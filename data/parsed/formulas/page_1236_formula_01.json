@@ -1,0 +1,16 @@
+{
+  "page": 1236,
+  "image_index": 1,
+  "filename": "page_1236_formula_01.png",
+  "filepath": "parsed\\formulas\\images\\page_1236_formula_01.png",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 418.95,
+    "x1": 205.5,
+    "y1": 433.95
+  },
+  "width": 154,
+  "height": 20,
+  "type": "formula_image",
+  "caption": ""
+}

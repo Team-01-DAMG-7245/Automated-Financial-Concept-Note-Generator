@@ -1,0 +1,9 @@
+Page 606
+================================================================================
+
+for k=1:NumSimSteps
+    [~,SimReward_Train_Buy(k),~,LoggedSignals] = ...
+        step(RL_OptimalExecution_Training_Environment_Buy,SimAction_Train_Buy(k));
+    SimInventory_Train_Buy(k) = LoggedSignals.CurrentInventoryShares;
+    SimExecutedShares_Train_Buy(k) = sum(LoggedSignals.ExecutedShares);
+end

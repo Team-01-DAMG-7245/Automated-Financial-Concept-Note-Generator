@@ -1,0 +1,12 @@
+{
+  "page": 37,
+  "original_text": "X = A\\B solves for X in A*X = B and",
+  "ocr_text": "X=ABsolvesforXinA*X=Band",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 338.64,
+    "x1": 262.48,
+    "y1": 350.27
+  },
+  "confidence": "high"
+}

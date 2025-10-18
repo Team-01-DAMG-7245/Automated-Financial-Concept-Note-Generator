@@ -1,0 +1,56 @@
+TransactionCosts: []
+                     Fees: []
+
+Several additional properties of the backtesting engine are initialized to empty. The backtesting
+engine populates these properties, which contain the results of the backtest, upon completion of the
+backtest.
+
+Load Data and Run Backtest
+
+Run the backtest over daily price data from the 30 component stocks of the DJIA.
+
+% Read table of daily adjusted close prices for 2006 DJIA stocks
+T = readtable('dowPortfolio.xlsx');
+
+% Remove the DJI index column and convert to timetable
+pricesTT = table2timetable(T(:,[1 3:end]),'RowTimes','Dates');
+
+Run the backtest using the runBacktest function.
+
+backtester = runBacktest(backtester,pricesTT)
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×1 backtestStrategy]
+             RiskFreeRate: 0.0200
+           CashBorrowRate: 0.0600
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 1000000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: 30
+                  Returns: [250×1 timetable]
+                Positions: [1×1 struct]
+                 Turnover: [250×1 timetable]
+                  BuyCost: [250×1 timetable]
+                 SellCost: [250×1 timetable]
+         TransactionCosts: [1×1 struct]
+                     Fees: [1×1 struct]
+
+Examine Results
+
+The backtesting engine populates the read-only properties of the backtestEngine object with the
+backtest results. Daily values for portfolio returns, asset positions, turnover, transaction costs, and
+fees are available to examine.
+
+Examine the daily returns.
+
+% Generate a histogram of daily portfolio returns
+histogram(backtester.Returns{:,1})
+title('Daily Portfolio Returns')
+
+backtestEngine
+
+15-273

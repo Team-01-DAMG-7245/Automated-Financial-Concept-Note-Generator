@@ -1,0 +1,12 @@
+{
+  "page": 670,
+  "original_text": "p = PortfolioCVaR;\np = simulateNormalScenariosByMoments(p, m, C, 20000);\n[passetmean, passetcovar] = estimateScenarioMoments(p)",
+  "ocr_text": "p=PortfolioCVaR;\np=simulateNormalScenariosByMoments(p,m,C,_20000);\n[passetmean,passetcovar]=estimateScenarioMoments(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 304.45,
+    "x1": 382.57,
+    "y1": 336.51
+  },
+  "confidence": "high"
+}

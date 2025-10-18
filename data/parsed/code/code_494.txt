@@ -1,0 +1,6 @@
+Page 469
+================================================================================
+
+function idxInGroup = getLeafNodesInGroup(nodeId, link)
+% getLeafNodesInGroup finds all leaf nodes for a given node id
+% in a linkage matrix.

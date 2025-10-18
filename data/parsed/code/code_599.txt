@@ -1,0 +1,7 @@
+Page 551
+================================================================================
+
+To reduce the training time, you can also use a reward function that tries to lead the agent to achieve
+a minimum wealth level at each investment period. The constantReturnReward function (see Local
+Functions on page 4-391) assumes that the returns are the same throughout the entire investment
+horizon and that the return value satisfies the following inequality:

@@ -1,0 +1,12 @@
+{
+  "page": 1745,
+  "original_text": "obj = obj.addEquality(AEquality, bEquality)",
+  "ocr_text": "obj_=obj.addEquality(AEquality,bEquality)",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 225.83,
+    "x1": 337.98,
+    "y1": 236.29
+  },
+  "confidence": "high"
+}

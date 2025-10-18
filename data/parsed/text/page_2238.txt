@@ -1,0 +1,59 @@
+03-Jan-2000     0.088805       0.1742     0.008775    -0.002353      0.12829    NaN       0.0
+    04-Jan-2000    -0.084331     -0.08324     -0.05608     -0.08353    -0.093805    NaN     -0.07
+    05-Jan-2000     0.014634     -0.14877    -0.003039     0.070984     0.066875    NaN     -0.00
+    06-Jan-2000    -0.086538    -0.060072    -0.016619    -0.038847    -0.012302    NaN     -0.06
+    07-Jan-2000     0.047368     0.061013       0.0587    -0.037708    -0.000964    NaN      0.02
+
+Notice that GOOG has missing data (NaN), because it was not listed before Aug 2004. The
+estimateAssetMoments function has a name-value pair argument 'MissingData' that indicates
+with a Boolean value whether to use the missing data capabilities of Financial Toolbox™ software.
+The default value for 'MissingData' is false which removes all samples with NaN values. If,
+however, 'MissingData' is set to true, estimateAssetMoments uses the ECM algorithm to
+estimate asset moments.
+
+r = Portfolio;
+r = estimateAssetMoments(r,AssetsTimeTable,'dataformat','returns','missingdata',true);
+
+In addition, the estimateAssetMoments function also extracts asset names or identifiers from a
+timetable object when the name-value argument 'GetAssetList' set to true (its default value is
+false). If the 'GetAssetList' value is true, the timetable column identifiers are used to set the
+AssetList property of the Portfolio object. To show this, the formation of the Portfolio object r is
+repeated with the 'GetAssetList' flag set to true.
+
+r = estimateAssetMoments(r,AssetsTimeTable,'GetAssetList',true);
+disp(r.AssetList')
+
+{'AAPL'  }
+    {'AMZN'  }
+    {'CSCO'  }
+    {'DELL'  }
+    {'EBAY'  }
+    {'GOOG'  }
+    {'HPQ'   }
+    {'IBM'   }
+    {'INTC'  }
+    {'MSFT'  }
+    {'ORCL'  }
+    {'YHOO'  }
+    {'MARKET'}
+    {'CASH'  }
+
+Estimate Mean and Covariance of Asset Returns from Data for a Portfolio Object with
+Integrality Constraints
+
+Create a Portfolio object for three assets.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+               0.00022983 0.00049937 0.00019247;
+               0.00420395 0.00019247 0.00764097 ];  
+AssetMean = AssetMean/12
+
+AssetMean = 3×1
+
+0.0008
+
+15
+Functions
+
+15-932

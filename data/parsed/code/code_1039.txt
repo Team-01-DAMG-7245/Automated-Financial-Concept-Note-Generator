@@ -1,0 +1,8 @@
+Page 1066
+================================================================================
+
+The negative of the expected Hessian of the log-likelihood function and the Fisher information matrix
+are identical if no data is missing. However, if data is missing, the Hessian, which is computed over
+available samples, accounts for the loss of information due to missing data. So, the Fisher information
+matrix provides standard errors that are a Cramér-Rao lower bound whereas the Hessian matrix
+provides standard errors that may be greater if there is missing data.

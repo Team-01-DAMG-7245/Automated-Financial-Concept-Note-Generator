@@ -1,0 +1,73 @@
+Portfolio Construction Examples
+
+In this section...
+
+“Introduction” on page 3-5
+
+“Efficient Frontier Example” on page 3-5
+
+Introduction
+
+The efficient frontier computation functions require information about each asset in the portfolio.
+This data is entered into the function via two matrices: an expected return vector and a covariance
+matrix. The expected return vector contains the average expected return for each asset in the
+portfolio. The covariance matrix is a square matrix representing the interrelationships between pairs
+of assets. This information can be directly specified or can be estimated from an asset return time
+series with the function ewstats.
+
+Note An alternative to using these portfolio optimization functions is to use the Portfolio object
+(Portfolio) for mean-variance portfolio optimization. This object supports gross or net portfolio
+returns as the return proxy, the variance of portfolio returns as the risk proxy, and a portfolio set that
+is any combination of the specified constraints to form a portfolio set. For information on the
+workflow when using Portfolio objects, see “Portfolio Object Workflow” on page 4-18.
+
+Efficient Frontier Example
+
+frontcon has been removed. To model the efficient frontier, use the Portfolio object instead. For
+example, using the Portfolio object, you can model an efficient frontier:
+
+•
+“Obtaining Portfolios Along the Entire Efficient Frontier” on page 4-99
+
+•
+“Obtaining Endpoints of the Efficient Frontier” on page 4-102
+
+•
+“Obtaining Efficient Portfolios for Target Returns” on page 4-105
+
+•
+“Obtaining Efficient Portfolios for Target Risks” on page 4-108
+
+•
+“Efficient Portfolio That Maximizes Sharpe Ratio” on page 4-111
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Plotting the Efficient Frontier for a Portfolio Object” on page 4-125
+
+See Also
+portalloc | frontier | portopt | Portfolio | portcons | portvrisk | pcalims | pcgcomp |
+pcglims | pcpval | abs2active | active2abs
+
+Related Examples
+
+•
+“Portfolio Optimization Functions” on page 3-3
+
+•
+“Portfolio Selection and Risk Aversion” on page 3-7
+
+•
+“Active Returns and Tracking Error Efficient Frontier” on page 3-27
+
+•
+“Plotting an Efficient Frontier Using portopt” on page 10-22
+
+•
+“portopt Migration to Portfolio Object” on page 3-11
+
+Portfolio Construction Examples
+
+3-5

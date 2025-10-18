@@ -1,0 +1,7 @@
+Page 1337
+================================================================================
+
+attributionsChart(BrinsonPAObj) creates a horizontal bar chart of portfolio performance
+attributions by category, aggregated over all time periods using a brinsonAttribution object. This
+function decomposes active returns into category allocation, within-category selection, and
+allocation-selection interaction effects.

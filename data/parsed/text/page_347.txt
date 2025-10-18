@@ -1,0 +1,43 @@
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Analysis with Turnover Constraints” on page 4-211
+
+•
+“Leverage in Portfolio Optimization with a Risk-Free Asset” on page 4-217
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-179

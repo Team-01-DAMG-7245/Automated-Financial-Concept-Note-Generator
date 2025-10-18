@@ -1,0 +1,12 @@
+{
+  "page": 395,
+  "original_text": "shpr = mean(benchRetn)/std(benchRetn);\ndelta = shpr/sqrt(wtsMarket'*Sigma*wtsMarket);",
+  "ocr_text": "shpr_=mean(benchRetn)/std(benchRetn);\ndelta=shpr/sqrt(wtsMarket*Sigma*wtsMarket);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 510.11,
+    "x1": 344.64,
+    "y1": 531.38
+  },
+  "confidence": "high"
+}

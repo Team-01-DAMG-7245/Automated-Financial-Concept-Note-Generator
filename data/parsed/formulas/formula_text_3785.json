@@ -1,0 +1,12 @@
+{
+  "page": 2139,
+  "original_text": "NewDate = daysadd(datetime(2004,2,1), 31)",
+  "ocr_text": "NewDate=daysadd(datetime(2004,2,1),31)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 644.05,
+    "x1": 312.14,
+    "y1": 654.51
+  },
+  "confidence": "high"
+}

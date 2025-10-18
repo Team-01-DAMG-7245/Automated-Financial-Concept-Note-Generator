@@ -1,0 +1,12 @@
+{
+  "page": 2294,
+  "original_text": "p = Portfolio('AssetMean',[0.3, 0.1, 0.5], 'AssetCovar',...\n[0.01, -0.010,  0.004; -0.010,  0.040, -0.002;  0.004, -0.002,  0.023]);\np = setDefaultConstraints(p);\nplotFrontier(p, 20);\np = setSolver(p,'quadprog','Display','off','ConstraintTolerance',1.0e-8,'OptimalityTolerance',1.0\nweights = estimateMaxSharpeRatio(p); \n[risk, ret] = estimatePortMoments(p, weights);\nhold on\nplot(risk,ret,'*r');",
+  "ocr_text": "p=Portfolio(AssetMean,[.3,0.1,0.5],AssetCovar,...\n[0.01,-0.010,0.004;-0.010,0.040,-0.002;0.004,-0.002,_0.023]);\np=setDefaultConstraints(p);\n\nplotFrontier(p,_20);\np=setSolver(p,quadprog,Display,off,ConstraintTolerance,1.0e-8,OptimalityTolerance,1.\nweights=estimateMaxSharpeRatio(p);\n\n[risk,ret]=estimatePortMoments(p,_weights);\n\nholdon\n\nplot(risk,ret,*r)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 505.13,
+    "x1": 615.59,
+    "y1": 602.0
+  },
+  "confidence": "high"
+}

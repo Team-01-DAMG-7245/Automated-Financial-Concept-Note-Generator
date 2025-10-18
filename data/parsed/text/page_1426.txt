@@ -1,0 +1,64 @@
+This technique attempts to reduce variance by inducing negative dependence between paired input
+samples, ideally resulting in negative dependence between paired output samples. The greater the
+extent of negative dependence, the more effective antithetic sampling is.
+
+Algorithms
+
+The simBySolution function simulates NTRIALS sample paths of NVARS correlated state variables,
+driven by NBROWNS Brownian motion sources of risk over NPERIODS consecutive observation periods,
+approximating continuous-time GBM short-rate models by an approximation of the closed-form
+solution.
+
+Consider a separable, vector-valued GBM model of the form:
+
+dXt = μ(t)Xtdt + D(t, Xt)V(t)dWt
+
+where:
+
+•
+Xt is an NVARS-by-1 state vector of process variables.
+
+•
+μ is an NVARS-by-NVARS generalized expected instantaneous rate of return matrix.
+
+•
+V is an NVARS-by-NBROWNS instantaneous volatility rate matrix.
+
+•
+dWt is an NBROWNS-by-1 Brownian motion vector.
+
+The simBySolution function simulates the state vector Xt using an approximation of the closed-form
+solution of diagonal-drift models.
+
+When evaluating the expressions, simBySolution assumes that all model parameters are piecewise-
+constant over each simulation period.
+
+In general, this is not the exact solution to the models, because the probability distributions of the
+simulated and true state vectors are identical only for piecewise-constant parameters.
+
+When parameters are piecewise-constant over each observation period, the simulated process is
+exact for the observation times at which Xt is sampled.
+
+Gaussian diffusion models, such as hwv, allow negative states. By default, simBySolution does
+nothing to prevent negative states, nor does it guarantee that the model be strictly mean-reverting.
+Thus, the model may exhibit erratic or explosive growth.
+
+Version History
+Introduced in R2008a
+
+R2022a: Perform Quasi-Monte Carlo simulation
+Behavior changed in R2022a
+
+Perform Quasi-Monte Carlo simulation using the name-value arguments MonteCarloMethod and
+QuasiSequence.
+
+R2022b: Perform Brownian bridge and principal components construction
+Behavior changed in R2022b
+
+Perform Brownian bridge and principal components construction using the name-value argument
+BrownianMotionMethod.
+
+15
+Functions
+
+15-120

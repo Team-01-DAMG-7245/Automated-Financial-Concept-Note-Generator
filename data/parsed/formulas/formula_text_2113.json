@@ -1,0 +1,12 @@
+{
+  "page": 1089,
+  "original_text": "% Estimate sample standard errors for model parameters\nStdParam = ecmmvnrstd(TestData, TestDesign, Covar, 'hessian');",
+  "ocr_text": "sEstimatesamplestandarderrorsformodelparameters\nStdParam=ecmmvnrstd(TestData,TestDesign,Covar,hessian);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 373.83,
+    "x1": 425.94,
+    "y1": 395.09
+  },
+  "confidence": "high"
+}

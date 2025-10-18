@@ -1,0 +1,12 @@
+{
+  "page": 739,
+  "original_text": "p = setScenarios(p, AssetScenarios);\np = setDefaultConstraints(p);\np = setProbabilityLevel(p, 0.95);",
+  "ocr_text": "p=setScenarios(p,AssetScenarios);\np=setDefaultConstraints(p);\np=setProbabilityLevel(p,0.95);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 285.05,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

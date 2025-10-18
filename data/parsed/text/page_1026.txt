@@ -1,0 +1,61 @@
+PaymentTimes(k),PaymentCF(k));
+end
+
+20-Sep-2009      0.1806      35388.89
+20-Dec-2009      0.2528      49544.44
+20-Mar-2010      0.2500      49000.00
+20-Jun-2010      0.2556      50088.89
+20-Sep-2010      0.2556      50088.89
+20-Dec-2010      0.2528      49544.44
+20-Mar-2011      0.2500      49000.00
+20-Jun-2011      0.2556      50088.89
+20-Sep-2011      0.2556      50088.89
+20-Dec-2011      0.2528      49544.44
+20-Mar-2012      0.2528      49544.44
+20-Jun-2012      0.2556      50088.89
+20-Sep-2012      0.2556      50088.89
+
+Also, you can use cdsprice to value a portfolio of CDS contracts. In the following code, a simple
+hedged position with two vanilla CDS contracts, one long, one short, with slightly different spreads is
+priced in a single call and the value of the portfolio is the sum of the returned prices.
+
+[Price2,AccPrem2] = cdsprice(ZeroData,ProbData,Settle, ...
+repmat(datenum(Maturity2),2,1),[Spread2;Spread2+3], ...
+'Notional',[1e7; -1e7]);
+
+fprintf('Contract \t Dirty Price \t Acc Premium \t  Clean Price\n');
+
+Contract      Dirty Price      Acc Premium       Clean Price
+
+fprintf('    Long \t $ %9.2f \t $ %9.2f \t $ %9.2f \t\n', ...
+   Price2(1)+AccPrem2(1), AccPrem2(1), Price2(1));
+
+Long      $  56872.94      $  15244.44      $  41628.50
+
+fprintf('   Short \t $ %8.2f \t $ %8.2f \t $ %8.2f \t\n', ...
+   Price2(2)+AccPrem2(2), AccPrem2(2), Price2(2));
+
+Short      $ -48185.88      $ -15477.78      $ -32708.11
+
+fprintf('Mark-to-market of hedged position: $ %8.2f\n',sum(Price2)+sum(AccPrem2));
+
+Mark-to-market of hedged position: $  8687.06
+
+See Also
+cdsbootstrap | cdsprice | cdsspread | cdsrpv01
+
+Related Examples
+
+•
+“First-to-Default Swaps” (Financial Instruments Toolbox)
+
+•
+“Credit Default Swap Option” (Financial Instruments Toolbox)
+
+•
+“Counterparty Credit Risk and CVA” (Financial Instruments Toolbox)
+
+8
+Credit Risk Analysis
+
+8-108

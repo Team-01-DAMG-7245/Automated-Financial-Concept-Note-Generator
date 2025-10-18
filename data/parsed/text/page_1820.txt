@@ -1,0 +1,60 @@
+Jul-08-2026     0.013883
+    Jul-08-2036     0.017359
+    Jul-08-2046     0.022704
+
+Bootstrap the probability of default (PD) curve from the bonds.
+
+format longg
+[defaultProb1, hazard1] = bondDefaultBootstrap(ZeroData, MarketData, Settle)
+
+defaultProb1 = 4×2
+
+736847        0.0704863142317494
+                    737577         0.162569420050034
+                    737943         0.217308133826188
+                    738673          0.38956773145021
+
+hazard1 = 4×2
+
+736847        0.0813390794774647
+                    737577        0.0521615800986281
+                    737943        0.0674145844133183
+                    738673          0.12428587278862
+
+format
+
+Reformat the default probability and hazard rate for a better representation.
+
+DefProbHazard = [defaultProb1, hazard1(:,2)];
+DefProbHazardTable = array2table(DefProbHazard, 'VariableNames', {'Date', 'DefaultProbability', 
+DefProbHazardTable.Date = datetime(DefProbHazardTable.Date,'Locale','en_US','ConvertFrom','datenu
+DefProbHazardTable.Date.Format = 'MMM-dd-yyyy'
+
+DefProbHazardTable=4×3 table
+       Date        DefaultProbability    HazardRate
+    ___________    __________________    __________
+
+Jun-01-2017         0.070486          0.081339 
+    Jun-01-2019          0.16257          0.052162 
+    Jun-01-2020          0.21731          0.067415 
+    Jun-01-2022          0.38957           0.12429
+
+Preview the selected bond to reprice based on the PD curve.
+
+TestCase
+
+TestCase=1×3 table
+     Maturity      Price     Coupon
+    ___________    ______    ______
+
+Jun-01-2019    109.02     0.08
+
+To reprice the bond, first generate cash flows and payment dates.
+
+[Payments, PaymentDates] = cfamounts(TestCase.Coupon, Settle, TestCase.Maturity);
+AccInt=-Payments(1);
+
+15
+Functions
+
+15-514

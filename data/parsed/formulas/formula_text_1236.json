@@ -1,0 +1,12 @@
+{
+  "page": 617,
+  "original_text": "MeanGains = abs(mean(ISGains));\nMeanLosses = abs(mean(ISLosses));",
+  "ocr_text": "MeanGains=abs(mean(ISGains));\nMeanLosses=abs(mean(ISLosses));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 557.43,
+    "x1": 268.79,
+    "y1": 578.69
+  },
+  "confidence": "high"
+}

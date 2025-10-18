@@ -1,0 +1,67 @@
+More About
+
+Antithetic Sampling
+
+Simulation methods allow you to specify a popular variance reduction technique called antithetic
+sampling.
+
+This technique attempts to replace one sequence of random observations with another of the same
+expected value, but smaller variance. In a typical Monte Carlo simulation, each sample path is
+independent and represents an independent trial. However, antithetic sampling generates sample
+paths in pairs. The first path of the pair is referred to as the primary path, and the second as the
+antithetic path. Any given pair is independent of any other pair, but the two paths within each pair
+are highly correlated. Antithetic sampling literature often recommends averaging the discounted
+payoffs of each pair, effectively halving the number of Monte Carlo trials.
+
+This technique attempts to reduce variance by inducing negative dependence between paired input
+samples, ideally resulting in negative dependence between paired output samples. The greater the
+extent of negative dependence, the more effective antithetic sampling is.
+
+Algorithms
+
+This function simulates any vector-valued SDE of the form
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+
+where:
+
+•
+X is an NVars-by-1 state vector of process variables (for example, short rates or equity prices) to
+simulate.
+
+•
+W is an NBrowns-by-1 Brownian motion vector.
+
+•
+F is an NVars-by-1 vector-valued drift-rate function.
+
+•
+G is an NVars-by-NBrowns matrix-valued diffusion-rate function.
+
+simByHybrid simulates NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods, using the
+hybrid method to approximate continuous-time stochastic processes.
+
+•
+This simulation engine provides a discrete-time approximation of the underlying generalized
+continuous-time process. The simulation is derived directly from the stochastic differential
+equation of motion. Thus, the discrete-time process approaches the true continuous-time process
+only as DeltaTime approaches zero.
+
+•
+The input argument Z allows you to directly specify the noise-generation process. This process
+takes precedence over the Correlation parameter of the rvm or roughbergomi object and the
+value of the Antithetic input flag and the QuasiMonteCarlo argument. If you do not specify a
+value for Z, simByHybrid generates correlated Gaussian variates, with or without antithetic
+sampling as requested.
+
+•
+The end-of-period Processes argument allows you to terminate a given trial early. At the end of
+each time step, simByHybrid tests the state vector Xt for an all-NaN condition. Thus, to signal an
+early termination of a given trial, all elements of the state vector Xt must be NaN. This test enables
+a user-defined Processes function to signal early termination of a trial, and offers significant
+performance benefits in some situations (for example, pricing down-and-out barrier options).
+
+simByHybrid
+
+15-345

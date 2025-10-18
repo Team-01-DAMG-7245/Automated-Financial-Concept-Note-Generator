@@ -1,0 +1,22 @@
+More About
+
+Backtest Workflow
+
+Backtesting a portfolio of investments refers to the process of applying a trading strategy to historical
+or simulated market data to determine how accurately the strategy would have predicted actual
+results.
+
+The steps of the backtesting workflow are:
+
+•
+Strategy definition — Clearly define the investment strategy, including the selection criteria for
+assets, the timing of buy and sell decisions, portfolio rebalancing rules, risk management
+techniques, and any other relevant parameters using backtestStrategy.
+
+•
+Create backtest engine — Use backtestEngine to create the framework designed to facilitate
+the backtesting of investment strategies using historical data.
+
+backtestEngine
+
+15-275

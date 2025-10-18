@@ -1,0 +1,64 @@
+Using the PortfolioMAD Function for a Single-Step Setup
+
+You can use the PortfolioMAD object to directly set up a “standard” portfolio optimization problem.
+Given scenarios of asset returns in the variable AssetScenarios, this problem is completely
+specified as follows:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioMAD('Scenarios', AssetScenarios, ...
+'LowerBound', 0, 'LowerBudget', 1, 'UpperBudget', 1)
+
+PortfolioMAD with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                  NumScenarios: 20000
+                          Name: []
+                     NumAssets: 4
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [4×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: []
+
+The LowerBound property value undergoes scalar expansion since AssetScenarios provides the
+dimensions of the problem.
+
+You can use dot notation with the function plotFrontier.
+
+p.plotFrontier
+
+6
+MAD Portfolio Optimization Tools
+
+6-24

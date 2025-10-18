@@ -1,0 +1,12 @@
+{
+  "page": 526,
+  "original_text": "% Risk budgeting portfolio with extra constraints\nw_extra = estimateCustomObjectivePortfolio(p,objFun);\n% Risk contribution",
+  "ocr_text": "Riskbudgetingportfoliowithextraconstraints\nw_extra=estimateCustom0bjectivePortfolio(p,objFun);\nSRiskcontribution",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 377.15,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,59 @@
+Impute Missing Data in the Credit Scorecard Workflow Using
+the Random Forest Algorithm
+
+This example shows how to perform imputation of missing data in the credit scorecard workflow
+using the random forest algorithm.
+
+Random forests are an ensemble learning method for classification or regression that operates by
+constructing a multitude of decision trees at training time and obtaining the class that is the mode of
+the classes (classification) or mean prediction (regression) of the individual trees. Random forests
+correct for the tendency of decision trees to overfit to the training set. For more information on the
+random forest algorithm, see fitrensemble and fitcensemble.
+
+For additional information on alternative approaches for "treating" missing data, see “Credit
+Scorecard Modeling with Missing Values” on page 8-57.
+
+Impute Missing Data Using Random Forest Algorithm
+
+Use the dataMissing data set to impute missing values for the CustAge (numeric) and ResStatus
+(categorical) predictors.
+
+load CreditCardData.mat
+disp(head(dataMissing));
+
+CustID    CustAge    TmAtAddress     ResStatus     EmpStatus    CustIncome    TmWBank    Othe
+    ______    _______    ___________    ___________    _________    __________    _______    ____
+
+1          53          62         <undefined>    Unknown        50000         55         Ye
+      2          61          22         Home Owner     Employed       52000         25         Ye
+      3          47          30         Tenant         Employed       37000         61         No
+      4         NaN          75         Home Owner     Employed       53000         20         Ye
+      5          68          56         Home Owner     Employed       53000         14         Ye
+      6          65          13         Home Owner     Employed       48000         59         Ye
+      7          34          32         Home Owner     Unknown        32000         26         Ye
+      8          50          57         Other          Employed       51000         33         No
+
+Remove the 'CustID' and 'status' columns in the imputation process as these are the id and
+response values respectively. Alternatively, you can choose to leave the 'status' column in.
+
+dataToImpute = dataMissing(:,setdiff(dataMissing.Properties.VariableNames,...
+    {'CustID','status'},'stable'));
+
+rfImputedData = dataMissing;
+
+Because multiple predictors contain missing data, turn on the 'Surrogate' flag when you create
+the decision tree template.
+
+rng('default');
+tmp = templateTree('Surrogate','on','Reproducible',true);
+
+Next, use the fitrensemble and fitcensemble functions, which return the trained regression and
+classification ensemble model objects contain the results of boosting 100 regression and classification
+trees using LSBoost, respectively.
+
+missingCustAge = ismissing(dataToImpute.CustAge);
+% Fit ensemble of regression learners
+
+Impute Missing Data in the Credit Scorecard Workflow Using the Random Forest Algorithm
+
+8-127

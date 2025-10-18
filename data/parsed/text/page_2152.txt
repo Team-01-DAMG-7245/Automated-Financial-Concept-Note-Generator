@@ -1,0 +1,55 @@
+deprdv
+
+Remaining depreciable value
+
+Syntax
+
+Depreciation = deprdv(Cost,Salvage,Accum)
+
+Description
+
+Depreciation = deprdv(Cost,Salvage,Accum) computes the remaining depreciable value for
+an asset.
+
+Examples
+
+Compute the Remaining Depreciable Value for an Asset
+
+This example shows how to find the remaining depreciable value after six years for the cost of an
+asset for $13,000 with a life of 10 years. The salvage value is $1000.
+
+Accum = depstln(13000, 1000, 10) * 6
+
+Accum = 
+7200
+
+Value = deprdv(13000, 1000, 7200)
+
+Value = 
+4800
+
+Input Arguments
+
+Cost — Initial value of the asset
+numeric
+
+Initial value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+Salvage — Salvage value of the asset
+numeric
+
+Salvage value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+Accum — Accumulated depreciation of the asset for prior periods
+numeric
+
+Accumulated depreciation of the asset for prior periods, specified as a scalar numeric.
+
+15
+Functions
+
+15-846

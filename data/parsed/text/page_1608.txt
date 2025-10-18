@@ -1,0 +1,36 @@
+Rebalance Functions
+
+This section contains the implementation of the strategy rebalance functions. For more information
+on creating strategies and writing rebalance functions, see backtestStrategy.
+
+function new_weights = equalWeightFcn(current_weights, pricesTT) %#ok<INUSL> 
+% Equal weighted portfolio allocation
+
+nAssets = size(pricesTT, 2);
+new_weights = ones(1,nAssets);
+new_weights = new_weights / sum(new_weights);
+
+end
+
+function new_weights = inverseVarianceFcn(current_weights, pricesTT) %#ok<INUSL> 
+% Inverse-variance portfolio allocation
+
+assetReturns = tick2ret(pricesTT);
+assetCov = cov(assetReturns{:,:});
+new_weights = 1 ./ diag(assetCov);
+new_weights = new_weights / sum(new_weights);
+
+end
+
+Input Arguments
+
+backtester — Backtesting engine
+backtestEngine object
+
+Backtesting engine, specified as a backtestEngine object. Use backtestEngine to create the
+backtesting engine and then use runBacktest to run a backtest.
+
+15
+Functions
+
+15-302

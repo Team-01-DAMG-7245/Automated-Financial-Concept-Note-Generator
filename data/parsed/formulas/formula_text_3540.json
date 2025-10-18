@@ -1,0 +1,12 @@
+{
+  "page": 1977,
+  "original_text": "Hols = datetime(2000,1,1) + calyears(0:100);",
+  "ocr_text": "Hols=datetime(2000,1,1)+calyears(0:100);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 375.9,
+    "x1": 333.81,
+    "y1": 386.36
+  },
+  "confidence": "high"
+}

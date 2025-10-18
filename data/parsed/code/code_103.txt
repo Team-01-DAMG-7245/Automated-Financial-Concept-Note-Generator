@@ -1,0 +1,5 @@
+Page 116
+================================================================================
+
+With training and validation data in place, specify the hyperparameters and compare Q in the two
+subsamples. The supporting function makeQ.m provides the steps for making Q.

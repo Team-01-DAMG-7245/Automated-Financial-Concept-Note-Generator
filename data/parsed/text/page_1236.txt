@@ -1,0 +1,58 @@
+accessible by the common t, Xt interface. This reflects the fact that GBM models are restricted
+parameterizations that derive from the general SDE class.
+
+As a convenience, you can specify parameters of restricted models, such as GBM models, as
+traditional MATLAB® arrays of appropriate dimension. In this case, such arrays represent a static
+special case of the more general dynamic situation accessible by the t, Xt  interface.
+
+Moreover, when you enter parameters as functions, object constructors can verify that they return
+arrays of correct size by evaluating them at the initial time and state. Otherwise, object constructors
+have no knowledge of any particular functional form.
+
+The following example illustrates a technique that includes dynamic behavior by mapping a
+traditional MATLAB® time series array to a callable function with a t, Xt  interface. It also compares
+the function with an otherwise identical model with constant parameters.
+
+Because time series arrays represent dynamic behavior that must be captured by functions accessible
+by the t, Xt  interface, you need utilities to convert traditional time series arrays into callable
+functions of time and state. The following example shows how to do this using the conversion function
+ts2func (time series to function).
+
+Load a daily historical data set containing three-month Euribor rates and closing index levels of
+France's CAC 40 spanning the time interval February 7, 2001 to April 24, 2006.
+
+load Data_GlobalIdx2
+
+Simulate risk-neutral sample paths of the CAC 40 index using a geometric Brownian motion (GBM)
+model:
+
+where r(t) represents evolution of the risk-free rate of return.
+
+Furthermore, assume that you need to annualize the relevant information derived from the daily data
+(annualizing the data is optional, but is useful for comparison to other examples), and that each
+calendar year comprises 250 trading days.
+
+dt      = 1/250;
+returns = tick2ret(Dataset.CAC);
+sigma   = std(returns)*sqrt(250);
+yields  = Dataset.EB3M;
+yields  = 360*log(1 + yields);
+
+Compare the resulting sample paths obtained from two risk-neutral historical simulation approaches,
+where the daily Euribor yields serve as a proxy for the risk-free rate of return.
+
+The first approach specifies the risk-neutral return as the sample average of Euribor yields, and
+therefore assumes a constant (non-dynamic) risk-free return.
+
+nPeriods = length(yields);  % Simulated observations
+rng(5713,'twister')
+obj    = gbm(mean(yields),diag(sigma),'StartState',100)
+
+obj = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+
+14
+Stochastic Differential Equations
+
+14-44

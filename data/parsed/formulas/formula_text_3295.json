@@ -1,0 +1,12 @@
+{
+  "page": 1774,
+  "original_text": "[mg,Cg = arith2geom(ma,Ca) transforms moments associated with a simple Brownian motion\ninto equivalent continuously compounded moments associated with a geometric Brownian motion\nwith a possible change in periodicity.",
+  "ocr_text": "[mg,Cg=arith2geom(ma,Ca)transformsmomentsassociatedwithasimpleBrownianmotion\nintoequivalentcontinuouslycompoundedmomentsassociatedwithageometricBrownianmotion\nwithapossiblechangeinperiodicity.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 262.95,
+    "x1": 539.93,
+    "y1": 298.58
+  },
+  "confidence": "high"
+}

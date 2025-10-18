@@ -1,0 +1,12 @@
+{
+  "page": 1226,
+  "original_text": "SDELD = sdeld(zeros(nVariables,1), diag(expReturn), ...\n    ones(nVariables,1), diag(sigma),'Correlation', ... \n    correlation, 'StartState', X)",
+  "ocr_text": "SDELD=sdeld(zeros(nVariables,1),diag(expReturn),...\nones(nVariables,1),diag(sigma),Correlation,...\ncorrelation,StartState,X)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 325.18,
+    "x1": 388.02,
+    "y1": 357.25
+  },
+  "confidence": "high"
+}

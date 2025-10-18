@@ -1,0 +1,63 @@
+Using the Information Ratio
+
+This example shows how to use the information ratio to calculate the ratio of relative return to
+relative risk.
+
+Although originally called the "appraisal ratio" by Treynor and Black, the information ratio is the ratio
+of relative return to relative risk (known as "tracking error"). Whereas the Sharpe ratio looks at
+returns relative to a riskless asset, the information ratio is based on returns relative to a risky
+benchmark which is known colloquially as a "bogey." Given an asset or portfolio of assets with
+random returns designated by Asset and a benchmark with random returns designated by
+Benchmark, the information ratio has the form:
+
+Mean(Asset − Benchmark) / Sigma (Asset − Benchmark)
+
+Here Mean(Asset − Benchmark) is the mean of Asset minus Benchmark returns, and
+Sigma(Asset - Benchmark) is the standard deviation of Asset minus Benchmark returns. A
+higher information ratio is considered better than a lower information ratio. For more information,
+see inforatio.
+
+To calculate the information ratio using the example data, the mean return of the market series is
+used as the return of the benchmark. Thus, given asset return data and the riskless asset return,
+compute the information ratio with
+
+load FundMarketCash 
+Returns = tick2ret(TestData);
+Benchmark = Returns(:,2);
+InfoRatio = inforatio(Returns, Benchmark)
+
+InfoRatio = 1×3
+
+0.0432       NaN   -0.0315
+
+Since the market series has no risk relative to itself, the information ratio for the second series is
+undefined (which is represented as NaN in MATLAB® software). Its standard deviation of relative
+returns in the denominator is 0.
+
+See Also
+sharpe | inforatio | portalpha | lpm | elpm | maxdrawdown | emaxdrawdown | ret2tick |
+tick2ret
+
+Related Examples
+
+•
+“Performance Metrics Overview” on page 7-2
+
+•
+“Using the Sharpe Ratio” on page 7-5
+
+•
+“Using Tracking Error” on page 7-8
+
+•
+“Using Risk-Adjusted Return” on page 7-9
+
+•
+“Using Sample and Expected Lower Partial Moments” on page 7-11
+
+•
+“Using Maximum and Expected Maximum Drawdown” on page 7-14
+
+Using the Information Ratio
+
+7-7

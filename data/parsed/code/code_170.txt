@@ -1,0 +1,6 @@
+Page 159
+================================================================================
+
+Using the information in these two tables, build a mathematical representation of the constraints
+represented. Assume that the vector of weights representing the exposure of each asset in a portfolio
+is called Wts = [W1 W2 W3].

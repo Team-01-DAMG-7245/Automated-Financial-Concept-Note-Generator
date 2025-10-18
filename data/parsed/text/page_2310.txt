@@ -1,0 +1,37 @@
+Calculate Portfolio Weights For a Target Risk Level
+
+The Portfolio object is able to find an efficient portfolio with respect to a specified target risk.
+
+Load Portfolio
+
+Load a vector of expected returns and a covariance matrix for 30 stocks.
+
+load StockStats
+
+Create Portfolio Object with Default Constraints
+
+The default constraints for a Portfolio object are that it is a long-only portfolio and that it is 100%
+invested. Many other constraint types are possible.
+
+P = Portfolio('mean',expRet,'covar',expCov);
+P = setDefaultConstraints(P);
+
+Plot Full Efficient Frontier
+
+Use the plotFrontier function with the Portfolio object to visualize the full frontier. Other
+functions exist that allow you to probe into particular portfolios along the frontier.
+
+P.plotFrontier
+
+Capture Upper and Lower Bounds of Portfolio Risks and Returns
+
+It is useful to know what are the upper and lower limits of the portfolio moments along the efficient
+frontier. This information allows you to determine what are feasible targets. Use the
+estimateFrontierLimits function with the Portfolio object to identify the weights at these
+extremes. Then you can use the estimatePortMoments function Portfolio object to find the
+limiting moments.
+
+15
+Functions
+
+15-1004

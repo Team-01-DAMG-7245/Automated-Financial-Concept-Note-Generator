@@ -1,0 +1,74 @@
+Assigning and Referencing Object Parameters
+
+•
+Objects support referencing similar to data structures. For example, statements like the following
+are valid:
+
+A = obj.A
+
+•
+Objects support complete parameter assignment similar to data structures. For example,
+statements like the following are valid:
+
+obj.A = 3
+
+•
+Objects do not support partial parameter assignment as data structures do. Therefore, statements
+like the following are invalid:
+
+obj.A(i,j) = 0.3
+
+Creating and Evaluating Models
+
+•
+You can create objects of any model class only if enough information is available to determine
+unambiguously the dimensionality of the model. Because each object offers unique input
+interfaces, some models require additional information to resolve model dimensionality.
+
+•
+You need only enter required input parameters in placeholder format, where a given input
+argument is associated with a specific position in an argument list. You can enter optional inputs
+in any order as parameter name-value pairs, where the name of a given parameter appears in
+single quotation marks and precedes its corresponding value.
+
+•
+Association of dynamic (time-variable) behavior with function evaluation, where time and state
+(t,Xt) are passed to a common, published interface, is pervasive throughout the SDE class system.
+You can use this function evaluation approach to model or construct powerful analytics. For a
+simple example, see “Specify Univariate Geometric Brownian Motion Model” on page 14-26.
+
+Specifying SDE Simulation Parameters
+
+The SDE engine allows the simulation of generalized multivariate stochastic processes, and provides
+a flexible and powerful simulation architecture. The framework also provides you with utilities and
+model classes that offer various parametric specifications and interfaces. The architecture is fully
+multidimensional in both the state vector and the Brownian motion, and offers both linear and mean-
+reverting drift-rate specifications.
+
+You can specify most parameters as MATLAB arrays or as functions accessible by a common
+interface, that supports general dynamic/nonlinear relationships common in SDE simulation.
+Specifically, you can simulate correlated paths of any number of state variables driven by a vector-
+valued Brownian motion of arbitrary dimensionality. This simulation approximates the underlying
+multivariate continuous-time process using a vector-valued stochastic difference equation.
+
+Consider the following general stochastic differential equation:
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+ (14-1)
+
+where:
+
+•
+X is an NVars-by-1 state vector of process variables (for example, short rates or equity prices) to
+simulate.
+
+•
+W is an NBrowns-by-1 Brownian motion vector.
+
+•
+F is an NVars-by-1 vector-valued drift-rate function.
+
+14
+Stochastic Differential Equations
+
+14-8

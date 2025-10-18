@@ -1,0 +1,12 @@
+{
+  "page": 1092,
+  "original_text": "b(i) = cov(R(i),M)/var(M)",
+  "ocr_text": "b(i)=cov(R(i),M)/var(M)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 414.45,
+    "x1": 240.5,
+    "y1": 426.08
+  },
+  "confidence": "high"
+}

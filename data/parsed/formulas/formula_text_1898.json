@@ -1,0 +1,12 @@
+{
+  "page": 960,
+  "original_text": "figure\nplot(Years,CreditIndex,'-d')\nhold on\nExample_RecessionBands\nhold off\ngrid on\nxlabel('Year')\nylabel('Shift')\ntitle('{\\bf Credit Index}')",
+  "ocr_text": "figure\nplot(Years,CreditIndex,-d)\nhold_on\nExample_RecessionBands\nholdoff\n\ngridon\n\nxlabel(Year)\nylabel(Shift)\ntitle({bfCreditIndex})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 238.98,
+    "x1": 241.72,
+    "y1": 335.85
+  },
+  "confidence": "high"
+}

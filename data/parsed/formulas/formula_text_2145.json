@@ -1,0 +1,12 @@
+{
+  "page": 1105,
+  "original_text": "PortfolioConvexity = Weights' * Convexities",
+  "ocr_text": "PortfolioConvexity=Weights*Convexities",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 478.23,
+    "x1": 322.98,
+    "y1": 488.7
+  },
+  "confidence": "high"
+}

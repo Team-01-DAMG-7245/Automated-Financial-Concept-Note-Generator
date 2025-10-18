@@ -1,0 +1,62 @@
+parameters. The function being maximized in this outer step is known as the profile log-likelihood
+for the degrees of freedom.
+
+•
+The second technique is derived by differentiating the log-likelihood function with respect to the
+linear correlation matrix, assuming the degrees of freedom is a fixed constant. The resulting
+expression is a non-linear equation that can be solved iteratively for the correlation matrix. This
+technique approximates the profile log-likelihood for the degrees of freedom parameter for large
+sample sizes. This technique is usually significantly faster than the true maximum likelihood
+technique outlined above; however, you should not use it with small or moderate sample sizes as
+the estimates and confidence limits may not be accurate.
+
+When the uniform variates are transformed by the empirical CDF of each margin, the calibration
+method is often known as canonical maximum likelihood (CML). The following code segment first
+transforms the daily centered returns to uniform variates by the piecewise, semi-parametric CDFs
+derived above. It then fits the Gaussian and t copulas to the transformed data:
+
+U = zeros(size(returns));
+
+for i = 1:nIndices
+    U(:,i) = cdf(tails{i}, returns(:,i));    % Transform each margin to uniform
+end
+
+options     = statset('Display', 'off', 'TolX', 1e-4);
+[rhoT, DoF] = copulafit('t', U, 'Method', 'ApproximateML', 'Options', options);
+rhoG        = copulafit('Gaussian', U);
+
+The estimated correlation matrices are quite similar but not identical.
+
+corrcoef(returns)  % Linear correlation matrix of daily returns
+
+ans = 6×6
+
+1.0000    0.4813    0.5058    0.1854    0.4573    0.6526
+    0.4813    1.0000    0.8485    0.2261    0.8575    0.5102
+    0.5058    0.8485    1.0000    0.2001    0.7650    0.6136
+    0.1854    0.2261    0.2001    1.0000    0.2295    0.1439
+    0.4573    0.8575    0.7650    0.2295    1.0000    0.4617
+    0.6526    0.5102    0.6136    0.1439    0.4617    1.0000
+
+rhoG               % Linear correlation matrix of the optimized Gaussian copula
+
+rhoG = 6×6
+
+1.0000    0.4745    0.5018    0.1857    0.4721    0.6622
+    0.4745    1.0000    0.8606    0.2393    0.8459    0.4912
+    0.5018    0.8606    1.0000    0.2126    0.7608    0.5811
+    0.1857    0.2393    0.2126    1.0000    0.2396    0.1494
+    0.4721    0.8459    0.7608    0.2396    1.0000    0.4518
+    0.6622    0.4912    0.5811    0.1494    0.4518    1.0000
+
+rhoT               % Linear correlation matrix of the optimized t copula
+
+rhoT = 6×6
+
+1.0000    0.4671    0.4858    0.1907    0.4734    0.6521
+    0.4671    1.0000    0.8871    0.2567    0.8500    0.5122
+
+14
+Stochastic Differential Equations
+
+14-78

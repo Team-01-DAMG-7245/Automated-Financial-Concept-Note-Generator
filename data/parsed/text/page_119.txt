@@ -1,0 +1,32 @@
+The estimated minimum objective coincides with the minimum observed objective (the search is
+monotonic). Unlike derivative-based algorithms, bayesopt does not converge. As it tries to find the
+global minimum, bayesopt continues exploring until it reaches the specified number of iterations
+(25).
+
+Obtain the best configuration by passing the results to bestPoint.
+
+[Calibration,negReturn] = bestPoint(results,'Criterion','min-observed')
+
+Calibration=1×2 table
+    numBins    numTicks
+    _______    ________
+
+3          24
+
+negReturn = 
+-7100
+
+Trading one share per tick, as directed by Q, the optimal strategy using (n,N) = (3,24) returns $0.71
+over the final 20% of the trading day. Modifying the trading volume scales the return.
+
+Another optimizer designed for expensive objectives is surrogateopt (Global Optimization Toolbox).
+It uses a different search strategy and can locate optima more quickly, depending on the objective.
+The supporting function optimizeTrading2.m uses surrogateopt instead of bayesopt to
+optimize the trading strategy in tradeOnQ.
+
+rng(0) % For reproducibility
+results2 = optimizeTrading2(TData,VData)
+
+Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction
+
+2-75

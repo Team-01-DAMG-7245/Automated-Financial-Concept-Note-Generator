@@ -1,0 +1,59 @@
+0     0     2    10    83     0    10    14
+     0     0     0     2     8    16     0     7
+     0     0     0     0     0     0     0     0
+
+Use transprobgrouptotals to group whole ratings into investment and speculative grades. This
+function takes a totals structure as the first argument. The second argument indicates the edges
+between rating categories. In this case, ratings 1 through 4 ('AAA' through 'BBB') correspond to
+the first category ('IG'), ratings 5 through 7 ('BB' through 'CCC') to the second category ('SG'),
+and rating 8 ('D') is a category of its own. transprobgrouptotals adds up the total time spent on
+ratings that belong to the same category. For example, total times spent on 'AAA' through 'BBB' are
+added up as the total time spent on 'IG'. transprobgrouptotals also adds up the total number of
+transitions between any 'IG' rating and any 'SG' rating, for example, a credit migration from
+'BBB' to 'BB'.
+
+The grouped totals can then be passed to transprobbytotals to obtain the transition matrix for
+investment and speculative grades. Both totalsMat and the new transition matrix are both 3-by-3,
+corresponding to the grouped categories 'IG', 'SG', and 'D'.
+
+sampleTotalsIGSG = transprobgrouptotals(sampleTotals,[4 7 8])
+
+sampleTotalsIGSG = struct with fields:
+    totalsVec: [4.8591e+03 1.5034e+03 1.1621e+03]
+    totalsMat: [3×3 double]
+    algorithm: 'duration'
+
+transMatIGSG = transprobbytotals(sampleTotalsIGSG)
+
+transMatIGSG = 3×3
+
+98.1591    1.6798    0.1611
+   12.3228   85.6961    1.9811
+         0         0  100.0000
+
+When a totals structure array is passed to transprobgrouptotals, this function groups each
+structure in the array individually and preserves sparsity, if the fields in the input structures are
+sparse. One way to exploit this feature is to compute confidence intervals for the investment grade
+default rate and the speculative grade default rate (see also “Estimate Bootstrap Confidence
+Intervals” on page 8-13).
+
+PDIGSG = transMatIGSG(1:2,3);
+
+idTotalsIGSG = transprobgrouptotals(idTotals,[4 7 8]);
+bootstat = bootstrp(100,@(totals)transprobbytotals(totals),idTotalsIGSG);
+ci = prctile(bootstat,[2.5 97.5]); % 95% confidence
+CIlower = reshape(ci(1,:),3,3);
+CIupper = reshape(ci(2,:),3,3);
+PDIGSG_LB = CIlower(1:2,3);
+PDIGSG_UB = CIupper(1:2,3);
+
+[PDIGSG_LB PDIGSG PDIGSG_UB]
+
+ans = 2×3
+
+0.0754    0.1611    0.2476
+
+8
+Credit Risk Analysis
+
+8-16

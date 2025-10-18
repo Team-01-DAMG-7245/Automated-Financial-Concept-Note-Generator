@@ -1,0 +1,12 @@
+{
+  "page": 926,
+  "original_text": "fprintf('Total transitions out of given rating, AA and CCC have one less than before:\\n')",
+  "ocr_text": "fprintf(Total_transitionsoutofgivenrating,AAandCCChaveonelessthanbefore:n)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 411.24,
+    "x1": 572.24,
+    "y1": 421.71
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1436,
+  "original_text": "Heston = heston(Return,Speed,Level,Volatility) creates a default heston object.",
+  "ocr_text": "Heston=heston(Return,Speed,Level,Volatility)createsadefaulthestonobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 598.49,
+    "x1": 519.14,
+    "y1": 610.12
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1585,
+  "original_text": "% Create the strategy\nnumAssets = size(pricesTT,2);\nequalWeightsVector = ones(1,numAssets) / numAssets;\nequalWeightsRebalanceFcn = @(~,~) equalWeightsVector;",
+  "ocr_text": "Createthestrategy\n\nnumAssets=size(pricesTT,2);\nequalWeightsVector=ones(1,numAssets)/numAssets;\nequalWeightsRebalanceFcn=(x,-)equalWeightsVector;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 559.23,
+    "x1": 377.16,
+    "y1": 602.09
+  },
+  "confidence": "high"
+}

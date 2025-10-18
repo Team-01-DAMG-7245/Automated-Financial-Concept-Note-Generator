@@ -1,0 +1,12 @@
+{
+  "page": 408,
+  "original_text": "Rrobust = max\nω\nr′ω −λω′Qω −kz | ω ≥0, z ≥0, ω′Σrω −z2 ≤0, ∑1\nNωi = 1, 0 ≤ω ≤0 . 1",
+  "ocr_text": "Rrobust=max{ro -AwQw-kz]w20,z20, wS,w-20, yNw;= 1,0sw=0.1}",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 209.36,
+    "x1": 509.58,
+    "y1": 230.4
+  },
+  "confidence": "high"
+}

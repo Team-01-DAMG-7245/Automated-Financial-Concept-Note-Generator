@@ -1,0 +1,12 @@
+{
+  "page": 1760,
+  "original_text": "ADline = adline(Data) calculates the Accumulation/Distribution Line from a set of high, low,\nclosing prices, and volume traded of a security.",
+  "ocr_text": "ADline=adline(Data)calculatestheAccumulation/DistributionLinefromasetofhigh,low,\nclosingprices,andvolumetradedofasecurity.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 254.16,
+    "x1": 536.09,
+    "y1": 277.79
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 33,
+  "original_text": "NewPortfolios = Portfolios_PQ + Portfolios_RS",
+  "ocr_text": "NewPortfolios=Portfolios_PQ+Portfolios_RS",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 644.92,
+    "x1": 333.81,
+    "y1": 655.39
+  },
+  "confidence": "high"
+}

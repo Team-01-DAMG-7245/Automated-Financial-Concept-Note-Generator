@@ -1,0 +1,54 @@
+0.0227    0.0400    0.9380    4.3175   12.3632   75.9429    2.5766    3.7991
+    0.0149    0.0180    0.3414    3.6918    8.1414   13.6010   70.7254    3.4661
+         0         0         0         0         0         0         0  100.0000
+
+Work with Large Datasets
+
+This example shows how to aggregate estimates from two (or more) datasets and estimate transition
+probabilities.
+
+This following code aggregates estimates from two (or more) datasets. It is possible that two
+datasets, coming from two different databases, must be considered for the estimation of the
+transition probabilities. Also, if a dataset is too large and cannot be loaded into memory, the dataset
+can be split into two (or more) datasets. In these cases, it is simple to apply transprob to each
+individual dataset, and then get the final estimates corresponding to the aggregated data with a call
+to transprobbytotals at the end.
+
+For example, the dataset data is artificially split into two sections in this example. In practice the two
+datasets would come from different files or databases. When aggregating multiple datasets, the
+history of a company cannot be split across datasets. You can analyze that this condition is satisfied
+for the arbitrarily chosen cut-off point.
+
+load Data_TransProb
+
+cutoff = 2099;
+data(cutoff-5:cutoff,:)
+
+ans=6×3 table
+         ID              Date          Rating 
+    ____________    _______________    _______
+
+{'00011166'}    {'24-Aug-1995'}    {'BBB'}
+    {'00011166'}    {'25-Jan-1997'}    {'A'  }
+    {'00011166'}    {'01-Feb-1998'}    {'AA' }
+    {'00014878'}    {'15-Mar-1983'}    {'B'  }
+    {'00014878'}    {'21-Sep-1986'}    {'BB' }
+    {'00014878'}    {'17-Jan-1998'}    {'BBB'}
+
+data(cutoff+1:cutoff+6,:)
+
+ans=6×3 table
+         ID              Date          Rating 
+    ____________    _______________    _______
+
+{'00012043'}    {'09-Feb-1985'}    {'BBB'}
+    {'00012043'}    {'03-Jan-1988'}    {'A'  }
+    {'00012043'}    {'15-Jan-1994'}    {'AAA'}
+    {'00011157'}    {'24-Jun-1984'}    {'A'  }
+    {'00011157'}    {'09-Dec-1999'}    {'BBB'}
+    {'00011157'}    {'28-Mar-2001'}    {'A'  }
+
+8
+Credit Risk Analysis
+
+8-20

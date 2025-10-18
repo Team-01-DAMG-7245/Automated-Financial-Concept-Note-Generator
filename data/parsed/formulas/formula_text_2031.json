@@ -1,0 +1,12 @@
+{
+  "page": 1051,
+  "original_text": "bi = bininfo(sc,'ResStatus');\ndisp(bi)",
+  "ocr_text": "bi=bininfo(sc,ResStatus);\ndisp(bi)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 525.78,
+    "x1": 247.13,
+    "y1": 547.05
+  },
+  "confidence": "high"
+}

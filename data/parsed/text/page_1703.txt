@@ -1,0 +1,39 @@
+% Preallocate simTermStruc
+simTermStructure = zeros(nPeriods+1,30);
+for i = futuresTimes
+    for t = T
+        bondPrice = P_func(i,i+t,rPathsExp(i));
+        simTermStructure(i,t) = -log(bondPrice)/t;
+    end
+end
+plot(simTermStructure')
+legend('Current','1-year','2-year','3-year','4-year','5-year')
+title('Projected Term Structure for Next 5 Years')
+ylabel('Long Rate Maturity R(t,T)')
+xlabel('Time')
+
+Quasi-Monte Carlo Simulation Using a CIR Model
+
+The Cox-Ingersoll-Ross (CIR) short rate class derives directly from SDE with mean-reverting drift
+
+(SDEMRD): dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+
+1
+2)V(t)dW
+
+where D is a diagonal matrix whose elements are the square root of the corresponding element of the
+state vector.
+
+Create a cir object to represent the model: dXt = 0 . 2(0 . 1 −Xt)dt + 0 . 05Xt
+
+1
+2dW.
+
+cir_obj = cir(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)
+
+cir_obj = 
+   Class CIR: Cox-Ingersoll-Ross
+
+simByTransition
+
+15-397

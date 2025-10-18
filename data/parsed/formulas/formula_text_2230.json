@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "rew = zeros(nSteps,nTrials);",
+  "ocr_text": "rew=zeros(nSteps,nTrials);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 241.7,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

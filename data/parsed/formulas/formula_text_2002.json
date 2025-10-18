@@ -1,0 +1,12 @@
+{
+  "page": 1038,
+  "original_text": "% Indicate rating extrapolated into the future (arbitrarily select 91\n   % days after endDate as the last date on the plot)\n   endDateExtrap = endDate+91;\n   if endDateExtrap>DatesOriginal(end)\n      DatesExtrap = [DatesOriginal(end); endDateExtrap];\n      RatingsExtrap = [RatingsOriginal(end); RatingsOriginal(end)];\n      stairs(DatesExtrap,RatingsExtrap,'LineWidth',2,'LineStyle',':')\n   end\n   hold off;",
+  "ocr_text": "Indicateratingextrapolatedintothefuture(arbitrarilyselect91\n\ndaysafterendDateasthelastdateontheplot)\n\nendDateExtrap=endDate+91;\n\nifendDateExtrap=DatesOriginal(end)\nDatesExtrap=[DatesOriginal(end);endDateExtrap];\nRatingsExtrap=[RatingsOriginal(end);RatingsOriginal(end)];\nstairs(DatesExtrap,RatingsExtrap,LineWidth,2,LineStyle,:)\n\nend\n\nholdoff;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.23,
+    "x1": 480.1,
+    "y1": 341.09
+  },
+  "confidence": "high"
+}

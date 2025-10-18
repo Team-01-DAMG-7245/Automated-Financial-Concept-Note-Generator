@@ -1,0 +1,12 @@
+{
+  "page": 1737,
+  "original_text": "AccruInterest = acrudisc( ___ ,Period,Basis) adds optional arguments for Period and\nBasis.",
+  "ocr_text": "AccruInterest=acrudisc( ,Period,Basis)addsoptionalargumentsforPeriodand\nBasis.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 291.2,
+    "x1": 537.78,
+    "y1": 314.83
+  },
+  "confidence": "high"
+}

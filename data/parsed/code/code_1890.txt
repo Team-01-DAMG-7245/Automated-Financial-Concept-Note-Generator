@@ -1,0 +1,5 @@
+Page 1533
+================================================================================
+
+As a deterministic function of time, when Speed is called with a real-valued scalar time t as its only
+input, Speed must produce a scalar value.

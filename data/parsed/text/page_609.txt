@@ -1,0 +1,60 @@
+[6] Lin S. and P. A. Beling. "An End-to-End Optimal Trade Execution Framework Based on Proximal
+Policy Optimization." Proceedings of the 29th International Joint Conference on Artificial Intelligence
+(IJCAI 2020) Special Track on AI in FinTech. 4548-4554. 2020.
+
+[7] LOBSTER Limit Order Book Data. Berlin: frischedaten UG (haftungsbeschränkt). Available at
+https://lobsterdata.com/.
+
+Local Functions
+
+function [IS_TWAP_Horizon,IS_TWAP_Step,InventorySharesStepTWAP,TradingSharesStepTWAP] = ...
+    executeTWAPTrades(InputLOB,NumLevels,TotalTradingShares,NumIntervalsPerHorizon,NumHorizons,Bu
+% executeTWAPTrades Function for Executing Trades for TWAP Baseline
+% This function executes buy or sell trades for the TWAP baseline and
+% computes the corresponding implementation shortfalls, inventory shares
+% and trading shares at each step.
+
+NumSteps = NumHorizons*NumIntervalsPerHorizon;
+IS_TWAP_Horizon = nan(NumHorizons,1);
+IS_TWAP_Step = nan(NumSteps,1);
+TradingSharesStepTWAP = round(TotalTradingShares./NumIntervalsPerHorizon).*ones(NumSteps,1);
+
+if BuyTrade
+    InventorySharesStepTWAP = zeros(NumSteps,1);
+else
+    InventorySharesStepTWAP = zeros(NumSteps,1) + TotalTradingShares;
+end
+
+for HorizonIdx = 1:NumHorizons
+    HorizonExecutedPrices = zeros(NumLevels*NumIntervalsPerHorizon,1);
+    HorizonExecutedShares = HorizonExecutedPrices;
+    for IntervalIdx = 1:NumIntervalsPerHorizon
+        CurrentBook =  InputLOB(IntervalIdx + NumIntervalsPerHorizon*(HorizonIdx-1),:);
+
+% Execute trade
+        if IntervalIdx==NumIntervalsPerHorizon
+            if BuyTrade
+                % Enforce target ending inventory constraint for buy trade (buy missing shares)
+                CurrentTradingShares = max(TotalTradingShares - ...
+                    InventorySharesStepTWAP(IntervalIdx + NumIntervalsPerHorizon.*(HorizonIdx-1))
+            else
+                % Enforce zero ending inventory constraint for sell trade (sell remaining shares)
+                CurrentTradingShares = max(InventorySharesStepTWAP(IntervalIdx + ...
+                    NumIntervalsPerHorizon.*(HorizonIdx-1)), 0);
+            end
+        else
+            CurrentTradingShares = TradingSharesStepTWAP(IntervalIdx + ...
+                NumIntervalsPerHorizon.*(HorizonIdx-1));
+        end
+
+[ExecutedShares,ExecutedPrices,InitialPrice,TradedLevels] = ...
+            tradeLOB(CurrentBook,CurrentTradingShares,BuyTrade);
+        if IntervalIdx==1
+            ArrivalPrice = InitialPrice;
+        end
+        HorizonExecutedShares((1:TradedLevels) + (IntervalIdx-1)*NumLevels) = ExecutedShares;
+        HorizonExecutedPrices((1:TradedLevels) + (IntervalIdx-1)*NumLevels) = ExecutedPrices;
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-441

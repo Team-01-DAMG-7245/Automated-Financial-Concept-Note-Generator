@@ -1,0 +1,12 @@
+{
+  "page": 828,
+  "original_text": "x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];\np = PortfolioMAD;\np = setCosts(p, 0.002, 0.002, x0);",
+  "ocr_text": "x0=[0.4;0.2;0.2;0.1;0.1];\np=PortfolioMAD;\np=setCosts(p,0.002,0.002,x0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 430.8,
+    "x1": 274.21,
+    "y1": 462.87
+  },
+  "confidence": "high"
+}

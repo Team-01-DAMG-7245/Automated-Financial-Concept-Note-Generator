@@ -1,0 +1,10 @@
+Page 64
+================================================================================
+
+In other words, a Financial Toolbox function first examines the FirstCouponDate input. If
+FirstCouponDate is specified, coupon payment dates and quasi-coupon dates are computed with
+respect to FirstCouponDate; if FirstCouponDate is unspecified, empty ([]), or NaN, then the
+LastCouponDate is examined. If LastCouponDate is specified, coupon payment dates and quasi-
+coupon dates are computed with respect to LastCouponDate. If both FirstCouponDate and
+LastCouponDate are unspecified, empty ([]), or NaN, the Maturity (a required input argument)
+serves as the synchronization date.

@@ -1,0 +1,5 @@
+Page 2197
+================================================================================
+
+[Mean,Covariance] = ecmninit(Data,InitMethod) creates initial mean and covariance
+estimates for the function ecmnmle.

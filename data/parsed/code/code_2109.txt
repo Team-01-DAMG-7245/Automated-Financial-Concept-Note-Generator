@@ -1,0 +1,7 @@
+Page 1715
+================================================================================
+
+(Optional) Any variable-length list of input arguments that the simulation method or function
+referenced by the SDE.Simulation parameter requires or accepts, specified as a variable-length list
+of input arguments. This input list is passed directly to the appropriate SDE simulation method or
+user-defined simulation function.

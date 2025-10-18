@@ -1,0 +1,39 @@
+xlabel('Time');
+ylabel('Price');
+
+Calculate Put Option for Stock Using Black-Scholes
+
+Use blsprice to calculate the put option.
+
+Strike = 190;
+[~,Put] = blsprice(Price_0,Strike,RiskFreeRate,T,Vol);
+
+Generate Simulation Matrix
+
+The simulation uses two strategies: (1) stock only and (2) stock with put cover.
+
+AssetScenarios = zeros(NTRIALS,2);
+Price_T = squeeze(Paths(end,1,:));
+
+% Strategy 1: Stock only
+AssetScenarios(:,1) = (Price_T - Price_0) ./ Price_0
+
+AssetScenarios = 100000×2
+
+0.5927         0
+   -0.4069         0
+   -0.2526         0
+    0.3365         0
+   -0.3606         0
+    0.5549         0
+   -0.2211         0
+    0.3080         0
+    0.0849         0
+   -0.0416         0
+    0.1977         0
+   -0.1537         0
+
+10
+Solving Sample Problems
+
+10-50

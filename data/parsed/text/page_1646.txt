@@ -1,0 +1,62 @@
+Create a roughbergomi object.
+
+Return = 0.03;
+Alpha = -0.03;
+Xi = 0.2;
+Eta = 0.015;
+
+roughbergomiObj = roughbergomi(Return,Alpha,Xi,Eta)
+
+roughbergomiObj = 
+   Class ROUGHBERGOMI: Rough Bergomi
+   ----------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+         Return: 0.03
+          Alpha: -0.03
+             Xi: 0.2
+            Eta: 0.015
+
+Use simByHybrid to simulate NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods. The
+function simByHybrid approximates a continuous-time stochastic process by the Hybrid scheme.
+
+NPeriods = 2;
+[Paths,Times,Z] = simByHybrid(roughbergomiObj,NPeriods,DeltaTime=0.03,NSteps=10)
+
+Paths = 3×2
+
+1.0000    0.2000
+    1.1182    0.2008
+    1.1301    0.2001
+
+Times = 3×1
+
+0
+    0.0300
+    0.0600
+
+Z = 20×3
+
+0.0294    0.1005    0.1186
+    0.0472    0.0175    0.0187
+   -0.0237    0.0188    0.0305
+    0.1517   -0.0740   -0.0845
+    0.0397   -0.0035   -0.0028
+   -0.0112   -0.0068   -0.0052
+    0.0772    0.0777    0.0967
+   -0.0661    0.0393    0.0516
+    0.0268    0.0567    0.0711
+   -0.0166    0.0161    0.0181
+    0.0487   -0.0629   -0.0794
+   -0.0443   -0.1613   -0.1950
+    0.0178   -0.0414   -0.0479
+   -0.0937   -0.0056   -0.0074
+
+15
+Functions
+
+15-340

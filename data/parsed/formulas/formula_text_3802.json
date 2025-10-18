@@ -1,0 +1,12 @@
+{
+  "page": 2150,
+  "original_text": "Depreciation = depgendb(10000, 1000, 5, 2)",
+  "ocr_text": "Depreciation=depgendb(10000,1000,5,2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 484.81,
+    "x1": 317.55,
+    "y1": 495.27
+  },
+  "confidence": "high"
+}

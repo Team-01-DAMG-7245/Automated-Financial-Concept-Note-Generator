@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf(' Gaussian Copula American Call Basket Price: %8.4f\\n'  , GaussianCopulaCallPrice)",
+  "ocr_text": "fprintf(GaussianCopulaAmericanCallBasketPrice:8.4fn,GaussianCopulaCallPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 454.0,
+    "x1": 577.65,
+    "y1": 464.46
+  },
+  "confidence": "high"
+}

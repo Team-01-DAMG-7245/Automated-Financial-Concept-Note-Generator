@@ -1,0 +1,12 @@
+{
+  "page": 756,
+  "original_text": "% Obtain risk level at target return\npwgtTarget = estimateFrontierByReturn(p,TargetRet); % CVaR efficient portfolio\npriskTarget = estimatePortRisk(p,pwgtTarget);",
+  "ocr_text": "Obtainrisklevelattargetreturn\npwgtTarget=estimateFrontierByReturn(p,TargetRet);CVaRefficientportfolio\npriskTarget=estimatePortRisk(p,pwgtTarget);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 456.53,
+    "x1": 512.63,
+    "y1": 488.6
+  },
+  "confidence": "high"
+}

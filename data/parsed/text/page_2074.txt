@@ -1,0 +1,54 @@
+cpndatep
+
+Previous coupon date for fixed-income security
+
+Syntax
+
+PreviousCouponDate = cpndatep(Settle,Maturity)
+PreviousCouponDate = cpndatep( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate)
+
+Description
+
+PreviousCouponDate = cpndatep(Settle,Maturity) returns the previous coupon date on or
+before settlement for a portfolio of bonds. This function finds the previous coupon date whether or
+not the coupon structure is synchronized with the maturity date. For zero coupon bonds the previous
+coupon date is the issue date, if available. However, if the issue date is not supplied, the previous
+coupon date for zero coupon bonds is the previous quasi coupon date calculated as if the frequency is
+semiannual.
+
+Required input arguments must be number of bonds, NUMBONDS-by-1 or 1-by-NUMBONDS, conforming
+vectors or scalars.
+
+PreviousCouponDate = cpndatep( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate) returns the previous coupon date on or before settlement
+for a portfolio of bonds.
+
+Optional input arguments must be either NUMBONDS-by-1 or 1-by-NUMBONDS conforming vectors,
+scalars, or empty matrices.
+
+If all the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate are
+either strings or date character vectors, then PreviousCouponDate is returned as a serial date
+number. Use the function datetime to convert serial date numbers to formatted date character
+vectors.
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate
+are datetime arrays, then PreviousCouponDate is returned as a datetime array.
+
+Examples
+
+Calculate the Previous Coupon Date on or Before Settlement
+
+Determine the PreviousCouponDate when using character vectors for input arguments.
+
+PreviousCouponDate = cpndatep(datetime(1997,3,14),datetime(2000,6,30),2, 0, 0)
+
+PreviousCouponDate = datetime
+   30-Dec-1996
+
+Determine the PreviousCouponDate when using datetime arrays for input arguments.
+
+15
+Functions
+
+15-768

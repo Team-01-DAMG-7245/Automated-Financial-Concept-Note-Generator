@@ -1,0 +1,7 @@
+Page 2405
+================================================================================
+
+G = [ true true true false false ];
+p = PortfolioCVaR;
+p = setGroups(p, G, [], 0.3);
+[GroupMatrix, LowerGroup, UpperGroup] = getGroups(p)

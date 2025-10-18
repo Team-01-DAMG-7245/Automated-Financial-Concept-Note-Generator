@@ -1,0 +1,10 @@
+Page 153
+================================================================================
+
+portopt accepts as input the outputs from portcons, pcalims, pcglims, and pcgcomp. This
+example focuses on portcons. portcons sets up linear constraints for portopt in the form A*Port
+<= b. In a matrix ConSet = [ A, b ] and break into separate A and b arrays with A =
+ConSet(:,1:end-1); and b = ConSet(:,end);. In addition, to illustrate default problem with
+additional group constraints, consider three groups. Assets 2, 3, and 4 can constitute up to 80% of
+portfolio, Assets 1 and 2 can constitute up to 70% of portfolio, and Assets 3, 4, and 5 can constitute
+up to 90% of portfolio.

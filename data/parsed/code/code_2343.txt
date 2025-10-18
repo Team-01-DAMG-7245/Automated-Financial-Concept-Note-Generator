@@ -1,0 +1,9 @@
+Page 2223
+================================================================================
+
+This example shows how to use estimateCustomObjectivePortfolio to solve a portfolio
+problem with a custom objective and a return constraint. You define the constraints for portfolio
+problems, other than the return constraint, using functions for the Portfolio object and then you
+specify the objective function as an input to estimateCustomObjectivePortfolio. The objective
+function must be continuous (and preferably smooth). To specify a return constraint, you use the
+TargetReturn name-value argument.

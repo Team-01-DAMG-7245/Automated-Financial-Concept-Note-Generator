@@ -1,0 +1,44 @@
+•
+Period — Time period numbers (1 for the first period, 2 for the second period, and so on)
+
+•
+Category — Asset category
+
+•
+PortfolioWeight — Portfolio weights
+
+•
+BenchmarkWeight — Benchmark weights
+
+•
+ActiveWeight — Active weights
+
+Version History
+Introduced in R2022b
+
+References
+
+[1] Brinson, G. P. and Fachler, N. “Measuring Non-US Equity Portfolio Performance.” Journal of
+Portfolio Management. Spring 1985: 73–76.
+
+[2] Brinson, G. P., Hood, L. R., and Beebower, G. L. “Determinants of Portfolio Performance.” Financial
+Analysts Journal. Vol. 42, No. 4, 1986: 39–44.
+
+[3] Menchero, J. “Multiperiod Arithmetic Attribution.” Financial Analysts Journal. Vol. 60, No. 4, 2004:
+76–91.
+
+[4] Tuttle, D. L., Pinto, J. E., and McLeavey, D. W. Managing Investment Portfolios: A Dynamic Process.
+Third Edition. CFA Institute, 2007.
+
+See Also
+totalAttribution | categoryReturns | categoryAttribution | summary |
+categoryReturnsChart | categoryWeightsChart | attributesChart
+
+Topics
+“Analyze Performance Attribution Using Brinson Model” on page 4-323
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+15
+Functions
+
+15-22

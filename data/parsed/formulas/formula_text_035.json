@@ -1,0 +1,12 @@
+{
+  "page": 46,
+  "original_text": "originalDate = datetime('now','Format','yyyy-MM-dd HH:mm:ss'); \n  % Find the next business day \n  b = busdate(originalDate)",
+  "ocr_text": "originalDate=datetime(now,Format,yyyy-MM-ddHH:mm:ss);\nSFindthenextbusinessday\nb=busdate(originalDate)",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 472.83,
+    "x1": 446.33,
+    "y1": 515.69
+  },
+  "confidence": "high"
+}

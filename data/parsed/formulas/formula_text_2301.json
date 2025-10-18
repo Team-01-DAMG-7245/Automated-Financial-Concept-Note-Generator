@@ -1,0 +1,12 @@
+{
+  "page": 1181,
+  "original_text": "returnFunc = @(open,high,low,close,volume) log(close) - log(open);\nweeklyReturn = rowfun(returnFunc,weeklyTMW,'OutputVariableNames',{'Return'});",
+  "ocr_text": "returnFunc=Q(open,high,low,close,volume)log(close)-log(open);\nweeklyReturn=rowfun(returnFunc,weeklyTMW,OutputVariableNames,{Return});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 183.03,
+    "x1": 507.22,
+    "y1": 204.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,71 @@
+α is the probability level such that 0 < α < 1.
+
+f(x,y) is the loss function for a portfolio x and asset return y.
+
+p(y) is the probability density function for asset return y.
+
+VaRα is the value-at-risk of portfolio x at probability level α.
+
+The value-at-risk is defined as
+
+VaRα x = min γ:Pr f(x, Y) ≤γ ≥α .
+
+An alternative formulation for CVaR has the form:
+
+CVaRα(x) = VaRα x +
+1
+1 −α ∫
+
+Rn
+max 0, (f(x, y) −VaRα(x)) p(y)dy
+
+The choice for the probability level α is typically 0.9 or 0.95. Choosing α implies that the value-at-risk
+VaRα(x) for portfolio x is the portfolio return such that the probability of portfolio returns falling
+below this level is (1 –α). Given VaRα(x) for a portfolio x, the conditional value-at-risk of the portfolio
+is the expected loss of portfolio returns above the value-at-risk return.
+
+Note Value-at-risk is a positive value for losses so that the probability level α indicates the
+probability that portfolio returns are below the negative of the value-at-risk.
+
+To describe the probability distribution of returns, the PortfolioCVaR object takes a finite sample
+of return scenarios ys, with s = 1,...,S. Each ys is an n vector that contains the returns for each of the
+n assets under the scenario s. This sample of S scenarios is stored as a scenario matrix of size S-by-n.
+Then, the risk proxy for CVaR portfolio optimization, for a given portfolio x ∈X and α ∈(0, 1), is
+computed as
+
+CVaRα(x) = VaRα(x) +
+1
+(1 −α)S ∑
+s = 1
+
+S
+max 0, −ysTx −VaRα(x)
+
+The value-at-risk, VaRα(x), is estimated whenever the CVaR is estimated. The loss function is
+
+f(x, ys) = −ysTx, which is the portfolio loss under scenario s.
+
+Under this definition, VaR and CVaR are sample estimators for VaR and CVaR based on the given
+scenarios. Better scenario samples yield more reliable estimates of VaR and CVaR.
+
+For more information, see Rockafellar and Uryasev [48], [49], and Cornuejols and Tütüncü, [51], at
+“Portfolio Optimization” on page A-5.
+
+Mean Absolute-Deviation
+
+The mean-absolute deviation (MAD) for a portfolio x ∈X is defined as
+
+MAD(x) = 1
+S ∑
+s = 1
+
+S
+
+(ys −m)Tx
+
+where:
+
+5
+CVaR Portfolio Optimization Tools
+
+5-6

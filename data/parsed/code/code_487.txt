@@ -1,0 +1,10 @@
+Page 466
+================================================================================
+
+1
+Build a risk parity portfolio within each cluster. The hrpPortfolio function in Local Functions
+on page 4-300 computes the HRP portfolio by receiving a vector with the cluster assignment and
+a covariance matrix Σ. Then, a risk parity portfolio is computed within each cluster by using
+riskBudgetingPortfolio. The riskBudgetingPortfolio function receives a reduced
+covariance matrix that only includes the information of the assets within the cluster and it
+returns the weights of the assets in the cluster

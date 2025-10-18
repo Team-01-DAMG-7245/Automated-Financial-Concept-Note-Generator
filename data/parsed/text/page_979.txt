@@ -1,0 +1,62 @@
+validatemodel. To further explore the handling of missing data, take a few rows from the original
+data as test data and introduce some missing data.
+
+tdata = dataMissing(11:14,mdl.PredictorNames); % Keep only the predictors retained in the model
+% Set some missing values
+tdata.CustAge(1) = NaN;
+tdata.ResStatus(2) = missing;
+tdata.EmpStatus(3) = missing;
+tdata.CustIncome(4) = NaN;
+disp(tdata)
+
+CustAge     ResStatus      EmpStatus     CustIncome    TmWBank    OtherCC    AMBalance
+    _______    ___________    ___________    __________    _______    _______    _________
+
+NaN      Tenant         Unknown          34000         44         Yes        119.8  
+       48      <undefined>    Unknown          44000         14         Yes       403.62  
+       65      Home Owner     <undefined>      48000          6         No        111.88  
+       44      Other          Unknown            NaN         35         No        436.41
+
+Score the new data and see how points for missing data are differently assigned for CustAge and
+ResStatus and for EmpStatus and CustIncome. CustAge and ResStatus have an explicit
+<missing> bin for missing data. However, for EmpStatus and CustIncome, the score function sets
+the points to NaN.
+
+[Scores,Points] = score(sc,tdata);
+disp(Scores)
+
+481.2231
+  520.8353
+       NaN
+       NaN
+
+disp(Points)
+
+CustAge    ResStatus    EmpStatus    CustIncome    TmWBank    OtherCC    AMBalance
+    _______    _________    _________    __________    _______    _______    _________
+
+64.984      62.138       58.807        67.893      61.858     75.622      89.922  
+     78.86      74.125       58.807        82.439      61.061     75.622      89.922  
+     96.76      73.248          NaN        96.969      51.132     50.914      89.922  
+    69.636      90.828       58.807           NaN      61.858     50.914      89.922
+
+Use the name-value pair argument 'Missing' in formatpoints to choose how to assign points to
+missing values for predictors that do not have an explicit <missing> bin. For this example, use the
+'MinPoints' option for the 'Missing' argument. For EmpStatus and CustIncome, the minimum
+numbers of points in the scorecard are 58.8072 and 29.3753, respectively. You can also treat
+missing values using one of the four different ways to "treat" the missing data on page 8-62.
+
+sc = formatpoints(sc,'Missing','MinPoints');
+[Scores,Points] = score(sc,tdata);
+disp(Scores)
+
+481.2231
+  520.8353
+  517.7532
+  451.3405
+
+disp(Points)
+
+Credit Scorecard Modeling with Missing Values
+
+8-61

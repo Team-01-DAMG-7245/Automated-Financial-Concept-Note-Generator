@@ -1,0 +1,12 @@
+{
+  "page": 1457,
+  "original_text": "subplot(2,1,2)\nhold on;\ngrid on;\nplot(T(n),0,'.-b',T(n + 1),0,'.-b')\nplot(times, variance, '.-r')\nhold('off');\ntitle('Brownian Bridge without Refinement: Sample Variance')\nxlabel('Time (Years)')\nylabel('Variance')\nlimits = axis;\naxis([T(n) T(n + 1) limits(3:4)]);",
+  "ocr_text": "subplot(2,1,2)\n\nholdon;\n\ngridon;\nplot(T(n),0,.-b,T(n+1),0,.-b)\nplot(times,variance,.-r)\nhold(off);\ntitle(BrownianBridgewithoutRefinement:SampleVariance)\nxlabel(Time(Years))\nylabel(Variance)\n\nlimits=axis;\naxis([T(n)T(n+1)limits(3:4)]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 469.43,
+    "x1": 415.11,
+    "y1": 587.89
+  },
+  "confidence": "high"
+}

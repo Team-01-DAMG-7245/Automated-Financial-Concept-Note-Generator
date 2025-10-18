@@ -1,0 +1,12 @@
+{
+  "page": 374,
+  "original_text": "% Rescale.\nassetActRiskAnnual = sqrt(scale) * assetActRiskDaily;\nportRiskAnnual  = sqrt(scale) *  portRiskAct;\nassetActRetnAnnual = scale * assetActRetnDaily;\nportRetnAnnual = scale *  portRetnAct;",
+  "ocr_text": "Rescale.\nassetActRiskAnnual=sqrt(scale)*assetActRiskDaily;\nportRiskAnnual=sqrt(scale)*_portRiskAct;\nassetActRetnAnnual=scale*assetActRetnDaily;\nportRetnAnnual=scale*_portRetnAct;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 377.15,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

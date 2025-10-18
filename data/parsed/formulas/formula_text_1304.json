@@ -1,0 +1,12 @@
+{
+  "page": 650,
+  "original_text": "p = PortfolioCVaR('Scenarios', AssetScenarios, ...\n'LowerBound', 0, 'LowerBudget', 1, 'UpperBudget', 1, ...\n'ProbabilityLevel', 0.95)",
+  "ocr_text": "p=PortfolioCVaR(Scenarios,AssetScenarios,...\nLowerBound,0,LowerBudget,1,_UpperBudget,1,...\nProbabilityLevel,0.95)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 280.39,
+    "x1": 305.78,
+    "y1": 303.19
+  },
+  "confidence": "high"
+}

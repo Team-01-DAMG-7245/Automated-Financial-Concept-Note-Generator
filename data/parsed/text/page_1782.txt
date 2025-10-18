@@ -1,0 +1,56 @@
+DividendRate — Dividend rate
+0 (default) | decimal
+
+(Optional) Dividend rate, specified as a scalar decimal. If you enter a value for DividendRate, set
+Dividend and ExDiv = 0 or do not enter them. If you enter values for Dividend and ExDiv, set
+DividendRate = 0
+
+Data Types: double
+
+Dividend — Dividend payment
+0 (default) | numeric
+
+(Optional) Dividend payment at an ex-dividend date (ExDiv), specified as a 1-by-N row vector. For
+each dividend payment, there must be a corresponding ex-dividend date. If you enter values for
+Dividend and ExDiv, set DividendRate = 0.
+
+Data Types: double
+
+ExDiv — Ex-dividend date
+0 (default) | numeric
+
+(Optional) Ex-dividend date, specified as a 1-by-N row vector for the number of periods.
+
+Data Types: double
+
+Output Arguments
+
+AssetPrice — Asset price
+vector
+
+Asset price, returned as a vector that represents each node of the Cox-Ross-Rubinstein (CRR) binary
+tree.
+
+OptionValue — Option value
+vector
+
+Option value, returned as a vector that represents each node of the Cox-Ross-Rubinstein (CRR) binary
+tree.
+
+Version History
+Introduced before R2006a
+
+References
+
+[1] Cox, J., S. Ross, and M. Rubenstein. “Option Pricing: A Simplified Approach.” Journal of Financial
+Economics. Vol. 7, Sept. 1979, pp. 229–263.
+
+[2] Hull, John C. Options, Futures, and Other Derivative Securities. 2nd edition, Chapter 14.
+
+See Also
+blkprice | blsprice
+
+15
+Functions
+
+15-476

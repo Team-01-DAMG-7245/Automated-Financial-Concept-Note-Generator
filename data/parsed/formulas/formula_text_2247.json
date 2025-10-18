@@ -1,0 +1,12 @@
+{
+  "page": 1153,
+  "original_text": "% Strategy 2: Put option cover at 50%\nAssetScenarios(:, 2) = (max(Price_T, Strike50) - (Price_0 + Put50)) ./ ...\n    (Price_0 + Put50);",
+  "ocr_text": "Strategy2:Putoptioncoverat50\nAssetScenarios(:,2)=(max(Price_T,Strike50)-(Price0+Put50))./...\n(Price_0+Put50);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 406.72,
+    "x1": 490.97,
+    "y1": 438.79
+  },
+  "confidence": "high"
+}

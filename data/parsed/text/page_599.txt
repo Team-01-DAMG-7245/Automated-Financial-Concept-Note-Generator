@@ -1,0 +1,61 @@
+Reward: [1164×1 double]
+    NumIntervalsPerHorizon: 12
+               NumHorizons: 97
+                 NumLevels: 5
+
+Reward2
+
+Reward2 = 
+-0.2050
+
+[~,Reward3,~,LoggedSignals3] = step( ...
+    RL_OptimalExecution_Testing_Environment_Sell,35);
+LoggedSignals3
+
+LoggedSignals3 = struct with fields:
+               IntervalIdx: 3
+                HorizonIdx: 1
+    CurrentInventoryShares: 2579
+              ArrivalPrice: 26.8000
+            ExecutedShares: 35
+            ExecutedPrices: 26.7900
+     HorizonExecutedShares: [60×1 double]
+     HorizonExecutedPrices: [60×1 double]
+                  IS_Agent: [1164×1 double]
+                    Reward: [1164×1 double]
+    NumIntervalsPerHorizon: 12
+               NumHorizons: 97
+                 NumLevels: 5
+
+Reward3
+
+Reward3 = 
+-0.2975
+
+Call the reset function again to restore the environment back to the initial state.
+
+reset(RL_OptimalExecution_Testing_Environment_Sell);
+
+Reset!
+
+Compute IS Using Trained Agent and Testing Data for Sell Trades
+
+Simulate actions using the trained agent and testing data for sell trades.
+
+simOptions = rlSimulationOptions(MaxSteps=NumTestingSteps);
+experience_Sell = sim(RL_OptimalExecution_Testing_Environment_Sell,Trained_Agent_Sell,simOptions)
+
+Reset!
+Last Horizon. Episode is Done!
+HorizonIdx:
+
+ans = 
+97
+
+SimAction_Test_Sell = squeeze(experience_Sell.Action.TradingAction_NumberOfShares_.Data);
+
+Compute Implementation Shortfall (IS) using simulated actions on testing data.
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-431

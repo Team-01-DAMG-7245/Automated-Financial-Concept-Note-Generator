@@ -1,0 +1,9 @@
+Page 560
+================================================================================
+
+function reward = sparseReward(loggedSignals,finalTimePeriod, ...
+    targetWealth,WMin,WMax)
+% Function that computes the reward obtained in the current state
+% following the sparse rule:
+%   R(W,t) =  1    if t >= T and W >= targetWealth
+%             0    if t < T or  W <  targetWealth

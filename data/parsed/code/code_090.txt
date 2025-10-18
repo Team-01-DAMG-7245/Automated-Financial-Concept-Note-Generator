@@ -1,0 +1,15 @@
+Page 107
+================================================================================
+
+subplot(3,1,1)
+hold on
+plot(t,sI,'c','LineWidth',2)
+for i = 2:numBins
+    yline(binEdges(i),'b--');
+end
+hold off
+xlim(timeRange)
+ylim([-1 1])
+yticks(binEdges)
+title("Imbalance Index (Smoothed)")
+grid on

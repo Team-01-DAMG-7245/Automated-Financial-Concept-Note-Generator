@@ -1,0 +1,12 @@
+{
+  "page": 611,
+  "original_text": "if EnvConstants.BuyTrade\n    LoggedSignals.CurrentInventoryShares = 0;\nelse\n    LoggedSignals.CurrentInventoryShares = EnvConstants.TotalTradingShares;\nend",
+  "ocr_text": "ifEnvConstants.BuyTrade\nLoggedSignals.CurrentInventoryShares=0;\nelse\nLoggedSignals.CurrentInventoryShares=EnvConstants.TotalTradingShares;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 341.43,
+    "x1": 496.35,
+    "y1": 395.09
+  },
+  "confidence": "high"
+}

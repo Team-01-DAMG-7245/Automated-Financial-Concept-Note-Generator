@@ -1,0 +1,59 @@
+Bond Prices and Yield Curve Nonparallel Shifts
+
+This example shows how to construct a bond portfolio to hedge the interest-rate risk of a Treasury
+bond maturing in 20 years. Key rate duration enables you to determine the sensitivity of the price of a
+bond to nonparallel shifts in the yield curve. This example uses bndkrdur to construct a portfolio to
+hedge the interest-rate risk of a U.S. Treasury bond maturing in 20 years.
+
+Specify the bond.
+
+Settle = datetime(2008,12,2);
+CouponRate = 5.500/100;
+Maturity = datetime(2028,8,15);
+Price = 128.68;
+
+The interest-rate risk of this bond is hedged with the following four on-the-run Treasury bonds:
+
+Maturity_30 = datetime(2038,5,15);  % 30-year bond
+Coupon_30 = .045;
+Price_30 = 124.69;
+
+Maturity_10 = datetime(2018,11,15);  %10-year note
+Coupon_10 = .0375;
+Price_10 = 109.35;
+
+Maturity_05 = datetime(2013,11,30);  % 5-year note
+Coupon_05 = .02;
+Price_05 = 101.67;
+
+Maturity_02 = datetime(2010,11,30);  % 2-year note
+Coupon_02 = .01250;
+Price_02 =  100.72;
+
+You can get the Treasury spot or zero curve from https://www.treas.gov/offices/domestic-finance/debt-
+management/interest-rate/yield.shtml:
+
+ZeroDates = daysadd(Settle,[30 90 180 360 360*2 360*3 360*5 ...
+360*7 360*10 360*20 360*30]);
+ZeroRates = ([0.09 0.07 0.44 0.81 0.90 1.16 1.71 2.13 2.72 3.51 3.22]/100)';
+
+Compute the key rate durations for both the bond and the hedging portfolio.
+
+BondKRD = bndkrdur(table(ZeroDates, ZeroRates), CouponRate, Settle,...
+Maturity,'keyrates',[2 5 10 20]);
+HedgeMaturity = [Maturity_02;Maturity_05;Maturity_10;Maturity_30];
+HedgeCoupon = [Coupon_02;Coupon_05;Coupon_10;Coupon_30];
+HedgeKRD = bndkrdur(table(ZeroDates, ZeroRates), HedgeCoupon,...
+Settle, HedgeMaturity, 'keyrates',[2 5 10 20])
+
+HedgeKRD = 4×4
+
+1.9675         0         0         0
+    0.1269    4.6152         0         0
+    0.2129    0.7324    7.4010         0
+    0.2229    0.7081    2.1487   14.5172
+
+10
+Solving Sample Problems
+
+10-12

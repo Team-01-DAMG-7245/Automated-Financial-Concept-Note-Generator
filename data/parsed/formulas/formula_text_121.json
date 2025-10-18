@@ -1,0 +1,12 @@
+{
+  "page": 97,
+  "original_text": "lambda  = 0.5; % Hyperparameter\nweights = exp(-(lambda)*[0 1 2]);\nVAsk = weights(1)*DTT.AskSize1 + weights(2)*DTT.AskSize2 + weights(3)*DTT.AskSize3;\nVBid = weights(1)*DTT.BidSize1 + weights(2)*DTT.BidSize2 + weights(3)*DTT.BidSize3;\nImbalanceIndex = (VBid-VAsk)./(VBid+VAsk);",
+  "ocr_text": "lambda=0.5;Hyperparameter\n\nweights=exp(-(lambda)*[012]);\nVAsk=weights(1)*DTT.AskSizel_+weights(2)*DTT.AskSize2+weights(3)*DTT.AskSize3;\nVBid=weights(1)*DTT.BidSizel+weights(2)*DTT.BidSize2+weights(3)*DTT.BidSize3;\nImbalanceIndex=(VBid-VAsk)./(VBid+VAsk);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 402.89,
+    "x1": 539.69,
+    "y1": 456.56
+  },
+  "confidence": "high"
+}

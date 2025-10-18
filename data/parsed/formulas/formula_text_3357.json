@@ -1,0 +1,12 @@
+{
+  "page": 1821,
+  "original_text": "DirtyPrice = DF * (SurvivalProb.*Payments') + (RecoveryAmount.*DF) * (-diff([1;SurvivalProb]));\nModelPrice = DirtyPrice - AccInt",
+  "ocr_text": "DirtyPrice=DF*(SurvivalProb.*Payments)+(RecoveryAmount.*DF)*(-diff([1;SurvivalProb]));\nModelPrice=DirtyPrice-AccInt",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 644.49,
+    "x1": 604.71,
+    "y1": 665.75
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,36 @@
+The following figure shows the loss reserves balance for each of the three alternatives in the
+backtesting exercise.
+
+EAD = 100*ones(nYearsBT,1); % in billions
+LGD = 0.45*ones(nYearsBT,1); % Loss given default, 45%
+% Reserves excess or shortfall for each year, in billions
+ReservesExcessShortfall = bsxfun(@times,EAD.*LGD,ErrorBT/100);
+% Cumulative reserve balance for each year, in billions
+ReservesBalanceEOY = cumsum(ReservesExcessShortfall);
+
+Example_BacktestPlot(YearsBT,[],ReservesBalanceEOY,'Year', ...
+   'Billions of Dollars',...
+   '{\bf Reserves Balance (EOY): Backtesting}', ...
+   MethodTags,'SW')
+grid on
+
+Using the linear regression model you can only observe a deficit in reserves in two out of ten years,
+and the maximum deficit, in 2001, is 0.09 billion, only nine basis points of the portfolio value.
+
+In contrast, both TTC and PIT reach a deficit of 1.2 billion by 2001. Things get worse for TTC in the
+next two years, reaching a deficit of 2.1 billion by 2003. PIT does make a correction quickly after
+2001, and by 2004 the reserves have a surplus. Yet, both TTC and PIT lead to more deficit years than
+surplus years in this exercise.
+
+The linear regression model shows more of a counter-cyclical effect than the alternatives in this
+exercise. The money set aside using the linear regression model reaches close to a billion in 1997 and
+1998. High levels of unused reserves translate into a slower pace of lending (not reflected in this
+example, because you exogenously impose the portfolio value). Moreover, capital is only slightly
+impacted during the 2001 recession thanks to the reserves accumulated over the previous expansion.
+This translates into more capital available to back up further lending, if desired, during the economic
+recovery.
+
+8
+Credit Risk Analysis
+
+8-34

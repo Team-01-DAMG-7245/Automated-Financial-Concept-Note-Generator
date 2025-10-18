@@ -1,0 +1,12 @@
+{
+  "page": 2172,
+  "original_text": "Fisher = ecmmvnrfish( ___ ,Method,MatrixFormat,CovarFormat) computes a Fisher\ninformation matrix based on current maximum likelihood or least-squares parameter estimates that\naccount for missing data using optional arguments.",
+  "ocr_text": "Fisher=ecmmvnrfish( ,Method,MatrixFormat,CovarFormat)computesaFisher\ninformationmatrixbasedoncurrentmaximumlikelihoodorleast-squaresparameterestimatesthat\naccountformissingdatausingoptionalarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 459.97,
+    "x1": 546.52,
+    "y1": 495.6
+  },
+  "confidence": "high"
+}

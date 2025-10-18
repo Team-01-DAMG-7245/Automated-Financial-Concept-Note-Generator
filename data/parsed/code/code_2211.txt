@@ -1,0 +1,10 @@
+Page 1962
+================================================================================
+
+Netting set IDs to indicate to which netting set each contract in values belongs, specified by a
+NumContracts-element vector of netting set IDs. NettingID can be a vector of numeric IDs or else
+a cell array of character vector identifiers. The creditexposures function uses counterparties
+and NettingID to define each unique netting set (all contracts in a netting set must be with the
+same counterparty). By default, each counterparty has a single netting set which covers all of their
+contracts. A value of NaN (or '' in a cell array) indicates that a contract is not included in any netting
+set. NettingID is case insensitive and leading or trailing white spaces are removed.

@@ -1,0 +1,12 @@
+{
+  "page": 2370,
+  "original_text": "FutureVal = fvfix( ___ ,PresentVal,Due) specifies options using one or more optional\nargument in addition to the input arguments in the previous syntax.",
+  "ocr_text": "FutureVal=fvfix( ,PresentVal,Due)specifiesoptionsusingoneormoreoptional\nargumentinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 289.16,
+    "x1": 521.64,
+    "y1": 312.79
+  },
+  "confidence": "high"
+}

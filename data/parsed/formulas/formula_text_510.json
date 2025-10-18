@@ -1,0 +1,12 @@
+{
+  "page": 350,
+  "original_text": "p = setDefaultConstraints(p);\np = setGroups(p, [ 0, 1, 1, 1 ], [], 0.85);\np = addGroups(p, [ 0, 0, 0, 1 ], [], 0.35);",
+  "ocr_text": "p=setDefaultConstraints(p);\np=setGroups(p,[0,1,1,1],[],0.85);\np=addGroups(p,[0,0,0,1],[],0.35);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 398.6,
+    "x1": 322.97,
+    "y1": 430.67
+  },
+  "confidence": "high"
+}

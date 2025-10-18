@@ -1,0 +1,12 @@
+{
+  "page": 1043,
+  "original_text": "dResStatusNewCustomers = dummyvar(dataNewCustomers.ResStatus);\ndEmpStatusNewCustomers = dummyvar(dataNewCustomers.EmpStatus);\ndOtherCCNewCustomers = dummyvar(dataNewCustomers.OtherCC);",
+  "ocr_text": "dResStatusNewCustomers=dummyvar(dataNewCustomers.ResStatus);\ndEmpStatusNewCustomers=dummyvar(dataNewCustomers.EmpStatus);\ndOtherCCNewCustomers=dummyvar(dataNewCustomers.OtherCC);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 538.35,
+    "x1": 425.92,
+    "y1": 570.42
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,90 @@
+Working with 'Simple' Bound Constraints Using Portfolio Object . . . . .
+4-62
+Setting 'Simple' Bounds Using the Portfolio Function . . . . . . . . . . . . . . .
+4-62
+Setting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .
+4-62
+Setting 'Simple' Bounds Using the Portfolio Function or setBounds Function
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-63
+
+Working with Budget Constraints Using Portfolio Object . . . . . . . . . . . .
+4-65
+Setting Budget Constraints Using the Portfolio Function . . . . . . . . . . . . .
+4-65
+Setting Budget Constraints Using the setBudget Function . . . . . . . . . . .
+4-65
+
+Working with Conditional Budget Constraints Using Portfolio Object . .
+4-67
+Setting Conditional Budget Constraints Using the Portfolio Function . . .
+4-67
+Setting Conditional Budget Constraints Using the setConditionalBudget
+Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-67
+
+Working with Group Constraints Using Portfolio Object . . . . . . . . . . . . .
+4-69
+Setting Group Constraints Using the Portfolio Function . . . . . . . . . . . . .
+4-69
+Setting Group Constraints Using the setGroups and addGroups Functions
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-69
+
+Working with Group Ratio Constraints Using Portfolio Object . . . . . . . .
+4-72
+Setting Group Ratio Constraints Using the Portfolio Function . . . . . . . . .
+4-72
+Setting Group Ratio Constraints Using the setGroupRatio and
+addGroupRatio Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-73
+
+Working with Linear Equality Constraints Using Portfolio Object . . . . .
+4-75
+Setting Linear Equality Constraints Using the Portfolio Function . . . . . .
+4-75
+Setting Linear Equality Constraints Using the setEquality and addEquality
+Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-75
+
+Working with Linear Inequality Constraints Using Portfolio Object . . . .
+4-78
+Setting Linear Inequality Constraints Using the Portfolio Function . . . . .
+4-78
+Setting Linear Inequality Constraints Using the setInequality and
+addInequality Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-78
+
+Working with 'Conditional' BoundType, MinNumAssets, and
+MaxNumAssets Constraints Using Portfolio Objects . . . . . . . . . . . . . .
+4-81
+Setting 'Conditional' BoundType Constraints Using the setBounds Function
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-81
+Setting the Limits on the Number of Assets Invested Using the
+setMinMaxNumAssets Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-82
+
+Working with Average Turnover Constraints Using Portfolio Object . . .
+4-85
+Setting Average Turnover Constraints Using the Portfolio Function . . . .
+4-85
+Setting Average Turnover Constraints Using the setTurnover Function . .
+4-85
+
+Working with One-Way Turnover Constraints Using Portfolio Object . . .
+4-88
+Setting One-Way Turnover Constraints Using the Portfolio Function . . . .
+4-88
+Setting Turnover Constraints Using the setOneWayTurnover Function . .
+4-88
+
+Working with Tracking Error Constraints Using Portfolio Object . . . . . .
+4-91
+Setting Tracking Error Constraints Using the Portfolio Function . . . . . . .
+4-91
+Setting Tracking Error Constraints Using the setTrackingError Function
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-91
+
+ix

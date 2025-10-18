@@ -1,0 +1,63 @@
+Maturity4 = datenum('20-Sep-13');
+Spread4Run = 550;
+ProbData4Run = cdsbootstrap(ZeroData,[Maturity4 Spread4Run],Settle);
+Spread4Std = 500;
+Price4 = cdsprice(ZeroData,ProbData4Run,Settle,Maturity4,Spread4Std);
+Upfront4 = Price4/10000000;
+fprintf('A running spread of %5.2f is equivalent to\n',Spread4Run);
+
+A running spread of 550.00 is equivalent to
+
+fprintf('   a standard spread of %5.2f with an upfront of %8.7f\n', ...
+   Spread4Std,Upfront4);
+
+a standard spread of 500.00 with an upfront of 0.0167576
+
+To reverse the conversion:
+
+ProbData4Upf = cdsbootstrap(ZeroData,[Maturity4 Upfront4 Spread4Std],Settle);
+Spread4RunFromUpf = cdsspread(ZeroData,ProbData4Upf,Settle,Maturity4);
+fprintf('A standard spread of %5.2f with an upfront of %8.7f\n', ...
+   Spread4Std,Upfront4);
+
+A standard spread of 500.00 with an upfront of 0.0167576
+
+fprintf('    is equivalent to a running spread of %5.2f\n',Spread4RunFromUpf);
+
+is equivalent to a running spread of 550.00
+
+As discussed in Beumee et. al., 2009 (see “Credit Derivatives” on page A-5), the FHR approach is a
+quoting convention only, and leads to quotes inconsistent with market data. For example, calculating
+the upfront for the three-year (standard dates) CDS contract with a standard spread of 100 bp using
+the FHR approach and comparing the results to the upfront amounts previously calculated,
+demonstrates that the FHR-based approach yields a different upfront amount.
+
+Maturity5 = MarketData(3,1);
+Spread5Run = MarketData(3,2);
+ProbData5Run = cdsbootstrap(ZeroData,[Maturity5 Spread5Run],Settle);
+Spread5Std = 100;
+Price5 = cdsprice(ZeroData,ProbData5Run,Settle,Maturity5,Spread5Std);
+Upfront5 = Price5/10000000;
+fprintf('Relative error of FHR-based upfront amount: %3.1f%%\n', ...
+   ((Upfront5-Upfront3(3))/Upfront3(3))*100);
+
+Relative error of FHR-based upfront amount: -0.8%
+
+See Also
+cdsbootstrap | cdsprice | cdsspread | cdsrpv01
+
+Related Examples
+
+•
+“First-to-Default Swaps” (Financial Instruments Toolbox)
+
+•
+“Credit Default Swap Option” (Financial Instruments Toolbox)
+
+•
+“Counterparty Credit Risk and CVA” (Financial Instruments Toolbox)
+
+8
+Credit Risk Analysis
+
+8-110

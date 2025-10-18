@@ -1,0 +1,12 @@
+{
+  "page": 2437,
+  "original_text": "Busday = isbusday(Date) returns logical true (1) if Date is a business day and logical false (0)\notherwise.",
+  "ocr_text": "Busday=isbusday(Date)returnslogicaltrue(1)ifDateisabusinessdayandlogicalfalse(0)\notherwise.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.64,
+    "x1": 544.87,
+    "y1": 280.27
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1577
+================================================================================
+
+% The rebalance function is simple enough that you can use an anonymous function
+equalWeightRebalanceFcn = @(current_weights,~) ones(size(current_weights)) / numel(current_weight

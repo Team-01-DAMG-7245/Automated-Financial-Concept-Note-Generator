@@ -1,0 +1,20 @@
+For further discussion on inverted curves, and their relationship to arbitrage, see O'Kane and
+Turnbull, 2003 (“Credit Derivatives” on page A-5).
+
+See Also
+cdsbootstrap | cdsprice | cdsspread | cdsrpv01
+
+Related Examples
+
+•
+“First-to-Default Swaps” (Financial Instruments Toolbox)
+
+•
+“Credit Default Swap Option” (Financial Instruments Toolbox)
+
+•
+“Counterparty Credit Risk and CVA” (Financial Instruments Toolbox)
+
+Bootstrapping from Inverted Market Curves
+
+8-113

@@ -1,0 +1,5 @@
+Page 1116
+================================================================================
+
+Now that the data has been specified, use the term structure function zbtprice to bootstrap the
+zero curve implied from the prices of the coupon-bearing bonds. This implied zero curve represents

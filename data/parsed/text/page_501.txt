@@ -1,0 +1,50 @@
+Equally Weighted Portfolio
+
+One of the diversification measures is the Herfindahl-Hirschman (HH) index defined as:
+
+HH x = ∑
+i = 1
+
+n
+xi
+2
+
+This index is minimized when the portfolio is equally weighted. The portfolios obtained from using
+this index as a penalty have weights that satisfy the portfolio constraints and that are more evenly
+weighted.
+
+The portfolio that minimizes the HH index is min
+x ∈X xTx. Since the constraints in X are the default
+
+constraints, the solution of this problem is the equally weighted (EW) portfolio. If X had extra
+constraints, the solution would be the portfolio that satisfies all the constraints and, at the same time,
+keeps the weights as equal as possible. Use the function handle HHObjFun for the Herfindahl-
+Hirschman (HH) index with the estimateCustomObjectivePortfolio function.
+
+% Maximize the HH diversification (by minimizing the HH index).
+HHObjFun = @(x) x'*x;
+% Solution that minimizes the HH index
+wHH = estimateCustomObjectivePortfolio(p,HHObjFun);
+
+The portfolio that minimizes the variance with the HH penalty is min
+x ∈X xTΣx + λHHxTx. Use the
+
+function handle HHMixObjFun for the HH penalty with the estimateCustomObjectivePortfolio
+function.
+
+% HH penalty parameter
+lambdaHH = 1e-2;
+% Variance + Herfindahl-Hirschman (HH) index
+HHMixObjFun = @(x) x'*p.AssetCovar*x + lambdaHH*(x'*x);
+% Solution that accounts for risk and HH diversification
+wHHMix = estimateCustomObjectivePortfolio(p,HHMixObjFun);
+
+Plot the weights distribution for the minimum variance portfolio, the equal weight portfolio, and the
+penalized strategy.
+
+% Plot the different strategies.
+plotAssetAllocationChanges(wMinVar,wHHMix,wHH)
+
+Diversify Portfolios Using Custom Objective
+
+4-333

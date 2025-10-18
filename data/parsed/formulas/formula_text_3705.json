@@ -1,0 +1,12 @@
+{
+  "page": 2093,
+  "original_text": "Use createholidays to create holidays*.m files from My_datafile.csv in the folder c:\\work.\nWeekends are included in the holidays list based on the input flag INCLUDEWDKS = 1",
+  "ocr_text": "Usecreateholidaystocreateholidays*.mfilesfromMy_datafile.csvinthefolderc:work.\nWeekendsareincludedintheholidayslistbasedontheinputflagINCLUDEWDKS=1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 412.39,
+    "x1": 553.55,
+    "y1": 436.02
+  },
+  "confidence": "high"
+}

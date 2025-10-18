@@ -1,0 +1,12 @@
+{
+  "page": 1571,
+  "original_text": "Example: backtester =\nbacktestEngine(strategies,'RiskFreeRate',0.02,'InitialPortfolioValue',1000,'R\natesConvention',\"Annualized\",'Basis',2)",
+  "ocr_text": "Example:backtester=\nbacktestEngine(strategies,RiskFreeRate,0.02,InitialPortfolioValue,1000,R\natesConvention,Annualized,Basis,2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.56,
+    "x1": 553.54,
+    "y1": 237.19
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 53,
+  "original_text": "LHNextDates = busdate(LHHDates);\nLHNextDays = datestr(LHNextDates)",
+  "ocr_text": "LHNextDates=busdate(LHHDates);\nLHNextDays=datestr(LHNextDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 325.56,
+    "x1": 268.8,
+    "y1": 346.82
+  },
+  "confidence": "high"
+}

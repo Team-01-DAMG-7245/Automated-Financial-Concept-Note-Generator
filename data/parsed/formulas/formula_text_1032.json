@@ -1,0 +1,12 @@
+{
+  "page": 538,
+  "original_text": "% Define the maximum possible wealth.\nWMaxVec = W0*exp((mu_max-(sigma_max^2)/2)*timeVec+ ...\n    3*sigma_max*sqrt(timeVec));\nWHatMax = max(WMaxVec);",
+  "ocr_text": "Definethemaximumpossiblewealth.\nWMaxVec=WO*exp((mu_max-(Sigma_max*2)/2)*timeVec+...\n\n3*sigma_max*sqrt(timeVec));\nWHatMax=max(WMaxVec);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 293.53,
+    "x1": 382.6,
+    "y1": 336.4
+  },
+  "confidence": "high"
+}

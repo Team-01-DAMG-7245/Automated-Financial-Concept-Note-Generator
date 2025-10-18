@@ -1,0 +1,12 @@
+{
+  "page": 1264,
+  "original_text": "clear\nload Data_GlobalIdx2\ndates = datetime(dates,'ConvertFrom','datenum');",
+  "ocr_text": "clear\nloadData_GlobalIdx2\ndates=datetime(dates,ConvertFrom,datenum);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 524.79,
+    "x1": 350.08,
+    "y1": 556.86
+  },
+  "confidence": "high"
+}

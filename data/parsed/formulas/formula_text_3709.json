@@ -1,0 +1,12 @@
+{
+  "page": 2095,
+  "original_text": "Fraction = cur2frac(12.125, 8)",
+  "ocr_text": "Fraction=cur2frac(12.125,8)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 376.79,
+    "x1": 252.54,
+    "y1": 387.25
+  },
+  "confidence": "high"
+}

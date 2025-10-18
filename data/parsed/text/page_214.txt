@@ -1,0 +1,58 @@
+0.0100
+    0.0150
+
+passetcovar = 4×4
+
+0.0005    0.0003    0.0002         0
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+         0    0.0010    0.0028    0.0102
+
+[qassetmean, qassetcovar] = getAssetMoments(q)
+
+qassetmean = 4×1
+
+0.0042
+    0.0083
+    0.0100
+    0.0150
+
+qassetcovar = 4×4
+
+0.0005    0.0003    0.0002   -0.0000
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+   -0.0000    0.0010    0.0028    0.0102
+
+Notice how either approach has the same moments. The default behavior of
+estimateAssetMoments is to work with asset returns. If, instead, you have asset prices in the
+variable Y, estimateAssetMoments accepts a name-value pair argument name 'DataFormat' with
+a corresponding value set to 'prices' to indicate that the input to the function is in the form of
+asset prices and not returns (the default value for the 'DataFormat' argument is 'returns'). The
+following code compares direct assignment of moments in the Portfolio object p with estimated
+moments from asset price data in Y in the Portfolio object q.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+ 
+X = portsim(m', C, 120);
+Y = ret2tick(X);
+
+p = Portfolio('mean',m,'covar',C);
+        
+q = Portfolio;
+q = estimateAssetMoments(q, Y, 'dataformat', 'prices');
+ 
+[passetmean, passetcovar] = getAssetMoments(p)
+
+passetmean = 4×1
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-46

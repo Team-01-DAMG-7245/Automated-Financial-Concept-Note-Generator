@@ -1,0 +1,12 @@
+{
+  "page": 1702,
+  "original_text": "rng('default');    % Reproduce the same result\nrPaths = simByTransition(obj,nPeriods,'nTrials',nTrials,'nSteps',nSteps);\nsize(rPaths)",
+  "ocr_text": "rng(default); SReproducethesameresult\nrPaths=simByTransition(obj,nPeriods,nTrials,nTrials,nSteps,nSteps);\nsize(rPaths)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 540.7,
+    "x1": 485.55,
+    "y1": 572.77
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1751,
+  "original_text": "obj = addGroups(obj,GroupMatrix,LowerGroup)\nobj = addGroups(obj,GroupMatrix,LowerGroup,UpperGroup)",
+  "ocr_text": "obj_=addGroups(obj,GroupMatrix,LowerGroup)\nobj_=addGroups(obj,GroupMatrix,LowerGroup,UpperGroup)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.21,
+    "x1": 415.1,
+    "y1": 214.84
+  },
+  "confidence": "high"
+}

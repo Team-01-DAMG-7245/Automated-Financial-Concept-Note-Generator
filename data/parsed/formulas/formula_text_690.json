@@ -1,0 +1,12 @@
+{
+  "page": 426,
+  "original_text": "% Combine the three signal timetables.\nsignalTT = timetable;\nsignalTT = synchronize(signalTT, smaSignal);\nsignalTT = synchronize(signalTT, macdSignal);\nsignalTT = synchronize(signalTT, rsiSignal);",
+  "ocr_text": "Combinethethreesignaltimetables.\nsignalTT=timetable;\nsignalTT=synchronize(signalTT,smaSignal);\nsignalTT=synchronize(signalTT,macdSignal);\nsignalTT=synchronize(signalTT,_rsiSignal);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.46,
+    "x1": 333.81,
+    "y1": 654.12
+  },
+  "confidence": "high"
+}

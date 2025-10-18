@@ -1,0 +1,12 @@
+{
+  "page": 605,
+  "original_text": "NumActions = 39;\nLowerActionRange = linspace(0,TradingShares_Step_TWAP_Train_Buy(1), round(NumActions/2));\nActionRange = round([LowerActionRange(1:end-1) ...\n    linspace(TradingShares_Step_TWAP_Train_Buy(1), ...\n    TradingShares_Step_TWAP_Train_Buy(1)*2,round(NumActions/2))]);\nNumActions = length(ActionRange);",
+  "ocr_text": "NumActions=39;\nLowerActionRange=linspace(0,TradingShares_Step_TWAP_Train_Buy(1),round(NumActions/2));\nActionRange=round([LowerActionRange(l:end-1)...\nLinspace(TradingShares_Step_TWAP_Train_Buy(1),...\nTradingShares_Step_TWAP_Train_Buy(1)*2,round(NumActions/2))]);\nNumActions=length(ActionRange);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 572.2,
+    "y1": 222.29
+  },
+  "confidence": "high"
+}

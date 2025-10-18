@@ -1,0 +1,70 @@
+r0 + μ −r0
+
+Tx −cB
+T max 0, x −x0 −cS
+T max 0, x0 −x
+≥μ0,
+
+where r0 is the risk-free rate (with 0 as default), μ is the mean of assets returns, cB is the proportional
+buy cost, cS is the proportional sell cost, x0 is the initial portfolio, and μ0 is the target return.
+
+To add net return constraints to the portfolio problem, you must use setCosts with the Portfolio
+object. If the Portfolio object has either of these costs, estimateCustomObjectivePortfolio
+automatically assumes that any added return constraint is a net return constraint.
+
+% Add buy and sell costs to the Portfolio object
+buyCost = 0.002;
+sellCost = 0.001;
+initPort = zeros(p.NumAssets,1);
+p = setCosts(p,buyCost,sellCost,initPort);
+% Solve portfolio problem with a net return constraint
+% wNet = estimateCustomObjectivePortfolio(p,objFun, ...
+%    TargetReturn=ret0)
+
+As with the gross return constraint, the net return constraint is not added to the Portfolio object
+properties, however the Portfolio object is modified by the addition of buy or sell costs. Adding buy
+or sell costs to the Portfolio object does not affect any constraints besides the return constraint,
+but these costs do affect the solution of maximum return problems because the solution is the
+maximum net return instead of the maximum gross return.
+
+Solve Portfolio Problems with Custom Objectives and Cardinality Constraints
+
+This example shows how to use estimateCustomObjectivePortfolio to solve a portfolio
+problem with a custom objective and cardinality constraints. You define the constraints for portfolio
+problems using functions for the Portfolio object and then you specify the objective function as an
+input to estimateCustomObjectivePortfolio. For problems with cardinality constraints or
+continuous bounds, the objective function must be continuous and convex.
+
+Create Portfolio Object
+
+Find a long-only, fully weighted portfolio with half the assets that minimizes the tracking error to the
+equally weighted portfolio. Furthermore, if an asset is present in the portfolio, at least 10% should be
+invested in that asset. The portfolio problem is as follows:
+
+min
+x
+x −x0
+
+TΣ x −x0
+
+s . t . ∑
+i
+xi = 1,
+
+∑
+i
+# xi ≠0 = 3,
+
+xi ≥0 . 1 or xi = 0
+
+Create a Portfolio object and set the assets moments.
+
+load('SixStocks.mat')
+p = Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);
+nAssets = size(AssetMean,1);
+
+Define the Portfolio constraints.
+
+estimateCustomObjectivePortfolio
+
+15-919

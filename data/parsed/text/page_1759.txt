@@ -1,0 +1,46 @@
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+More About
+
+Inequality Constraint
+
+An inequality constraint specifies a range of acceptable values rather than requiring an exact value.
+
+Use inequality constraints to impose limits on certain parameters of the portfolio to ensure that the
+portfolio adheres to specific guidelines or preferences set by the investor or portfolio manager.
+
+Tips
+
+•
+You can also use dot notation to add the linear inequality constraints for portfolio weights.
+
+obj = obj.addInequality(AInequality, bInequality)
+
+•
+You can also remove linear inequality constraints from any of the portfolio objects using dot
+notation.
+
+obj = obj.setInequality([ ], [ ])
+
+Version History
+Introduced in R2011a
+
+See Also
+setInequality
+
+Topics
+“Working with Linear Inequality Constraints Using Portfolio Object” on page 4-78
+“Working with Linear Inequality Constraints Using PortfolioCVaR Object” on page 5-70
+“Working with Linear Inequality Constraints Using PortfolioMAD Object” on page 6-69
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+Supported Constraints for Portfolio Optimization Using Portfolio Objects on page 4-9
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object on page 5-8
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object on page 6-8
+
+addInequality
+
+15-453

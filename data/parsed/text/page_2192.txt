@@ -1,0 +1,59 @@
+Maximum likelihood parameter estimates for the covariance of the Data using the ECM algorithm,
+specified as a NUMSERIES-by-NUMSERIES matrix.
+
+InvCovar — Cholesky decomposition of covariance matrix
+[ ] (default) | matrix
+
+(Optional) Inverse of covariance matrix, specified as a matrix using inv as:
+
+inv(Covariance)
+
+Data Types: double
+
+MatrixType — Matrix format
+'full' (default) | character vector
+
+(Optional) Matrix format, specified as a character vector with a value of:
+
+•
+'full' — Computes the full Fisher information matrix.
+
+•
+'meanonly' — Computes only the components of the Fisher information matrix associated with
+the mean.
+
+Data Types: char
+
+Output Arguments
+
+Fisher — Fisher information matrix
+matrix
+
+Fisher information matrix, returned as an NUMPARAMSNUMPARAMS matrix based on current parameter
+estimates, where NUMPARAMS = NUMSERIES * (NUMSERIES + 3)/2 if the MatrixFormat =
+'full'. If the MatrixFormat = 'meanonly', then the NUMPARAMS = NUMSERIES.
+
+More About
+
+Fisher Information Matrix
+
+The Fisher information matrix is a key concept in statistics and information theory that measures the
+amount of information that an observable random variable carries about an unknown parameter upon
+which the probability of the random variable depends.
+
+The Fisher information matrix is used to evaluate the efficiency of estimators and to derive
+confidence intervals.
+
+Version History
+Introduced before R2006a
+
+See Also
+ecmnhess | ecmnmle
+
+Topics
+“Multivariate Normal Regression With Missing Data” on page 9-14
+
+15
+Functions
+
+15-886

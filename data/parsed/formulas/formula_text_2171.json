@@ -1,0 +1,12 @@
+{
+  "page": 1117,
+  "original_text": "ZeroRates = zbtprice([Maturity CouponRate], Prices, Settle)",
+  "ocr_text": "ZeroRates=zbtprice([MaturityCouponRate],Prices,Settle)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.61,
+    "x1": 409.66,
+    "y1": 137.08
+  },
+  "confidence": "high"
+}

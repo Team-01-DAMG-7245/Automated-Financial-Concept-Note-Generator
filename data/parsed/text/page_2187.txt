@@ -1,0 +1,50 @@
+0.0567
+
+StdParam = 2×1
+
+0.0010
+    0.0836
+
+StdParam = 2×1
+
+0.0014
+    0.2159
+
+StdParam = 2×1
+
+0.0007
+    0.0567
+
+StdParam = 2×1
+
+0.0004
+    0.0376
+
+StdParam = 2×1
+
+0.0007
+    0.0585
+
+StdParam = 2×1
+
+0.0005
+    0.0429
+
+StdParam = 2×1
+
+0.0008
+    0.0709
+
+StdParam = 2×1
+
+0.0010
+    0.0853
+
+Input Arguments
+
+Data — Data
+matrix
+
+ecmmvnrstd
+
+15-881

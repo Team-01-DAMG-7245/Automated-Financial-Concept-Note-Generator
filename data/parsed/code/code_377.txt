@@ -1,0 +1,6 @@
+Page 390
+================================================================================
+
+assetNames = ["AA", "AIG", "WMT", "MSFT", "BA", "GE", "IBM"];
+benchmarkName = "DJI";
+head(T(:,["Dates" benchmarkName assetNames]))

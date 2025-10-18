@@ -1,0 +1,12 @@
+{
+  "page": 1299,
+  "original_text": "secondComponent = scores(:, 2);\nsecondComponentModel = arima(\"ARLags\", 1, ...\n    \"MALags\", 1, ...\n    \"Distribution\", \"t\", ...\n    \"Variance\", garch( \"ARCHLags\", 1, ...\n    \"Constant\", 0.01, ...\n    \"GARCHLags\", 1 ) );\nsecondComponentModel = estimate( secondComponentModel, secondComponent );",
+  "ocr_text": "secondComponent=scores(:,2);\nsecondComponentModel=arima(ARLags,1,...\n\nMALags,1,_...\n\nDistribution,t,...\n\nVariance,garch(ARCHLags,1,...\n\nConstant,0.01,_...\n\nGARCHLags,1));\nsecondComponentModel=estimate(secondComponentModel,secondComponent);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 230.67,
+    "x1": 485.52,
+    "y1": 316.74
+  },
+  "confidence": "high"
+}

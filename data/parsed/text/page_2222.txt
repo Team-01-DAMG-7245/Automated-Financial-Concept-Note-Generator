@@ -1,0 +1,57 @@
+estimateCustomObjectivePortfolio
+
+Estimate optimal portfolio for user-defined objective function for Portfolio object
+
+Syntax
+
+[pwgt,pbuy,psell,exitflag] = estimateCustomObjectivePortfolio(obj,fun)
+[pwgt,pbuy,psell,exitflag] = estimateCustomObjectivePortfolio( ___ ,Name=Value)
+
+Description
+
+[pwgt,pbuy,psell,exitflag] = estimateCustomObjectivePortfolio(obj,fun)
+estimates optimal portfolio with a user-defined objective function for a Portfolio object. For details
+on using estimateCustomObjectivePortfolio, see “Solver Guidelines for Custom Objective
+Problems Using Portfolio Objects” on page 4-119.
+
+[pwgt,pbuy,psell,exitflag] = estimateCustomObjectivePortfolio( ___ ,Name=Value)
+adds optional name-value arguments.
+
+Examples
+
+Solve Continuous Problems Using Custom Objectives
+
+This example shows how to use estimateCustomObjectivePortfolio to solve a portfolio
+problem with a custom objective. You define the constraints for portfolio problems using functions for
+the Portfolio object and then you specify the objective function as an input to
+estimateCustomObjectivePortfolio. The objective function must be continuous (and preferably
+smooth).
+
+Create Portfolio Object
+
+Find the portfolio that solves the problem:
+
+min
+x
+xTx
+
+s . t . ∑
+i
+xi = 1
+
+x ≥0
+
+Create a Portfolio object and set the default constraints using setDefaultConstraints. In this
+case, the portfolio problem does not involve the mean or covariance of the assets returns. Therefore,
+you do not need to define the assets moments to create the Portfolio object. You need only to
+define the number of assets in the problem.
+
+% Create a Portfolio object
+p = Portfolio(NumAssets=6);
+% Define the constraints of the portfolio methods
+p = setDefaultConstraints(p); % Long-only, fully invested weights
+
+15
+Functions
+
+15-916

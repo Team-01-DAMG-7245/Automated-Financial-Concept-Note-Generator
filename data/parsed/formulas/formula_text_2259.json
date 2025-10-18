@@ -1,0 +1,12 @@
+{
+  "page": 1159,
+  "original_text": "load Data_GlobalIdx1   % Import daily index closings\nData = Data(:,1:2);\nseries = string(series(1:2));",
+  "ocr_text": "loadData_GlobalIdxlImportdailyindexclosings\nData=Data(:,1:2);\nseries=string(series(1:2));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 560.23,
+    "x1": 371.74,
+    "y1": 592.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1532,
+  "original_text": "RoughHeston = roughheston(Return,Speed,Level,Volatility,Alpha)\nRoughHeston = roughheston( ___ ,Name=Value)",
+  "ocr_text": "RoughHeston=roughheston(Return,Speed,Level,Volatility,Alpha)\nRoughHeston=roughheston(__,Name=Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 420.43,
+    "x1": 463.27,
+    "y1": 444.06
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 432,
+  "original_text": "% Create portfolio with default constraints.\np = Portfolio('AssetList',Assets(1:11));\np = estimateAssetMoments(p, Data(:,1:11));\np = setDefaultConstraints(p);",
+  "ocr_text": "Createportfoliowithdefaultconstraints.\np=Portfolio(AssetList,Assets(1:11));\np=estimateAssetMoments(p,Data(:,1:11));\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 628.83,
+    "x1": 328.39,
+    "y1": 671.69
+  },
+  "confidence": "high"
+}

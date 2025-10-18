@@ -1,0 +1,19 @@
+To estimate the tails of the cumulative distribution function (CDF) using EVT, you must standardize
+the residuals by their corresponding conditional standard deviation. These standardized residuals
+represent a series that is zero-mean, unit-variance, and approximately independent and identically
+distributed. The EVT estimation of the sample CDF tails is based on this standardized residual series:
+
+residuals = residuals ./ sqrt(variances);
+
+Use autocorr (Econometrics Toolbox) to analyze the autocorrelation functions (ACFs) of the
+standardized residuals and squared standardized residuals. By comparing these ACFs to the ACFs of
+the raw returns, you can observe that the standardized residuals exhibit a closer approximation to the
+iid assumption. The standardized residuals are more suitable for subsequent tail estimation purposes.
+
+figure
+autocorr(residuals(:,index))
+title('Sample ACF of Standardized Residuals')
+
+Using Extreme Value Theory and Copula Fitting to Generate Synthetic Data
+
+10-65

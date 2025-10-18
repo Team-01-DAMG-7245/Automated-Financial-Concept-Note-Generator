@@ -1,0 +1,37 @@
+The flat parts of the equity curve are where the stop loss strategy has sold AIG and then later buys
+back into AIG.
+
+Local Functions
+
+function [new_weights,user_data] = incrementCounter(current_weights,prices,user_data)
+
+% Don't change the weights
+new_weights = current_weights;
+
+% Increment the user data counter
+user_data.Counter = user_data.Counter + 1;
+
+end
+
+function [new_weights,user_data] = stopLossSingleAsset(current_weights,prices,user_data)
+
+% Start with the existing weights
+new_weights = current_weights;
+
+% Find column of the asset
+asset = char(user_data.Asset);
+assetIdx = find(strncmpi(asset,prices.Properties.VariableNames,numel(asset)));
+assetPrice = prices{end,assetIdx};
+
+% Determine if currently invested or in cash
+inCash = sum(current_weights) < 1e-5;
+
+if inCash
+
+% You are in cash, see if you should buy back in
+    if assetPrice <= user_data.BuyInPrice
+
+15
+Functions
+
+15-250

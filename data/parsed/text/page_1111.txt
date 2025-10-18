@@ -1,0 +1,59 @@
+Compute the dollar durations for each of the instruments and each of the key rates (assuming holding
+100 bonds).
+
+PortfolioDD = 100*Price* BondKRD;
+HedgeDD = HedgeKRD.*[Price_30;Price_10;Price_05;Price_02]
+
+HedgeDD = 4×4
+103 ×
+
+0.2453         0         0         0
+    0.0139    0.5047         0         0
+    0.0216    0.0745    0.7525         0
+    0.0224    0.0713    0.2164    1.4622
+
+Compute the number of bonds to sell short to obtain a key rate duration that is 0 for the entire
+portfolio.
+
+NumBonds = PortfolioDD/HedgeDD
+
+NumBonds = 1×4
+
+3.8973    6.1596   23.0282   80.0522
+
+These results indicate selling 4, 6, 23 and 80 bonds respectively of the 2-, 5-, 10-, and 30-year bonds
+achieves a portfolio that is neutral with respect to the 2-, 5-, 10-, and 30-year spot rates.
+
+See Also
+bnddury | bndconvy | bndprice | bndkrdur | blsprice | blsdelta | blsgamma | blsvega |
+zbtprice | zero2fwd | zero2disc
+
+Related Examples
+
+•
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+
+•
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+
+•
+“Sensitivity of Bond Prices to Interest Rates” on page 10-2
+
+•
+“Bond Portfolio for Hedging Duration and Convexity” on page 10-6
+
+•
+“Bond Prices and Yield Curve Parallel Shifts” on page 10-9
+
+•
+“Term Structure Analysis and Interest-Rate Swaps” on page 10-18
+
+•
+“Plotting Sensitivities of an Option” on page 10-25
+
+•
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+Bond Prices and Yield Curve Nonparallel Shifts
+
+10-13

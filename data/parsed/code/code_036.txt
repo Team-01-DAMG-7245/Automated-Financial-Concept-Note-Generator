@@ -1,0 +1,5 @@
+Page 42
+================================================================================
+
+to return arguments A, B, and C. If you omit all but one, the function returns the first argument. Thus,
+for this example if you use the syntax

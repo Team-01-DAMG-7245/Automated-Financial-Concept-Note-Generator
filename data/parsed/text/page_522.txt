@@ -1,0 +1,54 @@
+Define Backtesting Parameters
+
+Set the backtesting strategies to rebalance every month.
+
+% Define the monthly rebalance frequency.
+rebalFreq = 21;
+
+To gather enough data, set the backtestStrategy lookback window for the backtesting to at least 2
+months. To remove old data from the parameter estimation, set the lookback window to no more than
+6 months.
+
+% Define the lookback window.
+lookback = [42 126];
+
+Use a fixed transaction cost equal to 0.5% of the amount traded.
+
+% Define a fixed transaction cost.
+transactionCost = 0.005;
+
+Define the allocation strategies using backtestStrategy.
+
+% Define a traditional mean-variance strategy.
+stratMarkowitz = backtestStrategy('Markowitz', @(w,TT) markowitzFcn(w,TT,p), ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionCost, ...
+    InitialWeights=initialMarkowitz);
+
+% Define a robust strategy.
+stratRobust = backtestStrategy('Robust', @(w,TT) robustFcn(w,TT,p,kappa), ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionCost, ...
+    InitialWeights=initialRP);
+
+Run Backtest
+
+Create a backtestEngine object and then run the backtest using runBacktest.
+
+% Define strategies for backtest engine
+strategies = [stratMarkowitz stratRobust];
+% Define a backtest engine
+backtester = backtestEngine(strategies);
+% Run the backtest
+backtester = runBacktest(backtester,pricesTT,Start=warmupPeriod);
+
+Use equityCurve to plot the equity curve.
+
+equityCurve(backtester)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-354

@@ -1,0 +1,6 @@
+Page 1650
+================================================================================
+
+The simByHybrid function runs processing functions at each observation period. They must accept
+the current observation time t, and the current state vector Xt, and return a state vector that may be
+an adjustment to the input state.

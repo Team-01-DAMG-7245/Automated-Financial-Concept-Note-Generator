@@ -1,0 +1,12 @@
+{
+  "page": 231,
+  "original_text": "p = Portfolio(p, 'UpperBound', []);",
+  "ocr_text": "p=Portfolio(p,UpperBound,[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 435.08,
+    "x1": 279.65,
+    "y1": 445.54
+  },
+  "confidence": "high"
+}

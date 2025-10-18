@@ -1,0 +1,6 @@
+Page 715
+================================================================================
+
+The estimatePortMoments function shows the range of risks and returns for efficient portfolios:
+Note that the endpoints of the efficient frontier depend upon the Scenarios in the PortfolioCVaR
+object. If you change the Scenarios, you are likely to obtain different endpoints.

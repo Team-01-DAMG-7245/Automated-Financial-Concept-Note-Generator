@@ -1,0 +1,5 @@
+Page 1535
+================================================================================
+
+Speed — Mean-reversion speed of stochastic variance process
+array or deterministic function of time

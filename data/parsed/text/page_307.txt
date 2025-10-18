@@ -1,0 +1,53 @@
+Function
+Number of Assets
+Sample Size
+Sample
+
+covarianceDenoisin
+g ( Financial Toolbox)
+
+Any (≥ 10
+recommended)
+
+Any
+Not required
+
+Another useful tool for covariance estimation is nearcorr. Use nearcorr to compute the nearest
+correlation matrix by minimizing the Frobenius distance to an initial estimate. This is particularly
+useful to get a positive definite covariance matrix when the number of observations is less than the
+number of assets.
+
+See Also
+Portfolio | covarianceShrinkage | covarianceDenoising | nearcorr
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Compare Performance of Covariance Denoising with Factor Modeling Using Backtesting” on
+page 4-394
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+Comparison of Methods for Covariance Estimation
+
+4-139

@@ -1,0 +1,12 @@
+{
+  "page": 1505,
+  "original_text": "prob(dPt = 1) = λpdt",
+  "ocr_text": "prob(dP;=1)= Apdt",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 683.0,
+    "x1": 205.85,
+    "y1": 696.74
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 461,
+  "original_text": "% Get returns timetable.\nreturnsTT = backtester.Returns;",
+  "ocr_text": "Getreturnstimetable.\nreturnsTT=backtester.Returns;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 257.96,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

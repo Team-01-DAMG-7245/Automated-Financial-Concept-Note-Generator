@@ -1,0 +1,12 @@
+{
+  "page": 1218,
+  "original_text": "A(t) = S(t)L(t), B(t) = −S(t)",
+  "ocr_text": "A(t)=SL(t),B)=_-S(t)",
+  "bbox": {
+    "x0": 112.32,
+    "y0": 707.36,
+    "x1": 239.88,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

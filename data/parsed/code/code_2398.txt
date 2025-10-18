@@ -1,0 +1,6 @@
+Page 2256
+================================================================================
+
+Starting from the initial portfolio, the estimateFrontier function returns purchases and sales to
+get from your initial portfolio to each efficient portfolio on the efficient frontier. Given an initial
+portfolio in pwgt0, you can obtain purchases and sales.

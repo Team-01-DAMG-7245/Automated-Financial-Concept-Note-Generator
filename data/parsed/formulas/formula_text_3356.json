@@ -1,0 +1,12 @@
+{
+  "page": 1821,
+  "original_text": "Num = length(Payments);\nRecoveryAmount = repmat(100*0.4, 1, Num)",
+  "ocr_text": "Num=length(Payments);\nRecoveryAmount=repmat(100*0.4,1,Num)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 378.71,
+    "x1": 306.72,
+    "y1": 399.97
+  },
+  "confidence": "high"
+}

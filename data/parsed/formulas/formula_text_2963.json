@@ -1,0 +1,12 @@
+{
+  "page": 1553,
+  "original_text": "% Invest equally across all assets.\nnum_assets = numel(current_weights);\nnew_weights = ones(1,num_assets) / num_assets;",
+  "ocr_text": "Investequallyacrossallassets.\nnum_assets=numel(current_weights);\nnew_weights=ones(1,num_assets)/num_assets;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.69,
+    "x1": 339.23,
+    "y1": 632.76
+  },
+  "confidence": "high"
+}

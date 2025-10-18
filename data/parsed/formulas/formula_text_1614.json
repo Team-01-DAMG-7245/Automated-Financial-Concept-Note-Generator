@@ -1,0 +1,12 @@
+{
+  "page": 811,
+  "original_text": "p = PortfolioMAD('numassets',4);\np = PortfolioMAD(p, 'assetlist', { 'AGG', 'EEM', 'MDY', 'SPY', 'VEU' });\ndisp(p.AssetList)",
+  "ocr_text": "p=PortfolioMAD(numassets,4);\np=PortfolioMAD(p,assetlist,{AGG,EEM,MDY,SPY,VEU});\ndisp(p.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 380.59,
+    "x1": 402.1,
+    "y1": 406.24
+  },
+  "confidence": "high"
+}

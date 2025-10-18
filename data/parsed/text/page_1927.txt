@@ -1,0 +1,76 @@
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Note Any optional input of size N-by-1 is also acceptable as an array of size 1-by-N, or as a single
+value applicable to all contracts. Single values are internally expanded to an array of size N-by-1.
+
+Example: [ProbData,HazData] =
+cdsbootstrap(ZeroData,MarketData,Settle,'RecoveryRate',Recovery,'ZeroCompound
+ing',-1)
+
+RecoveryRate — Recovery rate
+0.4 (default) | decimal
+
+Recovery rate, specified as the comma-separated pair consisting of 'RecoveryDate' and a N-by-1
+vector of recovery rates, specified as a decimal from 0 to 1.
+
+Data Types: double
+
+Period — Premium payment frequency
+4 (default) | numeric with values 1, 2, 3, 4, 6 or 12
+
+Premium payment frequency, specified as the comma-separated pair consisting of 'Period' and a N-
+by-1 vector with values of 1, 2, 3, 4, 6, or 12.
+
+Data Types: double
+
+Basis — Day-count basis of contract
+2 (actual/360) (default) | integers of the set [0...13] | vector of integers of the set [0...13]
+
+Day-count basis of the contract, specified as the comma-separated pair consisting of 'Basis' and a
+positive integer using a NINST-by-1 vector.
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+cdsbootstrap
+
+15-621

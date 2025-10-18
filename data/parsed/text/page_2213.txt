@@ -1,0 +1,51 @@
+effrr
+
+Effective rate of return
+
+Syntax
+
+Return = effrr(Rate,NumPeriods)
+
+Description
+
+Return = effrr(Rate,NumPeriods) calculates the annual effective rate of return. Compounding
+continuously returns Return equivalent to (e^Rate-1).
+
+Examples
+
+Compute the Annual Effective Rate of Return
+
+This example shows how to find the effective annual rate of return based on an annual percentage
+rate of 9% compounded monthly.
+
+Return = effrr(0.09, 12)
+
+Return = 
+0.0938
+
+Input Arguments
+
+Rate — Annual percentage rate
+scalar numeric decimal
+
+Annual percentage rate, specified as a scalar numeric decimal.
+
+Data Types: double
+
+NumPeriods — Number of compounding periods per year
+scalar integer
+
+Number of compounding periods per year, specified as a scalar integer.
+
+Data Types: double
+
+Output Arguments
+
+Return — Annual effective rate of return
+scalar numeric decimal
+
+Annual effective rate of return, returned as a scalar numeric decimal.
+
+effrr
+
+15-907

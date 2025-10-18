@@ -1,0 +1,12 @@
+{
+  "page": 949,
+  "original_text": "% Method 2: Point-in-time (PIT) default rate\n   PredDefRate(k,2) = DefRate(T);",
+  "ocr_text": "SMethod2:Point-in-time(PIT)defaultrate\nPredDefRate(k,2)=DefRate(T);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 406.23,
+    "x1": 344.65,
+    "y1": 427.49
+  },
+  "confidence": "high"
+}

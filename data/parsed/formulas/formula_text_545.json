@@ -1,0 +1,12 @@
+{
+  "page": 367,
+  "original_text": "On top of these previously specified constraints, use setBounds to add a constraint to limit the\nweight for the allocated assets. You can use constraints with mixed BoundType values, where\n'Simple' means lb ≤xi ≤ub and 'Conditional' means xi = 0 or lb ≤xi ≤ub.",
+  "ocr_text": "Ontopofthesepreviouslyspecifiedconstraints,usesetBoundstoaddaconstrainttolimitthe\nweightfortheallocatedassets.YoucanuseconstraintswithmixedBoundTypevalues,where\nSimplemeanslb=x;suband_Conditionalmeansx;=Oorlbsx;sub.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 595.78,
+    "x1": 528.11,
+    "y1": 633.53
+  },
+  "confidence": "high"
+}

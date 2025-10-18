@@ -1,0 +1,12 @@
+{
+  "page": 539,
+  "original_text": "Since the value function is the probability of achieving the wealth investment goal G at the final time\nstep, you know that the value function at t = T is given by",
+  "ocr_text": "SincethevaluefunctionistheprobabilityofachievingthewealthinvestmentgoalGatthefinaltime\nstep,youknowthatthevaluefunctionatt=Tisgivenby",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 695.36,
+    "x1": 551.78,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

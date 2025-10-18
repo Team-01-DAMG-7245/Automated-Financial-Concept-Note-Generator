@@ -1,0 +1,12 @@
+{
+  "page": 1557,
+  "original_text": "% Buy back in\n        new_weights(assetIdx) = 1;\n        % Set new stop loss price\n        user_data.StopLossPrice = assetPrice * (1 - user_data.StopLossPercent);\n    end",
+  "ocr_text": "SBuybackin\n\nnew_weights(assetIdx)=1;\n\nSetnewstoplossprice\n\nuser_data.StopLossPrice=assetPrice*(1-user_data.StopLossPercent);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 518.02,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

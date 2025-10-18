@@ -1,0 +1,12 @@
+{
+  "page": 2302,
+  "original_text": "Minimize yTCy,  s . t .  ∑yi = t,  t > 0,  0 ≤yi ≤t , μTy −rft = 1.",
+  "ocr_text": "MinimizeyCy, s.t. Syi= t,t0,0 xyst,py-ryt= 1.",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 344.28,
+    "x1": 399.87,
+    "y1": 360.91
+  },
+  "confidence": "high"
+}

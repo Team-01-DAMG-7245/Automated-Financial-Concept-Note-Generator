@@ -1,0 +1,5 @@
+Page 1404
+================================================================================
+
+Rate — Composite drift-rate function
+value stored from drift-rate function (default) | function accessible by F(t,Xt)

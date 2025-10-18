@@ -1,0 +1,12 @@
+{
+  "page": 573,
+  "original_text": "% Select 'TrustRegionCP' as the solver.\np_TR = setSolverMINLP(p,'TrustRegionCP');\npwgt_TR = estimateFrontier(p_TR);\n[rskTR,retTR] = estimatePortMoments(p_TR,pwgt_TR);",
+  "ocr_text": "SelectTrustRegionCPasthesolver.\np_TR=setSolverMINLP(p,TrustRegionCP);\npwgt_TR=estimateFrontier(p_TR);\n[rskTR,retTR]=estimatePortMoments(p_TR,pwgt_TR);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 360.9,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 621
+================================================================================
+
+% Set the rolling lookback window to be at least 2 calendar months and at
+% most 6 calendar months.
+minLookback = calmonths(2);
+maxLookback = calmonths(6);
+lookback  = [minLookback maxLookback];

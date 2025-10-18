@@ -1,0 +1,12 @@
+{
+  "page": 1413,
+  "original_text": "putPrice = exp(-r * T) * mean(putPayoff)",
+  "ocr_text": "putPrice=exp(-r*T)*mean(putPayoff)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 436.23,
+    "x1": 306.72,
+    "y1": 446.69
+  },
+  "confidence": "high"
+}

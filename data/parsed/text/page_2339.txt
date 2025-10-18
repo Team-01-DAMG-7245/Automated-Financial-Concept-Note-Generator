@@ -1,0 +1,58 @@
+h = 
+  Figure (1) with properties:
+
+Number: 1
+        Name: ''
+       Color: [1 1 1]
+    Position: [161 244 560 336.9343]
+       Units: 'pixels'
+
+Show all properties
+
+ax = 
+  Axes (Financial Forecast Chart) with properties:
+
+XLim: [1 7]
+             YLim: [0 35]
+           XScale: 'linear'
+           YScale: 'linear'
+    GridLineStyle: '-'
+         Position: [0.1300 0.1100 0.7750 0.8150]
+            Units: 'normalized'
+
+Show all properties
+
+The dotted points are the historical lines and the filled lines indicate the mean for the forecasts. This
+fanplot represents a backtest scenario where there is an overlap between the historical and forecast
+data.
+
+Create Fan Plot Using Cell Array Data and Customize the Plot With Name-Value Pair
+Arguments
+
+Define the data inputs for historical as a 5-by-2 cell array and forecast as a 5-by-21 cell array
+with 20 observations.
+
+historical =  {2006    -0.0110
+               2007     0.0120
+               2008     0.0090
+               2009     0.0120
+               2010     0.0150};
+
+forecast =    {2011  0.0203      -0.0155     0.0311     -0.0026      0.0035    0.0049      0.0026
+                     0.0533       0.0139     0.0037     -0.0727     -0.0291   -0.0058      0.0183
+               2012  0.0430      -0.0094     0.0587      0.0095      0.0185    0.0205      0.0172
+                     0.0141       0.0337     0.0187      0.0132     -0.0292    0.0048      0.0400
+               2013  0.0518      -0.0116     0.0708      0.0112      0.0221    0.0246      0.0205
+                     0.0168       0.0405     0.0224      0.0157     -0.0356    0.0056      0.0482
+               2014  0.0546      -0.0171     0.0762      0.0088      0.0210    0.0239      0.0193
+                     0.0151       0.0419     0.0214      0.0139     -0.0442    0.0024      0.0506
+               2015  0.0565      -0.0207     0.0797      0.0072      0.0203    0.0234      0.0185
+                     0.0139       0.0428     0.0207      0.0126     -0.0499    0.0026      0.0522
+
+Generate the fan plot using name-value pair arguments to customize the presentation.
+
+fanplot(historical,forecast,'FanFaceColor',[1 1 1;1 0 0],'FanLineStyle','--','ForecastMarker','p
+
+fanplot
+
+15-1033

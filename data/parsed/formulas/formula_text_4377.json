@@ -1,0 +1,12 @@
+{
+  "page": 2480,
+  "original_text": "MaxDD = maxdrawdown( ___ ,Format) adds an optional argument for Format.",
+  "ocr_text": "MaxDD=maxdrawdown(___,Format)addsanoptionalargumentforFormat.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 316.38,
+    "x1": 464.04,
+    "y1": 328.01
+  },
+  "confidence": "high"
+}

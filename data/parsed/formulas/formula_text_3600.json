@@ -1,0 +1,12 @@
+{
+  "page": 2030,
+  "original_text": "TFactors = cftimes(Settle,Maturity)\nTFactors = cftimes( ___ ,Name,Value)",
+  "ocr_text": "TFactors=cftimes(Settle,Maturity)\nTFactors=cftimes(__,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.38,
+    "x1": 300.72,
+    "y1": 215.01
+  },
+  "confidence": "high"
+}

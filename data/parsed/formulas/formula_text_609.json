@@ -1,0 +1,12 @@
+{
+  "page": 402,
+  "original_text": "unexplainedCovar = diag(cov(unexplainedRetn));\nD = diag(unexplainedCovar);",
+  "ocr_text": "unexplainedCovar=diag(cov(unexplainedRetn));\nD=diag(unexplainedCovar);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 178.83,
+    "x1": 339.23,
+    "y1": 200.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2297,
+  "original_text": "pwgtshpr_direct = estimateMaxSharpeRatio(q,'Method','direct');\npwgtshpr_iter = estimateMaxSharpeRatio(q,'Method','iterative'); % Default for 'TolX' is 1e-8\n[riskshpr_diret, retshpr_diret] = estimatePortMoments(q,pwgtshpr_direct);\n[riskshpr_iter, retshpr_iter] = estimatePortMoments(q,pwgtshpr_iter);",
+  "ocr_text": "pwgtshpr_direct=estimateMaxSharpeRatio(q,Method,direct);\npwgtshpr_iter=estimateMaxSharpeRatio(q,Method,iterative);DefaultforTolXisle-8\n[riskshpr_diret,retshpr_diret]=estimatePortMoments(q,pwgtshpr_direct);\n[riskshpr_iter,retshpr_iter]=estimatePortMoments(q,pwgtshpr_iter);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 149.43,
+    "x1": 588.49,
+    "y1": 192.29
+  },
+  "confidence": "high"
+}

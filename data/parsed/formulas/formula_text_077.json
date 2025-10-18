@@ -1,0 +1,12 @@
+{
+  "page": 76,
+  "original_text": "For positive prices, the range of PC is (−1,∞), that is, anything from a 100% loss (ps: ps(t − 1) → 0) to\nunlimited gain. The recursion in the second equation gives the subsequent prices; ps(t) is computed\nfrom ps(t − 1) by adding a percentage of ps(t − 1).",
+  "ocr_text": "Forpositiveprices,therangeofPCis(-1,),thatis,anythingfroma100loss(p,:p,(t-1)-0)to\nunlimitedgain.Therecursioninthesecondequationgivesthesubsequentprices;p,(t)iscomputed\nfromp,(t-1)byaddingapercentageofp,(t-1).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 683.36,
+    "x1": 551.35,
+    "y1": 720.19
+  },
+  "confidence": "high"
+}

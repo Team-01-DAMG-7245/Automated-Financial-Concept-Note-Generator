@@ -1,0 +1,36 @@
+⋮
+
+lambdabc = 
+0.2151
+
+Compare the result of the TMW_CLOSE data series with a normal (Gaussian) probability distribution
+function and the nonnormally distributed TMW_CLOSE.
+
+subplot(2, 1, 1);
+histogram(TMW_CLOSE);
+grid; title('Nonnormally Distributed Data');
+subplot(2, 1, 2);
+histogram(Xbc);
+grid; title('Box-Cox Transformed Data');
+
+The bar chart on the top represents the probability distribution function of the data series,
+TMW_CLOSE, which is the original data series. The distribution is skewed toward the left (not normally
+distributed). The bar chart on the bottom is less skewed to the left. If you plot a Gaussian probability
+distribution function (PDF) with similar mean and standard deviation, the distribution of the
+transformed data is close to normal (Gaussian). When you examine the contents of the resulting
+object Xbc, you find an identical object to the original object TMW_CLOSE but the contents are the
+transformed data series.
+
+Input Arguments
+
+data — Data
+positive column vector
+
+Data, specified as a positive column vector.
+
+Data Types: double
+
+15
+Functions
+
+15-598

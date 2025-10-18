@@ -1,0 +1,12 @@
+{
+  "page": 1276,
+  "original_text": "GaussianCopulaCallPrice = f.CallPrice(strike, r);\nGaussianCopulaPutPrice  = f.PutPrice (strike, r);",
+  "ocr_text": "GaussianCopulaCallPrice=f.CallPrice(strike,r);\nGaussianCopulaPutPrice=f.PutPrice(strike,r);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.91,
+    "x1": 355.48,
+    "y1": 611.18
+  },
+  "confidence": "high"
+}

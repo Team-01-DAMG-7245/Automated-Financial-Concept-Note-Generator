@@ -1,0 +1,67 @@
+If the number of assets is unknown, setDefaultConstraints accepts NumAssets as an optional
+argument to form a portfolio set for a default problem. Suppose that you have 20 assets:
+
+p = PortfolioCVaR;
+p = setDefaultConstraints(p, 20);
+disp(p)
+
+PortfolioCVaR with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+              ProbabilityLevel: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                  NumScenarios: []
+                          Name: []
+                     NumAssets: 20
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [20×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [20×1 categorical]
+
+See Also
+PortfolioCVaR | setDefaultConstraints | setBounds | setBudget |
+setConditionalBudget | setGroups | setGroupRatio | setEquality | setInequality |
+setTurnover | setOneWayTurnover
+
+Related Examples
+
+•
+“Working with 'Simple' Bound Constraints Using PortfolioCVaR Object” on page 5-55
+
+•
+“Working with Budget Constraints Using PortfolioCVaR Object” on page 5-58
+
+•
+“Working with Group Constraints Using PortfolioCVaR Object” on page 5-62
+
+•
+“Working with Group Ratio Constraints Using PortfolioCVaR Object” on page 5-65
+
+•
+“Working with Linear Equality Constraints Using PortfolioCVaR Object” on page 5-68
+
+Working with CVaR Portfolio Constraints Using Defaults
+
+5-53

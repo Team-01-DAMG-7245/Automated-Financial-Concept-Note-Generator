@@ -1,0 +1,6 @@
+Page 1564
+================================================================================
+
+% Estimate the Max Sharpe Ratio.
+new_weights = estimateMaxSharpeRatio(p);
+end

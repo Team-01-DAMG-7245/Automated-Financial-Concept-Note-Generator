@@ -1,0 +1,60 @@
+0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+         0    0.0010    0.0028    0.0102
+
+Scalar Expansion of Arguments
+
+Both the Portfolio object and the setAssetMoments function perform scalar expansion on
+arguments for the moments of asset returns. When using the Portfolio object, the number of
+assets must be already specified in the variable NumAssets. If NumAssets has not already been set,
+a scalar argument is interpreted as a scalar with NumAssets set to 1. setAssetMoments provides
+an additional optional argument to specify the number of assets so that scalar expansion works with
+the correct number of assets. In addition, if either a scalar or vector is input for the covariance of
+asset returns, a diagonal matrix is formed such that a scalar expands along the diagonal and a vector
+becomes the diagonal. This example demonstrates scalar expansion for four jointly independent
+assets with a common mean 0.1 and common variance 0.03:
+
+p = Portfolio;
+p = setAssetMoments(p, 0.1, 0.03, 4);
+[assetmean, assetcovar] = getAssetMoments(p)
+
+assetmean =
+
+0.1000
+    0.1000
+    0.1000
+    0.1000
+
+assetcovar =
+
+0.0300         0         0         0
+         0    0.0300         0         0
+         0         0    0.0300         0
+         0         0         0    0.0300
+
+If at least one argument is properly dimensioned, you do not need to include the additional
+NumAssets argument. This example illustrates a constant-diagonal covariance matrix and a mean of
+asset returns for four assets:
+
+p = Portfolio;
+p = setAssetMoments(p, [ 0.05; 0.06; 0.04; 0.03 ], 0.03);
+[assetmean, assetcovar] = getAssetMoments(p)
+
+assetmean =
+
+0.0500
+    0.0600
+    0.0400
+    0.0300
+
+assetcovar =
+
+0.0300         0         0         0
+         0    0.0300         0         0
+         0         0    0.0300         0
+         0         0         0    0.0300
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-44

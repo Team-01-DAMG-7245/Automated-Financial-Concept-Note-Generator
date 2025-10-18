@@ -1,0 +1,8 @@
+Page 2310
+================================================================================
+
+It is useful to know what are the upper and lower limits of the portfolio moments along the efficient
+frontier. This information allows you to determine what are feasible targets. Use the
+estimateFrontierLimits function with the Portfolio object to identify the weights at these
+extremes. Then you can use the estimatePortMoments function Portfolio object to find the
+limiting moments.

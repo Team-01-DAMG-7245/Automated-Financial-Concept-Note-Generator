@@ -1,0 +1,65 @@
+ans = 
+293
+
+SimAction_Train_Buy = squeeze(experience_Buy.Action.TradingAction_NumberOfShares_.Data);
+NumSimSteps = length(SimAction_Train_Buy);
+SimInventory_Train_Buy = nan(NumSimSteps,1);
+SimExecutedShares_Train_Buy = SimInventory_Train_Buy;
+SimReward_Train_Buy = nan(NumSimSteps,1);
+reset(RL_OptimalExecution_Training_Environment_Buy);
+
+Reset!
+
+for k=1:NumSimSteps
+    [~,SimReward_Train_Buy(k),~,LoggedSignals] = ...
+        step(RL_OptimalExecution_Training_Environment_Buy,SimAction_Train_Buy(k));
+    SimInventory_Train_Buy(k) = LoggedSignals.CurrentInventoryShares;
+    SimExecutedShares_Train_Buy(k) = sum(LoggedSignals.ExecutedShares);
+end
+
+Last Horizon. Episode is Done!
+HorizonIdx:
+
+ans = 
+293
+
+IS_Agent_Step_Train_Buy = LoggedSignals.IS_Agent;
+IS_Agent_Horizon_Train_Buy = IS_Agent_Step_Train_Buy( ....
+    NumIntervalsPerHorizon:NumIntervalsPerHorizon:NumTrainingSteps);
+
+Execute the TWAP trades and compute the IS for the testing data.
+
+[IS_TWAP_Horizon_Test_Buy,IS_TWAP_Step_Test_Buy, ...
+    InventoryShares_Step_TWAP_Test_Buy,TradingShares_Step_TWAP_Test_Buy] = ...
+    executeTWAPTrades(TestingLOB,NumLevels,TotalTradingShares_Buy, ...
+    NumIntervalsPerHorizon,NumTestingHorizons,BuyTrade);
+
+Set up the RL testing environment for buy trades.
+
+EnvConstants_Test_Buy.SampledBook = TestingLOB;
+EnvConstants_Test_Buy.BuyTrade = BuyTrade;
+EnvConstants_Test_Buy.TotalTradingShares = TotalTradingShares_Buy;
+EnvConstants_Test_Buy.NumIntervalsPerHorizon = NumIntervalsPerHorizon;
+EnvConstants_Test_Buy.NumHorizons = NumTestingHorizons;
+EnvConstants_Test_Buy.NumSteps = NumTestingSteps;
+EnvConstants_Test_Buy.NumLevels = NumLevels;
+EnvConstants_Test_Buy.IS_TWAP = IS_TWAP_Step_Test_Buy;
+ResetFunction_Test_Buy = @() RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Test_Buy);
+StepFunction_Test_Buy = @(Action,LoggedSignals) ...
+    RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvConstants_Test_Buy);
+RL_OptimalExecution_Testing_Environment_Buy = ...
+    rlFunctionEnv(ObservationInfo_Train_Buy,ActionInfo_Buy, ...
+    StepFunction_Test_Buy,ResetFunction_Test_Buy)
+
+Reset!
+Reset!
+
+RL_OptimalExecution_Testing_Environment_Buy = 
+  rlFunctionEnv with properties:
+
+StepFcn: @(Action,LoggedSignals)RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvCons
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-438

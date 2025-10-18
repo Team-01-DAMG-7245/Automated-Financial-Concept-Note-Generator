@@ -1,0 +1,12 @@
+{
+  "page": 2063,
+  "original_text": "NextQuasiCouponDate = cpndatenq(Settle,Maturity) determines the next quasi coupon\ndate for a portfolio of NUMBONDS fixed income securities whether or not the first or last coupon is\nnormal, short, or long. For zero coupon bonds, cpndatenq returns quasi coupon dates as if the bond\nhad a semiannual coupon structure. Successive quasi coupon dates determine the length of the\nstandard coupon period for the fixed income security of interest and do not necessarily coincide with\nactual coupon payment dates.",
+  "ocr_text": "NextQuasiCouponDate=cpndatenq(Settle,Maturity)determinesthenextquasicoupon\ndateforaportfolioofNUMBONDSfixedincomesecuritieswhetherornotthefirstorlastcouponis\nnormal,short,orlong.Forzerocouponbonds,cpndatengqreturnsquasicoupondatesasifthebond\nhadasemiannualcouponstructure.Successivequasicoupondatesdeterminethelengthofthe\nstandardcouponperiodforthefixedincomesecurityofinterestanddonotnecessarilycoincidewith\nactualcouponpaymentdates.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 271.92,
+    "x1": 552.36,
+    "y1": 343.55
+  },
+  "confidence": "high"
+}

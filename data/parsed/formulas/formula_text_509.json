@@ -1,0 +1,12 @@
+{
+  "page": 350,
+  "original_text": "p = Portfolio('Name', 'Asset Allocation Portfolio', ...\n'AssetList', Asset, 'InitPort', Blotter.InitPort);",
+  "ocr_text": "p=Portfolio(Name,AssetAllocationPortfolio,...\nAssetList,Asset,InitPort,Blotter.InitPort);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 366.2,
+    "x1": 388.01,
+    "y1": 387.47
+  },
+  "confidence": "high"
+}

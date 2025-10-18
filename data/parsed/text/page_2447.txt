@@ -1,0 +1,57 @@
+lifetableconv
+
+Convert life table series into life tables with forced termination
+
+Syntax
+
+[qx,lx,dx] = lifetableconv(x0,lx0)
+
+[qx,lx,dx] = lifetableconv(x0,y0,y0type)
+
+Description
+
+[qx,lx,dx] = lifetableconv(x0,lx0) converts life table with ages x0 and survival counts lx0
+into life tables with termination.
+
+[qx,lx,dx] = lifetableconv(x0,y0,y0type) converts life table with ages x0 and series y0,
+specified by the optional argument y0type, into life tables with termination.
+
+Examples
+
+Convert Life Table Series into Life Tables with Forced Termination
+
+Load the life table data file.
+
+load us_lifetable_2009
+
+Convert life table series into life tables with forced termination.
+
+[qx,lx,dx] = lifetableconv(x,lx);
+display(qx(1:20,:))
+
+0.0064    0.0070    0.0057
+    0.0004    0.0004    0.0004
+    0.0003    0.0003    0.0002
+    0.0002    0.0002    0.0002
+    0.0002    0.0002    0.0001
+    0.0001    0.0002    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0002    0.0002    0.0002
+    0.0003    0.0004    0.0002
+    0.0004    0.0005    0.0002
+    0.0005    0.0006    0.0003
+    0.0005    0.0007    0.0003
+    0.0006    0.0009    0.0004
+    0.0007    0.0010    0.0004
+
+display(lx(1:20,:))
+
+lifetableconv
+
+15-1141

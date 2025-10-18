@@ -1,0 +1,73 @@
+0.7500
+  0.5000
+
+Setting 'Simple' Bounds Using the Portfolio Function or setBounds
+Function
+
+Both the Portfolio object and setBounds function implement scalar expansion on either the
+LowerBound or UpperBound properties. If the NumAssets property is already set in the Portfolio
+object, scalar arguments for either property expand to have the same value across all dimensions. In
+addition, setBounds lets you specify NumAssets as an optional argument. Suppose that you have a
+universe of 500 assets and you want to set common bound constraints on all assets in your universe.
+Specifically, you are a long-only investor and want to hold no more than 5% of your portfolio in any
+single asset. You can set these bound constraints in any of these equivalent ways:
+
+p = Portfolio('NumAssets', 500, 'LowerBound', 0, 'UpperBound', 0.05,'BoundType', 'Simple');
+
+or
+
+p = Portfolio('NumAssets', 500);
+p = setBounds(p, 0, 0.05,'BoundType','Simple');
+
+or
+
+p = Portfolio;
+p = setBounds(p, 0, 0.05, 'NumAssets', 500,'BoundType','Simple');
+
+To clear bound constraints from your Portfolio object, use either the Portfolio object or
+setBounds with empty inputs for the properties to be cleared. For example, to clear the upper-bound
+constraint from the Portfolio object p in the previous example:
+
+p = Portfolio(p, 'UpperBound', []);
+
+See Also
+Portfolio | setDefaultConstraints | setBounds | setBudget | setConditionalBudget |
+setGroups | setGroupRatio | setEquality | setInequality | setTurnover |
+setOneWayTurnover | setTrackingPort | setTrackingError
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using
+Portfolio Objects” on page 4-81
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Constraint Specification Using a Portfolio Object” on page 3-19
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+Working with 'Simple' Bound Constraints Using Portfolio Object
+
+4-63

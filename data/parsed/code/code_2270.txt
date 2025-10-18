@@ -1,0 +1,6 @@
+Page 2104
+================================================================================
+
+If no DateForm argument is entered, this function determines the date format based on the span of
+the axis limits. For example, if the difference between the axis minimum and maximum is less than
+15, the tick labels are converted to three-letter day-of-the-week abbreviations (DateForm = 8).

@@ -1,0 +1,49 @@
+V Wi t
+=
+
+0 if Wi T < G
+
+1 if Wi T ≥G
+
+% Initialize the matrix that stores the value function at different
+% wealth nodes and time periods.
+V = zeros(nWealthNodes,T+1);
+% Define the Value function at t = T.
+V(:,end) = (WGrid >= G);
+
+To compute the value of V Wi t  for t < T, you need to go backwards in time. You start at t = T −1 to
+determine the portfolio that achieves the maximum in the Bellman equation and V Wi T −1 . Then
+continue with t = T −2, then t = T −3, until you reach t = 0. The value of V W 0  is the optimal
+probability of attaining the wealth goal G from the initial wealth W 0 .
+
+% Compute the optimal value function and portfolio at different
+% wealth nodes and time periods.
+portIdx = zeros(nWealthNodes,T);
+for t = T:-1:1
+    pTilde = zeros(nWealthNodes,nPortfolios);
+    for k = 1:nPortfolios
+        % sum_j ( V(Wj(t+1)) * p(Wj|Wi,mu_k) )
+        pTilde(:,k) = pTransition(:,:,k)*V(:,t+1);
+    end
+    % Choose the portfolios that achieve the best probabilities.
+    [V(:,t),portIdx(:,t)] = max(pTilde,[],2);
+end
+
+Note that V(i,t) is V Wi t −1 , which denotes the optimal probability of achieving the wealth goal
+from wealth node Wi at time period t −1. On the other hand, portIdx(i,t) defines the optimal
+portfolio to be chosen at time period t −1 if you are at wealth node Wi. The value of t is shifted down
+for V(i,t) and portIdx(i,t), given that array indices start at 1 and t starts at 0.
+
+Use heatmap to plot the value function.
+
+% Plot a heatmap of the value function.
+figure;
+heatmap(0:T,flip(WGrid(1:5:end)),flip(V(1:5:end,:)))
+xlabel("Time Period")
+ylabel("Wealth Level")
+title("Probability of Achieving Goal")
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-372

@@ -1,0 +1,11 @@
+Page 682
+================================================================================
+
+Both the PortfolioCVaR object and setBounds function implement scalar expansion on either the
+LowerBound or UpperBound properties. If the NumAssets property is already set in the
+PortfolioCVaR object, scalar arguments for either property expand to have the same value across
+all dimensions. In addition, setBounds lets you specify NumAssets as an optional argument.
+Suppose that you have a universe of 500 assets and you want to set common bound constraints on all
+assets in your universe. Specifically, you are a long-only investor and want to hold no more than 5% of
+your portfolio in any single asset. You can set these bound constraints in any of these equivalent
+ways:

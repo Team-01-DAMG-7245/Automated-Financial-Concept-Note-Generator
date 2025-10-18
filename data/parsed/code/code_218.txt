@@ -1,0 +1,8 @@
+Page 213
+================================================================================
+
+This example shows how to set the moments of asset returns by using the estimateAssetMoments
+function which accepts either prices or returns and estimates the mean and covariance of asset
+returns. Either prices or returns are stored as matrices with samples going down the rows and assets
+going across the columns. In addition, prices or returns can be stored in a table or timetable (see
+“Estimating Asset Moments from Time Series Data” on page 4-49).

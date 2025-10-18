@@ -1,0 +1,59 @@
+Quasi-Monte Carlo Simulation Using Merton Model
+
+This example shows how to use simBySolution with a Merton model to perform a quasi-Monte
+Carlo simulation. Quasi-Monte Carlo simulation is a Monte Carlo simulation that uses quasi-random
+sequences instead pseudo random numbers.
+
+Create a merton object.
+
+AssetPrice = 80;
+Return = 0.03;
+Sigma = 0.16;
+JumpMean = 0.02;
+JumpVol = 0.08;
+JumpFreq = 2;
+            
+Merton = merton(Return,Sigma,JumpFreq,JumpMean,JumpVol,'startstat',AssetPrice)
+
+Merton = 
+   Class MERTON: Merton Jump Diffusion
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 80
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.16
+         Return: 0.03
+       JumpFreq: 2
+       JumpMean: 0.02
+        JumpVol: 0.08
+
+Perform a quasi-Monte Carlo simulation by using simBySolution with the optional name-value
+arguments for 'MonteCarloMethod','QuasiSequence', and 'BrownianMotionMethod'.
+
+[paths,time,z,n] = simBySolution(Merton, 10,'ntrials',4096,'montecarlomethod','quasi','QuasiSeque
+
+Input Arguments
+
+MDL — Merton model
+merton object
+
+Merton model, specified as a merton object. You can create a merton object using merton.
+
+Data Types: object
+
+NPeriods — Number of simulation periods
+positive integer
+
+Number of simulation periods, specified as a positive scalar integer. The value of NPeriods
+determines the number of rows of the simulated output series.
+
+Data Types: double
+
+simBySolution
+
+15-365

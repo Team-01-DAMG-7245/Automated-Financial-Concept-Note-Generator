@@ -1,0 +1,58 @@
+Maturity = ['30-Sep-1997'; '31-Oct-1998'; '30-Nov-1998'];
+CFlowDates = cfdates('14-Mar-1997', Maturity)
+
+CFlowDates = 3×4
+
+729480      729663         NaN         NaN
+      729510      729694      729875      730059
+      729541      729724      729906      730089
+
+To look at the cash-flow dates for the last security:
+
+datestr(CFlowDates(3,:))
+
+ans = 4×11 char array
+    '31-May-1997'
+    '30-Nov-1997'
+    '31-May-1998'
+    '30-Nov-1998'
+
+Input Arguments
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as an NINST-by-1 vector using a datetime array, string array, or date
+character vectors. Settle must be earlier than Maturity.
+
+To support existing code, cfdates also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime array | string array | date character vector
+
+Maturity date, specified as an NINST-by-1 vector using a datetime array, string array, or date
+character vectors.
+
+To support existing code, cfdates also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Period — Coupons per year of the bond
+2 (semiannual) (default) | vector of positive integers from the set [1,2,3,4,6,12]
+
+(Optional) Coupons per year of the bond, specified as a vector of positive integers from the set
+[1,2,3,4,6,12].
+
+Data Types: double
+
+Basis — Day-count basis
+0 (actual/actual) (default) | positive integers of the set [1...13] | vector of positive integers of the
+set [1...13]
+
+cfdates
+
+15-685

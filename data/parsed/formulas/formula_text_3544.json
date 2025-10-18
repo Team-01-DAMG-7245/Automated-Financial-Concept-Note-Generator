@@ -1,0 +1,12 @@
+{
+  "page": 1985,
+  "original_text": "CF =\nCash flow amount.",
+  "ocr_text": "lcF=sd Cashflowamount.",
+  "bbox": {
+    "x0": 92.25,
+    "y0": 578.97,
+    "x1": 266.04,
+    "y1": 590.6
+  },
+  "confidence": "high"
+}

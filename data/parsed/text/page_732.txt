@@ -1,0 +1,57 @@
+display(pret0)
+
+pret0 = 
+0.0071
+
+display(prsk)
+
+prsk = 10×1
+
+0.0404
+    0.0439
+    0.0526
+    0.0646
+    0.0786
+    0.0937
+    0.1121
+    0.1363
+    0.1638
+    0.1932
+
+display(pret)
+
+pret = 10×1
+
+0.0050
+    0.0061
+    0.0072
+    0.0083
+    0.0093
+    0.0104
+    0.0115
+    0.0126
+    0.0136
+    0.0147
+
+Obtaining Portfolio Standard Deviation and VaR
+
+This example shows how to compute standard deviations of portfolio returns and the value-at-risk of
+portfolios for a PortfolioCVaR object with the functions estimatePortStd and
+estimatePortVaR. These functions work with any PortfolioCVaR portfolios, not necessarily efficient
+portfolios.
+
+For example, the following code obtains five portfolios (pwgt) on the efficient frontier and also has an
+initial portfolio in pwgt0. Various portfolio statistics are computed that include the return, risk,
+standard deviation, and value-at-risk. The listed estimates are for the initial portfolio in the first row
+followed by estimates for each of the five efficient portfolios in subsequent rows.
+
+m = [ 0.0042; 0.0083; 0.01; 0.15 ];
+C = [ 0.005333 0.00034 0.00016 0;
+0.00034 0.002408 0.0017 0.000992;
+0.00016 0.0017 0.0048 0.0028;
+0 0.000992 0.0028 0.010208 ];
+
+5
+CVaR Portfolio Optimization Tools
+
+5-106

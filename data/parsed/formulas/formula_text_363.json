@@ -1,0 +1,12 @@
+{
+  "page": 230,
+  "original_text": "lb = [ 0.5; 0.25 ];\nub = [ 0.75; 0.5 ];\np = Portfolio('LowerBound', lb, 'UpperBound', ub, 'BoundType', 'Simple');\ndisp(p.NumAssets)\ndisp(p.LowerBound)\ndisp(p.UpperBound)",
+  "ocr_text": "lb=[0.5;0.25];\n\nub=[0.75;0.5J;\np=Portfolio(LowerBound,lb,UpperBound,ub,BoundType,Simple);\ndisp(p.NumAssets)\n\ndisp(p.LowerBound)\n\ndisp(p.UpperBound)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 302.28,
+    "x1": 485.55,
+    "y1": 366.75
+  },
+  "confidence": "high"
+}

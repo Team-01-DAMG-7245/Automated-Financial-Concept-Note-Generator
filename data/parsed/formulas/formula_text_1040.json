@@ -1,0 +1,12 @@
+{
+  "page": 539,
+  "original_text": "% Compute the transition probabilities for portfolio k.\n    pTransition(:,:,k) = normcdf(pTildeAuxUB)-normcdf(pTildeAuxLB);\nend",
+  "ocr_text": "SComputethetransitionprobabilitiesforportfoliok.\npTransition(:,:,k)=normcdf(pTildeAuxUB)-normcdf(pTildeAuxLB);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 632.16,
+    "x1": 453.0,
+    "y1": 664.23
+  },
+  "confidence": "high"
+}

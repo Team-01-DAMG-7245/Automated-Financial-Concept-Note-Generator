@@ -1,0 +1,12 @@
+{
+  "page": 359,
+  "original_text": "Suppose that you want to avoid very small positions to minimize the churn and operational costs. Add\nanother constraint to confine the allocated positions to be no less than 5%, by setting the constraints\nxi = 0 or xi ≥0 . 05 using setBounds with a 'Conditional' BoundType.",
+  "ocr_text": "Supposethatyouwanttoavoidverysmallpositionstominimizethechurnandoperationalcosts.Add\nanotherconstrainttoconfinetheallocatedpositionstobenolessthan5,bysettingtheconstraints\nx=Oorx;=0.05usingsetBoundswithaConditionalBoundType.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 264.6,
+    "x1": 555.56,
+    "y1": 302.35
+  },
+  "confidence": "high"
+}

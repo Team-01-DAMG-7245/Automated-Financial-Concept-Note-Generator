@@ -1,0 +1,59 @@
+Creating the Portfolio Object
+
+In this section...
+
+“Syntax” on page 4-25
+
+“Portfolio Problem Sufficiency” on page 4-25
+
+“Portfolio Function Examples” on page 4-26
+
+To create a fully specified mean-variance portfolio optimization problem, instantiate the Portfolio
+object using Portfolio. For information on the workflow when using Portfolio objects, see
+“Portfolio Object Workflow” on page 4-18.
+
+Syntax
+
+Use Portfolio to create an instance of an object of the Portfolio class. You can use Portfolio
+in several ways. To set up a portfolio optimization problem in a Portfolio object, the simplest
+syntax is:
+
+p = Portfolio;
+
+This syntax creates a Portfolio object, p, such that all object properties are empty.
+
+The Portfolio object also accepts collections of argument name-value pair arguments for
+properties and their values. The Portfolio object accepts inputs for public properties with the
+general syntax:
+
+p = Portfolio('property1', value1, 'property2', value2, ... );
+
+If a Portfolio object already exists, the syntax permits the first (and only the first argument) of
+Portfolio to be an existing object with subsequent argument name-value pair arguments for
+properties to be added or modified. For example, given an existing Portfolio object in p, the
+general syntax is:
+
+p = Portfolio(p, 'property1', value1, 'property2', value2, ... );
+
+Input argument names are not case-sensitive, but must be completely specified. In addition, several
+properties can be specified with alternative argument names (see “Shortcuts for Property Names” on
+page 4-30). The Portfolio object detects problem dimensions from the inputs and, once set,
+subsequent inputs can undergo various scalar or matrix expansion operations that simplify the overall
+process to formulate a problem. In addition, a Portfolio object is a value object so that, given
+portfolio p, the following code creates two objects, p and q, that are distinct:
+
+q = Portfolio(p, ...)
+
+Portfolio Problem Sufficiency
+
+A mean-variance portfolio optimization is completely specified with the Portfolio object if these
+two conditions are met:
+
+•
+The moments of asset returns must be specified such that the property AssetMean contains a
+valid finite mean vector of asset returns and the property AssetCovar contains a valid symmetric
+positive-semidefinite matrix for the covariance of asset returns.
+
+Creating the Portfolio Object
+
+4-25

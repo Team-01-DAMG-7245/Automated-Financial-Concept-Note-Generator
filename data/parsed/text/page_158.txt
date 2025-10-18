@@ -1,0 +1,61 @@
+second column represents the maximum allocation to each group. Since the investment in the Energy
+sector is capped at 80% of the portfolio value, and the investment in the Technology sector is capped
+at 70%, create the GroupBounds matrix using this information.
+
+GroupBounds = [0   0.80;
+               0   0.70];
+
+Use the Portfolio object to obtain the vectors and arrays representing the risk, return, and weights
+for each of the eight portfolios computed along the efficient frontier. A budget constraint is added to
+ensure that the portfolio weights sum to 1.
+
+p = Portfolio('AssetMean', ExpReturn, 'AssetCovar', ExpCovariance);
+p = setBounds(p, AssetBounds(1), AssetBounds(2));
+p = setBudget(p, 1, 1);
+p = setGroups(p, Groups, GroupBounds(:,1), GroupBounds(:,2));
+
+PortWts = estimateFrontier(p, NumPorts);
+
+[PortRisk, PortReturn] = estimatePortMoments(p, PortWts);
+
+PortRisk
+
+PortRisk = 8×1
+
+0.0416
+    0.0499
+    0.0624
+    0.0767
+    0.0920
+    0.1100
+    0.1378
+    0.1716
+
+PortReturn
+
+PortReturn = 8×1
+
+0.1279
+    0.1361
+    0.1442
+    0.1524
+    0.1605
+    0.1687
+    0.1768
+    0.1850
+
+PortWts
+
+PortWts = 3×8
+
+0.7000    0.6031    0.4864    0.3696    0.2529    0.2000    0.2000    0.2000
+    0.2582    0.3244    0.3708    0.4172    0.4636    0.5738    0.7369    0.9000
+    0.0418    0.0725    0.1428    0.2132    0.2835    0.2262    0.0631   -0.1000
+
+The outputs are represented as columns for the portfolio's risk and return. Portfolio weights are
+identified as corresponding column vectors in a matrix.
+
+3
+Portfolio Analysis
+
+3-20

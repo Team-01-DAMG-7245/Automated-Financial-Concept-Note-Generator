@@ -1,0 +1,51 @@
+Color of forecast line, specified as a character vector with a value of 'none', a character vector for
+color, or an RGB triplet. For more information on supported character vectors for color, see Primitive
+Line.
+
+Data Types: double | char
+
+ForecastLineStyle — Style of forecast line
+'-' (default) | character vector
+
+Style of forecast line, specified as a character vector. For more information on supported character
+vectors for line styles, see Primitive Line.
+
+Data Types: char
+
+ForecastLineWidth — Width of forecast line
+1 (default) | positive value in point units
+
+Width of forecast line, specified as a positive value in point units.
+
+Data Types: double
+
+Output Arguments
+
+h — Figure handle for fanplot
+handle object
+
+Figure handle for the fanplot, returned as handle object.
+
+ax — Axis object
+axis object
+
+Axis object, returned as an ax object.
+
+Version History
+Introduced in R2014b
+
+R2025a: Added Name-Value Argument for Quantiles
+
+Use the name-value argument for Quantiles to specify quantiles displayed in the fan chart.
+
+R2025a: Additional output argument for ax
+
+You can specify an additional output argument for ax that retunes an axis object.
+
+See Also
+bollinger | candle | highlow | linebreak | movavg | pointfig | renko | volarea |
+priceandvol | datetime | ceil | timetable
+
+fanplot
+
+15-1039

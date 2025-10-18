@@ -1,0 +1,12 @@
+{
+  "page": 420,
+  "original_text": "% Visualize the correlation between the 15 stocks.\nreturns = tick2ret(pricesTT);\nstockCorr = corr(returns.Variables);\nheatmap(symbols,symbols,stockCorr,'Colormap',parula);",
+  "ocr_text": "Visualizethecorrelationbetweenthe15stocks.\nreturns=tick2ret(pricesTT);\nstockCorr=corr(returns.Variables);\nheatmap(symbols,symbols,stockCorr,Colormap,parula);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 166.63,
+    "x1": 377.17,
+    "y1": 209.49
+  },
+  "confidence": "high"
+}

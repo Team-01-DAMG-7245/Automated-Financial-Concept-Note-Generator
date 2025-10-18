@@ -1,0 +1,12 @@
+{
+  "page": 1275,
+  "original_text": "z = Example_CopulaRNG(returns * sqrt(252), nPeriods, 'Gaussian');",
+  "ocr_text": "z=Example_CopulaRNG(returns*sqrt(252),nPeriods,Gaussian);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 547.5,
+    "x1": 442.17,
+    "y1": 557.97
+  },
+  "confidence": "high"
+}

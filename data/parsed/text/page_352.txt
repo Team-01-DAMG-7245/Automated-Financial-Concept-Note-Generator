@@ -1,0 +1,38 @@
+Step 6. Evaluating gross vs. net portfolio returns.
+
+The Portfolio object p does not include transaction costs so that the portfolio optimization problem
+specified in p uses gross portfolio return as the return proxy. To handle net returns, create a second
+Portfolio object q that includes transaction costs.
+
+q = setCosts(p, UnitCost, UnitCost);
+display(q)
+
+q = 
+  Portfolio with properties:
+
+BuyCost: [4×1 double]
+                      SellCost: [4×1 double]
+                  RiskFreeRate: []
+                     AssetMean: [4×1 double]
+                    AssetCovar: [4×4 double]
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: 'Asset Allocation Portfolio'
+                     NumAssets: 4
+                     AssetList: {'Bonds'  'Large-Cap Equities'  'Small-Cap Equities'  'Emerging E
+                      InitPort: [4×1 double]
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [4×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-184

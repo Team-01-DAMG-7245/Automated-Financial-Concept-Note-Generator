@@ -1,0 +1,12 @@
+{
+  "page": 1959,
+  "original_text": "simulationDates = datetime(simulationDates,\"ConvertFrom\",\"datenum\");\nplot(simulationDates,squeeze(exposures));\nexpYLim = get(gca,'YLim');\ntitle(sprintf('Exposures for Counterparty: %d',cpID));\nxtickformat('MMMyy');\nylabel('Exposure ($)')\nxlabel('Simulation Dates')",
+  "ocr_text": "simulationDates=datetime(simulationDates,ConvertFrom,datenum);\nplot(simulationDates,squeeze(exposures));\n\nexpYLim=get(gca,YLim);\ntitle(sprintf(ExposuresforCounterparty:d,cpID));\nxtickformat(MMMyy);\n\nylabel(Exposure(S))\n\nxlabel(SimulationDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 302.25,
+    "x1": 458.45,
+    "y1": 377.51
+  },
+  "confidence": "high"
+}

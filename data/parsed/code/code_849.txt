@@ -1,0 +1,5 @@
+Page 817
+================================================================================
+
+This example shows how to use estimateScenarioMoments function to obtain estimates for the
+mean and covariance of scenarios in a PortfolioMAD object.

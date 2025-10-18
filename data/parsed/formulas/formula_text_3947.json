@@ -1,0 +1,12 @@
+{
+  "page": 2239,
+  "original_text": "p = estimateAssetMoments(p, X);\n[passetmean, passetcovar] = getAssetMoments(p)",
+  "ocr_text": "p=estimateAssetMoments(p,_X);\n[passetmean,passetcovar]=getAssetMoments(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 459.84,
+    "x1": 339.23,
+    "y1": 481.1
+  },
+  "confidence": "high"
+}

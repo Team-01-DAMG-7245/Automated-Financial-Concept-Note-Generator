@@ -1,0 +1,61 @@
+end
+
+StepIdx = LoggedSignals.IntervalIdx + ...
+    LoggedSignals.NumIntervalsPerHorizon.*(LoggedSignals.HorizonIdx-1);
+RemainingIntervals = LoggedSignals.NumIntervalsPerHorizon - LoggedSignals.IntervalIdx + 1;
+IS_TWAP = EnvConstants.IS_TWAP(StepIdx);
+
+if EnvConstants.BuyTrade
+    AvgPrice = mean(EnvConstants.SampledBook(StepIdx,[1 5]),2);
+    PriceDivergence = LoggedSignals.ArrivalPrice - AvgPrice;
+else
+    AvgPrice = mean(EnvConstants.SampledBook(StepIdx,[3 7]),2);
+    PriceDivergence = AvgPrice - LoggedSignals.ArrivalPrice;
+end
+
+% Enforce ending inventory constraint
+if LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon
+    if EnvConstants.BuyTrade
+        TradingShares = max(EnvConstants.TotalTradingShares - ...
+            LoggedSignals.CurrentInventoryShares, 0);
+    else
+        TradingShares = LoggedSignals.CurrentInventoryShares;
+    end
+else
+    if EnvConstants.BuyTrade
+        if PriceDivergence > 0
+            AgentRemainingSharestoTrade = max(EnvConstants.TotalTradingShares - ...
+                LoggedSignals.CurrentInventoryShares,0);
+            TradingShares = round(AgentRemainingSharestoTrade./RemainingIntervals./2);
+            TradingShares = min(TradingShares,Action);
+        else
+            TradingShares = min(EnvConstants.TotalTradingShares - ...
+                LoggedSignals.CurrentInventoryShares, Action);
+        end
+    else
+        if PriceDivergence > 0
+            AgentRemainingSharestoTrade = max(LoggedSignals.CurrentInventoryShares, 0);
+            TradingShares = round(AgentRemainingSharestoTrade./RemainingIntervals./2);
+            TradingShares = min(TradingShares,Action);
+        else
+            TradingShares = min(LoggedSignals.CurrentInventoryShares, Action);
+        end
+    end
+end
+
+% Update IsDone:
+% Episode is complete (IsDone is true) when time step reaches the end of
+% the trading data.
+if (LoggedSignals.HorizonIdx >= LoggedSignals.NumHorizons) && ...
+        (LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon)
+    IsDone = true;
+    disp("Last Horizon. Episode is Done!");
+    disp("HorizonIdx:");
+    LoggedSignals.HorizonIdx    
+elseif (LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon)
+    IsDone = false;    
+    % disp("HorizonIdx:");
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-445

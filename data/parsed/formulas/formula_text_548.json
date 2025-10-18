@@ -1,0 +1,12 @@
+{
+  "page": 368,
+  "original_text": "targetRetn = 0.0125;\npwgt = estimateFrontierByReturn(q, targetRetn);",
+  "ocr_text": "targetRetn=0.0125;\npwgt=estimateFrontierByReturn(q,targetRetn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 538.85,
+    "x1": 344.65,
+    "y1": 560.12
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2279,
+  "original_text": "When working with a Portfolio object, the setMinMaxNumAssets function enables you to set up\nthe limits on the number of assets invested (as known as cardinality) constraints. This sets the total\nnumber of allocated assets satisfying the Bound constraints that are between MinNumAssets and\nMaxNumAssets. By setting MinNumAssets = MaxNumAssets = 2, only two of the three assets are\ninvested in the portfolio.",
+  "ocr_text": "WhenworkingwithaPortfolioobject,thesetMinMaxNumAssetsfunctionenablesyoutosetup\nthelimitsonthenumberofassetsinvested(asknownascardinality)constraints.Thissetsthetotal\nnumberofallocatedassetssatisfyingtheBoundconstraintsthatarebetweenMinNumAssetsand\nMaxNumAssets.BysettingMinNumAssets=MaxNumAssets=2,onlytwoofthethreeassetsare\ninvestedintheportfolio.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 616.26,
+    "x1": 547.19,
+    "y1": 675.89
+  },
+  "confidence": "high"
+}

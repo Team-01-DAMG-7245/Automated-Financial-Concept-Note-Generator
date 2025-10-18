@@ -1,0 +1,12 @@
+{
+  "page": 1558,
+  "original_text": "% Partial shares and equal weight for assets\npartialRebal = @(~,prices) ones(1,width(prices)) / width(prices);\newPartial = backtestStrategy(\"PartialShares\",partialRebal,RebalanceFrequency=1);",
+  "ocr_text": "Partialsharesandequalweightforassets\npartialRebal=Q(-,prices)ones(1,width(prices))/width(prices);\newPartial=backtestStrategy(PartialShares,partialRebal,RebalanceFrequency=1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 197.88,
+    "x1": 523.46,
+    "y1": 229.95
+  },
+  "confidence": "high"
+}

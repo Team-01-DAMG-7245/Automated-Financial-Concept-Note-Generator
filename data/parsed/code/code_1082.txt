@@ -1,0 +1,9 @@
+Page 1110
+================================================================================
+
+BondKRD = bndkrdur(table(ZeroDates, ZeroRates), CouponRate, Settle,...
+Maturity,'keyrates',[2 5 10 20]);
+HedgeMaturity = [Maturity_02;Maturity_05;Maturity_10;Maturity_30];
+HedgeCoupon = [Coupon_02;Coupon_05;Coupon_10;Coupon_30];
+HedgeKRD = bndkrdur(table(ZeroDates, ZeroRates), HedgeCoupon,...
+Settle, HedgeMaturity, 'keyrates',[2 5 10 20])

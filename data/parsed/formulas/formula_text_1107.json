@@ -1,0 +1,12 @@
+{
+  "page": 565,
+  "original_text": "In the dimensional space formed by n asset returns, PCA finds the k directions that capture the most\nimportant variations in the returns. Usually, k is less than n. Therefore, by using PCA, you can\ndecompose the n asset returns into k directions that are interpreted as factor loadings. The scores\nfrom the decomposition are interpreted as the factor returns. For more information, see pca\n(Statistics and Machine Learning Toolbox™). In this example, the factor model uses k =nFactors,\nwhere covarianceDenoising determines the numFactors.",
+  "ocr_text": "Inthedimensionalspaceformedbynassetreturns,PCAfindsthekdirectionsthatcapturethemost\nimportantvariationsinthereturns.Usually,kislessthann.Therefore,byusingPCA,youcan\ndecomposethenassetreturnsintokdirectionsthatareinterpretedasfactorloadings.Thescores\nfromthedecompositionareinterpretedasthefactorreturns.Formoreinformation,seepca\n(StatisticsandMachineLearningToolbox).Inthisexample,thefactormodelusesk=nFactors,\nwherecovarianceDenoisingdeterminesthenumFactors.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 92.96,
+    "x1": 551.24,
+    "y1": 164.59
+  },
+  "confidence": "high"
+}

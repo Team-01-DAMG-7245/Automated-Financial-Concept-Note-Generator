@@ -1,0 +1,12 @@
+{
+  "page": 2175,
+  "original_text": "Dates = datetime(Dates,'ConvertFrom','datenum');",
+  "ocr_text": "Dates=datetime(Dates,ConvertFrom,datenum);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 610.3,
+    "x1": 350.09,
+    "y1": 620.77
+  },
+  "confidence": "high"
+}

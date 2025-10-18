@@ -1,0 +1,12 @@
+{
+  "page": 506,
+  "original_text": "% Compute and plot the risk contribution of each individual\n% asset to the portfolio.\nriskContribution = portfolioRiskContribution(p.AssetCovar, ...\n    weightsTable.Variables);\n% Remove small contributions\nriskContribution(riskContribution < 1e-3) = NaN;",
+  "ocr_text": "Computeandplottheriskcontributionofeachindividual\n\nassettotheportfolio.\n\nriskContribution=portfolioRiskContribution(p.AssetCovar,...\nweightsTable.Variables);\n\nSRemovesmall_contributions\n\nriskContribution(riskContributionle-3)=NaN;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 425.94,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

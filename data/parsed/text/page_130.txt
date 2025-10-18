@@ -1,0 +1,48 @@
+Train and Validate LSTM Neural Network
+
+Set the following training options by using the trainingOptions function:
+
+•
+Use the stochastic gradient descent with momentum solver.
+
+•
+Plot the training progress.
+
+•
+Monitor the solver's progress by printing numeric results, in real time, every 100 iterations.
+
+•
+Set the initial learning rate to 1e-1 and specify a piecewise learning rate schedule. These are
+hyperparameters.
+
+•
+Specify the validation data in a cell vector.
+
+•
+Validate every 100 iterations and set the validation patience to 5.
+
+•
+Shuffle the data every epoch.
+
+VData = {XV,yV};
+
+% Hyperparameters
+lr = 1e-4;
+lrs = "piecewise";
+
+options = trainingOptions("sgdm", ...
+    Plots='training-progress', ...
+    InputDataFormats="CTB",...
+    Metric="accuracy",...
+    Verbose=1,VerboseFrequency=100, ...
+    InitialLearnRate=lr,LearnRateSchedule=lrs, ...
+    ValidationData=VData,ValidationFrequency=100,ValidationPatience=5, ...
+    Shuffle="every-epoch");
+
+To train and validate the LSTM neural networks, set trainLSTM to true. Otherwise, this example
+loads the pretrained LSTM neural networks LSTMMdl and RiskyLSTMMdl in the MAT-file
+
+2
+Performing Common Financial Tasks
+
+2-86

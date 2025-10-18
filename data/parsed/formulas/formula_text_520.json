@@ -1,0 +1,12 @@
+{
+  "page": 355,
+  "original_text": "TotalCost = Wealth * sum(Blotter.UnitCost .* (Blotter.Buy + Blotter.Sell))",
+  "ocr_text": "TotalCost=Wealth*sum(Blotter.UnitCost.*(Blotter.Buy+Blotter.Sell))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 442.82,
+    "x1": 490.93,
+    "y1": 453.28
+  },
+  "confidence": "high"
+}

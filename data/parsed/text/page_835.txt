@@ -1,0 +1,70 @@
+0.2500
+
+0.7500
+  0.5000
+
+Setting 'Simple' Bounds Using the PortfolioMAD Function or
+setBounds Function
+
+Both the PortfolioMAD object and setBounds function implement scalar expansion on either the
+LowerBound or UpperBound properties. If the NumAssets property is already set in the
+PortfolioMAD object, scalar arguments for either property expand to have the same value across all
+dimensions. In addition, setBounds lets you specify NumAssets as an optional argument. Suppose
+that you have a universe of 500 assets and you want to set common bound constraints on all assets in
+your universe. Specifically, you are a long-only investor and want to hold no more than 5% of your
+portfolio in any single asset. You can set these bound constraints in any of these equivalent ways:
+
+p = PortfolioMAD('NumAssets', 500, 'LowerBound', 0, 'UpperBound', 0.05,'BoundType', 'Simple');
+
+or
+
+p = PortfolioMAD('NumAssets', 500);
+p = setBounds(p, 0, 0.05,'BoundType','Simple');
+
+or
+
+p = PortfolioMAD;
+p = setBounds(p, 0, 0.05,'NumAssets', 500,'BoundType','Simple');
+
+To clear bound constraints from your PortfolioMAD object, use either the PortfolioMAD object or
+setBounds with empty inputs for the properties to be cleared. For example, to clear the upper-bound
+constraint from the PortfolioMAD object p in the previous example:
+
+p = PortfolioMAD(p, 'UpperBound', []);
+
+See Also
+PortfolioMAD | setDefaultConstraints | setBounds | setBudget | setConditionalBudget
+| setGroups | setGroupRatio | setEquality | setInequality | setTurnover |
+setOneWayTurnover
+
+Related Examples
+
+•
+“Setting Default Constraints for Portfolio Weights Using PortfolioMAD Object” on page 6-50
+
+•
+“Troubleshooting for Setting 'Conditional' BoundType, MinNumAssets, and MaxNumAssets
+Constraints” on page 4-148
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Validate the MAD Portfolio Problem” on page 6-80
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+•
+“Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using
+PortfolioMAD Objects” on page 6-71
+
+Working with 'Simple' Bound Constraints Using PortfolioMAD Object
+
+6-55

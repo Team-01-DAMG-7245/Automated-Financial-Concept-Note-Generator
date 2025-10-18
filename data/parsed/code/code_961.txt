@@ -1,0 +1,12 @@
+Page 955
+================================================================================
+
+DefRateUB = zeros(nGridCPF,nGridSPR);
+for i=1:nGridCPF
+   for j=1:nGridSPR
+      DefRateUB(i,j) = yPredUBFn(gridCPF(i),gridSPR(j));
+   end
+end
+Example_StressTestPlot(gridCPF,gridSPR,DefRateUB,CPF,SPR, ...
+   'Corporate Profits Forecast (%)','Corporate Spread (%)', ...
+   ['{\bf ' strConf '% UB Default Rate Regions (in %)}'])

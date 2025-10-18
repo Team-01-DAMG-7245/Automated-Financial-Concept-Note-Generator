@@ -1,0 +1,8 @@
+Page 53
+================================================================================
+
+To determine cash-flow dates for securities with periodic payments, use cfdates. This function
+accounts for the coupons per year, the day-count basis, and the end-of-month rule. For example, you
+can determine the cash-flow dates for a security that pays four coupons per year on the last day of
+the month using an actual/365 day-count basis. To do so, enter the settlement date, the maturity
+date, and the parameters for Period, Basis, and EndMonthRule.

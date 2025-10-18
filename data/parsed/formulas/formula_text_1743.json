@@ -1,0 +1,12 @@
+{
+  "page": 880,
+  "original_text": "p = PortfolioMAD;\np = setSolver(p, 'fmincon', 'Algorithm', 'active-set', 'Display', 'final');\ndisplay(p.solverOptions)",
+  "ocr_text": "p=PortfolioMAD;\np=setSolver(p,fmincon,Algorithm,active-set,Display,final);\ndisplay(p.solver0ptions)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 482.13,
+    "x1": 378.98,
+    "y1": 504.93
+  },
+  "confidence": "high"
+}

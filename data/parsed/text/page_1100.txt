@@ -1,0 +1,59 @@
+Sensitivity of Bond Prices to Interest Rates
+
+This example demonstrates an analysis of duration and convexity for a bond portfolio using SIA-
+compliant bond functions.
+
+Macaulay and modified duration measure the sensitivity of a bond's price to changes in the level of
+interest rates. Convexity measures the change in duration for small shifts in the yield curve, and thus
+measures the second-order price sensitivity of a bond. Both measures can gauge the vulnerability of a
+bond portfolio's value to changes in the level of interest rates.
+
+Alternatively, analysts can use duration and convexity to construct a bond portfolio that is partly
+hedged against small shifts in the term structure. If you combine bonds in a portfolio whose duration
+is zero, the portfolio is insulated, to some extent, against interest rate changes. If the portfolio
+convexity is also zero, this insulation is even better. However, since hedging costs money or reduces
+expected return, you must know how much protection results from hedging duration alone compared
+to hedging both duration and convexity.
+
+The code in this example demonstrates a way to analyze the relative importance of duration and
+convexity for a bond portfolio using some of the SIA-compliant bond functions in Financial Toolbox™
+software. Using duration, this example constructs a first-order approximation of the change in
+portfolio price to a level shift in interest rates. Then, using convexity, this example calculates a
+second-order approximation. Finally, ths example compares the two approximations with the true
+price change resulting from a change in the yield curve.
+
+Define Bonds
+
+Define three bonds using values for the settlement date, maturity date, face value, and coupon rate.
+For simplicity, accept default values for the coupon payment periodicity (semiannual), end-of-month
+payment rule (rule in effect), and day-count basis (actual/actual). Also, synchronize the coupon
+payment structure to the maturity date (no odd first or last coupon dates). Any inputs for which
+defaults are accepted are set to empty matrices ([]) as placeholders where appropriate.
+
+Settle     = '19-Aug-1999';
+Maturity   = ['17-Jun-2010'; '09-Jun-2015'; '14-May-2025'];
+Face       = [100; 100; 1000];
+CouponRate = [0.07; 0.06; 0.045];
+
+Specify the yield curve information.
+
+Yields = [0.05; 0.06; 0.065];
+
+Calculate Bond Price, Modified Duration, and Convexity
+
+For each bond, calculate the price using bndprice, modified duration in years using bnddury, and
+convexity in years using bndconvy. The true price is quoted (clean) price plus accrued interest.
+
+[CleanPrice, AccruedInterest] = bndprice(Yields, CouponRate, ...
+Settle, Maturity, 2, 0, [], [], [], [], [], Face);
+
+Durations = bnddury(Yields, CouponRate, Settle, Maturity, 2, 0, ...
+[], [], [], [], [], Face);
+
+Convexities = bndconvy(Yields, CouponRate, Settle, Maturity, 2, 0, ...
+[], [], [], [], [], Face);
+
+10
+Solving Sample Problems
+
+10-2

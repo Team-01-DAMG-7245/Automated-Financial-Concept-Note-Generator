@@ -1,0 +1,59 @@
+Output Arguments
+
+SDEDDO — SDEDDO model
+SDEDDO object
+
+SDEDDO model, returned as a SDEDDO object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of first observation, applied to all state variables, specified as a scalar
+
+Data Types: double
+
+StartState — Initial values of state variables
+1 (default) | scalar, column vector, or matrix
+
+Initial values of state variables, specified as a scalar, column vector, or matrix.
+
+If StartState is a scalar, sdeddo applies the same initial value to all state variables on all trials.
+
+If StartState is a column vector, sdeddo applies a unique initial value to each state variable on all
+trials.
+
+If StartState is a matrix, sdeddo applies a unique initial value to each state variable on each trial.
+
+Data Types: double
+
+Correlation — Correlation between Gaussian random variates drawn to generate the
+Brownian motion vector (Wiener processes)
+NBrowns-by-NBrowns identity matrix representing independent Gaussian processes (default) |
+positive semidefinite matrix | deterministic function
+
+Correlation between Gaussian random variates drawn to generate the Brownian motion vector
+(Wiener processes), specified as an NBrowns-by-NBrowns positive semidefinite matrix, or as a
+deterministic function C(t) that accepts the current time t and returns an NBrowns-by-NBrowns
+positive semidefinite correlation matrix. If Correlation is not a symmetric positive semidefinite
+matrix, use nearcorr to create a positive semidefinite matrix for a correlation matrix.
+
+A Correlation matrix represents a static condition.
+
+As a deterministic function of time, Correlation allows you to specify a dynamic correlation
+structure.
+
+Data Types: double
+
+Simulation — User-defined simulation function or SDE simulation method
+simulation by Euler approximation (simByEuler) (default) | function | SDE simulation method
+
+User-defined simulation function or SDE simulation method, specified as a function or SDE simulation
+method.
+
+Data Types: function_handle
+
+sdeddo
+
+15-167

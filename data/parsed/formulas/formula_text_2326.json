@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "Hull-White/Vasicek (HWV)\ndXt = S(t)(L(t) −Xt)dt + V(t)dWt",
+  "ocr_text": "Hull-White/Vasicek(HWV) dX;=S(t)(L(t)-Xp)dt+Vit)dW;",
+  "bbox": {
+    "x0": 44.25,
+    "y0": 220.7,
+    "x1": 446.48,
+    "y1": 234.44
+  },
+  "confidence": "high"
+}

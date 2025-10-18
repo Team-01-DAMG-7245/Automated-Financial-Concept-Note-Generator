@@ -1,0 +1,10 @@
+Page 1547
+================================================================================
+
+•
+PortfolioValue — The current portfolio value at the time the rebalance function
+(RebalanceFcn) is called, specified as a numeric scalar. This PortfolioValue is potentially
+different from the "end of day" portfolio value reported by the backtestEngine at the end of the
+backtest. Transaction costs and other fees are paid after the rebalance function is called, so the
+PortfolioValue passed into the rebalance function by the engineData struct may be different
+from the final portfolio value reported for that day after the backtest completes.

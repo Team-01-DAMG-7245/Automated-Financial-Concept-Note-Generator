@@ -1,0 +1,19 @@
+Page 437
+================================================================================
+
+% Compute and plot efficient frontier for each value in contourWoB.
+figure;
+hold on
+labels = strings(nContour+1,1);
+for i = 1:nContour
+    p.bInequality = -contourWoB(i);
+    plotFrontier(p,nPort);
+    labels(i) = sprintf("%6.2f%% WoB",contourWoB(i)*100);
+end
+% Plot the "original" mean-variance frontier, i.e., the frontier
+% without WoB requierements.
+p.AInequality = []; p.bInequality = [];
+plotFrontier(p,nPort);
+labels(i+1) = "No WoB restriction";
+legend(labels,'Location','northwest')
+hold off

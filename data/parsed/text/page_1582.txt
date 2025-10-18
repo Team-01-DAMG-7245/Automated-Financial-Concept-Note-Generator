@@ -1,0 +1,63 @@
+•
+Define historical or simulated market data — Collect historical market data that is relevant to the
+strategy. This could include price data, trading volumes, economic indicators, or any other data
+that the strategy requires.
+
+•
+Run backtest — Use runBacktest to apply the investment strategy to the historical data to
+simulate how the portfolio would have performed during the selected time period. This involves
+"pretend" buying and selling assets according to the rules of the strategy.
+
+•
+Analyze results — Use summary and equityCurve calculate performance metrics from the
+simulated historical performance. Typical metrics include total return, annualized return, risk
+measures like standard deviation or maximum drawdown, and risk-adjusted return measures like
+the Sharpe ratio. Analyze the results to determine the potential effectiveness of the strategy. This
+includes looking for periods of underperformance, assessing the strategy's consistency, and
+comparing it to benchmarks or alternative strategies.
+
+•
+Refine strategies — Based on the analysis, refine the strategy to improve its performance or to
+reduce risk. This step may involve adjusting the rules, incorporating additional data, or altering
+the portfolio composition. To avoid overfitting, the strategy should be validated using out-of-
+sample data—data that was not used in the initial backtesting. This helps ensure that the strategy
+is robust and not just tailored to the specific historical period initially tested.
+
+Version History
+Introduced in R2020b
+
+R2023b: Detailed transaction costs
+Behavior changed in R2023b
+
+The backtestEngine object supports a read-only property for TransactionCosts to contain per-
+asset transaction costs for each rebalance date.
+
+R2023b: User-controlled cash handling
+Behavior changed in R2023b
+
+The backtestEngine object supports a read-only property for ExpensesPaidFromCash to indicate
+if transaction expenses are paid from a cash account or debt account.
+
+R2022b: Management and performance fees
+Behavior changed in R2022b
+
+The backtestEngine object supports a read-only property for Feesthat reports the management
+and performance fees paid during a backtest. The Fees property is a struct containing a timetable for
+each strategy and the timetable holds all the fees paid by the strategy.
+
+R2022a: Specify time varying cash rates of return
+
+The backtestEngine name-value arguments for RiskFreeRate and CashBorrowRate support a
+timetable data type.
+
+R2022a: Control how the backtesting framework handles missing rebalance dates
+Behavior changed in R2022a
+
+The name-value argument for DateAdjustment enables you to control the date handling behavior
+for rebalance dates that are missing from the assetPrices timetable. If a rebalance date falls on a
+holiday, you can specify the "Next" or "None" option for DateAdjustment.
+
+15
+Functions
+
+15-276

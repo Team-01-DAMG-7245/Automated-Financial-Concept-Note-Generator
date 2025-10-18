@@ -1,0 +1,12 @@
+{
+  "page": 436,
+  "original_text": "% Select the assets to exclude.\nub = zeros(p.NumAssets,1);\nub(WoB >= 0.33) = 1;\np.UpperBound = ub;\n% Estimate the return for a risk level of 0.012.\npwgt_exclude = estimateFrontierByRisk(p,0.012);\nret_exclude = estimatePortReturn(p,pwgt_exclude)",
+  "ocr_text": "Selecttheassetstoexclude.\nub=zeros(p.NumAssets,1);\n\nub(WoB_==0.33)=1;\n\np.UpperBound=ub;\nEstimatethereturnforarisklevelof0.012.\npwgt_exclude=estimateFrontierByRisk(p,0.012);\nret_exclude=estimatePortReturn(p,pwgt_exclude)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 521.58,
+    "x1": 350.07,
+    "y1": 596.85
+  },
+  "confidence": "high"
+}

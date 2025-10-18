@@ -1,0 +1,19 @@
+Page 2351
+================================================================================
+
+Rates = [0.0500;
+         0.0505;
+         0.0510;
+         0.0520];
+StartDates = [datetime(2011,1,20);
+              datetime(2011,4,15);
+              datetime(2011,7,15);
+              datetime(2011,11,15)];
+EndDates =   [datetime(2011,4,15);
+              datetime(2011,7,15);
+              datetime(2011,11,15);
+              datetime(2012,1,15)];
+ValuationDate = datetime(2011,1,20);
+RateSpec = intenvset('Compounding', Reset, 'Rates', Rates,...
+'StartDates', StartDates, 'EndDates', EndDates,...
+'ValuationDate', ValuationDate, 'Basis', Basis);

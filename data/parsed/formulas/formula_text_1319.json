@@ -1,0 +1,12 @@
+{
+  "page": 655,
+  "original_text": "p = PortfolioCVaR('Name','Asset Allocation Fund');\ndisp(p.Name)",
+  "ocr_text": "p=PortfolioCVaR(Name,AssetAllocationFund);\ndisp(p.Name)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 305.77,
+    "x1": 360.92,
+    "y1": 327.04
+  },
+  "confidence": "high"
+}

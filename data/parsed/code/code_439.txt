@@ -1,0 +1,13 @@
+Page 434
+================================================================================
+
+% Get the efficient surface values.
+prsk = cell(N,1);
+pret = cell(N,1);
+pWoB = cell(N,1);
+for i = 1:N
+    p.bInequality = -targetWoB(i);
+    pwgt = estimateFrontier(p,N);
+    [prsk{i},pret{i}] = estimatePortMoments(p,pwgt);
+    pWoB{i} = pwgt'*WoB;
+end

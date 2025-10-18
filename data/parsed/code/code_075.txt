@@ -1,0 +1,8 @@
+Page 86
+================================================================================
+
+The output from the binomial function is a binary tree. Read the StockPrice matrix this way:
+column 1 shows the price for period 0, column 2 shows the up and down prices for period 1, column 3
+shows the up-up, up-down, and down-down prices for period 2, and so on. Ignore the zeros. The
+OptionPrice matrix gives the associated option value for each node in the price tree. Ignore the
+zeros that correspond to a zero in the price tree.

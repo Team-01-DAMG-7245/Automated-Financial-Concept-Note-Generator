@@ -1,0 +1,53 @@
+cfamounts
+
+Cash flow and time mapping for bond portfolio
+
+Syntax
+
+[CFlowAmounts,CFlowDates,TFactors,CFlowFlags,CFPrincipal] = cfamounts(
+CouponRate,Settle,Maturity)
+[CFlowAmounts,CFlowDates,TFactors,CFlowFlags,CFPrincipal] = cfamounts( ___ ,
+Name,Value)
+
+Description
+
+[CFlowAmounts,CFlowDates,TFactors,CFlowFlags,CFPrincipal] = cfamounts(
+CouponRate,Settle,Maturity) returns matrices of cash flow amounts, cash flow dates, time
+factors, and cash flow flags for a portfolio of NUMBONDS fixed-income securities.
+
+The elements contained in the cfamounts outputs for the cash flow matrix, time factor matrix, and
+cash flow flag matrix correspond to the cash flow dates for each security. The first element of each
+row in the cash flow matrix is the accrued interest payable on each bond. This accrued interest is
+zero in the case of all zero coupon bonds. cfamounts determines all cash flows and time mappings
+for a bond whether or not the coupon structure contains odd first or last periods. All output matrices
+are padded with NaNs as necessary to ensure that all rows have the same number of elements.
+
+[CFlowAmounts,CFlowDates,TFactors,CFlowFlags,CFPrincipal] = cfamounts( ___ ,
+Name,Value) adds optional name-value arguments.
+
+Examples
+
+Compute the Cash Flow Structure and Time Factors for a Bond Portfolio
+
+This example shows how to compute the cash flow structure and time factors for a bond portfolio that
+contains a corporate bond paying interest quarterly and a Treasury bond paying interest
+semiannually.
+
+Settle = '01-Nov-1993';
+Maturity = ['15-Dec-1994';'15-Jun-1995'];
+CouponRate= [0.06; 0.05];
+Period = [4; 2];
+Basis = [1; 0];
+[CFlowAmounts, CFlowDates, TFactors, CFlowFlags] = ...
+cfamounts(CouponRate,Settle, Maturity, Period, Basis)
+
+CFlowAmounts = 2×6
+
+-0.7667    1.5000    1.5000    1.5000    1.5000  101.5000
+   -1.8989    2.5000    2.5000    2.5000  102.5000       NaN
+
+CFlowDates = 2×6
+
+cfamounts
+
+15-667

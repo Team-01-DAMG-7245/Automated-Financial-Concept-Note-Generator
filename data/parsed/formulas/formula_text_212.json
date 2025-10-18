@@ -1,0 +1,12 @@
+{
+  "page": 131,
+  "original_text": "figure\ncm = confusionchart(yV,predYLSTM);\ncm.NormalizedValues;\ncm.RowSummary = \"row-normalized\";",
+  "ocr_text": "figure\ncm=confusionchart(yV,predYLSTM);\ncm.NormalizedValues;\ncm.RowSummary=row-normalized;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 274.21,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

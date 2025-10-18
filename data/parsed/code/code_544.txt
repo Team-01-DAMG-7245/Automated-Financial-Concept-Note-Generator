@@ -1,0 +1,6 @@
+Page 504
+================================================================================
+
+Similar to the case for the MDP penalized formulation, there exists a λERC such that the ERC problem
+and its penalized version are equivalent. Use the function handle ERCMixObjFun for the ERC penalty
+with the estimateCustomObjectivePortfolio function.

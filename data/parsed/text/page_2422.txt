@@ -1,0 +1,36 @@
+highlow
+
+High, low, open, close chart
+
+Syntax
+
+highlow(Data)
+highlow(Data,Color)
+h = highlow(ax, ___ )
+
+Description
+
+highlow(Data) displays a highlow chart from a series of opening, high, low, and closing prices of a
+security. The plots are vertical lines whose top is the high, bottom is the low, open is a left tick, and
+close is a right tick.
+
+highlow(Data,Color) adds an optional argument for Color.
+
+h = highlow(ax, ___ ) adds an optional argument for ax.
+
+Examples
+
+Generate a Highlow Chart for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock. The highlow chart plots the price data using blue lines.
+
+load SimulatedStock.mat
+range = 1:25;
+highlow(TMW(range,:),'b');
+title('High, Low, Open, Close Chart for TMW')
+
+15
+Functions
+
+15-1116

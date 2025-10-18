@@ -1,0 +1,61 @@
+runBacktest
+
+Run backtest on one or more strategies
+
+Syntax
+
+backtester = runBacktest(backtester,pricesTT)
+backtester = runBacktest(backtester,pricesTT,signalTT)
+backtester = runBacktest( ___ ,Name,Value)
+
+Description
+
+backtester = runBacktest(backtester,pricesTT) runs the backtest over the timetable of
+adjusted asset price data.
+
+runBacktest initializes each strategy previously defined using backtestStrategy to the
+InitialPortfolioValue and then begins processing the timetable of price data (pricesTT) as
+follows:
+
+1
+At each time step, the runBacktest function applies the asset returns to the strategy portfolio
+positions.
+
+2
+The runBacktest function determines which strategies to rebalance based on the
+RebalanceFrequency property of the backtestStrategy objects.
+
+3
+For strategies that need rebalancing, the runBacktest function calls their rebalance functions
+with a rolling window of asset price data based on the LookbackWindow property of each
+backtestStrategy.
+
+4
+Transaction costs are calculated and charged based on the changes in asset positions and the
+TransactionCosts property of each backtestStrategy object.
+
+5
+After the backtest is complete, the results are stored in several properties of the
+backtestEngine object. For more information, see “runBacktest Processing Steps” on page 15-
+291.
+
+backtester = runBacktest(backtester,pricesTT,signalTT) run the backtest using the
+adjusted asset price data and signal data. When you specify the signal data timetable (signalTT),
+then the runBacktest function runs the backtest and additionally passes a rolling window of signal
+data to the rebalance function of each strategy during the rebalance step.
+
+backtester = runBacktest( ___ ,Name,Value) specifies options using one or more optional
+name-value pair arguments in addition to the input arguments in the previous syntax. For example,
+backtester = runBacktest(backtester,assetPrices,'Start',50,'End',100).
+
+Examples
+
+Run Backtests
+
+The MATLAB® backtesting engine runs backtests of portfolio investment strategies over timeseries
+of asset price data. After creating a set of backtest strategies using backtestStrategy and the
+
+15
+Functions
+
+15-278

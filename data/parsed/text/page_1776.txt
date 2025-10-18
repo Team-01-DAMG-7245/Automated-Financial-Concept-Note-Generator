@@ -1,0 +1,60 @@
+Arithmetic covariance of asset-return data, specified as an n-by-n symmetric, positive semidefinite
+matrix. If Ca is not a symmetric positive semidefinite matrix, use nearcorr to create a positive
+semidefinite matrix for a correlation matrix.
+
+Data Types: double
+
+t — Target period of geometric moments in terms of periodicity of arithmetic moments
+1 (default) | scalar positive numeric
+
+(Optional) Target period of geometric moments in terms of periodicity of arithmetic moments,
+specified as a scalar positive numeric.
+
+Data Types: double
+
+Output Arguments
+
+mg — Continuously compounded or "geometric" mean of asset returns over the target
+period
+vector
+
+Continuously compounded or "geometric" mean of asset returns over the target period (t), returned
+as an n-vector.
+
+Cg — Continuously compounded or "geometric" covariance of asset returns over the target
+period
+matrix
+
+Continuously compounded or "geometric" covariance of asset returns over the target period (t),
+returned as an n-by-n matrix.
+
+Algorithms
+
+Arithmetic returns over period tA are modeled as multivariate normal random variables with moments
+
+E[X] = mA
+
+and
+
+cov(X) = CA
+
+Geometric returns over period tG are modeled as multivariate lognormal random variables with
+moments
+
+E[Y] = 1 + mG
+
+cov(Y) = CG
+
+Given t = tG / tA, the transformation from geometric to arithmetic moments is
+
+1 + mGi = exp(tmAi + 1
+2tCAii)
+
+CGi j = (1 + mGi)(1 + mGj)(exp(tCAi j) −1)
+
+For i,j = 1,..., n.
+
+15
+Functions
+
+15-470

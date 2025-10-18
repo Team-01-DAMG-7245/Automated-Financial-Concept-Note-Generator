@@ -1,0 +1,12 @@
+{
+  "page": 2069,
+  "original_text": "PreviousCouponDate = cpndatep(Settle, Maturity)",
+  "ocr_text": "PreviousCouponDate=cpndatep(Settle,Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 344.65,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

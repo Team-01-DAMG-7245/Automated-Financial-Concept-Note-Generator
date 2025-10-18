@@ -1,0 +1,12 @@
+{
+  "page": 2341,
+  "original_text": "historical(:,1) = num2cell(datetime(2006:2010,1,1));\nforecast(:,1) = num2cell(datetime(2011:2015,1,1));\nfanplot (historical, forecast);",
+  "ocr_text": "historical(:,1)=num2cell(datetime(2006:2010,1,1));\nforecast(:,1)=num2cell(datetime(2011:2015,1,1));\nfanplot(historical,forecast);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 495.48,
+    "x1": 371.73,
+    "y1": 527.55
+  },
+  "confidence": "high"
+}

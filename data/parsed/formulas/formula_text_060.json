@@ -1,0 +1,12 @@
+{
+  "page": 66,
+  "original_text": "CouponRate = 0.05;\nYield = 0.045;\nSettle = datetime(2000,1,12);\nMaturity = datetime(2001,10,1);",
+  "ocr_text": "CouponRate=0.05;\nYield=0.045;\nSettle=datetime(2000,1,12);\nMaturity=datetime(2001,10,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 257.95,
+    "y1": 686.69
+  },
+  "confidence": "high"
+}

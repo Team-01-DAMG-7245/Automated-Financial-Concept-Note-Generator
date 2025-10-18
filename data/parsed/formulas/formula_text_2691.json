@@ -1,0 +1,12 @@
+{
+  "page": 1359,
+  "original_text": "% Compute the minimum variance portfolio.\nnew_weights = estimateFrontierLimits(p,'min');\nend",
+  "ocr_text": "Computetheminimumvarianceportfolio.\nnew_weights=estimateFrontierLimits(p,min);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.03,
+    "x1": 339.25,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

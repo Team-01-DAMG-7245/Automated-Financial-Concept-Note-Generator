@@ -1,0 +1,12 @@
+{
+  "page": 1252,
+  "original_text": "obj = gbm(rate, sigma, 'StartState', 100);",
+  "ocr_text": "obj=gbm(rate,sigma,StartState,100);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 295.38,
+    "x1": 317.57,
+    "y1": 305.85
+  },
+  "confidence": "high"
+}

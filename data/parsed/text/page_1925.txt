@@ -1,0 +1,53 @@
+cdsbootstrap
+
+Bootstrap default probability curve from credit default swap market quotes
+
+Syntax
+
+[ProbData,HazData] = cdsbootstrap(ZeroData,MarketData,Settle)
+[ProbData,HazData] = cdsbootstrap( ___ ,Name,Value)
+
+Description
+
+[ProbData,HazData] = cdsbootstrap(ZeroData,MarketData,Settle) bootstraps the
+default probability curve using credit default swap (CDS) market quotes. The market quotes can be
+expressed as a list of maturity dates and corresponding CDS market spreads, or as a list of maturities
+and corresponding upfronts and standard spreads for standard CDS contracts. The estimation uses
+the standard model of the survival probability.
+
+Note Alternatively, you can use the Financial Instruments Toolbox defprobstrip function to
+bootstrap a defprobcurve object from market CDS instruments. For more information, see “Get
+Started with Workflows Using Object-Based Framework for Pricing Financial Instruments” (Financial
+Instruments Toolbox).
+
+[ProbData,HazData] = cdsbootstrap( ___ ,Name,Value) adds optional name-value pair
+arguments.
+
+Examples
+
+Bootstrap Default Probability Curve from Credit Default Swap Market Quotes
+
+This example shows how to use cdsbootstrap with market quotes for CDS contracts to generate
+ProbData and HazData values.
+
+Settle = datetime(2009,7,17); % valuation date for the CDS
+Spread_Time = [1 2 3 5 7]';
+Spread = [140 175 210 265 310]';
+Market_Dates = daysadd(datenum(Settle),360*Spread_Time,1);
+MarketData = [Market_Dates Spread];
+Zero_Time = [.5 1 2 3 4 5]';
+Zero_Rate = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+Zero_Dates = daysadd(datenum(Settle),360*Zero_Time,1);
+ZeroData = [Zero_Dates Zero_Rate];
+
+format long
+[ProbData,HazData] = cdsbootstrap(ZeroData,MarketData,Settle)
+
+ProbData = 5×2
+105 ×
+
+7.343360000000000   0.000000233427859
+
+cdsbootstrap
+
+15-619

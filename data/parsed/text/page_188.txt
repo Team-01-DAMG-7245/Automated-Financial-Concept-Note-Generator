@@ -1,0 +1,66 @@
+Portfolio Object
+
+In this section...
+
+“Portfolio Object Properties and Functions” on page 4-20
+
+“Working with Portfolio Objects” on page 4-20
+
+“Setting and Getting Properties” on page 4-20
+
+“Displaying Portfolio Objects” on page 4-21
+
+“Saving and Loading Portfolio Objects” on page 4-21
+
+“Estimating Efficient Portfolios and Frontiers” on page 4-21
+
+“Arrays of Portfolio Objects” on page 4-22
+
+“Subclassing Portfolio Objects” on page 4-23
+
+“Conventions for Representation of Data” on page 4-23
+
+Portfolio Object Properties and Functions
+
+The Portfolio object implements mean-variance portfolio optimization. Every property and function
+of the Portfolio object is public, although some properties and functions are hidden. See
+Portfolio for the properties and functions of the Portfolio object. The Portfolio object is a
+value object where every instance of the object is a distinct version of the object. Since the
+Portfolio object is also a MATLAB object, it inherits the default functions associated with MATLAB
+objects.
+
+Working with Portfolio Objects
+
+The Portfolio object and its functions are an interface for mean-variance portfolio optimization. So,
+almost everything you do with the Portfolio object can be done using the associated functions. The
+basic workflow is:
+
+1
+Design your portfolio problem.
+
+2
+Use Portfolio to create the Portfolio object or use the various set functions to set up your
+portfolio problem.
+
+3
+Use estimate functions to solve your portfolio problem.
+
+In addition, functions are available to help you view intermediate results and to diagnose your
+computations. Since MATLAB features are part of a Portfolio object, you can save and load objects
+from your workspace and create and manipulate arrays of objects. After settling on a problem, which,
+in the case of mean-variance portfolio optimization, means that you have either data or moments for
+asset returns and a collection of constraints on your portfolios, use Portfolio to set the properties
+for the Portfolio object. Portfolio lets you create an object from scratch or update an existing
+object. Since the Portfolio object is a value object, it is easy to create a basic object, then use
+functions to build upon the basic object to create new versions of the basic object. This is useful to
+compare a basic problem with alternatives derived from the basic problem. For details, see “Creating
+the Portfolio Object” on page 4-25.
+
+Setting and Getting Properties
+
+You can set properties of a Portfolio object using either Portfolio or various set functions.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-20

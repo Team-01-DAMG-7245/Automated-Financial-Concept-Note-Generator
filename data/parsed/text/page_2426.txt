@@ -1,0 +1,56 @@
+holdings2weights
+
+Portfolio holdings into weights
+
+Syntax
+
+Weights = holdings2weights(Holdings,Prices)
+Weights = holdings2weights( ___ ,Budget)
+
+Description
+
+Weights = holdings2weights(Holdings,Prices) converts portfolio holdings into portfolio
+weights. The weights must satisfy a budget constraint such that the weights sum to Budget for each
+portfolio.
+
+Weights = holdings2weights( ___ ,Budget) converts portfolio holdings into portfolio weights
+using an optional argument for Budget.
+
+Input Arguments
+
+Holdings — Holdings value
+matrix
+
+Holdings value, returned as an NPORTS-by-NASSETS matrix that contains the holdings of NPORTS
+portfolios that contain NASSETS assets.
+
+Note
+
+•
+Holdings may be negative to indicate a short position, but the overall portfolio weights must
+satisfy a nonzero budget constraint.
+
+•
+The weights in each portfolio sum to the Budget value (which is 1 if Budget is unspecified.)
+
+Data Types: double
+
+Prices — Asset prices
+vector
+
+Asset prices, specified as an NASSETS vector.
+
+Data Types: double
+
+Budget — Budget constraints
+1 (default) | scalar numeric | vector
+
+(Optional) Budget constraints, specified as a scalar or an NPORTS vector of nonzero budget
+constraints.
+
+Data Types: double
+
+15
+Functions
+
+15-1120

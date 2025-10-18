@@ -1,0 +1,62 @@
+•
+"randomized-quasi" — Randomized quasi-Monte Carlo
+
+Note If you specify an input noise process (see Z), simBySolution ignores the value of
+MonteCarloMethod.
+
+Data Types: string | char
+
+QuasiSequence — Low discrepancy sequence to drive stochastic processes
+"sobol" (default) | string with value "sobol" | character vector with value 'sobol'
+
+Low discrepancy sequence to drive the stochastic processes, specified as the comma-separated pair
+consisting of 'QuasiSequence' and a string or character vector with the following value:
+
+•
+"sobol" — Quasi-random low-discrepancy sequences that use a base of two to form successively
+finer uniform partitions of the unit interval and then reorder the coordinates in each dimension
+
+Note
+
+•
+If MonteCarloMethod option is not specified or specified as"standard", QuasiSequence is
+ignored.
+
+•
+If you specify an input noise process (see Z), simBySolution ignores the value of
+QuasiSequence.
+
+Data Types: string | char
+
+BrownianMotionMethod — Brownian motion construction method
+"standard" (default) | string with value "brownian-bridge" or "principal-components" |
+character vector with value 'brownian-bridge' or 'principal-components'
+
+Brownian motion construction method, specified as the comma-separated pair consisting of
+'BrownianMotionMethod' and a string or character vector with one of the following values:
+
+•
+"standard" — The Brownian motion path is found by taking the cumulative sum of the Gaussian
+variates.
+
+•
+"brownian-bridge" — The last step of the Brownian motion path is calculated first, followed by
+any order between steps until all steps have been determined.
+
+•
+"principal-components" — The Brownian motion path is calculated by minimizing the
+approximation error.
+
+Note If an input noise process is specified using the Z input argument, BrownianMotionMethod is
+ignored.
+
+The starting point for a Monte Carlo simulation is the construction of a Brownian motion sample path
+(or Wiener path). Such paths are built from a set of independent Gaussian variates, using either
+standard discretization, Brownian-bridge construction, or principal components construction.
+
+Both standard discretization and Brownian-bridge construction share the same variance and,
+therefore, the same resulting convergence when used with the MonteCarloMethod using pseudo
+
+simBySolution
+
+15-125

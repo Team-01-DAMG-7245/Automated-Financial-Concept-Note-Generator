@@ -1,0 +1,61 @@
+arguments in the function call. For example, if you intend to use quadprog and want to use the
+'trust-region-reflective' algorithm, call setSolver with this code:
+
+p = Portfolio;
+p = setSolver(p, 'quadprog', 'Algorithm', 'trust-region-reflective');
+display(p.solverOptions)
+
+quadprog options:
+
+Options used by current Algorithm ('trust-region-reflective'):
+   (Other available algorithms: 'active-set', 'interior-point-convex')
+
+Set properties:
+              Algorithm: 'trust-region-reflective'
+
+Default properties:
+                Display: 'final'
+      FunctionTolerance: 'default dependent on problem'
+     HessianMultiplyFcn: []
+          MaxIterations: 'default dependent on problem'
+    OptimalityTolerance: 'default dependent on problem'
+          StepTolerance: 2.2204e-14
+    SubproblemAlgorithm: 'cg'
+               TypicalX: 'ones(numberOfVariables,1)'
+
+In addition, if you want to specify any of the options for quadprog that you typically set through
+optimoptions from Optimization Toolbox, setSolver accepts an optimoptions object as the
+second argument. For example, you can start with the default options for quadprog set by
+setSolver and then change the algorithm to 'trust-region-reflective' with no displayed
+output:
+
+p = Portfolio;
+options = optimoptions('quadprog', 'Algorithm', 'trust-region-reflective', 'Display', 'off');
+p = setSolver(p, 'quadprog', options);
+display(p.solverOptions.Algorithm)
+display(p.solverOptions.Display)
+
+trust-region-reflective
+off
+
+Using the Mixed Integer Nonlinear Programming (MINLP) Solver
+
+The mixed integer nonlinear programming (MINLP) solver, configured using setSolverMINLP,
+enables you to specify associated solver options for portfolio optimization for a Portfolio object.
+The MINLP solver is used when any one, or any combination of 'Conditional' BoundType,
+MinNumAssets, or MaxNumAssets constraints are active. In this case, you formulate the portfolio
+problem by adding NumAssets binary variables, where 0 indicates not invested, and 1 is invested.
+For more information on using 'Conditional' BoundType, see setBounds. For more information
+on specifying MinNumAssets and MaxNumAssets, see setMinMaxNumAssets.
+
+When using the estimate functions with a Portfolio object where 'Conditional' BoundType,
+MinNumAssets, or MaxNumAssets constraints are active, the mixed integer nonlinear programming
+(MINLP) solver is automatically used.
+
+Solver Guidelines for Portfolio Objects
+
+The following table provides guidelines for using setSolver and setSolverMINLP.
+
+Choosing and Controlling the Solver for Mean-Variance Portfolio Optimization
+
+4-115

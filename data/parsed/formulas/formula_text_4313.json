@@ -1,0 +1,12 @@
+{
+  "page": 2441,
+  "original_text": "(Optional) Valid axis object, specified as an axes object. The kagi plot is created in the axes specified\nby ax instead of in the current axes (ax = gca). The option ax can precede any of the input\nargument combinations.",
+  "ocr_text": "(Optional)Validaxisobject,specifiedasanaxesobject.Thekagiplotiscreatedintheaxesspecified\nbyaxinsteadofinthecurrentaxes(ax_=gca).Theoptionaxcanprecedeanyoftheinput\nargumentcombinations.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.92,
+    "x1": 549.66,
+    "y1": 289.55
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 477,
+  "original_text": "backtestPred_LSTM = minibatchpredict(net_LSTM,Xbacktest,InputDataFormats=\"CTB\");",
+  "ocr_text": "backtestPred_LSTM=minibatchpredict(net_LSTM,Xbacktest,InputDataFormats=CTB);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 565.39,
+    "x1": 523.47,
+    "y1": 575.85
+  },
+  "confidence": "high"
+}

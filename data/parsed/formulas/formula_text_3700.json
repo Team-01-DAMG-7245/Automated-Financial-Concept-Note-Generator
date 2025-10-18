@@ -1,0 +1,12 @@
+{
+  "page": 2088,
+  "original_text": "NumDaysPeriod = cpnpersz( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate) returns the number of days in the coupon period containing\nthe settlement date using optional input arguments.",
+  "ocr_text": "NumDaysPeriod=cpnpersz(____,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)returnsthenumberofdaysinthecouponperiodcontaining\nthesettlementdateusingoptionalinputarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 378.21,
+    "x1": 553.21,
+    "y1": 413.84
+  },
+  "confidence": "high"
+}

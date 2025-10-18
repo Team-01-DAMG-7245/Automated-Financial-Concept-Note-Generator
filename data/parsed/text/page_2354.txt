@@ -1,0 +1,64 @@
+AdjustCashFlowsBasis — Adjust cash flows according to accrual amount
+0 (not in effect) (default) | nonnegative integer 0 or 1
+
+Adjusts cash flows according to the accrual amount, specified as a NINST-by-1 vector of logicals.
+
+Note Usually you want to set AdjustCashFlowsBasis to 1, so cash flows are calculated with
+adjustments on accrual amounts. The default is set to 0 to be consistent with floatbyzero.
+
+Data Types: logical
+
+Holidays — Dates for holidays
+holidays.m used (default) | datetime array | string array | date character vector | serial date
+number
+
+Dates for holidays, specified as NHOLIDAYS-by-1 vector using a datetime array, string array, or date
+character vectors. Holidays are used in computing business days.
+
+To support existing code, floatdiscmargin also accepts serial date numbers as inputs, but they are
+not recommended.
+
+Data Types: char | string | datetime
+
+BusinessDayConvention — Business day conventions
+'actual' (default) | character vector with values'actual', 'follow', 'modifiedfollow',
+'previous'or 'modifiedprevious'
+
+Business day conventions, specified as a NINST-by-1 cell array of character vectors of business day
+conventions to be used in computing payment dates. The selection for business day convention
+determines how nonbusiness days are treated. Nonbusiness days are defined as weekends plus any
+other date that businesses are not open (for example, statutory holidays). Values are:
+
+•
+'actual' — Nonbusiness days are effectively ignored. Cash flows that fall on non-business days
+are assumed to be distributed on the actual date.
+
+•
+'follow' — Cash flows that fall on a nonbusiness day are assumed to be distributed on the
+following business day.
+
+•
+'modifiedfollow' — Cash flows that fall on a non-business day are assumed to be distributed
+on the following business day. However if the following business day is in a different month, the
+previous business day is adopted instead.
+
+•
+'previous' — Cash flows that fall on a nonbusiness day are assumed to be distributed on the
+previous business day.
+
+•
+'modifiedprevious' — Cash flows that fall on a nonbusiness day are assumed to be distributed
+on the previous business day. However if the previous business day is in a different month, the
+following business day is adopted instead.
+
+Data Types: char | cell
+
+Output Arguments
+
+Margin — Discount margin
+numeric
+
+15
+Functions
+
+15-1048

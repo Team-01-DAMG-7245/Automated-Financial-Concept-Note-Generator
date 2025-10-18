@@ -1,0 +1,4 @@
+Page 598
+================================================================================
+
+Now, validate the testing environment using reset and step function handles.

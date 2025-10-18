@@ -1,0 +1,38 @@
+The paths are close but not exact. The blue line in the last plot uses all the historical Euribor data,
+and illustrates a single trial of a historical simulation.
+
+Price European Stock Options Using Monte Carlo Simulation
+
+As discussed in “Simulate Positive Interest Rates” on page 14-54, all simulation and interpolation
+methods allow you to specify one or more functions of the form:
+
+to evaluate at the end of every sample time.
+
+The related example illustrates a simple, common end-of-period processing function to ensure
+nonnegative interest rates. This example illustrates a processing function that allows you to avoid
+simulation outputs altogether.
+
+Consider pricing European stock options by Monte Carlo simulation within a Black-Scholes-Merton
+framework. Assume that the stock has the following characteristics:
+
+•
+The stock currently trades at 100.
+
+•
+The stock pays no dividends.
+
+•
+The stock's volatility is 50% per annum.
+
+•
+The option strike price is 95.
+
+•
+The option expires in three months.
+
+•
+The risk-free rate is constant at 10% per annum.
+
+Simulating Equity Prices
+
+14-47

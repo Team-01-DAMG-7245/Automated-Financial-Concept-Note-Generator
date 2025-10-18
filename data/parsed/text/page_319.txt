@@ -1,0 +1,76 @@
+simple 
+     conditional 
+     conditional
+
+Redundant Constraints from 'BoundType', 'MinNumAssets', 'MaxNumAssets' Constraints
+
+When none of the constraints from 'BoundType', 'MinNumAssets', or 'MaxNumAssets' are
+active, the redundant constraints from 'BoundType', 'MinNumAssets', 'MaxNumAssets' warning
+occurs. This happens when you explicitly use setBounds and setMinMaxNumAssets but with values
+that are inactive. That is, the 'Conditional' BoundType has a LowerBound = [ ] or 0,
+'MinNumAssets' is 0, or 'MaxNumAssets' is the same value as NumAssets. In other words, if any
+of these three are active, the warning will not show up when using the estimate functions or
+plotFrontier. The following two examples show the rationale.
+
+The first example is when the BoundType is explicitly set as 'Conditional' but the LowerBound is
+0, and no 'MinNumAssets' and 'MaxNumAssets' constraints are defined using
+setMinMaxNumAssets.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+    0.00022983 0.00049937 0.00019247;
+    0.00420395 0.00019247 0.00764097 ];
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+p = setBounds(p, 0, 0.5, 'BoundType', 'Conditional');   
+estimateFrontier(p, 10)
+
+Warning: Redundant constraints from 'BoundType', 'MinNumAssets', 'MaxNumAssets'. 
+> In internal.finance.PortfolioMixedInteger/hasIntegerConstraints (line 24)
+  In Portfolio/estimateFrontier (line 51)
+
+ans =
+
+Columns 1 through 8
+
+0.5000    0.3555    0.3011    0.3299    0.3586    0.3873    0.4160    0.4448
+    0.5000    0.5000    0.4653    0.3987    0.3321    0.2655    0.1989    0.1323
+         0    0.1445    0.2335    0.2714    0.3093    0.3471    0.3850    0.4229
+
+Columns 9 through 10
+
+0.4735    0.5000
+    0.0657         0
+    0.4608    0.5000
+
+The second example is when you explicitly set the three constraints, but all with inactive values. In
+this example, the BoundType is 'Conditional' and the LowerBound is 0, thus specifying
+ineffective 'Conditional' BoundType constraints, and the 'MinNumAssets' and
+'MaxNumAssets' values are 0 and 3, respectively. The setMinMaxNumAssets function specifies
+ineffective 'MinNumAssets' and 'MaxNumAssets' constraints.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+    0.00022983 0.00049937 0.00019247;
+    0.00420395 0.00019247 0.00764097 ];
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+p = setBounds(p, 0, 0.5, 'BoundType', 'Conditional');   
+p = setMinMaxNumAssets(p, 0, 3);   
+estimateFrontier(p, 10)
+
+Warning: Redundant constraints from 'BoundType', 'MinNumAssets', 'MaxNumAssets'. 
+> In internal.finance.PortfolioMixedInteger/hasIntegerConstraints (line 24)
+  In Portfolio/estimateFrontier (line 51)
+
+ans =
+
+Columns 1 through 8
+
+0.5000    0.3555    0.3011    0.3299    0.3586    0.3873    0.4160    0.4448
+    0.5000    0.5000    0.4653    0.3987    0.3321    0.2655    0.1989    0.1323
+         0    0.1445    0.2335    0.2714    0.3093    0.3471    0.3850    0.4229
+
+Columns 9 through 10
+
+Troubleshooting Portfolio Optimization Results
+
+4-151

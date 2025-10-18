@@ -1,0 +1,4 @@
+Page 583
+================================================================================
+
+Validate the reset function and the initial observation.

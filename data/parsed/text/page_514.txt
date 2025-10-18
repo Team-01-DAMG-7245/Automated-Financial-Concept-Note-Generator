@@ -1,0 +1,75 @@
+min
+x
+x −x0
+
+TΣ x −x0
+
+s . t . ∑
+i
+xi = 1,
+
+∑
+i
+# xi ≠0 ≤2,
+
+x = 0 or x ≥0 . 01
+
+Since the constraints are the same, you need only to define a new objective function.
+
+% Define the objective function.
+TESquared2 = @(x) (x-bmkPort)'*p.AssetCovar*(x-bmkPort);
+
+Use estimateCustomObjectivePortfolio to compute the solution to the problem.
+
+% Solve the porfolio problem.
+wMinTE2 = estimateCustomObjectivePortfolio(p,TESquared2)
+
+wMinTE2 = 4×1
+
+0.8317
+         0
+         0
+    0.1683
+
+The difference in the allocation for the different methods is negligible within a numerical accuracy.
+This means that the solution to both problems is the same.
+
+norm(wMinTE1-wMinTE2,"inf")
+
+ans = 
+5.5511e-17
+
+Add Tracking Error as Soft Constraint
+
+When you want to find a portfolio that focuses on two different objectives, you can define one of those
+objectives as a soft constraint and adding that objective as a penalty to the objective function. In this
+example, the tracking error becomes a soft constraint and the strength of the constraint is controlled
+with the penalty parameter λ ≥0. The larger λ is, the stronger the tracking error constraint becomes,
+and conversely, the smaller λ is, the weaker the tracking error constraint becomes.
+
+Assume that you are interested in obtaining the portfolio closest to the equally weighted portfolio
+(EWP) while controlling its tracking error. Minimizing the Herfindahl-Hirschman (HH) index, given by
+xTx, returns the portfolio closest to the EWP that satisfies the necessary constraints. Assuming that
+the portfolio must satisfy the same constraints as in Minimizing Tracking Error on page 4-344, the
+problem is as follows
+
+min
+x
+xTx + λ x −x0
+
+TΣ x −x0
+
+s . t . ∑
+i
+xi = 1,
+
+∑
+i
+# xi ≠0 ≤2,
+
+x = 0 or x ≥0 . 01
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-346

@@ -1,0 +1,5 @@
+Page 1480
+================================================================================
+
+•
+B — Access function for the input argument B, callable as a function of time and state

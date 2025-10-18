@@ -1,0 +1,9 @@
+Page 582
+================================================================================
+
+ObservationDimension = [1 4];
+ObservationInfo_Train_Sell = rlNumericSpec(ObservationDimension);
+ObservationInfo_Train_Sell.Name = 'Observation Data';
+ObservationInfo_Train_Sell.Description = 'RemainingSharesToTrade, RemainingIntervals, IS_Agent, P
+ObservationInfo_Train_Sell.LowerLimit = -inf;
+ObservationInfo_Train_Sell.UpperLimit = inf;

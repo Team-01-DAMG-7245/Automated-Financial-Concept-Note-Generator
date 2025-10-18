@@ -1,0 +1,6 @@
+Page 2228
+================================================================================
+
+Using different initial points in mixed-integer problems should not return different values of the
+objective function because the objective function should always be convex. That is, there is only one
+value for the minimum of the objective function.

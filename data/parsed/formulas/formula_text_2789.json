@@ -1,0 +1,12 @@
+{
+  "page": 1420,
+  "original_text": "GBM = gbm(diag(expReturn),diag(sigma), 'Correlation', ...\n    correlation, 'StartState', X);",
+  "ocr_text": "GBM=gbm(diag(expReturn),diag(sigma),Correlation,...\ncorrelation,StartState,X);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.84,
+    "x1": 398.85,
+    "y1": 277.11
+  },
+  "confidence": "high"
+}

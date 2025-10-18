@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "% Find the new crossovers (signal changed from 0 to 1).\nidx = crossoverSignals{end,:} == 1 & crossoverSignals{end-1,:} == 0;",
+  "ocr_text": "sFindthenewcrossovers(signalchangedfrom0to1).\nidx=crossoverSignals{end,:}==1crossoverSignals{end-1,:}==0;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 458.42,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

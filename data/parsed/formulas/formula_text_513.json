@@ -1,0 +1,12 @@
+{
+  "page": 352,
+  "original_text": "q = setCosts(p, UnitCost, UnitCost);\ndisplay(q)",
+  "ocr_text": "q=setCosts(p,UnitCost,UnitCost);\ndisplay(q)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 428.67,
+    "x1": 285.05,
+    "y1": 449.94
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 614,
+  "original_text": "IS_TWAP_Penalty = RemainingIntervals.*endingInventoryIS(LoggedSignals.ArrivalPrice, ...\n    PenaltyTWAPExecutedPrices,PenaltyTWAPExecutedShares,EnvConstants.BuyTrade);",
+  "ocr_text": "IS_TWAP_Penalty=RemainingIntervals.*endingInventoryIS(LoggedSignals.ArrivalPrice,...\nPenaltyTWAPExecutedPrices,PenaltyTWAPExecutedShares,EnvConstants.BuyTrade);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.83,
+    "x1": 561.4,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

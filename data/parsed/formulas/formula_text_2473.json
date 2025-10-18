@@ -1,0 +1,12 @@
+{
+  "page": 1276,
+  "original_text": "f = Example_LongstaffSchwartz(nPeriods, nTrials);",
+  "ocr_text": "f=Example_LongstaffSchwartz(nPeriods,nTrials);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.51,
+    "x1": 355.48,
+    "y1": 405.98
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2143,
+  "original_text": "NumDays = daysdif(datetime(1999,3,1) ,datetime(2000,3,1), 1)",
+  "ocr_text": "NumDays=daysdif(datetime(1999,3,1),datetime(2000,3,1),1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 624.85,
+    "x1": 415.08,
+    "y1": 635.31
+  },
+  "confidence": "high"
+}

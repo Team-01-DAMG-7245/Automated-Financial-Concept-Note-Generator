@@ -1,0 +1,12 @@
+{
+  "page": 911,
+  "original_text": "MAR = mean(Returns(:,3))",
+  "ocr_text": "MAR=mean(Returns(:,3))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 492.75,
+    "x1": 220.03,
+    "y1": 503.22
+  },
+  "confidence": "high"
+}

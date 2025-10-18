@@ -1,0 +1,59 @@
+define a Processes function to signal early termination of a trial, and offers significant performance
+benefits in some situations (for example, pricing down-and-out barrier options).
+
+Data Types: cell | function
+
+Output Arguments
+
+Paths — Simulated paths of correlated state variables
+array
+
+Simulated paths of correlated state variables for a heston, bates, or cir model, returned as a
+(NPeriods + 1)-by-NVars-by-NTrials three-dimensional time series array.
+
+For a given trial, each row of Paths is the transpose of the state vector Xt at time t. When
+StorePaths is set to false, simByQuadExp returns Paths as an empty matrix.
+
+Times — Observation times associated with simulated paths
+column vector
+
+Observation times for a heston, bates, or cir model associated with the simulated paths, returned as a
+(NPeriods + 1)-by-1 column vector. Each element of Times is associated with the corresponding
+row of Paths.
+
+Z — Dependent random variates for generating Brownian motion vector
+array
+
+Dependent random variates for a heston, bates, or cir model for generating the Brownian motion
+vector (Wiener processes) that drive the simulation, returned as an (NPeriods ⨉ NSteps)-by-
+NBrowns-by-NTrials three-dimensional time-series array.
+
+N — Dependent random variates for generating jump counting process vector
+array
+
+Dependent random variates for a bates model for generating the jump counting process vector,
+returned as a (NPeriods ⨉ NSteps)-by-NJumps-by-NTrials three-dimensional time-series array.
+
+More About
+
+Antithetic Sampling
+
+Simulation methods allow you to specify a popular variance reduction technique called antithetic
+sampling.
+
+This technique attempts to replace one sequence of random observations with another of the same
+expected value, but smaller variance. In a typical Monte Carlo simulation, each sample path is
+independent and represents an independent trial. However, antithetic sampling generates sample
+paths in pairs. The first path of the pair is referred to as the primary path, and the second as the
+antithetic path. Any given pair is independent of any other pair, but the two paths within each pair
+are highly correlated. Antithetic sampling literature often recommends averaging the discounted
+payoffs of each pair, effectively halving the number of Monte Carlo trials.
+
+This technique attempts to reduce variance by inducing negative dependence between paired input
+samples, ideally resulting in negative dependence between paired output samples. The greater the
+extent of negative dependence, the more effective antithetic sampling is.
+
+15
+Functions
+
+15-380

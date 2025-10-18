@@ -1,0 +1,33 @@
+However, if you look at the rebalance table, you can see that the strategy still "missed" the first
+rebalance date. When you run the backtest over the test range of the data set, the first rebalance
+date is on March 22. This is because the warm-up range is omitted from the price history and the
+strategy had only 26 days of history available on that date (less than the minimum 30 days required
+for the lookback window). Therefore, the March 22 rebalance is skipped.
+
+To avoid backtesting over the warm-up range, the range was removed it from the data set. This
+means the new backtest start date and all subsequent rebalance dates are 30 days later. The price
+history data contained in the warm-up range was completely removed, so when the backtest engine
+hit the first rebalance date the price history was insufficient to rebalance.
+
+printRebalanceTable(ivStrategy,pricesTT(testRange,:),minLookback);
+
+First Day of Data    Backtest Start Date    Minimum Days to Rebalance
+    _________________    ___________________    _________________________
+
+14-Feb-2006           14-Feb-2006                   30
+
+Rebalance Dates    Days of Available Price History    Enough Data to Rebalance
+    _______________    _______________________________    ________________________
+
+22-Mar-2006                     26                           "No"           
+      27-Apr-2006                     51                           "Yes"          
+      02-Jun-2006                     76                           "Yes"          
+      10-Jul-2006                    101                           "Yes"          
+      14-Aug-2006                    126                           "Yes"          
+      19-Sep-2006                    151                           "Yes"          
+      24-Oct-2006                    176                           "Yes"          
+      29-Nov-2006                    201                           "Yes"
+
+runBacktest
+
+15-285

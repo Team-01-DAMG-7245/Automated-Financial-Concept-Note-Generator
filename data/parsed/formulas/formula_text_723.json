@@ -1,0 +1,12 @@
+{
+  "page": 435,
+  "original_text": "nC = 5; % Number of contour plots\nminContour = max(pWoB{1}); % WoB values lower than this return\n                           % overlapped contours.",
+  "ocr_text": "nC=5;*Numberofcontourplots\nminContour=max(pWoB{1});*WoBvalueslowerthanthis_return\nSoverlappedcontours.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.03,
+    "x1": 425.93,
+    "y1": 170.09
+  },
+  "confidence": "high"
+}

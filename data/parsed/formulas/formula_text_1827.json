@@ -1,0 +1,12 @@
+{
+  "page": 934,
+  "original_text": "sampleTotalsIGSG = transprobgrouptotals(sampleTotals,[4 7 8])",
+  "ocr_text": "sampleTotalsIGSG=transprobgrouptotals(sampleTotals,[478])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 310.47,
+    "x1": 420.5,
+    "y1": 320.94
+  },
+  "confidence": "high"
+}

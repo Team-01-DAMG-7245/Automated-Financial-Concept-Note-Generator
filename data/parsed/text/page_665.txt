@@ -1,0 +1,54 @@
+0.0147
+
+covar = 4×4
+
+0.0005    0.0003    0.0002   -0.0000
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+   -0.0000    0.0010    0.0028    0.0100
+
+Simulating Normal Scenarios
+
+As a convenience, the two functions (simulateNormalScenariosByData and
+simulateNormalScenariosByMoments) exist to simulate scenarios from data or moments under
+an assumption that they are distributed as multivariate normal random asset returns.
+
+Simulating Normal Scenarios from Returns or Prices
+
+This example shows how to use the function simulateNormalScenariosByData to simulate
+multivariate normal scenarios when given either return or price data. Either returns or prices are
+stored as matrices with samples going down the rows and assets going across the columns. In
+addition, returns or prices can be stored in a table or timetable (see “Simulating Normal
+Scenarios from Time Series Data” on page 5-42).
+
+To illustrate using simulateNormalScenariosByData, generate random samples of 120
+observations of asset returns for four assets from the mean and covariance of asset returns in the
+variables m and C with portsim. The default behavior of portsim creates simulated data with
+estimated mean and covariance identical to the input moments m and C. In addition to a return series
+created by portsim in the variable X, a price series is created in the variable Y.
+
+m = [ 0.0042; 0.0083; 0.01; 0.15 ];
+C = [ 0.005333 0.00034 0.00016 0;
+0.00034 0.002408 0.0017 0.000992;
+0.00016 0.0017 0.0048 0.0028;
+0 0.000992 0.0028 0.010208 ];
+
+X = portsim(m', C, 120);
+Y = ret2tick(X);
+
+Note that Portfolio optimization requires that you use total returns and not just price returns. So,
+"returns" should be total returns and "prices" should be total return prices.
+
+Given asset returns and prices in variables X and Y, this sequence of code demonstrates equivalent
+ways to simulate multivariate normal scenarios for the PortfolioCVaR object. Assume a
+PortfolioCVaR object created in p that uses the asset returns in X uses
+simulateNormalScenariosByData:
+
+p = PortfolioCVaR;
+p = simulateNormalScenariosByData(p, X, 20000);
+
+[passetmean, passetcovar] = estimateScenarioMoments(p)
+
+Asset Returns and Scenarios Using PortfolioCVaR Object
+
+5-39

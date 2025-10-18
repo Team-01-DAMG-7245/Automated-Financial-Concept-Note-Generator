@@ -1,0 +1,27 @@
+Based on the plot, you can reject 'UtilRate' since it has the highest number of zero values. You can
+also decide to reject 'TmAtAddress' since it shows a peak, albeit small.
+
+Set the Corresponding Coefficients to Zero
+
+To set the corresponding coefficients to zero, set their upper bound to zero and solve the model again
+using the original data set.
+
+ub(3) = 0;
+ub(end) = 0;
+[sc,mdl] = fitConstrainedModel(sc,'AInequality',AIneq,'bInequality',bIneq,'LowerBound',lb,'UpperB
+Ind = (abs(mdl.Coefficients.Estimate) <= Tol);
+ModelCoeff = mdl.Coefficients.Estimate(~Ind);
+ModelPreds = mdl.Coefficients.Properties.RowNames(~Ind)';
+
+figure
+hold on
+plot(ModelCoeff,'.','MarkerSize',12)
+ylim([0.2 1.2])
+ylabel('Model Coefficients')
+xticklabels(ModelPreds)
+title('Selected Model Coefficients After Bootstrapping')
+grid on
+
+Credit Scorecards with Constrained Logistic Regression Coefficients
+
+8-97

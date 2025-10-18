@@ -1,0 +1,12 @@
+{
+  "page": 117,
+  "original_text": "% Objective (local)\nfunction loss = negativeCash(x,TData,VData)",
+  "ocr_text": "Objective(local)\nfunctionloss=negativeCash(x,TData,VData)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 322.98,
+    "y1": 665.09
+  },
+  "confidence": "high"
+}

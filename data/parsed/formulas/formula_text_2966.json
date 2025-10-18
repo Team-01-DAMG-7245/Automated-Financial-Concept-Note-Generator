@@ -1,0 +1,12 @@
+{
+  "page": 1554,
+  "original_text": "% Select the X best performing stocks over the lookback window\n[~,idx] = sort(rollingReturns,'descend');\nbestStocksIndex = idx(1:numStocks);",
+  "ocr_text": "SelecttheXbestperformingstocksoverthelookbackwindow\n[-,idx]=sort(rollingReturns,descend);\nbestStocksIndex=idx(1:numStocks);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 425.92,
+    "y1": 189.89
+  },
+  "confidence": "high"
+}

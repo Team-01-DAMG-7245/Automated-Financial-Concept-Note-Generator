@@ -1,0 +1,5 @@
+Page 95
+================================================================================
+
+DSMSG = tabularTextDatastore(MSGFileName,'ReadVariableNames',false,'ReadSize','file');
+DSMSG.VariableNames = ["Time","Type","OrderID","Size","Price","Direction"];

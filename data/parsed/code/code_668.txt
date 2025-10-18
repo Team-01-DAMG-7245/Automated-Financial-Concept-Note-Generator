@@ -1,0 +1,10 @@
+Page 614
+================================================================================
+
+if EnvConstants.BuyTrade
+    AgentRemainingSharestoTrade = max(EnvConstants.TotalTradingShares - ...
+        LoggedSignals.CurrentInventoryShares - sum(ExecutedShares),0);
+else
+    AgentRemainingSharestoTrade = max(LoggedSignals.CurrentInventoryShares - ...
+        sum(ExecutedShares), 0);
+end

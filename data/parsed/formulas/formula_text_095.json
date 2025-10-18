@@ -1,0 +1,12 @@
+{
+  "page": 81,
+  "original_text": "pc = ret2tick(rc,Method=\"continuous\",StartPrice=3)",
+  "ocr_text": "pe=ret2tick(rc,Method=continuous,StartPrice=3)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 588.95,
+    "x1": 360.91,
+    "y1": 599.42
+  },
+  "confidence": "high"
+}

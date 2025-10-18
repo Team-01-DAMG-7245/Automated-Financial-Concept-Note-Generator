@@ -1,0 +1,62 @@
+___________    _____    _____    _____    _____    _____    _____    _____
+
+04-Jan-2006    28.89     18.3    75.54    26.32    56.48    22.87    56.74
+    05-Jan-2006    29.12    19.34    74.85    26.34     56.3    22.92    56.45
+    06-Jan-2006    29.02    19.61    75.47    26.26    56.24    23.21    57.57
+    09-Jan-2006    29.37    21.12    75.84    26.21    56.67     23.3    57.54
+    10-Jan-2006    28.44    20.79    75.37    26.35    56.45    23.16    57.99
+    11-Jan-2006    28.05    20.61    75.22    26.63    56.65    23.34    58.38
+    12-Jan-2006    27.68    19.76    74.57    26.48    56.02    23.24    57.77
+    13-Jan-2006    27.81     19.2    74.38    26.53    56.49    23.27    59.06
+
+#################################################################################
+
+Start=1 in runBacktest sets the starting time period to "03-Jan-2006", the first date available
+in pricesTT. Given that RebalanceFrequency is set to 2, you might expect the next rebablancing
+period to be "05-Jan-2006". However, the fist time the strategy rebalances is on "09-Jan-2006".
+This happens because the minimum value of the lookback window is set to 4 and on "05-Jan-2006"
+there are only three time periods available, so the backtest engine does not call the rebalancing
+function on this time period. On the next rebalancing period, "11-Jan-2006", the data includes
+seven observations which correspond to all the rows up to "11-Jan-2006". On the last rebalancing
+period, "13-Jan-2006", the first input of pricesTT is not included in the data. This happens
+because the maximum value of the lookback window is set to 8, which means that only the last eight
+time periods are passed to the rebalancing function. Also, note that the rolling window increases in
+size from rebalancing period to rebalancing period until it reaches the maximum size.
+
+Set Fixed-Sized Rolling Window
+
+Set the backtesting strategies to rebalance every 2 days.
+
+% Define the rebalance frequency.
+rebalFreq = 2;
+
+Set the lookback window to a fixed-size of 5 days.
+
+% Define the lookback window.
+lookback = 5;
+
+% Set backtest strategy.
+strat = backtestStrategy('MaxSharpeRatio',@maxSharpeRatioFcn, ...
+    RebalanceFrequency=rebalFreq,LookbackWindow=lookback);
+
+% Define a backtest engine.
+backtester = backtestEngine(strat);
+% Run the backtest.
+runBacktest(backtester,pricesTT,Start=1);
+
+#################################################################################
+Rebalancing period: 09-Jan-2006
+Number of time periods in data: 5
+#################################################################################
+       Dates        AA       GM       MMM     MSFT      PG        T       XOM 
+    ___________    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    28.72    17.82    75.93    26.19    56.38     22.7    56.64
+    04-Jan-2006    28.89     18.3    75.54    26.32    56.48    22.87    56.74
+    05-Jan-2006    29.12    19.34    74.85    26.34     56.3    22.92    56.45
+    06-Jan-2006    29.02    19.61    75.47    26.26    56.24    23.21    57.57
+
+15
+Functions
+
+15-256

@@ -1,0 +1,70 @@
+Data Types: double
+
+ZeroCompounding — Compounding frequency of the zero curve
+2 (semiannual) (default) | integer with value of 1,2,3,4,6,12, or –1
+
+Compounding frequency of the zero curve, specified as the comma-separated pair consisting of
+'ZeroCmpounding' and an integer with values:
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+•
+−1 — Continuous compounding
+
+Data Types: double
+
+ZeroBasis — Basis of the zero curve
+0 (actual/actual) (default) | integer with value of 0 to 13
+
+Basis of the zero curve, specified as the comma-separated pair consisting of 'ZeroBasis' and an
+integer with values that are identical to Basis.
+
+Data Types: double
+
+Output Arguments
+
+Price — CDS clean prices
+vector
+
+CDS clean prices, returned as a N-by-1 vector.
+
+AccPrem — Accrued premiums
+vector
+
+Accrued premiums, returned as a N-by-1 vector.
+
+PaymentDates — Payment dates
+matrix
+
+Payment dates, returned as a N-by-numCF matrix.
+
+PaymentTimes — Payment times
+matrix
+
+Payment times, returned as a N-by-numCF matrix of accrual fractions.
+
+PaymentCF — Payments
+matrix
+
+Payments, returned as a N-by-numCF matrix.
+
+15
+Functions
+
+15-630

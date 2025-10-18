@@ -1,0 +1,12 @@
+{
+  "page": 989,
+  "original_text": "sc = creditscorecard(data,'IDVar','CustID')",
+  "ocr_text": "sc=creditscorecard(data,IDVar,CustID)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 602.67,
+    "x1": 322.99,
+    "y1": 613.14
+  },
+  "confidence": "high"
+}

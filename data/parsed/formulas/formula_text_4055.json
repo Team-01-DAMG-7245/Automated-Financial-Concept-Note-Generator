@@ -1,0 +1,12 @@
+{
+  "page": 2295,
+  "original_text": "p = Portfolio('AssetMean',[0.3, 0.1, 0.5], 'AssetCovar',...\n[0.01, -0.010,  0.004; -0.010,  0.040, -0.002;  0.004, -0.002,  0.023],'lb', 0,'budget', 1);\nplotFrontier(p, 20);",
+  "ocr_text": "p=Portfolio(AssetMean,[0.3,0.1,0.5],AssetCovar,...\n[0.01,-0.010,0.004;-0.010,0.040,-0.002;0.004,-0.002,0.023],lb,0,budget,1);\nplotFrontier(p,_20);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 493.13,
+    "x1": 588.5,
+    "y1": 525.2
+  },
+  "confidence": "high"
+}

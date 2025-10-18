@@ -1,0 +1,6 @@
+Page 1814
+================================================================================
+
+Vega = blsvega(Price,Strike,Rate,Time,Volatility) returns the rate of change of the
+option value with respect to the volatility of the underlying asset. blsvega uses normpdf, the normal
+probability density function in the Statistics and Machine Learning Toolbox.

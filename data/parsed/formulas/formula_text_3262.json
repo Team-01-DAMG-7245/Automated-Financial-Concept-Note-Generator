@@ -1,0 +1,12 @@
+{
+  "page": 1750,
+  "original_text": "obj = obj.addGroupRatio(GroupA, GroupB, LowerRatio, UpperRatio)",
+  "ocr_text": "obj_=obj.addGroupRatio(GroupA,GroupB,LowerRatio,UpperRatio)",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 439.23,
+    "x1": 446.33,
+    "y1": 449.69
+  },
+  "confidence": "high"
+}

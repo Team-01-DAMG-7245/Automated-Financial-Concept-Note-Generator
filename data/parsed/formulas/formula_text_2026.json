@@ -1,0 +1,12 @@
+{
+  "page": 1047,
+  "original_text": "sc = creditscorecard(rfImputedData,'IDVar','CustID');\nsc = autobinning(sc);\n[sc,mdl] = fitmodel(sc,'display','off');\nsc = formatpoints(sc,'PointsOddsAndPDO',[500 2 50]);\nPointsInfo = displaypoints(sc);\ndisp(PointsInfo);",
+  "ocr_text": "sc_=creditscorecard(rfImputedData,IDVar,CustID);\nsc_=autobinning(sc);\n[sc,mdl]=fitmodel(sc,display,off);\nsc_=formatpoints(sc,PointsOddsAndPDO,[500250]);\nPointsInfo=displaypoints(sc);\n\ndisp(PointsInfo);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 473.85,
+    "x1": 377.18,
+    "y1": 538.31
+  },
+  "confidence": "high"
+}

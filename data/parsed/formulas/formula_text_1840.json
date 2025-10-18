@@ -1,0 +1,12 @@
+{
+  "page": 941,
+  "original_text": "% Pre-allocate the struct array\ntotalsByRtg(nYears,1) = struct('totalsVec',[],'totalsMat',[], ...\n   'algorithm','cohort');\nfor t = 1:nYears\n   % Number of issuers per rating at the beginning of the year",
+  "ocr_text": "SPre-allocatethestructarray\n\ntotalsByRtg(nYears,1)=struct(totalsVec,[],totalsMat,[],...\nalgorithm,cohort);\n\nfort=1:nYears\nsNumberofissuersperratingatthebeginningoftheyear",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 442.2,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 96,
+  "original_text": "DT.Time = seconds(DT.Time); % Cast time as a duration from midnight.\nDTT = table2timetable(DT);",
+  "ocr_text": "DT.Time=seconds(DT.Time);Casttimeasadurationfrommidnight.\nDTT=table2timetable(DT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 370.19,
+    "x1": 458.44,
+    "y1": 391.46
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 320,
+  "original_text": "Error in Portfolio/estimateFrontierLimits (line 73)\n    pwgt = int_frontierLimits(obj, minsolution, maxsolution);",
+  "ocr_text": "ErrorinPortfolio/estimateFrontierLimits(line73)\npwgt_=int_frontierLimits(obj,minsolution,maxsolution);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 481.21,
+    "x1": 325.02,
+    "y1": 496.33
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,21 @@
+Tips
+
+You can also use dot notation to estimate the Sharpe ratio of given portfolio weights.
+
+psharpe = obj.estimatePortSharpeRatio(pwgt);
+
+Version History
+Introduced in R2018a
+
+See Also
+estimateMaxSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk
+
+Topics
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+“Portfolio Optimization Theory” on page 4-4
+
+estimatePortSharpeRatio
+
+15-1001

@@ -1,0 +1,12 @@
+{
+  "page": 1178,
+  "original_text": "ans = struct with fields:\n           Size: [1000 1]\n           Type: 'double'\n    Description: ''\n          Units: ''\n     Continuity: []\n     NumMissing: 0\n            Min: 83.4200\n         Median: 116.7050\n            Max: 162.1100\n           Mean: 117.8929\n            Std: 18.2566",
+  "ocr_text": "ans=structwithfields:\nSize:[10001]\nType:double\nDescription:\nUnits:\nContinuity:[]\nNumMissing:0\nMin:83.4200\nMedian:_116.7050\nMax:162.1100\nMean:117.8929\nStd:18.2566",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 464.6,
+    "x1": 225.45,
+    "y1": 593.87
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2112,
+  "original_text": "TargetDate = datetime\n   03-Dec-1997",
+  "ocr_text": "TargetDate=datetime\n03-Dec-1997",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 632.75,
+    "x1": 203.78,
+    "y1": 654.02
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,9 @@
+Page 1225
+================================================================================
+
+G = 
+   Class DIFFUSION: Diffusion Rate Specification 
+   --------------------------------------------- 
+       Rate: diffusion rate function G(t,X(t))  
+      Alpha: 6x1 double array
+      Sigma: 6x6 diagonal double array

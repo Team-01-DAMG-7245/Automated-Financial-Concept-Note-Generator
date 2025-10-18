@@ -1,0 +1,62 @@
+% Fully invested portfolio
+p = setBudget(p,1,1);
+% Cardinality constraint
+p = setMinMaxNumAssets(p,3,3);
+% Conditional bounds
+p = setBounds(p,0.1,[],BoundType="conditional");
+
+Define Objective Function
+
+Define a function handle for the objective function.
+
+% Define the objective function
+EWP = 1/nAssets*ones(nAssets,1);
+trackingError = @(x) (x-EWP)'*p.AssetCovar*(x-EWP);
+
+Solve Portfolio Problem
+
+Use estimateCustomObjectivePortfolio to compute the solution to the problem.
+
+% Solve portfolio problem
+wMinTE = estimateCustomObjectivePortfolio(p,trackingError)
+
+wMinTE = 6×1
+
+0.1795
+    0.3507
+         0
+    0.4698
+         0
+         0
+
+Using ObjectiveBound and InitialPoint with Custom Objective Portfolios
+
+This example shows how to use the name-value arguments ObjectiveBound and InitialPoint
+with estimateCustomObjectivePortfolio.
+
+Load the returns data in CAPMuniverse.mat. Then, create a standard mean-variance Portfolio
+object with default constraints, which is a long-only portfolio whose weights sum to 1. For this
+example, you can define the feasible region of weights X as
+
+X =
+x| ∑
+i = 1
+
+n
+xi = 1, xi ≥0 .
+
+% Load data
+load CAPMuniverse
+
+% Create a mean-variance Portfolio object with default constraints
+p = Portfolio(AssetList=Assets(1:12));
+p = estimateAssetMoments(p,Data(:,1:12));
+p = setDefaultConstraints(p);
+
+% Add conditional bounds
+pInt = setBounds(p,0.1,[],BoundType='cond');
+
+15
+Functions
+
+15-920

@@ -1,0 +1,12 @@
+{
+  "page": 2015,
+  "original_text": "Settle = datetime(1999,8,3);\nMaturity = [datetime(2000,8,15) ; datetime(2000,12,15)];\nCouponRate= [0.06; 0.05];\nPeriod = [3;2];\nBasis = [1;0];\n[CFlowAmounts, CFlowDates, TFactors] = cfamounts(CouponRate,...\nSettle, Maturity, Period, Basis);",
+  "ocr_text": "Settle=datetime(1999,8,3);\nMaturity=[datetime(2000,8,15)_;datetime(2000,12,15)];\nCouponRate=[0.06;0.05];\n\nPeriod=[3;2];\n\nBasis=[1;0];\n[CFlowAmounts,CFlowDates,TFactors]=cfamounts(CouponRate,...\nSettle,Maturity,Period,Basis);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 303.77,
+    "x1": 431.36,
+    "y1": 379.04
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,37 @@
+rsiSignal = synchronize(rsiSignal,rsiSignali);
+end
+
+The RSI signal takes a value of 1 (indicating a buy signal) when the RSI value for the stock falls below
+30. The signal takes a value of -1 (indicating a sell signal) when the RSI for the stock rises above 70.
+Otherwise, the signal takes a value of 0, indicating no action.
+
+Plot the signal for a single asset to preview the trading frequency.
+
+plot(rsiSignal.Time,rsiSignal.CAT_RSI)
+ylim([-1.5, 1.5]);
+ylabel('RSI Buy/Sell Signal');
+title(sprintf('RSI Buy/Sell Signal for CAT'));
+
+Build the Strategies
+
+Build the strategies for the backtestStrategy object using the rebalance functions defined in the
+Local Functions on page 4-261 section. Each strategy uses the rebalance function to make trading
+decisions based on the appropriate signals.
+
+The signals require sufficient trailing data to compute the trading signals (for example, computing
+the SMA20 for day X requires prices from the 20 days prior to day X). All of the trailing data is
+captured in the precomputed trading signals. So the actual strategies need only a 2-day lookback
+window to make trading decisions to evaluate when the signals cross trading thresholds.
+
+All strategies pay 25 basis points transaction costs on buys and sells.
+
+The initial weights are computed based on the signal values after 20 trading days. The backtest
+begins after this 20 day initialization period.
+
+tradingCosts = 0.0025;
+
+% Use the crossoverRebalanceFunction for both the SMA
+
+Backtest Investment Strategies with Trading Signals
+
+4-257

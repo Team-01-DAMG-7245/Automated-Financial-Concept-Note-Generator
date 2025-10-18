@@ -1,0 +1,12 @@
+{
+  "page": 570,
+  "original_text": "% Create a mean-variance Portfolio object with default constraints.\np = Portfolio(AssetList=Assets(1:12));\np = estimateAssetMoments(p,Data(:,1:12));\np = setDefaultConstraints(p);",
+  "ocr_text": "Createamean-variancePortfolioobjectwithdefaultconstraints.\np=Portfolio(AssetList=Assets(1:12));\np=estimateAssetMoments(p,Data(:,1:12));\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 323.97,
+    "x1": 453.0,
+    "y1": 366.83
+  },
+  "confidence": "high"
+}

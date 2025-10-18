@@ -1,0 +1,9 @@
+Page 1304
+================================================================================
+
+tStart = tic;
+parPaths = zeros(NPeriods+1,1,NTrials);
+parfor i = 1:NTrials
+    parPaths(:,:,i) = simBySolution(mdl,NPeriods,'DeltaTime',dt,'Z',Z(:,:,i));
+end
+time2 = toc(tStart);

@@ -1,0 +1,12 @@
+{
+  "page": 1412,
+  "original_text": "obj = gbm(0.25, 0.3)  % (B = Return, Sigma)",
+  "ocr_text": "obj=gbm(0.25,0.3)(B=Return,Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.94,
+    "x1": 322.98,
+    "y1": 287.4
+  },
+  "confidence": "high"
+}

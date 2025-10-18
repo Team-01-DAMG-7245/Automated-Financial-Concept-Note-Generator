@@ -1,0 +1,26 @@
+Output Arguments
+
+Depreciation — Depreciation
+numeric
+
+Depreciation, returned as a straight-line depreciation for an asset.
+
+More About
+
+Straight-Line Depreciation Schedule
+
+A straight-line depreciation schedule is a method of calculating depreciation that applies the same
+amount of depreciation expense each year until the asset is fully depreciated.
+
+Version History
+Introduced before R2006a
+
+See Also
+depfixdb | depgendb | deprdv | depsoyd
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+depstln
+
+15-851

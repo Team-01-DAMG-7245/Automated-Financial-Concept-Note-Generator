@@ -1,0 +1,36 @@
+[qrsk,qret] = estimatePortMoments(q,qwgt);
+
+[trsk,tret] = estimatePortMoments(q,TrackingPort);
+
+% Plot the efficient frontier with tracking-error constraint.
+
+clf;
+portfolioexamples_plot('Efficient Frontier with 5% Tracking-Error Constraint', ...
+    {'line', prsk, pret, {'Unconstrained'}, ':b'}, ...
+    {'line', qrsk, qret, {'Tracking'}}, ...
+    {'scatter', [mrsk, crsk], [mret, cret], {'Market', 'Cash'}}, ...
+    {'scatter', trsk, tret, {'Tracking'}, 'r'});
+
+Combined Turnover and Tracking-Error Constraints
+
+This example illustrates the interactions that can occur with combined constraints. In this case, both
+a turnover constraint relative to an initial equal-weight portfolio and a tracking-error constraint
+relative to a tracking portfolio must be satisfied. The turnover constraint has a maximum of 30%
+turnover and the tracking-error constraint has a maximum of 5% tracking error. Note that the
+turnover to get from the initial portfolio to the tracking portfolio is 70% so that an upper bound of
+30% turnover means that the efficient frontier will lie somewhere between the initial portfolio and the
+tracking portfolio.
+
+Turnover = 0.3;
+InitPort = (1/q.NumAssets)*ones(q.NumAssets, 1);
+
+ii = [15, 16, 20, 21, 23, 25, 27, 29, 30];    % Indexes of assets to include in tracking portfoli
+
+TrackingError = 0.05/sqrt(12);
+TrackingPort = zeros(30, 1);
+TrackingPort(ii) = 1;
+TrackingPort = (1/sum(TrackingPort))*TrackingPort;
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-169

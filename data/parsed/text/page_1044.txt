@@ -1,0 +1,61 @@
+imputedCustAgeNewCustomers = round(predict(knnCustAge, dataNewCustomersCopy(missingCustAgeNewCust
+imputedResStatusNewCustomers = predict(knnResStatus, dataNewCustomersCopy(missingResStatusNewCust
+dataNewCustomers.CustAge(missingCustAgeNewCustomers) = imputedCustAgeNewCustomers;
+dataNewCustomers.ResStatus(missingResStatusNewCustomers) = imputedResStatusNewCustomers;
+
+Use score to calculate scores of new customers.
+
+[scores, points] = score(sc, dataNewCustomers);
+disp(scores);
+
+531.2201
+  553.4261
+  505.1671
+  563.1321
+  552.6226
+  584.6546
+  445.1156
+  516.8917
+  524.9965
+  507.6668
+  498.2255
+  539.4057
+  516.4594
+  491.6344
+  566.1685
+  486.8248
+  476.0595
+  469.5488
+  550.2850
+  511.0285
+
+disp(points);
+
+CustAge    ResStatus    EmpStatus    CustIncome    TmWBank    OtherCC    AMBalance
+    _______    _________    _________    __________    _______    _______    _________
+
+81.157      63.012       58.892        96.405      93.007     75.649      63.097  
+    97.315       72.35        86.83        96.405      61.778     75.649      63.097  
+    78.319      63.012        86.83        70.136      93.007     50.765      63.097  
+    81.157       72.35        86.83        96.405      60.975     75.649      89.765  
+    97.315       72.35        86.83        96.405      60.975     75.649      63.097  
+    97.315       72.35        86.83        96.405      93.007     75.649      63.097  
+    56.983       72.35       58.892        56.365      61.778     75.649      63.097  
+    79.494      92.434        86.83        96.405      61.778     50.765      49.184  
+    79.494      63.012       58.892        96.405      61.778     75.649      89.765  
+    79.494       72.35       58.892        96.405      61.778     75.649      63.097  
+    81.157      63.012       58.892        67.971      61.778     75.649      89.765  
+    79.494      92.434       58.892        82.196      60.975     75.649      89.765  
+    97.315       72.35       58.892        96.405      50.966     50.765      89.765  
+    67.063      92.434       58.892        70.936      61.778     50.765      89.765  
+    78.319      92.434        86.83        82.196      60.975     75.649      89.765  
+    56.983       72.35        86.83        70.136      61.778     75.649      63.097  
+    57.721      63.012        86.83        67.971      61.778     75.649      63.097  
+    53.675       72.35        86.83        30.304      60.975     75.649      89.765  
+    78.319       72.35        86.83        96.405      50.966     75.649      89.765  
+    81.157      92.434       58.892        82.196      60.975     75.649      59.725
+
+8
+Credit Risk Analysis
+
+8-126

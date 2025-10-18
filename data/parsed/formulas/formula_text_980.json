@@ -1,0 +1,12 @@
+{
+  "page": 520,
+  "original_text": "% Compute the returns from the prices.\nreturnsTT = tick2ret(pricesTT);\n% Compute the assets covariance matrix.\nSigma = cov(returnsTT.Variables);\n% Compute the covariance matrix of estimation errors in the expected returns.\nSigmaR = diag(diag(Sigma));",
+  "ocr_text": "SComputethereturnsfromtheprices.\n\nreturnsTT=tick2ret(pricesTT);\n\nSComputetheassetscovariancematrix.\n\nSigma=cov(returnsTT.Variables);\nComputethecovariancematrixofestimationerrorsintheexpectedreturns.\nSigmaR=diag(diag(Sigma));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.12,
+    "x1": 507.18,
+    "y1": 394.59
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,75 @@
+To support existing code, disc2zero also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: datetime | string | char
+
+Settle — Common settlement date for discount rates in DiscRates
+datetime scalar | string scalar | date character vector | serial date number
+
+Common settlement date for the discount rates in DiscRates, specified as scalar datetime, string, or
+date character vector.
+
+To support existing code, disc2zero also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: datetime | string | char
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [ZeroRates,CurveDates] =
+disc2zero(DiscRates,CurveDates,Settle,'Compounding',6,'Basis',9)
+
+Compounding — Rate at which output zero rates are compounded when annualized
+2 (default) | numeric values: 0,1, 2, 3, 4, 6, 12, 365, -1
+
+Rate at which the output zero rates are compounded when annualized, specified as a numeric value.
+Allowed values are:
+
+•
+0 — Simple interest (no compounding)
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding (default)
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+•
+365 — Daily compounding
+
+•
+-1 — Continuous compounding
+
+Data Types: double
+
+Basis — Day-count basis used for annualizing output zero rates
+0 (default) | numeric values: 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13
+
+Day-count basis used for annualizing the output zero rates, specified as a numeric value. Allowed
+values are:
+
+•
+0 = actual/actual
+
+15
+Functions
+
+15-854

@@ -1,0 +1,12 @@
+{
+  "page": 1272,
+  "original_text": "reset(s)\nR = zeros(nPoints, nIndices);             % Pre-allocate simulated returns array\nU = copularnd('Gaussian', rhoG, nPoints); % Simulate U(0,1) from Gaussian copula",
+  "ocr_text": "reset(s)\nR=zeros(nPoints,_nIndices); Pre-allocatesimulatedreturnsarray\nU=copularnd(Gaussian,rhoG,nPoints);*SimulateU(0,1)fromGaussiancopula",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 426.88,
+    "x1": 523.46,
+    "y1": 458.95
+  },
+  "confidence": "high"
+}

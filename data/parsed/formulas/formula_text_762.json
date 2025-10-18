@@ -1,0 +1,12 @@
+{
+  "page": 445,
+  "original_text": "% Create table\nstrategiesESG = table(Benchmark,ConstrainedHH,ConstrainedMD,TiltedHH,TiltedMDP);\nfigure;\nbar(categorical(strategiesESG.Properties.VariableNames),strategiesESG.Variables)\ntitle('ESG Scores')",
+  "ocr_text": "Createtable\nstrategiesESG=table(Benchmark,ConstrainedHH,ConstrainedMD,TiltedHH,TiltedMDP);\nfigure;\nbar(categorical(strategiesESG.Properties.VariableNames),strategiesESG.Variables)\ntitle(ESGScores)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 545.59,
+    "x1": 523.44,
+    "y1": 599.26
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,26 @@
+Version History
+Introduced before R2006a
+
+References
+
+[1] Hull, John C. Options, Futures, and Other Derivatives. 5th edition, Prentice Hall, 2003, pp. 287–
+288.
+
+[2] Jäckel, Peter. "Let's Be Rational." Wilmott Magazine., January, 2015 (https://
+onlinelibrary.wiley.com/doi/abs/10.1002/wilm.10395).
+
+[3] Black, Fischer. “The Pricing of Commodity Contracts.” Journal of Financial Economics. March 3,
+1976, pp. 167–79.
+
+See Also
+blkprice | blsprice | blsimpv
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+blkimpv
+
+15-481

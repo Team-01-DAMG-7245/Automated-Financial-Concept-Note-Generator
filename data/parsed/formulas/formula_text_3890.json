@@ -1,0 +1,12 @@
+{
+  "page": 2222,
+  "original_text": "[pwgt,pbuy,psell,exitflag] = estimateCustomObjectivePortfolio( ___ ,Name=Value)\nadds optional name-value arguments.",
+  "ocr_text": "[pwgt,pbuy,psell,exitflag]=estimateCustomObjectivePortfolio(,Name=Value)\naddsoptionalname-valuearguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 321.94,
+    "x1": 557.58,
+    "y1": 345.57
+  },
+  "confidence": "high"
+}

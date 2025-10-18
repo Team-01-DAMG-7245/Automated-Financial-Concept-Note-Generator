@@ -1,0 +1,12 @@
+{
+  "page": 1794,
+  "original_text": "Gamma = blsgamma(Price,Strike,Rate,Time,Volatility) returns gamma, the sensitivity of\ndelta to change in the underlying asset price. blsgamma uses normpdf, the probability density\nfunction in the Statistics and Machine Learning Toolbox.",
+  "ocr_text": "Gamma=blsgamma(Price,Strike,Rate,Time,Volatility)returnsgamma,thesensitivityof\ndeltatochangeintheunderlyingassetprice.blsgammausesnormpdf,theprobabilitydensity\nfunctionintheStatisticsandMachineLearningToolbox.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 251.25,
+    "x1": 551.32,
+    "y1": 286.88
+  },
+  "confidence": "high"
+}

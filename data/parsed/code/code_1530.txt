@@ -1,0 +1,5 @@
+Page 1437
+================================================================================
+
+Speed — Return represents the parameter S
+array or deterministic function of time or deterministic function of time and state

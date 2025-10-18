@@ -1,0 +1,12 @@
+{
+  "page": 2480,
+  "original_text": "MaxDD = maxdrawdown(Data)\nMaxDD = maxdrawdown( ___ ,Format)\n[MaxDD,MaxDDIndex] = maxdrawdown( ___ )",
+  "ocr_text": "MaxDD_=maxdrawdown(Data)\nMaxDD=maxdrawdown(____,Format)\n[MaxDD,MaxDDIndex]=maxdrawdown(____)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.47,
+    "x1": 316.76,
+    "y1": 227.1
+  },
+  "confidence": "high"
+}

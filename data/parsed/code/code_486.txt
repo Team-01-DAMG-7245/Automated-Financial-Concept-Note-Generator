@@ -1,0 +1,5 @@
+Page 465
+================================================================================
+
+Use the linkage function to compute the matrix that encodes the hierarchical tree of the assets in
+the universe. Them use the dendrogram function to visualize the hierarchical structure.

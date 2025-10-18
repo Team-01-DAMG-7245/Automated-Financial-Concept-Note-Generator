@@ -1,0 +1,41 @@
+Fees: [1×1 struct]
+
+Examine Backtest Results
+
+Use the summary function to generate a table of strategy performance results for the backtest.
+
+summaryByStrategies = summary(backtester)
+
+summaryByStrategies=9×5 table
+                       Equal_Weighted    Max_Sharpe_Ratio    Inverse_Variance    Markowitz_Optimi
+                       ______________    ________________    ________________    ________________
+
+TotalReturn             0.18745            0.14991            0.15906                 0.17404
+    SharpeRatio             0.12559           0.092456            0.12179                 0.10339
+    Volatility            0.0063474          0.0070186          0.0055626               0.0072466
+    AverageTurnover      0.00087623          0.0065762          0.0028666               0.0058268
+    MaxTurnover            0.031251              0.239            0.09114                 0.21873
+    AverageReturn        0.00083462         0.00068672          0.0007152              0.00078682
+    MaxDrawdown            0.072392           0.084768           0.054344                0.085544
+    AverageBuyCost         0.047298             0.3449            0.15228                  0.3155
+    AverageSellCost        0.047298             0.3449            0.22842                  0.3155
+
+The detailed backtest results, including the daily returns, asset positions, turnover, and fees are
+stored in properties of the backtestEngine object.
+
+When analzying these results, remember that the backtest engine computes the weights using past
+data. At the moment the weights are computed (with the past data), the portfolio weights obtained
+from the Max_Sharpe_Ratio strategy are the ones that achieve the maximum Sharpe ratio. After
+those weights are computed, they are invested in future unseen data. Consequently, in this summary,
+the Max_Sharpe_Ratio results are the lowest SharpeRatio with lowest returns. This example
+demonstrates that past performance is no guarantee of future results and a strategy that has
+performed well in the past may not perform well in the future.
+
+Use equityCurve to plot the equity curve for the five different investment strategies.
+
+equityCurve(backtester)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-244

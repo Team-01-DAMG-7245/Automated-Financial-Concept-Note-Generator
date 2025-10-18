@@ -1,0 +1,6 @@
+Page 2059
+================================================================================
+
+Maturity = ['30-Sep-2000'; '31-Oct-2000'; '30-Nov-2000'];
+NextCouponDate = cpndaten('14-Mar-1997', Maturity);
+datestr(NextCouponDate)

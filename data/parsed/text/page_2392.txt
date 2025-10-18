@@ -1,0 +1,55 @@
+UpperBudget = 
+1
+
+Obtain Values for Lower and Upper Budgets for a PortfolioMAD Object
+
+Given a PortfolioMAD object p with the default constraints set, obtain the values for LowerBudget
+and UpperBudget.
+
+p = PortfolioMAD;
+p = setDefaultConstraints(p, 5);
+[LowerBudget, UpperBudget] = getBudget(p)
+
+LowerBudget = 
+1
+
+UpperBudget = 
+1
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+Output Arguments
+
+LowerBudget — Lower-bound weight for each asset
+scalar
+
+Lower bound for budget constraint, returned as a scalar for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+UpperBudget — Upper bound for budget constraint
+scalar
+
+Upper bound for budget constraint, returned as a scalar for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+15
+Functions
+
+15-1086

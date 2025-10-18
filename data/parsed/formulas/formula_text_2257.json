@@ -1,0 +1,12 @@
+{
+  "page": 1156,
+  "original_text": "% Obtain risk level at target return\npwgtmvTarget = pmv.estimateFrontierByReturn(TargetRet);\npriskTarget = pmv.estimatePortRisk(pwgtmvTarget);",
+  "ocr_text": "Obtainrisklevelattargetreturn\npwgtmvTarget=pmv.estimateFrontierByReturn(TargetRet);\npriskTarget=pmv.estimatePortRisk(pwgtmvTarget);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 445.33,
+    "x1": 387.99,
+    "y1": 477.4
+  },
+  "confidence": "high"
+}

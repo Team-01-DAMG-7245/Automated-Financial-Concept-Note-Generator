@@ -1,0 +1,12 @@
+{
+  "page": 413,
+  "original_text": "% Compare the strategy turnover.\nnames = [backtester.Strategies.Name];\nnameLabels = strrep(names,'_',' ');\nbar(summaryByMetrics.AverageTurnover)\ntitle('Average Turnover')\nylabel('Daily Turnover (%)')\nset(gca,'xticklabel',nameLabels)",
+  "ocr_text": "Comparethestrategyturnover.\nnames=[backtester.Strategies.Name];\nnameLabels=strrep(names,,);\nbar(summaryByMetrics.AverageTurnover)\ntitle(AverageTurnover)\nylabel(DailyTurnover())\nset(gca,xticklabel,nameLabels)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 539.53,
+    "x1": 290.46,
+    "y1": 614.8
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2317,
+  "original_text": "pret = obj.estimatePortReturn(pwgt);",
+  "ocr_text": "pret=obj.estimatePortReturn(pwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 578.7,
+    "x1": 285.05,
+    "y1": 589.16
+  },
+  "confidence": "high"
+}

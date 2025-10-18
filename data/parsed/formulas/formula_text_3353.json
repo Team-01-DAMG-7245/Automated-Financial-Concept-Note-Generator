@@ -1,0 +1,12 @@
+{
+  "page": 1821,
+  "original_text": "% Truncate the payments as well as payment dates for calculation\n    % PaymentDates(1) is the settle date, no need for following calculations\nPaymentDates = PaymentDates(2:end)",
+  "ocr_text": "Truncatethepaymentsaswell_aspaymentdatesforcalculation\nSPaymentDates(1)isthesettledate,noneedforfollowingcalculations\nPaymentDates=PaymentDates(2:end)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 501.77,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

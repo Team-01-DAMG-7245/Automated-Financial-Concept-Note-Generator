@@ -1,0 +1,12 @@
+{
+  "page": 1288,
+  "original_text": "numClusters = 3;\nGroup = cluster( irregularComponentLinkage, \"maxclust\", numClusters );\nCommodity = string( commodityNames.' );\nclusteredCommodities = table( Commodity, Group );\ncommoditiesByCluster = sortrows( clusteredCommodities, \"Group\" );\ndisp( commoditiesByCluster )",
+  "ocr_text": "numClusters=3;\nGroup=cluster(irregularComponentLinkage,maxclust,numClusters);\nCommodity=string(commodityNames.);\nclusteredCommodities=table(Commodity,Group);\ncommoditiesByCluster=sortrows(clusteredCommodities,Group);\ndisp(commoditiesByCluster)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 428.74,
+    "x1": 469.29,
+    "y1": 493.21
+  },
+  "confidence": "high"
+}

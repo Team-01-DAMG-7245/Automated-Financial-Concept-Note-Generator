@@ -1,0 +1,7 @@
+Page 350
+================================================================================
+
+3
+Use the total return prices with the estimateAssetMoments function with a specification that
+your data in Y are prices, and not returns, to estimate asset return moments for your Portfolio
+object.

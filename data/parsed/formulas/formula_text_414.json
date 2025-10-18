@@ -1,0 +1,12 @@
+{
+  "page": 267,
+  "original_text": "pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];\np = setInitPort(p, pwgt0);\n[pwgt, pbuy, psell] = estimateFrontier(p);",
+  "ocr_text": "pwgt=[0.3;0.3;0.2;0.1];\np=setInitPort(p,_pwgt0);\n[pwgt,pbuy,psell]=estimateFrontier(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 581.78,
+    "x1": 317.56,
+    "y1": 613.85
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,14 @@
+Page 579
+================================================================================
+
+TradingIntervalSec = 5; % Trading interval length in seconds
+IntervalBoundSec = (StartTradingSec:TradingIntervalSec:EndTradingSec)';
+MessageSampleIdx = zeros(size(IntervalBoundSec));
+k1 = 1;
+for k2 = 1:size(TradeMessage,1)
+    if TradeMessage(k2,1) >= IntervalBoundSec(k1)
+        MessageSampleIdx(k1) = k2;
+        k1 = k1+1;
+    end
+end
+MessageSampleIdx(end) = length(TradeMessage);

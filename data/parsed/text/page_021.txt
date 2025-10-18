@@ -1,0 +1,106 @@
+Least-Squares Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-4
+Mean and Covariance Estimation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-4
+Convergence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-4
+Fisher Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-4
+Statistical Tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-5
+
+Maximum Likelihood Estimation with Missing Data . . . . . . . . . . . . . . . . .
+9-7
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-7
+ECM Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-7
+Standard Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-8
+Data Augmentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-8
+
+Multivariate Normal Regression Functions . . . . . . . . . . . . . . . . . . . . . . .
+9-10
+Multivariate Normal Regression Without Missing Data . . . . . . . . . . . . . .
+9-11
+Multivariate Normal Regression With Missing Data . . . . . . . . . . . . . . . .
+9-11
+Least-Squares Regression With Missing Data . . . . . . . . . . . . . . . . . . . . .
+9-11
+Multivariate Normal Parameter Estimation With Missing Data . . . . . . . .
+9-12
+Support Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-12
+
+Multivariate Normal Regression Types . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-13
+Regressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-13
+Multivariate Normal Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-13
+Multivariate Normal Regression Without Missing Data . . . . . . . . . . . . . .
+9-13
+Multivariate Normal Regression With Missing Data . . . . . . . . . . . . . . . .
+9-14
+Least-Squares Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-14
+Least-Squares Regression Without Missing Data . . . . . . . . . . . . . . . . . . .
+9-14
+Least-Squares Regression With Missing Data . . . . . . . . . . . . . . . . . . . . .
+9-14
+Covariance-Weighted Least Squares . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-14
+Covariance-Weighted Least Squares Without Missing Data . . . . . . . . . . .
+9-15
+Covariance-Weighted Least Squares With Missing Data . . . . . . . . . . . . .
+9-15
+Feasible Generalized Least Squares . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-15
+Feasible Generalized Least Squares Without Missing Data . . . . . . . . . . .
+9-15
+Feasible Generalized Least Squares With Missing Data . . . . . . . . . . . . . .
+9-16
+Seemingly Unrelated Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-16
+Seemingly Unrelated Regression Without Missing Data . . . . . . . . . . . . .
+9-17
+Seemingly Unrelated Regression With Missing Data . . . . . . . . . . . . . . . .
+9-17
+Mean and Covariance Parameter Estimation . . . . . . . . . . . . . . . . . . . . . .
+9-17
+
+Troubleshooting Multivariate Normal Regression . . . . . . . . . . . . . . . . . .
+9-18
+Biased Estimates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-18
+Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-18
+Slow Convergence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-18
+Nonrandom Residuals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-19
+Nonconvergence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-19
+
+Portfolios with Missing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-21
+
+Valuation with Missing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-26
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-26
+Capital Asset Pricing Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-26
+Estimation of the CAPM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-27
+Estimation with Missing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-27
+Estimation of Some Technology Stock Betas . . . . . . . . . . . . . . . . . . . . . .
+9-27
+Grouped Estimation of Some Technology Stock Betas . . . . . . . . . . . . . . .
+9-30
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-32
+
+xxi

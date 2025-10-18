@@ -1,0 +1,63 @@
+If you specify Speed as an array, it must be a scalar.
+
+If you specify Speed as a deterministic function of time, you call Speed with a real-valued scalar time
+t as its only input, it must return a scalar.
+
+If you specify Speed as a function of time and state, the function calculates the speed of mean
+reversion. This function must return a scalar of reversion rates when you call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+A 2-by-1 bivariate state vector Xt
+
+Note Although bates enforces no restrictions on Speed, the mean-reversion speed is nonnegative
+such that the underlying process reverts to some stable level.
+
+Data Types: double | function_handle
+
+Level — Reversion level or long-run average of CIR stochastic variance process
+array | deterministic function of time | deterministic function of time and state
+
+Reversion level or long-run average of the CIR stochastic variance process, specified as an array, or
+deterministic function of time.
+
+If you specify Level as an array, it must be a scalar.
+
+If you specify Level as a deterministic function of time, you call Level with a real-valued scalar time
+t as its only input, it must return a scalar.
+
+If you specify Level as a deterministic function of time and state, it must return a scalar of reversion
+levels when you call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+A 2-by-1 bivariate state vector Xt
+
+Data Types: double | function_handle
+
+Volatility — Instantaneous volatility CIR stochastic variance process
+scalar | deterministic function of time | deterministic function of time and state
+
+Instantaneous volatility of the CIR stochastic variance process (often called the volatility of volatility
+or volatility of variance), specified as a scalar, a deterministic function of time, or a deterministic
+function of time and state.
+
+If you specify Volatility as a scalar, it represents the instantaneous volatility of the CIR stochastic
+variance model.
+
+If you specify Volatility as a deterministic function of time, you call Volatility with a real-
+valued scalar time t as its only input, it must return a scalar.
+
+If you specify Volatility as a deterministic function time and state, Volatility must return a
+scalar when you call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+bates
+
+15-193

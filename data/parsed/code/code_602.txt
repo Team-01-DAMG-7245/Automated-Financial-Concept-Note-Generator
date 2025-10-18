@@ -1,0 +1,5 @@
+Page 552
+================================================================================
+
+The custom step function flags that the episode has finished when the current time period reaches
+finalTimePeriod.

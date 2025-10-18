@@ -1,0 +1,12 @@
+{
+  "page": 253,
+  "original_text": "x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];\np = Portfolio('InitPort', x0);\np = setTurnover(p, 0.3);",
+  "ocr_text": "xO=[0.12;0.09;0.08;0.07;0.1;0.1;0.15;0.11;0.08;0.1];\np=Portfolio(InitPort,x0);\np=setTurnover(p,0.3);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 659.06,
+    "x1": 371.74,
+    "y1": 684.71
+  },
+  "confidence": "high"
+}

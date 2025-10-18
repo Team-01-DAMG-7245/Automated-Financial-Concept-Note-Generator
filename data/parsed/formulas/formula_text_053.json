@@ -1,0 +1,12 @@
+{
+  "page": 56,
+  "original_text": "NPV = pvvar(Stream, ROR)",
+  "ocr_text": "NPV=pvvar(Stream,ROR)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 607.94,
+    "x1": 220.03,
+    "y1": 618.41
+  },
+  "confidence": "high"
+}

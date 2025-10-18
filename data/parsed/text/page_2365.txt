@@ -1,0 +1,56 @@
+NumPorts — Number of portfolios to calculate on each frontier
+positive integer
+
+Number of portfolios to calculate on each frontier, specified as a positive integer.
+
+Data Types: double
+
+ActiveMap — Indicates if an asset is part of the Universe on the corresponding date
+NUMOBS-by-NASSETS matrix of 1's (all assets active on all dates) (default) | matrix
+
+(Optional) Indicates if an asset is part of the Universe on the corresponding date, specified as a
+number of observations (NUMOBS) by number of assets (NASSETS) matrix with Boolean elements
+corresponding to the Universe.
+
+Data Types: double
+
+Conset — Constraint matrix for a portfolio of asset investments
+matrix
+
+Constraint matrix for a portfolio of asset investments, specified using portcons with the 'Default'
+constraint type. This single constraint matrix is applied to each frontier..
+
+Data Types: double
+
+NumNonNan — Minimum number of non-NaN points for each active asset in each window of
+data
+Window - NASSETS (default) | numeric value
+
+Minimum number of non-NaN points for each active asset in each window of data needed to perform
+the optimization, specified as a numeric value.
+
+Data Types: double
+
+Output Arguments
+
+PortWts — Weights allocated to each asset
+matrix
+
+Weights allocated to each asset., returned as a number of curves (NCURVES)-by-1 cell array, where
+each element is a NPORTS-by-NASSETS matrix of weights.
+
+AllMean — Expected asset returns used to generate each curve on the surface
+vector
+
+Expected asset returns used to generate each curve on the surface, returned as an NCURVES-by-1 cell
+array, where each element is a 1-by-NASSETS vector of the expected asset returns.
+
+AllCovariance — Covariance matrix used to generate each curve on the surface
+vector
+
+Covariance matrix used to generate each curve on the surface, returned as an NCURVES-by-1 cell
+array, where each element is a NASSETS-by-NASSETS vector.
+
+frontier
+
+15-1059

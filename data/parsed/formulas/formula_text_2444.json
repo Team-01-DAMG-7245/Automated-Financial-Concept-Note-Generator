@@ -1,0 +1,12 @@
+{
+  "page": 1264,
+  "original_text": "nIndices  = size(Data,2)-1;     % Number of indices",
+  "ocr_text": "nIndices=size(Data,2)-1; SNumberofindices",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 366.33,
+    "y1": 621.89
+  },
+  "confidence": "high"
+}

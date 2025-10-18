@@ -1,0 +1,12 @@
+{
+  "page": 38,
+  "original_text": "where A*X = B.",
+  "ocr_text": "whereA*X=B.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 173.86,
+    "x1": 161.42,
+    "y1": 185.49
+  },
+  "confidence": "high"
+}

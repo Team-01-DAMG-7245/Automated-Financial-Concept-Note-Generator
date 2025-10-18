@@ -1,0 +1,55 @@
+frac2cur
+
+Fractional currency value to decimal value
+
+Syntax
+
+Decimal = frac2cur(Fraction,Denominator)
+
+Description
+
+Decimal = frac2cur(Fraction,Denominator) converts a fractional currency value to a decimal
+value. Fraction is the fractional currency value input as a character vector, and Denominator is
+the denominator of the fraction.
+
+Examples
+
+Convert a Fractional Currency Value to a Decimal Value
+
+This example shows how to convert a fractional currency value to a decimal value.
+
+Decimal = frac2cur('12.1', 8)
+
+Decimal = 
+12.1250
+
+Input Arguments
+
+Fraction — Fractional currency values
+character vector | cell array of character vectors
+
+Fractional currency values, specified as a character vector or cell array of character vectors.
+
+Data Types: char | cell
+
+Denominator — Denominator of the fractions
+numeric
+
+Denominator of the fractions, specified as a scalar or vector using numeric values for the
+denominator.
+
+Data Types: double
+
+Output Arguments
+
+Decimal — Decimal currency value
+numeric decimal
+
+Decimal currency value, returned as a scalar or vector with numeric decimal values.
+
+Data Types: double
+
+15
+Functions
+
+15-1056

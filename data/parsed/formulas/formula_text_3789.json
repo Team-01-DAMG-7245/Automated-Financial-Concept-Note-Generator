@@ -1,0 +1,12 @@
+{
+  "page": 2143,
+  "original_text": "NumDays = daysdif(StartDate,EndDate)\nNumDays = daysdif( ___ ,Basis)",
+  "ocr_text": "NumDays=daysdif(StartDate,EndDate)\nNumDays=daysdif(___,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.44,
+    "x1": 306.74,
+    "y1": 214.07
+  },
+  "confidence": "high"
+}

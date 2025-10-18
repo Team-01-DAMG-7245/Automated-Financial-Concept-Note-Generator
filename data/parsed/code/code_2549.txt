@@ -1,0 +1,5 @@
+Page 2430
+================================================================================
+
+This function contains all holidays and special nontrading days for the New York Stock Exchange
+from January 1, 1885 to December 31, 2070.

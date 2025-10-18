@@ -1,0 +1,12 @@
+{
+  "page": 1155,
+  "original_text": "% Plot the efficient frontier.\nfigure;\nmvFrontierHandle = pmv.plotFrontier(pwgtmv);",
+  "ocr_text": "Plottheefficientfrontier.\nfigure;\nmvFrontierHandle=pmv.plotFrontier(pwgtmv);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 233.23,
+    "x1": 328.39,
+    "y1": 265.29
+  },
+  "confidence": "high"
+}

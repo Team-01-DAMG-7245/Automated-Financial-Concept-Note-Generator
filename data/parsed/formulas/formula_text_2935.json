@@ -1,0 +1,12 @@
+{
+  "page": 1534,
+  "original_text": "Kernel function parameter representing the roughness index, specified as numeric scalar. The value\nof Alpha must be in the range (-0.5 to 0). The corresponding fractional Brownian motion (fBm) is\ndefined with Hurst index H = Alpha + 0.5.",
+  "ocr_text": "Kernelfunctionparameterrepresentingtheroughnessindex,specifiedasnumericscalar.Thevalue\nofAlphamustbeintherange(-0.5toQ).ThecorrespondingfractionalBrownianmotion(fBm)is\ndefinedwithHurstindexH=Alpha+0.5.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 181.25,
+    "x1": 547.7,
+    "y1": 216.88
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1493,
+  "original_text": "obj = \n   Class SDEMRD: SDE with Mean-Reverting Drift\n   -------------------------------------------\n     Dimensions: State = 1, Brownian = 1",
+  "ocr_text": "obj=\nClassSDEMRD:SDEwithMean-RevertingDrift\nDimensions:State=1,Brownian=1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 339.22,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

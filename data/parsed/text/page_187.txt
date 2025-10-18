@@ -1,0 +1,28 @@
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Choosing and Controlling the Solver for Mean-Variance Portfolio Optimization” on page 4-114
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+Portfolio Object Workflow
+
+4-19

@@ -1,0 +1,12 @@
+{
+  "page": 1421,
+  "original_text": "OptionPrice = mean(DiscountedPayoffs);",
+  "ocr_text": "OptionPrice=mean(DiscountedPayoffs);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 158.13,
+    "x1": 295.89,
+    "y1": 168.59
+  },
+  "confidence": "high"
+}

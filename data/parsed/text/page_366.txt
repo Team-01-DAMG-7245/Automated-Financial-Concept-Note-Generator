@@ -1,0 +1,26 @@
+wgt = estimateFrontier(p);
+wgt2 = estimateFrontier(p2);
+plotFrontier(p, wgt); hold on;
+plotFrontier(p2, wgt2); hold off;
+legend('Baseline portfolio', 'Equal Weighted portfolio', 'location', 'best');
+
+Use estimateFrontierByRisk to optimize for a specific risk level, in this case .05, to determine
+what allocation maximizes the portfolio return.
+
+targetRisk = 0.05;
+pwgt = estimateFrontierByRisk(p, targetRisk);
+pwgt2 = estimateFrontierByRisk(p2, targetRisk);
+
+idx = (pwgt>toler) | (pwgt2>toler);
+barh([pwgt(idx), pwgt2(idx)]);
+grid on
+xlabel('Proportion of investment')
+yticks(1:sum(idx));
+yticklabels(p.AssetList(idx));
+title('Asset Allocation');
+legend('Baseline portfolio', 'Equal weighted portfolio', 'location', 'best');
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-198

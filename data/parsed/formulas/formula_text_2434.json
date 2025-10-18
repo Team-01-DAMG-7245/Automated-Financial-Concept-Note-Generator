@@ -1,0 +1,12 @@
+{
+  "page": 1251,
+  "original_text": "X = obj.simulate(nPeriods, 'DeltaTime', dt, ...\n    'nTrials', nPaths, 'Z', z);",
+  "ocr_text": "X=obj.simulate(nPeriods,DeltaTime,dt,...\nnTrials,nPaths,Z,z);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 344.66,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

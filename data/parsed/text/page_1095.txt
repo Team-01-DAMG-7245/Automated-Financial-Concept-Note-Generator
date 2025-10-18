@@ -1,0 +1,61 @@
+HPQ    0.0001 (  0.1747)    1.3745 ( 24.2390)    0.0255 (  0.0049)
+   IBM   -0.0000 (  0.0312)    1.0807 ( 28.7576)    0.0169 (  0.0032)
+  INTC    0.0001 (  0.1608)    1.6002 ( 27.3684)    0.0263 (  0.0050)
+  MSFT   -0.0002 (  0.4871)    1.1765 ( 27.4554)    0.0193 (  0.0037)
+  ORCL    0.0000 (  0.0389)    1.5010 ( 21.1855)    0.0319 (  0.0061)
+  YHOO    0.0001 (  0.1282)    1.6543 ( 19.3838)    0.0384 (  0.0074)
+
+The Alpha column contains alpha estimates for each stock that are near zero as expected. In
+addition, the t-statistics (which are enclosed in parentheses) generally reject the hypothesis that the
+alphas are nonzero at the 99.5% level of significance.
+
+The Beta column contains beta estimates for each stock that also have t-statistics enclosed in
+parentheses. For all stocks but GOOG, the hypothesis that the betas are nonzero is accepted at the
+99.5% level of significance. It would seem, however, that GOOG does not have enough data to obtain
+a meaningful estimate for beta since its t-statistic would imply rejection of the hypothesis of a
+nonzero beta.
+
+The Sigma column contains residual standard deviations, that is, estimates for non-systematic risks.
+Instead of t-statistics, the associated standard errors for the residual standard deviations are
+enclosed in parentheses.
+
+Grouped Estimation of Some Technology Stock Betas
+
+To estimate stock betas for all twelve stocks, set up a joint regression model that groups all twelve
+stocks within a single design (since each stock has the same design matrix, this model is actually an
+example of seemingly-unrelated regression). The function to estimate model parameters is
+ecmmvnrmle and the function to estimate standard errors is ecmmvnrstd.
+
+Since GOOG has a significant number of missing values, a direct use of the missing data function
+ecmmvnrmle takes 482 iterations to converge. This can take a long time to compute. For the sake of
+brevity, the parameter and covariance estimates after the first 480 iterations are contained in a MAT-
+file (CAPMgroupparam) and is used as initial estimates to compute stock betas.
+
+load CAPMgroupparam
+whos Param0 Covar0
+
+Name         Size            Bytes  Class     Attributes
+
+Covar0      12x12             1152  double              
+  Param0      24x1               192  double
+
+Now estimate the parameters for the collection of twelve stocks.
+
+NumParams = 2 * NumAssets;
+
+% Set up the grouped asset data and design matrices.
+TestData = zeros(NumSamples, NumAssets);
+TestDesign = cell(NumSamples, 1);
+Design = zeros(NumAssets, NumParams);
+
+for    k = 1:NumSamples
+    for i = 1:NumAssets
+        TestData(k,i) = Data(k,i) - Data(k,14);
+        Design(i,2*i - 1) = 1.0;
+        Design(i,2*i) = Data(k,13) - Data(k,14);
+    end
+    TestDesign{k} = Design;
+
+Capital Asset Pricing Model with Missing Data
+
+9-37

@@ -1,0 +1,7 @@
+Page 320
+================================================================================
+
+A second possible scenario is when the BoundType is 'Conditional' and the setEquality
+function is used with the bEquality parameter set to 0.04. This sets an equality constraint to have
+x1 + x3 = 0.04. At the same time, setBounds also set the semicontinuous constraints to have xi = 0
+or 0.1 <= xi <= 2.5, which lead to x1 + x3 = 0 or 0.1 <= x1 + x3 <= 5. The semicontinuous

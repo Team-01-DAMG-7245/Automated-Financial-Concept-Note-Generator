@@ -1,0 +1,66 @@
+•
+For a sell trade:
+Implementation Shortfall = Arrival Price × Traded Volume −Executed Price × Traded Volume
+
+•
+For a buy trade:
+Implementation Shortfall = Executed Price × Traded Volume −Arrival Price × Traded Volume
+
+The arrival price is the first bid or ask price observed at the beginning of the trade horizon. If
+Implementation Shortfall is positive, it implies that the average executed price was worse than the
+arrival price, while a negative Implementation Shortfall implies that the average executed price was
+better than the arrival price. The cumulative Implementation Shortfall from the beginning of the
+trade horizon until the previous step reflects the trading cost incurred by the agent in the past, and it
+serves as the third observation variable.
+
+The last observation variable is the current price divergence from arrival price. This variable reflects
+the current market condition and it is measured as the difference between the arrival price and the
+average price of the first two levels of the current limit order book (LOB).
+
+•
+For a sell trade:
+Price Divergence = Average Bid Prices of First 2 Levels of Current LOB −Arrival Price
+
+•
+For a buy trade:
+Price Divergence = Arrival Price −Average Ask Prices of First 2 Levels of Current LOB
+
+A positive price divergence implies more favorable current trading conditions than the arrival price,
+and a negative divergence less favorable conditions.
+
+Action Space
+
+The action space is defined as the possible number of shares traded at each step. For a TWAP policy,
+the only possible action at each step is to trade a constant number of shares computed as the total
+trading shares divided by the number of steps in the horizon. Meanwhile, the agents in this example
+choose from 39 possible actions that are mostly evenly spaced, ranging from trading 0 shares to
+trading twice the number of shares as the corresponding TWAP trade.
+
+For both TWAP trades and agent trades, you enforce ending inventory constraints so that if the target
+ending inventory is not met by the last step of the horizon, the action for the last step is to:
+
+•
+Sell any remaining shares in the inventory for a Sell trade.
+
+•
+Buy any missing shares in the inventory for a Buy trade.
+
+Also, you place limits on the agent actions to take advantage of price divergence and to prevent
+selling more than the available shares in the inventory or buying more than the target number of
+shares.
+
+Reward
+
+The reward is another important aspect of agent design, as agents learn their policies at each step
+using the rewards received after taking the previous actions. Research on reward design shows wide
+variations in optimal execution, and you can experiment with different rewards. Since the agent
+performance is measured against the baseline using Implementation Shortfall, many studies use
+Implementation Shortfalls directly in the rewards, while others use related quantities. Some studies
+use the proceeds from the trade as the reward [3 on page 4-440], while others also impose a penalty
+for trading many shares too quickly [4 on page 4-440]. Another study uses an elaborately shaped
+reward algorithm that is designed to use the TWAP policy most of the time, while encouraging the
+agent to deviate from the TWAP policy only when it is advantageous to do so [5 on page 4-440]. If
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-409

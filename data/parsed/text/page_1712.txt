@@ -1,0 +1,61 @@
+Up-and-In Barrier Option Price:   6.6572
+         Standard Error of Price:   0.7292
+ Confidence Interval Lower Bound:   5.2280
+ Confidence Interval Upper Bound:   8.0864
+
+Utility Function
+
+function displaySummary(optionPrice, standardError, lowerBound, upperBound)
+fprintf('  Up-and-In Barrier Option Price: %8.4f\n', ...
+            optionPrice);
+fprintf('         Standard Error of Price: %8.4f\n', ...
+            standardError);
+fprintf(' Confidence Interval Lower Bound: %8.4f\n', ...
+            lowerBound);
+fprintf(' Confidence Interval Upper Bound: %8.4f\n', ...
+            upperBound);
+end
+
+Specify Approximation Scheme with simulate Using a CIR Model
+
+The Cox-Ingersoll-Ross (CIR) short rate class derives directly from SDE with mean-reverting drift
+
+(SDEMRD): dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+
+1
+2)V(t)dW
+
+where D is a diagonal matrix whose elements are the square root of the corresponding element of the
+state vector.
+
+Create a cir object to represent the model: dXt = 0 . 2(0 . 1 −Xt)dt + 0 . 05Xt
+
+1
+2dW.
+
+cir_obj = cir(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)
+
+cir_obj = 
+   Class CIR: Cox-Ingersoll-Ross
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+Use the optional name-value argument for 'Scheme' to specify a scheme to simulate the sample
+paths.
+
+[paths,times] = simulate(cir_obj,10,'ntrials',4096,'scheme','quadratic-exponential');
+
+15
+Functions
+
+15-406

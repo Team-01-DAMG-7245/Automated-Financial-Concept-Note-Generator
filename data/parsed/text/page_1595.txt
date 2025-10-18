@@ -1,0 +1,60 @@
+Data Types: timetable
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: backtester = runBacktest(backtester,assetPrices,'Start',50,'End',100)
+
+Start — Time step to start backtest
+1 (default) | integer | datetime
+
+Time step to start the backtest, specified as the comma-separated pair consisting of 'Start' and a
+scalar integer or datetime.
+
+If an integer, the Start time refers to the row in the pricesTT timetable where the backtest begins.
+
+If a datetime object, the backtest will begin at the first time in the prices timetable that occurs on or
+after the 'Start' parameter. The backtest will end on the last time in the pricesTT timetable that
+occurs on or before the 'End' parameter. The 'Start' and 'End' parameters set the boundary of
+the data that is included in the backtest. For example:
+
+backtester = runBacktest(backtester,pricesTT,'Start',datetime('2006-01-05','InputFormat','yyyy-MM
+
+For an additional example, see “Backtest Investment Strategies Using datetime and
+calendarDuration” on page 4-451.
+
+Data Types: double | datetime
+
+End — Time step to end backtest
+Last row in pricesTT timetable (default) | integer | datetime
+
+Time step to end the backtest, specified as the comma-separated pair consisting of 'End' and a
+scalar integer or datetime.
+
+If an integer, the End time refers to the row in the pricesTT timetable where the backtest ends.
+
+If a datetime object, the backtest will end on the last time in the pricesTT timetable that occurs on
+or before the 'End' parameter. For example:
+
+backtester = runBacktest(backtester,pricesTT,'End',datetime('2006-12-05','InputFormat','yyyy-MM-d
+
+For an additional example, see “Backtest Investment Strategies Using datetime and
+calendarDuration” on page 4-451.
+
+Data Types: double | datetime
+
+CashAssets — Specify items in pricesTT timetable as cash assets
+"" (default) | string | string array
+
+Specify items in the pricesTT timetable as cash assets, specified as the comma-separated pair
+consisting of 'CashAssets' and a scalar string or a string array where each element in the list must
+correspond to a column in the pricesTT timetable.
+
+runBacktest
+
+15-289

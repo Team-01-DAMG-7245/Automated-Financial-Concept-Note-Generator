@@ -1,0 +1,61 @@
+Define Objective Function
+
+Define a function handle for the objective function xTx.
+
+% Define the objective function
+objFun = @(x) x'*x;
+
+Add Return Constraints
+
+When using the Portfolio object, you can use estimateFrontierByReturn to add a return
+constraint to the portfolio. However, when using the estimateCustomObjectivePortfolio
+function with a Portfolio object, you must add return constraints by using the TargetReturn
+name-value argument with a return target value.
+
+The Portfolio object supports two types of return constraints: gross return and net return. The
+type of return constraint that is added to the portfolio problem is implicitly defined by whether you
+provide buy or sell costs to the Portfolio object using setCosts. If no buy or sell costs are
+present, the added return constraint is a gross return constraint. Otherwise, a net return constraint is
+added.
+
+Gross Return Constraint
+
+The gross portfolio return constraint for a portfolio is
+
+r0 + μ −r0
+
+Tx ≥μ0,
+
+where r0 is the risk-free rate (with 0 as default), μ is the mean of assets returns, and μ0 is the target
+return.
+
+Since buy or sell costs are not needed to add a gross return constraint, the Portfolio object does
+not need to be modified before using estimateCustomObjectivePortfolio.
+
+% Set a return target
+ret0 = 0.03;
+% Solve portfolio problem with a gross return constraint
+wGross = estimateCustomObjectivePortfolio(p,objFun, ...
+    TargetReturn=ret0)
+
+wGross = 6×1
+
+0.1377
+    0.1106
+    0.1691
+    0.1829
+    0.1179
+    0.2818
+
+The return constraint is not added to the Portfolio object. In other words, the Portfolio
+properties are not modified by adding a gross return constraint in
+estimateCustomObjectivePortfolio.
+
+Net Return Constraint
+
+The net portfolio return constraint for a portfolio is
+
+15
+Functions
+
+15-918

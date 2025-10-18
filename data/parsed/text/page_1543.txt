@@ -1,0 +1,68 @@
+detailedCosts = computeTransactionCostsFcn(deltaPositions)
+
+The user-defined computeTransactionCostsFcn function handle takes a single input
+argument, deltaPositions, which is a vector of changes in asset positions for all assets (in
+currency units) as a result of a rebalance. Positive elements in the deltaPositions vector
+indicate purchases while negative entries represent sales. The user-defined function handle
+returns one output argument for detailedCosts for per-asset transaction costs.
+
+•
+If UserData is Empty and EngineDataList is Specified Using buyCosts and
+sellCosts Outputs
+
+When the optional name-value argument UserData is not specified, but the optional name-
+value argument EngineDataList is specified and the buyCosts and sellCosts output are
+used, the computeTransactionCostsFcn function handle has the following signatures:
+
+[buyCosts,sellCosts] = computeTransactionCostsFcn(deltaPositions,engineData)
+
+•
+If UserData is Empty and EngineDataList is Specified and detailedCosts Output is
+Specified
+
+When the optional name-value argument UserData is not specified, but the optional name-
+value argument EngineDataList is specified and detailedCosts output is specified, the
+computeTransactionCostsFcn function handle has the following signatures:
+
+detailedCosts = computeTransactionCostsFcn(deltaPositions,engineData)
+
+•
+If UserData is Specified and EngineDataList is Empty Using buyCosts and
+sellCosts Outputs
+
+When the optional name-value argument UserData is specified, but the optional name-value
+argument EngineDataList is not specified and buyCosts and sellCosts outputs are used,
+the computeTransactionCostsFcn function handle has the following signatures:
+
+[buyCosts,sellCosts,userData] = computeTransactionCostsFcn(deltaPositions,userData)
+
+•
+If UserData is Specified and EngineDataList is Empty and detailedCosts Output is
+specified
+
+When the optional name-value argument UserData is specified, but the optional name-value
+argument EngineDataList is not specified and detailedCosts output is specified, the
+computeTransactionCostsFcn function handle has the following signatures:
+
+[detailedCosts,userData] = computeTransactionCostsFcn(deltaPositions,userData)
+
+•
+If Both UserData and EngineDataList are Specified Using buyCosts and sellCosts
+Outputs
+
+If you use the optional name-value argument for UserData to specify a strategy-specific
+userData struct and the optional name-value argument EngineDataList to specify required
+backtest engine state data and buyCosts and sellCosts arguments are used, the required
+syntax for the computeTransactionCostsFcn function handle must have the following
+signature:
+
+[buyCosts,sellCosts,userData] = computeTransactionCostsFcn(deltaPositions,engineData,userDa
+
+If you specify the optional name-value argument UserData, then the strategy userData struct
+is passed to the computeTransactionCostsFcn cost function as the final input argument.
+The computeTransactionCostsFcn function handle can read or write any information to the
+userData struct. The updated userData struct is returned as the third output argument.
+
+backtestStrategy
+
+15-237

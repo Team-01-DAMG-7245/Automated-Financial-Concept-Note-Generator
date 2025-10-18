@@ -1,0 +1,12 @@
+{
+  "page": 1087,
+  "original_text": "% Set up results for output\n  Alpha = Param(1);\n  Beta = Param(2);\n  Sigma = sqrt(Covar);",
+  "ocr_text": "Setupresultsforoutput\nAlpha=Param(1);\nBeta=Param(2);\nSigma=sqrt(Covar);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.03,
+    "x1": 236.29,
+    "y1": 297.89
+  },
+  "confidence": "high"
+}

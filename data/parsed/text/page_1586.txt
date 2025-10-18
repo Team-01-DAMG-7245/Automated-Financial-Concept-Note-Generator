@@ -1,0 +1,62 @@
+RebalanceFcn: @(~,~)equalWeightsVector
+        RebalanceFrequency: 60
+          TransactionCosts: 0.0050
+            LookbackWindow: 0
+            InitialWeights: [0.1429 0.1429 0.1429 0.1429 0.1429 0.1429 0.1429]
+             ManagementFee: 0
+     ManagementFeeSchedule: 1y
+            PerformanceFee: 0
+    PerformanceFeeSchedule: 1y
+         PerformanceHurdle: 0
+                  UserData: [0×0 struct]
+            EngineDataList: [0×0 string]
+
+Run Backtest
+
+Create a backtesting engine and run a backtest over a year of stock data. For more information on
+creating backtest engines, see backtestEngine.
+
+% Create the backtest engine. The backtest engine properties that hold the
+% results are initialized to empty.
+backtester = backtestEngine(ewStrategy)
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×1 backtestStrategy]
+             RiskFreeRate: 0
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: []
+                  Returns: []
+                Positions: []
+                 Turnover: []
+                  BuyCost: []
+                 SellCost: []
+         TransactionCosts: []
+                     Fees: []
+
+% Run the backtest. The empty properties are now populated with
+% timetables of detailed backtest results.
+backtester = runBacktest(backtester,pricesTT)
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×1 backtestStrategy]
+             RiskFreeRate: 0
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+
+15
+Functions
+
+15-280

@@ -1,0 +1,63 @@
+JumpVol — Instantaneous standard deviation
+array | deterministic function of time | deterministic function of time and state
+
+Instantaneous standard deviation of log(1+J), specified as an array, a deterministic function of time,
+or a deterministic function of time and state.
+
+If you specify JumpVol as an array, it must be an NVars-by-NJumps matrix.
+
+If you specify JumpVol as a deterministic function of time, when you call JumpVol with a real-valued
+scalar time t as its only input, it must return an NVars-by-NJumps matrix.
+
+If you specify JumpVol as a deterministic function of time and state, it must return an NVars-by-
+NJumps matrix when you call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+An NVars-by-1 state vector Xt
+
+Data Types: double | function_handle
+
+Output Arguments
+
+Merton — Merton model
+Merton object
+
+Merton model, returned as a Merton object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of first observation, applied to all state variables, specified as a scalar.
+
+Data Types: double
+
+StartState — Initial values of state variables
+1 (default) | scalar | column vector | matrix
+
+Initial values of state variables, specified as a scalar, column vector, or matrix.
+
+If StartState is a scalar, merton applies the same initial value to all state variables on all trials.
+
+If StartState is a column vector, merton applies a unique initial value to each state variable on all
+trials.
+
+If StartState is a matrix, merton applies a unique initial value to each state variable on each trial.
+
+Data Types: double
+
+Correlation — Correlation between Gaussian random variates drawn to generate
+Brownian motion vector (Wiener processes)
+NBrowns-by-NBrowns identity matrix representing independent Gaussian processes (default) |
+positive semidefinite matrix | deterministic function
+
+Correlation between Gaussian random variates drawn to generate the Brownian motion vector
+(Wiener processes), specified as an NBrowns-by-NBrowns positive semidefinite matrix, or as a
+
+merton
+
+15-205

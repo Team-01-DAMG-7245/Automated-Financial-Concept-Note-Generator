@@ -1,0 +1,12 @@
+{
+  "page": 1272,
+  "original_text": "h = scatterhist(R(:,2), R(:,3),'Color','r','Marker','.','MarkerSize',1); \nfig = gcf;\nfig.Color = [1 1 1];\ny1 = ylim(h(1));\ny3 = ylim(h(3));\nxlim(h(1), [-.1 .1])\nylim(h(1), [-.1 .1])\nxlim(h(2), [-.1 .1])\nylim(h(3), [(y3(1) + (-0.1 - y1(1)))  (y3(2) + (0.1 - y1(2)))])\nxlabel('France')\nylabel('Germany')\ntitle('Gaussian Copula')",
+  "ocr_text": "h=scatterhist(R(:,2),R(:,3),Color,r,Marker,.,MarkerSize,1);\nfig=gcf;\n\nfig.Color=[111];\n\nyl=ylim(h(1));\n\ny3_=ylim(h(3));\n\nxlim(h(1),[-.1.1])\n\nylim(h(1),[-.1.1])\n\nxlim(h(2),[-.1.1])\nylim(h(3),[(y3(1)+(-.1-yl(1)))(y3(2)+(O.1-y1(2)))1)\nxlabel(France)\n\nylabel(Germany)\n\ntitle(GaussianCopula)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 513.28,
+    "x1": 485.54,
+    "y1": 642.55
+  },
+  "confidence": "high"
+}

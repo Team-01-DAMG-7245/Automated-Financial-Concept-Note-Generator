@@ -1,0 +1,9 @@
+Page 256
+================================================================================
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ]; 
+p = Portfolio('BuyTurnover', 0.3, 'SellTurnover', 0.2, 'InitPort', x0);
+disp(p.NumAssets)
+disp(p.BuyTurnover)
+disp(p.SellTurnover)
+disp(p.InitPort)

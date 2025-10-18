@@ -1,0 +1,12 @@
+{
+  "page": 1413,
+  "original_text": "% Discount payoffs back to present value and average\ncallPrice = exp(-r * T) * mean(callPayoff)",
+  "ocr_text": "Discountpayoffsbacktopresentvalueandaverage\ncallPrice=exp(-r*T)*mean(callPayoff)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 371.43,
+    "x1": 371.73,
+    "y1": 392.69
+  },
+  "confidence": "high"
+}

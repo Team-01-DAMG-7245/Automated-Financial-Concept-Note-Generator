@@ -1,0 +1,12 @@
+{
+  "page": 764,
+  "original_text": "% Search on the frontier iteratively. Find the return that minimizes the\n% negative of the reward-to-risk ratio.\nfhandle = @(ret) iterative_local_obj(ret,p);\noptions = optimset('Display', 'off', 'TolX', 1.0e-8);\noptret = fminbnd(fhandle, minret, maxret, options);",
+  "ocr_text": "Searchonthefrontieriteratively.Findthereturnthatminimizesthe\nnegativeofthereward-to-riskratio.\nfhandle=Q(ret)iterative_local_obj(ret,p);\noptions=optimset(Display,off,TolX,1.0e-8);\noptret=fminbnd(fhandle,minret,maxret,options);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 226.83,
+    "x1": 480.09,
+    "y1": 280.49
+  },
+  "confidence": "high"
+}

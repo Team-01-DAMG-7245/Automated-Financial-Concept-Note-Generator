@@ -1,0 +1,71 @@
+Note You can specify combinations of array and function input parameters as needed. Moreover, a
+parameter is identified as a deterministic function of time if the function accepts a scalar time t as its
+only input argument. Otherwise, a parameter is assumed to be a function of time t and state Xt and is
+invoked with both input arguments.
+
+Merton = merton( ___ ,Name,Value) sets “Properties” on page 15-205 using name-value pair
+arguments in addition to the input arguments in the preceding syntax. Enclose each property name in
+quotes.
+
+The merton object has the following “Properties” on page 15-205:
+
+•
+StartTime — Initial observation time
+
+•
+StartState — Initial state at time StartTime
+
+•
+Correlation — Access function for the Correlation input argument
+
+•
+Drift — Composite drift-rate function
+
+•
+Diffusion — Composite diffusion-rate function
+
+•
+Simulation — A simulation function or method
+
+Input Arguments
+
+Return — Expected mean instantaneous rates of asset return
+array | deterministic function of time | deterministic function of time and state
+
+Expected mean instantaneous rates of asset return, denoted as B(t,Xt), specified as an array, a
+deterministic function of time, or a deterministic function of time and state.
+
+If you specify Return as an array, it must be an NVars-by-NVars matrix representing the expected
+(mean) instantaneous rate of return.
+
+If you specify Return as a deterministic function of time, when you call Return with a real-valued
+scalar time t as its only input, it must return an NVars-by-NVars matrix.
+
+If you specify Return as a deterministic function of time and state, it must return an NVars-by-
+NVars matrix when you call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+An NVars-by-1 state vector Xt
+
+Data Types: double | function_handle
+
+Sigma — Instantaneous volatility rates
+array | deterministic function of time | deterministic function of time and state
+
+Instantaneous volatility rates, denoted as V(t,Xt), specified as an array, a deterministic function of
+time, or a deterministic function of time and state.
+
+If you specify Sigma as an array, it must be an NVars-by-NBrowns matrix of instantaneous volatility
+rates or a deterministic function of time. In this case, each row of Sigma corresponds to a particular
+state variable. Each column corresponds to a particular Brownian source of uncertainty, and
+associates the magnitude of the exposure of state variables with sources of uncertainty.
+
+If you specify Sigma as a deterministic function of time, when you call Sigma with a real-valued
+scalar time t as its only input, it must return an NVars-by-NBrowns matrix.
+
+merton
+
+15-203

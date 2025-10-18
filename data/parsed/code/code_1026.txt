@@ -1,0 +1,6 @@
+Page 1061
+================================================================================
+
+To estimate the parameters of the multivariate normal linear regression model using maximum
+likelihood estimation, it is necessary to maximize the log-likelihood function over the estimation
+parameters given observations z1, ... , zm.

@@ -1,0 +1,4 @@
+Page 1476
+================================================================================
+
+Pass the functions to the sdeddo function to create an object obj of class sdeddo:

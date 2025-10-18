@@ -1,0 +1,56 @@
+Using Maximum and Expected Maximum Drawdown
+
+Introduction
+
+Maximum drawdown is the maximum decline of a series, measured as return, from a peak to a nadir
+over a period of time. Although additional metrics exist that are used in the hedge fund and
+commodity trading communities (see Pederson and Rudholm-Alfvin [20] in “Bibliography” on page A-
+2), the original definition and subsequent implementation of these metrics is not yet standardized.
+
+It is possible to compute analytically the expected maximum drawdown for a Brownian motion with
+drift (see Magdon-Ismail, Atiya, Pratap, and Abu-Mostafa [16] “Bibliography” on page A-2). These
+results are used to estimate the expected maximum drawdown for a series that approximately follows
+a geometric Brownian motion.
+
+Use maxdrawdown and emaxdrawdown to calculate the maximum and expected maximum
+drawdowns.
+
+Maximum Drawdown
+
+This example shows how to compute the maximum drawdown (MaxDD) using example data with a
+fund, a market, and a cash series.
+
+load FundMarketCash
+MaxDD = maxdrawdown(TestData)
+
+MaxDD = 1×3
+
+0.1658    0.3381         0
+
+The maximum drop in the given time period is 16.58% for the fund series and 33.81% for the market.
+There is no decline in the cash series, as expected, because the cash account never loses value.
+
+maxdrawdown can also return the indices (MaxDDIndex) of the maximum drawdown intervals for
+each series in an optional output argument.
+
+[MaxDD, MaxDDIndex] = maxdrawdown(TestData)
+
+MaxDD = 1×3
+
+0.1658    0.3381         0
+
+MaxDDIndex = 2×3
+
+2     2   NaN
+    18    18   NaN
+
+The first two series experience their maximum drawdowns from the second to the 18th month in the
+data. The indices for the third series are NaNs because it never has a drawdown.
+
+The 16.58% value loss from month 2 to month 18 for the fund series is verified using the reported
+indices.
+
+7
+Investment Performance Metrics
+
+7-14

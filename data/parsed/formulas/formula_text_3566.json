@@ -1,0 +1,12 @@
+{
+  "page": 2002,
+  "original_text": "h = cfplot( ___ ,Name,Value) returns the handle to the line objects used in the cash flow\ndiagram.",
+  "ocr_text": "h=cfplot(__,Name,Value)returnsthehandletothelineobjectsusedinthecashflow\ndiagram.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 422.05,
+    "x1": 522.19,
+    "y1": 445.68
+  },
+  "confidence": "high"
+}

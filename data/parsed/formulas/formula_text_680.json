@@ -1,0 +1,12 @@
+{
+  "page": 420,
+  "original_text": "% Visualize the performance of each stock over the range of price data.\ntotalRet = ret2tick(returns);\nplot(totalRet.Dates,totalRet.Variables);\nlegend(symbols,'Location','NW');\ntitle('Growth of $1 for Each Stock')\nylabel('$')",
+  "ocr_text": "Visualizetheperformanceofeachstockovertherangeofpricedata.\ntotalRet=ret2tick(returns);\n\nplot(totalRet.Dates,totalRet.Variables);\nLegend(symbols,Location,NW);\n\ntitle(Growthof1forEachStock)\n\nylabel()",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 484.93,
+    "x1": 474.68,
+    "y1": 549.4
+  },
+  "confidence": "high"
+}

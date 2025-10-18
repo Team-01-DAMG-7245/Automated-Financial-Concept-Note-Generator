@@ -1,0 +1,66 @@
+the coupon payment is called accrued interest. The purchase price, the price paid for a bond, is the
+quoted market price plus accrued interest.
+
+The maturity date of a bond is the date when the issuer returns the final face value, also known as the
+redemption value or par value, to the buyer. The yield-to-maturity of a bond is the nominal compound
+rate of return that equates the present value of all future cash flows (coupons and principal) to the
+current market price of the bond.
+
+Period
+
+The period of a bond refers to the frequency with which the issuer of a bond makes coupon payments
+to the holder.
+
+Period of a Bond
+
+Period Value
+Payment Schedule
+
+0
+No coupons (Zero coupon bond)
+
+1
+Annual
+
+2
+Semiannual
+
+3
+Tri-annual
+
+4
+Quarterly
+
+6
+Bi-monthly
+
+12
+Monthly
+
+Basis
+
+The basis of a bond refers to the basis or day-count convention for a bond. Day count basis
+determines how interest accrues over time for various instruments and the amount transferred on
+interest payment dates. Basis is normally expressed as a fraction in which the numerator determines
+the number of days between two dates, and the denominator determines the number of days in the
+year.
+
+For example, the numerator of actual/actual means that when determining the number of days
+between two dates, count the actual number of days; the denominator means that you use the actual
+number of days in the given year in any calculations (either 365 or 366 days depending on whether
+the given year is a leap year). The calculation of accrued interest for dates between payments also
+uses day count basis. Day count basis is a fraction of Number of interest accrual days / Days
+in the relevant coupon period.
+
+Note Although the concept of day count sounds deceptively simple, the actual calculation of day
+counts can be complex. You can find a good discussion of day counts and the formulas for calculating
+them in Chapter 5 of Stigum and Robinson, Money Market and Bond Calculations in “Bibliography”
+on page A-2. For more information on Basis, see EMU and Market Conventions: Recent
+Developments.
+
+Supported day count conventions and basis values are:
+
+2
+Performing Common Financial Tasks
+
+2-16

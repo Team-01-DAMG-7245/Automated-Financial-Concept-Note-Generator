@@ -1,0 +1,12 @@
+{
+  "page": 134,
+  "original_text": "[predScoresRLSTMBT] = minibatchpredict(RiskyLSTMMdl,XBT,InputDataFormats=\"CTB\");\npredYRLSTMBT = scores2label(predScoresRLSTMBT,classes);",
+  "ocr_text": "[predScoresRLSTMBT]=minibatchpredict(RiskyLSTMMdl,XBT,InputDataFormats=CTB);\npredYRLSTMBT=scores2label(predScoresRLSTMBT,classes);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 695.93,
+    "x1": 523.48,
+    "y1": 717.2
+  },
+  "confidence": "high"
+}

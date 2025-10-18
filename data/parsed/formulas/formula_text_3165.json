@@ -1,0 +1,12 @@
+{
+  "page": 1701,
+  "original_text": "B(t, T) = e−A(t, T)r(t) + C(t, T)",
+  "ocr_text": "B(t,T)= eAlt, T)r(t)+C(t,T)",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 536.7,
+    "x1": 232.84,
+    "y1": 550.46
+  },
+  "confidence": "high"
+}

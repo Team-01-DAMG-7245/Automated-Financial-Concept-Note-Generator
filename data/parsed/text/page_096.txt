@@ -1,0 +1,64 @@
+mapreducer(0)
+DT = tall(DS);
+
+DTPreview = DT(:,1:5)
+
+DTPreview =
+
+M×5 tall table
+
+Time     AskPrice1    AskSize1    BidPrice1    BidSize1
+    _____    _________    ________    _________    ________
+
+34200    2.752e+05       66       2.751e+05      400   
+    34200    2.752e+05      166       2.751e+05      400   
+    34200    2.752e+05      166       2.751e+05      400   
+    34200    2.752e+05      166       2.751e+05      400   
+    34200    2.752e+05      166       2.751e+05      300   
+    34200    2.752e+05      166       2.751e+05      300   
+    34200    2.752e+05      166       2.751e+05      300   
+    34200    2.752e+05      166       2.751e+05      300   
+      :          :           :            :           :
+      :          :           :            :           :
+
+Timetables allow you to perform operations specific to time series (see “Create Timetables”). Because
+the LOB data consists of concurrent time series, convert DT to a tall timetable.
+
+DT.Time = seconds(DT.Time); % Cast time as a duration from midnight.
+DTT = table2timetable(DT);
+
+DTTPreview = DTT(:,1:4)
+
+DTTPreview =
+
+M×4 tall timetable
+
+Time       AskPrice1    AskSize1    BidPrice1    BidSize1
+    _________    _________    ________    _________    ________
+
+34200 sec    2.752e+05       66       2.751e+05      400   
+    34200 sec    2.752e+05      166       2.751e+05      400   
+    34200 sec    2.752e+05      166       2.751e+05      400   
+    34200 sec    2.752e+05      166       2.751e+05      400   
+    34200 sec    2.752e+05      166       2.751e+05      300   
+    34200 sec    2.752e+05      166       2.751e+05      300   
+    34200 sec    2.752e+05      166       2.751e+05      300   
+    34200 sec    2.752e+05      166       2.751e+05      300   
+        :            :           :            :           :
+        :            :           :            :           :
+
+Display all variables in the MATLAB workspace.
+
+whos
+
+Name               Size            Bytes  Class                                       Attribute
+
+DS                 1x1                 8  matlab.io.datastore.CombinedDatastore                
+  DSLOB              1x1                 8  matlab.io.datastore.TabularTextDatastore             
+  DSMSG              1x1                 8  matlab.io.datastore.TabularTextDatastore             
+  DSPreview          8x13             4899  table
+
+2
+Performing Common Financial Tasks
+
+2-52

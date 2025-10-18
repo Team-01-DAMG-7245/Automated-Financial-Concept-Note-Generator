@@ -1,0 +1,15 @@
+The following plot keeps track of cumulative square error, a measure often used for comparisons in
+backtesting exercises. This confirms TTC as a poor alternative. PIT shows lower cumulative error
+than the linear regression model in the late nineties, but after the 2001 recession the situation is
+reversed. Cumulative square error, however, is not an intuitive measure, it is hard to get a sense of
+what the difference between these alternatives means in practical terms.
+
+CumSqError = cumsum(ErrorBT.^2);
+Example_BacktestPlot(YearsBT,[],CumSqError,'Year','Cum Sq Error', ...
+   '{\bf Cumulative Square Error in Backtesting Exercise}', ...
+   MethodTags,'NW')
+
+8
+Credit Risk Analysis
+
+8-32

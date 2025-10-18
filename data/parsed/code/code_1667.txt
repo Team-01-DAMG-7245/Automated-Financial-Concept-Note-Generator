@@ -1,0 +1,18 @@
+Page 1476
+================================================================================
+
+obj = 
+   Class SDEDDO: SDE from Drift and Diffusion Objects
+   --------------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   --------------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+              A: 0
+              B: 0.1
+          Alpha: 1
+          Sigma: 0.3

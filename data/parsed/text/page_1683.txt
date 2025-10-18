@@ -1,0 +1,62 @@
+Number of intermediate time steps within each time increment dt (specified as DeltaTime),
+specified as the comma-separated pair consisting of 'NSteps' and a positive scalar integer.
+
+The simByQuadExp function partitions each time increment dt into NSteps subintervals of length dt/
+NSteps, and refines the simulation by evaluating the simulated state vector at NSteps − 1
+intermediate points. Although simByQuadExp does not report the output state vector at these
+intermediate points, the refinement improves accuracy by allowing the simulation to more closely
+approximate the underlying continuous-time process.
+
+Data Types: double
+
+MonteCarloMethod — Monte Carlo method to simulate stochastic processes
+"standard" (default) | string with values "standard", "quasi", or "randomized-quasi" |
+character vector with values 'standard', 'quasi', or 'randomized-quasi'
+
+Monte Carlo method to simulate stochastic processes, specified as the comma-separated pair
+consisting of 'MonteCarloMethod' and a string or character vector with one of the following
+values:
+
+•
+"standard" — Monte Carlo using pseudo random numbers.
+
+•
+"quasi" — Quasi-Monte Carlo using low-discrepancy sequences.
+
+•
+"randomized-quasi" — Randomized quasi-Monte Carlo.
+
+Note If you specify an input noise process (see Z and N), simByQuadExp ignores the value of
+MonteCarloMethod.
+
+Data Types: string | char
+
+QuasiSequence — Low discrepancy sequence to drive stochastic processes
+"sobol" (default) | string with value "sobol" | character vector with value 'sobol'
+
+Low discrepancy sequence to drive the stochastic processes, specified as the comma-separated pair
+consisting of 'QuasiSequence' and a string or character vector with one of the following values:
+
+•
+"sobol" — Quasi-random low-discrepancy sequences that use a base of two to form successively
+finer uniform partitions of the unit interval and then reorder the coordinates in each dimension
+
+Note If MonteCarloMethod option is not specified or specified as"standard", QuasiSequence is
+ignored.
+
+Data Types: string | char
+
+BrownianMotionMethod — Brownian motion construction method
+"standard" (default) | string with value "brownian-bridge" or "principal-components" |
+character vector with value 'brownian-bridge' or 'principal-components'
+
+Brownian motion construction method, specified as the comma-separated pair consisting of
+'BrownianMotionMethod' and a string or character vector with one of the following values:
+
+•
+"standard" — The Brownian motion path is found by taking the cumulative sum of the Gaussian
+variates.
+
+simByQuadExp
+
+15-377

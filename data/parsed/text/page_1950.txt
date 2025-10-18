@@ -1,0 +1,76 @@
+Business day conventions, specified as the comma-separated pair consisting of
+'BusinessDayConvention' and a character vector or N-by-1 cell array of character vectors of
+business day conventions. The selection for business day convention determines how non-business
+days are treated. Non-business days are defined as weekends plus any other date that businesses are
+not open (e.g. statutory holidays). Values are:
+
+•
+actual — Non-business days are effectively ignored. Cash flows that fall on non-business days
+are assumed to be distributed on the actual date.
+
+•
+follow — Cash flows that fall on a non-business day are assumed to be distributed on the
+following business day.
+
+•
+modifiedfollow — Cash flows that fall on a non-business day are assumed to be distributed on
+the following business day. However if the following business day is in a different month, the
+previous business day is adopted instead.
+
+•
+previous — Cash flows that fall on a non-business day are assumed to be distributed on the
+previous business day.
+
+•
+modifiedprevious — Cash flows that fall on a non-business day are assumed to be distributed
+on the previous business day. However if the previous business day is in a different month, the
+following business day is adopted instead.
+
+Data Types: char | cell
+
+CleanRPV01 — Flag for premium accrual
+true (default) | boolean flag with value true or false
+
+Flag for premium accrual, specified as the comma-separated pair consisting of 'CleanRPV01' and a
+N-by-1 vector of Boolean flags, which is true if the premium accrued at StartDate is excluded in
+the RPV01, and false otherwise.
+
+Data Types: logical
+
+PayAccruedPremium — Flag for accrued premium payment
+true (default) | boolean flag with value true or false
+
+Flag for accrued premium payment, specified as the comma-separated pair consisting of
+'PayAccruedPremium' and a N-by-1 vector of Boolean flags, true if accrued premiums are paid
+upon default, false otherwise.
+
+Data Types: logical
+
+ZeroCompounding — Compounding frequency of zero curve
+2 semiannual compounding (default) | integer with acceptable value [1,2,3,4,6,12, –1]
+
+Compounding frequency of the zero curve, specified as the comma-separated pair consisting of
+'ZeroCompounding' and an integer with values:
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+15
+Functions
+
+15-644

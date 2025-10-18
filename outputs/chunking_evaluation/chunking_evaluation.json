@@ -1,0 +1,116 @@
+{
+  "summary": {
+    "total_strategies": 4,
+    "strategies_tested": [
+      "recursive",
+      "markdown",
+      "code_aware",
+      "semantic"
+    ]
+  },
+  "comparison": {
+    "total_chunks": {
+      "recursive": 69,
+      "markdown": 16,
+      "code_aware": 72,
+      "semantic": 29,
+      "best": "code_aware",
+      "worst": "markdown"
+    },
+    "avg_chunk_size": {
+      "recursive": 772.8260869565217,
+      "markdown": 3136.125,
+      "code_aware": 776.125,
+      "semantic": 1724.5172413793102,
+      "best": "code_aware",
+      "worst": "markdown"
+    },
+    "avg_tokens": {
+      "recursive": 283.463768115942,
+      "markdown": 1149.4375,
+      "code_aware": 285,
+      "semantic": 633.8965517241379,
+      "best": "code_aware",
+      "worst": "markdown"
+    },
+    "processing_time": {
+      "recursive": 0.0,
+      "markdown": 0.012662172317504883,
+      "code_aware": 0.004151344299316406,
+      "semantic": 0.0,
+      "best": "recursive",
+      "worst": "markdown"
+    },
+    "chunks_per_second": {
+      "recursive": 0,
+      "markdown": 1263.6062437628275,
+      "code_aware": 17343.779462439696,
+      "semantic": 0,
+      "best": "code_aware",
+      "worst": "recursive"
+    }
+  },
+  "recommendations": [
+    "RecursiveCharacter: Best for general-purpose RAG with consistent chunk sizes",
+    "MarkdownHeader: Best for structured documents with clear hierarchies",
+    "CodeAware: Best for technical documents with code examples",
+    "SemanticSection: Best for concept-based retrieval (definitions, examples)"
+  ],
+  "pros_cons": {
+    "recursive": {
+      "pros": [
+        "Most consistent chunk sizes",
+        "Fastest processing",
+        "100% valid chunks",
+        "Good for general-purpose text"
+      ],
+      "cons": [
+        "May split code blocks",
+        "No semantic awareness",
+        "Ignores document structure"
+      ]
+    },
+    "markdown": {
+      "pros": [
+        "Preserves document hierarchy",
+        "Maintains section context",
+        "Good for structured documents",
+        "Rich metadata"
+      ],
+      "cons": [
+        "Variable chunk sizes",
+        "Some chunks too large",
+        "Slower than recursive",
+        "Requires markdown format"
+      ]
+    },
+    "code_aware": {
+      "pros": [
+        "Preserves code blocks",
+        "Includes surrounding context",
+        "Good for technical documents",
+        "No broken code"
+      ],
+      "cons": [
+        "Slower processing",
+        "More complex",
+        "May create large chunks",
+        "Requires code detection"
+      ]
+    },
+    "semantic": {
+      "pros": [
+        "Keeps related content together",
+        "Concept-aware",
+        "Variable chunk sizes",
+        "Good for definitions/examples"
+      ],
+      "cons": [
+        "Most complex",
+        "Slowest processing",
+        "Requires pattern matching",
+        "May miss some boundaries"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "page": 484,
+  "original_text": "% Rebalance on the first trading day of each month.\nrebalance_schedule = datetime(2006,1,1):calmonths(1):datetime(2006,12,1);\nfor idx = 1:numel(rebalance_schedule)\n    priceIdx = find(rebalance_schedule(idx) <= pricesTT.Dates,1,'first');\n    rebalance_schedule(idx) = pricesTT.Dates(priceIdx);\nend",
+  "ocr_text": "Rebalanceonthefirsttradingdayofeachmonth.\n\nrebalance_schedule=datetime(2006,1,1):calmonths(1):datetime(2006,12,1);\n\nforidx=1:numel(rebalance_schedule)\npriceIdx=find(rebalance_schedule(idx)=pricesTT.Dates,1,first);\nrebalance_schedule(idx)=pricesTT.Dates(priceIdx);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 204.18,
+    "x1": 485.54,
+    "y1": 268.64
+  },
+  "confidence": "high"
+}

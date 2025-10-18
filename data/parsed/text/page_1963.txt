@@ -1,0 +1,59 @@
+Dates — Simulation dates corresponding to each row of the values array
+vector of date numbers | cell array of character vectors
+
+Simulation dates corresponding to each row of the values array, specified as a NUMDATES-by-1
+vector of simulation dates. Dates is either a vector of MATLAB date numbers or else a cell array of
+character vectors in a known date format.
+
+Note When computing collateralized exposures, both the CollateralTable parameter and the
+Dates parameter must be specified.
+
+Data Types: double | cell
+
+Output Arguments
+
+exposures — 3-D array of credit exposures
+array
+
+3-D array of credit exposures representing the potential losses from each counterparty or contract at
+each date and over all scenarios. The size of exposures depends on the ExposureType input
+argument:
+
+•
+When ExposureType is 'Counterparty', exposures returns a NumDates-by-
+NumCounterparties-by-NumScenarios “cube” of credit exposures representing potential losses
+that could be incurred over all dates, counterparties, and scenarios, if a counterparty defaulted
+(ignoring any post-default recovery).
+
+•
+When ExposureType is 'Additive', exposures returns a NumDates-by-NumContracts-by-
+NumScenarios “cube,” where each element is the additive exposure of each contract (over all
+dates and scenarios). Additive exposures sum to the counterparty-level exposure.
+
+exposurecpty — Counterparties that correspond to columns of exposures array
+vector
+
+Counterparties that correspond to columns of the exposures array, returned as
+NumCounterparties or NumContracts elements depending on the ExposureType.
+
+collateral — Simulated collateral amounts available to counterparties at each simulation
+date and over each scenario
+3D array
+
+Simulated collateral amounts available to counterparties at each simulation date and over each
+scenario, returned as a NumDates-by-NumCounterparties-by-NumScenarios 3D array. Collateral
+amounts are calculated using a Brownian bridge to estimate contract values between simulation
+dates. For more information, see “Brownian Bridge” on page 15-658. If the CollateralTable was
+not specified, this output is empty.
+
+More About
+
+Counterparty Credit Exposure
+
+Counterparty credit exposure refers to the risk that a counterparty in a financial transaction may
+default on its obligations, leading to potential financial losses for the other party involved in the
+transaction.
+
+creditexposures
+
+15-657

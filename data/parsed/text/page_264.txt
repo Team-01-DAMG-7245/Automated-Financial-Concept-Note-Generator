@@ -1,0 +1,67 @@
+whether a collection of portfolios is feasible. Suppose that you perform the following portfolio
+optimization and want to determine if the resultant efficient portfolios are feasible relative to a
+modified problem.
+
+First, set up a problem in the Portfolio object p, estimate efficient portfolios in pwgt, and then
+confirm that these portfolios are feasible relative to the initial problem:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+ 
+p = Portfolio;
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+pwgt = estimateFrontier(p);
+
+checkFeasibility(p, pwgt)
+
+ans =
+
+1     1     1     1     1     1     1     1     1     1
+
+Next, set up a different portfolio problem that starts with the initial problem with an additional a
+turnover constraint and an equally weighted initial portfolio:
+
+q = setTurnover(p, 0.3, 0.25);
+checkFeasibility(q, pwgt)
+
+ans =
+
+0     0     0     1     1     0     0     0     0     0
+
+In this case, only two of the 10 efficient portfolios from the initial problem are feasible relative to the
+new problem in Portfolio object q. Solving the second problem using checkFeasibility
+demonstrates that the efficient portfolio for Portfolio object q is feasible relative to the initial
+problem:
+
+qwgt = estimateFrontier(q);
+checkFeasibility(p, qwgt)
+
+ans =
+
+1     1     1     1     1     1     1     1     1     1
+
+See Also
+Portfolio | estimateBounds | checkFeasibility
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-96

@@ -1,0 +1,12 @@
+{
+  "page": 283,
+  "original_text": "p = Portfolio;\noptions = optimoptions('quadprog', 'Algorithm', 'trust-region-reflective', 'Display', 'off');\np = setSolver(p, 'quadprog', options);\ndisplay(p.solverOptions.Algorithm)\ndisplay(p.solverOptions.Display)",
+  "ocr_text": "p=Portfolio;\noptions=optimoptions(quadprog,Algorithm,trust-region-reflective,Display,off);\np=setSolver(p,_quadprog,options);\n\ndisplay(p.solverOptions.Algorithm)\n\ndisplay(p.solverOptions.Display)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 427.11,
+    "x1": 448.34,
+    "y1": 465.27
+  },
+  "confidence": "high"
+}

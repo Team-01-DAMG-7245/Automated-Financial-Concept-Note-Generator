@@ -1,0 +1,12 @@
+{
+  "page": 461,
+  "original_text": "% Define strategies for backtest engine.\nstrategies = [stratBmk stratRP];\n% Define a backtest engine.\nbacktester = backtestEngine(strategies);\n% Run the backtest.\nbacktester = runBacktest(backtester,pricesTT,Start=warmupPeriod);",
+  "ocr_text": "Definestrategiesforbacktestengine.\nstrategies=[stratBmkstratRP];\n\nDefineabacktestengine.\nbacktester=backtestEngine(strategies);\n\nSRunthebacktest.\nbacktester=runBacktest(backtester,pricesTT,Start=warmupPeriod);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 266.87,
+    "x1": 442.17,
+    "y1": 331.34
+  },
+  "confidence": "high"
+}

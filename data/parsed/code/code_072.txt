@@ -1,0 +1,6 @@
+Page 82
+================================================================================
+
+Complex continuous returns are a necessary intermediary when considering logarithms of negative
+price ratios. tick2ret computes a continuous complex extension of the function on the positive real
+axis. The logarithm maintains the additivity property, used when computing multiperiod returns.

@@ -1,0 +1,5 @@
+Page 1930
+================================================================================
+
+If the time to default is denoted by τ, the default probability curve, or function, PD(t), and its
+complement, the survival function Q(t), are given by:

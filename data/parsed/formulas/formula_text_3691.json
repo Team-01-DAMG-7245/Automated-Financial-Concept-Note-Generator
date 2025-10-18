@@ -1,0 +1,12 @@
+{
+  "page": 2083,
+  "original_text": "NumDaysPrevious = cpndaysp(Settle,Maturity)\nNumDaysPrevious = cpndaysp( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)",
+  "ocr_text": "NumDaysPrevious=cpndaysp(Settle,Maturity)\nNumDaysPrevious=cpndaysp(____,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.44,
+    "x1": 497.37,
+    "y1": 226.07
+  },
+  "confidence": "high"
+}

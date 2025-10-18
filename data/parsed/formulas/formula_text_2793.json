@@ -1,0 +1,12 @@
+{
+  "page": 1421,
+  "original_text": "% Discount payoff back to present value and then average payoff value\nDiscountedPayoffs = exp(-r * T) * Payoffs;",
+  "ocr_text": "Discountpayoffbacktopresentvalueandthenaveragepayoffvalue\nDiscountedPayoffs=exp(-r*T)*Payoffs;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.73,
+    "x1": 463.85,
+    "y1": 146.99
+  },
+  "confidence": "high"
+}

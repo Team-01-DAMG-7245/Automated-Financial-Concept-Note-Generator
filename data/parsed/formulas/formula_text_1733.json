@@ -1,0 +1,12 @@
+{
+  "page": 873,
+  "original_text": "pret = estimatePortReturn(p, p.estimateFrontierLimits);\ndisplay(pret)",
+  "ocr_text": "pret=estimatePortReturn(p,p.estimateFrontierLimits);\ndisplay(pret)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 587.43,
+    "x1": 387.99,
+    "y1": 608.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 615
+================================================================================
+
+if LoggedSignals.CurrentInventoryShares <= 0
+        Reward = 0;
+    end
+end

@@ -1,0 +1,7 @@
+Page 485
+================================================================================
+
+strategies = [benchmark,equalCategory,riskBudgeting];
+bt = backtestEngine(strategies);
+bt = runBacktest(bt,pricesTT,'Start',start_date);
+equityCurve(bt)

@@ -1,0 +1,12 @@
+{
+  "page": 774,
+  "original_text": "% Obtain period t state mean and covariance\n[~,~,output] = smooth(EstMdlSSM,deflatedYields);\nMeanT = output(end).SmoothedStates;\nCovT = output(end).SmoothedStatesCov;\nCovT = (CovT + CovT')/2; % Ensures covariance is symmetric",
+  "ocr_text": "Obtainperiodtstatemeanandcovariance\n[-,x,output]=smooth(EstMd1lSSM,deflatedYields);\nMeanT=output(end).SmoothedStates;\nCovT=output(end).SmoothedStatesCov;\nCovT=(CovT+CovT)/2;Ensurescovarianceissymmetric",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 412.19,
+    "x1": 404.26,
+    "y1": 465.85
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 945,
+  "original_text": "tmAllExp = transprobbytotals(totalsAll(~Recession));\nDefRateExp = tmAllExp(1,2);",
+  "ocr_text": "tmALLExp=transprobbytotals(totalsAll(Recession));\nDefRateExp=tmALLExp(1,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.43,
+    "x1": 371.74,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

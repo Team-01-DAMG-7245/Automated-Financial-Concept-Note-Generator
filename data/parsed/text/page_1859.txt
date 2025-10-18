@@ -1,0 +1,73 @@
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: KeyRateDuration =
+bndkrdur(ZeroData,.0525,'12/31/1998','11/15/2028','KeyRates',[2 5 10 30])
+
+InterpMethod — Interpolation method used to obtain points from zero curve
+'linear' (default) | 'cubic', 'pchip'
+
+Interpolation method used to obtain points from the zero curve, specified as the comma-separated
+pair consisting of 'InterpMethod' and a character vector using one of the following values:
+
+•
+'linear' (default)
+
+•
+'cubic'
+
+•
+'pchip'
+
+Data Types: char
+
+ShiftValue — Value that zero curve is shifted up and down to compute duration
+.01 (100 basis points) (default) | numeric
+
+Value that zero curve is shifted up and down to compute duration, specified as the comma-separated
+pair consisting of 'ShiftValue' and a scalar numeric value.
+
+Data Types: double
+
+KeyRates — Rates to perform the duration calculation
+set to each of the zero dates (default) | numeric
+
+Rates to perform the duration calculation, specified as the comma-separated pair consisting of
+'KeyRates' and a time to maturity using a scalar or a NUMBONDS-by-1 vector.
+
+Data Types: double
+
+CurveCompounding — Compounding frequency of curve
+2 (default) | integer with value of 1, 2, 3, 4, 6, or 12
+
+Compounding frequency of the curve, specified as the comma-separated pair consisting of
+'CurveCompounding' and a scalar using one of the following values:
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+.
+
+bndkrdur
+
+15-553

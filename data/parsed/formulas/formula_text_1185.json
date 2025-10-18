@@ -1,0 +1,12 @@
+{
+  "page": 605,
+  "original_text": "RL_OptimalExecution_Training_Environment_Buy = rlFunctionEnv( ...\n    ObservationInfo_Train_Buy,ActionInfo_Buy,StepFunction_Train_Buy,ResetFunction_Buy)",
+  "ocr_text": "RL_OptimalExecution_Training_Environment_Buy=rlFunctionEnv(...\nObservationInfo_Train_Buy,ActionInfo_Buy,StepFunction_Train_Buy,ResetFunction_Buy)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 309.03,
+    "x1": 555.95,
+    "y1": 330.29
+  },
+  "confidence": "high"
+}

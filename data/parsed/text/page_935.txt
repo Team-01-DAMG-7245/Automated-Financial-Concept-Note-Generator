@@ -1,0 +1,57 @@
+1.3405    1.9811    2.6227
+
+Work with Nonsquare Matrices
+
+This example shows how to work with group totals in a nonsquare matrix.
+
+Transition probabilities and the number of transitions between ratings are usually reported without
+the 'D' ('Default') row. For example, a credit report can contain the following table, indicating the
+number of issuers starting in each rating (first column), and the number of transitions between
+ratings (remaining columns):
+
+Initial AAA AA A BBB BB B CCC D
+
+AAA 98 88 9 1 0 0 0 0 0
+
+AA 389 0 368 19 2 0 0 0 0
+
+A 1165 1 21 1087 56 0 0 0 0
+
+BBB 1435 0 2 89 1289 45 8 0 2
+
+BB 915 0 0 1 60 776 73 2 3
+
+B 867 0 0 1 7 88 715 39 17
+
+CCC 112 0 0 0 1 3 34 61 13
+
+You can store the information in this table in a totals structure compatible with the cohort
+algorithm. For more information on the cohort algorithm and the totals structure, see transprob.
+The totalsMat field is a nonsquare array in this case.
+
+% Define totals structure
+totals.totalsVec = [98 389 1165 1435 915 867 112];
+totals.totalsMat = [
+   88    9    1    0    0    0    0    0;
+    0  368   19    2    0    0    0    0;
+    1   21 1087   56    0    0    0    0;
+    0    2   89 1289   45    8    0    2;
+    0    0    1   60  776   73    2    3;
+    0    0    1    7   88  715   39   17;
+    0    0    0    1    3   34   61   13];
+totals.algorithm = 'cohort';
+
+transprobbytotals and transprobgrouptotals accept totals inputs with nonsquare
+totalsMat fields. To get the transition matrix corresponding to the previous table, and to group
+ratings into investment and speculative grade with the corresponding matrix:
+
+transMat = transprobbytotals(totals)
+
+transMat = 7×8
+
+89.7959    9.1837    1.0204         0         0         0         0         0
+         0   94.6015    4.8843    0.5141         0         0         0         0
+
+Estimation of Transition Probabilities
+
+8-17

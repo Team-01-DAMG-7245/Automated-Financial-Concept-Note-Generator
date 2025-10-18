@@ -1,0 +1,47 @@
+Finance rate for negative cash flow values, specified as a decimal.
+
+Data Types: double
+
+Reinvest — Reinvestment rate for positive cash flow values
+decimal
+
+Reinvestment rate for positive cash flow values, specified as a decimal.
+
+Data Types: double
+
+Output Arguments
+
+Return — Modified internal rate of return
+numeric
+
+Modified internal rate of return, returned as a scalar or vector.
+
+More About
+
+Modified Internal Rate of Return
+
+The Modified Internal Rate of Return (MIRR) is the interest rate that equates the present value of a
+project's negative cash flows (outflows) to the future value of its positive cash flows (inflows), using
+specific financing and reinvestment rates.
+
+Version History
+Introduced before R2006a
+
+References
+
+[1] Brealey and Myers. Principles of Corporate Finance. McGraw-Hill Higher Education, Chapter 5,
+2003.
+
+[2] Hazen G. “A New Perspective on Multiple Internal Rates of Return.” The Engineering Economist.
+Vol. 48-1, 2003, pp. 31–51.
+
+See Also
+annurate | effrr | irr | nomrr | pvvar | xirr
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+15
+Functions
+
+15-1182

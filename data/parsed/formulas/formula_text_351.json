@@ -1,0 +1,12 @@
+{
+  "page": 219,
+  "original_text": "q = estimateAssetMoments(q,assetRetnTable,'GetAssetList',true);\ndisp(q.AssetList)",
+  "ocr_text": "q=estimateAssetMoments(q,assetRetnTable,GetAssetList,true);\ndisp(q.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 206.53,
+    "x1": 431.36,
+    "y1": 227.8
+  },
+  "confidence": "high"
+}

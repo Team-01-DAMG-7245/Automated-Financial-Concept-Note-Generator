@@ -1,0 +1,12 @@
+{
+  "page": 1247,
+  "original_text": "rng(14151617,'twister')\nobj   = cir(0.25,@(t,X)0.1,0.2,'StartState',0.02);\n[X,T] = simByEuler(obj,250,'DeltaTime',1/250,'nTrials',5);\nsprintf('%0.4f\\t%0.4f+i%0.4f\\n',[T(195:205)';...\n    real(X(195:205,1,4))'; imag(X(195:205,1,4))'])",
+  "ocr_text": "rng(14151617,twister)\n\nobj =cir(0.25,Q(t,X)0.1,0.2,StartState,0.02);\n\n[X,T]=simByEuler(obj,250,DeltaTime,1/250,nTrials,5);\n\nsprintf(s0.4f,ts0.4f+i140.4fn,[T(195:205);...\nreal(X(195:205,1,4));imag(X(195:205,1,4))])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 537.32,
+    "x1": 404.27,
+    "y1": 590.99
+  },
+  "confidence": "high"
+}

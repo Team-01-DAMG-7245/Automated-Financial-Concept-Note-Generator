@@ -1,0 +1,12 @@
+{
+  "page": 2075,
+  "original_text": "Maturity = [datetime(2000,4,30) ; datetime(2000,5,31) ; datetime(2000,6,30)];\nPreviousCouponDate = cpndatep(datetime(1997,3,14), Maturity)",
+  "ocr_text": "Maturity=[datetime(2000,4,30);datetime(2000,5,31)_;datetime(2000,6,30)];\nPreviousCouponDate=cpndatep(datetime(1997,3,14),Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 270.46,
+    "x1": 507.18,
+    "y1": 291.73
+  },
+  "confidence": "high"
+}

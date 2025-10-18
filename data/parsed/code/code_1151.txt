@@ -1,0 +1,6 @@
+Page 1202
+================================================================================
+
+•
+Before simulation, the simulation method itself calls each function once to validate the size of the
+output at the initial time and state, obj.StartTime, and obj.StartState, respectively.

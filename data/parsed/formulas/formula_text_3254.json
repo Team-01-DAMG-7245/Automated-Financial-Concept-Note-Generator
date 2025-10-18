@@ -1,0 +1,12 @@
+{
+  "page": 1746,
+  "original_text": "obj = addGroupRatio(obj,GroupA,GroupB,LowerRatio,UpperRatio) adds group ratio\nconstraints for portfolio weights to existing group ratio constraints with an additional option for\nUpperRatio.",
+  "ocr_text": "obj=addGroupRatio(obj,GroupA,GroupB,LowerRatio,UpperRatio)addsgroupratio\nconstraintsforportfolioweightstoexistinggroupratioconstraintswithanadditionaloptionfor\nUpperRatio.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 435.15,
+    "x1": 529.91,
+    "y1": 470.78
+  },
+  "confidence": "high"
+}

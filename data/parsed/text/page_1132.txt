@@ -1,0 +1,63 @@
+% Define the purchase and investment horizon dates.
+settleDate = datetime(2010,9,1);
+hrznDate = datetime(2010,10,1);
+
+% Define the maturity dates for new issue treasuries purchased on the
+% settle date.
+treasuryMaturities = [datetime(2020,9,1) , datetime(2030,9,1) , datetime(2040,9,1)];
+
+% Select the observed yields for the securities of interest on the
+% settle date.
+treasuryYTMAtSettle = tsYTMRates(end,7:9);
+
+% Initialize arrays for later use.
+treasuryYTMAtHorizonSim = zeros(numSim,3);
+treasuryPricesAtSettle = zeros(1,3);
+treasuryPricesAtHorizonSim = zeros(numSim,3);
+
+% Use actual/actual day count basis with annualized yields.
+basis = 8;
+
+Price the treasuries at settle date with bndprice using the known yield to maturity. For simplicity,
+assume that none of these securities include coupon payments. Although the prices may not be
+accurate, the overall structure/relationships between values is preserved for the asset allocation
+process.
+
+for j=1:3
+    treasuryPricesAtSettle(j) = bndprice(treasuryYTMAtSettle(j),0,settleDate, ...
+                                         treasuryMaturities(j),'basis',basis);
+end
+
+To price the treasuries at the horizon, you need to know yield to maturity at 9 years 11 months, 19
+years 11 months, and 29 years 11 months for each simulation. You can approximate these using cubic
+spline interpolation using interp1.
+
+% Transform the simulated invariants to YTM at the horizon.
+hrznYTMRatesSims = repmat(tsYTMRates(end,:),numSim,1) + hrznInvSims;
+
+hrznYTMMaturities = [datetime(2011,4,1),datetime(2011,10,1),datetime(2012,10,1),datetime(2013,10,
+
+% Convert the dates to numeric serial dates.                 
+x = datenum(hrznYTMMaturities);
+xi = datenum(treasuryMaturities);
+
+% For numerical accuracy, shift the x values to start at zero.
+minDate = min(x);
+x = x - minDate;
+xi = xi - minDate;
+
+For each simulation and maturity approximate yield near 10,20, and 30 year nodes. Note that the
+effects of a spline fit vs. linear fit have a significant effect on the resulting ideal allocation. This is due
+to significant under-estimation of yield when using a linear fit for points just short of the known
+nodes.
+
+for i=1:numSim
+    treasuryYTMAtHorizonSim(i,:) = interp1(x,hrznYTMRatesSims(i,:),xi,'spline');
+end
+
+% Visualize a simulated yield curve with interpolation.
+
+10
+Solving Sample Problems
+
+10-34

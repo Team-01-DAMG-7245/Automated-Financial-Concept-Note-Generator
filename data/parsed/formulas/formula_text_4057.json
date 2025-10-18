@@ -1,0 +1,12 @@
+{
+  "page": 2295,
+  "original_text": "weights = estimateMaxSharpeRatio(p);",
+  "ocr_text": "weights=estimateMaxSharpeRatio(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.53,
+    "x1": 328.4,
+    "y1": 590.0
+  },
+  "confidence": "high"
+}

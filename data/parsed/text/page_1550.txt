@@ -1,0 +1,65 @@
+Data Types: string
+
+Examples
+
+Create Backtesting Strategies
+
+Define a backtest strategy by using a backtestStrategy object. backtestStrategy objects
+contain properties specific to a trading strategy, such as the rebalance frequency, transaction costs,
+and a rebalance function. The rebalance function implements the core logic of the strategy and is
+used by the backtesting engine during the backtest to allow the strategy to change its asset allocation
+and to make trades. In this example, to illustrate how to create and use backtest strategies in
+MATLAB®, you prepare two simple strategies for backtesting:
+
+1
+An equal weighted strategy
+
+2
+A strategy that attempts to "chase returns"
+
+The strategy logic for these two strategies is defined in the rebalance functions on page 15-247.
+
+Set Strategy Properties
+
+A backtestStrategy object has several properties that you set using parameters for the
+backtestStrategy function.
+
+Initial Weights
+
+The “InitialWeights” on page 15-0
+ property contains the asset allocation weights at the start of the
+backtest. The default value for InitialWeights is empty ([]), which indicates that the strategy
+begins the backtest uninvested, meaning that 100% of the capital is in cash earning the risk-free rate.
+
+Set the InitialWeights to a specific asset allocation. The size of the initial weights vector must
+match the number of assets in the backtest.
+
+% Initialize the strategies with 30 weights, since the backtest
+% data comes from a year of the 30 DJIA stocks.
+numAssets = 30;
+
+% Give the initial weights for both strategies equal weighting. Weights
+% must sum to 1 to be fully invested.
+initialWeights = ones(1,numAssets);
+initialWeights = initialWeights / sum(initialWeights);
+
+Transaction Costs
+
+The “TransactionCosts” on page 15-0
+ property allows you to set the fees that the strategy pays for
+trading assets. Transaction costs are paid as a percentage of the total change in position for each
+asset. Specify costs in decimal percentages. For example, if TransactionCosts is set to 1% (0.01)
+and the strategy buys $100 worth of a stock, then the transaction costs incurred are $1.
+
+Transaction costs are set using a 1-by-2 vector that sets separate fee rates for purchases and sales of
+assets. In this example, both strategies pay the same transaction costs — 25 basis points for asset
+purchases and 50 basis points for sales.
+
+% Define the Transaction costs as [buyCosts sellCost] and specify the costs
+% as decimal percentages.
+tradingCosts = [0.0025 0.005];
+
+15
+Functions
+
+15-244

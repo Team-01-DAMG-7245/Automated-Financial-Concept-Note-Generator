@@ -1,0 +1,46 @@
+Data Types: double
+
+Period — Number of years to calculate
+integer
+
+Number of years to calculate, specified as scalar integer.
+
+Data Types: double
+
+Month — Number of months in the first year of asset life
+12 (default) | numeric
+
+(Optional) Number of months in the first year of asset life, specified as a scalar numeric.
+
+Data Types: double
+
+Output Arguments
+
+Depreciation — Depreciation
+vector
+
+Depreciation, returned as the fixed declining-balance depreciation for each Period.
+
+More About
+
+Fixed Declining-Balance Depreciation Schedule
+
+A fixed declining-balance depreciation schedule is a method of calculating depreciation that applies a
+constant percentage rate to the book value of an asset at the beginning of each accounting period.
+
+This approach results in a larger depreciation expense in the earlier years of the asset's life,
+gradually decreasing the expense in subsequent years. It is particularly useful for assets that are
+expected to lose value more quickly in their initial years of usage.
+
+Version History
+Introduced before R2006a
+
+See Also
+depgendb | deprdv | depsoyd | depstln
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+depfixdb
+
+15-843

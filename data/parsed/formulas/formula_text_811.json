@@ -1,0 +1,12 @@
+{
+  "page": 464,
+  "original_text": "% Load data\nassetRetn = readmatrix(\"./retns_assets.txt\");\n[nSample,nAssets] = size(assetRetn);",
+  "ocr_text": "Loaddata\nassetRetn=readmatrix(./retns_assets.txt);\n[nSample,nAssets]=size(assetRetn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 314.23,
+    "x1": 333.83,
+    "y1": 346.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,19 @@
+Page 1514
+================================================================================
+
+mertonObj = 
+   Class MERTON: Merton Jump Diffusion
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 80
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.16
+         Return: 0.03
+       JumpFreq: 2
+       JumpMean: 0.02
+        JumpVol: 0.08

@@ -1,0 +1,61 @@
+Working with Other Portfolio Objects
+
+This example shows how to examine portfolio optimization problems according to different
+combinations of return and risk proxies.The PortfolioCVaR object is for CVaR portfolio
+optimization. The Portfolio object is for mean-variance portfolio optimization. Sometimes, you
+might want to examine portfolio optimization problems according to different combinations of return
+and risk proxies. A common example is that you want to do a CVaR portfolio optimization and then
+want to work primarily with moments of portfolio returns. Suppose that you set up a CVaR portfolio
+optimization problem with:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0;
+0.00408 0.0289 0.0204 0.0119;
+0.00192 0.0204 0.0576 0.0336;
+0 0.0119 0.0336 0.1225 ];
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+
+rng('default')
+p = PortfolioCVaR;
+p = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');
+p = setInitPort(p, pwgt0);
+p = simulateNormalScenariosByMoments(p, m, C, 20000);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.9);
+
+To work with the same problem in a mean-variance framework, you can use the scenarios from the
+PortfolioCVaR object to set up a Portfolio object so that p contains a CVaR optimization
+problem and q contains a mean-variance optimization problem based on the same data.
+
+q = Portfolio('AssetList', p.AssetList);
+q = estimateAssetMoments(q, p.getScenarios);
+q = setDefaultConstraints(q);
+
+pwgt = estimateFrontier(p);
+qwgt = estimateFrontier(q);
+
+Since each object has a different risk proxy, it is not possible to compare results side by side. To
+obtain means and standard deviations of portfolio returns, you can use the functions associated with
+each object to obtain:
+
+pret = estimatePortReturn(p, pwgt);
+pstd = estimatePortStd(p, pwgt);
+qret = estimatePortReturn(q, qwgt);
+qstd = estimatePortStd(q, qwgt);
+
+[pret, qret]
+
+ans = 10×2
+
+0.0676    0.0591
+    0.0800    0.0724
+    0.0923    0.0857
+    0.1047    0.0991
+    0.1171    0.1124
+    0.1295    0.1257
+
+5
+CVaR Portfolio Optimization Tools
+
+5-118

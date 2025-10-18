@@ -1,0 +1,66 @@
+Diversify Portfolios Using Custom Objective
+
+This example shows three techniques of asset diversification in a portfolio using the
+estimateCustomObjectivePortfolio function with a Portfolio object. The purpose of asset
+diversification is to balance the exposure of the portfolio to any given asset to reduce volatility over a
+period of time. Given the sensitivity of the minimum variance portfolio to the estimation of the
+covariance matrix, some practitioners have added diversification techniques to the portfolio selection
+with the hope of minimizing risk measures other than the variance measures such as turnover,
+maximum drawdown, and so on.
+
+This example applies these common diversification techniques:
+
+•
+Equally weighted (EW) portfolio on page 4-333
+
+•
+Equal risk contribution (ERC) on page 4-336
+
+•
+Most diversified portfolio (MDP) on page 4-334
+
+Additionally, this example demonstrates penalty methods that you can use to achieve different
+degrees of diversification. In those methods, you add a penalty term to the
+estimateCustomObjectivePortfolio function to balance the level of variance reduction and the
+diversification of the portfolio.
+
+Retrieve Market Data and Define Mean-Variance Portfolio
+
+Begin by loading and computing the expected returns and their covariance matrix.
+
+% Load data
+load('port5.mat');
+% Store the returns and covariance.
+mu = mean_return;
+Sigma = Correlation .* (stdDev_return * stdDev_return');
+
+Define a mean-variance portfolio using a Portfolio object with default constraints to create a fully
+invested, long-only portfolio.
+
+% Create a mean-variance Portfolio object with default constraints.
+p = Portfolio('AssetMean',mu,'AssetCovar',Sigma);
+p = setDefaultConstraints(p);
+
+One of the many features of the Portfolio object is that it can obtain the efficient frontier of the
+portfolio problem. The efficient frontier is computed by solving a series of optimization problems for
+which the return level of the portfolio, μ0, is modified to obtain different points on the efficient
+frontier. These problems are defined as
+
+min xTΣx
+
+st .
+∑
+i = 1
+
+n
+xi = 1
+
+xTμ ≥μ0
+x ≥0
+
+The advantage of using the Portfolio object to compute the efficient frontier is that you can obtain
+without having to manually formulate and solve the multiple optimization problems shown above.
+
+Diversify Portfolios Using Custom Objective
+
+4-331

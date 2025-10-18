@@ -1,0 +1,6 @@
+Page 553
+================================================================================
+
+Once you define the agent and the environment, you can use the train (Reinforcement Learning
+Toolbox) function to train the DQN agent. To configure the options for training, use
+rlTrainingOptions (Reinforcement Learning Toolbox).

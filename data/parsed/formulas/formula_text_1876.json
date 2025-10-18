@@ -1,0 +1,12 @@
+{
+  "page": 952,
+  "original_text": "Example_BacktestPlot(YearsBT,[],ReservesBalanceEOY,'Year', ...\n   'Billions of Dollars',...\n   '{\\bf Reserves Balance (EOY): Backtesting}', ...\n   MethodTags,'SW')\ngrid on",
+  "ocr_text": "Example_BacktestPlot(YearsBT,[],ReservesBalanceEOY,Year,...\nBillionsofDollars,...\n{bfReservesBalance(EOY):Backtesting},...\nMethodTags,SW)\n\ngridon",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 203.43,
+    "x1": 425.95,
+    "y1": 257.09
+  },
+  "confidence": "high"
+}

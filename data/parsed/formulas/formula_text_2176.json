@@ -1,0 +1,12 @@
+{
+  "page": 1120,
+  "original_text": "Covariances = corr2cov(STDs, Correlations)",
+  "ocr_text": "Covariances=corr2cov(STDs,Correlations)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 402.63,
+    "x1": 317.55,
+    "y1": 413.09
+  },
+  "confidence": "high"
+}

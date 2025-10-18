@@ -1,0 +1,6 @@
+Page 1079
+================================================================================
+
+Contrast the result of this approach with using all available data and the function ecmnmle to
+compute the mean and covariance. First, call ecmnmle with no output arguments to establish that
+enough data is available to obtain meaningful estimates.

@@ -1,0 +1,12 @@
+{
+  "page": 1097,
+  "original_text": "function displaySummary(regressionType, StartDate, EndDate, NumAssets, Assets, Alpha, StdAlpha, B\nfprintf(1,'%s regression with daily total return data from %s to %s ...\\n', ...\n    regressionType, string(StartDate),string(EndDate));\nfprintf(1,'  %4s %-20s %-20s %-20s\\n',' ','Alpha','Beta','Sigma');\nfprintf(1,'  ---- -------------------- -------------------- --------------------\\n');",
+  "ocr_text": "functiondisplaySummary(regressionType,StartDate,EndDate,NumAssets,Assets,Alpha,StdAlpha,\n\nfprintf(1,ss_regressionwithdailytotalreturndatafromstos_...n,...\nregressionType,string(StartDate),string(EndDate));\n\nfprintf(1,4s_-20s-20s-20sn,,Alpha,Beta,Sigma);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 304.03,
+    "x1": 615.55,
+    "y1": 357.69
+  },
+  "confidence": "high"
+}

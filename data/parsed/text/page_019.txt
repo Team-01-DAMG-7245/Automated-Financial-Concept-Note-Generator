@@ -1,0 +1,84 @@
+Investment Performance Metrics
+7
+
+Performance Metrics Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-2
+Performance Metrics Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-2
+
+Performance Metrics Illustration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-3
+
+Using the Sharpe Ratio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-5
+
+Using the Information Ratio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-7
+
+Using Tracking Error . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-8
+
+Using Risk-Adjusted Return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-9
+
+Using Sample and Expected Lower Partial Moments . . . . . . . . . . . . . . . .
+7-11
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-11
+Sample Lower Partial Moments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-11
+Expected Lower Partial Moments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-12
+
+Using Maximum and Expected Maximum Drawdown . . . . . . . . . . . . . . . .
+7-14
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-14
+Maximum Drawdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-14
+Expected Maximum Drawdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7-16
+
+Credit Risk Analysis
+8
+
+Estimation of Transition Probabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-2
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-2
+Estimate Transition Probabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-2
+Estimate Transition Probabilities for Different Rating Scales . . . . . . . . . .
+8-4
+Working with a Transition Matrix Containing NR Rating . . . . . . . . . . . . . .
+8-6
+Estimate Point-in-Time and Through-the-Cycle Probabilities . . . . . . . . . .
+8-10
+Estimate t-Year Default Probabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-12
+Estimate Bootstrap Confidence Intervals . . . . . . . . . . . . . . . . . . . . . . . .
+8-13
+Group Credit Ratings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-15
+Work with Nonsquare Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-17
+Remove Outliers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-18
+Estimate Probabilities for Different Segments . . . . . . . . . . . . . . . . . . . . .
+8-19
+Work with Large Datasets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-20
+
+Forecasting Corporate Default Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-23
+
+Credit Quality Thresholds . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-45
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-45
+Compute Credit Quality Thresholds . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-45
+Visualize Credit Quality Thresholds . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-46
+
+xix

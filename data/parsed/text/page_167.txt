@@ -1,0 +1,12 @@
+plot(ActiveRisk*100, ActiveReturn*100, 'blue')
+grid('on')
+xlabel('Active Risk (Standard Deviation in Percent)')
+ylabel('Active Return (Percent)')
+title('Tracking Error Efficient Frontier')
+
+Of particular interest is the lower-left portfolio along the frontier. This zero-risk/zero-return portfolio
+has a practical economic significance. It represents a full investment in the index portfolio itself. Each
+
+Active Returns and Tracking Error Efficient Frontier
+
+3-29

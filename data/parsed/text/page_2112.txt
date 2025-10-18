@@ -1,0 +1,54 @@
+datemnth
+
+Date of day in future or past month
+
+Syntax
+
+TargetDate = datemnth(StartDate,NumberMonths)
+TargetDate = datemnth( ___ ,DayFlag,Basis,EndMonthRule)
+
+Description
+
+TargetDate = datemnth(StartDate,NumberMonths) determines a date in a future or past
+month based on movement either forward or backward in time by a given number of months.
+
+Any input can contain multiple values, but if so, all other inputs must contain the same number of
+values or a single value that applies to all. For example, if StartDate is an n-row datetime, then
+NumberMonths must be an N-by-1 vector of integers or a single integer. TargetDate is then an N-
+by-1 vector of datetimes.
+
+If StartDate is a string or date character vector, TargetDate is returned as a serial date number.
+Use the function datetime to convert serial date numbers to formatted datetime arrays.
+
+If StartDate is a datetime array, then TargetDate is returned as a datetime array.
+
+TargetDate = datemnth( ___ ,DayFlag,Basis,EndMonthRule) determines a date in a future
+or past month based on movement either forward or backward in time by a given number of months,
+using optional input arguments for DayFlag,Basis, and EndMonthRule.
+
+Examples
+
+Determine the Dates of Days in a Future Month
+
+Determine the TargetDate in a future month using a datetime for StartDate.
+
+StartDate = datetime(1997,6,3);
+NumberMonths = 6;
+DayFlag = 0;
+Basis = 0;
+EndMonthRule = 1;
+ 
+TargetDate = datemnth(StartDate, NumberMonths, DayFlag,Basis, EndMonthRule)
+
+TargetDate = datetime
+   03-Dec-1997
+
+Determine the TargetDate in a future month using a vector for NumberMonths.
+
+NumberMonths = [1; 3; 5; 7; 9];
+TargetDate = datemnth(datetime(2001,1,31), NumberMonths)
+
+15
+Functions
+
+15-806

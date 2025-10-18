@@ -1,0 +1,64 @@
+ActiveReturn: 0.0059
+
+Compute Performance Attribution
+
+Use the brinsonAttribution object with categoryAttribution to compute the performance
+attribution of the portfolio for each category.
+
+[AggregateCategoryAttribution,PeriodicCategoryAttribution] = categoryAttribution(BrinsonPAobj)
+
+AggregateCategoryAttribution=2×5 table
+           Category           Allocation     Selection     Interaction    ActiveReturn
+    ______________________    __________    ___________    ___________    ____________
+
+Consumer Discretionary    -0.0071764       0.030316      -0.010105       0.013034 
+    Consumer Staples          -0.0071764    -9.4005e-19    -3.1335e-19     -0.0071764
+
+PeriodicCategoryAttribution=6×7 table
+    Period    LinkingCoefficient           Category           Allocation     Selection     Intera
+    ______    __________________    ______________________    __________    ___________    ______
+
+1            0.97032          Consumer Discretionary     -0.009653       0.072391       -0
+      1            0.97032          Consumer Staples           -0.009653              0          
+      2             1.0838          Consumer Discretionary     0.0055181      -0.046391       0.0
+      2             1.0838          Consumer Staples           0.0055181    -8.6736e-19    -2.891
+      3             1.0391          Consumer Discretionary    -0.0036477      0.0099623     -0.00
+      3             1.0391          Consumer Staples          -0.0036477              0
+
+Input Arguments
+
+brinsonAttributionObj — Brinson attribution model
+object
+
+Brinson attribution model, specified as a brinsonAttribution object.
+
+Data Types: object
+
+Output Arguments
+
+AggregateCategoryAttribution — Category attribution aggregated over all periods
+table
+
+Category attribution aggregated over all periods, returned as a table with the following columns:
+
+•
+Category — Asset category
+
+•
+Allocation — Category allocation effect for the category
+
+•
+Selection — Effect of selecting individual assets within the category
+
+•
+Interaction — Allocation-selection interaction effect
+
+•
+ActiveReturn — Active return compared with benchmark
+
+PeriodicCategoryAttribution — Category attribution for each period
+table
+
+categoryAttribution
+
+15-13

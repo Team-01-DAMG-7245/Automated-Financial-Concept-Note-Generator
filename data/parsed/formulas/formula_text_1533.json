@@ -1,0 +1,12 @@
+{
+  "page": 773,
+  "original_text": "settle = DataTimeTable.Time(end);",
+  "ocr_text": "settle=DataTimeTable.Time(end);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 268.79,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 303,
+  "original_text": "For more information on the supported constraints and nonlinear risk functions for Portfolio,\nPortfolioCVaR, and PortfolioMAD objects, see Supported Constraints for Portfolio\nOptimization Using Portfolio Objects on page 4-9 and “Portfolio Optimization Theory” on page 4-4.\nThe integer (binary) variables can come from either of the following sources: bounds on the\nnumber of assets that can be selected in the portfolio, setting conditional (semicontinuous) bounds\non the assets, or adding a conditional budget constraint. For example, if asset i is selected, then xi\n≥ lbi, otherwise xi = 0. These problems cannot be solved using the Optimization Toolbox solvers.\nHowever, you can implement your own mixed-integer solver. For more information, see “Mixed-\nInteger Quadratic Programming Portfolio Optimization: Problem-Based”.",
+  "ocr_text": "FormoreinformationonthesupportedconstraintsandnonlinearriskfunctionsforPortfolio,\nPortfolioCVaR,andPortfolioMADobjects,seeSupportedConstraintsforPortfolio\nOptimizationUsingPortfolioObjectsonpage4-9andPortfolioOptimizationTheoryonpage4-4.\nTheinteger(binary)variablescancomefromeitherofthefollowingsources:boundsonthe\nnumberofassetsthatcanbeselectedintheportfolio,settingconditional(semicontinuous)bounds\nontheassets,oraddingaconditionalbudgetconstraint.Forexample,ifassetiisselected,thenx;\n=1b;,otherwisex;=0.TheseproblemscannotbesolvedusingtheOptimizationToolboxsolvers.\nHowever,youcanimplementyourownmixed-integersolver.Formoreinformation,seeMixed-\nIntegerQuadraticProgrammingPortfolioOptimization:Problem-Based.",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 298.35,
+    "x1": 557.5,
+    "y1": 405.98
+  },
+  "confidence": "high"
+}

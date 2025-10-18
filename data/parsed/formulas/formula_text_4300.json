@@ -1,0 +1,12 @@
+{
+  "page": 2435,
+  "original_text": "PV = pvvar(CashFlow,0.10)",
+  "ocr_text": "PV=pvvar(CashFlow,0.10)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 408.46,
+    "x1": 225.45,
+    "y1": 418.93
+  },
+  "confidence": "high"
+}

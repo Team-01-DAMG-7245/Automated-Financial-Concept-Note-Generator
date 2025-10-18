@@ -1,0 +1,9 @@
+Page 1184
+================================================================================
+
+The createholidays function supports https://swapsmonitor.com/ trading calendars. This
+function can be used from the command line or from the Trading Calendars user interface. To use
+createholidays or the Trading Calendars user interface, you must obtain data, codes, and info files
+from https://swapsmonitor.com/ trading calendars. For more information on using the
+command line to programmatically generate the market-specific holidays.m files without displaying
+the interface, see createholidays.

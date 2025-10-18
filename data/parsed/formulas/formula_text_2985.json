@@ -1,0 +1,12 @@
+{
+  "page": 1560,
+  "original_text": "numAssets = width(prices);",
+  "ocr_text": "numAssets=width(prices);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 136.63,
+    "x1": 230.87,
+    "y1": 147.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,37 @@
+Comparable to the two diversification measures above, here the penalized strategy weights are
+between the minimum variance portfolio and the ERC portfolio. Choosing λERC = 0 returns the
+
+minimum variance solution and the values of λERC ∈0, λERC  return asset weights that range from
+
+the minimum variance behavior to the ERC portfolio behavior.
+
+Compare Diversification Strategies
+
+Compute the number of assets that are selected in each portfolio. Assume that an asset is selected if
+the weight associated to that asset is above a certain threshold.
+
+% Build a weights table.
+varNames = {'MinVariance','MixedHH','HH','MixedMDP','MDP', ...
+    'MixedERC','ERC'};
+weightsTable = table(wMinVar,wHHMix,wHH,wMDPMix,wMDP, ...
+    wERCMix,wERC,'VariableNames',varNames);
+% Number of assets with nonzero weights
+cutOff = 1e-3; % Weights below cut-off point are considered zero.
+[reweightedTable,TnonZero] = tableWithNonZeroWeights(weightsTable, ...
+    cutOff,varNames);
+display(TnonZero)
+
+TnonZero=1×7 table
+                       MinVariance    MixedHH    HH     MixedMDP    MDP    MixedERC    ERC
+                       ___________    _______    ___    ________    ___    ________    ___
+
+Nonzero weights        11           104      225       23       28       225       225
+
+As discussed above, the HH penalty goal is to obtain more evenly weighted portfolios. The portfolio
+that maximizes the HH diversity (and corresponds to the EW portfolio when only the default
+constraints are selected) has the largest number of assets selected and the weights of these assets
+are closer together. You can see this latter quality in the following boxchart. Also, the strategy that
+
+Diversify Portfolios Using Custom Objective
+
+4-337

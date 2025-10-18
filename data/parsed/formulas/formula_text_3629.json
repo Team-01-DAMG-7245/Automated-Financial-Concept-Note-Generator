@@ -1,0 +1,12 @@
+{
+  "page": 2046,
+  "original_text": "DesignSUR = convert2sur(Design,Group) converts a multivariate normal regression model\ninto a seemingly unrelated regression model with a specified grouping of the data series.",
+  "ocr_text": "DesignSUR=convert2sur(Design,Group)convertsamultivariatenormalregressionmodel\nintoaseeminglyunrelatedregressionmodelwithaspecifiedgroupingofthedataseries.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 240.76,
+    "x1": 538.59,
+    "y1": 264.39
+  },
+  "confidence": "high"
+}

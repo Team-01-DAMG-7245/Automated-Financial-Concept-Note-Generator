@@ -1,0 +1,12 @@
+{
+  "page": 2156,
+  "original_text": "Depreciation = depstln(Cost,Salvage,Life)",
+  "ocr_text": "Depreciation=depstln(Cost,Salvage,Life)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 196.36,
+    "x1": 336.84,
+    "y1": 207.99
+  },
+  "confidence": "high"
+}

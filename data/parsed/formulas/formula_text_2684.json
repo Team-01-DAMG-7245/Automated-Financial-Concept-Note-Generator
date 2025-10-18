@@ -1,0 +1,12 @@
+{
+  "page": 1357,
+  "original_text": "strat2 = backtestStrategy('Denoising', @denoisedStrat, ...\n    RebalanceFrequency=rebalFreq, ...",
+  "ocr_text": "strat2=backtestStrategy(Denoising,QdenoisedStrat,...\nRebalanceFrequency=rebalFreq,...",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 404.27,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

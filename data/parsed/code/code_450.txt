@@ -1,0 +1,7 @@
+Page 439
+================================================================================
+
+First, obtain feasible values of the ESG metric by finding the minimum and maximum ESG levels. To
+do this step, use the estimateCustomObjectivePortfolio function assigning the average ESG
+score as the objective function. The average ESG score of a portfolio is the weighted sum of the
+individual asset ESG scores, where the weights are given by the amount invested in each asset.

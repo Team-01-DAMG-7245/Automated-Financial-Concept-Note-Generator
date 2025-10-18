@@ -1,0 +1,50 @@
+pattern. Whether the market exhibits momentum in certain states is a test of the weak-form Efficient
+Market Hypothesis (EMH). For heavily traded assets, such as the one used in this example (INTC),
+the EMH is likely to hold over extended periods, and arbitrage opportunities quickly disappear.
+However, failure of EMH can occur in some assets over short time intervals. A working trading
+strategy divides a portion of the trading day, short enough to exhibit a degree of statistical
+equilibrium, into a training period for estimating Q, using optimal hyperparameter settings and a
+validation period on which to trade. For an implementation of such a strategy, see “Machine Learning
+for Statistical Arbitrage III: Training, Tuning, and Prediction” on page 2-69.
+
+Summary
+
+This example begins with raw data on the LOB and transforms it into a summary (the Q matrix) of
+statistical arbitrage opportunities. The analysis uses the mathematics of continuous-time Markov
+chain models, first in recognizing the Poisson process of LOB interarrival times, then by discretizing
+data into two-dimensional states representing the instantaneous position of the market. A description
+of state transitions, derived empirically, leads to the possibility of an algorithmic trading strategy.
+
+References
+
+[1] Cartea, Álvaro, Sebastian Jaimungal, and Jason Ricci. "Buy Low, Sell High: A High-Frequency
+Trading Perspective." SIAM Journal on Financial Mathematics 5, no. 1 (January 2014): 415–
+44. https://doi.org/10.1137/130911196.
+
+[2] Guilbaud, Fabien, and Huyen Pham. "Optimal High-Frequency Trading with Limit and Market
+Orders." Quantitative Finance 13, no. 1 (January 2013): 79–94. https://doi.org/
+10.1080/14697688.2012.708779.
+
+[3] Norris, J. R. Markov Chains. Cambridge, UK: Cambridge University Press, 1997.
+
+[4] Rubisov, Anton D. "Statistical Arbitrage Using Limit Order Book Imbalance." Master's thesis,
+University of Toronto, 2015.
+
+See Also
+
+More About
+
+•
+“Machine Learning for Statistical Arbitrage: Introduction” on page 2-48
+
+•
+“Machine Learning for Statistical Arbitrage I: Data Management and Visualization” on page 2-
+50
+
+•
+“Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction” on page 2-69
+
+2
+Performing Common Financial Tasks
+
+2-68

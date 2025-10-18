@@ -1,0 +1,6 @@
+Page 1512
+================================================================================
+
+Specifying AB as MATLAB double arrays clearly associates them with a linear drift rate parametric
+form. However, specifying either A or B as a function allows you to customize virtually any drift-rate
+specification.

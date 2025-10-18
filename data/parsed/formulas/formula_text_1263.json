@@ -1,0 +1,12 @@
+{
+  "page": 625,
+  "original_text": "% Assets with weights above 5% must not exceed 40% of the total\n% portfolio\np = setConditionalBudget(p,0.05,0.4);",
+  "ocr_text": "Assetswithweightsabove5mustnotexceed40ofthetotal\nportfolio\np=setConditionalBudget(p,0.05,0.4);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 509.59,
+    "x1": 431.33,
+    "y1": 541.65
+  },
+  "confidence": "high"
+}

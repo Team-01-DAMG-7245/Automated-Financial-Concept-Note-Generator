@@ -1,0 +1,12 @@
+{
+  "page": 1110,
+  "original_text": "Settle = datetime(2008,12,2);\nCouponRate = 5.500/100;\nMaturity = datetime(2028,8,15);\nPrice = 128.68;",
+  "ocr_text": "Settle=datetime(2008,12,2);\nCouponRate=5.500/100;\nMaturity=datetime(2028,8,15);\nPrice=128.68;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 217.56,
+    "x1": 257.96,
+    "y1": 260.43
+  },
+  "confidence": "high"
+}

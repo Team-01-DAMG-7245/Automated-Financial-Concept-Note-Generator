@@ -1,0 +1,13 @@
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+bollinger | candle | highlow | movavg | pointfig | datetime
+
+15
+Functions
+
+15-800

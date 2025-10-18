@@ -1,0 +1,12 @@
+{
+  "page": 774,
+  "original_text": "% Compute yields times\nyieldsDates = settle + calmonths(yieldsMaturity);\nyieldsTimes = yearfrac(settle,yieldsDates);\nyieldsT = yields(end,:)/100;",
+  "ocr_text": "SComputeyieldstimes\nyieldsDates=settle+calmonths(yieldsMaturity);\nyieldsTimes=yearfrac(settle,yieldsDates);\nyieldsT=yields(end,:)/100;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 164.58,
+    "x1": 355.49,
+    "y1": 207.45
+  },
+  "confidence": "high"
+}

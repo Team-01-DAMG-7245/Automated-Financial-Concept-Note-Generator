@@ -1,0 +1,7 @@
+Page 563
+================================================================================
+
+The function covarianceDenoising computes the denoised estimate of the covariance matrix and
+returns as a second output the number of eigenvalues identified with signal. You use this number in
+the Optimize the Asset Allocation Using Factor Modeling on page 4-396 section to determine the
+number of factors that the factor model allocation uses.

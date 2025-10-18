@@ -1,0 +1,5 @@
+Page 1493
+================================================================================
+
+rate function is expressed in mean-reverting drift form: dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+α(t))V(t)dWt.

@@ -1,0 +1,12 @@
+Page 560
+================================================================================
+
+% Compute reward
+if t >= finalTimePeriod && W >= targetWealth
+    reward = 1;
+elseif W >= initialWealth*(1+constantReturn)^t
+    reward = 0.1;
+else
+    reward = 0;
+end
+end

@@ -1,0 +1,12 @@
+{
+  "page": 2170,
+  "original_text": "Objective = ecmlsrobj(Data,Design,Parameters) computes a least-squares objective\nfunction based on current parameter estimates with missing data. Objective is a scalar that\ncontains the least-squares objective function.",
+  "ocr_text": "Objective=ecmlsrobj(Data,Design,Parameters)computesaleast-squaresobjective\nfunctionbasedoncurrentparameterestimateswithmissingdata.Objectiveisascalarthat\ncontainstheleast-squaresobjectivefunction.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 257.42,
+    "x1": 523.61,
+    "y1": 293.05
+  },
+  "confidence": "high"
+}

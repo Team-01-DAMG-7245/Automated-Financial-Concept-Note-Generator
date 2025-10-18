@@ -1,0 +1,53 @@
+cpndatepq
+
+Previous quasi-coupon date for fixed-income security
+
+Syntax
+
+PreviousQuasiCouponDate = cpndatepq(Settle,Maturity)
+PreviousQuasiCouponDate = cpndatepq( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate)
+
+Description
+
+PreviousQuasiCouponDate = cpndatepq(Settle,Maturity) determines the previous quasi-
+coupon date for a set of NUMBONDS fixed income securities. Prior quasi-coupon dates determine the
+length of the standard coupon period for the fixed income security of interest, and do not necessarily
+coincide with actual coupon payment dates. This function finds the previous quasi-coupon date for
+bonds with a coupon structure whose first or last period is either normal, short, or long.
+
+Required input arguments must be number of bonds, NUMBONDS-by-1 or 1-by-NUMBONDS, conforming
+vectors or scalars.
+
+PreviousQuasiCouponDate = cpndatepq( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate), using optional input arguments, determines the previous
+quasi-coupon date for a set of NUMBONDS fixed income securities.
+
+Optional input arguments must be either NUMBONDS-by-1 or 1-by-NUMBONDS conforming vectors,
+scalars, or empty matrices.
+
+If all the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate are
+either strings or date character vectors, then PreviousQuasiCouponDate is returned as a serial
+date number. Use the function datetime to convert serial date numbers to formatted datetime
+arrays.
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate
+are datetime arrays, then PreviousQuasiCouponDate is returned as a datetime array.
+
+Examples
+
+Determine the Previous Quasi Coupon Date for a Portfolio of Fixed-Income Securities
+
+Given a pair of bonds with the following characteristics:
+
+Settle = [datetime(1997,5,30) ; datetime(1997,12,10)]; 
+Maturity = [datetime(2002,11,30) ; datetime(2004,6,10)];
+
+With no FirstCouponDate explicitly supplied, compute the PreviousCouponDate for this pair of
+bonds.
+
+PreviousCouponDate = cpndatep(Settle, Maturity)
+
+cpndatepq
+
+15-763

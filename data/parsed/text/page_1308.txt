@@ -1,0 +1,72 @@
+brinsonAttribution
+
+Create brinsonAttribution object to analyze performance attribution
+
+Description
+
+Create a brinsonAttribution object for performance attribution using the Brinson model.
+
+Use this workflow to develop and analyze a Brinson model for performance attribution:
+
+1
+Prepare data for the AssetTable input.
+
+2
+Use brinsonAttribution to create a brinsonAttribution object.
+
+3
+Use the following functions with the brinsonAttribution object:
+
+•
+categoryAttribution
+
+•
+categoryReturns
+
+•
+categoryWeights
+
+•
+totalAttribution
+
+•
+summary
+
+•
+categoryReturnsChart
+
+•
+categoryWeightsChart
+
+•
+attributionsChart
+
+For more detailed information on this workflow, see “Analyze Performance Attribution Using Brinson
+Model” on page 4-323.
+
+Creation
+
+Syntax
+
+brinsonAttributionObj = brinsonAttribution(AssetTable)
+
+Description
+
+brinsonAttributionObj = brinsonAttribution(AssetTable) creates a
+brinsonAttribution object and sets the properties on page 15-4. Use the
+brinsonAttribution object with the categoryAttribution, categoryReturns,
+categoryWeights, totalAttribution, and summary functions.
+
+Input Arguments
+
+AssetTable — Information about individual asset returns in the portfolio and benchmark
+table
+
+Information about individual asset returns in the portfolio and benchmark, specified as a table with
+the number of rows equal to NumAssets-times-NumPeriods rows. The column variables are in the
+following order from left to right:
+
+15
+Functions
+
+15-2

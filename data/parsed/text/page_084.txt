@@ -1,0 +1,67 @@
+Theta
+
+Theta is the rate of change in the price of a derivative security relative to time. Theta is usually small
+or negative since the value of an option tends to drop as it approaches maturity.
+
+Vega
+
+Vega is the rate of change in the price of a derivative security relative to the volatility of the
+underlying security. When vega is large the security is sensitive to small changes in volatility. For
+example, options traders often must decide whether to buy an option to hedge against vega or
+gamma. The hedge selected usually depends upon how frequently one rebalances a hedge position
+and also upon the standard deviation of the price of the underlying asset (the volatility). If the
+standard deviation is changing rapidly, balancing against vega is preferable.
+
+Implied Volatility
+
+The implied volatility of an option is the standard deviation that makes an option price equal to the
+market price. It helps determine a market estimate for the future volatility of a stock and provides the
+input volatility (when needed) to the other Black-Scholes functions.
+
+Analysis Models
+
+Toolbox functions for analyzing equity derivatives use the Black-Scholes model for European options
+and the binomial model for American options. The Black-Scholes model makes several assumptions
+about the underlying securities and their behavior. The Black-Scholes model was the first complete
+mathematical model for pricing options, developed by Fischer Black and Myron Scholes. It examines
+market price, strike price, volatility, time to expiration, and interest rates. It is limited to only certain
+kinds of options.
+
+The binomial model, on the other hand, makes far fewer assumptions about the processes underlying
+an option. A binomial model is a method of pricing options or other equity derivatives in which the
+probability over time of each possible price follows a binomial distribution. The basic assumption is
+that prices can move to only two values (one higher and one lower) over any short time period. For
+further explanation, see Options, Futures, and Other Derivatives by John Hull in “Bibliography” on
+page A-2.
+
+Black-Scholes Model
+
+This example shows how to compute the call and put prices of a European option and its delta,
+gamma, lambda, and implied volatility.
+
+Using the Black-Scholes model entails several assumptions:
+
+•
+The prices of the underlying asset follow an Ito process. (See “Derivatives Pricing and Yields” on
+page A-3, page 222.)
+
+•
+The option can be exercised only on its expiration date (European option).
+
+•
+Short selling is permitted.
+
+•
+There are no transaction costs.
+
+•
+All securities are divisible.
+
+•
+There is no riskless arbitrage (where arbitrage is the purchase of securities on one market for
+immediate resale on another market to profit from a price or currency discrepancy).
+
+2
+Performing Common Financial Tasks
+
+2-40

@@ -1,0 +1,12 @@
+{
+  "page": 113,
+  "original_text": "function cash = tradeOnQ(Data,Q,n,N)",
+  "ocr_text": "functioncash=tradeOnQ(Data,Q,n,N)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 285.05,
+    "y1": 632.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 197,
+  "original_text": "p = Portfolio;\np = Portfolio(p, 'LowerBound', zeros(size(m)));\np = Portfolio(p, 'LowerBudget', 1, 'UpperBudget', 1);\np = Portfolio(p, 'AssetMean', m, 'AssetCovar', C);\n \nplotFrontier(p)",
+  "ocr_text": "p=Portfolio;\np=Portfolio(p,LowerBound,zeros(size(m)));\np=Portfolio(p,LowerBudget,1,_UpperBudget,1);\np=Portfolio(p,AssetMean,m,AssetCovar,C);\nplotFrontier(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 461.91,
+    "x1": 377.18,
+    "y1": 526.38
+  },
+  "confidence": "high"
+}

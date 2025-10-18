@@ -1,0 +1,12 @@
+{
+  "page": 500,
+  "original_text": "wMinVar = estimateFrontierLimits(p,'min');",
+  "ocr_text": "wMinVar=estimateFrontierLimits(p,min);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 515.69,
+    "x1": 317.57,
+    "y1": 526.16
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,49 @@
+Machine Learning for Statistical Arbitrage II: Feature
+Engineering and Model Development
+
+This example creates a continuous-time Markov model of limit order book (LOB) dynamics, and
+develops a strategy for algorithmic trading based on patterns observed in the data. It is part of a
+series of related examples on machine learning for statistical arbitrage (see “Machine Learning
+Applications”).
+
+Exploratory Data Analysis
+
+To predict the future behavior of a system, you need to discover patterns in historical data. The vast
+amount of data available from exchanges, such as NASDAQ, poses computational challenges while
+offering statistical opportunities. This example explores LOB data by looking for indicators of price
+momentum, following the approach in [4].
+
+Raw Data
+
+Load LOBVars.mat, the preprocessed LOB data set of the NASDAQ security INTC, which is included
+with the Financial Toolbox™ documentation.
+
+load LOBVars
+
+The data set contains the following information for each order: the arrival time t (seconds from
+midnight), level 1 asking price MOAsk, level 1 bidding price MOBid, midprice S, and imbalance index
+I.
+
+Create a plot that shows the intraday evolution of the LOB imbalance index I and midprice S.
+
+figure
+
+t.Format = "hh:mm:ss";
+
+yyaxis left
+plot(t,I)
+ylabel("Imbalance Index")
+
+yyaxis right
+plot(t,S/10000,'LineWidth',2)
+ylabel("Midprice (Dollars)")
+
+xlabel("Time")
+
+title('Exchange Data: One Day')
+legend(["Imbalance","Midprice"],'Location','NE')
+grid on
+
+Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development
+
+2-59

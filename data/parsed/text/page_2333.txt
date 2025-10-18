@@ -1,0 +1,52 @@
+ewstats
+
+Expected return and covariance from return time series
+
+Syntax
+
+[ExpReturn,ExpCovariance,NumEffObs] = ewstats(RetSeries)
+[ExpReturn,ExpCovariance,NumEffObs] = ewstats( ___ ,DecayFactor,WindowLength)
+
+Description
+
+[ExpReturn,ExpCovariance,NumEffObs] = ewstats(RetSeries) computes estimated
+expected returns (ExpReturn), estimated covariance matrix (ExpCovariance), and the number of
+effective observations (NumEffObs). These outputs are maximum likelihood estimates which are
+biased.
+
+[ExpReturn,ExpCovariance,NumEffObs] = ewstats( ___ ,DecayFactor,WindowLength)
+adds optional input arguments for DecayFactor and WindowLength.
+
+Examples
+
+Compute Estimated Expected Returns and Estimated Covariance Matrix
+
+This example shows how to compute the estimated expected returns and the estimated covariance
+matrix.
+
+RetSeries = [ 0.24 0.08 
+              0.15 0.13 
+              0.27 0.06 
+              0.14 0.13 ];
+
+DecayFactor = 0.98;
+
+[ExpReturn, ExpCovariance] = ewstats(RetSeries, DecayFactor)
+
+ExpReturn = 1×2
+
+0.1995    0.1002
+
+ExpCovariance = 2×2
+
+0.0032   -0.0017
+   -0.0017    0.0010
+
+Input Arguments
+
+RetSeries — Return series
+matrix
+
+ewstats
+
+15-1027

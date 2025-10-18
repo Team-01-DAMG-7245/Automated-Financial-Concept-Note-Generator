@@ -1,0 +1,5 @@
+Page 1560
+================================================================================
+
+% For readability, use only a few stocks.
+assetSymbols = ["AA","GM","MMM","MSFT","PG","T","XOM"];

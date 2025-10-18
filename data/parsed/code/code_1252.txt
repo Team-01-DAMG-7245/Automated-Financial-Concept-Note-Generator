@@ -1,0 +1,7 @@
+Page 1290
+================================================================================
+
+for k = 1:numClusters
+    % Extract coordinate data for the current group.
+    idx = clusteredCommodities.Group == k;
+    clusterx = Y(idx, 1);

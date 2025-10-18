@@ -1,0 +1,12 @@
+{
+  "page": 767,
+  "original_text": "% Set conditional bounds\ncondLB = 0.1;\ncondUB = 0.5;\np = setBounds(p,condLB,condUB,BoundType=\"conditional\");",
+  "ocr_text": "Setconditionalbounds\n\ncondLB=0.1;\n\ncondUB=0.5;\np=setBounds(p,condLB,condUB,BoundType=conditional);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 417.08,
+    "x1": 388.02,
+    "y1": 459.95
+  },
+  "confidence": "high"
+}

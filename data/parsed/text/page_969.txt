@@ -1,0 +1,50 @@
+is a sampling step, to produce a training set, sometimes called the modeling view, and usually a
+validation set, too. The training set, in the form of a table, is the required data input to the
+creditscorecard object, and this training set table must be prepared before creating a
+creditscorecard object in the Modeling phase.
+
+2
+Modeling phase
+
+Use the creditscorecard object and associated object functions to develop a credit scorecard
+model. You can bin the data, apply the Weight of Evidence (WOE) transformation, and compute
+other statistics, such as the Information Value. You can fit a logistic regression model and also
+review the resulting scorecard points and format their scaling and rounding. For details on using
+the creditscorecard object, see creditscorecard.
+
+3
+Deployment phase
+
+Deployment entails integrating a credit scorecard model into an IT production environment and
+keeping tracking logs, performance reports, and so on.
+
+The creditscorecard object is designed for the Modeling phase of the credit scorecard workflow.
+Support for all three phases requires other MathWorks products.
+
+See Also
+creditscorecard | autobinning | bininfo | predictorinfo | modifypredictor |
+modifybins | bindata | plotbins | fitmodel | displaypoints | formatpoints | score |
+setmodel | probdefault | validatemodel
+
+Related Examples
+
+•
+“Troubleshooting Credit Scorecard Results” on page 8-64
+
+•
+“Case Study for Credit Scorecard Analysis” on page 8-71
+
+•
+“Explore Fairness Metrics for Credit Scoring Model” (Risk Management Toolbox)
+
+More About
+
+•
+“Credit Scorecard Modeling Workflow” on page 8-52
+
+•
+“Credit Scorecard Modeling Using Observation Weights” on page 8-55
+
+About Credit Scorecards
+
+8-51

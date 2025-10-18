@@ -1,0 +1,12 @@
+{
+  "page": 107,
+  "original_text": "dS = 20; % Hyperparameter\ndTS = dS*DTAvg",
+  "ocr_text": "dS=20;*Hyperparameter\ndTS_=dS*DTAvg",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 168.43,
+    "x1": 225.45,
+    "y1": 189.69
+  },
+  "confidence": "high"
+}

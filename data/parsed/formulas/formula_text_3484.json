@@ -1,0 +1,12 @@
+{
+  "page": 1937,
+  "original_text": "when accrued premiums are paid upon default. Here, t0 = 0 is the valuation date, and t1,...,tn = T are\nthe premium payment dates over the life of the contract,T is the maturity of the contract, Z(t) is the\ndiscount factor for a payment received at time t, and Δ(tj-1, tj, B) is a day count between dates tj-1 and\ntj corresponding to a basis B.",
+  "ocr_text": "whenaccruedpremiumsarepaidupondefault.Here,t)=0isthevaluationdate,andfy,...,t,=Tare\nthepremiumpaymentdatesoverthelifeofthecontract,Tisthematurityofthecontract,Z(t)isthe\ndiscountfactorforapaymentreceivedattimet,andA(t;.;,t;,B)isadaycountbetweendatest;.,and\nt;correspondingtoabasisB.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 576.79,
+    "x1": 552.1,
+    "y1": 625.62
+  },
+  "confidence": "high"
+}

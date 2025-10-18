@@ -1,0 +1,50 @@
+Covariance — User-supplied estimate for covariance matrix of residuals of the regression
+vector
+
+(Optional) User-supplied estimate for the covariance matrix of the residuals of the regression,
+specified as an NUMPARAMS-by-1 column vector.
+
+ecmlsrobj requires that Covariance be positive-definite.
+
+Note that
+
+ecmlsrobj(Data, Design, Parameters) = ecmmvnrobj(Data, Design, Parameters, IdentityMatrix)
+
+where IdentityMatrix is a NUMSERIES-by-NUMSERIES identity matrix.
+
+Data Types: double
+
+Output Arguments
+
+Objective — Least-squares objective function
+scalar
+
+Least-squares objective function, returned as scalar.
+
+More About
+
+Least Squares Regression
+
+Least squares regression is a statistical method used to estimate the relationships between variables.
+
+Least squares regression is commonly employed in linear regression analysis to find the best-fitting
+line through a set of data points. The goal is to minimize the sum of the squares of the differences
+(residuals) between the observed values and the values predicted by the model.
+
+Version History
+Introduced in R2006a
+
+See Also
+ecmlsrmle | mvnrmle
+
+Topics
+“Least-Squares Regression With Missing Data” on page 9-14
+“Multivariate Normal Regression” on page 9-13
+“Least-Squares Regression” on page 9-14
+“Covariance-Weighted Least Squares” on page 9-14
+“Feasible Generalized Least Squares” on page 9-15
+“Seemingly Unrelated Regression” on page 9-16
+
+ecmlsrobj
+
+15-865

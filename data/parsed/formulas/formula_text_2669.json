@@ -1,0 +1,12 @@
+{
+  "page": 1353,
+  "original_text": "% Create a Portfolio object with true mean and denoised covariance\npDenoised = Portfolio(AssetMean=mean_return,AssetCovar=denoisedSigma);\npDenoised = setDefaultConstraints(pDenoised);",
+  "ocr_text": "CreateaPortfolioobjectwithtruemeananddenoisedcovariance\npDenoised=Portfolio(AssetMean=mean_return,AssetCovar=denoisedSigma);\npDenoised=setDefaultConstraints(pDenoised);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 450.7,
+    "x1": 469.26,
+    "y1": 482.77
+  },
+  "confidence": "high"
+}

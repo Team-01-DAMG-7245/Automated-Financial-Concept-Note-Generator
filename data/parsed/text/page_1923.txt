@@ -1,0 +1,79 @@
+Issue date for the certificate of deposit, specified as a scalar or a NCDS-by-1 or 1-by-NCDS vector using
+a datetime array, string array, or date character vectors.
+
+To support existing code, cdprice also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Basis — Day-count basis for certificate of deposit
+2 (actual/360) (default) | integers of the set [0...13] | vector of integers of the set [0...13]
+
+(Optional) Day-count basis for the certificate of deposit, specified as a scalar or a NINST-by-1 vector.
+Values are:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+Output Arguments
+
+Price — Clean price of certificate of deposit per $100
+numeric
+
+Clean price of the certificate of deposit per $100, returned as a NCDS-by-1 or 1-by-NCDS vector.
+
+AccrInt — Accrued interest payable at settlement per unit of face value
+numeric
+
+Accrued interest payable at settlement per unit of face value, returned as a NCDS-by-1 or 1-by-NCDS
+vector.
+
+Version History
+Introduced before R2006a
+
+cdprice
+
+15-617

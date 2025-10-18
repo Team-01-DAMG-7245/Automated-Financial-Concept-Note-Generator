@@ -1,0 +1,57 @@
+Input Arguments
+
+Data — Data for low prices
+matrix | table | timetable
+
+Data for low prices, specified as a matrix, table, or timetable. Timetables and tables with M rows must
+contain a variable named 'Low' (case insensitive).
+
+Data Types: double | table | timetable
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: values = llow(TMW_LOW,'NumPeriods',10)
+
+NumPeriods — Moving window for the lowest low calculation
+14 (default) | positive integer
+
+Moving window for the lowest low calculation, specified as the comma-separated pair consisting of
+'NumPeriods' and a scalar positive integer.
+
+Data Types: double
+
+Output Arguments
+
+values — Lowest low series
+matrix | table | timetable
+
+Lowest low series, returned with the same number of rows (M) and the same type (matrix, table, or
+timetable) as the input Data.
+
+Version History
+Introduced before R2006a
+
+R2023a: fints support removed for Data input argument
+Behavior changed in R2023a
+
+fints object support for the Data input argument is removed.
+
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+References
+
+[1] Achelis, S. B. Technical Analysis from A to Z. Second Edition. McGraw-Hill, 1995.
+
+15
+Functions
+
+15-1166

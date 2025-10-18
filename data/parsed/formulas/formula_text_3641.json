@@ -1,0 +1,12 @@
+{
+  "page": 2050,
+  "original_text": "ExpCov(i,j) = ExpCorrC(i,j)*ExpSigma(i)*ExpSigma(j)",
+  "ocr_text": "ExpCov(i,j)=ExpCorrC(i,j)*ExpSigma(i)*ExpSigma(j)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 308.79,
+    "x1": 290.34,
+    "y1": 316.23
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2239,
+  "original_text": "p = Portfolio('AssetMean',AssetMean, 'AssetCovar', AssetCovar);\np = setDefaultConstraints(p);",
+  "ocr_text": "p=Portfolio(AssetMean,AssetMean,_AssetCovar,AssetCovar);\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 257.6,
+    "x1": 431.36,
+    "y1": 278.87
+  },
+  "confidence": "high"
+}

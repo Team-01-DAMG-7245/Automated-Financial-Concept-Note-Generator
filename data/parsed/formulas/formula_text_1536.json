@@ -1,0 +1,12 @@
+{
+  "page": 774,
+  "original_text": "% Compute prices from cash flow yields\nDF = exp(-CFYields.*CFTimes);\nbondsPrices = (allCF*DF)';",
+  "ocr_text": "SComputepricesfromcashflowyields\nDF=exp(-CFYields.*CFTimes);\nbondsPrices=(allCF*DF);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 280.59,
+    "x1": 295.88,
+    "y1": 312.66
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1483
+================================================================================
+
+•
+B is an NVars-by-NVars matrix-valued function accessible using the (t, Xt) interface.

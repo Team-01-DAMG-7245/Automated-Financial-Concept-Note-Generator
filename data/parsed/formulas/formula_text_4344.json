@@ -1,0 +1,12 @@
+{
+  "page": 2463,
+  "original_text": "qx = lifetablegen((0:100), a)",
+  "ocr_text": "qx=lifetablegen((0:100),a)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 283.63,
+    "x1": 247.12,
+    "y1": 294.09
+  },
+  "confidence": "high"
+}

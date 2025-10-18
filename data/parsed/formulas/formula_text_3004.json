@@ -1,0 +1,12 @@
+{
+  "page": 1577,
+  "original_text": "% Create the strategy\nstrategy = backtestStrategy(\"EqualWeighted\",equalWeightRebalanceFcn,...\n    'RebalanceFrequency',20,...\n    'TransactionCosts',[0.0025 0.005],...\n    'LookbackWindow',0)",
+  "ocr_text": "Createthestrategy\nstrategy=backtestStrategy(EqualWeighted,equalWeightRebalanceFcn,...\nRebalanceFrequency,20,...\nTransactionCosts,[.00250.005],...\nLookbackWindow,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 399.63,
+    "x1": 474.71,
+    "y1": 453.29
+  },
+  "confidence": "high"
+}

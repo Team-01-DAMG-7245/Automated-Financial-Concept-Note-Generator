@@ -1,0 +1,12 @@
+{
+  "page": 604,
+  "original_text": "ans=table\n    Total_Outperformance_Test_Sell\n    ______________________________",
+  "ocr_text": "ans=table\nTotal_OutperformanceTest_Sell",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 175.47,
+    "x1": 274.21,
+    "y1": 207.53
+  },
+  "confidence": "high"
+}

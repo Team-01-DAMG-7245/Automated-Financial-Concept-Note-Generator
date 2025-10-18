@@ -1,0 +1,12 @@
+{
+  "page": 2112,
+  "original_text": "StartDate = datetime(1997,6,3);\nNumberMonths = 6;\nDayFlag = 0;\nBasis = 0;\nEndMonthRule = 1;\n \nTargetDate = datemnth(StartDate, NumberMonths, DayFlag,Basis, EndMonthRule)",
+  "ocr_text": "StartDate=datetime(1997,6,3);\n\nNumberMonths=6;\n\nDayFlag=0;\n\nBasis=0;\n\nEndMonthRule=1;\nTargetDate=datemnth(StartDate,NumberMonths,DayFlag,Basis,EndMonthRule)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 547.36,
+    "x1": 496.35,
+    "y1": 622.63
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1990,
+  "original_text": "CFlowDates = cfdates( ___ ,Period,Basis,EndMonthRule,IssueDate,FirstCouponDate,\nLastCouponDate) specifies options using one or more optional arguments in addition to the input\narguments in the previous syntax.",
+  "ocr_text": "CFlowDates=cfdates( ,Period,Basis,EndMonthRule,IssueDate,FirstCouponDate,\nLastCouponDate)specifiesoptionsusingoneormoreoptionalargumentsinadditiontotheinput\nargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 313.11,
+    "x1": 557.58,
+    "y1": 348.74
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,69 @@
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Note If a SIA day-count basis is defined in the Basis input argument and there is no value assigned
+for DiscountBasis, the default behavior is for SIA bases to use the actual/actual day count to
+compute discount factors.
+
+If an ICMA day-count basis or BUS/252 is defined in the Basis input argument and there is no value
+assigned for DiscountBasis, the specified bases from the Basis input argument are used.
+
+Data Types: double
+
+Output Arguments
+
+TFactors — Time to cash flow
+matrix
+
+Time to cash flow, returned as an NUMBONDS rows. The number of columns is determined by the
+maximum number of cash flow payment dates required to hold the bond portfolio. NaNs are padded
+for bonds which have less than the maximum number of cash flow payment dates.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cftimes supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+15
+Functions
+
+15-728

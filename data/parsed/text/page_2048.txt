@@ -1,0 +1,55 @@
+Output Arguments
+
+DesignSUR — Seemingly unrelated regression model with a specified grouping of the data
+series
+matrix | cell array
+
+Seemingly unrelated regression model with a specified grouping of the data series, returned as either
+a matrix or a cell array that depends on the value of NUMSERIES.
+
+•
+If NUMSERIES = 1, DesignSUR = Design, which is a NUMSAMPLES-by-NUMPARAMS matrix.
+
+•
+If NUMSERIES > 1 and NUMGROUPS groups are to be formed, Design is a cell array with
+NUMSAMPLES cells, where each cell contains a NUMSERIES-by-(NUMGROUPS * NUMPARAMS)
+matrix of known values.
+
+The original collection of parameters that are common to all series are replicated to form collections
+of parameters for each group.
+
+More About
+
+Multivariate Normal Regression
+
+Multivariate normal regression is a statistical modeling approach that extends traditional regression
+techniques to situations where the dependent variable is multivariate, meaning it consists of multiple
+correlated outcomes.
+
+Multivariate normal regression is particularly useful in fields where researchers are interested in
+understanding the relationships between several response variables and one or more predictor
+variables.
+
+Seemingly Unrelated Regression Model
+
+The Seemingly Unrelated Regression (SUR) model is a statistical method used in econometrics to
+estimate multiple regression equations that are related to each other through their error terms.
+
+The SUR model allows for the simultaneous estimation of these equations, taking into account the
+potential correlation between the error terms of different equations. This can lead to more efficient
+estimates compared to estimating each equation independently.
+
+Version History
+Introduced in R2006a
+
+See Also
+ecmnfish | mvnrfish
+
+Topics
+“Seemingly Unrelated Regression Without Missing Data” on page 9-17
+“Multivariate Normal Linear Regression” on page 9-2
+
+15
+Functions
+
+15-742

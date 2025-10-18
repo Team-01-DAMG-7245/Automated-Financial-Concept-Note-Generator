@@ -1,0 +1,6 @@
+Page 2348
+================================================================================
+
+•
+If Holiday is a string or date character vector, then Date is returned as a serial date number. Use
+the function datetime to convert serial date numbers to formatted datetime arrays.

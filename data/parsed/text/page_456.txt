@@ -1,0 +1,58 @@
+0.4124
+
+Assume that the correlation between the assets is 0.7 instead of 0.8. Use the new covariance matrix
+(Sigma7) to compute the same mean-variance and risk budgeting portfolios.
+
+% Update the covariance matrix.
+Sigma7 = corr2cov(sigma,C(0.7));
+% Compute the mean-variance portfolio.
+p = Portfolio(AssetMean=mu,AssetCovar=Sigma7);
+p = setDefaultConstraints(p);
+wMV_rho7 = estimateFrontierByRisk(p,targetRisk)
+
+wMV_rho7 = 3×1
+
+0.3841
+    0.2600
+    0.3559
+
+% Compute the risk budgeting portfolio.
+wRB_rho7 = riskBudgetingPortfolio(Sigma7,budget)
+
+wRB_rho7 = 3×1
+
+0.3844
+    0.1986
+    0.4170
+
+What if the correlation is 0.9 instead of 0.8 (Sigma9) and the risk of the second asset is 0.18
+instead of 0.21?
+
+% Update the covariance matrix.
+sigma2 = sigma;
+sigma2(2) = 0.18;
+Sigma9 = corr2cov(sigma2,C(0.9));
+% Compute the mean-variance portfolio.
+p = Portfolio(AssetMean=mu,AssetCovar=Sigma9);
+p = setDefaultConstraints(p);
+wMV_rho9 = estimateFrontierByRisk(p,targetRisk)
+
+wMV_rho9 = 3×1
+
+0.0000
+    0.6612
+    0.3388
+
+% Compute the risk budgeting portfolio.
+wRB_rho9 = riskBudgetingPortfolio(Sigma9,budget)
+
+wRB_rho9 = 3×1
+
+0.3852
+    0.2196
+    0.3952
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-288

@@ -1,0 +1,7 @@
+Page 1820
+================================================================================
+
+DefProbHazard = [defaultProb1, hazard1(:,2)];
+DefProbHazardTable = array2table(DefProbHazard, 'VariableNames', {'Date', 'DefaultProbability', 
+DefProbHazardTable.Date = datetime(DefProbHazardTable.Date,'Locale','en_US','ConvertFrom','datenu
+DefProbHazardTable.Date.Format = 'MMM-dd-yyyy'

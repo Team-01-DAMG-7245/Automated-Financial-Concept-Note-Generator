@@ -1,0 +1,12 @@
+{
+  "page": 1363,
+  "original_text": "Sigma = cov(retSeries);\nshrunkSigma = covarianceShrinkage(retSeries);",
+  "ocr_text": "Sigma=cov(retSeries);\nshrunkSigma=covarianceShrinkage(retSeries);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 664.08,
+    "x1": 333.81,
+    "y1": 685.35
+  },
+  "confidence": "high"
+}

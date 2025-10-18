@@ -1,0 +1,61 @@
+09-Jan-2006    29.37    21.12    75.84    26.21    56.67     23.3    57.54
+
+#################################################################################
+
+#################################################################################
+Rebalancing period: 11-Jan-2006
+Number of time periods in data: 5
+#################################################################################
+       Dates        AA       GM       MMM     MSFT      PG        T       XOM 
+    ___________    _____    _____    _____    _____    _____    _____    _____
+
+05-Jan-2006    29.12    19.34    74.85    26.34     56.3    22.92    56.45
+    06-Jan-2006    29.02    19.61    75.47    26.26    56.24    23.21    57.57
+    09-Jan-2006    29.37    21.12    75.84    26.21    56.67     23.3    57.54
+    10-Jan-2006    28.44    20.79    75.37    26.35    56.45    23.16    57.99
+    11-Jan-2006    28.05    20.61    75.22    26.63    56.65    23.34    58.38
+
+#################################################################################
+
+#################################################################################
+Rebalancing period: 13-Jan-2006
+Number of time periods in data: 5
+#################################################################################
+       Dates        AA       GM       MMM     MSFT      PG        T       XOM 
+    ___________    _____    _____    _____    _____    _____    _____    _____
+
+09-Jan-2006    29.37    21.12    75.84    26.21    56.67     23.3    57.54
+    10-Jan-2006    28.44    20.79    75.37    26.35    56.45    23.16    57.99
+    11-Jan-2006    28.05    20.61    75.22    26.63    56.65    23.34    58.38
+    12-Jan-2006    27.68    19.76    74.57    26.48    56.02    23.24    57.77
+    13-Jan-2006    27.81     19.2    74.38    26.53    56.49    23.27    59.06
+
+#################################################################################
+
+Start=1 in runBacktest sets the starting time period to "03-Jan-2006", the first date available
+in pricesTT. Given that RebalanceFrequency is set to 2, you might expect the next rebalancing
+period to be "05-Jan-2006". However, the fist time the strategy rebalances is on "09-Jan-2006".
+This happens because LookbackWindow is set to 5, which automatically sets the minimum lookback
+window to 5 and at "05-Jan-2006" there are only three time periods available. On the second
+rebalancing period, "11-Jan-2006", the first two inputs of pricesTT are not included in the data
+passed to the rebalancing function. This happens because the maximum value of the lookback
+window is implicitly set to 5, which means that only the last five time periods are passed to the
+rebalancing function. The same behavior happens in the last rebalancing period. Also, note that the
+size of the rolling window remains constant throughout all rebalancing periods.
+
+Local Functions
+
+function new_weights = maxSharpeRatioFcn(~, pricesTT)
+% Maximum Sharpe Ratio allocation
+
+% Display prices timetable and rebalancing period.
+fprintf('#################################################################################\n')
+fprintf('Rebalancing period: %s\n',string(pricesTT.Dates(end)))
+fprintf('Number of time periods in data: %i\n',size(pricesTT,1))
+fprintf('#################################################################################\n')
+disp(pricesTT)
+fprintf('#################################################################################\n\n')
+
+backtestStrategy
+
+15-257

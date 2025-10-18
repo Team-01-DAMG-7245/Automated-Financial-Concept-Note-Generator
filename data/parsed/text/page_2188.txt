@@ -1,0 +1,69 @@
+Data, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a NUMSERIES-
+dimensional random vector. Missing values are indicated by NaNs. Only samples that are entirely
+NaNs are ignored. (To ignore samples with at least one NaN, use mvnrmle.)
+
+Data Types: double
+
+Design — Design model
+matrix | cell array
+
+Design model, specified as a matrix or a cell array that handles two model structures:
+
+•
+If NUMSERIES = 1, Design is a NUMSAMPLES-by-NUMPARAMS matrix with known values. This
+structure is the standard form for regression on a single series.
+
+•
+If NUMSERIES ≥ 1, Design is a cell array. The cell array contains either one or NUMSAMPLES cells.
+Each cell contains a NUMSERIES-by-NUMPARAMS matrix of known values.
+
+If Design has a single cell, it is assumed to have the same Design matrix for each sample. If
+Design has more than one cell, each cell contains a Design matrix for each sample.
+
+Data Types: double | cell
+
+Covariance — Estimates for covariance of regression residuals
+matrix
+
+Estimates for the covariance of the regression residuals, specified as an NUMSERIES-by-NUMSERIES
+matrix.
+
+Data Types: double
+
+Method — Method of calculation for the information matrix
+'hessian' (default) | character vector
+
+(Optional) Method of calculation for the information matrix, specified as a character vector defined
+as:
+
+•
+'hessian' — The expected Hessian matrix of the observed log-likelihood function. This method
+is recommended since the resultant standard errors incorporate the increased uncertainties due
+to missing data.
+
+•
+'fisher' — The Fisher information matrix.
+
+Note If Method = 'fisher', to obtain more quickly just the standard errors of variance
+estimates without the standard errors of the covariance estimates, set CovarFormat =
+'diagonal' regardless of the form of the covariance matrix.
+
+Data Types: char
+
+CovarFormat — Format for the covariance matrix
+'full' (default) | character vector
+
+(Optional) Format for the covariance matrix, specified as a character vector. The choices are:
+
+•
+'full' — Compute the full covariance matrix.
+
+•
+'diagonal' — Force the covariance matrix to be a diagonal matrix.
+
+Data Types: char
+
+15
+Functions
+
+15-882

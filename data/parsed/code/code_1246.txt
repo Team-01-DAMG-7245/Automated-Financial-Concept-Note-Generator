@@ -1,0 +1,6 @@
+Page 1275
+================================================================================
+
+In this example, you also specify an end-of-period processing function that accepts time followed by
+state (t,X), and records the sample times and value of the portfolio as the single-unit weighted
+average of all indices. This function also shares this information with other functions designed to

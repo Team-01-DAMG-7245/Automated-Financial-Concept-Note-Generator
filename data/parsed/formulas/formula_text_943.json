@@ -1,0 +1,12 @@
+{
+  "page": 507,
+  "original_text": "% Compute and plot the correlation of each individual asset to its\n% portfolio.\ncorrAsset2Port = correlationInfo(p.AssetCovar, ...\n    weightsTable.Variables);\n% Boxchart of assets to portfolio correlations\nfigure\nboxchart(corrAsset2Port)\nxticklabels(varNames)\ntitle('Correlation of Individual Assets to Their Portfolio')\nxlabel('Strategies')\nylabel('Correlation')",
+  "ocr_text": "Computeandplotthecorrelationofeachindividualassettoits\n\nportfolio.\n\ncorrAsset2Port=correlationInfo(p.AssetCovar,...\nweightsTable.Variables);\n\nBoxchartofassetstoportfoliocorrelations\n\nfigure\n\nboxchart(corrAsset2Port)\n\nxticklabels(varNames)\n\ntitle(CorrelationofIndividualAssetstoTheirPortfolio)\n\nxlabel(Strategies)\n\nylabel(Correlation)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 594.49,
+    "x1": 447.58,
+    "y1": 712.95
+  },
+  "confidence": "high"
+}

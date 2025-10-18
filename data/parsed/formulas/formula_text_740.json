@@ -1,0 +1,12 @@
+{
+  "page": 441,
+  "original_text": "If the portfolio is fully invested in one asset, or if all assets are perfectly correlated, the diversification\nratio φ x  is equal to 1. For all other cases, φ x > 1. Therefore, if φ x ≈1, there is no diversification,\nso the goal is to maximize φ x . Unlike the HH index, the goal of MDP is not to obtain a portfolio",
+  "ocr_text": "Iftheportfolioisfullyinvestedinoneasset,orifallassetsareperfectlycorrelated,thediversification\nratiog(x)isequalto1.Forallothercases,p(x)=1.Therefore,ifg(x)=1,thereisnodiversification,\nsothegoalistomaximize(x).UnliketheHHindex,thegoalofMDPisnottoobtainaportfolio",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 683.36,
+    "x1": 557.17,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

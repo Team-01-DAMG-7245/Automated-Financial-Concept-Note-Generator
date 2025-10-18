@@ -1,0 +1,12 @@
+{
+  "page": 38,
+  "original_text": "a11x1 + a12x2 + … + a1nxn = b1\na21x1 + a22x2 + … + a2nxn = b2\n⋮\nam1x1 + am2x2 + … + amnxn = bm",
+  "ocr_text": "Q41X1+.442X2+...+d1nXn_=by\n21X1+d22X2+...+d2nXn_=b2\nOm1X1+Gm2X2+--+AmnXn=Dm",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 370.92,
+    "x1": 258.68,
+    "y1": 432.95
+  },
+  "confidence": "high"
+}

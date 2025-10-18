@@ -1,0 +1,12 @@
+{
+  "page": 1027,
+  "original_text": "Maturity3 = MarketData(:,1);\nSpread3Run = MarketData(:,2);\nSpread3Std = 100*ones(size(Maturity3));\nPrice3 = cdsprice(ZeroData,ProbData,Settle,Maturity3,Spread3Std);\nUpfront3 = Price3/10000000; % Standard notional of 10MM\ndisplay(Upfront3);",
+  "ocr_text": "Maturity3=MarketData(:,1);\n\nSpread3Run=MarketData(:,2);\nSpread3Std=100*ones(size(Maturity3));\nPrice3=cdsprice(ZeroData,ProbData,Settle,Maturity3,Spread3Std);\nUpfront3=Price3/10000000;Standardnotionalof10MM\ndisplay(Upfront3);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 353.36,
+    "x1": 442.17,
+    "y1": 417.82
+  },
+  "confidence": "high"
+}

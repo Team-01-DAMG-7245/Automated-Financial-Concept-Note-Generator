@@ -1,0 +1,12 @@
+{
+  "page": 1180,
+  "original_text": "weeklyTMW = synchronize(weeklyTMW,TMW(:,'Volume'),'weekly','sum');\nhead(weeklyTMW)",
+  "ocr_text": "weeklyTMW=synchronize(weeklyTMW,TMW(:,Volume),weekly,sum);\nhead(weeklyTMW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 612.58,
+    "x1": 447.62,
+    "y1": 633.85
+  },
+  "confidence": "high"
+}

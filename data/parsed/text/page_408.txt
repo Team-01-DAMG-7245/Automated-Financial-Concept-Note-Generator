@@ -1,0 +1,67 @@
+In this example, the region of uncertainty S r0  is specified as an ellipsoid:
+
+S(r0) = {r |(r −r0)′Σr
+−1(r −r0) ≤κ2}
+
+Here, κ - is the uncertainty aversion coefficient that defines how wide the uncertainty region is, and
+Σr is the matrix of estimation errors in expected returns r.
+
+With the addition of the ellipsoid uncertainty to the Markowitz model, the robust optimization
+problem is reformulated as:
+
+Rrobust = max
+ω
+r′ω −λω′Qω −kz | ω ≥0, z ≥0, ω′Σrω −z2 ≤0, ∑1
+Nωi = 1, 0 ≤ω ≤0 . 1
+
+Implement the Strategy Rebalance Functions
+
+The core logic of each strategy is implemented in a rebalance function. A rebalance function is a user-
+defined MATLAB® function that specifies how a strategy allocates capital in a portfolio. The
+rebalance function is an input argument to backtestStrategy. The rebalance function must
+implement the following fixed signature:
+
+function new_weights = allocationFunctionName(current_weights,
+pricesTimetable)
+
+This fixed signature is the API that the backtest framework uses when rebalancing a portfolio. As the
+backtest runs, the backtesting engine calls the rebalance function of each strategy, passing in these
+inputs:
+
+•
+current_weights — Current portfolio weights before rebalancing
+
+•
+pricesTimetable — MATLAB® timetable object containing the rolling window of asset prices.
+
+The backtestStrategy rebalance function uses this information to compute the desired new
+portfolio weights, which are returned to the backtesting engine in the function output new_weights.
+See the Local Functions on page 4-247 sections for the rebalance function for each of the five
+strategies.
+
+Compute Initial Strategy Weights
+
+Use the strategy rebalance functions to compute the initial weights for each strategy. Setting the
+initial weights is important because otherwise the strategies begin the backtest with 100% in cash,
+earning the risk-free rate, until the first rebalance date.
+
+This example uses the first 40 days of the data set (about 2 months) to initialize the strategies. The
+backtest is then run over the remaining data (about 10 months).
+
+warmupPeriod = 40;
+
+The initial weights are calculated by calling the backtestStrategy rebalance function in the same
+way that the backtesting engine will call it. To do so, pass in a vector of current weights (all zeros,
+that is 100% cash) as well as a window of price data that the strategies will use to set the desired
+weights (the warm-up data partition). Using the rebalance functions to compute the initial weights in
+this way is not required. The initial weights are a vector of the initial portfolio weights and can be set
+to any appropriate value. The rebalance functions in this example approximate the state the
+strategies would be in had they been already running at the start of the backtest.
+
+% No current weights (100% cash position).
+current_weights = zeros(1,numAssets);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-240

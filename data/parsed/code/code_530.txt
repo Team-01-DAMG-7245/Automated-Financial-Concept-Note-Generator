@@ -1,0 +1,9 @@
+Page 490
+================================================================================
+
+% Aggregate the inputs into the Brinson asset table
+asset_table = table(Period(:),Name(:),Return(:),Category(:), ...
+    PortfolioWeight(:),BenchmarkWeight(:),...
+    VariableNames=["Period","Name","Return","Category", ...
+    "PortfolioWeight","BenchmarkWeight"]);
+end

@@ -1,0 +1,66 @@
+dXt = B(t, Xt)Xtdt + D(t, Xt)V(t, xt)dWt + Y(t, Xt, Nt)XtdNt
+
+Here:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+B(t,Xt) is an NVars-by-NVars matrix of generalized expected instantaneous rates of return.
+
+•
+D(t,Xt) is an NVars-by-NVars diagonal matrix in which each element along the main diagonal is
+the corresponding element of the state vector.
+
+•
+V(t,Xt) is an NVars-by-NVars matrix of instantaneous volatility rates.
+
+•
+dWt is an NBrowns-by-1 Brownian motion vector.
+
+•
+Y(t,Xt,Nt) is an NVars-by-NJumps matrix-valued jump size function.
+
+•
+dNt is an NJumps-by-1 counting process vector.
+
+Version History
+Introduced in R2020a
+
+R2022a: Perform Quasi-Monte Carlo simulation
+Behavior changed in R2022a
+
+Perform Quasi-Monte Carlo simulation using the name-value arguments MonteCarloMethod and
+QuasiSequence.
+
+R2022b: Perform Brownian bridge and principal components construction
+Behavior changed in R2022b
+
+Perform Brownian bridge and principal components construction using the name-value argument
+BrownianMotionMethod.
+
+References
+
+[1] Aït-Sahalia, Yacine. “Testing Continuous-Time Models of the Spot Interest Rate.” Review of
+Financial Studies, Vol. 9, No. 2 ( Apr. 1996): 385–426.
+
+[2] Aït-Sahalia, Yacine. “Transition Densities for Interest Rate and Other Nonlinear Diffusions.” The
+Journal of Finance, Vol. 54, No. 4 (Aug. 1999): 1361–95.
+
+[3] Glasserman, Paul. Monte Carlo Methods in Financial Engineering, New York: Springer-Verlag,
+2004.
+
+[4] Hull, John C. Options, Futures and Other Derivatives, 7th ed, Prentice Hall, 2009.
+
+[5] Johnson, Norman Lloyd, Samuel Kotz, and Narayanaswamy Balakrishnan. Continuous Univariate
+Distributions, 2nd ed. Wiley Series in Probability and Mathematical Statistics. New York:
+Wiley, 1995.
+
+[6] Shreve, Steven E. Stochastic Calculus for Finance, New York: Springer-Verlag, 2004.
+
+See Also
+simByEuler | merton
+
+simBySolution
+
+15-371

@@ -1,0 +1,5 @@
+Page 123
+================================================================================
+
+DSMSG.SelectedVariableNames = ["Time" "Type"];
+DSLOB.SelectedVariableNames = DSLOB.VariableNames;

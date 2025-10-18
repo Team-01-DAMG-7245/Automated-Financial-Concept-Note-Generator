@@ -1,0 +1,12 @@
+{
+  "page": 1608,
+  "original_text": "nAssets = size(pricesTT, 2);\nnew_weights = ones(1,nAssets);\nnew_weights = new_weights / sum(new_weights);",
+  "ocr_text": "nAssets=size(pricesTT,2);\nnew_weights=ones(1,nAssets);\nnew_weights=new_weights/sum(new_weights);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 447.51,
+    "x1": 333.81,
+    "y1": 479.58
+  },
+  "confidence": "high"
+}

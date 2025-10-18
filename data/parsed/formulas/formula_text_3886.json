@@ -1,0 +1,12 @@
+{
+  "page": 2219,
+  "original_text": "load FundMarketCash\nlogReturns = log(TestData(2:end,:) ./ TestData(1:end - 1,:));\nMu = mean(logReturns(:,1));\nSigma = std(logReturns(:,1),1);\nT = size(logReturns,1);",
+  "ocr_text": "load_FundMarketCash\nlogReturns=log(TestData(2:end,:)./TestData(l:end-1,:));\nMu=mean(logReturns(:,1));\n\nSigma=std(logReturns(:,1),1);\n\nT=size(logReturns,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 518.33,
+    "x1": 420.49,
+    "y1": 572.0
+  },
+  "confidence": "high"
+}

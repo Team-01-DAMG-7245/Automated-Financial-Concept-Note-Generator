@@ -1,0 +1,55 @@
+estimateFrontierByRisk
+
+Estimate optimal portfolios with targeted portfolio risks
+
+Syntax
+
+[pwgt,pbuy,psell] = estimateFrontierByRisk(obj,TargetRisk)
+
+[pwgt,pbuy,psell] = estimateFrontierByRisk( ___ ,Name,Value)
+
+Description
+
+[pwgt,pbuy,psell] = estimateFrontierByRisk(obj,TargetRisk) estimates optimal
+portfolios with targeted portfolio risks for Portfolio, PortfolioCVaR, or PortfolioMAD objects.
+For details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+[pwgt,pbuy,psell] = estimateFrontierByRisk( ___ ,Name,Value) adds name-optional
+name-value pair arguments for Portfolio or PortfolioMAD objects.
+
+Examples
+
+Obtain Portfolios with Targeted Portfolio Risks for a Portfolio Object
+
+To obtain efficient portfolios that have targeted portfolio risks, the estimateFrontierByRisk
+function accepts one or more target portfolio risks and obtains efficient portfolios with the specified
+risks. Assume you have a universe of four assets where you want to obtain efficient portfolios with
+target portfolio risks of 12%, 14%, and 16%. This example uses the default 'direct' method to
+estimate the optimal portfolios with targeted portfolio risks.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+ 
+ p = Portfolio;
+ p = setAssetMoments(p, m, C);
+ p = setDefaultConstraints(p);
+ pwgt = estimateFrontierByRisk(p, [0.12, 0.14, 0.16]);
+
+display(pwgt);
+
+pwgt = 4×3
+
+0.3984    0.2659    0.1416
+    0.3064    0.3791    0.4474
+    0.0882    0.1010    0.1131
+    0.2071    0.2540    0.2979
+
+15
+Functions
+
+15-966

@@ -1,0 +1,63 @@
+Rebalance Function
+
+The rebalance function (“rebalanceFcn” on page 15-0
+) is the user-authored function that contains
+the logic of the strategy. The backtesting engine calls the strategy rebalance function with a fixed set
+of parameters and expects it to return a vector of asset weights representing the new, desired
+portfolio allocation after a rebalance. For more information, see the rebalance functions on page 15-
+247.
+
+Create Strategies
+
+Using the prepared strategy properties, you can create the two strategy objects.
+
+% Create the equal weighted strategy. The rebalance function @equalWeights
+% is defined in the Rebalance Functions section at the end of this example.
+equalWeightStrategy = backtestStrategy("EqualWeight",@equalWeight, ...
+    'RebalanceFrequency',rebalFreq, ...
+    'TransactionCosts',tradingCosts, ...
+    'LookbackWindow',ewLookback, ...
+    'InitialWeights',initialWeights)
+
+equalWeightStrategy = 
+  backtestStrategy with properties:
+
+Name: "EqualWeight"
+              RebalanceFcn: @equalWeight
+        RebalanceFrequency: 20
+          TransactionCosts: [0.0025 0.0050]
+            LookbackWindow: 0
+            InitialWeights: [0.0333 0.0333 0.0333 0.0333 0.0333 0.0333 0.0333 0.0333 0.0333 0.033
+             ManagementFee: 0
+     ManagementFeeSchedule: 1y
+            PerformanceFee: 0
+    PerformanceFeeSchedule: 1y
+         PerformanceHurdle: 0
+                  UserData: [0×0 struct]
+            EngineDataList: [0×0 string]
+
+% Create the "chase returns" strategy.  The rebalance function
+% @chaseReturns is defined in the Rebalance Functions section at the end of this example.
+chaseReturnsStrategy = backtestStrategy("ChaseReturns",@chaseReturns, ...
+    'RebalanceFrequency',rebalFreq, ...
+    'TransactionCosts',tradingCosts, ...
+    'LookbackWindow',chaseLookback, ...
+    'InitialWeights',initialWeights)
+
+chaseReturnsStrategy = 
+  backtestStrategy with properties:
+
+Name: "ChaseReturns"
+              RebalanceFcn: @chaseReturns
+        RebalanceFrequency: 20
+          TransactionCosts: [0.0025 0.0050]
+            LookbackWindow: 11
+            InitialWeights: [0.0333 0.0333 0.0333 0.0333 0.0333 0.0333 0.0333 0.0333 0.0333 0.033
+             ManagementFee: 0
+     ManagementFeeSchedule: 1y
+            PerformanceFee: 0
+
+15
+Functions
+
+15-246

@@ -1,0 +1,58 @@
+% Truncate the payments as well as payment dates for calculation
+    % PaymentDates(1) is the settle date, no need for following calculations
+PaymentDates = PaymentDates(2:end)
+
+PaymentDates = 1×6 datetime
+   01-Dec-2016   01-Jun-2017   01-Dec-2017   01-Jun-2018   01-Dec-2018   01-Jun-2019
+
+Payments = Payments(2:end)
+
+Payments = 1×6
+
+4     4     4     4     4   104
+
+Calculate the discount factors on the payment dates.
+
+DF = zero2disc(interp1(RiskFreeRate.Date, RiskFreeRate.Rate, PaymentDates, 'linear', 'extrap'), P
+
+DF = 1×6
+
+0.9987    0.9959    0.9926    0.9887    0.9845    0.9799
+
+Assume that the recovery amount is a fixed proportion of bond's face value. The bond’s face value is
+100, and the recovery ratio is set to 40% as assumed in bondDefaultBootstrap.
+
+Num = length(Payments);
+RecoveryAmount = repmat(100*0.4, 1, Num)
+
+RecoveryAmount = 1×6
+
+40    40    40    40    40    40
+
+Calculate the probability of default based on the default curve.
+
+DefaultProb1 = bondDefaultBootstrap(ZeroData, MarketData, Settle, 'ZeroCompounding', -1, 'Probabi
+SurvivalProb = 1 - DefaultProb1(:,2)
+
+SurvivalProb = 6×1
+
+0.9680
+    0.9295
+    0.9055
+    0.8823
+    0.8595
+    0.8375
+
+Calculate the model-based clean bond price.
+
+DirtyPrice = DF * (SurvivalProb.*Payments') + (RecoveryAmount.*DF) * (-diff([1;SurvivalProb]));
+ModelPrice = DirtyPrice - AccInt
+
+ModelPrice = 
+109.0200
+
+Compare the repriced bond to the market quote.
+
+bondDefaultBootstrap
+
+15-515

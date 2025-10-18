@@ -1,0 +1,5 @@
+Page 2231
+================================================================================
+
+Note The objective function must be continuous and defined using only the portfolio weights as
+variables. If the portfolio problem has cardinality constraints and/or conditional bounds using

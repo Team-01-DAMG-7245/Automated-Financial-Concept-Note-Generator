@@ -1,0 +1,12 @@
+{
+  "page": 104,
+  "original_text": "timeRange = seconds([36000 36060]); % One minute after 10 AM, when prices were climbing\nxlim(timeRange)\nlegend('Location','SE')\ntitle(\"Exchange Data: One Minute\")",
+  "ocr_text": "timeRange=seconds([3600036060]);Oneminuteafter10AM,whenpriceswereclimbing\nxlim(timeRange)\n\nLegend(Location,SE)\n\ntitle(ExchangeData:OneMinute)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 408.93,
+    "x1": 561.39,
+    "y1": 451.8
+  },
+  "confidence": "high"
+}

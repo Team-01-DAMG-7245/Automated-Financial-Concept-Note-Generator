@@ -1,0 +1,12 @@
+{
+  "page": 742,
+  "original_text": "p = setInitPort(p, pwgt0);\np = simulateNormalScenariosByMoments(p, m, C, 20000);\np = setDefaultConstraints(p);\np = setProbabilityLevel(p, 0.9);",
+  "ocr_text": "p=setInitPort(p,_pwgt0);\np=simulateNormalScenariosByMoments(p,m,C,_20000);\np=setDefaultConstraints(p);\np=setProbabilityLevel(p,0.9);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 377.15,
+    "y1": 189.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 37,
+  "original_text": "DoublePort = Portfolios * 2",
+  "ocr_text": "DoublePort=Portfolios*2",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 136.23,
+    "x1": 236.29,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

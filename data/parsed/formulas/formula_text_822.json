@@ -1,0 +1,12 @@
+{
+  "page": 467,
+  "original_text": "% Create the pie chart labels to improve plot reading.\nlabels = 1:nAssets;\nlabels = string(labels);",
+  "ocr_text": "Createthepiechartlabelstoimproveplotreading.\nlabels=1:nAssets;\nlabels=string(labels);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.83,
+    "x1": 382.57,
+    "y1": 567.89
+  },
+  "confidence": "high"
+}

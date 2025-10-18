@@ -1,0 +1,12 @@
+{
+  "page": 440,
+  "original_text": "% Esimate the lower value for contour plots.\npwgt = estimateFrontier(p,N);\npESG = pwgt'*ESGnumeric;\nminContour = max(pESG); % All ESG scores lower than this have\n                        % overlapped contours.",
+  "ocr_text": "Esimatethelowervalueforcontourplots.\n\npwgt=estimateFrontier(p,N);\n\npESG=pwgt*ESGnumeric;\n\nminContour=max(pESG);AllESGscoreslowerthanthishave\nSoverlappedcontours.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 417.43,
+    "x1": 420.51,
+    "y1": 471.09
+  },
+  "confidence": "high"
+}

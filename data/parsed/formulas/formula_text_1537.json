@@ -1,0 +1,12 @@
+{
+  "page": 774,
+  "original_text": "% Deflate the yields\nintercept = (EstMdlSSM.C*mu')';\ndeflatedYields = yields - intercept;",
+  "ocr_text": "Deflatetheyields\nintercept=(EstMdlSSM.C*mu);\ndeflatedYields=yields-intercept;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 368.99,
+    "x1": 285.05,
+    "y1": 401.06
+  },
+  "confidence": "high"
+}

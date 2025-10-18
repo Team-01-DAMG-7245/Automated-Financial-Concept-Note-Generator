@@ -1,0 +1,13 @@
+Page 2007
+================================================================================
+
+Settle = datetime(2010,6,8);
+RateSpec = intenvset('Rates', [.005 .0075 .01 .014 .02 .025 .03]',...
+'StartDates',Settle, 'EndDates',[datetime(2010,12,8),datetime(2011,6,8),datetime(2012,6,8),dateti
+Maturity = datetime(2020,9,15);
+LegRate = [.025 50];
+LegType = [1 0]; % Fixed/Floating
+LatestFloatingRate = .005;
+[Price, SwapRate, AI, RecCF, RecCFDates, PayCF,PayCFDates] = ...
+swapbyzero(RateSpec, LegRate, Settle, Maturity,'LegType',LegType,...
+'LatestFloatingRate',LatestFloatingRate)

@@ -1,0 +1,57 @@
+Input Arguments
+
+MDL — Stochastic differential equation model
+object
+
+Stochastic differential equation model, specified as an sde, bm, gbm, cev, cir, hwv, heston, sdeddo,
+sdeld, or sdemrd object.
+
+Data Types: object
+
+NPeriods — Number of simulation periods
+positive scalar integer
+
+Number of simulation periods, specified as a positive scalar integer. The value of NPeriods
+determines the number of rows of the simulated output series.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [Paths,Times,Z] = simByEuler(SDE,NPeriods,'DeltaTime',dt)
+
+Method — Method to handle negative values
+'basic' (default) | character vector with values'basic', 'absorption', 'reflection',
+'partial-truncation', 'full-truncation', or 'higham-mao' | string with values "basic",
+"absorption", "reflection", "partial-truncation", "full-truncation", or "higham-
+mao"
+
+Method to handle negative values, specified as the comma-separated pair consisting of 'Method'
+and a character vector or string with a supported value.
+
+Note The Method argument is only supported when using a CIR object. For more information on
+creating a CIR object, see cir.
+
+Data Types: char | string
+
+NTrials — Simulated trials (sample paths) of NPeriods observations each
+1 (single path of correlated state variables) (default) | positive scalar integer
+
+Simulated trials (sample paths) of NPeriods observations each, specified as the comma-separated
+pair consisting of 'NTrials' and a positive scalar integer.
+
+Data Types: double
+
+DeltaTime — Positive time increments between observations
+1 (default) | scalar | column vector
+
+15
+Functions
+
+15-388

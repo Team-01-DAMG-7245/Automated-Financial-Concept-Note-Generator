@@ -1,0 +1,5 @@
+Page 1593
+================================================================================
+
+The strategy rebalance function is implemented as follows. For more information on creating
+strategies and writing rebalance functions, see backtestStrategy.

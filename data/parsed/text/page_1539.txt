@@ -1,0 +1,58 @@
+backtestStrategy
+
+Create backtestStrategy object to define portfolio allocation strategy
+
+Description
+
+Create a backtestStrategy object which defines a portfolio allocation strategy.
+
+Use this workflow to develop and run a backtest:
+
+1
+Define the strategy logic using a backtestStrategy object to specify how the strategy
+rebalances a portfolio of assets.
+
+2
+Use backtestEngine to create a backtestEngine object that specifies the parameters of the
+backtest.
+
+3
+Use runBacktest to run the backtest against historical asset price data and, optionally, trading
+signal data.
+
+4
+Use equityCurve to plot the equity curves of each strategy.
+
+5
+Use summary to summarize the backtest results in a table format.
+
+For more detailed information on this workflow, see “Backtest Workflow” on page 15-275 and
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238.
+
+Creation
+
+Syntax
+
+strategy = backtestStrategy(name,rebalanceFcn)
+strategy = backtestStrategy( ___ ,Name,Value)
+
+Description
+
+strategy = backtestStrategy(name,rebalanceFcn) creates a backtestStrategy object.
+
+strategy = backtestStrategy( ___ ,Name,Value) sets properties on page 15-242 using name-
+value pair arguments and any of the arguments in the previous syntax. You can specify multiple
+name-value pair arguments. For example, strat =
+backtestStrategy('MyStrategy',@myRebalFcn,'TransactionCost',0.005,'LookbackWi
+ndow',20).
+
+Input Arguments
+
+name — Strategy name
+string
+
+Strategy name, specified as a string.
+
+backtestStrategy
+
+15-233

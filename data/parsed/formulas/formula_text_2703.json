@@ -1,0 +1,12 @@
+{
+  "page": 1364,
+  "original_text": "% Create a Portfolio object with the true parameters\np = Portfolio(AssetMean=mean_return,AssetCovar=covariance);\np = setDefaultConstraints(p);",
+  "ocr_text": "CreateaPortfolioobjectwiththetrueparameters\np=Portfolio(AssetMean=mean_return,AssetCovar=covariance);\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 266.23,
+    "x1": 409.67,
+    "y1": 298.29
+  },
+  "confidence": "high"
+}

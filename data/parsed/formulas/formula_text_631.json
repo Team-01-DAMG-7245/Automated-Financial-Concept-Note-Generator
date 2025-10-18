@@ -1,0 +1,12 @@
+{
+  "page": 407,
+  "original_text": "∑i = 1\nN\nσii\n−1, where σii are diagonal elements of the asset return covariance",
+  "ocr_text": "Oi : f\n? ai ) T whereo3;arediagonalelementsoftheassetreturncovariance\nSi=15i",
+  "bbox": {
+    "x0": 224.61,
+    "y0": 419.98,
+    "x1": 556.98,
+    "y1": 442.77
+  },
+  "confidence": "high"
+}

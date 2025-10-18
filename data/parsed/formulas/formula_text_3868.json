@@ -1,0 +1,12 @@
+{
+  "page": 2206,
+  "original_text": "Objective = ecmnobj(Data,Mean,Covariance) evaluates the negative log-likelihood function\nfor ecmnmle.",
+  "ocr_text": "Objective=ecmnobj(Data,Mean,Covariance)evaluatesthenegativelog-likelihoodfunction\nforecmnmle.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 252.58,
+    "x1": 547.81,
+    "y1": 276.21
+  },
+  "confidence": "high"
+}

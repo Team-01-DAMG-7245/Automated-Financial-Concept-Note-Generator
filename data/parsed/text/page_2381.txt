@@ -1,0 +1,51 @@
+geom2arith
+
+Geometric to arithmetic moments of asset returns
+
+Syntax
+
+[ma,Ca] = geom2arith(mg,Cg)
+[ma,Ca] = geom2arith( ___ ,t)
+
+Description
+
+[ma,Ca] = geom2arith(mg,Cg) transforms moments associated with a continuously compounded
+geometric Brownian motion into equivalent moments associated with a simple Brownian motion with
+a possible change in periodicity.
+
+[ma,Ca] = geom2arith( ___ ,t) adds an optional argument t.
+
+Examples
+
+Obtain Geometric to Arithmetic Moments of Asset Returns
+
+This example shows several variations of using geom2arith.
+
+Given geometric mean m and covariance C of monthly total returns, obtain annual arithmetic mean ma
+and covariance Ca. In this case, the output period (1 year) is 12 times the input period (1 month) so
+that the optional input t = 12.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+[ma, Ca] = geom2arith(m, C, 12)
+
+ma = 4×1
+
+0.5508
+    1.0021
+    1.0906
+    1.4802
+
+Ca = 4×4
+
+0.0695    0.0423    0.0196         0
+    0.0423    0.2832    0.1971    0.1095
+    0.0196    0.1971    0.5387    0.3013
+         0    0.1095    0.3013    1.0118
+
+geom2arith
+
+15-1075

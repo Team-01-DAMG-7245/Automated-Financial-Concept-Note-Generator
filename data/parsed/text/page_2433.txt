@@ -1,0 +1,29 @@
+Asset versus a riskless Benchmark (a Benchmark with standard deviation of returns equal to 0) are
+equivalent. This equivalence is not necessarily true if the Benchmark is risky.
+
+More About
+
+Information Ratio
+
+The information ratio quantifies the excess return of a portfolio (or investment) over its benchmark,
+relative to the volatility (or tracking error) of that excess return.
+
+Version History
+Introduced in R2006b
+
+References
+
+[1] Grinold, R. C. and Ronald N. Kahn. Active Portfolio Management. 2nd. Edition. McGraw-Hill, 2000.
+
+[2] Treynor, J. and Fischer Black. "How to Use Security Analysis to Improve Portfolio Selection."
+Journal of Business. Vol. 46, No. 1, January 1973, pp. 66–86.
+
+See Also
+portalpha | sharpe
+
+Topics
+“Performance Metrics Overview” on page 7-2
+
+inforatio
+
+15-1127

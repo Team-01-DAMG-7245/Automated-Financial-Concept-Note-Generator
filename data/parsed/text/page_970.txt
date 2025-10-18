@@ -1,0 +1,62 @@
+Credit Scorecard Modeling Workflow
+
+Create, model, and analyze credit scorecards as follows.
+
+1
+Use screenpredictors from Risk Management Toolbox™ to pare down a potentially large set
+of predictors to a subset that is most predictive of the credit score card response variable. Use
+this subset of predictors when creating the creditscorecard object. In addition, you can use
+Threshold Predictors to interactively set credit scorecard predictor thresholds using the output
+from screenpredictors.
+
+Create a creditscorecard object for credit scorecard analysis by specifying “training” data in
+table format. The training data, sometimes called the modeling view, is the result of multiple data
+preparation tasks (see “About Credit Scorecards” on page 8-49) that must be performed before
+creating a creditscorecard object.
+
+You can use optional input arguments for creditscorecard to specify scorecard properties
+such as the response variable and the GoodLabel. Perform some initial data exploration when
+the creditscorecard object is created, although data analysis is usually done in combination
+with data binning (see step 2). For more information and examples, see creditscorecard and
+step 1 in “Case Study for Credit Scorecard Analysis” on page 8-71.
+
+2
+Create a creditscorecard object using training data.
+
+When you create a creditscorecard object for credit scorecard, you can specify “training”
+data in table format. The training data, sometimes called the modeling view, is the result of
+multiple data preparation tasks (see “About Credit Scorecards” on page 8-49) that must be
+performed before creating a creditscorecard object.
+
+You can use optional input arguments for creditscorecard to specify scorecard properties
+such as the response variable and the GoodLabel. Perform some initial data exploration when
+the creditscorecard object is created, although data analysis is usually done in combination
+with data binning (see step 2). For more information and examples, see creditscorecard and
+step 1 in “Case Study for Credit Scorecard Analysis” on page 8-71.
+
+3
+Bin the data.
+
+Perform manual or automatic binning of the data loaded into the creditscorecard object.
+
+A common starting point is to apply automatic binning to all or selected variables using
+autobinning, report using bininfo, and visualize bin information with respect to bin counts
+and statistics or association measures such as Weight of Evidence (WOE) using plotbins. The
+bins can be modified or fine-tuned either manually using modifybins or with a different
+automatic binning algorithm using autobinning. Bins that show a close-to-linear trend in the
+WOE are frequently desired in the credit scorecard context.
+
+Alternatively, with Risk Management Toolbox, you can use the Binning Explorer app to
+interactively bin. The Binning Explorer enables you to interactively apply a binning algorithm and
+modify bins. For more information, see Binning Explorer.
+
+For more information and examples, see autobinning, modifybins, bininfo, and plotbins
+and step 2 in “Case Study for Credit Scorecard Analysis” on page 8-71.
+
+4
+Fit a logistic regression model.
+
+8
+Credit Risk Analysis
+
+8-52

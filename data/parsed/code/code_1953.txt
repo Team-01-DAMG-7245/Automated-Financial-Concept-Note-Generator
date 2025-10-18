@@ -1,0 +1,5 @@
+Page 1551
+================================================================================
+
+If the strategy does not require any price or signal data history, then you can indicate that the
+rebalance function requires no data by setting the LookbackWindow property to 0.

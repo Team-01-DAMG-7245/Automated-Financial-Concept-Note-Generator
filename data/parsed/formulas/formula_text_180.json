@@ -1,0 +1,12 @@
+{
+  "page": 123,
+  "original_text": "DSLOB = tabularTextDatastore(LOBFileName,ReadVariableNames=false,ReadSize=\"file\");\nDSLOB.VariableNames = [\"AskPrice1\" \"AskSize1\" \"BidPrice1\" \"BidSize1\" ...\n                       \"AskPrice2\" \"AskSize2\" \"BidPrice2\" \"BidSize2\" ...\n                       \"AskPrice3\" \"AskSize3\" \"BidPrice3\" \"BidSize3\" ...\n                       \"AskPrice4\" \"AskSize4\" \"BidPrice4\" \"BidSize4\" ...\n                       \"AskPrice5\" \"AskSize5\" \"BidPrice5\" \"BidSize5\"];",
+  "ocr_text": "DSLOB=tabularTextDatastore(LOBFileName,ReadVariableNames=false,ReadSize=file);\n\nDSLOB.VariableNames=[AskPricelAskSizelBidPricelBidSizel...\nAskPrice2AskSize2_BidPrice2BidSize2...\nAskPrice3AskSize3_BidPrice3_BidSize3...\nAskPrice4AskSize4_BidPrice4BidSize4...\nAskPrice5AskSize5_BidPrice5BidSize5];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 326.34,
+    "x1": 534.31,
+    "y1": 390.81
+  },
+  "confidence": "high"
+}

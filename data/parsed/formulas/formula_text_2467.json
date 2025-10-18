@@ -1,0 +1,12 @@
+{
+  "page": 1275,
+  "original_text": "sigma       = std(returns) * sqrt(252);    % Annualized volatility\ncorrelation = corrcoef(returns);           % Correlated Gaussian disturbances\nGBM1        = gbm(diag(r(ones(1,nIndices))), diag(sigma), 'StartState', X, ...\n                 'Correlation'             , correlation);",
+  "ocr_text": "sigma =std(returns)_*sqrt(252); Annualizedvolatility\n\ncorrelation=corrcoef(returns); *CorrelatedGaussiandisturbances\n\nGBM1 =gbm(diag(r(ones(1,nIndices))),diag(sigma),StartState,X,...\nCorrelation ,correlation);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 322.55,
+    "x1": 512.64,
+    "y1": 365.42
+  },
+  "confidence": "high"
+}

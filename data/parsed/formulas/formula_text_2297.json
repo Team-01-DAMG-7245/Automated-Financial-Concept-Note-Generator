@@ -1,0 +1,12 @@
+{
+  "page": 1178,
+  "original_text": "ans = struct with fields:\n          Size: [1000 1]\n          Type: 'datetime'\n      TimeZone: ''\n    SampleRate: NaN\n     StartTime: 04-Sep-2012\n    NumMissing: 0\n           Min: 04-Sep-2012",
+  "ocr_text": "ans=structwithfields:\nSize:[10001]\nType:datetime\nTimeZone:\nSampleRate:NaN\nStartTime:04-Sep-2012\nNumMissing:0\nMin:04-Sep-2012",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.03,
+    "x1": 236.29,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

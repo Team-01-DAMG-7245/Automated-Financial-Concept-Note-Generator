@@ -1,0 +1,12 @@
+{
+  "page": 2109,
+  "original_text": "Indices = datefind( ___ ,Tolerance) returns a vector of indices to the date numbers in\nSuperset that are present in Subset, plus the optional argument for Tolerance. If no date\nnumbers match, Indices = [].",
+  "ocr_text": "Indices=datefind( ,Tolerance)returnsavectorofindicestothedatenumbersin\nSupersetthatarepresentinSubset,plustheoptionalargumentforTolerance.Ifnodate\nnumbersmatch,Indices=[].",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 291.12,
+    "x1": 522.79,
+    "y1": 326.75
+  },
+  "confidence": "high"
+}

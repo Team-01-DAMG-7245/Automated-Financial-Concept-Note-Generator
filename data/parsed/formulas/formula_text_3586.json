@@ -1,0 +1,12 @@
+{
+  "page": 2022,
+  "original_text": "RateSpec = intenvset('StartDates', Settle, 'EndDates', CurveDates,...\n'Rates', ZeroRates)",
+  "ocr_text": "RateSpec=intenvset(StartDates,Settle,_EndDates,CurveDates,...\nRates,ZeroRates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 548.24,
+    "x1": 463.87,
+    "y1": 569.51
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,80 @@
+Working with a Riskless Asset
+
+You can specify a riskless asset with the mean and covariance of asset returns in the AssetMean and
+AssetCovar properties such that the riskless asset has variance of 0 and is completely uncorrelated
+with all other assets. In this case, the Portfolio object uses a separate RiskFreeRate property
+that stores the rate of return of a riskless asset. Thus, you can separate your universe into a riskless
+asset and a collection of risky assets. For example, assume that your riskless asset has a return in the
+scalar variable r0, then the property for the RiskFreeRate is set using the Portfolio object:
+
+r0 = 0.01/12;
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+
+p = Portfolio('RiskFreeRate', r0, 'AssetMean', m, 'AssetCovar', C);
+disp(p.RiskFreeRate)
+
+8.3333e-004
+
+Note If your problem has a budget constraint such that your portfolio weights must sum to 1, then
+the riskless asset is irrelevant.
+
+See Also
+Portfolio | setAssetMoments | estimateAssetMoments | getAssetMoments
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-52

@@ -1,0 +1,12 @@
+{
+  "page": 1917,
+  "original_text": "CouponRate =  0.05;\nSettle =  datetime('02-Jan-02','Locale','en_US');\nMaturity =  datetime('31-Mar-02','Locale','en_US');\nIssueDate =  datetime('1-Oct-01','Locale','en_US');\nAccrInt = cdai(CouponRate, Settle, Maturity, IssueDate)",
+  "ocr_text": "CouponRate=_0.05;\nSettle=datetime(02-Jan-02,Locale,en_US);\nMaturity=datetime(31-Mar-02,Locale,en_US);\nIssueDate=datetime(1-Oct-01,Locale,en_US);\nAccrInt=cdai(CouponRate,Settle,Maturity,IssueDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 635.38,
+    "x1": 387.99,
+    "y1": 689.05
+  },
+  "confidence": "high"
+}

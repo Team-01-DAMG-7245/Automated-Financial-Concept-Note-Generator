@@ -1,0 +1,82 @@
+disp(results)
+
+Asset      Weight 
+    ________    _______
+
+{'AA'  }     1.5389
+    {'AXP' }    0.35545
+    {'C'   }     9.6533
+    {'DD'  }     4.0684
+    {'HPQ' }     17.699
+    {'JPM' }     21.565
+    {'MCD' }     26.736
+    {'MO'  }     13.648
+    {'MSFT'}     2.6858
+    {'UTX' }     2.0509
+
+fprintf('Active return for Max. Info Ratio portfolio is %0.2f%%\n', optPortRetn*25200);
+
+Active return for Max. Info Ratio portfolio is 12.14%
+
+fprintf('Tracking error for Max. Info Ratio portfolio is %0.2f%%\n', optPortRisk*sqrt(252)*100);
+
+Tracking error for Max. Info Ratio portfolio is 6.32%
+
+See Also
+Portfolio | inforatio | fminbnd
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Performance Metrics Overview” on page 7-2
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+Portfolio Optimization Against a Benchmark
+
+4-209

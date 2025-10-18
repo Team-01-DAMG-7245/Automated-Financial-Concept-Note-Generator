@@ -1,0 +1,45 @@
+nexttile
+pie(wMinVar)
+title('Minimum Variance Portfolio',Position=[0,1.5]);
+% Risk parity portfolio
+nexttile
+pie(wRP)
+title('Risk Parity Portfolio',Position=[0,1.5]);
+
+% Add legend
+lgd = legend({'1','2','3','4'});
+lgd.Layout.Tile = 'east';
+
+The portfolio allocation of the minimum variance portfolio sets all assets with the smallest risk to
+their maximum (30%). On the other hand, the risk parity allocation sets only the first two assets to
+30% and the last two are more balanced. This result is a simple example of how the risk parity
+allocation helps to diversify a portfolio.
+
+See Also
+estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk | estimateCustomObjectivePortfolio
+
+Related Examples
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Solve Tracking Error Portfolio Problems” on page 4-343
+
+•
+“Solve Problem for Minimum Tracking Error with Net Return Constraint” on page 4-349
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-360

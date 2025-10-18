@@ -1,0 +1,35 @@
+Create Hierarchical Risk Parity Portfolio
+
+This example shows how to compute a hierarchical risk parity (HRP) portfolio. You can use HRP as a
+technique for portfolio diversification where the assets are divided and weighted according to a
+hierarchical tree structure. The weights of the assets within a cluster and between clusters can be
+assigned in many ways. A few ideas of the ways to allocate the weights are:
+
+•
+Compute an inverse variance portfolio within each cluster. Then, allocate weights to each cluster
+using a value proportional to the inverse of the variance of the cluster's portfolio.
+
+•
+Compute a risk parity portfolio within each cluster. Then, use a risk parity allocation strategy to
+assign each cluster's weights. The risk parity between clusters uses the covariance matrix
+between the cluster's portfolios. This example focuses on this allocation strategy.
+
+•
+Use a bisection approach like the one described in Lopez de Prado [1 on page 4-300]. For more
+information, see the example Asset Allocation - Hierarchical Risk Parity.
+
+Begin by loading the data and looking at the correlation between the assets returns.
+
+% Load data
+assetRetn = readmatrix("./retns_assets.txt");
+[nSample,nAssets] = size(assetRetn);
+
+% Compute covariance and correlation matrices
+Sigma = cov(assetRetn);
+C = corrcov(Sigma);
+heatmap(C);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-296

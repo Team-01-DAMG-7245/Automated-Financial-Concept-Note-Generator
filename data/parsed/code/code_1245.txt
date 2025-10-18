@@ -1,0 +1,9 @@
+Page 1275
+================================================================================
+
+When working with copulas, it is often convenient to allow the random number generator function
+Z(t,X) to induce dependence (of which the traditional notion of linear correlation is a special case)
+with the copula, and to induce magnitude or scale of variation (similar to volatility or standard
+deviation) with the semi-parametric CDF and inverse CDF transforms. Since the CDF and inverse
+CDF transforms of each index inherit the characteristics of historical returns, this also explains why
+the returns are now centered.

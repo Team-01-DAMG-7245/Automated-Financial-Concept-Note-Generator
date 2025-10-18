@@ -1,0 +1,12 @@
+{
+  "page": 71,
+  "original_text": "Maturity = '26-Dec-2002';\nInitialDiscount = 0.0161;\nPurchaseDate = '26-Sep-2002';\nSaleDate = '26-Oct-2002';\nRepoRate = 0.0149;\nBreakevenDiscount = tbillrepo(RepoRate, InitialDiscount, ... \nPurchaseDate, SaleDate, Maturity)",
+  "ocr_text": "Maturity=26-Dec-2002;\n\nInitialDiscount=0.0161;\n\nPurchaseDate=26-Sep-2002;\n\nSaleDate=26-Oct-2002;\n\nRepoRate=0.0149;\nBreakevenDiscount=tbillrepo(RepoRate,InitialDiscount,...\nPurchaseDate,SaleDate,Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 613.06,
+    "x1": 420.52,
+    "y1": 688.33
+  },
+  "confidence": "high"
+}

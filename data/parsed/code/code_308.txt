@@ -1,0 +1,11 @@
+Page 306
+================================================================================
+
+•
+covarianceDenoising computes a covariance estimate from a data sample or from an initial
+covariance estimate (usually the standard covariance estimate from cov). The
+covarianceDenoising function reduces the noise in the estimator generated from using a finite
+sample. Unlike covarianceShrinkage, the covarianceDenoising function differentiates
+between the noise and the signal in the data to pull only the eigenvalues associated with noise
+towards a target value. This technique results in an estimate that decreases noise while increasing
+the signal.

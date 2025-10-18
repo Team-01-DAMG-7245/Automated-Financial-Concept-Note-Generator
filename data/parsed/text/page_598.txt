@@ -1,0 +1,61 @@
+StepFcn: @(Action,LoggedSignals)RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvCons
+    ResetFcn: @()RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Test_Sell)
+        Info: [1×1 struct]
+
+Validate Testing Environment Reset and Step Functions for Sell Trades
+
+Now, validate the testing environment using reset and step function handles.
+
+InitialObservation = reset(RL_OptimalExecution_Testing_Environment_Sell);
+
+Reset!
+
+InitialObservation
+
+InitialObservation = 1×4
+
+2738          12           0           0
+
+[~,Reward1,~,LoggedSignals1] = step( ...
+    RL_OptimalExecution_Testing_Environment_Sell,TradingShares_Step_TWAP_Train_Sell(1));
+LoggedSignals1
+
+LoggedSignals1 = struct with fields:
+               IntervalIdx: 1
+                HorizonIdx: 1
+    CurrentInventoryShares: 2624
+              ArrivalPrice: 26.8000
+            ExecutedShares: 114
+            ExecutedPrices: 26.8000
+     HorizonExecutedShares: [60×1 double]
+     HorizonExecutedPrices: [60×1 double]
+                  IS_Agent: [1164×1 double]
+                    Reward: [1164×1 double]
+    NumIntervalsPerHorizon: 12
+               NumHorizons: 97
+                 NumLevels: 5
+
+Reward1
+
+Reward1 = 
+0
+
+[~,Reward2,~,LoggedSignals2] = step( ...
+    RL_OptimalExecution_Testing_Environment_Sell,10);
+LoggedSignals2
+
+LoggedSignals2 = struct with fields:
+               IntervalIdx: 2
+                HorizonIdx: 1
+    CurrentInventoryShares: 2614
+              ArrivalPrice: 26.8000
+            ExecutedShares: 10
+            ExecutedPrices: 26.7900
+     HorizonExecutedShares: [60×1 double]
+     HorizonExecutedPrices: [60×1 double]
+                  IS_Agent: [1164×1 double]
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-430

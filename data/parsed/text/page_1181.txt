@@ -1,0 +1,65 @@
+30-Sep-2012      97.3    103.15     96.68     99.66    3.3761e+07
+    07-Oct-2012     99.76    106.61      98.7    104.23    3.1299e+07
+    14-Oct-2012    104.54    109.75    100.55    103.77    3.1534e+07
+    21-Oct-2012    103.84    104.32     96.95     97.41    3.1706e+07
+
+To perform calculations on entries in a timetable, use the MATLAB rowfun function to apply a
+function to each row of a weekly frequency timetable.
+
+returnFunc = @(open,high,low,close,volume) log(close) - log(open);
+weeklyReturn = rowfun(returnFunc,weeklyTMW,'OutputVariableNames',{'Return'});
+
+weeklyStd = retime(TMW(:,'Close'),'weekly',@std);
+weeklyStd.Properties.VariableNames{'Close'} = 'Volatility';
+
+weeklyTMW = [weeklyReturn,weeklyStd,weeklyTMW]
+
+weeklyTMW=208×7 timetable
+       Time          Return       Volatility     Open      High      Low      Close       Volume 
+    ___________    ___________    __________    ______    ______    ______    ______    _________
+
+02-Sep-2012      -0.004912     0.59386         100    102.38     98.45     99.51    2.7279e+0
+    09-Sep-2012      -0.022309     0.63563       99.72    101.55     96.52     97.52    2.8518e+0
+    16-Sep-2012      -0.037894     0.93927       97.35     97.52      92.6     93.73    2.9151e+0
+    23-Sep-2012       0.039817      2.0156       93.55     98.03     92.25     97.35     3.179e+0
+    30-Sep-2012       0.023965      1.1014        97.3    103.15     96.68     99.66    3.3761e+0
+    07-Oct-2012       0.043833      1.3114       99.76    106.61      98.7    104.23    3.1299e+0
+    14-Oct-2012     -0.0073929      1.8097      104.54    109.75    100.55    103.77    3.1534e+0
+    21-Oct-2012      -0.063922      2.1603      103.84    104.32     96.95     97.41    3.1706e+0
+    28-Oct-2012      -0.028309      0.9815       97.45      99.1     92.58     94.73    1.9866e+0
+    04-Nov-2012    -0.00010566       1.224       94.65      96.1     90.82     94.64    3.5043e+0
+    11-Nov-2012       0.077244      2.4854       94.39    103.98     93.84    101.97    3.0624e+0
+    18-Nov-2012       0.022823     0.55896      102.23    105.27    101.24    104.59    2.5803e+0
+    25-Nov-2012      -0.012789       1.337      104.66    106.02    100.85    103.33    3.1402e+0
+    02-Dec-2012      -0.043801      0.2783      103.37    103.37     97.69     98.94    3.2136e+0
+    09-Dec-2012      -0.063475      1.9826       99.02     99.09     91.34     92.93    3.4447e+0
+    16-Dec-2012      0.0025787      1.2789       92.95      94.2     88.58     93.19    3.3247e+0
+      ⋮
+
+See Also
+timetable | retime | synchronize | timerange | withtol | vartype | issorted | sortrows |
+unique | diff | isregular | rmmissing | fillmissing
+
+Related Examples
+
+•
+“Select Times in Timetable”
+
+•
+“Resample and Aggregate Data in Timetable”
+
+•
+“Combine Timetables and Synchronize Their Data”
+
+•
+“Retime and Synchronize Timetable Variables Using Different Methods”
+
+•
+“Clean Timetable with Missing, Duplicate, or Nonuniform Times”
+
+•
+“Convert Financial Time Series Objects (fints) to Timetables” on page 11-2
+
+Use Timetables in Finance
+
+11-11

@@ -1,0 +1,12 @@
+{
+  "page": 549,
+  "original_text": "numPortfolios = 15;\npwgt = estimateFrontier(p,numPortfolios);",
+  "ocr_text": "numPortfolios=15;\npwgt=estimateFrontier(p,numPortfolios);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.03,
+    "x1": 312.14,
+    "y1": 147.29
+  },
+  "confidence": "high"
+}

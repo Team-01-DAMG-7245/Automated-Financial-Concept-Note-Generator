@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "Reward = stepReward - c*stepReward.^2;",
+  "ocr_text": "Reward=stepReward-c*stepReward.*2;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.83,
+    "x1": 295.88,
+    "y1": 546.29
+  },
+  "confidence": "high"
+}

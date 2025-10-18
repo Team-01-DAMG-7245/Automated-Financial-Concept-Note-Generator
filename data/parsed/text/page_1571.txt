@@ -1,0 +1,60 @@
+Data Types: object
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: backtester =
+backtestEngine(strategies,'RiskFreeRate',0.02,'InitialPortfolioValue',1000,'R
+atesConvention',"Annualized",'Basis',2)
+
+RiskFreeRate — Risk free rate
+0 (default) | numeric | timetable
+
+Risk free rate, specified as the comma-separated pair consisting of 'RiskFreeRate' and a scalar
+numeric or a one-column timetable.
+
+Note If you specify a timetable:
+
+•
+The dates in the specified timetable must include the start and end dates of the backtest.
+
+•
+The series of dates in the specified timetable between the start and end dates (inclusive) must
+correspond exactly to the corresponding series of dates in the assetPrices timetable.
+
+If RatesConvention is "Annualized", then RiskFreeRate specifies an annualized rate.
+
+If RatesConvention is "PerStep", then the RiskFreeRate is a decimal percentage and
+represents the risk free rate for one time step in the backtest. For example, if the backtest uses daily
+asset price data, then the RiskFreeRate value must be the daily rate of return for cash.
+
+Data Types: double | timetable
+
+CashBorrowRate — Cash borrowing rate
+0 (default) | numeric | timetable
+
+Cash borrowing rate, specified as the comma-separated pair consisting of 'CashBorrowRate' and a
+scalar numeric or a one-column timetable.
+
+Note If you specify a timetable:
+
+•
+The dates in the specified timetable must include the start and end dates of the backtest.
+
+•
+The series of dates in the specified timetable between the start and end dates (inclusive) must
+correspond exactly to the corresponding series of dates in the assetPrices timetable.
+
+The CashBorrowRate specifies the rate of interest accrual on negative cash balances (margin)
+during the backtest.
+
+If RatesConvention is "Annualized", then CashBorrowRate specifies an annualized rate.
+
+backtestEngine
+
+15-265

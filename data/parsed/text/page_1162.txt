@@ -1,0 +1,44 @@
+structure in time series data. By estimating the parameters of the ARIMA model, you can generate
+residuals that are approximately independent. To address heteroskedasticity in the equity index
+return data, you can use arima with the Glosten-Jagannathan-Runkle GARCH (GJR) model. GJR
+models are effective in capturing the time-varying volatility observed in financial return series. By
+estimating the parameters of the GJR model, you can generate standardized residuals with a constant
+variance.
+
+Extract the filtered residuals and conditional variances from the returns of the equity index.
+
+model     = arima('AR', NaN, 'Distribution', 't', 'Variance', gjr(1,1));
+nIndices  = size(Data,2);        % Number of indices
+residuals = NaN(T, nIndices);    % Preallocate storage
+variances = NaN(T, nIndices);
+fit       = cell(nIndices,1);
+
+options   = optimoptions(@fmincon, 'Display', 'off', ...
+    'Diagnostics', 'off', 'Algorithm', 'sqp', 'TolCon', 1e-7);
+
+for i = 1:nIndices
+    fit{i} = estimate(model, returns(:,i), 'Display', 'off', 'Options', options);
+    [residuals(:,i), variances(:,i)] = infer(fit{i}, returns(:,i));
+end
+
+For the TSX Composite index, compare the model residuals and the corresponding conditional
+standard deviations filtered from the raw returns. The lower graph clearly shows the variation in
+volatility (heteroskedasticity) of the filtered residuals.
+
+figure
+subplot(2,1,1)
+plot(dates(2:end), residuals(:,index))
+xlabel('Date')
+ylabel('Residual')
+title ('Filtered Residuals')
+
+subplot(2,1,2)
+plot(dates(2:end), sqrt(variances(:,index)))
+xlabel('Date')
+ylabel('Volatility')
+title ('Filtered Conditional Standard Deviations')
+
+10
+Solving Sample Problems
+
+10-64

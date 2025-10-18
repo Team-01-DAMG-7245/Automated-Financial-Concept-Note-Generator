@@ -1,0 +1,12 @@
+{
+  "page": 1532,
+  "original_text": "RoughHeston = roughheston( ___ ,Name=Value) creates a RoughHeston object with additional\noptions specified by one or more name-value arguments to set the properties on page 15-229.",
+  "ocr_text": "RoughHeston=roughheston(___,Name=Value)createsaRoughHestonobjectwithadditional\noptionsspecifiedbyoneormorename-valueargumentstosetthepropertiesonpage15-229.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 695.36,
+    "x1": 556.79,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

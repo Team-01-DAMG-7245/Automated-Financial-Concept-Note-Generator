@@ -1,0 +1,12 @@
+{
+  "page": 2097,
+  "original_text": "BankText = cur2str(Value,Digits) returns the given value in bank format.",
+  "ocr_text": "BankText=cur2str(Value,Digits)returnsthegivenvalueinbankformat.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.51,
+    "x1": 464.88,
+    "y1": 256.14
+  },
+  "confidence": "high"
+}

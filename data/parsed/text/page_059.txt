@@ -1,0 +1,61 @@
+Pricing and Computing Yields for Fixed-Income Securities
+
+In this section...
+
+“Introduction” on page 2-15
+
+“Fixed-Income Terminology” on page 2-15
+
+“Framework” on page 2-18
+
+“Default Parameter Values” on page 2-18
+
+“Coupon Date Calculations” on page 2-20
+
+“Yield Conventions” on page 2-21
+
+“Pricing Functions” on page 2-21
+
+“Yield Functions” on page 2-21
+
+“Fixed-Income Sensitivities” on page 2-22
+
+Introduction
+
+The Financial Toolbox product provides functions for computing accrued interest, price, yield,
+convexity, and duration of fixed-income securities. Various conventions exist for determining the
+details of these computations. The Financial Toolbox software supports conventions specified by the
+Securities Industry and Financial Markets Association (SIFMA), used in the US markets, the
+International Capital Market Association (ICMA), used mainly in the European markets, and the
+International Swaps and Derivatives Association (ISDA). For historical reasons, SIFMA is referred to
+in Financial Toolbox documentation as SIA and ISMA is referred to as International Capital Market
+Association (ICMA). Financial Instruments Toolbox™supports additional functionality for pricing
+fixed-income securities. For more information, see “Price Interest-Rate Instruments” (Financial
+Instruments Toolbox).
+
+Fixed-Income Terminology
+
+Since terminology varies among texts on this subject, here are some basic definitions that apply to
+these Financial Toolbox functions.
+
+The settlement date of a bond is the date when money first changes hands; that is, when a buyer pays
+for a bond. It need not coincide with the issue date, which is the date a bond is first offered for sale.
+
+The first coupon date and last coupon date are the dates when the first and last coupons are paid,
+respectively. Although bonds typically pay periodic annual or semiannual coupons, the length of the
+first and last coupon periods may differ from the standard coupon period. The toolbox includes price
+and yield functions that handle these odd first and/or last periods.
+
+Successive quasi-coupon dates determine the length of the standard coupon period for the fixed
+income security of interest, and do not necessarily coincide with actual coupon payment dates. The
+toolbox includes functions that calculate both actual and quasi-coupon dates for bonds with odd first
+and/or last periods.
+
+Fixed-income securities can be purchased on dates that do not coincide with coupon payment dates.
+In this case, the bond owner is not entitled to the full value of the coupon for that period. When a
+bond is purchased between coupon dates, the buyer must compensate the seller for the pro-rata
+share of the coupon interest earned from the previous coupon payment date. This pro-rata share of
+
+Pricing and Computing Yields for Fixed-Income Securities
+
+2-15

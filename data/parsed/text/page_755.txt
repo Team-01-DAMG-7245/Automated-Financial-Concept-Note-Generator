@@ -1,0 +1,21 @@
+CVaR and Mean-Variance Efficient Frontier Comparison
+
+Create the Portfolio object. Use AssetScenarios from the simulation to estimate the assets
+moments. Notice that, unlike for the PortfolioCVaR object, only an estimate of the assets moments
+is required to fully specify a mean-variance portfolio.
+
+pmv = Portfolio('Name','Mean-Variance Portfolio Five Hedging Levels',...
+   'AssetList',{'Stock','Hedge50','Hedge75','Hedge90','Hedge95'});
+pmv = estimateAssetMoments(pmv, AssetScenarios);
+pmv = setDefaultConstraints(pmv);
+
+% Estimate the efficient frontier to obtain portfolio weights
+pwgtmv = estimateFrontier(pmv);
+
+% Plot the efficient frontier
+figure;
+plotFrontier(pmv, pwgtmv);
+
+Hedging Using CVaR Portfolio Optimization
+
+5-129

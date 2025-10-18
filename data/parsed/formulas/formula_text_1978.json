@@ -1,0 +1,12 @@
+{
+  "page": 1026,
+  "original_text": "fprintf('   Short \\t $ %8.2f \\t $ %8.2f \\t $ %8.2f \\t\\n', ...\n   Price2(2)+AccPrem2(2), AccPrem2(2), Price2(2));",
+  "ocr_text": "fprintf( Shortt8.2f(t8.2f(t8.2f(tn,...\nPrice2(2)+AccPrem2(2),AccPrem2(2),Price2(2));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 452.23,
+    "x1": 420.52,
+    "y1": 473.49
+  },
+  "confidence": "high"
+}

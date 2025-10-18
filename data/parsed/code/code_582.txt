@@ -1,0 +1,8 @@
+Page 539
+================================================================================
+
+% Compute p tilde before the cdf.
+    pTilde = 1/sigma*(log(WGrid'./WGrid) - (mu-(sigma^2)/2));
+    % Auxiliary matrices for edge cases (j = 1 and j = i_max)
+    pTildeAuxUB = [pTilde(:,2:end) inf(nWealthNodes,1)];
+    pTildeAuxLB = [-inf(nWealthNodes,1) pTilde(:,2:end)];

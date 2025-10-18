@@ -1,0 +1,35 @@
+The contour levels now indicate capital requirements as a percentage of portfolio value. The two
+scenarios above, profits of 10% with spread of 3.5%, and profits of -2.5% and spread of 2%, result in
+capital requirements near 2.75%. The worst-case point from the historical data yields a capital
+requirement of about 3%.
+
+This visualization can also be used, for example, as part of a reverse stress test analysis. Critical
+levels of capital can be determined first, and the figure can be used to determine regions of risk
+factor values (in this case CPF and SPR) that lead to those critical levels.
+
+Instead of historical observations of CPF and SPR, an empirical distribution for the risk factors can be
+simulated using, for example, a vector autoregressive (VAR) model from Econometrics Toolbox™. The
+capital requirements corresponding to each default probability level can be found by simulation if a
+closed form formula is not available, and the same plots can be generated. For large simulations, a
+distributed computing implementation using Parallel Computing Toolbox™ or MATLAB® Parallel
+Server™ can make the process more efficient.
+
+Appendix: Modeling Full Transition Matrices
+
+Transition matrices change in time, and a full description of their dynamics requires working with
+multi-dimensional time series. There are, however, techniques that exploit the particular structure of
+transition matrices to reduce the dimensionality of the problem. In [8 on page 8-43], for example, a
+single parameter related to the proportion of downgrades is used, and both [6 on page 8-43] and [8
+on page 8-43] describe a method to shift transition probabilities using a single parameter. The latter
+approach is shown in this appendix.
+
+The method takes the TTC transition matrix as a baseline.
+
+tmTTC = transprobbytotals(totalsByRtg);
+Example_DisplayTransitions(tmTTC,[], ...
+   {'AAA','AA','A','BBB','BB','B','CCC'}, ...
+   {'AAA','AA','A','BBB','BB','B','CCC','D','NR'})
+
+Forecasting Corporate Default Rates
+
+8-39

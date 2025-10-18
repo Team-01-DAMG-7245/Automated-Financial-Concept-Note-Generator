@@ -1,0 +1,12 @@
+{
+  "page": 804,
+  "original_text": "p = PortfolioMAD('Scenarios', AssetScenarios, ...\n'LowerBound', 0, 'LowerBudget', 1, 'UpperBudget', 1)",
+  "ocr_text": "p=PortfolioMAD(Scenarios,AssetScenarios,...\nLowerBound,0,LowerBudget,1,_UpperBudget,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 234.39,
+    "x1": 290.36,
+    "y1": 249.51
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 511,
+  "original_text": "% Define a Portfolio object.\np = Portfolio;\np = estimateAssetMoments(p,assetsTT);\n% Specify constraints for a long-only, fully invested portfolio.\np = setDefaultConstraints(p);\nplotFrontier(p);",
+  "ocr_text": "sDefineaPortfolioobject.\n\np=Portfolio;\n\np=estimateAssetMoments(p,assetsTT);\nSpecifyconstraintsforalong-only,fullyinvestedportfolio.\np=setDefaultConstraints(p);\n\nplotFrontier(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 474.43,
+    "x1": 436.75,
+    "y1": 538.89
+  },
+  "confidence": "high"
+}

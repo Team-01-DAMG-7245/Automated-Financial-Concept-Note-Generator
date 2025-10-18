@@ -1,0 +1,58 @@
+p = PortfolioCVaR;
+p = setEquality(p, A, b);
+[AEquality, bEquality] = getEquality(p)
+
+AEquality = 1×5
+
+1     1     1     0     0
+
+bEquality = 
+0.5000
+
+Obtain Equality Constraints for a PortfolioMAD Object
+
+Suppose you have a portfolio of five assets and you want to ensure that the first three assets are 50%
+of your portfolio. Given a PortfolioMAD object p, set the linear equality constraints and obtain the
+values for AEquality and bEquality:
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioMAD;
+p = setEquality(p, A, b);
+[AEquality, bEquality] = getEquality(p)
+
+AEquality = 1×5
+
+1     1     1     0     0
+
+bEquality = 
+0.5000
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+Output Arguments
+
+AEquality — Matrix to form linear equality constraints
+matrix
+
+15
+Functions
+
+15-1092

@@ -1,0 +1,12 @@
+{
+  "page": 751,
+  "original_text": "% Valuation date\nValuation = datetime(2012,1,1);",
+  "ocr_text": "Valuationdate\nValuation=datetime(2012,1,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 427.24,
+    "x1": 257.95,
+    "y1": 448.51
+  },
+  "confidence": "high"
+}

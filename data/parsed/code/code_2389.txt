@@ -1,0 +1,8 @@
+Page 2253
+================================================================================
+
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = setInitPort(p, pwgt0);
+[pwgt, pbuy, psell] = estimateFrontier(p);

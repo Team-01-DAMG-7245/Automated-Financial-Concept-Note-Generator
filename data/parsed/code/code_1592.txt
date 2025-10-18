@@ -1,0 +1,8 @@
+Page 1452
+================================================================================
+
+When you invoke these parameters with inputs, they behave like functions, giving the impression of
+dynamic behavior. The parameters accept the observation time t and a state vector Xt, and return an
+array of appropriate dimension. Even if you originally specified an input as an array, hwv treats it as a
+static function of time and state, by that means guaranteeing that all parameters are accessible by
+the same interface.

@@ -1,0 +1,12 @@
+{
+  "page": 1594,
+  "original_text": "disp(table(allDates(1),rebalanceDates(1),minLookback,'VariableNames',{'First Day of Data','Backte\nfprintf('\\n\\n');\nnumHistory = rebalanceIndices(2:end);\nsufficient = repmat(\"No\",size(numHistory));\nsufficient(numHistory > minLookback) = \"Yes\";\ndisp(table(rebalanceDates(2:end),rebalanceIndices(2:end),sufficient,'VariableNames',{'Rebalance D",
+  "ocr_text": "disp(table(allDates(1),rebalanceDates(1),minLookback,VariableNames,{FirstDayofData,Backt\nfprintf(nn);\n\nnumHistory=rebalanceIndices(2:end);\n\nsufficient=repmat(No,size(numHistory));\n\nsufficient(numHistory=minLookback)=Yes;\ndisp(table(rebalanceDates(2:end),rebalanceIndices(2:end),sufficient,VariableNames,{Rebalance",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 329.48,
+    "x1": 615.59,
+    "y1": 393.94
+  },
+  "confidence": "high"
+}

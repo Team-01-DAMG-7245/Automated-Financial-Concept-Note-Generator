@@ -1,0 +1,12 @@
+{
+  "page": 202,
+  "original_text": "p = Portfolio('numassets',5);\np.defaultforAssetList = 'ETF'; \np = setAssetList(p);\ndisp(p.AssetList)",
+  "ocr_text": "p=Portfolio(numassets,5);\np.defaultforAssetList=ETF;\np=setAssetList(p);\ndisp(p.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 655.04,
+    "x1": 257.97,
+    "y1": 697.9
+  },
+  "confidence": "high"
+}

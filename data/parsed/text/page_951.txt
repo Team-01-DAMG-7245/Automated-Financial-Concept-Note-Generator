@@ -1,0 +1,38 @@
+It makes sense to translate the prediction errors into a monetary measure. Here you can measure the
+impact of the prediction error on a simplified framework for generating loss reserves in an institution.
+
+Assume a homogeneous portfolio, where all credits have the same probability of default, the same
+loss given default (LGD), and the same exposure at default (EAD). Both LGD and EAD are assumed to
+be known. For simplicity, keep these values constant for the 10 years of the exercise. Set LGD at 45%,
+and EAD per bond at 100 million. The portfolio is assumed to have a thousand bonds, so the total
+value of the portfolio, the total EAD, is 100 billion.
+
+The predicted default rate for year t, determined at the end of year t-1, is used to calculate the
+expected loss for year t
+
+ELt = EADt × LGDt × PredictedDefaultRatet
+
+This is the amount added to the loss reserves at the start of year t. At the end of the year, the actual
+losses are known
+
+ALt = EADt × LGDt × ObservedDefaultRatet
+
+Assume that unused loss reserves remain in the reserves fund. The starting balance in reserves at the
+beginning of the exercise is set to zero. If the actual losses surpass the expected loss, unused
+reserves accumulated over the years are used first, and only if these run out, capital is used to cover
+a shortfall. All this translates into the following formula
+
+Reservest = Reservest −1 + ELt −ALt
+
+or equivalently
+
+Reservest = ∑
+s = 1
+
+t
+
+ELt −ALt
+
+Forecasting Corporate Default Rates
+
+8-33

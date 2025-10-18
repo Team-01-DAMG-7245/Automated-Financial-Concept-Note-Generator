@@ -1,0 +1,8 @@
+Page 48
+================================================================================
+
+Some MATLAB functions accept numeric data types but not datetime values as inputs. To apply these
+functions to your date and time data, first, convert datetime values to meaningful numeric values, and
+then call the function. For example, the log function accepts double inputs but not datetime
+inputs. Suppose that you have a datetime array of dates spanning the course of a research study or
+experiment.

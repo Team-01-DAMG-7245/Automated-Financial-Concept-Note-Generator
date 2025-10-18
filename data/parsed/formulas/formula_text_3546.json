@@ -1,0 +1,12 @@
+{
+  "page": 1985,
+  "original_text": "f =\nFrequency of quotes for the yield. Default is 2 for Basis values 0 to 7 and 13\nand 1 for Basis values 8 to 12. The default can be overridden by specifying the\nCompoundingFrequency name-value pair.",
+  "ocr_text": "f= Frequencyofquotesfortheyield.Defaultis2forBasisvalues0to7and13\nand1forBasisvalues8to12.Thedefaultcanbeoverriddenbyspecifyingthe\nCompoundingFrequencyname-valuepair.",
+  "bbox": {
+    "x0": 92.25,
+    "y0": 623.97,
+    "x1": 547.56,
+    "y1": 659.6
+  },
+  "confidence": "high"
+}

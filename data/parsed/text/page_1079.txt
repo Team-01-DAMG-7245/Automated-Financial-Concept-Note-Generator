@@ -1,0 +1,43 @@
+Portfolios with Missing Data
+
+This example shows how to use the missing data algorithms for portfolio optimization and for
+valuation. This example works with five years of daily total return data for 12 computer technology
+stocks, with six hardware and six software companies. The example estimates the mean and
+covariance matrix for these stocks, forms efficient frontiers with both a naïve approach and the ECM
+approach, and then compares results.
+
+Load the data file.
+
+load ecmtechdemo.mat
+
+This data file contains these three quantities:
+
+•
+Assets is a cell array of the tickers for the 12 stocks in the example.
+
+•
+Data is a 1254-by-12 matrix of 1254 daily total returns for each of the 12 stocks.
+
+•
+Dates is a 1254-by-1 column vector of the dates associated with the data.
+
+The time period for the data extends from April 19, 2000 to April 18, 2005. The sixth stock in Assets
+is Google (GOOG), which started trading on August 19, 2004. So, all returns before August 20, 2004
+are missing and represented as NaNs. Also, Amazon (AMZN) had a few days with missing values
+scattered throughout the past five years.
+
+A naïve approach to the estimation of the mean and covariance for these 12 assets is to eliminate all
+days that have missing values for any of the 12 assets. Use the function ecmninit with the
+'nanskip' option to do this.
+
+[NaNMean, NaNCovar] = ecmninit(Data,'nanskip');
+
+Contrast the result of this approach with using all available data and the function ecmnmle to
+compute the mean and covariance. First, call ecmnmle with no output arguments to establish that
+enough data is available to obtain meaningful estimates.
+
+ecmnmle(Data);
+
+Portfolios with Missing Data
+
+9-21

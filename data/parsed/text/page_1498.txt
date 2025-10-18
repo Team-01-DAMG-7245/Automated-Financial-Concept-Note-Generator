@@ -1,0 +1,73 @@
+•
+MATLAB array. Specify an array to indicate a static (non-time-varying) parametric specification.
+This array fully captures all implementation details, which are clearly associated with a
+parametric form.
+
+•
+MATLAB function. Specify a function to provide indirect support for virtually any static, dynamic,
+linear, or nonlinear model. This parameter is supported by an interface because all
+implementation details are hidden and fully encapsulated by the function.
+
+Note You can specify combinations of array and function input parameters as needed. Moreover, a
+parameter is identified as a deterministic function of time if the function accepts a scalar time t as its
+only input argument. Otherwise, a parameter is assumed to be a function of time t and state Xt and is
+invoked with both input arguments.
+
+Bates = bates( ___ ,Name,Value) sets “Properties” on page 15-195 using name-value pair
+arguments in addition to the input arguments in the preceding syntax. Enclose each property name in
+quotes.
+
+The bates object has the following “Properties” on page 15-195:
+
+•
+StartTime — Initial observation time
+
+•
+StartState — Initial state at time StartTime
+
+•
+Correlation — Access function for the Correlation input argument
+
+•
+Drift — Composite drift-rate function
+
+•
+Diffusion — Composite diffusion-rate function
+
+•
+Simulation — A simulation function or method
+
+Input Arguments
+
+Return — Expected mean instantaneous rate of return of GBM price process
+array | deterministic function of time | deterministic function of time and state
+
+Expected mean instantaneous rate of return of the GBM price process, specified as an array, or a
+deterministic function of time.
+
+If you specify Return as an array, it must be scalar.
+
+If you specify Return as a deterministic function of time, you call Return with a real-valued scalar
+time t as its only input, it must return a scalar.
+
+If you specify Return as a deterministic function of time and state, it must return a scalar when you
+call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+A 2-by-1 bivariate state vector Xt
+
+Data Types: double | function_handle
+
+Speed — Mean-reversion speed of CIR stochastic variance process
+array | deterministic function of time | deterministic function of time and state
+
+Mean-reversion speed of the CIR stochastic variance process, specified as an array or deterministic
+function of time.
+
+15
+Functions
+
+15-192

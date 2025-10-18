@@ -1,0 +1,7 @@
+Page 715
+================================================================================
+
+Often when using a PortfolioCVaR object, you might be interested in the endpoint portfolios for the
+efficient frontier. Suppose that you want to determine the range of returns from minimum to
+maximum to refine a search for a portfolio with a specific target return. Use the
+estimateFrontierLimits function to obtain the endpoint portfolios.

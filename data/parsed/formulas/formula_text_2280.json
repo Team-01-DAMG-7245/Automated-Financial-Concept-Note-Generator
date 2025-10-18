@@ -1,0 +1,12 @@
+{
+  "page": 1172,
+  "original_text": "Convert to matrix\nfts2mat(tsobj)\nS = vartype('numeric');",
+  "ocr_text": "Converttomatrix fts2mat(tsobj) S=vartype(numeric);",
+  "bbox": {
+    "x0": 92.4,
+    "y0": 607.76,
+    "x1": 525.55,
+    "y1": 619.39
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 751,
+  "original_text": "% Investment horizon date\nHorizon = datetime(2013,1,1);",
+  "ocr_text": "Investmenthorizondate\nHorizon=datetime(2013,1,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 459.64,
+    "x1": 247.12,
+    "y1": 480.91
+  },
+  "confidence": "high"
+}

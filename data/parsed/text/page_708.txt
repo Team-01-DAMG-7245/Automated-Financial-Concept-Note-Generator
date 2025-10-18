@@ -1,0 +1,62 @@
+ub =
+
+1.0e-008 *
+
+-0.3712
+       Inf
+
+isbounded =
+
+0
+
+In this case, estimateBounds returns (possibly infinite) bounds and sets the isbounded flag to
+false. The result shows which assets are unbounded so that you can apply bound constraints as
+necessary.
+
+Finally, suppose that you created a CVaR portfolio set that is both nonempty and bounded.
+estimateBounds not only validates the set, but also obtains tighter bounds which are useful if you
+are concerned with the actual range of portfolio choices for individual assets in your portfolio set:
+
+p = PortfolioCVaR;
+p = setBudget(p, 1,1);
+p = setBounds(p, [ -0.1; 0.2; 0.3; 0.2 ], [ 0.5; 0.3; 0.9; 0.8 ]);
+        
+[lb, ub, isbounded] = estimateBounds(p)
+
+lb =
+
+-0.1000
+    0.2000
+    0.3000
+    0.2000
+
+ub =
+
+0.3000
+    0.3000
+    0.7000
+    0.6000
+
+isbounded =
+
+1
+
+In this example, all but the second asset has tighter upper bounds than the input upper bound
+implies.
+
+Validating CVaR Portfolios
+
+Given a CVaR portfolio set specified in a PortfolioCVaR object, you often want to check if specific
+portfolios are feasible with respect to the portfolio set. This can occur with, for example, initial
+portfolios and with portfolios obtained from other procedures. The checkFeasibility function
+determines whether a collection of portfolios is feasible. Suppose that you perform the following
+portfolio optimization and want to determine if the resultant efficient portfolios are feasible relative
+to a modified problem.
+
+First, set up a problem in the PortfolioCVaR object p, estimate efficient portfolios in pwgt, and
+then confirm that these portfolios are feasible relative to the initial problem:
+
+5
+CVaR Portfolio Optimization Tools
+
+5-82

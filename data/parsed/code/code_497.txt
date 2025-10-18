@@ -1,0 +1,8 @@
+Page 473
+================================================================================
+
+for j = 1:numSamples
+    network_features{j} = (returnData(j:j+historySize-1,:).Variables)';
+    network_responses(j,:) = ...
+        (returnData(j+historySize:j+historySize+futureSize-1,outputVarName).Variables)';
+end

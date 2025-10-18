@@ -1,0 +1,37 @@
+Generate a category weights chart using categoryWeightsChart with the brinson object. The
+category weights chart creates a horizontal bar chart of portfolio, benchmark, and active weights by
+category, averaged over all time periods.
+
+categoryWeightsChart(brinson)
+
+The equal category strategy, despite having different category weights from the benchmark, has the
+same equal-weighted asset selection process within each category. Therefore, the equal category
+strategy has no selection or interaction effect (relative to the benchmark). Meanwhile, the risk
+budgeting strategy disregards the asset categories when setting portfolio weights, so it has selection
+and interaction effects.
+
+Local Functions
+
+Both the equal asset weight and equal category weight rebalance functions compute a fixed weight
+that is assigned at each rebalance date. In order to avoid calculating the weights each time, the
+weights are calculated once and then the result is saved in the UserData struct for the
+backtestStrategy object. For more information on the UserData struct, see the “rebalanceFcn”
+on page 15-0
+ input argument for backtestStrategy.
+
+function [new_weights,user_data] = equalWeightRebalanceFcn(~,pricesTT,user_data)
+% Equal asset weight rebalance function
+
+if ~isfield(user_data,'FixedAllocation')
+    % If this is the first call to the rebalance function, calculate the
+    % desired fixed allocation and save it.
+    user_data.FixedAllocation = computeEqualWeights(width(pricesTT));
+end    
+new_weights = user_data.FixedAllocation;
+
+end
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-320

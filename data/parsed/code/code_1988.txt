@@ -1,0 +1,7 @@
+Page 1584
+================================================================================
+
+backtester = runBacktest(backtester,pricesTT,signalTT) run the backtest using the
+adjusted asset price data and signal data. When you specify the signal data timetable (signalTT),
+then the runBacktest function runs the backtest and additionally passes a rolling window of signal
+data to the rebalance function of each strategy during the rebalance step.

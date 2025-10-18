@@ -1,0 +1,6 @@
+Page 2245
+================================================================================
+
+The estimateBounds function returns (possibly infinite) bounds and sets the isbounded flag to
+false. The result shows which assets are unbounded so that you can apply bound constraints as
+necessary.

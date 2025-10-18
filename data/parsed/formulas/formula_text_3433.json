@@ -1,0 +1,12 @@
+{
+  "page": 1903,
+  "original_text": "[transdat,lambda] = boxcox(data)\ntransdat = boxcox(lambda,data)",
+  "ocr_text": "[transdat,Lambda]=boxcox(data)\ntransdat=boxcox(lambda,data)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.63,
+    "x1": 282.66,
+    "y1": 212.26
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1337,
+  "original_text": "attributionsChart(BrinsonPAObj)\nh = attributionsChart(ax,BrinsonPAObj)\nh = attributionsChart( ___ ,Name=Value)",
+  "ocr_text": "attributionsChart(BrinsonPAObj)\nh=attributionsChart(ax,BrinsonPAObj)\nh=attributionsChart(__,Name=Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.93,
+    "x1": 318.78,
+    "y1": 226.56
+  },
+  "confidence": "high"
+}

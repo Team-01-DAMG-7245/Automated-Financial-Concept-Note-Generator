@@ -1,0 +1,12 @@
+{
+  "page": 2064,
+  "original_text": "NextQuasiCouponDate = cpndatenq(Settle, Maturity)",
+  "ocr_text": "NextQuasiCouponDate=cpndatenq(Settle,Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 166.3,
+    "x1": 355.48,
+    "y1": 176.77
+  },
+  "confidence": "high"
+}

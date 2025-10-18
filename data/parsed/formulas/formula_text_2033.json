@@ -1,0 +1,12 @@
+{
+  "page": 1052,
+  "original_text": "dataTreated = dataMissing;\ndataTreated.CustAge = fillmissing(dataTreated.CustAge,'constant',modeCustAge);",
+  "ocr_text": "dataTreated=dataMissing;\ndataTreated.CustAge=fillmissing(dataTreated.CustAge,constant,modeCustAge);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 693.18,
+    "x1": 512.63,
+    "y1": 714.45
+  },
+  "confidence": "high"
+}

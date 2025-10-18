@@ -1,0 +1,12 @@
+{
+  "page": 1029,
+  "original_text": "Settle = '17-Jul-2009';  % valuation date for the CDS\nMarketDates = datenum({'20-Sep-10','20-Sep-11','20-Sep-12','20-Sep-14',...\n'20-Sep-16'});",
+  "ocr_text": "Settle=17-Jul-2009;valuationdatefortheCDS\nMarketDates=datenum({20-Sep-10,20-Sep-11,20-Sep-12,20-Sep-14,...\n20-Sep-16});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 164.77,
+    "x1": 410.77,
+    "y1": 190.42
+  },
+  "confidence": "high"
+}

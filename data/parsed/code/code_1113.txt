@@ -1,0 +1,5 @@
+Page 1145
+================================================================================
+
+function [InitialObservation,LoggedSignals] = resetFcn(Moneyness,TimeToMaturity,InitPosition)
+% Reset function to reset at the beginning of each episode.

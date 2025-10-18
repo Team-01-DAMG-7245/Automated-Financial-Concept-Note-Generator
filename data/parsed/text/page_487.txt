@@ -1,0 +1,9 @@
+Generate a category returns chart using categoryReturnsChart with the brinson object. The
+category returns chart creates a horizontal bar chart of portfolio and benchmark category returns,
+aggregated over all time periods.
+
+categoryReturnsChart(brinson)
+
+Backtest with Brinson Attribution to Evaluate Portfolio Performance
+
+4-319

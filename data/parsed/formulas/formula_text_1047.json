@@ -1,0 +1,12 @@
+{
+  "page": 542,
+  "original_text": "simulation = table((0:T)',Z,WPath,portPath,VPath,'VariableNames', ...\n    {'t','Z','Wealth','OptPort','ProbOfSuccess'})",
+  "ocr_text": "simulation=table((0:T),Z,WPath,portPath,VPath,VariableNames,...\n{t,Z,Wealth,OptPort,ProbOfSuccess})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 463.87,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

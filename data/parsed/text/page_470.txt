@@ -1,0 +1,85 @@
+Backtest Strategies Using Deep Learning
+
+Construct trading strategies using a deep learning model and then backtest the strategies using the
+Financial Toolbox™ backtesting framework. The example uses Deep Learning Toolbox™ to train a
+predictive model from a set of time series and demonstrates the steps necessary to convert the model
+output into trading signals. It builds a variety of trading strategies that backtest the signal data over
+a 5-year period.
+
+This example illustrates the following workflow:
+
+1
+Load price data for a set of energy commodities on page 4-302.
+
+2
+Clean and trim data on page 4-303.
+
+3
+Use the historical data to train a long short-term memory (LSTM) network to predict the change
+in energy prices over the next trading day on page 4-304.
+
+4
+Use the LSTM network to build a timetable of trading signal data for the backtest engine on page
+4-309.
+
+5
+Construct trading strategies that allocate capital based on the trading signals on page 4-310.
+
+6
+Backtest the strategies using the backtesting framework on page 4-310.
+
+7
+Examine the backtest results on page 4-311.
+
+The focus of this example is on the workflow from data, to a trained model, to trading strategies, and
+finally to a backtest of the strategies. The deep learning model, its output, the subsequent trading
+signals, and the strategies are fictional. The intent is only to show the steps for developing and
+deploying this type of model.
+
+Load Data
+
+Load the historical price data. This data set contains daily spot prices for 12 different energy
+products ranging from 1986 to 2021 and consists of the following time series:
+
+•
+WTI — West Texas Intermediate light crude oil
+
+•
+Brent — Brent light crude oil
+
+•
+NaturalGas — Henry Hub natural gas
+
+•
+Propane — Mon Belvieu propane
+
+•
+Kerosene — US Gulf Coast kerosene-type jet fuel
+
+•
+HeatingOil — New York Harbor no. 2 heating oil
+
+•
+GulfRegular — US Gulf Coast conventional gasoline
+
+•
+LARegular — Los Angeles reformulated RBOB regular gasoline
+
+•
+NYRegular — New York Harbor conventional gasoline
+
+•
+GulfDiesel — US Gulf Coast ultra-low sulfur no. 2 diesel
+
+•
+LADiesel — Los Angeles ultra-low sulfur CARB diesel
+
+•
+NYDiesel — New York Harbor ultra-low sulfur no. 2 diesel
+
+The source of this data is the US Energy Information Administration (Nov 2021).
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-302

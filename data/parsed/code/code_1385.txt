@@ -1,0 +1,5 @@
+Page 1385
+================================================================================
+
+static function of time and state, by that means guaranteeing that all parameters are accessible by
+the same interface.

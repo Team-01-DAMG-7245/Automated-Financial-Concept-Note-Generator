@@ -1,0 +1,6 @@
+Page 954
+================================================================================
+
+yPred = [1 XLast]*stats.beta;
+PredStd = sqrt([1 XLast]*stats.covb*[1 XLast]'+stats.mse);
+yPredUB = yPred + tCrit*PredStd;

@@ -1,0 +1,56 @@
+p.solverTypeMINLP
+
+ans = 
+'OuterApproximation'
+
+p.solverOptionsMINLP
+
+ans = struct with fields:
+                           MaxIterations: 1000
+                    AbsoluteGapTolerance: 1.0000e-07
+                    RelativeGapTolerance: 1.0000e-05
+                  NonlinearScalingFactor: 1000
+                  ObjectiveScalingFactor: 1000
+                                 Display: 'off'
+                           CutGeneration: 'basic'
+                MaxIterationsInactiveCut: 30
+                      ActiveCutTolerance: 1.0000e-07
+                    IntMainSolverOptions: [1×1 optim.options.Intlinprog]
+    NumIterationsEarlyIntegerConvergence: 30
+                     ExtendedFormulation: 0
+                            NumInnerCuts: 10
+                     NumInitialOuterCuts: 10
+
+Obtain Endpoint Portfolios for a PortfolioCVaR Object
+
+Given portfolio p, the estimateFrontierLimits function obtains the endpoint portfolios.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+rng(11);
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+pwgt = estimateFrontierLimits(p);
+
+disp(pwgt);
+
+0.8445         0
+    0.0609         0
+    0.0458         0
+    0.0488    1.0000
+
+estimateFrontierLimits
+
+15-983

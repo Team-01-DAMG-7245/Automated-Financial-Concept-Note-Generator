@@ -1,0 +1,12 @@
+{
+  "page": 105,
+  "original_text": "DTAvg = expfit(DT)",
+  "ocr_text": "DTAvg=expfit(DT)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 596.52,
+    "x1": 187.53,
+    "y1": 606.99
+  },
+  "confidence": "high"
+}

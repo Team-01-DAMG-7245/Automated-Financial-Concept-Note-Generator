@@ -1,0 +1,12 @@
+{
+  "page": 1819,
+  "original_text": "Settle = datetime('08-Jul-2016','Locale','en_US');\nTreasuryParYield = [0.26 0.28 0.36 0.48 0.61 0.71 0.95 1.19 1.37 1.69 2.11]'/100;\nTreasuryDates = datemnth(Settle, [[1 3 6], 12 * [1 2 3 5 7 10 20 30]]');",
+  "ocr_text": "Settle=datetime(08-Jul-2016,Locale,en_US);\nTreasuryParYield=[0.260.280.360.480.610.710.951.191.371.692.11]/100;\nTreasuryDates=datemnth(Settle,[[136],12*[12357102030]]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 171.48,
+    "x1": 528.86,
+    "y1": 203.54
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+Page 975
+================================================================================
+
+When you create a creditscorecard object, the data can contain missing values. When using
+creditscorecard to create a creditscorecard object, you can set the name-value pair argument
+for 'BinMissingData' set to true. In this case, the missing data for numeric predictors (NaN
+values) and for categorical predictors (<undefined> values) is binned in a separate bin labeled
+<missing> that appears at the end of the bins. Predictors with no missing values in the training data
+have no <missing> bin. If you do not specify the 'BinMissingData' argument or if you set
+'BinMissingData' to false, the creditscorecard function discards missing observations when
+computing frequencies of Good and Bad, and neither the bininfo nor plotbins functions reports
+such observations.

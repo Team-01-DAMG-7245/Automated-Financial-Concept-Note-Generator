@@ -1,0 +1,52 @@
+blsdelta
+
+Black-Scholes sensitivity to underlying price change
+
+Syntax
+
+[CallDelta,PutDelta] = blsdelta(Price,Strike,Rate,Time,Volatility)
+[CallDelta,PutDelta] = blsdelta( ___ ,Yield)
+
+Description
+
+[CallDelta,PutDelta] = blsdelta(Price,Strike,Rate,Time,Volatility) returns delta,
+the sensitivity in option value to change in the underlying asset price. Delta is also known as the
+hedge ratio. blsdelta uses normcdf, the normal cumulative distribution function in the Statistics
+and Machine Learning Toolbox.
+
+In addition, you can use the Financial Instruments Toolbox object framework with the BlackScholes
+pricer object to obtain price and delta values for a Vanilla, Barrier, Touch, DoubleTouch, or
+Binary instrument using a BlackScholes model.
+
+Note blsdelta can handle other types of underlies like Futures and Currencies. When pricing
+Futures (Black model), enter the input argument Yield as:
+
+Yield = Rate
+
+When pricing currencies (Garman-Kohlhagen model), enter the input argument Yield as:
+
+Yield = ForeignRate
+
+where ForeignRate is the continuously compounded, annualized risk-free interest rate in the
+foreign country.
+
+[CallDelta,PutDelta] = blsdelta( ___ ,Yield) adds an optional argument for Yield.
+
+Examples
+
+Find the Sensitivity in Option Value to Change in the Underlying Asset Price
+
+This example shows how to find the Black-Scholes delta sensitivity for an underlying asset price
+change.
+
+[CallDelta, PutDelta] = blsdelta(50, 50, 0.1, 0.25, 0.3, 0)
+
+CallDelta = 
+0.5955
+
+PutDelta = 
+-0.4045
+
+blsdelta
+
+15-485

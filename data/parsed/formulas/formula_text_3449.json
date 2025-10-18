@@ -1,0 +1,12 @@
+{
+  "page": 1910,
+  "original_text": "bdates = datestr(busdays('1/2/01','1/9/01','weekly'))",
+  "ocr_text": "bdates=datestr(busdays(1/2/01,1/9/01,weekly))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 449.44,
+    "x1": 382.6,
+    "y1": 459.9
+  },
+  "confidence": "high"
+}

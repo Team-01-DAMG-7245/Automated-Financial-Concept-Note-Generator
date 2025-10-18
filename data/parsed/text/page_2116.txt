@@ -1,0 +1,57 @@
+datewrkdy
+
+Date of future or past workday
+
+Syntax
+
+EndDate = datewrkdy(StartDate,NumberWorkDays,NumberHolidays)
+
+Description
+
+EndDate = datewrkdy(StartDate,NumberWorkDays,NumberHolidays) returns the datetime
+of the date a given number of workdays before or after the start date.
+
+Any input can contain multiple values, but if so, all other inputs must contain the same number of
+values or a single value that applies to all.
+
+For example, if StartDate is an n-row datetime, then NumberWorkDays must be an N-by-1 vector of
+integers or a single integer. EndDate is then an N-by-1 vector of datetimes.
+
+If StartDate is a string or date character vector, EndDate is returned as a serial date number. Use
+the function datetime to convert serial date numbers to formatted datetime arrays.
+
+If StartDate is a datetime array, then EndDate is returned as a datetime array.
+
+Examples
+
+Determine the Date for a Future Workday
+
+Determine the EndDate for a future workday using a date character vector for StartDate.
+
+StartDate = '20-Dec-1994';
+NumberWorkDays = 16;
+NumberHolidays = 2;
+ 
+EndDate = datewrkdy(StartDate, NumberWorkDays, NumberHolidays)
+
+EndDate = 
+728671
+
+datestr(EndDate)
+
+ans = 
+'12-Jan-1995'
+
+Determine the EndDate for a future workday using a datetime for StartDate.
+
+EndDate = datewrkdy(datetime(2000,12,12), 16, 2)
+
+EndDate = datetime
+   04-Jan-2001
+
+Determine the EndDate for future workdays using a vector for NumberWorkDays.
+
+15
+Functions
+
+15-810

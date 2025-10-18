@@ -1,0 +1,12 @@
+{
+  "page": 519,
+  "original_text": "Rport = max\nx ∈X\nmin\nr ∈S r0",
+  "ocr_text": "Rport=Maxmin\nxeXreS(ro)",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 584.96,
+    "x1": 197.49,
+    "y1": 607.05
+  },
+  "confidence": "high"
+}

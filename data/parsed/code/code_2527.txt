@@ -1,0 +1,5 @@
+Page 2400
+================================================================================
+
+Use the getGroupRatio function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain group ratio constraint arrays from portfolio objects.

@@ -1,0 +1,11 @@
+Page 615
+================================================================================
+
+% Update Observation
+if LoggedSignals.IntervalIdx == LoggedSignals.NumIntervalsPerHorizon
+    Observation = ...
+        [EnvConstants.TotalTradingShares RemainingIntervals-1 IS_Agent PriceDivergence*100];
+else
+    Observation = ...
+        [AgentRemainingSharestoTrade RemainingIntervals-1 IS_Agent PriceDivergence*100];
+end

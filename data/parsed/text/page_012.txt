@@ -1,0 +1,87 @@
+Single Period Goal-Based Wealth Management . . . . . . . . . . . . . . . . . . .
+4-362
+
+Dynamic Portfolio Allocation in Goal-Based Wealth Management for
+Multiple Time Periods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-367
+
+Multiperiod Goal-Based Wealth Management Using Reinforcement
+Learning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-379
+
+Compare Performance of Covariance Denoising with Factor Modeling
+Using Backtesting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-394
+
+Mixed-Integer Mean-Variance Portfolio Optimization Problem . . . . . .
+4-402
+
+Deep Reinforcement Learning for Optimal Trade Execution . . . . . . . . .
+4-407
+
+Backtest Investment Strategies Using datetime and calendarDuration
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-451
+
+Adding Constraints to Satisfy UCITS Directive . . . . . . . . . . . . . . . . . . . .
+4-457
+
+CVaR Portfolio Optimization Tools
+5
+
+Portfolio Optimization Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-3
+Portfolio Optimization Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-3
+Portfolio Problem Specification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-3
+Return Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-4
+Risk Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-5
+
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR
+Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-8
+Linear Inequality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-8
+Linear Equality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-9
+'Simple' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-9
+'Conditional' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-10
+Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-10
+Conditional Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-11
+Group Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-11
+Group Ratio Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-12
+Average Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-13
+One-way Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-13
+Cardinality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-14
+
+Default Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-15
+
+PortfolioCVaR Object Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-16
+
+PortfolioCVaR Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-17
+PortfolioCVaR Object Properties and Functions . . . . . . . . . . . . . . . . . . . .
+5-17
+Working with PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-17
+Setting and Getting Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-18
+Displaying PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-18
+
+xii
+Contents

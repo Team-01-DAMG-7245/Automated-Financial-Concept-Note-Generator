@@ -1,0 +1,12 @@
+{
+  "page": 433,
+  "original_text": "% Maximum percentage of women on the board\nwgt_maxWoB = estimateCustomObjectivePortfolio(p,objFun,...\n    ObjectiveSense=\"maximize\");\nmaxWoB = objFun(wgt_maxWoB)",
+  "ocr_text": "SMaximumpercentageofwomenontheboard\nwgt_maxWoB=estimateCustom0bjectivePortfolio(p,objFun,...\n\nObjectiveSense=maximize);\nmaxWoB_=objFun(wgt_maxWoB)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 479.43,
+    "x1": 404.27,
+    "y1": 522.29
+  },
+  "confidence": "high"
+}

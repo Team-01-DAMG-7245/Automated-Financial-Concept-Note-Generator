@@ -1,0 +1,6 @@
+Page 876
+================================================================================
+
+The estimateFrontierByRisk function accepts one or more target portfolio risks and obtains
+efficient portfolios with the specified risks. Suppose that you have a universe of four assets where you
+want to obtain efficient portfolios with target portfolio risks of 12%, 14%, and 16%.

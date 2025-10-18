@@ -1,0 +1,12 @@
+{
+  "page": 53,
+  "original_text": "PayDates = cfdates('14-Mar-2000','30-Nov-2001',4,3,1);\nPayDays = datestr(PayDates)",
+  "ocr_text": "PayDates=cfdates(14-Mar-2000,30-Nov-2001,4,3,1);\nPayDays=datestr(PayDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 570.8,
+    "x1": 382.59,
+    "y1": 592.07
+  },
+  "confidence": "high"
+}

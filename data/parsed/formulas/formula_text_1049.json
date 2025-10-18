@@ -1,0 +1,12 @@
+{
+  "page": 545,
+  "original_text": "% Define standard normal random variables for the Brownian motion.\nZ = randn(T,1);\nZ = [Z;nan]; % No randomness at the final time period",
+  "ocr_text": "DefinestandardnormalrandomvariablesfortheBrownianmotion.\nZ=randn(T,1);\nZ=[Z;nan];*Norandomnessatthefinaltimeperiod",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.43,
+    "x1": 447.59,
+    "y1": 535.49
+  },
+  "confidence": "high"
+}

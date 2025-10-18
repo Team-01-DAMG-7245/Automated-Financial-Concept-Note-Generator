@@ -1,0 +1,55 @@
+ecmmvnrfish
+
+Fisher information matrix for multivariate normal regression model
+
+Syntax
+
+Fisher] = ecmmvnrfish(Data,Design,Covariance)
+Fisher = ecmmvnrfish( ___ ,Method,MatrixFormat,CovarFormat)
+
+Description
+
+Fisher] = ecmmvnrfish(Data,Design,Covariance) computes a Fisher information matrix
+based on current maximum likelihood or least-squares parameter estimates that account for missing
+data.
+
+Fisher is a NUMPARAMS-by-NUMPARAMS Fisher information matrix or Hessian matrix. The size of
+NUMPARAMS depends on MatrixFormat and on current parameter estimates. If MatrixFormat =
+'full',
+
+NUMPARAMS = NUMSERIES * (NUMSERIES + 3)/2
+
+If MatrixFormat = 'paramonly',
+
+NUMPARAMS = NUMSERIES
+
+Note ecmmvnrfish operates slowly if you calculate the full Fisher information matrix.
+
+Fisher = ecmmvnrfish( ___ ,Method,MatrixFormat,CovarFormat) computes a Fisher
+information matrix based on current maximum likelihood or least-squares parameter estimates that
+account for missing data using optional arguments.
+
+Input Arguments
+
+Data — Data sample
+matrix
+
+Data sample, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a
+NUMSERIES-dimensional random vector. If a data sample has missing values, represented as NaNs,
+the sample is ignored. (Use mvnrmle to handle missing data.)
+
+Data Types: double
+
+Design — Model design
+matrix | cell array of character vectors
+
+Model design, specified as a matrix or a cell array that handles two model structures:
+
+•
+If NUMSERIES = 1, Design is a NUMSAMPLES-by-NUMPARAMS matrix with known values. This
+structure is the standard form for regression on a single series.
+
+15
+Functions
+
+15-866

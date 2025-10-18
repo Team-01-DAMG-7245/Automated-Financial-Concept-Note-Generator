@@ -1,0 +1,12 @@
+Page 110
+================================================================================
+
+PCond = zeros(size(P));
+phiNums = 1:numStates;
+modNums = mod(phiNums,numBins);
+for i = phiNums
+    for j = phiNums
+        idx = (modNums == modNums(j));
+        PCond(i,j) = sum(P(i,idx));        
+    end    
+end

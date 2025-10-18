@@ -1,0 +1,12 @@
+{
+  "page": 114,
+  "original_text": "cash = cash + assets*MOAsk(T); % Buy back",
+  "ocr_text": "cash=cash+assets*MOAsk(T);Buy_back",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 333.83,
+    "y1": 632.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,60 @@
+Since you also want to ensure that average turnover is no more than 15%, you can add the average
+turnover constraint to the Portfolio object using setTurnover:
+
+q = setTurnover(q, 0.15);
+[qwgt, qbuy, qsell] = estimateFrontierByRisk(q, 0.15);
+
+You can enter the estimated efficient portfolio with purchases and sales into the Blotter:
+
+qbuy(abs(qbuy) < 1.0e-5) = 0;
+qsell(abs(qsell) < 1.0e-5) = 0;  % Zero out near 0 trade weights.
+
+Blotter.Port = qwgt;
+Blotter.Buy = qbuy;
+Blotter.Sell = qsell;
+
+display(Blotter)
+
+Blotter=4×7 table
+                          Price    InitHolding    InitPort    UnitCost     Port      Buy       Se
+                          _____    ___________    ________    ________    _______    ____    ____
+
+Bonds                  52.4       42938         0.3        0.001      0.18787       0     0.1
+    Large-Cap Equities    122.7       24449         0.4        0.001          0.4       0        
+    Small-Cap Equities     35.2       42612         0.2        0.001      0.16213       0    0.03
+    Emerging Equities      46.9       15991         0.1        0.004         0.25    0.15
+
+The Buy and Sell elements of the Blotter are changes in portfolio weights that must be converted
+into changes in portfolio holdings to determine the trades. Since you are working with net portfolio
+returns, you must first compute the cost to trade from your initial portfolio to the new portfolio. This
+is accomplished as follows:
+
+TotalCost = Wealth * sum(Blotter.UnitCost .* (Blotter.Buy + Blotter.Sell))
+
+TotalCost = 
+5.6248e+03
+
+The cost to trade is $5,625, so that, in general, you would have to adjust your initial wealth
+accordingly before setting up your new portfolio weights. However, to keep the analysis simple, note
+that you have sufficient cash ($60,0000) set aside to pay the trading costs and that you will not touch
+the cash position to build up any positions in your portfolio. Thus, you can populate your blotter with
+the new portfolio holdings and the trades to get to the new portfolio without making any changes in
+your total invested wealth. First, compute the portfolio holding:
+
+Blotter.Holding = Wealth * (Blotter.Port ./ Blotter.Price);
+
+Compute number of shares to Buy and Sell in your Blotter:
+
+Blotter.BuyShare = Wealth * (Blotter.Buy ./ Blotter.Price);
+Blotter.SellShare = Wealth * (Blotter.Sell ./ Blotter.Price);
+
+Notice how you used an ad hoc truncation rule to obtain unit numbers of shares to buy and sell. Clean
+up the Blotter by removing the unit costs and the buy and sell portfolio weights:
+
+Blotter.Buy = [];
+Blotter.Sell = [];
+Blotter.UnitCost = [];
+
+Asset Allocation Case Study
+
+4-187

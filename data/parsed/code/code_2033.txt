@@ -1,0 +1,7 @@
+Page 1626
+================================================================================
+
+Use simByEuler to simulate NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk and NJumps compound Poisson processes representing the
+arrivals of important events over NPeriods consecutive observation periods. The function
+simByEuler approximates a continuous-time Merton jump diffusion process by the Euler approach.

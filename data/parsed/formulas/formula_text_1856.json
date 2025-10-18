@@ -1,0 +1,12 @@
+{
+  "page": 947,
+  "original_text": "inSample = 4:nYears-1;\nT = length(inSample);\nvarNames = {'AGE','CPF','SPR'};\nX = [AGE CPF SPR];\nX = X(inSample,:);\ny = DefRate(inSample+1); % DefaultRate, year t+1\nstats = regstats(y,X);",
+  "ocr_text": "inSample=4:nYears-1;\n\nT=length(inSample);\nvarNames={AGE,CPF,SPR};\nX=[AGECPFSPR];\n\nX=X(inSample,:);\ny=DefRate(inSample+1);*DefaultRate,yeart+1\nstats=regstats(y,X);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 210.03,
+    "x1": 350.08,
+    "y1": 285.29
+  },
+  "confidence": "high"
+}

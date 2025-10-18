@@ -1,0 +1,12 @@
+{
+  "page": 1227,
+  "original_text": "GBM = \n   Class GBM: Generalized Geometric Brownian Motion\n   ------------------------------------------------\n     Dimensions: State = 6, Brownian = 6\n   ------------------------------------------------\n      StartTime: 0\n     StartState: 100 (6x1 double array) \n    Correlation: 6x6 double array \n          Drift: drift rate function F(t,X(t)) \n      Diffusion: diffusion rate function G(t,X(t)) \n     Simulation: simulation method/function simByEuler\n         Return: 6x6 diagonal double array\n          Sigma: 6x6 diagonal double array",
+  "ocr_text": "GBM=\nClassGBM:GeneralizedGeometricBrownianMotion\nDimensions:State=6,Brownian=6\nStartTime:0\nStartState:100(6x1doublearray)\nCorrelation:6x6doublearray\nDrift:driftratefunctionF(t,X(t))\nDiffusion:diffusionratefunctionG(t,X(t))\nSimulation:simulationmethod/functionsimByEuler\nReturn:6x6diagonaldoublearray\nSigma:6x6diagonaldoublearray",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 185.84,
+    "x1": 382.57,
+    "y1": 325.91
+  },
+  "confidence": "high"
+}

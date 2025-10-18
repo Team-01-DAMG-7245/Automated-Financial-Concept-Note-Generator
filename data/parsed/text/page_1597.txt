@@ -1,0 +1,64 @@
+Backtesting engine, returned as an updated backtestEngine object. After backtesting is complete,
+runBacktest populates several properties in the backtestEngine object with the results of the
+backtest. You can summarize the results by using the summary function.
+
+More About
+
+runBacktest Processing Steps
+
+runBacktest works in a walk-forward process.
+
+The steps for runBacktest processing are:
+
+1
+runBacktest identifies the rebalancing time periods by using the RebalanceFrequency
+property of the backtestStrategy object. For more information, see “Defining Schedules for
+Backtest Strategies” on page 15-258.
+
+2
+At each rebalancing period, runBacktest decides if there is enough past data to perform the
+rebalancing using the LookbackWindow property of the backtestStrategy object. For
+example, if you are at rebalancing period T, the prices that are used are those at times t <= T, as
+long as there is enough price data before time period T to satisfy the minimum value in the
+LookbackWindow property. runBacktest also verifies that you are not using older data than
+that defined by the maximum value in the LookbackWindow property.
+
+3
+The backtest information is computed at time T using the rebalanced weights and the prices at
+time T.
+
+4
+Then runBacktest moves to time period T+1, where there are two options:
+
+a
+If T+1 is not a rebalancing time period, then the backtest information is computed using the
+rebalancing at time T with the prices at time T+1.
+
+b
+If time T+1 is a rebalancing time period, then runBacktest proceeds to step 2 in this
+process.
+
+5
+runBacktest continues running this process until the end of the backtest.
+
+Version History
+Introduced in R2020b
+
+R2023b: Supports for CashAssets and DebtAssets name-value arguments
+
+runBacktest supports name-value arguments for CashAssets and DebtAssets. When you specify
+a CashAssets or DebtAssets using runBacktest, you can use the backtestStrategy
+EngineDataList name-value argument to capture this backtest state data that a strategy needs in
+the backtestStrategy rebalanceFcn input argument.
+
+See Also
+backtestStrategy | backtestEngine | summary | equityCurve
+
+Topics
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+“Backtest Investment Strategies Using datetime and calendarDuration” on page 4-451
+
+runBacktest
+
+15-291

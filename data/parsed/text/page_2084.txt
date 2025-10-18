@@ -1,0 +1,67 @@
+NumDaysPrevious = 3×1
+
+135
+   105
+    74
+
+Input Arguments
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors. Settle must be earlier than Maturity.
+
+To support existing code, cpndaysp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime array | string array | date character vector
+
+Maturity date, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors.
+
+To support existing code, cpndaysp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Period — Coupons per year of the bond
+2 (semiannual) (default) | vector of positive integers from the set [1,2,3,4,6,12]
+
+Coupons per year of the bond, specified as a vector of positive integers from the set
+[1,2,3,4,6,12].
+
+Data Types: single | double
+
+Basis — Day-count basis of the instrument
+0 (actual/actual) (default) | numeric with value 0 through 13 | vector of numerics with values 0
+through 13
+
+Day-count basis of the instrument, specified as an integer with a with value 0 through 13 or an N-by-1
+vector of integers with values 0 through 13.
+
+•
+0 = actual/actual (default)
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (BMA)
+
+•
+5 = 30/360 (ISDA)
+
+15
+Functions
+
+15-778

@@ -1,0 +1,55 @@
+•
+If specified, the random noise process Z is a three-dimensional array.
+
+•
+If Z is unspecified, the assumed Gaussian correlation structure is a double matrix.
+
+Creating Constant Elasticity of Variance (CEV) Models
+
+The Constant Elasticity of Variance (CEV) model (cev) also derives directly from the linear drift
+(sdeld) model:
+
+dXt = μ(t)Xtdt + D(t, Xt
+α(t))V(t)dWt
+
+The cev object constrains A to an NVars-by-1 vector of zeros. D is a diagonal matrix whose elements
+are the corresponding element of the state vector X, raised to an exponent α(t).
+
+Specify Univariate Constant Elasticity of Variance Model
+
+Create a univariate cev object to represent the model using cev. The cev model derives from the
+sdeld (SDE with drift rate expressed in linear form) class and takes the form:
+
+obj = cev(0.25, 0.5, 0.3) % (B = Return, Alpha, Sigma)
+
+obj = 
+   Class CEV: Constant Elasticity of Variance
+   ------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.25
+          Alpha: 0.5
+          Sigma: 0.3
+
+cev and gbm objects display the parameter B as the more familiar Return.
+
+Creating Geometric Brownian Motion (GBM) Models
+
+The Geometric Brownian Motion (GBM) model (gbm) derives directly from the CEV (cev) model:
+
+dXt = μ(t)Xtdt + D(t, Xt)V(t)dWt
+
+Compared to the cev object, a gbm object constrains all elements of the alpha exponent vector to one
+such that D is now a diagonal matrix with the state vector X along the main diagonal.
+
+The gbm object also provides two simulation methods that can be used by separable models:
+
+Parametric Models
+
+14-25

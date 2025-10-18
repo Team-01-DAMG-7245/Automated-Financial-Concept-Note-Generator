@@ -1,0 +1,12 @@
+{
+  "page": 1355,
+  "original_text": "mu = mean_return(1:numAssets);\nC = Correlation(1:numAssets,1:numAssets);",
+  "ocr_text": "mu=mean_return(1:numAssets);\nC=Correlation(1:numAssets,1:numAssets);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 312.14,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

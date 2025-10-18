@@ -1,0 +1,12 @@
+{
+  "page": 518,
+  "original_text": "% Solve the portfolio problem\nwFinTbx = estimateCustomObjectivePortfolio(p,fun,TargetReturn=ret0)",
+  "ocr_text": "Solvetheportfolioproblem\nwFinTbx=estimateCustom0bjectivePortfolio(p,fun,TargetReturn=retd)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 453.01,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

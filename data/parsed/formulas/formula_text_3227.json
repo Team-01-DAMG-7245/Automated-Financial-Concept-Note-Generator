@@ -1,0 +1,12 @@
+{
+  "page": 1734,
+  "original_text": "AccruInterest = acrubond(IssueDate,Settle,FirstCouponDate,Face,CouponRate)\nAccruInterest = acrubond( ___ ,Period,Basis)",
+  "ocr_text": "AccruInterest=acrubond(IssueDate,Settle,FirstCouponDate,Face,CouponRate)\nAccruInterest=acrubond(____,Period,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.28,
+    "x1": 535.52,
+    "y1": 214.91
+  },
+  "confidence": "high"
+}

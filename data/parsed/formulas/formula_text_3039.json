@@ -1,0 +1,12 @@
+{
+  "page": 1593,
+  "original_text": "t = backtester.Positions.(strategyName).Time;\npositions = backtester.Positions.(strategyName).Variables;\nh = area(t,positions);\ntitle(sprintf('%s Positions',strategyName));\nxlabel('Date');\nylabel('Asset Positions');\nxtickformat('MM/dd');\nxlim([t(1) t(end)])\noldylim = ylim;",
+  "ocr_text": "t=backtester.Positions.(strategyName).Time;\npositions=backtester.Positions.(strategyName).Variables;\nh=area(t,positions);\ntitle(sprintf(s_Positions,strategyName));\nxlabel(Date);\n\nylabel(AssetPositions);\n\nxtickformat(MM/dd);\n\nxlim([t(1)t(end)])\n\noldylim=ylim;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 404.24,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

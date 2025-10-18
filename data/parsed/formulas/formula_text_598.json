@@ -1,0 +1,12 @@
+{
+  "page": 395,
+  "original_text": "numAssets = size(assetRetn,2);\nLB = zeros(1,numAssets);\nAeq = ones(1,numAssets);\nBeq = 1;\nopts = optimoptions('lsqlin','Algorithm','interior-point', 'Display',\"off\");\nwtsMarket = lsqlin(assetRetn, benchRetn, [], [], Aeq, Beq, LB, [], [], opts);",
+  "ocr_text": "numAssets=size(assetRetn,2);\n\nLB=zeros(1,numAssets);\n\nAeq=ones(1,numAssets);\n\nBeq=1;\nopts=optimoptions(lsqlin,Algorithm,interior-point,Display,off);\nwtsMarket=lsqlin(assetRetn,benchRetn,[],[],Aeq,Beq,LB,[],[],opts);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 340.7,
+    "x1": 507.18,
+    "y1": 405.17
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,80 @@
+2
+H. M. Markowitz. "Portfolio Selection." Journal of Finance. Vol. 1, No. 1, pp. 77-91, 1952.
+
+3
+J. Lintner. "The Valuation of Risk Assets and the Selection of Risky Investments in Stock Portfolios
+and Capital Budgets." Review of Economics and Statistics. Vol. 47, No. 1, pp. 13-37, 1965.
+
+4
+H. M. Markowitz. Portfolio Selection: Efficient Diversification of Investments. John Wiley & Sons,
+Inc., 1959.
+
+5
+W. F. Sharpe. "Mutual Fund Performance." Journal of Business. Vol. 39, No. 1, Part 2, pp. 119-138,
+1966.
+
+6
+J. Tobin. "Liquidity Preference as Behavior Towards Risk." Review of Economic Studies. Vol. 25,
+No.1, pp. 65-86, 1958.
+
+7
+J. L. Treynor and F. Black. "How to Use Security Analysis to Improve Portfolio Selection." Journal
+of Business. Vol. 46, No. 1, pp. 68-86, 1973.
+
+Local Functions
+
+function displaySumOfTransactions(Turnover, qbuy, qsell)
+fprintf('Sum of Purchases by Portfolio along Efficient Frontier (Max. Turnover %g%%)\n', ...
+    100*Turnover);
+fprintf('%.4f ', 100*sum(qbuy)), sprintf('\n\n');
+fprintf('\n')
+fprintf('Sum of Sales by Portfolio along Efficient Frontier (Max. Turnover %g%%)\n', ...
+    100*Turnover);
+fprintf('%.4f ', 100*sum(qsell));
+end
+
+function displayPortfolio(Description, Blotter, LongShortFlag, portfolioType)
+fprintf('%s\n', Description);
+disp(Blotter);
+if (LongShortFlag)
+    fprintf('Confirm %s Portfolio\n', portfolioType);
+    fprintf('  (Net, Long, Short)\n');
+    fprintf('%.4f ' , [ sum(Blotter.Weight), sum(Blotter.Long), sum(Blotter.Short) ]);
+end
+end
+
+See Also
+Portfolio | setBounds | addGroups | setAssetMoments | estimateAssetMoments |
+estimateBounds | plotFrontier | estimateFrontierLimits | estimateFrontierByRisk |
+estimatePortRisk
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-178

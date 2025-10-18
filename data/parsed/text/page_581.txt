@@ -1,0 +1,65 @@
+11
+Validate Testing Environment Reset and Step Functions for Sell Trades on page 4-430
+
+12
+Compute IS Using Trained Agent and Testing Data for Sell Trades on page 4-431
+
+13
+Plot Testing Results for Sell Trades on page 4-432
+
+14
+Display Summary of Training and Testing Results for Sell Trades on page 4-435
+
+Define Settings for Sell Trades
+
+To indicate sell trades, set the BuyTrade logical flag to false.
+
+BuyTrade = false;
+
+Define the total number of shares to sell over the horizon.
+
+TotalTradingShares_Sell = 2738;
+
+TWAP Baseline Analysis on Training Data
+
+Execute TWAP trades and compute Implementation Shortfall (IS) using the executeTWAPTrades
+function, which uses the tradeLOB function to execute the trades and the endingInventoryIS
+function to compute IS. These functions are in the Local Functions on page 4-441 section.
+
+[IS_TWAP_Horizon_Train_Sell,IS_TWAP_Step_Train_Sell, ...
+    InventoryShares_Step_TWAP_Train_Sell,TradingShares_Step_TWAP_Train_Sell] = ...
+    executeTWAPTrades(TrainingLOB,NumLevels,TotalTradingShares_Sell, ...
+    NumIntervalsPerHorizon,NumTrainingHorizons,BuyTrade);
+
+Plot the implementation shortfall, executed shares, and inventory shares for the TWAP baseline for
+each step using the training data.
+
+figure
+subplot(3,1,1)
+bar(1:NumTrainingSteps, IS_TWAP_Step_Train_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTrainingSteps), " steps total.)"))
+ylabel("Implementation Shortfall")
+title("Implementation Shortfall (TWAP, Training, Sell)")
+xlim([0 300])
+
+subplot(3,1,2)
+bar(1:NumTrainingSteps, TradingShares_Step_TWAP_Train_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTrainingSteps), " steps total.)"))
+ylabel("Executed Shares")
+title("Shares Traded at Each Step (TWAP, Training, Sell)")
+xlim([0 300])
+ylim([0 2000])
+
+subplot(3,1,3)
+bar(1:NumTrainingSteps, InventoryShares_Step_TWAP_Train_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTrainingSteps), " steps total.)"))
+ylabel("Inventory Shares")
+title("Inventory Shares (TWAP, Training, Sell)")
+xlim([0 300])
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-413

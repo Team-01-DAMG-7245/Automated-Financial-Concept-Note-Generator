@@ -1,0 +1,43 @@
+This plot shows how the penalized strategy returns weights that are between the minimum variance
+portfolio and the EW portfolio. In fact, choosing λHH = 0 returns the minimum variance solution, and
+as λHH →∞, the solution approaches the EW portfolio.
+
+Most Diversified Portfolio
+
+The diversification index associated to the most diversified portfolio (MDP) is defined as
+
+MDP x = −∑
+i = 1
+
+n
+σixi
+
+where σi represents the standard deviation of asset i.
+
+The MDP is the portfolio that maximizes the diversification ratio:
+
+φ x =
+xTσ
+
+xTΣx
+
+The diversification ratio φ x  is equal to 1 if the portfolio is fully invested in one asset or if all assets
+are perfectly correlated. For all other cases, φ x > 1. If φ x ≈1, there is no diversification, so the
+goal is to find the portfolio that maximizes φ x :
+
+max
+x ∈X
+
+σTx
+
+xTΣx
+
+Unlike the HH index, the MDP goal is not to obtain a portfolio whose weights are evenly distributed
+among all assets, but to obtain a portfolio whose selected (nonzero) assets have the same correlation
+to the portfolio as a whole. Use the function handle MDPObjFun for the most diversified portfolio
+(MDP) with the estimateCustomObjectivePortfolio function.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-334

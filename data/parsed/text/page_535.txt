@@ -1,0 +1,67 @@
+Dynamic Portfolio Allocation in Goal-Based Wealth
+Management for Multiple Time Periods
+
+This example shows a dynamic programming strategy to maximize the probability of obtaining an
+investor's wealth goal at the end of the investment horizon. This dynamic programming strategy is
+known in the literature as a goal-based wealth management (GBWM) strategy. In GBWM, risk is not
+necessarily measured using the standard deviation, the value-at-risk, or any other common risk
+metric. Instead, risk is understood as the likelihood of not attaining an investor's goal. This
+alternative concept of risk implies that, sometimes, in order to increase the probability of attaining an
+investor’s goal, the optimal portfolio’s traditional risk (that is, standard deviation) must increase if
+the portfolio is underfunded. In other words, for the investor’s view of risk to decrease, the traditional
+view of risk must increase if the portfolio’s wealth is too low.
+
+The objective of the investment strategy is to determine a dynamic portfolio allocation such that the
+portfolios chosen at each rebalancing period are on the traditional mean-variance efficient frontier
+and these portfolios maximize the probability of achieving the wealth goal G at the time horizon T.
+This objective is represented as
+
+max
+A 0 , A 1 , …, A T −1
+
+ℙW T ≥G ,
+
+where W T  is the terminal portfolio wealth and A t  are the possible actions and allocations at time
+t = 0, 1, …, T −1.
+
+The dynamic portfolio problem consists of the following parts:
+
+•
+Time periods — Portfolio rebalancing periods
+
+•
+Actions — Portfolio weights rebalancing
+
+•
+States — Wealth levels
+
+•
+Value function — Probability of achieving the goal at the end of the investment period
+
+•
+Policy or strategy — Optimal actions at each state and time period
+
+This example follows the GBWM strategy of Das [1 on page 4-378]. For an example of GBWM for a
+single time period, see the “Single Period Goal-Based Wealth Management” on page 4-362 example.
+
+Inputs for Investment Wealth Goals
+
+Specify the initial wealth.
+
+W0 = 100;
+
+Specify the target wealth at the end of the investment horizon.
+
+G = 200;
+
+Define the time horizon.
+
+T = 10;
+
+Load the asset information.
+
+load BlueChipStockMoments.mat
+
+Dynamic Portfolio Allocation in Goal-Based Wealth Management for Multiple Time Periods
+
+4-367

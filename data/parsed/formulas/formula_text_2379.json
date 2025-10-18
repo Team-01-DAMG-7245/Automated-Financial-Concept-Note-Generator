@@ -1,0 +1,12 @@
+{
+  "page": 1224,
+  "original_text": "F = drift(zeros(nVariables,1), diag(expReturn))",
+  "ocr_text": "F=drift(zeros(nVariables,1),diag(expReturn))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 344.65,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

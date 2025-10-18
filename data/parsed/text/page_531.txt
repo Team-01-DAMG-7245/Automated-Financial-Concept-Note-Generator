@@ -1,0 +1,41 @@
+Choose Single Portfolio Using GBWM
+
+GBWM provides a way to choose a single portfolio on the efficient frontier that allows you to
+incorporate the investor's preference in a straightforward way. In this case, the investor's goal is to
+reach a target wealth G from their initial wealth W0 at the end of the investment period T. Therefore,
+you can formulate the problem as choosing the portfolio that maximizes the probability of having a
+wealth at time T that surpasses the goal G, while making sure that the chosen weights are on the
+efficient frontier.
+
+max
+w, μ, σ P WT ≥G
+
+s . t . μ0Tw = μ
+
+wTΣ0w = σ2
+
+∑
+i = 1
+
+n
+wi = 1
+
+0 ≤w ≤1
+
+% Define investor's preferences
+W0 = 100;
+G = 200;
+T = 10;
+
+For this example, assume that the wealth evolves following a Brownian motion [1 on page 4-366]
+
+WT = W0 exp
+μ −σ2
+
+2 T + σ TZ ,
+
+where Z is a standard normal random variable.
+
+Single Period Goal-Based Wealth Management
+
+4-363

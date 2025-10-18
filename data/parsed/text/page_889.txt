@@ -1,0 +1,36 @@
+The Name property appears as the title of the efficient frontier plot if you set it in the PortfolioMAD
+object. Without an explicit name, the title on the plot would be "Efficient Frontier." If you want to
+obtain a specific number of portfolios along the efficient frontier, use plotFrontier with the
+number of portfolios that you want.
+
+Suppose that you have this PortfolioMAD object and you want to plot 20 portfolios along the
+efficient frontier and to obtain 20 risk and return values for each portfolio:
+
+[prsk, pret] = plotFrontier(p, 20);
+
+display([pret, prsk])
+
+0.0049    0.0175
+    0.0054    0.0179
+    0.0060    0.0189
+    0.0065    0.0204
+    0.0070    0.0223
+    0.0075    0.0245
+    0.0080    0.0270
+    0.0085    0.0297
+    0.0090    0.0325
+    0.0096    0.0354
+    0.0101    0.0384
+    0.0106    0.0414
+    0.0111    0.0447
+    0.0116    0.0487
+    0.0121    0.0531
+    0.0127    0.0579
+    0.0132    0.0630
+    0.0137    0.0684
+    0.0142    0.0739
+    0.0147    0.0796
+
+Plotting the Efficient Frontier for a PortfolioMAD Object
+
+6-109

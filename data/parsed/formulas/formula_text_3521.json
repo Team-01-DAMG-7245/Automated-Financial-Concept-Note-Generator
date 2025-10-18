@@ -1,0 +1,12 @@
+{
+  "page": 1960,
+  "original_text": "threshold = 100000;\nminTransfer = 10000;\ncollateralTable = table(cpID,periodOfRisk,threshold,minTransfer,...\n'VariableNames',collateralVariables)",
+  "ocr_text": "threshold=100000;\n\nminTransfer=10000;\ncollateralTable=table(cpID,periodOfRisk,threshold,minTransfer,...\nVariableNames,collateralVariables)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 453.03,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

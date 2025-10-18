@@ -1,0 +1,12 @@
+{
+  "page": 1797,
+  "original_text": "Volatility = blsimpv(Price,Strike,Rate,Time,Value) using a Black-Scholes model\ncomputes the implied volatility of an underlying asset from the market value of European options. If\nthe Class name-value argument is empty or unspecified, the default is a call option",
+  "ocr_text": "Volatility=blsimpv(Price,Strike,Rate,Time,Value)usingaBlack-Scholesmodel\ncomputestheimpliedvolatilityofanunderlyingassetfromthemarketvalueofEuropeanoptions.If\ntheClassname-valueargumentisemptyorunspecified,thedefaultisacalloption",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 250.79,
+    "x1": 547.85,
+    "y1": 286.42
+  },
+  "confidence": "high"
+}

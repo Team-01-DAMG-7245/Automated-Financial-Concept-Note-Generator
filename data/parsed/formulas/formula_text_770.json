@@ -1,0 +1,12 @@
+{
+  "page": 450,
+  "original_text": "% Normalize weights\nwMixedHH = backtester.Positions.MixedHH{:,2:end}./...\n    sum(backtester.Positions.MixedHH.Variables,2);\nwMixedMDP = backtester.Positions.MixedMDP{:,2:end}./...\n    sum(backtester.Positions.MixedMDP.Variables,2);\nwTiltedHH = backtester.Positions.TiltedHH{:,2:end}./...\n    sum(backtester.Positions.TiltedHH.Variables,2);\nwTiltedMDP = backtester.Positions.TiltedMDP{:,2:end}./...\n    sum(backtester.Positions.TiltedMDP.Variables,2);",
+  "ocr_text": "Normalizeweights\nwMixedHH=backtester.Positions.MixedHH{:,2:end}./...\nsum(backtester.Positions.MixedHH.Variables,2);\nwMixedMDP=backtester.Positions.MixedMDP{:,2:end}./...\nsum(backtester.Positions.MixedMDP.Variables,2);\nwTiltedHH=backtester.Positions.TiltedHH{:,2:end}./...\nsum(backtester.Positions.TiltedHH.Variables,2);\nwTiltedMDP=backtester.Positions.TiltedMDP{:,2:end}./...\nsum(backtester.Positions.TiltedMDP.Variables,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 471.03,
+    "x1": 398.85,
+    "y1": 567.89
+  },
+  "confidence": "high"
+}

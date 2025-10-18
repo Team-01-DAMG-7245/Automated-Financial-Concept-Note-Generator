@@ -1,0 +1,83 @@
+Obtaining Portfolios Along the Entire Efficient Frontier . . . . . . . . . . . . .
+5-86
+
+Obtaining Endpoints of the Efficient Frontier . . . . . . . . . . . . . . . . . . . . .
+5-89
+
+Obtaining Efficient Portfolios for Target Returns . . . . . . . . . . . . . . . . . .
+5-92
+
+Obtaining Efficient Portfolios for Target Risks . . . . . . . . . . . . . . . . . . . . .
+5-95
+
+Choosing and Controlling the Solver for PortfolioCVaR Optimizations .
+5-98
+Using 'TrustRegionCP', 'ExtendedCP', and 'cuttingplane' SolverTypes . . .
+5-98
+Using 'fmincon' SolverType . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-99
+Using the Mixed Integer Nonlinear Programming (MINLP) Solver . . . .
+5-100
+Solver Guidelines for PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . .
+5-100
+
+Estimate Efficient Frontiers for PortfolioCVaR Object . . . . . . . . . . . . . .
+5-105
+Obtaining CVaR Portfolio Risks and Returns . . . . . . . . . . . . . . . . . . . . .
+5-105
+Obtaining Portfolio Standard Deviation and VaR . . . . . . . . . . . . . . . . . .
+5-106
+
+Plotting the Efficient Frontier for a PortfolioCVaR Object . . . . . . . . . .
+5-109
+
+Postprocessing Results to Set Up Tradable Portfolios . . . . . . . . . . . . . .
+5-115
+
+Working with Other Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-118
+
+Troubleshooting CVaR Portfolio Optimization Results . . . . . . . . . . . . . .
+5-121
+PortfolioCVaR Object Destroyed When Modifying . . . . . . . . . . . . . . . . .
+5-121
+Matrix Incompatibility and "Non-Conformable" Errors . . . . . . . . . . . . .
+5-121
+CVaR Portfolio Optimization Warns About “Max Iterations” . . . . . . . . . .
+5-121
+CVaR Portfolio Optimization Errors with “Could Not Solve” Message . .
+5-122
+Missing Data Estimation Fails . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-122
+cvar_optim_transform Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-122
+Efficient Portfolios Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .
+5-123
+
+Hedging Using CVaR Portfolio Optimization . . . . . . . . . . . . . . . . . . . . .
+5-125
+
+Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio . . . . . . . .
+5-137
+
+Mixed-Integer CVaR Portfolio Optimization Problem . . . . . . . . . . . . . .
+5-141
+
+Bond Portfolio CVaR Optimization Using Diebold-Li Model . . . . . . . . .
+5-146
+
+MAD Portfolio Optimization Tools
+6
+
+Portfolio Optimization Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-3
+Portfolio Optimization Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-3
+Portfolio Problem Specification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-3
+Return Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-4
+Risk Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-5
+
+xv

@@ -1,0 +1,40 @@
+disp(TransitionsAsTable)
+
+end
+
+function hPlotTransitions(CompanyID,startDate,endDate,data,RatingLabels)
+% Helper function to visualize transitions between ratings
+
+Ind = string(data.ID)==CompanyID;
+   DatesOriginal = datetime(data.Date(Ind),'Locale','en_US');
+   RatingsOriginal = categorical(data.Rating(Ind),flipud(RatingLabels(:)),flipud(RatingLabels(:))
+   
+   stairs(DatesOriginal,RatingsOriginal,'LineWidth',2)
+   hold on;
+
+% Indicate rating extrapolated into the future (arbitrarily select 91
+   % days after endDate as the last date on the plot)
+   endDateExtrap = endDate+91;
+   if endDateExtrap>DatesOriginal(end)
+      DatesExtrap = [DatesOriginal(end); endDateExtrap];
+      RatingsExtrap = [RatingsOriginal(end); RatingsOriginal(end)];
+      stairs(DatesExtrap,RatingsExtrap,'LineWidth',2,'LineStyle',':')
+   end
+   hold off;
+
+% Add lines to indicate the snapshot dates
+   % transprob uses 1 as the default for 'snapsPerYear', hardcoded here for simplicity
+   % The call to cfdates generates the exact same snapshot dates that transprob uses
+   snapsPerYear = 1;
+   snapDates = cfdates(startDate-1,endDate,snapsPerYear)';
+   yLimits = ylim;
+   for ii=1:length(snapDates)
+      line([snapDates(ii) snapDates(ii)],yLimits,'Color','m')
+   end
+   title(strcat("Company ID: ",CompanyID))
+end
+
+8
+Credit Risk Analysis
+
+8-120

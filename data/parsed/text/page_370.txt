@@ -1,0 +1,37 @@
+Portfolio Optimization Against a Benchmark
+
+This example shows how to perform portfolio optimization using the Portfolio object in Financial
+Toolbox™.
+
+This example, in particular, demonstrates optimizing a portfolio to maximize the information ratio
+relative to a market benchmark. Specifically, financial data contained in a table is read into
+MATLAB® and visualizations (at both daily and annual levels) are performed. A Portfolio object is
+created with the market data using an active daily return for each asset. Using functions supporting a
+Portfolio object, the efficient frontier is calculated directly and a customized optimization problem
+is solved to find the asset allocation with the maximized information ratio.
+
+Import Historical Data Using MATLAB®
+
+Import historical prices for the asset universe and the Dow Jones Industrial Average (DJI) market
+benchmark. The data is imported into a table from a Microsoft® Excel® spreadsheet using the
+MATLAB® readtable function.
+
+data = readtable('dowPortfolio.xlsx');
+head(data, 10)
+
+Dates        DJI      AA       AIG      AXP      BA        C       CAT      DD       DIS  
+    ___________    _____    _____    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    10847    28.72    68.41    51.53    68.63    45.26    55.86    40.68    24.18 
+    04-Jan-2006    10880    28.89    68.51    51.03    69.34    44.42    57.29    40.46    23.77 
+    05-Jan-2006    10882    29.12     68.6    51.57    68.53    44.65    57.29    40.38    24.19 
+    06-Jan-2006    10959    29.02    68.89    51.75    67.57    44.65    58.43    40.55    24.52 
+    09-Jan-2006    11012    29.37    68.57    53.04    67.01    44.43    59.49    40.32    24.78 
+    10-Jan-2006    11012    28.44    69.18    52.88    67.33    44.57    59.25     40.2    25.09 
+    11-Jan-2006    11043    28.05     69.6    52.59     68.3    44.98    59.28    38.87    25.33 
+    12-Jan-2006    10962    27.68    69.04     52.6     67.9    45.02    60.13    38.02    25.41
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-202

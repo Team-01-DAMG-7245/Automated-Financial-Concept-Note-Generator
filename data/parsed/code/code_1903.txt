@@ -1,0 +1,5 @@
+Page 1535
+================================================================================
+
+Return — Expected (mean) instantaneous rate of return of GBM price process
+array, deterministic function of time, deterministic function of time and state

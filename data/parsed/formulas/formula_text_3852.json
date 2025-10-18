@@ -1,0 +1,12 @@
+{
+  "page": 2186,
+  "original_text": "TestData(:) = Data(:,i) - Data(:,14);\n    TestDesign(:,1) = 1.0;\n    TestDesign(:,2) = Data(:,13) - Data(:,14);",
+  "ocr_text": "TestData(:)=Data(:,i)-Data(:,14);\nTestDesign(:,1)=1.0;\nTestDesign(:,2)=Data(:,13)-Data(:,14);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 377.88,
+    "x1": 339.23,
+    "y1": 409.94
+  },
+  "confidence": "high"
+}

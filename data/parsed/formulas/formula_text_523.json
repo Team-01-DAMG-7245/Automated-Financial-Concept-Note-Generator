@@ -1,0 +1,12 @@
+{
+  "page": 356,
+  "original_text": "plotFrontier(q, 40);\nhold on\nscatter(estimatePortRisk(q, qwgt), estimatePortReturn(q, qwgt), 'filled', 'r');\nh = legend('Initial Portfolio', 'Efficient Frontier', 'Final Portfolio', 'location', 'best');\nset(h, 'Fontsize', 8);\nhold off",
+  "ocr_text": "plotFrontier(q,_40);\n\nhold_on\n\nscatter(estimatePortRisk(q,qwgt),estimatePortReturn(q,qwgt),filled,r)\nh=legend(InitialPortfolio,EfficientFrontier,FinalPortfolio,location,best);\nset(h,_Fontsize,8);\n\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 338.64,
+    "x1": 593.91,
+    "y1": 403.1
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 1551
+================================================================================
+
+Each time the backtest engine calls a strategy rebalance function, a rolling window of asset price
+data (and possibly signal data) is passed to the rebalance function. The rebalance function can then
+make trading and allocation decisions based on that data. The “LookbackWindow” on page 15-0
+property sets the size of these rolling windows in terms of time steps. The window determines the
+amount of data from the asset price timetable that are passed to the rebalance function.

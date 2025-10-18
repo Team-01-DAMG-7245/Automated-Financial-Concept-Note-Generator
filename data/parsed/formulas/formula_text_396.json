@@ -1,0 +1,12 @@
+{
+  "page": 250,
+  "original_text": "p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);\np = setMinMaxNumAssets(p, 2, 2)",
+  "ocr_text": "p=Portfolio(AssetMean,AssetMean,AssetCovar,AssetCovar);\np=setMinMaxNumAssets(p,2,_2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 516.64,
+    "x1": 436.77,
+    "y1": 537.91
+  },
+  "confidence": "high"
+}

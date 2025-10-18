@@ -1,0 +1,58 @@
+Machine Learning for Statistical Arbitrage I: Data Management
+and Visualization
+
+This example shows techniques for managing, processing, and visualizing large amounts of financial
+data in MATLAB®. It is part of a series of related examples on machine learning for statistical
+arbitrage (see “Machine Learning Applications”).
+
+Working with Big Data
+
+Financial markets, with electronic exchanges such as NASDAQ executing orders on a timescale of
+milliseconds, generate vast amounts of data. Data streams can be mined for statistical arbitrage
+opportunities, but traditional methods for processing and storing dynamic analytic information can be
+overwhelmed by big data. Fortunately, new computational approaches have emerged, and MATLAB
+has an array of tools for implementing them.
+
+Main computer memory provides high-speed access but limited capacity, whereas external storage
+offers low-speed access but potentially unlimited capacity. Computation takes place in memory. The
+computer recalls data and results from external storage.
+
+Data Files
+
+This example uses one trading day of NASDAQ exchange data [2] on one security (INTC) in a sample
+provided by LOBSTER [1] and included with Financial Toolbox™ documentation in the zip file
+LOBSTER_SampleFile_INTC_2012-06-21_5.zip. Extract the contents of the zip file into your
+current folder. The expanded files, including two CSV files of data and the text file
+LOBSTER_SampleFiles_ReadMe.txt, consume 93.7 MB of memory.
+
+unzip("LOBSTER_SampleFile_INTC_2012-06-21_5.zip");
+
+The data describes the intraday evolution of the limit order book (LOB), which is the record of market
+orders (best price), limit orders (designated price), and resulting buys and sells. The data includes
+the precise time of these events, with orders tracked from arrival until cancellation or execution. At
+each moment in the trading day, orders on both the buy and sell side of the LOB exist at various levels
+away from the midprice between the lowest ask (order to sell) and the highest bid (order to buy).
+
+Level 5 data (five levels away from the midprice on either side) is contained in two CSV files. Extract
+the trading date from the message file name.
+
+MSGFileName = "INTC_2012-06-21_34200000_57600000_message_5.csv";   % Message file (description of
+LOBFileName = "INTC_2012-06-21_34200000_57600000_orderbook_5.csv"; % Data file
+
+[ticker,rem] = strtok(MSGFileName,'_');
+date = strtok(rem,'_');
+
+Data Storage
+
+Daily data streams accumulate and need to be stored. A datastore is a repository for collections of
+data that are too big to fit in memory.
+
+Use tabularTextDatastore to create datastores for the message and data files. Because the files
+contain data with different formats, create the datastores separately. Ignore generic column headers
+(for example, VarName1) by setting the 'ReadVariableNames' name-value argument to false.
+Replace the headers with descriptive variable names obtained from
+
+2
+Performing Common Financial Tasks
+
+2-50

@@ -1,0 +1,6 @@
+Page 943
+================================================================================
+
+the function which ratings are to be grouped together (1 to 4, and 5 to 7). You can also group all non-
+default ratings into one category. These are preliminary steps to get the IG, SG, and overall default
+rates for each year.

@@ -1,0 +1,12 @@
+{
+  "page": 527,
+  "original_text": "% Define assets mean\np.AssetMean = [0.1; 0.1; 0.15; 0.2];\n% Minimum variance portfolio\nwMinVar = estimateFrontierLimits(p,'min');",
+  "ocr_text": "Defineassetsmean\np.AssetMean=[0.1;0.1;0.15;0.2];\nsMinimumvarianceportfolio\nwMinVar=estimateFrontierLimits(p,min);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 467.34,
+    "x1": 317.58,
+    "y1": 510.21
+  },
+  "confidence": "high"
+}

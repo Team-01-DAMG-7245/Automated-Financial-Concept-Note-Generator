@@ -1,0 +1,12 @@
+{
+  "page": 474,
+  "original_text": "options_LSTM = trainingOptions('adam', ...\n    'InputDataFormats',\"CTB\",...\n    'Plots','training-progress', ...\n    'Verbose',0, ...\n    'MaxEpochs',max_epochs, ...\n    'MiniBatchSize',mini_batch_size, ...\n    'Shuffle','every-epoch', ...\n    'ValidationData',{Xvalidation,Tvalidation}, ...\n    'ValidationFrequency',50, ...\n    'ValidationPatience',10, ...\n    'InitialLearnRate',learning_rate, ...\n    'GradientThreshold',1);",
+  "ocr_text": "options_LSTM=trainingOptions(adam,...\nInputDataFormats,CTB,...\nPlots,training-progress,...\nVerbose,0,...\nMaxEpochs,max_epochs,...\nMiniBatchSize,mini_batch_size,...\nShuffle,every-epoch,...\nValidationData,{Xvalidation,Tvalidation},...\nValidationFrequency,50,...\nValidationPatience,10,...\nInitialLearnRate,learning_rate,...\nGradientThreshold,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 272.23,
+    "x1": 366.34,
+    "y1": 401.49
+  },
+  "confidence": "high"
+}

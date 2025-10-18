@@ -1,0 +1,12 @@
+{
+  "page": 552,
+  "original_text": "DQNagent = rlDQNAgent(observationInfo,actionInfo, ...\n    initializationOptions);",
+  "ocr_text": "DQNagent=rlDQNAgent(observationInfo,actionInfo,...\ninitializationOptions);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 675.6,
+    "x1": 377.18,
+    "y1": 696.87
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1687,
+  "original_text": "dV(t) = κ(θ −V(t))dt + σ V(t)dWV(t)",
+  "ocr_text": "dV(t)=K(0-V(t))dt+oVV(t)dWy(t)",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 182.54,
+    "x1": 280.1,
+    "y1": 195.82
+  },
+  "confidence": "high"
+}

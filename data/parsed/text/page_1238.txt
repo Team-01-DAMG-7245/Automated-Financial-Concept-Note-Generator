@@ -1,0 +1,45 @@
+architecture, and is discussed in more detail in “Optimizing Accuracy: About Solution Precision and
+Error” on page 14-66.
+
+Complete the comparison by performing the second simulation using the same initial random number
+state. Simulate paths using a dynamic, deterministic rate of return.
+
+rng(5713,'twister')
+obj = gbm(r, diag(sigma),'StartState',100)
+
+obj = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 100
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: function ts2func/vector2Function
+          Sigma: 0.231906
+
+X2  = simulate(obj,nPeriods,'DeltaTime',dt);
+
+Plot the series of risk-free reference rates to compare the two simulation trials.
+
+subplot(2,1,1)
+dates = datetime(dates,"ConvertFrom","datenum");
+plot(dates,100*yields)
+xlabel('Date')
+ylabel('Annualized Yield (%)')
+title('Risk Free Rate(3-Mo Euribor Continuously-Compounded)')
+subplot(2,1,2)
+plot(T,X1,'red',T,X2,'blue')
+xlabel('Time (Years)')
+ylabel('Index Level')
+title('Constant vs. Dynamic Rate of Return: CAC 40')
+legend({'Constant Interest Rates' 'Dynamic Interest Rates'},...
+    'Location', 'Best')
+
+14
+Stochastic Differential Equations
+
+14-46

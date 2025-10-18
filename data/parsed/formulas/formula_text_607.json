@@ -1,0 +1,12 @@
+{
+  "page": 401,
+  "original_text": "covarFactor = cov(factorRetn);",
+  "ocr_text": "covarFactor=cov(factorRetn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 673.09,
+    "x1": 252.54,
+    "y1": 683.55
+  },
+  "confidence": "high"
+}

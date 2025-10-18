@@ -1,0 +1,12 @@
+{
+  "page": 379,
+  "original_text": "% Provide the current holdings.\nP = setInitPort(P,W);",
+  "ocr_text": "SProvidethecurrentholdings.\nP=setInitPort(P,W);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 517.03,
+    "x1": 257.96,
+    "y1": 538.29
+  },
+  "confidence": "high"
+}

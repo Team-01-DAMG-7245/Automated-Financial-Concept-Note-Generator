@@ -1,0 +1,12 @@
+{
+  "page": 320,
+  "original_text": "p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);\np = setBounds(p, 0.1, 0.5, 'BoundType','Conditional');\np = setGroups(p, [1,1,0], 0.3, 0.5);\np = addGroups(p, [0,1,0], 0.3, 0.7);\npwgt = estimateFrontierLimits(p)",
+  "ocr_text": "p=Portfolio(AssetMean,AssetMean,AssetCovar,AssetCovar,Budget,1);\np=setBounds(p,0.1,0.5,_BoundType,Conditional);\np=setGroups(p,[1,1,0],0.3,0.5);\n\np=addGroups(p,[0,1,0],0.3,0.7);\n\npwgt=estimateFrontierLimits(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 576.88,
+    "x1": 386.69,
+    "y1": 615.04
+  },
+  "confidence": "high"
+}

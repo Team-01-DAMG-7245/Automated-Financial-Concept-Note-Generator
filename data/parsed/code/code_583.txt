@@ -1,0 +1,6 @@
+Page 539
+================================================================================
+
+% Compute the transition probabilities for portfolio k.
+    pTransition(:,:,k) = normcdf(pTildeAuxUB)-normcdf(pTildeAuxLB);
+end

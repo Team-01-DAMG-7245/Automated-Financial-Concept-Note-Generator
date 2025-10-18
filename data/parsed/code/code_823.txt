@@ -1,0 +1,9 @@
+Page 797
+================================================================================
+
+The PortfolioMAD object implements mean absolute-deviation (MAD) portfolio optimization and is
+derived from the abstract class AbstractPortfolio. Every property and function of the
+PortfolioMAD object is public, although some properties and functions are hidden. The
+PortfolioMAD object is a value object where every instance of the object is a distinct version of the
+object. Since the PortfolioMAD object is also a MATLAB object, it inherits the default functions
+associated with MATLAB objects.

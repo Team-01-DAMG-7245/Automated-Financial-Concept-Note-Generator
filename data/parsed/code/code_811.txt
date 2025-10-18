@@ -1,0 +1,4 @@
+Page 765
+================================================================================
+
+This local function that computes the negative of the reward-to-risk ratio for a target return level.

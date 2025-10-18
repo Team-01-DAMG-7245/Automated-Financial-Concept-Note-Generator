@@ -1,0 +1,74 @@
+PriceOnPurchaseDate = tbillprice(InitialDiscount, ... 
+PurchaseDate, Maturity, 3)
+
+PriceOnPurchaseDate = 
+99.5930
+
+Compute the interest due on the repurchase agreement.
+
+RepoInterest = ... 
+RepoRate*PriceOnPurchaseDate*days360(PurchaseDate,SaleDate)/360
+
+RepoInterest = 
+0.1237
+
+RepoInterest for a 1.49% 30-day term repurchase agreement (30/360 basis) is 0.1237.
+
+Compute the price of the Treasury bill on the sale date (October 26).
+
+PriceOnSaleDate = tbillprice(BreakevenDiscount, SaleDate, ... 
+Maturity, 3)
+
+PriceOnSaleDate = 
+99.7167
+
+Examining the cash flows, observe that the break-even discount causes the sum of the price on the
+purchase date plus the accrued 30-day interest to be equal to the price on sale date. The following
+table shows the cash flows:
+
+Cash Flows from Repurchase Agreement
+
+Date
+Cash Out Flow
+Cash In Flow
+
+9/26/2002
+Purchase T-bill
+99.593
+Repo money
+99.593
+
+10/26/2002
+Payment of repo
+99.593
+Sell T-bill
+99.7168
+
+Repo interest
+0.1238
+
+Total
+199.3098
+199.3098
+
+Treasury Bill Yields
+
+This example shows how to convert a Treasury bill discount to an equivalent yield.
+
+You can examine the money-market and bond-equivalent yields of a Treasury bill at the time of
+purchase and sale. The function tbilldisc2yield can perform both computations at one time.
+
+Maturity = '26-Dec-2002';
+InitialDiscount = 0.0161;
+PurchaseDate = '26-Sep-2002';
+SaleDate = '26-Oct-2002';
+RepoRate = 0.0149;
+BreakevenDiscount = tbillrepo(RepoRate, InitialDiscount, ... 
+PurchaseDate, SaleDate, Maturity)
+
+BreakevenDiscount = 
+0.0167
+
+Computing Treasury Bill Price and Yield
+
+2-27

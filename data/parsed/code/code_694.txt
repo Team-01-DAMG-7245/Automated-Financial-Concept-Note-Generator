@@ -1,0 +1,6 @@
+Page 626
+================================================================================
+
+% Penalized objective function
+penalizedVariance = @(w) w'*Sigma*w + ...
+    (w-trackingPortfolio)'*Sigma*(w-trackingPortfolio);

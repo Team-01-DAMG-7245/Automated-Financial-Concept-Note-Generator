@@ -1,0 +1,37 @@
+Find a Portfolio with a Targeted Return and Targeted Risk
+
+Given the range of risks and returns, it is possible to locate specific portfolios on the efficient frontier
+that have target values for return and risk using the functions estimateFrontierByReturn and
+estimateFrontierByRisk.
+
+TargetReturn = 0.20;            % Input target annualized return and risk here.
+TargetRisk = 0.15;
+
+% Obtain portfolios with targeted return and risk.
+
+awgt = estimateFrontierByReturn(p,TargetReturn/12);
+[arsk,aret] = estimatePortMoments(p,awgt);
+
+bwgt = estimateFrontierByRisk(p,TargetRisk/sqrt(12));
+[brsk,bret] = estimatePortMoments(p,bwgt);
+
+% Plot efficient frontier with targeted portfolios.
+
+clf;
+portfolioexamples_plot('Efficient Frontier with Targeted Portfolios', ...
+    {'line', prsk, pret}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', arsk, aret, {sprintf('%g%% Return',100*TargetReturn)}}, ...
+    {'scatter', brsk, bret, {sprintf('%g%% Risk',100*TargetRisk)}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+To see what these targeted portfolios look like, use the dataset object to set up "blotters" that
+contain the portfolio weights and asset names (which are obtained from the Portfolio object).
+
+aBlotter = dataset({100*awgt(awgt > 0),'Weight'}, 'obsnames', p.AssetList(awgt > 0));
+
+displayPortfolio(sprintf('Portfolio with %g%% Target Return', 100*TargetReturn), aBlotter, false)
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-165

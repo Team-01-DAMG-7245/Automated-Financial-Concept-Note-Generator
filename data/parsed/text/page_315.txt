@@ -1,0 +1,24 @@
+An example of a portfolio optimization problem that has difficulties at the endpoints of the efficient
+frontier is this standard mean-variance portfolio problem (long-only with a budget constraint) with
+the following mean and covariance of asset returns:
+
+m = [ 1; 2; 3 ];
+C = [ 1 1 0; 1 1 0; 0 0 1 ];
+
+p = Portfolio;
+p = Portfolio(p, 'assetmean', m, 'assetcovar', C);
+p = Portfolio(p, 'lowerbudget', 1, 'upperbudget', 1);
+p = Portfolio(p, 'lowerbound', 0);
+
+plotFrontier(p)
+
+To work around this problem, set the hidden Portfolio object property for enforcePareto. This
+property instructs the optimizer to perform extra steps to ensure a Pareto-optimal solution. This slows
+down the solver, but guarantees a Pareto-optimal solution.
+
+p.enforcePareto = true;
+plotFrontier(p)
+
+Troubleshooting Portfolio Optimization Results
+
+4-147

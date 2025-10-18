@@ -1,0 +1,54 @@
+Although the results for complete-data stocks are the same as in “Estimation of Some Technology
+Stock Betas” on page 9-27, the beta estimates for AMZN and GOOG (the two stocks with missing
+values) are different from the estimates derived for each stock separately. Since AMZN has few
+missing values, the differences in the estimates are small. With GOOG, however, the differences are
+more pronounced.
+
+The t-statistic for the beta estimate of GOOG is now significant at the 99.5% level of significance.
+However, the t-statistics for beta estimates are based on standard errors from the sample Hessian
+which, in contrast to the Fisher information matrix, accounts for the increased uncertainty in an
+estimate due to missing values. If the t-statistic is obtained from the more optimistic Fisher
+information matrix, the t-statistic for GOOG is 8.25. Thus, despite the increase in uncertainty due to
+missing data, GOOG nonetheless has a statistically significant estimate for beta.
+
+Finally, note that the beta estimate for GOOG is 0.62 — a value that may require some explanation.
+Although the market has been volatile over this period with sideways price movements, GOOG has
+steadily appreciated in value. So, it is less tightly correlated with the market, implying that it is less
+volatile than the market (beta < 1).
+
+References
+
+[1] Caines, Peter E. Linear Stochastic Systems. John Wiley & Sons, Inc., 1988.
+
+[2] Cramér, Harald. Mathematical Methods of Statistics. Princeton University Press, 1946.
+
+[3] Dempster, A.P, N.M. Laird, and D.B Rubin. “Maximum Likelihood from Incomplete Data via the EM
+Algorithm.”Journal of the Royal Statistical Society, Series B. Vol. 39, No. 1, 1977, pp. 1-37.
+
+[4] Greene, William H. Econometric Analysis. 5th ed., Pearson Education, Inc., 2003.
+
+[5] Jarrow, R.A. Finance Theory. Prentice-Hall, Inc., 1988.
+
+[6] Lintner, J. “The Valuation of Risk Assets and the Selection of Risky Investments in Stocks.” Review
+of Economics and Statistics. Vol. 14, 1965, pp. 13-37.
+
+[7] Little, Roderick J. A and Donald B. Rubin. Statistical Analysis with Missing Data. 2nd ed., John
+Wiley & Sons, Inc., 2002.
+
+[8] Meng, Xiao-Li and Donald B. Rubin. “Maximum Likelihood Estimation via the ECM Algorithm.”
+Biometrika. Vol. 80, No. 2, 1993, pp. 267-278.
+
+[9] Sexton, Joe and Anders Rygh Swensen. “ECM Algorithms that Converge at the Rate of EM.”
+Biometrika. Vol. 87, No. 3, 2000, pp. 651-662.
+
+[10] Shafer, J. L. Analysis of Incomplete Multivariate Data. Chapman & Hall/CRC, 1997.
+
+[11] Sharpe, W. F. “Capital Asset Prices: A Theory of Market Equilibrium Under Conditions of Risk.”
+Journal of Finance. Vol. 19, 1964, pp. 425-442.
+
+[12] Sharpe, W. F., G. J. Alexander, and J. V. Bailey. Investments. 6th ed., Prentice-Hall, Inc., 1999.
+
+9
+Regression with Missing Data
+
+9-32

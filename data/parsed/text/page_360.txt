@@ -1,0 +1,32 @@
+The figure shows that the two Portfolio objects have almost identical efficient frontiers. However,
+the one with the minimum weight requirement is more practical, since it prevents the close-to-zero
+positions.
+
+Check the optimal weights for the portfolio with default constraints to see how many assets are below
+the 5% limit for each optimal allocation.
+
+toler = eps;
+sum(wgt>toler & wgt<0.05)
+
+ans = 1×10
+
+5     7     5     4     2     3     4     2     0     0
+
+Use estimateFrontierByReturn to investigate the portfolio compositions for a target return on
+the frontier for both cases.
+
+targetRetn = 0.011;
+pwgt = estimateFrontierByReturn(p, targetRetn);
+pwgtWithMinWeight = estimateFrontierByReturn(pWithMinWeight, targetRetn);
+
+Plot the composition of the two Portfolio objects for the universe of 30 assets.
+
+figure(2);
+barh([pwgt, pwgtWithMinWeight]);
+grid on
+xlabel('Proportion of Investment')
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-192

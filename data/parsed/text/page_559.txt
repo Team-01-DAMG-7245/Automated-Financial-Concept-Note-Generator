@@ -1,0 +1,60 @@
+References
+
+[1] Das, S. R., and S. Varma. "Dynamic Goals-Based Wealth Management Using Reinforcement
+Learning." Journal Of Investment Management, 18 No.2 (2020): 1-20.
+
+Local Functions
+
+function [initialObservation,loggedSignals] =...
+    myResetFunction(initialWealth,WMin,WMax)
+% Reset function to set wealth and time period to initial state.
+
+% Transform wealth to [0,1] space
+initialWealth = (initialWealth-WMin)/(WMax-WMin);
+
+% Store initial state in loggedSignals
+loggedSignals.Wealth = initialWealth;
+loggedSignals.TimePeriod = 0;
+
+% Return initial observation
+initialObservation = [initialWealth; loggedSignals.TimePeriod];
+end
+
+function [nextObservation,reward,isDone,loggedSignals] =...
+    myStepFunction(action,loggedSignals,prsk,pret,finalTimePeriod, ...
+    rewardFunction,WMin,WMax)
+% Step function to compute the wealth obtained from investing in
+% the portfolio specified by the action. The function also
+% computes the reward obtained by the current action and checks if
+% episode is done.
+
+% Get current wealth and time period
+W = loggedSignals.Wealth;
+t = loggedSignals.TimePeriod;
+
+% Transform wealth to original space
+W = W*(WMax-WMin) + WMin;
+
+% Get risk and return levels for current action
+mu = pret(action,1);
+sigma = prsk(action,1);
+
+% Compute next wealth
+Z = randn;
+W = W*exp(mu-(sigma^2/2)+sigma*Z);
+
+% Return wealth to [0,1] space
+W = (W-WMin)/(WMax-WMin);
+
+% Store next state in LoggedSignal
+loggedSignals.Wealth = W;
+loggedSignals.TimePeriod = t+1;
+
+% Return observation
+nextObservation = [loggedSignals.Wealth;loggedSignals.TimePeriod];
+
+% Compute reward
+
+Multiperiod Goal-Based Wealth Management Using Reinforcement Learning
+
+4-391

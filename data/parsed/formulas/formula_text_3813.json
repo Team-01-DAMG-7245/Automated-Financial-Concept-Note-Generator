@@ -1,0 +1,12 @@
+{
+  "page": 2156,
+  "original_text": "Depreciation = depstln(13000, 1000, 10)",
+  "ocr_text": "Depreciation=depstln(13000,1000,10)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 394.83,
+    "x1": 301.3,
+    "y1": 405.29
+  },
+  "confidence": "high"
+}

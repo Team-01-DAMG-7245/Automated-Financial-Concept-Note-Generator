@@ -1,0 +1,71 @@
+Note The strategy name must be a unique and valid MATLAB variable name. Any space character in
+the name is converted to an underscore character.
+
+Data Types: string
+
+rebalanceFcn — Rebalance function
+function handle
+
+Rebalance function, specified as a function handle which computes new portfolio weights during the
+backtest. The rebalanceFcn argument implements the core logic of the trading strategy.
+
+The signature of the rebalanceFcn depends on whether UserData and EngineDataList name-
+value arguments are specified for the backtestStrategy function. For an example of
+rebalanceFcn where UserData is specified, see “Backtest with Brinson Attribution to Evaluate
+Portfolio Performance” on page 4-315.
+
+•
+If UserData and EngineDataList are Empty
+
+If the UserData and EngineDataList name-value arguments are empty, then the
+rebalanceFcn must have one of the following signatures:
+
+•
+new_weights = rebalanceFcn(weights,assetPrices)
+
+•
+new_weights = rebalanceFcn(weights,assetPrices,signalData)
+
+If you do not specify UserData, the rebalance function returns a single output argument,
+new_weights, which is a vector of asset weights specified as decimal percentages.
+
+•
+If the new_weights sum to 1, then the portfolio is fully invested.
+
+•
+If the new_weights sum to less than 1, then the portfolio has the remainder in cash, earning
+the RiskFreeRate specified in the backtestEngine object.
+
+•
+If the new_weights sum to more than 1, then there is a negative cash position (margin) and
+the cash borrowed accrues interest at the cash borrowing rate specified in the
+CashBorrowRate property of the backtestEngine object.
+
+•
+
+If UserData is Empty and EngineDataList is Specified
+
+If the UserData name-value argument is empty and the EngineDataList name-value argument
+is specified, then the rebalanceFcn must have one of the following signatures:
+
+•
+new_weights = rebalanceFcn(engineData,assetPrices)
+
+•
+new_weights = rebalanceFcn(engineData,assetPrices,signalData)
+
+•
+
+If UserData is Specified and EngineDataList is Empty
+
+If you use the name-value argument for UserData to specify a strategy-specific userData struct
+but do not specify the name-value argument for EngineDataList, the required syntax for
+rebalanceFcn must have one of the following signatures:
+
+•
+[new_weights,userData] = rebalanceFcn(weights,assetPrices,userData)
+
+15
+Functions
+
+15-234

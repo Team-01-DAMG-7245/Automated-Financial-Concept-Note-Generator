@@ -1,0 +1,8 @@
+Page 1433
+================================================================================
+
+The end-of-period Processes argument allows you to terminate a given trial early. At the end of each
+time step, simBySolution tests the state vector Xt for an all-NaN condition. Thus, to signal an early
+termination of a given trial, all elements of the state vector Xt must be NaN. This test enables a user-
+defined Processes function to signal early termination of a trial, and offers significant performance
+benefits in some situations (for example, pricing down-and-out barrier options).

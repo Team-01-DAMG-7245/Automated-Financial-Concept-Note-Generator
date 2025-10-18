@@ -1,0 +1,6 @@
+Page 2200
+================================================================================
+
+ecmnmle(Data) with no output arguments, this mode displays the convergence of the ECM
+algorithm in a plot by estimating objective function values for each iteration of the ECM algorithm
+until termination.

@@ -1,0 +1,12 @@
+{
+  "page": 129,
+  "original_text": "nTP = tspTV.TrainSize;\nclassFreqT = countcats(yT);\nclassWtsT = nTP./(numClasses*classFreqT);",
+  "ocr_text": "nTP=tspTV.TrainSize;\nclassFreqT=countcats(yT);\nclassWtsT=nTP./(numClasses*classFreqT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 149.67,
+    "x1": 312.14,
+    "y1": 181.73
+  },
+  "confidence": "high"
+}

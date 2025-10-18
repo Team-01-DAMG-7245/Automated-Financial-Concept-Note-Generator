@@ -1,0 +1,77 @@
+End-of-Month Rule
+
+The end-of-month rule affects a bond's coupon payment structure. When the rule is in effect, a
+security that pays a coupon on the last actual day of a month will always pay coupons on the last day
+of the month. This means, for example, that a semiannual bond that pays a coupon on February 28 in
+nonleap years will pay coupons on August 31 in all years and on February 29 in leap years.
+
+End-of-Month Rule
+
+End-of-Month Rule Value
+Meaning
+
+1 (default)
+Rule in effect.
+
+0
+Rule not in effect.
+
+Framework
+
+Although not all Financial Toolbox functions require the same input arguments, they all accept the
+following common set of input arguments.
+
+Common Input Arguments
+
+Input
+Meaning
+
+Settle
+Settlement date
+
+Maturity
+Maturity date
+
+Period
+Coupon payment period
+
+Basis
+Day-count basis
+
+EndMonthRule
+End-of-month payment rule
+
+IssueDate
+Bond issue date
+
+FirstCouponDate
+First coupon payment date
+
+LastCouponDate
+Last coupon payment date
+
+Of the common input arguments, only Settle and Maturity are required. All others are optional.
+They are set to the default values if you do not explicitly set them. By default, the FirstCouponDate
+and LastCouponDate are nonapplicable. In other words, if you do not specify FirstCouponDate
+and LastCouponDate, the bond is assumed to have no odd first or last coupon periods. In this case,
+the bond is a standard bond with a coupon payment structure based solely on the maturity date.
+
+Default Parameter Values
+
+To illustrate the use of default values in Financial Toolbox functions, consider the cfdates function,
+which computes actual cash flow payment dates for a portfolio of fixed income securities regardless
+of whether the first and/or last coupon periods are normal, long, or short.
+
+The complete calling syntax with the full input argument list is
+
+CFlowDates = cfdates(Settle, Maturity, Period, Basis, ... 
+EndMonthRule, IssueDate, FirstCouponDate, LastCouponDate)
+
+while the minimal calling syntax requires only settlement and maturity dates
+
+CFlowDates = cfdates(Settle, Maturity)
+
+2
+Performing Common Financial Tasks
+
+2-18

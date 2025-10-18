@@ -1,0 +1,12 @@
+{
+  "page": 2042,
+  "original_text": "p = Portfolio;\np = setAssetMoments(p, m, C);\np = setDefaultConstraints(p);\npwgt = estimateFrontier(p);",
+  "ocr_text": "p=Portfolio;\np=setAssetMoments(p,m,C);\np=setDefaultConstraints(p);\npwgt=estimateFrontier(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 497.89,
+    "x1": 247.13,
+    "y1": 540.75
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,4 @@
+Page 412
+================================================================================
+
+Use the summary function to generate a table of strategy performance results for the backtest.

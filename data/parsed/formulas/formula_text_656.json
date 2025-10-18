@@ -1,0 +1,12 @@
+{
+  "page": 415,
+  "original_text": "nAssets = size(pricesTT, 2);\nassetReturns = tick2ret(pricesTT);",
+  "ocr_text": "nAssets=size(pricesTT,2);\nassetReturns=tick2ret(pricesTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 514.22,
+    "x1": 274.21,
+    "y1": 535.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 776,
+  "original_text": "% 95% CVaR Portfolio\np = PortfolioCVaR(Scenarios=simMonthlyReturns,ProbabilityLevel=0.95);",
+  "ocr_text": "95CVaRPortfolio\np=PortfolioCVaR(Scenarios=simMonthlyReturns,ProbabilityLevel=0.95);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 493.22,
+    "x1": 463.84,
+    "y1": 514.49
+  },
+  "confidence": "high"
+}

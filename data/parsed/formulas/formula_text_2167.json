@@ -1,0 +1,12 @@
+{
+  "page": 1114,
+  "original_text": "PortfolioGamma =  Gammas * OptionQuantities",
+  "ocr_text": "PortfolioGamma=Gammas*OptionQuantities",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 430.63,
+    "x1": 322.97,
+    "y1": 441.09
+  },
+  "confidence": "high"
+}

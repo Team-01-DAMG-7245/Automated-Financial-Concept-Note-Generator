@@ -1,0 +1,18 @@
+Page 1219
+================================================================================
+
+obj = 
+   Class SDEMRD: SDE with Mean-Reverting Drift
+   -------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   -------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Alpha: 0.5
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2

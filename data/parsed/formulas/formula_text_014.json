@@ -1,0 +1,12 @@
+{
+  "page": 36,
+  "original_text": "PortfolioValues = WeekClosePr * Portfolios",
+  "ocr_text": "PortfolioValues=WeekClosePr*Portfolios",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 464.65,
+    "x1": 317.55,
+    "y1": 475.11
+  },
+  "confidence": "high"
+}

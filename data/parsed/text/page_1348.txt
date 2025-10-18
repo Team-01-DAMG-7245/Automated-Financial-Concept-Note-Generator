@@ -1,0 +1,63 @@
+"Consumer Discretionary"; ...
+      "Consumer Discretionary"; ...
+      "Consumer Staples"; ...
+      "Consumer Staples"]),NumPeriods,1);
+
+Define benchmark and portfolio weights.
+
+BenchmarkWeight = repmat(1./NumAssets.*ones(NumAssets, 1),NumPeriods,1);
+PortfolioWeight = repmat([1;0;1;1]./3,NumPeriods,1);
+
+Create AssetTable Input
+
+Create AssetTable as the input for the brinsonAttribution object.
+
+AssetTable = table(Period, Name, ...
+    MonthlyReturns(:), Categories, PortfolioWeight, BenchmarkWeight, ...
+    VariableNames=["Period","Name","Return","Category","PortfolioWeight","BenchmarkWeight"])
+
+AssetTable=12×6 table
+    Period    Name     Return             Category           PortfolioWeight    BenchmarkWeight
+    ______    ____    _________    ______________________    _______________    _______________
+
+1       "GM"      0.27273    Consumer Discretionary        0.33333             0.25      
+      1       "HD"    -0.016838    Consumer Discretionary              0             0.25      
+      1       "KO"     0.011801    Consumer Staples              0.33333             0.25      
+      1       "PG"     0.012416    Consumer Staples              0.33333             0.25      
+      2       "GM"     -0.14594    Consumer Discretionary        0.33333             0.25      
+      2       "HD"     0.039622    Consumer Discretionary              0             0.25      
+      2       "KO"     0.014199    Consumer Staples              0.33333             0.25      
+      2       "PG"     0.011913    Consumer Staples              0.33333             0.25      
+      3       "GM"      0.04698    Consumer Discretionary        0.33333             0.25      
+      3       "HD"    0.0071306    Consumer Discretionary              0             0.25      
+      3       "KO"        0.005    Consumer Staples              0.33333             0.25      
+      3       "PG"    -0.038435    Consumer Staples              0.33333             0.25
+
+Create brinsonAttribution Object
+
+Use brinsonAttribution to create the brinsonAttribution object.
+
+BrinsonPAobj = brinsonAttribution(AssetTable)
+
+BrinsonPAobj = 
+  brinsonAttribution with properties:
+
+NumAssets: 4
+         NumPortfolioAssets: 3
+         NumBenchmarkAssets: 4
+                 NumPeriods: 3
+              NumCategories: 2
+                  AssetName: [4×1 string]
+                AssetReturn: [4×3 double]
+              AssetCategory: [4×3 categorical]
+       PortfolioAssetWeight: [4×3 double]
+       BenchmarkAssetWeight: [4×3 double]
+    PortfolioCategoryReturn: [2×3 double]
+    BenchmarkCategoryReturn: [2×3 double]
+    PortfolioCategoryWeight: [2×3 double]
+    BenchmarkCategoryWeight: [2×3 double]
+
+15
+Functions
+
+15-42

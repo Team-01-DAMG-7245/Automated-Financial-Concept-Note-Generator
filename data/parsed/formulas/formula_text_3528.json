@@ -1,0 +1,12 @@
+{
+  "page": 1966,
+  "original_text": "simulationDates = datetime(simulationDates,\"ConvertFrom\",\"datenum\");\nplot(simulationDates,cpProfiles(cpIdx).PFE, ...\n        simulationDates,cpProfiles(cpIdx).MPFE * ones(numDates,1), ...\n        simulationDates,cpProfiles(cpIdx).EE,...\n        simulationDates,cpProfiles(cpIdx).EPE * ones(numDates,1), ...\n        simulationDates,cpProfiles(cpIdx).EffEE,...\n        simulationDates,cpProfiles(cpIdx).EffEPE * ones(numDates,1));\nlegend({'PFE (95%)','Max PFE','Exp Exposure (EE)', ...\n        'Time-Avg EE (EPE)','Max past EE (EffEE)', ...\n        'Time-Avg EffEE (EffEPE)'})\nxtickformat('MMMyy');\ntitle(sprintf('Counterparty %d Exposure Profiles',cpIdx));\nylabel('Exposure ($)')\nxlabel('Simulation Dates')",
+  "ocr_text": "simulationDates=datetime(simulationDates,ConvertFrom,datenum);\n\nplot(simulationDates,cpProfiles(cpIdx).PFE,...\nsimulationDates,cpProfiles(cpIdx).MPFE*ones(numDates,1),...\nsimulationDates,cpProfiles(cpIdx).EE,...\nsimulationDates,cpProfiles(cpIdx).EPE*ones(numDates,1),...\nsimulationDates,cpProfiles(cpIdx).EffEE,...\nsimulationDates,cpProfiles(cpIdx).EffEPE*ones(numDates,1));\n\nlegend({PFE(95),MaxPFE,ExpExposure(EE),...\nTime-AvgEE(EPE),MaxpastEE(EffEE),...\nTime-AvgEffEE(EffEPE)})\n\nxtickformat(MMMyy);\n\ntitle(sprintf(CounterpartysdExposureProfiles,cpIdx));\n\nylabel(Exposure(S))\n\nxlabel(SimulationDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 469.29,
+    "y1": 243.89
+  },
+  "confidence": "high"
+}

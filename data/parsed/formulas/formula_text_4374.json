@@ -1,0 +1,12 @@
+{
+  "page": 2476,
+  "original_text": "•\nUpside = lpm(-Data, -MAR, 1) / sqrt(lpm(Data, MAR, 2))",
+  "ocr_text": "Upside=lpm(-Data,-MAR,1)/sqrt(lpm(Data,MAR,2))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.96,
+    "x1": 430.08,
+    "y1": 169.59
+  },
+  "confidence": "high"
+}

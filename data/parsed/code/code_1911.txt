@@ -1,0 +1,5 @@
+Page 1536
+================================================================================
+
+Alpha — Kernel function parameter representing roughness index
+scalar numeric

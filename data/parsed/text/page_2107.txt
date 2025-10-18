@@ -1,0 +1,52 @@
+datedisp
+
+Display date entries
+
+Syntax
+
+datedisp(NumMat)
+datedisp( ___ ,DateForm)
+CharMat = datedisp(NumMat,DateForm)
+
+Description
+
+datedisp(NumMat) displays a matrix with the serial dates formatted as date character vectors,
+using a matrix with mixed numeric entries and serial date number entries. Integers between
+datenum('01-Jan-1900') and datenum('01-Jan-2200') are assumed to be serial date
+numbers, while all other values are treated as numeric entries.
+
+datedisp( ___ ,DateForm), using the optional argument DateForm, displays a matrix with the
+serial dates formatted as date character vectors, using a matrix with mixed numeric entries and serial
+date number entries. Integers between datenum('01-Jan-1900') and datenum('01-
+Jan-2200') are assumed to be serial date numbers, while all other values are treated as numeric
+entries.
+
+CharMat = datedisp(NumMat,DateForm) returns CharMat, character array representing
+NumMat. If no output variable is assigned, the function prints the array to the display.
+
+Examples
+
+Display a Matrix with the Serial Dates Formatted as Date Character Vectors
+
+This example shows how to display a matrix with the serial dates formatted as date character vectors.
+
+NumMat = [730730, 0.03, 1200 730100;
+          730731, 0.05, 1000 NaN];
+
+datedisp(NumMat)
+
+01-Sep-2000   0.03   1200   11-Dec-1998   
+02-Sep-2000   0.05   1000      NaN
+
+Input Arguments
+
+NumMat — Numeric matrix to display
+serial date numbers
+
+Numeric matrix to display, specified as serial date numbers.
+
+Data Types: double
+
+datedisp
+
+15-801

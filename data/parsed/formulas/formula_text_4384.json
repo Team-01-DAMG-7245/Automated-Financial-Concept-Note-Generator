@@ -1,0 +1,12 @@
+{
+  "page": 2485,
+  "original_text": "load SimulatedStock.mat\nMedianPrice = medprice(TMW);\nplot(MedianPrice.Time,MedianPrice.MedianPrice) \ntitle('Median Price for TMW')",
+  "ocr_text": "loadSimulatedStock.mat\nMedianPrice=medprice(TMw);\nplot(MedianPrice.Time,MedianPrice.MedianPrice)\ntitle(MedianPriceforTMW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 394.83,
+    "x1": 344.64,
+    "y1": 437.69
+  },
+  "confidence": "high"
+}

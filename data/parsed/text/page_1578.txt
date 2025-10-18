@@ -1,0 +1,63 @@
+Risk-Free Rate
+
+The RiskFreeRate property holds the interest rate earned for uninvested capital (that is, cash).
+When the sum of portfolio weights is below 1, the remaining capital is invested in cash and earns the
+risk-free rate. The risk-free rate and the cash-borrow rate can be defined in annualized terms or as
+explicit "per-time-step" interest rates. The RatesConvention property is used to specify how the
+backtestEngine interprets the two rates (the default interpretation is "Annualized"). For this
+example, set the risk-free rate to 2% annualized.
+
+% 2% annualized risk-free rate
+riskFreeRate = 0.02;
+
+Cash Borrow Rate
+
+The CashBorrowRate property sets the interest accrual rate applied to negative cash balances. If at
+any time the portfolio weights sum to a value greater than 1, then the cash position is negative by the
+amount in excess of 1. This behavior of portfolio weights is analogous to borrowing capital on margin
+to invest with leverage. Like the RiskFreeRate property, the CashBorrowRate property can either
+be annualized or per-time-step depending on the value of the RatesConvention property.
+
+% 6% annualized margin interest rate
+cashBorrowRate = 0.06;
+
+Initial Portfolio Value
+
+The InitialPortfolioValue property sets the value of the portfolio at the start of the backtest for
+all strategies. The default is $10,000.
+
+% Start backtest with $1M
+initPortfolioValue = 1000000;
+
+Create Backtest Engine
+
+Using the prepared properties, create the backtesting engine using the backtestEngine function.
+
+% The backtesting engine takes an array of backtestStrategy objects as the first argument
+backtester = backtestEngine(strategy,...
+    'RiskFreeRate',riskFreeRate,...
+    'CashBorrowRate',cashBorrowRate,...
+    'InitialPortfolioValue',initPortfolioValue)
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×1 backtestStrategy]
+             RiskFreeRate: 0.0200
+           CashBorrowRate: 0.0600
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 1000000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: []
+                  Returns: []
+                Positions: []
+                 Turnover: []
+                  BuyCost: []
+                 SellCost: []
+
+15
+Functions
+
+15-272

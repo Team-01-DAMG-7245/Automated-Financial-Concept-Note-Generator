@@ -1,0 +1,12 @@
+{
+  "page": 1132,
+  "original_text": "% Transform the simulated invariants to YTM at the horizon.\nhrznYTMRatesSims = repmat(tsYTMRates(end,:),numSim,1) + hrznInvSims;",
+  "ocr_text": "TransformthesimulatedinvariantstoYTMatthehorizon.\nhrznYTMRatesSims=repmat(tsYTMRates(end,:),numSim,1)+hrznInvSims;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 459.83,
+    "x1": 458.43,
+    "y1": 481.09
+  },
+  "confidence": "high"
+}

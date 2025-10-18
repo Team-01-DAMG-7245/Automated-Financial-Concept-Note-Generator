@@ -1,0 +1,12 @@
+{
+  "page": 481,
+  "original_text": "signal = signalTT.backtestPred_LSTM(end,:);\nnew_weights = zeros(size(current_weights));\nnew_weights(signal == max(signal)) = 1;",
+  "ocr_text": "signal=signalTT.backtestPred_LSTM(end,:);\nnew_weights=zeros(size(current_weights));\nnew_weights(signal==max(signal))=1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 322.97,
+    "y1": 189.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 77,
+  "original_text": "T\npc(t)\npc(t −1)\n= ∑\nt = 2",
+  "ocr_text": "T T\nPelt) _\nIla 7_ a]I - ay",
+  "bbox": {
+    "x0": 212.96,
+    "y0": 216.23,
+    "x1": 307.71,
+    "y1": 246.48
+  },
+  "confidence": "high"
+}

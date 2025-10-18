@@ -1,0 +1,12 @@
+{
+  "page": 446,
+  "original_text": "% Store info to pass to ESG tilting strategies\ntiltStruct.p = setInequality(p,[],[]);\ntiltStruct.ret0 = ret0;\n% HH tilting penalty parameters\n% Penalty parameter for assets with 'low' ESG score",
+  "ocr_text": "StoreinfotopasstoESGtiltingstrategies\ntiltStruct.p=setInequality(p,[],[]);\ntiltStruct.retO=ret0;\nSHHtiltingpenaltyparameters\nSPenaltyparameterforassetswithlowESGscore",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 610.78,
+    "x1": 366.32,
+    "y1": 664.45
+  },
+  "confidence": "high"
+}

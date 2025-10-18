@@ -1,0 +1,8 @@
+Page 126
+================================================================================
+
+classes = ["loss" "const" "gain"];
+y = DS((dtS+1):end);
+y = categorical(y,[-1 0 1],classes);
+n = numel(y);
+numClasses = numel(classes);

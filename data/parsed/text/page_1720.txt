@@ -1,0 +1,59 @@
+Because time series arrays represent dynamic behavior that must be captured by functions accessible
+by the t, Xt  interface, you need utilities to convert traditional time series arrays into callable
+functions of time and state. The following example shows how to do this using the conversion function
+ts2func (time series to function).
+
+Load a daily historical data set containing three-month Euribor rates and closing index levels of
+France's CAC 40 spanning the time interval February 7, 2001 to April 24, 2006.
+
+load Data_GlobalIdx2
+
+Simulate risk-neutral sample paths of the CAC 40 index using a geometric Brownian motion (GBM)
+model:
+
+where r(t) represents evolution of the risk-free rate of return.
+
+Furthermore, assume that you need to annualize the relevant information derived from the daily data
+(annualizing the data is optional, but is useful for comparison to other examples), and that each
+calendar year comprises 250 trading days.
+
+dt      = 1/250;
+returns = tick2ret(Dataset.CAC);
+sigma   = std(returns)*sqrt(250);
+yields  = Dataset.EB3M;
+yields  = 360*log(1 + yields);
+
+Compare the resulting sample paths obtained from two risk-neutral historical simulation approaches,
+where the daily Euribor yields serve as a proxy for the risk-free rate of return.
+
+The first approach specifies the risk-neutral return as the sample average of Euribor yields, and
+therefore assumes a constant (non-dynamic) risk-free return.
+
+nPeriods = length(yields);  % Simulated observations
+rng(5713,'twister')
+obj    = gbm(mean(yields),diag(sigma),'StartState',100)
+
+obj = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 100
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.0278117
+          Sigma: 0.231906
+
+[X1,T] = simulate(obj,nPeriods,'DeltaTime',dt);
+
+In contrast, the second approach specifies the risk-neutral return as the historical time series of
+Euribor yields. It therefore assumes a dynamic, yet deterministic, rate of return; this example does
+not illustrate stochastic interest rates. To illustrate this dynamic effect, use the ts2func utility.
+
+15
+Functions
+
+15-414

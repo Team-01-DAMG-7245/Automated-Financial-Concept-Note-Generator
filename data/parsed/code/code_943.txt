@@ -1,0 +1,8 @@
+Page 934
+================================================================================
+
+When a totals structure array is passed to transprobgrouptotals, this function groups each
+structure in the array individually and preserves sparsity, if the fields in the input structures are
+sparse. One way to exploit this feature is to compute confidence intervals for the investment grade
+default rate and the speculative grade default rate (see also “Estimate Bootstrap Confidence
+Intervals” on page 8-13).

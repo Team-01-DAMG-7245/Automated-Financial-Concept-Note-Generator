@@ -1,0 +1,5 @@
+Page 348
+================================================================================
+
+Since this is a hypothetical example, to simulate asset prices from a given mean and covariance of
+annual asset total returns for the asset classes, the portsim function is used to create asset returns

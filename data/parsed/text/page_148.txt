@@ -1,0 +1,33 @@
+This borrowed capital is added to the original capital available for investment. In this example, the
+customer tolerates borrowing 18.69% of the original capital amount.
+
+See Also
+portalloc | frontier | portopt | Portfolio | portcons | portvrisk | pcalims | pcgcomp |
+pcglims | pcpval | abs2active | active2abs
+
+Related Examples
+
+•
+“Portfolio Optimization Functions” on page 3-3
+
+•
+“Active Returns and Tracking Error Efficient Frontier” on page 3-27
+
+•
+“Plotting an Efficient Frontier Using portopt” on page 10-22
+
+•
+“portopt Migration to Portfolio Object” on page 3-11
+
+More About
+
+•
+“Analyzing Portfolios” on page 3-2
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+3
+Portfolio Analysis
+
+3-10

@@ -1,0 +1,5 @@
+Page 50
+================================================================================
+
+Alternatively, convert date character vectors to serial date numbers directly in the function input
+argument list.

@@ -1,0 +1,5 @@
+Page 1546
+================================================================================
+
+Strategy-specific user data for use in rebalanceFcn, specified as a struct. When UserData is set to
+a struct, the backtestEngine provides all user-defined rebalanceFcn function handle functions

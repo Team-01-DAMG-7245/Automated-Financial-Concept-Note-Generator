@@ -1,0 +1,24 @@
+Tips
+
+You can also use dot notation to obtain group ratio constraint arrays from portfolio objects.
+
+[GroupA, GroupB, LowerRatio, UpperRatio] = obj.getGroupRatio;
+
+Version History
+Introduced in R2011a
+
+See Also
+setGroupRatio
+
+Topics
+“Working with Group Ratio Constraints Using Portfolio Object” on page 4-72
+“Working with Group Constraints Using PortfolioCVaR Object” on page 5-62
+“Working with Group Constraints Using PortfolioMAD Object” on page 6-61
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+Supported Constraints for Portfolio Optimization Using Portfolio Objects on page 4-9
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object on page 5-8
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object on page 6-8
+
+getGroupRatio
+
+15-1097

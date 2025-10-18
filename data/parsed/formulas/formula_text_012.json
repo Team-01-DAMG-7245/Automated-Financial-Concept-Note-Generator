@@ -1,0 +1,12 @@
+{
+  "page": 36,
+  "original_text": "then C = A*B is an m-by-p matrix; and the element cij in the ith row and jth column of C is",
+  "ocr_text": "thenC=A*Bisanm-by-pmatrix;andtheelementc,intheithrowandjthcolumnofCis",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 311.79,
+    "x1": 501.17,
+    "y1": 324.62
+  },
+  "confidence": "high"
+}

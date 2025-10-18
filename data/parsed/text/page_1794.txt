@@ -1,0 +1,54 @@
+blsgamma
+
+Black-Scholes sensitivity to underlying delta change
+
+Syntax
+
+Gamma = blsgamma(Price,Strike,Rate,Time,Volatility)
+Gamma = blsgamma( ___ ,Yield)
+
+Description
+
+Gamma = blsgamma(Price,Strike,Rate,Time,Volatility) returns gamma, the sensitivity of
+delta to change in the underlying asset price. blsgamma uses normpdf, the probability density
+function in the Statistics and Machine Learning Toolbox.
+
+In addition, you can use the Financial Instruments Toolbox object framework with the BlackScholes
+pricer object to obtain price and gamma values for a Vanilla, Barrier, Touch, DoubleTouch, or
+Binary instrument using a BlackScholes model.
+
+Note blsgamma can handle other types of underlies like Futures and Currencies. When pricing
+Futures (Black model), enter the input argument Yield as:
+
+Yield = Rate
+
+When pricing currencies (Garman-Kohlhagen model), enter the input argument Yield as:
+
+Yield = ForeignRate
+
+where ForeignRate is the continuously compounded, annualized risk-free interest rate in the
+foreign country.
+
+Gamma = blsgamma( ___ ,Yield) adds an optional argument for Yield.
+
+Examples
+
+Find Gamma for a Change in the Underlying Asset Price
+
+This example shows how to find the gamma, the sensitivity of delta to a change in the underlying
+asset price.
+
+Gamma = blsgamma(50, 50, 0.12, 0.25, 0.3, 0)
+
+Gamma = 
+0.0512
+
+Input Arguments
+
+Price — Current price of underlying asset
+numeric
+
+15
+Functions
+
+15-488

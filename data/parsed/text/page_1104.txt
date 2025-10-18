@@ -1,0 +1,60 @@
+Bond Portfolio for Hedging Duration and Convexity
+
+This example shows how to construct a bond portfolio to hedge a portfolio of bonds.
+
+The code in this example constructs a bond portfolio to hedge the portfolio of “Sensitivity of Bond
+Prices to Interest Rates” on page 10-2. It assumes a long position in (holding) the portfolio, and that
+three other bonds are available for hedging. It chooses weights for these three other bonds in a new
+portfolio so that the duration and convexity of the new portfolio match those of the original portfolio.
+Taking a short position in the new portfolio, in an amount equal to the value of the first portfolio,
+partially hedges against parallel shifts in the yield curve.
+
+Recall that portfolio duration or convexity is a weighted average of the durations or convexities of the
+individual bonds in a portfolio. As in the previous example, this example uses modified duration in
+years and convexity in years. The hedging problem therefore becomes one of solving a system of
+linear equations, which is an easy thing to do in MATLAB® software.
+
+Define Bonds
+
+Define three bonds available for hedging the original portfolio. Specify values for the settlement date,
+maturity date, face value, and coupon rate. For simplicity, accept default values for the coupon
+payment periodicity (semiannual), end-of-month payment rule (rule in effect), and day-count basis
+(actual/actual). Also, synchronize the coupon payment structure to the maturity date (that is, no odd
+first or last coupon dates). Set any inputs for which defaults are accepted to empty matrices ([]) as
+placeholders where appropriate. The intent is to hedge against duration and convexity and constrain
+total portfolio price.
+
+Settle     = '19-Aug-1999';
+Maturity   = ['15-Jun-2005'; '02-Oct-2010'; '01-Mar-2025'];
+Face       = [500; 1000; 250];
+CouponRate = [0.07; 0.066; 0.08];
+
+Specify the yield curve for each bond.
+
+Yields = [0.06; 0.07; 0.075];
+
+Calculate Price, Modified Duration, and Convexity for Each Bond
+
+Calculate the price, modified duration in years, and convexity in years of each bond.
+
+[CleanPrice, AccruedInterest] = bndprice(Yields,CouponRate,... 
+Settle, Maturity, 2, 0, [], [], [], [], [], Face);
+
+Durations = bnddury(Yields, CouponRate, Settle, Maturity,...
+2, 0, [], [], [], [], [], Face);
+
+Convexities = bndconvy(Yields, CouponRate, Settle,... 
+Maturity, 2, 0, [], [], [], [], [], Face);
+
+Prices  =  CleanPrice + AccruedInterest
+
+Prices = 3×1
+
+530.4248
+  994.4065
+  273.4051
+
+10
+Solving Sample Problems
+
+10-6

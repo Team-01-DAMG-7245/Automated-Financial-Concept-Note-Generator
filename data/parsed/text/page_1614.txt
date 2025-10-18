@@ -1,0 +1,16 @@
+Version History
+Introduced in R2021a
+
+See Also
+backtestStrategy | backtestEngine | runBacktest | summary
+
+Topics
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+“Backtest Investment Strategies Using datetime and calendarDuration” on page 4-451
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+15
+Functions
+
+15-308

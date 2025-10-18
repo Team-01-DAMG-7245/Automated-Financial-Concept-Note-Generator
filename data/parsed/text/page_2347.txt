@@ -1,0 +1,52 @@
+731521      731888      732252
+
+datestr(Date)
+
+ans = 3×11 char array
+    '01-Nov-2002'
+    '03-Nov-2003'
+    '01-Nov-2004'
+
+Return a Serial Date Number for the First Business Date Using the Weekend Argument
+
+This example shows how to return serial date numbers for the first business date, given year and
+month, and also indicate that Saturday is a business day by setting the Weekend argument. March 1,
+2003, is a Saturday. Use fbusdate to check that this Saturday is actually the first business day of the
+month.
+
+Weekend = [1 0 0 0 0 0 0];
+Date = datestr(fbusdate(2003, 3, [], Weekend))
+
+Date = 
+'01-Mar-2003'
+
+Return a datetime array for Date for the First Business Date Using the outputType
+Argument
+
+This example shows how to return a datetime array for Date using an outputType of 'datetime'.
+
+Date = fbusdate(2001, 11,[],[],'datetime')
+
+Date = datetime
+   01-Nov-2001
+
+Input Arguments
+
+Year — Year to determine occurrence of weekday
+4-digit integer | vector of 4-digit integers
+
+Year to determine occurrence of weekday, specified as a 4-digit integer or vector of 4-digit integers.
+
+Data Types: double
+
+Month — Month to determine occurrence of weekday
+integer with value 1 through 12 | vector of integers with values 1 through 12
+
+Month to determine occurrence of weekday, specified as an integer or vector of integers with values 1
+through 12.
+
+Data Types: double
+
+fbusdate
+
+15-1041

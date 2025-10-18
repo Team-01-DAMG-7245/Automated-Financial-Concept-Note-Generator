@@ -1,0 +1,12 @@
+{
+  "page": 616,
+  "original_text": "ExecutedPrices = LOBPrices(1:TradedLevels);\nExecutedShares = LOBSizes(1:TradedLevels);\nExecutedShares(end) = ExecutedShares(end) - (sum(ExecutedShares) - TradingShares);\nend",
+  "ocr_text": "ExecutedPrices=LOBPrices(1:TradedLevels);\nExecutedShares=LOBSizes(1:TradedLevels);\nExecutedShares(end)=ExecutedShares(end)-(sum(ExecutedShares)-TradingShares);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.43,
+    "x1": 534.28,
+    "y1": 546.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,63 @@
+diffusion
+
+Diffusion-rate model component
+
+Description
+
+The diffusion object specifies the diffusion-rate component of continuous-time stochastic
+differential equations (SDEs).
+
+The diffusion-rate specification supports the simulation of sample paths of NVars state variables
+driven by NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods,
+approximating continuous-time stochastic processes.
+
+The diffusion-rate specification can be any NVars-by-NBrowns matrix-valued function G of the
+general form:
+
+G(t, Xt) = D(t, Xt
+α(t))V(t)
+ (15-1)
+
+where:
+
+•
+D is an NVars-by-NVars diagonal matrix-valued function.
+
+•
+Each diagonal element of D is the corresponding element of the state vector raised to the
+corresponding element of an exponent Alpha, which is an NVars-by-1 vector-valued function.
+
+•
+V is an NVars-by-NBrowns matrix-valued volatility rate function Sigma.
+
+•
+Alpha and Sigma are also accessible using the (t, Xt) interface.
+
+And a diffusion-rate specification is associated with a vector-valued SDE of the form:
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+
+where:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+dWt is an NBrowns-by-1 Brownian motion vector.
+
+•
+D is an NVars-by-NVars diagonal matrix, in which each element along the main diagonal is the
+corresponding element of the state vector raised to the corresponding power of α.
+
+•
+V is an NVars-by-NBrowns matrix-valued volatility rate function Sigma.
+
+The diffusion-rate specification is flexible, and provides direct parametric support for static
+volatilities and state vector exponents. It is also extensible, and provides indirect support for
+dynamic/nonlinear models via an interface. This enables you to specify virtually any diffusion-rate
+specification.
+
+15
+Functions
+
+15-90

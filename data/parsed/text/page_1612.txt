@@ -1,0 +1,51 @@
+Strategies: [1×1 backtestStrategy]
+             RiskFreeRate: 0
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: []
+                  Returns: []
+                Positions: []
+                 Turnover: []
+                  BuyCost: []
+                 SellCost: []
+         TransactionCosts: []
+                     Fees: []
+
+% Run the backtest. The empty properties are now populated with
+% timetables of detailed backtest results.
+backtester = runBacktest(backtester,pricesTT)
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×1 backtestStrategy]
+             RiskFreeRate: 0
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: 7
+                  Returns: [250×1 timetable]
+                Positions: [1×1 struct]
+                 Turnover: [250×1 timetable]
+                  BuyCost: [250×1 timetable]
+                 SellCost: [250×1 timetable]
+         TransactionCosts: [1×1 struct]
+                     Fees: [1×1 struct]
+
+Generate Equity Curve
+
+Use the equityCurve to plot the equity curve for the equal-weight strategy.
+
+equityCurve(backtester)
+
+15
+Functions
+
+15-306

@@ -1,0 +1,60 @@
+To compute moving average with custom weights, the weights (w) are first normalized such that they
+sum to one:
+
+W(i) = w(i)/sum(w), for i = 1,2,...,N
+
+The normalized weights (W) are then used to form the N-point weighted moving average (y) of the
+input Data (x):
+
+y(t) = W(1)*x(t) + W(2)*x(t-1) + ... + W(N)*x(t-N)
+
+The initial moving average values within the window size are then adjusted according to the method
+specified in the name-value pair argument initialPoints.
+
+Data Types: double
+
+initialPoints — Indicates how moving average is calculated at initial points
+'shrink' (default) | character vector with values of 'shrink', 'fill', or 'zero' | string with
+values of "shrink", "fill", or "zero"
+
+(Optional) Indicates how the moving average is calculated at initial points (before there is enough
+data to fill the window), specified as a character vector or string using one of the following values:
+
+•
+'shrink' - Initializes the moving average such that the initial points include only observed data
+
+•
+'zero' - Initializes the initial points with 0
+
+•
+'fill' - Fills initial points with NaNs
+
+Note The initialPoints argument applies to all type specifications except for the
+'exponential' and 'modified' options.
+
+Data Types: char | string
+
+Output Arguments
+
+ma — Moving average series
+matrix | table | timetable
+
+Moving average series, returned with the same number of rows (M) and the same type (matrix, table,
+or timetable) as the input Data.
+
+More About
+
+Moving Average
+
+A moving average is a statistical calculation used to analyze data points by creating averages of
+different subsets of the complete data set.
+
+Moving averages are commonly used to smooth out price data over a specified period, helping to
+identify trends and reduce noise in price movements.
+
+Version History
+Introduced before R2006a
+
+movavg
+
+15-1187

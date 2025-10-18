@@ -1,0 +1,6 @@
+Page 52
+================================================================================
+
+Another example of needing specific dates could be that your company closes on Martin Luther King
+Jr. Day, which is the third Monday in January. You can use the nweekdate function to determine those
+specific dates for 2011 through 2014.

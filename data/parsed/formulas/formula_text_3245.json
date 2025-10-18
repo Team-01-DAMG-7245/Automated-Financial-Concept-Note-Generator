@@ -1,0 +1,12 @@
+{
+  "page": 1742,
+  "original_text": "A = [ 0 0 1 1 1 ];    % Second equality constraint\nb = 0.5;\np = addEquality(p, A, b);",
+  "ocr_text": "A=[{[00111]; Secondequalityconstraint\nb=0.5;\np=addEquality(p,A,b);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 573.13,
+    "x1": 360.91,
+    "y1": 605.2
+  },
+  "confidence": "high"
+}

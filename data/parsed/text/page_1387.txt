@@ -1,0 +1,63 @@
+cir
+
+Cox-Ingersoll-Ross (CIR) mean-reverting square root diffusion model
+
+Description
+
+Creates and displays a cir objects, which derives from the sdemrd (SDE with drift rate expressed in
+mean-reverting form) class.
+
+Use cir objects to simulate sample paths of NVars state variables expressed in mean-reverting drift-
+rate form. These state variables are driven by NBrowns Brownian motion sources of risk over
+NPeriods consecutive observation periods, approximating continuous-time CIR stochastic processes
+with square root diffusions.
+
+You can simulate any vector-valued CIR process of the form:
+
+dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+
+1
+2)V(t)dWt
+
+where:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+S is an NVars-by-NVars matrix of mean reversion speeds (the rate of mean reversion).
+
+•
+L is an NVars-by-1 vector of mean reversion levels (long-run mean or level).
+
+•
+D is an NVars-by-NVars diagonal matrix, where each element along the main diagonal is the
+square root of the corresponding element of the state vector.
+
+•
+V is an NVars-by-NBrowns instantaneous volatility rate matrix.
+
+•
+dWt is an NBrowns-by-1 Brownian motion vector.
+
+Creation
+
+Syntax
+
+CIR = cir(Speed,Level,Sigma)
+CIR = cir( ___ ,Name,Value)
+
+Description
+
+CIR = cir(Speed,Level,Sigma) creates a default CIR object.
+
+Specify the required input parameters as one of the following types:
+
+•
+A MATLAB array. Specifying an array indicates a static (non-time-varying) parametric
+specification. This array fully captures all implementation details, which are clearly associated
+with a parametric form.
+
+cir
+
+15-81

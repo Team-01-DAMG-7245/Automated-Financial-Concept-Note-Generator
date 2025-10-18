@@ -1,0 +1,18 @@
+See Also
+backtestStrategy | runBacktest | summary | equityCurve | timetable
+
+Topics
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+“Backtest Investment Strategies Using datetime and calendarDuration” on page 4-451
+“Backtest Using Risk-Based Equity Indexation” on page 4-291
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+“runBacktest Processing Steps” on page 15-291
+
+External Websites
+Backtesting Strategy Framework in Financial Toolbox (2 min 17 sec)
+Backtesting Investment Strategies with MATLAB (35 min 39 sec)
+
+backtestEngine
+
+15-277

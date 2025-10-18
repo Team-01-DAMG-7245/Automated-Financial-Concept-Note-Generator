@@ -1,0 +1,12 @@
+{
+  "page": 538,
+  "original_text": "Wmin =\nmin\nτ ∈\n0, 1, …, T",
+  "ocr_text": "Wmin = min\nt{0,1,...,T}",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 127.62,
+    "x1": 177.11,
+    "y1": 147.25
+  },
+  "confidence": "high"
+}

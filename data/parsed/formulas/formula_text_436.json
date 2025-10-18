@@ -1,0 +1,12 @@
+{
+  "page": 298,
+  "original_text": "m = [ 0.05; 0.1; 0.12; 0.18 ];\nC = [ 0.0064 0.00408 0.00192 0; \n      0.00408 0.0289 0.0204 0.0119;\n      0.00192 0.0204 0.0576 0.0336;\n      0 0.0119 0.0336 0.1225 ];\npwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];\n \np = Portfolio('InitPort', pwgt0);\np = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');\np = setAssetMoments(p, m, C);",
+  "ocr_text": "m=[0.05;0.1;0.12;0.18];\nC=[0.00640.004080.001920;\n\n0.004080.02890.02040.0119;\n\n0.00192_0.02040.05760.0336;\n\n00.01190.03360.1225];\npwgt=[0.3;0.3;0.2;0.1];\np=Portfolio(InitPort,pwgtO);\np=setAssetList(p,_Bonds,Large-CapEquities,Small-CapEquities,EmergingEquities);\np=setAssetMoments(p,m,C);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 583.08,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

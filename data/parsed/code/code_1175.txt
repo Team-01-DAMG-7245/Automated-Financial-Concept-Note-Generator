@@ -1,0 +1,9 @@
+Page 1212
+================================================================================
+
+G = 
+   Class DIFFUSION: Diffusion Rate Specification 
+   --------------------------------------------- 
+       Rate: diffusion rate function G(t,X(t))  
+      Alpha: 1
+      Sigma: 0.3

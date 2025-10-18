@@ -1,0 +1,5 @@
+Page 50
+================================================================================
+
+For example, consider the function bndprice that computes the price of a bond given the yield to
+maturity. First set up variables for the yield to maturity, coupon rate, and the necessary dates.

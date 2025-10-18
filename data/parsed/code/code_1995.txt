@@ -1,0 +1,7 @@
+Page 1590
+================================================================================
+
+% Use the rebalance function to set the initial weights. This might
+% or might not be possible for other strategies depending on the details of
+% the strategy logic.
+initWeights = inverseVarianceFcn([],pricesTT(warmupRange,:));

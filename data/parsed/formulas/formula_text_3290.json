@@ -1,0 +1,12 @@
+{
+  "page": 1772,
+  "original_text": "NumPeriods = annuterm(Rate,Payment,PresentValue)\nNumPeriods = annuterm( ___ ,FutureValue,Due)",
+  "ocr_text": "NumPeriods=annuterm(Rate,Payment,PresentValue)\nNumPeriods=annuterm(__,FutureValue,Due)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.65,
+    "x1": 378.99,
+    "y1": 215.28
+  },
+  "confidence": "high"
+}

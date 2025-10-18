@@ -1,0 +1,12 @@
+{
+  "page": 548,
+  "original_text": "p = setBounds(p,0,0.5);",
+  "ocr_text": "p=setBounds(p,0,0.5);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 664.91,
+    "x1": 214.62,
+    "y1": 675.38
+  },
+  "confidence": "high"
+}

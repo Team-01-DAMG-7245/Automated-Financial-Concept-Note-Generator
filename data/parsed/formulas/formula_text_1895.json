@@ -1,0 +1,12 @@
+{
+  "page": 958,
+  "original_text": "figure\nplot(x,normcdf(x),'m','LineWidth',1.5)\nfor i=2:length(labels)\n   val = thresCCC(i);\n   line([val val],[0 normcdf(val)],'LineStyle',':');\n   line([x(1) val],[normcdf(val) normcdf(val)],'LineStyle',':');\n   if (centersY(i-1)-centersY(i))>0.05\n      text(-4.5,centersY(i),labels{i});\n   end\nend\nxlabel('Credit Quality Thresholds')\nylabel('Cumulative Probability')\ntitle('{\\bf Visualization of Credit Quality Thresholds}')\nlegend('Std Normal CDF','Location','E')",
+  "ocr_text": "figure\nplot(x,normcdf(x),m,LineWidth,1.5)\nfori=2:length(labels)\nval=thresCCC(i);\nLline([val_val],[0normcdf(val)],LineStyle,:);\nLine([x(1)val],[normcdf(val)normcdf(val)],LineStyle,:);\nif(centersY(i-1)-centersY(i))=0.05\ntext(-4.5,centersY(i),labels{i});\nend\nend\nxlabel(CreditQualityThresholds)\nylabel(CumulativeProbability)\ntitle({bfVisualizationofCreditQualityThresholds})\nlegend(StdNormalCDF,Location,E)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 537.23,
+    "x1": 436.78,
+    "y1": 688.09
+  },
+  "confidence": "high"
+}

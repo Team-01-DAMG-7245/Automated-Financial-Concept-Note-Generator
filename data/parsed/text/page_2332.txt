@@ -1,0 +1,55 @@
+Object for portfolio, specified using a PortfolioCVaR or PortfolioMAD object.
+
+For more information on creating a PortfolioCVaR or PortfolioMAD object, see
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+Output Arguments
+
+ScenarioMean — Estimate for mean of scenarios
+[] (default) | vector
+
+Estimate for mean of scenarios, returned as a NumPorts vector or [].
+
+Note If no scenarios are associated with the specified object, both ScenarioMean and
+ScenarioCovar are set to empty [].
+
+ScenarioCovar — Estimate for covariance of scenarios
+[] (default) | matrix
+
+Estimate for covariance of scenarios, returned as a NumAssets-by-NumAssets matrix or [].
+
+Note If no scenarios are associated with the specified object, both ScenarioMean and
+ScenarioCovar are set to empty [].
+
+Tips
+
+You can also use dot notation to estimate the mean and covariance of asset return scenarios for a
+portfolio.
+
+[ScenarioMean, ScenarioCovar] = obj.estimateScenarioMoments
+
+Version History
+Introduced in R2012b
+
+See Also
+setScenarios | estimatePortRisk | simulateNormalScenariosByMoments | rng
+
+Topics
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+External Websites
+Getting Started with Portfolio Optimization (4 min 13 sec)
+CVaR Portfolio Optimization (4 min 56 sec)
+
+15
+Functions
+
+15-1026

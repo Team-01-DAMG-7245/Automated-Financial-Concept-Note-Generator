@@ -1,0 +1,37 @@
+SDE = sde(F, G, 'Correlation', ...
+    correlation, 'StartState', X);
+
+GBM = gbm(diag(expReturn),diag(sigma), 'Correlation', ...
+    correlation, 'StartState', X);
+
+To illustrate the performance benefit of the overloaded Euler approximation function (simulate),
+increase the number of trials to 10000.
+
+nPeriods = 249;      % # of simulated observations
+dt       =   1;      % time increment = 1 day
+rng(142857,'twister')
+[X,T] = simulate(GBM, nPeriods, 'DeltaTime', dt, ...
+    'nTrials', 10000);
+
+whos X
+
+Name        Size                     Bytes  Class     Attributes
+
+X         250x6x10000            120000000  double
+
+Using this sample size, examine the terminal distribution of Canada's TSX Composite to verify
+qualitatively the lognormal character of the data.
+
+histogram(squeeze(X(end,1,:)), 30), xlabel('Price'), ylabel('Frequency')
+title('Histogram of Prices after One Year: Canada (TSX Composite)')
+
+Simulate 10 trials of the solution and plot the first trial:
+
+rng('default')
+[S,T] = simulate(SDE, nPeriods, 'DeltaTime', dt, 'nTrials', 10);
+rng('default')
+[X,T] = simBySolution(GBM, nPeriods,...
+
+simBySolution
+
+15-111

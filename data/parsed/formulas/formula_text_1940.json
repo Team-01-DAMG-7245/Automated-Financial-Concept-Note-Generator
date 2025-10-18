@@ -1,0 +1,12 @@
+{
+  "page": 999,
+  "original_text": "sc = modifybins(sc,'TmWBank','BinLabels',...\n{'Up to 11' '12 to 44' '45 to 70' '71 and up'});",
+  "ocr_text": "sc=modifybins(sc,TmWBank,BinLabels,...\n{Upto1112to4445to7071andup});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 320.98,
+    "x1": 350.08,
+    "y1": 342.25
+  },
+  "confidence": "high"
+}

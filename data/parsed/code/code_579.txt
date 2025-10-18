@@ -1,0 +1,4 @@
+Page 539
+================================================================================
+
+The value function V Wi t  represents the probability of exceeding the wealth goal G at time T, given

@@ -1,0 +1,12 @@
+{
+  "page": 403,
+  "original_text": "covarAsset = factorLoading*covarFactor*factorLoading'+D;\nport = Portfolio(\"AssetMean\", meanStockRetn, 'AssetCovar', covarAsset, 'LowerBound', 0, 'UpperBou\n    'Budget', 1);\nassetWgt2 = estimateFrontierByRisk(port, targetRisk);",
+  "ocr_text": "covarAsset=factorLoading*covarFactor*factorLoading+D;\n\nport=Portfolio(AssetMean,meanStockRetn,AssetCovar,covarAsset,LowerBound,0,_UpperBol\nBudget,_1);\n\nassetWgt2=estimateFrontierByRisk(port,targetRisk);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 338.06,
+    "x1": 615.59,
+    "y1": 380.93
+  },
+  "confidence": "high"
+}

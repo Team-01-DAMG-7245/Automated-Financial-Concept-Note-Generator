@@ -1,0 +1,12 @@
+{
+  "page": 1172,
+  "original_text": "T =\nreadtable(filename,opts,Name\n,Value)",
+  "ocr_text": "T=\nreadtable(filename,opts,Name\n,Value)",
+  "bbox": {
+    "x0": 387.09,
+    "y0": 482.76,
+    "x1": 555.65,
+    "y1": 518.39
+  },
+  "confidence": "high"
+}

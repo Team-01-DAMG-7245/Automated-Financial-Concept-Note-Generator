@@ -1,0 +1,44 @@
+correspond to the budget equality constraint; the remaining rows correspond to the upper/lower
+investment bounds.
+
+AbsConSet = portcons('PortValue', 1, NumAssets, ... 
+'AssetLims', zeros(NumAssets,1), ones(NumAssets,1));
+
+Transform the absolute constraints to active constraints with abs2active.
+
+ActiveConSet = abs2active(AbsConSet, Index);
+
+An examination of the absolute and active constraint matrices reveals that they differ only in the last
+column (the columns corresponding to the b in A*w <= b.
+
+[AbsConSet(:,end)  ActiveConSet(:,end)]
+
+ans = 12×2
+
+1.0000         0
+   -1.0000         0
+    1.0000    0.8000
+    1.0000    0.8000
+    1.0000    0.8000
+    1.0000    0.8000
+    1.0000    0.8000
+         0    0.2000
+         0    0.2000
+         0    0.2000
+         0    0.2000
+         0    0.2000
+      ⋮
+
+In particular, note that the sum-to-one absolute budget constraint becomes a sum-to-zero active
+budget constraint. The general transformation is as follows:
+
+Construct the Portfolio object and plot the tracking error efficient frontier with 21 portfolios.
+
+p = Portfolio('AssetMean', ExpReturn, 'AssetCovar', ExpCovariance);
+p = p.setInequality(ActiveConSet(:,1:end-1), ActiveConSet(:,end));
+[ActiveRisk, ActiveReturn] = p.plotFrontier(21);
+
+3
+Portfolio Analysis
+
+3-28

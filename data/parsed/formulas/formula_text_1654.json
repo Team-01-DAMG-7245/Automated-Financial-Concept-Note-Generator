@@ -1,0 +1,12 @@
+{
+  "page": 831,
+  "original_text": "p = PortfolioMAD('NumAssets', 20);\np = setDefaultConstraints(p);\ndisp(p)",
+  "ocr_text": "p=PortfolioMAD(NumAssets,20);\np=setDefaultConstraints(p);\ndisp(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 288.58,
+    "x1": 274.22,
+    "y1": 320.64
+  },
+  "confidence": "high"
+}

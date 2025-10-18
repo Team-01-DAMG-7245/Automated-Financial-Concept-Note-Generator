@@ -1,0 +1,63 @@
+Pricing and Analyzing Equity Derivatives
+
+In this section...
+
+“Introduction” on page 2-39
+
+“Sensitivity Measures” on page 2-39
+
+“Analysis Models” on page 2-40
+
+Introduction
+
+These toolbox functions compute prices, sensitivities, and profits for portfolios of options or other
+equity derivatives. They use the Black-Scholes model for European options and the binomial model
+for American options. Such measures are useful for managing portfolios and for executing collars,
+hedges, and straddles:
+
+•
+A collar is an interest-rate option that guarantees that the rate on a floating-rate loan will not
+exceed a certain upper level nor fall below a lower level. It is designed to protect an investor
+against wide fluctuations in interest rates.
+
+•
+A hedge is a securities transaction that reduces or offsets the risk on an existing investment
+position.
+
+•
+A straddle is a strategy used in trading options or futures. It involves simultaneously purchasing
+put and call options with the same exercise price and expiration date, and it is most profitable
+when the price of the underlying security is very volatile.
+
+Sensitivity Measures
+
+There are six basic sensitivity measures associated with option pricing: delta, gamma, lambda, rho,
+theta, and vega — the “greeks.” The toolbox provides functions for calculating each sensitivity and for
+implied volatility.
+
+Delta
+
+Delta of a derivative security is the rate of change of its price relative to the price of the underlying
+asset. It is the first derivative of the curve that relates the price of the derivative to the price of the
+underlying security. When delta is large, the price of the derivative is sensitive to small changes in
+the price of the underlying security.
+
+Gamma
+
+Gamma of a derivative security is the rate of change of delta relative to the price of the underlying
+asset; that is, the second derivative of the option price relative to the security price. When gamma is
+small, the change in delta is small. This sensitivity measure is important for deciding how much to
+adjust a hedge position.
+
+Lambda
+
+Lambda, also known as the elasticity of an option, represents the percentage change in the price of
+an option relative to a 1% change in the price of the underlying security.
+
+Rho
+
+Rho is the rate of change in option price relative to the risk-free interest rate.
+
+Pricing and Analyzing Equity Derivatives
+
+2-39

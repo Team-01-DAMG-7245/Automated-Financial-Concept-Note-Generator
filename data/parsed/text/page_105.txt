@@ -1,0 +1,35 @@
+At this scale, sharp departures in the imbalance index align with corresponding departures in the
+midprice. If the relationship is predictive, meaning imbalances of a certain size forecast future price
+movements, then quantifying the relationship can provide statistical arbitrage opportunities.
+
+Plot a histogram of the interarrival times in the LOB.
+
+DT = diff(t); % Interarrival Times
+DT.Format = "s";
+
+figure
+binEdges = seconds(0.01:0.01:1);
+histogram(DT,binEdges)
+xlabel("Seconds")
+ylabel("Number of Orders")
+title("LOB Interarrival Times")
+
+Interarrival times follow the characteristic pattern of a Poisson process.
+
+Compute the average wait time between orders by fitting an exponential distribution to the
+interarrival times.
+
+DTAvg = expfit(DT)
+
+DTAvg = duration
+   0.040273 sec
+
+Smoothed Data
+
+The raw imbalance series I is erratic. To identify the most significant dynamic shifts, introduce a
+degree of smoothing dI, which is the number of backward ticks used to average the raw imbalance
+series.
+
+Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development
+
+2-61

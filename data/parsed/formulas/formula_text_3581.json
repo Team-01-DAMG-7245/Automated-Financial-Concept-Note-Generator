@@ -1,0 +1,12 @@
+{
+  "page": 2022,
+  "original_text": "Spread = cfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle) computes spread\nover a yield curve for a cash flow.",
+  "ocr_text": "Spread=cfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle)computesspread\noverayieldcurveforacashflow.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.12,
+    "x1": 556.23,
+    "y1": 279.75
+  },
+  "confidence": "high"
+}

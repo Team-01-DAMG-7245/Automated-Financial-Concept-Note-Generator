@@ -1,0 +1,12 @@
+{
+  "page": 1268,
+  "original_text": "minProbability = cdf(tails{index}, (min(returns(:,index))));\nmaxProbability = cdf(tails{index}, (max(returns(:,index))));",
+  "ocr_text": "minProbability=cdf(tails{index},_(min(returns(:,index))));\nmaxProbability=cdf(tails{index},_(max(returns(:,index))));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.43,
+    "x1": 415.08,
+    "y1": 524.69
+  },
+  "confidence": "high"
+}

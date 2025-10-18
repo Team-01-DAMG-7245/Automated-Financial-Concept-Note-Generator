@@ -1,0 +1,12 @@
+{
+  "page": 820,
+  "original_text": "q = PortfolioMAD;\nq = simulateNormalScenariosByData(q, Y, 20000, 'dataformat', 'prices', 'missingdata', true);",
+  "ocr_text": "q_=PortfolioMAD;\nq=simulateNormalScenariosByData(q,Y,20000,dataformat,prices,missingdata,true);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 347.34,
+    "x1": 588.49,
+    "y1": 368.61
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1257,
+  "original_text": "•\nUse the optional input flag StorePaths, which all simulation methods support. By default, Paths\nis stored (StorePaths = true). However, setting StorePaths to false returns Paths as an\nempty matrix.",
+  "ocr_text": "*UsetheoptionalinputflagStorePaths,whichallsimulationmethodssupport.Bydefault,Paths\nisstored(StorePaths=true).However,settingStorePathstofalsereturnsPathsasan\nemptymatrix.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 683.36,
+    "x1": 555.45,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 454,
+  "original_text": "% Define a risk budget.\nbudget = [0.5; 0.25; 0.25];\nwRB = riskBudgetingPortfolio(Sigma,budget)",
+  "ocr_text": "Defineariskbudget.\nbudget=[0.5;0.25;0.25];\nwRB=riskBudgetingPortfolio(Sigma,budget)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 657.25,
+    "x1": 317.56,
+    "y1": 689.31
+  },
+  "confidence": "high"
+}

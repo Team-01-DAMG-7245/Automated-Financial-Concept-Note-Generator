@@ -1,0 +1,12 @@
+{
+  "page": 62,
+  "original_text": "CFlowDates = cfdates(Settle, Maturity, Period, Basis, ... \nEndMonthRule, IssueDate, FirstCouponDate, LastCouponDate)",
+  "ocr_text": "CFlowDates=cfdates(Settle,Maturity,Period,Basis,...\nEndMonthRule,IssueDate,FirstCouponDate,LastCouponDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 655.51,
+    "x1": 404.24,
+    "y1": 676.78
+  },
+  "confidence": "high"
+}

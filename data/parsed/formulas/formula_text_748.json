@@ -1,0 +1,12 @@
+{
+  "page": 443,
+  "original_text": "The strategies that include the penalty function in the objective give weights that are between the\nminimum variance portfolio weights and the weights from the respective maximum diversification\ntechnique. In fact, for the problem with the HH penalty, choosing λHH = 0 returns the minimum\nvariance solution, and as λHH →∞, the solution approaches the one that maximizes HH\ndiversification. For the problem with the MDP penalty, choosing λMDP = 0 also returns the minimum",
+  "ocr_text": "Thestrategiesthatincludethepenaltyfunctionintheobjectivegiveweightsthatarebetweenthe\nminimumvarianceportfolioweightsandtheweightsfromtherespectivemaximumdiversification\ntechnique.Infact,fortheproblemwiththeHHpenalty,choosingAyy=0returnstheminimum\nvariancesolution,andasAyy-,thesolutionapproachestheonethatmaximizesHH\ndiversification.FortheproblemwiththeMDPpenalty,choosingAypp=0alsoreturnstheminimum",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.67,
+    "x1": 548.36,
+    "y1": 698.74
+  },
+  "confidence": "high"
+}

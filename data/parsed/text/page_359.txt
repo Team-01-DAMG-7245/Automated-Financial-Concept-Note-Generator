@@ -1,0 +1,34 @@
+This example demonstrates a Portfolio object with semicontinuous and cardinality constraints and
+uses the BlueChipStockMoments dataset, which has a universe of 30 assets.
+
+load BlueChipStockMoments
+numAssets = numel(AssetList)
+
+numAssets = 30
+
+Limit the Minimum Weight for Each Allocated Asset
+
+Create a fully invested portfolio with only long positions: xi ≥0 and sum xi = 1. These are configured
+with setDefaultConstraints.
+
+p = Portfolio('AssetList', AssetList,'AssetCovar', AssetCovar, 'AssetMean', AssetMean);
+p = setDefaultConstraints(p);
+
+Suppose that you want to avoid very small positions to minimize the churn and operational costs. Add
+another constraint to confine the allocated positions to be no less than 5%, by setting the constraints
+xi = 0 or xi ≥0 . 05 using setBounds with a 'Conditional' BoundType.
+
+pWithMinWeight = setBounds(p, 0.05, 'BoundType', 'Conditional');
+
+Plot the efficient frontiers for both Portfolio objects.
+
+wgt = estimateFrontier(p);
+wgtWithMinWeight = estimateFrontier(pWithMinWeight);
+figure(1);
+plotFrontier(p, wgt); hold on;
+plotFrontier(pWithMinWeight, wgtWithMinWeight); hold off;
+legend('Baseline portfolio', 'With minWeight constraint', 'location', 'best');
+
+Portfolio Optimization with Semicontinuous and Cardinality Constraints
+
+4-191

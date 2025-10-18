@@ -1,0 +1,12 @@
+{
+  "page": 1509,
+  "original_text": "Merton = merton( ___ ,Name,Value) sets “Properties” on page 15-205 using name-value pair\narguments in addition to the input arguments in the preceding syntax. Enclose each property name in\nquotes.",
+  "ocr_text": "Merton=merton( ,Name,Value)setsPropertiesonpage15-205usingname-valuepair\nargumentsinadditiontotheinputargumentsintheprecedingsyntax.Encloseeachpropertynamein\nquotes.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 161.96,
+    "x1": 556.98,
+    "y1": 197.59
+  },
+  "confidence": "high"
+}

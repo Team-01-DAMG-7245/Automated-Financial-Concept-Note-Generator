@@ -1,0 +1,10 @@
+Page 613
+================================================================================
+
+if EnvConstants.BuyTrade
+    AvgPrice = mean(EnvConstants.SampledBook(StepIdx,[1 5]),2);
+    PriceDivergence = LoggedSignals.ArrivalPrice - AvgPrice;
+else
+    AvgPrice = mean(EnvConstants.SampledBook(StepIdx,[3 7]),2);
+    PriceDivergence = AvgPrice - LoggedSignals.ArrivalPrice;
+end

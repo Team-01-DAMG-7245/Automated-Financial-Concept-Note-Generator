@@ -1,0 +1,5 @@
+Page 1426
+================================================================================
+
+The simBySolution function simulates the state vector Xt using an approximation of the closed-form
+solution of diagonal-drift models.

@@ -1,0 +1,12 @@
+{
+  "page": 451,
+  "original_text": "function new_weights = MixMDP(~, assetPrices, struct)\n% Min variance + MDP diversification strategy",
+  "ocr_text": "functionnew_weights=MixMDP(,assetPrices,struct)\nMinvariance+MDPdiversificationstrategy",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 438.63,
+    "x1": 377.15,
+    "y1": 459.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1148,
+  "original_text": "AssetScenarios = zeros(NTRIALS,2);\nPrice_T = squeeze(Paths(end,1,:));",
+  "ocr_text": "AssetScenarios=zeros(NTRIALS,2);\nPriceT=squeeze(Paths(end,1,:));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 505.39,
+    "x1": 274.21,
+    "y1": 526.65
+  },
+  "confidence": "high"
+}

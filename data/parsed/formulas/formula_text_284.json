@@ -1,0 +1,12 @@
+{
+  "page": 175,
+  "original_text": "f(x, ys) = −ysTx, which is the portfolio loss under scenario s.",
+  "ocr_text": "INDEINDODYIIOONENFBENEAANLINDIIIAINDENIIAIIDNANOIRILIIDIENEANE\nf(X,ys)=- yl x,whichistheportfoliolossunderscenarios.",
+  "bbox": {
+    "x0": 90.56,
+    "y0": 506.43,
+    "x1": 366.35,
+    "y1": 521.78
+  },
+  "confidence": "high"
+}

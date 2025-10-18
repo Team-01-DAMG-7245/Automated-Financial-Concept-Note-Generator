@@ -1,0 +1,12 @@
+{
+  "page": 1550,
+  "original_text": "% Give the initial weights for both strategies equal weighting. Weights\n% must sum to 1 to be fully invested.\ninitialWeights = ones(1,numAssets);\ninitialWeights = initialWeights / sum(initialWeights);",
+  "ocr_text": "Givetheinitialweightsforbothstrategiesequalweighting.Weights\nSmustsumto1tobefullyinvested.\ninitialWeights=ones(1,numAssets);\ninitialWeights=initialWeights/sum(initialWeights);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 512.23,
+    "x1": 474.68,
+    "y1": 555.09
+  },
+  "confidence": "high"
+}

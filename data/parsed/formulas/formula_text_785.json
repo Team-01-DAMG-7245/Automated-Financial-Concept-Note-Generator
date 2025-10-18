@@ -1,0 +1,12 @@
+{
+  "page": 452,
+  "original_text": "function new_weights = tiltedMDP(~,assetPrices,struct)\n% Tilted MDP approach",
+  "ocr_text": "functionnew_weights=tiltedMDP(-,assetPrices,struct)\nTiltedMDPapproach",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 319.83,
+    "x1": 382.57,
+    "y1": 341.09
+  },
+  "confidence": "high"
+}

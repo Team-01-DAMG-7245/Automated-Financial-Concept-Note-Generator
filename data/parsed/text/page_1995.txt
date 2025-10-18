@@ -1,0 +1,51 @@
+cfdatesq
+
+Quasi-coupon dates for fixed-income security
+
+Syntax
+
+QuasiCouponDates = cfdatesq(Settle,Maturity)
+QuasiCouponDates = cfdatesq( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate,PeriodsBeforeSettle,PeriodsAfterMaturity)
+
+Description
+
+QuasiCouponDates = cfdatesq(Settle,Maturity) returns a matrix of quasi-coupon dates
+expressed in datetime format (if any inputs are in datetime format).
+
+Successive quasi-coupon dates determine the length of the standard coupon period for the fixed-
+income security of interest, and do not necessarily coincide with actual coupon payment dates. Quasi-
+coupon dates are determined regardless of whether the first or last coupon periods are normal, long,
+or short.
+
+QuasiCouponDates has NUMBONDS rows and the number of columns is determined by the maximum
+number of quasi-coupon dates required to hold the bond portfolio. NaNs are padded for bonds which
+have less than the maximum number quasi-coupon dates. By default, quasi-coupon dates after
+settlement and on or preceding maturity are returned. If settlement occurs on maturity, and maturity
+is a quasi-coupon date, then the maturity date is returned.
+
+QuasiCouponDates = cfdatesq( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate,PeriodsBeforeSettle,PeriodsAfterMaturity)
+specifies options using one or more optional arguments in addition to the input arguments in the
+previous syntax.
+
+Examples
+
+Obtain Quasi-Coupon Dates for Fixed-Income Security
+
+Compute the quasi-coupon dates given the Settle and Maturity dates.
+
+QuasiCouponDates = cfdatesq('14-Mar-1997', '30-Nov-1998', 2, 0, 1)
+
+QuasiCouponDates = 1×4
+
+729541      729724      729906      730089
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, or LastCouponDate
+are datetime arrays, then QuasiCouponDates is returned as a datetime array. For example:
+
+QuasiCouponDates = cfdatesq('14-Mar-1997', datetime('30-Nov-1998','Locale','en_US'), 2, 0, 1)
+
+cfdatesq
+
+15-689

@@ -1,0 +1,23 @@
+Version History
+Introduced before R2006a
+
+R2022b: Support for negative price data
+
+The Data input accepts negative prices.
+
+R2018a: Support for matrix, time, or timetable input for data
+Behavior changed in R2018a
+
+highlow accepts Data input as a matrix, timetable, or table.
+
+See Also
+timetable | table | movavg | pointfig | kagi | linebreak | priceandvol | renko | volarea |
+candle
+
+Topics
+“Use Timetables in Finance” on page 11-7
+“Convert Financial Time Series Objects (fints) to Timetables” on page 11-2
+
+highlow
+
+15-1119

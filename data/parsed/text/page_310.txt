@@ -1,0 +1,156 @@
+Available Solvers (Use setSolverMINLP to specify the
+solver)
+
+Portfolio
+Problem
+
+Use Function:
+Portfolio Object
+PortfolioCVaR
+Object
+
+PortfolioMAD
+Object
+
+Maximize return
+subject to a risk
+constraint
+
+estimateFronti
+erByRisk(p,ris
+kTarget)
+
+(See
+estimateFronti
+erByRisk)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+Supports
+extended
+formulation
+using the name-
+value argument
+“ExtendedForm
+ulation” on
+page 15-0
+.
+
+•
+TrustRegionC
+P
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+Maximize Sharpe
+ratio
+
+estimateMaxSha
+rpeRatio(p)
+
+(See
+estimateMaxSha
+rpeRatio)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+Supports
+extended
+formulation
+using the name-
+value argument
+“ExtendedForm
+ulation” on
+page 15-0
+.
+
+•
+TrustRegionC
+P
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+Optimize custom
+linear objective
+without risk or
+tracking error
+constraint
+
+estimateCustom
+ObjectivePortf
+olio(p,linFun)
+
+(See
+estimateCustom
+ObjectivePortf
+olio)
+
+intlinprog
+
+Use
+IntMainSolverO
+ptions name-
+value argument to
+control
+intlinprog
+options.
+
+Not supported
+Not supported
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-142

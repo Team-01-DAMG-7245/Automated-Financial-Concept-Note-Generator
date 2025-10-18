@@ -1,0 +1,56 @@
+Obtaining Efficient Portfolios for Target Returns
+
+This example shows how to obtain efficient portfolios that have targeted portfolio returns using the
+estimateFrontierByReturn function.
+
+The estimateFrontierByReturn function accepts one or more target portfolios returns and
+obtains efficient portfolios with the specified returns. For example, assume that you have a universe
+of four assets where you want to obtain efficient portfolios with target portfolio returns of 6%, 9%,
+and 12%:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+ 
+p = Portfolio;
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+pwgt = estimateFrontierByReturn(p, [0.06, 0.09, 0.12]);
+
+display(pwgt)
+
+pwgt = 4×3
+
+0.8772    0.5032    0.1293
+    0.0434    0.2488    0.4541
+    0.0416    0.0780    0.1143
+    0.0378    0.1700    0.3022
+
+Sometimes, you can request a return for which no efficient portfolio exists. Based on the previous
+code, suppose that you want a portfolio with a 5% return (which is the return of the first asset). A
+portfolio that is fully invested in the first asset, however, is inefficient. estimateFrontierByReturn
+warns if your target returns are outside the range of efficient portfolio returns and replaces it with
+the endpoint portfolio of the efficient frontier closest to your target return. The best way to avoid this
+situation is to bracket your target portfolio returns with estimateFrontierLimits and
+estimatePortReturn (see “Obtaining Endpoints of the Efficient Frontier” on page 4-102 and
+“Obtaining Portfolio Risks and Returns” on page 4-122).
+
+pret = estimatePortReturn(p, p.estimateFrontierLimits);
+display(pret)
+
+pret = 2×1
+
+0.0590
+    0.1800
+
+This result indicates that efficient portfolios have returns that range between 5.9% and 18%.
+
+If you have an initial portfolio, estimateFrontierByReturn also returns purchases and sales to get
+from your initial portfolio to the target portfolios on the efficient frontier. For example, given an initial
+portfolio in pwgt0, to obtain purchases and sales with target returns of 6%, 9%, and 12%:
+
+Obtaining Efficient Portfolios for Target Returns
+
+4-105

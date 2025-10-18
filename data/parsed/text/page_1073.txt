@@ -1,0 +1,59 @@
+∑
+k = 1
+
+m
+
+Zk −Hkb TC0 Zk −Hkb
+
+with fixed covariance C0.
+
+In most cases, C0 is a diagonal matrix. The inverse matrix W = C0
+−1 has diagonal elements that can be
+considered relative “weights” for each series. Thus, CWLS is a form of weighted least squares with
+the weights applied across series.
+
+Covariance-Weighted Least Squares Without Missing Data
+
+Estimate parameters using mvnrmle:
+
+[Parameters, Covariance] = mvnrmle(Data, Design, 1, [], [], [], Covar0);
+
+Estimate standard errors using mvnrstd:
+
+StdParameters = mvnrstd(Data, Design, Covariance);
+
+Covariance-Weighted Least Squares With Missing Data
+
+Estimate parameters using ecmlsrmle:
+
+[Parameters, Covariance] = ecmlsrmle(Data, Design, [], [], [], [], Covar0);
+
+Estimate standard errors using ecmmvnrstd:
+
+StdParameters = ecmmvnrstd(Data, Design, Covariance);
+
+Feasible Generalized Least Squares
+
+An ad hoc form of least squares that has surprisingly good properties for misspecified or nonnormal
+models is known as feasible generalized least squares, or FGLS. The basic procedure is to do least-
+squares regression and then to do covariance-weighted least-squares regression with the resultant
+residual covariance from the first regression.
+
+Feasible Generalized Least Squares Without Missing Data
+
+Estimate parameters using mvnrmle:
+
+[Parameters, Covariance] = mvnrmle(Data, Design, 2, 0, 0);
+
+or (to illustrate the FGLS process explicitly)
+
+[Parameters, Covar0] = mvnrmle(Data, Design, 1);
+[Parameters, Covariance] = mvnrmle(Data, Design, 1, [], [], [], Covar0);
+
+Estimate standard errors using mvnrstd:
+
+StdParameters = mvnrstd(Data, Design, Covariance);
+
+Multivariate Normal Regression Types
+
+9-15

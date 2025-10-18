@@ -1,0 +1,12 @@
+{
+  "page": 1355,
+  "original_text": "denoisedCorr = covarianceDenoising(stdCorr,numObservations);\ndenoisedCorr = (denoisedCorr+denoisedCorr')/2;",
+  "ocr_text": "denoisedCorr=covarianceDenoising(stdCorr,numObservations);\ndenoisedCorr=(denoisedCorr+denoisedCorr)/2;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 405.33,
+    "x1": 415.08,
+    "y1": 426.6
+  },
+  "confidence": "high"
+}

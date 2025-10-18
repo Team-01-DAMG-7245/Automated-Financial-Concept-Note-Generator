@@ -1,0 +1,62 @@
+1
+(1 + J)δ 2πexp
+
+−ln(1 + J) −(ln(1+μj) −δ2
+
+2
+
+2
+
+2δ2
+
+Here:
+
+μj is the mean of J(μj > -1).
+
+ƛp is the annual frequency (intensity) of the Poisson process Pt (ƛp ≥ 0).
+
+σM is the volatility of the asset price (σM> 0).
+
+Under this formulation, extreme events are explicitly included in the stochastic differential equation
+as randomly occurring discontinuous jumps in the diffusion trajectory. Therefore, the disparity
+between observed tail behavior of log returns and that of Brownian motion is mitigated by the
+inclusion of a jump mechanism.
+
+Version History
+Introduced in R2020a
+
+R2023b: Added simByMilstein2 method
+Behavior changed in R2023b
+
+Use the simByMilstein2 method to approximate a numerical solution of a stochastic differential
+equation.
+
+R2023a: Added simByMilstein method
+Behavior changed in R2023a
+
+Use the simByMilstein method to approximate a numerical solution of a stochastic differential
+equation.
+
+References
+
+[1] Aït-Sahalia, Yacine. “Testing Continuous-Time Models of the Spot Interest Rate.” Review of
+Financial Studies 9, no. 2 ( Apr. 1996): 385–426.
+
+[2] Aït-Sahalia, Yacine. “Transition Densities for Interest Rate and Other Nonlinear Diffusions.” The
+Journal of Finance 54, no. 4 (Aug. 1999): 1361–95.
+
+[3] Glasserman, Paul. Monte Carlo Methods in Financial Engineering. New York: Springer-Verlag,
+2004.
+
+[4] Hull, John C. Options, Futures and Other Derivatives. 7th ed, Prentice Hall, 2009.
+
+[5] Johnson, Norman Lloyd, Samuel Kotz, and Narayanaswamy Balakrishnan. Continuous Univariate
+Distributions. 2nd ed. Wiley Series in Probability and Mathematical Statistics. New York:
+Wiley, 1995.
+
+[6] Shreve, Steven E. Stochastic Calculus for Finance. New York: Springer-Verlag, 2004.
+
+15
+Functions
+
+15-210

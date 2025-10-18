@@ -1,0 +1,10 @@
+Page 1724
+================================================================================
+
+•
+The output function F is always a deterministic function of time, F(t), and may always be called
+with a single input regardless of the Deterministic flag. The distinction is that when
+Deterministic is false, the function F may also be called with a second input, an NVars-by-1
+state vector X(t), which is a placeholder and ignored. While F(t) and F(t,X) produce identical
+results, the former specifically indicates that the function is a deterministic function of time, and
+may offer significant performance benefits in some situations.

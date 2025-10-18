@@ -1,0 +1,9 @@
+Page 1405
+================================================================================
+
+When you invoke drift-rate parameters with inputs, they behave like functions, giving the impression
+of dynamic behavior. The parameters A and B accept the observation time t and a state vector Xt, and
+return an array of appropriate dimension. Specifically, parameters A and B evaluate the
+corresponding drift-rate component. Even if you originally specified an input as an array, drift
+treats it as a static function of time and state, by that means guaranteeing that all parameters are
+accessible by the same interface.

@@ -1,0 +1,59 @@
+ecmlsrobj
+
+Log-likelihood function for least-squares regression with missing data
+
+Syntax
+
+Objective = ecmlsrobj(Data,Design,Parameters)
+Objective = ecmlsrobj( ___ ,Covariance)
+
+Description
+
+Objective = ecmlsrobj(Data,Design,Parameters) computes a least-squares objective
+function based on current parameter estimates with missing data. Objective is a scalar that
+contains the least-squares objective function.
+
+Objective = ecmlsrobj( ___ ,Covariance) computes a least-squares objective function based
+on current parameter estimates with missing data using an optional argument.
+
+Input Arguments
+
+Data — Data sample
+matrix
+
+Data sample, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a
+NUMSERIES-dimensional random vector. If a data sample has missing values, represented as NaNs.
+Only samples that are entirely NaNs are ignored. (To ignore samples with at least one NaN, use
+mvnrmle.)
+
+Data Types: double
+
+Design — Model design
+matrix | cell array of character vectors
+
+Model design, specified as a matrix or a cell array that handles two model structures:
+
+•
+If NUMSERIES = 1, Design is a NUMSAMPLES-by-NUMPARAMS matrix with known values. This
+structure is the standard form for regression on a single series.
+
+•
+If NUMSERIES ≥ 1, Design is a cell array. The cell array contains either one or NUMSAMPLES cells.
+Each cell contains a NUMSERIES-by-NUMPARAMS matrix of known values.
+
+If Design has a single cell, it is assumed to have the same Design matrix for each sample. If
+Design has more than one cell, each cell contains a Design matrix for each sample.
+
+Data Types: double | cell
+
+Parameters — Estimates for the parameters of regression model
+vector
+
+Estimates for the parameters of regression model, specified as an NUMPARAMS-by-1 column vector.
+
+Data Types: double
+
+15
+Functions
+
+15-864

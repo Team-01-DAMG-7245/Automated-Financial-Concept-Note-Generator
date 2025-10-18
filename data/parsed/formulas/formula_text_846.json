@@ -1,0 +1,12 @@
+{
+  "page": 473,
+  "original_text": "% Validation set\nXvalidation = network_features(cv_partition.test,:);\nTvalidation = network_responses(cv_partition.test,:);",
+  "ocr_text": "Validationset\nXvalidation=network_features(cv_partition.test,:);\nTvalidation=network_responses(cv_partition.test,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 522.23,
+    "x1": 377.15,
+    "y1": 554.29
+  },
+  "confidence": "high"
+}

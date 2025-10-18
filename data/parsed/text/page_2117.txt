@@ -1,0 +1,55 @@
+NumberWorkDays = [16; 20; 44];
+EndDate = datewrkdy(datetime(2000,12,12), NumberWorkDays, 2)
+
+EndDate = 3×1 datetime
+   04-Jan-2001
+   10-Jan-2001
+   13-Feb-2001
+
+Input Arguments
+
+StartDate — Start date
+datetime array | string array | date character vector
+
+Start date, specified as an N-by-1 or 1-by-N vector using a datetime array, string array, or date
+character vectors.
+
+To support existing code, datewrkdy also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+NumberWorkDays — Number of work or business days in future (positive) or past (negative)
+positive or negative integers
+
+Number of work or business days in future (positive) or past (negative) that includes the starting
+date, specified as an N-by-1 or 1-by-N vector containing positive or negative integers.
+
+NumberHolidays and NumberWorkDays must have the same sign.
+
+Data Types: double
+
+NumberHolidays — Number of holidays within NumberWorkDays
+positive or negative integers
+
+Number of holidays within NumberWorkDays, specified as positive or negative integers using an N-
+by-1 or 1-by-N containing values for the number of days movement in terms of holidays into the future
+(if positive) or past (if negative).
+
+NumberHolidays and NumberWorkDays must have the same sign.
+
+Data Types: double
+
+Output Arguments
+
+EndDate — Date of future or past workday
+vector
+
+Date of future or past workday, returned as an N-by-1 or 1-by-N vector for the future or past date.
+
+Version History
+Introduced before R2006a
+
+datewrkdy
+
+15-811

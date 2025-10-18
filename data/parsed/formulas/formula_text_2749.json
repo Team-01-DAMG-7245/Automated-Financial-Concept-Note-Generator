@@ -1,0 +1,12 @@
+{
+  "page": 1391,
+  "original_text": "Example: F = drift(0, 0.1) % Drift rate function F(t,X)",
+  "ocr_text": "Example:F=drift(0,0.1)DriftratefunctionF(t,X)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 371.45,
+    "x1": 412.29,
+    "y1": 383.08
+  },
+  "confidence": "high"
+}

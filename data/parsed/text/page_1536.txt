@@ -1,0 +1,61 @@
+Mean-reversion speed of the stochastic variance process, returned as an array or deterministic
+function of time.
+
+Data Types: double | function_handle
+
+Level — Reversion level or long-run average of stochastic variance process
+array or deterministic function of time
+
+Reversion level or long-run average of the stochastic variance process, returned as an array or
+deterministic function of time.
+
+Data Types: double | function_handle
+
+Volatility — Instantaneous volatility of stochastic variance process
+scalar or deterministic function of time or deterministic function of time and state
+
+Instantaneous volatility of the stochastic variance process (often called the volatility of volatility or
+volatility of variance), returned as a scalar or deterministic function of time.
+
+Data Types: double | function_handle
+
+Alpha — Kernel function parameter representing roughness index
+scalar numeric
+
+Kernel function parameter representing the roughness index, returned as a numeric scalar.
+
+Data Types: double
+
+Object Functions
+simByEuler
+Simulate RVM, roughbergomi, or roughheston sample paths by Euler approximation
+
+Examples
+
+Create roughheston Object
+
+The roughheston object is a bivariate composite model, composed of two coupled and dissimilar
+univariate models, each driven by a single Brownian motion source of risk over NPERIODS
+consecutive observation periods, approximating continuous-time rough Heston stochastic volatility
+processes.
+
+Create a roughheston object.
+
+Return = 0.1;
+Speed = 0.2;
+Level = 0.1;
+Volatility = 0.05;
+Alpha = -0.03;
+
+roughHestonObj = roughheston(Return,Speed,Level,Volatility,Alpha)
+
+roughHestonObj = 
+   Class ROUGHHESTON: Rough Heston Stochastic Volatility
+   -----------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   -----------------------------------------------------
+
+15
+Functions
+
+15-230

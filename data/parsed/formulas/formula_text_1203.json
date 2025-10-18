@@ -1,0 +1,12 @@
+{
+  "page": 609,
+  "original_text": "for HorizonIdx = 1:NumHorizons\n    HorizonExecutedPrices = zeros(NumLevels*NumIntervalsPerHorizon,1);\n    HorizonExecutedShares = HorizonExecutedPrices;\n    for IntervalIdx = 1:NumIntervalsPerHorizon\n        CurrentBook =  InputLOB(IntervalIdx + NumIntervalsPerHorizon*(HorizonIdx-1),:);",
+  "ocr_text": "forHorizonIdx=1:NumHorizons\nHorizonExecutedPrices=zeros(NumLevels*NumIntervalsPerHorizon,1);\nHorizonExecutedShares=HorizonExecutedPrices;\nforIntervalIdx=1:NumIntervalsPerHorizon\nCurrentBook=_InputLOB(IntervalIdx+NumIntervalsPerHorizon*(HorizonIdx-1),:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.43,
+    "x1": 561.37,
+    "y1": 449.09
+  },
+  "confidence": "high"
+}

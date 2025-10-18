@@ -1,0 +1,12 @@
+{
+  "page": 1471,
+  "original_text": "SDEDDO = sdeddo(DriftRate,DiffusionRate)\nSDEDDO = sdeddo( ___ ,Name,Value)",
+  "ocr_text": "SDEDDO=sdeddo(DriftRate,DiffusionRate)\nSDEDDO=sdeddo(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 527.8,
+    "x1": 330.82,
+    "y1": 551.43
+  },
+  "confidence": "high"
+}

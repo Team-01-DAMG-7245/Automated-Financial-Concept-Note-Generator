@@ -1,0 +1,36 @@
+Portfolio Selection and Risk Aversion
+
+In this section...
+
+“Introduction” on page 3-7
+
+“Optimal Risky Portfolio” on page 3-8
+
+Introduction
+
+One of the factors to consider when selecting the optimal portfolio for a particular investor is the
+degree of risk aversion. This level of aversion to risk can be characterized by defining the investor's
+indifference curve. This curve consists of the family of risk/return pairs defining the trade-off between
+the expected return and the risk. It establishes the increment in return that a particular investor
+requires to make an increment in risk worthwhile. Typical risk aversion coefficients range from 2.0
+through 4.0, with the higher number representing lesser tolerance to risk. The equation used to
+represent risk aversion in Financial Toolbox software is
+
+U = E(r) - 0.005*A*sig^2
+
+where:
+
+U is the utility value.
+
+E(r) is the expected return.
+
+A is the index of investor's aversion.
+
+sig is the standard deviation.
+
+Note An alternative to using these portfolio optimization functions is to use the Portfolio object
+(Portfolio) for mean-variance portfolio optimization. This object supports gross or net portfolio
+
+Portfolio Selection and Risk Aversion
+
+3-7

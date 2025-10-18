@@ -1,0 +1,12 @@
+{
+  "page": 537,
+  "original_text": "W t = W 0 e μ −σ 2/2 t + σ tZ,",
+  "ocr_text": "W(t)= W(o)el - o7/2)t + oytZ",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 445.58,
+    "x1": 224.1,
+    "y1": 462.49
+  },
+  "confidence": "high"
+}

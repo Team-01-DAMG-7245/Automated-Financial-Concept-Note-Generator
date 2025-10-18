@@ -1,0 +1,12 @@
+{
+  "page": 315,
+  "original_text": "p.enforcePareto = true;\nplotFrontier(p)",
+  "ocr_text": "p.enforcePareto=true;\nplotFrontier(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 523.88,
+    "x1": 178.62,
+    "y1": 539.0
+  },
+  "confidence": "high"
+}

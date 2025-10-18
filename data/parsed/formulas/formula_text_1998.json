@@ -1,0 +1,12 @@
+{
+  "page": 1035,
+  "original_text": "StartYearNR = 2010;\nEndYearNR = 2018;\nstartDateNR = datetime(StartYearNR,12,31,'Locale','en_US');\nendDateNR = datetime(EndYearNR,12,31,'Locale','en_US');\nCompanyID_NR = \"DEF\";",
+  "ocr_text": "StartYearNR=2010;\n\nEndYearNR=2018;\nstartDateNR=datetime(StartYearNR,12,31,Locale,en_US);\nendDateNR=datetime(EndYearNR,12,31,Locale,en_US);\nCompanyID_NR=DEF;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 333.51,
+    "x1": 409.69,
+    "y1": 387.18
+  },
+  "confidence": "high"
+}

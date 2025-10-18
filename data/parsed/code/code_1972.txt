@@ -1,0 +1,12 @@
+Page 1560
+================================================================================
+
+This example shows how to use the “LookbackWindow” on page 15-0
+ name-value argument to set
+the rolling windows of the backtesting strategies. Each time the backtest engine calls a strategy
+rebalance function, a rolling window of asset price data (and possibly signal data) is passed to the
+rebalance function (“rebalanceFcn” on page 15-0
+). The rebalance function can then make trading
+and allocation decisions based on that data. The LookbackWindow property sets the size of these
+rolling windows in terms of time steps. The window determines the amount of data from the asset
+price timetable that is passed to the rebalance function.

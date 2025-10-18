@@ -1,0 +1,12 @@
+{
+  "page": 1857,
+  "original_text": "KeyRateDuration = bndkrdur(ZeroData,CouponRate,Settle,Maturity)\nKeyRateDuration = bndkrdur( ___ ,Name,Value)",
+  "ocr_text": "KeyRateDuration=bndkrdur(ZeroData,CouponRate,Settle,Maturity)\nKeyRateDuration=bndkrdur(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.97,
+    "x1": 469.29,
+    "y1": 213.6
+  },
+  "confidence": "high"
+}

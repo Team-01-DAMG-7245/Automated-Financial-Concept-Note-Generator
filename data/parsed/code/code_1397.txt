@@ -1,0 +1,4 @@
+Page 1388
+================================================================================
+
+Speed represents the parameter S, specified as an array or deterministic function of time.

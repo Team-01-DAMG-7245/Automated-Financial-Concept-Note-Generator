@@ -1,0 +1,5 @@
+Page 1186
+================================================================================
+
+The UICalendar example creates a function that displays a user interface that lets you select a date
+from the UICalendar user interface and fill in a text field with that date.

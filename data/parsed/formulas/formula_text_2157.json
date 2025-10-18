@@ -1,0 +1,12 @@
+{
+  "page": 1110,
+  "original_text": "BondKRD = bndkrdur(table(ZeroDates, ZeroRates), CouponRate, Settle,...\nMaturity,'keyrates',[2 5 10 20]);\nHedgeMaturity = [Maturity_02;Maturity_05;Maturity_10;Maturity_30];\nHedgeCoupon = [Coupon_02;Coupon_05;Coupon_10;Coupon_30];\nHedgeKRD = bndkrdur(table(ZeroDates, ZeroRates), HedgeCoupon,...\nSettle, HedgeMaturity, 'keyrates',[2 5 10 20])",
+  "ocr_text": "BondKRD=bndkrdur(table(ZeroDates,ZeroRates),CouponRate,Settle,...\nMaturity,keyrates,[251020]);\nHedgeMaturity=[Maturity_02;Maturity_05;Maturity_10;Maturity_30];\nHedgeCoupon=[Coupon_02;Coupon_05;Coupon_10;Coupon_30];\nHedgeKRD=bndkrdur(table(ZeroDates,ZeroRates),HedgeCoupon,...\nSettle,HedgeMaturity,keyrates,[251020])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.68,
+    "x1": 469.29,
+    "y1": 633.15
+  },
+  "confidence": "high"
+}

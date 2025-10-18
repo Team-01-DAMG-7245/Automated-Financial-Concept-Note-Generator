@@ -1,0 +1,36 @@
+estimateFrontier
+
+Estimate specified number of optimal portfolios on the efficient frontier
+
+Syntax
+
+[pwgt,pbuy,psell] = estimateFrontier(obj)
+[pwgt,pbuy,psell] = estimateFrontier(obj,NumPorts)
+
+Description
+
+[pwgt,pbuy,psell] = estimateFrontier(obj) estimates the specified number of optimal
+portfolios on the efficient frontier for Portfolio, PortfolioCVaR, or PortfolioMAD objects. For
+details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+[pwgt,pbuy,psell] = estimateFrontier(obj,NumPorts) estimates the specified number of
+optimal portfolios on the efficient frontier with an additional option specified for NumPorts.
+
+Examples
+
+Create a Portfolio Object and Determine Efficient Portfolios
+
+Create efficient portfolios:
+
+load CAPMuniverse
+
+p = Portfolio('AssetList',Assets(1:12));
+p = estimateAssetMoments(p, Data(:,1:12),'missingdata',true);
+p = setDefaultConstraints(p);
+plotFrontier(p);
+
+estimateFrontier
+
+15-941

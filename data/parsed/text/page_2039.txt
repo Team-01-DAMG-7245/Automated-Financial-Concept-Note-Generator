@@ -1,0 +1,31 @@
+chaikvolat
+
+Chaikin volatility
+
+Syntax
+
+volatility = chaikvolat(Data)
+volatility = chaikvolat( ___ ,Name,Value)
+
+Description
+
+volatility = chaikvolat(Data) calculates the Chaikin volatility from a data series of high and
+low stock prices.
+
+volatility = chaikvolat( ___ ,Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Calculate the Chaikin Volatility for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+volatility = chaikvolat(TMW,'NumPeriods',14,'WindowSize',14);
+plot(volatility.Time,volatility.ChaikinVolatility)
+title('Chaikin Volatility for TMW')
+
+chaikvolat
+
+15-733

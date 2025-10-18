@@ -1,0 +1,62 @@
+Data Types: double | function
+
+N — Dependent random counting process for generating number of jumps
+random numbers from Poisson distribution with merton object parameter JumpFreq (default) |
+three-dimensional array | function
+
+Dependent random counting process for generating the number of jumps, specified as the comma-
+separated pair consisting of 'N' and a function or an (NPeriods ⨉ NSteps) -by-NJumps-by-
+NNTrials three-dimensional array of dependent random variates. If you specify a function, N must
+return an NJumps-by-1 column vector, and you must call it with two inputs: a real-valued scalar
+observation time t followed by an NVars-by-1 state vector Xt.
+
+Data Types: double | function
+
+StorePaths — Flag that indicates how Paths is stored and returned
+true (default) | logical with values true or false
+
+Flag that indicates how the output array Paths is stored and returned, specified as the comma-
+separated pair consisting of 'StorePaths' and a scalar numeric or logical 1 (true) or 0 (false).
+
+•
+If StorePaths is true (the default value) or is unspecified, simBySolution returns Paths as a
+three-dimensional time series array.
+
+•
+If StorePaths is false (logical 0), simBySolution returns Paths as an empty matrix.
+
+Data Types: logical
+
+Processes — Sequence of end-of-period processes or state vector adjustments of the form
+simBySolution makes no adjustments and performs no processing (default) | function | cell array of
+functions
+
+Sequence of end-of-period processes or state vector adjustments, specified as the comma-separated
+pair consisting of 'Processes' and a function or cell array of functions of the form
+
+Xt = P(t, Xt)
+
+simBySolution applies processing functions at the end of each observation period. These functions
+must accept the current observation time t and the current state vector Xt, and return a state vector
+that can be an adjustment to the input state.
+
+The end-of-period Processes argument allows you to terminate a given trial early. At the end of each
+time step, simBySolution tests the state vector Xt for an all-NaN condition. Thus, to signal an early
+termination of a given trial, all elements of the state vector Xt must be NaN. This test enables a user-
+defined Processes function to signal early termination of a trial, and offers significant performance
+benefits in some situations (for example, pricing down-and-out barrier options).
+
+If you specify more than one processing function, simBySolution invokes the functions in the order
+in which they appear in the cell array. You can use this argument to specify boundary conditions,
+prevent negative prices, accumulate statistics, plot graphs, and more.
+
+Data Types: cell | function
+
+Output Arguments
+
+Paths — Simulated paths of correlated state variables
+array
+
+simBySolution
+
+15-369

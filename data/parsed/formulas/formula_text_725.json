@@ -1,0 +1,12 @@
+{
+  "page": 437,
+  "original_text": "% Include the WoB constraint into the portfolio.\np = addInequality(p,-WoB',-0.33);\n% Estimate the return for a risk level of 0.012.\npwgt_avgWoB = estimateFrontierByRisk(p,0.012);\nret_avgWoB = estimatePortReturn(p,pwgt_avgWoB)",
+  "ocr_text": "IncludetheWoBconstraintintotheportfolio.\np=addInequality(p,-WoB,-0.33);\nEstimatethereturnforarisklevelof0.012.\npwgt_avgWoB=estimateFrontierByRisk(p,0.012);\nret_avgWoB=estimatePortReturn(p,pwgt_avgWoB)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 350.06,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

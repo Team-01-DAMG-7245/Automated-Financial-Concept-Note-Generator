@@ -1,0 +1,12 @@
+{
+  "page": 551,
+  "original_text": "R W, t =\n0 if t < T or W < G\n1 if t = T and W ≥G",
+  "ocr_text": "RW,t)= O0iftTorWG\n1ift=TandW=G",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 384.97,
+    "x1": 255.17,
+    "y1": 411.6
+  },
+  "confidence": "high"
+}

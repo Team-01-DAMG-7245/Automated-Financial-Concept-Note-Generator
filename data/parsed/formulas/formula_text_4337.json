@@ -1,0 +1,12 @@
+{
+  "page": 2457,
+  "original_text": "h(x) = A exp(Bx) + C + D exp(-Ex)",
+  "ocr_text": "h(x)=A_exp(Bx)+C+Dexp(-Ex)",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 687.42,
+    "x1": 283.79,
+    "y1": 697.88
+  },
+  "confidence": "high"
+}

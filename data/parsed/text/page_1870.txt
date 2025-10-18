@@ -1,0 +1,68 @@
+by-NUMBONDS vector. LastCouponInterest is based on only the last coupon and the face value to
+be repaid. Acceptable values are:
+
+•
+simple
+
+•
+compound
+
+Data Types: char | cell
+
+Output Arguments
+
+Price — Clean price of bond
+numeric
+
+Clean price of bond, returned as a NUMBONDS-by-1 vector. The dirty price of the bond is the clean
+price plus the accrued interest. It equals the present value of the bond cash flows of the yield to
+maturity with semiannual compounding.
+
+AccruedInt — Accrued interest payable at settlement
+numeric
+
+accrued interest payable at settlement, returned as a NUMBONDS-by-1 vector.
+
+More About
+
+Price and Yield Conventions
+
+The Price and Yield are related to different formulae for SIA and ICMA conventions.
+
+For SIA conventions, Price and Yield are related by the formula:
+
+Price + Accrued Interest = sum(Cash_Flow*(1+Yield/2)^(-Time))
+
+where the sum is over the bond's cash flows and corresponding times in units of semiannual coupon
+periods.
+
+For ICMA conventions, the Price and Yield are related by the formula:
+
+Price + Accrued Interest = sum(Cash_Flow*(1+Yield)^(-Time))
+
+Algorithms
+
+For SIA conventions, the following formula defines bond price and yield:
+
+PV = ∑
+i = 1
+
+n
+CF
+
+(1 + z
+f )
+TF ,
+
+where:
+
+PV =
+Present value of a cash flow.
+
+CF =
+Cash flow amount.
+
+15
+Functions
+
+15-564

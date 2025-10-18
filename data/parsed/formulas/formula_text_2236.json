@@ -1,0 +1,12 @@
+{
+  "page": 1147,
+  "original_text": "% Length (in years) of each time step per period\ndt = T/NPERIODS;",
+  "ocr_text": "Length(inyears)ofeachtimestepperperiod\ndt_=T/NPERIODS;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 546.99,
+    "x1": 350.07,
+    "y1": 568.25
+  },
+  "confidence": "high"
+}

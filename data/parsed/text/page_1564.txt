@@ -1,0 +1,59 @@
+% Compute asset returns.
+assetReturns = tick2ret(pricesTT);
+
+% Define porfolio problem.
+p = Portfolio;
+p = estimateAssetMoments(p, assetReturns{:,:});
+p = setDefaultConstraints(p);
+
+% Estimate the Max Sharpe Ratio.
+new_weights = estimateMaxSharpeRatio(p);
+end
+
+More About
+
+Defining Schedules for Backtest Strategies
+
+A backtesting schedule is a set of dates defining when specific events will occur.
+
+The backtestStrategy object uses schedules in several of ways, including setting the rebalance
+frequency (RebalanceFrequency), the performance fee (PerformanceFeeSchedule), and the
+management fee (ManagementFeeSchedule) schedules. Schedules are specified with a syntax that
+supports a variety of data types, which include numeric scalars, a vector of datetimes, and duration
+or calendarDuration objects. The resulting schedules for the different data types are:
+
+•
+Numeric — If a schedule is defined using a numeric scalar, it refers to the number of rows (of the
+assetPrices timetable) between each event in the schedule, starting from the backtest start
+date. For example, if a schedule is set to 10, then the schedule event (a rebalance date or fee
+payment date) occurs on every 10th row of the prices timetable while the backtest runs.
+
+•
+duration or calendarDuration — If specified as a duration or calendarDuration object,
+the schedule specifies a duration of time between each event (rebalance date or fee payment
+date). The schedule is calculated starting at the backtest start date and then schedule dates are
+added after each step of the specified duration. For an example, see “Backtest Investment
+Strategies Using datetime and calendarDuration” on page 4-451.
+
+•
+Vector of datetimes — If the numeric or duration syntaxes are not appropriate, then you can
+explicitly specify schedules using a vector of datetimes.
+
+Note For both the duration and datetime syntaxes, if a resulting schedule date is not found in the
+backtest data set (the assetPrices timetable), the backtestEngine either adjusts the date to the
+nearest valid date or else issues an error. This behavior is controlled by the DateAdjustment
+property of the backtestEngine object. By default, dates are adjusted to the nearest previous date.
+For example, if a schedule date falls on a Saturday, and is not found in the backtest data set, then the
+date is adjusted to the previous Friday. Alternatively, the backtestEngine DateAdjustment
+property allows you to adjust dates to the next valid date, or to issue an error if a date is not found by
+requiring exact dates.
+
+Management Fees
+
+The management fee is the annualized rate charged on the assets under management of the strategy
+to pay for the fund's management costs.
+
+15
+Functions
+
+15-258

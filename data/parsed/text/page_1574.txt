@@ -1,0 +1,63 @@
+2
+If user-controlled cash assets are specified (that is, CashAssets or DebtAssets parameters for
+runBacktest are set), then expenses are paid using the first specified cash asset if it has
+sufficient funds. If not, the first cash asset is set to $0 and the engine moves on to the second
+cash asset, continuing in this way until the expense is paid. Once all CashAssets are exhausted
+and if some expense remains unpaid, then the first specified DebtAsset incurs all remaining
+expenses. If no DebtAsset is specified, then the final cash asset goes negative to pay any
+remaining expense.
+
+Data Types: logical
+
+Output Arguments
+
+backtester — Backtest engine
+backtestEngine object
+
+Backtest engine, returned as a backtestEngine object.
+
+Properties
+
+Strategies — Backtest strategies
+vector of backtestStrategy objects
+
+Backtest strategies, specified as a vector of backtestStrategy objects.
+
+Data Types: object
+
+RiskFreeRate — Risk free rate
+0 (default) | numeric | timetable
+
+Risk free rate, specified as a scalar numeric or timetable.
+
+Data Types: double
+
+CashBorrowRate — Cash borrowing rate
+0 (default) | numeric | timetable
+
+Cash borrowing rate, specified as a scalar numeric or timetable.
+
+Data Types: double
+
+InitialPortfolioValue — Initial portfolio value
+10000 (default) | numeric
+
+Initial portfolio value, specified as a scalar numeric.
+
+Data Types: double
+
+AnnualizedRates — Use annualized rates for RiskFreeRate and CashBorrowRate
+true (default) | logical with value true or false
+
+Use annualized rates for RiskFreeRate and CashBorrowRate, specified as a scalar logical.
+
+Data Types: logical
+
+DateAdjustment — Date handling behavior for rebalance dates that are missing from asset
+prices timetable
+"Previous" (default) | string with value "Previous", "Next", or "None"
+
+15
+Functions
+
+15-268

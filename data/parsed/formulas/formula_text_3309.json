@@ -1,0 +1,12 @@
+{
+  "page": 1784,
+  "original_text": "Volatility = blkimpv( ___ ,Name,Value) specifies options using one or more name-value pair\narguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "Volatility=blkimpv( ,Name,Value)specifiesoptionsusingoneormorename-valuepair\nargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 386.21,
+    "x1": 552.13,
+    "y1": 409.84
+  },
+  "confidence": "high"
+}

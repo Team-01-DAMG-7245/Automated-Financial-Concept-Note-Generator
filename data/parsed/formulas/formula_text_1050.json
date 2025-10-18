@@ -1,0 +1,12 @@
+{
+  "page": 545,
+  "original_text": "% Find the wealth node index of the initial wealth.\ntol = 1e-8; % Account for numerical inaccuracies\ndifference = WGrid-W0;\n% Assign to wealth node j such that W_j <= W(0) < W_{j+1}\nWNodeIdx = find(difference<=tol,1,'last');",
+  "ocr_text": "Findthewealthnodeindexoftheinitialwealth.\ntol=le-8;Accountfornumericalinaccuracies\ndifference=WGrid-Wwo;\nAssigntowealthnodejsuchthatW_j=W(0)=W_{j+1}\nWNodeIdx=find(differencex=tol,1,last);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 546.62,
+    "x1": 398.83,
+    "y1": 600.29
+  },
+  "confidence": "high"
+}

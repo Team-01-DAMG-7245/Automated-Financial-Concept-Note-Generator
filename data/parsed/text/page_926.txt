@@ -1,0 +1,63 @@
+To remove transitions to 'NR' from the transition matrix, you need to use the 'excludeLabels'
+optional name-value input argument to transprob.
+
+The 'labels' input to transprob may or may not include the label that needs to be excluded. In
+the following code, the NR rating is removed from the labels for display purposes, but passing
+RatingsLabelsNR to transprob would also work.
+
+RatingsLabels = {'AAA','AA','A','BBB','BB','B','CCC','D'};
+
+[MatrixCohort,TotalsCohort] = transprob(dataNR,'Labels',RatingsLabels,'ExcludeLabels','NR','Algor
+
+fprintf('Transition probability, cohort, after postprocessing to remove NR:\n')
+
+Transition probability, cohort, after postprocessing to remove NR:
+
+disp(array2table(MatrixCohort,'VariableNames',RatingsLabels, ...
+   'RowNames',RatingsLabels))
+
+AAA         AA          A          BBB         BB          B          CCC          D
+           ________    _______    ________    _______    ________    ________    ________    ____
+
+AAA      93.135     5.9335     0.74557    0.15533    0.031066           0           0        
+    AA       1.7362     92.938      4.5455    0.58525     0.15607           0           0    0.03
+    A       0.12683     2.9716      91.991     4.3124      0.4711    0.054358           0    0.07
+    BBB    0.021048    0.37887      5.0726     89.771      4.0413     0.46306    0.042096     0.2
+    BB     0.022099     0.1105     0.68508      6.232      88.376      3.6464     0.28729     0.6
+    B             0          0    0.076161    0.72353       7.997      86.215      2.7037      2
+    CCC           0          0           0     0.3096      1.8576      4.4892       80.96      12
+    D             0          0           0          0           0           0           0
+
+fprintf('Total transitions out of given rating, AA and CCC have one less than before:\n')
+
+Total transitions out of given rating, AA and CCC have one less than before:
+
+disp(array2table(TotalsCohort.totalsVec,'VariableNames',RatingsLabels))
+
+AAA      AA      A      BBB      BB      B      CCC      D  
+    ____    ____    ____    ____    ____    ____    ____    ____
+
+3219    5126    5519    4751    4525    2626    1292    4050
+
+All transitions involving 'NR' are removed from the sample, but all other transitions are still used to
+estimate the transition probabilities. In this example, the transition from 'NR' to 'CCC' has been
+removed, as well as the transition from 'AA' to 'NR' (and five more transitions from 'NR' to 'NR').
+That means the first company is still contributing transitions from 'CCC' to 'CCC' for the estimation,
+only the periods overlapping with the time this company spent in 'NR' have been removed from the
+sample, and similarly for the other company.
+
+This procedure is different from removing the 'NR' rows from the data itself.
+
+For example, if you remove the 'NR' rows in this example, the first company seems to stay in its
+initial rating of 'CCC' all the way from the initial date in 1984 to the default event in 1991. With the
+previous approach, the estimation knows that the company transitioned out of 'CCC' at some point,
+it knows it was not staying at 'CCC' all the time.
+
+If the 'NR' row is removed for the second company, this company seems to have stayed in the sample
+as an 'AA' company until the end of the sample. With the previous approach, the estimation knows
+that this company stopped being an 'AA' earlier.
+
+8
+Credit Risk Analysis
+
+8-8

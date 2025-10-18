@@ -1,0 +1,12 @@
+{
+  "page": 1287,
+  "original_text": "d(s1, s2) = 1 −ρ(s1, s2), where ρ(s1, s2) is the linear correlation coefficient between the two time series\ns1 and s2.",
+  "ocr_text": "d(sy,S2)=1-p(s1,S2),wherep(s1,S2)isthelinearcorrelationcoefficientbetweenthetwotimeseries\nS,andSp.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 382.53,
+    "x1": 554.59,
+    "y1": 409.44
+  },
+  "confidence": "high"
+}

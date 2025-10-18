@@ -1,0 +1,10 @@
+Page 539
+================================================================================
+
+% Compute the transition probabilities for different portfolios:
+% pTransition(i,j,k) = p(Wj|Wi,mu_k)
+pTransition = zeros(nWealthNodes,nWealthNodes,nPortfolios);
+for k = 1:nPortfolios
+    % Get the return and variance of portfolio k.
+    mu = pret(k);
+    sigma = prsk(k);

@@ -1,0 +1,12 @@
+{
+  "page": 993,
+  "original_text": "cp([1 5]) = []; % To merge bins 1 and 2, and bins 5 and 6\nsc = modifybins(sc,'CustAge','CutPoints',cp);\nplotbins(sc,'CustAge')",
+  "ocr_text": "cp([15])=[];_*Tomergebins1and2,andbins5and6\nsc_=modifybins(sc,CustAge,CutPoints,cp);\nplotbins(sc,CustAge)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 501.35,
+    "x1": 398.84,
+    "y1": 533.41
+  },
+  "confidence": "high"
+}

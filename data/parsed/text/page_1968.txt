@@ -1,0 +1,33 @@
+Data Types: double
+
+Output Arguments
+
+profilestructs — Structure of credit exposure profiles
+array of structs holding credit exposure profiles for each counterparty
+
+Structure of credit exposure profiles, returned as an array of structs holding credit exposure profiles
+for each counterparty, returned as a struct, with the fields of the struct as the (abbreviated) names of
+every exposure profile. Profiles listed in the ProfileSpec (and their related profiles) are populated,
+while those not requested contain empty ([]). profilestructs contains the dates information as a
+vector of MATLAB date numbers requested in the ProfileSpec argument.
+
+Version History
+Introduced in R2014a
+
+References
+
+[1] Basel II: International Convergence of Capital Measurement and Capital Standards: A Revised
+Framework - Comprehensive Version. at https://www.bis.org/publ/bcbs128.htm,
+2006.
+
+See Also
+creditexposures | datetime
+
+Topics
+“Counterparty Credit Risk and CVA” (Financial Instruments Toolbox)
+“Wrong Way Risk with Copulas” (Financial Instruments Toolbox)
+
+15
+Functions
+
+15-662

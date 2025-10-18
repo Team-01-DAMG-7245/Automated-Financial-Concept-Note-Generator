@@ -1,0 +1,55 @@
+cfyield
+
+Compute yield to maturity for cash flow given price
+
+Syntax
+
+Yield = cfyield(CFlowAmounts,CFlowDates,Price,Settle)
+Yield = cfyield( ___ ,Name,Value)
+
+Description
+
+Yield = cfyield(CFlowAmounts,CFlowDates,Price,Settle) computes yield to maturity for
+a cash flow given price.
+
+Yield = cfyield( ___ ,Name,Value) specifies options using one or more name-value pair
+arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Compute the Yield to Maturity for a Cash Flow When Given a Price
+
+Use cfyield to compute yield to maturity for a cash flow when given a price.
+
+Define data for the yield curve and price.
+
+Settle = datetime(2003,7,1);
+Price = 98;
+CFlowAmounts = [30 40 30];
+CFlowDates = [datetime(2004,7,15) ; datetime(2005,7,15) ; datetime(2006,7,15)]';
+
+Compute the Yield.
+
+Yield = cfyield(CFlowAmounts, CFlowDates, Price, Settle)
+
+Yield = 
+0.0099
+
+Input Arguments
+
+CFlowAmounts — Cash flow amounts
+vector
+
+Cash flow amounts, specified as an NINST-by-MOSTCFS matrix. Each row is a list of cash flow values
+for one instrument. If an instrument has fewer than MOSTCFS cash flows, the end of the row is padded
+with NaNs.
+
+Data Types: double
+
+CFlowDates — Cash flow dates
+datetime array | string array | date character vector
+
+15
+Functions
+
+15-720

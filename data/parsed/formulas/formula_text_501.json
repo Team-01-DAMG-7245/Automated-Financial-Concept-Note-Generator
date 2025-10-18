@@ -1,0 +1,12 @@
+{
+  "page": 342,
+  "original_text": "q = setBounds(p, -Exposure, Exposure);\nq = setBudget(q, 0, 0);\nq = setOneWayTurnover(q, Exposure, Exposure, 0);",
+  "ocr_text": "q=setBounds(p,-Exposure,Exposure);\nq=setBudget(q,0,0);\nq=setOneWayTurnover(q,Exposure,Exposure,0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.22,
+    "x1": 350.07,
+    "y1": 600.29
+  },
+  "confidence": "high"
+}

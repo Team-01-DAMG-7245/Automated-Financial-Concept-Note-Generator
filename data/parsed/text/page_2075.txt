@@ -1,0 +1,58 @@
+PreviousCouponDate = cpndatep(datetime(1997,3,14),datetime(2000,6,30),2, 0, 0)
+
+PreviousCouponDate = datetime
+   30-Dec-1996
+
+Determine the PreviousCouponDate when using character vectors for input arguments and the
+optional argument for EndMonthRule.
+
+PreviousCouponDate = cpndatep(datetime(1997,3,14),datetime(2000,6,30),2, 0, 1)
+
+PreviousCouponDate = datetime
+   31-Dec-1996
+
+Determine the PreviousCouponDate when using an input vector for Maturity.
+
+Maturity = [datetime(2000,4,30) ; datetime(2000,5,31) ; datetime(2000,6,30)];
+PreviousCouponDate = cpndatep(datetime(1997,3,14), Maturity)
+
+PreviousCouponDate = 3×1 datetime
+   31-Oct-1996
+   30-Nov-1996
+   31-Dec-1996
+
+Input Arguments
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors. Settle must be earlier than Maturity.
+
+To support existing code, cpndatep also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime array | string array | date character vector
+
+Maturity date, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors.
+
+To support existing code, cpndatep also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Period — Coupons per year of the bond
+2 (semiannual) (default) | vector of positive integers from the set [1,2,3,4,6,12]
+
+Coupons per year of the bond, specified as a vector of positive integers from the set
+[1,2,3,4,6,12].
+
+Data Types: single | double
+
+cpndatep
+
+15-769

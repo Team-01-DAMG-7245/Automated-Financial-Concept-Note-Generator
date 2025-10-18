@@ -1,0 +1,12 @@
+{
+  "page": 1089,
+  "original_text": "for k = 1:NumSamples\n    for i = 1:NumAssets\n        TestData(k,i) = Data(k,i) - Data(k,14);\n        Design(i,2*i - 1) = 1.0;\n        Design(i,2*i) = Data(k,13) - Data(k,14);\n    end\n    TestDesign{k} = Design;\nend",
+  "ocr_text": "fork=1:NumSamples\nfori=1:NumAssets\nTestData(k,i)=Data(k,i)-Data(k,14);\nDesign(i,2*i-1)=1.0;\nDesign(i,2*i)=Data(k,13)-Data(k,14);\nend\nTestDesign{k}=Design;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 350.06,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

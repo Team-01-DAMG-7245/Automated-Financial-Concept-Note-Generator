@@ -1,0 +1,12 @@
+{
+  "page": 2027,
+  "original_text": "Example: Yield =\ncfyield(CFAmounts,CFDates,Yield,Settle,'Basis',4,'CompoundingFrequency',4)",
+  "ocr_text": "Example:Yield=\ncfyield(CFAmounts,CFDates,Yield,Settle,Basis,4,CompoundingFrequency,4)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 544.2,
+    "x1": 535.48,
+    "y1": 567.83
+  },
+  "confidence": "high"
+}

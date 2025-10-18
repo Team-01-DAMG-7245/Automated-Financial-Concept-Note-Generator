@@ -1,0 +1,12 @@
+{
+  "page": 2471,
+  "original_text": "load SimulatedStock.mat\nvalues = llow(TMW);\nplot(values.Time,values.LowestLow)\ntitle('Lowest Low for TMW')",
+  "ocr_text": "loadSimulatedStock.mat\nvalues=lLlow(TMW);\nplot(values.Time,values.LowestLow)\ntitle(LowestLowforTMW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 410.08,
+    "x1": 274.21,
+    "y1": 452.94
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,64 @@
+Compute Category Returns
+
+Use categoryReturns with the brinsonAttribution object to compute aggregate and periodic
+category (sector) returns.
+
+[AggregateCategoryReturns, PeriodicCategoryReturns] = categoryReturns(BrinsonPAobj)
+
+AggregateCategoryReturns=2×3 table
+           Category           AggregatePortfolioReturn    AggregateBenchmarkReturn
+    ______________________    ________________________    ________________________
+
+Consumer Discretionary             0.13805                    0.096876        
+    Consumer Staples                 0.0081816                   0.0081816
+
+PeriodicCategoryReturns=6×4 table
+    Period           Category           PortfolioReturn    BenchmarkReturn
+    ______    ______________________    _______________    _______________
+
+1       Consumer Discretionary         0.27273            0.12794   
+      1       Consumer Staples              0.012108           0.012108   
+      2       Consumer Discretionary        -0.14594          -0.053161   
+      2       Consumer Staples              0.013056           0.013056   
+      3       Consumer Discretionary         0.04698           0.027055   
+      3       Consumer Staples             -0.016717          -0.016717
+
+Input Arguments
+
+brinsonAttributionObj — Brinson attribution model
+object
+
+Brinson attribution model, specified as a brinsonAttribution object.
+
+Data Types: object
+
+Output Arguments
+
+AggregateCategoryReturns — Category returns aggregated over all periods
+table
+
+Category returns aggregated over all periods, returned as a table with the following columns:
+
+•
+Category — Asset category
+
+•
+AggregatePortfolioReturn — Aggregate portfolio returns
+
+•
+AggregateBenchmarkReturn — Aggregate benchmark returns
+
+PeriodicCategoryReturns — Category returns for each period
+table
+
+Category returns for each period, returned as a table with the following columns:
+
+•
+Period — Time period numbers (1 for the first period, 2 for the second period, and so on)
+
+•
+Category — Asset category
+
+categoryReturns
+
+15-17

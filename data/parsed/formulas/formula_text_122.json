@@ -1,0 +1,12 @@
+{
+  "page": 97,
+  "original_text": "numTicks = length(t)",
+  "ocr_text": "numTicks=length(t)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 198.36,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

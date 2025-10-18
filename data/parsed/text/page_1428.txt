@@ -1,0 +1,55 @@
+simBySolution
+
+Simulate approximate solution of diagonal-drift HWV processes
+
+Syntax
+
+[Paths,Times,Z] = simBySolution(MDL,NPeriods)
+[Paths,Times,Z] = simBySolution( ___ ,Name,Value)
+
+Description
+
+[Paths,Times,Z] = simBySolution(MDL,NPeriods) simulates approximate solution of
+diagonal-drift for Hull-White/Vasicek Gaussian Diffusion (HWV) processes.
+
+[Paths,Times,Z] = simBySolution( ___ ,Name,Value) adds optional name-value pair
+arguments.
+
+You can perform quasi-Monte Carlo simulations using the name-value arguments for
+MonteCarloMethod, QuasiSequence, and BrownianMotionMethod. For more information, see
+“Quasi-Monte Carlo Simulation” on page 14-63.
+
+Examples
+
+Use simBySolution with an hwv Object
+
+Create an hwv object to represent the model:
+
+dXt = 0.2(0.1 −Xt)dt + 0.05dWt .
+
+hwv = hwv(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)
+
+hwv =
+
+Class HWV: Hull-White/Vasicek
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+The simBySolution function simulates the state vector Xt using an approximation of the closed-form
+solution of diagonal drift HWV models. Each element of the state vector Xt is expressed as the sum of
+NBrowns correlated Gaussian random draws added to a deterministic time-variable drift.
+
+15
+Functions
+
+15-122

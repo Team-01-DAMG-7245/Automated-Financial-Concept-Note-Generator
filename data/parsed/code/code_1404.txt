@@ -1,0 +1,7 @@
+Page 1389
+================================================================================
+
+If you specify Sigma as an array, it must be an NVars-by-NBrowns matrix of instantaneous volatility
+rates or as a deterministic function of time. In this case, each row of Sigma corresponds to a
+particular state variable. Each column corresponds to a particular Brownian source of uncertainty,
+and associates the magnitude of the exposure of state variables with sources of uncertainty.

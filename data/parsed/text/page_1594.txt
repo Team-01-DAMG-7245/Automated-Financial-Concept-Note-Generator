@@ -1,0 +1,62 @@
+ylim([0 oldylim(2)]);
+cm = parula(numel(h));
+for i = 1:numel(h)
+    set(h(i),'FaceColor',cm(i,:));
+end
+legend(backtester.Positions.(strategyName).Properties.VariableNames)
+
+end
+
+This helper function generates a table of rebalance dates along with the available price history at
+each date.
+
+function printRebalanceTable(strategy,pricesTT,minLookback,startRow)
+
+if nargin < 4
+    startRow = 1;
+end
+
+allDates = pricesTT.(pricesTT.Properties.DimensionNames{1});
+rebalanceDates = allDates(startRow:strategy.RebalanceFrequency:end);
+[~,rebalanceIndices] = ismember(rebalanceDates,pricesTT.Dates);
+
+disp(table(allDates(1),rebalanceDates(1),minLookback,'VariableNames',{'First Day of Data','Backte
+fprintf('\n\n');
+numHistory = rebalanceIndices(2:end);
+sufficient = repmat("No",size(numHistory));
+sufficient(numHistory > minLookback) = "Yes";
+disp(table(rebalanceDates(2:end),rebalanceIndices(2:end),sufficient,'VariableNames',{'Rebalance D
+
+end
+
+Input Arguments
+
+backtester — Backtesting engine
+backtestEngine object
+
+Backtesting engine, specified as a backtestEngine object. Use backtestEngine to create the
+backtester object.
+
+Data Types: object
+
+pricesTT — Asset prices
+timetable
+
+Asset prices, specified as a timetable of asset prices that the backtestEngine uses to backtest the
+strategies. Each column of the prices timetable must contain a timeseries of prices for an asset.
+Historical asset prices must be adjusted for splits and dividends.
+
+Data Types: timetable
+
+signalTT — Signal data
+timetable
+
+(Optional) Signal data, specified as a timetable of trading signals that the strategies use to make
+trading decisions. signalTT is optional. If provided, the backtestEngine calls the strategy
+rebalance functions with both asset price data and signal data. The signalTT timetable must have
+the same time dimension as the pricesTT timetable.
+
+15
+Functions
+
+15-288

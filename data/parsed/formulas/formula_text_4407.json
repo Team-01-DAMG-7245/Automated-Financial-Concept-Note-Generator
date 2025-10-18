@@ -1,0 +1,12 @@
+{
+  "page": 2499,
+  "original_text": "where Param represents the output Parameters, and iteration k = 2, 3, ... . Convergence is assumed\nwhen both the TolParam and TolObj conditions are satisfied. If both TolParam ≤ 0 and TolObj ≤\n0, do the maximum number of iterations (MaxIterations), whatever the results of the convergence\ntests.",
+  "ocr_text": "whereParamrepresentstheoutputParameters,anditerationk=2,3,....Convergenceisassumed\nwhenboththeTolParamandTol0bjconditionsaresatisfied.IfbothTolParam=0andTolObj=\n0,dothemaximumnumberofiterations(MaxIterations),whatevertheresultsoftheconvergence\ntests.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 427.22,
+    "x1": 556.22,
+    "y1": 474.85
+  },
+  "confidence": "high"
+}

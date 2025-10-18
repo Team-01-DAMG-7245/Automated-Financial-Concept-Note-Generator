@@ -1,0 +1,5 @@
+Page 1390
+================================================================================
+
+User-defined simulation function or SDE simulation method, specified as a function or SDE simulation
+method.

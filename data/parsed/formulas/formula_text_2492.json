@@ -1,0 +1,12 @@
+{
+  "page": 1278,
+  "original_text": "QuasiMonteCarloCallPrice = f.CallPrice(strike, r/252);\nQuasiMonteCarloPutPrice  = f.PutPrice (strike, r/252);",
+  "ocr_text": "QuasiMonteCarloCallPrice=f.CallPrice(strike,_r/252);\nQuasiMonteCarloPutPrice=f.PutPrice(strike,r/252);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 585.98,
+    "x1": 382.57,
+    "y1": 607.24
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2400,
+  "original_text": "GA = [ true true true false false false ];    % financial companies\nGB = [ false false false true true true ];    % nonfinancial companies\np = Portfolio;\np = setGroupRatio(p, GA, GB, [], 0.5);\n[GroupA, GroupB, LowerRatio, UpperRatio] = getGroupRatio(p)",
+  "ocr_text": "GA=[truetruetruefalsefalsefalse]; financial_companies\nGB=[falsefalsefalsetruetruetrue]; Snonfinancial_companies\np=Portfolio;\n\np=setGroupRatio(p,GA,GB,[],0.5);\n[GroupA,GroupB,LowerRatio,UpperRatio]=getGroupRatio(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 479.82,
+    "x1": 469.28,
+    "y1": 533.49
+  },
+  "confidence": "high"
+}

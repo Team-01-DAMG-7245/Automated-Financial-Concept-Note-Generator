@@ -1,0 +1,50 @@
+cdsrpv01
+
+Compute risky present value of a basis point for credit default swap
+
+Syntax
+
+RPV01 = cdsrpv01(ZeroData,ProbData,Settle,Maturity)
+RPV01 = cdsrpv01( ___ ,Name,Value)
+
+[RPV01,PaymentDates,PaymentTimes] = cdsrpv01(ZeroData,ProbData,Settle,
+Maturity)
+[RPV01,PaymentDates,PaymentTimes] = cdsrpv01( ___ ,Name,Value)
+
+Description
+
+RPV01 = cdsrpv01(ZeroData,ProbData,Settle,Maturity) computes the risky present value
+of a basis point (RPV01) for a credit default swap (CDS).
+
+RPV01 = cdsrpv01( ___ ,Name,Value) adds optional name-value arguments.
+
+[RPV01,PaymentDates,PaymentTimes] = cdsrpv01(ZeroData,ProbData,Settle,
+Maturity) computes the risky present value of a basis point (RPV01), PaymentDates, and
+PaymentTimes for a credit default swap (CDS).
+
+[RPV01,PaymentDates,PaymentTimes] = cdsrpv01( ___ ,Name,Value) computes the risky
+present value of a basis point (RPV01), PaymentDates, and PaymentTimes for a credit default swap
+(CDS) using optional name-value pair arguments.
+
+Examples
+
+Calculate the RPV01 Value for a CDS
+
+Calculate the RPV01 value, given the following specification for a CDS.
+
+Settle = '17-Jul-2009'; % valuation date for the CDS
+Zero_Time = [.5 1 2 3 4 5]';
+Zero_Rate = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+Zero_Dates = daysadd(Settle,360*Zero_Time,1);
+ZeroData = [Zero_Dates Zero_Rate];
+ProbData = [daysadd(datenum(Settle),360,1), 0.0247];
+Maturity = datetime(2010,9,20);
+
+RPV01 = cdsrpv01(ZeroData,ProbData,Settle,Maturity)
+
+RPV01 = 
+1.1651
+
+cdsrpv01
+
+15-641

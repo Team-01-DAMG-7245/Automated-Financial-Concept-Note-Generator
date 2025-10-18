@@ -1,0 +1,12 @@
+{
+  "page": 1074,
+  "original_text": "fprintf(1,'Seemingly Unrelated Regression Parameter\n   Estimates\\n');\nfprintf(1,'   %7s ',' ');\nfprintf(1,'  Group(%3d) ',1:NumGroups);\nfprintf(1,'\\n');\nfor i = 1:NumParams\n    fprintf(1,'   %7d ',i);\n    ii = i;\n        for j = 1:NumGroups\n            fprintf(1,'%12g ',Param(ii));\n            ii = ii + NumParams;\n            end\n            fprintf(1,'\\n');\nend\nfprintf(1,'\\n');",
+  "ocr_text": "fprintf(1,SeeminglyUnrelatedRegressionParameter\nEstimates(n);\nfprintf(1, S7s,)3\nfprintf(1,Group(3d)_,1:NumGroups);\nfprintf(1,n);\nfori=1:NumParams\nfprintf(1, S7d,1i);\nii=i;\nforj=1:NumGroups\nfprintf(1,s12g_,Param(ii))\nii=ii+NumParams;\nend\nfprintf(1,n);\nend\nfprintf(1,n);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 519.11,
+    "x1": 366.32,
+    "y1": 680.77
+  },
+  "confidence": "high"
+}

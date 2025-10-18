@@ -1,0 +1,80 @@
+Shortcuts for Property Names
+
+Shortcut Argument Name
+Equivalent Argument / Property Name
+
+ae
+AEquality
+
+ai
+AInequality
+
+covar
+AssetCovar
+
+assetnames or assets
+AssetList
+
+mean
+AssetMean
+
+be
+bEquality
+
+bi
+bInequality
+
+group
+GroupMatrix
+
+lb
+LowerBound
+
+n or num
+NumAssets
+
+rfr
+RiskFreeRate
+
+ub
+UpperBound
+
+budget
+UpperBudget and LowerBudget
+
+For example, this call Portfolio uses these shortcuts for properties and is equivalent to the
+previous examples:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+p = Portfolio('mean', m, 'covar', C, 'budget', 1, 'lb', 0);
+plotFrontier(p)
+
+Direct Setting of Portfolio Object Properties
+
+Although not recommended, you can set properties directly, however no error-checking is done on
+your inputs:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+p = Portfolio;
+p.NumAssets = numel(m);
+p.AssetMean = m;
+p.AssetCovar = C;
+p.LowerBudget = 1;
+p.UpperBudget = 1;
+p.LowerBound = zeros(size(m));
+
+plotFrontier(p)
+
+Creating the Portfolio Object
+
+4-31

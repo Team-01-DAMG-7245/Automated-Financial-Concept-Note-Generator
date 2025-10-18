@@ -1,0 +1,12 @@
+{
+  "page": 609,
+  "original_text": "if BuyTrade\n    InventorySharesStepTWAP = zeros(NumSteps,1);\nelse\n    InventorySharesStepTWAP = zeros(NumSteps,1) + TotalTradingShares;\nend",
+  "ocr_text": "ifBuyTrade\nInventorySharesStepTWAP=zeros(NumSteps,1);\nelse\nInventorySharesStepTWAP=zeros(NumSteps,1)+TotalTradingShares;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.63,
+    "x1": 463.84,
+    "y1": 384.29
+  },
+  "confidence": "high"
+}

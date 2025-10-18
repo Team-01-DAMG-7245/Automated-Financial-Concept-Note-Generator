@@ -1,0 +1,57 @@
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+GroupA — Base groups for comparison
+matrix of logical or numerical arrays
+
+Base groups for comparison, specified as a matrix of logical or numerical arrays.
+
+Note The group matrices GroupA and GroupB are usually indicators of membership in groups,
+which means that their elements are usually either 0 or 1. Because of this interpretation, the GroupA
+and GroupB matrices can be logical or numerical arrays.
+
+Data Types: double
+
+GroupB — Comparison group
+matrix of logical or numerical arrays
+
+Comparison group, specified as a matrix of logical or numerical arrays.
+
+Note The group matrices GroupA and GroupB are usually indicators of membership in groups,
+which means that their elements are usually either 0 or 1. Because of this interpretation, the GroupA
+and GroupB matrices can be logical or numerical arrays.
+
+Data Types: double
+
+LowerRatio — Lower-bound for ratio of GroupB groups to GroupA groups
+vector
+
+Lower-bound for ratio of GroupB groups to GroupA groups, specified as a vector.
+
+Note If input is scalar, LowerRatio undergoes scalar expansion to be conformable with the group
+matrices.
+
+Data Types: double
+
+UpperRatio — Upper-bound for ratio of GroupB groups to GroupA groups
+vector
+
+Upper-bound for ratio of GroupB groups to GroupA groups, specified as a vector.
+
+Note If input is scalar, UpperRatio undergoes scalar expansion to be conformable with the group
+matrices.
+
+addGroupRatio
+
+15-443

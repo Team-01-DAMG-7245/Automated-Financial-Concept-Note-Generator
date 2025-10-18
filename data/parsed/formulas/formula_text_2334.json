@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "dX1t = B(t)X1tdt +\nX2tX1tdW1t",
+  "ocr_text": "aX = B(t)X,,dt + X74-X1,dWyt",
+  "bbox": {
+    "x0": 298.05,
+    "y0": 561.81,
+    "x1": 442.06,
+    "y1": 575.55
+  },
+  "confidence": "high"
+}

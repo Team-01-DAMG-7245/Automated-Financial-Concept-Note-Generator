@@ -1,0 +1,59 @@
+startDate = ['31-Dec-' num2str(Years(t)-1)];
+   endDate = ['31-Dec-' num2str(Years(t))];
+   [transMatPIT(:,:,t),sampleTotals(t)] = transprob(prepData, ...
+    'startDate',startDate,'endDate',endDate,'algorithm',algorithm);
+end
+
+Here is the PIT transition matrix for 1993. Recall that the sample dataset contains simulated credit
+migrations so the PIT estimates in this example do not match actual historical transition rates.
+
+transMatPIT(:,:,Years==1993)
+
+ans = 8×8
+
+95.3193    4.5999    0.0802    0.0004    0.0002    0.0000    0.0000    0.0000
+    2.0631   94.5931    3.3057    0.0254    0.0126    0.0002    0.0000    0.0000
+    0.0237    2.1748   95.5901    1.4700    0.7284    0.0131    0.0000    0.0000
+    0.0003    0.0372    3.2585   95.2914    1.3876    0.0250    0.0001    0.0000
+    0.0000    0.0005    0.0657    3.8292   92.7474    3.3459    0.0111    0.0001
+    0.0000    0.0001    0.0128    0.7977    8.0926   90.4897    0.5958    0.0113
+    0.0000    0.0000    0.0005    0.0459    0.5026   11.1621   84.9315    3.3574
+         0         0         0         0         0         0         0  100.0000
+
+A structure array stores the sampleTotals optional output from transprob. The sampleTotals
+structure contains summary information on the total time spent on each rating, and the number of
+transitions out of each rating, for each year under consideration. For more information on the
+sampleTotals structure, see transprob.
+
+As an example, the sampleTotals structure for 1993 is used here. The total time spent on each
+rating is stored in the totalsVec field of the structure. The total transitions out of each rating are
+stored in the totalsMat field. A third field, algorithm, indicates the algorithm used to generate the
+structure.
+
+sampleTotals(Years==1993).totalsVec
+
+ans = 1×8
+
+144.4411  230.0356  262.2438  204.9671  246.1315  147.0767   54.9562  215.1479
+
+sampleTotals(Years==1993).totalsMat
+
+ans = 8×8
+
+0     7     0     0     0     0     0     0
+     5     0     8     0     0     0     0     0
+     0     6     0     4     2     0     0     0
+     0     0     7     0     3     0     0     0
+     0     0     0    10     0     9     0     0
+     0     0     0     1    13     0     1     0
+     0     0     0     0     0     7     0     2
+     0     0     0     0     0     0     0     0
+
+sampleTotals(Years==1993).algorithm
+
+ans = 
+'duration'
+
+Estimation of Transition Probabilities
+
+8-11

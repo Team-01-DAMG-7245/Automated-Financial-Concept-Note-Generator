@@ -1,0 +1,7 @@
+Page 813
+================================================================================
+
+To clear an initial portfolio from your PortfolioMAD object, use either the PortfolioMAD object or
+the setInitPort function with an empty input for the InitPort property. If transaction costs or
+turnover constraints are set, it is not possible to clear the InitPort property in this way. In this
+case, to clear InitPort, first clear the dependent properties and then clear theInitPort property.

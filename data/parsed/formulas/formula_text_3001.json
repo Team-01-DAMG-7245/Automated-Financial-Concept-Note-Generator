@@ -1,0 +1,12 @@
+{
+  "page": 1570,
+  "original_text": "backtester = backtestEngine( ___ ,Name,Value) sets properties on page 15-268 using name-\nvalue pair arguments and any of the arguments in the previous syntax. You can specify multiple\nname-value pair arguments. For example, backtester =\nbacktestEngine(strategies,'RiskFreeRate',0.02,'InitialPortfolioValue',1000,'R\natesConvention',\"Annualized\",'Basis',2).",
+  "ocr_text": "backtester=backtestEngine(___,Name,Value)setspropertiesonpage15-268usingname-\nvaluepairargumentsandanyoftheargumentsintheprevioussyntax.Youcanspecifymultiple\nname-valuepairarguments.Forexample,backtester=\nbacktestEngine(strategies,RiskFreeRate,0.02,InitialPortfolioValue,1000,R\natesConvention,Annualized,Basis,2).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 570.13,
+    "x1": 556.28,
+    "y1": 629.76
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,9 @@
+Page 815
+================================================================================
+
+As a function of the portfolio weights, the MAD of the portfolio is a convex non-smooth function (see
+Konno and Yamazaki [50] at “Portfolio Optimization” on page A-5). The PortfolioMAD object
+computes MAD as this nonlinear function which can be handled by the solver fmincon Optimization
+Toolbox. The nonlinear programming solver fmincon has several algorithms that can be selected
+with the setSolver function, the two algorithms that work best in practice are 'sqp' and
+'active-set'.

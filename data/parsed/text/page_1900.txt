@@ -1,0 +1,36 @@
+Input Arguments
+
+Data — Data for market prices
+matrix | table | timetable
+
+Data for market prices, specified as a matrix, table, or timetable. For matrix input, Data must be
+column-oriented.
+
+Data Types: double | table | timetable
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [middle,upper,lower] = bollinger(TMW_CLOSE,'WindowSize',10,'Type',1)
+
+WindowSize — Number of observations of input series to include in moving average in
+periods
+10 (default) | positive integer
+
+Number of observations of the input series to include in the moving average in periods, specified as
+the comma-separated pair consisting of 'WindowSize' and a scalar positive integer.
+
+Data Types: double
+
+Type — Type of moving average to compute
+0 (simple) (default) | integer with value 0 or 1
+
+15
+Functions
+
+15-594

@@ -1,0 +1,80 @@
+Length of 'BoundType' Must Be Conformable with NumAssets
+
+The setBounds optional name-value argument for 'BoundType' must be defined for all assets in a
+Portfolio, PortfolioCVaR, or PortfolioMAD object. By default, the 'BoundType' is 'Simple'
+and applies to all assets. Using setBounds, you can choose to define a 'BoundType' for each asset.
+In this case, the number of 'BoundType' specifications must match the number of assets
+(NumAssets) in the Portfolio, PortfolioCVaR, or PortfolioMAD object. The following example
+demonstrates the error when the number of 'BoundType' specifications do not match the number of
+assets in the Portfolio object.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+    0.00022983 0.00049937 0.00019247;
+    0.00420395 0.00019247 0.00764097 ];
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+p = setBounds(p, 0.1, 0.5, 'BoundType',["simple"; "conditional"])
+
+Cannot create bound constraints.
+
+Caused by:
+    Error using internal.finance.PortfolioMixedInteger/checkBoundType (line 28)
+    Length of 'BoundType' must be conformable with 'NumAssets'=3.
+
+To correct this, modify the BoundType to include three specifications because the Portfolio object
+has three assets.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+    0.00022983 0.00049937 0.00019247;
+    0.00420395 0.00019247 0.00764097 ];
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+p = setBounds(p, 0.1, 0.5, 'BoundType',["simple"; "conditional";"conditional"])
+p.BoundType
+
+p =
+
+Portfolio with properties:
+
+BuyCost: []
+         SellCost: []
+     RiskFreeRate: []
+        AssetMean: [3×1 double]
+       AssetCovar: [3×3 double]
+    TrackingError: []
+     TrackingPort: []
+         Turnover: []
+      BuyTurnover: []
+     SellTurnover: []
+             Name: []
+        NumAssets: 3
+        AssetList: []
+         InitPort: []
+      AInequality: []
+      bInequality: []
+        AEquality: []
+        bEquality: []
+       LowerBound: [3×1 double]
+       UpperBound: [3×1 double]
+      LowerBudget: 1
+      UpperBudget: 1
+      GroupMatrix: []
+       LowerGroup: []
+       UpperGroup: []
+           GroupA: []
+           GroupB: []
+       LowerRatio: []
+       UpperRatio: []
+        BoundType: [3×1 categorical]
+     MinNumAssets: []
+     MaxNumAssets: []
+
+ans =
+
+3×1 categorical array
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-150

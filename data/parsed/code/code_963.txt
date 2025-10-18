@@ -1,0 +1,13 @@
+Page 956
+================================================================================
+
+% Correlation as a function of PD
+w = @(pd) (1-exp(-50*pd))/(1-exp(-50)); % weight
+R = @(pd) (0.12*w(pd)+0.24*(1-w(pd))); % correlation
+% Vasicek formula
+V = @(pd) normcdf(norminv(pd)+R(pd).*norminv(0.999)./sqrt(1-R(pd)));
+% Parameter b for maturity adjustment
+b = @(pd) (0.11852-0.05478*log(pd)).^2;
+% Basel II capital requirement with LGD=45% and maturity M=2.5 (numerator
+% in maturity adjustment term becomes 1)
+K = @(pd) 0.45*(V(pd)-pd).*(1./(1-1.5*b(pd)));

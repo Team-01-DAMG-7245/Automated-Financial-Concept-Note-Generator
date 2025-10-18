@@ -1,0 +1,40 @@
+In this plot:
+
+•
+The solid red and blue dots indicate the simulated states of the bivariate model.
+
+•
+The straight lines that connect the solid dots indicate intermediate states that would be obtained
+from a deterministic linear interpolation.
+
+•
+Open circles indicate interpolated states.
+
+•
+Open circles associated with every other interpolated state encircle solid dots associated with the
+corresponding simulated state. However, interpolated states at the midpoint of each time
+increment typically deviate from the straight line connecting each solid dot.
+
+Simulation of Conditional Gaussian Distributions
+
+You can gain additional insight into the behavior of stochastic interpolation by regarding a Brownian
+bridge as a Monte Carlo simulation of a conditional Gaussian distribution. This example examines the
+behavior of a Brownian bridge over a single time increment.
+
+Create Subintervals
+
+Divide a single time increment of length dt into 10 subintervals.
+
+mu    = [0.3; 0.4];
+sigma = [0.2 -0.1; 0.1 -0.2];
+rho   = [1 0.5; 0.5 1];
+obj   = bm(mu,sigma,'Correlation',rho);
+
+rng default; % make output reproducible
+dt    = 1/250;  % 1 trading day = 1/250 years
+[X,T] = simulate(obj,250,'DeltaTime',dt);
+
+15
+Functions
+
+15-150

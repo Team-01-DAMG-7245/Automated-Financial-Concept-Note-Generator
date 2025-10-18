@@ -1,0 +1,70 @@
+CVaR Portfolio Optimization Errors with “Could Not Solve” Message
+
+If the 'cuttingplane' solver generates the following error:
+
+Error using cvar_cuttingplane_solver (line 251)
+Could not solve the problem. Consider modifying the solver options, or using fmincon.
+
+Error in cvar_optim_by_return (line 100)
+        [x,~,~,exitflag] = cvar_cuttingplane_solver(...
+
+Error in PortfolioCVaR/estimateFrontier (line 80)
+    pwgt = cvar_optim_by_return(obj, r(2:end-1), obj.NumAssets, ...
+
+this error means that the main solver failed to solve one of the main problems. The error may be due
+to numerical instability or other problem-specific situation.
+
+To correct this problem, you can use setSolver to make any of these changes:
+
+•
+Modify the main solver options ('MainSolverOptions'), for example, change the algorithm
+('Algorithm') or the termination tolerance ('TolFun').
+
+•
+Alternatively, you can try the 'fmincon' solver.
+
+Missing Data Estimation Fails
+
+If asset return data has missing or NaN values, the simulateNormalScenariosByData function
+with the 'missingdata' flag set to true may fail with either too many iterations or a singular
+covariance. To correct this problem, consider this:
+
+•
+If you have asset return data with no missing or NaN values, you can compute a covariance matrix
+that may be singular without difficulties. If you have missing or NaN values in your data, the
+supported missing data feature requires that your covariance matrix must be positive-definite,
+that is, nonsingular.
+
+•
+simulateNormalScenariosByData uses default settings for the missing data estimation
+procedure that might not be appropriate for all problems.
+
+In either case, you might want to estimate the moments of asset returns separately with either the
+ECM estimation functions such as ecmnmle or with your own functions.
+
+cvar_optim_transform Errors
+
+If you obtain optimization errors such as:
+
+Error using cvar_optim_transform (line 276)
+Portfolio set appears to be either empty or unbounded. Check constraints.
+
+Error in PortfolioCVaR/estimateFrontier (line 64)
+    [AI, bI, AE, bE, lB, uB, f0, f, x0] = cvar_optim_transform(obj);
+
+or
+
+Error using cvar_optim_transform (line 281)
+Cannot obtain finite lower bounds for specified portfolio set.
+
+Error in PortfolioCVaR/estimateFrontier (line 64)
+    [AI, bI, AE, bE, lB, uB, f0, f, x0] = cvar_optim_transform(obj);
+
+Since the portfolio optimization tools require a bounded portfolio set, these errors (and similar
+errors) can occur if your portfolio set is either empty and, if nonempty, unbounded. Specifically, the
+portfolio optimization algorithm requires that your portfolio set have at least a finite lower bound.
+
+5
+CVaR Portfolio Optimization Tools
+
+5-122

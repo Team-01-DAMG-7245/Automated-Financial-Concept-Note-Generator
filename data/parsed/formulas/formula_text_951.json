@@ -1,0 +1,12 @@
+{
+  "page": 511,
+  "original_text": "% Find all business days of the last two years.\ntEnd = datetime('today');\nbdates = busdays(tEnd-calyears(2),tEnd);\n% Create a simulated timetable.\nrng('default')\nnScen = size(bdates,1);\nassetsTT = array2timetable(mvnrnd(mu,Sigma,nScen),RowTimes=bdates);",
+  "ocr_text": "Findallbusinessdaysofthelasttwoyears.\ntEnd=datetime(today);\n\nbdates=busdays(tEnd-calyears(2),tEnd);\nCreateasimulatedtimetable.\n\nrng(default)\n\nnScen=size(bdates,1);\nassetsTT=array2timetable(mvnrnd(mu,Sigma,nScen),RowTimes=bdates);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 367.83,
+    "x1": 453.0,
+    "y1": 443.09
+  },
+  "confidence": "high"
+}

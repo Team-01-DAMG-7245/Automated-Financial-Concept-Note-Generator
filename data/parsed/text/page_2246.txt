@@ -1,0 +1,50 @@
+•
+If the set is nonempty and unbounded, isbounded = false.
+
+•
+If the set is nonempty and bounded, isbounded = true.
+
+•
+If the set is empty, glb and gub are set to NaN vectors.
+
+An isbounded value is returned for Portfolio, PortfolioCVaR, or PortfolioMAD input object
+(obj).
+
+More About
+
+Upper and Lower Bounds
+
+Upper and lower bounds in portfolio optimization are critical constraints that help define the limits of
+asset allocation, ensuring that the resulting portfolio aligns with the investor's goals for risk
+tolerance.
+
+Tips
+
+•
+You can also use dot notation to estimate the global lower and upper bounds for a given set of
+portfolios.
+
+[glb, gub, isbounded] = obj.estimateBounds;
+
+•
+Estimated bounds are accurate in most cases to within 1.0e-8. If you intend to use these bounds
+directly in a portfolio object, ensure that if you impose such bound constraints, a lower bound of 0
+is probably preferable to a lower bound of, for example, 1.0e-10 for portfolio weights.
+
+Version History
+Introduced in R2011a
+
+See Also
+checkFeasibility
+
+Topics
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+“Validate the CVaR Portfolio Problem” on page 5-81
+“Validate the MAD Portfolio Problem” on page 6-80
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+“Portfolio Optimization Theory” on page 4-4
+
+15
+Functions
+
+15-940

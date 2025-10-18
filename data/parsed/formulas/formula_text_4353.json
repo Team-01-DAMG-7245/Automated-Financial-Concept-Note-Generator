@@ -1,0 +1,12 @@
+{
+  "page": 2465,
+  "original_text": "h(x) = A exp(Bx) + C",
+  "ocr_text": "h(x)=A_exp(Bx)+C",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 383.62,
+    "x1": 213.36,
+    "y1": 394.08
+  },
+  "confidence": "high"
+}

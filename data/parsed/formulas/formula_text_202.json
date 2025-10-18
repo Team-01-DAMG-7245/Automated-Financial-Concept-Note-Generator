@@ -1,0 +1,12 @@
+{
+  "page": 127,
+  "original_text": "pBT = 0.5;\ntspFull = tspartition(n,Holdout=pBT);\nidxTV = training(tspFull);  % Training and validation indices",
+  "ocr_text": "pBT=0.5;\ntspFull_=tspartition(n,Holdout=pBT);\nidxTV=training(tspFull);Trainingandvalidationindices",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 420.51,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,62 @@
+Backtest to Compare Investment Strategy When Using Covariance Denoising
+
+This example compares a minimum variance investment strategy using the traditional covariance
+estimate with a minimum variance strategy using covariance denoising.
+
+Load Data
+
+% Read a table of daily adjusted close prices for 2006 DJIA stocks.
+T = readtable('dowPortfolio.xlsx');
+
+% Convert the table to a timetable.
+pricesTT = table2timetable(T,'RowTimes','Dates');
+numAssets = size(pricesTT.Variables, 2);
+
+Use the first 42 days of the dowPortfolio.xlsx data set to initialize the backtest strategies. The
+backtest is then run over the remaining data.
+
+warmupPeriod = 42;
+
+Compute Initial Weights
+
+Use the traditionalStrat and denoisedStrat functions in Local Functions on page 15-53 to
+compute the weights.
+
+% Specify no current weights (100% cash position).
+w0 = zeros(1,numAssets);
+
+% Specify warm-up partition of data set timetable.
+warmupTT = pricesTT(1:warmupPeriod,:);
+
+% Compute the initial portfolio weights for each strategy.
+traditional_initial = traditionalStrat(w0,warmupTT);
+shrunk_initial = denoisedStrat(w0,warmupTT);
+
+Create Backtest Strategies
+
+Create Traditional and Denoising backtest strategy objects using backtestStrategy.
+
+% Rebalance approximately every month.
+rebalFreq = 21;
+
+% Set the rolling lookback window to be at least 2 months and at
+% most 6 months.
+lookback  = [42 126];
+
+% Use a fixed transaction cost (buy and sell costs are both 0.5%
+% of amount traded).
+transactionsFixed = 0.005;
+
+% Specify the strategy objects.
+strat1 = backtestStrategy('Traditional', @traditionalStrat, ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionsFixed, ...
+    InitialWeights=traditional_initial);
+
+strat2 = backtestStrategy('Denoising', @denoisedStrat, ...
+    RebalanceFrequency=rebalFreq, ...
+
+covarianceDenoising
+
+15-51

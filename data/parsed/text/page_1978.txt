@@ -1,0 +1,56 @@
+Input Arguments
+
+CouponRate — Annual percentage rate used to determine coupons payable on a bond
+decimal
+
+Annual percentage rate used to determine the coupons payable on a bond, specified as decimal using
+a scalar or a NBONDS-by-1 vector.
+
+CouponRate is 0 for zero coupon bonds.
+
+Note CouponRate and Face can change over the life of the bond. Schedules for CouponRate and
+Face can be specified with an NBONDS-by-1 cell array, where each element is a NumDates-by-2 matrix
+or cell array, where the first column is dates (serial date numbers or character vectors) and the
+second column is associated rates. The date indicates the last day that the coupon rate or face value
+is valid. This means that the corresponding CouponRate and Face value applies "on or before" the
+specified ending date.
+
+Data Types: double | cell | char
+
+Settle — Settlement date of bond
+datetime array | string array | date character vector
+
+Settlement date of the bond, specified as a scalar or a NBONDS-by-1 vector using a datetime array,
+string array, or date character vectors. The Settle date must be before the Maturity date.
+
+To support existing code, cfamounts also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of bond
+datetime array | string array | date character vector
+
+Maturity date of the bond, specified as a scalar or a NBONDS-by-1 vector using a datetime array, string
+array, or date character vectors.
+
+To support existing code, cfamounts also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [CFlowAmounts, CFlowDates, TFactors, CFlowFlags] = ...
+cfamounts(CouponRate,Settle,
+
+15
+Functions
+
+15-672

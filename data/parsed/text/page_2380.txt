@@ -1,0 +1,42 @@
+Maturity dates that correspond to the ZeroRates, returned as a NUMBONDS-by-1 vector of maturity
+dates that correspond to the zero rates in ZeroRates. This vector is the same as the input vector
+CurveDates, but is sorted by ascending maturity.
+
+If both inputs for CurveDates and Settle are strings or date character vectors, CurveDates is
+returned as serial date numbers. Use the function datetime to convert serial date numbers to
+formatted datetime arrays. However, if either of the inputs for CurveDates and Settle are a
+datetime array, CurveDates is returned as a datetime array.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although fwd2zero supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+zero2fwd | prbyzero | pyld2zero | zbtprice | zbtyield | zero2disc | zero2fwd | zero2pyld
+| datetime
+
+Topics
+“Term Structure of Interest Rates” on page 2-29
+“Fixed-Income Terminology” on page 2-15
+
+15
+Functions
+
+15-1074

@@ -1,0 +1,4 @@
+Page 1593
+================================================================================
+
+function assetAreaPlot(backtester,strategyName)

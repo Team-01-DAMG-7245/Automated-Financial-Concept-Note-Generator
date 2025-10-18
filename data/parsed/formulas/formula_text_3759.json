@@ -1,0 +1,12 @@
+{
+  "page": 2127,
+  "original_text": "NumDays = days360isda(datetime(2002,1,1), datetime(2002,2,1))",
+  "ocr_text": "NumDays=days360isda(datetime(2002,1,1),datetime(2002,2,1))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 571.09,
+    "x1": 420.5,
+    "y1": 581.55
+  },
+  "confidence": "high"
+}

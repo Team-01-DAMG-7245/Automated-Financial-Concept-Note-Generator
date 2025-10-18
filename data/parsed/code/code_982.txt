@@ -1,0 +1,6 @@
+Page 987
+================================================================================
+
+Solution: To resolve this issue, use the formatpoints function with the name-value pair argument
+Missing. When using Missing, you can replace a predictor’s NaN value according to three
+alternative criteria ('ZeroWoe', 'MinPoints', or 'MaxPoints').

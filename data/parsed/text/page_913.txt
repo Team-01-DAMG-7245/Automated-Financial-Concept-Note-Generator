@@ -1,0 +1,27 @@
+See Also
+sharpe | inforatio | portalpha | lpm | elpm | maxdrawdown | emaxdrawdown | ret2tick |
+tick2ret
+
+Related Examples
+
+•
+“Performance Metrics Overview” on page 7-2
+
+•
+“Using the Sharpe Ratio” on page 7-5
+
+•
+“Using the Information Ratio” on page 7-7
+
+•
+“Using Tracking Error” on page 7-8
+
+•
+“Using Risk-Adjusted Return” on page 7-9
+
+•
+“Using Maximum and Expected Maximum Drawdown” on page 7-14
+
+Using Sample and Expected Lower Partial Moments
+
+7-13

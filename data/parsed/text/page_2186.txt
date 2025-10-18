@@ -1,0 +1,60 @@
+The data covers the period from January 1, 2000 to November 7, 2005 with daily total returns. Two
+stocks in this universe have missing values that are represented by NaNs. One of the two stocks had
+an IPO during this period and, consequently, has significantly less data than the other stocks.
+
+[Mean,Covariance] = ecmnmle(Data);
+
+Compute separate regressions for each stock, where the stocks with missing data have estimates that
+reflect their reduced observability.
+
+[NumSamples, NumSeries] = size(Data);
+NumAssets = NumSeries - 2;
+
+StartDate = Dates(1);
+EndDate = Dates(end);
+
+Alpha = NaN(1, length(NumAssets));
+Beta = NaN(1, length(NumAssets));
+Sigma = NaN(1, length(NumAssets));
+StdAlpha = NaN(1, length(NumAssets));
+StdBeta = NaN(1, length(NumAssets));
+StdSigma = NaN(1, length(NumAssets));
+for i = 1:NumAssets
+    % Set up separate asset data and design matrices
+    TestData = zeros(NumSamples,1);
+    TestDesign = zeros(NumSamples,2);
+
+TestData(:) = Data(:,i) - Data(:,14);
+    TestDesign(:,1) = 1.0;
+    TestDesign(:,2) = Data(:,13) - Data(:,14);
+
+[Param, Covar] = ecmmvnrmle(TestData, TestDesign);
+    
+    % Estimate the sample standard errors for model parameters for each asset.
+    StdParam = ecmmvnrstd(TestData, TestDesign, Covar,'hessian')
+    
+end
+
+StdParam = 2×1
+
+0.0008
+    0.0715
+
+StdParam = 2×1
+
+0.0012
+    0.1000
+
+StdParam = 2×1
+
+0.0008
+    0.0663
+
+StdParam = 2×1
+
+0.0007
+
+15
+Functions
+
+15-880

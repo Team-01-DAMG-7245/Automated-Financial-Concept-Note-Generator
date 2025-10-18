@@ -1,0 +1,55 @@
+binprice
+
+Binomial put and call American option pricing using Cox-Ross-Rubinstein model
+
+Syntax
+
+[AssetPrice,OptionValue] = binprice(Price,Strike,Rate,Time,Increment,
+Volatility,Flag)
+[AssetPrice,OptionValue] = binprice( ___ ,DividendRate,Dividend,ExDiv)
+
+Description
+
+[AssetPrice,OptionValue] = binprice(Price,Strike,Rate,Time,Increment,
+Volatility,Flag) prices an American option using the Cox-Ross-Rubinstein binomial pricing
+model. An American option can be exercised any time until its expiration date.
+
+[AssetPrice,OptionValue] = binprice( ___ ,DividendRate,Dividend,ExDiv) adds
+optional arguments for DividendRate,Dividend, and ExDiv.
+
+Examples
+
+Price an American Option Using the Cox-Ross-Rubinstein Binomial Pricing Model
+
+This example shows how to price an American put option with an exercise price of $50 that matures
+in 5 months. The current asset price is $52, the risk-free interest rate is 10%, and the volatility is
+40%. There is one dividend payment of $2.06 in 3-1/2 months. When specifying the input argument
+ExDiv in terms of number of periods, divide the ex-dividend date, specified in years, by the time
+Increment.
+
+ExDiv = ( 3.5/12) / (1/12) = 3.5
+
+[Price, Option] = binprice(52, 50, 0.1, 5/12, 1/12, 0.4, 0, 0, 2.06, 3.5)
+
+Price = 6×6
+
+52.0000   58.1367   65.0226   72.7494   79.3515   89.0642
+         0   46.5642   52.0336   58.1706   62.9882   70.6980
+         0         0   41.7231   46.5981   49.9992   56.1192
+         0         0         0   37.4120   39.6887   44.5467
+         0         0         0         0   31.5044   35.3606
+         0         0         0         0         0   28.0688
+
+Option = 6×6
+
+4.4404    2.1627    0.6361         0         0         0
+         0    6.8611    3.7715    1.3018         0         0
+         0         0   10.1591    6.3785    2.6645         0
+         0         0         0   14.2245   10.3113    5.4533
+         0         0         0         0   18.4956   14.6394
+         0         0         0         0         0   21.9312
+
+15
+Functions
+
+15-474

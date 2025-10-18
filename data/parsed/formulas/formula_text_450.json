@@ -1,0 +1,12 @@
+{
+  "page": 319,
+  "original_text": "AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];\nAssetCovar = [ 0.00324625 0.00022983 0.00420395;\n    0.00022983 0.00049937 0.00019247;\n    0.00420395 0.00019247 0.00764097 ];\np = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);\np = setBounds(p, 0, 0.5, 'BoundType', 'Conditional');   \nestimateFrontier(p, 10)",
+  "ocr_text": "AssetMean=[_0.0101110;0.0043532;0.0137058];\nAssetCovar=[0.003246250.00022983_0.00420395;\n\n.00022983_0.000499370.00019247;\n\n.00420395_0.000192470.00764097];\np=Portfolio(AssetMean,AssetMean,AssetCovar,AssetCovar,Budget,1);\np=setBounds(p,0,0.5,_BoundType,Conditional);\nestimateFrontier(p,_10)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 284.72,
+    "x1": 386.69,
+    "y1": 338.24
+  },
+  "confidence": "high"
+}

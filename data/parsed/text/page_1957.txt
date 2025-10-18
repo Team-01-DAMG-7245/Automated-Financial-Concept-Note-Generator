@@ -1,0 +1,37 @@
+Compute the credit exposure profiles.
+
+simulationDates = convertTo(simulationDates,"datenum");
+profilesBefore = exposureprofiles(simulationDates,exposures)
+
+profilesBefore = struct with fields:
+     Dates: [37×1 double]
+        EE: [37×1 double]
+       PFE: [37×1 double]
+      MPFE: 2.1580e+05
+     EffEE: [37×1 double]
+       EPE: 2.8602e+04
+    EffEPE: 4.9579e+04
+
+Consider a new trade with a counterparty. For this example, take another trade from the original
+swap portfolio and "copy" it for a new counterparty. This example is only for illustrative purposes.
+
+newTradeIdx = 3;
+newTradeValues = values(:,newTradeIdx,:);
+
+% Append a new trade to your existing portfolio.
+cpValues = [cpValues newTradeValues];
+netting = [netting; cpID];
+exposures = creditexposures(cpValues,cpID,'NettingID',netting);
+
+Compute the new credit exposure profiles.
+
+profilesAfter = exposureprofiles(simulationDates,exposures)
+
+profilesAfter = struct with fields:
+     Dates: [37×1 double]
+        EE: [37×1 double]
+       PFE: [37×1 double]
+
+creditexposures
+
+15-651

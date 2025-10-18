@@ -1,0 +1,12 @@
+{
+  "page": 614,
+  "original_text": "if EnvConstants.BuyTrade\n    AgentRemainingSharestoTrade = max(EnvConstants.TotalTradingShares - ...\n        LoggedSignals.CurrentInventoryShares - sum(ExecutedShares),0);\nelse\n    AgentRemainingSharestoTrade = max(LoggedSignals.CurrentInventoryShares - ...\n        sum(ExecutedShares), 0);\nend",
+  "ocr_text": "ifEnvConstants.BuyTrade\nAgentRemainingSharestoTrade=max(EnvConstants.TotalTradingShares-...\nLoggedSignals.CurrentInventoryShares-sum(ExecutedShares),0);\nelse\nAgentRemainingSharestoTrade=max(LoggedSignals.CurrentInventoryShares-...\nsum(ExecutedShares),0);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 373.83,
+    "x1": 523.48,
+    "y1": 449.09
+  },
+  "confidence": "high"
+}

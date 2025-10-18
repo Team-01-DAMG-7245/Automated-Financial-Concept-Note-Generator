@@ -1,0 +1,12 @@
+{
+  "page": 942,
+  "original_text": "fprintf('\\nTransition counts (totals struct) for 2005:\\n\\n')",
+  "ocr_text": "fprintf(nTransitioncounts(totalsstruct)for2005:nn)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 447.88,
+    "x1": 415.11,
+    "y1": 458.35
+  },
+  "confidence": "high"
+}

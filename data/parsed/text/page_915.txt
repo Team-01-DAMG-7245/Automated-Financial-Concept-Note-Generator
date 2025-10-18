@@ -1,0 +1,37 @@
+Start = MaxDDIndex(1,:);
+End = MaxDDIndex(2,:);
+(TestData(Start(1),1) - TestData(End(1),1))/TestData(Start(1),1)
+
+ans = 
+0.1658
+
+Although the maximum drawdown is measured in terms of returns, maxdrawdown can measure the
+drawdown in terms of absolute drop in value, or in terms of log-returns. To contrast these alternatives
+more clearly, you can work with the fund series assuming, an initial investment of 50 dollars.
+
+Fund50 = 50*TestData(:,1);
+plot(Fund50);
+title('\bfFive-Year Fund Performance, Initial Investment 50 usd');
+xlabel('Months');
+ylabel('Value of Investment');
+
+Compute the standard maximum drawdown, which coincides with the results above because returns
+are independent of the initial amounts invested.
+
+MaxDD50Ret = maxdrawdown(Fund50)
+
+MaxDD50Ret = 
+0.1658
+
+Compute the maximum drop in value, using the arithmetic argument.
+
+[MaxDD50Arith, Ind50Arith] = maxdrawdown(Fund50,'arithmetic')
+
+MaxDD50Arith = 
+8.4285
+
+Ind50Arith = 2×1
+
+Using Maximum and Expected Maximum Drawdown
+
+7-15

@@ -1,0 +1,33 @@
+% Penalized objective function
+penalizedVariance = @(w) w'*Sigma*w + ...
+    (w-trackingPortfolio)'*Sigma*(w-trackingPortfolio);
+
+% Penalized variance portfolio
+p = setSolverMINLP(p,"OuterApproximation",ExtendedFormulation=true, ...
+    ObjectiveScalingFactor=1e4);
+w = estimateCustomObjectivePortfolio(p,penalizedVariance);
+
+The following bar chart shows the weights distribution of the portfolio.
+
+figure
+bar(assetReturnsTT.Properties.VariableNames,w);
+hold on
+yline(0.05,'r--',LineWidth=2)
+title('Minimum Variance Portfolio with Tracking Error Penalty')
+ylabel('Weight')
+
+Only five assets are above the 5% conditional threshold and the sum of these assets are less than
+40%.
+
+conditionalBudget = sum(w(w > 0.05))
+
+conditionalBudget = 
+0.4000
+
+See Also
+setConditionalBudget | setBounds
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-458

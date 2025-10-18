@@ -1,0 +1,12 @@
+{
+  "page": 443,
+  "original_text": "% Plot the asset allocation.\nfigure\nt = tiledlayout(1,2);",
+  "ocr_text": "Plottheassetallocation.\nfigure\nt=tiledlayout(1,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 171.03,
+    "x1": 241.7,
+    "y1": 203.09
+  },
+  "confidence": "high"
+}

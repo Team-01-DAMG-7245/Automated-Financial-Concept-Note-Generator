@@ -1,0 +1,6 @@
+Page 1512
+================================================================================
+
+deterministic function Ct that accepts the current time t and returns an NBrowns-by-NBrowns
+positive semidefinite correlation matrix. If Correlation is not a symmetric positive semidefinite
+matrix, use nearcorr to create a positive semidefinite matrix for a correlation matrix.

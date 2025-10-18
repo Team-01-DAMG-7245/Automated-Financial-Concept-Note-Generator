@@ -1,0 +1,14 @@
+{
+  "storage_stats": {
+    "total_vectors": 49,
+    "upserted_vectors": 49,
+    "failed_vectors": 0,
+    "total_time": 2.295130968093872,
+    "queries": 0
+  },
+  "index_stats": {
+    "total_vector_count": 0,
+    "namespaces": {},
+    "dimension": 3072
+  }
+}

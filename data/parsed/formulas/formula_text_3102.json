@@ -1,0 +1,12 @@
+{
+  "page": 1636,
+  "original_text": "roughhestonObj = \n   Class ROUGHHESTON: Rough Heston Stochastic Volatility",
+  "ocr_text": "roughhestonObj_=\nClassROUGHHESTON:RoughHestonStochasticVolatility",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 393.41,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

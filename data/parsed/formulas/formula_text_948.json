@@ -1,0 +1,12 @@
+{
+  "page": 509,
+  "original_text": "auxM = eye(nX);\ncorrAsset2Port = zeros(nX,nP);\nfor j = 1:nP\n    % Portfolio's standard deviation\n    sigmaPortfolio = sqrt(portWeights(:,j)'*Sigma*portWeights(:,j));\n    for i = 1:nX\n        % Assets's standard deviation\n        sigmaAsset = sqrt(Sigma(i,i));\n        % Asset to portfolio correlation\n        corrAsset2Port(i,j) = (auxM(:,i)'*Sigma*portWeights(:,j))/ ...\n            (sigmaAsset*sigmaPortfolio);\n    end\nend",
+  "ocr_text": "auxM=eye(nX);\ncorrAsset2Port=zeros(nX,nP);\nforj=1:mnP\nPortfoliosstandarddeviation\nsigmaPortfolio=sqrt(portWeights(:,j)*Sigma*portWeights(:,j));\nfori=1:nX\nAssetssstandarddeviation\nsigmaAsset=sqrt(Sigma(i,i));\nAssettoportfoliocorrelation\ncorrAsset2Port(i,j)=(auxM(:,i)*Sigma*portWeights(:,j))/...\n(sigmaAsset*sigmaPortfolio);\nend\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.43,
+    "x1": 469.29,
+    "y1": 643.49
+  },
+  "confidence": "high"
+}

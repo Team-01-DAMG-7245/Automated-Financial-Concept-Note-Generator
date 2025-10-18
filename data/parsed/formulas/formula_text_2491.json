@@ -1,0 +1,12 @@
+{
+  "page": 1278,
+  "original_text": "f    = Example_LongstaffSchwartz(nPeriods, nTrials);\nGBM1 = gbm(diag(r(ones(1,nIndices))/252), diag(std(returns)), 'StartState', X, ...\n          'Correlation', correlation);",
+  "ocr_text": "f =Example_LongstaffSchwartz(nPeriods,_nTrials);\nGBM1_=gbm(diag(r(ones(1,nIndices))/252),diag(std(returns)),StartState,X,...\nCorrelation,correlation);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 501.85,
+    "x1": 534.31,
+    "y1": 533.92
+  },
+  "confidence": "high"
+}

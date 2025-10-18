@@ -1,0 +1,34 @@
+Target date in the future or past month, returned as an N-by-1 or 1-by-N vector.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although datemnth supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+datevec | days360 | days365 | daysact | daysdif | wrkdydif | datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+“Trading Calendars User Interface” on page 12-2
+“UICalendar User Interface” on page 12-4
+
+datemnth
+
+15-809

@@ -1,0 +1,7 @@
+Page 2217
+================================================================================
+
+Note To compute upper partial moments, reverse the signs of both the input Mean and MAR (do not
+reverse the signs of either Sigma or the output). This function computes expected lower partial
+moments with the mean and standard deviation of normally distributed asset returns. To compute
+sample lower partial moments from asset returns which have no distributional assumptions, use lpm.

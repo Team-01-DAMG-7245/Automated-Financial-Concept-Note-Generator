@@ -1,0 +1,5 @@
+Page 1509
+================================================================================
+
+Instantaneous volatility rates, denoted as V(t,Xt), specified as an array, a deterministic function of
+time, or a deterministic function of time and state.

@@ -1,0 +1,12 @@
+{
+  "page": 2322,
+  "original_text": "prsk = obj.estimatePortRisk(pwgt);",
+  "ocr_text": "prsk=obj.estimatePortRisk(pwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.59,
+    "x1": 274.21,
+    "y1": 611.06
+  },
+  "confidence": "high"
+}

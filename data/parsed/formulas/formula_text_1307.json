@@ -1,0 +1,12 @@
+{
+  "page": 651,
+  "original_text": "p = PortfolioCVaR;\np = setScenarios(p, AssetScenarios);\np = PortfolioCVaR(p, 'LowerBound', 0);\np = PortfolioCVaR(p, 'LowerBudget', 1, 'UpperBudget', 1);\np = setProbabilityLevel(p, 0.95);",
+  "ocr_text": "p=PortfolioCVaR;\n\np=setScenarios(p,AssetScenarios);\np=PortfolioCVaR(p,_LowerBound,0);\np=PortfolioCVaR(p,_LowerBudget,1,_UpperBudget,1);\np=setProbabilityLevel(p,0.95);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 601.71,
+    "x1": 398.85,
+    "y1": 655.38
+  },
+  "confidence": "high"
+}

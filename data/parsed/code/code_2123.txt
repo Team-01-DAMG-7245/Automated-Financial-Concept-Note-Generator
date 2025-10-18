@@ -1,0 +1,5 @@
+Page 1722
+================================================================================
+
+Array — Time series array to encapsulate within a callable function of time and state
+vector | 2-dimensional matrix | three-dimensional array

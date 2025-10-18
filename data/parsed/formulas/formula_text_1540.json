@@ -1,0 +1,12 @@
+{
+  "page": 774,
+  "original_text": "% Set new settle date\nsimSettle = settle + calmonths(1);",
+  "ocr_text": "Setnewsettledate\nsimSettle=settle+calmonths(1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 274.22,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

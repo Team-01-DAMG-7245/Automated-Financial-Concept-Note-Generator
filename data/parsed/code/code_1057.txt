@@ -1,0 +1,8 @@
+Page 1087
+================================================================================
+
+% Display estimates
+  fprintf('  %4s %9.4f (%8.4f) %9.4f (%8.4f) %9.4f (%8.4f)\n', ...
+     Assets{i},Alpha(1),abs(Alpha(1)/StdAlpha(1)), ...
+     Beta(1),abs(Beta(1)/StdBeta(1)),Sigma(1),StdSigma(1));
+end

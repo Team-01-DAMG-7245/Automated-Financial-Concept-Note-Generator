@@ -1,0 +1,12 @@
+{
+  "page": 2489,
+  "original_text": "ma = movavg(Data,type,windowSize) computes the moving average (MA) of a financial time\nseries.",
+  "ocr_text": "ma=movavg(Data,type,windowSize)computesthemovingaverage(MA)ofafinancialtime\nseries.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 286.81,
+    "x1": 539.46,
+    "y1": 310.44
+  },
+  "confidence": "high"
+}

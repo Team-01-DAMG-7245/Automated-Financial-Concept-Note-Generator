@@ -1,0 +1,57 @@
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+
+Create a heston object.
+
+heston_obj = heston (0.1, 0.2, 0.1, 0.05)  % (Return, Speed, Level, Volatility)
+
+heston_obj = 
+   Class HESTON: Heston Bivariate Stochastic Volatility
+   ----------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   ----------------------------------------------------
+      StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.1
+          Speed: 0.2
+          Level: 0.1
+     Volatility: 0.05
+
+Define the quasi-Monte Carlo simulation using the optional name-value arguments for
+'MonteCarloMethod','QuasiSequence', and 'BrownianMotionMethod'.
+
+[paths,time,z] = simByEuler(heston_obj,10,'ntrials',4096,'montecarlomethod','quasi','quasisequenc
+
+Quasi-Monte Carlo Simulation with simByEuler Using GBM Model
+
+Create a univariate gbm object to represent the model: dXt = 0 . 25Xtdt + 0 . 3XtdWt.
+
+gbm_obj = gbm(0.25, 0.3)  % (B = Return, Sigma)
+
+gbm_obj = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.25
+          Sigma: 0.3
+
+gbm objects display the parameter B as the more familiar Return.
+
+Define the quasi-Monte Carlo simulation using the optional name-value arguments for
+'MonteCarloMethod','QuasiSequence', and 'BrownianMotionMethod'.
+
+[paths,time,z] = simByEuler(gbm_obj,10,'ntrials',4096,'montecarlomethod','quasi','quasisequence',
+
+simByEuler
+
+15-387

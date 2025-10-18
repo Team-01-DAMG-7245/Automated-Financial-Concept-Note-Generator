@@ -1,0 +1,71 @@
+PriceApprox2  =  PortfolioPrice + ...
+PercentApprox2 * PortfolioPrice/100
+
+PriceApprox2 = 
+9.7968e+04
+
+Calculate True New Portfolio Price
+
+Calculate the true new portfolio price by shifting the yield curve.
+
+[CleanPrice, AccruedInterest] = bndprice(Yields + dY, ...
+CouponRate, Settle, Maturity, 2, 0, [], [], [], [], [], ...
+Face);
+
+NewPrice = PortfolioAmounts' * (CleanPrice + AccruedInterest)
+
+NewPrice = 
+9.7968e+04
+
+Compare Results
+
+Compare the results. The analysis results are as follows:
+
+•
+The original portfolio price was $100,000.
+
+•
+The yield curve shifted up by 0.2 percentage point or 20 basis points.
+
+•
+The portfolio duration and convexity are 10.3181 and 157.6346, respectively. These are needed
+for “Bond Portfolio for Hedging Duration and Convexity” on page 10-6.
+
+•
+The first-order approximation, based on modified duration, predicts the new portfolio price
+(PriceApprox1), which is $97,936.37.
+
+•
+The second-order approximation, based on duration and convexity, predicts the new portfolio price
+(PriceApprox2), which is $97,968.90.
+
+•
+The true new portfolio price (NewPrice) for this yield curve shift is $97,968.51.
+
+•
+The estimate using duration and convexity is good (at least for this fairly small shift in the yield
+curve), but only slightly better than the estimate using duration alone. The importance of
+convexity increases as the magnitude of the yield curve shift increases. Try a larger shift (dY) to
+see this effect.
+
+The approximation formulas in this example consider only parallel shifts in the term structure,
+because both formulas are functions of dY, the change in yield. The formulas are not well-defined
+unless each yield changes by the same amount. In actual financial markets, changes in yield curve
+level typically explain a substantial portion of bond price movements. However, other changes in the
+yield curve, such as slope, may also be important and are not captured here. Also, both formulas give
+local approximations whose accuracy deteriorates as dY increases in size. You can demonstrate this
+by running the program with larger values of dY.
+
+See Also
+bnddury | bndconvy | bndprice | bndkrdur | blsprice | blsdelta | blsgamma | blsvega |
+zbtprice | zero2fwd | zero2disc
+
+Related Examples
+
+•
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+
+10
+Solving Sample Problems
+
+10-4

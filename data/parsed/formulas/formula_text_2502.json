@@ -1,0 +1,12 @@
+{
+  "page": 1281,
+  "original_text": "Prices = addprop( Prices, \"CommodityType\", \"variable\" );\nPrices.Properties.CustomProperties.CommodityType = commodityTypes;",
+  "ocr_text": "Prices=addprop(Prices,CommodityType,variable);\nPrices.Properties.CustomProperties.CommodityType=commodityTypes;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.24,
+    "x1": 447.58,
+    "y1": 265.51
+  },
+  "confidence": "high"
+}

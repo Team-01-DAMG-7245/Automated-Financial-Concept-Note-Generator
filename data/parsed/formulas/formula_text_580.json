@@ -1,0 +1,12 @@
+{
+  "page": 391,
+  "original_text": "benchRetn = retnsT(:, \"DJI\");\nnumAssets = size(assetRetns, 2);",
+  "ocr_text": "benchRetn=retnsT(:,DJI);\nnumAssets=size(assetRetns,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 263.38,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

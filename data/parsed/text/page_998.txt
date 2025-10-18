@@ -1,0 +1,62 @@
+5. Adding CustAge, Deviance = 1442.06, Chi2Stat = 5.5547849, PValue = 0.018430237
+6. Adding ResStatus, Deviance = 1437.9435, Chi2Stat = 4.1164321, PValue = 0.042468555
+7. Adding OtherCC, Deviance = 1433.7372, Chi2Stat = 4.2063597, PValue = 0.040272676
+
+Generalized linear regression model:
+    logit(status) ~ 1 + CustAge + ResStatus + EmpStatus + CustIncome + TmWBank + OtherCC + AMBala
+    Distribution = Binomial
+
+Estimated Coefficients:
+                   Estimate      SE       tStat       pValue  
+                   ________    _______    ______    __________
+
+(Intercept)     0.7024       0.064    10.975    5.0407e-28
+    CustAge        0.61562     0.24783    2.4841      0.012988
+    ResStatus       1.3776     0.65266    2.1107      0.034799
+    EmpStatus      0.88592     0.29296     3.024     0.0024946
+    CustIncome     0.69836     0.21715     3.216     0.0013001
+    TmWBank          1.106     0.23266    4.7538    1.9958e-06
+    OtherCC         1.0933     0.52911    2.0662      0.038806
+    AMBalance       1.0437     0.32292    3.2322     0.0012285
+
+1200 observations, 1192 error degrees of freedom
+Dispersion: 1
+Chi^2-statistic vs. constant model: 89.7, p-value = 1.42e-16
+
+Step 4. Review and format scorecard points.
+
+After fitting the logistic model, by default the points are unscaled and come directly from the
+combination of WOE values and model coefficients. The displaypoints function summarizes the
+scorecard points.
+
+p1 = displaypoints(sc);
+disp(p1)
+
+Predictors              Bin              Points  
+    ______________    ____________________    _________
+
+{'CustAge'   }    {'[-Inf,37)'       }     -0.15314
+    {'CustAge'   }    {'[37,40)'         }    -0.062247
+    {'CustAge'   }    {'[40,46)'         }     0.045763
+    {'CustAge'   }    {'[46,58)'         }      0.22888
+    {'CustAge'   }    {'[58,Inf]'        }      0.48354
+    {'CustAge'   }    {'<missing>'       }          NaN
+    {'ResStatus' }    {'Tenant'          }    -0.031302
+    {'ResStatus' }    {'Home Owner'      }      0.12697
+    {'ResStatus' }    {'Other'           }      0.37652
+    {'ResStatus' }    {'<missing>'       }          NaN
+    {'EmpStatus' }    {'Unknown'         }    -0.076369
+    {'EmpStatus' }    {'Employed'        }      0.31456
+    {'EmpStatus' }    {'<missing>'       }          NaN
+    {'CustIncome'}    {'[-Inf,29000)'    }     -0.45455
+    {'CustIncome'}    {'[29000,33000)'   }      -0.1037
+    {'CustIncome'}    {'[33000,42000)'   }     0.077768
+    {'CustIncome'}    {'[42000,47000)'   }      0.24406
+    {'CustIncome'}    {'[47000,Inf]'     }      0.43536
+    {'CustIncome'}    {'<missing>'       }          NaN
+    {'TmWBank'   }    {'[-Inf,12)'       }     -0.18221
+
+8
+Credit Risk Analysis
+
+8-80

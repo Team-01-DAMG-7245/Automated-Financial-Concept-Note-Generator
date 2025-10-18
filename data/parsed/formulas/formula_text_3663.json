@@ -1,0 +1,12 @@
+{
+  "page": 2064,
+  "original_text": "NextCouponDate = cpndaten(Settle, Maturity, 2, 0, 1, [],FirstCouponDate)",
+  "ocr_text": "NextCouponDate=cpndaten(Settle,Maturity,2,0,1,[],FirstCouponDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 321.33,
+    "x1": 480.09,
+    "y1": 331.8
+  },
+  "confidence": "high"
+}

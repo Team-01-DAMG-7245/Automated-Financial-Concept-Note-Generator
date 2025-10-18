@@ -1,0 +1,72 @@
+Truncating and Padding Asset Lists
+
+If the NumAssets property is already set and you pass in too many or too few identifiers, the
+PortfolioCVaR object, and the setAssetList function truncate or pad the list with numbered
+default asset names that use the name specified in the hidden public property
+defaultforAssetList. If the list is truncated or padded, a warning message indicates the
+discrepancy. For example, assume that you have a PortfolioCVaR object with five ETFs and you
+only know the first three CUSIPs '921937835', '922908769', and '922042775'. Use this syntax
+to create an asset list that pads the remaining asset identifiers with numbered 'UnknownCUSIP'
+placeholders:
+
+p = PortfolioCVaR('numassets',5);
+p.defaultforAssetList = 'UnknownCUSIP';
+p = setAssetList(p, '921937835', '922908769', '922042775');
+disp(p.AssetList)
+
+Warning: Input list of assets has 2 too few identifiers. Padding with numbered assets. 
+> In PortfolioCVaR.setAssetList at 118 
+    '921937835'    '922908769'    '922042775'    'UnknownCUSIP4'    'UnknownCUSIP5'
+
+Alternatively, suppose that you have too many identifiers and need only the first four assets. This
+example illustrates truncation of the asset list using the PortfolioCVaR object:
+
+p = PortfolioCVaR('numassets',4);
+p = PortfolioCVaR(p, 'assetlist', { 'AGG', 'EEM', 'MDY', 'SPY', 'VEU' });
+disp(p.AssetList)
+
+Warning: AssetList has 1 too many identifiers. Using first 4 assets. 
+> In PortfolioCVaR.checkarguments at 399
+  In PortfolioCVaR.PortfolioCVaR>PortfolioCVaR.PortfolioCVaR at 195 
+    'AGG'    'EEM'    'MDY'    'SPY'
+
+The hidden public property uppercaseAssetList is a Boolean flag to specify whether to convert
+asset names to uppercase letters. The default value for uppercaseAssetList is false. This
+example shows how to use the uppercaseAssetList flag to force identifiers to be uppercase
+letters:
+
+p = PortfolioCVaR;
+p.uppercaseAssetList = true;
+p = setAssetList(p, { 'aa', 'ba', 'cat', 'dd', 'etr' });
+disp(p.AssetList)
+
+'AA'    'BA'    'CAT'    'DD'    'ETR'
+
+See Also
+PortfolioCVaR | setAssetList | setInitPort | estimateBounds | checkFeasibility
+
+Related Examples
+
+•
+“Setting Up an Initial or Current Portfolio” on page 5-33
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+Common Operations on the PortfolioCVaR Object
+
+5-31

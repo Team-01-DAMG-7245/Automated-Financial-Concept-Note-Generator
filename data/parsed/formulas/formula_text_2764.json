@@ -1,0 +1,12 @@
+{
+  "page": 1402,
+  "original_text": "DriftRate = drift(A,B) creates a default DriftRate model component.",
+  "ocr_text": "DriftRate=drift(A,B)createsadefaultDriftRatemodelcomponent.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 684.17,
+    "x1": 446.24,
+    "y1": 695.8
+  },
+  "confidence": "high"
+}

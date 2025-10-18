@@ -1,0 +1,12 @@
+{
+  "page": 1634,
+  "original_text": "[Paths,Times,Z] = simByEuler(MDL,NPeriods)\n[Paths,Times,Z] = simByEuler( ___ ,Name=Value)",
+  "ocr_text": "[Paths,Times,Z]=simByEuler(MDL,NPeriods)\n[Paths,Times,Z]_=simByEuler(__,Name=Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.86,
+    "x1": 358.9,
+    "y1": 213.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,93 @@
+Validate the Portfolio Problem for Portfolio Object . . . . . . . . . . . . . . . . .
+4-94
+Validating a Portfolio Set . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-94
+Validating Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-95
+
+Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio
+Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-98
+
+Obtaining Portfolios Along the Entire Efficient Frontier . . . . . . . . . . . . .
+4-99
+
+Obtaining Endpoints of the Efficient Frontier . . . . . . . . . . . . . . . . . . . .
+4-102
+
+Obtaining Efficient Portfolios for Target Returns . . . . . . . . . . . . . . . . .
+4-105
+
+Obtaining Efficient Portfolios for Target Risks . . . . . . . . . . . . . . . . . . . .
+4-108
+
+Efficient Portfolio That Maximizes Sharpe Ratio . . . . . . . . . . . . . . . . . .
+4-111
+
+Choosing and Controlling the Solver for Mean-Variance Portfolio
+Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-114
+Using 'lcprog' and 'quadprog' . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-114
+Using the Mixed Integer Nonlinear Programming (MINLP) Solver . . . .
+4-115
+Solver Guidelines for Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . .
+4-115
+Solver Guidelines for Custom Objective Problems Using Portfolio Objects
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-119
+
+Estimate Efficient Frontiers for Portfolio Object . . . . . . . . . . . . . . . . . .
+4-122
+Obtaining Portfolio Risks and Returns . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-122
+
+Plotting the Efficient Frontier for a Portfolio Object . . . . . . . . . . . . . . .
+4-125
+
+Postprocessing Results to Set Up Tradable Portfolios . . . . . . . . . . . . . .
+4-130
+
+When to Use Portfolio Objects Over Optimization Toolbox . . . . . . . . . .
+4-132
+Always Use Portfolio, PortfolioCVaR, or PortfolioMAD Object . . . . . . . .
+4-134
+Preferred Use of Portfolio, PortfolioCVaR, or PortfolioMAD Object . . . .
+4-135
+Use Optimization Toolbox . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-136
+
+Comparison of Methods for Covariance Estimation . . . . . . . . . . . . . . . .
+4-138
+
+Choose MINLP Solvers for Portfolio Problems . . . . . . . . . . . . . . . . . . . .
+4-140
+
+Troubleshooting Portfolio Optimization Results . . . . . . . . . . . . . . . . . .
+4-145
+Portfolio Object Destroyed When Modifying . . . . . . . . . . . . . . . . . . . . .
+4-145
+Optimization Fails with “Bad Pivot” Message . . . . . . . . . . . . . . . . . . . .
+4-145
+Speed of Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-145
+Matrix Incompatibility and "Non-Conformable" Errors . . . . . . . . . . . . .
+4-145
+Missing Data Estimation Fails . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-145
+mv_optim_transform Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-145
+solveContinuousCustomObjProb or solveMICustomObjProb Errors . . . .
+4-146
+Efficient Portfolios Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .
+4-146
+Efficient Frontiers Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .
+4-146
+Troubleshooting estimateCustomObjectivePortfolio . . . . . . . . . . . . . . .
+4-148
+Troubleshooting for Setting 'Conditional' BoundType, MinNumAssets, and
+MaxNumAssets Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-148
+
+x
+Contents

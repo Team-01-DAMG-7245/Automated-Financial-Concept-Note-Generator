@@ -1,0 +1,12 @@
+{
+  "page": 867,
+  "original_text": "p = PortfolioMAD;\np = setScenarios(p, AssetScenarios);\np = setDefaultConstraints(p);\npwgt = estimateFrontierLimits(p);",
+  "ocr_text": "p=PortfolioMAD;\np=setScenarios(p,AssetScenarios);\np=setDefaultConstraints(p);\npwgt=estimateFrontierLimits(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 302.23,
+    "x1": 285.05,
+    "y1": 345.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1123,
+  "original_text": "ZVal = blsgamma(NewRange, 40*Pad, 0.1*Pad, Newj, 0.35*Pad);\nColor = blsdelta(NewRange, 40*Pad, 0.1*Pad, Newj, 0.35*Pad);",
+  "ocr_text": "ZVal_=blsgamma(NewRange,40*Pad,0.1*Pad,Newj,0.35*Pad);\nColor=blsdelta(NewRange,40*Pad,0.1*Pad,Newj,0.35*Pad);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 422.83,
+    "x1": 415.08,
+    "y1": 444.09
+  },
+  "confidence": "high"
+}

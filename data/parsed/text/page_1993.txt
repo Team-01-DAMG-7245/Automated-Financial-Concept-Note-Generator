@@ -1,0 +1,56 @@
+Irregular or normal first coupon date, specified as a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS
+vector using a datetime array, string array, or date character vectors.
+
+If you do not specify a FirstCouponDate, the cash flow payment dates are determined from other
+inputs.
+
+To support existing code, cfdates also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+LastCouponDate — Irregular or normal last coupon date
+cash flow payment dates are determined from other inputs (default) | datetime array | string array |
+date character vector
+
+Irregular or normal last coupon date, specified as a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS
+vector using a datetime array, string array, or date character vectors.
+
+If you do not specify a LastCouponDate, the cash flow payment dates are determined from other
+inputs.
+
+To support existing code, cfdates also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+CFlowDates — Actual cash flow payment dates
+matrix
+
+Actual cash flow payment dates, returned as a N-row matrix of dates in datetime format (if inputs are
+in datetime format). CFlowDates has NUMBONDS rows and the number of columns is determined by
+the maximum number of cash flow payment dates required to hold the bond portfolio. NaNs are
+padded for bonds which have less than the maximum number of cash flow payment dates.
+
+If all of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, or LastCouponDate are
+either strings or date character vectors, then CFlowDates is returned as a serial date number. Use
+the function datetime to convert serial date numbers to formatted datetime arrays.
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, or LastCouponDate
+are datetime arrays, then CFlowDates is returned as a datetime array.
+
+Note The cash flow flags for a portfolio of bonds were formerly available as the cfdates second
+output argument, CFlowFlags. You can now use cfamounts to get these flags. If you specify a
+CFlowFlags argument, cfdates displays a message directing you to use cfamounts.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+cfdates
+
+15-687

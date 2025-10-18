@@ -1,0 +1,7 @@
+Page 1094
+================================================================================
+
+StdAlpha(i) = StdParam(1);
+    StdBeta(i) = StdParam(2);
+    StdSigma(i) = sqrt(StdCovar);
+end

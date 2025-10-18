@@ -1,0 +1,12 @@
+{
+  "page": 156,
+  "original_text": "LowerGroup = GroupBounds(:,1);\nUpperGroup = GroupBounds(:,2);",
+  "ocr_text": "LowerGroup_=GroupBounds(:,1);\nUpperGroup=GroupBounds(:,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 264.63,
+    "x1": 205.58,
+    "y1": 279.75
+  },
+  "confidence": "high"
+}

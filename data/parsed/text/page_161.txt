@@ -1,0 +1,60 @@
+-0.5000
+    0.5000
+
+One approach to solving this portfolio problem is to explicitly use the setInequality function with
+a Portfolio object.
+
+ExpReturn = [0.1 0.2 0.15];
+ExpCovariance  =  [ 0.005   -0.010    0.004;
+                   -0.010    0.040   -0.002;
+                    0.004   -0.002    0.023];
+NumPorts = 8;
+AssetBounds = [-0.1, 1.1];
+
+p = Portfolio('AssetMean', ExpReturn, 'AssetCovar', ExpCovariance);
+p = setBounds(p, AssetBounds(1), AssetBounds(2));
+p = setBudget(p, 1, 1);
+p = setInequality(p, A, b);
+PortWts = estimateFrontier(p, NumPorts);
+[PortRisk, PortReturn] = estimatePortMoments(p, PortWts);
+
+PortRisk
+
+PortRisk = 8×1
+
+0.0586
+    0.0586
+    0.0586
+    0.0586
+    0.0586
+    0.0586
+    0.0586
+    0.0586
+
+PortReturn
+
+PortReturn = 8×1
+
+0.1375
+    0.1375
+    0.1375
+    0.1375
+    0.1375
+    0.1375
+    0.1375
+    0.1375
+
+PortWts
+
+PortWts = 3×8
+
+0.5000    0.5000    0.5000    0.5000    0.5000    0.5000    0.5000    0.5000
+    0.2500    0.2500    0.2500    0.2500    0.2500    0.2500    0.2500    0.2500
+    0.2500    0.2500    0.2500    0.2500    0.2500    0.2500    0.2500    0.2500
+
+In this case, the constraints allow only one optimum portfolio. Since eight portfolios were requested,
+all eight portfolios are the same. Note that the solution to this portfolio problem using the
+
+Constraint Specification Using a Portfolio Object
+
+3-23

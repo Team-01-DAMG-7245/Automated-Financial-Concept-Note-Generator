@@ -1,0 +1,63 @@
+Working with MAD Portfolio Constraints Using Defaults
+
+The final element for a complete specification of a portfolio optimization problem is the set of feasible
+
+portfolios, which is called a portfolio set. A portfolio set X ⊂Rn is specified by construction as the
+intersection of sets formed by a collection of constraints on portfolio weights. A portfolio set
+necessarily and sufficiently must be a nonempty, closed, and bounded set.
+
+When setting up your portfolio set, ensure that the portfolio set satisfies these conditions. The most
+basic or “default” portfolio set requires portfolio weights to be nonnegative (using the lower-bound
+constraint) and to sum to 1 (using the budget constraint). For information on the workflow when
+using PortfolioMAD objects, see “PortfolioMAD Object Workflow” on page 6-16.
+
+Setting Default Constraints for Portfolio Weights Using PortfolioMAD
+Object
+
+The “default” MAD portfolio problem has two constraints on portfolio weights:
+
+•
+Portfolio weights must be nonnegative.
+
+•
+Portfolio weights must sum to 1.
+
+Implicitly, these constraints imply that portfolio weights are no greater than 1, although this is a
+superfluous constraint to impose on the problem.
+
+Setting Default Constraints Using the PortfolioMAD Function
+
+Given a portfolio optimization problem with NumAssets = 20 assets, use the PortfolioMAD object
+to set up a default problem and explicitly set bounds and budget constraints:
+
+p = PortfolioMAD('NumAssets', 20, 'LowerBound', 0, 'Budget', 1);
+disp(p)
+
+PortfolioMAD with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                  NumScenarios: []
+                          Name: []
+                     NumAssets: 20
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [20×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+
+6
+MAD Portfolio Optimization Tools
+
+6-50

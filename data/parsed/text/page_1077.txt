@@ -1,0 +1,33 @@
+Other improvised approaches are possible although most approaches are problem-dependent. In
+particular, for mean and covariance estimation, the estimation function ecmnmle uses a function
+ecmninit to obtain an initial estimate.
+
+Nonrandom Residuals
+
+Simultaneous estimates for parameters b and covariances C require C to be positive-definite. So, the
+general multivariate normal regression routines require nondegenerate residual errors. If you are
+faced with a model that has exact results, the least-squares routine ecmlsrmle still works, although
+it provides a least-squares estimate with a singular residual covariance matrix. The other regression
+functions fail.
+
+Nonconvergence
+
+Although the regression functions are robust and work for most “typical” cases, they can fail to
+converge. The main failure mode is an ill-conditioned covariance matrix, where failures are either soft
+or hard. A soft failure wanders endlessly toward a nearly singular covariance matrix and can be
+spotted if the algorithm fails to converge after about 100 iterations. If MaxIterations is increased
+to 500 and display mode is initiated (with no output arguments), a typical soft failure looks like this.
+
+This case, which is based on 20 observations of five assets with 30% of data missing, shows that the
+log-likelihood goes linearly to infinity as the likelihood function goes to 0. In this case, the function
+converges but the covariance matrix is effectively singular with a smallest eigenvalue on the order of
+machine precision (eps).
+
+For the function ecmnmle, a hard error looks like this:
+
+> In ecmninit at 60
+  In ecmnmle at 140
+
+Troubleshooting Multivariate Normal Regression
+
+9-19

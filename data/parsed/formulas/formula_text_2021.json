@@ -1,0 +1,12 @@
+{
+  "page": 1045,
+  "original_text": "rng('default');\ntmp = templateTree('Surrogate','on','Reproducible',true);",
+  "ocr_text": "rng(default);\ntmp=templateTree(Surrogate,on,Reproducible,true);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 621.67,
+    "x1": 398.85,
+    "y1": 642.94
+  },
+  "confidence": "high"
+}

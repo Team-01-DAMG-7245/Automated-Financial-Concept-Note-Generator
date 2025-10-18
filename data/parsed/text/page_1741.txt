@@ -1,0 +1,18 @@
+Output Arguments
+
+AbsConSet — Transformed portfolio linear inequality constraint
+matrix
+
+Transformed portfolio linear inequality constraint, returned as a matrix and expressed in absolute
+weight format, also of the form [A b] such that A*w <= b. The value w represents a vector of active
+asset weights (relative to the index portfolio) whose elements sum to the total portfolio value.
+
+Version History
+Introduced before R2006a
+
+See Also
+abs2active | pcalims | pcgcomp | pcglims | pcpval | portcons
+
+active2abs
+
+15-435

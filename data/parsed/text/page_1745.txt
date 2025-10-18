@@ -1,0 +1,38 @@
+More About
+
+Equality Constraint
+
+An equality constraint requires certain conditions to be met exactly, rather than allowing for a range
+of values.
+
+Tips
+
+•
+You can also use dot notation to add the linear equality constraints for portfolio weights.
+
+obj = obj.addEquality(AEquality, bEquality)
+
+•
+You can also remove linear equality constraints from a portfolio object using dot notation.
+
+obj = obj.setEquality([ ], [ ])
+
+Version History
+Introduced in R2011a
+
+See Also
+setEquality
+
+Topics
+“Working with Linear Equality Constraints Using Portfolio Object” on page 4-75
+“Working with Linear Equality Constraints Using PortfolioCVaR Object” on page 5-68
+“Setting Linear Inequality Constraints Using the setInequality and addInequality Functions” on page
+6-69
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+Supported Constraints for Portfolio Optimization Using Portfolio Objects on page 4-9
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object on page 5-8
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object on page 6-8
+
+addEquality
+
+15-439

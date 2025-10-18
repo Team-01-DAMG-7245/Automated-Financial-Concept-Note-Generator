@@ -1,0 +1,6 @@
+Page 1799
+================================================================================
+
+To specify call options, set Class = true or Class = {'call'}. To specify put options, set Class =
+false or Class = {'put'} or Class = ["put"]. If Class is empty or unspecified, the default is a
+call option.

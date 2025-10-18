@@ -1,0 +1,12 @@
+{
+  "page": 1146,
+  "original_text": "Position_prev = InitPos;\nPosition_next = policy(simPaths(1,:)/Strike,T*ones(1,nTrials),InitPos*ones(1,nTrials));\nfor timeidx=2:nSteps+1\n    rew(timeidx-1,:) = (simPaths(timeidx,:) - simPaths(timeidx-1,:)).*Position_prev - ...\n        abs(Position_next - Position_prev).*simPaths(timeidx,:)*kappa - ...\n        blsprice(simPaths(timeidx,:),Strike,r,max(0,T - simTimes(timeidx)),ExpVol) + ...\n        blsprice(simPaths(timeidx-1,:),Strike,r,T - simTimes(timeidx-1),ExpVol);",
+  "ocr_text": "Position_prev=InitPos;\nPosition_next=policy(simPaths(1,:)/Strike,T*ones(1,nTrials),InitPos*ones(1,nTrials));\nfortimeidx=2:nSteps+1\nrew(timeidx-1,:)=(simPaths(timeidx,:)-simPaths(timeidx-1,:)).*Position_prev-...\nabs(Position_next-Position_prev).*simPaths(timeidx,:)*kappa-...\nblsprice(simPaths(timeidx,:),Strike,r,max(0,T-simTimes(timeidx)),ExpVol)+...\nblsprice(simPaths(timeidx-1,:),Strike,r,T-simTimes(timeidx-1),ExpVol);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 572.24,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 625,
+  "original_text": "% Weights must be either 0 or between 0.01 and 0.1\np = setBounds(p,0.01,0.1,BoundType=\"conditional\");",
+  "ocr_text": "Weightsmustbeeither0orbetween0.01and0.1\np=setBounds(p,0.01,0.1,BoundType=conditional);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 447.27,
+    "x1": 360.92,
+    "y1": 468.53
+  },
+  "confidence": "high"
+}

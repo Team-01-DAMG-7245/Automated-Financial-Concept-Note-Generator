@@ -1,0 +1,12 @@
+{
+  "page": 852,
+  "original_text": "p = PortfolioMAD;\np = setBounds(p, 0.02, 0.5,'BoundType', 'Conditional', 'NumAssets', 3)  \np = setMinMaxNumAssets(p, 2, 2)",
+  "ocr_text": "p=PortfolioMAD;\np=setBounds(p,0.02,0.5,BoundType,Conditional,NumAssets,3)\np=setMinMaxNumAssets(p,2,_2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 397.84,
+    "x1": 480.13,
+    "y1": 429.91
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 1482
+================================================================================
+
+Correlation between Gaussian random variates drawn to generate the Brownian motion vector
+(Wiener processes), specified as an NBrowns-by-NBrowns positive semidefinite matrix, or as a
+deterministic function C(t) that accepts the current time t and returns an NBrowns-by-NBrowns
+positive semidefinite correlation matrix. If Correlation is not a symmetric positive semidefinite
+matrix, use nearcorr to create a positive semidefinite matrix for a correlation matrix.

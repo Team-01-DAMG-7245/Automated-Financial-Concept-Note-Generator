@@ -1,0 +1,7 @@
+Page 527
+================================================================================
+
+% Define assets mean
+p.AssetMean = [0.1; 0.1; 0.15; 0.2];
+% Minimum variance portfolio
+wMinVar = estimateFrontierLimits(p,'min');

@@ -1,0 +1,5 @@
+Page 1371
+================================================================================
+
+Mu — Mu represents the parameter μ
+array or deterministic function of time | deterministic function of time and state

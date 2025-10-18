@@ -1,0 +1,12 @@
+{
+  "page": 1268,
+  "original_text": "fig = gcf;\nfig.Color = [1 1 1];\nhold off",
+  "ocr_text": "fig=gcf;\nfig.Color=[111];\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 198.36,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

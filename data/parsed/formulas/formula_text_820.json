@@ -1,0 +1,12 @@
+{
+  "page": 467,
+  "original_text": "% Compute HRP portfolio\nwHRP = hrpPortfolio(T,Sigma)",
+  "ocr_text": "ComputeHRPportfolio\nwHRP=hrpPortfolio(T,Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 154.68,
+    "x1": 241.71,
+    "y1": 175.95
+  },
+  "confidence": "high"
+}

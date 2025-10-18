@@ -1,0 +1,6 @@
+Page 1480
+================================================================================
+
+As a deterministic function of time, when B is called with a real-valued scalar time t as its only input,
+B must produce an NVars-by-NVars matrix. If you specify B as a function of time and state, it must
+generate an NVars-by-NVars matrix of state vector coefficients when invoked with two inputs:

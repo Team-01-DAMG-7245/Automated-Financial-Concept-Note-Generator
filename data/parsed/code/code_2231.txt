@@ -1,0 +1,10 @@
+Page 2015
+================================================================================
+
+Settle = datetime(1999,8,3);
+Maturity = [datetime(2000,8,15) ; datetime(2000,12,15)];
+CouponRate= [0.06; 0.05];
+Period = [3;2];
+Basis = [1;0];
+[CFlowAmounts, CFlowDates, TFactors] = cfamounts(CouponRate,...
+Settle, Maturity, Period, Basis);

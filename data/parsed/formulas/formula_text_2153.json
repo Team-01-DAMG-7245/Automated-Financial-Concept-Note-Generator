@@ -1,0 +1,12 @@
+{
+  "page": 1108,
+  "original_text": "Prices = Prices * BondAmounts;\nPrices = reshape(Prices, NumYields, NumTimes);",
+  "ocr_text": "Prices=Prices*BondAmounts;\nPrices=reshape(Prices,NumYields,NumTimes);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 459.03,
+    "x1": 339.23,
+    "y1": 480.29
+  },
+  "confidence": "high"
+}

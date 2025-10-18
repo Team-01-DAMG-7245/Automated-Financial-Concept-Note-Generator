@@ -1,0 +1,5 @@
+Page 1466
+================================================================================
+
+•
+A is an NVars-by-1 vector-valued function accessible using the (t, Xt) interface.

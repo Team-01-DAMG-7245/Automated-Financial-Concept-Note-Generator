@@ -1,0 +1,12 @@
+{
+  "page": 553,
+  "original_text": "do_train = false;\nif do_train\n    % Train the agent\n    trainingStats = train(DQNagent,gbwmEnvironment,trainingOptions);\nelse\n    load('trainedAgent');\nend",
+  "ocr_text": "do_train=false;\nifdo_train\nTraintheagent\ntrainingStats=train(DQNagent,gbwmEnvironment,trainingOptions);\nelse\nload(trainedAgent);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 386.83,
+    "x1": 458.43,
+    "y1": 462.09
+  },
+  "confidence": "high"
+}

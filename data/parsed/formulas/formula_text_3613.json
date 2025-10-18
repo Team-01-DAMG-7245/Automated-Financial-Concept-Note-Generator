@@ -1,0 +1,12 @@
+{
+  "page": 2039,
+  "original_text": "load SimulatedStock.mat\nvolatility = chaikvolat(TMW,'NumPeriods',14,'WindowSize',14);\nplot(volatility.Time,volatility.ChaikinVolatility)\ntitle('Chaikin Volatility for TMW')",
+  "ocr_text": "loadSimulatedStock.mat\nvolatility=chaikvolat(TMW,NumPeriods,14,WindowSize,14);\nplot(volatility.Time,volatility.ChaikinVolatility)\ntitle(ChaikinVolatilityforTMW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 410.08,
+    "x1": 420.53,
+    "y1": 452.94
+  },
+  "confidence": "high"
+}

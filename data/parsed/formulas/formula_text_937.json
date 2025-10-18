@@ -1,0 +1,12 @@
+{
+  "page": 504,
+  "original_text": "The portfolio that minimizes the variance with the ERC penalty is min\nx ∈X xTΣx −λERC ∑\ni = 1",
+  "ocr_text": "n\nTheportfoliothatminimizesthevariancewiththeERCpenaltyis min xTSx-AgRc S I\nxe i=l",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 396.46,
+    "x1": 493.55,
+    "y1": 421.66
+  },
+  "confidence": "high"
+}

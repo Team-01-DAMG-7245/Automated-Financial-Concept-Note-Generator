@@ -1,0 +1,5 @@
+Page 1300
+================================================================================
+
+approxVolatility = mu + sigma .* (simComponents * coeffs(:, 1:2).');
+approxVolatility = [InferredVolatility{end, :}; approxVolatility];

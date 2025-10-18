@@ -1,0 +1,12 @@
+{
+  "page": 1149,
+  "original_text": "% Strategy 2: Stock with put option cover\nAssetScenarios(:, 2) = (max(Price_T, Strike) - (Price_0 + Put)) ./ ...\n    (Price_0 + Put)",
+  "ocr_text": "Strategy2:Stockwithputoptioncover\nAssetScenarios(:,2)=(max(Price_T,Strike)-(Price0+Put))./...\n(Price_0+Put)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 156.03,
+    "x1": 469.29,
+    "y1": 188.09
+  },
+  "confidence": "high"
+}

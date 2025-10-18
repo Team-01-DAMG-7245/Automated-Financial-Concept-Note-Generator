@@ -1,0 +1,62 @@
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Sigma — Sigma represents the parameter V
+array or deterministic function of time
+
+Sigma represents the parameter V, specified as an array or a deterministic function of time.
+
+If you specify Sigma as an array, it must be an NVars-by-NBrowns two-dimensional matrix of
+instantaneous volatility rates. In this case, each row of Sigma corresponds to a particular state
+variable. Each column corresponds to a particular Brownian source of uncertainty, and associates the
+magnitude of the exposure of state variables with sources of uncertainty.
+
+As a deterministic function of time, when Sigma is called with a real-valued scalar time t as its only
+input, Sigma must produce an NVars-by-NBrowns matrix. If you specify Sigma as a function of time
+and state, it must return an NVars-by-NBrowns matrix of volatility rates when invoked with two
+inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Note Although diffusion enforces no restrictions on the signs of these volatility parameters, each
+parameter is specified as a positive value.
+
+Output Arguments
+
+DiffusionRate — Diffusion rate model component
+DiffusionRate object
+
+Diffusion rate model component, returned as a DiffusionRate object.
+
+Properties
+
+Rate — Composite diffusion-rate function
+value stored from diffusion-rate function (default) | function accessible by (t, Xt)
+
+This property is read-only.
+
+Composite diffusion-rate function, specified as: G(t,Xt)). The function stored in Rate fully
+encapsulates the combined effect of Alpha and Sigma where:
+
+•
+Alpha is the state vector exponent, which determines the format of D(t,Xt) of G(t,Xt).
+
+•
+Sigma is the volatility rate, V(t,Xt), of G(t,Xt).
+
+Data Types: struct | double
+
+Examples
+
+15
+Functions
+
+15-92

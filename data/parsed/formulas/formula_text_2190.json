@@ -1,0 +1,12 @@
+{
+  "page": 1130,
+  "original_text": "% Create a PCA factor covariance matrix.\npcaFactorCov = corr2cov(sqrt(pcaFactorVar),eye(numFactors));",
+  "ocr_text": "CreateaPCAfactorcovariancematrix.\npcaFactorCov=corr2cov(sqrt(pcaFactorVar),eye(numFactors));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 415.08,
+    "y1": 686.69
+  },
+  "confidence": "high"
+}

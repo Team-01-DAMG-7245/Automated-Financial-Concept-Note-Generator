@@ -1,0 +1,69 @@
+when no accrued premiums are paid upon default, and it can be approximated by
+
+RPV01 ≈1
+2 ∑
+j = 1
+
+N
+Z(t j)Δ(t j −1, t j, B)(Q(t j −1) + Q(t j))
+
+when accrued premiums are paid upon default. Here, t0 = 0 is the valuation date, and t1,...,tn = T are
+the premium payment dates over the life of the contract,T is the maturity of the contract, Z(t) is the
+discount factor for a payment received at time t, and Δ(tj-1, tj, B) is a day count between dates tj-1 and
+tj corresponding to a basis B.
+
+The protection leg of a CDS contract is given by the following formula:
+
+ProtectionLeg =∫0
+
+T
+Z(τ)(1 −R)dPD(τ)
+
+≈(1 −R) ∑
+i = 1
+
+M
+Z(τi)(PD(τi) −PD(τi −1))
+
+= (1 −R) ∑
+i = 1
+
+M
+Z(τi)(Q(τi −1) −Q(τi))
+
+where the integral is approximated with a finite sum over the discretization τ0 = 0,τ1,...,τM = T.
+
+A breakeven spread S0 makes the value of the premium and protection legs equal. It follows that:
+
+S0 = ProtectionLeg
+RPV01
+
+Version History
+Introduced in R2010b
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cdsspread supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Beumee, J., D. Brigo, D. Schiemert, and G. Stoyle. “Charting a Course Through the CDS Big Bang.”
+Fitch Solutions, Quantitative Research, Global Special Report. April 7, 2009.
+
+cdsspread
+
+15-639

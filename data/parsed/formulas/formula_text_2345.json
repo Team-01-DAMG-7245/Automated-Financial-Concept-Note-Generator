@@ -1,0 +1,12 @@
+{
+  "page": 1212,
+  "original_text": "F = \n   Class DRIFT: Drift Rate Specification  \n   -------------------------------------  \n      Rate: drift rate function F(t,X(t)) \n         A: 0\n         B: 0.1",
+  "ocr_text": "F=\nClassDRIFT:DriftRateSpecification\nRate:driftratefunctionF(t,X(t))\nA:0\nB:0.1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 113.95,
+    "x1": 317.56,
+    "y1": 178.42
+  },
+  "confidence": "high"
+}

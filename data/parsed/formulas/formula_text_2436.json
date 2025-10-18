@@ -1,0 +1,12 @@
+{
+  "page": 1251,
+  "original_text": "WT = norminv(U) * sqrt(T);  % Stratified Brownian motion.",
+  "ocr_text": "WT=norminv(U)*sqrt(T);StratifiedBrownianmotion.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 246.1,
+    "x1": 398.84,
+    "y1": 256.56
+  },
+  "confidence": "high"
+}

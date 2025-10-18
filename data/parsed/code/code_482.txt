@@ -1,0 +1,5 @@
+Page 462
+================================================================================
+
+% Do not invest in the market index.
+new_weights = [0; riskBudgetingPortfolio(assetCov)];

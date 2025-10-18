@@ -1,0 +1,7 @@
+Page 502
+================================================================================
+
+Unlike the HH index, the MDP goal is not to obtain a portfolio whose weights are evenly distributed
+among all assets, but to obtain a portfolio whose selected (nonzero) assets have the same correlation
+to the portfolio as a whole. Use the function handle MDPObjFun for the most diversified portfolio
+(MDP) with the estimateCustomObjectivePortfolio function.

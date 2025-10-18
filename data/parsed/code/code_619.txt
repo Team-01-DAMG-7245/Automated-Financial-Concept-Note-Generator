@@ -1,0 +1,9 @@
+Page 560
+================================================================================
+
+if loggedSignals.TimePeriod >= finalTimePeriod && W >= targetWealth
+    reward = 1;
+else
+    reward = 0;
+end
+end

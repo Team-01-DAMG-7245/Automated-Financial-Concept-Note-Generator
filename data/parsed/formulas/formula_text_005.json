@@ -1,0 +1,12 @@
+{
+  "page": 34,
+  "original_text": "Values = NumShares * ClosePrices",
+  "ocr_text": "Values=NumShares*ClosePrices",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 624.52,
+    "x1": 263.37,
+    "y1": 634.99
+  },
+  "confidence": "high"
+}

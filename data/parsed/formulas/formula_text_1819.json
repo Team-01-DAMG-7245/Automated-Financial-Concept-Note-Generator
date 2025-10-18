@@ -1,0 +1,12 @@
+{
+  "page": 930,
+  "original_text": "transMatTTC = transprobbytotals(sampleTotals)",
+  "ocr_text": "transMatTTC=transprobbytotals(sampleTotals)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 163.08,
+    "x1": 333.81,
+    "y1": 173.55
+  },
+  "confidence": "high"
+}

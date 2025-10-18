@@ -1,0 +1,61 @@
+For this example, you want to find the portfolio that minimizes the tracking error to the benchmark
+with, at most, half of the assets in the universe. Furthermore, if an asset is selected in the portfolio, at
+least 10% must be invested in that asset. This problem is as follows:
+
+min
+x
+xTΣRx
+
+s . t . ∑
+i
+xi = 1,
+
+∑
+i
+# xi ≠0 ≤2,
+
+x = 0 or x ≥0 . 1
+
+To solve this problem, first add the constraints to the Portfolio object using the setBudget,
+setMinMaxNumAssets, and setBounds functions.
+
+% Specify that the budget sums to one constraint.
+p = setBudget(p,1,1);
+% Specify the maximum number of assets as 15.
+p = setMinMaxNumAssets(p,[],2);
+% Specify the conditional bounds.
+p = setBounds(p,0.1,[],BoundType="conditional");
+
+Define a function handle for the objective function xTΣRx.
+
+% Define the objective function.
+TEsquared1 = @(x) x'*excessRetSigma*x;
+
+Use estimateCustomObjectivePortfolio to compute the solution to the problem.
+
+% Solve the porfolio problem.
+wMinTE1 = estimateCustomObjectivePortfolio(p,TEsquared1)
+
+wMinTE1 = 4×1
+
+0.8317
+         0
+         0
+    0.1683
+
+Tracking Error Using Benchmark Weights
+
+You can also define the tracking error as
+
+x −x0
+
+TΣ x −x0 .
+
+In this formulation, Σ is the covariance matrix of the assets returns (not the excess returns) and this
+example assumes that the weight vector of the benchmark portfolio is known. Using the same
+constraints as the Tracking Error Using the Benchmark Returns on page 4-344 method, the problem
+is as follows:
+
+Solve Tracking Error Portfolio Problems
+
+4-345

@@ -1,0 +1,12 @@
+Page 1457
+================================================================================
+
+average  = zeros(length(times),1);
+variance = zeros(length(times),1);
+for i = 1:length(times)
+    t = times(i);
+    x = interpolate(obj,t(ones(nTrials,1)),...
+        X,'Times',T);
+    average(i)  = mean(x(:,1));
+    variance(i) = var(x(:,1));
+end

@@ -1,0 +1,12 @@
+{
+  "page": 688,
+  "original_text": "G = [ true true true false false ];\np = PortfolioCVaR;\np = setGroups(p, G, [], 0.3);\ndisp(p.NumAssets)\ndisp(p.GroupMatrix)\ndisp(p.UpperGroup)",
+  "ocr_text": "G=[truetruetruefalsefalse];\np=PortfolioCVaR;\np=setGroups(p,G,[],0.3);\ndisp(p.NumAssets)\ndisp(p.GroupMatrix)\ndisp(p.UpperGroup)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 279.63,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

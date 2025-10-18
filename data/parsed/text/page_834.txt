@@ -1,0 +1,59 @@
+Working with 'Simple' Bound Constraints Using PortfolioMAD
+Object
+
+'Simple' bound constraints are optional linear constraints that maintain upper and lower bounds on
+portfolio weights (see “'Simple' Bound Constraints” on page 6-9). Although every portfolio set must
+be bounded, it is not necessary to specify a portfolio set with explicit bound constraints. For example,
+you can create a portfolio set with an implicit upper bound constraint or a portfolio set with average
+turnover constraints. The bound constraints have properties LowerBound for the lower-bound
+constraint and UpperBound for the upper-bound constraint. Set default values for these constraints
+using the setDefaultConstraints function (see “Setting Default Constraints for Portfolio Weights
+Using Portfolio Object” on page 4-58).
+
+Setting 'Simple' Bounds Using the PortfolioMAD Function
+
+The properties for bound constraints are set through the PortfolioMAD object. Suppose that you
+have a balanced fund with stocks that can range from 50% to 75% of your portfolio and bonds that
+can range from 25% to 50% of your portfolio. The bound constraints for a balanced fund are set with:
+
+lb = [ 0.5; 0.25 ];
+ub = [ 0.75; 0.5 ];
+p = PortfolioMAD('LowerBound', lb, 'UpperBound', ub, 'BoundType', 'Simple');
+disp(p.NumAssets)
+disp(p.LowerBound)
+disp(p.UpperBound)
+
+2
+
+0.5000
+ 0.2500
+
+0.7500
+ 0.5000
+
+To continue with this example, you must set up a budget constraint. For details, see “Working with
+Budget Constraints Using Portfolio Object” on page 4-65.
+
+Setting 'Simple' Bounds Using the setBounds Function
+
+You can also set the properties for bound constraints using setBounds. Suppose that you have a
+balanced fund with stocks that can range from 50% to 75% of your portfolio and bonds that can range
+from 25% to 50% of your portfolio. Given a PortfolioMAD object p, use setBounds to set the bound
+constraints:
+
+lb = [ 0.5; 0.25 ];
+ub = [ 0.75; 0.5 ];
+p = PortfolioMAD;
+p = setBounds(p, lb, ub,'BoundType', 'Simple');
+disp(p.NumAssets)
+disp(p.LowerBound)
+disp(p.UpperBound)
+
+2
+
+0.5000
+
+6
+MAD Portfolio Optimization Tools
+
+6-54

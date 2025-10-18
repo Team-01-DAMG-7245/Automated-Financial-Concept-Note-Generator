@@ -1,0 +1,63 @@
+Local Functions
+
+function new_weights = equalWeightShares(engine_data,prices)
+
+numAssets = width(prices);
+
+% Dollars per asset for equal weight with partial shares
+dollars_per_asset = engine_data.PortfolioValue / numAssets;
+% Compute shares (partial shares first, then round down)
+asset_shares = floor(dollars_per_asset ./ prices{end,:});
+% Convert number of shares into dollars
+asset_dollars = asset_shares .* prices{end,:};
+% Convert dollars into weights
+new_weights = asset_dollars / engine_data.PortfolioValue;
+
+end
+
+Set the Size of Rolling Windows for Backtest Strategies
+
+This example shows how to use the “LookbackWindow” on page 15-0
+ name-value argument to set
+the rolling windows of the backtesting strategies. Each time the backtest engine calls a strategy
+rebalance function, a rolling window of asset price data (and possibly signal data) is passed to the
+rebalance function (“rebalanceFcn” on page 15-0
+). The rebalance function can then make trading
+and allocation decisions based on that data. The LookbackWindow property sets the size of these
+rolling windows in terms of time steps. The window determines the amount of data from the asset
+price timetable that is passed to the rebalance function.
+
+The LookbackWindow property can be set in two ways:
+
+•
+Expanding rolling window — For an expanding rolling window of data, set the
+LookbackWindow property to a 1-by-2 vector [min max]. The software then calls the rebalance
+function with a price timetable containing at least min rows and at most max rows of rolling price
+data.
+
+•
+Fixed-size rolling window — For a fixed-sized rolling window of data, set the LookbackWindow
+property to a single scalar value (N). The software then calls the rebalance function with a price
+timetable containing exactly N rows of rolling price data.
+
+Load Data
+
+Load 10 days of adjusted price data for a selected set of stocks.
+
+% Read a table of daily adjusted close prices for 2006 DJIA stocks.
+T = readtable('dowPortfolio.xlsx');
+
+% For readability, use only a few stocks.
+assetSymbols = ["AA","GM","MMM","MSFT","PG","T","XOM"];
+
+% Prune the table to hold only 10 days of data and selected stocks.
+timeColumn = "Dates";
+T = T(1:10,[timeColumn assetSymbols]);
+
+% Convert the table to a timetable.
+pricesTT = table2timetable(T,'RowTimes','Dates');
+
+15
+Functions
+
+15-254

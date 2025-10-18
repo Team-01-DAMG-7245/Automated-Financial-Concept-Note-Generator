@@ -1,0 +1,37 @@
+Shifting the critical values to the right or left changes the transition probabilities. For example, here
+is the transition matrix obtained by shifting the TTC thresholds by 0.5 to the right. Note that default
+probabilities increase.
+
+shiftedThresholds = thresholdMat+0.5;
+Example_DisplayTransitions(transprobfromthresholds(shiftedThresholds), ...
+   [],{'AAA','AA','A','BBB','BB','B','CCC'}, ...
+   {'AAA','AA','A','BBB','BB','B','CCC','D','NR'})
+
+AAA     AA      A    BBB     BB      B    CCC      D     NR 
+   AAA  75.34  13.84   1.05   0.19   0.13      0      0      0   9.45 
+    AA   0.13  74.49  13.53   1.21   0.12   0.22   0.04   0.02  10.24 
+     A   0.01   0.51   76.4  10.02   0.83   0.31   0.06   0.08  11.77 
+   BBB      0   0.03    1.2  74.03   7.22   1.39   0.32   0.51  15.29 
+    BB      0   0.01   0.05   1.77  63.35  10.94   1.47   1.88  20.52 
+     B      0   0.01   0.04   0.07   1.91  59.67   5.74    8.1  24.46 
+   CCC      0      0   0.05    0.1   0.36   4.61  35.06  33.18  26.65
+
+Given a particular PIT matrix, the idea in [6 on page 8-43] and [8 on page 8-43] is to vary the
+shifting parameter applied to the TTC thresholds so that the resulting transition matrix is as close as
+possible to the PIT matrix. Closeness is measured as the sum of squares of differences between
+corresponding transition probabilities. The optimal shifting value is called credit index. A credit index
+is determined for every PIT transition matrix in the sample.
+
+You can use fminunc from Optimization Toolbox™ to find the credit indices.
+
+CreditIndex = zeros(nYears,1);
+ExitFlag = zeros(nYears,1);
+options = optimset('LargeScale','Off','Display','Off');
+for i=1:nYears
+   errorfun = @(z)norm(squeeze(TransMat(:,:,i))-...
+      transprobfromthresholds(...
+      transprobtothresholds(tmTTC)+z),'fro');
+
+Forecasting Corporate Default Rates
+
+8-41

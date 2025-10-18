@@ -1,0 +1,35 @@
+qwgt = estimateFrontier(q, 20);
+[qrsk, qret] = estimatePortMoments(q, qwgt);
+
+Plot the efficient frontier with a tangent line (0 to 1 cash).
+
+pwgtshpr_direct = estimateMaxSharpeRatio(q,'Method','direct');
+pwgtshpr_iter = estimateMaxSharpeRatio(q,'Method','iterative'); % Default for 'TolX' is 1e-8
+[riskshpr_diret, retshpr_diret] = estimatePortMoments(q,pwgtshpr_direct);
+[riskshpr_iter, retshpr_iter] = estimatePortMoments(q,pwgtshpr_iter);
+
+clf;
+portfolioexamples_plot('Efficient Frontier with Capital Allocation Line', ...
+                {'line', prsk, pret, {'EF'}, '-r', 2}, ...
+                {'line', qrsk, qret, {'EF with riskfree'}, '-b', 1}, ...
+                {'scatter', [mrsk, crsk, ersk, riskshpr_fully, riskshpr_diret, riskshpr_iter], .
+    [mret, cret, eret, retshpr_fully , retshpr_diret, retshpr_iter], {'Market', 'Cash', 'Equal',
+                {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+When a risk-free asset is not available to the portfolio, or in other words, the portfolio is fully
+invested, the efficient frontier is curved, corresponding to the red line in the above figure. Therefore,
+there is a unique (risk, return) point that maximizes the Sharpe ratio, which the 'iterative' and
+'direct' methods will both find. If the portfolio is allowed to invest in a risk-free asset, part of the
+red efficient frontier line is replaced by the capital allocation line, resulting in the efficient frontier of
+a portfolio with a risk-free investment (blue line). All the (risk, return) points on the straight blue line
+share the same Sharpe ratio. Also, it is likely that the 'iterative' and 'direct' methods end up
+with different points, therefore there are different portfolio allocations.
+
+When using the 'iterative' method, you can use an optional 'TolX' name-value argument. TolX
+is a termination tolerance that is related to the possible return levels of the efficient frontier. If the
+selected TolX value is large compared to the range of returns, then the accuracy of the solution is
+poor. TolX should be a number smaller than 0.01*(maxReturn - minReturn).
+
+estimateMaxSharpeRatio
+
+15-991

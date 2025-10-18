@@ -1,0 +1,12 @@
+{
+  "page": 1797,
+  "original_text": "Volatility = blsimpv(100, 95, 0.075, 0.25, 10, 'Limit', 0.5);\nVolatility = blsimpv(100, 95, 0.075, 0.25, 10, 'Limit',0.5,'Yield',0,'Class', {'Call'});\nVolatility = blsimpv(100, 95, 0.075, 0.25, 10, 'Limit',0.5,'Yield',0, 'Class', true);\nVolatility = blsimpv(100, 95, 0.075, 0.25, 10, 'Limit',0.5,'Yield',0, 'Class', true,'Method','jac",
+  "ocr_text": "Volatility=blsimpv(100,95,0.075,0.25,10,Limit,0.5);\nVolatility=blsimpv(100,95,0.075,0.25,10,Limit,0.5,Yield,0,Class,{Call});\nVolatility=blsimpv(100,95,0.075,0.25,10,Limit,0.5,Yield,0,Class,true);\nVolatility=blsimpv(100,95,0.075,0.25,10,Limit,0.5,Yield,,Class,true,Method,jai",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 574.18,
+    "x1": 615.59,
+    "y1": 617.05
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2434,
+  "original_text": "Return = irr(CashFlow)\n[Return,AllRates] = irr( ___ )",
+  "ocr_text": "Return=irr(CashFlow)\n[Return,AllRates]=irr(___)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.49,
+    "x1": 262.57,
+    "y1": 212.12
+  },
+  "confidence": "high"
+}

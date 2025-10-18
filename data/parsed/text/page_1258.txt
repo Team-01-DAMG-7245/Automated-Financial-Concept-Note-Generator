@@ -1,0 +1,62 @@
+Managing Memory Using End-of-Period Processing Functions
+
+Specify one or more end-of-period processing functions to manage and store only the information of
+interest, avoiding simulation outputs altogether.
+
+This approach requires you to specify one or more end-of-period processing functions, and is often
+the preferred approach for large-scale problems. This approach allows you to avoid simulation
+outputs altogether. Since no outputs are requested, the three-dimensional time series arrays Paths
+and Z are not stored.
+
+This approach often requires more effort, but is far more elegant and allows you to customize tasks
+and dramatically reduce memory usage. See “Price European Stock Options Using Monte Carlo
+Simulation” on page 14-47.
+
+Enhancing Performance
+
+The following approaches improve performance when solving SDE problems:
+
+•
+Specifying model parameters as traditional MATLAB arrays and functions, in various
+combinations. This provides a flexible interface that can support virtually any general nonlinear
+relationship. However, while functions offer a convenient and elegant solution for many problems,
+simulations typically run faster when you specify parameters as double-precision vectors or
+matrices. Thus, it is a good practice to specify model parameters as arrays when possible.
+
+•
+Use models that have overloaded Euler simulation methods, when possible. Using
+Brownian motion (BM) and geometric Brownian motion (GBM) models that provide overloaded
+Euler simulation methods take advantage of separable, constant-parameter models. These
+specialized methods are exceptionally fast, but are only available to models with constant
+parameters that are simulated without specifying end-of-period processing and noise generation
+functions.
+
+•
+Replace the simulation of a constant-parameter, univariate model derived from the
+SDEDDO class with that of a diagonal multivariate model. Treat the multivariate model as a
+portfolio of univariate models. This increases the dimensionality of the model and enhances
+performance by decreasing the effective number of simulation trials.
+
+Note This technique is applicable only to constant-parameter univariate models without
+specifying end-of-period processing and noise generation functions.
+
+•
+Take advantage of the fact that simulation methods are designed to detect the presence
+of NaN (not a number) conditions returned from end-of-period processing functions. A
+NaN represents the result of an undefined numerical calculation, and any subsequent calculation
+based on a NaN produces another NaN. This helps improve performance in certain situations. For
+example, consider simulating paths of the underlier of a knock-out barrier option (that is, an
+option that becomes worthless when the price of the underlying asset crosses some prescribed
+barrier). Your end-of-period function could detect a barrier crossing and return a NaN to signal
+early termination of the current trial.
+
+Optimizing Accuracy: About Solution Precision and Error
+
+The simulation architecture does not, in general, simulate exact solutions to any SDE. Instead, the
+simulation architecture provides a discrete-time approximation of the underlying continuous-time
+process, a simulation technique often known as a Euler approximation.
+
+14
+Stochastic Differential Equations
+
+14-66

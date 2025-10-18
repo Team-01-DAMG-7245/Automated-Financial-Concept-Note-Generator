@@ -1,0 +1,12 @@
+{
+  "page": 489,
+  "original_text": "function new_weights = computeRiskBudgeting(pricesTT) \n% Risk budgeting portfolio allocation",
+  "ocr_text": "functionnew_weights=computeRiskBudgeting(pricesTT)\nRiskbudgetingportfolioallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.03,
+    "x1": 382.57,
+    "y1": 600.29
+  },
+  "confidence": "high"
+}

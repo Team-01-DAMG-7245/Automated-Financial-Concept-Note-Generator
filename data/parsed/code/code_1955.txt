@@ -1,0 +1,5 @@
+Page 1553
+================================================================================
+
+% Create an array of strategies for the backtestEngine.
+strategies = [equalWeightStrategy chaseReturnsStrategy];

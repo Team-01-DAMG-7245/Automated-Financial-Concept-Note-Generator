@@ -1,0 +1,4 @@
+Page 520
+================================================================================
+
+Define the objective function with κ = 0 . 5 as the ellipsoidal uncertainty parameter.

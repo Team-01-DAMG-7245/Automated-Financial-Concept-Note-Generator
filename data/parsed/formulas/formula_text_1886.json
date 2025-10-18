@@ -1,0 +1,12 @@
+{
+  "page": 955,
+  "original_text": "cpf = CPF(end);\nspr = SPR(end)+1;\nyPredRange = [yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];\nfprintf('SPR rises 1%%    %4.2f%%  %4.2f%%  %4.2f%%\\n',yPredRange);",
+  "ocr_text": "cpf=CPF(end);\n\nspr_=SPR(end)+1;\nyPredRange=[yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];\nfprintf(SPRrises16 4.2684.2F84.2Fs5n,yPredRange);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 165.03,
+    "x1": 469.26,
+    "y1": 207.89
+  },
+  "confidence": "high"
+}

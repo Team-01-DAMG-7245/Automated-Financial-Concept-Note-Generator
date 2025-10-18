@@ -1,0 +1,60 @@
+EnvConstants_Train_Sell.NumLevels = NumLevels;
+EnvConstants_Train_Sell.IS_TWAP = IS_TWAP_Step_Train_Sell;
+
+ResetFunction_Sell = @() RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Train_Sell);
+
+Define the action information as the number of shares to be traded at each step, ranging from zero
+shares to twice the number of shares as in TWAP.
+
+NumActions = 39;
+LowerActionRange = linspace(0,TradingShares_Step_TWAP_Train_Sell(1), round(NumActions/2));
+ActionRange = round([LowerActionRange(1:end-1) ...
+    linspace(TradingShares_Step_TWAP_Train_Sell(1), ...
+    TradingShares_Step_TWAP_Train_Sell(1)*2,round(NumActions/2))]);
+
+ActionInfo_Sell = rlFiniteSetSpec(ActionRange);
+ActionInfo_Sell.Name = 'Trading Action (Number of Shares)';
+ActionInfo_Sell.Description = 'Number of Shares to be Traded at Each Time Step';
+
+Define the step function, which computes the rewards and updates the observations at each step. The
+function definition for RL_OptimalExecution_LOB_StepFcn is in the Local Functions on page 4-
+441 section.
+
+StepFunction_Train_Sell = @(Action,LoggedSignals) ...
+    RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvConstants_Train_Sell);
+
+Create the environment using the custom function handles defined in this section.
+
+RL_OptimalExecution_Training_Environment_Sell = rlFunctionEnv(ObservationInfo_Train_Sell,ActionIn
+
+Reset!
+Reset!
+
+RL_OptimalExecution_Training_Environment_Sell = 
+  rlFunctionEnv with properties:
+
+StepFcn: @(Action,LoggedSignals)RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvCons
+    ResetFcn: @()RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Train_Sell)
+        Info: [1×1 struct]
+
+Validate Training Environment Reset and Step Functions for Sell Trades
+
+Before using the created environment, the best practice is to validate the reset and step functions for
+the environment. Call the reset and step functions to see if they produce reasonable results without
+errors.
+
+Validate the reset function and the initial observation.
+
+InitialObservation = reset(RL_OptimalExecution_Training_Environment_Sell);
+
+Reset!
+
+InitialObservation
+
+InitialObservation = 1×4
+
+2738          12           0           0
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-415

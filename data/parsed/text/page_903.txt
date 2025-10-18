@@ -1,0 +1,42 @@
+Performance Metrics Illustration
+
+To illustrate the functions for investment performance metrics, you work with three financial time
+series objects using performance data for:
+
+•
+An actively managed, large-cap value mutual fund
+
+•
+A large-cap market index
+
+•
+90-day Treasury bills
+
+The data is monthly total return prices that cover a span of five years.
+
+The following plot illustrates the performance of each series in terms of total returns to an initial $1
+invested at the start of this 5-year period:
+
+load FundMarketCash
+plot(TestData)
+hold on
+title('\bfFive-Year Total Return Performance');
+legend('Fund','Market','Cash','Location','SouthEast');
+hold off
+
+The mean (Mean) and standard deviation (Sigma) of returns for each series are
+
+Returns = tick2ret(TestData);
+Assets
+Mean = mean(Returns)
+Sigma = std(Returns, 1)
+
+which gives the following result:
+
+Assets = 
+    'Fund'    'Market'    'Cash'
+Mean =
+
+Performance Metrics Illustration
+
+7-3

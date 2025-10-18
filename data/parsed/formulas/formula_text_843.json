@@ -1,0 +1,12 @@
+{
+  "page": 473,
+  "original_text": "% Remove the backtest data.\nnetwork_features = network_features(1:backtest_indices(1)-1);\nnetwork_responses = network_responses(1:backtest_indices(1)-1,:);",
+  "ocr_text": "Removethebacktestdata.\nnetwork_features=network_features(1:backtest_indices(1)-1);\nnetwork_responses=network_responses(1:backtest_indices(1)-1,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 392.63,
+    "x1": 442.17,
+    "y1": 424.69
+  },
+  "confidence": "high"
+}

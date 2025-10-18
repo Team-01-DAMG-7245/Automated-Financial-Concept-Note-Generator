@@ -1,0 +1,23 @@
+Conclusion
+
+Complex continuous returns are a necessary intermediary when considering logarithms of negative
+price ratios. tick2ret computes a continuous complex extension of the function on the positive real
+axis. The logarithm maintains the additivity property, used when computing multiperiod returns.
+
+Because of the extensible logarithm implemented in MATLAB, current implementations of
+Computational Finance tools that accept prices and returns behave logically with negative prices. The
+interpretation of complex-valued results can be unfamiliar at first, but as shown, the results are
+meaningful and explicable.
+
+See Also
+tick2ret | ret2tick
+
+More About
+
+•
+“Work with Negative Interest Rates Using Functions” (Financial Instruments Toolbox)
+
+2
+Performing Common Financial Tasks
+
+2-38

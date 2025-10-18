@@ -1,0 +1,12 @@
+{
+  "page": 905,
+  "original_text": "Sharpe = sharpe(Returns, Riskless)",
+  "ocr_text": "Sharpe=sharpe(Returns,Riskless)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 396.44,
+    "x1": 274.21,
+    "y1": 406.91
+  },
+  "confidence": "high"
+}

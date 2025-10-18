@@ -1,0 +1,12 @@
+{
+  "page": 1176,
+  "original_text": "TT.Variables =\ncumsum(TT.Variables)",
+  "ocr_text": "TT.Variables=\ncumsum(TT.Variables)",
+  "bbox": {
+    "x0": 373.05,
+    "y0": 283.86,
+    "x1": 493.45,
+    "y1": 307.49
+  },
+  "confidence": "high"
+}

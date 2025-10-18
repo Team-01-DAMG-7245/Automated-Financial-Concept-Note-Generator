@@ -1,0 +1,12 @@
+{
+  "page": 473,
+  "original_text": "network_features  = cell(numSamples,1);\nnetwork_responses = zeros(numSamples,numOutputs);",
+  "ocr_text": "network_features=cell(numSamples,1);\nnetwork_responses=zeros(numSamples,numOutputs);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.93,
+    "x1": 355.49,
+    "y1": 160.19
+  },
+  "confidence": "high"
+}

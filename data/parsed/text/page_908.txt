@@ -1,0 +1,56 @@
+Using Tracking Error
+
+This example shows how to use tracking error to measure the variation of a portfolio's return relative
+to its benchmark index.
+
+Given an asset or portfolio of assets and a benchmark, the relative standard deviation of returns
+between the asset or portfolio of assets and the benchmark is called tracking error.
+
+The function inforatio computes the tracking error and returns it as a second argument.
+
+load FundMarketCash 
+Returns = tick2ret(TestData);
+Benchmark = Returns(:,2);
+[InfoRatio, TrackingError] = inforatio(Returns, Benchmark)
+
+InfoRatio = 1×3
+
+0.0432       NaN   -0.0315
+
+TrackingError = 1×3
+
+0.0187         0    0.0390
+
+Tracking error, also know as active risk, measures the volatility of active returns. Tracking error is a
+useful measure of performance relative to a benchmark since it is in units of asset returns. For
+example, the tracking error of 1.87% for the fund relative to the market in this example is reasonable
+for an actively managed, large-cap value fund.
+
+See Also
+sharpe | inforatio | portalpha | lpm | elpm | maxdrawdown | emaxdrawdown | ret2tick |
+tick2ret
+
+Related Examples
+
+•
+“Performance Metrics Overview” on page 7-2
+
+•
+“Using the Sharpe Ratio” on page 7-5
+
+•
+“Using the Information Ratio” on page 7-7
+
+•
+“Using Risk-Adjusted Return” on page 7-9
+
+•
+“Using Sample and Expected Lower Partial Moments” on page 7-11
+
+•
+“Using Maximum and Expected Maximum Drawdown” on page 7-14
+
+7
+Investment Performance Metrics
+
+7-8

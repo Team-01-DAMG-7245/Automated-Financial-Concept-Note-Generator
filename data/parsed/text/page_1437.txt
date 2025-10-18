@@ -1,0 +1,76 @@
+Note You can specify combinations of array and function input parameters as needed.
+
+Moreover, a parameter is identified as a deterministic function of time if the function accepts a scalar
+time t as its only input argument. Otherwise, a parameter is assumed to be a function of time t and
+state X(t) and is invoked with both input arguments.
+
+Heston = heston( ___ ,Name,Value) constructs a heston object with additional options
+specified by one or more Name,Value pair arguments.
+
+Name is a property name and Value is its corresponding value. Name must appear inside single
+quotes (''). You can specify several name-value pair arguments in any order as Name1,Value1,
+…,NameN,ValueN
+
+The heston object has the following “Properties” on page 15-133:
+
+•
+StartTime — Initial observation time
+
+•
+StartState — Initial state at StartTime
+
+•
+Correlation — Access function for the Correlation input, callable as a function of time
+
+•
+Drift — Composite drift-rate function, callable as a function of time and state
+
+•
+Diffusion — Composite diffusion-rate function, callable as a function of time and state
+
+•
+Simulation — A simulation function or method
+
+•
+Return — Access function for the input argument Return, callable as a function of time and state
+
+•
+Speed — Access function for the input argument Speed, callable as a function of time and state
+
+•
+Level — Access function for the input argument Level, callable as a function of time and state
+
+•
+Volatility — Access function for the input argument Volatility, callable as a function of
+time and state
+
+Input Arguments
+
+Return — Return represents the parameter μ
+array or deterministic function of time or deterministic function of time and state
+
+Return represents the parameter μ, specified as an array or deterministic function of time.
+
+If you specify Return as an array, it must be an NVars-by-NVars matrix representing the expected
+(mean) instantaneous rate of return.
+
+As a deterministic function of time, when Return is called with a real-valued scalar time t as its only
+input, Return must produce an NVars-by-NVars matrix. If you specify Return as a function of time
+and state, it must return an NVars-by-NVars matrix when invoked with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Speed — Return represents the parameter S
+array or deterministic function of time or deterministic function of time and state
+
+Speed represents the parameter S, specified as an array or deterministic function of time.
+
+heston
+
+15-131

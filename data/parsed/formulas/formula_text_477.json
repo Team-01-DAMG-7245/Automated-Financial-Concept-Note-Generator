@@ -1,0 +1,12 @@
+{
+  "page": 330,
+  "original_text": "p = setDefaultConstraints(p);",
+  "ocr_text": "p=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 462.13,
+    "x1": 247.13,
+    "y1": 472.6
+  },
+  "confidence": "high"
+}

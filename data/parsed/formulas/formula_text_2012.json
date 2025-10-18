@@ -1,0 +1,12 @@
+{
+  "page": 1040,
+  "original_text": "knnImputedData = dataMissing;\nknnImputedData.CustAge(missingCustAge) = imputedCustAge;\nknnImputedData.ResStatus(missingResStatus) = imputedResStatus;\ndisp(knnImputedData(5:10,:));",
+  "ocr_text": "knnImputedData=dataMissing;\nknnImputedData.CustAge(missingCustAge)=imputedCustAge;\nknnImputedData.ResStatus(missingResStatus)=imputedResStatus;\ndisp(knnImputedData(5:10,:));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 592.12,
+    "x1": 425.91,
+    "y1": 634.99
+  },
+  "confidence": "high"
+}

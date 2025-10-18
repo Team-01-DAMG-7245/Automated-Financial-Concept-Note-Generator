@@ -1,0 +1,32 @@
+The real part shows the trend in the absolute price series. When |pc(t − 1)| < |pc(t)|, that is, when
+prices move away from zero, rc(t) has a positive real part. When |pc(t − 1)| > |pc(t)|, that is, when
+prices move toward zero, rc(t) has a negative real part. When |pc(t − 1)| = |pc(t)|, that is, when the
+absolute size of the prices is unchanged, rc(t) has a zero real part. For positive price series, where the
+absolute series is the same as the series itself, the real part has its usual meaning.
+
+The imaginary part shows changes of sign in the price series. When pc(t − 1) > 0 and pc(t) < 0, that
+is, when prices move from investments to divestments, rc(t) has a positive imaginary part (+π). When
+pc(t − 1) < 0 and pc(t) > 0, that is, when prices move from divestments to investments, rc(t) has a
+negative imaginary part (−π). When the sign of the prices is unchanged, rc(t) has a zero imaginary
+part. For positive price series, changes of sign are irrelevant, and the imaginary part conveys no
+information (0).
+
+Visualization of Complex Returns
+
+Complex continuous returns contain a lot of information. Visualizing the information can help you to
+interpret the complex returns. The following code plots the real and imaginary parts of the logarithm
+on either side of zero.
+
+p = -5:0.01:5;
+hold on
+plot(p,real(log(p)),"b")
+plot(p,imag(log(p)),"r")
+xticks(-5:5)
+xlabel("Price (p)")
+ylabel("Ordinate")
+legend(["real(log(p))" "imag(log(p))"],AutoUpdate=false)
+grid minor
+
+Returns with Negative Prices
+
+2-35

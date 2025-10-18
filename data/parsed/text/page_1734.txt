@@ -1,0 +1,52 @@
+acrubond
+
+Accrued interest of security with periodic interest payments
+
+Syntax
+
+AccruInterest = acrubond(IssueDate,Settle,FirstCouponDate,Face,CouponRate)
+AccruInterest = acrubond( ___ ,Period,Basis)
+
+Description
+
+AccruInterest = acrubond(IssueDate,Settle,FirstCouponDate,Face,CouponRate)
+returns the accrued interest for a security with periodic interest payments. acrubond computes the
+accrued interest for securities with standard, short, and long first coupon periods.
+
+Note cfamounts or accrfrac is recommended when calculating accrued interest beyond the first
+period.
+
+AccruInterest = acrubond( ___ ,Period,Basis) adds optional arguments for Period and
+Basis.
+
+Examples
+
+Find Accrued Interest of a Bond with Periodic Interest Payments
+
+This example shows how to find the accrued interest for a bond with semiannual interest payments.
+
+AccruInterest = acrubond(datetime(1983,1,31), datetime(1993,3,1),datetime(1983,7,31),  100,  0.1,
+
+AccruInterest = 
+0.8011
+
+Input Arguments
+
+IssueDate — Issue date of security
+datetime array | string array | date character vector
+
+Issue date of the security, specified as a scalar or a NINST-by-1 vector using a datetime array, string
+array, or date character vectors.
+
+To support existing code, acrubond also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Settle — Settlement date of security
+datetime array | string array | date character vector
+
+15
+Functions
+
+15-428

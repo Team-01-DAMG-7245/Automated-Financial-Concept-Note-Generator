@@ -1,0 +1,58 @@
+Working with Linear Inequality Constraints Using
+PortfolioCVaR Object
+
+Linear inequality constraints are optional linear constraints that impose systems of inequalities on
+portfolio weights (see “Linear Inequality Constraints” on page 5-8). Linear inequality constraints have
+properties AInequality for the inequality constraint matrix, and bInequality for the inequality
+constraint vector.
+
+Setting Linear Inequality Constraints Using the PortfolioCVaR Function
+
+The properties for linear inequality constraints are set using the PortfolioCVaR object. Suppose
+that you have a portfolio of five assets and you want to ensure that the first three assets are no more
+than 50% of your portfolio. To set up these constraints:
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioCVaR('AInequality', A, 'bInequality', b);
+disp(p.NumAssets)
+disp(p.AInequality)
+disp(p.bInequality)
+
+5
+
+1     1     1     0     0
+
+0.5000
+
+Setting Linear Inequality Constraints Using the setInequality and
+addInequality Functions
+
+You can also set the properties for linear inequality constraints using setInequality. Suppose that
+you have a portfolio of five assets and you want to ensure that the first three assets constitute no
+more than 50% of your portfolio. Given a PortfolioCVaR object p, use setInequality to set the
+linear inequality constraints:
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioCVaR;
+p = setInequality(p, A, b);
+disp(p.NumAssets)
+disp(p.AInequality)
+disp(p.bInequality)
+
+5
+
+1     1     1     0     0
+
+0.5000
+
+Suppose that you want to add another linear inequality constraint to ensure that the last three assets
+constitute at least 50% of your portfolio. You can set up an augmented system of linear inequalities or
+use the addInequality function to build up linear inequality constraints. For this example, create
+another system of inequalities:
+
+5
+CVaR Portfolio Optimization Tools
+
+5-70

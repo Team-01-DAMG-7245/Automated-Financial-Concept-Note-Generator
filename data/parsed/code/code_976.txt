@@ -1,0 +1,9 @@
+Page 978
+================================================================================
+
+Use fitmodel to fit a logistic regression model using WOE values. fitmodel internally transforms
+all the predictor variables into WOE values, using the bins found during the automatic binning
+process. By default, fitmodel then fits a logistic regression model using a stepwise method. For
+predictors that have missing data, there is an explicit <missing> bin with a corresponding WOE
+value computed from the data. When you use fitmodel, the corresponding WOE value for the
+<missing> bin is applied when the function performs the WOE transformation.

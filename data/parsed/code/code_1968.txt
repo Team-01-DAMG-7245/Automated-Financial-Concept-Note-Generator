@@ -1,0 +1,7 @@
+Page 1558
+================================================================================
+
+This example runs a backtest on two equal-weighted strategies and then compares the results. The
+first backtest strategy uses an exact equal-weight rebalance function that allows fractional shares.
+The second backtest strategy uses a EngineDataList property for PortfolioValue to enforce a
+whole shares constraint.

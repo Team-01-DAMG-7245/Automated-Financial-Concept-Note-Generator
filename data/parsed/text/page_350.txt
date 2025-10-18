@@ -1,0 +1,69 @@
+1
+The specification of the initial portfolio from Blotter gives the number of assets in your
+universe so you do not need to specify the NumAssets property directly. Next, set up default
+constraints (long-only with a budget constraint). In addition, set up the group constraint that
+imposes an upper bound on equities in the portfolio (equities are identified in the group matrix
+with 1's) and the upper bound constraint on emerging equities. Although you could have set the
+upper bound on emerging equities using the setBounds function, notice how the addGroups
+function is used to set up this constraint.
+
+2
+To have a fully specified mean-variance portfolio optimization problem, you must specify the
+mean and covariance of asset returns. Since starting with these moments in the variables
+AssetMean and AssetCovar, you can use the setAssetMoments function to enter these
+variables into your Portfolio object (remember that you are assuming that your raw data are
+monthly returns which is why you divide your annual input moments by 12 to get monthly
+returns).
+
+3
+Use the total return prices with the estimateAssetMoments function with a specification that
+your data in Y are prices, and not returns, to estimate asset return moments for your Portfolio
+object.
+
+4
+Although the returns in your Portfolio object are in units of monthly returns, and since
+subsequent costs are annualized, it is convenient to specify them as annualized total returns with
+this direct transformation of the AssetMean and AssetCovar properties of your Portfolio
+object p.
+
+5
+Display the Portfolio object p.
+
+p = Portfolio('Name', 'Asset Allocation Portfolio', ...
+'AssetList', Asset, 'InitPort', Blotter.InitPort);
+
+p = setDefaultConstraints(p);
+p = setGroups(p, [ 0, 1, 1, 1 ], [], 0.85);
+p = addGroups(p, [ 0, 0, 0, 1 ], [], 0.35);
+
+p = setAssetMoments(p, AssetMean/12, AssetCovar/12);
+p = estimateAssetMoments(p, Y, 'DataFormat', 'Prices');
+
+p.AssetMean = 12*p.AssetMean;
+p.AssetCovar = 12*p.AssetCovar;
+
+display(p)
+
+p = 
+  Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                     AssetMean: [4×1 double]
+                    AssetCovar: [4×4 double]
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: 'Asset Allocation Portfolio'
+                     NumAssets: 4
+                     AssetList: {'Bonds'  'Large-Cap Equities'  'Small-Cap Equities'  'Emerging E
+                      InitPort: [4×1 double]
+                   AInequality: []
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-182

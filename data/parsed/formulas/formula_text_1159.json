@@ -1,0 +1,12 @@
+{
+  "page": 590,
+  "original_text": "simOptions = rlSimulationOptions(MaxSteps=NumTrainingSteps)",
+  "ocr_text": "simOptions=rlSimulationOptions(MaxSteps=NumTrainingSteps)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 667.85,
+    "x1": 409.66,
+    "y1": 678.31
+  },
+  "confidence": "high"
+}

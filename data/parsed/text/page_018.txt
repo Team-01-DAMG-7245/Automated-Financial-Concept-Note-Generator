@@ -1,0 +1,86 @@
+Working with Average Turnover Constraints Using PortfolioMAD Object
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-74
+Setting Average Turnover Constraints Using the PortfolioMAD Function
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-74
+Setting Average Turnover Constraints Using the setTurnover Function . .
+6-74
+
+Working with One-Way Turnover Constraints Using PortfolioMAD Object
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-77
+Setting One-Way Turnover Constraints Using the PortfolioMAD Function
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-77
+Setting Turnover Constraints Using the setOneWayTurnover Function . .
+6-77
+
+Validate the MAD Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-80
+Validating a MAD Portfolio Set . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-80
+Validating MAD Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-81
+
+Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD
+Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-84
+
+Obtaining Portfolios Along the Entire Efficient Frontier . . . . . . . . . . . . .
+6-85
+
+Obtaining Endpoints of the Efficient Frontier . . . . . . . . . . . . . . . . . . . . .
+6-87
+
+Mixed-Integer MAD Portfolio Optimization Problem . . . . . . . . . . . . . . . .
+6-89
+
+Obtaining Efficient Portfolios for Target Returns . . . . . . . . . . . . . . . . . .
+6-93
+
+Obtaining Efficient Portfolios for Target Risks . . . . . . . . . . . . . . . . . . . . .
+6-96
+
+Choosing and Controlling the Solver for PortfolioMAD Optimizations .
+6-99
+Using 'TrustRegionCP' and 'ExtendedCP' SolverTypes . . . . . . . . . . . . . .
+6-99
+Using 'fmincon' SolverType . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-100
+Using the Mixed Integer Nonlinear Programming (MINLP) Solver . . . .
+6-101
+Solver Guidelines for PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . .
+6-101
+
+Estimate Efficient Frontiers for PortfolioMAD Object . . . . . . . . . . . . . .
+6-105
+Obtaining MAD Portfolio Risks and Returns . . . . . . . . . . . . . . . . . . . . .
+6-105
+Obtaining the PortfolioMAD Standard Deviation . . . . . . . . . . . . . . . . . .
+6-106
+
+Plotting the Efficient Frontier for a PortfolioMAD Object . . . . . . . . . . .
+6-108
+
+Postprocessing Results to Set Up Tradable Portfolios . . . . . . . . . . . . . .
+6-113
+
+Working with Other Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-115
+
+Troubleshooting MAD Portfolio Optimization Results . . . . . . . . . . . . . .
+6-118
+PortfolioMAD Object Destroyed When Modifying . . . . . . . . . . . . . . . . .
+6-118
+Matrix Incompatibility and "Non-Conformable" Errors . . . . . . . . . . . . .
+6-118
+Missing Data Estimation Fails . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-118
+mad_optim_transform Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-118
+Efficient Portfolios Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .
+6-119
+
+xviii
+Contents

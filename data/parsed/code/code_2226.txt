@@ -1,0 +1,7 @@
+Page 2008
+================================================================================
+
+CFlowDates = [PayCFDates;RecCFDates];
+CFlowAmounts = [-PayCF;RecCF];
+cfplot(CFlowDates, CFlowAmounts, 'Groups', {[1 2]});
+xlabel('Numeric Cash Flow Dates');

@@ -1,0 +1,5 @@
+Page 1205
+================================================================================
+
+You can use the simBySolution function to simulate approximate solutions of diagonal-drift
+processes for the following classes:

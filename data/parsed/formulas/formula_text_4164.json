@@ -1,0 +1,12 @@
+{
+  "page": 2335,
+  "original_text": "E(r) is the weighed average of r(n),…,r(1). The unnormalized weights are w, w2, …, w(n-1). The\nunnormalized weights do not sum up to 1, so NumEffObs rescales the unnormalized weights. After\nrescaling, the normalized weights (which sum up to 1) are used for averaging. When w = 1, then\nNumEffObs = n, which is the number of observations. When w < 1, NumEffObs is still interpreted as\nthe sample size, but it is less than n due to the down-weight on the observations of the remote past.",
+  "ocr_text": "E(r)istheweighedaverageofr(n),...,r(1).Theunnormalizedweightsarew,w?,...,w).The\nunnormalizedweightsdonotsumupto1,soNumEffObsrescalestheunnormalizedweights.After\nrescaling,thenormalizedweights(whichsumupto1)areusedforaveraging.Whenw=1,then\nNumEffObs=n,whichisthenumberofobservations.Whenw1,NumEffObsisstillinterpretedas\nthesamplesize,butitislessthannduetothedown-weightontheobservationsoftheremotepast.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.52,
+    "x1": 554.41,
+    "y1": 304.32
+  },
+  "confidence": "high"
+}

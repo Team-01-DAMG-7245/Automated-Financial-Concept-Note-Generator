@@ -1,0 +1,12 @@
+{
+  "page": 954,
+  "original_text": "fprintf('\\n\\n         What-if Analysis\\n');",
+  "ocr_text": "fprintf(nn What-ifAnalysisn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 647.32,
+    "x1": 323.0,
+    "y1": 657.79
+  },
+  "confidence": "high"
+}

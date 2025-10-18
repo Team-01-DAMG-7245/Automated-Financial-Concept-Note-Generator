@@ -1,0 +1,12 @@
+{
+  "page": 1347,
+  "original_text": "categoryWeightsChart(BrinsonPAObj)\nh = categoryWeightsChart(ax,BrinsonPAObj)\nh = categoryWeightsChart( ___ ,Name=Value)",
+  "ocr_text": "categoryWeightsChart(BrinsonPAObj)\nh=categoryWeightsChart(ax,BrinsonPAObj)\nh=categoryWeightsChart(_-_,Name=Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.73,
+    "x1": 336.84,
+    "y1": 225.36
+  },
+  "confidence": "high"
+}

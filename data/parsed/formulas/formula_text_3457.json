@@ -1,0 +1,12 @@
+{
+  "page": 1915,
+  "original_text": "Get the hexadecimal color codes using H = compose(\"#%02X%02X%02X\",round(RGB*255)).",
+  "ocr_text": "GetthehexadecimalcolorcodesusingH_=_compose(02X02X02X,round(RGB*255)).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 493.76,
+    "x1": 531.09,
+    "y1": 505.39
+  },
+  "confidence": "high"
+}

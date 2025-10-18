@@ -1,0 +1,59 @@
+Matrix Algebra Refresher
+
+In this section...
+
+“Introduction” on page 1-7
+
+“Adding and Subtracting Matrices” on page 1-7
+
+“Multiplying Matrices” on page 1-8
+
+“Dividing Matrices” on page 1-11
+
+“Solving Simultaneous Linear Equations” on page 1-11
+
+“Operating Element by Element” on page 1-13
+
+Introduction
+
+The explanations in the sections that follow should help refresh your skills for using matrix algebra
+and using MATLAB functions.
+
+In addition, Macro-Investment Analysis by William Sharpe also provides an excellent explanation of
+matrix algebra operations using MATLAB. It is available on the web at:
+
+https://www.stanford.edu/~wfsharpe/mia/mia.htm
+
+Tip When you are setting up a problem, it helps to "talk through" the units and dimensions
+associated with each input and output matrix. In the example under “Multiplying Matrices” on page
+1-8, one input matrix has five days' closing prices for three stocks, the other input matrix has
+shares of three stocks in two portfolios, and the output matrix therefore has five days' closing values
+for two portfolios. It also helps to name variables using descriptive terms.
+
+Adding and Subtracting Matrices
+
+Matrix addition and subtraction operate element-by-element. The two input matrices must have the
+same dimensions. The result is a new matrix of the same dimensions where each element is the sum
+or difference of each corresponding input element. For example, consider combining portfolios of
+different quantities of the same stocks (“shares of stocks A, B, and C [the rows] in portfolios P and Q
+[the columns] plus shares of A, B, and C in portfolios R and S”).
+
+Portfolios_PQ = [100   200
+                 500   400
+                 300   150];
+
+Portfolios_RS = [175   125
+                 200   200
+                 100   500];
+
+NewPortfolios = Portfolios_PQ + Portfolios_RS
+
+NewPortfolios =
+
+275           325
+        700           600
+        400           650
+
+Matrix Algebra Refresher
+
+1-7

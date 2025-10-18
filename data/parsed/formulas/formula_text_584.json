@@ -1,0 +1,12 @@
+{
+  "page": 391,
+  "original_text": "% View 2\nP(2, assetNames==\"WMT\") = 1; \nq(2) = 0.03;\nOmega(2, 2) = 1e-3;",
+  "ocr_text": "View2\nP(2,assetNames==WMT)=1;\nq(2)=0.03;\nOmega(2,2)=le-3;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 469.2,
+    "x1": 247.13,
+    "y1": 512.06
+  },
+  "confidence": "high"
+}

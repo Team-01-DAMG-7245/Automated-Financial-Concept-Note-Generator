@@ -1,0 +1,9 @@
+Page 865
+================================================================================
+
+Given a portfolio optimization problem in a PortfolioMAD object, the estimateFrontier function
+computes efficient portfolios spaced evenly according to the return proxy from the minimum to
+maximum return efficient portfolios. The number of portfolios estimated is controlled by the hidden
+property defaultNumPorts which is set to 10. A different value for the number of portfolios
+estimated is specified as an input argument to estimateFrontier. This example shows the default
+number of efficient portfolios over the entire range of the efficient frontier.

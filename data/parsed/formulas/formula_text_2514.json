@@ -1,0 +1,12 @@
+{
+  "page": 1285,
+  "original_text": "figure\ntlTrend = tiledlayout(8,4, \"TileSpacing\", \"tight\");\ntitle( tlTrend, \"Trend Components\" )",
+  "ocr_text": "figure\ntlTrend=tiledlayout(8,4,TileSpacing,tight);\ntitle(tlTrend,TrendComponents)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 159.27,
+    "x1": 366.34,
+    "y1": 191.33
+  },
+  "confidence": "high"
+}

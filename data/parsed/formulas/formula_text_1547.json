@@ -1,0 +1,12 @@
+{
+  "page": 776,
+  "original_text": "% Fully-invested portfolio\np = setBudget(p,1,1);",
+  "ocr_text": "Fully-investedportfolio\np=setBudget(p,1,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 590.42,
+    "x1": 230.87,
+    "y1": 611.69
+  },
+  "confidence": "high"
+}

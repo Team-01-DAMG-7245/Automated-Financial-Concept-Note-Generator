@@ -1,0 +1,61 @@
+Solve for Bond Weights
+
+Set up and solve the system of linear equations whose solution is the weights of the new bonds in a
+new portfolio with the same duration and convexity as the original portfolio. In addition, scale the
+weights to sum to 1; that is, force them to be portfolio weights. You can then scale this unit portfolio
+to have the same price as the original portfolio. Recall that the original portfolio duration and
+convexity are 10.3181 and 157.6346, respectively. Also, note that the last row of the linear system
+ensures that the sum of the weights is unity.
+
+A = [Durations'
+     Convexities'
+     1 1 1];
+
+b = [ 10.3181
+     157.6346
+       1];
+
+Weights = A\b
+
+Weights = 3×1
+
+-0.3043
+    0.7130
+    0.5913
+
+Compute Duration and Convexity of Hedge Portfolio
+
+Compute the duration and convexity of the hedge portfolio, which should now match the original
+portfolio.
+
+PortfolioDuration  = Weights' * Durations
+
+PortfolioDuration = 
+10.3181
+
+PortfolioConvexity = Weights' * Convexities
+
+PortfolioConvexity = 
+157.6346
+
+Scale Unit Porfolio
+
+Scale the unit portfolio to match the value of the original portfolio and find the number of bonds
+required to insulate against small parallel shifts in the yield curve.
+
+PortfolioValue = 100000;
+HedgeAmounts   = Weights ./ Prices * PortfolioValue
+
+HedgeAmounts = 3×1
+
+-57.3716
+   71.7044
+  216.2653
+
+Compare Results
+
+Compare the results.
+
+Bond Portfolio for Hedging Duration and Convexity
+
+10-7

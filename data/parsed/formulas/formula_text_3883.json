@@ -1,0 +1,12 @@
+{
+  "page": 2219,
+  "original_text": "ExpDrawdown = emaxdrawdown(Mu,Sigma,T)",
+  "ocr_text": "ExpDrawdown=emaxdrawdown(Mu,Sigma,T)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.42,
+    "x1": 318.78,
+    "y1": 200.05
+  },
+  "confidence": "high"
+}

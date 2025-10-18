@@ -1,0 +1,12 @@
+{
+  "page": 928,
+  "original_text": "Years = 1991:2000;\nnYears = length(Years);\nnRatings = length(prepData.ratingsLabels);\ntransMatPIT = zeros(nRatings,nRatings,nYears);\nalgorithm = 'duration';\nsampleTotals(nYears,1) = struct('totalsVec',[],'totalsMat',[], ...\n'algorithm',algorithm);\nfor t = 1:nYears",
+  "ocr_text": "Years=1991:2000;\n\nnYears=length(Years);\n\nnRatings=length(prepData.ratingsLabels);\ntransMatPIT=zeros(nRatings,nRatings,nYears);\nalgorithm=duration;\nsampleTotals(nYears,1)=struct(totalsVec,[],totalsMat,[],...\nalgorithm,algorithm);\n\nfort=1:nYears",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.03,
+    "x1": 447.62,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

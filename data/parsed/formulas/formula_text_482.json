@@ -1,0 +1,12 @@
+{
+  "page": 333,
+  "original_text": "bwgt = estimateFrontierByRisk(p,TargetRisk/sqrt(12));\n[brsk,bret] = estimatePortMoments(p,bwgt);",
+  "ocr_text": "bwgt=estimateFrontierByRisk(p,TargetRisk/sqrt(12));\n[brsk,bret]=estimatePortMoments(p,bwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 247.26,
+    "x1": 377.16,
+    "y1": 268.53
+  },
+  "confidence": "high"
+}

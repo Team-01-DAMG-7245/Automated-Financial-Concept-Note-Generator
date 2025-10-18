@@ -1,0 +1,33 @@
+boundType = repmat("simple",q.NumAssets,1);
+boundType(ii) = "conditional";
+q = setBounds(q, lb, ub, 'BoundType',boundType);
+
+Plot the efficient frontier:
+
+plotFrontier(q);
+
+Use estimateFrontierByReturn to find the allocation that minimizes the risk for a given return at
+0.125.
+
+targetRetn = 0.0125;
+pwgt = estimateFrontierByReturn(q, targetRetn);
+
+Show the allocation of assets by weight.
+
+idx = abs(pwgt)>eps;
+assetnames = q.AssetList';
+Asset = assetnames(idx);
+Weight = pwgt(idx);
+resultAlloc = table(Asset, Weight)
+
+resultAlloc=7×2 table
+     Asset      Weight 
+    ________    _______
+
+{'JNJ' }        0.1
+    {'MMM' }    0.19503
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-200

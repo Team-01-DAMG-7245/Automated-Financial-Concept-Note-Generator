@@ -1,0 +1,12 @@
+{
+  "page": 632,
+  "original_text": "CVaRα(x) = VaRα(x) +\n1\n(1 −α)S ∑\ns = 1",
+  "ocr_text": "1 S\nCVaRq(x)=VaRo(x)+ a-as, L",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 478.79,
+    "x1": 274.11,
+    "y1": 505.73
+  },
+  "confidence": "high"
+}

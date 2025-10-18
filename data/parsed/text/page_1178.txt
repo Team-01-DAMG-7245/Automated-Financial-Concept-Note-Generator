@@ -1,0 +1,61 @@
+StartTime: 04-Sep-2012
+              SampleRate: NaN
+                TimeStep: NaN
+                  Events: []
+        CustomProperties: No custom properties are set.
+      Use addprop and rmprop to modify CustomProperties.
+
+Step 3. Calculate basic data statistics, and fill the missing data.
+
+Use the MATLAB summary function to view basic statistics of the timetable data. By reviewing the
+summary for each variable, you can identify missing values. You can then use the MATLAB
+fillmissing function to fill in missing data in a timetable by specifying a fill method.
+
+summaryTMW = summary(TMW);
+summaryTMW.Close
+
+ans = struct with fields:
+           Size: [1000 1]
+           Type: 'double'
+    Description: ''
+          Units: ''
+     Continuity: []
+     NumMissing: 3
+            Min: 83.4200
+         Median: 116.7500
+            Max: 162.1100
+           Mean: 117.9487
+            Std: 18.2554
+
+TMW = fillmissing(TMW,'linear');
+summaryTMW = summary(TMW);
+summaryTMW.Close
+
+ans = struct with fields:
+           Size: [1000 1]
+           Type: 'double'
+    Description: ''
+          Units: ''
+     Continuity: []
+     NumMissing: 0
+            Min: 83.4200
+         Median: 116.7050
+            Max: 162.1100
+           Mean: 117.8929
+            Std: 18.2566
+
+summaryTMW.Time
+
+ans = struct with fields:
+          Size: [1000 1]
+          Type: 'datetime'
+      TimeZone: ''
+    SampleRate: NaN
+     StartTime: 04-Sep-2012
+    NumMissing: 0
+           Min: 04-Sep-2012
+
+11
+Using Financial Timetables
+
+11-8

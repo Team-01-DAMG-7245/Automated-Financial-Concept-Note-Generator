@@ -1,0 +1,5 @@
+Page 1540
+================================================================================
+
+Rebalance function, specified as a function handle which computes new portfolio weights during the
+backtest. The rebalanceFcn argument implements the core logic of the trading strategy.

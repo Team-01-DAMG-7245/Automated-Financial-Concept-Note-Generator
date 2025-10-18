@@ -1,0 +1,12 @@
+{
+  "page": 2347,
+  "original_text": "Date = datetime\n   01-Nov-2001",
+  "ocr_text": "Date=datetime\n01-Nov-2001",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 485.68,
+    "x1": 171.28,
+    "y1": 506.95
+  },
+  "confidence": "high"
+}

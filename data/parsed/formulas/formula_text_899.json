@@ -1,0 +1,12 @@
+{
+  "page": 490,
+  "original_text": "% Brinson Return input\nReturn = asset_returns.Variables';",
+  "ocr_text": "sBrinsonReturninput\nReturn=asset_returns.Variables;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 274.21,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,46 @@
+List of all dates that have any cash flow from the bond portfolio, returned as an NUMDATES-by-1
+matrix. The AllDates matrix is expressed in datetime format (if CFlowDates is in datetime format).
+
+AllTF — Time factors corresponding to the dates in AllDates
+matrix
+
+Time factors corresponding to the dates in AllDates, returned as an NUMDATES-by-1 matrix. If
+TFactors is not entered, AllTF contains the number of days from the first date in AllDates.
+
+IndByBond — Indices by bond
+matrix
+
+Indices by bond, returned as an NUMBONDS-by-NUMCFS matrix. The ith row contains a list of indices
+into AllDates where the ith bond has cash flows. Since some bonds have more cash flows than
+others, the matrix is padded with NaNs.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cfport supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+cfamounts | cfplot | datetime
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+cfport
+
+15-711

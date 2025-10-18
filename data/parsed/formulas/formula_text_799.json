@@ -1,0 +1,12 @@
+{
+  "page": 457,
+  "original_text": "% Display a table of weights for the mean-variance portfolios.\nMVtable = table(wMV,wMV_rho7,wMV_rho9,wMV_mu1)",
+  "ocr_text": "Displayatableofweightsforthemean-varianceportfolios.\nMVtable=table(wMV,wMV_rho7,wMV_rho9,wMV_mul1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 569.33,
+    "x1": 425.91,
+    "y1": 590.6
+  },
+  "confidence": "high"
+}

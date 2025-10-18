@@ -1,0 +1,12 @@
+{
+  "page": 560,
+  "original_text": "% Check if episode has ended\nif loggedSignals.TimePeriod >= finalTimePeriod\n    isDone = true;\nelse\n    isDone = false;\nend\nend",
+  "ocr_text": "Checkifepisodehasended\nif_loggedSignals.TimePeriod-=finalTimePeriod\nisDone=true;\nelse\nisDone=false;\nend\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 114.63,
+    "x1": 339.23,
+    "y1": 189.89
+  },
+  "confidence": "high"
+}

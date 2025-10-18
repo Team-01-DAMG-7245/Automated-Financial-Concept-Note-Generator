@@ -1,0 +1,12 @@
+{
+  "page": 355,
+  "original_text": "Blotter.BuyShare = Wealth * (Blotter.Buy ./ Blotter.Price);\nBlotter.SellShare = Wealth * (Blotter.Sell ./ Blotter.Price);",
+  "ocr_text": "Blotter.BuyShare=Wealth*(Blotter.Buy./Blotter.Price);\nBlotter.SellShare=Wealth*(Blotter.Sell_./Blotter.Price);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 620.87,
+    "x1": 420.5,
+    "y1": 642.13
+  },
+  "confidence": "high"
+}

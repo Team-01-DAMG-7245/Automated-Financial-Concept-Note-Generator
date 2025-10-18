@@ -1,0 +1,5 @@
+Page 89
+================================================================================
+
+For a continuous probability distribution, the hazard function is a function of the survival function
+with

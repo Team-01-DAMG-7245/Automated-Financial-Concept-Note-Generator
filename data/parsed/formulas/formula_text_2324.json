@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "Constant Elasticity of Variance (CEV)\ndXt = B(t)Xtdt + V(t)Xt\nα(t)dWt",
+  "ocr_text": "ConstantElasticityofVariance(CEV) dX;=B(t)X;dt+Vit) x2qw,",
+  "bbox": {
+    "x0": 44.25,
+    "y0": 165.99,
+    "x1": 432.01,
+    "y1": 183.46
+  },
+  "confidence": "high"
+}

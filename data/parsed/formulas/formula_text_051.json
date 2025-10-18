@@ -1,0 +1,12 @@
+{
+  "page": 56,
+  "original_text": "Rate = effrr(0.09, 12)",
+  "ocr_text": "Rate=effrr(0.09,12)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 173.75,
+    "x1": 209.2,
+    "y1": 184.22
+  },
+  "confidence": "high"
+}

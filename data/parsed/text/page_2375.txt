@@ -1,0 +1,53 @@
+fwd2zero
+
+Zero curve given forward curve
+
+Note In R2017b, the specification of optional input arguments has changed. While the previous
+ordered inputs syntax is still supported, it may no longer be supported in a future release. Use the
+new optional name-value pair inputs: InputCompounding, InputBasis, OutputCompounding, and
+OutputBasis.
+
+Syntax
+
+[ZeroRates,CurveDates] = fwd2zero(ForwardRates,CurveDates,Settle)
+[ZeroRates,CurveDates] = fwd2zero( ___ ,Name,Value)
+
+Description
+
+[ZeroRates,CurveDates] = fwd2zero(ForwardRates,CurveDates,Settle) returns a zero
+curve given an implied forward rate curve and its maturity dates. If both inputs for CurveDates and
+Settle are strings or date character vectors, CurveDates is returned as serial date numbers.
+However, if either of the inputs for CurveDates and Settle are a datetime array, CurveDates is
+returned as a datetime array.
+
+[ZeroRates,CurveDates] = fwd2zero( ___ ,Name,Value) adds optional name-value pair
+arguments
+
+Examples
+
+Compute the Zero Curve Given the Forward Curve Using datetime Inputs
+
+This example shows how to use datetime inputs compute the zero curve, given an implied forward
+rate curve over a set of maturity dates, a settlement date, and a compounding rate.
+
+ForwardRates = [0.0469
+                0.0519
+                0.0549
+                0.0535
+                0.0558
+                0.0508
+                0.0560
+                0.0545
+                0.0615
+                0.0486];
+
+CurveDates = [datetime(2000,11,6) 
+              datetime(2000,12,11) 
+              datetime(2001,1,15) 
+              datetime(2001,2,5) 
+              datetime(2001,3,4) 
+              datetime(2001,4,2)
+
+fwd2zero
+
+15-1069

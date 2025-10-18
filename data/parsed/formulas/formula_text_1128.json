@@ -1,0 +1,12 @@
+{
+  "page": 570,
+  "original_text": "% Compute the efficient frontier.\npwgt = estimateFrontier(p)",
+  "ocr_text": "Computetheefficientfrontier.\npwgt=estimateFrontier(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 536.97,
+    "x1": 268.8,
+    "y1": 558.24
+  },
+  "confidence": "high"
+}

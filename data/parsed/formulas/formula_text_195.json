@@ -1,0 +1,12 @@
+{
+  "page": 125,
+  "original_text": "DS = DS(1:end-dtS,:);\nI = I(dtS+1:end,:);\nmidprices = midprices(dtS+1:end);\nt = t(dtS+1:end,:);\nX = [I DS];",
+  "ocr_text": "DS=DS(1l:end-dtS,:);\nI=I(dtS+l:end,:);\nmidprices=midprices(dtS+1:end);\nt=t(dtS+l:end,:);\n\nX=[IDS];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 268.79,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 566
+================================================================================
+
+% Aggregate the strategy objects into an array.
+strategies = [strat1, strat2];

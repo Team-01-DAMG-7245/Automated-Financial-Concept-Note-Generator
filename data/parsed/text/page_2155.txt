@@ -1,0 +1,36 @@
+Data Types: double
+
+Life — Depreciable life of the asset in years
+numeric
+
+Depreciable life of the asset in years, specified as a scalar numeric.
+
+Data Types: double
+
+Output Arguments
+
+Sum — Depreciation values
+vector
+
+Depreciation values, returned as a 1-by-Life vector of depreciation values with each element
+corresponding to a year of the asset's life.
+
+More About
+
+Sum of Years' Digits Method
+
+The Sum of Years' Digits (SYD) method is an accelerated depreciation method that allocates a larger
+portion of an asset's cost to the earlier years of its useful life and a smaller portion to the later years.
+
+Version History
+Introduced before R2006a
+
+See Also
+depfixdb | depgendb | deprdv | depstln
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+depsoyd
+
+15-849

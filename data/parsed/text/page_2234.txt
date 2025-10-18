@@ -1,0 +1,45 @@
+estimateCustomObjectivePortfolio supports tracking error constraints when using
+setTrackingError with the Portfolio object. For an example, see “Add Tracking Error
+Constraints to a Custom Objective Problem” on page 15-922.
+
+R2024a: Added Name-Value Arguments for TargetVolatility for risk constraints
+
+estimateCustomObjectivePortfolio added a name-value argument for TargetVolatility for
+risk constraints. For an example, see “Add Risk Constraint to a Custom Objective Problem” on page
+15-924.
+
+R2023b: Added Name-Value Arguments for ObjectiveBound and InitialPoint
+
+estimateCustomObjectivePortfolio added name-value arguments for ObjectiveBound and
+InitialPoint.
+
+References
+
+[1] Cornuejols, G. and Reha Tütüncü. Optimization Methods in Finance. Cambridge University Press,
+2007.
+
+See Also
+estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk
+
+Topics
+“Diversify Portfolios Using Custom Objective” on page 4-331
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+“Portfolio Optimization Against a Benchmark” on page 4-202
+“Solve Tracking Error Portfolio Problems” on page 4-343
+“Solve Problem for Minimum Tracking Error with Net Return Constraint” on page 4-349
+“Solve Robust Portfolio Maximum Return Problem with Ellipsoidal Uncertainty” on page 4-351
+“Risk Parity or Budgeting with Constraints” on page 4-357
+“Single Period Goal-Based Wealth Management” on page 4-362
+“Adding Constraints to Satisfy UCITS Directive” on page 4-457
+“Solver Guidelines for Custom Objective Problems Using Portfolio Objects” on page 4-119
+“Portfolio Optimization Theory” on page 4-4
+“Role of Convexity in Portfolio Problems” on page 4-157
+“Choose MINLP Solvers for Portfolio Problems” on page 4-140
+“Troubleshooting estimateCustomObjectivePortfolio” on page 4-148
+“solveContinuousCustomObjProb or solveMICustomObjProb Errors” on page 4-146
+
+15
+Functions
+
+15-928

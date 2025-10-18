@@ -1,0 +1,62 @@
+•
+G is an NVars-by-NBrowns matrix-valued diffusion-rate function.
+
+The drift and diffusion rates, F and G, respectively, are general functions of a real-valued scalar
+sample time t and state vector Xt. Also, static (non-time-variable) coefficients are simply a special
+case of the more general dynamic (time-variable) situation, just as a function can be a trivial
+constant; for example, f(t,Xt) = 4. The SDE in “Equation 14-1” is useful in implementing derived
+classes that impose additional structure on the drift and diffusion-rate functions.
+
+Specifying User-Defined Functions as Model Parameters
+
+Several examples in this documentation emphasize the evaluation of object parameters as functions
+accessible by a common interface. In fact, you can evaluate object parameters by passing to them
+time and state, regardless of whether the underlying user-specified parameter is a function. However,
+it is helpful to compare the behavior of object parameters that are specified as functions to that of
+user-specified noise and end-of-period processing functions.
+
+Model parameters that are specified as functions are evaluated in the same way as user-specified
+random number (noise) generation functions. (For more information, see “Evaluating Different Types
+of Functions” on page 14-9.) Model parameters that are specified as functions are inputs to remove
+object constructors. User-specified noise and processing functions are optional inputs to simulation
+methods.
+
+Because class constructors offer unique interfaces, and simulation methods of any given model have
+different implementation details, models often call parameter functions for validation purposes a
+different number of times, or in a different order, during object creation, simulation, and
+interpolation.
+
+Therefore, although parameter functions, user-specified noise generation functions, and end-of-period
+processing functions all share the interface and are validated at the same initial time and state
+(obj.StartTime and obj.StartState), parameter functions are not guaranteed to be invoked
+only once before simulation as noise generation and end-of-period processing functions are. In fact,
+parameter functions might not even be invoked the same number of times during a given Monte Carlo
+simulation process.
+
+In most applications in which you specify parameters as functions, they are simple, deterministic
+functions of time and/or state. There is no need to count periods, count trials, or otherwise
+accumulate information or synchronize time.
+
+However, if parameter functions require more sophisticated bookkeeping, the correct way to
+determine when a simulation has begun (or equivalently, to determine when model validation is
+complete) is to determine when the input time and/or state differs from the initial time and state
+(obj.StartTime and obj.StartState, respectively). Because the input time is a known scalar,
+detecting a change from the initial time is likely the best choice in most situations. This is a general
+mechanism that you can apply to any type of user-defined function.
+
+Evaluating Different Types of Functions
+
+It is useful to compare the evaluation rules of user-specified noise generation functions to those of
+end-of-period processing functions. These functions have the following in common:
+
+•
+They both share the same general interface, returning a column vector of appropriate length when
+evaluated at the current time and state:
+
+Xt = f(t, Xt)
+
+zt = Z(t, Xt)
+
+SDE Models
+
+14-9

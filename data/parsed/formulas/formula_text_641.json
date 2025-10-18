@@ -1,0 +1,12 @@
+{
+  "page": 409,
+  "original_text": "strategyNames = {'Equal Weighted', 'Max Sharpe Ratio', 'Inverse Variance', 'Markowitz Optimizatio\nassetSymbols = pricesTT.Properties.VariableNames;\ninitialWeights = [equalWeight_initial(:), maxSharpeRatio_initial(:), inverseVariance_initial(:), \nheatmap(strategyNames, assetSymbols, initialWeights, 'title','Initial Asset Allocations','Colorma",
+  "ocr_text": "strategyNames={EqualWeighted,MaxSharpeRatio,InverseVariance,MarkowitzOptimizati\nassetSymbols=pricesTT.Properties.VariableNames;\ninitialWeights=[equalWeight_initial(:),maxSharpeRatio_initial(:),inverseVariance_initial(:),\nheatmap(strategyNames,assetSymbols,initialWeights,title,InitialAssetAllocations,Colorm",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 231.92,
+    "x1": 615.58,
+    "y1": 274.79
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1959,
+  "original_text": "exposures = creditexposures(cpValues,swaps.Counterparty(cpIdx),...\n'NettingID',swaps.NettingID(cpIdx));",
+  "ocr_text": "exposures=creditexposures(cpValues,swaps.Counterparty(cpIdx),...\nNettingID,swaps.NettingID(cpIdx));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 250.54,
+    "x1": 447.61,
+    "y1": 271.81
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,55 @@
+createholidays
+
+Create trading calendars
+
+Syntax
+
+createholidays(Filename,Codefile,InfoFile,TargetDir,IncludeWkds,Wprompt,
+NoGUI)
+
+Description
+
+createholidays(Filename,Codefile,InfoFile,TargetDir,IncludeWkds,Wprompt,
+NoGUI) programmatically generates the market-specific holidays.m files (from
+FinancialCalendar.com financial center holiday data) without displaying the interface.
+
+Note To use createholidays, you must obtain data, codes, and info files from https://
+swapsmonitor.com/ trading calendars. The data files must be in the required MATLAB format.
+
+Examples
+
+Create holidays.m Files Using createholidays
+
+Use createholidays to create holidays*.m files from My_datafile.csv in the folder c:\work.
+Weekends are included in the holidays list based on the input flag INCLUDEWDKS = 1
+
+createholidays('FinancialCalendar\My_datafile.csv',...
+'FinancialCalendar\My_codesfile.csv',...
+'FinancialCalendar\My_infofile.csv','c:\work',1,1,1)
+
+Input Arguments
+
+Filename — Data file name
+character vector
+
+Data file name, specified using a character vector.
+
+Data Types: char
+
+Codefile — Code file name
+character vector
+
+Code file name, specified using a character vector.
+
+Data Types: char
+
+InfoFile — Info file name
+character vector
+
+Info file name, specified using a character vector.
+
+Data Types: char
+
+createholidays
+
+15-787

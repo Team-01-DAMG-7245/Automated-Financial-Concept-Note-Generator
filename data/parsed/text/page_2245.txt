@@ -1,0 +1,61 @@
+The estimateBounds function returns (possibly infinite) bounds and sets the isbounded flag to
+false. The result shows which assets are unbounded so that you can apply bound constraints as
+necessary.
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+obtainExactBounds — Flag to specify whether to solve for all bounds or to accept specified
+bounds whenever available
+true (default) | logical
+
+Flag to specify whether to solve for all bounds or to accept specified bounds whenever available,
+specified as a logical with values of true or false. If bounds are known, set obtainExactBounds
+to false to accept known bounds. The default for obtainExactBounds is true.
+
+Data Types: logical
+
+Output Arguments
+
+glb — Global lower bounds for portfolio set
+vector
+
+Global lower bounds for portfolio set, returned as vector for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+gub — Global upper bounds for portfolio set
+vector
+
+Global upper bounds for portfolio set, returned as vector for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+isbounded — Indicator for whether portfolio set is empty, bounded, or unbounded
+logical
+
+Indicator for whether portfolio set is empty ([]), bounded (true), or unbounded (false), returned as
+a logical.
+
+Note By definition, any portfolio set must be nonempty and bounded:
+
+•
+If the set is empty, isbounded = [ ].
+
+estimateBounds
+
+15-939

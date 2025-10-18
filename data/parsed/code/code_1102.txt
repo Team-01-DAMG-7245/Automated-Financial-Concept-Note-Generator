@@ -1,0 +1,6 @@
+Page 1128
+================================================================================
+
+Note: Data is downloaded using Datafeed Toolbox™ using commands like: >> conn = fred; >>
+data = fetch(conn,'DGS10','9/1/2000','9/1/2010'); results have been aggregated and
+stored in a binary HistoricalYTMData.mat file for convenience.

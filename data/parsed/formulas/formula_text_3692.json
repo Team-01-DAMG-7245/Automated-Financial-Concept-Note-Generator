@@ -1,0 +1,12 @@
+{
+  "page": 2083,
+  "original_text": "NumDaysPrevious = cpndaysp(Settle,Maturity) returns the number of days between the\nprevious coupon date and the settlement date for a bond or set of bonds. When the coupon frequency\nis 0 (a zero coupon bond), the previous coupon date is calculated as if the frequency were\nsemiannual. NumDaysPrevious returns a NUMBONDS-by-1 vector containing the number of days from\nthe previous coupon date to settlement.",
+  "ocr_text": "NumDaysPrevious=cpndaysp(Settle,Maturity)returnsthenumberofdaysbetweenthe\npreviouscoupondateandthesettlementdateforabondorsetofbonds.Whenthecouponfrequency\nis0(azerocouponbond),thepreviouscoupondateiscalculatedasifthefrequencywere\nsemiannual.NumDaysPreviousreturnsaNUMBONDS-by-1vectorcontainingthenumberofdaysfrom\nthepreviouscoupondatetosettlement.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 268.12,
+    "x1": 555.64,
+    "y1": 327.75
+  },
+  "confidence": "high"
+}

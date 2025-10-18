@@ -1,0 +1,24 @@
+Simulate Using Agent
+
+Simulate 1000 scenarios taking the actions of the training agent DQNagent. Use
+rlSimulationOptions (Reinforcement Learning Toolbox) to set the number of simulations.
+
+numSimulations = 1e3;
+simulationOptions = rlSimulationOptions(NumSimulations=numSimulations);
+
+Simulate the trained agent using sim (Reinforcement Learning Toolbox).
+
+experience = sim(gbwmEnvironment,DQNagent,simulationOptions);
+
+Obtain the wealth observations per period and the rewards at the end of the episode. These rewards
+show whether the target wealth is achieved by the end of the investment horizon or not.
+
+% Retrieve simulation information
+cumulativeReward = 0;
+wealthSimulation = zeros(finalTimePeriod+1,numSimulations);
+for i = 1:numSimulations
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-386

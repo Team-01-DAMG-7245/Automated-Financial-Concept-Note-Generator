@@ -1,0 +1,12 @@
+{
+  "page": 452,
+  "original_text": "% Solve problem\n% Solution that minimizes variance + HH term\nnew_weights = estimateCustomObjectivePortfolio(p,objFun, ...\n    TargetReturn=ret0);",
+  "ocr_text": "Solveproblem\n\nSolutionthatminimizesvariance+HHterm\n\nnew_weights=estimateCustom0bjectivePortfolio(p,objFun,...\nTargetReturn=ret0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.23,
+    "x1": 415.11,
+    "y1": 287.09
+  },
+  "confidence": "high"
+}

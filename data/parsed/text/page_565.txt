@@ -1,0 +1,60 @@
+In the dimensional space formed by n asset returns, PCA finds the k directions that capture the most
+important variations in the returns. Usually, k is less than n. Therefore, by using PCA, you can
+decompose the n asset returns into k directions that are interpreted as factor loadings. The scores
+from the decomposition are interpreted as the factor returns. For more information, see pca
+(Statistics and Machine Learning Toolbox™). In this example, the factor model uses k =nFactors,
+where covarianceDenoising determines the numFactors.
+
+Compute the maximum return portfolio subject to a target risk of 0.008 using the factor model
+covariance estimate. For details on how to obtain the weights allocation using factor modeling, see
+“Portfolio Optimization Using Factor Models” on page 4-231.
+
+% Compute the weights with denoised strategy.
+userData.numFactors = [];
+[wFactorModel_initial,userData] = factorModeling(w0,warmupTT, ...
+    userData);
+
+Check for asset allocations that are over 5% to show assets with large investment weights.
+
+percentage = 0.05;
+AssetName = pricesTT.Properties.VariableNames( ...
+    wFactorModel_initial>=percentage)';
+Weight = wFactorModel_initial(wFactorModel_initial>=percentage);
+T2 = table(AssetName,Weight)
+
+T2=6×2 table
+     AssetName      Weight 
+    ___________    ________
+
+{'Asset6' }    0.075366
+    {'Asset35'}    0.069395
+    {'Asset47'}     0.10676
+    {'Asset50'}     0.21628
+    {'Asset75'}     0.12423
+    {'Asset94'}      0.3068
+
+The assets with large investment weights are almost the same for both investment strategies.
+Asset35 is the only asset that appears in one table, namely in the factor model strategy, and not the
+other. Even the weights of the assets are similar.
+
+Backtesting
+
+Use backtestStrategy to create strategy objects for the two investment strategies. Compare the
+denoising strategy (strat1) against the factor model strategy (strat2) using backtesting.
+
+% Rebalance approximately every month
+rebalFreq = 21;
+
+% Set the rolling lookback window to be at least 2 months and at
+% most 6 months.
+lookback  = [42 126];
+
+% Use a fixed transaction cost (buy and sell costs are both 0.5%
+% of amount traded).
+transactionsFixed = 0.005;
+
+% Strategies
+
+Compare Performance of Covariance Denoising with Factor Modeling Using Backtesting
+
+4-397

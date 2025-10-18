@@ -1,0 +1,6 @@
+Page 1724
+================================================================================
+
+If the optional input argument Deterministic is true, F is a deterministic function of time, F(t), and
+the only input it accepts is a scalar, real-valued time t. Otherwise, if Deterministic is false (the
+default), F accepts a scalar, real-valued time t followed by an NVars-by-1 state vector X(t).

@@ -1,0 +1,10 @@
+Page 319
+================================================================================
+
+When none of the constraints from 'BoundType', 'MinNumAssets', or 'MaxNumAssets' are
+active, the redundant constraints from 'BoundType', 'MinNumAssets', 'MaxNumAssets' warning
+occurs. This happens when you explicitly use setBounds and setMinMaxNumAssets but with values
+that are inactive. That is, the 'Conditional' BoundType has a LowerBound = [ ] or 0,
+'MinNumAssets' is 0, or 'MaxNumAssets' is the same value as NumAssets. In other words, if any
+of these three are active, the warning will not show up when using the estimate functions or
+plotFrontier. The following two examples show the rationale.

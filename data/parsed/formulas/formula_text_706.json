@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "% Start with the current weights.\nnew_weights = current_weights;",
+  "ocr_text": "SStartwiththecurrentweights.\nnew_weights=current_weights;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 427.43,
+    "x1": 268.79,
+    "y1": 448.69
+  },
+  "confidence": "high"
+}

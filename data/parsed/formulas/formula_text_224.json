@@ -1,0 +1,12 @@
+{
+  "page": 137,
+  "original_text": "function [new_weights,user_data] = rebalance(weights,~,signalData,user_data,col,id)\n    new_weights = weights;\n    \n    direction = signalData{:,col};\n    if direction == \"gain\"\n        new_weights = 1;    % Expect a gain --> Fully invest \n    end\n    if direction == \"loss\"\n        new_weights = 0;    % Expect loss --> Cash out, with risk-free rate of 0%\n    end\n    \n    % Print iteration information at command line \n    user_data.Counter = user_data.Counter + 1;\n    if (mod(user_data.Counter,5000) == 0)\n        displayText = \"Backtesting \" + id + \". Total progress: \" + num2str(user_data.Counter) + \"\n        disp(displayText);",
+  "ocr_text": "function[new_weights,user_data]=rebalance(weights,,signalData,user_data,col,id)\nnew_weights=weights;\ndirection=signalData{:,col};\nifdirection==gain\nnew_weights=1; Expectagain--Fullyinvest\nend\nifdirection==loss\nnew_weights=0; SExpectloss--Cashout,withrisk-freerateof0\nend\nSPrintiterationinformationatcommandline\nuser_data.Counter=user_data.Counter+1;\nif_(mod(user_data.Counter,5000)==0)\ndisplayText=Backtesting+id+.Totalprogress:+num2str(user_data.Counter)+\ndisp(displayText);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 511.13,
+    "x1": 615.59,
+    "y1": 683.6
+  },
+  "confidence": "high"
+}

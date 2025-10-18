@@ -1,0 +1,58 @@
+13-Sep-2006                    176                           "Yes"          
+      18-Oct-2006                    201                           "Yes"          
+      22-Nov-2006                    226                           "Yes"          
+      29-Dec-2006                    251                           "Yes"
+
+The first rebalance date comes on February 8 but the strategy does not have enough price history to
+fill out a valid lookback window (minimum is 30 days), so no rebalance occurs. The next rebalance
+date is on March 16, a full 50 days into the backtest.
+
+This situation is not ideal as these 50 days sitting in an all-cash position represent approximately 20%
+of the total backtest. Consequently, when the backtesting engine reports on the performance of the
+strategy (that is, the total return, Sharpe ratio, volatility, and so on), the results do not reflect the
+"true" strategy performance because the strategy only began to make asset allocation decisions only
+about 20% into the backtest.
+
+Warm Start Backtest
+
+It is possible to "warm start" the backtest. A warm start means that the backtest results reflect the
+strategy performance in the market conditions reflected in the price timetable. To start, set the initial
+weights of the strategy to avoid starting all in cash.
+
+The inverse variance strategy requires 30 days of price history to fill out a valid lookback window, so
+you can partition the price data set into two sections, a "warm-up" set and a "test" set.
+
+warmupRange = 1:30;
+% The 30th row is included in both ranges since the day 30 price is used
+% to compute the day 31 returns.
+testRange = 30:height(pricesTT);
+
+Use the warm-up partition to set the initial weights of the inverse variance strategy. By doing so, you
+can begin the backtest with the strategy already "running" and avoid the initial weeks spent in the
+cash position.
+
+% Use the rebalance function to set the initial weights. This might
+% or might not be possible for other strategies depending on the details of
+% the strategy logic.
+initWeights = inverseVarianceFcn([],pricesTT(warmupRange,:));
+
+Update the strategy and rerun the backtest. Since the warm-up range is used to initialize the inverse
+variance strategy, you must omit this data from the backtest to avoid a look-ahead bias, or "seeing the
+future," and to backtest only over the "test range."
+
+% Set the initial weights on the strategy in the backtester. You can do this when you 
+% create the strategy as well, using the 'InitialWeights' parameter.
+backtester.Strategies(1).InitialWeights = initWeights;
+
+% Rerun the backtest over the "test" range.
+backtester = runBacktest(backtester,pricesTT(testRange,:));
+
+When you generate the area plot, you can see that the issue where the strategy is in cash for the first
+portion of the backtest is avoided.
+
+assetAreaPlot(backtester,"InverseVariance")
+
+15
+Functions
+
+15-284

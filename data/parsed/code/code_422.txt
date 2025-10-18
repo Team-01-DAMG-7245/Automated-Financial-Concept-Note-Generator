@@ -1,0 +1,4 @@
+Page 429
+================================================================================
+
+The initial weight calculation function as well as the strategy rebalancing functions follow.

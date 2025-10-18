@@ -1,0 +1,12 @@
+{
+  "page": 79,
+  "original_text": "p = -5:0.01:5;\nhold on\nplot(p,real(log(p)),\"b\")\nplot(p,imag(log(p)),\"r\")\nxticks(-5:5)\nxlabel(\"Price (p)\")\nylabel(\"Ordinate\")\nlegend([\"real(log(p))\" \"imag(log(p))\"],AutoUpdate=false)\ngrid minor",
+  "ocr_text": "p=-5:0.01:5;\n\nhold_on\n\nplot(p,real(log(p)),b)\n\nplot(p,imag(log(p)),r)\n\nxticks(-5:5)\n\nxlabel(Price(p))\n\nylabel(Ordinate)\nlegend([real(log(p))imag(log(p))],AutoUpdate=false)\ngridminor",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 415.83,
+    "x1": 393.42,
+    "y1": 512.7
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1108,
+  "original_text": "hold on                  % Add the current value for reference\nbasemesh = mesh(dt, dy, 100000*ones(NumYields, NumTimes));\nset(basemesh, 'facecolor', 'none');\nset(basemesh, 'edgecolor', 'm');\nset(gca, 'box', 'on');",
+  "ocr_text": "holdon sAddthecurrentvalueforreference\nbasemesh=mesh(dt,dy,100000*ones(NumYields,NumTimes));\nset(basemesh,facecolor,none);\nset(basemesh,edgecolor,m);\n\nset(gca,_box,on);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 583.83,
+    "x1": 425.93,
+    "y1": 637.49
+  },
+  "confidence": "high"
+}

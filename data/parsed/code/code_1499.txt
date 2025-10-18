@@ -1,0 +1,6 @@
+Page 1419
+================================================================================
+
+The discrete-time approximation improves as DeltaTime approaches zero. The Euler function is
+often the least accurate and most general method available. All models shipped in the simulation
+suite have the simByEuler function.

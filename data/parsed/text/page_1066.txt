@@ -1,0 +1,59 @@
+The CM step proceeds in the same manner as the maximum likelihood procedure without missing
+data. The main difference is that missing data moments are imputed from the conditional
+expectations obtained in the E step.
+
+The E and CM steps are repeated until the log-likelihood function ceases to increase. One of the
+important properties of the ECM algorithm is that it is always guaranteed to find a maximum of the
+log-likelihood function and, under suitable conditions, this maximum can be a global maximum.
+
+Standard Errors
+
+The negative of the expected Hessian of the log-likelihood function and the Fisher information matrix
+are identical if no data is missing. However, if data is missing, the Hessian, which is computed over
+available samples, accounts for the loss of information due to missing data. So, the Fisher information
+matrix provides standard errors that are a Cramér-Rao lower bound whereas the Hessian matrix
+provides standard errors that may be greater if there is missing data.
+
+Data Augmentation
+
+The ECM functions do not “fill in” missing values as they estimate model parameters. In some cases,
+you may want to fill in the missing values. Although you can fill in the missing values in your data
+with conditional expectations, you would get optimistic and unrealistic estimates because conditional
+estimates are not random realizations.
+
+Several approaches are possible, including resampling methods and multiple imputation (see Little
+and Rubin [7] and Shafer [10] for details). A somewhat informal sampling method for data
+augmentation is to form random samples for missing values based on the conditional distribution for
+
+the missing values. Given parameter estimates for X ⊂Rn and C , each observation has moments
+
+E Zk = Hkb
+
+and
+
+cov Zk = HkC HkT
+
+for k = 1, ..., m, where you have dropped the parameter dependence on the left sides for notational
+convenience.
+
+For observations with missing values partitioned into missing values Xk and observed values Yk = yk,
+you can form conditional estimates for any subcollection of random variables within a given
+observation. Thus, given estimates E[ Zk ] and cov(Zk) based on the parameter estimates, you can
+create conditional estimates
+
+E Xk yk
+
+and
+
+cov Xk yk
+
+using standard multivariate normal distribution theory. Given these conditional estimates, you can
+simulate random samples for the missing values from the conditional distribution
+
+Xk ∼N E Xk yk , cov Xk yk
+.
+
+9
+Regression with Missing Data
+
+9-8

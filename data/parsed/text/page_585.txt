@@ -1,0 +1,34 @@
+ArrivalPrice: 27.4600
+            ExecutedShares: 35
+            ExecutedPrices: 27.4900
+     HorizonExecutedShares: [60×1 double]
+     HorizonExecutedPrices: [60×1 double]
+                  IS_Agent: [3516×1 double]
+                    Reward: [3516×1 double]
+    NumIntervalsPerHorizon: 12
+               NumHorizons: 293
+                 NumLevels: 5
+
+Reward3
+
+Reward3 = 
+0.8925
+
+Call the reset function again to restore the environment back to the initial state.
+
+reset(RL_OptimalExecution_Training_Environment_Sell);
+
+Reset!
+
+Create and Train Agent for Sell Trades
+
+Open Reinforcement Learning Designer (Reinforcement Learning Toolbox).
+
+reinforcementLearningDesigner
+
+Import the training environment by clicking the Import button and selecting the created training
+environment.
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-417

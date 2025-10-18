@@ -1,0 +1,19 @@
+If you did not specify the size of LowerBound but, instead, input a scalar argument, the Portfolio
+object assumes that you are defining a single-asset problem and produces an error at the call to set
+asset moments with four assets.
+
+Shortcuts for Property Names
+
+The Portfolio object has shorter argument names that replace longer argument names associated
+with specific properties of the Portfolio object. For example, rather than enter 'assetcovar', the
+Portfolio object accepts the case-insensitive name 'covar' to set the AssetCovar property in a
+Portfolio object. Every shorter argument name corresponds with a single property in the
+Portfolio object. The one exception is the alternative argument name 'budget', which signifies
+both the LowerBudget and UpperBudget properties. When 'budget' is used, then the
+LowerBudget and UpperBudget properties are set to the same value to form an equality budget
+constraint.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-30

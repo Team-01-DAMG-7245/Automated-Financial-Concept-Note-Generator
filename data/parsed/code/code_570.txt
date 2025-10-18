@@ -1,0 +1,6 @@
+Page 527
+================================================================================
+
+As explained in “Role of Convexity in Portfolio Problems” on page 4-157, because the objective
+function is nonconvex, this formulation cannot be solved by the Portfolio object solvers if you add
+cardinality constraints or conditional bounds to the problem.

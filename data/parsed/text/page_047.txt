@@ -1,0 +1,66 @@
+Many Financial Toolbox functions that require dates as input arguments accept date character
+vectors, datetime arrays, or serial date numbers. If you are dealing with a few dates at the MATLAB
+command-line level, date character vectors are more convenient. If you are using Financial Toolbox
+functions on large numbers of dates, as in analyzing large portfolios or cash flows, performance
+improves if you use datetime arrays or serial date numbers. For more information, see “Represent
+Dates and Times in MATLAB”.
+
+Date Conversions
+
+Financial Toolbox provides functions that convert date character vectors to or from serial date
+numbers. In addition, you can convert character vectors or serial date numbers to datetime arrays.
+
+Functions that convert between date formats are:
+
+datedisp
+Displays a numeric matrix with date entries formatted as date character
+vectors.
+
+datenum
+Converts a date character vector to a serial date number.
+
+datestr
+Converts a serial date number to a date character vector.
+
+datetime
+Converts from date character vectors or serial date numbers to create a
+datetime array.
+
+datevec
+Converts a serial date number or date character vector to a date vector
+whose elements are [Year Month Day Hour Minute Second].
+
+m2xdate
+Converts MATLAB serial date number to Excel® serial date number.
+
+x2mdate
+Converts Microsoft® Excel serial date number to MATLAB serial date
+number.
+
+For more information, see “Convert Between Text and datetime or duration Values”.
+
+Convert Between Datetime Arrays and Character Vectors
+
+A date can be a character vector composed of fields related to a specific date and time. There are
+several ways to represent dates and times in several text formats. For example, all the following are
+character vectors represent August 23, 2010 at 04:35:42 PM:
+
+'23-Aug-2010 04:35:06 PM'
+'Wednesday, August 23'
+'08/23/10 16:35'
+'Aug 23 16:35:42.946'
+
+A date character vector includes characters that separate the fields, such as the hyphen, space, and
+colon used here:
+
+d = '23-Aug-2010 16:35:42'
+
+Convert one or more date character vectors to a datetime array using the datetime function. For
+the best performance, specify the format of the input character vectors as an input to datetime.
+
+Note The specifiers that datetime uses to describe date and time formats differ from the specifiers
+that the datestr, datevec, and datenum functions accept.
+
+Handle and Convert Dates
+
+2-3

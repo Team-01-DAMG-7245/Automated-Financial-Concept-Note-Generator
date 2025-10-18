@@ -1,0 +1,12 @@
+{
+  "page": 37,
+  "original_text": "In ordinary algebra, you would divide both sides of the equation by A, and X would equal B/A.\nHowever, since matrix algebra is not commutative (A*X ≠ X*A), different processes apply. In formal\nmatrix algebra, the solution involves matrix inversion. MATLAB, however, simplifies the process by\nproviding two matrix division symbols, left and right (\\ and /). In general,",
+  "ocr_text": "Inordinaryalgebra,youwoulddividebothsidesoftheequationbyA,andXwouldequalB/A.\nHowever,sincematrixalgebraisnotcommutative(A*X+X*A),differentprocessesapply.Informal\nmatrixalgebra,thesolutioninvolvesmatrixinversion.MATLAB,however,simplifiestheprocessby\nprovidingtwomatrixdivisionsymbols,leftandright(and/).Ingeneral,",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 281.74,
+    "x1": 544.52,
+    "y1": 329.37
+  },
+  "confidence": "high"
+}

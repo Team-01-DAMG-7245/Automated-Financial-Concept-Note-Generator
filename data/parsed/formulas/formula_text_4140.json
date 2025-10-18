@@ -1,0 +1,12 @@
+{
+  "page": 2324,
+  "original_text": "pstd = estimatePortStd(p, pwgt);\ndisp(pstd)",
+  "ocr_text": "pstd=estimatePortStd(p,_pwgt);\ndisp(pstd)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.76,
+    "x1": 263.37,
+    "y1": 622.03
+  },
+  "confidence": "high"
+}

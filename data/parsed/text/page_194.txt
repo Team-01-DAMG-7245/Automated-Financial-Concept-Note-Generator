@@ -1,0 +1,63 @@
+The first condition is satisfied by setting the properties associated with the moments of asset
+returns.
+
+•
+The set of feasible portfolios must be a nonempty compact set, where a compact set is closed and
+bounded.
+
+The second condition is satisfied by an extensive collection of properties that define different types
+of constraints to form a set of feasible portfolios. Since such sets must be bounded, either explicit
+or implicit constraints can be imposed, and several functions, such as estimateBounds, provide
+ways to ensure that your problem is properly formulated.
+
+Although the general sufficiency conditions for mean-variance portfolio optimization go beyond these
+two conditions, the Portfolio object implemented in Financial Toolbox implicitly handles all these
+additional conditions. For more information on the Markowitz model for mean-variance portfolio
+optimization, see “Portfolio Optimization” on page A-5.
+
+Portfolio Function Examples
+
+If you create a Portfolio object, p, with no input arguments, you can display it using disp:
+
+p = Portfolio;
+disp(p)
+
+Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                     AssetMean: []
+                    AssetCovar: []
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: []
+                     NumAssets: []
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: []
+                    UpperBound: []
+                   LowerBudget: []
+                   UpperBudget: []
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-26

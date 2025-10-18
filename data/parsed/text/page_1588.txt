@@ -1,0 +1,62 @@
+% View the final asset price timetable.
+head(pricesTT)
+
+Dates        BA       CAT      DIS      GE       IBM      MCD     MSFT 
+    ___________    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    68.63    55.86    24.18     33.6    80.13    32.72    26.19
+    04-Jan-2006    69.34    57.29    23.77    33.56    80.03    33.01    26.32
+    05-Jan-2006    68.53    57.29    24.19    33.47    80.56    33.05    26.34
+    06-Jan-2006    67.57    58.43    24.52     33.7    82.96    33.25    26.26
+    09-Jan-2006    67.01    59.49    24.78    33.61    81.76    33.88    26.21
+    10-Jan-2006    67.33    59.25    25.09    33.43     82.1    33.91    26.35
+    11-Jan-2006     68.3    59.28    25.33    33.66    82.19     34.5    26.63
+    12-Jan-2006     67.9    60.13    25.41    33.25    81.61    33.96    26.48
+
+Create Strategy
+
+This example backtests an "inverse variance" strategy. The inverse variance rebalance function is
+implemeted in the Local Functions on page 15-287 section. For more information on creating
+backtest strategies, see backtestStrategy. The inverse variance strategy uses the covariance of
+asset returns to make decisions about asset allocation. The LookbackWindow for this strategy must
+contain at least 30 days of trailing data (about 6 weeks), and at most, 60 days (about 12 weeks).
+
+Set RebalanceFrequency for backtestStrategy to rebalance the portfolio every 25 days.
+
+% Create the strategy
+minLookback = 30;
+maxLookback = 60;
+ivStrategy = backtestStrategy("InverseVariance",@inverseVarianceFcn, ...
+    'RebalanceFrequency',25, ...
+    'LookbackWindow',[minLookback maxLookback], ...
+    'TransactionCosts',[0.0025 0.005])
+
+ivStrategy = 
+  backtestStrategy with properties:
+
+Name: "InverseVariance"
+              RebalanceFcn: @inverseVarianceFcn
+        RebalanceFrequency: 25
+          TransactionCosts: [0.0025 0.0050]
+            LookbackWindow: [30 60]
+            InitialWeights: [1×0 double]
+             ManagementFee: 0
+     ManagementFeeSchedule: 1y
+            PerformanceFee: 0
+    PerformanceFeeSchedule: 1y
+         PerformanceHurdle: 0
+                  UserData: [0×0 struct]
+            EngineDataList: [0×0 string]
+
+Run Backtest and Examine Results
+
+Create a backtesting engine and run a backtest over a year of stock data. For more information on
+creating backtest engines, see backtestEngine.
+
+% Create the backtest engine.
+backtester = backtestEngine(ivStrategy);
+
+15
+Functions
+
+15-282

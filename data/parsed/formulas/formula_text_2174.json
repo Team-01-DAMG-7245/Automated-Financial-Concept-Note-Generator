@@ -1,0 +1,12 @@
+{
+  "page": 1118,
+  "original_text": "PresentValue = sum((ForwardRates/Period) .* DiscountFactors)",
+  "ocr_text": "PresentValue=sum((ForwardRates/Period).*DiscountFactors)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 326.23,
+    "x1": 415.08,
+    "y1": 336.69
+  },
+  "confidence": "high"
+}

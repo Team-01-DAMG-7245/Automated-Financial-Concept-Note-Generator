@@ -1,0 +1,6 @@
+Page 1480
+================================================================================
+
+As a deterministic function of time, when A is called with a real-valued scalar time t as its only input,
+A must produce an NVars-by-1 column vector. If you specify A as a function of time and state, it must
+generate an NVars-by-1 column vector of intercepts when invoked with two inputs:

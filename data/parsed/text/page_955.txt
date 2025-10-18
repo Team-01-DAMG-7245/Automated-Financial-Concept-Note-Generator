@@ -1,0 +1,54 @@
+cpf = CPF(end)-4;
+spr = SPR(end);
+yPredRange = [yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];
+fprintf('CPF drops 4%%    %4.2f%%  %4.2f%%  %4.2f%%\n',yPredRange);
+
+CPF drops 4%    0.42%  1.57%  2.71%
+
+cpf = CPF(end);
+spr = SPR(end)+1;
+yPredRange = [yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];
+fprintf('SPR rises 1%%    %4.2f%%  %4.2f%%  %4.2f%%\n',yPredRange);
+
+SPR rises 1%    0.71%  1.88%  3.05%
+
+cpf = CPF(end);
+spr = SPR(end);
+yPredRange = [yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];
+fprintf('    Baseline    %4.2f%%  %4.2f%%  %4.2f%%\n',yPredRange);
+
+Baseline    0.04%  1.18%  2.31%
+
+fprintf('\nCorrelation between CPF and SPR: %4.3f\n',corr(CPF,SPR));
+
+Correlation between CPF and SPR: 0.012
+
+Now take a more global view of the scenario analysis. Instead of analyzing one scenario at a time, you
+can visualize the default rate forecasts as a function of CPF and SPR. More precisely, you can plot
+default rate contours over a whole grid of CPF and SPR values. Use the conservative 95% upper
+bound.
+
+If you assume a particular bivariate distribution for the values of CPF and SPR, you can plot the
+contours of their distribution in the same figure. That would give visual information on the probability
+of falling on each region. Lacking such a distribution, you can simply add to the plot the CPF - SPR
+pairs observed in this sample, as a historical, empirical distribution. The last observation in the
+sample, the baseline scenario, is marked in red.
+
+gridCPF = 2*min(CPF):0.1:max(CPF);
+gridSPR = min(SPR):0.1:2*max(SPR);
+nGridCPF = length(gridCPF);
+nGridSPR = length(gridSPR);
+
+DefRateUB = zeros(nGridCPF,nGridSPR);
+for i=1:nGridCPF
+   for j=1:nGridSPR
+      DefRateUB(i,j) = yPredUBFn(gridCPF(i),gridSPR(j));
+   end
+end
+Example_StressTestPlot(gridCPF,gridSPR,DefRateUB,CPF,SPR, ...
+   'Corporate Profits Forecast (%)','Corporate Spread (%)', ...
+   ['{\bf ' strConf '% UB Default Rate Regions (in %)}'])
+
+Forecasting Corporate Default Rates
+
+8-37

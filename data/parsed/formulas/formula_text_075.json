@@ -1,0 +1,12 @@
+{
+  "page": 76,
+  "original_text": "PC =\nps(t)\nps(t −1) −1",
+  "ocr_text": "pst)\nPC=5G-p}",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 628.82,
+    "x1": 195.2,
+    "y1": 655.4
+  },
+  "confidence": "high"
+}

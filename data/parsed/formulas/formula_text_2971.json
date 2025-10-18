@@ -1,0 +1,12 @@
+{
+  "page": 1555,
+  "original_text": "% Setup the initial UserData\nstopLossStrat.UserData = struct(StopLossPercent=0.05,BuyInPercent=0.02,Asset=\"AIG\",StopLossPrice=",
+  "ocr_text": "SetuptheinitialUserData\nstopLossStrat.UserData=struct(StopLossPercent=0.05,BuyInPercent=0.02,Asset=AIG,StopLossPrice:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 305.63,
+    "x1": 615.59,
+    "y1": 326.89
+  },
+  "confidence": "high"
+}

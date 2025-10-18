@@ -1,0 +1,12 @@
+{
+  "page": 615,
+  "original_text": "% Update LoggedSignals.IS_Agent\nLoggedSignals.IS_Agent(StepIdx) = IS_Agent;",
+  "ocr_text": "UpdateLoggedSignals.IS_Agent\nLoggedSignals.IS_Agent(StepIdx)=IS_Agent;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 322.97,
+    "y1": 297.89
+  },
+  "confidence": "high"
+}

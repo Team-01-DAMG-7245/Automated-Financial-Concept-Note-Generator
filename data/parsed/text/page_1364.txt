@@ -1,0 +1,58 @@
+conditionNum = [cond(Sigma); cond(shrunkSigma)];
+condNumT = table(conditionNum,'RowNames',{'Sigma','SigmaHat'})
+
+condNumT=2×1 table
+                conditionNum
+                ____________
+
+Sigma        3.1119e+18 
+    SigmaHat         5274.8
+
+Use Portfolio to construct Portfolio objects that use the different AssetCovar values. Then use
+setDefaultConstraints to set the portfolio constraints with nonnegative weights that sum to 1 for
+the three portfolios: the true mean with the true covariance, the traditional covariance estimate, and
+the shrunk estimate.
+
+% Create a Portfolio object with the true parameters
+p = Portfolio(AssetMean=mean_return,AssetCovar=covariance);
+p = setDefaultConstraints(p);
+
+% Create a Portfolio object with true mean and traditional covariance estimate
+pTraditional = Portfolio(AssetMean=mean_return,AssetCovar=Sigma);
+pTraditional = setDefaultConstraints(pTraditional);
+
+% Create a Portfolio object with true mean and shrunk covariance
+pShrunk = Portfolio(AssetMean=mean_return,AssetCovar=shrunkSigma);
+pShrunk = setDefaultConstraints(pShrunk);
+
+Use estimateFrontier to estimate the efficient frontier for each of the Portfolio objects.
+
+% Number of portfolios on the efficient frontier
+nPort = 20;
+
+% True efficient portfolios
+w = estimateFrontier(p,nPort);
+
+% Traditional covariance efficient portfolios
+wTraditional = estimateFrontier(pTraditional,nPort);
+
+% Denoised covariance efficient portfolios
+wShrunk = estimateFrontier(pShrunk,nPort);
+
+Use plotFrontier to plot the frontier obtained from the different weights using the true parameter
+values.
+
+figure
+plotFrontier(p,w)
+hold on
+plotFrontier(p,wTraditional)
+plotFrontier(p,wShrunk)
+plotFrontier(p,estimateMaxSharpeRatio(p))
+legend('True frontier','Traditional frontier','Shrunk frontier', ...,
+'Max Sharpe ratio',Location='southeast');
+hold off
+
+15
+Functions
+
+15-58

@@ -1,0 +1,17 @@
+Figure handle for the category returns chart, returned as handle object. You can use the figure
+handle to access and change the properties of the chart.
+
+Version History
+Introduced in R2023a
+
+See Also
+categoryWeightsChart | attributionsChart | brinsonAttribution
+
+Topics
+“Analyze Performance Attribution Using Brinson Model” on page 4-323
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+15
+Functions
+
+15-40

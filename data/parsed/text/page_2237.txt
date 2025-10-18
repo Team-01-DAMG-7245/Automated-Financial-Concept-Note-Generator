@@ -1,0 +1,56 @@
+X = portsim(m', C, 120);
+Y = ret2tick(X);
+
+p = Portfolio('mean',m,'covar',C);
+        
+q = Portfolio;
+q = estimateAssetMoments(q, Y, 'dataformat', 'prices');
+ 
+[passetmean, passetcovar] = getAssetMoments(p)
+
+passetmean = 4×1
+
+0.0042
+    0.0083
+    0.0100
+    0.0150
+
+passetcovar = 4×4
+
+0.0005    0.0003    0.0002         0
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+         0    0.0010    0.0028    0.0102
+
+[qassetmean, qassetcovar] = getAssetMoments(q)
+
+qassetmean = 4×1
+
+0.0042
+    0.0083
+    0.0100
+    0.0150
+
+qassetcovar = 4×4
+
+0.0005    0.0003    0.0002   -0.0000
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+   -0.0000    0.0010    0.0028    0.0102
+
+Estimate Mean and Covariance of Asset Returns from Timetable Data for a Portfolio Object
+
+To illustrate using the estimateAssetMoments function with AssetReturns data continued in a
+timetable object, use the CAPMuniverse.mat which contains a timetable object
+(AssetTimeTable) for returns data.
+
+load CAPMuniverse
+AssetsTimeTable.Properties;
+head(AssetsTimeTable,5)
+
+Time          AAPL         AMZN         CSCO         DELL         EBAY       GOOG       HP
+    ___________    _________    _________    _________    _________    _________    ____    _____
+
+estimateAssetMoments
+
+15-931

@@ -1,0 +1,12 @@
+{
+  "page": 2314,
+  "original_text": "pret = estimatePortReturn(obj,pwgt) estimates the mean of portfolio returns (as the proxy\nfor portfolio return) for Portfolio, PortfolioCVaR, or PortfolioMAD objects. For details on the\nrespective workflows when using these different objects, see “Portfolio Object Workflow” on page 4-\n18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object Workflow” on page 6-\n16.",
+  "ocr_text": "pret=estimatePortReturn(obj,pwgt)estimatesthemeanofportfolioreturns(astheproxy\nforportfolioreturn)forPortfolio,PortfolioCVaR,orPortfolioMADobjects.Fordetailsonthe\nrespectiveworkflowswhenusingthesedifferentobjects,seePortfolioObjectWorkflowonpage4-\n18,PortfolioCVaRObjectWorkflowonpage5-16,andPortfolioMADObjectWorkflowonpage6-\n16.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 247.64,
+    "x1": 549.35,
+    "y1": 307.27
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1408
+================================================================================
+
+•
+Sigma — Access function for the input argument Sigma, callable as a function of time and state

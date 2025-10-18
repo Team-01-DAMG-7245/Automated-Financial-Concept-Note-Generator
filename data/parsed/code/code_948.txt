@@ -1,0 +1,7 @@
+Page 943
+================================================================================
+
+edgesIGSG = [4 7];
+totalsIGSG = transprobgrouptotals(totalsByRtg,edgesIGSG);
+edgesAll = 7; % Could also use edgesAll = 2 with totalsIGSG
+totalsAll = transprobgrouptotals(totalsByRtg,edgesAll);

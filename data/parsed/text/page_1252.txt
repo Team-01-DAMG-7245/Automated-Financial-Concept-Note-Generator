@@ -1,0 +1,41 @@
+To illustrate this, load the data set and simulate risk-neutral sample paths of the FTSE 100 index
+using a geometric Brownian motion (GBM) model with constant parameters:
+
+where the average Euribor yield represents the risk-free rate of return.
+
+Assume that the relevant information derived from the daily data is annualized, and that each
+calendar year comprises 252 trading days.
+
+load Data_GlobalIdx2
+returns = tick2ret(Dataset.FTSE);
+sigma   = std(returns) * sqrt(252);
+rate    = Dataset.EB3M;
+rate    = mean(360 * log(1 + rate));
+
+Create the GBM model using gbm, assuming the FTSE 100 starts at 100.
+
+obj = gbm(rate, sigma, 'StartState', 100);
+
+Determine the sample time and simulate the price paths. In the following code, NSteps specifies the
+number of intermediate time steps within each time increment DeltaTime. Each increment
+DeltaTime is partitioned into NSteps subintervals of length DeltaTime/NSteps each, refining the
+simulation by evaluating the simulated state vector at NSteps–1 intermediate points. This refinement
+improves accuracy by allowing the simulation to more closely approximate the underlying continuous-
+time process without storing the intermediate information.
+
+nSteps      = 1;
+sampleTimes = cumsum([obj.StartTime ; ...
+dt(ones(nPeriods * nSteps,1))/nSteps]);
+z           = Example_StratifiedRNG(nPaths, sampleTimes);
+rng(10203,'twister')
+[Y, Times]  = obj.simBySolution(nPeriods, 'nTrials', nPaths,...
+'DeltaTime', dt, 'nSteps', nSteps,  'Z', z);
+Y = squeeze(Y);   % Reorder to a 2-D array
+plot(Times, Y)
+xlabel('Time (Years)'), ylabel('Index Level')
+title('FTSE 100 Terminal Stratification:Geometric Brownian Motion')
+
+14
+Stochastic Differential Equations
+
+14-60

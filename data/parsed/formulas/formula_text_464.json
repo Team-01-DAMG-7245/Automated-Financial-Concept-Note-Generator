@@ -1,0 +1,12 @@
+{
+  "page": 322,
+  "original_text": "Error in Portfolio/estimateFrontierLimits>int_frontierLimits (line 93)\nProbStruct = buildMixedIntegerProblem(obj);",
+  "ocr_text": "ErrorinPortfolio/estimateFrontierLimits=int_frontierLimits(line93)\nProbStruct_=buildMixedIntegerProblem(obj);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 517.21,
+    "x1": 359.7,
+    "y1": 532.34
+  },
+  "confidence": "high"
+}

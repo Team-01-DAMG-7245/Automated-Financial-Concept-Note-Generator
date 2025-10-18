@@ -1,0 +1,5 @@
+Page 2319
+================================================================================
+
+Given portfolio p, use the estimatePortRisk function to show the standard deviation of portfolio
+returns for each portfolio in pwgt.

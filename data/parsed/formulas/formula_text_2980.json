@@ -1,0 +1,12 @@
+{
+  "page": 1557,
+  "original_text": "% Load equity adjusted price data and convert the data to timetable\nT = readtable('dowPortfolio.xlsx');\npricesTT = table2timetable(T(:,[1 3:end]),'RowTimes','Dates')",
+  "ocr_text": "Loadequityadjustedpricedataandconvertthedatatotimetable\nT=readtable(dowPortfolio.xlsx);\npricesTT=table2timetable(T(:,[13:end]),RowTimes,Dates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 416.03,
+    "x1": 453.01,
+    "y1": 448.09
+  },
+  "confidence": "high"
+}

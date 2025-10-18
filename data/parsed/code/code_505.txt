@@ -1,0 +1,5 @@
+Page 480
+================================================================================
+
+function new_weights = LongShortRebalanceFcn(current_weights,pricesTT,signalTT) %#ok<INUSD> 
+% Long/Short strategy, in proportion to the signal

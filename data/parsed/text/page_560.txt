@@ -1,0 +1,60 @@
+reward = rewardFunction(loggedSignals);
+
+% Check if episode has ended
+if loggedSignals.TimePeriod >= finalTimePeriod
+    isDone = true;
+else
+    isDone = false;
+end
+end
+
+function reward = sparseReward(loggedSignals,finalTimePeriod, ...
+    targetWealth,WMin,WMax)
+% Function that computes the reward obtained in the current state
+% following the sparse rule:
+%   R(W,t) =  1    if t >= T and W >= targetWealth
+%             0    if t < T or  W <  targetWealth
+
+% Transform wealth to original space
+W = loggedSignals.Wealth*(WMax-WMin) + WMin;
+
+if loggedSignals.TimePeriod >= finalTimePeriod && W >= targetWealth
+    reward = 1;
+else
+    reward = 0;
+end
+end
+
+function reward = constantReturnReward(loggedSignals, ...
+    initialWealth,finalTimePeriod,targetWealth,constantReturn)
+% Function that computes the reward obtained in the current state
+% following the constant return rule:
+%   R(W,t) =  1    if t >= T and W >= targetWealth
+%             0.1  if t < T and  W >= W0 * (1+r)^t
+%             0    o.w.
+
+% Get current state
+t = loggedSignals.TimePeriod;
+W = loggedSignals.Wealth;
+
+% Transform wealth to original space
+W = W*(WMax-WMin) + WMin;
+
+% Compute reward
+if t >= finalTimePeriod && W >= targetWealth
+    reward = 1;
+elseif W >= initialWealth*(1+constantReturn)^t
+    reward = 0.1;
+else
+    reward = 0;
+end
+end
+
+See Also
+Portfolio | estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-392

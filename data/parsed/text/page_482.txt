@@ -1,0 +1,24 @@
+Related Examples
+
+•
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+
+•
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+
+•
+“Backtest Using Risk-Based Equity Indexation” on page 4-291
+
+•
+“Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data” on page 2-78
+
+•
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+•
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-314

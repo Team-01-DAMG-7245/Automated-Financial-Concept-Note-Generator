@@ -1,0 +1,8 @@
+Page 1592
+================================================================================
+
+The 'Start' and 'End' name-value pair arguments for runBacktest enable you to start and end
+the backtest on specific dates. You can specify 'Start' and 'End' as rows of the prices timetable or
+as datetime values (see the documentation for the runBacktest function for details). The 'Start'
+argument lets the backtest begin on a particular date while giving the backtest engine access to the
+full data set.

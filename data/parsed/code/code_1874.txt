@@ -1,0 +1,6 @@
+Page 1526
+================================================================================
+
+Forward variance curve specified as an array, a numeric scalar, or a deterministic function of time, Xi
+must return a scalar when called with a real-valued scalar time t as its only input. Although this
+function enforces no restrictions, Xi is usually non-negative.

@@ -1,0 +1,12 @@
+{
+  "page": 363,
+  "original_text": "pwgtWithMaxNum = estimateFrontierByReturn(pWithMaxNumAssets, targetRetn);",
+  "ocr_text": "pwgtWithMaxNum=estimateFrontierByReturn(pWithMaxNumAssets,_targetRetn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 455.38,
+    "x1": 485.51,
+    "y1": 465.85
+  },
+  "confidence": "high"
+}

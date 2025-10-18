@@ -1,0 +1,31 @@
+(Optional) Correlation matrix, specified as an n-by-n correlation coefficient matrix. A correlation
+coefficient is a statistic in which the covariance is scaled to a value between minus one (perfect
+negative correlation) and plus one (perfect positive correlation).
+
+If ExpCorrC is not specified, the processes are assumed to be uncorrelated, and the identity matrix is
+used.
+
+Data Types: double
+
+Output Arguments
+
+ExpCovariance — Covariance matrix
+matrix
+
+Covariance matrix, returned as an n-by-n covariance matrix, where n is the number of processes.
+
+The (i,j) entry is the expectation of the i'th fluctuation from the mean times the j'th fluctuation from
+the mean.
+
+ExpCov(i,j) = ExpCorrC(i,j)*ExpSigma(i)*ExpSigma(j)
+
+Version History
+Introduced before R2006a
+
+See Also
+cov2corr | ewstats | nearcorr
+
+15
+Functions
+
+15-744

@@ -1,0 +1,38 @@
+Selecting different values of λ ≥0 modifies the strength of the tracking error constraint.
+
+See Also
+estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk | estimateCustomObjectivePortfolio
+
+Related Examples
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Risk Parity or Budgeting with Constraints” on page 4-357
+
+•
+“Solve Robust Portfolio Maximum Return Problem with Ellipsoidal Uncertainty” on page 4-351
+
+•
+“Solve Problem for Minimum Tracking Error with Net Return Constraint” on page 4-349
+
+More About
+
+•
+“Solver Guidelines for Custom Objective Problems Using Portfolio Objects” on page 4-119
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-348

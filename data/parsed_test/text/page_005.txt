@@ -1,0 +1,76 @@
+Getting Started
+1
+
+Financial Toolbox Product Description . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-2
+
+Expected Users . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-3
+
+Analyze Sets of Numbers Using Matrix Functions . . . . . . . . . . . . . . . . . . .
+1-4
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-4
+Key Definitions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-4
+Referencing Matrix Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-4
+Transposing Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-5
+
+Matrix Algebra Refresher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-7
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-7
+Adding and Subtracting Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-7
+Multiplying Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-8
+Dividing Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-11
+Solving Simultaneous Linear Equations . . . . . . . . . . . . . . . . . . . . . . . . .
+1-11
+Operating Element by Element . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-13
+
+Using Input and Output Arguments with Functions . . . . . . . . . . . . . . . . .
+1-15
+Input Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-15
+Output Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+1-16
+
+Performing Common Financial Tasks
+2
+
+Handle and Convert Dates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-2
+Date Formats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-2
+Date Conversions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-3
+Current Date and Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-7
+Determining Specific Dates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-8
+Determining Holidays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-8
+Determining Cash-Flow Dates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-9
+
+Analyzing and Computing Cash Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-11
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-11
+Interest Rates/Rates of Return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-11
+Present or Future Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-12
+Depreciation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-13
+Annuities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-13
+
+v
+
+Contents

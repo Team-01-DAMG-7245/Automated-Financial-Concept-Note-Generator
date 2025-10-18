@@ -1,0 +1,9 @@
+Page 1552
+================================================================================
+
+The rebalance function (“rebalanceFcn” on page 15-0
+) is the user-authored function that contains
+the logic of the strategy. The backtesting engine calls the strategy rebalance function with a fixed set
+of parameters and expects it to return a vector of asset weights representing the new, desired
+portfolio allocation after a rebalance. For more information, see the rebalance functions on page 15-
+247.

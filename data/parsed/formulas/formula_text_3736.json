@@ -1,0 +1,12 @@
+{
+  "page": 2116,
+  "original_text": "EndDate = datetime\n   04-Jan-2001",
+  "ocr_text": "EndDate=datetime\n04-Jan-2001",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.42,
+    "x1": 187.53,
+    "y1": 686.69
+  },
+  "confidence": "high"
+}

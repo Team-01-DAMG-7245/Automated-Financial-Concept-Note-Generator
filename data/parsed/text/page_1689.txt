@@ -1,0 +1,53 @@
+simByEuler
+
+Euler simulation of stochastic differential equations (SDEs) for SDE, BM, GBM, CEV, CIR, HWV, Heston,
+SDEDDO, SDELD, or SDEMRD models
+
+Syntax
+
+[Paths,Times,Z] = simByEuler(MDL,NPeriods)
+[Paths,Times,Z] = simByEuler( ___ ,Name,Value)
+
+Description
+
+[Paths,Times,Z] = simByEuler(MDL,NPeriods) simulates NTrials sample paths of NVars
+correlated state variables driven by NBrowns Brownian motion sources of risk over NPeriods
+consecutive observation periods. simByEuler uses the Euler approach to approximate continuous-
+time stochastic processes.
+
+[Paths,Times,Z] = simByEuler( ___ ,Name,Value) specifies options using one or more name-
+value pair arguments in addition to the input arguments in the previous syntax.
+
+You can perform quasi-Monte Carlo simulations using the name-value arguments for
+MonteCarloMethod, QuasiSequence, and BrownianMotionMethod. For more information, see
+“Quasi-Monte Carlo Simulation” on page 14-63.
+
+Examples
+
+Simulate Equity Markets Using simByEuler
+
+Load the Data and Specify the SDE Model
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+    Dataset.NIK Dataset.FTSE Dataset.SP];
+
+returns =  tick2ret(prices);
+
+nVariables  = size(returns,2);
+expReturn   = mean(returns);
+sigma       = std(returns);
+correlation = corrcoef(returns);
+t           = 0;
+X           = 100;
+X           = X(ones(nVariables,1));
+
+F = @(t,X) diag(expReturn)* X;
+G = @(t,X) diag(X) * diag(sigma);
+
+SDE = sde(F, G, 'Correlation', ...
+    correlation, 'StartState', X);
+
+simByEuler
+
+15-383

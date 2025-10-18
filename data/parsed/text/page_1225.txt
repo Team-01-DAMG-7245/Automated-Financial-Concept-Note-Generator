@@ -1,0 +1,56 @@
+F = 
+   Class DRIFT: Drift Rate Specification  
+   -------------------------------------  
+      Rate: drift rate function F(t,X(t)) 
+         A: 6x1 double array
+         B: 6x6 diagonal double array
+
+G = diffusion(ones(nVariables,1), diag(sigma))
+
+G = 
+   Class DIFFUSION: Diffusion Rate Specification 
+   --------------------------------------------- 
+       Rate: diffusion rate function G(t,X(t))  
+      Alpha: 6x1 double array
+      Sigma: 6x6 diagonal double array
+
+Pass the drift and diffusion objects to sdeddo.
+
+SDEDDO = sdeddo(F, G, 'Correlation', correlation, ...
+'StartState', 100)
+
+SDEDDO = 
+   Class SDEDDO: SDE from Drift and Diffusion Objects
+   --------------------------------------------------
+     Dimensions: State = 6, Brownian = 6
+   --------------------------------------------------
+      StartTime: 0
+     StartState: 100 (6x1 double array) 
+    Correlation: 6x6 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+              A: 6x1 double array
+              B: 6x6 diagonal double array
+          Alpha: 6x1 double array
+          Sigma: 6x6 diagonal double array
+
+The sdeddo object requires two input objects that provide more information than the two functions
+from step 4 of “Represent Market Models Using SDE Models” on page 14-31. Thus, the
+dimensionality is more easily resolved. In fact, the initial price of each index is as a scalar
+(StartState = 100). This is in contrast to the sde object, which required an explicit state vector to
+uniquely determine the dimensionality of the problem.
+
+Once again, the class of each object is clearly identified, and parameters display like fields of a
+structure. In particular, the Rate parameter of drift and diffusion objects is identified as a callable
+function of time and state, F t, Xt and G t, Xt , respectively. The additional parameters, A, B, Alpha,
+and Sigma, are arrays of appropriate dimension, indicating static (non-time-varying) parameters. In
+other words, A t, Xt , B t, Xt , Alpha t, Xt , and Sigma t, Xt are constant functions of time and state.
+
+Represent Market Models Using SDELD, CEV, and GBM Objects
+
+Create sdeld, cev, and gbm objects to represent the market model in
+
+Simulating Equity Prices
+
+14-33

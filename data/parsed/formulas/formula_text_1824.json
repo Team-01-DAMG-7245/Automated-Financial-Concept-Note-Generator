@@ -1,0 +1,12 @@
+{
+  "page": 932,
+  "original_text": "PD = transMat(1:7,8);",
+  "ocr_text": "PD=transMat(1:7,8);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 203.78,
+    "y1": 621.89
+  },
+  "confidence": "high"
+}

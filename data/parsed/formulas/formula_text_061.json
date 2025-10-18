@@ -1,0 +1,12 @@
+{
+  "page": 67,
+  "original_text": "Settle = datenum('18-Nov-2008'); \nCouponRate = 5.500/100;\nMaturity = datenum('15-Aug-2028'); \nPrice = 114.83;",
+  "ocr_text": "Settle=datenum(18-Nov-2008);\nCouponRate=5.500/100;\nMaturity=datenum(15-Aug-2028);\nPrice=114.83;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 279.65,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1412,
+  "original_text": "% Create GBM object\ngbmobj = gbm(r,sigma,'StartState',S0);",
+  "ocr_text": "CreateGBMobject\ngbmobj=gbm(r,sigma,StartState,SO);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 295.9,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1519,
+  "original_text": "Example: rvmObj = rvm(Return,Volatility,Alpha,Beta,KernelType=\"gamma\")",
+  "ocr_text": "Example:rvm0bj=rvm(Return,Volatility,Alpha,Beta,KernelType=gamma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 625.59,
+    "x1": 502.6,
+    "y1": 637.22
+  },
+  "confidence": "high"
+}

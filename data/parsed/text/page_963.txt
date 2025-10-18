@@ -1,0 +1,59 @@
+Credit Quality Thresholds
+
+In this section...
+
+“Introduction” on page 8-45
+
+“Compute Credit Quality Thresholds” on page 8-45
+
+“Visualize Credit Quality Thresholds” on page 8-46
+
+Introduction
+
+An equivalent way to represent transition probabilities is by transforming them into credit quality
+thresholds. These are critical values of a standard normal distribution that yield the same transition
+probabilities.
+
+An M-by-N matrix of transition probabilities TRANS and the corresponding M-by-N matrix of credit
+quality thresholds THRESH are related as follows. The thresholds THRESH(i,j) are critical values of a
+standard normal distribution z, such that
+
+TRANS(i,N) = P[z < THRESH(i,N)],
+
+TRANS(i,j) = P[z < THRESH(i,j)] - P[z < THRESH(i,j+1)], for 1<=j<N
+
+Financial Toolbox supports the transformation between transition probabilities and credit quality
+thresholds with the functions transprobtothresholds and transprobfromthresholds.
+
+Compute Credit Quality Thresholds
+
+This example shows how to compute credit quality thresholds.
+
+To compute credit quality thresholds, transition probabilities are required as input. Here is a
+transition matrix estimated from credit ratings data:
+
+load Data_TransProb
+trans = transprob(data)
+
+trans = 8×8
+
+93.1170    5.8428    0.8232    0.1763    0.0376    0.0012    0.0001    0.0017
+    1.6166   93.1518    4.3632    0.6602    0.1626    0.0055    0.0004    0.0396
+    0.1237    2.9003   92.2197    4.0756    0.5365    0.0661    0.0028    0.0753
+    0.0236    0.2312    5.0059   90.1846    3.7979    0.4733    0.0642    0.2193
+    0.0216    0.1134    0.6357    5.7960   88.9866    3.4497    0.2919    0.7050
+    0.0010    0.0062    0.1081    0.8697    7.3366   86.7215    2.5169    2.4399
+    0.0002    0.0011    0.0120    0.2582    1.4294    4.2898   81.2927   12.7167
+         0         0         0         0         0         0         0  100.0000
+
+Convert the transition matrix to credit quality thresholds using transprobtothresholds.
+
+thresh = transprobtothresholds(trans)
+
+thresh = 8×8
+
+Inf   -1.4846   -2.3115   -2.8523   -3.3480   -4.0083   -4.1276   -4.1413
+
+Credit Quality Thresholds
+
+8-45

@@ -1,0 +1,12 @@
+{
+  "page": 1778,
+  "original_text": "Yield = beytbill(Settle,Maturity,Discount) returns the bond equivalent yield for a\nTreasury bill.",
+  "ocr_text": "Yield=beytbill(Settle,Maturity,Discount)returnsthebondequivalentyieldfora\nTreasurybill.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 239.69,
+    "x1": 522.23,
+    "y1": 263.32
+  },
+  "confidence": "high"
+}

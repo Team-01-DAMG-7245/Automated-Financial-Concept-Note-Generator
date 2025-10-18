@@ -1,0 +1,12 @@
+{
+  "page": 2410,
+  "original_text": "Y = obj.getScenarios;",
+  "ocr_text": "Y=obj.getScenarios;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 324.43,
+    "x1": 203.77,
+    "y1": 334.89
+  },
+  "confidence": "high"
+}

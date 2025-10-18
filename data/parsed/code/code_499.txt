@@ -1,0 +1,8 @@
+Page 474
+================================================================================
+
+Train the LSTM network. Use the trainNetwork (Deep Learning Toolbox) function to train the
+network until the network meets a stopping criteria. This process can take several minutes depending
+on the computer running the example. For more information on increasing the network training
+performance, see “Scale Up Deep Learning in Parallel, on GPUs, and in the Cloud” (Deep Learning
+Toolbox).

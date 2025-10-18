@@ -1,0 +1,12 @@
+{
+  "page": 1353,
+  "original_text": "Sigma = cov(retSeries);\ndenoisedSigma = covarianceDenoising(retSeries);",
+  "ocr_text": "Sigma=cov(retSeries);\ndenoisedSigma=covarianceDenoising(retSeries);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.1,
+    "x1": 344.64,
+    "y1": 147.37
+  },
+  "confidence": "high"
+}

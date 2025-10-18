@@ -1,0 +1,12 @@
+{
+  "page": 555,
+  "original_text": "% Transform wealth levels from the simulation to the original space.\nwealthSimulation = wealthSimulation*(WMax-WMin) + WMin;",
+  "ocr_text": "Transformwealthlevelsfromthesimulationtotheoriginalspace.\nwealthSimulation=wealthSimulation*(WMax-WMin)+WMin;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 458.42,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

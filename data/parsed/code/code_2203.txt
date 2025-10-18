@@ -1,0 +1,12 @@
+Page 1925
+================================================================================
+
+Settle = datetime(2009,7,17); % valuation date for the CDS
+Spread_Time = [1 2 3 5 7]';
+Spread = [140 175 210 265 310]';
+Market_Dates = daysadd(datenum(Settle),360*Spread_Time,1);
+MarketData = [Market_Dates Spread];
+Zero_Time = [.5 1 2 3 4 5]';
+Zero_Rate = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+Zero_Dates = daysadd(datenum(Settle),360*Zero_Time,1);
+ZeroData = [Zero_Dates Zero_Rate];

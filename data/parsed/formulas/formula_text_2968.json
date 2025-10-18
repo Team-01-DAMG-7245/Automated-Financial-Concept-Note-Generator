@@ -1,0 +1,12 @@
+{
+  "page": 1554,
+  "original_text": "% Invest equally across the top performing stocks.\nnew_weights(bestStocksIndex) = 1;\nnew_weights = new_weights / sum(new_weights);",
+  "ocr_text": "Investequallyacrossthetopperformingstocks.\nnew_weights(bestStocksIndex)=1;\nnew_weights=new_weights/sum(new_weights);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 233.43,
+    "x1": 360.9,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

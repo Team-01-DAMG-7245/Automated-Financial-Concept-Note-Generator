@@ -1,0 +1,12 @@
+{
+  "page": 848,
+  "original_text": "b = 0.5;\np = setEquality(p, A, b);",
+  "ocr_text": "b=0.5;\np=setEquality(p,A,b);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 225.45,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

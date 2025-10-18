@@ -1,0 +1,12 @@
+{
+  "page": 1930,
+  "original_text": "In the standard model, the survival probability is defined in terms of a piecewise constant hazard rate\nh(t). For example, if h(t) =",
+  "ocr_text": "Inthestandardmodel,thesurvivalprobabilityisdefinedintermsofapiecewiseconstanthazardrate\nh(t).Forexample,ifh(t)=",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 281.12,
+    "x1": 556.12,
+    "y1": 304.75
+  },
+  "confidence": "high"
+}

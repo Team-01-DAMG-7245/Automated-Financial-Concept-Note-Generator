@@ -1,0 +1,12 @@
+{
+  "page": 391,
+  "original_text": "viewTable = array2table([P q diag(Omega)], 'VariableNames', [assetNames \"View_Return\" \"View_Uncer",
+  "ocr_text": "viewTable=array2table([Pqdiag(Omega)],VariableNames,[assetNamesViewReturnView_Unce",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.61,
+    "x1": 615.59,
+    "y1": 622.08
+  },
+  "confidence": "high"
+}

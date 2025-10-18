@@ -1,0 +1,6 @@
+Page 2237
+================================================================================
+
+To illustrate using the estimateAssetMoments function with AssetReturns data continued in a
+timetable object, use the CAPMuniverse.mat which contains a timetable object
+(AssetTimeTable) for returns data.

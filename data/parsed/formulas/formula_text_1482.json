@@ -1,0 +1,12 @@
+{
+  "page": 747,
+  "original_text": "Warning: Max iterations reached. Consider modifying the solver options, or using fmincon. \n> In @PortfolioCVaR\\private\\cvar_cuttingplane_solver at 255\n  In @PortfolioCVaR\\private\\cvar_optim_min_risk at 85\n  In PortfolioCVaR.estimateFrontier at 69",
+  "ocr_text": "Warning:Maxiterationsreached.Considermodifyingthesolveroptions,orusingfmincon.\n\nInQPortfolioCVaRprivatecvar_cuttingplane_solverat255\nInQPortfolioCVaRprivate(cvar_optim_min_riskat85\nInPortfolioCVaR.estimateFrontierat_69",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 341.47,
+    "x1": 436.76,
+    "y1": 371.95
+  },
+  "confidence": "high"
+}

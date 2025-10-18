@@ -1,0 +1,55 @@
+0.0001    0.0017    0.0048    0.0025
+    0.0001    0.0007    0.0025    0.0083
+
+The Portfolio object p contains raw moments, the Portfolio object q contains estimated
+moments in which NaN values are discarded, and the Portfolio object r contains raw moments that
+accommodate missing values. Each time you run this code, you will get different estimates for the
+moments in q and r, and these will also differ from the moments in p.
+
+Estimating Asset Moments from Time Series Data
+
+This example shows how the estimateAssetMoments function also accepts asset returns or prices
+stored in a table or timetable. estimateAssetMoments implicitly works with matrices of data or
+data in a table or timetable object using the same rules for whether the data are returns or
+prices.
+
+To illustrate the use of a table and timetable, use array2table and array2timetable to create a
+table and a timetable that contain asset returns generated with portsim (see “Estimating Asset
+Moments from Prices or Returns” on page 4-45). Two portfolio objects are then created with the
+AssetReturns based on a table and a timetable object.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+ 
+assetRetnScenarios = portsim(m', C, 120);
+dates = datetime(datenum(2001,1:120,31), 'ConvertFrom', 'datenum');
+assetsName = {'Bonds', 'LargeCap', 'SmallCap', 'Emerging'};
+assetRetnTimeTable = array2timetable(assetRetnScenarios,'RowTimes',dates, 'VariableNames', assets
+assetRetnTable = array2table(assetRetnScenarios, 'VariableNames', assetsName);
+
+% Create two Portfolio objects:
+% p with predefined mean and covar and q with asset return scenarios to estimate mean and covar.
+p = Portfolio('mean', m, 'covar', C);
+q = Portfolio;
+
+% Estimate asset moments using a timetable
+q = estimateAssetMoments(q, assetRetnTimeTable);
+[passetmean, passetcovar] = getAssetMoments(p)
+
+passetmean = 4×1
+
+0.0042
+    0.0083
+    0.0100
+    0.0150
+
+passetcovar = 4×4
+
+Asset Returns and Moments of Asset Returns Using Portfolio Object
+
+4-49

@@ -1,0 +1,12 @@
+{
+  "page": 475,
+  "original_text": "% Compare the actual returns to model predicted returns.\nactual    = Tvalidation;\npredicted = minibatchpredict(net_LSTM,Xvalidation,InputDataFormats=\"CTB\");",
+  "ocr_text": "Comparetheactualreturnstomodelpredictedreturns.\nactual =Tvalidation;\npredicted=minibatchpredict(net_LSTM,Xvalidation,InputDataFormats=CTB);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 490.97,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 765
+================================================================================
+
+function sratio = iterative_local_obj(ret, obj)
+% Set the objective function to the negative of the reward-to-risk ratio.

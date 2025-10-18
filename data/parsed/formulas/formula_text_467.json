@@ -1,0 +1,12 @@
+{
+  "page": 323,
+  "original_text": "T = readtable('dowPortfolio.xlsx');\nsymbol = T.Properties.VariableNames(3:end);\nassetReturn = tick2ret(T{:,3:end});\np = Portfolio('AssetList', symbol, 'budget', 1);\np = setMinMaxNumAssets(p, 10, 15);\np = estimateAssetMoments(p,assetReturn);\np = setBounds(p,0.01,0.5,'BoundType','Conditional','NumAssets',30);\np = setTrackingError(p,0.05,ones(1, p.NumAssets)/p.NumAssets);\nw = estimateFrontierLimits(p,'min'); % minimum risk portfolio",
+  "ocr_text": "T=readtable(dowPortfolio.xlsx);\nsymbol_=T.Properties.VariableNames(3:end);\nassetReturn=tick2ret(T{:,3:end});\np=Portfolio(AssetList,symbol,_budget,1);\np=setMinMaxNumAssets(p,10,15);\np=estimateAssetMoments(p,assetReturn);\np=setBounds(p,0.01,0.5,BoundType,Conditional,NumAssets,30);\np=setTrackingError(p,0.05,ones(1,_p.NumAssets)/p.NumAssets);\nw=estimateFrontierLimits(p,min);*minimumriskportfolio",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 206.61,
+    "x1": 348.16,
+    "y1": 275.49
+  },
+  "confidence": "high"
+}

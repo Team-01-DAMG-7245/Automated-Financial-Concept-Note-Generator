@@ -1,0 +1,12 @@
+{
+  "page": 1763,
+  "original_text": "ado = adosc(Data) calculates the Accumulation/Distribution (A/D) oscillator.",
+  "ocr_text": "ado_=adosc(Data)calculatestheAccumulation/Distribution(A/D)oscillator.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 254.16,
+    "x1": 455.65,
+    "y1": 265.79
+  },
+  "confidence": "high"
+}

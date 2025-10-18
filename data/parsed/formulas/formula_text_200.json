@@ -1,0 +1,12 @@
+{
+  "page": 127,
+  "original_text": "for k = 1:n\n    tmp = zeros(width(X),b);\n    for j = 1:b\n        tmp(:,j) = X(j+k-1,:)';\n    end\n    XCell{k} = tmp;\nend",
+  "ocr_text": "fork=1:n\ntmp_=zeros(width(X),b);\nforj=1:b\ntmp(:,j)=X(j+k-1,:);\nend\nXCell{k}=tmp;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 181.24,
+    "x1": 257.96,
+    "y1": 256.5
+  },
+  "confidence": "high"
+}

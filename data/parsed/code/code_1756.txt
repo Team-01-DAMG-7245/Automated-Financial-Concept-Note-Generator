@@ -1,0 +1,5 @@
+Page 1498
+================================================================================
+
+Expected mean instantaneous rate of return of the GBM price process, specified as an array, or a
+deterministic function of time.

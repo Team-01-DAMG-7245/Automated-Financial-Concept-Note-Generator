@@ -1,0 +1,104 @@
+PortfolioCVaR
+Problem
+
+PortfolioCVaR
+Function
+
+Type of
+Optimization
+Problem
+
+Main Solver
+Helper Solver
+
+PortfolioCVaR
+without active
+'Conditional'
+BoundType,
+MinNumAssets,
+and
+MaxNumAssets
+
+estimateFronti
+erByRisk
+
+Optimizing a
+portfolio for a
+certain risk level
+introduces a
+nonlinear
+constraint.
+Therefore, this
+problem has a
+linear objective
+with linear and
+nonlinear
+constraints.
+
+'TrustRegionCP
+', 'ExtendedCP',
+'fmincon', or
+'cuttingplane'
+using setSolver
+
+'linprog' using
+setSolver
+
+PortfolioCVaR
+without active
+'Conditional'
+BoundType,
+MinNumAssets,
+and
+MaxNumAssets
+
+estimateFronti
+erByReturn
+
+Nonlinear
+objective with
+linear constraints
+
+'TrustRegionCP
+', 'ExtendedCP',
+'fmincon', or
+'cuttingplane'
+using setSolver
+
+'linprog' using
+setSolver
+
+PortfolioCVaR
+without active
+'Conditional'
+BoundType,
+MinNumAssets,
+and
+MaxNumAssets
+
+estimateFronti
+erLimits
+
+Nonlinear or linear
+objective with
+linear constraints
+
+For ‘min’:
+nonlinear
+objective,
+'TrustRegionCP
+', 'ExtendedCP',
+'fmincon', or
+'cuttingplane'
+using setSolver
+
+For ‘max’: linear
+objective,
+'linprog' using
+setSolver
+
+Not applicable
+
+Choosing and Controlling the Solver for PortfolioCVaR Optimizations
+
+5-101

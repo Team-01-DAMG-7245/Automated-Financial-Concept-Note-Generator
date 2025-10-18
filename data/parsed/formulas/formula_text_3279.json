@@ -1,0 +1,12 @@
+{
+  "page": 1759,
+  "original_text": "obj = obj.setInequality([ ], [ ])",
+  "ocr_text": "obj=obj.setInequality([],[])",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 339.23,
+    "x1": 283.8,
+    "y1": 349.69
+  },
+  "confidence": "high"
+}

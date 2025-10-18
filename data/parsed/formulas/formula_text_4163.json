@@ -1,0 +1,12 @@
+{
+  "page": 2335,
+  "original_text": "E(r) = (r(n) + wr(n −1) + w2r(n −2) + ... + wn −1r(1))\nNumEf fObs",
+  "ocr_text": "E(y)_=Ln)+wrin=1)+ wr(n-2)+...+w=r(1))\n- NumEffObs",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 151.89,
+    "x1": 359.49,
+    "y1": 177.26
+  },
+  "confidence": "high"
+}

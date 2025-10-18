@@ -1,0 +1,12 @@
+{
+  "page": 1086,
+  "original_text": "StartDate = Dates(1);\nEndDate = Dates(end);",
+  "ocr_text": "StartDate=Dates(1);\nEndDate=Dates(end);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 424.55,
+    "x1": 203.78,
+    "y1": 445.82
+  },
+  "confidence": "high"
+}

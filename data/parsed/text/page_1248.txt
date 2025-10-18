@@ -1,0 +1,35 @@
+0.8160    0.0008+i0.0001
+     '
+
+Interest rates can become negative if the resulting paths are simulated in discrete time. Moreover,
+since cir models incorporate a square root diffusion term, the short rates might even become
+complex.
+
+Repeat the simulation, this time specifying a processing function that takes the absolute magnitude of
+the short rate at the end of each period. You can access the processing function by time and state
+
+t, Xt , but it only uses the state vector of short rates Xt .
+
+rng(14151617,'twister')
+[Y,T] = simByEuler(obj,250,'DeltaTime',1/250,... 
+    'nTrials',5,'Processes',@(t,X)abs(X));
+
+Graphically compare the magnitude of the unadjusted path (with negative and complex numbers) to
+the corresponding path kept positive by using an end-of-period processing function over the time
+span of interest.
+
+clf
+plot(T,100*abs(X(:,1,4)),'red',T,100*Y(:,1,4),'blue')
+axis([0.75 1 0 0.4])
+xlabel('Time (Years)'), ylabel('Short Rate (%)')
+title('Univariate CIR Short Rates')
+legend({'Negative/Complex Rates' 'Positive Rates'}, ... 
+    'Location', 'Best')
+
+You can use this method to obtain more accurate SDE solutions. For more information, see
+“Performance Considerations” on page 14-65.
+
+14
+Stochastic Differential Equations
+
+14-56

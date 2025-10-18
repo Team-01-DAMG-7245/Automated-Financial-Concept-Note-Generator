@@ -1,0 +1,5 @@
+Page 1398
+================================================================================
+
+Rate — Composite diffusion-rate function
+value stored from diffusion-rate function (default) | function accessible by (t, Xt)

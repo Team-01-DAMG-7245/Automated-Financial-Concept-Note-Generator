@@ -1,0 +1,12 @@
+{
+  "page": 923,
+  "original_text": "load Data_TransProb\nstartDate = datetime(1995,12,31);\nendDate = datetime(2000,12,31);\ndataIGSG(1:10,:)",
+  "ocr_text": "loadData_TransProb\nstartDate=datetime(1995,12,31);\nendDate=datetime(2000,12,31);\ndataIGSG(1:10,:)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 184.44,
+    "x1": 268.79,
+    "y1": 227.3
+  },
+  "confidence": "high"
+}

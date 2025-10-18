@@ -1,0 +1,62 @@
+Clean price of the bond (current price without accrued interest), specified as a scalar or a NUMBONDS-
+by-1 or 1-by-NUMBONDS vector.
+
+Data Types: double
+
+CouponRate — Annual percentage rate used to determine coupons payable on a bond
+decimal
+
+Annual percentage rate used to determine the coupons payable on a bond, specified as decimal using
+a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector.
+
+Data Types: double
+
+Settle — Settlement date of bond
+datetime array | string array | date character vector
+
+Settlement date of the bond, specified as a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using
+a datetime array, string array, or date character vectors. The Settle date must be before the
+Maturity date.
+
+To support existing code, bndyield also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of bond
+datetime array | string array | date character vector
+
+Maturity date of the bond, specified as a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using a
+datetime array, string array, or date character vectors.
+
+To support existing code, bndyield also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: Yield =
+bndyield(Price,CouponRate,Settle,Maturity,'Period',4,'Basis',9)
+
+Period — Number of coupon payments per year
+2 (default) | numeric with values 0, 1, 2, 3, 4, 6 or 12
+
+Number of coupon payments per year, specified as the comma-separated pair consisting of 'Period'
+and a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using the values: 0, 1, 2, 3, 4, 6, or 12.
+
+Data Types: double
+
+Basis — Day-count basis of instrument
+0 (default) | numeric values: 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13
+
+15
+Functions
+
+15-586

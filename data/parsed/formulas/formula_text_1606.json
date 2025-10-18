@@ -1,0 +1,12 @@
+{
+  "page": 809,
+  "original_text": "p = PortfolioMAD('Name','Asset Allocation Fund');\ndisp(p.Name);\nAsset Allocation Fund",
+  "ocr_text": "p=PortfolioMAD(Name,AssetAllocationFund);\ndisp(p.Name);\nAssetAllocationFund",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.51,
+    "x1": 355.5,
+    "y1": 333.58
+  },
+  "confidence": "high"
+}

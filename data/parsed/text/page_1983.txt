@@ -1,0 +1,71 @@
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Note If a SIA day-count basis is defined in the Basis input argument and there is no value assigned
+for DiscountBasis, the default behavior is for SIA bases to use the actual/actual day count to
+compute discount factors.
+
+If an ICMA day-count basis or BUS/252 is defined in the Basis input argument and there is no value
+assigned for DiscountBasis, the specified bases from the Basis input argument are used.
+
+Data Types: double
+
+Holidays — Dates for holidays
+holidays.m used (default) | datetime array | string array | date character vector
+
+Dates for holidays, specified as the comma-separated pair consisting of 'Holidays' and a
+NHOLIDAYS-by-1 vector using a datetime array, string array, or date character vectors. Holidays are
+used in computing business days. For an example, see “Use cfamounts with User-Defined Holiday
+Calendar” on page 15-671.
+
+To support existing code, cfamounts also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+PrincipalType — Type of principal when a Face schedule is specified
+sinking (default) | character vector with values 'sinking' or 'bullet'
+
+Type of principal when a Face schedule, specified as the comma-separated pair consisting of
+'PrincipalType' and a value of 'sinking' or 'bullet' using a scalar or a NBONDS-by-1 vector.
+
+If 'sinking', principal cash flows are returned throughout the life of the bond.
+
+If 'bullet', principal cash flow is only returned at maturity.
+
+Data Types: char | cell
+
+Output Arguments
+
+CFlowAmounts — Cash flow amounts
+matrix
+
+cfamounts
+
+15-677

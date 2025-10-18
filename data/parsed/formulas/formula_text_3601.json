@@ -1,0 +1,12 @@
+{
+  "page": 2030,
+  "original_text": "TFactors = cftimes(Settle,Maturity) determines the time factors corresponding to the cash\nflows of a bond or set of bonds.",
+  "ocr_text": "TFactors=cftimes(Settle,Maturity)determinesthetimefactorscorrespondingtothecash\nflowsofabondorsetofbonds.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 257.71,
+    "x1": 552.52,
+    "y1": 281.34
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 2073
+================================================================================
+
+Previous quasi coupon date for a portfolio of NUMBONDS fixed income securities, whether or not the
+first or last coupon is normal, short, or long, returned as a NUMBONDS-by-1 vector of previous quasi-
+coupon dates before settlement. If settlement is a coupon date, this function returns the settlement
+date.

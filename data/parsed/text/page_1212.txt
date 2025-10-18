@@ -1,0 +1,65 @@
+F = drift(0, 0.1)      % Drift rate function F(t,X)
+
+F = 
+   Class DRIFT: Drift Rate Specification  
+   -------------------------------------  
+      Rate: drift rate function F(t,X(t)) 
+         A: 0
+         B: 0.1
+
+G = diffusion(1, 0.3)  % Diffusion rate function G(t,X)
+
+G = 
+   Class DIFFUSION: Diffusion Rate Specification 
+   --------------------------------------------- 
+       Rate: diffusion rate function G(t,X(t))  
+      Alpha: 1
+      Sigma: 0.3
+
+Each object displays like a MATLAB® structure and contains supplemental information, namely, the
+object's class and a brief description. However, in contrast to the SDE representation, a summary of
+the dimensionality of the model does not appear, because drift and diffusion objects create
+model components rather than models. Neither F nor G contains enough information to characterize
+the dimensionality of a problem.
+
+The drift object's displayed parameters are:
+
+•
+Rate: The drift-rate function, F t, Xt
+
+•
+A: The intercept term, A t, Xt , of F t, Xt
+
+•
+B: The first order term, B t, Xt , of F t, Xt
+
+A and B enable you to query the original inputs. The function stored in Rate fully encapsulates the
+combined effect of A and B.
+
+The diffusion object's displayed parameters are:
+
+•
+Rate: The diffusion-rate function, G t, Xt
+
+•
+Alpha: The state vector exponent, which determines the format of D t, Xt  of G t, Xt
+
+•
+Sigma: The volatility rate, V t, Xt , of G t, Xt
+
+Again, Alpha and Sigma enable you to query the original inputs. (The combined effect of the
+individual Alpha and Sigma parameters is fully encapsulated by the function stored in Rate.) The
+Rate functions are the calculation engines for the drift and diffusion objects, and are the only
+parameters required for simulation.
+
+Specify SDEDDO with Drift and Diffusion Functions
+
+The sdeddo object derives from the base sde object. To use this object, you must pass drift and
+diffusion objects to sdeddo.
+
+Create drift and diffusion rate objects.
+
+14
+Stochastic Differential Equations
+
+14-20

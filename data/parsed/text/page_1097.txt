@@ -1,0 +1,31 @@
+References
+
+[1] R. A. Jarrow. Finance Theory. Prentice-Hall, Inc., 1988.
+
+[2] J. Lintner. "The Valuation of Risk Assets and the Selection of Risky Investments in Stocks." Review
+of Economics and Statistics. Vol. 14, 1965, pp. 13-37.
+
+[3] W. F. Sharpe. "Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk."
+Journal of Finance. Vol. 19, 1964, pp. 425-442.
+
+[4] W. F. Sharpe, G. J. Alexander, and J. V. Bailey, Investments. 6th ed., Prentice-Hall, Inc., 1999.
+
+Utility Functions
+
+function displaySummary(regressionType, StartDate, EndDate, NumAssets, Assets, Alpha, StdAlpha, B
+fprintf(1,'%s regression with daily total return data from %s to %s ...\n', ...
+    regressionType, string(StartDate),string(EndDate));
+fprintf(1,'  %4s %-20s %-20s %-20s\n',' ','Alpha','Beta','Sigma');
+fprintf(1,'  ---- -------------------- -------------------- --------------------\n');
+
+for i = 1:NumAssets
+    fprintf('  %4s %9.4f (%8.4f) %9.4f (%8.4f) %9.4f (%8.4f)\n', ...
+        Assets{i},Alpha(i),abs(Alpha(i)/StdAlpha(i)), ...
+        Beta(i),abs(Beta(i)/StdBeta(i)),Sigma(i),StdSigma(i));
+end
+
+end
+
+Capital Asset Pricing Model with Missing Data
+
+9-39

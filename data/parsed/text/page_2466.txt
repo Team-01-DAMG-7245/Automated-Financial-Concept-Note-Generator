@@ -1,0 +1,43 @@
+dx — Decrement counts for N ages and num series
+matrix
+
+Decrement counts for N ages and num series, returned as an N-by-num matrix. The series dx is the
+number of people out of 100,000 alive at birth who die between age x and the next age in the series.
+For the last age, dx represent probabilities or counts for all ages after the last age.
+
+The last row of the N-by-num output for dx are values for all ages on or after the last age in x (due to
+“Forced Termination” on page 15-1160). Therefore, the last row of dx contains the remaining count of
+100,000 people alive at birth who have not died by the last age.
+
+More About
+
+Life Table
+
+A life table is a statistical table used in demography and actuarial science to summarize the mortality
+experience of a population.
+
+A life table provides a detailed breakdown of the probability of death and survival at various ages,
+allowing for the analysis of life expectancy and the assessment of the health status of a population.
+
+Forced Termination
+
+Most modern life tables have “forced” termination. Forced termination means that the last row of the
+life table applies for all persons with ages on or after the last age in the life table.
+
+This sample illustrates forced termination.
+
+In this case, the last row of the life table applies for all persons aged 100 or older. Specifically, qx
+probabilities are 1qx for ages less than 100 and, technically, ∞qx for age 100.
+
+Forced termination has terminal age values that apply to all ages after the terminal age so that lx is
+positive, qx is 1, and dx is positive. Ages after the terminal age are NaN values, although lx and dx
+can be 0 and qx can be 1 for input series. Forced termination is triggered by a naturally terminating
+series, the last age in a truncated series, or the first NaN value in a series.
+
+Version History
+Introduced in R2015a
+
+15
+Functions
+
+15-1160

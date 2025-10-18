@@ -1,0 +1,36 @@
+[CreditIndex(i),~,ExitFlag(i)] = fminunc(errorfun,0,options);
+end
+
+In general, one expects that higher credit indices correspond to riskier years. The series of credit
+indices found does not entirely match this pattern. There may be different reasons for this. First,
+transition probabilities may deviate from their long-term averages in different ways that may lead to
+confounding effects in the single parameter trying to capture these differences, the credit index.
+Having separate credit indices for IG and SG, for example, may help separate confounding effects.
+Second, a difference of five basis points may be very significant for the 'BBB' default rate, but not as
+important for the 'CCC' default rate, yet the norm used weights them equally. Other norms can be
+considered. Also, it is always a good idea to check the exit flags of optimization solvers, in case the
+algorithm could not find a solution. Here you get valid solutions for each year (all exit flags are 1).
+
+figure
+plot(Years,CreditIndex,'-d')
+hold on
+Example_RecessionBands
+hold off
+grid on
+xlabel('Year')
+ylabel('Shift')
+title('{\bf Credit Index}')
+
+The workflow above can be adapted to work with the series of credit indices instead of the series of
+corporate default rates. A model can be fit to predict a credit index for the following year, and a
+predicted transition matrix can be inferred and used for risk analyses.
+
+References
+
+[1] Altman, E., and E. Hotchkiss, Corporate Financial Distress and Bankruptcy, third edition, New
+Jersey: Wiley Finance, 2006.
+
+8
+Credit Risk Analysis
+
+8-42

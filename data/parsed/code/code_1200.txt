@@ -1,0 +1,16 @@
+Page 1227
+================================================================================
+
+GBM = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+     Dimensions: State = 6, Brownian = 6
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 100 (6x1 double array) 
+    Correlation: 6x6 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 6x6 diagonal double array
+          Sigma: 6x6 diagonal double array

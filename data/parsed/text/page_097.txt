@@ -1,0 +1,60 @@
+DT                 Mx13             5292  tall                                                 
+  DTPreview          Mx5              2926  tall                                                 
+  DTT                Mx12             5056  tall                                                 
+  DTTPreview         Mx4              2704  tall                                                 
+  LOB3Variables      1x12              952  string                                               
+  LOBFileName        1x1               262  string                                               
+  LOBPreview         8x5              2331  table                                                
+  MSGFileName        1x1               246  string                                               
+  TimeVariable       1x1               166  string                                               
+  date               1x1               182  string                                               
+  rem                1x1               246  string                                               
+  ticker             1x1               166  string
+
+Because all the data is in the datastore, the workspace uses little memory.
+
+Preprocess and Evaluate Data
+
+Tall arrays allow preprocessing, or queuing, of computations before they are evaluated, which
+improves memory management in the workspace.
+
+Midprice S and imbalance index I are used to model LOB dynamics. To queue their computations,
+define them, and the time base, in terms of DTT.
+
+timeBase = DTT.Time;
+MidPrice = (DTT.BidPrice1 + DTT.AskPrice1)/2;
+
+% LOB level 3 imbalance index:
+
+lambda  = 0.5; % Hyperparameter
+weights = exp(-(lambda)*[0 1 2]);
+VAsk = weights(1)*DTT.AskSize1 + weights(2)*DTT.AskSize2 + weights(3)*DTT.AskSize3;
+VBid = weights(1)*DTT.BidSize1 + weights(2)*DTT.BidSize2 + weights(3)*DTT.BidSize3;
+ImbalanceIndex = (VBid-VAsk)./(VBid+VAsk);
+
+The imbalance index is a weighted average of ask and bid volumes on either side of the midprice [3].
+The imbalance index is a potential indicator of future price movements. The variable lambda is a
+hyperparameter, which is a parameter specified before training rather than estimated by the machine
+learning algorithm. A hyperparameter can influence the performance of the model. Feature
+engineering is the process of choosing domain-specific hyperparameters to use in machine learning
+algorithms. You can tune hyperparameters to optimize a trading strategy.
+
+To bring preprocessed expressions into memory and evaluate them, use the gather function. This
+process is called deferred evaluation.
+
+[t,S,I] = gather(timeBase,MidPrice,ImbalanceIndex);
+
+Evaluating tall expression using the Local MATLAB Session:
+- Pass 1 of 1: Completed in 4.5 sec
+Evaluation completed in 5 sec
+
+A single call to gather evaluates multiple preprocessed expressions with a single pass through the
+datastore.
+
+Determine the sample size, which is the number of ticks, or updates, in the data.
+
+numTicks = length(t)
+
+Machine Learning for Statistical Arbitrage I: Data Management and Visualization
+
+2-53

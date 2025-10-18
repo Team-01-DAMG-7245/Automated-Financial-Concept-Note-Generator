@@ -1,0 +1,12 @@
+{
+  "page": 2295,
+  "original_text": "te = 0.08;\np = setTrackingError(p,te,weights);",
+  "ocr_text": "te=0.08;\np=setTrackingError(p,te,weights);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 601.13,
+    "x1": 279.63,
+    "y1": 622.4
+  },
+  "confidence": "high"
+}

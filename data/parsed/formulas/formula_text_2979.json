@@ -1,0 +1,12 @@
+{
+  "page": 1557,
+  "original_text": "% Sell the stock\n        new_weights(assetIdx) = 0;\n        % Set new buy-in price\n        user_data.BuyInPrice = assetPrice * (1 - user_data.BuyInPercent);\n    end",
+  "ocr_text": "Sell_thestock\n\nnew_weights(assetIdx)=0;\n\nSetnewbuy-inprice\n\nuser_data.BuyInPrice=assetPrice*(1-user_data.BuyInPercent);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 211.83,
+    "x1": 485.51,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

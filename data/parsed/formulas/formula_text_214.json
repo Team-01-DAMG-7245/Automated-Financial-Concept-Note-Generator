@@ -1,0 +1,12 @@
+{
+  "page": 132,
+  "original_text": "figure\ncm = confusionchart(yV,predYRLSTM);\ncm.NormalizedValues;\ncm.RowSummary = \"row-normalized\";\ncm.ColumnSummary = \"column-normalized\";\ncm.Title = \"Risky LSTM\";",
+  "ocr_text": "figure\ncm=confusionchart(yV,predYRLSTM);\ncm.NormalizedValues;\ncm.RowSummary=row-normalized;\ncm.ColumnSummary=column-normalized;\ncm.Title=RiskyLSTM;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 519.73,
+    "x1": 301.32,
+    "y1": 584.2
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1053,
+  "original_text": "dataTreated.ResStatus = fillmissing(dataTreated.ResStatus,'constant',string(modeResStatus));",
+  "ocr_text": "dataTreated.ResStatus=fillmissing(dataTreated.ResStatus,constant,string(modeResStatus));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.73,
+    "x1": 588.48,
+    "y1": 212.19
+  },
+  "confidence": "high"
+}

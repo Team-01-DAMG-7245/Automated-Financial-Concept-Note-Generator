@@ -1,0 +1,12 @@
+{
+  "page": 1977,
+  "original_text": "CouponRate = 0.0325; \nFutSettle = datetime(2024,4,12); \nMaturity = datetime(2055,5,25); \nPeriod = 1; \nBasis = 8; % Act/Act ICMA \nBusinessDayConvention = 'modifiedfollow';",
+  "ocr_text": "CouponRate=0.0325;\nFutSettle=datetime(2024,4,12);\nMaturity=datetime(2055,5,25);\nPeriod=1;\n\nBasis=8;Act/ActICMA\nBusinessDayConvention=modifiedfollow;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 300.3,
+    "x1": 317.58,
+    "y1": 364.76
+  },
+  "confidence": "high"
+}

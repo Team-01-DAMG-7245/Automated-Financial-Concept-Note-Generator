@@ -1,0 +1,12 @@
+{
+  "page": 1874,
+  "original_text": "SpreadInBP = bndspread(SpotInfo, Price, Coupon, Settle, ...\nMaturity, Period, Basis)",
+  "ocr_text": "SpreadInBP=bndspread(SpotInfo,Price,Coupon,Settle,...\nMaturity,Period,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 541.23,
+    "x1": 409.69,
+    "y1": 562.49
+  },
+  "confidence": "high"
+}

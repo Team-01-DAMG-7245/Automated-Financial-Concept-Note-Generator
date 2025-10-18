@@ -1,0 +1,12 @@
+{
+  "page": 777,
+  "original_text": "% Transaction costs\ncost = 3e-4; % 3 bps\nw0 = zeros(p.NumAssets,1);\nw0([1 2 3 4 16 18 19 20]) = 0.05;\nw0(110) = 0.1;\nw0(112) = 0.5;\np = setCosts(p,cost,cost,w0);",
+  "ocr_text": "Transactioncosts\ncost=3e-4;3bps\nwO=zeros(p.NumAssets,1);\nw0([123416181920])=0.05;\nw0(110)=0.1;\n\nw0(112)=0.5;\np=setCosts(p,cost,cost,w0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.24,
+    "x1": 268.8,
+    "y1": 200.51
+  },
+  "confidence": "high"
+}

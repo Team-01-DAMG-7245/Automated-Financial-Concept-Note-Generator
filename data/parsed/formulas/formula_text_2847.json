@@ -1,0 +1,12 @@
+{
+  "page": 1467,
+  "original_text": "obj = \n   Class SDE: Stochastic Differential Equation\n   -------------------------------------------\n     Dimensions: State = 1, Brownian = 1\n   -------------------------------------------\n      StartTime: 0",
+  "ocr_text": "obj=\nClassSDE:StochasticDifferentialEquation\nDimensions:State=1,Brownian=1\nStartTime:0",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 339.23,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 1337
+================================================================================
+
+Period = ones(NumAssets*NumPeriods,1);
+  for k = 1:NumPeriods
+      Period(k*NumAssets+1:end,1) = Period(k*NumAssets,1) + 1;
+  end

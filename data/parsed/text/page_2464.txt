@@ -1,0 +1,40 @@
+Input Arguments
+
+x — Increasing ages for raw data
+vector of nonnegative integers
+
+Increasing ages for raw data, specified as a N vector of nonnegative integer values. The ages must
+start at 0 (birth).
+
+Data Types: double
+
+a — Model parameters for num models
+matrix
+
+Model parameters for num models, specified as a numparam-by-num matrix, where the number of
+parameters (numparam) depends on the model specified using the lifemodel argument.
+
+Data Types: double
+
+lifemodel — Parametric mortality model type
+'heligman-pollard' (default) | character vector with values 'heligman-pollard', 'heligman-
+pollard-2''heligman-pollard-3', 'gompertz', 'makeham', 'siler'
+
+(Optional) Parametric mortality model type, specified as a character vector with one of the following
+values:
+
+•
+'heligman-pollard' — Eight-parameter Heligman-Pollard model (version 1), specified in terms
+of the discrete hazard function:
+
+q(x)
+1 −q(x) = A(x + B)C
++ Dexp( −E(log x
+F)
+2
+) + GHX
+
+15
+Functions
+
+15-1158

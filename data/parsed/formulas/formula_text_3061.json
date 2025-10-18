@@ -1,0 +1,12 @@
+{
+  "page": 1605,
+  "original_text": "% Plot the change of asset allocation over time\nt = backtester.Positions.InverseVariance.Time;\npositions = backtester.Positions.InverseVariance.Variables;\nh = area(t,positions);\ntitle('Inverse Variance Positions');\nxlabel('Date');\nylabel('Asset Positions');\nxtickformat('MM/dd');\nylim([0 12000])\nxlim([t(1) t(end)])\ncm = parula(numel(h));\nfor i = 1:numel(h)\n    set(h(i),'FaceColor',cm(i,:));\nend",
+  "ocr_text": "Plotthechangeofassetallocationovertime\n\nt_=backtester.Positions.InverseVariance.Time;\n\npositions=backtester.Positions.InverseVariance.Variables;\n\nh=area(t,positions);\n\ntitle(InverseVariancePositions);\n\nxlabel(Date);\n\nylabel(AssetPositions);\n\nxtickformat(MM/dd);\n\nylim([12000])\n\nxlim([t(1)t(end)])\n\ncm=parula(numel(h));\n\nfori=1:numel(h)\nset(h(i),FaceColor,cm(i,:));\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 285.63,
+    "x1": 409.66,
+    "y1": 436.49
+  },
+  "confidence": "high"
+}

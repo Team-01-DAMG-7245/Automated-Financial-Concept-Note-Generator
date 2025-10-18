@@ -1,0 +1,6 @@
+Page 1599
+================================================================================
+
+summaryTable = summary(backtester) generates a table of metrics to summarize the backtest.
+Each row of the table is a calculated metric and each column represents a strategy. You must run the
+summary function only after running the runBacktest function.

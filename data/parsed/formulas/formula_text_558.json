@@ -1,0 +1,12 @@
+{
+  "page": 373,
+  "original_text": "activReturn = assetReturn - benchReturn;\npAct = estimateAssetMoments(p,activReturn,'missingdata',false)",
+  "ocr_text": "activReturn=assetReturn-benchReturn;\npAct=estimateAssetMoments(p,activReturn,missingdata,false)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 214.87,
+    "x1": 425.94,
+    "y1": 236.14
+  },
+  "confidence": "high"
+}

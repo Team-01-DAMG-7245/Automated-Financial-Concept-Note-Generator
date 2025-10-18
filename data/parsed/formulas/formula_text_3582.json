@@ -1,0 +1,12 @@
+{
+  "page": 2022,
+  "original_text": "Spread = cfspread( ___ ,Name,Value) specifies options using one or more name-value pair\narguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "Spread=cfspread( ,Name,Value)specifiesoptionsusingoneormorename-valuepair\nargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 290.33,
+    "x1": 534.07,
+    "y1": 313.96
+  },
+  "confidence": "high"
+}

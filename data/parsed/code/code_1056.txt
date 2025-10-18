@@ -1,0 +1,7 @@
+Page 1086
+================================================================================
+
+for i = 1:NumAssets
+% Set up separate asset data and design matrices
+  TestData = zeros(NumSamples,1);
+  TestDesign = zeros(NumSamples,2);

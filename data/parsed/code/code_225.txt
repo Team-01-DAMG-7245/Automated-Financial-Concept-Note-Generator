@@ -1,0 +1,7 @@
+Page 217
+================================================================================
+
+This example shows how the estimateAssetMoments function also accepts asset returns or prices
+stored in a table or timetable. estimateAssetMoments implicitly works with matrices of data or
+data in a table or timetable object using the same rules for whether the data are returns or
+prices.

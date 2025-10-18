@@ -1,0 +1,12 @@
+{
+  "page": 506,
+  "original_text": "% Boxchart of portfolio weights\nfigure;\nmatBoxPlot = reweightedTable.Variables;\nmatBoxPlot(matBoxPlot == 0) = NaN;\nboxchart(matBoxPlot)\nxticklabels(varNames)\ntitle('Weights Distribution')\nxlabel('Strategies')\nylabel('Weight')",
+  "ocr_text": "Boxchartofportfolioweights\n\nfigure;\nmatBoxPlot=reweightedTable.Variables;\nmatBoxPlot(matBoxPlot==0)=NaN;\nboxchart(matBoxPlot)\nxticklabels(varNames)\ntitle(WeightsDistribution)\nxlabel(Strategies)\n\nylabel(Weight)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.92,
+    "x1": 301.3,
+    "y1": 235.79
+  },
+  "confidence": "high"
+}

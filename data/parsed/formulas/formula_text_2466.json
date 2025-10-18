@@ -1,0 +1,12 @@
+{
+  "page": 1275,
+  "original_text": "strike   = sum(X);                   % Initialize an at-the-money basket",
+  "ocr_text": "strike=sum(X); Initializeanat-the-moneybasket",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 480.11,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

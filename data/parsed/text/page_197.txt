@@ -1,0 +1,20 @@
+This way works because the calls to Portfolio are in this particular order. In this case, the call to
+initialize AssetMean and AssetCovar provides the dimensions for the problem. If you were to do
+this step last, you would have to explicitly dimension the LowerBound property as follows:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+p = Portfolio;
+p = Portfolio(p, 'LowerBound', zeros(size(m)));
+p = Portfolio(p, 'LowerBudget', 1, 'UpperBudget', 1);
+p = Portfolio(p, 'AssetMean', m, 'AssetCovar', C);
+ 
+plotFrontier(p)
+
+Creating the Portfolio Object
+
+4-29

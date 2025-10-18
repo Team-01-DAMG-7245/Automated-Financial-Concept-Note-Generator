@@ -1,0 +1,12 @@
+{
+  "page": 999,
+  "original_text": "sc = modifybins(sc,'CustIncome','BinLabels',...\n{'Up to 28999' '29000 to 32999' '33000 to 41999' '42000 to 46999' '47000 and up'});",
+  "ocr_text": "sc_=modifybins(sc,CustIncome,BinLabels,...\n{Upto28999_29000to3299933000to4199942000to4699947000andup});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 288.58,
+    "x1": 539.73,
+    "y1": 309.85
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 867
+================================================================================
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = setInitPort(p, pwgt0);
+[pwgt, pbuy, psell] = estimateFrontierLimits(p);
+    
+display(pwgt)

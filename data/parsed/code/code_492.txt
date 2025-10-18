@@ -1,0 +1,12 @@
+Page 469
+================================================================================
+
+% Compute the risk parity portfolio within each cluster.
+W = zeros(nAssets,nClusters);
+for i = 1:nClusters
+    % Identify assets in cluster i and the sub-covariance matrix.
+    idx = T == i;
+    tempSigma = Sigma(idx,idx);
+    % Compute the risk parity portfolio of cluster i.
+    W(idx,i) = riskBudgetingPortfolio(tempSigma);
+end

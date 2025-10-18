@@ -1,0 +1,12 @@
+{
+  "page": 751,
+  "original_text": "% Length (in years) of the simulation\nT = date2time(Valuation, Horizon, 1, 1);",
+  "ocr_text": "SLength(inyears)ofthesimulation\nT=date2time(Valuation,Horizon,1,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.82,
+    "x1": 306.72,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

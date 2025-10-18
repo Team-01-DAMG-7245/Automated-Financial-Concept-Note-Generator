@@ -1,0 +1,12 @@
+{
+  "page": 2305,
+  "original_text": "ans = struct with fields:\n                           MaxIterations: 1000\n                    AbsoluteGapTolerance: 1.0000e-07",
+  "ocr_text": "ans=structwithfields:\nMaxIterations:_1000\nAbsoluteGapTolerance:_1.0000e-07",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 371.73,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

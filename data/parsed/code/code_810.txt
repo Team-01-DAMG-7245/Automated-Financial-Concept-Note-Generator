@@ -1,0 +1,8 @@
+Page 764
+================================================================================
+
+To do so, use the sratio function, defined in the Local Functions on page 5-139 section, to return
+the negative reward-to-risk ratio for a target return. Then, pass this function to fminbnd. fminbnd
+iterates through the possible return values and evaluates their associated reward-to-risk ratio.
+fminbnd returns the optimal return for which the maximum reward-to-risk ratio is achieved (or that
+minimizes the negative of the reward-to-risk ratio).

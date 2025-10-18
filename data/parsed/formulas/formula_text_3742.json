@@ -1,0 +1,12 @@
+{
+  "page": 2119,
+  "original_text": "NumberDays = days252bus(datetime(2009,1,1), datetime(2009,8,1))",
+  "ocr_text": "NumberDays=days252bus(datetime(2009,1,1),datetime(2009,8,1))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 442.92,
+    "x1": 431.34,
+    "y1": 453.38
+  },
+  "confidence": "high"
+}

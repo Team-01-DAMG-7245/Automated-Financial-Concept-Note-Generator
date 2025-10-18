@@ -1,0 +1,12 @@
+{
+  "page": 1105,
+  "original_text": "PortfolioDuration  = Weights' * Durations",
+  "ocr_text": "PortfolioDuration=Weights*Durations",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 428.65,
+    "x1": 312.14,
+    "y1": 439.12
+  },
+  "confidence": "high"
+}

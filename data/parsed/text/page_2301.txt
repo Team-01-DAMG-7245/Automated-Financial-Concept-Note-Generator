@@ -1,0 +1,56 @@
+TolX — Tolerance on the step size for fminbnd convergence when using 'iterative'
+method
+1e-8 (default) | positive scalar
+
+Tolerance on the step size for fminbnd convergence when using 'iterative' method, specified as
+the comma-separated pair consisting of 'TolX' and a positive scalar. The step size is related to the
+return levels achieved on the efficient frontier and tried by fminbnd. If the specified TolX is large
+compared to the range of returns, the accuracy of the solution is poor. TolX should be a number
+smaller than 0.01*(maxReturn - minReturn).
+
+Note If the 'direct' method is selected, TolX is ignored.
+
+Data Types: double
+
+Output Arguments
+
+pwgt — Portfolio on efficient frontier with maximum Sharpe ratio
+vector
+
+Portfolio on the efficient frontier with a maximum Sharpe ratio, returned as a NumAssets vector.
+
+pbuy — Purchases relative to initial portfolio for portfolio on efficient frontier with
+maximum Sharpe ratio
+vector
+
+Purchases relative to an initial portfolio for a portfolio on the efficient frontier with a maximum
+Sharpe ratio, returned as a NumAssets vector.
+
+pbuy is returned for a Portfolio input object (obj).
+
+psell — Sales relative to initial portfolio for portfolio on efficient frontier with maximum
+Sharpe ratio
+vector
+
+Sales relative to an initial portfolio for a portfolio on the efficient frontier with maximum Sharpe ratio,
+returned as a NumAssets vector.
+
+psell is returned for a Portfolio input object (obj).
+
+More About
+
+Sharpe Ratio
+
+The Sharpe ratio is the ratio of the difference between the mean of portfolio returns and the risk-free
+rate divided by the standard deviation of portfolio returns.
+
+The estimateMaxSharpeRatio function maximizes the Sharpe ratio among portfolios on the
+efficient frontier.
+
+Tips
+
+You can also use dot notation to estimate an efficient portfolio that maximizes the Sharpe ratio.
+
+estimateMaxSharpeRatio
+
+15-995

@@ -1,0 +1,12 @@
+{
+  "page": 333,
+  "original_text": "awgt = estimateFrontierByReturn(p,TargetReturn/12);\n[arsk,aret] = estimatePortMoments(p,awgt);",
+  "ocr_text": "awgt=estimateFrontierByReturn(p,TargetReturn/12);\n[arsk,aret]=estimatePortMoments(p,awgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 214.86,
+    "x1": 366.32,
+    "y1": 236.13
+  },
+  "confidence": "high"
+}

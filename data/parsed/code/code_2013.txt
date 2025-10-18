@@ -1,0 +1,17 @@
+Page 1605
+================================================================================
+
+% Plot the change of asset allocation over time
+t = backtester.Positions.InverseVariance.Time;
+positions = backtester.Positions.InverseVariance.Variables;
+h = area(t,positions);
+title('Inverse Variance Positions');
+xlabel('Date');
+ylabel('Asset Positions');
+xtickformat('MM/dd');
+ylim([0 12000])
+xlim([t(1) t(end)])
+cm = parula(numel(h));
+for i = 1:numel(h)
+    set(h(i),'FaceColor',cm(i,:));
+end

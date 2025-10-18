@@ -1,0 +1,6 @@
+Page 1065
+================================================================================
+
+Each sample zk for k = 1, ..., m, is either complete with no missing values, empty with no observed
+values, or incomplete with both observed and missing values. Empty samples are ignored since they
+contribute no information.

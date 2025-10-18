@@ -1,0 +1,66 @@
+Setting Group Ratio Constraints Using the setGroupRatio and
+addGroupRatio Functions
+
+You can also set the properties for group ratio constraints using setGroupRatio. For example,
+assume that you want the ratio of financial to nonfinancial companies in your portfolios to never go
+above 50%. Suppose that you have six assets with three financial companies (assets 1–3) and three
+nonfinancial companies (assets 4–6). Given a Portfolio object p, use setGroupRatio to set the
+group constraints:
+
+GA = [ true true true false false false ];   % financial companies
+GB = [ false false false true true true ];   % nonfinancial companies
+p = Portfolio;
+p = setGroupRatio(p, GA, GB, [], 0.5);
+disp(p.NumAssets)
+disp(p.GroupA)
+disp(p.GroupB)
+disp(p.UpperRatio)
+
+6
+
+1     1     1     0     0     0
+
+0     0     0     1     1     1
+
+0.5000
+
+In this example, you would set the LowerRatio property to be empty ([]).
+
+Suppose that you want to add another group ratio constraint to ensure that the weights in odd-
+numbered assets constitute at least 20% of the weights in nonfinancial assets your portfolio. You can
+set up augmented group ratio matrices and introduce infinite bounds for unconstrained group ratio
+bounds, or you can use the addGroupRatio function to build up group ratio constraints. For this
+example, create another group matrix for the second group constraint:
+
+p = Portfolio;
+GA = [ true true true false false false ];   % financial companies
+GB = [ false false false true true true ];   % nonfinancial companies
+p = setGroupRatio(p, GA, GB, [], 0.5);
+
+GA = [ true false true false true false ];   % odd-numbered companies
+GB = [ false false false true true true ];   % nonfinancial companies
+p = addGroupRatio(p, GA, GB, 0.2);
+
+disp(p.NumAssets)
+disp(p.GroupA)
+disp(p.GroupB)
+disp(p.LowerRatio)
+disp(p.UpperRatio)
+
+6
+
+1     1     1     0     0     0
+1     0     1     0     1     0
+
+0     0     0     1     1     1
+0     0     0     1     1     1
+
+-Inf
+0.2000
+
+0.5000
+  Inf
+
+Working with Group Ratio Constraints Using Portfolio Object
+
+4-73

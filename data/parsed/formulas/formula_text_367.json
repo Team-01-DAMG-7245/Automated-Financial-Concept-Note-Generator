@@ -1,0 +1,12 @@
+{
+  "page": 231,
+  "original_text": "p = Portfolio;\np = setBounds(p, 0, 0.05, 'NumAssets', 500,'BoundType','Simple');",
+  "ocr_text": "p=Portfolio;\np=setBounds(p,0,0.05,NumAssets,500,BoundType,Simple);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 357.69,
+    "x1": 442.19,
+    "y1": 378.96
+  },
+  "confidence": "high"
+}

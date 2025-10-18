@@ -1,0 +1,37 @@
+nX = size(portWeights,1); % Number of assets
+nP = size(portWeights,2); % Number of portfolios
+
+riskContribution = zeros(nX,nP);
+for i = 1:nP
+    weights = portWeights(:,i);
+    % Portfolio variance
+    portVar = weights'*Sigma*weights;
+    % Marginal constribution to portfoli risk (MCR)
+    margRiskCont = weights.*(Sigma*weights)/sqrt(portVar);
+    % Percent contribution to portfolio risk
+    riskContribution(:,i) = margRiskCont/sqrt(portVar);
+end
+
+end
+
+See Also
+estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk
+
+Related Examples
+
+•
+“Diversify ESG Portfolios” on page 4-271
+
+•
+“Diversify Portfolios Using Optimization Toolbox”
+
+More About
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-342

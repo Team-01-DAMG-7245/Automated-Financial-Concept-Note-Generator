@@ -1,0 +1,6 @@
+Page 1075
+================================================================================
+
+Without missing data, you can estimate the mean of your Data with the function mean and the
+covariance with the function cov. Nevertheless, the function ecmnmle does this for you if it detects
+an absence of missing values. Otherwise, it uses the ECM algorithm to handle missing values.

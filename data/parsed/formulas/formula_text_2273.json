@@ -1,0 +1,12 @@
+{
+  "page": 1168,
+  "original_text": "nTrials = 1000;                                  % Number of independent random trials\nhorizon = size(Data,1);                          % Simulation horizon",
+  "ocr_text": "nTrials=1000; SNumberofindependentrandomtrials\nhorizon=size(Data,1); SSimulationhorizon",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 158.83,
+    "x1": 555.97,
+    "y1": 180.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,63 @@
+LowerRatio =
+
+[]
+
+UpperRatio = 
+0.5000
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+Output Arguments
+
+GroupA — Matrix that forms base groups for comparison
+matrix
+
+Matrix that forms base groups for comparison, returned as a matrix for a Portfolio,
+PortfolioCVaR, or PortfolioMAD input object (obj).
+
+GroupB — Matrix that forms comparison groups
+matrix
+
+Matrix that forms comparison groups, returned as a matrix Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+LowerRatio — Lower bound for ratio of GroupB groups to GroupA groups
+vector
+
+Lower bound for ratio of GroupB groups to GroupA groups, returned as a vector for a Portfolio,
+PortfolioCVaR, or PortfolioMAD input object (obj).
+
+UpperRatio — Upper bound for ratio of GroupB groups to GroupA groups
+vector
+
+Upper bound for ratio of GroupB groups to GroupA groups, returned as a vector for a Portfolio,
+PortfolioCVaR, or PortfolioMAD input object (obj).
+
+More About
+
+Group Ratio Constraints
+
+Group ratio constraints specify that the total weight or allocation of assets within a particular group
+must satisfy certain conditions relative to the total portfolio.
+
+15
+Functions
+
+15-1096

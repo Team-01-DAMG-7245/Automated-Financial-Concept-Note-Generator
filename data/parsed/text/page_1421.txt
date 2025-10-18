@@ -1,0 +1,60 @@
+Discount the payoff back to the present value and then average the payoff value to estimate the
+option price.
+
+% Discount payoff back to present value and then average payoff value
+DiscountedPayoffs = exp(-r * T) * Payoffs;
+
+OptionPrice = mean(DiscountedPayoffs);
+
+Display the estimated price for the call option.
+
+% Display results
+disp(['Estimated Europen option price using Monte Carlo simulation: ', num2str(OptionPrice)]);
+
+Estimated Europen option price using Monte Carlo simulation: 40.0231
+
+Input Arguments
+
+MDL — Geometric Brownian motion (GBM) model
+gbm object
+
+Geometric Brownian motion (GBM) model, specified as a gbm object that is created using gbm.
+
+Data Types: object
+
+NPeriods — Number of simulation periods
+positive integer
+
+Number of simulation periods, specified as a positive scalar integer. The value of NPeriods
+determines the number of rows of the simulated output series.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [Paths,Times,Z] =
+simBySolution(GBM,NPeriods,'DeltaTime',dt,'NTrials',10)
+
+NTrials — Simulated trials (sample paths) of NPERIODS observations each
+1 (single path of correlated state variables) (default) | positive integer
+
+Simulated trials (sample paths) of NPERIODS observations each, specified as the comma-separated
+pair consisting of 'NTrials' and a positive scalar integer.
+
+Data Types: double
+
+DeltaTime — Positive time increments between observations
+1 (default) | scalar | column vector
+
+Positive time increments between observations, specified as the comma-separated pair consisting of
+'DeltaTime' and a scalar or a NPERIODS-by-1 column vector.
+
+simBySolution
+
+15-115

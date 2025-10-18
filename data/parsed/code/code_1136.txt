@@ -1,0 +1,8 @@
+Page 1180
+================================================================================
+
+weeklyOpen = retime(TMW(:,'Open'),'weekly','firstvalue');
+weeklyHigh = retime(TMW(:,'High'),'weekly','max');
+weeklyLow = retime(TMW(:,'Low'),'weekly','min');
+weeklyClose = retime(TMW(:,'Close'),'weekly','lastvalue');
+weeklyTMW = [weeklyOpen,weeklyHigh,weeklyLow,weeklyClose];

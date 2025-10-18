@@ -1,0 +1,12 @@
+{
+  "page": 211,
+  "original_text": "0.00408 0.0289 0.0204 0.0119;\n      0.00192 0.0204 0.0576 0.0336;\n      0 0.0119 0.0336 0.1225 ];\nm = m/12;\nC = C/12;\n \np = Portfolio;\np = Portfolio(p, 'AssetMean', m);\np = Portfolio(p, 'AssetCovar', C);\n[assetmean, assetcovar] = p.getAssetMoments",
+  "ocr_text": "0.004080.02890.02040.0119;\n0.001920.02040.05760.0336;\n00.01190.03360.1225];\nm=m/12;\nC=C/12;\np=Portfolio;\np=Portfolio(p,AssetMean,m);\np=Portfolio(p,AssetCovar,C);\n[assetmean,assetcovar]=p.getAssetMoments",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 322.97,
+    "y1": 200.69
+  },
+  "confidence": "high"
+}

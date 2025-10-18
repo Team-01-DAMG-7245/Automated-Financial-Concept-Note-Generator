@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "function new_weights = rsiRebalanceFcn(current_weights, pricesTT, signalTT)\n% Buy and sell on 1 and -1 rebalance function.",
+  "ocr_text": "functionnew_weights=rsiRebalanceFcn(current_weights,pricesTT,signalTT)\nSBuyandsellon1and-1rebalancefunction.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 297.83,
+    "x1": 496.35,
+    "y1": 319.09
+  },
+  "confidence": "high"
+}

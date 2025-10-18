@@ -1,0 +1,63 @@
+MaxSteps: 3516
+             NumSimulations: 1
+                StopOnError: "on"
+      SimulationStorageType: "memory"
+    SaveSimulationDirectory: "savedSims"
+            SaveFileVersion: "-v7"
+                UseParallel: 0
+     ParallelizationOptions: [1×1 rl.option.ParallelSimulation]
+
+Trained_Agent_Sell = DQN_agent_Sell_Trained;
+experience_Sell = sim(RL_OptimalExecution_Training_Environment_Sell,Trained_Agent_Sell,simOptions
+
+Reset!
+Last Horizon. Episode is Done!
+HorizonIdx:
+
+ans = 
+293
+
+SimAction_Train_Sell = squeeze(experience_Sell.Action.TradingAction_NumberOfShares_.Data);
+
+Compute the IS using simulated actions on the training data.
+
+NumSimSteps = length(SimAction_Train_Sell);
+SimInventory_Train_Sell = nan(NumSimSteps,1);
+SimExecutedShares_Train_Sell = SimInventory_Train_Sell;
+SimReward_Train_Sell = nan(NumSimSteps,1);
+
+reset(RL_OptimalExecution_Training_Environment_Sell);
+
+Reset!
+
+for k=1:NumSimSteps
+    [~,SimReward_Train_Sell(k),~,LoggedSignals] = ...
+        step(RL_OptimalExecution_Training_Environment_Sell,SimAction_Train_Sell(k));
+    SimInventory_Train_Sell(k) = LoggedSignals.CurrentInventoryShares;
+    SimExecutedShares_Train_Sell(k) = sum(LoggedSignals.ExecutedShares);
+end
+
+Last Horizon. Episode is Done!
+HorizonIdx:
+
+ans = 
+293
+
+IS_Agent_Step_Train_Sell = LoggedSignals.IS_Agent;
+IS_Agent_Horizon_Train_Sell = IS_Agent_Step_Train_Sell( ....
+    NumIntervalsPerHorizon:NumIntervalsPerHorizon:NumTrainingSteps);
+
+Plot Training Results for Sell Trades
+
+Plot Implementation Shortfall (IS), executed shares, and inventory shares for the agent for each step
+using training data.
+
+figure
+subplot(3,1,1)
+bar(1:NumTrainingSteps, IS_Agent_Step_Train_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTrainingSteps), " steps total.)"))
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-423

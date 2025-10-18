@@ -1,0 +1,18 @@
+Plot Mean Variance Efficient Portfolio on CVaR Frontier
+
+The following plot displays that the target portfolio is below the mean-CVaR efficient frontier.
+
+% Obtain CVaR risk for mean variance target return portfolio
+pretTargetCVaR = p.estimatePortReturn(pwgtmvTarget); % Should be TargetRet
+priskTargetCVaR = p.estimatePortRisk(pwgtmvTarget);  % Risk proxy is CVaR
+
+% Plot target return portfolio onto mean-CVaR frontier
+figure;
+p.plotFrontier(pwgt);
+hold on
+scatter(priskTargetCVaR,pretTargetCVaR);
+hold off
+
+Hedge Using Monte Carlo Simulation
+
+10-59

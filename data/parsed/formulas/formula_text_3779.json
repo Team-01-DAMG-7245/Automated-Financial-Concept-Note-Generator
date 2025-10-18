@@ -1,0 +1,12 @@
+{
+  "page": 2136,
+  "original_text": "MoreDays = [datetime(2002,9,7) ; datetime(2002,10,22) ; datetime(2002,11,5)];\nNumDays = daysact(MoreDays, '12/25/2002')",
+  "ocr_text": "MoreDays=[datetime(2002,9,7);datetime(2002,10,22)_;datetime(2002,11,5)];\nNumDays=daysact(MoreDays,12/25/2002)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 645.64,
+    "x1": 507.18,
+    "y1": 666.91
+  },
+  "confidence": "high"
+}

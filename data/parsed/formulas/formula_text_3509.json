@@ -1,0 +1,12 @@
+{
+  "page": 1956,
+  "original_text": "netting = swaps.NettingID(cpIdx);\nexposures = creditexposures(cpValues,cpID,'NettingID',netting);",
+  "ocr_text": "netting=swaps.NettingID(cpIdx);\nexposures=creditexposures(cpValues,cpID,NettingID,netting);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 381.13,
+    "x1": 431.36,
+    "y1": 402.4
+  },
+  "confidence": "high"
+}

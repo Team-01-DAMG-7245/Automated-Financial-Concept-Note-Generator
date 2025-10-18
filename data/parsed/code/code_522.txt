@@ -1,0 +1,5 @@
+Page 489
+================================================================================
+
+function weights = computeEqualCategory(asset_categories)
+% Equal category weight portfolio allocation

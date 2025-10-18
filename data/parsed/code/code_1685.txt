@@ -1,0 +1,5 @@
+Page 1481
+================================================================================
+
+As a deterministic function of time, when Alpha is called with a real-valued scalar time t as its only
+input, Alpha must produce an NVars-by-1 matrix.

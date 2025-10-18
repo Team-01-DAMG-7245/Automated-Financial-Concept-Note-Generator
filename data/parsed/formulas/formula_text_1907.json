@@ -1,0 +1,12 @@
+{
+  "page": 965,
+  "original_text": "figure\nplot(x,normcdf(x),'m','LineWidth',1.5)\ntext(centersX(1),0.2,labels{1},'FontSize',fs(1), ...\n   'HorizontalAlignment','center')\nfor i=2:length(labels)\n   val = thresCCC(i);\n   line([val val],[0 normcdf(val)],'LineStyle',':');\n   line([x(1) val],[normcdf(val) normcdf(val)],'LineStyle',':');\n   text(centersX(i),0.2,labels{i},'FontSize',fs(i), ...\n      'HorizontalAlignment','center')\nend\nxlabel('Credit Quality Thresholds')\nylabel('Cumulative Probability')\ntitle('{\\bf Visualization of Credit Quality Thresholds}')\nlegend('Std Normal CDF','Location','W')",
+  "ocr_text": "figure\n\nplot(x,normcdf(x),m,LineWidth,1.5)\n\ntext(centersX(1),0.2,labels{1},FontSize,fs(1),...\nHorizontalAlignment,center)\n\nfori=2:length(labels)\nval_=thresCCC(i);\nLline([val_val],[0normcdf(val)],LineStyle,:);\nLine([x(1)val],[normcdf(val)normcdf(val)],LineStyle,:);\ntext(centersX(i),0.2,labels{i},FontSize,fs(i),...\n\nHorizontalAlignment,center)\n\nend\n\nxlabel(CreditQualityThresholds)\n\nylabel(CumulativeProbability)\n\ntitle({bfVisualizationofCreditQualityThresholds})\n\nlegend(StdNormalCDF,Location,W)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 532.93,
+    "x1": 436.78,
+    "y1": 694.6
+  },
+  "confidence": "high"
+}

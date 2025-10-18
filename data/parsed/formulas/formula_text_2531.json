@@ -1,0 +1,12 @@
+{
+  "page": 1292,
+  "original_text": "•\nIn many typical applications, 0 . 90 ≤λ ≤0 . 99. In this example, you take λ = 0 . 94.",
+  "ocr_text": "*Inmanytypicalapplications,0.90sAs0.99.Inthisexample,youtakeA=0.94.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.3,
+    "x1": 486.83,
+    "y1": 199.94
+  },
+  "confidence": "high"
+}

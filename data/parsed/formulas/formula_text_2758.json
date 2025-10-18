@@ -1,0 +1,12 @@
+{
+  "page": 1397,
+  "original_text": "DiffusionRate = diffusion(Alpha,Sigma) creates default DiffusionRate model\ncomponent.",
+  "ocr_text": "DiffusionRate=diffusion(Alpha,Sigma)createsdefaultDiffusionRatemodel\ncomponent.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 197.92,
+    "x1": 502.01,
+    "y1": 221.55
+  },
+  "confidence": "high"
+}

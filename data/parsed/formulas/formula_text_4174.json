@@ -1,0 +1,12 @@
+{
+  "page": 2343,
+  "original_text": "•\nWhen N = NumQuantiles, the color of each fan is specified by the corresponding row in the\nmatrix.",
+  "ocr_text": "*WhenN=NumQuantiles,thecolorofeachfanisspecifiedbythecorrespondingrowinthe\nmatrix.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 183.96,
+    "x1": 528.83,
+    "y1": 207.59
+  },
+  "confidence": "high"
+}

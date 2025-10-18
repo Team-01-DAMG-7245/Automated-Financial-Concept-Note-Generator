@@ -1,0 +1,61 @@
+Prices  =  CleanPrice + AccruedInterest
+
+Prices = 3×1
+
+117.7622
+  101.1534
+  763.3932
+
+Shift Yield Curve
+
+Choose a hypothetical amount by which to shift the yield curve (here, 0.2 percentage point or 20
+basis points).
+
+dY = 0.002;
+
+Weight the three bonds equally, and calculate the actual quantity of each bond in the portfolio, which
+has a total value of $100,000.
+
+PortfolioPrice   = 100000;
+PortfolioWeights = ones(3,1)/3;
+PortfolioAmounts = PortfolioPrice * PortfolioWeights ./ Prices
+
+PortfolioAmounts = 3×1
+
+283.0562
+  329.5324
+   43.6647
+
+Calculate Modified Duration and Convexity for Portfolio
+
+Calculate the modified duration and convexity of the portfolio. The portfolio duration or convexity is a
+weighted average of the durations or convexities of the individual bonds. Calculate the first- and
+second-order approximations of the percent price change as a function of the change in the level of
+interest rates.
+
+PortfolioDuration  = PortfolioWeights' * Durations;
+PortfolioConvexity = PortfolioWeights' * Convexities;
+PercentApprox1 = -PortfolioDuration * dY * 100
+
+PercentApprox1 = 
+-2.0636
+
+PercentApprox2 =  PercentApprox1 + ...
+PortfolioConvexity*dY^2*100/2.0
+
+PercentApprox2 = 
+-2.0321
+
+Estimate Portfolio Price
+
+Estimate the new portfolio price using the two estimates for the percent price change.
+
+PriceApprox1  =  PortfolioPrice + ... 
+PercentApprox1 * PortfolioPrice/100
+
+PriceApprox1 = 
+9.7936e+04
+
+Sensitivity of Bond Prices to Interest Rates
+
+10-3

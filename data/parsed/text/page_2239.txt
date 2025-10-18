@@ -1,0 +1,60 @@
+0.0004
+    0.0011
+
+AssetCovar = AssetCovar/12
+
+AssetCovar = 3×3
+10-3 ×
+
+0.2705    0.0192    0.3503
+    0.0192    0.0416    0.0160
+    0.3503    0.0160    0.6367
+
+X = portsim(AssetMean', AssetCovar, 120);
+
+p = Portfolio('AssetMean',AssetMean, 'AssetCovar', AssetCovar);
+p = setDefaultConstraints(p);
+
+Use setBounds with semi-continuous constraints to set xi=0 or 0.02<=xi<=0.5 for all
+i=1,...NumAssets.
+
+p = setBounds(p, 0.02, 0.5,'BoundType', 'Conditional', 'NumAssets', 3);
+
+When working with a Portfolio object, the setMinMaxNumAssets function enables you to set up
+cardinality constraints for a long-only portfolio. This sets the cardinality constraints for the
+Portfolio object, where the total number of allocated assets satisfying the nonzero semi-continuous
+constraints are between MinNumAssets and MaxNumAssets. By setting
+MinNumAssets=MaxNumAssets=2, only two of the three assets are invested in the portfolio.
+
+p = setMinMaxNumAssets(p, 2, 2);
+
+Use estimateAssetMoments to estimate mean and covariance of asset returns from data for a
+Portfolio object.
+
+p = estimateAssetMoments(p, X);
+[passetmean, passetcovar] = getAssetMoments(p)
+
+passetmean = 3×1
+
+0.0008
+    0.0004
+    0.0011
+
+passetcovar = 3×3
+10-3 ×
+
+0.2705    0.0192    0.3503
+    0.0192    0.0416    0.0160
+    0.3503    0.0160    0.6367
+
+The estimateAssetMoments function uses the MINLP solver to solve this problem. Use the
+setSolverMINLP function to configure the SolverType and options.
+
+p.solverOptionsMINLP
+
+ans = struct with fields:
+                           MaxIterations: 1000
+
+estimateAssetMoments
+
+15-933

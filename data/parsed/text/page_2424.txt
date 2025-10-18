@@ -1,0 +1,92 @@
+Color Name
+Short Name
+RGB Triplet
+Hexadecimal
+Color Code
+
+Appearance
+
+"red"
+"r"
+[1 0 0]
+"#FF0000"
+
+"green"
+"g"
+[0 1 0]
+"#00FF00"
+
+"blue"
+"b"
+[0 0 1]
+"#0000FF"
+
+"cyan"
+"c"
+[0 1 1]
+"#00FFFF"
+
+"magenta"
+"m"
+[1 0 1]
+"#FF00FF"
+
+"yellow"
+"y"
+[1 1 0]
+"#FFFF00"
+
+"black"
+"k"
+[0 0 0]
+"#000000"
+
+"white"
+"w"
+[1 1 1]
+"#FFFFFF"
+
+This table lists the default color palettes for plots in the light and dark themes.
+
+Palette
+Palette Colors
+
+"gem" — Light theme default
+
+Most plots use these colors by default.
+
+"glow" — Dark theme default
+
+You can get the RGB triplets and hexadecimal color codes for these palettes using the
+orderedcolors and rgb2hex functions. For example, get the RGB triplets for the "gem" palette
+and convert them to hexadecimal color codes.
+
+RGB = orderedcolors("gem");
+H = rgb2hex(RGB);
+
+Get the RGB triplets using RGB = get(groot,"FactoryAxesColorOrder").
+
+Get the hexadecimal color codes using H = compose("#%02X%02X%02X",round(RGB*255)).
+
+Data Types: double | string
+
+ax — Valid axis object
+current axes (ax = gca) (default) | axes object
+
+(Optional) Valid axis object, specified as an axes object. The highlow plot is created in the axes
+specified by ax instead of in the current axes (ax = gca). The option ax can precede any of the input
+argument combinations.
+
+Data Types: object
+
+Output Arguments
+
+h — Graphic handle of the figure
+handle object
+
+Graphic handle of the figure, returned as a handle object.
+
+15
+Functions
+
+15-1118

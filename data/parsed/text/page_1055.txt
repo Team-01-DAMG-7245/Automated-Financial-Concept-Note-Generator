@@ -1,0 +1,62 @@
+{'CustIncome'}    {'[-Inf,29000)'     }    29.906
+    {'CustIncome'}    {'[29000,33000)'    }    56.219
+    {'CustIncome'}    {'[33000,35000)'    }    67.938
+    {'CustIncome'}    {'[35000,40000)'    }    70.123
+    {'CustIncome'}    {'[40000,42000)'    }    70.931
+    {'CustIncome'}    {'[42000,47000)'    }      82.3
+    {'CustIncome'}    {'[47000,Inf]'      }    96.647
+    {'CustIncome'}    {'<missing>'        }       NaN
+    {'TmWBank'   }    {'[-Inf,12)'        }     51.05
+    {'TmWBank'   }    {'[12,23)'          }    61.018
+    {'TmWBank'   }    {'[23,45)'          }    61.818
+    {'TmWBank'   }    {'[45,71)'          }    92.921
+    {'TmWBank'   }    {'[71,Inf]'         }    133.14
+    {'TmWBank'   }    {'<missing>'        }       NaN
+    {'OtherCC'   }    {'No'               }    50.806
+    {'OtherCC'   }    {'Yes'              }    75.642
+    {'OtherCC'   }    {'<missing>'        }       NaN
+    {'AMBalance' }    {'[-Inf,558.88)'    }    89.788
+    {'AMBalance' }    {'[558.88,1254.28)' }    63.088
+    {'AMBalance' }    {'[1254.28,1597.44)'}    59.711
+    {'AMBalance' }    {'[1597.44,Inf]'    }    49.157
+    {'AMBalance' }    {'<missing>'        }       NaN
+
+The new scorecard does not know that the data was treated, hence it assigns NaNs to the <missing>
+bins. If you need to score a new data set and it contains missing data, by default, the score function
+sets the points to NaN. To further explore the handling of missing data, take a few rows from the
+original data as test data and introduce some missing data.
+
+tdata = dataTreated(11:14,mdl.PredictorNames); % Keep only the predictors retained in the model
+% Set some missing values
+tdata.CustAge(1) = NaN;
+tdata.ResStatus(2) = missing;
+tdata.EmpStatus(3) = missing;
+tdata.CustIncome(4) = NaN;
+disp(tdata)
+
+CustAge     ResStatus      EmpStatus     CustIncome    TmWBank    OtherCC    AMBalance
+    _______    ___________    ___________    __________    _______    _______    _________
+
+NaN      Tenant         Unknown          34000         44         Yes        119.8  
+       48      <undefined>    Unknown          44000         14         Yes       403.62  
+       65      Home Owner     <undefined>      48000          6         No        111.88  
+       44      Other          Unknown            NaN         35         No        436.41
+
+Score the new data and see how points are set to NaN, which leads to NaN scores.
+
+[Scores,Points] = score(scTreated,tdata);
+disp(Scores)
+
+NaN
+   NaN
+   NaN
+   NaN
+
+disp(Points)
+
+CustAge    ResStatus    EmpStatus    CustIncome    TmWBank    OtherCC    AMBalance
+    _______    _________    _________    __________    _______    _______    _________
+
+Treat Missing Data in a Credit Scorecard Workflow Using MATLAB fillmissing
+
+8-137

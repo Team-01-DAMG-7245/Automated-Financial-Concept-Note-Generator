@@ -1,0 +1,58 @@
+NPeriods = 100
+[Paths,Times,Z] = simBySolution(hwv, NPeriods,'NTrials', 10);
+
+Quasi-Monte Carlo Simulation Using HWV Model
+
+This example shows how to use simBySolution with a HWV model to perform a quasi-Monte Carlo
+simulation. Quasi-Monte Carlo simulation is a Monte Carlo simulation that uses quasi-random
+sequences instead pseudo random numbers.
+
+HWV = hwv(1.5,100,10,'startstate',100);
+
+Perform a quasi-Monte Carlo simulation by using simBySolution with the optional name-value
+arguments for 'MonteCarloMethod','QuasiSequence', and 'BrownianMotionMethod'.
+
+[paths,time,z] = simBySolution(HWV, 10,'ntrials',4096,'MonteCarloMethod','quasi','QuasiSequence',
+
+Input Arguments
+
+MDL — Hull-White/Vasicek (HWV) model
+hwv object
+
+Hull-White/Vasicek (HWV) mode, specified as a hwv object that is created using hwv.
+
+Data Types: object
+
+NPeriods — Number of simulation periods
+positive integer
+
+Number of simulation periods, specified as a positive scalar integer. The value of NPeriods
+determines the number of rows of the simulated output series.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [Paths,Times,Z] =
+simBySolution(HWV,NPeriods,'DeltaTime',dt,'NTrials',10)
+
+NTrials — Simulated trials (sample paths) of NPeriods observations each
+1 (single path of correlated state variables) (default) | positive integer
+
+Simulated trials (sample paths) of NPeriods observations each, specified as the comma-separated
+pair consisting of 'NTrials' and a positive scalar integer.
+
+Data Types: double
+
+DeltaTime — Positive time increments between observations
+1 (default) | scalar | column vector
+
+simBySolution
+
+15-123

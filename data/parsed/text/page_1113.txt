@@ -1,0 +1,57 @@
+Volatility   = DataMatrix(:,4);
+DividendRate = DataMatrix(:,5);
+
+Compute Prices, and Delta, Gamma, and Vega Sensitivity
+
+Based on the Black-Scholes model, compute the prices, and the delta, gamma, and vega sensitivity
+greeks of each of the four options. The functions blsprice and blsdelta have two outputs, while
+blsgamma and blsvega have only one. The price and delta of a call option differ from the price and
+delta of an otherwise equivalent put option, in contrast to the gamma and vega sensitivities, which
+are valid for both calls and puts.
+
+[CallPrices, PutPrices] = blsprice(StockPrice, StrikePrice, ... 
+RiskFreeRate, ExpiryTime, Volatility, DividendRate);
+
+[CallDeltas, PutDeltas] = blsdelta(StockPrice, ... 
+StrikePrice, RiskFreeRate, ExpiryTime, Volatility, ... 
+DividendRate);
+
+Gammas = blsgamma(StockPrice, StrikePrice, RiskFreeRate, ...
+                  ExpiryTime, Volatility , DividendRate)'
+
+Gammas = 1×4
+
+0.0290    0.0353    0.0548    0.0074
+
+Vegas  = blsvega(StockPrice, StrikePrice, RiskFreeRate, ...
+                 ExpiryTime, Volatility , DividendRate)'
+
+Vegas = 1×4
+
+17.4293   20.0347    9.5837   83.5225
+
+Extract the prices and deltas of interest to account for the distinction between call and puts.
+
+Prices = [CallPrices(1) PutPrices(2) CallPrices(3)... 
+PutPrices(4)]
+
+Prices = 1×4
+
+6.3441    6.6035    4.2993   22.7694
+
+Deltas = [CallDeltas(1) PutDeltas(2) CallDeltas(3)... 
+PutDeltas(4)]
+
+Deltas = 1×4
+
+0.5856   -0.6255    0.7003   -0.4830
+
+Solve Linear System of Equations for Option Portfolio
+
+Assuming an arbitrary portfolio value of $17,000, set up and solve the linear system of equations such
+that the overall option portfolio is simultaneously delta, gamma, and vega-neutral. The solution
+computes the value of a particular greek of a portfolio of options as a weighted average of the
+
+Greek-Neutral Portfolios of European Stock Options
+
+10-15

@@ -1,0 +1,66 @@
+•
+Minimum risk problems subject to constraints for return, linear equality, linear inequality,
+turnover, and tracking error where the supported risk measures are variance, conditional
+value-at-risk (CVaR), and mean-absolute-deviation (MAD)
+
+•
+Maximum return problems subject to constraints for linear equality, liner inequality, turnover,
+risk, and tracking error where the supported risk measures are variance, CVaR, and MAD
+
+Tracking error is supported only for mean-variance problems using the Portfolio object. For
+more information on the supported constraints for a Portfolio, PortfolioCVaR, or
+PortfolioMAD object, see Supported Constraints for Portfolio Optimization Using Portfolio
+Objects on page 4-9.
+
+•
+Custom objective minimization or maximization. The custom objective function (using
+estimateCustomObjectivePortfolio) must be continuous and convex subject to
+constraints for return, risk, linear equality, linear inequality, tracking error, and turnover.
+
+Tracking error is supported using the Portfolio object only when the objective is the return,
+variance or Sharpe ratio. Sharpe ratio is supported only using the Portfolio object.
+
+For more information on the supported constraints and nonlinear risk functions for Portfolio,
+PortfolioCVaR, and PortfolioMAD objects, see Supported Constraints for Portfolio
+Optimization Using Portfolio Objects on page 4-9 and “Portfolio Optimization Theory” on page 4-4.
+The integer (binary) variables can come from either of the following sources: bounds on the
+number of assets that can be selected in the portfolio, setting conditional (semicontinuous) bounds
+on the assets, or adding a conditional budget constraint. For example, if asset i is selected, then xi
+≥ lbi, otherwise xi = 0. These problems cannot be solved using the Optimization Toolbox solvers.
+However, you can implement your own mixed-integer solver. For more information, see “Mixed-
+Integer Quadratic Programming Portfolio Optimization: Problem-Based”.
+
+•
+Problems with turnover constraints and sell or buy costs
+
+Although the continuous version of these problems can be solved by the Optimization Toolbox
+solvers, the variable space must be manipulated to rewrite the nonsmooth constraints into
+equivalent smooth constraints. Given that rewriting the problem requires optimization knowledge,
+it is recommended to use the Portfolio, PortfolioCVaR, and PortfolioMAD objects instead.
+
+Preferred Use of Portfolio, PortfolioCVaR, or PortfolioMAD Object
+
+The general case for preferred use of the Portfolio, PortfolioCVaR, or PortfolioMAD object is:
+
+•
+Continuous problems with minimum risk, maximum return, and maximum Sharpe ratio that are
+subject to linear equality, liner inequality, turnover, and tracking error constraints.
+
+Sharpe ratio is supported only for mean-variance problems using the Portfolio object. For more
+information on the supported constraints for a Portfolio, PortfolioCVaR, or PortfolioMAD
+object, see Supported Constraints for Portfolio Optimization Using Portfolio Objects on page 4-9.
+
+•
+Custom objective minimization or maximization. The custom objective function (using
+estimateCustomObjectivePortfolio) must be continuous and convex subject to constraints
+for return, risk, linear equality, linear inequality, tracking error, and turnover.
+
+Tracking error is supported using the Portfolio object only when the objective is the return,
+variance or Sharpe ratio. Sharpe ratio is supported only using the Portfolio object.
+
+The supported risk measures are variance, CVaR, and MAD. For more information on the supported
+constraints for these risk measures, see Supported Constraints for Portfolio Optimization Using
+
+When to Use Portfolio Objects Over Optimization Toolbox
+
+4-135

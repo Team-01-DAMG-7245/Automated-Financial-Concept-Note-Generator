@@ -1,0 +1,43 @@
+Solve Tracking Error Portfolio Problems
+
+This example shows how to compute a portfolio that minimizes the tracking error subject to a
+benchmark portfolio. This example uses estimateCustomObjectivePortfolio to solve a problem
+for a minimum variance Portfolio with a tracking error penalty. The example also shows how to
+add the tracking error as a "soft constraint" to any portfolio optimization problem. The tracking error
+measures the standard deviation of the divergence between a portfolio's return and that of a
+benchmark.
+
+Define the mean and covariance of the assets returns.
+
+% Define the assets mean.
+mu = [ 0.05; 0.1; 0.12; 0.18 ];
+% Define the assets covariance.
+Sigma = [ 0.0064 0.00408 0.00192 0; 
+        0.00408 0.0289 0.0204 0.0119;
+        0.00192 0.0204 0.0576 0.0336;
+        0 0.0119 0.0336 0.1225 ];
+
+Simulate a timeseries of assets returns with mean mu and covariance Sigma. From this point onward,
+assume that the true mean and covariance are not known and they can only be estimated from the
+timetable data.
+
+% Find all business days of the last two years.
+tEnd = datetime('today');
+bdates = busdays(tEnd-calyears(2),tEnd);
+% Create a simulated timetable.
+rng('default')
+nScen = size(bdates,1);
+assetsTT = array2timetable(mvnrnd(mu,Sigma,nScen),RowTimes=bdates);
+
+Define a long-only, fully invested portfolio problem using Portfolio.
+
+% Define a Portfolio object.
+p = Portfolio;
+p = estimateAssetMoments(p,assetsTT);
+% Specify constraints for a long-only, fully invested portfolio.
+p = setDefaultConstraints(p);
+plotFrontier(p);
+
+Solve Tracking Error Portfolio Problems
+
+4-343

@@ -1,0 +1,40 @@
+threshold = 100000;
+minTransfer = 10000;
+collateralTable = table(cpID,periodOfRisk,threshold,minTransfer,...
+'VariableNames',collateralVariables)
+
+collateralTable=1×4 table
+    Counterparty    PeriodOfRisk    Threshold    MinimumTransfer
+    ____________    ____________    _________    _______________
+
+4               14           1e+05           10000
+
+Compute the collateralized exposures.
+
+[collatExp, collatcpty, collateral] = creditexposures(cpValues,...
+    swaps.Counterparty(cpIdx),'NettingID',swaps.NettingID(cpIdx),...
+    'CollateralTable',collateralTable,'Dates',simulationDates);
+
+Plot the collateral levels and collateralized exposures.
+
+figure;
+subplot(2,1,1)
+plot(simulationDates,squeeze(collateral));
+set(gca,'YLim',expYLim);
+title(sprintf('Collateral for Counterparty: %d',cpID));
+xtickformat('MMMyy');
+ylabel('Collateral ($)')
+xlabel('Simulation Dates')
+
+subplot(2,1,2)
+plot(simulationDates,squeeze(collatExp));
+set(gca,'YLim',expYLim);
+title(sprintf('Collateralized Exposure for Counterparty: %d',cpID));
+xtickformat('MMMyy');
+ylabel('Exposure ($)')
+xlabel('Simulation Dates');
+
+15
+Functions
+
+15-654

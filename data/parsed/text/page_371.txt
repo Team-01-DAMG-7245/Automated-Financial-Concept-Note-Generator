@@ -1,0 +1,37 @@
+13-Jan-2006    10960    27.81    68.84     52.5     67.7    44.92    60.24    37.86    25.47 
+    17-Jan-2006    10896    27.97    67.84    52.03    66.93    44.47    60.85    37.75    25.15
+
+Separate the asset names, asset prices, and DJI benchmark prices from the table. The visualization
+shows the evolution of all the asset prices normalized to start at unity, that is accumulative returns.
+
+benchPrice = data.DJI;
+assetNames = data.Properties.VariableNames(3:2:end); % Use half of the assets for display.
+assetPrice = data(:,assetNames).Variables;
+
+assetP = assetPrice./assetPrice(1, :);  
+benchmarkP = benchPrice / benchPrice(1);
+
+figure;
+plot(data.Dates,assetP);
+hold on;
+plot(data.Dates,benchmarkP,'LineWidth',3,'Color','k');
+hold off;
+xlabel('Date');
+ylabel('Normalized Price');
+title('Normalized Asset Prices and Benchmark');
+grid on;
+
+The bold line indicates the DJIA market benchmark.
+
+Compute Returns and Risk-Adjusted Returns
+
+Calculate the return series from the price series and compute the asset moments (historical returns
+and standard deviations). The visualization shows a scatter plot of the risk-return characteristics of
+all the assets and the DJI market benchmark.
+
+benchReturn = tick2ret(benchPrice);
+assetReturn = tick2ret(assetPrice);
+
+Portfolio Optimization Against a Benchmark
+
+4-203

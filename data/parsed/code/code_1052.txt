@@ -1,0 +1,4 @@
+Page 1077
+================================================================================
+
+For the function ecmnmle, a hard error looks like this:

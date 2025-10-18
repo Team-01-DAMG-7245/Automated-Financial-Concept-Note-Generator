@@ -1,0 +1,46 @@
+Brownian Bridge
+
+A Brownian bridge is used to simulate portfolio values at intermediate dates to compute collateral
+available at the subsequent simulation dates.
+
+For example, to estimate collateral available at a particular simulation date, ti, you need to know the
+state of the portfolio at time ti – dt, where dt is the margin period of risk. Portfolio values are
+simulated at these intermediate dates by drawing from a distribution defined by the Brownian bridge
+between ti and the previous simulation date, ti–1.
+
+If the contract values at time ti –1 and ti are known and you want to estimate the contract value at time
+tc (where tc is ti – dt), then a sample from a normal distribution is used with variance:
+
+(ti  − tc)(tc  − ti −1)
+(ti  − ti −1)
+
+and with mean that is simply the linear interpolation of the contract values between the two
+simulation dates at time tc. For more details, see References.
+
+Version History
+Introduced in R2014a
+
+References
+
+[1] Lomibao, D., and S. Zhu. “A Conditional Valuation Approach for Path-Dependent Instruments.”
+August 2005.
+
+[2] Pykhtin M. “Modeling credit exposure for collateralized counterparties.” December 2009.
+
+[3] Pykhtin M., and S. Zhu. “A Guide to Modeling Counterparty Credit Risk.” GARP, July/August 2007,
+issue 37.
+
+[4] Pykhtin, Michael., and Dan Rosen. “Pricing Counterparty Risk at the Trade Level and CVA
+Allocations.” FEDS Working Paper No. 10., February 1, 2010.
+
+See Also
+exposureprofiles | table
+
+Topics
+“Counterparty Credit Risk and CVA” (Financial Instruments Toolbox)
+“Wrong Way Risk with Copulas” (Financial Instruments Toolbox)
+
+15
+Functions
+
+15-658

@@ -1,0 +1,6 @@
+Page 135
+================================================================================
+
+•
+LookbackWindow=1, which indicates that the previous data point is available to the rebalance
+function during backtesting.

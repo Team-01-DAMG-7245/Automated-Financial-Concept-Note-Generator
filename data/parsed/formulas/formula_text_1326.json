@@ -1,0 +1,12 @@
+{
+  "page": 657,
+  "original_text": "p = PortfolioCVaR('numassets',5);\np.defaultforAssetList = 'UnknownCUSIP';\np = setAssetList(p, '921937835', '922908769', '922042775');\ndisp(p.AssetList)",
+  "ocr_text": "p=PortfolioCVaR(numassets,5);\np.defaultforAssetList=UnknownCUSIP;\np=setAssetList(p,_921937835,_922908769,_922042775);\ndisp(p.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 221.37,
+    "x1": 317.33,
+    "y1": 251.86
+  },
+  "confidence": "high"
+}

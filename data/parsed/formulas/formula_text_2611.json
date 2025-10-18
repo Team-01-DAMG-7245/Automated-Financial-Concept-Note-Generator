@@ -1,0 +1,12 @@
+{
+  "page": 1330,
+  "original_text": "AssetTable = table(Period, Name, ...\n      MonthlyReturns(:), Categories, PortfolioWeight, BenchmarkWeight, ...\n      VariableNames=[\"Period\",\"Name\",\"Return\",\"Category\",\"PortfolioWeight\",\"BenchmarkWeight\"])",
+  "ocr_text": "AssetTable=table(Period,Name,...\nMonthlyReturns(:),Categories,PortfolioWeight,BenchmarkWeight,...\nVariableNames=[Period,Name,Return,Category,PortfolioWeight,BenchmarkWeight])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 218.31,
+    "x1": 599.33,
+    "y1": 250.38
+  },
+  "confidence": "high"
+}

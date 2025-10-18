@@ -1,0 +1,12 @@
+{
+  "page": 1114,
+  "original_text": "PortfolioValue =  Prices * OptionQuantities",
+  "ocr_text": "PortfolioValue=_Prices*OptionQuantities",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 329.83,
+    "x1": 322.97,
+    "y1": 340.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1772,
+  "original_text": "NumPeriods = annuterm( ___ ,FutureValue,Due) specifies options using one or more optional\narguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "NumPeriods=annuterm( ,FutureValue,Due)specifiesoptionsusingoneormoreoptional\nargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 304.74,
+    "x1": 551.73,
+    "y1": 328.37
+  },
+  "confidence": "high"
+}

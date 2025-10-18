@@ -1,0 +1,59 @@
+{'00012937'}    {'07-Feb-1984'}      1
+
+% Note {1,2,3} and num2cell(1:3) are equivalent; num2cell is convenient
+% when the number of ratings is larger
+transMatIGSGnum = transprob(dataIGSGnum,'labels',{1,2,3},...
+'startDate',startDate,'endDate',endDate)
+
+transMatIGSGnum = 3×3
+
+98.1986    1.5179    0.2835
+    8.5396   89.4891    1.9713
+         0         0  100.0000
+
+Any time the input dataset contains ratings not included in the default rating scale {'AAA', 'AA',
+'A', 'BBB', 'BB', 'B', 'CCC', 'D'}, the full rating scale must be specified using the labels
+optional argument. For example, if the dataset contains ratings 'AAA', ..., 'CCC, 'D', and 'NR'
+(not rated), use labels with this cell array {'AAA', 'AA',
+'A','BBB','BB','B','CCC','D','NR'}.
+
+Working with a Transition Matrix Containing NR Rating
+
+This example shows how to remove transitions to NR from a transition matrix.
+
+The folowing code demonstrates how 'NR' (not rated) ratings are handled by transprob, and how to
+get transition matrix that use the 'NR' rating information for the estimation, but that do not show the
+'NR' rating in the final transition probabilities.
+
+The dataset data from Data_TransProb.mat contains sample credit ratings using the default
+rating scale {'AAA', 'AA','A', 'BBB', 'BB', 'B', 'CCC', 'D'}.
+
+load Data_TransProb
+head(data,12)
+
+ID              Date          Rating 
+    ____________    _______________    _______
+
+{'00010283'}    {'10-Nov-1984'}    {'CCC'}
+    {'00010283'}    {'12-May-1986'}    {'B'  }
+    {'00010283'}    {'29-Jun-1988'}    {'CCC'}
+    {'00010283'}    {'12-Dec-1991'}    {'D'  }
+    {'00013326'}    {'09-Feb-1985'}    {'A'  }
+    {'00013326'}    {'24-Feb-1994'}    {'AA' }
+    {'00013326'}    {'10-Nov-2000'}    {'BBB'}
+    {'00014413'}    {'23-Dec-1982'}    {'B'  }
+    {'00014413'}    {'20-Apr-1988'}    {'BB' }
+    {'00014413'}    {'16-Jan-1998'}    {'B'  }
+    {'00014413'}    {'25-Nov-1999'}    {'BB' }
+    {'00012126'}    {'17-Feb-1985'}    {'CCC'}
+
+Replace a transition to 'B' with a transition to 'NR' for the first company. Note that there is a
+subsequent transition from 'NR' to 'CCC'.
+
+dataNR = data;
+dataNR.Rating{2} = 'NR';
+
+8
+Credit Risk Analysis
+
+8-6

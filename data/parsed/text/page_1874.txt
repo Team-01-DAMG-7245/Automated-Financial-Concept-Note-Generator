@@ -1,0 +1,55 @@
+RefBonds = [RefPrices, RefMaturity, RefCpn];
+Settle   = datetime('26-Nov-2002','Locale','en_US');
+[ZeroRates, CurveDates] = zbtprice(RefBonds(:, 2:end), ...
+RefPrices, Settle)
+
+ZeroRates = 6×1
+
+0.0121
+    0.0127
+    0.0194
+    0.0317
+    0.0423
+    0.0550
+
+CurveDates = 6×1 datetime
+   27-Feb-2003
+   29-May-2003
+   31-Oct-2004
+   15-Nov-2007
+   15-Nov-2012
+   15-Feb-2031
+
+% FNMA 4 3/8 maturing 10/06 at 4.30 pm Tuesday
+Price    = 105.484;
+Coupon   = 0.04375;
+Maturity = datetime('15-Oct-2006','Locale','en_US');
+
+% All optional inputs are accounted by default,
+% except the accrued interest under 30/360 (SIA), so:
+Period = 2;
+Basis  = 1;
+
+SpotInfo = table(CurveDates, ZeroRates);
+
+% Compute static spread over treasury curve, taking into account
+% the shape of curve as derived by bootstrapping method embedded
+% within bndspread.
+
+SpreadInBP = bndspread(SpotInfo, Price, Coupon, Settle, ...
+Maturity, Period, Basis)
+
+SpreadInBP = 
+18.5669
+
+plot(CurveDates, ZeroRates*100, 'b', CurveDates, ...
+ZeroRates*100+SpreadInBP/100, 'r--')
+legend({'Treasury'; 'FNMA 4 3/8'})
+xlabel('Curve Dates')
+ylabel('Spot Rate [%]')
+grid;
+
+15
+Functions
+
+15-568

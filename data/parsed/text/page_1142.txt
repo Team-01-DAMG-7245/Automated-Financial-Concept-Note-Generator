@@ -1,0 +1,30 @@
+% Load the pretrained agent for the example.
+    load('DeepHedgingDDPG.mat','agent')
+end
+
+To avoid waiting for the training, load pretrained networks by setting the doTraining flag to false.
+If you set doTraining to true, the Reinforcement Learning Episode Manager displays the training
+progress.
+
+Validate Agent
+
+Use the Financial Toolbox™ functions blsdelta and blsprice for a conventional approach to
+calculate the price as a European call option. When comparing the conventional approach to the RL
+approach, the results are similar to the findings of Cao [2 on page 10-46] in Exhibit 4. This example
+demonstrates that the RL approach significantly reduces hedging costs.
+
+% Simulation parameters
+nTrials = 1000;
+
+policy_BSM = @(mR,TTM,Pos) blsdelta(mR,1,rfRate,max(TTM,eps),ExpVol);
+
+policy_RL = @(mR,TTM,Pos) arrayfun(@(mR,TTM,Pos) cell2mat(getAction(agent,[mR TTM Pos]')),mR,TTM,
+
+OptionPrice = blsprice(SpotPrice,Strike,rfRate,Maturity,ExpVol);
+
+Costs_BSM = computeCosts(policy_BSM,nTrials,nSteps,SpotPrice,Strike,Maturity,rfRate,ExpVol,InitPo
+
+10
+Solving Sample Problems
+
+10-44

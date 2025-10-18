@@ -1,0 +1,5 @@
+Page 117
+================================================================================
+
+% Objective (local)
+function loss = negativeCash(x,TData,VData)

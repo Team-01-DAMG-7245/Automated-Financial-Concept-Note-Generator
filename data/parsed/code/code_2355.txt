@@ -1,0 +1,9 @@
+Page 2228
+================================================================================
+
+This example shows how to use estimateCustomObjectivePortfolio to compare the weight
+assignment of the minimum risk portfolio with a constrained equally weighted portfolio. The weights
+can be either zero or greater than 15% and must sum to 1. You define the constraints for portfolio
+problems using functions for the Portfolio object and then you specify the objective function as an
+input to estimateCustomObjectivePortfolio. The objective function must be continuous (and
+preferably smooth).

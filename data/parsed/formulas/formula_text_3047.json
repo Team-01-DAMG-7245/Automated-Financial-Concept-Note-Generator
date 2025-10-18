@@ -1,0 +1,12 @@
+{
+  "page": 1599,
+  "original_text": "summaryTable = summary(backtester)",
+  "ocr_text": "summaryTable=summary(backtester)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.2,
+    "x1": 294.69,
+    "y1": 203.83
+  },
+  "confidence": "high"
+}

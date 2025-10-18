@@ -1,0 +1,8 @@
+Page 929
+================================================================================
+
+startDate = ['31-Dec-' num2str(Years(t)-1)];
+   endDate = ['31-Dec-' num2str(Years(t))];
+   [transMatPIT(:,:,t),sampleTotals(t)] = transprob(prepData, ...
+    'startDate',startDate,'endDate',endDate,'algorithm',algorithm);
+end

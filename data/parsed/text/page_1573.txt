@@ -1,0 +1,79 @@
+Defines the day-count convention when computing interest at the RiskFreeRate or
+CashBorrowRate, specified as the comma-separated pair consisting of 'Basis' and a scalar integer
+using a supported value:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Note Basis is only used when the RatesConvention property is set to "Annualized". If the
+RatesConvention is "PerStep", and Basis is set, backtestEngine ignores the Basis value.
+
+Data Types: double
+
+PayExpensesFromCash — Indicates if transaction expenses paid from cash account or by
+reducing portfolio value
+false (default) | true or false
+
+Indicates if backtest expenses (transaction costs or fees) are paid from cash account or by reducing
+the total portfolio value, specified as the comma-separated pair consisting of
+'PayExpensesFromCash' and a logical value.
+
+If set to false (the default), backtest expenses are paid by reducing the total portfolio value. This
+allows the backtest engine to pay for expenses while maintaining the strategy allocation weights
+exactly.
+
+If set to true, the backtest engine pays all expenses from one or more cash accounts (CashAssets)
+or debt accounts (DebtAssets). This happens as follows:
+
+1
+If user-controlled cash assets are not specified (that is, the CashAssets or DebtAssets
+parameters for runBacktest are not set), then expenses are paid from the unallocated cash
+account. This is the default behavior. The unallocated cash account contains the remaining
+portfolio value when the backtestStrategy rebalance function returns portfolio weights that
+do not sum to 1. Unallocated cash earns the RiskFreeRate (or CashBorrowRate if it goes
+negative).
+
+backtestEngine
+
+15-267

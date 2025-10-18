@@ -1,0 +1,34 @@
+The LowerBound property value undergoes scalar expansion since AssetScenarios provides the
+dimensions of the problem.
+
+You can use dot notation with the function plotFrontier.
+
+p.plotFrontier
+
+Using the PortfolioCVaR Function with a Sequence of Steps
+
+An alternative way to accomplish the same task of setting up a “standard” CVaR portfolio
+optimization problem, given AssetScenarios variable is:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0;
+0.00408 0.0289 0.0204 0.0119;
+0.00192 0.0204 0.0576 0.0336;
+0 0.0119 0.0336 0.1225 ];
+
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+p = PortfolioCVaR(p, 'LowerBound', 0);
+p = PortfolioCVaR(p, 'LowerBudget', 1, 'UpperBudget', 1);
+p = setProbabilityLevel(p, 0.95);
+
+plotFrontier(p)
+
+Creating the PortfolioCVaR Object
+
+5-25

@@ -1,0 +1,12 @@
+{
+  "page": 1747,
+  "original_text": "p = PortfolioCVaR;\nGA = [ true true true false false false ];    % financial companies\nGB = [ false false false true true true ];    % nonfinancial companies\np = setGroupRatio(p, GA, GB, [], 0.5);",
+  "ocr_text": "p=PortfolioCVaR;\n\nGA=[truetruetruefalsefalsefalse]; financial_companies\nGB=[falsefalsefalsetruetruetrue]; Snonfinancial_companies\np=setGroupRatio(p,GA,GB,[],0.5);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 518.29,
+    "x1": 469.28,
+    "y1": 561.15
+  },
+  "confidence": "high"
+}

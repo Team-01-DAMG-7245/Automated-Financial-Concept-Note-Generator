@@ -1,0 +1,9 @@
+Page 480
+================================================================================
+
+if any(0 < signal)
+    signal(signal < 0) = 0;
+    new_weights = signal / sum(signal);
+else
+    new_weights = zeros(size(current_weights));
+end

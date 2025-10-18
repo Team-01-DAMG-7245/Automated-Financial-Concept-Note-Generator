@@ -1,0 +1,12 @@
+{
+  "page": 2362,
+  "original_text": "Decimal = frac2cur('12.1', 8)",
+  "ocr_text": "Decimal=frac2cur(12.1,8)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 373.94,
+    "x1": 247.13,
+    "y1": 384.41
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 605,
+  "original_text": "RL_OptimalExecution_Training_Environment_Buy = \n  rlFunctionEnv with properties:",
+  "ocr_text": "RL_OptimalExecution_TrainingEnvironment_Buy=\nrlFunctionEnvwithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 373.83,
+    "x1": 344.65,
+    "y1": 395.09
+  },
+  "confidence": "high"
+}

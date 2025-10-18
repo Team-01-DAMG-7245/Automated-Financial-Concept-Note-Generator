@@ -1,0 +1,42 @@
+Solution: Bin the data using autobinning or modifybins before plotting or inquiring about the
+bin statistics, to avoid having too many bins or having NaNs and Infs. For example, you can use the
+name-value pair argument for AlgoOptions with the autobinning function to define the number of
+bins.
+
+load CreditCardData
+sc = creditscorecard(data,'IDVar','CustID','GoodLabel',0);
+AlgoOptions = {'NumBins',4};
+sc = autobinning(sc,'CustAge','Algorithm','EqualFrequency',...
+'AlgorithmOptions',AlgoOptions);
+bininfo(sc,'CustAge','Totals','off')
+plotbins(sc,'CustAge')
+
+ans =
+
+Bin        Good    Bad     Odds       WOE       InfoValue
+    ___________    ____    ___    ______    ________    _________
+
+'[-Inf,39)'    186     133    1.3985    -0.36902      0.03815
+    '[39,46)'      195     108    1.8056    -0.11355    0.0033158
+    '[46,52)'      192      75      2.56     0.23559     0.011823
+    '[52,Inf]'     230      81    2.8395     0.33921      0.02795
+
+If Categorical Data Is Given as Numeric
+
+Categorical data is often recorded using numeric values, and can be stored in a numeric array.
+Although you know that the data should be interpreted as categorical information, for
+creditscorecard this predictor looks like a numeric array.
+
+To show the case where categorical data is given as numeric data, the data for the variable
+ResStatus is intentionally converted to numeric values.
+
+load CreditCardData
+data.ResStatus = double(data.ResStatus);
+sc = creditscorecard(data,'IDVar','CustID')
+
+sc =
+
+8
+Credit Risk Analysis
+
+8-66

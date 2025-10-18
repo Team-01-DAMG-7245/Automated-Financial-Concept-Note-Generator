@@ -1,0 +1,12 @@
+{
+  "page": 2336,
+  "original_text": "h = fanplot(ax,historical,forecast)\n[h,ax] = fanplot( ___ ,Name,Value)",
+  "ocr_text": "h=fanplot(ax,historical,forecast)\n[h,ax]=fanplot(_,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.47,
+    "x1": 300.72,
+    "y1": 279.1
+  },
+  "confidence": "high"
+}

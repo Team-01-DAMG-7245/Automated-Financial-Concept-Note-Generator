@@ -1,0 +1,62 @@
+bm
+
+Brownian motion (BM) models
+
+Description
+
+Creates and displays a Brownian motion (sometimes called arithmetic Brownian motion or
+generalized Wiener process) bm object that derives from the sdeld (SDE with drift rate expressed in
+linear form) class.
+
+Use bm objects to simulate sample paths of NVars state variables driven by NBrowns sources of risk
+over NPeriods consecutive observation periods, approximating continuous-time Brownian motion
+stochastic processes. This enables you to transform a vector of NBrowns uncorrelated, zero-drift,
+unit-variance rate Brownian components into a vector of NVars Brownian components with arbitrary
+drift, variance rate, and correlation structure.
+
+Use bm to simulate any vector-valued BM process of the form:
+
+dXt = μ(t)dt + V(t)dWt
+
+where:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+μ is an NVars-by-1 drift-rate vector.
+
+•
+V is an NVars-by-NBrowns instantaneous volatility rate matrix.
+
+•
+dWt is an NBrowns-by-1 vector of (possibly) correlated zero-drift/unit-variance rate Brownian
+components.
+
+Creation
+
+Syntax
+
+BM = bm(Mu,Sigma)
+BM = bm( ___ ,Name,Value)
+
+Description
+
+BM = bm(Mu,Sigma) creates a default BM object.
+
+Specify the required input parameters as one of the following types:
+
+•
+A MATLAB array. Specifying an array indicates a static (non-time-varying) parametric
+specification. This array fully captures all implementation details, which are clearly associated
+with a parametric form.
+
+•
+A MATLAB function. Specifying a function provides indirect support for virtually any static,
+dynamic, linear, or nonlinear model. This parameter is supported via an interface, because all
+implementation details are hidden and fully encapsulated by the function.
+
+15
+Functions
+
+15-64

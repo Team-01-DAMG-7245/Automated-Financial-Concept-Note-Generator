@@ -1,0 +1,75 @@
+version are equivalent. Consequently, values of λMDP ∈0, λMDP  return asset weights that range from
+
+the minimum variance behavior to the MDP behavior.
+
+Diversification by "Tilting"
+
+The strategies in Diversification for Fixed ESG Level on page 4-274 explicitly set a target ESG
+average score. However, a different set of strategies controls the ESG score in a less direct way. The
+method in these strategies uses ESG tilting. With tilting, you discretize the ESG score into 'high'
+and 'low' levels and the objective function penalizes each level differently. In other words, you use
+the diversification measure to tilt the portfolio toward higher or lower ESG values. Therefore, instead
+of explicitly requiring that the portfolios maintain a target ESG average score, you select assets, with
+respect to their ESG score, implicitly through the choice of penalty parameters.
+
+Start by labeling the assets with an ESG score less than or equal to 0.5 as 'low' and assets with an
+ESG score greater than 0.5 as 'high', and then remove the ESG constraint.
+
+% Label the ESG data.
+ESGlabel = discretize(ESGnumeric,[0 0.5 1], ...
+    "categorical",{'low','high'});
+% Create a table with ESG scores and labels.
+ESG = table(ESGnumeric,ESGlabel);
+% Remove the ESG constraint.
+p = setInequality(p,[],[]);
+
+The tilted version of the portfolio with the HH index is
+
+min xTΣx + λHH
+high ∑
+i ∈H
+xi
+2 + λHH
+low ∑
+i ∈L
+xi
+2
+
+s . t .
+∑
+i = 1
+
+n
+xi = 1, μTx ≥ret0, x ≥0
+
+The feasible region does not bound the average ESG level of the portfolio. Instead, you implicitly
+control the ESG score by applying different penalization terms to assets with a 'high' ESG score
+(i ∈H) and assets with a 'low' ESG score (i ∈L). To achieve a portfolio with a high average ESG
+
+score, the penalty terms must satisfy that 0 ≤λHH
+high ≤λHH
+low.
+
+% HH penalty parameters
+% Penalty parameter for assets with 'low' ESG score
+
+lambdaLowHH =
+;
+% Penalty parameter for assets with 'high' ESG score
+
+lambdaHighHH =
+;
+% Lambda for HH 'tilted' penalty
+lambdaTiltHH = (ESG.ESGlabel=='low').*lambdaLowHH + (ESG.ESGlabel=='high').*lambdaHighHH;
+
+% Variance + Herfindahl-Hirschman (HH) index
+tilt_HH = @(x) x'*p.AssetCovar*x + lambdaTiltHH'*(x.^2);
+% Solution that minimizes variance + HH term
+wTiltHH = estimateCustomObjectivePortfolio(p,tilt_HH,TargetReturn=ret0);
+
+Similarly, the tilted version of the portfolio with the MDP penalty term is given by
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-276

@@ -1,0 +1,59 @@
+Set Group Constraints
+
+Use getGroups to include group constraints. The first group constraint ensures that the weights
+invested in mixed retail (Amazon and eBay) are at least 15%. The second group constraint ensures
+that the weights invested in computer companies (Apple, Dell and HP) are between 25% and 50%.
+
+% Group constraints
+G = [0 1 0 0 1 0 0 0 0 0 0;
+     1 0 0 1 0 0 1 0 0 0 0];
+LowG = [0.15; 0.25];
+UpG = [Inf; 0.5];
+p = setGroups(p, G, LowG, UpG);
+
+Find the minimum and maximum percentage of WoB that a portfolio can attain given these extra
+group constraints. This is done using the estimateCustomObjectivePortfolio function with the
+average percentage of women on a company's board as the objective function.
+
+% Set the average WoB as the objective.
+objFun = @(x) WoB'*x;
+
+Find the portfolio with the minimum average percentage of WoB with the group constraints using
+estimateCustomObjectivePortfolio with the function handle objFun.
+
+% Minimum percetage of women on the board
+wgt_minWoB = estimateCustomObjectivePortfolio(p,objFun);
+minWoB = objFun(wgt_minWoB)
+
+minWoB = 
+0.2462
+
+Find the portfolio with the maximum average percentage of WoB with the group constraints using
+estimateCustomObjectivePortfolio with the name-value argument ObjectiveSense set to
+maximize.
+
+% Maximum percentage of women on the board
+wgt_maxWoB = estimateCustomObjectivePortfolio(p,objFun,...
+    ObjectiveSense="maximize");
+maxWoB = objFun(wgt_maxWoB)
+
+maxWoB = 
+0.4792
+
+Compute and Plot the Efficient Surface
+
+Define a grid of WoB percentages such that minWoB = targetWoB(1) ≤… ≤ targetWoB(N) =
+maxWoB.
+
+N = 20; % Size of the grid.
+targetWoB = linspace(minWoB,maxWoB,N);
+
+Use setInequality to set the percentage of WoB as a constraint. The coefficients of the linear
+constraint should be the WoB percentages associated to each asset, and the right-hand side should be
+the target portfolio WoB. The convention of the inequality is ≤. Since the goal is to maximize portfolio
+WoB, then the target WoB should be a lower bound for the portfolio WoB. Therefore, the signs of the
+coefficients and the right-hand side of the added inequality should be flipped.
+
+Portfolio Optimization Using Social Performance Measure
+
+4-265

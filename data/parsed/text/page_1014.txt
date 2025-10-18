@@ -1,0 +1,26 @@
+line(xlim,[0 0],'color','k','linestyle',':')
+line(xlim,[1 1],'color','k','linestyle',':')
+title('Bootstrapping with N = 100 Iterations')
+ylabel('Model Coefficients')
+
+The solid red lines in the boxplot indicate that the median values and the bottom and top edges are
+
+for the 25th and 75th percentiles. The "whiskers" are the minimum and maximum values, not
+including outliers. The dotted lines represent the lower and upper bound constraints on the
+coefficients. In this example, the coefficients cannot be negative, by construction.
+
+To help decide which predictors to keep in the model, assess the proportion of times each coefficient
+is zero.
+
+Tol = 1e-6;
+figure
+bar(100*sum(mdl.Bootstrap.Matrix<= Tol)/NIter)
+ylabel('% of Zeros')
+title('Percentage of Zeros Over Bootstrap Iterations')
+xticklabels(mdl.Coefficients.Properties.RowNames)
+grid on
+
+8
+Credit Risk Analysis
+
+8-96

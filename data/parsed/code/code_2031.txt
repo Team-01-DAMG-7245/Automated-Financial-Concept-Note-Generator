@@ -1,0 +1,6 @@
+Page 1622
+================================================================================
+
+•
+One model is a geometric Brownian motion (gbm) model with a stochastic volatility function and
+jumps.

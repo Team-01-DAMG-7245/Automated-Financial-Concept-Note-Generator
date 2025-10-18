@@ -1,0 +1,12 @@
+{
+  "page": 1244,
+  "original_text": "T      = 64;\ntimes  = (1:T)';\nt      = NaN(length(times) + 1, 1);\nt(1)   = obj.StartTime;\nt(2)   = T;\ndelta  = T;\njMax   = 1;\niCount = 3;",
+  "ocr_text": "T =64;\n\ntimes=(1:T);\n\nt =NaN(length(times)+1,1);\nt(1) =obj.StartTime;\n\nt(2) =T;\n\ndelta=T;\n\njMax =1;\n\niCount=3;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 514.23,
+    "x1": 279.63,
+    "y1": 600.29
+  },
+  "confidence": "high"
+}

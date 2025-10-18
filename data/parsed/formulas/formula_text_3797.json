@@ -1,0 +1,12 @@
+{
+  "page": 2148,
+  "original_text": "Depreciation = depfixdb(Cost,Salvage,Life,Period) computes the fixed declining-\nbalance depreciation for each Period.",
+  "ocr_text": "Depreciation=depfixdb(Cost,Salvage,Life,Period)computesthefixeddeclining-\nbalancedepreciationforeachPeriod.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 252.72,
+    "x1": 522.57,
+    "y1": 276.35
+  },
+  "confidence": "high"
+}

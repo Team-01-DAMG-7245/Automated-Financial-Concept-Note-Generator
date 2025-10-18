@@ -1,0 +1,53 @@
+checkFeasibility
+
+Check feasibility of input portfolios against portfolio object
+
+Syntax
+
+status = checkFeasibility(obj,pwgt)
+
+Description
+
+status = checkFeasibility(obj,pwgt) checks the feasibility of input portfolios against a
+portfolio object.
+
+Use the checkFeasibility function with a Portfolio, PortfolioCVaR, or PortfolioMAD
+object to check the feasibility of input portfolios against a portfolio object. For details on the
+respective workflows when using these different objects, see “Portfolio Object Workflow” on page 4-
+18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object Workflow” on page 6-
+16.
+
+Examples
+
+Determine If the Portfolio Is Feasible for a Portfolio Object
+
+Given portfolio p, determine if p is feasible.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+p = Portfolio;
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+pwgt = estimateFrontier(p);
+
+checkFeasibility(p, pwgt)
+
+ans = 1×10 logical array
+
+1   1   1   1   1   1   1   1   1   1
+
+Determine If the Portfolio Is Feasible for a PortfolioCVaR Object
+
+Given portfolio p, determine if p is feasible.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0;
+
+15
+Functions
+
+15-736

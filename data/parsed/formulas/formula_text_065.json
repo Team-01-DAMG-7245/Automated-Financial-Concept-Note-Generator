@@ -1,0 +1,12 @@
+{
+  "page": 70,
+  "original_text": "BreakevenDiscount = tbillrepo(RepoRate, InitialDiscount, ... \nPurchaseDate, SaleDate, Maturity)",
+  "ocr_text": "BreakevenDiscount=tbillrepo(RepoRate,InitialDiscount,...\nPurchaseDate,SaleDate,Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.25,
+    "x1": 420.52,
+    "y1": 643.52
+  },
+  "confidence": "high"
+}

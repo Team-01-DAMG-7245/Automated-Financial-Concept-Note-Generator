@@ -1,0 +1,54 @@
+Last coupon date of a bond before maturity date, specified as a NUMBONDS-by-1 vector using a
+datetime array, string array, or date character vectors.
+
+LastCouponDate is used when a bond has an irregular last coupon period. In the absence of a
+specified FirstCouponDate, a specified LastCouponDate determines the coupon structure of the
+bond. The coupon structure of a bond is truncated at the LastCouponDate, regardless of where it
+falls, and is followed only by the bond's maturity cash flow date. If you do not specify a
+LastCouponDate, the cash flow payment dates are determined from other inputs.
+
+To support existing code, cpndaysn also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+NumDaysNext — Number of days from settlement date to next coupon date
+vector
+
+Number of days from settlement date to next coupon date, returned as an NUMBONDS-by-1 vector. For
+zero coupon bonds coupon dates are computed as if the bonds have a semiannual coupon structure.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cpndaysn supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+accrfrac | cfamounts | cfdates | cftimes | cpncount | cpndaten | cpndatep | cpndatenq |
+cpndaysp | cpnpersz | datetime | cpndatepq
+
+Topics
+“Pricing and Computing Yields for Fixed-Income Securities” on page 2-15
+
+15
+Functions
+
+15-776

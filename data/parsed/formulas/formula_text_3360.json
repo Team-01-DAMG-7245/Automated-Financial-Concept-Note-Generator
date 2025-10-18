@@ -1,0 +1,12 @@
+{
+  "page": 1827,
+  "original_text": "Price = Disc(tN) × FV × Q(tN) + C\nf × ∑\ni = 1",
+  "ocr_text": "N\nPrice=Disc(ty)XFVxQ(tn)+ x S I\ni=1",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 428.07,
+    "x1": 298.94,
+    "y1": 455.01
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1383,
+  "original_text": "obj = cev(0.25, 0.5, 0.3) % (B = Return, Alpha, Sigma)",
+  "ocr_text": "obj=cev(0.25,0.5,0.3)(B=Return,Alpha,Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 498.48,
+    "x1": 382.59,
+    "y1": 508.95
+  },
+  "confidence": "high"
+}

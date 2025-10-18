@@ -1,0 +1,12 @@
+{
+  "page": 1132,
+  "original_text": "for i=1:numSim\n    treasuryYTMAtHorizonSim(i,:) = interp1(x,hrznYTMRatesSims(i,:),xi,'spline');\nend",
+  "ocr_text": "fori=1:numSim\ntreasuryYTMAtHorizonSim(i,:)=interp1(x,hrznYTMRatesSims(i,:),xi,spline);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 523.47,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

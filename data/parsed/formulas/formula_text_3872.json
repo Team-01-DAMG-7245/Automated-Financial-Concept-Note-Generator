@@ -1,0 +1,12 @@
+{
+  "page": 2210,
+  "original_text": "StdMeanH = ecmnstd(Data,ECMMean,ECMCovar,'hessian')",
+  "ocr_text": "StdMeanH=ecmnstd(Data,ECMMean,ECMCovar,hessian)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 677.55,
+    "x1": 366.34,
+    "y1": 688.02
+  },
+  "confidence": "high"
+}

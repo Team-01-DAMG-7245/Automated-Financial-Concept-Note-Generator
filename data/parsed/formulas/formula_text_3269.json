@@ -1,0 +1,12 @@
+{
+  "page": 1754,
+  "original_text": "obj = obj.addGroups(GroupMatrix, LowerGroup, UpperGroup)",
+  "ocr_text": "obj_=obj.addGroups(GroupMatrix,LowerGroup,UpperGroup)",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 514.59,
+    "x1": 408.4,
+    "y1": 525.05
+  },
+  "confidence": "high"
+}

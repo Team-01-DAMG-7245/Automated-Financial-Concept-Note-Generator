@@ -1,0 +1,8 @@
+Page 173
+================================================================================
+
+The proxy for portfolio return is a function μ: X
+R on a portfolio set X ⊂Rn that characterizes the
+rewards associated with portfolio choices. Usually, the proxy for portfolio return has two general
+forms, gross and net portfolio returns. Both portfolio return forms separate the risk-free rate r0 so
+that the portfolio x ∈X contains only risky assets.

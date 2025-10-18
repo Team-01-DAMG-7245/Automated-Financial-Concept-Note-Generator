@@ -1,0 +1,12 @@
+{
+  "page": 532,
+  "original_text": "% Solve problem\nwGBWM = estimateCustomObjectivePortfolio(p,probability);",
+  "ocr_text": "Solveproblem\nwGBWM_=estimateCustom0bjectivePortfolio(p,probability);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.82,
+    "x1": 393.41,
+    "y1": 557.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 542,
+  "original_text": "1\nAt t = 0, choose the optimal strategy shown in portIdx(i,j) such that i is the index associated\nwith the wealth node that satisfies Wi ≤W 0 < Wi + 1 and j = t + 1. Also, let A* 0 =\nportIdx(i,j).",
+  "ocr_text": "1Att=0,choosetheoptimalstrategyshowninportIdx(i,j)suchthatiistheindexassociated\nwiththewealthnodethatsatisfiesWjsW(0)W;+1andj=t+1.Also,letA*(0)=\nportIdx(i,j).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 499.92,
+    "x1": 554.29,
+    "y1": 537.19
+  },
+  "confidence": "high"
+}

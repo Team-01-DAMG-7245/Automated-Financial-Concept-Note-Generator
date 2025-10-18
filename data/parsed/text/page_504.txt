@@ -1,0 +1,63 @@
+Equal Risk Contribution Portfolio
+
+The diversification index associated with the equal risk contribution (ERC) portfolio is defined as
+
+ERC x = −∑
+i = 1
+
+n
+ln xi
+
+This index is related to a convex reformulation shown by Maillard [1 on page 4-340] that computes
+the ERC portfolio. The authors show that you can obtain the ERC portfolio by solving the following
+optimization problem
+
+min
+y ≥0 yTΣ y
+
+st . ∑
+i = 1
+
+n
+ln yi ≥c
+
+and by defining x, the ERC portfolio with default constraints, as x =
+y
+∑iyi, where c > 0 can be any
+
+constant. You implement this procedure in the riskBudgetingPortfolio on page 4-340 function.
+
+The purpose of the ERC portfolio is to select the assets weights in such a way that the risk
+contribution of each asset to the portfolio volatility is the same for all assets.
+
+% ERC portfolio
+wERC = riskBudgetingPortfolio(p.AssetCovar);
+
+The portfolio that minimizes the variance with the ERC penalty is min
+x ∈X xTΣx −λERC ∑
+i = 1
+
+n
+ln xi .
+
+Similar to the case for the MDP penalized formulation, there exists a λERC such that the ERC problem
+and its penalized version are equivalent. Use the function handle ERCMixObjFun for the ERC penalty
+with the estimateCustomObjectivePortfolio function.
+
+% ERC penalty parameter
+lambdaERC = 3e-6; % lambdaERC is so small because the log of a number
+                  % close to zero (the portfolio weights) is large
+% Variance + Equal Risk Contribution (ERC)
+ERCMixObjFun = @(x) x'*p.AssetCovar*x - lambdaERC*sum(log(x));
+% Solution that accounts for risk and ERC diversification
+wERCMix = estimateCustomObjectivePortfolio(p,ERCMixObjFun);
+
+Plot the weights distribution for the minimum variance portfolio, the ERC, and the penalized strategy.
+
+% Plot the different strategies.
+plotAssetAllocationChanges(wMinVar,wERCMix,wERC)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-336

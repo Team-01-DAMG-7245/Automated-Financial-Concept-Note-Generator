@@ -1,0 +1,12 @@
+{
+  "page": 1108,
+  "original_text": "NumTimes  =  length(dt);       % Number of time steps\nNumYields =  length(dy);       % Number of yield changes\nNumBonds  =  length(Maturity); % Number of bonds",
+  "ocr_text": "NumTimes=_length(dt); SNumberoftimesteps\nNumYields=_length(dy); sNumberofyield_changes\nNumBonds=_length(Maturity);Numberof_bonds",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 203.43,
+    "x1": 393.43,
+    "y1": 235.49
+  },
+  "confidence": "high"
+}

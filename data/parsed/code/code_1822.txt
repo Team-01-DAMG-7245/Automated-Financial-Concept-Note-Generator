@@ -1,0 +1,5 @@
+Page 1510
+================================================================================
+
+If you specify JumpMean as a deterministic function of time and state, it must return an NVars-by-
+NJumps matrix when you call it with two inputs:

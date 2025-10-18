@@ -1,0 +1,12 @@
+{
+  "page": 2495,
+  "original_text": "Fisher = mvnrfish(Data,Design,Covariance) computes a Fisher information matrix based on\ncurrent maximum likelihood or least-squares parameter estimates.",
+  "ocr_text": "Fisher=mvnrfish(Data,Design,Covariance)computesaFisherinformationmatrixbasedon\ncurrentmaximumlikelihoodorleast-squaresparameterestimates.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 258.39,
+    "x1": 556.57,
+    "y1": 282.02
+  },
+  "confidence": "high"
+}

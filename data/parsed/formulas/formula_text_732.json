@@ -1,0 +1,12 @@
+{
+  "page": 440,
+  "original_text": "% Find the minimum ESG score.\nsolMin = estimateCustomObjectivePortfolio(p,ESGscore);\nminESG = ESGscore(solMin)",
+  "ocr_text": "sFindtheminimumESGscore.\nsolMin=estimateCustom0bjectivePortfolio(p,ESGscore);\nminESG=ESGscore(solMin)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 382.57,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

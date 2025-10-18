@@ -1,0 +1,58 @@
+Irregular or normal last coupon date, specified as a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS
+vector using a datetime array, string array, or date character vectors.
+
+If you do not specify a LastCouponDate, the cash flow payment dates are determined from other
+inputs.
+
+To support existing code, cfdatesq also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+PeriodsBeforeSettle — Number of quasi-coupon dates on or before settlement to include
+0 (default) | nonnegative integer
+
+(Optional) Number of quasi-coupon dates on or before settlement to include, specified as a
+nonnegative integer.
+
+Data Types: double
+
+PeriodsAfterMaturity — Number of quasi-coupon dates after maturity to include
+0 (default) | nonnegative integer
+
+(Optional) Number of quasi-coupon dates after maturity to include, specified as a nonnegative
+integer.
+
+Data Types: double
+
+Output Arguments
+
+QuasiCouponDates — Quasi-coupon dates
+matrix
+
+Quasi-coupon dates, returned as a N-row matrix of dates in datetime format (if any inputs are in
+datetime format). QuasiCouponDates has NUMBONDS rows and the number of columns is determined
+by the maximum number of quasi-coupon dates required to hold the bond portfolio. NaNs are padded
+for bonds which have less than the maximum number quasi-coupon dates. By default, quasi-coupon
+dates after settlement and on or preceding maturity are returned. If settlement occurs on maturity,
+and maturity is a quasi-coupon date, then the maturity date is returned.
+
+If all of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, or LastCouponDate are
+either strings or date character vectors, then QuasiCouponDates is returned as a serial date
+number. Use the function datetime to convert serial date numbers to formatted datetime arrays.
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, or LastCouponDate
+are datetime arrays, then QuasiCouponDates is returned as a datetime array.
+
+More About
+
+Quasi Coupon
+
+A quasi coupon is a term used in the context of certain fixed-income securities, particularly bonds,
+that do not pay traditional periodic interest payments (coupons) but instead provide returns in a
+different manner.
+
+15
+Functions
+
+15-692

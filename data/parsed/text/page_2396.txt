@@ -1,0 +1,25 @@
+Tips
+
+You can also use dot notation to obtain the buy and sell transaction costs from portfolio objects.
+
+[BuyCost, SellCost] = obj.getCosts;
+
+Version History
+Introduced in R2011a
+
+See Also
+setCosts
+
+Topics
+“Working with Transaction Costs” on page 4-54
+“Working with Transaction Costs” on page 5-47
+“Working with Transaction Costs” on page 6-46
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+Supported Constraints for Portfolio Optimization Using Portfolio Objects on page 4-9
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object on page 5-8
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object on page 6-8
+
+15
+Functions
+
+15-1090

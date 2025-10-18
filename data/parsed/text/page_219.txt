@@ -1,0 +1,81 @@
+-0.0000    0.0010    0.0028    0.0102
+
+As you can see, the moments match between th two portfolios. In addition, estimateAssetMoments
+also extracts asset names or identifiers from a table or timetable when the argument name
+'GetAssetList' is set to true (its default value is false). If the 'GetAssetList' value is true,
+the identifiers are used to set the AssetList property of the Portfolio object. To show this, the
+formation of the Portfolio object q is repeated from the previous code with the 'GetAssetList'
+flag set to true and this extracts the column labels from a table or timetable object.
+
+q = estimateAssetMoments(q,assetRetnTable,'GetAssetList',true);
+disp(q.AssetList)
+
+{'Bonds'}    {'LargeCap'}    {'SmallCap'}    {'Emerging'}
+
+Note if you set the 'GetAssetList' flag set to true and your input data is in a matrix,
+estimateAssetMoments uses the default labeling scheme from setAssetList described in
+“Setting Up a List of Asset Identifiers” on page 4-33.
+
+See Also
+Portfolio | setAssetMoments | estimateAssetMoments | getAssetMoments | setCosts
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+Asset Returns and Moments of Asset Returns Using Portfolio Object
+
+4-51

@@ -1,0 +1,12 @@
+{
+  "page": 1518,
+  "original_text": "RVM = rvm(Return,Volatility,Alpha,Beta)\nRVM = rvm( ___ ,Name=Value)",
+  "ocr_text": "RVM=rvm(Return,Volatility,Alpha,Beta)\nRVM=rvm(____,Name=Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 401.81,
+    "x1": 324.8,
+    "y1": 425.44
+  },
+  "confidence": "high"
+}

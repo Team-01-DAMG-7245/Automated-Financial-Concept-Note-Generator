@@ -1,0 +1,39 @@
+Optimize the Asset Allocation Directly Against Factors with a Problem-Based Definition
+Framework
+
+For the factors, you can use statistical factors extracted from the asset return series. In this example,
+you use principal component analysis (PCA) to extract statistical factors [1 on page 4-236]. You can
+then use this factor model to solve the portfolio optimization problem.
+
+With a factor model, p asset returns can be expressed as a linear combination of k factor returns,
+ra = μa + F rf + εa , where k<<p. In the mean-variance framework, portfolio risk is
+
+Var Rp = Var raTwa = Var μa + F rf + εa
+
+Twa = waT FΣfFT + D wa = wf
+T Σf wf + waT D wa, with
+
+wf = FTwa,
+
+where:
+
+Rp is the portfolio return (a scalar).
+
+ra is the asset return.
+
+μa  is the mean of asset return.
+
+F is the factor loading, with the dimensions p-by-k.
+
+rf is the factor return.
+
+εa is the idiosyncratic return related to each asset.
+
+wa is the asset weight.
+
+wf is the factor weight.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-232

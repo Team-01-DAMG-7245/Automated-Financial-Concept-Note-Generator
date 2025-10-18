@@ -1,0 +1,12 @@
+{
+  "page": 1125,
+  "original_text": "Rate = 0.1*ones(10,1);\nTime = [36  36  36  27  18  18  18  9  9  9];\nSigma = 0.35*ones(10,1);\nNumOpt = 1000*[4  8  3  5  5.5  2  4.8  3  4.8  2.5];\nZVal = zeros(36, PLen);\nColor = zeros(36, PLen);",
+  "ocr_text": "Rate=0.1*ones(10,1);\nTime=[36363627181818999Q];\nSigma=0.35*ones(10,1);\nNumOpt=1000*[48355.524.834.82.5];\nZVal=zeros(36,PLen);\n\nColor=zeros(36,PLen);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 316.65,
+    "x1": 377.15,
+    "y1": 381.12
+  },
+  "confidence": "high"
+}

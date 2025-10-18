@@ -1,0 +1,12 @@
+{
+  "page": 469,
+  "original_text": "function idxInGroup = getLeafNodesInGroup(nodeId, link)\n% getLeafNodesInGroup finds all leaf nodes for a given node id\n% in a linkage matrix.",
+  "ocr_text": "functionidxInGroup=getLeafNodesInGroup(nodelId,_ltink)\ngetLeafNodesInGroupfindsallleafnodesforagivennodeid\nSinalinkagematrix.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.43,
+    "x1": 425.92,
+    "y1": 427.49
+  },
+  "confidence": "high"
+}

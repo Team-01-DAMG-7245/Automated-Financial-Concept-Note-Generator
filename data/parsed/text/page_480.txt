@@ -1,0 +1,32 @@
+Local Functions
+
+function new_weights = LongOnlyRebalanceFcn(current_weights,pricesTT,signalTT)  
+% Long only strategy, in proportion to the signal.
+
+signal = signalTT.backtestPred_LSTM(end,:);
+
+if any(0 < signal)
+    signal(signal < 0) = 0;
+    new_weights = signal / sum(signal);
+else
+    new_weights = zeros(size(current_weights));
+end
+
+end
+
+function new_weights = LongShortRebalanceFcn(current_weights,pricesTT,signalTT) %#ok<INUSD> 
+% Long/Short strategy, in proportion to the signal
+
+signal = signalTT.backtestPred_LSTM(end,:);
+abssum = sum(abs(signal));
+
+if 0 < abssum
+    new_weights = signal / abssum;
+else
+    new_weights = zeros(size(current_weights));
+end
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-312

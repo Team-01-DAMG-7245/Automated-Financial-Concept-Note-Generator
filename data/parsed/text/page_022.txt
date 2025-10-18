@@ -1,0 +1,71 @@
+Capital Asset Pricing Model with Missing Data . . . . . . . . . . . . . . . . . . . .
+9-34
+
+Solving Sample Problems
+10
+
+Sensitivity of Bond Prices to Interest Rates . . . . . . . . . . . . . . . . . . . . . . .
+10-2
+
+Bond Portfolio for Hedging Duration and Convexity . . . . . . . . . . . . . . . .
+10-6
+
+Bond Prices and Yield Curve Parallel Shifts . . . . . . . . . . . . . . . . . . . . . . .
+10-9
+
+Bond Prices and Yield Curve Nonparallel Shifts . . . . . . . . . . . . . . . . . . .
+10-12
+
+Greek-Neutral Portfolios of European Stock Options . . . . . . . . . . . . . . .
+10-14
+
+Term Structure Analysis and Interest-Rate Swaps . . . . . . . . . . . . . . . . .
+10-18
+
+Plotting an Efficient Frontier Using portopt . . . . . . . . . . . . . . . . . . . . . .
+10-22
+
+Plotting Sensitivities of an Option . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10-25
+
+Plotting Sensitivities of a Portfolio of Options . . . . . . . . . . . . . . . . . . . .
+10-27
+
+Bond Portfolio Optimization Using Portfolio Object . . . . . . . . . . . . . . .
+10-30
+
+Hedge Options Using Reinforcement Learning Toolbox . . . . . . . . . . . .
+10-40
+
+Hedge Using Monte Carlo Simulation . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10-49
+
+Using Extreme Value Theory and Copula Fitting to Generate Synthetic
+Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10-61
+
+Using Financial Timetables
+11
+
+Convert Financial Time Series Objects (fints) to Timetables . . . . . . . . .
+11-2
+Create Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11-2
+Index an Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11-3
+Transform Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11-3
+Convert Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11-4
+Merge Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11-5
+Analyze Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11-5
+Data Extraction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11-6
+
+Use Timetables in Finance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+11-7
+
+xxii
+Contents

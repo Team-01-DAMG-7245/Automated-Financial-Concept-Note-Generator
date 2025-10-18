@@ -1,0 +1,28 @@
+The fee is charged on each date specified by the ManagementFeeSchedule name-value argument.
+For more information, see “Defining Schedules for Backtest Strategies” on page 15-258.
+
+The management fee is forward looking, meaning that a fee paid on a given date covers the
+management of the strategy from that date to the next management fee date. For some syntaxes of
+theManagementFeeSchedule, the resulting schedule does not begin and end precisely on the
+backtest start and end dates. In these cases, the backtest engine adds default dates to the start and
+end of the schedule to ensure that the entire backtest is covered by management fees. For example:
+
+•
+If ManagementFeeSchedule is specified as a vector of datetimes, and the backtest start date is
+not included in the vector, then the start date is added to the fee schedule.
+
+•
+If ManagementFeeSchedule is specified as a numeric scalar or a vector of datetimes, and the
+final specified fee date occurs before the backtest end date, then the backtest end date is added to
+the fee schedule.
+
+•
+If ManagementFeeSchedule is specified as a duration or calendarDuration object, and the
+backtest end date is not included in the generated schedule, then a final fee date is added to the
+end by adding the duration object to the (previous) final fee date. This adjustment can produce a
+final fee date that is beyond the end of the backtest, but it results in more realistic fees paid at the
+final payment date.
+
+backtestStrategy
+
+15-259

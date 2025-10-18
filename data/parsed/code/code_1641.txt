@@ -1,0 +1,6 @@
+Page 1472
+================================================================================
+
+•
+Alpha — Access function for the diffusion-rate property Alpha, callable as a function of time and
+state

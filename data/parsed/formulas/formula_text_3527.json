@@ -1,0 +1,12 @@
+{
+  "page": 1965,
+  "original_text": "cpIdx = find(expcpty == 4);\nnumDates = numel(simulationDates);",
+  "ocr_text": "cpIdx=find(expcpty==4);\nnumDates=numel(simulationDates);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 274.22,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

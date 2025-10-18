@@ -1,0 +1,5 @@
+Page 1509
+================================================================================
+
+If you specify Return as a deterministic function of time, when you call Return with a real-valued
+scalar time t as its only input, it must return an NVars-by-NVars matrix.

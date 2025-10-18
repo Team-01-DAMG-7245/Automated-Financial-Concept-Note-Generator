@@ -1,0 +1,12 @@
+{
+  "page": 501,
+  "original_text": "% HH penalty parameter\nlambdaHH = 1e-2;\n% Variance + Herfindahl-Hirschman (HH) index\nHHMixObjFun = @(x) x'*p.AssetCovar*x + lambdaHH*(x'*x);\n% Solution that accounts for risk and HH diversification\nwHHMix = estimateCustomObjectivePortfolio(p,HHMixObjFun);",
+  "ocr_text": "HHpenaltyparameter\n\nlLambdaHH=1le-2;\nSVariance+Herfindahl-Hirschman(HH)index\nHHMixObjFun=Q(x)x*p.AssetCovar*x_+LambdaHH*(x*x);\nSolutionthataccountsforriskandHHdiversification\nwHHMix=estimateCustom0bjectivePortfolio(p,HHMix0bjFun);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 407.14,
+    "x1": 398.83,
+    "y1": 471.61
+  },
+  "confidence": "high"
+}

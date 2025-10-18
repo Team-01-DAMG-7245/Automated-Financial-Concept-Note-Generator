@@ -1,0 +1,38 @@
+X = obj.simulate(nPeriods, 'DeltaTime', dt, ...
+    'nTrials', nPaths, 'Z', z);
+
+For convenience, reorder the output sample paths by reordering the three-dimensional output to a
+two-dimensional equivalent array.
+
+X = squeeze(X);
+
+Verify the stratification by recreating the uniform draws with proportional sampling.
+
+rng(10203,'twister')
+U  = ((1:nPaths)' - 1 + rand(nPaths,1))/nPaths;
+
+Verify the stratification by transforming it to obtain the terminal values of standard Brownian motion.
+
+WT = norminv(U) * sqrt(T);  % Stratified Brownian motion.
+
+Verify the stratification by plotting the terminal values and output paths on the same figure.
+
+plot(sampleTimes, X), hold('on')
+xlabel('Time (Years)'), ylabel('Brownian State')
+title('Terminal Stratification: Standard Brownian Motion')
+plot(T, WT, '. black', T, WT, 'o black')
+hold('off')
+
+The last value of each sample path (the last row of the output array (X) coincides with the
+corresponding element of the stratified terminal value of the Brownian motion. This occurs because
+the simulated model and the noise generation function both represent the same standard Brownian
+motion.
+
+However, you can use the same stratified sampling function to stratify the terminal price of constant-
+parameter geometric Brownian motion models. In fact, you can use the stratified sampling function to
+stratify the terminal value of any constant-parameter model driven by Brownian motion if the model's
+terminal value is a monotonic transformation of the terminal value of the Brownian motion.
+
+Stratified Sampling
+
+14-59

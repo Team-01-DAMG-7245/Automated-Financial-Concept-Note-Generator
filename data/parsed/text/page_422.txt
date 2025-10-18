@@ -1,0 +1,57 @@
+SMA: Simple Moving Average Crossover
+
+The SMA indicator uses 5-day and 20-day simple moving averages to make buy and sell decisions.
+When the 5-day SMA crosses the 20-day SMA (moving upwards), then the stock is bought. When the
+5-day SMA crosses below the 20-day SMA, the stock is sold.
+
+% Create SMA timetables using the movavg function.
+sma5  = movavg(pricesTT,'simple',5);
+sma20 = movavg(pricesTT,'simple',20);
+
+Create the SMA indicator signal timetable.
+
+smaSignalNameEnding = '_SMA5over20';
+
+smaSignal = timetable;
+for i = 1:numel(symbols)
+    symi = symbols(i);
+    % Build a timetable for each symbol, then aggregate them together.
+    smaSignali = timetable(pricesTT.Dates,...
+        double(sma5.(symi) > sma20.(symi)),...
+        'VariableNames',{sprintf('%s%s',symi,smaSignalNameEnding)});
+    % Use the synchronize function to merge the timetables together.
+    smaSignal = synchronize(smaSignal,smaSignali);
+end
+
+The SMA signal timetable contains an indicator with a value of 1 when the 5-day moving average is
+above the 20-day moving average for each asset, and a 0 otherwise. The column names for each stock
+indicator are [stock symbol]SMA5over20. The backtestStrategy object makes trading decisions
+based on these crossover events.
+
+View the structure of the SMA signal timetable.
+
+head(smaSignal)
+
+Time        AA_SMA5over20    CAT_SMA5over20    DIS_SMA5over20    GM_SMA5over20    HPQ_SMA5
+    ___________    _____________    ______________    ______________    _____________    ________
+
+03-Jan-2006          0                0                 0                 0                0 
+    04-Jan-2006          0                0                 0                 0                0 
+    05-Jan-2006          0                0                 0                 0                0 
+    06-Jan-2006          0                0                 0                 0                0 
+    09-Jan-2006          1                0                 0                 0                1 
+    10-Jan-2006          1                1                 1                 1                1 
+    11-Jan-2006          0                1                 1                 1                1 
+    12-Jan-2006          0                1                 1                 1                1
+
+Plot the signal for a single asset to preview the trading frequency.
+
+plot(smaSignal.Time,smaSignal.CAT_SMA5over20);
+ylim([-0.5, 1.5]);
+ylabel('SMA 5 > SMA 20');
+title(sprintf('SMA 5 over 20 for CAT'));
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-254

@@ -1,0 +1,12 @@
+{
+  "page": 379,
+  "original_text": "% You can assign text names to each asset in the portfolio.\nP = setAssetList(P,AssetHoldingData.Symbol);",
+  "ocr_text": "Youcanassigntextnamestoeachassetintheportfolio.\nP=setAssetList(P,AssetHoldingData.Symbol);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 484.63,
+    "x1": 409.66,
+    "y1": 505.89
+  },
+  "confidence": "high"
+}

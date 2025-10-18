@@ -1,0 +1,12 @@
+{
+  "page": 1518,
+  "original_text": "RVM = rvm( ___ ,Name=Value) creates an RVM object with additional options specified by one or\nmore name-value arguments to set the “Properties” on page 15-215.",
+  "ocr_text": "RVM=rvm(_____,Name=Value)createsanRVMobjectwithadditionaloptionsspecifiedbyoneor\nmorename-valueargumentstosetthePropertiesonpage15-215.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 695.36,
+    "x1": 543.62,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

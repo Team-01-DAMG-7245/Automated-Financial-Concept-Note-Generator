@@ -1,0 +1,12 @@
+{
+  "page": 1187,
+  "original_text": "dateTextHandle = uicontrol(f, 'Style', 'Text', ...\n'String', 'Date:', ...\n'Horizontalalignment', 'left', ...\n'Position', [100 200 50 20]);\n3\nAdd an uicontrol editable text field to display the selected date.",
+  "ocr_text": "dateTextHandle=uicontrol(f,Style,Text,...\n\nString,Date:,...\n\nHorizontalalignment,left,...\n\nPosition,[1002005020]);\n3Addanuicontroleditabletextfieldtodisplaytheselecteddate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 135.63,
+    "x1": 413.26,
+    "y1": 190.39
+  },
+  "confidence": "high"
+}

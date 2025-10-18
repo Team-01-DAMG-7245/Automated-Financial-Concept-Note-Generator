@@ -1,0 +1,67 @@
+RebalanceFrequency — Rebalance frequency during backtest
+1 (default) | integer | duration object | calendarDuration object | vector of datetime objects
+
+Rebalance frequency during the backtest, specified as the comma-separated pair consisting of
+'RebalanceFrequency' and a scalar integer, duration or calendarDuration object, or a vector
+of datetime objects.
+
+The RebalanceFrequency specifies the schedule of dates where the strategy will rebalance its
+portfolio. The default is 1, meaning the strategy rebalances with each time step.
+
+For more information, see “Defining Schedules for Backtest Strategies” on page 15-258.
+
+Data Types: double | object | datetime
+
+TransactionCosts — Transaction costs for trades
+0 (not computed) (default) | numeric | vector | function handle
+
+Transaction costs for trades, specified as the comma-separated pair consisting of
+'TransactionCosts' and a scalar numeric, vector, or function handle. You can specify transaction
+costs in three ways:
+
+•
+rate — A scalar decimal percentage charge to both purchases and sales of assets. For example ,if
+you set TransactionCosts to 0.001, then each transaction (buys and sells) would pay 0.1% in
+transaction fees.
+
+•
+[buyRate, sellRate] — A 1-by-2 vector of decimal percentage rates that specifies separate
+rates for buying and selling of assets.
+
+•
+computeTransactionCostsFcn — A function handle to compute customized transaction fees. If
+you specify a function handle, the backtestEngine object calls the TransactionCosts function
+to compute the fees for each rebalance. The user-defined computeTransactionCostsFcn
+function handle has different signatures depending on whether the optional name-value
+arguments UserData and EngineDataList are specified and whether the sellCosts,
+buyCosts, or detailedCosts outputs are used.
+
+•
+If UserData is Empty and EngineDataList is Empty Using buyCosts and sellCosts
+Outputs
+
+When the optional name-value arguments UserData and EngineDataList are not specified
+and the sellCosts and buyCosts outputs are used, the computeTransactionCostsFcn
+function handle has the following signature:
+
+[buyCosts,sellCosts] = computeTransactionCostsFcn(deltaPositions)
+
+The user-defined computeTransactionCostsFcn function handle takes a single input
+argument, deltaPositions, which is a vector of changes in asset positions for all assets (in
+currency units) as a result of a rebalance. Positive elements in the deltaPositions vector
+indicate purchases while negative entries represent sales. The user-defined function handle
+must return two output arguments buyCosts and sellCosts, which contain the total costs
+(in currency) for the entire rebalance for each type of transaction.
+
+•
+If UserData is Empty and EngineDataList is Empty and detailedCosts Output is
+specified
+
+When the optional name-value arguments UserData and EngineDataList are not specified
+and detailedCosts output is specified, the computeTransactionCostsFcn function
+handle has the following signature:
+
+15
+Functions
+
+15-236

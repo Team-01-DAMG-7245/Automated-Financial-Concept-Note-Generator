@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf(' Quasi-Monte Carlo American Put  Basket Price: %8.4f\\n\\n', QuasiMonteCarloPutPrice)",
+  "ocr_text": "fprintf(Quasi-MonteCarloAmericanPutBasketPrice:8.4fnn,QuasiMonteCarloPutPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 414.55,
+    "x1": 588.48,
+    "y1": 425.02
+  },
+  "confidence": "high"
+}

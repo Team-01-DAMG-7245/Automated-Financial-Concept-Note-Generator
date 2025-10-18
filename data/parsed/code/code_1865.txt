@@ -1,0 +1,5 @@
+Page 1523
+================================================================================
+
+from zero, slowly varying function at zero: g(x) = xαL0(x), where ɑ = H -1/2 and H is a Hurst
+exponent.

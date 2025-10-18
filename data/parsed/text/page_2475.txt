@@ -1,0 +1,56 @@
+The first row of LPM contains zero-order lower partial moments of the three series. The fund and
+market index fall below MAR about 40% of the time and cash returns fall below its own mean about
+60% of the time.
+
+The second row contains first-order lower partial moments of the three series. The fund and market
+have large average shortfall returns relative to MAR by 75 and 140 basis points per month. On the
+other hand, cash underperforms MAR by about only four basis points per month on the downside.
+
+The third row contains second-order lower partial moments of the three series. The square root of
+these quantities provides an idea of the dispersion of returns that fall below the MAR. The market
+index has a much larger variation on the downside when compared to the fund.
+
+Input Arguments
+
+Data — Asset returns
+matrix
+
+Asset returns, specified as a NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES observations of
+NUMSERIES asset returns.
+
+Data Types: double
+
+MAR — Minimum acceptable return
+0 (default) | numeric
+
+(Optional) Minimum acceptable return, specified as a scalar numeric. MAR is a cutoff level of return
+such that all returns above MAR contribute nothing to the lower partial moment.
+
+Data Types: double
+
+Order — Moment orders
+0 (default) | scalar numeric | vector
+
+(Optional) Moment orders, specified as either a scalar or a NUMORDERS vector of nonnegative integer
+moment orders. If no order specified, the default Order = 0, which is the shortfall probability.
+Although the lpm function works for noninteger orders and, in some cases, for negative orders, this
+falls outside customary usage.
+
+Data Types: double
+
+Output Arguments
+
+Moment — Lower partial moments
+matrix
+
+Lower partial moments, returned as a NUMORDERS x NUMSERIES matrix of lower partial moments
+with NUMORDERS Orders and NUMSERIES series, that is, each row contains lower partial moments for
+a given order.
+
+Note To compute upper partial moments, reverse the signs of both Data and MAR (do not reverse
+the sign of the output). The lpm function computes sample lower partial moments from data. To
+compute expected lower partial moments for multivariate normal asset returns with a specified mean
+
+lpm
+
+15-1169

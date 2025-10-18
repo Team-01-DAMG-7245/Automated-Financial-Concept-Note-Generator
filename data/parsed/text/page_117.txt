@@ -1,0 +1,60 @@
+The severity of proceeding with a homogeneity assumption is not known a priori, and can emerge
+only from more comprehensive backtesting. Statistical tests are available, as described in [4] and [5],
+for example. During real-time trading, a rolling computation of Q over trailing training data of
+suitable size can provide the most reliable cues. Such an approach acknowledges inherent
+nonstationarity in the market.
+
+Machine Learning
+
+Machine learning refers to the general approach of effectively performing a task (for example,
+trading) in an automated fashion by detecting patterns (for example, computing Q) and making
+inferences based on available data. Often, data is dynamic and big enough to require specialized
+computational techniques. The evaluation process—tuning hyperparameters to describe the data and
+direct performance of the task—is ongoing.
+
+In addition to the challenges of working with big data, the process of evaluating complex, sometimes
+black-box, objective functions is also challenging. Objective functions supervise hyperparameter
+evaluation. The trading strategy evaluates hyperparameter tunings by first computing Q on a training
+subsample, and then trading during an evaluation (real-time) subsample. The objective is to maximize
+profit, or minimize negative cash returned, over a space of suitably constrained configurations (n,N).
+This objective is a prototypical "expensive" objective function. Bayesian optimization is a type of
+machine learning suited to such objective functions. One of its principal advantages is the absence of
+costly derivative evaluations. To implement Bayesian optimization, use the Statistics and Machine
+Learning Toolbox™ function bayesopt.
+
+The supporting function optimizeTrading.m uses bayesopt to optimize the trading strategy in
+tradeOnQ.
+
+function results = optimizeTrading(TData,VData)
+
+% Optimization variables
+
+n = optimizableVariable('numBins',[1 10],'Type','integer');
+N = optimizableVariable('numTicks',[1 50],'Type','integer');
+
+% Objective function handle
+
+f = @(x)negativeCash(x,TData,VData);
+
+% Optimize
+
+results = bayesopt(f,[n,N],...
+                   'IsObjectiveDeterministic',true,...
+                   'AcquisitionFunctionName','expected-improvement-plus',...
+                   'MaxObjectiveEvaluations',25,...
+                   'ExplorationRatio',2,...
+                   'Verbose',0);
+
+end % optimizeTrading
+
+% Objective (local)
+function loss = negativeCash(x,TData,VData)
+
+n = x.numBins;
+N = x.numTicks;
+
+% Make trading matrix Q
+
+Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction
+
+2-73

@@ -1,0 +1,12 @@
+{
+  "page": 1105,
+  "original_text": "PortfolioValue = 100000;\nHedgeAmounts   = Weights ./ Prices * PortfolioValue",
+  "ocr_text": "PortfolioValue=100000;\nHedgeAmounts=Weights./Prices*PortfolioValue",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 582.12,
+    "x1": 366.31,
+    "y1": 603.39
+  },
+  "confidence": "high"
+}

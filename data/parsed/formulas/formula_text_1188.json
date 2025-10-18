@@ -1,0 +1,12 @@
+{
+  "page": 606,
+  "original_text": "SimAction_Train_Buy = squeeze(experience_Buy.Action.TradingAction_NumberOfShares_.Data);\nNumSimSteps = length(SimAction_Train_Buy);\nSimInventory_Train_Buy = nan(NumSimSteps,1);\nSimExecutedShares_Train_Buy = SimInventory_Train_Buy;\nSimReward_Train_Buy = nan(NumSimSteps,1);\nreset(RL_OptimalExecution_Training_Environment_Buy);",
+  "ocr_text": "SimAction_Train_Buy=squeeze(experience_Buy.Action.TradingAction_NumberOfShares_.Data);\nNumSimSteps=length(SimAction_Train_Buy);\n\nSimInventory_Train_Buy=nan(NumSimSteps,1);\nSimExecutedShares_Train_Buy=SimInventory_Train_Buy;\nSimReward_Train_Buy=nan(NumSimSteps,1);\nreset(RL_OptimalExecution_Training_Environment_Buy);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 123.27,
+    "x1": 566.78,
+    "y1": 187.73
+  },
+  "confidence": "high"
+}

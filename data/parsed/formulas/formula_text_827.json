@@ -1,0 +1,12 @@
+{
+  "page": 469,
+  "original_text": "% Compute the covariance between the risk parity portfolios of each\n% cluster.\ncovCluster = W'*Sigma*W;",
+  "ocr_text": "Computethecovariancebetweentheriskparityportfoliosofeach\ncluster.\ncovCluster=W*Sigma*w;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.03,
+    "x1": 453.01,
+    "y1": 287.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 2249
+================================================================================
+
+The estimateFrontier function uses the MINLP solver to solve this problem. Use the
+setSolverMINLP function to configure the SolverType and options.

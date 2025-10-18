@@ -1,0 +1,59 @@
+Obtaining Efficient Portfolios for Target Risks
+
+This example shows how to obtain efficient portfolios that have targeted portfolio risks using the
+estimateFrontierByRisk function.
+
+The estimateFrontierByRisk function accepts one or more target portfolio risks and obtains
+efficient portfolios with the specified risks. Suppose that you have a universe of four assets where you
+want to obtain efficient portfolios with target portfolio risks of 12%, 14%, and 16%.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioMAD;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+
+pwgt = estimateFrontierByRisk(p, [0.12, 0.14, 0.16]);
+
+display(pwgt)
+
+pwgt = 4×3
+
+0.1926    0.0402         0
+    0.4288    0.5146    0.4455
+    0.0903    0.1020    0.1006
+    0.2883    0.3432    0.4539
+
+Sometimes, you can request a risk for which no efficient portfolio exists. Based on the previous code,
+suppose that you want a portfolio with 6% risk (individual assets in this universe have risks ranging
+from 7% to 42.5%). It turns out that a portfolio with 6% risk cannot be formed with these four assets.
+estimateFrontierByRisk warns if your target risks are outside the range of efficient portfolio
+risks and replaces it with the endpoint of the efficient frontier closest to your target risk. The best
+way to avoid this situation is to bracket your target portfolio risks with estimateFrontierLimits
+and estimatePortRisk (see “Obtaining Endpoints of the Efficient Frontier” on page 6-87 and
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105).
+
+prsk = estimatePortRisk(p, p.estimateFrontierLimits);
+display(prsk)
+
+prsk = 2×1
+
+0.0607
+    0.2756
+
+This result indicates that efficient portfolios have risks that range from 7% to 42.5%. Note, your
+results for this code may be different due to the random generation of scenarios.
+
+Starting with an initial portfolio, estimateFrontierByRisk also returns purchases and sales to get
+from your initial portfolio to the target portfolios on the efficient frontier. For example, given an initial
+
+6
+MAD Portfolio Optimization Tools
+
+6-96

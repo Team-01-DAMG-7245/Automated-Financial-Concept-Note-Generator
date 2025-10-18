@@ -1,0 +1,58 @@
+simByTransition
+
+Simulate CIR sample paths with transition density
+
+Syntax
+
+[Paths,Times] = simByTransition(MDL,NPeriods)
+[Paths,Times] = simByTransition( ___ ,Name,Value)
+
+Description
+
+[Paths,Times] = simByTransition(MDL,NPeriods) simulates NTrials sample paths of
+NVars independent state variables driven by the Cox-Ingersoll-Ross (CIR) process sources of risk
+over NPeriods consecutive observation periods. simByTransition approximates a continuous-time
+CIR model using an approximation of the transition density function.
+
+[Paths,Times] = simByTransition( ___ ,Name,Value) specifies options using one or more
+name-value pair arguments in addition to the input arguments in the previous syntax.
+
+You can perform quasi-Monte Carlo simulations using the name-value arguments for
+MonteCarloMethod, QuasiSequence, and BrownianMotionMethod. For more information, see
+“Quasi-Monte Carlo Simulation” on page 14-63.
+
+Examples
+
+Simulate Future Term Structures Using a CIR Model
+
+Using the short rate, simulate the rate dynamics and term structures in the future using a CIR model.
+The CIR model is expressed as
+
+dr(t) = α(b −r(t))dt + σ r(t)dW(t)
+
+The exponential affine form of the bond price is
+
+B(t, T) = e−A(t, T)r(t) + C(t, T)
+
+where
+
+A(t, T) =
+2(eγ(T −t) −1)
+(γ + α)(eγ(T −t) −1) + 2γ
+
+B(t, T) = 2αb
+σ2 log
+2γe(α + γ)(T −t)/2
+
+(γ + α)(eγ(T −t) −1) + 2γ
+
+and
+
+γ =
+α2 + 2σ2
+
+Define the parameters for the cir object.
+
+simByTransition
+
+15-395

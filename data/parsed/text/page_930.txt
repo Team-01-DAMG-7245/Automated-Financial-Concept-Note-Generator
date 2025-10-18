@@ -1,0 +1,56 @@
+To get the TTC transition matrix, pass the sampleTotals structure array to transprobbytotals.
+Internally, transprobbytotals aggregates the information in the sampleTotals structures to get
+the total time spent on each rating over the 10 years considered in this example, and the total
+number of transitions out of each rating during the same period. transprobbytotals uses the
+aggregated information to get the TTC matrix, or average one-year transition matrix.
+
+transMatTTC = transprobbytotals(sampleTotals)
+
+transMatTTC = 8×8
+
+92.8544    6.1068    0.7463    0.2761    0.0123    0.0009    0.0001    0.0032
+    2.9399   92.2329    3.8394    0.7349    0.1676    0.0050    0.0004    0.0799
+    0.2410    4.5963   90.3468    3.9572    0.6909    0.0521    0.0025    0.1133
+    0.0530    0.4729    7.9221   87.2751    3.5075    0.4650    0.0791    0.2254
+    0.0460    0.1636    1.1873    9.3442   85.4305    2.9520    0.1150    0.7615
+    0.0031    0.0152    0.2608    1.5563   10.4468   83.8525    1.9771    1.8882
+    0.0009    0.0041    0.0542    0.8378    2.9996    7.3614   82.4758    6.2662
+         0         0         0         0         0         0         0  100.0000
+
+The same TTC matrix could be obtained with a direct call to transprob, setting the estimation
+window to the 10 years under consideration. But it is much more efficient to use the sampleTotals
+structures, whenever they are available. (Note, for the duration algorithm, these alternative
+workflows can result in small numerical differences in the estimates whenever leap years are part of
+the sample.)
+
+In “Estimate Transition Probabilities” on page 8-2, a 1-year transition matrix is estimated using the 5-
+year time window from 1996 through 2000. This is another example of a TTC matrix and this can also
+be computed using the sampleTotals structure array.
+
+transprobbytotals(sampleTotals(Years>=1996&Years<=2000))
+
+ans = 8×8
+
+90.6239    7.9048    1.0313    0.4123    0.0210    0.0020    0.0003    0.0043
+    4.4776   89.5565    4.5294    1.1224    0.2283    0.0094    0.0009    0.0754
+    0.3982    6.1159   87.0651    5.4797    0.7636    0.0892    0.0050    0.0832
+    0.1029    0.8571   10.7909   83.0218    3.9968    0.7001    0.1313    0.3991
+    0.1043    0.3744    2.2960   14.0947   78.9851    3.0012    0.0463    1.0980
+    0.0113    0.0544    0.7054    3.2922   15.4341   75.6004    1.8165    3.0858
+    0.0044    0.0189    0.1903    1.9742    6.2318   10.2332   75.9990    5.3482
+         0         0         0         0         0         0         0  100.0000
+
+Estimate t-Year Default Probabilities
+
+This example shows how varying the start and end dates, the amount of data considered for the
+estimation is changed, but the output still contains, by default, one-year transition probabilities.
+
+By varying the start and end dates, the amount of data considered for the estimation is changed, but
+the output still contains, by default, one-year transition probabilities. You can change the default
+behavior by specifying the transInterval argument, as illustrated in “Estimate Transition
+Probabilities” on page 8-2.
+
+8
+Credit Risk Analysis
+
+8-12

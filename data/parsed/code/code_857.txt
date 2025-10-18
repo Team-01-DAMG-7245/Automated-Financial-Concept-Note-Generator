@@ -1,0 +1,7 @@
+Page 823
+================================================================================
+
+This example shows how to use the simulateNormalScenariosByMoments function to simulate
+multivariate normal scenarios when given the mean and covariance of asset returns. The mean can
+be either a row or column vector and the covariance matrix must be a symmetric positive-
+semidefinite matrix. Various rules for scalar expansion apply.

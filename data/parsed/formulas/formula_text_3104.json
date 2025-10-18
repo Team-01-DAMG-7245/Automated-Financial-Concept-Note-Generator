@@ -1,0 +1,12 @@
+{
+  "page": 1638,
+  "original_text": "Example: [Paths,Times,Z] = simByEuler(rvm,NPeriods,DeltaTime=dt)",
+  "ocr_text": "Example:[Paths,Times,Z]=simByEuler(rvm,NPeriods,DeltaTime=dt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 159.7,
+    "x1": 466.48,
+    "y1": 171.33
+  },
+  "confidence": "high"
+}

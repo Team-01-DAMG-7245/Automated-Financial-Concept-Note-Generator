@@ -1,0 +1,62 @@
+and used in the Portfolio object. In this example, the expected returns and covariances of the
+assets in the portfolio are set to their historical values.
+
+p = Portfolio('AssetList',assetNames);
+
+Set up default portfolio constraints (all weights sum to 1, no shorting, and 100% investment in risky
+assets).
+
+p = setDefaultConstraints(p);
+
+Add asset returns and covariance to the Portfolio object.
+
+activReturn = assetReturn - benchReturn;
+pAct = estimateAssetMoments(p,activReturn,'missingdata',false)
+
+pAct = 
+  Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                     AssetMean: [15×1 double]
+                    AssetCovar: [15×15 double]
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: []
+                     NumAssets: 15
+                     AssetList: {'AA'  'AXP'  'C'  'DD'  'GE'  'HD'  'HPQ'  'INTC'  'JPM'  'MCD' 
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [15×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [15×1 categorical]
+
+Compute the Efficient Frontier Using the Portfolio Object
+
+Compute the mean-variance efficient frontier of 20 optimal portfolios. Visualize the frontier over the
+risk-return characteristics of the individual assets. Furthermore, calculate and visualize the
+information ratio for each portfolio along the frontier.
+
+Portfolio Optimization Against a Benchmark
+
+4-205

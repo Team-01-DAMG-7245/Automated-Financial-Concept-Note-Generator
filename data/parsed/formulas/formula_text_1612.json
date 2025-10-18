@@ -1,0 +1,12 @@
+{
+  "page": 810,
+  "original_text": "p = PortfolioMAD('numassets',5);\np.defaultforAssetList = 'ETF'; \np = setAssetList(p);\ndisp(p.AssetList)",
+  "ocr_text": "p=PortfolioMAD(numassets,5);\np.defaultforAssetList=ETF;\np=setAssetList(p);\ndisp(p.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 649.83,
+    "x1": 263.39,
+    "y1": 692.69
+  },
+  "confidence": "high"
+}

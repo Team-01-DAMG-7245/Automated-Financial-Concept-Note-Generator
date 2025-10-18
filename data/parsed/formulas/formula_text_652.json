@@ -1,0 +1,12 @@
+{
+  "page": 415,
+  "original_text": "nAssets = size(pricesTT, 2);\nassetReturns = tick2ret(pricesTT);\n% Max 25% into a single asset (including cash)\np = Portfolio('NumAssets',nAssets,...\n    'LowerBound',0,'UpperBound',0.1,...\n    'LowerBudget',1,'UpperBudget',1);\np = estimateAssetMoments(p, assetReturns{:,:});\nnew_weights = estimateMaxSharpeRatio(p);",
+  "ocr_text": "nAssets=size(pricesTT,2);\nassetReturns=tick2ret(pricesTT);\nMax25intoasingleasset(includingcash)\np=Portfolio(NumAssets,nAssets,...\nLowerBound,0,UpperBound,0.1,...\nLowerBudget,1,UpperBudget,1);\np=estimateAssetMoments(p,assetReturns{:,:});\nnew_weights=estimateMaxSharpeRatio(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 260.66,
+    "x1": 344.65,
+    "y1": 346.73
+  },
+  "confidence": "high"
+}

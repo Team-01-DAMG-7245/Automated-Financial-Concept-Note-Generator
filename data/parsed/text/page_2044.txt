@@ -1,0 +1,69 @@
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+pwgt — Portfolios to check
+matrix
+
+Portfolios to check, specified as a NumAssets-by-NumPorts matrix.
+
+Data Types: double
+
+Output Arguments
+
+status — Indicator if portfolio is feasible
+row vector
+
+Indicator if portfolio is feasible, returned as a row vector of NumPorts indicators that are true if
+portfolio is feasible and false otherwise.
+
+Note By definition, any portfolio set must be nonempty and bounded. If the set is empty, no portfolios
+can be feasible. Use estimateBounds to test for nonempty and bounded sets.
+
+Feasibility status is returned for Portfolio, PortfolioCVaR, or PortfolioMAD objects. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+More About
+
+Feasibility
+
+Feasibility in portfolio optimization ensures that the proposed investment strategies are practical and
+can be executed within the constraints set by the investor's preferences, risk tolerance, and
+regulatory requirements.
+
+In portfolio optimization, feasible solutions are those that meet all specified constraints.
+
+Tips
+
+•
+You can also use dot notation to check the feasibility of input portfolios against a portfolio object.
+
+status = obj.checkFeasibility(pwgt);
+
+•
+The constraint tolerance to assess whether a constraint is satisfied is obtained from the hidden
+property obj.defaultTolCon.
+
+15
+Functions
+
+15-738

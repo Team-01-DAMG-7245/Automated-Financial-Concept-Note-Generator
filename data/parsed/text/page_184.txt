@@ -1,0 +1,70 @@
+must be a non-empty compact set, the application of a tracking error constraint may result in an
+empty portfolio set. Use estimateBounds to confirm that the portfolio set is non-empty and
+compact.
+
+Cardinality Constraints
+
+Cardinality constraint limits the number of assets in the optimal allocation for an Portfolio,
+PortfolioCVaR, or PortfolioMAD object. Use setMinMaxNumAssets to specify the
+'MinNumAssets' and 'MaxNumAssets' constraints. To mathematically formulate this type of
+constraints, a binary variable vi is needed. vi = 0 indicates that asset i is not selected and vi = 1
+indicates that the asset was selected. Thus
+
+MinNumAssets ≤
+∑
+i = 1
+
+NumAssets
+vi ≤MaxNumAssets
+
+The default is to ignore this constraint.
+
+See Also
+Portfolio | PortfolioCVaR | PortfolioMAD
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+More About
+
+•
+Portfolio
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+•
+“Default Portfolio Problem” on page 4-17
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-16

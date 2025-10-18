@@ -1,0 +1,79 @@
+Zk ∼N Hkb, C
+
+for k = 1, ..., m.
+
+The goal of multivariate normal regression is to obtain maximum likelihood estimates for b and C
+given a collection of m observations z1, ..., zm of the random variables Z1, ..., Zm. The estimated
+parameters are the p distinct elements of b and the n (n + 1)/2 distinct elements of C (the lower-
+triangular elements of C).
+
+Note Quasi-maximum likelihood estimation works with the same models but with a relaxation of the
+assumption of normally distributed residuals. In this case, however, the parameter estimates are
+asymptotically optimal.
+
+Maximum Likelihood Estimation
+
+To estimate the parameters of the multivariate normal linear regression model using maximum
+likelihood estimation, it is necessary to maximize the log-likelihood function over the estimation
+parameters given observations z1, ... , zm.
+
+Given the multivariate normal model to characterize residual errors in the regression model, the log-
+likelihood function is
+
+L z1, …, zm; b, C = 1
+2mnlog 2π + 1
+2mlog det C
+
++ 1
+2 ∑
+k = 1
+
+m
+
+zk −Hkb TC−1 zk −Hkb .
+
+Although the cross-sectional residuals must be independent, you can use this log-likelihood function
+for quasi-maximum likelihood estimation. In this case, the estimates for the parameters b and C
+provide estimates to characterize the first and second moments of the residuals. See Caines [1] for
+details.
+
+Except for a special case (see “Special Case of Multiple Linear Regression Model” on page 9-4), if
+both the model parameters in b and the covariance parameters in C are to be estimated, the
+estimation problem is intractably nonlinear and a solution must use iterative methods. Denote
+estimates for the parameters b and C for iteration t = 0, 1, ... with the superscript notation b(t) and
+C(t).
+
+Given initial estimates b(0) and C(0) for the parameters, the maximum likelihood estimates for b and C
+are obtained using a two-stage iterative process with
+
+b t + 1 =
+∑
+k = 1
+
+m
+HkT C t −1Hk
+
+−1
+
+∑
+k = 1
+
+m
+HkT C t −1zk
+
+and
+
+C t + 1 = 1
+m ∑
+k = 1
+
+m
+
+zk −Hkb t + 1
+zk −Hkb t + 1 T
+
+for t = 0, 1, ... .
+
+Multivariate Normal Regression
+
+9-3

@@ -1,0 +1,61 @@
+Bond Issue date, specified as the comma-separated pair consisting of 'IssueDate' and a scalar or a
+NUMBONDS-by-1 or 1-by-NUMBONDS vector using a datetime array, string array, or date character
+vectors.
+
+If you do not specify an IssueDate, the cash flow payment dates are determined from other inputs.
+
+To support existing code, bndconvp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+FirstCouponDate — Irregular or normal first coupon date
+datetime array | string array | date character vector
+
+Irregular or normal first coupon date, specified as the comma-separated pair consisting of
+'FirstCouponDate' and a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using a datetime
+array, string array, or date character vectors.
+
+If you do not specify a FirstCouponDate, the cash flow payment dates are determined from other
+inputs.
+
+To support existing code, bndconvp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+LastCouponDate — Irregular or normal last coupon date
+datetime array | string array | date character vector
+
+Irregular or normal last coupon date, specified as the comma-separated pair consisting of
+'LastCouponDate' and a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using a datetime
+array, string array, or date character vectors.
+
+If you do not specify a LastCouponDate, the cash flow payment dates are determined from other
+inputs.
+
+To support existing code, bndconvp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+StartDate — Forward starting date of payments
+datetime array | string array | date character vector
+
+Forward starting date of payments, specified as the comma-separated pair consisting of
+'StartDate' and a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using a datetime array,
+string array, or date character vectors. The StartDate is when a bond actually starts (the date from
+which a bond cash flow is considered). To make an instrument forward-starting, specify this date as a
+future date.
+
+If you do not specify a StartDate, the effective start date is the Settle date.
+
+To support existing code, bndconvp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+15
+Functions
+
+15-526

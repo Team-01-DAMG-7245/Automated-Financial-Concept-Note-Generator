@@ -1,0 +1,64 @@
+DT = tall(CombinedDS);
+DT.Time = seconds(DT.Time);
+DTT = table2timetable(DT);
+
+The timestamps are durations, seconds from midnight on June 21, 2012 when the corresponding
+event occurred. Obtain timestamps that are dates and times of events instead of durations.
+
+strt = datetime(201,6,21,0,0,0,34200000);
+t = datetime(strt,Format="dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSSSS") + DTT.Time;
+
+Imbalance Index It
+
+The level 3 imbalance index at time t It is the ratio of the weighted averages of the first three levels of
+ask and bid volumes on either side of the midprice at time t [4]. Symbolically,
+
+It = Vbt −Vat
+Vbt + Vat,
+
+where the level 3 weighted average of bid volumes Vbt = ∑
+j = 1
+
+3
+e−λ( j −1)Vb jt and Vb jt is the level j bid
+
+volume at time t. Vat is similarly defined.
+
+The variable λ > 0 is a hyperparameter controlling the influence of levels 2 through 3 on the average
+volume. You choose the value of λ before training or you can tune it by, for example, performing
+cross-validation. This example sets λ to 0.5.
+
+It is in the interval −1, 1 ; a positive value indicates a larger bid volume than ask volume and a
+negative value indicates a larger ask volume than bid volume. A magnitude close to 1 suggests an
+extreme volume imbalance.
+
+Compute level 3 imbalance index values.
+
+lvl = 3;        % Hyperparameter
+lambda = 0.5;   % Hyperparameter
+weights = exp(-(lambda)*(0:(lvl-1)))';
+VAsk = DTT{:,"AskSize" + string(1:lvl)}*weights;
+VBid = DTT{:,"BidSize" + string(1:lvl)}*weights;
+DTT.I = (VBid-VAsk)./(VBid+VAsk);
+
+Midprice St
+
+The midprice at time t St is the average of the level 1 bid and ask prices, St = (Vb1t + Va1t)/2. Price
+changes are measured with respect to changes in midprices.
+
+Compute the midprices.
+
+DTT.Midprices = (DTT.BidPrice1 + DTT.AskPrice1)/2;
+
+Focus on Order Executions
+
+Prices are far more likely to change when orders are executed, which correspond to event types 4
+and 5 in the message data. Focus the sample on only those events.
+
+executionIdx = DTT.Type == 4 | DTT.Type == 5;   % By assumption
+I = DTT.I(executionIdx);
+
+2
+Performing Common Financial Tasks
+
+2-80

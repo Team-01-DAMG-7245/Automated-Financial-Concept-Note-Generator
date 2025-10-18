@@ -1,0 +1,12 @@
+{
+  "page": 1361,
+  "original_text": "2\nCompute the eigendecomposition of C = VΛ VT.",
+  "ocr_text": "2ComputetheeigendecompositionofC=VAV.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 368.2,
+    "x1": 327.03,
+    "y1": 380.01
+  },
+  "confidence": "high"
+}

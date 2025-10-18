@@ -1,0 +1,39 @@
+% Interpolate simulated yields at cash flow times
+simCFTimes = yearfrac(simSettle,allDates);
+simCFYields = interp1(yieldsTimes,simYields',simCFTimes',[],"extrap")';
+
+% Compute prices from cash flow yields
+simDF = exp(-simCFYields.*simCFTimes');
+simBondsPrices = (allCF*simDF')';
+
+% Compute simulated returns
+simMonthlyReturns = (simBondsPrices - bondsPrices)./bondsPrices;
+
+The resulting returns simulation allows you to analyze the distribution of the one-month-ahead
+returns of the bonds. You can plot the distribution of the one-month-ahead distribution of the bonds
+with 3-month, 10-year, and 20-year maturities.
+
+figure
+t = tiledlayout(3,1);
+title(t,'PDF of One-Month-Ahead Returns')
+ylabel(t,'Returns')
+bins = -0.1:0.001:0.1;
+
+% 3-month maturity bond
+nexttile
+histogram(simMonthlyReturns(:,3),bins,'Normalization','pdf')
+xlabel('3-Month Maturity Bond')
+
+% 24-month maturity
+nexttile
+histogram(simMonthlyReturns(:,68),'Normalization','pdf')
+xlabel('10-Year Maturity Bond')
+
+% 120-month maturity
+nexttile
+histogram(simMonthlyReturns(:,90),'Normalization','pdf')
+xlabel('20-Year Maturity Bond')
+
+Bond Portfolio CVaR Optimization Using Diebold-Li Model
+
+5-149

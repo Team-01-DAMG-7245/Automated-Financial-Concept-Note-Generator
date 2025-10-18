@@ -1,0 +1,12 @@
+{
+  "page": 455,
+  "original_text": "mrc = portfolioRiskContribution(wRB,Sigma,RiskContributionType=\"absolute\")",
+  "ocr_text": "mrc=portfolioRiskContribution(wRB,Sigma,RiskContributionType=absolute)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 354.35,
+    "x1": 490.97,
+    "y1": 364.81
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 849
+================================================================================
+
+Suppose that you want to add another linear inequality constraint to ensure that the last three assets
+constitute at least 50% of your portfolio. You can set up an augmented system of linear inequalities or
+use the addInequality function to build up linear inequality constraints. For this example, create
+another system of inequalities:

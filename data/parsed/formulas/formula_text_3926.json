@@ -1,0 +1,12 @@
+{
+  "page": 2231,
+  "original_text": "Note If no initial portfolio is specified in obj.InitPort, the initial portfolio is assumed to be 0 so\nthat pbuy = max(0, pwgt) and psell = max(0, -pwgt). If no tracking portfolio is specified in\nobj.TrackingPort, the tracking portfolio is assumed to be 0.",
+  "ocr_text": "NoteIfnoinitialportfolioisspecifiedinobj.InitPort,theinitialportfolioisassumedtobe0so\nthatpbuy=max(0,_pwgt)andpsell=max(0,_-pwgt).Ifnotrackingportfolioisspecifiedin\nobj.TrackingPort,thetrackingportfolioisassumedtobe0.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 538.81,
+    "x1": 543.79,
+    "y1": 574.44
+  },
+  "confidence": "high"
+}

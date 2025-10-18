@@ -1,0 +1,12 @@
+{
+  "page": 2133,
+  "original_text": "NumDays = days365('15-jan-2000', '15-mar-2000')",
+  "ocr_text": "NumDays=days365(15-jan-2000:,_15-mar-2000)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 469.11,
+    "x1": 344.66,
+    "y1": 479.58
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1053,
+  "original_text": "modeResStatus = mode(dataMissing.ResStatus);\ndisp(modeResStatus)",
+  "ocr_text": "modeResStatus=mode(dataMissing.ResStatus);\ndisp(modeResStatus)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.83,
+    "x1": 328.39,
+    "y1": 148.1
+  },
+  "confidence": "high"
+}

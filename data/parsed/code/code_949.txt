@@ -1,0 +1,17 @@
+Page 943
+================================================================================
+
+DefRateIG = zeros(nYears,1);
+DefRateSG = zeros(nYears,1);
+DefRate = zeros(nYears,1);
+for t=1:nYears
+   % Get transition matrix at IG/SG level and extract IG default rate and
+   % SG default rate for year t
+   tmIGSG = transprobbytotals(totalsIGSG(t));
+   DefRateIG(t) = tmIGSG(1,3);
+   DefRateSG(t) = tmIGSG(2,3);
+   % Get transition matrix at most aggregate level and extract overall
+   % corporate default rate for year t
+   tmAll = transprobbytotals(totalsAll(t));
+   DefRate(t) = tmAll(1,2);
+end

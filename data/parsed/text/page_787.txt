@@ -1,0 +1,40 @@
+f(x,y) is the loss function for a portfolio x and asset return y.
+
+m is the mean of asset returns (n vector).
+
+such that
+
+m = 1
+S ∑
+s = 1
+
+S
+ys
+
+For more information, see Konno and Yamazaki [50] at “Portfolio Optimization” on page A-5.
+
+See Also
+Portfolio | PortfolioCVaR | PortfolioMAD
+
+Related Examples
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+More About
+
+•
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object on page 6-8
+
+•
+“Default Portfolio Problem” on page 6-15
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+Portfolio Optimization Theory
+
+6-7

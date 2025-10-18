@@ -1,0 +1,68 @@
+where:
+
+r0 is the risk-free rate (scalar).
+
+m is the mean of asset returns (n vector).
+
+b is the proportional cost to purchase assets (n vector).
+
+s is the proportional cost to sell assets (n vector).
+
+You can incorporate fixed transaction costs in this model also. Though in this case, it is necessary to
+incorporate prices into such costs. The properties in the Portfolio object to specify net portfolio
+returns are:
+
+•
+RiskFreeRate for r0
+•
+AssetMean for m
+
+•
+InitPort for x0
+•
+BuyCost for b
+
+•
+SellCost for s
+
+Risk Proxy
+
+The proxy for portfolio risk is a function σ: X
+R on a portfolio set X ⊂Rn that characterizes the risks
+associated with portfolio choices.
+
+Variance
+
+The variance of portfolio returns for a portfolio x ∈X is
+
+Variance x = xTCx
+
+where C is the covariance of asset returns (n-by-n positive-semidefinite matrix).
+
+The property in the Portfolio object to specify the variance of portfolio returns is AssetCovar for
+C.
+
+Although the risk proxy in mean-variance portfolio optimization is the variance of portfolio returns,
+the square root, which is the standard deviation of portfolio returns, is often reported and displayed.
+Moreover, this quantity is often called the “risk” of the portfolio. For details, see Markowitz [46], [47]
+at (“Portfolio Optimization” on page A-5).
+
+Conditional Value-at-Risk
+
+The conditional value-at-risk for a portfolio x ∈X, which is also known as expected shortfall, is
+defined as
+
+CVaRα x =
+1
+1 −α
+∫
+f(x, y) ≥VaRα(x)
+f(x, y)p(y)dy,
+
+where:
+
+α is the probability level such that 0 < α < 1.
+
+Portfolio Optimization Theory
+
+6-5

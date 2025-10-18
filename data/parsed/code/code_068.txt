@@ -1,0 +1,11 @@
+Page 74
+================================================================================
+
+Use a bootstrapping function to derive an implied zero curve. Bootstrapping is a process whereby you
+begin with known data points and solve for unknown data points using an underlying arbitrage
+theory. Every coupon bond can be valued as a package of zero-coupon bonds which mimic its cash
+flow and risk characteristics. By mapping yields-to-maturity for each theoretical zero-coupon bond, to
+the dates spanning the investment horizon, you can create a theoretical zero-rate curve. The
+Financial Toolbox™ software provides two bootstrapping functions: zbtprice derives a zero curve
+from bond data and prices, and zbtyield derives a zero curve from bond data and yields. Using
+zbtprice

@@ -1,0 +1,55 @@
+Price a Treasury Bond from Yield to Maturity Using datetime Inputs
+
+This example shows how to use datetime inputs to price a treasury bond at three different yield
+values.
+
+Yield = [0.04; 0.05; 0.06];
+CouponRate = 0.05;
+Settle = datetime('20-Jan-1997','Locale','en_US');
+Maturity = datetime('15-Jun-2002','Locale','en_US');
+Period = 2;
+Basis = 0;
+[Price, AccruedInt] = bndprice(Yield, CouponRate, Settle,...
+Maturity, Period, Basis)
+
+Price = 3×1
+
+104.8106
+   99.9951
+   95.4384
+
+AccruedInt = 3×1
+
+0.4945
+    0.4945
+    0.4945
+
+Price a Treasury Bond with Different Yield Values
+
+This example shows how to price a Treasury bond at two different yield values that include
+parameter/value pairs for CompoundingFrequency, DiscountBasis, and
+LastCouponPeriodInterest.
+
+bndprice(.04,0.08,datetime(2004,5,25),datetime(2005,4,21),'Period',1,'Basis',8, ...
+'LastCouponInterest','simple')
+
+ans = 
+103.4743
+
+Input Arguments
+
+Yield — Bond yield to maturity
+numeric
+
+Bond yield to maturity is specified as a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector. Yield is
+on a semiannual basis for Basis values 0 through 7 and 13 and an annual basis for Basis values 8
+through 12.
+
+Data Types: double
+
+CouponRate — Annual percentage rate used to determine coupons payable on a bond
+decimal
+
+bndprice
+
+15-559

@@ -1,0 +1,10 @@
+Page 240
+================================================================================
+
+GA = [ 1 1 1 0 0 0 ];    % financial companies
+GB = [ 0 0 0 1 1 1 ];    % nonfinancial companies
+p = Portfolio('GroupA', GA, 'GroupB', GB, 'UpperRatio', 0.5);
+disp(p.NumAssets)
+disp(p.GroupA)
+disp(p.GroupB)
+disp(p.UpperRatio)

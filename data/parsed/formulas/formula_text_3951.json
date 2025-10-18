@@ -1,0 +1,12 @@
+{
+  "page": 2242,
+  "original_text": "obj = obj.estimateAssetMoments(AssetReturns);",
+  "ocr_text": "obj_=obj.estimateAssetMoments(AssetReturns);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 259.83,
+    "x1": 333.81,
+    "y1": 270.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 492,
+  "original_text": "Name = repmat(string(MonthlyPrices.Properties.VariableNames(:)),1,NumPeriods);",
+  "ocr_text": "Name=repmat(string(MonthlyPrices.Properties.VariableNames(:)),1,NumPeriods);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 512.6,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

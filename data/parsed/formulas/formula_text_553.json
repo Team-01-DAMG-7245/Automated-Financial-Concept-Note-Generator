@@ -1,0 +1,12 @@
+{
+  "page": 371,
+  "original_text": "benchReturn = tick2ret(benchPrice);\nassetReturn = tick2ret(assetPrice);",
+  "ocr_text": "benchReturn=tick2ret(benchPrice);\nassetReturn=tick2ret(assetPrice);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 279.63,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

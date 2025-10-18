@@ -1,0 +1,14 @@
+figure;
+plotFrontier(p,pwgt);
+
+% Plot the portfolio weights.
+figure;
+area(pwgt');
+legend(p.AssetList);
+axis([1 10 0 1])
+title('CVaR Portfolio Weights');
+
+10
+Solving Sample Problems
+
+10-56

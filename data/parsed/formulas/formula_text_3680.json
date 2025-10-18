@@ -1,0 +1,12 @@
+{
+  "page": 2075,
+  "original_text": "PreviousCouponDate = cpndatep(datetime(1997,3,14),datetime(2000,6,30),2, 0, 1)",
+  "ocr_text": "PreviousCouponDate=cpndatep(datetime(1997,3,14),datetime(2000,6,30),2,0,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 187.74,
+    "x1": 512.61,
+    "y1": 198.21
+  },
+  "confidence": "high"
+}

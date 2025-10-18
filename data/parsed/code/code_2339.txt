@@ -1,0 +1,8 @@
+Page 2222
+================================================================================
+
+This example shows how to use estimateCustomObjectivePortfolio to solve a portfolio
+problem with a custom objective. You define the constraints for portfolio problems using functions for
+the Portfolio object and then you specify the objective function as an input to
+estimateCustomObjectivePortfolio. The objective function must be continuous (and preferably
+smooth).

@@ -1,0 +1,32 @@
+rng(22814,'twister')
+[X2,T] = simByEuler(GBM2,1000);  % standard Brownian motion
+
+When based on the same initial random number state, each technique generates identical asset price
+paths.
+
+subplot(2,1,1)
+plot(T, X1)
+title('Sample Paths from Correlated Brownian Motion')
+ylabel('Asset Price')
+subplot(2,1,2)
+plot(T, X2)
+title('Sample Paths from Standard Brownian Motion')
+xlabel('Trading Day')
+ylabel('Asset Price')
+
+Dynamic Behavior of Market Parameters
+
+As discussed in “Creating SDE Objects” on page 14-7, object parameters may be evaluated as if they
+are MATLAB® functions accessible by a common interface. This accessibility provides the impression
+of dynamic behavior regardless of whether the underlying parameters are truly time-varying.
+Furthermore, because parameters are accessible by a common interface, seemingly simple linear
+constructs may in fact represent complex, nonlinear designs.
+
+For example, consider a univariate geometric Brownian motion (GBM) model of the form:
+
+In this model, the return, μ(t), and volatility,σ(t), are dynamic parameters of time alone. However,
+when creating a gbm object to represent the underlying model, such dynamic behavior must be
+
+Simulating Equity Prices
+
+14-43

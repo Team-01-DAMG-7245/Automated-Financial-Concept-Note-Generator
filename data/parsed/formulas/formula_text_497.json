@@ -1,0 +1,12 @@
+{
+  "page": 340,
+  "original_text": "clf;\nsubplot(2,1,1);\nplot(prsk, pret, 'LineWidth', 2);\nhold on\nscatter(srsk, sret, 'g', 'filled');\ntitle('\\bfEfficient Frontier');\nxlabel('Portfolio Risk');\nylabel('Portfolio Return');\nhold off",
+  "ocr_text": "clf;\n\nsubplot(2,1,1);\nplot(prsk,pret,LineWidth,2);\nholdon\nscatter(srsk,sret,g,filled);\ntitle(bfEfficientFrontier);\nxlabel(PortfolioRisk);\nylabel(PortfolioReturn);\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 308.23,
+    "x1": 279.65,
+    "y1": 405.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1040,
+  "original_text": "missingResStatus = ismissing(dataToImpute.ResStatus);\nmissingCustAge = ismissing(dataToImpute.CustAge);",
+  "ocr_text": "missingResStatus=ismissing(dataToImpute.ResStatus);\nmissingCustAge=ismissing(dataToImpute.CustAge);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 221.49,
+    "x1": 377.15,
+    "y1": 242.75
+  },
+  "confidence": "high"
+}

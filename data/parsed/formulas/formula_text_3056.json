@@ -1,0 +1,12 @@
+{
+  "page": 1601,
+  "original_text": "% Create the backtesting engine using the default settings\nbacktester = backtestEngine(strategies)",
+  "ocr_text": "Createthebacktestingengineusingthedefaultsettings\nbacktester=backtestEngine(strategies)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 317.94,
+    "x1": 404.24,
+    "y1": 339.21
+  },
+  "confidence": "high"
+}

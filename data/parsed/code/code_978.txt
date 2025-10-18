@@ -1,0 +1,5 @@
+Page 980
+================================================================================
+
+Approach 1: Fill missing data using the fillmissing function of the creditscorecard
+object

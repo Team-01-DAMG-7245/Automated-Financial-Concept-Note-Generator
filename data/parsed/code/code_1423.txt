@@ -1,0 +1,5 @@
+Page 1396
+================================================================================
+
+The diffusion-rate specification can be any NVars-by-NBrowns matrix-valued function G of the
+general form:

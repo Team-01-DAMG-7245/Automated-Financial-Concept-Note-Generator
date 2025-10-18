@@ -1,0 +1,12 @@
+{
+  "page": 2350,
+  "original_text": "dMargin = floatdiscmargin(Price, Spread, Settle, Maturity, ...\n[StubRate, SpotRate], LatestFloatingRate,'Reset', Reset, 'Basis', Basis, ...\n'AdjustCashFlowsBasis', true)",
+  "ocr_text": "dMargin=floatdiscmargin(Price,Spread,Settle,Maturity,...\n[StubRate,SpotRate],LatestFloatingRate,Reset,Reset,Basis,Basis,...\nAdjustCashFlowsBasis,true)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 621.85,
+    "x1": 501.8,
+    "y1": 653.92
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,61 @@
+Asset Returns and Scenarios Using PortfolioMAD Object
+
+In this section...
+
+“How Stochastic Optimization Works” on page 6-35
+
+“What Are Scenarios?” on page 6-35
+
+“Setting Scenarios Using the PortfolioMAD Function” on page 6-36
+
+“Setting Scenarios Using the setScenarios Function” on page 6-37
+
+“Estimating the Mean and Covariance of Scenarios” on page 6-37
+
+“Simulating Normal Scenarios” on page 6-38
+
+“Simulating Normal Scenarios from Returns or Prices” on page 6-38
+
+“Simulating Normal Scenarios with Missing Data” on page 6-39
+
+“Simulating Normal Scenarios from Time Series Data” on page 6-41
+
+“Simulating Normal Scenarios with Mean and Covariance” on page 6-43
+
+How Stochastic Optimization Works
+
+The MAD of a portfolio is mean-absolute deviation. For the definition of the MAD function, see “Risk
+Proxy” on page 6-5. Although analytic solutions for MAD exist for a few probability distributions, an
+alternative is to compute the expectation for MAD with samples from the probability distribution of
+asset returns. These samples are called scenarios and, given a collection of scenarios, the portfolio
+optimization problem becomes a stochastic optimization problem.
+
+As a function of the portfolio weights, the MAD of the portfolio is a convex non-smooth function (see
+Konno and Yamazaki [50] at “Portfolio Optimization” on page A-5). The PortfolioMAD object
+computes MAD as this nonlinear function which can be handled by the solver fmincon Optimization
+Toolbox. The nonlinear programming solver fmincon has several algorithms that can be selected
+with the setSolver function, the two algorithms that work best in practice are 'sqp' and
+'active-set'.
+
+There are reformulations of the MAD portfolio optimization problem (see Konno and Yamazaki [50] at
+“Portfolio Optimization” on page A-5) that result in a linear programming problem, which can be
+solved either with standard linear programming techniques or with stochastic programming solvers.
+The PortfolioMAD object, however, does not reformulate the problem in such a manner. The
+PortfolioMAD object computes the MAD as a nonlinear function. The convexity of the MAD, as a
+function of the portfolio weights and the dull edges when the number of scenarios is large, make the
+MAD portfolio optimization problem tractable, in practice, for certain nonlinear programming solvers,
+such as fmincon from Optimization Toolbox. To learn more about the workflow when using
+PortfolioMAD objects, see “PortfolioMAD Object Workflow” on page 6-16.
+
+What Are Scenarios?
+
+Since mean absolute deviation portfolio optimization works with scenarios of asset returns to perform
+the optimization, several ways exist to specify and simulate scenarios. In many applications with MAD
+portfolio optimization, asset returns may have distinctly nonnormal probability distributions with
+either multiple modes, binning of returns, truncation of distributions, and so forth. In other
+applications, asset returns are modeled as the result of various simulation methods that might
+include Monte-Carlo simulation, quasi-random simulation, and so forth. Often, the underlying
+
+Asset Returns and Scenarios Using PortfolioMAD Object
+
+6-35

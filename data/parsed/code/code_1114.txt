@@ -1,0 +1,5 @@
+Page 1145
+================================================================================
+
+LoggedSignals.State = [Moneyness TimeToMaturity InitPosition]';
+InitialObservation  = LoggedSignals.State;

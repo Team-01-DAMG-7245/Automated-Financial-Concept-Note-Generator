@@ -1,0 +1,12 @@
+{
+  "page": 158,
+  "original_text": "PortWts = estimateFrontier(p, NumPorts);",
+  "ocr_text": "PortWts=estimateFrontier(p,NumPorts);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 266.53,
+    "x1": 306.72,
+    "y1": 277.0
+  },
+  "confidence": "high"
+}

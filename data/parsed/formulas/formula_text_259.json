@@ -1,0 +1,12 @@
+{
+  "page": 160,
+  "original_text": "Since you must represent the information in the form A*Wts <= b, multiply equation numbers 1, 3\nand 5 by –1. Also turn equation number 7 into a set of two inequalities: W2 + W3 ≥ 0.50 and W2 +\nW3 ≤ 0.50. (The intersection of these two inequalities is the equality itself.) Thus",
+  "ocr_text": "SinceyoumustrepresenttheinformationintheformA*Wts_=b,multiplyequationnumbers1,3\nand5by-1.Alsoturnequationnumber7intoasetoftwoinequalities:W2+W3=0.50andW2+\nW3s0.50.(Theintersectionofthesetwoinequalitiesistheequalityitself.)Thus",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 92.96,
+    "x1": 546.28,
+    "y1": 128.59
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,49 @@
+Local Functions
+
+function new_weights = equalWeightFcn(~,pricesTT)
+% Equal-weighted portfolio allocation
+
+nAssets = size(pricesTT, 2);
+new_weights = ones(1,nAssets);
+new_weights = new_weights / sum(new_weights);
+
+end
+
+function new_weights = maxSharpeRatioFcn(~,pricesTT)
+% Max Sharpe ratio portfolio allocation
+
+nAssets = size(pricesTT, 2);
+assetReturns = tick2ret(pricesTT);
+% Max 25% into a single asset (including cash)
+p = Portfolio('NumAssets',nAssets,...
+    'LowerBound',0,'Budget',1);
+p = estimateAssetMoments(p,assetReturns{:,:});
+new_weights = estimateMaxSharpeRatio(p);
+
+end
+
+function assetAreaPlot(backtester,strategyName)
+% Plot the asset allocation as an area plot.
+
+t = backtester.Positions.(strategyName).Time;
+positions = backtester.Positions.(strategyName).Variables;
+h = area(t,positions);
+title(sprintf('%s Positions',strrep(strategyName,'_',' ')));
+xlabel('Date');
+ylabel('Asset Positions');
+xtickformat('MM/dd');
+xlim([t(1) t(end)])
+oldylim = ylim;
+ylim([0 oldylim(2)]);
+cm = parula(numel(h));
+for i = 1:numel(h)
+    set(h(i),'FaceColor',cm(i,:));
+end
+legend(backtester.Positions.(strategyName).Properties.VariableNames)
+
+end
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-456

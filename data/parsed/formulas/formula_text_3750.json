@@ -1,0 +1,12 @@
+{
+  "page": 2124,
+  "original_text": "NumDays = days360e(StartDate,EndDate)",
+  "ocr_text": "NumDays=days360e(StartDate,EndDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.67,
+    "x1": 312.76,
+    "y1": 203.3
+  },
+  "confidence": "high"
+}

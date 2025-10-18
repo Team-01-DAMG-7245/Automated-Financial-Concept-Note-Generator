@@ -1,0 +1,62 @@
+load CAPMuniverse
+p0 = Portfolio('AssetList',Assets(1:12));
+p0 = estimateAssetMoments(p0, Data(:,1:12),'missingdata',true);
+p0 = setDefaultConstraints(p0);
+
+Use setMinMaxNumAssets to define a maximum number of 3 assets.
+
+p1 = setMinMaxNumAssets(p0, [], 3);
+
+Use setBounds to define a lower and upper bound and a BoundType of 'Conditional'.
+
+p1 = setBounds(p1, 0.1, 0.5,'BoundType', 'Conditional');
+pwgt = estimateFrontier(p1, 5);
+
+The following table shows that the optimized allocations only have maximum 3 assets invested, and
+small positions less than 0.1 are avoided.
+
+result = table(p0.AssetList', pwgt)
+
+result=12×2 table
+      Var1                             pwgt                        
+    ________    ___________________________________________________
+
+{'AAPL'}          0          0          0    0.14232          0
+    {'AMZN'}          0          0          0          0          0
+    {'CSCO'}          0          0          0          0          0
+    {'DELL'}          0          0          0          0          0
+    {'EBAY'}          0          0          0          0        0.5
+    {'GOOG'}    0.16891    0.29534    0.42177        0.5        0.5
+    {'HPQ' }          0          0          0          0          0
+    {'IBM' }    0.49968    0.43657    0.37326    0.35768          0
+    {'INTC'}          0          0          0          0          0
+    {'MSFT'}     0.3314     0.2681    0.20496          0          0
+    {'ORCL'}          0          0          0          0          0
+    {'YHOO'}          0          0          0          0          0
+
+The estimateFrontier function uses the MINLP solver to solve this problem. Use the
+setSolverMINLP function to configure the SolverType and options.
+
+p1.solverTypeMINLP
+
+ans = 
+'OuterApproximation'
+
+p1.solverOptionsMINLP
+
+ans = struct with fields:
+                           MaxIterations: 1000
+                    AbsoluteGapTolerance: 1.0000e-07
+                    RelativeGapTolerance: 1.0000e-05
+                  NonlinearScalingFactor: 1000
+                  ObjectiveScalingFactor: 1000
+                                 Display: 'off'
+                           CutGeneration: 'basic'
+                MaxIterationsInactiveCut: 30
+                      ActiveCutTolerance: 1.0000e-07
+                    IntMainSolverOptions: [1×1 optim.options.Intlinprog]
+    NumIterationsEarlyIntegerConvergence: 30
+
+estimateFrontier
+
+15-943

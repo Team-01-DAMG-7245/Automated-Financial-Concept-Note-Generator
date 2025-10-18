@@ -1,0 +1,62 @@
+if BuyTrade
+            InventorySharesStepTWAP((IntervalIdx:NumIntervalsPerHorizon) + ...
+                NumIntervalsPerHorizon.*(HorizonIdx-1)) = ...
+                InventorySharesStepTWAP(IntervalIdx + ...
+                NumIntervalsPerHorizon.*(HorizonIdx-1)) + sum(ExecutedShares);
+        else
+            InventorySharesStepTWAP((IntervalIdx:NumIntervalsPerHorizon) + ...
+                NumIntervalsPerHorizon.*(HorizonIdx-1)) = ...
+                InventorySharesStepTWAP(IntervalIdx + ...
+                NumIntervalsPerHorizon.*(HorizonIdx-1)) - sum(ExecutedShares);
+        end
+
+% Compute Implementation Shortfall for each Step
+        IS_TWAP_Step(IntervalIdx + NumIntervalsPerHorizon.*(HorizonIdx-1)) = ...
+            endingInventoryIS(ArrivalPrice,HorizonExecutedPrices,HorizonExecutedShares,BuyTrade);
+    end
+
+% Compute Implementation Shortfall for each Horizon
+    IS_TWAP_Horizon(HorizonIdx) = endingInventoryIS(ArrivalPrice, ...
+        HorizonExecutedPrices,HorizonExecutedShares,BuyTrade);
+end
+
+end
+
+function [InitialObservation,LoggedSignals] = RL_OptimalExecution_LOB_ResetFcn(EnvConstants)
+% RL_OptimalExecution_LOB_ResetFcn is Reset Function for RL Agent
+% Define Reset Function
+%
+% Inputs:
+%
+% EnvConstants: Structure with the following fields:
+% - SampledBook: Limit order book sampled at time intervals
+% - BuyTrade: Scalar logical indicating the trading direction
+%               true: Buy
+%               false: Sell
+% - TotalTradingShares: Number of shares to trade over the horizon (scalar)
+% - NumIntervalsPerHorizon: Number of intervals per horizon (scalar)
+% - NumHorizons: Number of horizons in the data (scalar)
+% - NumSteps: Number of steps in the data (scalar)
+% - NumLevels: Number of levels in the limit order book (scalar)
+% - IS_TWAP: Implementation shortfall for TWAP baseline (NumSteps-by-1 vector)
+%
+% Outputs:
+%
+% InitialObservation:
+% - Remaining shares to be traded by agent
+% - Remaining intervals (steps) in the current trading horizon
+% - Implementation shortfall of agent
+% - Price divergence times 100
+%
+% LoggedSignals: Structure with following fields:
+% - IntervalIdx: Current time interval index (initial value: 0)
+% - HorizonIdx: Current time horizon index (initial value: 0)
+% - CurrentInventoryShares: Current number of shares in inventory
+%    (Initial value: 0 for Buy trade)
+%    (Initial value: TotalTradingShares for Sell trade)
+% - ArrivalPrice: Arrival price at the beginning of horizon (initial value: 0)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-442

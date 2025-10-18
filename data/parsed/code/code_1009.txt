@@ -1,0 +1,6 @@
+Page 1029
+================================================================================
+
+MarketSpreadsInv1 = [750 650 550 500 450]';
+MarketDataInv1 = [MarketDates MarketSpreadsInv1];
+[ProbDataInv1,HazDataInv1] = cdsbootstrap(ZeroData,MarketDataInv1,Settle)

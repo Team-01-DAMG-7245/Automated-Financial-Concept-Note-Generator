@@ -1,0 +1,12 @@
+{
+  "page": 2150,
+  "original_text": "The large value returned at the final year is the sum of the depreciation over the life time and is equal\nto the difference between the Cost and Salvage. The value of the asset in the final year is computed\nas (Cost - Salvage) = Sum_Depreciation_Upto_Final_Year.",
+  "ocr_text": "Thelargevaluereturnedatthefinalyearisthesumofthedepreciationoverthelifetimeandisequal\ntothedifferencebetweentheCostandSalvage.Thevalueoftheassetinthefinalyeariscomputed\nas(Cost-Salvage)=Sum_Depreciation_Upto_Final_Year.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.75,
+    "x1": 557.59,
+    "y1": 604.38
+  },
+  "confidence": "high"
+}

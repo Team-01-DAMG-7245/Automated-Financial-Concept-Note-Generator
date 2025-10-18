@@ -1,0 +1,63 @@
+{'JNJ' }    Health Care           
+      ⋮
+
+Define and Create Backtest Strategies
+
+Multiperiod Brinson attribution expects fixed, regular time periods. In this case, the backtest strategy
+rebalance schedules will match the Brinson periods. You can set the rebalance dates to be monthly
+starting from January first.
+
+% Rebalance on the first trading day of each month.
+rebalance_schedule = datetime(2006,1,1):calmonths(1):datetime(2006,12,1);
+for idx = 1:numel(rebalance_schedule)
+    priceIdx = find(rebalance_schedule(idx) <= pricesTT.Dates,1,'first');
+    rebalance_schedule(idx) = pricesTT.Dates(priceIdx);
+end
+
+The risk budgeting strategy needs historical data in order to set initial weights. You can use the first
+month of price data as a warm-up period to set the initial weights. The backtest begins at the end of
+the warm-up period.
+
+% Use first month as warm-up period for the risk budgeting strategy.
+start_date = rebalance_schedule(2);
+
+% Get the first month of prices to initialize the risk budgeting strategy.
+initial_prices = pricesTT(pricesTT.Dates <= start_date,:);
+
+Brinson attribution measures portfolio manager performance against some benchmark. For this
+example, use a simple equal-weighted strategy as the benchmark. This example examines the
+performance of the following two strategies relative to this benchmark:
+
+•
+Equal Category — This strategy allocates resources equally per category, and then allocates equal
+weights for stocks within each category.
+
+•
+Risk Budgeting — This strategy sets weights for stocks with the goal of minimizing each asset's
+risk contribution.
+
+Create a backtestStrategy object for the benchmark and the two candidate strategies. Define
+each of these strategies to use the same rebalance schedule and assign the appropriate initial
+weights.
+
+% Define the Benchmark strategy.
+benchmark = backtestStrategy('Benchmark',@equalWeightRebalanceFcn, ...
+    'RebalanceFrequency',rebalance_schedule, ...
+    'InitialWeights',computeEqualWeights(num_assets), ...
+    'UserData',struct());
+
+% Define the equal category strategy.
+equalCategory = backtestStrategy('EqualCategory',@equalCategoryRebalanceFcn, ...
+    'RebalanceFrequency',rebalance_schedule, ...
+    'InitialWeights',computeEqualCategory(asset_categories), ...
+    'UserData',struct('Categories',asset_categories));
+
+% Define the risk budgeting strategy.
+riskBudgeting = backtestStrategy('RiskBudgeting',@riskBudgetingRebalanceFcn, ...
+    'RebalanceFrequency',rebalance_schedule, ...
+    'InitialWeights',computeRiskBudgeting(initial_prices));
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-316

@@ -1,0 +1,12 @@
+{
+  "page": 1097,
+  "original_text": "for i = 1:NumAssets\n    fprintf('  %4s %9.4f (%8.4f) %9.4f (%8.4f) %9.4f (%8.4f)\\n', ...\n        Assets{i},Alpha(i),abs(Alpha(i)/StdAlpha(i)), ...\n        Beta(i),abs(Beta(i)/StdBeta(i)),Sigma(i),StdSigma(i));\nend",
+  "ocr_text": "fori=1:NumAssets\nfprintf(4s_9.4f_(8.4f)9.4f(8.4f)_9.4f(8.4f)(n,...\nAssets{i},Alpha(i),abs(Alpha(i)/StdAlpha(i)),...\nBeta(i),abs(Beta(i)/StdBeta(i)),Sigma(i),StdSigma(i));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 368.83,
+    "x1": 458.45,
+    "y1": 422.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2422,
+  "original_text": "highlow(Data)\nhighlow(Data,Color)\nh = highlow(ax, ___ )",
+  "ocr_text": "highlow(Data)\nhighlow(Data,Color)\nh=highlow(ax,____)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.76,
+    "x1": 208.39,
+    "y1": 225.39
+  },
+  "confidence": "high"
+}

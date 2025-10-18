@@ -1,0 +1,62 @@
+ManagementFee — Management fee charged as an annualized percent of the total portfolio
+value
+0 (default) | decimal
+
+Management fee charged as an annualized percent of the total portfolio value, specified as a numeric
+scalar.
+
+Data Types: double
+
+ManagementFeeSchedule — Management fee schedule
+calyears(1) (default) | integer | vector of datetimes | duration object | calendarDuration
+object
+
+Management fee schedule, specified as scalar numeric, a vector of datetimes, or a duration or
+calendarDuration object.
+
+Data Types: double | datetime | object
+
+PerformanceFee — Performance fee charged as an absolute percent of the total portfolio
+growth
+0 (default) | decimal
+
+Performance fee charged as an absolute percent of the total portfolio growth, specified as a numeric
+scalar.
+
+Data Types: double
+
+PerformanceHurdle — Annualized hurdle rate or column in assets or signals to act as
+hurdle asset
+0 (default) | decimal | string
+
+Annualized hurdle rate or column in assetPrices or signalData to act as hurdle asset, specified
+as a numeric scalar or a string in either assetPrices or signalData as a hurdle asset.
+
+Data Types: double | string
+
+PerformanceFeeSchedule — Performance fee schedule
+calyears(1) (default) | decimal | vector of datetimes | duration object | calendarDuration
+object
+
+Performance fee schedule, specified as a scalar numeric, vector of datetimes, or a duration or
+calendarDuration object.
+
+Data Types: datetime | object
+
+UserData — Strategy-specific user data for use in rebalanceFcn
+[] (default) | struct
+
+Strategy-specific user data for use in rebalanceFcn, specified as a struct.
+
+Data Types: struct
+
+EngineDataList — Specify set of optional backtest state data a strategy needs in
+rebalanceFcn
+[] (default) | string
+
+Specify set of optional backtest state data a strategy needs in rebalanceFcn, specified as a scalar
+string or string array.
+
+backtestStrategy
+
+15-243

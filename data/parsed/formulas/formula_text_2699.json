@@ -1,0 +1,12 @@
+{
+  "page": 1363,
+  "original_text": "SigmaHat = covarianceShrinkage(AssetReturns) returns a covariance estimate using linear\nshrinkage to reduce the mean squared error (MSE).",
+  "ocr_text": "SigmaHat=covarianceShrinkage(AssetReturns)returnsacovarianceestimateusinglinear\nshrinkagetoreducethemeansquarederror(MSE).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 241.53,
+    "x1": 551.39,
+    "y1": 265.16
+  },
+  "confidence": "high"
+}

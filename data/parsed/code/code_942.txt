@@ -1,0 +1,12 @@
+Page 934
+================================================================================
+
+Use transprobgrouptotals to group whole ratings into investment and speculative grades. This
+function takes a totals structure as the first argument. The second argument indicates the edges
+between rating categories. In this case, ratings 1 through 4 ('AAA' through 'BBB') correspond to
+the first category ('IG'), ratings 5 through 7 ('BB' through 'CCC') to the second category ('SG'),
+and rating 8 ('D') is a category of its own. transprobgrouptotals adds up the total time spent on
+ratings that belong to the same category. For example, total times spent on 'AAA' through 'BBB' are
+added up as the total time spent on 'IG'. transprobgrouptotals also adds up the total number of
+transitions between any 'IG' rating and any 'SG' rating, for example, a credit migration from
+'BBB' to 'BB'.

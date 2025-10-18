@@ -1,0 +1,35 @@
+Summary
+
+This example introduces the basics of working with big data, both in and out of memory. It shows how
+to set up, combine, and update external datastores, then create tall arrays for preprocessing data
+without allocating variables in the MATLAB workspace. The gather function transfers data into the
+workspace for computation and further analysis. The example shows how to visualize the data
+through data sampling or by MATLAB plotting functions that work directly with out-of-memory data.
+
+References
+
+[1] LOBSTER Limit Order Book Data. Berlin: frischedaten UG (haftungsbeschränkt).
+
+[2] NASDAQ Historical TotalView-ITCH Data. New York: The Nasdaq, Inc.
+
+[3] Rubisov, Anton D. "Statistical Arbitrage Using Limit Order Book Imbalance." Master's thesis,
+University of Toronto, 2015.
+
+See Also
+
+More About
+
+•
+“Machine Learning for Statistical Arbitrage: Introduction” on page 2-48
+
+•
+“Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development” on
+page 2-59
+
+•
+“Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction” on page 2-69
+
+2
+Performing Common Financial Tasks
+
+2-58

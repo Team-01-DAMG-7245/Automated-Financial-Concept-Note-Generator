@@ -1,0 +1,12 @@
+{
+  "page": 1343,
+  "original_text": "h = categoryReturnsChart(ax,BrinsonPAObj) additionally returns the figure handle h.",
+  "ocr_text": "h=categoryReturnsChart(ax,BrinsonPAObj)additionallyreturnsthefigurehandleh.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 285.51,
+    "x1": 523.07,
+    "y1": 297.14
+  },
+  "confidence": "high"
+}

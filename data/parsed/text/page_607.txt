@@ -1,0 +1,62 @@
+ResetFcn: @()RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Test_Buy)
+        Info: [1×1 struct]
+
+Compute IS using the trained agent and testing data for buy trades.
+
+simOptions = rlSimulationOptions(MaxSteps=NumTestingSteps);
+experience_Buy = sim(RL_OptimalExecution_Testing_Environment_Buy,Trained_Agent_Buy,simOptions);
+
+Reset!
+Last Horizon. Episode is Done!
+HorizonIdx:
+
+ans = 
+97
+
+SimAction_Test_Buy = squeeze(experience_Buy.Action.TradingAction_NumberOfShares_.Data);
+NumSimSteps = length(SimAction_Test_Buy);
+SimInventory_Test_Buy = nan(NumSimSteps,1);
+SimExecutedShares_Test_Buy = SimInventory_Test_Buy;
+SimReward_Test_Buy = nan(NumSimSteps,1);
+reset(RL_OptimalExecution_Testing_Environment_Buy);
+
+Reset!
+
+for k=1:NumSimSteps
+    [NextObs1,SimReward_Test_Buy(k),IsDone1,LoggedSignals] = step( ...
+        RL_OptimalExecution_Testing_Environment_Buy,SimAction_Test_Buy(k));
+    SimInventory_Test_Buy(k) = LoggedSignals.CurrentInventoryShares;
+    SimExecutedShares_Test_Buy(k) = sum(LoggedSignals.ExecutedShares);
+end
+
+Last Horizon. Episode is Done!
+HorizonIdx:
+
+ans = 
+97
+
+IS_Agent_Step_Test_Buy = LoggedSignals.IS_Agent;
+IS_Agent_Horizon_Test_Buy = IS_Agent_Step_Test_Buy( ...
+    NumIntervalsPerHorizon:NumIntervalsPerHorizon:NumTestingSteps);
+
+Display the total Implementation Shortfall (IS) outperformance of the agent over TWAP for training
+data.
+
+Total_Outperformance_Train_Buy = sum(IS_TWAP_Horizon_Train_Buy - IS_Agent_Horizon_Train_Buy);
+table(Total_Outperformance_Train_Buy)
+
+ans=table
+    Total_Outperformance_Train_Buy
+    ______________________________
+
+326.25
+
+Display total-gain-to-loss ratio (TGLR) and gain-to-loss ratio (GLR) for the training data.
+
+[TGLR_Train_Buy, GLR_Train_Buy] = ...
+    ISTGLR(IS_TWAP_Horizon_Train_Buy - IS_Agent_Horizon_Train_Buy);
+table(TGLR_Train_Buy, GLR_Train_Buy)
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-439

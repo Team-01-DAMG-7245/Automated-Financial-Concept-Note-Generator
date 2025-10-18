@@ -1,0 +1,12 @@
+{
+  "page": 1388,
+  "original_text": "CIR = cir( ___ ,Name,Value) creates a CIR object with additional options specified by one or\nmore Name,Value pair arguments.",
+  "ocr_text": "CIR=cir(____,Name,Value)createsaCIRobjectwithadditionaloptionsspecifiedbyoneor\nmoreName,VaLluepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 228.7,
+    "x1": 537.82,
+    "y1": 252.33
+  },
+  "confidence": "high"
+}

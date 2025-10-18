@@ -1,0 +1,12 @@
+{
+  "page": 467,
+  "original_text": "% Define the Portfolio object.\np = Portfolio(AssetMean=mean(assetRetn), AssetCovar=Sigma);\np = setDefaultConstraints(p); % Long-only, fully-invested portfolio\n% Min variance portfolio\nwMV = estimateFrontierLimits(p,'min');",
+  "ocr_text": "DefinethePortfolioobject.\np=Portfolio(AssetMean=mean(assetRetn),AssetCovar=Sigma);\np=setDefaultConstraints(p);*Long-only,fully-investedportfolio\nMinvarianceportfolio\n\nwMV=estimateFrontierLimits(p,min);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 448.21,
+    "x1": 453.02,
+    "y1": 501.88
+  },
+  "confidence": "high"
+}

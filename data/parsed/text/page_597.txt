@@ -1,0 +1,35 @@
+Set Up RL Testing Environment for Sell Trades
+
+Next, define the reset function for the testing environment.
+
+EnvConstants_Test_Sell.SampledBook = TestingLOB;
+EnvConstants_Test_Sell.BuyTrade = BuyTrade;
+EnvConstants_Test_Sell.TotalTradingShares = TotalTradingShares_Sell;
+EnvConstants_Test_Sell.NumIntervalsPerHorizon = NumIntervalsPerHorizon;
+EnvConstants_Test_Sell.NumHorizons = NumTestingHorizons;
+EnvConstants_Test_Sell.NumSteps = NumTestingSteps;
+EnvConstants_Test_Sell.NumLevels = NumLevels;
+EnvConstants_Test_Sell.IS_TWAP = IS_TWAP_Step_Test_Sell;
+
+ResetFunction_Test_Sell = @() RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Test_Sell);
+
+Define the step function for the testing environment.
+
+StepFunction_Test_Sell = @(Action,LoggedSignals) ...
+    RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvConstants_Test_Sell);
+
+Create the testing environment using the reset and step function handles.
+
+RL_OptimalExecution_Testing_Environment_Sell = ...
+    rlFunctionEnv(ObservationInfo_Train_Sell,ActionInfo_Sell, ...
+    StepFunction_Test_Sell,ResetFunction_Test_Sell)
+
+Reset!
+Reset!
+
+RL_OptimalExecution_Testing_Environment_Sell = 
+  rlFunctionEnv with properties:
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-429

@@ -1,0 +1,12 @@
+{
+  "page": 1711,
+  "original_text": "optionPrice   = f.OptionPrice(strike, rate, barrier);\nstandardError = f.StandardError(strike, rate, barrier,...\n                         true);\nlowerBound    = optionPrice - 1.96 * standardError;\nupperBound    = optionPrice + 1.96 * standardError;",
+  "ocr_text": "optionPrice =f.OptionPrice(strike,rate,barrier);\n\nstandardError=f.StandardError(strike,rate,barrier,...\ntrue);\n\nLowerBound =optionPrice-1.96*standardError;\n\nupperBound =optionPrice+1.96*standardError;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 398.85,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

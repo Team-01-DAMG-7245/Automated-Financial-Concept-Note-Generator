@@ -1,0 +1,12 @@
+{
+  "page": 1168,
+  "original_text": "simulatedReturns = zeros(horizon, nTrials, nIndices);",
+  "ocr_text": "simulatedReturns=zeros(horizon,nTrials,nIndices);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 435.96,
+    "x1": 377.16,
+    "y1": 446.43
+  },
+  "confidence": "high"
+}

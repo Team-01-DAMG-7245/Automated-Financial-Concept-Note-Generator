@@ -1,0 +1,61 @@
+PutTheta = 
+-3.1404
+
+Input Arguments
+
+Price — Current price of underlying asset
+numeric
+
+Current price of the underlying asset, specified as a numeric value.
+
+Data Types: double
+
+Strike — Exercise price of option
+numeric
+
+Exercise price of the option, specified as a numeric value.
+
+Data Types: double
+
+Rate — Annualized, continuously compounded risk-free rate of return over life of option
+positive decimal
+
+Annualized, continuously compounded risk-free rate of return over the life of the option, specified as
+a positive decimal value.
+
+Data Types: double
+
+Time — Time (in years) to expiration of the option
+numeric
+
+Time (in years) to expiration of the option, specified as a numeric value.
+
+Data Types: double
+
+Volatility — Annualized asset price volatility
+positive decimal
+
+Annualized asset price volatility (annualized standard deviation of the continuously compounded
+asset return), specified as a positive decimal value.
+
+Data Types: double
+
+Yield — Annualized, continuously compounded yield of the underlying asset over life of
+option
+0 (default) | decimal
+
+(Optional) Annualized, continuously compounded yield of the underlying asset over the life of the
+option, specified as a decimal value. For example, for options written on stock indices, Yield could
+represent the dividend yield. For currency options, Yield could be the foreign risk-free interest rate.
+
+Data Types: double
+
+Output Arguments
+
+CallTheta — Call option theta
+numeric
+
+15
+Functions
+
+15-506

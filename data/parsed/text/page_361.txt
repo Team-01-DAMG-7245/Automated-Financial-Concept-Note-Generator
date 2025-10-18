@@ -1,0 +1,20 @@
+yticks(1:p.NumAssets);
+yticklabels(p.AssetList);
+title('Asset Allocation');
+legend('Without min weight limit', 'With min weight limit', 'location', 'best');
+
+Show only the allocated assets.
+
+idx = (pwgt>toler) | (pwgtWithMinWeight>toler);
+
+barh([pwgt(idx), pwgtWithMinWeight(idx)]);
+grid on
+xlabel('Proportion of Investment')
+yticks(1:sum(idx));
+yticklabels(p.AssetList(idx));
+title('Asset Allocation');
+legend('Without min weight limit', 'With min weight limit', 'location', 'best');
+
+Portfolio Optimization with Semicontinuous and Cardinality Constraints
+
+4-193

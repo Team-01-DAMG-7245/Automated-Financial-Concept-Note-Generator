@@ -1,0 +1,12 @@
+{
+  "page": 2074,
+  "original_text": "PreviousCouponDate = cpndatep(Settle,Maturity) returns the previous coupon date on or\nbefore settlement for a portfolio of bonds. This function finds the previous coupon date whether or\nnot the coupon structure is synchronized with the maturity date. For zero coupon bonds the previous\ncoupon date is the issue date, if available. However, if the issue date is not supplied, the previous\ncoupon date for zero coupon bonds is the previous quasi coupon date calculated as if the frequency is\nsemiannual.",
+  "ocr_text": "PreviousCouponDate=cpndatep(Settle,Maturity)returnsthepreviouscoupondateonor\nbeforesettlementforaportfolioofbonds.Thisfunctionfindsthepreviouscoupondatewhetheror\nnotthecouponstructureissynchronizedwiththematuritydate.Forzerocouponbondstheprevious\ncoupondateistheissuedate,ifavailable.However,iftheissuedateisnotsupplied,theprevious\ncoupondateforzerocouponbondsisthepreviousquasicoupondatecalculatedasifthefrequencyis\nsemiannual.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 268.3,
+    "x1": 555.62,
+    "y1": 339.93
+  },
+  "confidence": "high"
+}

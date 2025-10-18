@@ -1,0 +1,12 @@
+{
+  "page": 1890,
+  "original_text": "Yield = bndyield(Price,CouponRate,Settle,Maturity) given NUMBONDS bonds with SIA\ndate parameters and clean prices (excludes accrued interest), returns the bond equivalent yields to\nmaturity.",
+  "ocr_text": "Yield=bndyield(Price,CouponRate,Settle,Maturity)givenNUMBONDSbondswithSIA\ndateparametersandcleanprices(excludesaccruedinterest),returnsthebondequivalentyieldsto\nmaturity.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.32,
+    "x1": 545.26,
+    "y1": 290.95
+  },
+  "confidence": "high"
+}

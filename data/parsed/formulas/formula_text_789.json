@@ -1,0 +1,12 @@
+{
+  "page": 454,
+  "original_text": "% Define the returns covariance matrix.\nsigma = [0.2; 0.21; 0.1];       % Assets risk\nrho = 0.8;                      % Assets correlation\nC = @(rho) [  1  rho  rho;\n            rho    1  rho;\n            rho  rho    1 ];    % Uniform correlation\nSigma = corr2cov(sigma,C(rho)); % Covariance\n% Check that Sigma is positive semidefinite. All\n% eigenvalues should be nonnegative (>= 0).\neig(Sigma)",
+  "ocr_text": "Definethereturnscovariancematrix.\nsigma=[0.2;0.21;0.1]; sAssetsrisk\nrho=0.8; sAssetscorrelation\nC=(rho)[1.rho_rho;\n\nrho 1rho;\n\nrhorho 1]; sUniformcorrelation\nSigma=corr2cov(sigma,C(rho));*Covariance\nCheckthatSigmaispositivesemidefinite.All\neigenvaluesshouldbenonnegative(=0).\neig(Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 402.46,
+    "x1": 377.17,
+    "y1": 510.13
+  },
+  "confidence": "high"
+}

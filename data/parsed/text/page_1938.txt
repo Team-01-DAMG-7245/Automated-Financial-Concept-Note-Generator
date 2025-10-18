@@ -1,0 +1,60 @@
+= (1 −R) ∑
+i = 1
+
+M
+Z(τi)(Q(τi −1) −Q(τi))
+
+where the integral is approximated with a finite sum over the discretization τ0 = 0,τ1,...,τM = T.
+
+If the spread of an existing CDS contract is SC, and the current breakeven spread for a comparable
+contract is S0, the current price, or mark-to-market value of the contract is given by:
+
+MtM = Notional (S0 –SC)RPV01
+
+This assumes a long position from the protection standpoint (protection was bought). For short
+positions, the sign is reversed.
+
+Version History
+Introduced in R2010b
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cdsprice supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Beumee, J., D. Brigo, D. Schiemert, and G. Stoyle. “Charting a Course Through the CDS Big Bang.”
+Fitch Solutions, Quantitative Research, Global Special Report. April 7, 2009.
+
+[2] Hull, J., and A. White. “Valuing Credit Default Swaps I: No Counterparty Default Risk.” Journal of
+Derivatives. Vol. 8, pp. 29–40.
+
+[3] O'Kane, D. and S. Turnbull. “Valuation of Credit Default Swaps.” Lehman Brothers, Fixed Income
+Quantitative Credit Research, April 2003.
+
+See Also
+cdsbootstrap | cdsspread | cdsoptprice | IRDataCurve
+
+Topics
+“Finding Breakeven Spread for New CDS Contract” on page 8-104
+“Valuing an Existing CDS Contract” on page 8-107
+“Converting from Running to Upfront” on page 8-109
+
+15
+Functions
+
+15-632

@@ -1,0 +1,58 @@
+TF =
+Time factor for a given cash flow. The time factor is computed using the
+compounding frequency and the discount basis. If these values are not specified,
+then the defaults are as follows: CompoundingFrequency default is 2 for Basis
+values 0 to 7 and 13 and 1 for Basis values 8 to 12.
+
+DiscountBasis is 0 for Basis values 0 to 7 and 13 and the value of the input
+Basis for Basis values 8 to 12.
+
+Note The Basis is always used to compute accrued interest.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cfamounts supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+R2017b: Support for optional name-value input arguments
+Behavior changed in R2017b
+
+The specification of optional input arguments has changed. While the previous ordered inputs syntax
+is still supported, it may no longer be supported in a future release. Use the optional name-value pair
+inputs: Period, Basis, EndMonthRule, IssueDate,FirstCouponDate, LastCouponDate,
+StartDate,Face, AdjustCashFlowsBasis, BusinessDayConvention,
+CompoundingFrequency, DiscountBasis, Holidays, and PrincipalType.
+
+References
+
+[1] Krgin, D. Handbook of Global Fixed Income Calculations. Wiley, 2002.
+
+[2] Mayle, J. "Standard Securities Calculations Methods: Fixed Income Securities Formulas for
+Analytic Measures." SIA, Vol 2, Jan 1994.
+
+[3] Stigum, M., Robinson, F. Money Market and Bond Calculation. McGraw-Hill, 1996.
+
+See Also
+accrfrac | cfdates | cpncount | cftimes | cpndaten | cpndatenq | cpndatep | cpndaysn |
+cpndaysp | datetime | cpndatepq
+
+15
+Functions
+
+15-680

@@ -1,0 +1,12 @@
+{
+  "page": 942,
+  "original_text": "fprintf('\\nTransition matrix for 2005:\\n\\n')",
+  "ocr_text": "fprintf(nTransitionmatrixfor2005:nn)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 224.17,
+    "x1": 328.41,
+    "y1": 234.64
+  },
+  "confidence": "high"
+}

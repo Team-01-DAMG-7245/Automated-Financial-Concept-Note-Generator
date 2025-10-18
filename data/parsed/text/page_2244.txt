@@ -1,0 +1,52 @@
+The estimateBounds function returns (possibly infinite) bounds and sets the isbounded flag to
+false. The result shows which assets are unbounded so that you can apply bound constraints as
+necessary.
+
+Create an Unbounded Portfolio for a PortfolioCVaR Object
+
+Create an unbounded portfolio set.
+
+p = PortfolioCVaR('AInequality', [1 -1; 1 1 ], 'bInequality', 0);
+[lb, ub, isbounded] = estimateBounds(p)
+
+lb = 2×1
+
+-Inf
+  -Inf
+
+ub = 2×1
+
+0
+   Inf
+
+isbounded = logical
+   0
+
+The estimateBounds function returns (possibly infinite) bounds and sets the isbounded flag to
+false. The result shows which assets are unbounded so that you can apply bound constraints as
+necessary.
+
+Create an Unbounded Portfolio for a PortfolioMAD Object
+
+Create an unbounded portfolio set.
+
+p = PortfolioMAD('AInequality', [1 -1; 1 1 ], 'bInequality', 0);
+[lb, ub, isbounded] = estimateBounds(p)
+
+lb = 2×1
+
+-Inf
+  -Inf
+
+ub = 2×1
+
+0
+   Inf
+
+isbounded = logical
+   0
+
+15
+Functions
+
+15-938

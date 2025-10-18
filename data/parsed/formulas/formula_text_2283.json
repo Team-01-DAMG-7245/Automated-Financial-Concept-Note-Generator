@@ -1,0 +1,12 @@
+{
+  "page": 1174,
+  "original_text": "Boxcox transformation\nnewfts = boxcox(oldfts)\nUse boxcox:",
+  "ocr_text": "Boxcoxtransformation newfts=boxcox(oldfts) Useboxcox:",
+  "bbox": {
+    "x0": 92.4,
+    "y0": 129.86,
+    "x1": 446.62,
+    "y1": 141.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,18 @@
+Page 1074
+================================================================================
+
+fprintf(1,'Seemingly Unrelated Regression Parameter
+   Estimates\n');
+fprintf(1,'   %7s ',' ');
+fprintf(1,'  Group(%3d) ',1:NumGroups);
+fprintf(1,'\n');
+for i = 1:NumParams
+    fprintf(1,'   %7d ',i);
+    ii = i;
+        for j = 1:NumGroups
+            fprintf(1,'%12g ',Param(ii));
+            ii = ii + NumParams;
+            end
+            fprintf(1,'\n');
+end
+fprintf(1,'\n');

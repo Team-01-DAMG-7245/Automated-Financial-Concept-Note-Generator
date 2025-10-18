@@ -1,0 +1,12 @@
+{
+  "page": 2481,
+  "original_text": "Fund50 = 50*TestData(:,1);\nplot(Fund50);\ntitle('\\bfFive-Year Fund Performance, Initial Investment 50 usd');\nxlabel('Months');\nylabel('Value of Investment');",
+  "ocr_text": "Fund50=50*TestData(:,1);\n\nplot(Fund50);\ntitle(bfFive-YearFundPerformance,InitialInvestment50usd);\nxlabel(Months);\n\nylabel(ValueofInvestment);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 341.85,
+    "x1": 447.62,
+    "y1": 395.52
+  },
+  "confidence": "high"
+}

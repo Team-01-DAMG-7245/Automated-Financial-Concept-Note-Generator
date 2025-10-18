@@ -1,0 +1,8 @@
+Page 555
+================================================================================
+
+cumulativeReward = cumulativeReward+...
+        experience(i).Reward.Data(end);
+    wealthSimulation(:,i) =...
+        squeeze(experience(i).Observation.obs1.Data(1,1,:));
+end

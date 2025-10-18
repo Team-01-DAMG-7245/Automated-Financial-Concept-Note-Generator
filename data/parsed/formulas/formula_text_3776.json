@@ -1,0 +1,12 @@
+{
+  "page": 2136,
+  "original_text": "NumDays = daysact( ___ ,EndDate) returns the actual number of days between StartDate and\nthe optional argument EndDate.",
+  "ocr_text": "NumDays=daysact(___,EndDate)returnstheactualnumberofdaysbetweenStartDateand\ntheoptionalargumentEndDate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 288.82,
+    "x1": 551.84,
+    "y1": 312.45
+  },
+  "confidence": "high"
+}

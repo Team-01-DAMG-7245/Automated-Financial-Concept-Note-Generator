@@ -1,0 +1,56 @@
+ecmnobj
+
+Multivariate normal negative log-likelihood function
+
+Syntax
+
+Objective = ecmnobj(Data,Mean,Covariance)
+Objective = ecmnobj( ___ ,CholCovariance)
+
+Description
+
+Objective = ecmnobj(Data,Mean,Covariance) evaluates the negative log-likelihood function
+for ecmnmle.
+
+Use ecmnobj after estimating the mean and covariance of Data with ecmnmle.
+
+Objective = ecmnobj( ___ ,CholCovariance) adds an optional argument for
+CholCovariance.
+
+Examples
+
+Compute Value of the Observed Negative Log-Likelihood Function for Data
+
+This example shows how to compute the value of the observed negative log-likelihood function for
+five years of daily total return data for 12 computer technology stocks, with six hardware and six
+software companies
+
+load ecmtechdemo.mat
+
+The time period for this data extends from April 19, 2000 to April 18, 2005. The sixth stock in Assets
+is Google (GOOG), which started trading on August 19, 2004. So, all returns before August 20, 2004
+are missing and represented as NaNs. Also, Amazon (AMZN) had a few days with missing values
+scattered throughout the past five years.
+
+[ECMMean, ECMCovar] = ecmnmle(Data)
+
+ECMMean = 12×1
+
+0.0008
+    0.0008
+   -0.0005
+    0.0002
+    0.0011
+    0.0038
+   -0.0003
+   -0.0000
+   -0.0003
+   -0.0000
+   -0.0003
+    0.0004
+      ⋮
+
+15
+Functions
+
+15-900

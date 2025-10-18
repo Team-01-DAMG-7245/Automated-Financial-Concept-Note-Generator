@@ -1,0 +1,6 @@
+Page 559
+================================================================================
+
+function [initialObservation,loggedSignals] =...
+    myResetFunction(initialWealth,WMin,WMax)
+% Reset function to set wealth and time period to initial state.

@@ -1,0 +1,12 @@
+{
+  "page": 434,
+  "original_text": "Ain = -WoB';\nbin = -minWoB; % Start with the smallest WoB.\np = setInequality(p,Ain,bin);",
+  "ocr_text": "Ain=-WoB;\nbin=-minWoB;StartwiththesmallestWoB.\np=setInequality(p,Ain,bin);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 333.82,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1397,
+  "original_text": "DiffusionRate = diffusion(Alpha,Sigma)",
+  "ocr_text": "DiffusionRate=diffusion(Alpha,Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 153.66,
+    "x1": 318.78,
+    "y1": 165.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,66 @@
+have a tracking portfolio of 10 assets in a variable x0 and want to ensure that tracking error is no
+more than 8%. Given a Portfolio object p, use setTrackingError to set the tracking error
+constraint with and without the initial portfolio being set previously:
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];
+p = Portfolio('TrackingPort', x0);
+p = setTrackingError(p, 0.08);
+
+disp(p.NumAssets)
+disp(p.TrackingError)
+disp(p.TrackingPort)
+
+10
+
+0.0800
+
+0.1200
+    0.0900
+    0.0800
+    0.0700
+    0.1000
+    0.1000
+    0.1500
+    0.1100
+    0.0800
+    0.1000
+
+or
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];
+p = Portfolio('TrackingPort', x0);
+p = setTrackingError(p, 0.08, x0);
+
+disp(p.NumAssets)
+disp(p.TrackingError)
+disp(p.TrackingPort)
+
+10
+
+0.0800
+
+0.1200
+    0.0900
+    0.0800
+    0.0700
+    0.1000
+    0.1000
+    0.1500
+    0.1100
+    0.0800
+    0.1000
+
+If the NumAssets or TrackingPort properties are not set before or when the tracking error
+constraint is set, various rules are applied to assign default values to these properties (see “Setting
+Up a Tracking Portfolio” on page 4-40).
+
+setTrackingError implements scalar expansion on the argument for the tracking portfolio. If the
+NumAssets property is already set in the Portfolio object, a scalar argument for TrackingPort
+expands to have the same value across all dimensions. In addition, setTrackingError lets you
+specify NumAssets as an optional argument. To clear tracking error from your Portfolio object,
+use the Portfolio object or setTrackingError with empty inputs for the properties to be cleared.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-92

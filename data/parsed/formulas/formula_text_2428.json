@@ -1,0 +1,12 @@
+{
+  "page": 1245,
+  "original_text": "average = obj.StartState * exp(-speed * T) + level * ...\n(1 - exp(-speed * T));\nX       = [obj.StartState ; average];",
+  "ocr_text": "average=obj.StartState*exp(-speed*T)+level*...\n(1_-exp(-speed*T));\nX =[obj.StartState;average];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 518.47,
+    "x1": 393.43,
+    "y1": 550.54
+  },
+  "confidence": "high"
+}

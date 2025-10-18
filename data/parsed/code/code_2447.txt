@@ -1,0 +1,12 @@
+Page 2300
+================================================================================
+
+•
+'direct' — Transform the Sharpe ratio function into a quadratic one and solve one optimization
+problem directly, instead of iteratively exploring the efficient frontier. The 'direct' option either
+uses the solver quadprog (for a problem with linear constraints) or fmincon (for a problem with
+nonlinear constraints). For an example of using the 'direct' option, see “Estimate Efficient
+Portfolio that Maximizes the Sharpe Ratio for a Portfolio Object Using Solver Options with the
+Direct Method” on page 15-988 and “Estimate Efficient Portfolio that Maximizes the Sharpe Ratio
+for a Portfolio Object With Tracking Error Using the Direct Method and Solver Options” on page
+15-989.

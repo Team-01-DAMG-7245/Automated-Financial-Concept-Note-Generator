@@ -1,0 +1,12 @@
+{
+  "page": 489,
+  "original_text": "function weights = computeEqualWeights(num_assets)\n% Equal asset weight portfolio allocation",
+  "ocr_text": "functionweights=computeEqualWeights(num_assets)\nEqualassetweightportfolioallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 360.9,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

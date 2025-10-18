@@ -1,0 +1,58 @@
+Active Returns and Tracking Error Efficient Frontier
+
+This example shows how to minimize the variance of the difference in returns with respect to a given
+target portfolio.
+
+Suppose that you want to identify an efficient set of portfolios that minimize the variance of the
+difference in returns with respect to a given target portfolio, subject to a given expected excess
+return. The mean and standard deviation of this excess return are often called the active return and
+active risk, respectively. Active risk is sometimes referred to as the tracking error. Since the objective
+is to track a given target portfolio as closely as possible, the resulting set of portfolios is sometimes
+referred to as the tracking error efficient frontier.
+
+Specifically, assume that the target portfolio is expressed as an index weight vector, such that the
+index return series may be expressed as a linear combination of the available assets. This example
+illustrates how to construct a frontier that minimizes the active risk (tracking error) subject to
+attaining a given level of return. That is, it computes the tracking error efficient frontier.
+
+One way to construct the tracking error efficient frontier is to explicitly form the target return series
+and subtract it from the return series of the individual assets. In this manner, you specify the
+expected mean and covariance of the active returns, and compute the efficient frontier subject to the
+usual portfolio constraints.
+
+This example works directly with the mean and covariance of the absolute (unadjusted) returns but
+converts the constraints from the usual absolute weight format to active weight format.
+
+Consider a portfolio of five assets with the following expected returns, standard deviations, and
+correlation matrix based on absolute weekly asset returns.
+
+NumAssets    =  5;
+
+ExpReturn    = [0.2074  0.1971  0.2669  0.1323  0.2535]/100;
+
+Sigmas       = [2.6570  3.6297  3.9916  2.7145  2.6133]/100;
+
+Correlations = [1.0000  0.6092  0.6321  0.5833  0.7304
+                0.6092  1.0000  0.8504  0.8038  0.7176
+                0.6321  0.8504  1.0000  0.7723  0.7236
+                0.5833  0.8038  0.7723  1.0000  0.7225
+                0.7304  0.7176  0.7236  0.7225  1.0000];
+
+Convert the correlations and standard deviations to a covariance matrix using corr2cov.
+
+ExpCovariance = corr2cov(Sigmas, Correlations);
+
+Assume that the target index portfolio is an equally weighted portfolio formed from the five assets.
+The sum of index weights equals 1, satisfying the standard full investment budget equality constraint.
+
+Index = ones(NumAssets, 1)/NumAssets;
+
+Generate an asset constraint matrix using portcons. The constraint matrix AbsConSet is expressed
+in absolute format (unadjusted for the index), and is formatted as [A b], corresponding to
+constraints of the form A*w <= b. Each row of AbsConSet corresponds to a constraint, and each
+column corresponds to an asset. Allow no short-selling and full investment in each asset (lower and
+upper bounds of each asset are 0 and 1, respectively). In particular, note that the first two rows
+
+Active Returns and Tracking Error Efficient Frontier
+
+3-27

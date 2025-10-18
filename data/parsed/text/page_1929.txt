@@ -1,0 +1,67 @@
+•
+2 — Semiannual compounding
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+•
+−1 — Continuous compounding
+
+Data Types: double
+
+ZeroBasis — Basis of the zero curve
+0 (actual/actual) (default) | integer with value of 0 to 13
+
+Basis of the zero curve, specified as the comma-separated pair consisting of 'ZeroBasis' and an
+integer with values that are identical to Basis.
+
+Data Types: double
+
+ProbDates — Dates for probability data
+column of dates in MarketData (default) | datetime array | string array | date character vector
+
+Dates for probability data, specified as the comma-separated pair consisting of 'ProbDates' and a
+P-by-1 vector using a datetime array, string array, or date character vectors.
+
+To support existing code, cdsbootstrap also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+ProbData — Default probability values
+matrix
+
+Default probability values, returned as a P-by-2 matrix with dates and corresponding cumulative
+default probability values. The dates match those in MarketData, unless the optional input
+parameter ProbDates is provided.
+
+HazData — Hazard rate values
+matrix
+
+Hazard rate values, returned as a N-by-2 matrix with dates and corresponding hazard rate values for
+the survival probability model. The dates match those in MarketData.
+
+Note A warning is displayed when non-monotone default probabilities (that is, negative hazard rates)
+are found.
+
+More About
+
+Credit Default Swap
+
+A Credit Default Swap (CDS) is a financial derivative contract that allows an investor to "swap" or
+transfer the credit risk of a borrower (usually a corporation or government) to another party.
+
+cdsbootstrap
+
+15-623

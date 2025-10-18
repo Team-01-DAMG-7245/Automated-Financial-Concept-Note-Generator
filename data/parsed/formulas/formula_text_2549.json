@@ -1,0 +1,12 @@
+{
+  "page": 1302,
+  "original_text": "% Import the data.\nPrices = readtable(filename, opts);",
+  "ocr_text": "SImportthedata.\nPrices=readtable(filename,opts);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 279.63,
+    "y1": 222.29
+  },
+  "confidence": "high"
+}

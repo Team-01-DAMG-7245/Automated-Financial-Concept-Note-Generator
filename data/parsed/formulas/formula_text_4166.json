@@ -1,0 +1,12 @@
+{
+  "page": 2336,
+  "original_text": "h = fanplot(ax,historical,forecast) generates a fan chart and returns the figure handle h.\nIn time series analysis, a fan chart is a chart that joins a simple line chart for observed past data with\nranges for possible values of future data. The historical data and possible future data are joined with\na line showing a central estimate or most likely value for the future outcomes.",
+  "ocr_text": "h=fanplot(ax,historical,forecast)generatesafanchartandreturnsthefigurehandleh.\n\nIntimeseriesanalysis,afanchartisachartthatjoinsasimplelinechartforobservedpastdatawith\nrangesforpossiblevaluesoffuturedata.Thehistoricaldataandpossiblefuturedataarejoinedwith\n\nalineshowingacentralestimateormostlikelyvalueforthefutureoutcomes.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 539.87,
+    "x1": 554.54,
+    "y1": 587.5
+  },
+  "confidence": "high"
+}

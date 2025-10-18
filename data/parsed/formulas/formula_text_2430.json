@@ -1,0 +1,12 @@
+{
+  "page": 1245,
+  "original_text": "[t,i] = sort(t);\nY     = squeeze(Y);",
+  "ocr_text": "{[t,i]=sort(t);\nY =squeeze(Y);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 192.95,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

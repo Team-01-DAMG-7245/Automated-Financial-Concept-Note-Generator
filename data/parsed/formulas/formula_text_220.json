@@ -1,0 +1,12 @@
+{
+  "page": 135,
+  "original_text": "bte = backtestEngine(strategies);",
+  "ocr_text": "bte=backtestEngine(strategies);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 653.02,
+    "x1": 268.8,
+    "y1": 663.49
+  },
+  "confidence": "high"
+}

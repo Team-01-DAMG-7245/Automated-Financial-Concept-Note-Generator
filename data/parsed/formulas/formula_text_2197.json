@@ -1,0 +1,12 @@
+{
+  "page": 1132,
+  "original_text": "for j=1:3\n    treasuryPricesAtSettle(j) = bndprice(treasuryYTMAtSettle(j),0,settleDate, ...\n                                         treasuryMaturities(j),'basis',basis);\nend",
+  "ocr_text": "forj=1:3\ntreasuryPricesAtSettle(j)=bndprice(treasuryYTMAtSettle(j),0,settleDate,...\ntreasuryMaturities(j),basis,basis);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 363.43,
+    "x1": 528.9,
+    "y1": 406.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1519
+================================================================================
+
+Beta — Kernel function parameter to control asymptotic memory properties
+scalar numeric

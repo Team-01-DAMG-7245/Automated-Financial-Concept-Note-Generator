@@ -1,0 +1,8 @@
+Page 357
+================================================================================
+
+function displayReturnLevel(Level, qret, qrsk)
+fprintf('Portfolio at %g%% return level on efficient frontier ...\n',100*Level);
+fprintf('%10s %10s\n','Return','Risk');
+fprintf('%10.2f %10.2f\n',100*qret,100*qrsk);
+end

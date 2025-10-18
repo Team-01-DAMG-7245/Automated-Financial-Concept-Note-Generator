@@ -1,0 +1,74 @@
+Flag
+Cash Flow Type
+
+8
+Smaller than normal maturity cash flow when the bond has less than one coupon
+period to maturity.
+
+9
+Larger than normal maturity cash flow when the bond has less than one coupon
+period to maturity.
+
+10
+Maturity cash flow on a zero coupon bond.
+
+11
+Sinking principal and initial cash flow amount smaller than normal due to a
+"stub" coupon period. A stub period is created when the time from issue date to
+first coupon date is shorter than normal.
+
+12
+Sinking principal and larger than normal initial cash flow amount because the
+first coupon period is longer than normal.
+
+13
+Sinking principal and nominal coupon cash flow amount.
+
+CFPrincipal — Principal cash flows
+matrix
+
+Principal cash flows, returned as a NBONDS-by-NCFS matrix.
+
+If PrincipalType is 'sinking', CFPrincipal output indicates when the principal is returned.
+
+If PrincipalType is 'bullet', CFPrincipal is all zeros and, at Maturity, the appropriate Face
+value.
+
+More About
+
+Time Factors
+
+Time factors help determine the present value of a stream of cash flows.
+
+The term time factors refer to the exponent TF in the discounting equation
+
+PV = ∑
+i = 1
+
+n
+CF
+
+(1 + z
+f )
+TF ,
+
+where:
+
+PV =
+Present value of a cash flow.
+
+CF =
+Cash flow amount.
+
+z =
+Risk-adjusted annualized rate or yield corresponding to a given cash flow. The
+yield is quoted on a semiannual basis.
+
+f =
+Frequency of quotes for the yield. Default is 2 for Basis values 0 to 7 and 13
+and 1 for Basis values 8 to 12. The default can be overridden by specifying the
+CompoundingFrequency name-value pair.
+
+cfamounts
+
+15-679

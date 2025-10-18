@@ -1,0 +1,12 @@
+{
+  "page": 2449,
+  "original_text": "a = lifetablefit(x,lx)",
+  "ocr_text": "a=lifetablefit(x,1x)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 475.6,
+    "x1": 209.2,
+    "y1": 486.07
+  },
+  "confidence": "high"
+}

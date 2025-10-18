@@ -1,0 +1,55 @@
+Previous quasi coupon date for a portfolio of NUMBONDS fixed income securities, whether or not the
+first or last coupon is normal, short, or long, returned as a NUMBONDS-by-1 vector of previous quasi-
+coupon dates before settlement. If settlement is a coupon date, this function returns the settlement
+date.
+
+If all the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate are
+either strings or date character vectors, then PreviousQuasiCouponDate is returned as a serial
+date number. Use the function datetime to convert serial date numbers to formatted date character
+vectors.
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate
+are datetime arrays, then PreviousQuasiCouponDate is returned as a datetime array.
+
+More About
+
+Quasi-Coupon
+
+A quasi-coupon is a term used in the context of certain fixed-income securities, particularly bonds,
+that do not pay traditional periodic interest payments (coupons) but instead provide returns in a
+different manner.
+
+A quasi coupon can include returns that are contingent on certain conditions or linked to the
+performance of an underlying asset.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cpndatepq supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+accrfrac | cfamounts | cfdates | cftimes | cpncount | cpndaten | cpndatep | cpndatenq |
+cpndaysn | cpndaysp | cpnpersz | datetime
+
+Topics
+“Pricing and Computing Yields for Fixed-Income Securities” on page 2-15
+
+cpndatepq
+
+15-767

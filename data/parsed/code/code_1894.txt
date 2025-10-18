@@ -1,0 +1,5 @@
+Page 1533
+================================================================================
+
+Volatility — Instantaneous volatility of stochastic variance process
+scalar or deterministic function of time or deterministic function of time and state

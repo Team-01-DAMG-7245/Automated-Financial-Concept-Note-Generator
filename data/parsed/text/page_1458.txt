@@ -1,0 +1,39 @@
+The Brownian interpolation within the chosen interval, dt, illustrates the following:
+
+•
+The conditional mean of each state variable lies on a straight-line segment between the original
+simulated states at each endpoint.
+
+•
+The conditional variance of each state variable is a quadratic function. This function attains its
+maximum midway between the interval endpoints, and is zero at each endpoint.
+
+•
+The maximum variance, although dependent upon the actual model diffusion-rate function G(t,X),
+is the variance of the sum of NBrowns correlated Gaussian variates scaled by the factor dt/4.
+
+The previous plot highlights interpolation without refinement, in that none of the interpolated states
+take into account new information as it becomes available. If you had performed interpolation with
+refinement, new interpolated states would have been inserted into the time series and made available
+to subsequent interpolations on a trial-by-trial basis. In this case, all random draws for any given
+interpolation time would be identical. Also, the plot of the sample mean would exhibit greater
+variability, but would still cluster around the straight-line segment between the original simulated
+states at each endpoint. The plot of the sample variance, however, would be zero for all interpolation
+times, exhibiting no variability.
+
+Input Arguments
+
+MDL — Stochastic differential equation model
+object
+
+Stochastic differential equation model, specified as an sde, bm, gbm, cev, cir, hwv, heston, sdeddo,
+sdeld, or sdemrd object.
+
+All MDL parameters are assumed piecewise constant, evaluated from the most recent observation
+time in Times that precedes a specified interpolation time in T. This is consistent with the Euler
+approach of Monte Carlo simulation.
+
+15
+Functions
+
+15-152

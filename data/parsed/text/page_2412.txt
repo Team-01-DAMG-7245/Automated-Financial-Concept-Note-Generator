@@ -1,0 +1,58 @@
+p = PortfolioCVaR;
+p = setInequality(p, A, b);
+[AInequality, bInequality] = getInequality(p)
+
+AInequality = 1×5
+
+1     1     1     0     0
+
+bInequality = 
+0.5000
+
+Obtain Inequality Constraints for a PortfolioMAD Object
+
+Suppose you have a portfolio of five assets and you want to ensure that the first three assets
+constitute at most 50% of your portfolio. Given a PortfolioMAD object p, set the linear inequality
+constraints and then obtain values for AInequality and bInequality.
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioMAD;
+p = setInequality(p, A, b);
+[AInequality, bInequality] = getInequality(p)
+
+AInequality = 1×5
+
+1     1     1     0     0
+
+bInequality = 
+0.5000
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+Output Arguments
+
+AInequality — Matrix to form linear inequality constraints
+matrix
+
+15
+Functions
+
+15-1106

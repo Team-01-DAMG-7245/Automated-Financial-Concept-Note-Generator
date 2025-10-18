@@ -1,0 +1,54 @@
+covarianceDenoising
+
+Estimate covariance matrix using denoising
+
+Syntax
+
+SigmaHat = covarianceDenoising(AssetReturns)
+SigmaHat = covarianceDenoising(Sigma,SampleSize)
+[SigmaHat,numSignalEig] = covarianceDenoising( ___ )
+
+Description
+
+SigmaHat = covarianceDenoising(AssetReturns) returns a covariance estimate that uses
+random matrix theory to denoise the empirical covariance matrix. For more information, see
+“Covariance Denoising” on page 15-54 and “Denoising Algorithm” on page 15-55.
+
+In addition, you can use covarianceShrinkage to compute an estimate of covariance matrix using
+shrinkage estimation. For information on which covariance estimation method to choose, see
+“Comparison of Methods for Covariance Estimation” on page 4-138.
+
+SigmaHat = covarianceDenoising(Sigma,SampleSize) returns a covariance estimate from an
+initial covariance matrix estimate (Sigma) and the sample size used to estimate the initial covariance
+(sampleSize).
+
+[SigmaHat,numSignalEig] = covarianceDenoising( ___ ) returns a covariance estimate and
+the number of eigenvalues that are associated with signal in combination with either of the input
+argument combinations in the previous syntaxes.
+
+Examples
+
+Perform Covariance Denoising
+
+This example shows how to use covariance denoising to reduce noise and enhance the signal of the
+empirical covariance matrix. In mean-variance portfolio optimization, a noisy estimate of the
+covariance estimate results in unstable solutions that cause high turnover and transaction costs.
+Ideally, to decrease the estimation error, it is desirable to increase the sample size. Yet, there are
+cases where this is not possible. In extreme cases in which the number of assets is larger than the
+number of observations, the traditional covariance matrix results in a singular matrix. Working with a
+nearly singular or an ill-conditioned covariance matrix magnifies the impact of estimation errors.
+
+Compute a portfolio efficient frontier using different covariance estimates with the same sample data.
+
+% Load portfolio data with 225 assets
+load port5.mat
+covariance = corr2cov(stdDev_return,Correlation);
+% Generate a sample with 200 observations
+rng('default')
+nScen = 200;
+retSeries = portsim(mean_return',covariance,nScen);
+
+15
+Functions
+
+15-46

@@ -1,0 +1,12 @@
+{
+  "page": 1627,
+  "original_text": "mertonObj = \n   Class MERTON: Merton Jump Diffusion\n   ----------------------------------------\n     Dimensions: State = 1, Brownian = 1\n   ----------------------------------------\n      StartTime: 0\n     StartState: 80\n    Correlation: 1\n          Drift: drift rate function F(t,X(t)) \n      Diffusion: diffusion rate function G(t,X(t)) \n     Simulation: simulation method/function simByEuler\n          Sigma: 0.16\n         Return: 0.03\n       JumpFreq: 2\n       JumpMean: 0.02\n        JumpVol: 0.08",
+  "ocr_text": "merton0bj=\nClassMERTON:MertonJumpDiffusion\nDimensions:State=1,Brownian=1\nStartTime:0\nStartState:80\nCorrelation:1\nDrift:driftratefunctionF(t,X(t))\nDiffusion:diffusionratefunctionG(t,X(t))\nSimulation:simulationmethod/functionsimByEuler\nSigma:0.16\nReturn:0.03\nJumpFreq:2\nJumpMean:0.02\nJumpVol:0.08",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 124.03,
+    "x1": 382.57,
+    "y1": 296.5
+  },
+  "confidence": "high"
+}

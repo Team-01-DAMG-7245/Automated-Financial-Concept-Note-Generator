@@ -1,0 +1,30 @@
+Version History
+Introduced in R2012a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cfprice supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+cfbyzero | cfyield | cfspread | datetime
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+cfprice
+
+15-715

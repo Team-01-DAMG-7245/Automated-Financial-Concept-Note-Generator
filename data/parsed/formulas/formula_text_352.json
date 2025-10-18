@@ -1,0 +1,12 @@
+{
+  "page": 220,
+  "original_text": "p = Portfolio('RiskFreeRate', r0, 'AssetMean', m, 'AssetCovar', C);\ndisp(p.RiskFreeRate)",
+  "ocr_text": "p=Portfolio(RiskFreeRate,r0,AssetMean,m,_AssetCovar,C);\ndisp(p.RiskFreeRate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 265.46,
+    "x1": 380.43,
+    "y1": 282.47
+  },
+  "confidence": "high"
+}

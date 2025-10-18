@@ -1,0 +1,38 @@
+04-Jan-2006       0          0           0           0          0           0           0    
+    05-Jan-2006       0          0           0           0          0           0           0    
+    06-Jan-2006       0          0           0           0          0           0           0    
+    09-Jan-2006       0          0           0           0          0           0           0    
+    10-Jan-2006       0          0           0           0          0           0           0    
+    11-Jan-2006       0          0           0           0          0           0           0    
+    12-Jan-2006       0          0           0           0          0           0           0
+
+Similar to the SMA, plot the signal for a single asset to preview the trading frequency.
+
+plot(macdSignal.Time,macdSignal.CAT_MACD)
+ylim([-0.5, 1.5]);
+ylabel('MACD > 0');
+title(sprintf('MACD > 0 for CAT'));
+
+RSI: Relative Strength Index
+
+The RSI is a metric to capture momentum. A common heuristic is to buy when the RSI falls below 30
+and to sell when the RSI rises above 70.
+
+rsiSignalNameEnding = '_RSI';
+
+rsiSignal = timetable;
+for i = 1:numel(symbols)
+    symi = symbols(i);
+    rsiValues = rsindex(pricesTT.(symi));
+    rsiBuySell = zeros(size(rsiValues));
+    rsiBuySell(rsiValues < 30) = 1;
+    rsiBuySell(rsiValues > 70) = -1;
+    % Build a timetable for each symbol, then aggregate the symbols together.
+    rsiSignali = timetable(pricesTT.Dates,...
+        rsiBuySell,...
+        'VariableNames',{sprintf('%s%s',symi,rsiSignalNameEnding)});
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-256

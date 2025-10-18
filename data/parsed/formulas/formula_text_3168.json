@@ -1,0 +1,12 @@
+{
+  "page": 1702,
+  "original_text": "gamma = sqrt(alpha^2 + 2*sigma^2);\nA_func = @(t, T) ...\n    2*(exp(gamma*(T-t))-1)/((alpha+gamma)*(exp(gamma*(T-t))-1)+2*gamma);\nC_func = @(t, T) ...\n    (2*alpha*b/sigma^2)*log(2*gamma*exp((alpha+gamma)*(T-t)/2)/((alpha+gamma)*(exp(gamma*(T-t))-1\nP_func = @(t,T,r_t) exp(-A_func(t,T)*r_t+C_func(t,T));",
+  "ocr_text": "gamma=sqrt(alpha*2+2*sigma2);\nA_func=Q(t,T)...\n2*(exp(gamma*(T-t))-1)/((alpha+gamma)*(exp(gamma*(T-t))-1)+2*gamma);\nC_func=Q(t,T)...\n(2*alpha*b/sigma2)*log(2*gamma*exp((alpha+gamma)*(T-t)/2)/((alpha+gamma)*(exp(gamma*(T-t))-\nP_func=Q(t,T,r_t)exp(-A_func(t,T)*r_t+C_func(t,T));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 167.29,
+    "x1": 615.55,
+    "y1": 231.75
+  },
+  "confidence": "high"
+}

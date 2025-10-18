@@ -1,0 +1,12 @@
+{
+  "page": 1111,
+  "original_text": "NumBonds = PortfolioDD/HedgeDD",
+  "ocr_text": "NumBonds=PortfolioDD/HedgeDD",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 286.03,
+    "x1": 252.54,
+    "y1": 296.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 371,
+  "original_text": "assetP = assetPrice./assetPrice(1, :);  \nbenchmarkP = benchPrice / benchPrice(1);",
+  "ocr_text": "assetP=assetPrice./assetPrice(1,:);\nbenchmarkP=benchPrice/_benchPrice(1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.9,
+    "x1": 306.72,
+    "y1": 223.17
+  },
+  "confidence": "high"
+}

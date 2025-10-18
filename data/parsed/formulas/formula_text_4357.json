@@ -1,0 +1,12 @@
+{
+  "page": 2466,
+  "original_text": "In this case, the last row of the life table applies for all persons aged 100 or older. Specifically, qx\nprobabilities are 1qx for ages less than 100 and, technically, ∞qx for age 100.",
+  "ocr_text": "Inthiscase,thelastrowofthelifetableappliesforallpersonsaged100orolder.Specifically,q,\nprobabilitiesare,q,forageslessthan100and,technically,..q,forage100.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 580.61,
+    "x1": 533.22,
+    "y1": 605.45
+  },
+  "confidence": "high"
+}

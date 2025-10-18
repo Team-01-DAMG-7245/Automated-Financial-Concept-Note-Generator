@@ -1,0 +1,14 @@
+Perform Portfolio Optimization with a Turnover Constraint
+
+How close can you get to this efficient frontier by only trading some of the portfolio? Assume that you
+want to trade only a certain percentage of the portfolio to avoid too much turnover in your holdings.
+This requirement imposes some nonlinear constraints on the problem and gives a problem with
+multiple local minima. Even so, the Portfolio object solves the problem, and you specify the
+turnover constraint using the setTurnover function.
+
+P10 = setTurnover(P,0.10);
+plotFrontier(P10)
+
+Portfolio Analysis with Turnover Constraints
+
+4-213

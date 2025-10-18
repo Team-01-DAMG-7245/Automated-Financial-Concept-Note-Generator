@@ -1,0 +1,9 @@
+Page 841
+================================================================================
+
+G = [ true true true false false ];
+p = PortfolioMAD;
+p = setGroups(p, G, [], 0.3);
+disp(p.NumAssets);
+disp(p.GroupMatrix);
+disp(p.UpperGroup);

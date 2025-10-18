@@ -1,0 +1,60 @@
+0.1524    0.1524
+    0.1657    0.1657
+    0.1790    0.1790
+
+[pstd, qstd]
+
+ans = 10×2
+
+0.0761    0.0761
+    0.0825    0.0823
+    0.0988    0.0984
+    0.1210    0.1206
+    0.1465    0.1462
+    0.1739    0.1736
+    0.2054    0.2051
+    0.2469    0.2466
+    0.2945    0.2944
+    0.3462    0.3462
+
+To produce comparable results, you can use the returns or risks from one portfolio optimization as
+target returns or risks for the other portfolio optimization.
+
+qwgt = estimateFrontierByReturn(q, pret);
+qret = estimatePortReturn(q, qwgt);
+qstd = estimatePortStd(q, qwgt);
+
+[pret, qret]
+
+ans = 10×2
+
+0.0594    0.0594
+    0.0727    0.0727
+    0.0860    0.0860
+    0.0993    0.0993
+    0.1126    0.1126
+    0.1259    0.1259
+    0.1391    0.1391
+    0.1524    0.1524
+    0.1657    0.1657
+    0.1790    0.1790
+
+[pstd, qstd]
+
+ans = 10×2
+
+0.0761    0.0761
+    0.0825    0.0825
+    0.0988    0.0988
+    0.1210    0.1210
+    0.1465    0.1465
+    0.1739    0.1739
+    0.2054    0.2054
+    0.2469    0.2469
+    0.2945    0.2945
+    0.3462    0.3462
+
+6
+MAD Portfolio Optimization Tools
+
+6-116

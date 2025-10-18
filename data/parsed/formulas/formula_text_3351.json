@@ -1,0 +1,12 @@
+{
+  "page": 1819,
+  "original_text": "[ZeroRates, CurveDates] = pyld2zero(TreasuryParYield, TreasuryDates, Settle);\nZeroData = [datenum(CurveDates), ZeroRates];\nRiskFreeRate = array2table(ZeroData, 'VariableNames', {'Date', 'Rate'});\nRiskFreeRate.Date = datetime(RiskFreeRate.Date,'Locale','en_US','ConvertFrom','datenum');\nRiskFreeRate.Date.Format = 'MMM-dd-yyyy'",
+  "ocr_text": "[ZeroRates,CurveDates]=pyld2zero(TreasuryParYield,TreasuryDates,Settle);\nZeroData=[datenum(CurveDates),ZeroRates];\nRiskFreeRate=array2table(ZeroData,VariableNames,{Date,Rate});\nRiskFreeRate.Date=datetime(RiskFreeRate.Date,Locale,en_US,ConvertFrom,datenum);\nRiskFreeRate.Date.Format=MMM-dd-yyyy",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 526.38,
+    "x1": 572.24,
+    "y1": 580.04
+  },
+  "confidence": "high"
+}

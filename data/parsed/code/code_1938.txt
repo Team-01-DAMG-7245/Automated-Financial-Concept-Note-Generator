@@ -1,0 +1,6 @@
+Page 1547
+================================================================================
+
+Specify a set of optional backtest state data that a strategy needs in the rebalanceFcn function
+handle, specified as a scalar string or string array. By default, the EngineDataList property is
+empty, indicating that no additional engine data is required.

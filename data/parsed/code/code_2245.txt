@@ -1,0 +1,5 @@
+Page 2053
+================================================================================
+
+Maturity = [datetime(2000,9,30) ; datetime(2001,10,31) ; datetime(2002,11,30)];
+NumCouponsRemaining = cpncount(datetime(1997,9,14), Maturity)

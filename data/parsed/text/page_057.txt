@@ -1,0 +1,53 @@
+Depreciation
+
+This example shows how to compute standard depreciation schedules using depgendb.
+
+The following code depreciates an automobile worth $15,000 over five years with a salvage value of
+$1,500. It computes the general declining balance using two different depreciation rates: 50% (or
+1.5), and 100% (or 2.0, also known as double declining balance).
+
+Decline1 = depgendb(15000, 1500, 5, 1.5)
+
+Decline1 = 1×5
+103 ×
+
+4.5000    3.1500    2.2050    1.5435    2.1015
+
+Decline2 = depgendb(15000, 1500, 5, 2.0)
+
+Decline2 = 1×5
+103 ×
+
+6.0000    3.6000    2.1600    1.2960    0.4440
+
+These results indicate the actual depreciation amount for the first four years and the remaining
+depreciable value as the entry for the fifth year.
+
+Annuities
+
+This example shows how to work with annuities using annurate.
+
+The following code shows how to compute the interest rate associated with a series of loan payments
+when only the payment amounts and principal are known. For a loan whose original value was
+$5000.00 and which was paid back monthly over four years at $130.00/month:
+
+Rate = annurate(4*12, 130, 5000, 0, 0)
+
+Rate = 
+0.0094
+
+The function returns a rate of 0.0094 monthly, or about 11.28% annually.
+
+You can use a present-value function (pvfix) to compute the initial principal when the payment and
+rate are known. For a loan paid at $300.00/month over four years at 11% annual interest:
+
+Principal = pvfix(0.11/12, 4*12, 300, 0, 0)
+
+Principal = 
+1.1607e+04
+
+The function returns the original principal value of $11,607.43.
+
+Analyzing and Computing Cash Flows
+
+2-13

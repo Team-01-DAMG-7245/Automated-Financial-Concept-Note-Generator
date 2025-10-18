@@ -1,0 +1,29 @@
+adline
+
+Accumulation/Distribution line
+
+Syntax
+
+ADline = adline(Data)
+
+Description
+
+ADline = adline(Data) calculates the Accumulation/Distribution Line from a set of high, low,
+closing prices, and volume traded of a security.
+
+Examples
+
+Calculate the Accumulation/Distribution Line for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+line = adline(TMW);
+plot(line.Time,line.ADLine)
+title('Accumulation/Distribution Line for TMW')
+
+15
+Functions
+
+15-454

@@ -1,0 +1,5 @@
+Page 1243
+================================================================================
+
+yields     = Dataset.EB3M;
+regressors = [ones(length(yields) - 1, 1) yields(1:end-1)];

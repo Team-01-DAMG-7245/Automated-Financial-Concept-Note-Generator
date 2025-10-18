@@ -1,0 +1,12 @@
+{
+  "page": 1012,
+  "original_text": "After calibrating the unconstrained model as described in the \"Unconstrained Model Using\nfitConstrainedModel\" section, you can solve for the model coefficients subject to constraints. You can\nchoose lower and upper bounds such that 0 ≤bi ≤1, ∀i = 1 . . . K, except for the intercept. Also, since\nthe customer age and customer income are somewhat correlated, you can also use additional\nconstraints on their coefficients, for example, |bCusAge −bCustIncome| < 0 . 1. The coefficients\ncorresponding to the predictors 'CustAge' and 'CustIncome' in this example are b2 and b6,\nrespectively.",
+  "ocr_text": "AftercalibratingtheunconstrainedmodelasdescribedintheUnconstrainedModelUsing\nfitConstrainedModelsection,youcansolveforthemodelcoefficientssubjecttoconstraints.Youcan\nchooselowerandupperboundssuchthat0=bjs1,Vi=1...K,exceptfortheintercept.Also,since\nthecustomerageandcustomerincomearesomewhatcorrelated,youcanalsouseadditional\nconstraintsontheircoefficients,forexample,bcusage-Dcustincome_0.1.Thecoefficients\ncorrespondingtothepredictorsCustAgeandCustIncomeinthisexampleareb2andbg,\nrespectively.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 322.24,
+    "x1": 556.53,
+    "y1": 410.81
+  },
+  "confidence": "high"
+}

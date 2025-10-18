@@ -1,0 +1,6 @@
+Page 2458
+================================================================================
+
+•
+'ratio' — Given raw data qx and model estimates q x for x = 1, ... , N, the first objective (which
+is the preferred objective) has the form

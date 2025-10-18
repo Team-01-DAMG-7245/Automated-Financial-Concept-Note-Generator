@@ -1,0 +1,38 @@
+About Credit Scorecards
+
+In this section...
+
+“What Is a Credit Scorecard?” on page 8-49
+
+“Credit Scorecard Development Process” on page 8-50
+
+What Is a Credit Scorecard?
+
+Credit scoring is one of the most widely used credit risk analysis tools. The goal of credit scoring is
+ranking borrowers by their credit worthiness. In the context of retail credit (credit cards, mortgages,
+car loans, and so on), credit scoring is performed using a credit scorecard. Credit scorecards
+represent different characteristics of a customer (age, residential status, time at current address,
+time at current job, and so on) translated into points and the total number of points becomes the
+credit score. The credit worthiness of customers is summarized by their credit score; high scores
+usually correspond to low-risk customers, and conversely. Scores are also used for corporate credit
+analysis of small and medium enterprises, and, large corporations.
+
+A credit scorecard is a lookup table that maps specific characteristics of a borrower into points. The
+total number of points becomes the credit score. Credit scorecards are a widely used type of credit
+scoring model. As such, the goal of a credit scorecard is to distinguish between customers who repay
+their loans (“good” customers), and customers who will not (“bad” customers). Like other credit
+scoring models, credit scorecards quantify the risk that a borrower will not repay a loan in the form
+of a score and a probability of default.
+
+For example, a credit scorecard can give individual borrowers points for their age and income
+according to the following table. Other characteristics such as residential status, employment status,
+might also be included, although, for brevity, they are not shown in this table.
+
+Using the credit scorecard in this example, a particular customer who is 31 and has an income of
+$52,000 a year, is placed into the second age group (26–40) and receives 25 points for their age, and
+similarly, receives 28 points for their income. Other characteristics (not shown here) might contribute
+additional points to their score. The total score is the sum of all points, which in this example is
+
+About Credit Scorecards
+
+8-49

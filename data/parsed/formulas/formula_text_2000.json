@@ -1,0 +1,12 @@
+{
+  "page": 1037,
+  "original_text": "fprintf('\\n%s\\n\\n',Title)",
+  "ocr_text": "fprintf(nssnn,Title)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 225.46,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

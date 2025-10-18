@@ -1,0 +1,7 @@
+Page 1095
+================================================================================
+
+To estimate stock betas for all twelve stocks, set up a joint regression model that groups all twelve
+stocks within a single design (since each stock has the same design matrix, this model is actually an
+example of seemingly-unrelated regression). The function to estimate model parameters is
+ecmmvnrmle and the function to estimate standard errors is ecmmvnrstd.

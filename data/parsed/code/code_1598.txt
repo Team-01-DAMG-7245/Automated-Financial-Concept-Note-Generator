@@ -1,0 +1,5 @@
+Page 1459
+================================================================================
+
+For a given trial, each row of this array is the transpose of the state vector Xt at time t. Paths is the
+initial time series array into which the interpolate function performs the Brownian interpolation.

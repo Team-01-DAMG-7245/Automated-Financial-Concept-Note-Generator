@@ -1,0 +1,59 @@
+Working with Tracking Error Constraints Using Portfolio Object
+
+Tracking error constraints are optional constraints (see “Tracking Error Constraints” on page 4-15)
+that measure the risk relative to a portfolio called a tracking portfolio. Tracking error constraints can
+be set using the Portfolio object or the setTrackingError function.
+
+The tracking error constraint is an optional quadratic constraint that enforces an upper bound on
+tracking error, which is the relative risk between a portfolio and a designated tracking portfolio. For
+more information, see “Tracking Error Constraints” on page 4-15.
+
+The tracking error constraint can be set using the Portfolio object or the setTrackingPort and
+setTrackingError functions. The tracking error constraint depends on a tracking portfolio, which
+is assumed to be zero if not set when the tracking error constraint is set. The tracking error
+constraint has properties TrackingError, for the upper bound on tracking error, and
+TrackingPort, for the portfolio against which tracking error is computed.
+
+Note The initial portfolio in the Portfolio object property InitPort is distinct from the tracking
+portfolio in the Portfolio object property TrackingPort.
+
+Setting Tracking Error Constraints Using the Portfolio Function
+
+The properties for the tracking error constraints are set using the Portfolio object. Suppose that
+you have a tracking portfolio of 10 assets in a variable x0 and you want to ensure that the tracking
+error of any portfolio on the efficient frontier is no more than 8% relative to this portfolio. To set this
+constraint:
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ]; 
+p = Portfolio('TrackingError', 0.08, 'TrackingPort', x0);
+disp(p.NumAssets)
+disp(p.TrackingError)
+disp(p.TrackingPort)
+
+10
+
+0.0800
+
+0.1200
+    0.0900
+    0.0800
+    0.0700
+    0.1000
+    0.1000
+    0.1500
+    0.1100
+    0.0800
+    0.1000
+
+If the NumAssets or TrackingPort properties are not set before or when the tracking error
+constraint is set, various rules are applied to assign default values to these properties (see “Setting
+Up a Tracking Portfolio” on page 4-40).
+
+Setting Tracking Error Constraints Using the setTrackingError Function
+
+You can also set properties for portfolio tracking error using the setTrackingError function to
+specify both the upper bound for tracking error and a designated tracking portfolio. Suppose that you
+
+Working with Tracking Error Constraints Using Portfolio Object
+
+4-91

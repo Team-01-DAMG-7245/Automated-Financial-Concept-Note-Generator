@@ -1,0 +1,64 @@
+•
+Period — Column vector of positive whole numbers containing the time Period numbers. For
+each one of the NumAssets asset names, the Period numbers range from 1 to NumPeriods with
+increments of 1, so that there are a total of NumAssets-times-NumPeriods rows. Row 1 is for the
+first period, row 2 is for the second period, and is repeated for each asset. If the Period column is
+missing from AssetTable, all Period numbers are internally set to 1 and all asset returns in
+AssetTable are assumed to be for the same single period.
+
+•
+Name — String column vector containing the individual asset names for the associated returns.
+There is a total of NumAssets unique names, and the names are repeated for each Period.
+
+•
+Return — Numeric column vector containing the asset returns in decimals.
+
+•
+Category — Categorical vector containing the asset categories (sectors) for the associated asset
+returns. There is a total of NumCategories unique categories.
+
+•
+Portfolio Weight — Numeric vector containing the asset portfolio weights in decimals. The
+weights are internally normalized so that they sum to 1 for each Period.
+
+Note The values for Portfolio Weight must sum to 1 for the Brinson model. If the weights do
+not sum to 1, the Portfolio Weight values are internally normalized so that they sum to 1 and
+brinsonAttribution displays a warning. If there is a cash position, you must account for it as
+an asset with its own weight so that the weights sum to 1.
+
+•
+Benchmark Weight — Numeric vector containing the asset benchmark weights in decimals. The
+weights are internally normalized so that they sum to 1 for each Period.
+
+Note The values for the Benchmark Weight must sum to 1 for the Brinson model. If the weights
+do not sum to 1, the Benchmark Weight values are internally normalized so that they sum to 1
+and brinsonAttribution displays a warning. If there is a cash position, you must account for it
+as an asset with its own weight so that the weights sum to 1.
+
+Note AssetTable must be a table. Instead of specific dates and times, the Period column of
+AssetTable must have period numbers that start with 1 and have increments of one. The
+multiperiod Brinson model assumes that all returns are for time periods of equal intervals (for
+example, monthly, quarterly, and so on).
+
+Each individual asset must belong to one and only one category. You can apply Brinson attribution to
+any portfolio containing assets with measured returns if each of the individual asset belongs to one
+and only one category. Therefore, you can include a bond or cash holding in the portfolio after
+assigning it to its own category (for example, "Bond" or "Cash") and you enter its measured returns
+and weights. If the portfolio's benchmark does not have the bond or cash holding, then the
+benchmark weight for that asset is 0. As for an ETF, you can decompose the ETF into its individual
+holdings (for example, about 100 stocks in QQQ) and then enter these stocks into the portfolio with
+the associated measured returns, weights (relative to the overall portfolio, not within the ETF) and
+associate each stock in the ETF with a category.
+
+Data Types: table
+
+Output Arguments
+
+brinsonAttributionObj — Brinson Attribution model
+brinsonAttribution object
+
+Brinson Attribution model, returned as a brinsonAttributionObj object.
+
+brinsonAttribution
+
+15-3

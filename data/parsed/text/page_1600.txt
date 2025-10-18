@@ -1,0 +1,64 @@
+The inverse variance strategy requires some price history to initialize, so you can allocate a portion of
+the data to use for setting initial weights. By doing this, you can "warm start" the backtest.
+
+warmupRange = 1:20;
+testRange = 21:height(pricesTT);
+
+Create Strategies
+
+Define an investment strategy by using the backtestStrategy function. This example builds two
+strategies:
+
+•
+Equal weighted
+
+•
+Inverse variance
+
+This example does not provide details on how to build the strategies. For more information on
+creating strategies, see backtestStrategy. The strategy rebalance functions are implemented in
+the Rebalance Functions on page 15-302 section.
+
+% Create the strategies
+ewInitialWeights = equalWeightFcn([],pricesTT(warmupRange,:));
+ewStrategy = backtestStrategy("EqualWeighted",@equalWeightFcn, ...
+    'RebalanceFrequency',20, ...
+    'TransactionCosts',[0.0025 0.005], ...
+    'LookbackWindow',0, ...
+    'InitialWeights',ewInitialWeights)
+
+ewStrategy = 
+  backtestStrategy with properties:
+
+Name: "EqualWeighted"
+              RebalanceFcn: @equalWeightFcn
+        RebalanceFrequency: 20
+          TransactionCosts: [0.0025 0.0050]
+            LookbackWindow: 0
+            InitialWeights: [0.1429 0.1429 0.1429 0.1429 0.1429 0.1429 0.1429]
+             ManagementFee: 0
+     ManagementFeeSchedule: 1y
+            PerformanceFee: 0
+    PerformanceFeeSchedule: 1y
+         PerformanceHurdle: 0
+                  UserData: [0×0 struct]
+            EngineDataList: [0×0 string]
+
+ivInitialWeights = inverseVarianceFcn([],pricesTT(warmupRange,:));
+ivStrategy = backtestStrategy("InverseVariance",@inverseVarianceFcn, ...
+    'RebalanceFrequency',20, ...
+    'TransactionCosts',[0.0025 0.005], ...
+    'InitialWeights',ivInitialWeights)
+
+ivStrategy = 
+  backtestStrategy with properties:
+
+Name: "InverseVariance"
+              RebalanceFcn: @inverseVarianceFcn
+        RebalanceFrequency: 20
+          TransactionCosts: [0.0025 0.0050]
+
+15
+Functions
+
+15-294

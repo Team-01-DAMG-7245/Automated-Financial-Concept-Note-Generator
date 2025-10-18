@@ -1,0 +1,64 @@
+Last actual coupon date, specified as the comma-separated pair consisting of 'LastCouponDate'
+and a scalar datetime, string, or date character vector. LastCouponDate is used when a bond has an
+irregular last coupon period. In the absence of a specified FirstCouponDate, a specified
+LastCouponDate determines the coupon structure of the bond. The coupon structure of a bond is
+truncated at the LastCouponDate, regardless of where it falls, and is followed only by the bond's
+maturity cash flow date.
+
+To support existing code, bondDefaultBootstrap also accepts serial date numbers as inputs, but
+they are not recommended.
+
+Data Types: char | datetime | string
+
+StartDate — Forward starting date of payments
+if you do not specify StartDate, effective start date is Settle date (default) | datetime scalar |
+string scalar | date character vector
+
+Forward starting date of payments, specified as the comma-separated pair consisting of
+'StartDate' and a scalar datetime, string, or date character vector. StartDate is when a bond
+actually starts (the date from which a bond cash flow is considered). To make an instrument forward-
+starting, specify this date as a future date.
+
+To support existing code, bondDefaultBootstrap also accepts serial date numbers as inputs, but
+they are not recommended.
+
+Data Types: char | datetime | string
+
+BusinessDayConvention — Business day conventions
+'actual' (default) | character vector or string object with values'actual', 'follow',
+'modifiedfollow', 'previous'or 'modifiedprevious'
+
+Business day conventions, specified as the comma-separated pair consisting of
+'BusinessDayConvention' and a character vector or a string object. The selection for business
+day convention determines how nonbusiness days are treated. Nonbusiness days are defined as
+weekends plus any other date that businesses are not open (for example, statutory holidays). Values
+are:
+
+•
+'actual' — Nonbusiness days are effectively ignored. Cash flows that fall on non-business days
+are assumed to be distributed on the actual date.
+
+•
+'follow' — Cash flows that fall on a nonbusiness day are assumed to be distributed on the
+following business day.
+
+•
+'modifiedfollow' — Cash flows that fall on a non-business day are assumed to be distributed
+on the following business day. However if the following business day is in a different month, the
+previous business day is adopted instead.
+
+•
+'previous' — Cash flows that fall on a nonbusiness day are assumed to be distributed on the
+previous business day.
+
+•
+'modifiedprevious' — Cash flows that fall on a nonbusiness day are assumed to be distributed
+on the previous business day. However if the previous business day is in a different month, the
+following business day is adopted instead.
+
+Data Types: char | cell | string
+
+15
+Functions
+
+15-520

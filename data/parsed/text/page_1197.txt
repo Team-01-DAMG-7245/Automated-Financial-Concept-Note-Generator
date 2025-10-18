@@ -1,0 +1,79 @@
+SDE Class Hierarchy
+
+The Financial Toolbox SDE class structure represents a generalization and specialization hierarchy.
+The top-level class provides the most general model interface and offers the default Monte Carlo
+simulation and interpolation methods. In turn, derived classes offer restricted interfaces that simplify
+model creation and manipulation while providing detail regarding model structure.
+
+The following table lists the SDE classes. The introductory examples in “Available SDE Models” on
+page 14-11 show how to use these classes to create objects associated with univariate models.
+Although the Financial Toolbox SDE engine supports multivariate models, univariate models facilitate
+object creation and display, and allow you to easily associate inputs with object parameters.
+
+SDE Classes
+
+Class Name
+For More Information, See ...
+
+SDE
+sde and “Base SDE Models” on page 14-16
+
+Drift, Diffusion
+drift, diffusion, and “Overview” on page 14-19
+
+SDEDDO
+sdeddo and “Drift and Diffusion Models” on page 14-
+19
+
+SDELD
+sdeld and “Linear Drift Models” on page 14-22
+
+CEV
+cev and “Creating Constant Elasticity of Variance
+(CEV) Models” on page 14-25
+
+BM
+bm and “Creating Brownian Motion (BM) Models” on
+page 14-24
+
+SDEMRD
+sdemrd and “Creating Stochastic Differential Equations
+from Mean-Reverting Drift (SDEMRD) Models” on page
+14-26
+
+GBM
+gbm and “Creating Geometric Brownian Motion (GBM)
+Models” on page 14-25
+
+HWV
+hwv and “Creating Hull-White/Vasicek (HWV) Gaussian
+Diffusion Models” on page 14-28
+
+CIR
+cir and “Creating Cox-Ingersoll-Ross (CIR) Square
+Root Diffusion Models” on page 14-27
+
+Heston
+heston and “Creating Heston Stochastic Volatility
+Models” on page 14-29
+
+Merton
+merton
+
+Bates
+bates
+
+rvm
+rvm
+
+roughbergomi
+roughbergomi
+
+roughheston
+roughheston
+
+The following figure illustrates the inheritance relationships among SDE classes.
+
+SDE Class Hierarchy
+
+14-5

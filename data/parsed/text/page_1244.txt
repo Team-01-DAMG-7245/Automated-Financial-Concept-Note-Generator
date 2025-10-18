@@ -1,0 +1,63 @@
+[coefficients, intervals, residuals] = ...
+   regress(diff(yields), regressors);
+dt    = 1;  % time increment = 1 day
+speed = -coefficients(2)/dt;
+level = -coefficients(1)/coefficients(2);
+sigma =  std(residuals)/sqrt(dt);
+
+Create an hwv object with StartState set to the most recently observed short rate.
+
+obj = hwv(speed, level, sigma, 'StartState', yields(end))
+
+obj = 
+   Class HWV: Hull-White/Vasicek
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 7.70408e-05
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 4.77637e-07
+          Level: 6.00424e-05
+          Speed: 0.00228854
+
+Assume, for example, that you simulate the fitted model over 64 (26) trading days, using a refined
+Brownian bridge with the power-of-two algorithm instead of the usual beginning-to-end Monte Carlo
+simulation approach. Furthermore, assume that the initial time and state coincide with those of the
+last available observation of the historical data, and that the terminal state is the expected value of
+the Vasicek model 64 days into the future. In this case, you can assess the behavior of various paths
+that all share the same initial and terminal states, perhaps to support pricing path-dependent interest
+rate options over a three-month interval.
+
+Create a vector of interpolation times to traverse the time grid by moving both forward and backward
+in time. Specifically, the first interpolation time is set to the most recent short-rate observation time,
+the second interpolation time is set to the terminal time, and subsequent interpolation times
+successively sample intermediate states.
+
+T      = 64;
+times  = (1:T)';
+t      = NaN(length(times) + 1, 1);
+t(1)   = obj.StartTime;
+t(2)   = T;
+delta  = T;
+jMax   = 1;
+iCount = 3;
+
+for k = 1:log2(T)
+    i = delta / 2;
+    for j = 1:jMax
+        t(iCount) = times(i);
+        i         = i + delta;
+        iCount    = iCount + 1;
+    end
+    jMax  = 2 * jMax;
+    delta = delta / 2;
+end
+
+14
+Stochastic Differential Equations
+
+14-52

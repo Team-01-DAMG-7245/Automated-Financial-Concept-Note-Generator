@@ -1,0 +1,8 @@
+Page 1588
+================================================================================
+
+This example backtests an "inverse variance" strategy. The inverse variance rebalance function is
+implemeted in the Local Functions on page 15-287 section. For more information on creating
+backtest strategies, see backtestStrategy. The inverse variance strategy uses the covariance of
+asset returns to make decisions about asset allocation. The LookbackWindow for this strategy must
+contain at least 30 days of trailing data (about 6 weeks), and at most, 60 days (about 12 weeks).

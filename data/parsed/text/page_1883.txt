@@ -1,0 +1,57 @@
+EffectiveRate = 
+0.0528
+
+Perform scenario analysis on the reinvestment rate.
+
+ReinvestRate = [0.03; 0.035; 0.04; 0.045; 0.05];
+[BondEquiv, EffectiveRate] = bndtotalreturn(Price, CouponRate, ...
+Settle, Maturity, ReinvestRate, 'HorizonDate', HorizonDate)
+
+BondEquiv = 5×1
+
+0.0557
+    0.0538
+    0.0521
+    0.0505
+    0.0490
+
+EffectiveRate = 5×1
+
+0.0565
+    0.0546
+    0.0528
+    0.0511
+    0.0496
+
+Compute the Total Return of a Fixed-Coupon Bond Using datetime Inputs
+
+Use bndtotalreturn with datetime inputs to compute the total return for a fixed-coupon bond,
+given an investment horizon date.
+
+Price = 101;
+CouponRate = 0.05;
+Settle = datetime('15-Nov-2011','Locale','en_US');
+Maturity = datetime('15-Nov-2031','Locale','en_US');
+HorizonDate = datetime('15-Nov-2021','Locale','en_US');
+ReinvestRate = 0.04;
+[BondEquiv, EffectiveRate] = bndtotalreturn(Price, CouponRate, ...
+Settle, Maturity, ReinvestRate, 'HorizonDate', HorizonDate)
+
+BondEquiv = 
+0.0521
+
+EffectiveRate = 
+0.0528
+
+Input Arguments
+
+Price — Clean price at settlement date
+matrix
+
+Clean price at the settlement date, specified as a scalar or a NINST-by-1 vector.
+
+Data Types: double
+
+bndtotalreturn
+
+15-577

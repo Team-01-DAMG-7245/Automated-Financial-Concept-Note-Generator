@@ -1,0 +1,9 @@
+Page 385
+================================================================================
+
+If the sum(AssetWeight_i) is less than 1, the extra cash is invested in a risk-free asset. If the
+sum(AssetWeight_i) is larger than 1, meaning that total risky asset investment is larger than
+initial available cash, the risk-free asset is shorted (borrowed) to fund the extra investment in a risky
+asset. The cost associated with borrowing a risk-free asset is automatically captured in the mean-
+variance optimization model for the Portfolio class. Therefore, you can use the setBudget
+function directly to control the level of leverage of cash for the portfolio.

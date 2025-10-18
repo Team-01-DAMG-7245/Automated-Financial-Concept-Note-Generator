@@ -1,0 +1,6 @@
+Page 1519
+================================================================================
+
+KernelType — Type of kernel function assembling BSS process
+"gamma" (default) | string with value "gamma" or "power-law" | character vector with value
+'gamma' or 'power-law'

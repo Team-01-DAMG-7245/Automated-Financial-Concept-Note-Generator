@@ -1,0 +1,28 @@
+At t = 4, the wealth goal has been achieved. However, because of the uncertainty in the problem, the
+probability of success is not yet 1. Furthermore, trying different paths (random seeds) shows how
+even a monotonic increase in the wealth does not translate to a monotonic increase in the probability
+of success. This behavior occurs because the wealth increase at later time periods should be higher
+than at earlier time periods to have the same increase in the probability of success.
+
+Plot the cumulative distribution function (CDF) of attaining the goal wealth at different time periods.
+
+% Plot the cumulative distribution function (CDF) of success at
+% different time periods.
+figure
+nWN = 60;
+plot(WGrid(1:nWN),V(1:nWN,1:end-1))
+xline(W0,'--k','LineWidth',2); % Initial wealth
+xline(G,'-.r','LineWidth',2); % Goal wealth
+xlim(WGrid([1,nWN]))
+
+% Specify the title, labels, and legends.
+title('Success CDF at Different Time Periods')
+xlabel('Wealth Level')
+ylabel('Probability of Success')
+legend("t = "+num2str((0:T-1)'),Location="se")
+grid on
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-376

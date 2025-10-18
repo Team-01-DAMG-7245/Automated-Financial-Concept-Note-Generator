@@ -1,0 +1,70 @@
+there is enough data, the reward may be given sparsely, only at the end of each horizon rather than at
+each step [6 on page 4-440]. In this example, the data size is small, so you give the reward at each
+step and design it so that the reward at each step approximates the expected reward at the end of the
+horizon.
+
+Specifically, you use a reward that compares the Implementation Shortfall of the TWAP baseline
+against that of the agent at each step, while also taking into account the penalty for the approximate
+Implementation Shortfall of the remaining unexecuted shares based on the current limit order book.
+The reward is also scaled based on the current time relative to the end of the horizon.
+
+Reward t =
+ISTWAP 0, t + ISTWAP, Penalty t, T
+−ISAgent 0, t + ISAgent, Penalty t, T
+× t
+T
+
+Reward t  is the reward at time step t
+
+ISTWAP 0, t  is the Implementation Shortfall of TWAP from the beginning of the horizon until time step
+t
+
+ISTWAP, Penalty t, T  is the approximate Implementation Shortfall of TWAP from time step t to the end
+of the horizon at time step T
+
+ISAgent 0, t  is the Implementation Shortfall of the agent from the beginning of horizon until time step
+t
+
+ISAgent, Penalty t, T  is the approximate Implementation Shortfall of the agent from time step t to the
+end of the horizon at time step T
+
+Since the agent performance is ultimately measured against the baseline using Implementation
+Shortfall at the end of the horizon at time step T, and the approximate reward becomes more
+
+accurate as t approaches T, Reward t  has a scaling factor t
+T  so that its magnitude increases as t
+
+approaches T. At time step T, the reward becomes Reward T .
+
+Reward T = ISTWAP 0, T −ISAgent 0, T
+
+Performance Analysis
+
+You measure agent performance against the TWAP baseline using Implementation Shortfall (IS), by
+computing the following for all horizons:
+
+•
+IS total outperformance of agent over TWAP — Sum of ISTWAP 0, T −ISAgent 0, T
+
+•
+IS total-gain-to-loss ratio (TGLR) — Ratio of total positive over total negative
+ISTWAP 0, T −ISAgent 0, T  magnitudes
+
+•
+IS gain-to-loss ratio (GLR) — Ratio of mean positive over mean negative
+ISTWAP 0, T −ISAgent 0, T  magnitudes
+
+Workflow Organization
+
+The workflow in this example is:
+
+•
+Load and Prepare Data on page 4-411
+
+•
+- LOBSTER Message Data — Contains time stamps
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-410

@@ -1,0 +1,61 @@
+Valuation with Missing Data
+
+In this section...
+
+“Introduction” on page 9-26
+
+“Capital Asset Pricing Model” on page 9-26
+
+“Estimation of the CAPM” on page 9-27
+
+“Estimation with Missing Data” on page 9-27
+
+“Estimation of Some Technology Stock Betas” on page 9-27
+
+“Grouped Estimation of Some Technology Stock Betas” on page 9-30
+
+“References” on page 9-32
+
+Introduction
+
+The Capital Asset Pricing Model (CAPM) is a venerable but often maligned tool to characterize
+comovements between asset and market prices. Although many issues arise in CAPM implementation
+and interpretation, one problem that practitioners face is to estimate the coefficients of the CAPM
+with incomplete stock price data.
+
+The following example shows how to use the missing data regression functions to estimate the
+coefficients of the CAPM.
+
+Capital Asset Pricing Model
+
+Given a host of assumptions that can be found in the references (see Sharpe [11], Lintner [6], Jarrow
+[5], and Sharpe, et. al. [12]), the CAPM concludes that asset returns have a linear relationship with
+market returns. Specifically, given the return of all stocks that constitute a market denoted as M and
+the return of a riskless asset denoted as C, the CAPM states that the return of each asset Ri in the
+market has the expectational form
+
+E[Ri] = αi + C + βi(E[M] −C)
+
+for assets i = 1, ..., n, where βi is a parameter that specifies the degree of comovement between a
+given asset and the underlying market. In other words, the expected return of each asset is equal to
+the return on a riskless asset plus a risk-adjusted expected market return net of riskless asset
+returns. The collection of parameters β1, ..., βn is called asset betas.
+
+The beta of an asset has the form
+
+βi = cov Ri, M
+
+var M
+,
+
+which is the ratio of the covariance between asset and market returns divided by the variance of
+market returns.Beta is the price volatility of a financial instrument relative to the price volatility of a
+market or index as a whole. Beta is commonly used with respect to equities. A high-beta instrument is
+riskier than a low-beta instrument. If an asset has a beta = 1, the asset is said to move with the
+market; if an asset has a beta > 1, the asset is said to be more volatile than the market. Conversely, if
+an asset has a beta < 1, the asset is said to be less volatile than the market.
+
+9
+Regression with Missing Data
+
+9-26

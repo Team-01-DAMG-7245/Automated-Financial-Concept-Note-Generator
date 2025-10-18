@@ -1,0 +1,12 @@
+{
+  "page": 515,
+  "original_text": "•\nAs λ →∞, the weights of the penalized problem come closer to the weights of the minimum\ntracking error problem. This result happens because the penalized term in the objective\novercomes the HH index.",
+  "ocr_text": "*AsA-o,theweightsofthepenalizedproblemcomeclosertotheweightsoftheminimum\ntrackingerrorproblem.Thisresulthappensbecausethepenalizedtermintheobjective\novercomestheHHindex.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 675.91,
+    "x1": 524.66,
+    "y1": 711.56
+  },
+  "confidence": "high"
+}

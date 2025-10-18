@@ -1,0 +1,12 @@
+{
+  "page": 778,
+  "original_text": "% Max return portfolio\nnexttile\nidxMaxRet = pwgt(:,end) >= 1e-4;\npiechart(pwgt(idxMaxRet,end),labels(idxMaxRet))\ntitle('Max Return Portfolio')",
+  "ocr_text": "Maxreturnportfolio\n\nnexttile\n\nidxMaxRet=pwgt(:,end)-=le-4;\npiechart(pwgt(idxMaxRet,end),Labels(idxMaxRet))\ntitle(MaxReturnPortfolio)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 482.83,
+    "x1": 344.65,
+    "y1": 536.49
+  },
+  "confidence": "high"
+}

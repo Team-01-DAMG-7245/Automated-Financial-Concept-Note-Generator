@@ -1,0 +1,4 @@
+Page 1721
+================================================================================
+
+However, you can also evaluate the resulting function at any intermediate time t and state Xt:

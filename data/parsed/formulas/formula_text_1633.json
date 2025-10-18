@@ -1,0 +1,12 @@
+{
+  "page": 817,
+  "original_text": "p = PortfolioMAD;\np = setScenarios(p, AssetScenarios);\n[mean, covar] = estimateScenarioMoments(p)",
+  "ocr_text": "p=PortfolioMAD;\np=setScenarios(p,AssetScenarios);\n[mean,covar]=estimateScenarioMoments(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 656.64,
+    "x1": 317.56,
+    "y1": 688.71
+  },
+  "confidence": "high"
+}

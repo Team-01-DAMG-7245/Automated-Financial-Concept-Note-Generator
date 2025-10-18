@@ -1,0 +1,9 @@
+Page 1089
+================================================================================
+
+% Display estimates
+for i = 1:NumAssets
+  fprintf('  %4s %9.4f (%8.4f) %9.4f (%8.4f) %9.4f (%8.4f)\n', ... 
+  Assets{i},Alpha(i),abs(Alpha(i)/StdAlpha(i)), ...
+  Beta(i),abs(Beta(i)/StdBeta(i)),Sigma(i),StdSigma(i));
+end

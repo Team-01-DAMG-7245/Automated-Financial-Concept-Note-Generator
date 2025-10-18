@@ -1,0 +1,5 @@
+Page 1367
+================================================================================
+
+function new_weights = traditionalStrat(~, pricesTT) 
+% Function for minimum variance portfolio using traditional covariance estimate.

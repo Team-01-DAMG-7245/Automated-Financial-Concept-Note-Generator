@@ -1,0 +1,54 @@
+Input Arguments
+
+Tickaxis — Determines which axis tick labels, x, y, z to replace
+'x' (default) | character vector with value 'x', 'y', or 'z'
+
+(Optional) Determines which axis tick labels —x, y, or z— to replace, specified as a character vector.
+
+Data Types: char
+
+DateForm — Defines which date format to use
+date format based on the span of the axis limits (default) | integer from 0 to 17
+
+(Optional) Defines which date format to use, specified as an integer from 0 to 17.
+
+If no DateForm argument is entered, this function determines the date format based on the span of
+the axis limits. For example, if the difference between the axis minimum and maximum is less than
+15, the tick labels are converted to three-letter day-of-the-week abbreviations (DateForm = 8).
+
+DateForm
+Format
+Description
+
+0
+01-Mar-1999 15:45:17
+day-month-year hour:minute:second
+
+1
+01-mar-1999
+day-month-year
+
+2
+03/01/99
+month/day/year
+
+3
+Mar
+month, three letters
+
+4
+M
+month, single letter
+
+5
+3
+month
+
+6
+03/01
+month/day
+
+15
+Functions
+
+15-798

@@ -1,0 +1,12 @@
+{
+  "page": 539,
+  "original_text": "% Compute the transition probabilities for different portfolios:\n% pTransition(i,j,k) = p(Wj|Wi,mu_k)\npTransition = zeros(nWealthNodes,nWealthNodes,nPortfolios);\nfor k = 1:nPortfolios\n    % Get the return and variance of portfolio k.\n    mu = pret(k);\n    sigma = prsk(k);",
+  "ocr_text": "Computethetransitionprobabilitiesfordifferentportfolios:\nSpTransition(i,j,k)=p(Wj[Wi,mu_k)\npTransition=zeros(nWealthNodes,nWealthNodes,nPortfolios);\nfork=1:nPortfolios\n\nGetthereturnandvarianceofportfoliok.\n\nmu=pret(k);\n\nsigma=prsk(k);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 480.96,
+    "x1": 436.75,
+    "y1": 556.23
+  },
+  "confidence": "high"
+}

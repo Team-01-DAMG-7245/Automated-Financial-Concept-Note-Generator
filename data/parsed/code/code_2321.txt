@@ -1,0 +1,7 @@
+Page 2196
+================================================================================
+
+Hessian matrix, returned as an NUMPARAMSNUMPARAMS matrix of the observed log-likelihood function
+based on current parameter estimates, where NUMPARAMS = NUMSERIES * (NUMSERIES + 3)/2
+if the MatrixFormat = 'full'. If the MatrixFormat = 'meanonly', then the NUMPARAMS =
+NUMSERIES.

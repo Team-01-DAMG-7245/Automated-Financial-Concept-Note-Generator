@@ -1,0 +1,12 @@
+{
+  "page": 472,
+  "original_text": "% The date_vector variable stores the dates for making predictions.\ndate_vector = returnData.Time(start_idx-1:end_idx-1);",
+  "ocr_text": "Thedate_vectorvariablestoresthedatesformakingpredictions.\ndate_vector=returnData.Time(start_idx-1:end_idx-1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.43,
+    "x1": 453.0,
+    "y1": 708.69
+  },
+  "confidence": "high"
+}

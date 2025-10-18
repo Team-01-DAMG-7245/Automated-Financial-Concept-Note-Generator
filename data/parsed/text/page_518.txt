@@ -1,0 +1,48 @@
+% Solve the portfolio problem
+wFinTbx = estimateCustomObjectivePortfolio(p,fun,TargetReturn=ret0)
+
+wFinTbx = 6×1
+
+0.1633
+    0.0648
+    0.1950
+    0.2618
+    0.0625
+    0.2525
+
+See Also
+estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk | estimateCustomObjectivePortfolio
+
+Related Examples
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Solve Tracking Error Portfolio Problems” on page 4-343
+
+•
+“Solve Robust Portfolio Maximum Return Problem with Ellipsoidal Uncertainty” on page 4-351
+
+•
+“Risk Parity or Budgeting with Constraints” on page 4-357
+
+More About
+
+•
+“Solver Guidelines for Custom Objective Problems Using Portfolio Objects” on page 4-119
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-350

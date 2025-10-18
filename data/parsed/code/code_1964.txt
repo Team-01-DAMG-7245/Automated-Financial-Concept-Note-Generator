@@ -1,0 +1,8 @@
+Page 1557
+================================================================================
+
+% Buy back in
+        new_weights(assetIdx) = 1;
+        % Set new stop loss price
+        user_data.StopLossPrice = assetPrice * (1 - user_data.StopLossPercent);
+    end

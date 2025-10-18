@@ -1,0 +1,62 @@
+[AggregateCategoryReturns,PeriodicCategoryReturns] = categoryReturns(BrinsonPAobj)
+
+AggregateCategoryReturns=9×3 table
+           Category           AggregatePortfolioReturn    AggregateBenchmarkReturn
+    ______________________    ________________________    ________________________
+
+Communication Services            0.41756                     0.42797         
+    Consumer Discretionary            0.27772                     0.34718         
+    Consumer Staples                  0.20572                     0.14112         
+    Energy                            0.33598                     0.33598         
+    Financials                        0.22678                     0.15838         
+    Health Care                       0.19451                     0.20679         
+    Industrials                       0.14132                     0.14253         
+    Information Technology            0.14339                     0.13485         
+    Materials                         0.17109                     0.10402
+
+PeriodicCategoryReturns=108×4 table
+    Period           Category           PortfolioReturn    BenchmarkReturn
+    ______    ______________________    _______________    _______________
+
+1       Communication Services        0.056262           0.052385   
+      1       Consumer Discretionary        0.079767            0.10017   
+      1       Consumer Staples              -0.01485         -0.0033588   
+      1       Energy                        0.073093           0.073093   
+      1       Financials                  -0.0021179          -0.029374   
+      1       Health Care                   0.012124           0.022297   
+      1       Industrials                  0.0018686          0.0088589   
+      1       Information Technology        0.033481          -0.011315   
+      1       Materials                    -0.090708          -0.018543   
+      2       Communication Services        0.069253           0.078033   
+      2       Consumer Discretionary       -0.023091          -0.036416   
+      2       Consumer Staples             0.0027749         0.00096619   
+      2       Energy                         -0.0487            -0.0487   
+      2       Financials                    0.033379            0.02054   
+      2       Health Care                   0.014975           0.015929   
+      2       Industrials                   0.047732           0.041906   
+      ⋮
+
+Compute Category Attribution
+
+Use the brinsonAttribution object and categoryAttribution to compute the performance
+attribution of the portfolio for each category (sector).
+
+[AggregateCategoryAttribution,PeriodicCategoryAttribution] = categoryAttribution(BrinsonPAobj)
+
+AggregateCategoryAttribution=9×5 table
+           Category           Allocation     Selection     Interaction    ActiveReturn
+    ______________________    __________    ___________    ___________    ____________
+
+Communication Services    -0.0025318    -0.00071062      0.0002061     -0.0030363 
+    Consumer Discretionary     0.0024505       -0.00678     -0.0011609     -0.0054903 
+    Consumer Staples           0.0023692      0.0093618     -0.0025511        0.00918 
+    Energy                    0.00038824     1.3872e-19     2.7745e-20     0.00038824 
+    Financials                 0.0013464      0.0097268     -0.0022858      0.0087874 
+    Health Care               0.00011567     -0.0013031    -0.00028667     -0.0014741 
+    Industrials                0.0016701    -0.00035051    -5.7623e-05       0.001262 
+    Information Technology     0.0015686      0.0017812     0.00016898      0.0035187
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-326

@@ -1,0 +1,31 @@
+Treasury Bills Defined
+
+Treasury bills are short-term securities (issued with maturities of one year or less) sold by the United
+States Treasury. Sales of these securities are frequent, usually weekly. From time to time, the
+Treasury also offers longer duration securities called Treasury notes and Treasury bonds.
+
+A Treasury bill is a discount security. The holder of the Treasury bill does not receive periodic interest
+payments. Instead, at the time of sale, a percentage discount is applied to the face value. At maturity,
+the holder redeems the bill for full face value.
+
+The basis for Treasury bill interest calculation is actual/360. Under this system, interest accrues on
+the actual number of elapsed days between purchase and maturity, and each year contains 360 days.
+
+See Also
+tbilldisc2yield | tbillprice | tbillrepo | tbillyield | tbillyield2disc | tbillval01 |
+tbl2bond | tr2bonds | zbtprice | zbtyield
+
+Related Examples
+
+•
+“Handle and Convert Dates” on page 2-2
+
+•
+“Term Structure of Interest Rates” on page 2-29
+
+•
+“Computing Treasury Bill Price and Yield” on page 2-26
+
+Treasury Bills Defined
+
+2-25

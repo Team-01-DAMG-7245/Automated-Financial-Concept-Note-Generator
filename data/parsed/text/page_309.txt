@@ -1,0 +1,175 @@
+Available Solvers (Use setSolverMINLP to specify the
+solver)
+
+Portfolio
+Problem
+
+Use Function:
+Portfolio Object
+PortfolioCVaR
+Object
+
+PortfolioMAD
+Object
+
+Maximize return
+without risk
+constraint or
+tracking error
+constraint
+
+estimateFronti
+erLimits(p,'ma
+x')
+
+(See
+estimateFronti
+erLimits)
+
+intlinprog
+
+Use
+IntMainSolverO
+ptions name-
+value argument to
+control
+intlinprog
+options.
+
+intlinprog
+
+Use
+IntMainSolverO
+ptions name-
+value argument to
+control
+intlinprog
+options.
+
+intlinprog
+
+Use
+IntMainSolverO
+ptions name-
+value argument to
+control
+intlinprog
+options.
+
+Maximize return
+with risk
+constraint and/or
+tracking error
+constraint
+
+estimateFronti
+erLimits(p,'ma
+x')
+
+(See
+estimateFronti
+erLimits)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+Supports
+extended
+formulation
+using the name-
+value argument
+“ExtendedForm
+ulation” on
+page 15-0
+.
+
+•
+TrustRegionC
+P
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+Minimize risk
+subject to a return
+constraint
+
+estimateFronti
+erByReturn(p,r
+eturnTarget)
+
+(See
+estimateFronti
+erByReturn)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+Supports
+extended
+formulation
+using the name-
+value argument
+“ExtendedForm
+ulation” on
+page 15-0
+.
+
+•
+TrustRegionC
+P
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+Choose MINLP Solvers for Portfolio Problems
+
+4-141

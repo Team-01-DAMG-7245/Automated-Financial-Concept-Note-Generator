@@ -1,0 +1,7 @@
+Page 306
+================================================================================
+
+•
+robustcov computes a covariance estimate from a data sample. This function reduces the noise
+in the estimator by identifying the outliers in the sample and removing them from the final
+covariance estimate.

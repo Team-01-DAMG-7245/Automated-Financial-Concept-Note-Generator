@@ -1,0 +1,63 @@
+Xt = P(t, Xt)
+
+The interpolate function runs processing functions at each interpolation time. They must accept
+the current interpolation time t, and the current state vector Xt, and return a state vector that may be
+an adjustment to the input state.
+
+If you specify more than one processing function, interpolate invokes the functions in the order in
+which they appear in the cell array. You can use this argument to specify boundary conditions,
+prevent negative prices, accumulate statistics, plot graphs, and so on.
+
+Data Types: cell | function
+
+Output Arguments
+
+XT — Interpolated state variables
+array
+
+Interpolated state variables, returned as a NTimes-by-NVars-by-NTrials time series array.
+
+For a given trial, each row of this array is the transpose of the interpolated state vector Xt at time t.
+XT is the interpolated time series formed by interpolating into the input Paths time series array.
+
+T — Interpolation times associated with the output time series XT
+column vector
+
+Interpolation times associated with the output time series XT, returned as a NTimes-by-1 column
+vector.
+
+If the input interpolation time vector Times contains no missing observations (NaNs), the output of T
+is the same time vector as Times, but with the NaNs removed. This reduces the length of T and the
+number of rows of XT.
+
+Algorithms
+
+This function performs a Brownian interpolation into a user-specified time series array, based on a
+piecewise-constant Euler sampling approach.
+
+Consider a vector-valued SDE of the form:
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+
+where:
+
+•
+X is an NVars-by-1 state vector.
+
+•
+F is an NVars-by-1 drift-rate vector-valued function.
+
+•
+G is an NVars-by-NBrowns diffusion-rate matrix-valued function.
+
+•
+W is an NBrowns-by-1 Brownian motion vector.
+
+Given a user-specified time series array associated with this equation, this function performs a
+Brownian (stochastic) interpolation by sampling from a conditional Gaussian distribution. This
+sampling technique is sometimes called a Brownian bridge.
+
+15
+Functions
+
+15-154

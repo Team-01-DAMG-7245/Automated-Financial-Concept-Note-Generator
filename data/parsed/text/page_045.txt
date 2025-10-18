@@ -1,0 +1,49 @@
+Performing Common Financial Tasks
+
+•
+“Handle and Convert Dates” on page 2-2
+
+•
+“Analyzing and Computing Cash Flows” on page 2-11
+
+•
+“Pricing and Computing Yields for Fixed-Income Securities” on page 2-15
+
+•
+“Treasury Bills Defined” on page 2-25
+
+•
+“Computing Treasury Bill Price and Yield” on page 2-26
+
+•
+“Term Structure of Interest Rates” on page 2-29
+
+•
+“Returns with Negative Prices” on page 2-32
+
+•
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+
+•
+“About Life Tables” on page 2-44
+
+•
+“Case Study for Life Tables Analysis” on page 2-46
+
+•
+“Machine Learning for Statistical Arbitrage: Introduction” on page 2-48
+
+•
+“Machine Learning for Statistical Arbitrage I: Data Management and Visualization” on page 2-50
+
+•
+“Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development”
+on page 2-59
+
+•
+“Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction” on page 2-69
+
+•
+“Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data” on page 2-78
+
+2

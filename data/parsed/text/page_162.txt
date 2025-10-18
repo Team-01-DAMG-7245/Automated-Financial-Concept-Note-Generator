@@ -1,0 +1,86 @@
+setInequality function is the same as using the setGroups function in the example “Specifying
+Group Constraints” on page 3-24.
+
+Specifying Group Constraints
+
+This example shows how to solve a portfolo problem using a Portfolio object with group
+constraints.
+
+The example “Linear Constraint Equations” on page 3-21 defines a constraint matrix that specifies a
+set of typical scenarios. It defines groups of assets, specifies upper and lower bounds for total
+allocation in each of these groups, and it sets the total allocation of one group to a fixed value.
+Constraints like these are common occurrences. The Portfolio object enables you to simplify the
+creation of the constraint matrix for these and other common portfolio requirements.
+
+An alternative approach for solving the portfolio problem is to use the Portfolio object to define:
+
+•
+A Group matrix, indicating the assets that belong to each group.
+
+•
+A GroupMin vector, indicating the minimum bounds for each group.
+
+•
+A GroupMax vector, indicating the maximum bounds for each group.
+
+Based on the table Group Membership, build the Group matrix, with each row representing a group,
+and each column representing an asset.
+
+Group Membership
+
+Group
+Fund 1
+Fund 2
+Fund 3
+
+North America
+X
+X
+
+Europe
+X
+
+Latin America
+X
+
+Asia
+X
+X
+
+Group = [1    1    0;
+         0    0    1;
+         1    0    0;
+         0    1    1];
+
+The table Maximum and Minimum Group Exposure has the information to build GroupMin and
+GroupMax.
+
+Maximum and Minimum Group Exposure
+
+Group
+Minimum Exposure
+Maximum Exposure
+
+North America
+0.30
+0.75
+
+Europe
+0.10
+0.55
+
+Latin America
+0.20
+0.50
+
+Asia
+0.50
+0.50
+
+GroupMin = [0.30  0.10  0.20  0.50];
+GroupMax = [0.75  0.55  0.50  0.50];
+
+3
+Portfolio Analysis
+
+3-24

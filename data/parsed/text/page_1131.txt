@@ -1,0 +1,62 @@
+% Fix the random seed for reproducible results.
+stream = RandStream('mrg32k3a');
+RandStream.setGlobalStream(stream);
+
+% Take random draws from a multivariate normal distribution with zero mean
+% and diagonal covariance.
+pcaFactorSims = mvnrnd(zeros(numFactors,1),pcaFactorCov,numSim);
+
+% Transform to horizon invariants and calculate the statistics.
+hrznInvSims = pcaFactorSims*pcaFactorCoeff + repmat(hrznInvMu,numSim,1);
+hrznInvSimsMu = mean(hrznInvSims);
+hrznInvSimsCov = cov(hrznInvSims);
+[hrznInvSimsStd,hrznInvSimsCor] = cov2corr(hrznInvSimsCov);
+
+The simulated invariants have very similar statistics to the original invariants:
+
+disp('Mean:');
+
+Mean:
+
+disp(hrznInvSimsMu);
+
+1.0e-03 *
+
+-0.5222   -0.5118   -0.4964   -0.4132   -0.3255   -0.3365   -0.2508   -0.2171   -0.1636
+
+disp('Standard Deviation:');
+
+Standard Deviation:
+
+disp(hrznInvSimsStd);
+
+0.0016    0.0047    0.0046    0.0025    0.0040    0.0017    0.0007    0.0005    0.0004
+
+disp('Correlation:');
+
+Correlation:
+
+disp(hrznInvSimsCor);
+
+1.0000    0.8903    0.7458   -0.4746   -0.4971    0.4885   -0.2353   -0.0971    0.1523
+    0.8903    1.0000    0.9463   -0.7155   -0.6787    0.5164   -0.2238   -0.0889    0.2198
+    0.7458    0.9463    1.0000   -0.8578   -0.7610    0.4659   -0.1890   -0.0824    0.2631
+   -0.4746   -0.7155   -0.8578    1.0000    0.9093   -0.4999    0.2378    0.1084   -0.2972
+   -0.4971   -0.6787   -0.7610    0.9093    1.0000   -0.7159    0.3061    0.1118   -0.2976
+    0.4885    0.5164    0.4659   -0.4999   -0.7159    1.0000   -0.5360   -0.1542    0.1327
+   -0.2353   -0.2238   -0.1890    0.2378    0.3061   -0.5360    1.0000    0.3176   -0.1108
+   -0.0971   -0.0889   -0.0824    0.1084    0.1118   -0.1542    0.3176    1.0000    0.0093
+    0.1523    0.2198    0.2631   -0.2972   -0.2976    0.1327   -0.1108    0.0093    1.0000
+
+Calculate Distribution of Security Returns at Horizon
+
+The portfolio will consist of 10, 20, and 30 year maturity treasuries. For simplicity, assume that these
+are new issues on the settlement date and are priced at market value inferred from the current yield
+curve. Profit and loss distributions are calculated by pricing each security along each simulated yield
+at the horizon and subtracting the purchase price. The horizon prices require nonstandard time to
+maturity yields. These are calculated using cubic spline interpolation. Simulated linear returns are
+their statistics that are calculated from the profit and loss scenarios.
+
+Bond Portfolio Optimization Using Portfolio Object
+
+10-33

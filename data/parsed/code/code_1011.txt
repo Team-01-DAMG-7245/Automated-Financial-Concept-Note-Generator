@@ -1,0 +1,7 @@
+Page 1032
+================================================================================
+
+This example shows how to visualize credit rating transitions that are used as an input to the
+transprob function. The example also describes how the transprob function treats rating
+transitions when the company data starts after the start date of the analysis, or when the end date of
+the analysis is after the last transition observed.

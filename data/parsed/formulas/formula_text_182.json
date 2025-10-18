@@ -1,0 +1,12 @@
+{
+  "page": 123,
+  "original_text": "CombinedDS = combine(DSMSG,DSLOB);",
+  "ocr_text": "CombinedDS=combine(DSMSG,DSLOB);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 467.06,
+    "x1": 274.21,
+    "y1": 477.53
+  },
+  "confidence": "high"
+}

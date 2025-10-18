@@ -1,0 +1,12 @@
+{
+  "page": 560,
+  "original_text": "% Transform wealth to original space\nW = W*(WMax-WMin) + WMin;",
+  "ocr_text": "Transformwealthtooriginalspace\nW=W*(WMax-WMin)+WMin;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 514.23,
+    "x1": 285.05,
+    "y1": 535.49
+  },
+  "confidence": "high"
+}

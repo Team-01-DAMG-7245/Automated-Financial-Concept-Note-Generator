@@ -1,0 +1,12 @@
+{
+  "page": 726,
+  "original_text": "p = PortfolioCVaR;\noptions = optimoptions('fmincon','Algorithm','trust-region-reflective', 'Display', 'off');\np = setSolver(p, 'fmincon', options);\ndisplay(p.solverOptions.Algorithm)\ndisplay(p.solverOptions.Display)",
+  "ocr_text": "p=PortfolioCvaR;\noptions=optimoptions(fmincon,Algorithm,trust-region-reflective,Display,off);\np=setSolver(p,_fmincon,options);\n\ndisplay(p.solverOptions.Algorithm)\n\ndisplay(p.solverOptions.Display)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 249.31,
+    "x1": 436.78,
+    "y1": 287.47
+  },
+  "confidence": "high"
+}

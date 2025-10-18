@@ -1,0 +1,73 @@
+If you set up an array of Portfolio objects, you can access properties of a particular Portfolio
+object in the array by indexing so that you can set the lower and upper bounds lb and ub for the
+(i,j,k) element of a 3-D array of Portfolio objects with
+
+p(i,j,k) = setBounds(p(i,j,k),lb, ub);
+
+and, once set, you can access these bounds with
+
+[lb, ub] = getBounds(p(i,j,k));
+
+Portfolio object functions work on only one Portfolio object at a time.
+
+Subclassing Portfolio Objects
+
+You can subclass the Portfolio object to override existing functions or to add new properties or
+functions. To do so, create a derived class from the Portfolio class. This gives you all the properties
+and functions of the Portfolio class along with any new features that you choose to add to your
+subclassed object. The Portfolio class is derived from an abstract class called
+AbstractPortfolio. Because of this, you can also create a derived class from
+AbstractPortfolio that implements an entirely different form of portfolio optimization using
+properties and functions of the AbstractPortfolio class.
+
+Conventions for Representation of Data
+
+The portfolio optimization tools follow these conventions regarding the representation of different
+quantities associated with portfolio optimization:
+
+•
+Asset returns or prices are in matrix form with samples for a given asset going down the rows and
+assets going across the columns. In the case of prices, the earliest dates must be at the top of the
+matrix, with increasing dates going down.
+
+•
+The mean and covariance of asset returns are stored in a vector and a matrix and the tools have
+no requirement that the mean must be either a column or row vector.
+
+•
+Portfolios are in vector or matrix form with weights for a given portfolio going down the rows and
+distinct portfolios going across the columns.
+
+•
+Constraints on portfolios are formed in such a way that a portfolio is a column vector.
+
+•
+Portfolio risks and returns are either scalars or column vectors (for multiple portfolio risks and
+returns).
+
+See Also
+Portfolio
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+Portfolio Object
+
+4-23

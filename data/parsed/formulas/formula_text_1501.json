@@ -1,0 +1,12 @@
+{
+  "page": 755,
+  "original_text": "pmv = Portfolio('Name','Mean-Variance Portfolio Five Hedging Levels',...\n   'AssetList',{'Stock','Hedge50','Hedge75','Hedge90','Hedge95'});\npmv = estimateAssetMoments(pmv, AssetScenarios);\npmv = setDefaultConstraints(pmv);",
+  "ocr_text": "pmv=Portfolio(Name,Mean-VariancePortfolioFiveHedgingLevels,...\n\nAssetList,{Stock,Hedge50,Hedge75,Hedge90,Hedge95});\npmv=estimateAssetMoments(pmv,AssetScenarios);\npmv=setDefaultConstraints(pmv);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 426.13,
+    "x1": 480.13,
+    "y1": 469.0
+  },
+  "confidence": "high"
+}

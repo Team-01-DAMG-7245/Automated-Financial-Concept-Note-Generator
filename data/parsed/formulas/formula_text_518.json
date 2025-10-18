@@ -1,0 +1,12 @@
+{
+  "page": 355,
+  "original_text": "q = setTurnover(q, 0.15);\n[qwgt, qbuy, qsell] = estimateFrontierByRisk(q, 0.15);",
+  "ocr_text": "q=setTurnover(q,0.15);\n[qwgt,qbuy,qsell]=estimateFrontierByRisk(q,0.15);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.76,
+    "x1": 382.57,
+    "y1": 148.03
+  },
+  "confidence": "high"
+}

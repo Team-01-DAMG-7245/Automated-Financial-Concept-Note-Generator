@@ -1,0 +1,12 @@
+{
+  "page": 1710,
+  "original_text": "barrier      = 120;           % barrier\nstrike       = 100;           % exercise price\nrate         = 0.05;          % annualized risk-free rate\nsigma        = 0.3;           % annualized volatility\nnPeriods     = 63;            % 63 trading days\ndt           = 1 / 252;       % time increment = 252 days\nTime        = nPeriods * dt; % expiration time = 0.25 years\nobj        = gbm(rate, sigma, 'StartState', 105);",
+  "ocr_text": "barrier =120; sbarrier\n\nstrike =100; exerciseprice\n\nrate =0.05; annualizedrisk-freerate\nsigma =0.3; annualizedvolatility\nnPeriods =63; 63tradingdays\n\ndt =1/252; Stimeincrement=252days\nTime =nPeriods*dt;*expirationtime=0.25years\nobj =gbm(rate,sigma,StartState,105);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 206.03,
+    "x1": 409.68,
+    "y1": 292.09
+  },
+  "confidence": "high"
+}

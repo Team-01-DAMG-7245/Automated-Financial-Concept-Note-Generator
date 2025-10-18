@@ -1,0 +1,6 @@
+Page 579
+================================================================================
+
+•
+- RL_OptimalExecution_LOB_ResetFcn — Reset function for training and testing
+environments

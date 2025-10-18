@@ -1,0 +1,66 @@
+ActiveReturn: 0.0059
+
+Compute Total Performance Attribution
+
+Use the brinsonAttribution object with totalAttribution to compute the total performance
+attribution of the portfolio summed up for all categories.
+
+[AggregateTotalAttribution, PeriodicTotalAttribution] = totalAttribution(BrinsonPAobj)
+
+AggregateTotalAttribution=1×4 table
+    Allocation    Selection    Interaction    ActiveReturn
+    __________    _________    ___________    ____________
+
+-0.014353     0.030316      -0.010105      0.0058578
+
+PeriodicTotalAttribution=3×6 table
+    Period    LinkingCoefficient    Allocation    Selection    Interaction    ActiveReturn
+    ______    __________________    __________    _________    ___________    ____________
+
+1            0.97032           -0.019306     0.072391      -0.02413        0.028955 
+      2             1.0838            0.011036    -0.046391      0.015464       -0.019891 
+      3             1.0391          -0.0072954    0.0099623    -0.0033208     -0.00065389
+
+Input Arguments
+
+brinsonAttributionObj — Brinson attribution model
+object
+
+Brinson attribution model, specified as a brinsonAttribution object.
+
+Data Types: object
+
+Output Arguments
+
+AggregateTotalAttribution — Total attribution aggregated over all periods
+table
+
+Total attribution aggregated over all periods, returned as a table with the following columns:
+
+•
+Allocation — Category allocation effect for the category
+
+•
+Selection — Effect of selecting individual assets within the category
+
+•
+Interaction — Allocation-selection interaction effect
+
+•
+ActiveReturn — Active return compared with benchmark
+
+PeriodicTotalAttribution — Total attribution for each period
+table
+
+Total attribution for each period, returned as a table with the following columns:
+
+•
+Period — Time period numbers (1 for the first period, 2 for the second period, and so on)
+
+•
+LinkingCoefficient — Linking coefficients used to aggregate the attribution results over all
+time periods
+
+totalAttribution
+
+15-25

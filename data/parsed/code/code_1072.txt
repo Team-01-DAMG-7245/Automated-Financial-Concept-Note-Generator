@@ -1,0 +1,7 @@
+Page 1101
+================================================================================
+
+Calculate the modified duration and convexity of the portfolio. The portfolio duration or convexity is a
+weighted average of the durations or convexities of the individual bonds. Calculate the first- and
+second-order approximations of the percent price change as a function of the change in the level of
+interest rates.

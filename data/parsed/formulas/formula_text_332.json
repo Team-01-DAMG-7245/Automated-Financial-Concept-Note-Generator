@@ -1,0 +1,12 @@
+{
+  "page": 208,
+  "original_text": "x0 = [ 0.3; 0.2; 0.2; 0.0 ];\np = Portfolio('TrackingPort', x0);\ndisp(p.TrackingPort)",
+  "ocr_text": "xO=[0.3;0.2;0.2;0.0];\np=Portfolio(TrackingPort,x0);\ndisp(p.TrackingPort)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 291.44,
+    "x1": 274.23,
+    "y1": 323.5
+  },
+  "confidence": "high"
+}

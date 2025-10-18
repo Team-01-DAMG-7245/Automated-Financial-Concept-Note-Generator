@@ -1,0 +1,55 @@
+Yield — Annualized continuously compounded yield of underlying asset over life of the
+option
+0 (default) | decimal
+
+Annualized continuously compounded yield of the underlying asset over the life of the
+option,specified as the comma-separated pair consisting of 'Yield' and a decimal number. If Yield
+is empty or missing, the default value is 0.
+
+For example, for options written on stock indices, Yield could represent the dividend yield. For
+currency options, Yield could be the foreign risk-free interest rate.
+
+Note blsimpv can handle other types of underlies like Futures and Currencies. When pricing
+Futures (Black model), enter the input argument Yield as:
+
+Yield = Rate
+
+When pricing currencies (Garman-Kohlhagen model), enter the input argument Yield as:
+
+Yield = ForeignRate
+
+where ForeignRate is the continuously compounded, annualized risk-free interest rate in the
+foreign country.
+
+Data Types: double
+
+Tolerance — Implied volatility termination tolerance
+1e6 (default) | positive scalar numeric
+
+Implied volatility termination tolerance, specified as the comma-separated pair consisting of
+'Tolerance' and a positive scalar numeric. If empty or missing, the default is 1e6.
+
+Note If you are using Method with a value of 'jackel2016', the Tolerance argument is ignored.
+
+Data Types: double
+
+Class — Option class from which implied volatility is derived
+true (call option) (default) | logical | cell array of character vectors | string array
+
+Option class indicating option type (call or put) from which implied volatility is derived, specified as
+the comma-separated pair consisting of 'Class' and a logical indicator, cell array of character
+vectors, or string array.
+
+To specify call options, set Class = true or Class = {'call'}. To specify put options, set Class =
+false or Class = {'put'} or Class = ["put"]. If Class is empty or unspecified, the default is a
+call option.
+
+Data Types: logical | cell | string
+
+Method — Method for computing implied volatility
+'jackel2016' (default) | character vector with values 'search' or 'jackel2016' | string with
+values "search" or "jackel2016"
+
+blsimpv
+
+15-493

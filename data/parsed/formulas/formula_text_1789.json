@@ -1,0 +1,12 @@
+{
+  "page": 909,
+  "original_text": "MeanMarket = mean(Market)",
+  "ocr_text": "MeanMarket=mean(Market)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 375.0,
+    "x1": 225.45,
+    "y1": 385.47
+  },
+  "confidence": "high"
+}

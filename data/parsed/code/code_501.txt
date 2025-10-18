@@ -1,0 +1,4 @@
+Page 478
+================================================================================
+
+strategies = [LongStrategy LongShortStrategy BestBetStrategy EqualWeightStrategy];

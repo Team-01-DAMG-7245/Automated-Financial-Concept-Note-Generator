@@ -1,0 +1,11 @@
+Page 928
+================================================================================
+
+Years = 1991:2000;
+nYears = length(Years);
+nRatings = length(prepData.ratingsLabels);
+transMatPIT = zeros(nRatings,nRatings,nYears);
+algorithm = 'duration';
+sampleTotals(nYears,1) = struct('totalsVec',[],'totalsMat',[], ...
+'algorithm',algorithm);
+for t = 1:nYears

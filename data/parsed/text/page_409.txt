@@ -1,0 +1,35 @@
+% Warm-up partition of data set timetable.
+warmupTT = pricesTT(1:warmupPeriod,:);
+
+% Compute the initial portfolio weights for each strategy.
+equalWeight_initial     = equalWeightFcn(current_weights,warmupTT);
+maxSharpeRatio_initial  = maxSharpeRatioFcn(current_weights,warmupTT);
+inverseVariance_initial = inverseVarianceFcn(current_weights,warmupTT);
+markowitz_initial       = markowitzFcn(current_weights,warmupTT);
+robustOptim_initial     = robustOptimFcn(current_weights,warmupTT);
+
+Visualize the initial weight allocations from the strategies.
+
+strategyNames = {'Equal Weighted', 'Max Sharpe Ratio', 'Inverse Variance', 'Markowitz Optimizatio
+assetSymbols = pricesTT.Properties.VariableNames;
+initialWeights = [equalWeight_initial(:), maxSharpeRatio_initial(:), inverseVariance_initial(:), 
+heatmap(strategyNames, assetSymbols, initialWeights, 'title','Initial Asset Allocations','Colorma
+
+Create Backtest Strategies
+
+To use the strategies in the backtesting framework, you must build backtestStrategy objects, one
+for each strategy. The backtestStrategy function takes as input the strategy name and
+rebalancing function for each strategy. Additionally, the backtestStrategy can take a variety of
+name-value pair arguments to specify various options. For more information on creating backtest
+strategies, see backtestStrategy.
+
+Set the rebalance frequency and lookback window size are set in terms of number of time steps (that
+is, rows of the pricesTT timetable). Since the data is daily price data, specify the rebalance
+frequency and rolling lookback window in days.
+
+% Rebalance approximately every 1 month (252 / 12 = 21).
+rebalFreq = 21;
+
+Backtest Investment Strategies Using Financial Toolbox
+
+4-241

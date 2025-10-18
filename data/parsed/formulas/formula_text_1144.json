@@ -1,0 +1,12 @@
+{
+  "page": 580,
+  "original_text": "LOB = readmatrix(LOBFileName);\nNumLevels = 5;",
+  "ocr_text": "LOB=readmatrix(LOBFileName);\nNumLevels=5;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 137.0,
+    "x1": 252.54,
+    "y1": 158.27
+  },
+  "confidence": "high"
+}

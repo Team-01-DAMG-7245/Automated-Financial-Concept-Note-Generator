@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "if IsDone\n    stepReward = stepReward - Position_next*S_next*kappa;\nend",
+  "ocr_text": "ifIsDone\nstepReward=stepReward-Position_next*S_next*kappa;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 492.63,
+    "x1": 398.83,
+    "y1": 524.69
+  },
+  "confidence": "high"
+}

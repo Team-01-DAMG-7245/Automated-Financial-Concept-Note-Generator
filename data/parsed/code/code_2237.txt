@@ -1,0 +1,8 @@
+Page 2042
+================================================================================
+
+Use the checkFeasibility function with a Portfolio, PortfolioCVaR, or PortfolioMAD
+object to check the feasibility of input portfolios against a portfolio object. For details on the
+respective workflows when using these different objects, see “Portfolio Object Workflow” on page 4-
+18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object Workflow” on page 6-
+16.

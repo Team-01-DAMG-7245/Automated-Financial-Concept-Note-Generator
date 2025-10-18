@@ -1,0 +1,16 @@
+Page 509
+================================================================================
+
+auxM = eye(nX);
+corrAsset2Port = zeros(nX,nP);
+for j = 1:nP
+    % Portfolio's standard deviation
+    sigmaPortfolio = sqrt(portWeights(:,j)'*Sigma*portWeights(:,j));
+    for i = 1:nX
+        % Assets's standard deviation
+        sigmaAsset = sqrt(Sigma(i,i));
+        % Asset to portfolio correlation
+        corrAsset2Port(i,j) = (auxM(:,i)'*Sigma*portWeights(:,j))/ ...
+            (sigmaAsset*sigmaPortfolio);
+    end
+end

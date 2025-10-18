@@ -1,0 +1,12 @@
+{
+  "page": 114,
+  "original_text": "% Get Q row, column indices of current state\n    \n    row = rho(tt-1)+n*(DS(tt-1)+1);\n    downColumn = rho(tt);\n    upColumn = rho(tt) + 2*n;",
+  "ocr_text": "SGetQrow,columnindicesofcurrentstate\nrow=rho(tt-1)+n*(DS(tt-1)+1);\ndownColumn=rho(tt);\nupColumn=rho(tt)+2*n;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 350.06,
+    "y1": 330.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 614,
+  "original_text": "% Execute trade\nCurrentLOB = EnvConstants.SampledBook(LoggedSignals.IntervalIdx + ...\n    LoggedSignals.NumIntervalsPerHorizon*(LoggedSignals.HorizonIdx-1),:);",
+  "ocr_text": "Executetrade\nCurrentLOB=EnvConstants.SampledBook(LoggedSignals.IntervalIdx+...\nLoggedSignals.NumIntervalsPerHorizon*(LoggedSignals.HorizonIdx-1),:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 485.51,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

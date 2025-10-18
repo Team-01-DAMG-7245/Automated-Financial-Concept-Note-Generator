@@ -1,0 +1,62 @@
+[2] Cao J., J. Chen, J. Hull, and Z. Poulos. "Deep Hedging of Derivatives Using Reinforcement
+Learning." The Journal of Financial Data Science. Vol. 3, No. 1, 2021, pp. 10–27.
+
+[3] Halperin I. "QLBS: Q-learner in the Black-Scholes (-Merton) Worlds." The Journal of Derivatives.
+Vol. 28, No. 1, 2020, pp. 99–122.
+
+[4] Kolm P.N. and G. Ritter. "Dynamic Replication and Hedging: A Reinforcement Learning Approach."
+The Journal of Financial Data Science. Vol. 1, No. 1, 2019, pp. 159–71.
+
+Local Functions
+
+function [InitialObservation,LoggedSignals] = resetFcn(Moneyness,TimeToMaturity,InitPosition)
+% Reset function to reset at the beginning of each episode.
+
+LoggedSignals.State = [Moneyness TimeToMaturity InitPosition]';
+InitialObservation  = LoggedSignals.State;
+
+end
+
+function [NextObs,Reward,IsDone,LoggedSignals] = stepFcn(Position_next,LoggedSignals,r,vol,dT,X,m
+% Step function to evaluate at each step of the episode.
+
+Moneyness_prev = LoggedSignals.State(1);
+TTM_prev = LoggedSignals.State(2);
+Position_prev = LoggedSignals.State(3);
+
+S_prev = Moneyness_prev*X;
+
+% GBM Motion
+S_next = S_prev*((1 + mu*dT) + (randn* vol).*sqrt(dT));
+TTM_next = max(0,TTM_prev - dT);
+
+IsDone = TTM_next < eps;
+
+stepReward = (S_next - S_prev)*Position_prev - abs(Position_next - Position_prev)*S_next*kappa - 
+    blsprice(S_next,X,r,TTM_next,vol) + blsprice(S_prev,X,r,TTM_prev,vol);
+
+if IsDone
+    stepReward = stepReward - Position_next*S_next*kappa;
+end
+
+Reward = stepReward - c*stepReward.^2;
+
+LoggedSignals.State = [S_next/X;TTM_next;Position_next];
+NextObs = LoggedSignals.State;
+
+end
+
+function perCosts = computeCosts(policy,nTrials,nSteps,SpotPrice,Strike,T,r,ExpVol,InitPos,dT,mu,
+% Helper function to compute costs for any hedging approach.
+
+rng(0)
+
+simOBJ = gbm(mu,ExpVol,'StartState',SpotPrice);
+[simPaths,simTimes] = simulate(simOBJ,nSteps,'nTrials',nTrials,'deltaTime',dT);
+simPaths = squeeze(simPaths);
+
+rew = zeros(nSteps,nTrials);
+
+Hedge Options Using Reinforcement Learning Toolbox
+
+10-47

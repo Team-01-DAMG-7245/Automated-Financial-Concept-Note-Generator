@@ -1,0 +1,11 @@
+Page 215
+================================================================================
+
+This example shows how to work with missing data indicated by NaN values in your return or price
+data. Although “Multivariate Normal Regression” on page 9-2 goes into detail about regression
+with missing data, the estimateAssetMoments function has a name-value pair argument name
+'MissingData' that indicates with a Boolean value whether to use the missing data capabilities of
+Financial Toolbox™ software. The default value for 'MissingData' is false which removes all
+samples with NaN values. If, however, 'MissingData' is set to true, estimateAssetMoments uses
+the ECM algorithm to estimate asset moments. The following code illustrates how this works on price
+data with missing values:

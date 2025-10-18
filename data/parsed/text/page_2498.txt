@@ -1,0 +1,60 @@
+mvnrmle
+
+Multivariate normal regression (ignore missing data)
+
+Syntax
+
+[Parameters,Covariance,Resid,Info] = mvnrmle(Data,Design)
+[Parameters,Covariance,Resid,Info] = mvnrmle( ___ ,MaxIterations,TolParam,
+TolObj,Covar0,CovarFormat)
+
+Description
+
+[Parameters,Covariance,Resid,Info] = mvnrmle(Data,Design) estimates a multivariate
+normal regression model without missing data. The model has the form
+
+Datak ∼N Designk × Parameters, Covariance
+
+for samples k = 1, ... , NUMSAMPLES.
+
+mvnrmle estimates a NUMPARAMS-by-1 column vector of model parameters called Parameters, and a
+NUMSERIES-by-NUMSERIES matrix of covariance parameters called Covariance.
+
+mvnrmle(Data, Design) with no output arguments plots the log-likelihood function for each
+iteration of the algorithm.
+
+[Parameters,Covariance,Resid,Info] = mvnrmle( ___ ,MaxIterations,TolParam,
+TolObj,Covar0,CovarFormat) estimates a multivariate normal regression model without missing
+data using optional arguments.
+
+Input Arguments
+
+Data — Data sample
+matrix
+
+Data sample, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a
+NUMSERIES-dimensional random vector. If a data sample has missing values, represented as NaNs,
+the sample is ignored. (Use mvnrmle to handle missing data.)
+
+Data Types: double
+
+Design — Model design
+matrix | cell array of character vectors
+
+Model design, specified as a matrix or a cell array that handles two model structures:
+
+•
+If NUMSERIES = 1, Design is a NUMSAMPLES-by-NUMPARAMS matrix with known values. This
+structure is the standard form for regression on a single series.
+
+•
+If NUMSERIES ≥ 1, Design is a cell array. The cell array contains either one or NUMSAMPLES cells.
+Each cell contains a NUMSERIES-by-NUMPARAMS matrix of known values.
+
+If Design has a single cell, it is assumed to have the same Design matrix for each sample. If
+Design has more than one cell, each cell contains a Design matrix for each sample.
+
+15
+Functions
+
+15-1192

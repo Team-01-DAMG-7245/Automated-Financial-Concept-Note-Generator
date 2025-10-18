@@ -1,0 +1,145 @@
+Revision History
+
+October 1995
+First printing
+January 1998
+Second printing
+Revised for Version 1.1
+January 1999
+Third printing
+Revised for Version 2.0 (Release 11)
+November 2000
+Fourth printing
+Revised for Version 2.1.2 (Release 12)
+May 2003
+Online only
+Revised for Version 2.3 (Release 13)
+June 2004
+Online only
+Revised for Version 2.4 (Release 14)
+August 2004
+Online only
+Revised for Version 2.4.1 (Release 14+)
+September 2005
+Fifth printing
+Revised for Version 2.5 (Release 14SP3)
+March 2006
+Online only
+Revised for Version 3.0 (Release 2006a)
+September 2006
+Sixth printing
+Revised for Version 3.1 (Release 2006b)
+March 2007
+Online only
+Revised for Version 3.2 (Release 2007a)
+September 2007
+Online only
+Revised for Version 3.3 (Release 2007b)
+March 2008
+Online only
+Revised for Version 3.4 (Release 2008a)
+October 2008
+Online only
+Revised for Version 3.5 (Release 2008b)
+March 2009
+Online only
+Revised for Version 3.6 (Release 2009a)
+September 2009
+Online only
+Revised for Version 3.7 (Release 2009b)
+March 2010
+Online only
+Revised for Version 3.7.1 (Release 2010a)
+September 2010
+Online only
+Revised for Version 3.8 (Release 2010b)
+April 2011
+Online only
+Revised for Version 4.0 (Release 2011a)
+September 2011
+Online only
+Revised for Version 4.1 (Release 2011b)
+March 2012
+Online only
+Revised for Version 4.2 (Release 2012a)
+September 2012
+Online only
+Revised for Version 5.0 (Release 2012b)
+March 2013
+Online only
+Revised for Version 5.1 (Release 2013a)
+September 2013
+Online only
+Revised for Version 5.2 (Release 2013b)
+March 2014
+Online only
+Revised for Version 5.3 (Release 2014a)
+October 2014
+Online only
+Revised for Version 5.4 (Release 2014b)
+March 2015
+Online only
+Revised for Version 5.5 (Release 2015a)
+September 2015
+Online only
+Revised for Version 5.6 (Release 2015b)
+March 2016
+Online only
+Revised for Version 5.7 (Release 2016a)
+September 2016
+Online only
+Revised for Version 5.8 (Release 2016b)
+March 2017
+Online only
+Revised for Version 5.9 (Release 2017a)
+September 2017
+Online only
+Revised for Version 5.10 (Release 2017b)
+March 2018
+Online only
+Revised for Version 5.11 (Release 2018a)
+September 2018
+Online only
+Revised for Version 5.12 (Release 2018b)
+March 2019
+Online only
+Revised for Version 5.13 (Release 2019a)
+September 2019
+Online only
+Revised for Version 5.14 (Release 2019b)
+March 2020
+Online only
+Revised for Version 5.15 (Release 2020a)
+September 2020
+Online only
+Revised for Version 6.0 (Release 2020b)
+March 2021
+Online only
+Revised for Version 6.1 (Release 2021a)
+September 2021
+Online only
+Revised for Version 6.2 (Release 2021b)
+March 2022
+Online only
+Revised for Version 6.3 (Release 2022a)
+September 2022
+Online only
+Revised for Version 6.4 (Release 2022b)
+March 2023
+Online only
+Revised for Version 6.5 (Release 2023a)
+September 2023
+Online only
+Revised for Version 23.2 (R2023b)
+March 2024
+Online only
+Revised for Version 24.1 (R2024a)
+September 2024
+Online only
+Revised for Version 24.2 (R2024b)
+March 2025
+Online only
+Revised for Version 25.1 (R2025a)
+September 2025
+Online only
+Rereleased for Version 25.2 (R2025b)

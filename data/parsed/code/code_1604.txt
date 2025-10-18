@@ -1,0 +1,7 @@
+Page 1461
+================================================================================
+
+•
+The interpolate function assumes that all model parameters are piecewise-constant, and
+evaluates them from the most recent observation time in Times that precedes a specified
+interpolation time in T. This is consistent with the Euler approach of Monte Carlo simulation.

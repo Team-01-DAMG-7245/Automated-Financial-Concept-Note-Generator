@@ -1,0 +1,83 @@
+DateFormNum
+Example
+
+5
+03
+
+6
+03/01
+
+7
+01
+
+8
+Wed
+
+9
+W
+
+10
+2000
+
+11
+00
+
+12
+Mar00
+
+17
+Q1–00
+
+18
+Q1
+
+19
+01/03
+
+20
+01/03/00
+
+27
+Q1–2000
+
+28
+Mar2000
+
+29
+2000–03–01
+
+Data Types: char | double
+
+Output Arguments
+
+h — Handles to line objects
+vector
+
+Handles to line objects, returned as a NINST-by-3 matrix of handles to line objects, containing
+[hLines, hUArrowHead, hDArrowHead] where:
+
+•
+hLines — Horizontal and vertical lines used in the cash flow diagram
+
+•
+hUArrowHead — "Up" arrowheads
+
+•
+hDArrowHead — "Down" arrowheads
+
+axes_handle — Handles to axes for plot or subplots
+vector
+
+Handles to axes for the plot or subplots, returned as a (Number of axes)-by-1 vector of handles to
+axes.
+
+Version History
+Introduced in R2013a
+
+R2025a: Default Display Change for DateFormat
+
+The default display for the DateFormat name-value argument changes from datenum to datetime.
+
+cfplot
+
+15-705

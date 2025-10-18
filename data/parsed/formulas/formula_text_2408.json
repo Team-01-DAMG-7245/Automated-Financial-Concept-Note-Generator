@@ -1,0 +1,12 @@
+{
+  "page": 1236,
+  "original_text": "dt      = 1/250;\nreturns = tick2ret(Dataset.CAC);\nsigma   = std(returns)*sqrt(250);\nyields  = Dataset.EB3M;\nyields  = 360*log(1 + yields);",
+  "ocr_text": "dt =1/250;\nreturns=tick2ret(Dataset.CAC);\nsigma =std(returns)*sqrt(250);\nyields=Dataset.EB3M;\nyields=360*log(1+yields);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 514.12,
+    "x1": 268.8,
+    "y1": 567.79
+  },
+  "confidence": "high"
+}

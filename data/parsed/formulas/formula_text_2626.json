@@ -1,0 +1,12 @@
+{
+  "page": 1337,
+  "original_text": "h = attributionsChart(ax,BrinsonPAObj) additionally returns the figure handle h.",
+  "ocr_text": "h=attributionsChart(ax,BrinsonPAObj)additionallyreturnsthefigurehandleh.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 327.3,
+    "x1": 505.0,
+    "y1": 338.93
+  },
+  "confidence": "high"
+}

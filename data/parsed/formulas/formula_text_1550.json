@@ -1,0 +1,12 @@
+{
+  "page": 777,
+  "original_text": "% Plot efficient frontier\nfigure\npwgt = estimateFrontier(p);\nplotFrontier(p,pwgt)",
+  "ocr_text": "sPlotefficientfrontier\nfigure\npwgt=estimateFrontier(p);\nplotFrontier(p,pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 242.19,
+    "x1": 236.28,
+    "y1": 285.06
+  },
+  "confidence": "high"
+}

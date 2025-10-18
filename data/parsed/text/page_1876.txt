@@ -1,0 +1,65 @@
+ZeroRates = [0.012067955808764;0.012730933424479;0.019360902068703;0.031704525214251;0.042306085224510;0.054987415342936];
+CurveDates = [731639;731730;732251;733361;735188;741854];
+Settle   = datetime(2002,11,26);
+Price    = 105.484;
+Coupon   = 0.04375;
+Maturity = datetime(2006,10,15);
+Period = 2;
+Basis  = 1;
+SpotInfo = table(datestr(CurveDates), ZeroRates);
+
+Data Types: double | string | char | datetime | table | struct
+
+Price — Clean price for every $100 notional amount of bonds whose spreads are computed
+numeric
+
+Clean price for every $100 notional amount of bonds whose spreads are computed, specified as
+numeric value using a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector.
+
+The clean price is the price of a bond not including accrued interest payments. The clean price is
+typically the quoted price on financial news sites. This price does not include any interest accrued
+between the scheduled coupon payments for the bond.
+
+Data Types: double
+
+Coupon — Annual coupon rate of bonds whose spreads are computed
+decimal
+
+Annual coupon rate of bonds whose spreads are computed, specified as decimal value using a scalar
+or a NUMBONDS-by-1 or 1-by-NUMBONDS vector.
+
+Data Types: double
+
+Settle — Settlement date of bond
+datetime array | string array | date character vector
+
+Settlement date of the bond, specified as a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using
+a datetime array, string array, or date character vectors. The Settle date must be before the
+Maturity date.
+
+To support existing code, bndspread also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of bond
+datetime array | string array | date character vector
+
+Maturity date of the bond, specified as a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using a
+datetime array, string array, or date character vectors.
+
+To support existing code, bndspread also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+15
+Functions
+
+15-570

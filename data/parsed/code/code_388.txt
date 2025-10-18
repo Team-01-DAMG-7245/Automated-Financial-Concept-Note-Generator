@@ -1,0 +1,8 @@
+Page 409
+================================================================================
+
+To use the strategies in the backtesting framework, you must build backtestStrategy objects, one
+for each strategy. The backtestStrategy function takes as input the strategy name and
+rebalancing function for each strategy. Additionally, the backtestStrategy can take a variety of
+name-value pair arguments to specify various options. For more information on creating backtest
+strategies, see backtestStrategy.

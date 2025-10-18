@@ -1,0 +1,5 @@
+Page 2404
+================================================================================
+
+Use the getGroups function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain group constraint arrays from portfolio objects.

@@ -1,0 +1,37 @@
+adds the HH index as a penalty function to the objective has a larger number of assets than the
+minimum variance portfolio but less than the portfolio that maximizes HH diversity. The ERC portfolio
+also selects all the assets because all weights need to be nonzero to have some risk contribution.
+
+% Boxchart of portfolio weights
+figure;
+matBoxPlot = reweightedTable.Variables;
+matBoxPlot(matBoxPlot == 0) = NaN;
+boxchart(matBoxPlot)
+xticklabels(varNames)
+title('Weights Distribution')
+xlabel('Strategies')
+ylabel('Weight')
+
+This boxchart shows the spread of the assets' positive weights for the different portfolios. As
+previously discussed, the weights of the portfolio that maximize the HH diversity are all the same. If
+the portfolio had other types of constraints, the weights would not all be the same, but they would
+have the lowest variance. The ERC portfolio weights also have a small variance. In fact, you can
+observe as the number of assets increases as the variance of the ERC portfolio weights becomes
+smaller.
+
+The weights variability of the MDP is smaller than the variability of the minimum variance weights.
+However, it is not necessarily true that the MDP's weights will have less variability than the minimum
+variance weights because the goal of the MDP is not to obtain equally weighted assets, but to
+distribute the correlation of each asset with its portfolio evenly.
+
+% Compute and plot the risk contribution of each individual
+% asset to the portfolio.
+riskContribution = portfolioRiskContribution(p.AssetCovar, ...
+    weightsTable.Variables);
+% Remove small contributions
+riskContribution(riskContribution < 1e-3) = NaN;
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-338

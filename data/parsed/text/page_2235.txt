@@ -1,0 +1,55 @@
+estimateAssetMoments
+
+Estimate mean and covariance of asset returns from data
+
+Syntax
+
+obj = estimateAssetMoments(obj,AssetReturns)
+obj = estimateAssetMoments( ___ ,Name,Value)
+
+Description
+
+obj = estimateAssetMoments(obj,AssetReturns) estimates mean and covariance of asset
+returns from data for a Portfolio object. For details on the workflow, see “Portfolio Object
+Workflow” on page 4-18.
+
+obj = estimateAssetMoments( ___ ,Name,Value) estimates mean and covariance of asset
+returns from data for a Portfolio object with additional options for one or more Name,Value pair
+arguments.
+
+Examples
+
+Estimate Mean and Covariance of Asset Returns from Data for a Portfolio Object
+
+To illustrate using the estimateAssetMoments function, generate random samples of 120
+observations of asset returns for four assets from the mean and covariance of asset returns in the
+variables m and C with the portsim function. The default behavior portsim creates simulated data
+with estimated mean and covariance identical to the input moments m and C. In addition to a return
+series created by the portsim function in the variable X, a price series is created in the variable Y:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+X = portsim(m', C, 120);
+Y = ret2tick(X);
+
+Given asset returns and prices in the variables X and Y from above, the following examples
+demonstrate equivalent ways to estimate asset moments for the Portfolio object. A Portfolio object is
+created in p with the moments of asset returns set directly in the Portfolio object and a second
+Portfolio object is created in q to obtain the mean and covariance of asset returns from asset return
+data in X using the estimateAssetMoments function.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+m = m/12;
+
+estimateAssetMoments
+
+15-929

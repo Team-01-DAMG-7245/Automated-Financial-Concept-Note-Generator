@@ -1,0 +1,12 @@
+{
+  "page": 36,
+  "original_text": "ci j = ai1b1 j + ai2b12 + … + ainbn j .",
+  "ocr_text": "Dnj-\ndin\n\n+\n\ni2bi2\n\nqj\n\n;+\n\ni1b1;\n\nqj\n\nCij =",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 332.76,
+    "x1": 261.66,
+    "y1": 346.5
+  },
+  "confidence": "high"
+}

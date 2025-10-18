@@ -1,0 +1,5 @@
+Page 1904
+================================================================================
+
+Compare the result of the TMW_CLOSE data series with a normal (Gaussian) probability distribution
+function and the nonnormally distributed TMW_CLOSE.

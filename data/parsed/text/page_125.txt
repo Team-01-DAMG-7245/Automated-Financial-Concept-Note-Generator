@@ -1,0 +1,61 @@
+midprices = DTT.Midprices(executionIdx);
+t = t(executionIdx);
+
+Initiate all calculations on the tall arrays.
+
+[I,midprices,t,DTT] = gather(I,midprices,t,DTT);
+
+Evaluating tall expression using the Local MATLAB Session:
+- Pass 1 of 1: Completed in 15 sec
+Evaluation completed in 17 sec
+
+t = t + milliseconds(1:numel(midprices))'; % Make timestamps unique
+
+Forward Price Movement ΔSt
+
+The forward price movement at time t ΔSt is the difference between the midprice St at time t and
+time t −ΔtS.
+
+The variable ΔtS > 0 is a hyperparameter controlling the baseline midprice to compare the current
+forward price. You can set it to the value informed by theory or practice, or you can tune it.
+
+Following the procedure in “Machine Learning for Statistical Arbitrage II: Feature Engineering and
+Model Development” on page 2-59 to determine a value for ΔtS, compute the average time for
+arrivals of order executions.
+
+dt = diff(t,1,1);
+dt.Format = "s";
+dtav = expfit(dt)
+
+dtav = duration
+   0.7214 sec
+
+dtS = 1;    % Hyperparameter
+
+The average arrival time of order executions is 0.72 seconds. The setting ΔtS = 1 corresponds to an
+interval of 0.72 seconds, on average, which is close to the figure from the example. Therefore,
+ΔSt = St −St −1.
+
+ΔSt indicates the magnitude and direction of the current price change from the baseline St −ΔtS.
+
+Although use of the magnitude might inform future price changes, this example discretizes the ΔSt
+such that it uses only the direction of the price change.
+
+Compute the forward price movements between execution orders.
+
+DS = NaN(size(midprices));
+shiftS = midprices((dtS+1):end);
+DS(1:(end-dtS)) = sign(shiftS-midprices(1:(end-dtS)));
+
+The difference operation introduces ΔtS missing values at the tail of DS. Remove the missing values
+and synchronize all series.
+
+DS = DS(1:end-dtS,:);
+I = I(dtS+1:end,:);
+midprices = midprices(dtS+1:end);
+t = t(dtS+1:end,:);
+X = [I DS];
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data
+
+2-81

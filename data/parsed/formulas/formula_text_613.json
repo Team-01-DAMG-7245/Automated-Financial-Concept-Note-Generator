@@ -1,0 +1,12 @@
+{
+  "page": 402,
+  "original_text": "optimProb = optimproblem('Description','Portfolio with factor covariance matrix','ObjectiveSense\nwgtAsset = optimvar('asset_weight', p, 1, 'Type', 'continuous', 'LowerBound', 0, 'UpperBound', 1)\nwgtFactor = optimvar('factor_weight', k, 1, 'Type', 'continuous');",
+  "ocr_text": "optimProb=optimproblem(Description,Portfoliowithfactorcovariancematrix,ObjectiveSense\nwgtAsset=optimvar(asset_weight,p,1,_Type,continuous,LowerBound,,_UpperBound,1\nwgtFactor=optimvar(factor_weight,k,1,_Type,continuous);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 343.78,
+    "x1": 615.59,
+    "y1": 375.85
+  },
+  "confidence": "high"
+}

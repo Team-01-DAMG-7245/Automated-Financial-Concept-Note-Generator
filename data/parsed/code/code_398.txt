@@ -1,0 +1,5 @@
+Page 415
+================================================================================
+
+function new_weights = maxSharpeRatioFcn(current_weights, pricesTT)
+% Mean-variance portfolio allocation

@@ -1,0 +1,42 @@
+For more information on creating a PortfolioCVaR or PortfolioMAD object, see
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+Output Arguments
+
+Y — Scenarios matrix
+matrix
+
+Scenarios matrix, returned as a NumScenarios-by-NumAssets matrix for a PortfolioCVaR or
+PortfolioMAD object.
+
+Tips
+
+You can also use dot notation to obtain scenarios from a PortfolioCVaR or PortfolioMAD object.
+
+Y = obj.getScenarios;
+
+Version History
+Introduced in R2012b
+
+See Also
+setScenarios | rng
+
+Topics
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+External Websites
+Getting Started with Portfolio Optimization (4 min 13 sec)
+CVaR Portfolio Optimization (4 min 56 sec)
+
+15
+Functions
+
+15-1104

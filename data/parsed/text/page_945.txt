@@ -1,0 +1,37 @@
+tmAllRec = transprobbytotals(totalsAll(Recession));
+DefRateRec = tmAllRec(1,2);
+
+tmAllExp = transprobbytotals(totalsAll(~Recession));
+DefRateExp = tmAllExp(1,2);
+
+tmAllTTC = transprobbytotals(totalsAll);
+DefRateTTC = tmAllTTC(1,2);
+
+The following figure shows the estimated PIT rates, TTC rates, and recession and expansion rates.
+
+DefRateTwoValues = DefRateExp*ones(nYears,1);
+DefRateTwoValues(Recession) = DefRateRec;
+
+figure
+plot(Years,DefRate,'bo:','LineWidth',1.2)
+hold on
+stairs(Years-0.5,DefRateTwoValues,'m-','LineWidth',1.5)
+plot(Years,DefRateTTC*ones(nYears,1),'r-.','LineWidth',1.5)
+Example_RecessionBands
+hold off
+grid on
+title('{\bf Default Rate}')
+ylabel('%')
+legend({'Point-in-time (PIT)','Recession/Expansion Avg',...
+   'Through-the-cycle (TTC)'},'location','NW')
+
+Some analyses (see, for example, [11 on page 8-43]) use simulations where the default rate is
+conditional on the general state of the economy, for example, recession v. expansion. The recession
+and expansion estimates obtained can be useful in such a framework. These are all historical
+averages, however, and may not work well if used as predictions for the actual default rates expected
+on any particular year. The second part of this example uses these types of historical averages as
+forecasting tools in a backtesting exercise.
+
+Forecasting Corporate Default Rates
+
+8-27

@@ -1,0 +1,8 @@
+Page 609
+================================================================================
+
+for HorizonIdx = 1:NumHorizons
+    HorizonExecutedPrices = zeros(NumLevels*NumIntervalsPerHorizon,1);
+    HorizonExecutedShares = HorizonExecutedPrices;
+    for IntervalIdx = 1:NumIntervalsPerHorizon
+        CurrentBook =  InputLOB(IntervalIdx + NumIntervalsPerHorizon*(HorizonIdx-1),:);

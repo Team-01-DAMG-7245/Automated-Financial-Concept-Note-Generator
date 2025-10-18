@@ -1,0 +1,12 @@
+{
+  "page": 2039,
+  "original_text": "volatility = chaikvolat(Data)\nvolatility = chaikvolat( ___ ,Name,Value)",
+  "ocr_text": "volatility=chaikvolat(Data)\nvolatility=chaikvolat(_,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.02,
+    "x1": 328.8,
+    "y1": 213.65
+  },
+  "confidence": "high"
+}

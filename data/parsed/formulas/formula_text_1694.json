@@ -1,0 +1,12 @@
+{
+  "page": 858,
+  "original_text": "x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];\np = PortfolioMAD('InitPort', x0);\np = setOneWayTurnover(p, 0.3, 0.2);",
+  "ocr_text": "xO=[0.12;0.09;0.08;0.07;0.1;0.1;0.15;0.11;0.08;0.1];\np=PortfolioMAD(InitPort,x0);\np=setOneWayTurnover(p,0.3,0.2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.14,
+    "x1": 371.74,
+    "y1": 118.79
+  },
+  "confidence": "high"
+}

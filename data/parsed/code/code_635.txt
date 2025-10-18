@@ -1,0 +1,5 @@
+Page 582
+================================================================================
+
+Define the environment constants for the training data and the reset function. The function definition
+for RL_OptimalExecution_LOB_ResetFcn is in the Local Functions on page 4-441 section.

@@ -1,0 +1,12 @@
+{
+  "page": 437,
+  "original_text": "% Compute and plot efficient frontier for each value in contourWoB.\nfigure;\nhold on\nlabels = strings(nContour+1,1);\nfor i = 1:nContour\n    p.bInequality = -contourWoB(i);\n    plotFrontier(p,nPort);\n    labels(i) = sprintf(\"%6.2f%% WoB\",contourWoB(i)*100);\nend\n% Plot the \"original\" mean-variance frontier, i.e., the frontier\n% without WoB requierements.\np.AInequality = []; p.bInequality = [];\nplotFrontier(p,nPort);\nlabels(i+1) = \"No WoB restriction\";\nlegend(labels,'Location','northwest')\nhold off",
+  "ocr_text": "ComputeandplotefficientfrontierforeachvalueincontourWoB.\nfigure;\nholdon\nlabels_=strings(nContour+1,1);\nfori=1:nContour\np.bInequality=-contourWoB(i);\nplotFrontier(p,nPort);\nlabels(i)=sprintf(6.2fWoB,contourWoB(i)*100);\nend\nSPlottheoriginalmean-variancefrontier,i.e.,thefrontier\nSwithoutWoBrequierements.\np.AInequality=[];p.bInequality=[];\nplotFrontier(p,nPort);\nlabels(i+1)=NoWoBrestriction;\nlegend(labels,Location,northwest)\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 438.63,
+    "x1": 453.01,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

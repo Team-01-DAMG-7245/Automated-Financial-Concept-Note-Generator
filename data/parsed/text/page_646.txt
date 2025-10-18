@@ -1,0 +1,66 @@
+After setting up an array of PortfolioCVaR objects, you can work on individual PortfolioCVaR
+objects in the array by indexing. For example:
+
+p(i,j) = PortfolioCVaR(p(i,j), ... );
+
+This example calls PortfolioCVaR for the (i,j) element of a matrix of PortfolioCVaR objects in
+the variable p.
+
+If you set up an array of PortfolioCVaR objects, you can access properties of a particular
+PortfolioCVaR object in the array by indexing so that you can set the lower and upper bounds lb
+and ub for the (i,j,k) element of a 3-D array of PortfolioCVaR objects with
+
+p(i,j,k) = setBounds(p(i,j,k), lb, ub);
+
+and, once set, you can access these bounds with
+
+[lb, ub] = getBounds(p(i,j,k));
+
+PortfolioCVaR object functions work on only one PortfolioCVaR object at a time.
+
+Subclassing PortfolioCVaR Objects
+
+You can subclass the PortfolioCVaR object to override existing functions or to add new properties
+or functions. To do so, create a derived class from the PortfolioCVaR class. This gives you all the
+properties and functions of the PortfolioCVaR class along with any new features that you choose to
+add to your subclassed object. The PortfolioCVaR class is derived from an abstract class called
+AbstractPortfolio. Because of this, you can also create a derived class from
+AbstractPortfolio that implements an entirely different form of portfolio optimization using
+properties and functions of the AbstractPortfolio class.
+
+Conventions for Representation of Data
+
+The CVaR portfolio optimization tools follow these conventions regarding the representation of
+different quantities associated with portfolio optimization:
+
+•
+Asset returns or prices for scenarios are in matrix form with samples for a given asset going down
+the rows and assets going across the columns. In the case of prices, the earliest dates must be at
+the top of the matrix, with increasing dates going down.
+
+•
+Portfolios are in vector or matrix form with weights for a given portfolio going down the rows and
+distinct portfolios going across the columns.
+
+•
+Constraints on portfolios are formed in such a way that a portfolio is a column vector.
+
+•
+Portfolio risks and returns are either scalars or column vectors (for multiple portfolio risks and
+returns).
+
+See Also
+PortfolioCVaR
+
+Related Examples
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+5
+CVaR Portfolio Optimization Tools
+
+5-20

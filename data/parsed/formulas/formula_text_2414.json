@@ -1,0 +1,12 @@
+{
+  "page": 1238,
+  "original_text": "subplot(2,1,1)\ndates = datetime(dates,\"ConvertFrom\",\"datenum\");\nplot(dates,100*yields)\nxlabel('Date')\nylabel('Annualized Yield (%)')\ntitle('Risk Free Rate(3-Mo Euribor Continuously-Compounded)')\nsubplot(2,1,2)\nplot(T,X1,'red',T,X2,'blue')\nxlabel('Time (Years)')\nylabel('Index Level')\ntitle('Constant vs. Dynamic Rate of Return: CAC 40')\nlegend({'Constant Interest Rates' 'Dynamic Interest Rates'},...\n    'Location', 'Best')",
+  "ocr_text": "subplot(2,1,1)\n\ndates=datetime(dates,ConvertFrom,datenum);\n\nplot(dates,100*yields)\n\nxlabel(Date)\n\nylabel(AnnualizedYield())\n\ntitle(RiskFreeRate(3-MoEuriborContinuously-Compounded))\n\nsubplot(2,1,2)\n\nplot(T,X1,red,T,X2,blue)\n\nxlabel(Time(Years))\n\nylabel(IndexLevel)\n\ntitle(Constantvs.DynamicRateofReturn:CAC40)\n\nlegend({ConstantInterestRatesDynamicInterestRates},...\nLocation,Best)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 381.83,
+    "x1": 431.36,
+    "y1": 521.89
+  },
+  "confidence": "high"
+}

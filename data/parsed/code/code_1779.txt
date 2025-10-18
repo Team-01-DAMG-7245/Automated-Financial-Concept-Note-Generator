@@ -1,0 +1,5 @@
+Page 1500
+================================================================================
+
+JumpVol — Instantaneous standard deviation
+array | deterministic function of time | deterministic function of time and state

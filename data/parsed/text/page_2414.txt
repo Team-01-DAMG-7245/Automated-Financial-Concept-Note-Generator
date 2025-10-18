@@ -1,0 +1,36 @@
+getOneWayTurnover
+
+Obtain one-way turnover constraints from portfolio object
+
+Syntax
+
+[BuyTurnover,SellTurnover] = getOneWayTurnover(obj)
+
+Description
+
+Use the getOneWayTirnover function with a Portfolio, PortfolioCVaR, or PortfolioMAD
+object to obtain one-way turnover constraints from portfolio objects.
+
+For details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+[BuyTurnover,SellTurnover] = getOneWayTurnover(obj) obtain one-way turnover
+constraints from portfolio objects.
+
+Examples
+
+Obtain One-Way Turnover Costs for a Portfolio Object
+
+Set one-way turnover costs.
+
+p = Portfolio('AssetMean',[0.1, 0.2, 0.15], 'AssetCovar',...
+[ 0.005, -0.010,  0.004; -0.010,  0.040, -0.002;  0.004, -0.002,  0.023]);
+p = setBudget(p, 1, 1);
+p = setOneWayTurnover(p, 1.3, 0.3, 0);    %130-30 portfolio
+plotFrontier(p);
+
+15
+Functions
+
+15-1108

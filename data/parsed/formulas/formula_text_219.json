@@ -1,0 +1,12 @@
+{
+  "page": 135,
+  "original_text": "user_data = struct(\"Counter\",0,\"NumTestPoints\",nBT);\nmaxMoneyStrat = backtestStrategy(\"MaxProfit\",@(w,p,s,u)rebalance(w,p,s,u,1,\"MaxProfit\"), ...\n    LookbackWindow=1,UserData=user_data);\nRiskyLSTMStrat = backtestStrategy(\"RiskyLSTM\",@(w,p,s,u)rebalance(w,p,s,u,2,\"RiskyLSTM\"), ...\n    LookbackWindow=1,UserData=user_data);\nstrategies = [maxMoneyStrat RiskyLSTMStrat];",
+  "ocr_text": "user_data=struct(Counter,0,NumTestPoints,nBT);\n\nmaxMoneyStrat=backtestStrategy(MaxProfit,Q(w,p,S,u)rebalance(w,p,s,u,1,MaxProfit),...\nLookbackWindow=1,UserData=user_data);\n\nRiskyLSTMStrat=backtestStrategy(RiskyLSTM,Q(w,p,s,u)rebalance(w,p,s,U,2,RiskyLSTM),...\nLookbackWindow=1,UserData=user_data);\n\nstrategies=[maxMoneyStratRiskyLSTMStrat];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 523.79,
+    "x1": 593.92,
+    "y1": 588.25
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,13 @@
+Page 392
+================================================================================
+
+In the absence of any views, the equilibrium returns are likely equal to the implied returns from the
+equilibrium portfolio holding. In practice, the applicable equilibrium portfolio holding can be any
+optimal portfolio that the investment analyst would use in the absence of additional views on the
+market, such as the portfolio benchmark, an index, or even the current portfolio [2 on page 4-229]. In
+this example, you use linear regression to find a market portfolio that tracks the returns of the DJI
+benchmark. Then, you use the market portfolio as the equilibrium portfolio and the equilibrium
+returns are implied from the market portfolio. The findMarketPortfolioAndImpliedReturn
+function, defined in Local Functions on page 4-226, implements the equilibrium returns. This function
+takes historical asset returns and benchmark returns as inputs and outputs the market portfolio and
+the corresponding implied returns.

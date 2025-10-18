@@ -1,0 +1,61 @@
+Base SDE Models
+
+In this section...
+
+“Overview” on page 14-16
+
+“Specify Base Stochastic Differential Equation (SDE) Model” on page 14-16
+
+Overview
+
+The base sde object
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+
+represents the most general model.
+
+Tip The sde class is not an abstract class. You can instantiate sde objects directly to extend the set
+of core models.
+
+Creating an sde object using sde requires the following inputs:
+
+•
+A drift-rate function F. This function returns an NVars-by-1 drift-rate vector when run with the
+following inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+•
+A diffusion-rate function G. This function returns an NVars-by-NBrowns diffusion-rate matrix when
+run with the inputs t and Xt.
+
+Evaluating object parameters by passing (t, Xt) to a common, published interface allows most
+parameters to be referenced by a common input argument list that reinforces common method
+programming. You can use this simple function evaluation approach to model or construct powerful
+analytics, as in the following example.
+
+Specify Base Stochastic Differential Equation (SDE) Model
+
+Create an sde object using sde to represent a univariate geometric Brownian Motion model of the
+form:
+
+Create drift and diffusion functions that are accessible by the common (t, Xt) interface.
+
+F = @(t,X) 0.1 * X;
+G = @(t,X) 0.3 * X;
+
+Pass the drift and diffusion functions to sde to creare an sde object.
+
+obj = sde(F, G)    % dX = F(t,X)dt + G(t,X)dW
+
+obj = 
+   Class SDE: Stochastic Differential Equation
+
+14
+Stochastic Differential Equations
+
+14-16

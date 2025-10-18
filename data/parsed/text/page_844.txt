@@ -1,0 +1,69 @@
+Working with Group Ratio Constraints Using PortfolioMAD
+Object
+
+Group ratio constraints are optional linear constraints that maintain bounds on proportional
+relationships among groups of assets (see “Group Ratio Constraints” on page 6-12). Although the
+constraints are implemented as general constraints, the usual convention is to specify a pair of group
+matrices that identify membership of each asset within specific groups with Boolean indicators
+(either true or false or with 1 or 0) for each element in each of the group matrices. The goal is to
+ensure that the ratio of a base group compared to a comparison group fall within specified bounds.
+Group ratio constraints have properties:
+
+•
+GroupA for the base membership matrix
+
+•
+GroupB for the comparison membership matrix
+
+•
+LowerRatio for the lower-bound constraint on the ratio of groups
+
+•
+UpperRatio for the upper-bound constraint on the ratio of groups
+
+Setting Group Ratio Constraints Using the PortfolioMAD Function
+
+The properties for group ratio constraints are set using PortfolioMAD object. For example, assume
+that you want the ratio of financial to nonfinancial companies in your portfolios to never go above
+50%. Suppose that you have six assets with three financial companies (assets 1–3) and three
+nonfinancial companies (assets 4–6). To set group ratio constraints:
+
+GA = [ 1 1 1 0 0 0 ];    % financial companies
+GB = [ 0 0 0 1 1 1 ];    % nonfinancial companies
+p = PortfolioMAD('GroupA', GA, 'GroupB', GB, 'UpperRatio', 0.5);
+disp(p.NumAssets)
+disp(p.GroupA)
+disp(p.GroupB)
+disp(p.UpperRatio)
+
+6
+
+1     1     1     0     0     0
+
+0     0     0     1     1     1
+
+0.5000
+
+Group matrices GA and GB in this example can be logical matrices with true and false elements
+that yield the same result:
+
+GA = [ true true true false false false ];    % financial companies
+GB = [ false false false true true true ];    % nonfinancial companies
+p = PortfolioMAD('GroupA', GA, 'GroupB', GB, 'UpperRatio', 0.5);
+disp(p.NumAssets)
+disp(p.GroupA)
+disp(p.GroupB)
+disp(p.UpperRatio)
+
+6
+
+1     1     1     0     0     0
+
+0     0     0     1     1     1
+
+0.5000
+
+6
+MAD Portfolio Optimization Tools
+
+6-64

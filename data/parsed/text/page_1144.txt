@@ -1,0 +1,32 @@
+A plot of the hedge Ratio with respect to moneyness shows the differences between the BSM and RL
+approaches. As discussed in Cao [2 on page 10-46], in the presence of transaction costs, the agent
+learns that "when delta hedging would require shares to be purchased, it tends to be optimal for a
+trader to be underhedged relative to delta. Similarly, when delta hedging would require shares to be
+sold, it tends to be optimal for a trader to be over-hedged relative to delta."
+
+policy_RL_mR = @(mR,TTM,Pos) cell2mat(getAction(agent,[mR TTM Pos]'));
+
+mRange = (.8:.01:1.2)';
+
+figure
+t_plot = 2/12;
+plot(mRange,blsdelta(mRange,1,rfRate,t_plot,ExpVol),'b')
+hold on
+plot(mRange,arrayfun(@(mR) policy_RL_mR(mR,t_plot,blsdelta(mR,1,rfRate,t_plot,ExpVol)),mRange),'r
+plot(mRange,arrayfun(@(mR) policy_RL_mR(mR,t_plot,blsdelta(mR+.1,1,rfRate,t_plot,ExpVol)),mRange)
+plot(mRange,arrayfun(@(mR) policy_RL_mR(mR,t_plot,blsdelta(mR-.1,1,rfRate,t_plot,ExpVol)),mRange)
+legend('Theoretical BLS Delta','RL Hedge -- ATM','RL Hedge -- Selling','RL Hedge -- Buying', ...
+    'location','best')
+xlabel('Moneyness')
+ylabel('Hedge Ratio')
+title('RL Hedge vs. BLS Delta for TTM of 2/12')
+
+References
+
+[1] Buehler H., L. Gonon, J. Teichmann, and B. Wood. "Deep hedging." Quantitative Finance. Vol. 19,
+No. 8, 2019, pp. 1271–91.
+
+10
+Solving Sample Problems
+
+10-46

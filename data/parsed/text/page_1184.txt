@@ -1,0 +1,46 @@
+Trading Calendars User Interface
+
+Use the createholidays function to open the Trading Calendars user interface.
+
+The createholidays function supports https://swapsmonitor.com/ trading calendars. This
+function can be used from the command line or from the Trading Calendars user interface. To use
+createholidays or the Trading Calendars user interface, you must obtain data, codes, and info files
+from https://swapsmonitor.com/ trading calendars. For more information on using the
+command line to programmatically generate the market-specific holidays.m files without displaying
+the interface, see createholidays.
+
+To use the Trading Calendars user interface:
+
+1
+From the command line, type the following command to open the Trading Calendars user
+interface.
+
+createholidays
+
+2
+Click Choose data file to select the data file.
+
+3
+Click Choose codes file to select the codes file.
+
+4
+Click Choose info file to select the info file.
+
+5
+Click Choose directory for writing holiday files to select the output folder.
+
+6
+Select Include weekends to include weekends in the holiday list and click Prompt for target
+directory to be prompted for the file location for each holidays.m file that is created.
+
+7
+Click Create holiday files to convert FinancialCalendar.com financial center holiday data
+into market-specific holidays.m files.
+
+The market-specific holidays.m files can be used in place of the standard holidays.m that
+ships with Financial Toolbox software.
+
+12
+Trading Date Utilities
+
+12-2

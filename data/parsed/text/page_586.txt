@@ -1,0 +1,7 @@
+Create a new DQN agent by selecting New > Agent, then selecting DQN from the Compatible
+algorithm menu. Enable LSTM by selecting Use recurrent neural network.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-418

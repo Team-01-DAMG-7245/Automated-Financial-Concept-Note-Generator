@@ -1,0 +1,9 @@
+Page 1220
+================================================================================
+
+Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2

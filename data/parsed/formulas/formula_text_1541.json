@@ -1,0 +1,12 @@
+{
+  "page": 775,
+  "original_text": "% Interpolate simulated yields at cash flow times\nsimCFTimes = yearfrac(simSettle,allDates);\nsimCFYields = interp1(yieldsTimes,simYields',simCFTimes',[],\"extrap\")';",
+  "ocr_text": "Interpolatesimulatedyieldsatcashflowtimes\nsimCFTimes=yearfrac(simSettle,allDates);\nsimCFYields=interpl(yieldsTimes,simYields,simCFTimes,[],extrap);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 474.7,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

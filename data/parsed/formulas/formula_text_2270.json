@@ -1,0 +1,12 @@
+{
+  "page": 1167,
+  "original_text": "U = zeros(size(residuals));",
+  "ocr_text": "U=zeros(size(residuals));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 460.51,
+    "x1": 236.29,
+    "y1": 470.98
+  },
+  "confidence": "high"
+}

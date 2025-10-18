@@ -1,0 +1,5 @@
+Page 539
+================================================================================
+
+Since the value function is the probability of achieving the wealth investment goal G at the final time
+step, you know that the value function at t = T is given by

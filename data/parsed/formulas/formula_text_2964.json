@@ -1,0 +1,12 @@
+{
+  "page": 1553,
+  "original_text": "function new_weights = chaseReturns(current_weights,assetPrices)",
+  "ocr_text": "functionnew_weights=chaseReturns(current_weights,assetPrices)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 442.17,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

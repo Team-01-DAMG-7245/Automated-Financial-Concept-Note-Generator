@@ -1,0 +1,47 @@
+ecmnmle
+
+Mean and covariance of incomplete multivariate normal data
+
+Syntax
+
+ecmnmle(Data)
+[Mean,Covariance] = ecmnmle(Data)
+[Mean,Covariance] = ecmnmle( ___ ,InitMethod,MaxIterations,Tolerance,Mean0,
+Covar0)
+
+Description
+
+ecmnmle(Data) with no output arguments, this mode displays the convergence of the ECM
+algorithm in a plot by estimating objective function values for each iteration of the ECM algorithm
+until termination.
+
+[Mean,Covariance] = ecmnmle(Data) estimates the mean and covariance of a data set (Data).
+If the data set has missing values, this routine implements the ECM algorithm of Meng and Rubin [2]
+with enhancements by Sexton and Swensen [3]. ECM stands for a conditional maximization form of
+the EM algorithm of Dempster, Laird, and Rubin [4].
+
+[Mean,Covariance] = ecmnmle( ___ ,InitMethod,MaxIterations,Tolerance,Mean0,
+Covar0) adds an optional arguments for InitMethod, MaxIterations, Tolerance,Mean0, and
+Covar0.
+
+Examples
+
+Compute Mean and Covariance of Incomplete Multivariate Normal Data
+
+This example shows how to compute the mean and covariance of incomplete multivariate normal data
+for five years of daily total return data for 12 computer technology stocks, with six hardware and six
+software companies
+
+load ecmtechdemo.mat
+
+The time period for this data extends from April 19, 2000 to April 18, 2005. The sixth stock in Assets
+is Google (GOOG), which started trading on August 19, 2004. So, all returns before August 20, 2004
+are missing and represented as NaNs. Also, Amazon (AMZN) had a few days with missing values
+scattered throughout the past five years.
+
+ecmnmle(Data)
+
+15
+Functions
+
+15-894

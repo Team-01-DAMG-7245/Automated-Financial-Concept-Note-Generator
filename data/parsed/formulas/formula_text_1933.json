@@ -1,0 +1,12 @@
+{
+  "page": 995,
+  "original_text": "cp([3 4]) = []; % To merge bins 3, 4, and 5\nsc = modifybins(sc,'CustIncome','CutPoints',cp);\nplotbins(sc,'CustIncome')",
+  "ocr_text": "cp([34])=[];*Tomergebins3,4,and5\nsc=modifybins(sc,CustIncome,CutPoints,cp);\nplotbins(sc,CustIncome)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 123.79,
+    "x1": 350.08,
+    "y1": 155.85
+  },
+  "confidence": "high"
+}

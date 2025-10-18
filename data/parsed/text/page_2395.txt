@@ -1,0 +1,60 @@
+Obtain Buy and Sell Costs for a PortfolioMAD Object
+
+Given a PortfolioMAD object p with the costs set, obtain the values for BuyCost and SellCost.
+
+p = PortfolioMAD;
+p = setCosts(p, 0.001, 0.001, 5);
+[BuyCost, SellCost] = getCosts(p)
+
+BuyCost = 
+1.0000e-03
+
+SellCost = 
+1.0000e-03
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+Output Arguments
+
+BuyCost — Proportional transaction cost to purchase each asset
+vector
+
+Proportional transaction cost to purchase each asset, returned as a vector for a Portfolio,
+PortfolioCVaR, or PortfolioMAD input object (obj).
+
+SellCost — Proportional transaction cost to sell each asset
+vector
+
+Proportional transaction cost to sell each asset, returned as a vector for a Portfolio,
+PortfolioCVaR, or PortfolioMAD input object (obj).
+
+More About
+
+Transaction Costs
+
+Transaction costs are the expenses incurred when buying or selling securities within an investment
+portfolio.
+
+Transaction costs can significantly impact the overall performance of an investment strategy, and
+understanding them is crucial for effective portfolio management.
+
+getCosts
+
+15-1089

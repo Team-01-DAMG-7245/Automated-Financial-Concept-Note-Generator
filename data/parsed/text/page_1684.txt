@@ -1,0 +1,61 @@
+•
+"brownian-bridge" — The last step of the Brownian motion path is calculated first, followed by
+any order between steps until all steps have been determined.
+
+•
+"principal-components" — The Brownian motion path is calculated by minimizing the
+approximation error.
+
+Note If an input noise process is specified using the Z input argument, BrownianMotionMethod is
+ignored.
+
+The starting point for a Monte Carlo simulation is the construction of a Brownian motion sample path
+(or Wiener path). Such paths are built from a set of independent Gaussian variates, using either
+standard discretization, Brownian-bridge construction, or principal components construction.
+
+Both standard discretization and Brownian-bridge construction share the same variance and
+therefore the same resulting convergence when used with the MonteCarloMethod using pseudo
+random numbers. However, the performance differs between the two when the MonteCarloMethod
+option "quasi" is introduced, with faster convergence seen for "brownian-bridge" construction
+option and the fastest convergence when using the "principal-components" construction option.
+
+Data Types: string | char
+
+Antithetic — Flag to use antithetic sampling to generate the Gaussian random variates
+false (no antithetic sampling) (default) | logical with values true or false
+
+Flag to use antithetic sampling to generate the Gaussian random variates that drive the Brownian
+motion vector (Wiener processes), specified as the comma-separated pair consisting of
+'Antithetic' and a scalar numeric or logical 1 (true) or 0 (false).
+
+When you specify true, simByQuadExp performs sampling such that all primary and antithetic paths
+are simulated and stored in successive matching pairs:
+
+•
+Odd trials (1,3,5,...) correspond to the primary Gaussian paths.
+
+•
+Even trials (2,4,6,...) are the matching antithetic paths of each pair derived by negating the
+Gaussian draws of the corresponding primary (odd) trial.
+
+Note If you specify an input noise process (see Z), simByEuler ignores the value of Antithetic.
+
+Data Types: logical
+
+Z — Direct specification of dependent random noise process for generating Brownian
+motion vector
+generates correlated Gaussian variates based on the Correlation member of the heston, bates,
+or cir object (default) | function | three-dimensional array of dependent random variates
+
+Direct specification of the dependent random noise process for generating the Brownian motion
+vector (Wiener process) that drives the simulation, specified as the comma-separated pair consisting
+of 'Z' and a function or an (NPeriods ⨉ NSteps)-by-NBrowns-by-NTrials three-dimensional
+array of dependent random variates.
+
+If you specify Z as a function, it must return an NBrowns-by-1 column vector, and you must call it
+with two inputs:
+
+15
+Functions
+
+15-378

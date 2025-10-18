@@ -1,0 +1,12 @@
+{
+  "page": 1087,
+  "original_text": "% Display estimates\n  fprintf('  %4s %9.4f (%8.4f) %9.4f (%8.4f) %9.4f (%8.4f)\\n', ...\n     Assets{i},Alpha(1),abs(Alpha(1)/StdAlpha(1)), ...\n     Beta(1),abs(Beta(1)/StdBeta(1)),Sigma(1),StdSigma(1));\nend",
+  "ocr_text": "Displayestimates\nfprintf(4s_9.4f_(8.4f)9.4f_(8.4f)9.4f(8.4f)n,...\nAssets{i},Alpha(1),abs(Alpha(1)/StdAlpha(1)),_...\nBeta(1),abs(Beta(1)/StdBeta(1)),Sigma(1),StdSigma(1));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 352.23,
+    "x1": 447.62,
+    "y1": 405.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,64 @@
+If you have an initial portfolio, estimateFrontierByReturn also returns purchases and sales to get
+from your initial portfolio to the target portfolios on the efficient frontier. For example, given an initial
+portfolio in pwgt0, to obtain purchases and sales with target returns of 7%, 10%, and 12%:
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = setInitPort(p, pwgt0);
+[pwgt, pbuy, psell] = estimateFrontierByReturn(p, [0.07,  0.10, .12]);
+
+display(pwgt)
+
+pwgt = 4×3
+
+0.7489    0.3770    0.1264
+    0.1202    0.3235    0.4641
+    0.0466    0.0771    0.0963
+    0.0843    0.2224    0.3132
+
+display(pbuy)
+
+pbuy = 4×3
+
+0.4489    0.0770         0
+         0    0.0235    0.1641
+         0         0         0
+         0    0.1224    0.2132
+
+display(psell)
+
+psell = 4×3
+
+0         0    0.1736
+    0.1798         0         0
+    0.1534    0.1229    0.1037
+    0.0157         0         0
+
+If you do not have an initial portfolio, the purchase and sale weights assume that your initial portfolio
+is 0.
+
+See Also
+PortfolioMAD | estimateFrontier | estimateFrontierLimits |
+estimateFrontierByReturn | estimatePortReturn | estimateFrontierByRisk |
+estimatePortRisk | estimateFrontierByRisk | setSolver
+
+Related Examples
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+6
+MAD Portfolio Optimization Tools
+
+6-94

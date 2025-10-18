@@ -1,0 +1,7 @@
+Page 49
+================================================================================
+
+The datenum function is important for using Financial Toolbox software efficiently. datenum takes an
+input date character vector in any of several formats, with 'dd-mmm-yyyy', 'mm/dd/yyyy', or
+'dd-mmm-yyyy, hh:mm:ss.ss' formats being the most common. The input date character vector
+can have up to six fields formed by letters and numbers separated by any other characters, such that:

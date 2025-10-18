@@ -1,0 +1,9 @@
+Page 426
+================================================================================
+
+% strategy as well as the MACD strategy.  This is because they both trade
+% on their respective signals in the same way (buy when signal goes from
+% 0->1, sell when signal goes from 1->0).  Build an anonymous
+% function for the rebalance functions of the strategies that calls the
+% shared crossoverRebalanceFcn() with the appropriate signal name string
+% for each strategy.

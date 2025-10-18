@@ -1,0 +1,12 @@
+{
+  "page": 1281,
+  "original_text": "soft = Prices.Properties.CustomProperties.CommodityType == \"Soft\";\nintact = all(~ismissing(Prices));\nPrices = Prices(:, soft & intact);",
+  "ocr_text": "soft=Prices.Properties.CustomProperties.CommodityType==Soft;\nintact=all(ismissing(Prices));\nPrices=Prices(:,softintact);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 318.11,
+    "x1": 447.62,
+    "y1": 350.17
+  },
+  "confidence": "high"
+}

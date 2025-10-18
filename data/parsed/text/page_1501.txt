@@ -1,0 +1,63 @@
+If you specify JumpVol as a deterministic function of time, you call JumpVol with a real-valued scalar
+time t as its only input, it must return a scalar.
+
+If you specify JumpVol as a function of time and state, JumpVol must return a scalar when you call it
+with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+A 2-by-1 bivariate state vector Xt
+
+Data Types: double | function_handle
+
+Output Arguments
+
+Bates — Bates model
+Bates object
+
+Bates model, returned as a Bates object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of first observation, applied to all state variables, specified as a scalar.
+
+Data Types: double
+
+StartState — Initial values of state variables
+1 (default) | scalar | column vector | matrix
+
+Initial values of state variables, specified as a scalar, column vector, or matrix.
+
+If StartState is a scalar, bates applies the same initial value to all state variables on all trials.
+
+If StartState is a bivariate column vector, bates applies a unique initial value to each state
+variable on all trials.
+
+If StartState is a matrix, bates applies a unique initial value to each state variable on each trial.
+
+Data Types: double
+
+Correlation — Correlation between Gaussian random variates drawn to generate
+Brownian motion vector (Wiener processes)
+2-by-2 identity matrix representing independent Gaussian processes (default) | positive semidefinite
+matrix | deterministic function
+
+Correlation between Gaussian random variates drawn to generate the Brownian motion vector
+(Wiener processes), specified as a scalar, a 2-by-2 positive semidefinite matrix, or as a deterministic
+function Ct that accepts the current time t and returns an 2-by-2 positive semidefinite correlation
+matrix. If Correlation is not a symmetric positive semidefinite matrix, use nearcorr to create a
+positive semidefinite matrix for a correlation matrix.
+
+A Correlation matrix represents a static condition.
+
+If you specify Correlation as a deterministic function of time, Correlation allows you to specify a
+dynamic correlation structure.
+
+bates
+
+15-195

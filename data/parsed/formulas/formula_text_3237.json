@@ -1,0 +1,12 @@
+{
+  "page": 1740,
+  "original_text": "AbsConSet = active2abs(ActiveConSet,Index)",
+  "ocr_text": "AbsConSet=active2abs(ActiveConSet,Index)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 193.9,
+    "x1": 342.86,
+    "y1": 205.53
+  },
+  "confidence": "high"
+}

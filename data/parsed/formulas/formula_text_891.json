@@ -1,0 +1,12 @@
+{
+  "page": 489,
+  "original_text": "weights = zeros(1,numel(asset_categories));\nunique_categories = unique(asset_categories);\ncategory_weight = 1 / numel(unique_categories);",
+  "ocr_text": "weights=zeros(1,numel(asset_categories));\nunique_categories=unique(asset_categories);\ncategory_weight=1/numel(unique_categories);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 363.03,
+    "x1": 344.65,
+    "y1": 395.09
+  },
+  "confidence": "high"
+}

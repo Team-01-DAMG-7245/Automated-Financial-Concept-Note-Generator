@@ -1,0 +1,12 @@
+{
+  "page": 1564,
+  "original_text": "% Estimate the Max Sharpe Ratio.\nnew_weights = estimateMaxSharpeRatio(p);\nend",
+  "ocr_text": "SEstimatetheMaxSharpeRatio.\nnew_weights=estimateMaxSharpeRatio(p);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.23,
+    "x1": 306.72,
+    "y1": 222.29
+  },
+  "confidence": "high"
+}

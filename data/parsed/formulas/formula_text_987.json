@@ -1,0 +1,12 @@
+{
+  "page": 522,
+  "original_text": "% Define a robust strategy.\nstratRobust = backtestStrategy('Robust', @(w,TT) robustFcn(w,TT,p,kappa), ...\n    RebalanceFrequency=rebalFreq, ...\n    LookbackWindow=lookback, ...\n    TransactionCosts=transactionCost, ...\n    InitialWeights=initialRP);",
+  "ocr_text": "sDefinearobuststrategy.\nstratRobust=backtestStrategy(Robust,Q(w,TT)robustFcn(w,TT,p,kappa),...\nRebalanceFrequency=rebalFreq,...\nLookbackWindow=Lookback,...\nTransactionCosts=transactionCost,...\nInitialWeights=initialRP);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 393.43,
+    "x1": 507.22,
+    "y1": 457.89
+  },
+  "confidence": "high"
+}

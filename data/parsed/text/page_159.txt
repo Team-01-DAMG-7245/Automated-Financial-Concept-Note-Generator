@@ -1,0 +1,103 @@
+Linear Constraint Equations
+
+This example shows how to use the Portfolio object to specify the minimum and maximum
+investment in various groups.
+
+While the Portfolio object allows you to enter a fixed set of constraints related to minimum and
+maximum values for groups and individual assets, you often need to specify a larger and more
+general set of constraints when finding the optimal risky portfolio. Portfolio also addresses this need,
+by accepting an arbitrary set of constraints.
+
+Maximum and Minimum Group Exposure
+
+Group
+Minimum Exposure
+Maximum Exposure
+
+North America
+0.30
+0.75
+
+Europe
+0.10
+0.55
+
+Latin America
+0.20
+0.50
+
+Asia
+0.50
+0.50
+
+The minimum and maximum exposure in Asia is the same. This means that you require a fixed
+exposure for this group.
+
+Also assume that the portfolio consists of three different funds. The correspondence between funds
+and groups is shown in the table below.
+
+Group Membership
+
+Group
+Fund 1
+Fund 2
+Fund 3
+
+North America
+X
+X
+
+Europe
+X
+
+Latin America
+X
+
+Asia
+X
+X
+
+Using the information in these two tables, build a mathematical representation of the constraints
+represented. Assume that the vector of weights representing the exposure of each asset in a portfolio
+is called Wts = [W1 W2 W3].
+
+Specifically
+
+1.
+W1 + W2
+≥
+0.30
+
+2.
+W1 + W2
+≤
+0.75
+
+3.
+W3
+≥
+0.10
+
+4.
+W3
+≤
+0.55
+
+5.
+W1
+≥
+0.20
+
+6.
+W1
+≤
+0.50
+
+7.
+W2 + W3
+=
+0.50
+
+Constraint Specification Using a Portfolio Object
+
+3-21

@@ -1,0 +1,5 @@
+Page 1650
+================================================================================
+
+Sequence of end-of-period processes or state vector adjustments, specified as a function or cell array
+of functions of the form

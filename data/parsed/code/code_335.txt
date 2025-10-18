@@ -1,0 +1,13 @@
+Page 325
+================================================================================
+
+Another important feature of convex functions is that all tangents of the function lie underneath the
+function. This feature is particularly useful in problems with cardinality constraints or conditional
+bounds. For more information on cardinality constraints and conditional bounds, see “Working with
+'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using Portfolio Objects” on
+page 4-81 and setMinMaxNumAssets. The Financial Toolbox internal solvers for portfolio problems
+with binary variables use an iterative method that approximates the nonlinear functions (for example,
+variance) with a collection of linear functions. The linear functions used to approximate the original
+function are the tangents of the function at different points. Because the tangents for convex
+functions always lie underneath the function, the Financial Toolbox solvers guarantee that the
+approximation does not remove any minimum from the problem.

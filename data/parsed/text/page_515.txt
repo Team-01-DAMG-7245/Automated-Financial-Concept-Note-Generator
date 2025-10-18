@@ -1,0 +1,61 @@
+Define the tracking error penalized objective function using the max Sharpe ratio portfolio as the
+benchmark.
+
+% Define the objective function.
+
+lambda =
+;
+penalizedObjFun = @(x) x'*x + ...
+    lambda*(x-bmkPort)'*p.AssetCovar*(x-bmkPort);
+
+Use estimateCustomObjectivePortfolio to solve problem.
+
+% Solve the penalized problem.
+wEWPwithTE = estimateCustomObjectivePortfolio(p,penalizedObjFun)
+
+wEWPwithTE = 4×1
+
+0.7856
+         0
+         0
+    0.2144
+
+Check the size of the tracking error. If the tracking error is too big, make λ larger.
+
+% Check size of tracking error.
+sqrt(TESquared2(wEWPwithTE))
+
+ans = 
+0.0388
+
+Compare the different portfolio allocations.
+
+% Compare the weights of the different portfolios.
+pwgt = table(wEWPwithTE,wMinTE1,bmkPort, ...
+    VariableNames={'EWPwithTE','MinTE','Benchmark'})
+
+pwgt=4×3 table
+    EWPwithTE     MinTE     Benchmark
+    _________    _______    _________
+
+0.78558     0.83165     0.64102 
+           0           0     0.15599 
+           0           0    0.067687 
+     0.21442     0.16835     0.13531
+
+When you compare the weights of the portfolio that minimizes the HH index with the tracking error
+penalty against the weights of the portfolio that minimizes the tracking error, you can see:
+
+•
+As λ →0, the weights of the penalized problem become exactly 0.5 in two assets. This happens
+because a portfolio with 0.5 weights in two assets is the one that is closest to the EW portfolio and
+satisfies the constraints.
+
+•
+As λ →∞, the weights of the penalized problem come closer to the weights of the minimum
+tracking error problem. This result happens because the penalized term in the objective
+overcomes the HH index.
+
+Solve Tracking Error Portfolio Problems
+
+4-347

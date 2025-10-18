@@ -1,0 +1,72 @@
+idxBT = test(tspFull);      % Backtesting indices
+XTV = XCell(idxTV);
+yTV = y(idxTV);
+XBT = XCell(idxBT);
+yBT = y(idxBT);
+tBT = t(idxBT);
+mpBT = midprices(idxBT);
+nBT = sum(idxBT);
+
+pV = 0.15;
+nTV = sum(idxTV);
+tspTV = tspartition(nTV,Holdout=pV);
+idxT = training(tspTV);     % Training indices
+idxV = test(tspTV);         % Validation indices
+XT = XCell(idxT);
+yT = y(idxT);
+XV = XCell(idxV);
+yV = y(idxV);
+
+Configure LSTM Neural Networks
+
+Consider training the following two LSTM neural networks:
+
+•
+A deep learning model that ignores the severely imbalanced class distribution of the response
+data.
+
+•
+A deep learning model that, despite the risk, addresses imbalanced class distribution by applying
+a weighting scheme.
+
+For both deep learning models, this example uses the following LSTM architecture in this order. For
+more details, see “Long Short-Term Memory Neural Networks” (Deep Learning Toolbox).
+
+•
+sequenceInputLayer — Sequence input layer for the two feature variables with b = MinLength
+= 100.
+
+•
+batchNormalizationLayer — Batch normalization layer, which normalizes a mini-batch of data
+across all observations to speed up training and reduce the sensitivity to network initialization.
+
+•
+lstmLayer — Long short-term memory layer with 64 hidden units and configured to return only
+the last step sequence. The number of hidden layers is a hyperparameter.
+
+•
+fullyConnectedLayer — Fully connected layer, which combines W and inputs, and reduces the
+number of neurons to 10.
+
+•
+leakyReluLayer — Leaky ReLU layer, which reduces negative outputs of the fully connected
+layer to 10% of their value.
+
+•
+fullyConnectedLayer — Fully connected layer, which combines W and inputs, and reduces the
+number of neurons to 3.
+
+•
+softmaxLayer — Softmax layer, which outputs a length 3 vector of class probabilities by
+applying the softmax function to the outputs of the previous fully connected layer.
+
+The risky model applies the following class weighting scheme to increase the penalty on the loss for
+predicting into the gain and loss classes:
+
+uj = nT
+3cj,
+
+2
+Performing Common Financial Tasks
+
+2-84

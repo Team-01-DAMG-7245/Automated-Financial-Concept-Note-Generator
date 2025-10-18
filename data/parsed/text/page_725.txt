@@ -1,0 +1,59 @@
+Display: 'off'
+                CutGeneration: 'basic'
+     MaxIterationsInactiveCut: 30
+           ActiveCutTolerance: 1.0000e-07
+                  ShrinkRatio: 0.7500
+    TrustRegionStartIteration: 2
+                   DeltaLimit: 1
+
+interior-point
+off
+
+Using 'fmincon' SolverType
+
+Unlike Optimization Toolbox which uses the interior-point algorithm as the default algorithm for
+fmincon, the portfolio optimization for a PortfolioCVaR object uses the sqp algorithm. For details
+about fmincon and constrained nonlinear optimization algorithms and options, see “Constrained
+Nonlinear Optimization Algorithms”.
+
+To modify fmincon options for CVaR portfolio optimizations, use setSolver to set the hidden
+properties solverType and solverOptions to specify and control the solver. (Note that you can
+see the default options by creating a dummy PortfolioCVaR object, using p = PortfolioCVaR
+and then type p.solverOptions.) Since these solver properties are hidden, you cannot set them
+using the PortfolioCVaR object. The default for the fmincon solver is to use the sqp algorithm
+objective function, gradients turned on, and no displayed output, so you do not need to use
+setSolver to specify the sqp algorithm.
+
+p = PortfolioCVaR;
+p = setSolver(p, 'fmincon');
+display(p.solverOptions)
+
+fmincon options:
+
+Options used by current Algorithm ('sqp'):
+   (Other available algorithms: 'active-set', 'interior-point', 'sqp-legacy', 'trust-region-refle
+
+Set properties:
+                    Algorithm: 'sqp'
+          ConstraintTolerance: 1.0000e-08
+                      Display: 'off'
+          OptimalityTolerance: 1.0000e-08
+    SpecifyConstraintGradient: 1
+     SpecifyObjectiveGradient: 1
+                StepTolerance: 1.0000e-08
+
+Default properties:
+     FiniteDifferenceStepSize: 'sqrt(eps)'
+         FiniteDifferenceType: 'forward'
+       MaxFunctionEvaluations: '100*numberOfVariables'
+                MaxIterations: 400
+               ObjectiveLimit: -1.0000e+20
+                    OutputFcn: []
+                      PlotFcn: []
+                 ScaleProblem: 0
+                     TypicalX: 'ones(numberOfVariables,1)'
+                  UseParallel: 0
+
+Choosing and Controlling the Solver for PortfolioCVaR Optimizations
+
+5-99

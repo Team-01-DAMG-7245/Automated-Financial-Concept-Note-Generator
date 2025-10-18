@@ -1,0 +1,12 @@
+{
+  "page": 131,
+  "original_text": "predYLSTM = scores2label(predScoresLSTM,classes);\naccV = 100*mean(predYLSTM == yV)",
+  "ocr_text": "predYLSTM=scores2label(predScoresLSTM,classes);\naccV=100*mean(predYLSTM==yV)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 613.54,
+    "x1": 355.48,
+    "y1": 634.81
+  },
+  "confidence": "high"
+}

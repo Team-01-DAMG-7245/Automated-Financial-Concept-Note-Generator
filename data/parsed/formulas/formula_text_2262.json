@@ -1,0 +1,12 @@
+{
+  "page": 1162,
+  "original_text": "model     = arima('AR', NaN, 'Distribution', 't', 'Variance', gjr(1,1));\nnIndices  = size(Data,2);        % Number of indices\nresiduals = NaN(T, nIndices);    % Preallocate storage\nvariances = NaN(T, nIndices);\nfit       = cell(nIndices,1);",
+  "ocr_text": "model =arima(AR,NaN,Distribution,t,Variance,gjr(1,1));\nnIndices=size(Data,2); SNumberofindices\nresiduals=NaN(T,nIndices); Preallocatestorage\nvariances=NaN(T,nIndices);\n\nfit =cell(nIndices,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 196.03,
+    "x1": 480.12,
+    "y1": 249.69
+  },
+  "confidence": "high"
+}

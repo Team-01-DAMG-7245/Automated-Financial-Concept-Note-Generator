@@ -1,0 +1,12 @@
+Page 546
+================================================================================
+
+% Store the optimum strategy and value function.
+    if t<T
+        portPath(t+1) = portIdx(WNodeIdx,t+1);
+    else
+        portPath(t+1) = nan;
+    end
+    VPath(t+1) = V(WNodeIdx,t+1);
+end
+end

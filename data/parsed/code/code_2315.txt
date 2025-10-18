@@ -1,0 +1,9 @@
+Page 2186
+================================================================================
+
+[Param, Covar] = ecmmvnrmle(TestData, TestDesign);
+    
+    % Estimate the sample standard errors for model parameters for each asset.
+    StdParam = ecmmvnrstd(TestData, TestDesign, Covar,'hessian')
+    
+end

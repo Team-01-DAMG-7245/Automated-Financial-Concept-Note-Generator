@@ -1,0 +1,12 @@
+{
+  "page": 554,
+  "original_text": "% Retrieve simulation information\ncumulativeReward = 0;\nwealthSimulation = zeros(finalTimePeriod+1,numSimulations);\nfor i = 1:numSimulations",
+  "ocr_text": "Retrievesimulationinformation\n\ncumulativeReward=0;\nwealthSimulation=zeros(finalTimePeriod+1,numSimulations);\nfori=1:numSimulations",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 409.66,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

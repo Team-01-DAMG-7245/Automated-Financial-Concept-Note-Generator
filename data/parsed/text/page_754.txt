@@ -1,0 +1,27 @@
+% Put option cover
+subplot(2,1,2);
+histogram(AssetScenarios(:,2),'Normalization','probability')
+title('Put Option at 95% Distribution')
+xlabel('Return')
+ylabel('Relative Probability')
+
+CVaR Efficient Frontier
+
+Create a PortfolioCVaR object using the AssetScenarios from the simulation.
+
+p = PortfolioCVaR('Name','CVaR Portfolio Five Hedging Levels',...
+   'AssetList',{'Stock','Hedge50','Hedge75','Hedge90','Hedge95'},...
+   'Scenarios', AssetScenarios, 'LowerBound', 0, ...
+   'Budget', 1, 'ProbabilityLevel', 0.95);
+
+% Estimate the efficient frontier to obtain portfolio weights
+pwgt = estimateFrontier(p);
+
+% Plot the efficient frontier
+figure;
+plotFrontier(p, pwgt);
+
+5
+CVaR Portfolio Optimization Tools
+
+5-128

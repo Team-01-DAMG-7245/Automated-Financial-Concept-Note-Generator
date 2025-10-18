@@ -1,0 +1,12 @@
+{
+  "page": 423,
+  "original_text": "macdSignal = timetable;\nfor i = 1:numel(symbols)\n    symi = symbols(i);\n    % Build a timetable for each symbol, then aggregate the symbols together.\n    macdSignali = timetable(pricesTT.Dates,...\n        double(macdTT.(symi) > 0),...\n        'VariableNames',{sprintf('%s%s',symi,macdSignalNameEnding)});\n    macdSignal = synchronize(macdSignal,macdSignali);\nend",
+  "ocr_text": "macdSignal=timetable;\nfori=1:numel(symbols)\nsymi=symbols(i);\nBuildatimetableforeachsymbol,thenaggregatethesymbolstogether.\nmacdSignali=timetable(pricesTT.Dates,...\ndouble(macdTT.(symi)0),...\nVariableNames,{sprintf(ssss,symi,macdSignalNameEnding)});\nmacdSignal=synchronize(macdSignal,macdSignali);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 502.69,
+    "x1": 507.19,
+    "y1": 599.56
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,98 @@
+performance between the portfolio and benchmark is measured by a ratio based on the portfolio and
+benchmark returns.
+
+The optimized linking algorithm by Menchero [3] extends the single-period arithmetic performance
+attribution to multiple periods by introducing the optimized linking coefficient βt for each period
+before adding the single-period attributions. This step overcomes the fact that each single-period
+attribution does not simply add over multiple periods, because the optimized linking coefficient βt
+reconciles the difference that arises between simple arithmetic addition and geometric compounding.
+As a result, the single-period Brinson model can be extended to multiple periods by using the
+following optimized linking algorithm:
+
+rυ = rp −rB = ∑
+t = 1
+
+T
+βt(rP, t −rB, t) = ∑
+j = 1
+
+N
+
+∑
+t = 1
+
+T
+βtSj, t + ∑
+t = 1
+
+T
+βtUj, t + ∑
+t = 1
+
+T
+βtIj, t = ∑
+j = 1
+
+N
+(Sj + Uj + Ij)
+
+βt = A + C(rp, t −rB, t)
+
+A =
+
+(rp −rB)
+T
+
+(1 + rp)
+
+1
+T −(1 + rB)
+
+1
+T
+
+C =
+
+rp −rB −A∑t = 1
+T
+(rP, t −rB, t)
+∑t = 1
+T
+(rP, t −rB, t)2
+
+where
+
+rp — Portfolio return over multiple periods
+
+rB — Benchmark return over multiple periods
+
+rυ — Value-added return over multiple periods
+
+rP,t — Portfolio return for period t
+
+rB,t — Benchmark return for period t
+
+βt — Optimized linking coefficient for period t
+
+T — Number of periods
+
+N — Number of sectors
+
+Sj,t — Sector allocation effect for sector j and period t
+
+Uj,t — Allocation and selection interaction effect for sector j and period t
+
+Ij,t — Issue selection effect for sector j and period t
+
+Sj,t — Sector allocation effect for sector j over multiple periods
+
+Uj,t — Allocation and sector interaction effect for sector j over multiple periods
+
+Ij,t — Issue sector effect for sector j over multiple periods
+
+In Menchero's optimized linking algorithm shown above, the optimized linking coefficient βt is
+computed for each period using rP, rB, rP,t, rB,t, and T. This algorithm allows extending the Brinson
+
+brinsonAttribution
+
+15-9

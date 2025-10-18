@@ -1,0 +1,5 @@
+Page 56
+================================================================================
+
+A companion function nomrr computes the nominal rate of return given the effective annual rate and
+the number of compounding periods.

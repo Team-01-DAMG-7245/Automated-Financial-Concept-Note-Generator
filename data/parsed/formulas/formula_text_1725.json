@@ -1,0 +1,12 @@
+{
+  "page": 871,
+  "original_text": "% Select 'ExtendedCP' as solver using 'midway' cuts as 'CutGeneration'\np_ECP = setSolverMINLP(p,'ExtendedCP',CutGeneration=\"midway\");\npwgt_ECP = estimateFrontier(p_ECP);\nrskECP = estimatePortRisk(p,pwgt_ECP);\nretECP = estimatePortReturn(p,pwgt_ECP);",
+  "ocr_text": "SelectExtendedCPassolverusingmidwaycutsas_CutGeneration\np_ECP=setSolverMINLP(p,ExtendedCP,CutGeneration=midway);\npwgt_ECP=estimateFrontier(p_ECP);\nrskECP=estimatePortRisk(p,pwgt_ECP);\nretECP=estimatePortReturn(p,pwgt_ECP);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 213.57,
+    "x1": 469.26,
+    "y1": 267.23
+  },
+  "confidence": "high"
+}

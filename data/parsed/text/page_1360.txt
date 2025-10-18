@@ -1,0 +1,57 @@
+p = Portfolio(AssetMean=mu,AssetCovar=Sigma);
+% Specify long-only fully invested contraints.
+p = setDefaultConstraints(p);
+
+% Compute the minimum variance portfolio.
+new_weights = estimateFrontierLimits(p,'min');
+end
+
+Input Arguments
+
+AssetReturns — Asset returns
+matrix | table | timetable
+
+Asset returns, specified as a NumObservations-by-NumAssets matrix, table, or timetable.
+
+Note All rows (observations) with one or more NaN values are removed before computing the
+covariance estimate.
+
+Data Types: double | table | timetable
+
+Sigma — Initial covariance matrix estimate
+matrix
+
+Covariance matrix estimate, specified as a NumAssets-by-NumAssets covariance estimate matrix.
+
+Data Types: double
+
+SampleSize — Sample size to compute initial covariance estimate
+scalar numeric
+
+Sample size to compute the initial covariance estimate Sigma, specified as a scalar numeric value.
+
+Data Types: double
+
+Output Arguments
+
+SigmaHat — Estimated covariance matrix
+matrix
+
+Estimated covariance matrix, returned as a NumAssets-by-NumAssets matrix.
+
+numSignalEig — Number of eigenvalues associated with signal
+numeric
+
+Number of eigenvalues associated with signal, returned as a scalar numeric.
+
+More About
+
+Covariance Denoising
+
+The goal of covariance denoising is to reduce the noise and enhance the signal of the empirical
+covariance matrix.
+
+15
+Functions
+
+15-54

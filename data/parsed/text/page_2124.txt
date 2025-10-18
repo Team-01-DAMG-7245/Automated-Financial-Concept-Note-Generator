@@ -1,0 +1,56 @@
+days360e
+
+Days between dates based on 360-day year (European)
+
+Syntax
+
+NumDays = days360e(StartDate,EndDate)
+
+Description
+
+NumDays = days360e(StartDate,EndDate) returns the number of days between StartDate
+and EndDate based on a 360-day year (that is, all months contain 30 days). If EndDate is earlier than
+StartDate, NumDays is negative. This day count convention is used primarily in Europe. Under this
+convention, all months contain 30 days.
+
+Either input argument can contain multiple values, but if so, the other must contain the same number
+of values or a single value that applies to all. For example, if StartDate is an n-row datetime, then
+EndDate must be an N-by-1 vector of integers or a single integer. NumDays is then an N-by-1 vector of
+date numbers.
+
+Examples
+
+Determine the Number of Days Between Two Dates Given a Basis of 30/360 Based on
+European Convention
+
+Determine the NumDays using date character vectors for StartDate and EndDate for the month of
+January.
+
+StartDate = '1-Jan-2002';
+EndDate = '1-Feb-2002';
+NumDays = days360e(StartDate, EndDate)
+
+NumDays = 
+30
+
+Determine the NumDays in the month of January using datetimes for StartDate and EndDate.
+
+NumDays = days360e(datetime(2002,1,1), datetime(2002,2,1))
+
+NumDays = 
+30
+
+Determine the NumDays using a datatime arrayr for EndDate.
+
+MoreDays = [datetime(2000,3,15) ; datetime(2000,4,15) ; datetime(2000,6,15)];
+NumDays = days360e(datetime(2000,1,15), MoreDays)
+
+NumDays = 3×1
+
+60
+    90
+
+15
+Functions
+
+15-818

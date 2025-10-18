@@ -1,0 +1,12 @@
+{
+  "page": 620,
+  "original_text": "wEW = w1, w2, ⋯, wN , wi = 1\nN",
+  "ocr_text": "1\nWew=(W1,W2,)Wy),Wi=77",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 114.96,
+    "x1": 251.09,
+    "y1": 138.26
+  },
+  "confidence": "high"
+}

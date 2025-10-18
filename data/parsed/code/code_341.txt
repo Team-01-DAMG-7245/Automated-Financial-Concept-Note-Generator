@@ -1,0 +1,7 @@
+Page 329
+================================================================================
+
+To provide a basis for comparison, set up an equal-weight portfolio and make it the initial portfolio in
+the Portfolio object. Keep in mind that the hedged portfolios to be constructed later will require a
+different initial portfolio. Once the initial portfolio is created, the estimatePortMoments function
+estimates the mean and standard deviation of equal-weight portfolio returns.

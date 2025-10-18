@@ -1,0 +1,16 @@
+Page 1681
+================================================================================
+
+AssetPrice = 80;
+Return = 0.03;
+JumpMean = 0.02;
+JumpVol = 0.08;
+JumpFreq = 0.1;
+            
+V0 = 0.04;
+Level = 0.05;
+Speed = 1.0;
+Volatility = 0.2;
+Rho = -0.7;
+StartState = [AssetPrice;V0]; 
+Correlation = [1 Rho;Rho 1];

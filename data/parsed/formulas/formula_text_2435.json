@@ -1,0 +1,12 @@
+{
+  "page": 1251,
+  "original_text": "X = squeeze(X);",
+  "ocr_text": "X=squeeze(X);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 155.65,
+    "x1": 171.27,
+    "y1": 166.12
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1290,
+  "original_text": "lowerDim = 3;\nY = cmdscale( irregularCorrDistances, lowerDim );",
+  "ocr_text": "lowerDim=3;\nY=cmdscale(irregularCorrDistances,lowerDim);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 545.05,
+    "x1": 355.48,
+    "y1": 566.32
+  },
+  "confidence": "high"
+}

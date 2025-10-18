@@ -1,0 +1,68 @@
+0.0013
+    0.0024
+
+0.4000
+    0.2000
+    0.2000
+    0.1000
+    0.1000
+
+Setting Transaction Costs with Scalar Expansion
+
+Both the PortfolioMAD object and setCosts function implement scalar expansion on the
+arguments for transaction costs and the initial portfolio. If the NumAssets property is already set in
+the PortfolioMAD object, scalar arguments for these properties are expanded to have the same
+value across all dimensions. In addition, setCosts lets you specify NumAssets as an optional final
+argument. For example, assume that you have an initial portfolio x0 and you want to set common
+transaction costs on all assets in your universe. You can set these costs in any of these equivalent
+ways:
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = PortfolioMAD('InitPort', x0, 'BuyCost', 0.002, 'SellCost', 0.002);
+
+or
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = PortfolioMAD('InitPort', x0);
+p = setCosts(p, 0.002, 0.002);
+
+or
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = PortfolioMAD;
+p = setCosts(p, 0.002, 0.002, x0);
+
+To clear costs from your PortfolioMAD object, use either the PortfolioMAD object or setCosts
+with empty inputs for the properties to be cleared. For example, you can clear sales costs from the
+PortfolioMAD object p in the previous example:
+
+p = PortfolioMAD(p, 'SellCost', []);
+
+See Also
+PortfolioMAD | setCosts | setScenarios | simulateNormalScenariosByMoments |
+simulateNormalScenariosByData
+
+Related Examples
+
+•
+“Working with a Riskless Asset” on page 6-45
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Validate the MAD Portfolio Problem” on page 6-80
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+6
+MAD Portfolio Optimization Tools
+
+6-48

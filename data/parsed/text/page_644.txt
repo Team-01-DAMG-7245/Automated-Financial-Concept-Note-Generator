@@ -1,0 +1,60 @@
+Setting and Getting Properties
+
+You can set properties of a PortfolioCVaR object using either the PortfolioCVaR object or
+various set functions.
+
+Note Although you can also set properties directly, it is not recommended since error-checking is not
+performed when you set a property directly.
+
+The PortfolioCVaR object supports setting properties with name-value pair arguments such that
+each argument name is a property and each value is the value to assign to that property. For example,
+to set the LowerBound, Budget, and ProbabilityLevel properties in an existing PortfolioCVaR
+object p, use the syntax:
+
+p = PortfolioCVaR(p,'LowerBound', 0, 'Budget', 1, 'ProbabilityLevel', 0.95);
+
+In addition to the PortfolioCVaR object, which lets you set individual properties one at a time,
+groups of properties are set in a PortfolioCVaR object with various “set” and “add” functions. For
+example, to set up an average turnover constraint, use the setTurnover function to specify the
+bound on portfolio turnover and the initial portfolio. To get individual properties from a
+PortfolioCVaR object, obtain properties directly or use an assortment of “get” functions that obtain
+groups of properties from a PortfolioCVaR object. The PortfolioCVaR object and set functions
+have several useful features:
+
+•
+The PortfolioCVaR object and set functions try to determine the dimensions of your problem
+with either explicit or implicit inputs.
+
+•
+The PortfolioCVaR object and set functions try to resolve ambiguities with default choices.
+
+•
+The PortfolioCVaR object and set functions perform scalar expansion on arrays when possible.
+
+•
+The CVaR functions try to diagnose and warn about problems.
+
+Displaying PortfolioCVaR Objects
+
+The PortfolioCVaR object uses the default display functions provided by MATLAB, where display
+and disp display a PortfolioCVaR object and its properties with or without the object variable
+name.
+
+Saving and Loading PortfolioCVaR Objects
+
+Save and load PortfolioCVaR objects using the MATLAB save and load commands.
+
+Estimating Efficient Portfolios and Frontiers
+
+Estimating efficient portfolios and efficient frontiers is the primary purpose of the CVaR portfolio
+optimization tools. An efficient portfolio are the portfolios that satisfy the criteria of minimum risk for
+a given level of return and maximum return for a given level of risk. A collection of “estimate” and
+“plot” functions provide ways to explore the efficient frontier. The “estimate” functions obtain either
+efficient portfolios or risk and return proxies to form efficient frontiers. At the portfolio level, a
+collection of functions estimates efficient portfolios on the efficient frontier with functions to obtain
+efficient portfolios:
+
+5
+CVaR Portfolio Optimization Tools
+
+5-18

@@ -1,0 +1,12 @@
+{
+  "page": 1607,
+  "original_text": "totalCost = sum(backtester.BuyCost{:,:}) + sum(backtester.SellCost{:,:});\nbar(totalCost);\ntitle('Total Transaction Costs');\nylabel('$')\nset(gca,'xticklabel',[strategies.Name])",
+  "ocr_text": "totalCost=sum(backtester.BuyCost{:,:})+sum(backtester.SellCost{:,:});\nbar(totalCost);\n\ntitle(TotalTransactionCosts);\n\nylabel()\n\nset(gca,xticklabel,[strategies.Name])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 485.51,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

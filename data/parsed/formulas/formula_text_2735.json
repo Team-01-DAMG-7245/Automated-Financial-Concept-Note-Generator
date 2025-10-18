@@ -1,0 +1,12 @@
+{
+  "page": 1378,
+  "original_text": "CEV = cev(Return,Alpha,Sigma)\nCEV = cev( ___ ,Name,Value)",
+  "ocr_text": "CEV=cev(Return,Alpha,Sigma)\nCEV=cev(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 513.68,
+    "x1": 264.6,
+    "y1": 537.31
+  },
+  "confidence": "high"
+}

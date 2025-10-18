@@ -1,0 +1,6 @@
+Page 1248
+================================================================================
+
+Graphically compare the magnitude of the unadjusted path (with negative and complex numbers) to
+the corresponding path kept positive by using an end-of-period processing function over the time
+span of interest.

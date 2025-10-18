@@ -1,0 +1,37 @@
+ExpReturn = [ 0.0054; 0.0531; 0.0779; 0.0934; 0.0130 ];
+
+ExpCovariance = [ 0.0569,  0.0092,  0.0039,  0.0070,  0.0022;
+    0.0092,  0.0380,  0.0035,  0.0197,  0.0028;
+    0.0039,  0.0035,  0.0997,  0.0100,  0.0070;
+    0.0070,  0.0197,  0.0100,  0.0461,  0.0050;
+    0.0022,  0.0028,  0.0070,  0.0050,  0.0573 ];
+
+NumPorts = 10;
+
+p = Portfolio;
+p = setAssetMoments(p, ExpReturn, ExpCovariance);
+p = setDefaultConstraints(p);
+
+plotFrontier(p, NumPorts);
+
+Without output arguments, portopt plots the efficient frontier. The Portfolio object has similar
+behavior although the Portfolio object writes to the current figure window rather than create a new
+window each time a plot is generated.
+
+Migrate portopt with Output Arguments
+
+This example shows how to migrate portopt with output arguments to a Portfolio object.
+
+With output arguments, the basic functionality of portopt returns portfolio moments and weights.
+Once the Portfolio object is set up, moments and weights are obtained in separate steps.
+
+ExpReturn = [ 0.0054; 0.0531; 0.0779; 0.0934; 0.0130 ];
+
+ExpCovariance = [ 0.0569,  0.0092,  0.0039,  0.0070,  0.0022;
+    0.0092,  0.0380,  0.0035,  0.0197,  0.0028;
+    0.0039,  0.0035,  0.0997,  0.0100,  0.0070;
+
+3
+Portfolio Analysis
+
+3-12

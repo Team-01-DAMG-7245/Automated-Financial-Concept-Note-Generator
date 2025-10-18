@@ -1,0 +1,6 @@
+Page 433
+================================================================================
+
+Find the minimum and maximum percentage of WoB that a portfolio can attain given these extra
+group constraints. This is done using the estimateCustomObjectivePortfolio function with the
+average percentage of women on a company's board as the objective function.

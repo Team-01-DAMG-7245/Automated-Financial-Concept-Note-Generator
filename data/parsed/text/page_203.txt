@@ -1,0 +1,73 @@
+Truncating and Padding Asset Lists
+
+If the NumAssets property is already set and you pass in too many or too few identifiers, the
+Portfolio object, and the setAssetList function truncate or pad the list with numbered default
+asset names that use the name specified in the hidden public property defaultforAssetList. If
+the list is truncated or padded, a warning message indicates the discrepancy. For example, assume
+that you have a Portfolio object with five ETFs and you only know the first three CUSIPs
+'921937835', '922908769', and '922042775'. Use this syntax to create an asset list that pads
+the remaining asset identifiers with numbered 'UnknownCUSIP' placeholders:
+
+p = Portfolio('numassets',5);
+p.defaultforAssetList = 'UnknownCUSIP';
+p = setAssetList(p,'921937835', '922908769', '922042775');
+disp(p.AssetList)
+
+Warning: Input list of assets has 2 too few identifiers. Padding with numbered assets. 
+> In Portfolio.setAssetList at 121 
+    '921937835'    '922908769'    '922042775'    'UnknownCUSIP4'    'UnknownCUSIP5'
+
+Alternatively, suppose that you have too many identifiers and need only the first four assets. This
+example illustrates truncation of the asset list using the Portfolio object:
+
+p = Portfolio('numassets',4);
+p = Portfolio(p, 'assetlist', { 'AGG', 'EEM', 'MDY', 'SPY', 'VEU' });
+disp(p.AssetList)
+
+Warning: AssetList has 1 too many identifiers. Using first 4 assets. 
+> In Portfolio.checkarguments at 434
+  In Portfolio.Portfolio>Portfolio.Portfolio at 171 
+    'AGG'    'EEM'    'MDY'    'SPY'
+
+The hidden public property uppercaseAssetList is a Boolean flag to specify whether to convert
+asset names to uppercase letters. The default value for uppercaseAssetList is false. This
+example shows how to use the uppercaseAssetList flag to force identifiers to be uppercase
+letters:
+
+p = Portfolio;
+p.uppercaseAssetList = true;
+p = setAssetList(p,{ 'aa', 'ba', 'cat', 'dd', 'etr' });
+disp(p.AssetList)
+
+'AA'    'BA'    'CAT'    'DD'    'ETR'
+
+See Also
+Portfolio | setAssetList | setInitPort | setTrackingPort | estimateBounds |
+checkFeasibility
+
+Related Examples
+
+•
+“Setting Up an Initial or Current Portfolio” on page 4-37
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Asset Returns and Moments of Asset Returns Using Portfolio Object” on page 4-42
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+Common Operations on the Portfolio Object
+
+4-35

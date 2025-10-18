@@ -1,0 +1,52 @@
+blsprice
+
+Black-Scholes put and call option pricing
+
+Syntax
+
+[Call,Put] = blsprice(Price,Strike,Rate,Time,Volatility)
+[Call,Put] = blsprice( ___ ,Yield)
+
+Description
+
+[Call,Put] = blsprice(Price,Strike,Rate,Time,Volatility) computes European put
+and call option prices using a Black-Scholes model.
+
+Note Any input argument can be a scalar, vector, or matrix. If a scalar, then that value is used to
+price all options. If more than one input is a vector or matrix, then the dimensions of those non-scalar
+inputs must be the same.
+
+Ensure that Rate, Time, Volatility, and Yield are expressed in consistent units of time.
+
+In addition, you can use the Financial Instruments Toolbox object framework with the BlackScholes
+pricer object to obtain price values for a Vanilla, Barrier, Touch, DoubleTouch, or Binary
+instrument using a BlackScholes model.
+
+[Call,Put] = blsprice( ___ ,Yield) adds an optional an argument for Yield.
+
+Examples
+
+Compute European Put and Call Option Prices Using a Black-Scholes Model
+
+This example shows how to price European stock options that expire in three months with an exercise
+price of $95. Assume that the underlying stock pays no dividend, trades at $100, and has a volatility
+of 50% per annum. The risk-free rate is 10% per annum.
+
+[Call, Put] = blsprice(100, 95, 0.1, 0.25, 0.5)
+
+Call = 
+13.6953
+
+Put = 
+6.3497
+
+Compute European Put and Call Option Prices on a Stock Index Using a Black-Scholes Model
+
+The S&P 100 index is at 910 and has a volatility of 25% per annum. The risk-free rate of interest is
+2% per annum and the index provides a dividend yield of 2.5% per annum. Calculate the value of a
+three-month European call and put with a strike price of 980.
+
+15
+Functions
+
+15-498

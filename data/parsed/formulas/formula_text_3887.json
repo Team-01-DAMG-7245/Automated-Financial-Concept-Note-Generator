@@ -1,0 +1,12 @@
+{
+  "page": 2219,
+  "original_text": "MaxDD = maxdrawdown(TestData(:,1),'geometric')",
+  "ocr_text": "MaxDD=maxdrawdown(TestData(:,1),geometric)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 583.13,
+    "x1": 339.25,
+    "y1": 593.6
+  },
+  "confidence": "high"
+}

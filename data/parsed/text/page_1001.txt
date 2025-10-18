@@ -1,0 +1,62 @@
+Step 5. Score the data.
+
+The score function computes the scores for the training data. An optional data input can also be
+passed to score, for example, validation data. The points per predictor for each customer are
+provided as an optional output.
+
+[Scores,Points] = score(sc);
+disp(Scores(1:10))
+
+528.2044
+  554.8861
+  505.2406
+  564.0717
+  554.8861
+  586.1904
+  441.8755
+  515.8125
+  524.4553
+  508.3169
+
+disp(Points(1:10,:))
+
+CustAge    ResStatus    EmpStatus    CustIncome    TmWBank    OtherCC    AMBalance
+    _______    _________    _________    __________    _______    _______    _________
+
+80.796      62.028       58.777         95.69      92.829     75.732      62.353  
+    99.166      73.445       86.976         95.69      61.524     75.732      62.353  
+    80.796      62.028       86.976        69.896      92.829     50.364      62.353  
+    80.796      73.445       86.976         95.69      61.524     75.732      89.908  
+    99.166      73.445       86.976         95.69      61.524     75.732      62.353  
+    99.166      73.445       86.976         95.69      92.829     75.732      62.353  
+    53.239      73.445       58.777        56.805      61.524     75.732      62.353  
+    80.796      91.446       86.976         95.69      61.524     50.364      49.016  
+    80.796      62.028       58.777         95.69      61.524     75.732      89.908  
+    80.796      73.445       58.777         95.69      61.524     75.732      62.353
+
+Step 6. Calculate the probability of default.
+
+To calculate the probability of default, use the probdefault function.
+
+pd = probdefault(sc);
+
+Define the probability of being “Good” and plot the predicted odds versus the formatted scores.
+Visually analyze that the target points and target odds match and that the points-to-double-the-odds
+(PDO) relationship holds.
+
+ProbGood = 1-pd;
+PredictedOdds = ProbGood./pd;
+
+figure
+scatter(Scores,PredictedOdds)
+title('Predicted Odds vs. Score')
+xlabel('Score')
+ylabel('Predicted Odds')
+
+hold on
+
+xLimits = xlim;
+
+Case Study for Credit Scorecard Analysis
+
+8-83

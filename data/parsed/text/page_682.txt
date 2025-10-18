@@ -1,0 +1,72 @@
+0.2500
+
+0.7500
+  0.5000
+
+Setting 'Simple' Bounds Using the PortfolioCVaR Function or
+setBounds Function
+
+Both the PortfolioCVaR object and setBounds function implement scalar expansion on either the
+LowerBound or UpperBound properties. If the NumAssets property is already set in the
+PortfolioCVaR object, scalar arguments for either property expand to have the same value across
+all dimensions. In addition, setBounds lets you specify NumAssets as an optional argument.
+Suppose that you have a universe of 500 assets and you want to set common bound constraints on all
+assets in your universe. Specifically, you are a long-only investor and want to hold no more than 5% of
+your portfolio in any single asset. You can set these bound constraints in any of these equivalent
+ways:
+
+p = PortfolioCVaR('NumAssets', 500, 'LowerBound', 0, 'UpperBound', 0.05,'BoundType', 'Simple');
+
+or
+
+p = PortfolioCVaR('NumAssets', 500);
+p = setBounds(p, 0, 0.05,'BoundType','Simple');
+
+or
+
+p = PortfolioCVaR;
+p = setBounds(p, 0, 0.05,'NumAssets', 500,'BoundType','Simple');
+
+To clear bound constraints from your PortfolioCVaR object, use either the PortfolioCVaR object
+or setBounds with empty inputs for the properties to be cleared. For example, to clear the upper-
+bound constraint from the PortfolioCVaR object p in the previous example:
+
+p = PortfolioCVaR(p, 'UpperBound', []);
+
+See Also
+PortfolioCVaR | setDefaultConstraints | setBounds | setBudget |
+setConditionalBudget | setGroups | setGroupRatio | setEquality | setInequality |
+setTurnover | setOneWayTurnover
+
+Related Examples
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Troubleshooting for Setting 'Conditional' BoundType, MinNumAssets, and MaxNumAssets
+Constraints” on page 4-148
+
+•
+“Validate the CVaR Portfolio Problem” on page 5-81
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using
+PortfolioCVaR Objects” on page 5-72
+
+5
+CVaR Portfolio Optimization Tools
+
+5-56

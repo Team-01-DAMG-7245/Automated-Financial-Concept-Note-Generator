@@ -1,0 +1,12 @@
+{
+  "page": 530,
+  "original_text": "% Add long-only, fully-invested constraints\np = setDefaultConstraints(p);",
+  "ocr_text": "Addlong-only,fully-investedconstraints\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 540.23,
+    "x1": 322.98,
+    "y1": 561.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,34 @@
+plot(TMW_CLOSE(1:100))
+hold on
+plot(malong_term(1:100))
+plot(mashort_term(1:100))
+hold off
+legend('Actual','Long-term','Short-term')
+
+Input Arguments
+
+Data — Data for a financial series
+matrix | table | timetable
+
+Data for a financial series, specified as a column-oriented matrix, table, or timetable. Timetables and
+tables must contain variables with only a numeric type.
+
+Data Types: double | table | timetable
+
+type — Type of moving average to compute
+character vector with value of 'simple', 'square-root', 'linear', 'square', 'exponential',
+'triangular', 'modified', or 'custom' | string with value of "simple", "square-root",
+"linear", "square", "exponential", "triangular", "modified", or "custom"
+
+Type of moving average to compute, specified as a character vector or string with an associated
+value. The types of moving average are:
+
+•
+"simple" — The simple moving average (SMA) is calculated by summing up a specified number
+of data points and dividing the sum by the number of data points. The SMA gives equal
+importance to each data point within the specified period. The resulting value represents the
+average price over the specified period.
+
+movavg
+
+15-1185

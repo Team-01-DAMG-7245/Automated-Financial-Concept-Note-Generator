@@ -1,0 +1,12 @@
+{
+  "page": 484,
+  "original_text": "% Get the first month of prices to initialize the risk budgeting strategy.\ninitial_prices = pricesTT(pricesTT.Dates <= start_date,:);",
+  "ocr_text": "Getthefirstmonthofpricestoinitializetheriskbudgetingstrategy.\ninitial_prices=pricesTT(pricesTT.Dates=start_date,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 358.55,
+    "x1": 490.93,
+    "y1": 379.82
+  },
+  "confidence": "high"
+}

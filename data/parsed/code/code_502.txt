@@ -1,0 +1,5 @@
+Page 480
+================================================================================
+
+function new_weights = LongOnlyRebalanceFcn(current_weights,pricesTT,signalTT)  
+% Long only strategy, in proportion to the signal.

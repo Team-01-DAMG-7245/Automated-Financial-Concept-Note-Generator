@@ -1,0 +1,10 @@
+Page 450
+================================================================================
+
+% Plot the original mean-variance frontier.
+p.AInequality = []; p.bInequality = [];
+plotFrontier(p,nPort);
+labels(i+1) = "No ESG restriction";
+title('Efficient Frontiers')
+legend(labels,'Location','southeast')
+hold off

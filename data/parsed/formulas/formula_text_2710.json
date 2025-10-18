@@ -1,0 +1,12 @@
+{
+  "page": 1365,
+  "original_text": "% Convert the table to a timetable.\npricesTT = table2timetable(T,'RowTimes','Dates');\nnumAssets = size(pricesTT.Variables, 2);",
+  "ocr_text": "Convertthetabletoatimetable.\npricesTT=table2timetable(T,Rowlimes,Dates);\nnumAssets=size(pricesTT.Variables,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.59,
+    "x1": 355.5,
+    "y1": 600.65
+  },
+  "confidence": "high"
+}

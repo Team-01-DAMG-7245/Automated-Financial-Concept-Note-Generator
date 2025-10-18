@@ -1,0 +1,12 @@
+{
+  "page": 1298,
+  "original_text": "firstComponent = scores(:, 1);",
+  "ocr_text": "firstComponent=scores(:,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 494.31,
+    "x1": 252.54,
+    "y1": 504.78
+  },
+  "confidence": "high"
+}

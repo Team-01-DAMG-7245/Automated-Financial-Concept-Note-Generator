@@ -1,0 +1,63 @@
+f.CallPrice(strike,rate)
+
+ans = 
+13.9342
+
+f.PutPrice(strike,rate)
+
+ans = 
+6.4166
+
+Although steps 3 and 4 produce the same option prices, the latter approach works directly with the
+terminal stock prices of each sample path. Therefore, it is much more memory efficient. In this
+example, there is no compelling reason to request an output.
+
+See Also
+sde | bm | gbm | merton | bates | drift | diffusion | sdeddo | sdeld | cev | cir | heston | hwv |
+sdemrd | rvm | roughbergomi | roughheston | ts2func | simulate | simByEuler |
+simBySolution | simByQuadExp | simBySolution | interpolate
+
+Related Examples
+
+•
+“Simulating Interest Rates” on page 14-50
+
+•
+“Stratified Sampling” on page 14-58
+
+•
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo
+Simulation” on page 14-71
+
+•
+“Improving Performance of Monte Carlo Simulation with Parallel Computing” on page 14-111
+
+•
+“Base SDE Models” on page 14-16
+
+•
+“Drift and Diffusion Models” on page 14-19
+
+•
+“Linear Drift Models” on page 14-22
+
+•
+“Parametric Models” on page 14-24
+
+More About
+
+•
+“SDEs” on page 14-2
+
+•
+“SDE Models” on page 14-7
+
+•
+“SDE Class Hierarchy” on page 14-5
+
+•
+“Performance Considerations” on page 14-65
+
+Simulating Equity Prices
+
+14-49

@@ -1,0 +1,45 @@
+new_weights = new_weights / sum(new_weights);
+
+end
+
+function assetAreaPlot(backtester,strategyName)
+% Plot the asset allocation as an area plot.
+
+t = backtester.Positions.(strategyName).Time;
+positions = backtester.Positions.(strategyName).Variables;
+h = area(t,positions);
+title(sprintf('%s Positions',strrep(strategyName,'_',' ')));
+xlabel('Date');
+ylabel('Asset Positions');
+xtickformat('MM/dd');
+xlim([t(1) t(end)])
+oldylim = ylim;
+ylim([0 oldylim(2)]);
+cm = parula(numel(h));
+for i = 1:numel(h)
+    set(h(i),'FaceColor',cm(i,:));
+end
+legend(backtester.Positions.(strategyName).Properties.VariableNames)
+
+end
+
+See Also
+backtestStrategy | backtestEngine | runBacktest | summary
+
+Related Examples
+
+•
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+
+•
+“Backtest Strategies Using Deep Learning” on page 4-302
+
+•
+“Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data” on page 2-78
+
+•
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+Backtest Investment Strategies with Trading Signals
+
+4-263

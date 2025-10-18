@@ -1,0 +1,7 @@
+Page 1095
+================================================================================
+
+Since GOOG has a significant number of missing values, a direct use of the missing data function
+ecmmvnrmle takes 482 iterations to converge. This can take a long time to compute. For the sake of
+brevity, the parameter and covariance estimates after the first 480 iterations are contained in a MAT-
+file (CAPMgroupparam) and is used as initial estimates to compute stock betas.

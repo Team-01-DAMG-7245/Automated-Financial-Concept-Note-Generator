@@ -1,0 +1,43 @@
+This figure shows that the higher the wealth, the lower the number of the optimal portfolio. Since the
+number of the portfolio is directly related to the aggressiveness of the strategy, you can see that the
+wealthier the portfolio, the less risk is needed to achieve the final wealth goal. When the portfolio has
+less money, then the optimal portfolio is the one with a larger expected return, even at the cost of
+increasing the volatility. Also, note that the closer the time period is to the end of the investment
+horizon, the choice of the optimal portfolio becomes polarized, where the portfolio is either extremely
+aggressive or extremely conservative.
+
+Implement Optimal Strategy
+
+The following describes the workflow to implement the optimal strategy:
+
+1
+At t = 0, choose the optimal strategy shown in portIdx(i,j) such that i is the index associated
+with the wealth node that satisfies Wi ≤W 0 < Wi + 1 and j = t + 1. Also, let A* 0 =
+portIdx(i,j).
+
+2
+Rebalance the portfolio to match the weights in pwgt(:,A* 0 ). Then, define π* 0 =pwgt(:,
+
+A* 0 ).
+
+3
+Either using historical data for time period t = 0 or simulating one step of a Brownian motion,
+obtain W 1 , given that you started at W 0 , and chose portfolio π* 0 .
+
+4
+Repeat steps 1 through 3 for t = 1, …, T −1.
+
+% Simulate one path following the optimal strategy.
+rng('default')
+[Z,WPath,portPath,VPath] = DynamicPortSim(W0,WGrid,pret,prsk, ...
+    portIdx,V);
+
+Present a table with the results of the simulation.
+
+simulation = table((0:T)',Z,WPath,portPath,VPath,'VariableNames', ...
+    {'t','Z','Wealth','OptPort','ProbOfSuccess'})
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-374

@@ -1,0 +1,12 @@
+{
+  "page": 657,
+  "original_text": "p = PortfolioCVaR;\np.uppercaseAssetList = true;\np = setAssetList(p, { 'aa', 'ba', 'cat', 'dd', 'etr' });\ndisp(p.AssetList)",
+  "ocr_text": "p=PortfolioCVaR;\n\np.uppercaseAssetList=true;\np=setAssetList(p,{aa,ba,cat,dd,etr});\ndisp(p.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 453.96,
+    "x1": 393.43,
+    "y1": 496.83
+  },
+  "confidence": "high"
+}

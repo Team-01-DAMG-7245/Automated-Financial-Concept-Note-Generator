@@ -1,0 +1,66 @@
+Note If you specify Z as a function, it must return an NBrowns-by-1 column vector, and you must call
+it with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function
+
+StorePaths — Flag that indicates how output array Paths is stored and returned
+True (default) | logical with values True or False
+
+Flag that indicates how the output array Paths is stored and returned, specified as the comma-
+separated pair consisting of 'StorePaths' and a scalar logical flag with a value of True or False.
+
+•
+If StorePaths is True (the default value) or is unspecified, simByEuler returns Paths as a
+three-dimensional time series array.
+
+•
+If StorePaths is False (logical 0), simByEuler returns the Paths output array as an empty
+matrix.
+
+Data Types: logical
+
+MonteCarloMethod — Monte Carlo method to simulate stochastic processes
+"standard" (default) | string with values "standard", "quasi", or "randomized-quasi" |
+character vector with values 'standard', 'quasi', or 'randomized-quasi'
+
+Monte Carlo method to simulate stochastic processes, specified as the comma-separated pair
+consisting of 'MonteCarloMethod' and a string or character vector with one of the following
+values:
+
+•
+"standard" — Monte Carlo using pseudo random numbers
+
+•
+"quasi" — Quasi-Monte Carlo using low-discrepancy sequences
+
+•
+"randomized-quasi" — Randomized quasi-Monte Carlo
+
+Note If you specify an input noise process (see Z), simByEuler ignores the value of
+MonteCarloMethod.
+
+Data Types: string | char
+
+QuasiSequence — Low discrepancy sequence to drive stochastic processes
+"sobol" (default) | string with value "sobol" | character vector with value 'sobol'
+
+Low discrepancy sequence to drive the stochastic processes, specified as the comma-separated pair
+consisting of 'QuasiSequence' and a string or character vector with the following value:
+
+•
+"sobol" — Quasi-random low-discrepancy sequences that use a base of two to form successively
+finer uniform partitions of the unit interval and then reorder the coordinates in each dimension.
+
+Note If MonteCarloMethod option is not specified or specified as"standard", QuasiSequence is
+ignored.
+
+15
+Functions
+
+15-390

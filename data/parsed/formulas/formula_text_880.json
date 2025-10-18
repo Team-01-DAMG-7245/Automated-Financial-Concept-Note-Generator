@@ -1,0 +1,12 @@
+{
+  "page": 484,
+  "original_text": "% Define the Benchmark strategy.\nbenchmark = backtestStrategy('Benchmark',@equalWeightRebalanceFcn, ...\n    'RebalanceFrequency',rebalance_schedule, ...\n    'InitialWeights',computeEqualWeights(num_assets), ...\n    'UserData',struct());",
+  "ocr_text": "DefinetheBenchmarkstrategy.\n\nbenchmark=backtestStrategy(Benchmark,GequalWeightRebalanceFcn,...\nRebalanceFrequency,rebalance_schedule,...\nInitialWeights,computeEqualWeights(num_assets),...\nUserData,struct());",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 546.62,
+    "x1": 469.29,
+    "y1": 600.29
+  },
+  "confidence": "high"
+}

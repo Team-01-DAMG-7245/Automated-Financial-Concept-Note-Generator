@@ -1,0 +1,5 @@
+Page 526
+================================================================================
+
+% Define objective function
+objFun = @(w) sum(((w.*(Sigma*w))/(w'*Sigma*w) - budget).^2);

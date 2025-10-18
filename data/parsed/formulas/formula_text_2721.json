@@ -1,0 +1,12 @@
+{
+  "page": 1368,
+  "original_text": "function new_weights = shrunkStrat(~, pricesTT) \n% Function for minimum variance portfolio using covariance shrinkage.",
+  "ocr_text": "functionnew_weights=shrunkStrat(,pricesTT)\nSFunctionforminimumvarianceportfoliousingcovarianceshrinkage.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 463.84,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

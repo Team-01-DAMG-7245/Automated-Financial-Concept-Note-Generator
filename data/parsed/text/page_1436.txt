@@ -1,0 +1,59 @@
+heston
+
+Heston model
+
+Description
+
+Creates and displays a heston object, which derives from the sdeddo (SDE from drift and diffusion
+objects).
+
+Use heston objects to simulate sample paths of two state variables. Each state variable is driven by a
+single Brownian motion source of risk over NPeriods consecutive observation periods,
+approximating continuous-time stochastic volatility processes.
+
+Heston models are bivariate composite models. Each Heston model consists of two coupled univariate
+models:
+
+•
+A geometric Brownian motion (gbm) model with a stochastic volatility function.
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t
+
+This model usually corresponds to a price process whose volatility (variance rate) is governed by
+the second univariate model.
+
+•
+A Cox-Ingersoll-Ross (cir) square root diffusion model.
+
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+
+This model describes the evolution of the variance rate of the coupled GBM price process.
+
+Creation
+
+Syntax
+
+Heston = heston(Return,Speed,Level,Volatility)
+Heston = heston( ___ ,Name,Value)
+
+Description
+
+Heston = heston(Return,Speed,Level,Volatility) creates a default heston object.
+
+Specify the required input parameters as one of the following types:
+
+•
+A MATLAB array. Specifying an array indicates a static (non-time-varying) parametric
+specification. This array fully captures all implementation details, which are clearly associated
+with a parametric form.
+
+•
+A MATLAB function. Specifying a function provides indirect support for virtually any static,
+dynamic, linear, or nonlinear model. This parameter is supported via an interface, because all
+implementation details are hidden and fully encapsulated by the function.
+
+15
+Functions
+
+15-130

@@ -1,0 +1,6 @@
+Page 146
+================================================================================
+
+Calling portopt, while specifying output arguments, returns the corresponding vectors and arrays
+representing the risk, return, and weights for each of the portfolios along the efficient frontier. Use
+these as the first three input arguments to the function portalloc.

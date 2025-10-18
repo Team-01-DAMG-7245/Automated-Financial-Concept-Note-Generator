@@ -1,0 +1,5 @@
+Page 1489
+================================================================================
+
+Alpha — Alpha represents the parameter D
+array or deterministic function of time or deterministic function of time and state

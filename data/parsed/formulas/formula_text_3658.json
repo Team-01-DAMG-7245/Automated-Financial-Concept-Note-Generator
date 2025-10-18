@@ -1,0 +1,12 @@
+{
+  "page": 2063,
+  "original_text": "NextQuasiCouponDate = cpndatenq(Settle,Maturity)\nNextQuasiCouponDate = cpndatenq( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)",
+  "ocr_text": "NextQuasiCouponDate=cpndatenq(Settle,Maturity)\nNextQuasiCouponDate=cpndatenq(__,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.69,
+    "x1": 527.48,
+    "y1": 228.32
+  },
+  "confidence": "high"
+}

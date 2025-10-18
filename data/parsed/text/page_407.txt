@@ -1,0 +1,85 @@
+251          15
+
+Define the Strategies
+
+Investment strategies capture the logic used to make asset allocation decisions while a backtest is
+running. As the backtest runs, each strategy is periodically given the opportunity to update its
+portfolio allocation based on the trailing market conditions, which it does by setting a vector of asset
+weights. The asset weights represent the percentage of available capital invested into each asset,
+with each element in the weights vector corresponding to the respective column in the asset
+pricesTT timetable. If the sum of the weights vector is 1, then the portfolio is fully invested.
+
+In this example, there are five backtest strategies. The backtest strategies assign asset weights using
+the following criteria:
+
+•
+Equal-weighted
+
+ωEW = ω1, ω2, . . . , ωN , ωi = 1
+N
+
+•
+Maximization of Sharpe ratio
+
+ωSR = argmax
+ω
+
+r′ω
+ω′Qω |ω ≥0, ∑1
+Nωi = 1, 0 ≤ω ≤0 . 1 , where r is a vector of expected returns and Q
+
+is the covariance matrix of asset returns.
+
+•
+Inverse variance
+
+ωIV =
+ω1, ω2, . . . , ωN ,ωi =
+
+σii
+−1
+
+∑i = 1
+N
+σii
+−1, where σii are diagonal elements of the asset return covariance
+
+matrix.
+
+•
+Markowitz portfolio optimization (maximizing return and minimizing risk with fixed risk-aversion
+coefficient)
+
+RMkwtz = max
+ω
+r′ω −λω′Qω | ω ≥0, ∑1
+Nωi = 1, 0 ≤ω ≤0 . 1 , where λ is the risk-aversion coefficient.
+
+•
+Robust optimization with uncertainty in expected returns
+
+•
+The robust portfolio optimization strategy, in contrast to the deterministic Markowitz formulation,
+takes into consideration the uncertainty expected returns of the assets and their variances and
+covariances. Instead of modeling unknown values (for example, expected returns) as one point,
+typically represented by the mean value calculated from the past, unknowns are specified as a set
+of values that contain the most likely possible realizations, r = {r |r ∈S(r0)}.
+
+In this case, the expected return is defined not by the deterministic vector r0 but by the region S(r0)
+around the vector r0.
+
+Taking this into consideration, there are several ways to reformulate the portfolio optimization
+problem. One of the most frequently used methods is to formulate the problem as a problem of
+finding the maximum and minimum:
+
+Rrobust = max
+ω
+min
+r ∈S r0
+
+r′ω −λω′Qω | ω ≥0, ∑1
+Nωi = 1, 0 ≤ω ≤0 . 1
+
+Backtest Investment Strategies Using Financial Toolbox
+
+4-239

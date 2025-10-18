@@ -1,0 +1,12 @@
+{
+  "page": 776,
+  "original_text": "% Semi-continuous bounds\np = setBounds(p,0.05,0.5,BoundType=\"conditional\");",
+  "ocr_text": "Semi-continuous_bounds\np=setBounds(p,0.05,0.5,BoundType=conditional);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 525.62,
+    "x1": 360.92,
+    "y1": 546.89
+  },
+  "confidence": "high"
+}

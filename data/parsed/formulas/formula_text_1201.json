@@ -1,0 +1,12 @@
+{
+  "page": 609,
+  "original_text": "NumSteps = NumHorizons*NumIntervalsPerHorizon;\nIS_TWAP_Horizon = nan(NumHorizons,1);\nIS_TWAP_Step = nan(NumSteps,1);\nTradingSharesStepTWAP = round(TotalTradingShares./NumIntervalsPerHorizon).*ones(NumSteps,1);",
+  "ocr_text": "NumSteps=NumHorizons*NumIntervalsPerHorizon;\n\nIS_TWAP_Horizon=nan(NumHorizons,1);\n\nIS_TWAP_Step=nan(NumSteps,1);\nTradingSharesStepTWAP=round(TotalTradingShares./NumIntervalsPerHorizon).*ones(NumSteps,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 588.46,
+    "y1": 319.49
+  },
+  "confidence": "high"
+}

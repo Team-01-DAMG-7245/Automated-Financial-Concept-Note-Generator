@@ -1,0 +1,5 @@
+Page 1498
+================================================================================
+
+Speed — Mean-reversion speed of CIR stochastic variance process
+array | deterministic function of time | deterministic function of time and state

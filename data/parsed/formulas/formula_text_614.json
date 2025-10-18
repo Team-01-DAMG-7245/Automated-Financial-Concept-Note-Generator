@@ -1,0 +1,12 @@
+{
+  "page": 402,
+  "original_text": "optimProb.Objective = sum(meanStockRetn'.*wgtAsset);",
+  "ocr_text": "optimProb.Objective=sum(meanStockRetn.*wgtAsset);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 386.98,
+    "x1": 371.74,
+    "y1": 397.45
+  },
+  "confidence": "high"
+}

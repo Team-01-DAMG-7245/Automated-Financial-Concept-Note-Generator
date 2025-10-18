@@ -1,0 +1,12 @@
+{
+  "page": 1958,
+  "original_text": "subplot(2,1,2)\nincrementalEE = profilesAfter.EE - profilesBefore.EE;\nplot(simulationDates,incrementalEE);\ngrid on;\nlegend('Incremental EE')\nxtickformat('MMMyy');\nylabel('Exposure ($)')\nxlabel('Simulation Dates')",
+  "ocr_text": "subplot(2,1,2)\nincrementalEE=profilesAfter.EE-profilesBefore.EE;\nplot(simulationDates,incrementalEE);\n\ngridon;\n\nLegend(IncrementalEE)\n\nxtickformat(MMMyy);\n\nylabel(Exposure(S))\n\nxlabel(SimulationDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 308.83,
+    "x1": 377.16,
+    "y1": 394.89
+  },
+  "confidence": "high"
+}

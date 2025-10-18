@@ -1,0 +1,12 @@
+{
+  "page": 2046,
+  "original_text": "Group = 1:6;\nDesignSUR = convert2sur(Design, Group);\n[Param, Covar] = mvnrmle(Asset, DesignSUR);\nParam = reshape(Param, 2, 6);",
+  "ocr_text": "Group=1:6;\nDesignSUR=convert2sur(Design,Group);\n[Param,Covar]=mvnrmle(Asset,DesignSUR);\nParam=reshape(Param,2,6);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 322.98,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

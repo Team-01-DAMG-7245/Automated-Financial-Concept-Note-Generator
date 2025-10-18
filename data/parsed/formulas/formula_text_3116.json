@@ -1,0 +1,12 @@
+{
+  "page": 1650,
+  "original_text": "Xt = P(t, Xt)",
+  "ocr_text": "Xt = P(t, X)",
+  "bbox": {
+    "x0": 112.19,
+    "y0": 249.96,
+    "x1": 165.86,
+    "y1": 263.7
+  },
+  "confidence": "high"
+}

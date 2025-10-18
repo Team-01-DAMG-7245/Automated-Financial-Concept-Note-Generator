@@ -1,0 +1,12 @@
+{
+  "page": 158,
+  "original_text": "p = Portfolio('AssetMean', ExpReturn, 'AssetCovar', ExpCovariance);\np = setBounds(p, AssetBounds(1), AssetBounds(2));\np = setBudget(p, 1, 1);\np = setGroups(p, Groups, GroupBounds(:,1), GroupBounds(:,2));",
+  "ocr_text": "p=Portfolio(AssetMean,ExpReturn,AssetCovar,ExpCovariance);\np=setBounds(p,AssetBounds(1),AssetBounds(2));\np=setBudget(p,1,1);\np=setGroups(p,Groups,GroupBounds(:,1),GroupBounds(:,2));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 212.53,
+    "x1": 453.03,
+    "y1": 255.4
+  },
+  "confidence": "high"
+}

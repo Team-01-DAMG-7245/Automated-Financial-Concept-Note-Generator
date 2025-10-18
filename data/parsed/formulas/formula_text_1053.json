@@ -1,0 +1,12 @@
+{
+  "page": 546,
+  "original_text": "% Compute the wealth node index corresponding to the current wealth.\n    difference = WGrid-WPath(t+1);\n    % Assign to wealth node j such that W_j <= W(t+1) < W_{j+1}\n    WNodeIdx = find(difference <= tol,1,'last');",
+  "ocr_text": "Computethewealthnodeindexcorrespondingtothecurrentwealth.\ndifference=WGrid-WPath(t+1);\nAssigntowealthnodejsuchthatW_j=W(t+1)=W_{j+1}\nWNodeIdx=find(difference=tol,1,last);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 114.63,
+    "x1": 480.1,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

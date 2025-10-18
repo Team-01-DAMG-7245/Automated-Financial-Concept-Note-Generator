@@ -1,0 +1,12 @@
+{
+  "page": 1029,
+  "original_text": "ProbTimes = yearfrac(Settle, MarketDates);\nfigure\nplot([0; ProbTimes],[0; ProbDataInv1(:,2)])",
+  "ocr_text": "ProbTimes=yearfrac(Settle,MarketDates);\nfigure\nplot([0;ProbTimes],[0;ProbDataInv1(:,2)])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 322.97,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

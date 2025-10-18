@@ -1,0 +1,7 @@
+Page 1743
+================================================================================
+
+p = PortfolioMAD;
+A = [ 1 1 1 0 0 ];    % First equality constraint
+b = 0.5;
+p = setEquality(p, A, b);

@@ -1,0 +1,24 @@
+Select a target return. In this case, the target return is the midpoint return on the CVaR portfolio
+efficient frontier.
+
+% Achievable levels of return
+pretlimits = estimatePortReturn(p, estimateFrontierLimits(p));
+TargetRet = mean(pretlimits); % Target half way up the frontier
+
+Plot the efficient CVaR portfolio for the return TargetRet on the CVaR efficient frontier.
+
+% Obtain risk level at target return
+pwgtTarget = estimateFrontierByReturn(p,TargetRet); % CVaR efficient portfolio
+priskTarget = estimatePortRisk(p,pwgtTarget);
+
+% Plot point onto CVaR efficient frontier
+figure;
+plotFrontier(p,pwgt);
+hold on
+scatter(priskTarget,TargetRet,[],'filled');
+hold off
+
+5
+CVaR Portfolio Optimization Tools
+
+5-130

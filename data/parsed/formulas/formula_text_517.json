@@ -1,0 +1,12 @@
+{
+  "page": 354,
+  "original_text": "TargetRisk = [ 0.10; 0.15; 0.20 ];\nqwgt = estimateFrontierByRisk(q, TargetRisk);\ndisplay(qwgt)",
+  "ocr_text": "TargetRisk=[0.10;0.15;0.20];\nqwgt=estimateFrontierByRisk(q,TargetRisk);\ndisplay(qwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 369.94,
+    "x1": 333.81,
+    "y1": 402.01
+  },
+  "confidence": "high"
+}

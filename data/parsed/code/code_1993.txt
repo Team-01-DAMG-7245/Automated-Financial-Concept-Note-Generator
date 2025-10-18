@@ -1,0 +1,7 @@
+Page 1587
+================================================================================
+
+% Prune the table to include only the dates and selected stocks.
+timeColumn = "Dates";
+assetSymbols = ["BA", "CAT", "DIS", "GE", "IBM", "MCD", "MSFT"];
+T = T(:,[timeColumn assetSymbols]);

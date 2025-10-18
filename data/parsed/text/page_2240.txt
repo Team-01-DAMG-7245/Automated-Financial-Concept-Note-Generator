@@ -1,0 +1,63 @@
+AbsoluteGapTolerance: 1.0000e-07
+                    RelativeGapTolerance: 1.0000e-05
+                  NonlinearScalingFactor: 1000
+                  ObjectiveScalingFactor: 1000
+                                 Display: 'off'
+                           CutGeneration: 'basic'
+                MaxIterationsInactiveCut: 30
+                      ActiveCutTolerance: 1.0000e-07
+                    IntMainSolverOptions: [1×1 optim.options.Intlinprog]
+    NumIterationsEarlyIntegerConvergence: 30
+                     ExtendedFormulation: 0
+                            NumInnerCuts: 10
+                     NumInitialOuterCuts: 10
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using a Portfolio object. For more information on creating a portfolio
+object, see
+
+•
+Portfolio
+
+Data Types: object
+
+AssetReturns — Matrix, table, or timetable that contains asset price data that can be
+converted to asset returns
+matrix | table | table
+
+Matrix, table, or timetable that contains asset price data that can be converted to asset returns,
+specified by a NumSamples-by-NumAssets matrix.
+
+AssetReturns data can be:
+
+•
+NumSamples-by-NumAssets matrix.
+
+•
+Table of NumSamples prices or returns at a given periodicity for a collection of NumAssets assets
+
+•
+Timetable object with NumSamples observations and NumAssets time series
+
+Use the optional DataFormat argument to convert AssetReturns input data that is asset prices
+into asset returns. Be careful when using asset price data because portfolio optimization usually
+requires total returns and not simply price returns.
+
+Data Types: double | table | timetable
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+15
+Functions
+
+15-934

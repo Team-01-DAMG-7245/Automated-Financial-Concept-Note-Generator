@@ -1,0 +1,6 @@
+Page 971
+================================================================================
+
+The formatpoints function lets you control scaling and rounding of scorecard points. For more
+information and examples, see displaypoints and formatpoints and step 4 in “Case Study
+for Credit Scorecard Analysis” on page 8-71.

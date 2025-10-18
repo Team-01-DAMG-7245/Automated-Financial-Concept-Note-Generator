@@ -1,0 +1,55 @@
+Beta — Kernel function parameter to control asymptotic memory properties
+scalar numeric
+
+Kernel function parameter to control asymptotic memory properties, returned as a numeric scalar.
+
+Data Types: double
+
+Object Functions
+simByEuler
+Simulate RVM, roughbergomi, or roughheston sample paths by Euler approximation
+simByHybrid
+Simulate RVM or roughbergomi sample paths by hybrid approximation
+
+Examples
+
+Create rvm Object
+
+RVM (rough volatility model) objects are bivariate composite models, composed of two coupled and
+dissimilar univariate models that approximate continuous-time rough stochastic volatility processes.
+
+Create an rvm object.
+
+Return = 0.03;
+Volatility = 0.2;
+Alpha = 0.03;
+Beta = 0.015;
+
+rvmObj = rvm(Return,Volatility,Alpha,Beta,KernelType="gamma")
+
+rvmObj = 
+   Class RVM: Rough Stochastic Volatility
+   ----------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+         Return: 0.03
+     Volatility: 0.2
+         Kernel: gamma
+          Alpha: 0.03
+           Beta: 0.015
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+15
+Functions
+
+15-216

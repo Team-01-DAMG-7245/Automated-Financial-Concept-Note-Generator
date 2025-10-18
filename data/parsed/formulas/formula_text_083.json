@@ -1,0 +1,12 @@
+{
+  "page": 77,
+  "original_text": "If negative prices are allowed, the range of simple returns PC expands to (−∞,∞), that is, anything\nfrom unlimited loss to unlimited gain. In the formula for continuous returns, logarithms of negative\nnumbers are unavoidable. The logarithm of a negative number is not a mathematical problem\nbecause the complex logarithm (the MATLAB default) interprets negative numbers as complex\nnumbers with phase angle ±π, so that, for example,",
+  "ocr_text": "Ifnegativepricesareallowed,therangeofsimplereturnsPCexpandsto(-,),thatis,anything\nfromunlimitedlosstounlimitedgain.Intheformulaforcontinuousreturns,logarithmsofnegative\nnumbersareunavoidable.Thelogarithmofanegativenumberisnotamathematicalproblem\nbecausethecomplexlogarithm(theMATLABdefault)interpretsnegativenumbersascomplex\nnumberswithphaseangle+n,sothat,forexample,",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 280.85,
+    "x1": 544.31,
+    "y1": 340.48
+  },
+  "confidence": "high"
+}

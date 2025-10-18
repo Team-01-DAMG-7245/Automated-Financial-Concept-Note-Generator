@@ -1,0 +1,12 @@
+{
+  "page": 1917,
+  "original_text": "AccrInt = cdai(CouponRate,Settle,Maturity,IssueDate) computes the accrued interest\non a certificate of deposit.",
+  "ocr_text": "AccrInt=cdai(CouponRate,Settle,Maturity,IssueDate)computestheaccruedinterest\nonacertificateofdeposit.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 251.51,
+    "x1": 545.39,
+    "y1": 275.14
+  },
+  "confidence": "high"
+}

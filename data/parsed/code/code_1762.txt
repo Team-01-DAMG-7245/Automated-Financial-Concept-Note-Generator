@@ -1,0 +1,5 @@
+Page 1499
+================================================================================
+
+If you specify Speed as a function of time and state, the function calculates the speed of mean
+reversion. This function must return a scalar of reversion rates when you call it with two inputs:

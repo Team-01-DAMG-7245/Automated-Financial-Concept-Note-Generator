@@ -1,0 +1,57 @@
+psharpe = 3×1
+
+0.7796
+    0.8519
+    0.7406
+
+psharpe is a NumPorts-by-1 vector, where NumPorts is the number of portfolios in the collection of
+portfolios.
+
+Estimate Sharpe Ratios of the Given Portfolio Weights Portfolio Object with Integrality
+Constraints
+
+Create a Portfolio object for three assets.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+               0.00022983 0.00049937 0.00019247;
+               0.00420395 0.00019247 0.00764097 ];  
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);
+p = setDefaultConstraints(p);
+
+Use setBounds with semi-continuous constraints to set xi=0 or 0.02<=xi<=0.5 for all
+i=1,...NumAssets.
+
+p = setBounds(p, 0.02, 0.5,'BoundType', 'Conditional', 'NumAssets', 3);
+
+When working with a Portfolio object, the setMinMaxNumAssets function enables you to set up
+cardinality constraints for a long-only portfolio. This sets the cardinality constraints for the
+Portfolio object, where the total number of allocated assets satisfying the nonzero semi-continuous
+constraints are between MinNumAssets and MaxNumAssets. By setting
+MinNumAssets=MaxNumAssets=2, only two of the three assets are invested in the portfolio.
+
+p = setMinMaxNumAssets(p, 2, 2);
+
+Use estimatePortSharpeRatio to estimate Sharpe ratio of given portfolio weights for a
+Portfolio object.
+
+pwgt = estimateFrontierByReturn(p, [ 0.0072321, 0.0119084 ]);
+psharpe = estimatePortSharpeRatio(p,pwgt)
+
+psharpe = 2×1
+
+0.2230
+    0.1715
+
+The estimatePortSharpeRatio function uses the MINLP solver to solve this problem. Use the
+setSolverMINLP function to configure the SolverType and options.
+
+p.solverOptionsMINLP
+
+ans = struct with fields:
+                           MaxIterations: 1000
+                    AbsoluteGapTolerance: 1.0000e-07
+
+estimatePortSharpeRatio
+
+15-999

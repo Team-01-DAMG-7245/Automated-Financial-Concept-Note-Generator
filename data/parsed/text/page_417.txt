@@ -1,0 +1,61 @@
+% Buys:
+%   $0-$10,000 : 0.5%
+%   $10,000+   : 0.35%
+% Sells:
+%   $0-$1,000  : 0.75%
+%   $1,000+    : 0.5%
+
+buy  = zeros(1,numel(deltaPositions));
+sell = zeros(1,numel(deltaPositions));
+
+% Buys
+idx = 0 < deltaPositions & deltaPositions < 1e4;
+buy(idx) = 0.005 * deltaPositions(idx); % 50 basis points
+idx = 1e4 <= deltaPositions;
+buy(idx) = 0.0035 * deltaPositions(idx); % 35 basis ponits
+buy = sum(buy);
+
+% Sells
+idx = -1e3 < deltaPositions & deltaPositions < 0;
+sell(idx) = 0.0075 * -deltaPositions(idx); % 75 basis points
+idx = deltaPositions <= -1e3;
+sell(idx) = 0.005 * -deltaPositions(idx); % 50 basis points
+sell = sum(sell);
+
+end
+
+function assetAreaPlot(backtester,strategyName)
+% Plot the asset allocation as an area plot.
+
+t = backtester.Positions.(strategyName).Time;
+positions = backtester.Positions.(strategyName).Variables;
+h = area(t,positions);
+title(sprintf('%s Positions',strrep(strategyName,'_',' ')));
+xlabel('Date');
+ylabel('Asset Positions');
+xtickformat('MM/dd');
+xlim([t(1) t(end)])
+oldylim = ylim;
+ylim([0 oldylim(2)]);
+cm = parula(numel(h));
+for i = 1:numel(h)
+    set(h(i),'FaceColor',cm(i,:));
+end
+legend(backtester.Positions.(strategyName).Properties.VariableNames)
+
+end
+
+See Also
+backtestStrategy | backtestEngine | runBacktest | summary
+
+Related Examples
+
+•
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+
+•
+“Backtest Strategies Using Deep Learning” on page 4-302
+
+Backtest Investment Strategies Using Financial Toolbox
+
+4-249

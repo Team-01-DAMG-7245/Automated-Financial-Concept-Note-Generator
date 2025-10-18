@@ -1,0 +1,5 @@
+Page 1723
+================================================================================
+
+Flag to indicate whether the output function is a deterministic function of time alone, specified as the
+comma-separated pair consisting of 'Determininistic' and a scalar integer flag.

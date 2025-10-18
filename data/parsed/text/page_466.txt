@@ -1,0 +1,38 @@
+The plot shows that there are 6 blocks of assets that are closer together. You can divide the assets
+into 6 clusters using the cluster function.
+
+% Get the clusters.
+T = cluster(link, MaxClust=6);
+
+Hierarchical Risk Parity Algorithm
+
+Given a clustering of the assets, the HRP algorithm presented in this example follows these steps:
+
+1
+Build a risk parity portfolio within each cluster. The hrpPortfolio function in Local Functions
+on page 4-300 computes the HRP portfolio by receiving a vector with the cluster assignment and
+a covariance matrix Σ. Then, a risk parity portfolio is computed within each cluster by using
+riskBudgetingPortfolio. The riskBudgetingPortfolio function receives a reduced
+covariance matrix that only includes the information of the assets within the cluster and it
+returns the weights of the assets in the cluster
+
+w j =riskBudgetingPortfolio(Σ j),
+
+where Σ j is a matrix whose entries include the covariance information only for the assets in the jth
+cluster.
+
+2. Compute each cluster's weight using the covariance between each cluster's portfolio. Now, the
+riskBudgetingPortfolio function receives a matrix (Γ) that represents the covariance between
+
+the cluster's portfolios (w j).
+
+Γij = WTΣW,
+
+where Wij = wi
+j if asset i is in cluster j, otherwise Wij = 0. In other words W = w1| . . . |wK , for K
+clusters and γ =riskBudgetingPortfolio(Γ).
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-298

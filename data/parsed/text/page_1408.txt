@@ -1,0 +1,73 @@
+Moreover, a parameter is identified as a deterministic function of time if the function accepts a scalar
+time t as its only input argument. Otherwise, a parameter is assumed to be a function of time t and
+state X(t) and is invoked with both input arguments.
+
+GBM = gbm( ___ ,Name,Value) creates a GBM object with additional options specified by one or
+more Name,Value pair arguments.
+
+Name is a property name and Value is its corresponding value. Name must appear inside single
+quotes (''). You can specify several name-value pair arguments in any order as Name1,Value1,
+…,NameN,ValueN
+
+The GBM object has the following “Properties” on page 15-103:
+
+•
+StartTime — Initial observation time
+
+•
+StartState — Initial state at StartTime
+
+•
+Correlation — Access function for the Correlation input, callable as a function of time
+
+•
+Drift — Composite drift-rate function, callable as a function of time and state
+
+•
+Diffusion — Composite diffusion-rate function, callable as a function of time and state
+
+•
+Simulation — A simulation function or method
+
+•
+Return — Access function for the input argument Return, callable as a function of time and state
+
+•
+Sigma — Access function for the input argument Sigma, callable as a function of time and state
+
+Input Arguments
+
+Return — Return represents the parameter μ
+array or deterministic function of time or deterministic function of time and state
+
+Return represents the parameter μ, specified as an array or deterministic function of time.
+
+If you specify Return as an array, it must be an NVars-by-NVars matrix representing the expected
+(mean) instantaneous rate of return.
+
+As a deterministic function of time, when Return is called with a real-valued scalar time t as its only
+input, Return must produce an NVars-by-NVars matrix. If you specify Return as a function of time
+and state, it must return an NVars-by-NVars matrix when invoked with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Sigma — Sigma represents the parameter V
+array or deterministic function of time or deterministic function of time and state
+
+Sigma represents the parameter V, specified as an array or a deterministic function of time.
+
+If you specify Sigma as an array, it must be an NVars-by-NBrowns matrix of instantaneous volatility
+rates or as a deterministic function of time. In this case, each row of Sigma corresponds to a
+particular state variable. Each column corresponds to a particular Brownian source of uncertainty,
+and associates the magnitude of the exposure of state variables with sources of uncertainty.
+
+15
+Functions
+
+15-102

@@ -1,0 +1,53 @@
+and covariance, use elpm. With lpm, you can compute various investment ratios such as Omega ratio,
+Sortino ratio, and Upside Potential ratio, where:
+
+•
+Omega = lpm(-Data, -MAR, 1) / lpm(Data, MAR, 1)
+
+•
+Sortino = (mean(Data) - MAR) / sqrt(lpm(Data, MAR, 2))
+
+•
+Upside = lpm(-Data, -MAR, 1) / sqrt(lpm(Data, MAR, 2))
+
+More About
+
+Lower Partial Moments
+
+Use lower partial moments to examine what is colloquially known as “downside risk.”
+
+The main idea of the lower partial moment framework is to model moments of asset returns that fall
+below a minimum acceptable level of return. To compute lower partial moments from data, use lpm to
+calculate lower partial moments for multiple asset return series and for multiple moment orders. To
+compute expected values for lower partial moments under several assumptions about the distribution
+of asset returns, use elpm to calculate lower partial moments for multiple assets and for multiple
+orders.
+
+Version History
+Introduced in R2006b
+
+References
+
+[1] Bawa, V.S. "Safety-First, Stochastic Dominance, and Optimal Portfolio Choice." Journal of
+Financial and Quantitative Analysis. Vol. 13, No. 2, June 1978, pp. 255–271.
+
+[2] Harlow, W.V. "Asset Allocation in a Downside-Risk Framework." Financial Analysts Journal. Vol. 47,
+No. 5, September/October 1991, pp. 28–40.
+
+[3] Harlow, W.V. and K. S. Rao. "Asset Pricing in a Generalized Mean-Lower Partial Moment
+Framework: Theory and Evidence." Journal of Financial and Quantitative Analysis. Vol. 24,
+No. 3, September 1989, pp. 285–311.
+
+[4] Sortino, F.A. and Robert van der Meer. "Downside Risk." Journal of Portfolio Management. Vol. 17,
+No. 5, Spring 1991, pp. 27–31.
+
+See Also
+elpm
+
+Topics
+“Performance Metrics Overview” on page 7-2
+
+15
+Functions
+
+15-1170

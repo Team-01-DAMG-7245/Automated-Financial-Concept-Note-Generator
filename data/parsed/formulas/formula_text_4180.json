@@ -1,0 +1,12 @@
+{
+  "page": 2346,
+  "original_text": "Year = [2002 2003 2004];\nDate = fbusdate(Year, 11)",
+  "ocr_text": "Year=[200220032004];\nDate=fbusdate(Year,_11)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 667.4,
+    "x1": 230.87,
+    "y1": 688.67
+  },
+  "confidence": "high"
+}

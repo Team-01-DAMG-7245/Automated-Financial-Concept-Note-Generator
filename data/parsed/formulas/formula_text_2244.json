@@ -1,0 +1,12 @@
+{
+  "page": 1151,
+  "original_text": "% Estimate the efficient frontier to obtain portfolio weights.\npwgt = estimateFrontier(p);",
+  "ocr_text": "SEstimatetheefficientfrontiertoobtainportfolioweights.\npwgt_=estimateFrontier(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 521.43,
+    "x1": 425.92,
+    "y1": 542.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,17 @@
+Page 558
+================================================================================
+
+This figure shows the actions chosen by the agent for different wealth levels and time periods. The
+numbers inside the grid represent the action taken by the agent at each state. In this example, using
+the sparse reward function, the trained agent only invests in portfolio #6, #9, or #11, where the
+higher the portfolio number, the more aggressive the portfolio is. In this policy, the aggressiveness of
+the portfolio increases as time gets closer to the end of the investment horizon. Notice that only at
+the beginning of the investment horizon, it is more likely that the agent choose the most conservative
+portfolio, especially if the wealth is below the wealth that would be achieved by the constant reward
+assumption (see section Constant Return Reward on page 4-383). However, if the wealth is very low
+close to the end of the investment horizon, then the agent needs to increase the risk to improve the
+probability of attaining the desired goal. This choice increases the expected return, even at the cost
+of increasing the volatility. The extreme choice made by the agent is the result of the objective
+function not taking into account possible losses. If the investor also wants to take their losses into
+account, they can add those losses into the objective and reward function to penalize cases where the
+losses become too high.

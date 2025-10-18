@@ -1,0 +1,5 @@
+Page 1499
+================================================================================
+
+If you specify Volatility as a deterministic function of time, you call Volatility with a real-
+valued scalar time t as its only input, it must return a scalar.

@@ -1,0 +1,59 @@
+dXt = B(t)Xtdt +
+YtXtdWt
+
+Yt = Y0 +
+1
+Γ(α + 1)∫0
+
+t
+(t −s)ακ(θ −Ys)ds +
+1
+Γ(α + 1)∫0
+
+t
+(t −s)ασ YsdWs
+
+where ɑ = – ½ and H is the Hurst exponent.
+
+The first equation is a geometric Brownian motion model with a stochastic volatility function. By
+adding the Volterra kernel, the Heston stochastic volatility model allows for a rough behavior of the
+volatility.
+
+The Brownian semistationary process (Yt in the general rough volatility model) has W as a two-sided
+Brownian motion providing the fundamental noise innovations where the amplitude is modulated by a
+stochastic volatility process that depends on W. This driving noise is then convolved with a
+deterministic kernel function g that specifies the dependence structure of Yt. The process Yt is also
+viewed as a moving average of volatility modulated Brownian noise and, when setting the volatility of
+volatility = 1, the stationary Brownian moving averages are nested in this class of processes.
+
+Version History
+Introduced in R2024b
+
+References
+
+[1] Euch, O. E. and M. Rosenbaum. “The Characteristic Function of Rough Heston.” Mathematical
+Finance. Vol. 29, No. 1 , 2019, pp. 3–38.
+
+See Also
+rvm | roughbergomi | simByEuler | nearcorr
+
+Topics
+“Simulating Equity Prices” on page 14-31
+“Simulating Interest Rates” on page 14-50
+“Stratified Sampling” on page 14-58
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation” on
+page 14-71
+“Base SDE Models” on page 14-16
+“Drift and Diffusion Models” on page 14-19
+“Linear Drift Models” on page 14-22
+“Parametric Models” on page 14-24
+“SDEs” on page 14-2
+“SDE Models” on page 14-7
+“SDE Class Hierarchy” on page 14-5
+“Quasi-Monte Carlo Simulation” on page 14-63
+“Performance Considerations” on page 14-65
+
+15
+Functions
+
+15-232

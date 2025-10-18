@@ -1,0 +1,5 @@
+Page 2207
+================================================================================
+
+To evaluate the negative log-likelihood function for ecmnmle, use ecmnobj based on the current
+maximum likelihood parameter estimates.

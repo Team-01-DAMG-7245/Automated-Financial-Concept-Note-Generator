@@ -1,0 +1,12 @@
+{
+  "page": 1046,
+  "original_text": "rfCustAge = fitrensemble(dataToImpute,'CustAge','Method','Bag',...\n    'NumLearningCycles',200,'Learners',tmp,'CategoricalPredictors',...\n    {'ResStatus','EmpStatus','OtherCC'});\nrfImputedData.CustAge(missingCustAge) = predict(rfCustAge,...\n    dataToImpute(missingCustAge,:));",
+  "ocr_text": "rfCustAge=fitrensemble(dataToImpute,CustAge,Method,Bag,...\nNumLearningCycles,200,Learners,tmp,CategoricalPredictors,...\n{ResStatus,EmpStatus,OtherCC});\n\nrfImputedData.CustAge(missingCustAge)=predict(rfCustAge,...\ndataToImpute(missingCustAge,:));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 469.29,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

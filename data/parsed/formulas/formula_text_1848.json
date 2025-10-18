@@ -1,0 +1,12 @@
+{
+  "page": 944,
+  "original_text": "minIG = min(DefRateIG(DefRateIG~=0));\nfigure\nplot(Years,log(DefRateSG),'m-*')\nhold on\nplot(Years,log(DefRate),'b-o')\nplot(Years,log(max(DefRateIG,minIG-0.001)),'r-+')\nExample_RecessionBands\nhold off\ngrid on\ntitle('{\\bf Default Rates (log scale)}')\nylabel('log %')\nlegend({'SG','Overall','IG'},'location','NW')",
+  "ocr_text": "minIG=min(DefRateIG(DefRateIG-=0));\n\nfigure\n\nplot(Years,log(DefRateSG),m-*)\n\nhold_on\n\nplot(Years,log(DefRate),b-o)\nplot(Years,log(max(DefRateIG,minIG-0.001)),r-+)\nExample_RecessionBands\n\nholdoff\n\ngridon\ntitle({bfDefaultRates(logscale)})\nylabel(log)\nlegend({SG,Overall,IG},location,NW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 174.19,
+    "x1": 355.5,
+    "y1": 303.45
+  },
+  "confidence": "high"
+}

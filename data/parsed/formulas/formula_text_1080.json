@@ -1,0 +1,12 @@
+{
+  "page": 557,
+  "original_text": "% Possible observations\nwVar = repmat(wealthLevel',finalTimePeriod,1);\ntVar = repelem((0:finalTimePeriod-1)',numWealthPoints);",
+  "ocr_text": "Possibleobservations\nwVar=repmat(wealthLevel,finalTimePeriod,1);\ntVar=repelem((0:finalTimePeriod-1),numWealthPoints);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 628.63,
+    "x1": 387.99,
+    "y1": 660.7
+  },
+  "confidence": "high"
+}

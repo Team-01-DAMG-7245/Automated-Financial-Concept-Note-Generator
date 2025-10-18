@@ -1,0 +1,60 @@
+3. The final asset allocation is given by the cluster's risk parity portfolio (w j) multiplied by each
+cluster's weight (γj)
+
+w = Wγ.
+
+% Compute HRP portfolio
+wHRP = hrpPortfolio(T,Sigma)
+
+wHRP = 14×1
+
+0.0854
+    0.0584
+    0.0423
+    0.0567
+    0.1867
+    0.1648
+    0.0521
+    0.0540
+    0.0539
+    0.0755
+    0.0397
+    0.0513
+    0.0394
+    0.0399
+      ⋮
+
+Compare HRP and Mean-Variance Portfolios
+
+Define a long-only, fully-invested mean-variance Portfolio object. Then, compute the associated
+minimum variance portfolio.
+
+% Define the Portfolio object.
+p = Portfolio(AssetMean=mean(assetRetn), AssetCovar=Sigma);
+p = setDefaultConstraints(p); % Long-only, fully-invested portfolio
+% Min variance portfolio
+wMV = estimateFrontierLimits(p,'min');
+
+Visualize the resulting allocations from these two strategies.
+
+% Create the pie chart labels to improve plot reading.
+labels = 1:nAssets;
+labels = string(labels);
+
+% Sort the assets following quasi-diagonalization order.
+labels = labels(sortedIdx);
+wMV = wMV(sortedIdx);
+wHRP = wHRP(sortedIdx);
+
+% Plot the pie charts.
+tiledlayout(1,2);
+% Min variance portfolio
+nexttile
+pie(wMV(wMV>=1e-8),labels(wMV>=1e-8))
+title('Min Variance Portfolio',Position=[0,1.5]);
+% HRP portfolio
+nexttile
+
+Create Hierarchical Risk Parity Portfolio
+
+4-299

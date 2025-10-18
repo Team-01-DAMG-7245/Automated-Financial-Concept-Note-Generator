@@ -1,0 +1,4 @@
+Page 52
+================================================================================
+
+The MATLAB function date returns a character vector for the current date.

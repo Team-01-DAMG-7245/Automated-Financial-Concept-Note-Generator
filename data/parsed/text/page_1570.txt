@@ -1,0 +1,62 @@
+backtestEngine
+
+Create backtestEngine object to backtest strategies and analyze results
+
+Description
+
+Create a backtestEngine to run a backtest of portfolio investment strategies on historical data.
+
+Use this workflow to develop and run a backtest:
+
+1
+Define the strategy logic using a backtestStrategy object to specify how a strategy
+rebalances a portfolio of assets.
+
+2
+Use backtestEngine to create a backtestEngine object that specifies parameters of the
+backtest.
+
+3
+Use runBacktest to run the backtest against historical asset price data and, optionally, trading
+signal data.
+
+4
+Use equityCurve to plot the equity curves of each strategy.
+
+5
+Use summary to summarize the backtest results in a table format.
+
+For more detailed information on this workflow, see “Backtest Workflow” on page 15-275 and
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238.
+
+Creation
+
+Syntax
+
+backtester = backtestEngine(strategies)
+backtester = backtestEngine( ___ ,Name,Value)
+
+Description
+
+backtester = backtestEngine(strategies) creates a backtestEngine object. Use the
+backtestEngine object to backtest the portfolio trading strategies defined in the
+backtestStrategy objects.
+
+backtester = backtestEngine( ___ ,Name,Value) sets properties on page 15-268 using name-
+value pair arguments and any of the arguments in the previous syntax. You can specify multiple
+name-value pair arguments. For example, backtester =
+backtestEngine(strategies,'RiskFreeRate',0.02,'InitialPortfolioValue',1000,'R
+atesConvention',"Annualized",'Basis',2).
+
+Input Arguments
+
+strategies — Backtest strategies
+vector of backtestStrategy objects
+
+Backtest strategies, specified as a vector of backtestStrategy objects. Each backtestStrategy
+object defines a portfolio trading strategy.
+
+15
+Functions
+
+15-264

@@ -1,0 +1,12 @@
+{
+  "page": 446,
+  "original_text": "% Store info to pass to ESG constrained strategies\nAin = -ESGnumeric';\nbin = -ESG0; % Set the target ESG score.\nconStruct.p = setInequality(p,-ESGnumeric',-ESG0);\nconStruct.ret0 = ret0;",
+  "ocr_text": "StoreinfotopasstoESGconstrainedstrategies\nAin=-ESGnumeric;\nbin=-ESGO;*SetthetargetESGscore.\nconStruct.p=setInequality(p,-ESGnumeric,-ESGO);\nconStruct.retO=retQ;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 502.13,
+    "x1": 360.9,
+    "y1": 555.8
+  },
+  "confidence": "high"
+}

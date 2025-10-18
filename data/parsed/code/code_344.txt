@@ -1,0 +1,11 @@
+Page 335
+================================================================================
+
+In addition to transaction costs, the Portfolio object can handle turnover constraints. The following
+example demonstrates that a turnover constraint produces an efficient frontier in the neighborhood
+of an initial portfolio that may restrict trading. Moreover, the introduction of a turnover constraint
+often implies that multiple trades may be necessary to shift from an initial portfolio to an
+unconstrained efficient frontier. Consequently, the turnover constraint introduces a form of time
+diversification that can spread trades out over multiple time periods. In this example, note that the
+sum of purchases and sales from the estimateFrontier function confirms that the turnover
+constraint is satisfied.

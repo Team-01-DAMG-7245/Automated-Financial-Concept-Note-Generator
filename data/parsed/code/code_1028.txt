@@ -1,0 +1,7 @@
+Page 1061
+================================================================================
+
+Although the cross-sectional residuals must be independent, you can use this log-likelihood function
+for quasi-maximum likelihood estimation. In this case, the estimates for the parameters b and C
+provide estimates to characterize the first and second moments of the residuals. See Caines [1] for
+details.

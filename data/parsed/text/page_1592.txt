@@ -1,0 +1,37 @@
+This scenario is also not correct since the original price timetable (warm-up and test partitions
+together) does have enough price history by March 22 to fill out a valid lookback window. However,
+the earlier data is not available to the backtest engine because the backtest was run using only the
+test partition.
+
+Use Start and End Parameters for runBacktest
+
+The ideal workflow in this situation is to both omit the warm-up data range from the backtest to avoid
+the look-ahead bias but include the warm-up data in the price history to be able to fill out the
+lookback window of the strategy with all available price history data. You can do so by using the
+'Start' parameter for the runBacktest function.
+
+The 'Start' and 'End' name-value pair arguments for runBacktest enable you to start and end
+the backtest on specific dates. You can specify 'Start' and 'End' as rows of the prices timetable or
+as datetime values (see the documentation for the runBacktest function for details). The 'Start'
+argument lets the backtest begin on a particular date while giving the backtest engine access to the
+full data set.
+
+Rerun the backtest using the 'Start' name-value pair argument rather than only running on a
+partition of the original data set.
+
+% Rerun the backtest starting on the last day of the warmup range.
+startRow = warmupRange(end);
+backtester = runBacktest(backtester,pricesTT,'Start',startRow);
+
+Plot the new asset area plot.
+
+assetAreaPlot(backtester,"InverseVariance")
+
+View the new rebalance table with the new 'Start' parameter.
+
+printRebalanceTable(ivStrategy,pricesTT,minLookback,startRow);
+
+15
+Functions
+
+15-286

@@ -1,0 +1,39 @@
+model to multiple periods while achieving the resulting desirable properties that are similar to the
+geometric multiperiod performance attribution.
+
+Version History
+Introduced in R2022b
+
+R2023a: Charting functions added for brinsonAttribution object
+
+Using a brinsonAttribution object, you can use the following charting functions:
+categoryReturnsChart, categoryWeightsChart, and attributesChart.
+
+References
+
+[1] Brinson, G. P. and Fachler, N. “Measuring Non-US Equity Portfolio Performance.” Journal of
+Portfolio Management. Spring 1985: 73–76.
+
+[2] Brinson, G. P., Hood, L. R., and Beebower, G. L. “Determinants of Portfolio Performance.” Financial
+Analysts Journal. Vol. 42, No. 4, 1986: 39–44.
+
+[3] Menchero, J. “Multiperiod Arithmetic Attribution.” Financial Analysts Journal. Vol. 60, No. 4, 2004:
+76–91.
+
+[4] Tuttle, D. L., Pinto, J. E., and McLeavey, D. W. Managing Investment Portfolios: A Dynamic Process.
+Third Edition. CFA Institute, 2007.
+
+See Also
+table
+
+Topics
+“Analyze Performance Attribution Using Brinson Model” on page 4-323
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+External Websites
+Backtesting Strategy Framework in Financial Toolbox (2 min 17 sec)
+
+15
+Functions
+
+15-10

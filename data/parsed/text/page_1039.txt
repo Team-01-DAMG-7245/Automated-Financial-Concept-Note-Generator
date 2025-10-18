@@ -1,0 +1,59 @@
+Impute Missing Data in the Credit Scorecard Workflow Using
+the k-Nearest Neighbors Algorithm
+
+This example shows how to perform imputation of missing data in the credit scorecard workflow
+using the k-nearest neighbors (kNN) algorithm.
+
+The kNN algorithm is a nonparametric method used for classification and regression. In both cases,
+the input consists of the k-closest training examples in the feature space. The output depends on
+whether kNN is used for classification or regression. In kNN classification, an object is classified by a
+plurality vote of its neighbors, and the object is assigned to the class most common among its k-
+nearest neighbors. In kNN regression, the output is the average of the values of k-nearest neighbors.
+For more information on the kNN algorithm, see fitcknn.
+
+For additional information on alternative approaches for "treating" missing data, see “Credit
+Scorecard Modeling with Missing Values” on page 8-57.
+
+Impute Missing Data Using kNN Algorithm
+
+Use the dataMissing data set to impute missing values for the CustAge (numeric) and ResStatus
+(categorical) predictors.
+
+load CreditCardData.mat
+disp(head(dataMissing));
+
+CustID    CustAge    TmAtAddress     ResStatus     EmpStatus    CustIncome    TmWBank    Othe
+    ______    _______    ___________    ___________    _________    __________    _______    ____
+
+1          53          62         <undefined>    Unknown        50000         55         Ye
+      2          61          22         Home Owner     Employed       52000         25         Ye
+      3          47          30         Tenant         Employed       37000         61         No
+      4         NaN          75         Home Owner     Employed       53000         20         Ye
+      5          68          56         Home Owner     Employed       53000         14         Ye
+      6          65          13         Home Owner     Employed       48000         59         Ye
+      7          34          32         Home Owner     Unknown        32000         26         Ye
+      8          50          57         Other          Employed       51000         33         No
+
+In this example, the 'CustID' and 'status' columns are removed in the imputation process as
+those are the id and response values respectively. Alternatively, you can choose to leave the
+'status' column in.
+
+dataToImpute = dataMissing(:,setdiff(dataMissing.Properties.VariableNames,...
+    {'CustID','status'},'stable'));
+
+Create dummy variables for all categorical predictors so that the kNN algorithm can compute the
+Euclidean distances.
+
+dResStatus = dummyvar(dataToImpute.ResStatus);
+dEmpStatus = dummyvar(dataToImpute.EmpStatus);
+dOtherCC = dummyvar(dataToImpute.OtherCC);
+
+'k' in the kNN algorithm is based on feature similarity. Choosing the right value of 'k' is a process
+called parameter tuning, which is important for greater accuracy. There is no physical way to
+determine the "best" value for 'k', so you have to try a few values before settling on one. Small
+values of 'k' can be noisy and subject to the effects of outliers. Larger values of 'k' have smoother
+decision boundaries, which mean lower variance but increased bias.
+
+Impute Missing Data in the Credit Scorecard Workflow Using the k-Nearest Neighbors Algorithm
+
+8-121

@@ -1,0 +1,44 @@
+WPath(t+1) = WPath(t)*exp(mu-(sigma^2)/2+sigma*Z(t));
+
+% Compute the wealth node index corresponding to the current wealth.
+    difference = WGrid-WPath(t+1);
+    % Assign to wealth node j such that W_j <= W(t+1) < W_{j+1}
+    WNodeIdx = find(difference <= tol,1,'last');
+
+% Store the optimum strategy and value function.
+    if t<T
+        portPath(t+1) = portIdx(WNodeIdx,t+1);
+    else
+        portPath(t+1) = nan;
+    end
+    VPath(t+1) = V(WNodeIdx,t+1);
+end
+end
+
+References
+
+[1] Das, Sanjiv R., Daniel Ostrov, Anand Radhakrishnan, and Deep Srivastav. “Dynamic Portfolio
+Allocation in Goals-Based Wealth Management.” Computational Management Science 17, no. 4
+(December 2020): 613–40. Available at: https://doi.org/10.1007/s10287-019-00351-7.
+
+See Also
+Portfolio | estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk
+
+Related Examples
+
+•
+“Single Period Goal-Based Wealth Management” on page 4-362
+
+•
+“Multiperiod Goal-Based Wealth Management Using Reinforcement Learning” on page 4-379
+
+More About
+
+•
+“Choose MINLP Solvers for Portfolio Problems” on page 4-140
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-378

@@ -1,0 +1,54 @@
+distributions of the simulated and true state vectors are identical only for piecewise constant
+parameters. If S t, Xt , L t, Xt , and V t, Xt  are piecewise constant over each observation period, the
+state vector Xtis normally distributed, and the simulated process is exact for the observation times at
+which Xtis sampled.
+
+Hull-White vs. Vasicek Models
+
+Many references differentiate between Vasicek models and Hull-White models. Where such
+distinctions are made, Vasicek parameters are constrained to be constants, while Hull-White
+parameters vary deterministically with time. Think of Vasicek models in this context as constant-
+coefficient Hull-White models and equivalently, Hull-White models as time-varying Vasicek models.
+However, from an architectural perspective, the distinction between static and dynamic parameters is
+trivial. Since both models share the same general parametric specification as previously described, a
+single hwv object encompasses the models.
+
+Creating Heston Stochastic Volatility Models
+
+The Heston (heston) object derives directly from SDE from the Drift and Diffusion (sdeddo) class.
+Each Heston model is a bivariate composite model, consisting of two coupled univariate models:
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t
+ (14-5)
+
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+ (14-6)
+
+The first equation is typically associated with a price process. The second equation represents the
+evolution of the price process' variance. Models of type heston are typically used to price equity
+options.
+
+Specify Heston Stochastic Volatility Model
+
+Create a heston object using heston to represent the model:
+
+obj = heston (0.1, 0.2, 0.1, 0.05)
+
+obj = 
+   Class HESTON: Heston Bivariate Stochastic Volatility
+   ----------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   ----------------------------------------------------
+      StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.1
+          Speed: 0.2
+
+Parametric Models
+
+14-29

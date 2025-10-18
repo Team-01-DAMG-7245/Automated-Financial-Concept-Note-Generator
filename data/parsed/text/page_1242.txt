@@ -1,0 +1,47 @@
+Simulating Interest Rates
+
+In this section...
+
+“Simulate Interest Rates Through Interpolation” on page 14-50
+
+“Simulate Positive Interest Rates” on page 14-54
+
+Simulate Interest Rates Through Interpolation
+
+All simulation methods require that you specify a time grid by specifying the number of periods
+(NPeriods). You can also optionally specify a scalar or vector of strictly positive time increments
+(DeltaTime) and intermediate time steps (NSteps). These parameters, along with an initial sample
+time associated with the object (StartTime), uniquely determine the sequence of times at which the
+state vector is sampled. Thus, simulation methods allow you to traverse the time grid from beginning
+to end (that is, from left to right).
+
+In contrast, interpolation methods allow you to traverse the time grid in any order, allowing both
+forward and backward movements in time. They allow you to specify a vector of interpolation times
+whose elements do not have to be unique.
+
+Many references define the Brownian Bridge as a conditional simulation combined with a scheme for
+traversing the time grid, effectively merging two distinct algorithms. In contrast, the interpolation
+method offered here provides additional flexibility by intentionally separating the algorithms. In this
+method for moving about a time grid, you perform an initial Monte Carlo simulation to sample the
+state at the terminal time, and then successively sample intermediate states by stochastic
+interpolation. The first few samples determine the overall behavior of the paths, while later samples
+progressively refine the structure. Such algorithms are often called variance reduction techniques.
+This algorithm is simple when the number of interpolation times is a power of 2. In this case, each
+interpolation falls midway between two known states, refining the interpolation using a method like
+bisection. This example highlights the flexibility of refined interpolation by implementing this power-
+of-two algorithm.
+
+Load a historical data set of three-month Euribor rates, observed daily, and corresponding trading
+dates spanning the time interval from February 7, 2001 through April 24, 2006.
+
+load Data_GlobalIdx2
+dates = datetime(dates,"ConvertFrom","datenum");
+plot(dates, 100 * Dataset.EB3M)
+xlabel('Date')
+ylabel('Daily Yield (%)')
+title('3-Month Euribor as a Daily Effective Yield')
+
+14
+Stochastic Differential Equations
+
+14-50

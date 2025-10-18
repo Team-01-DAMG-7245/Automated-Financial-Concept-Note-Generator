@@ -1,0 +1,12 @@
+{
+  "page": 1304,
+  "original_text": "time1                 % elapsed time of conventional simulation, in seconds\ntime2                 % elapsed time of parallel simulation, in seconds\nspeedup = time1/time2 % speedup factor",
+  "ocr_text": "timel Selapsedtimeofconventionalsimulation,inseconds\ntime2 elapsedtimeofparallelsimulation,inseconds\nspeedup=timel/time2*speedupfactor",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 496.36,
+    "y1": 654.29
+  },
+  "confidence": "high"
+}

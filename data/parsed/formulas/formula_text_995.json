@@ -1,0 +1,12 @@
+{
+  "page": 524,
+  "original_text": "% Compute the maximum return portfolio.\nnew_weights = estimateCustomObjectivePortfolio(p,robustObjective, ...\n    ObjectiveSense=\"maximize\");",
+  "ocr_text": "SComputethemaximumreturnportfolio.\nnew_weights=estimateCustom0bjectivePortfolio(p,robustObjective,...\nObjectiveSense=maximize);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.83,
+    "x1": 463.87,
+    "y1": 427.89
+  },
+  "confidence": "high"
+}

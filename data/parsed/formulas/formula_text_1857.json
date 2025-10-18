@@ -1,0 +1,12 @@
+{
+  "page": 947,
+  "original_text": "fprintf('\\nConst   AGE   CPF   SPR   adjR^2\\n')",
+  "ocr_text": "fprintf(nConst AGE CPF SPRadjR*2n)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 296.43,
+    "x1": 344.67,
+    "y1": 306.89
+  },
+  "confidence": "high"
+}

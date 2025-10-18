@@ -1,0 +1,56 @@
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Note When using the 30/360 day-count basis, it is not always possible to find the exact date
+NewDate number of days away because of a known discontinuity in the method of counting days. A
+warning is displayed if this occurs.
+
+Data Types: double
+
+Output Arguments
+
+NewDate — Date for given number of days away from StartDate
+vector
+
+Date for given number of days away from StartDate, returned as a scalar or an N-by-1 vector
+containing dates.
+
+If StartDate is a string or date character vector, NewDate is returned as a serial date number. Use
+the function datetime to convert serial date numbers to formatted datetime arrays.
+
+If StartDate is a datetime array, then NewDate is returned as a datetime array.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although daysadd supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Stigum, Marcia L. and Franklin Robinson. Money Market and Bond Calculations. Richard D. Irwin,
+1996, ISBN 1-55623-476-7
+
+See Also
+daysdif | datetime
+
+daysadd
+
+15-835

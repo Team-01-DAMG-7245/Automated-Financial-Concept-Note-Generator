@@ -1,0 +1,12 @@
+{
+  "page": 1213,
+  "original_text": "F = drift(0, 0.1);      % Drift rate function F(t,X)\nG = diffusion(1, 0.3);  % Diffusion rate function G(t,X)",
+  "ocr_text": "F=drift(0,0.1); sDriftratefunctionF(t,X)\nG=diffusion(1,0.3);DiffusionratefunctionG(t,X)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 393.42,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

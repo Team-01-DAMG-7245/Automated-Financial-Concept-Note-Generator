@@ -1,0 +1,18 @@
+Version History
+Introduced in R2006a
+
+See Also
+mvnrstd | mvnrmle
+
+Topics
+“Multivariate Normal Regression With Missing Data” on page 9-14
+“Multivariate Normal Regression Without Missing Data” on page 9-13
+“Least-Squares Regression With Missing Data” on page 9-14
+“Least-Squares Regression Without Missing Data” on page 9-14
+“Fisher Information” on page 9-4
+“Multivariate Normal Linear Regression” on page 9-2
+“Least-Squares Regression” on page 9-4
+
+mvnrfish
+
+15-1191

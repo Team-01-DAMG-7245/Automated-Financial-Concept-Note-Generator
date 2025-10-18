@@ -1,0 +1,47 @@
+Create a heston Object
+
+The Heston (heston) class derives directly from SDE from Drift and Diffusion (sdeddo). Each Heston
+model is a bivariate composite model, consisting of two coupled univariate models:
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t
+
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+
+Create a heston object to represent the model:
+
+dX1t = 0 . 1X1tdt +
+X2tX1tdW1t
+
+dX2t = 0 . 2[0 . 1 −X2t]dt + 0 . 05 X2tdW2t
+
+obj = heston (0.1, 0.2, 0.1, 0.05)  % (Return, Speed, Level, Volatility)
+
+obj = 
+   Class HESTON: Heston Bivariate Stochastic Volatility
+   ----------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   ----------------------------------------------------
+      StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.1
+          Speed: 0.2
+          Level: 0.1
+     Volatility: 0.05
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+15
+Functions
+
+15-136

@@ -1,0 +1,12 @@
+{
+  "page": 1072,
+  "original_text": "Given m = NUMSAMPLES observations, the typical covariance-weighted least squares, or CWLS,\nregression model seeks to minimize the objective function",
+  "ocr_text": "Givenm=NUMSAMPLESobservations,thetypicalcovariance-weightedleastsquares,orCWLS,\nregressionmodelseekstominimizetheobjectivefunction",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 695.36,
+    "x1": 526.04,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

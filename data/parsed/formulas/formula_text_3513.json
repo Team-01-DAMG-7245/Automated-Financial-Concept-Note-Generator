@@ -1,0 +1,12 @@
+{
+  "page": 1957,
+  "original_text": "% Append a new trade to your existing portfolio.\ncpValues = [cpValues newTradeValues];\nnetting = [netting; cpID];\nexposures = creditexposures(cpValues,cpID,'NettingID',netting);",
+  "ocr_text": "Appendanewtradetoyourexistingportfolio.\ncpValues=[cpValuesnewTradeValues];\nnetting=[netting;cpID];\nexposures=creditexposures(cpValues,cpID,NettingID,netting);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 583.01,
+    "x1": 431.36,
+    "y1": 625.88
+  },
+  "confidence": "high"
+}

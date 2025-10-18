@@ -1,0 +1,12 @@
+{
+  "page": 1746,
+  "original_text": "p = Portfolio;\nGA = [ true true true false false false ];    % financial companies",
+  "ocr_text": "p=Portfolio;\nGA=[truetruetruefalsefalsefalse]; financial_companies",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 453.02,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

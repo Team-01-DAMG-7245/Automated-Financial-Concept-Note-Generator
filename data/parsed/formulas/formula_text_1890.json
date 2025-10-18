@@ -1,0 +1,12 @@
+{
+  "page": 955,
+  "original_text": "DefRateUB = zeros(nGridCPF,nGridSPR);\nfor i=1:nGridCPF\n   for j=1:nGridSPR\n      DefRateUB(i,j) = yPredUBFn(gridCPF(i),gridSPR(j));\n   end\nend\nExample_StressTestPlot(gridCPF,gridSPR,DefRateUB,CPF,SPR, ...\n   'Corporate Profits Forecast (%)','Corporate Spread (%)', ...\n   ['{\\bf ' strConf '% UB Default Rate Regions (in %)}'])",
+  "ocr_text": "DefRateUB=zeros(nGridCPF,nGridSPR);\nfori=1:nGridCPF\nforj=1:nGridSPR\nDefRateUB(i,j)=yPredUBFn(gridCPF(i),gridSPR(j));\nend\nend\nExample_StressTestPlot(gridCPF,gridSPR,DefRateUB,CPF,SPR,...\nCorporateProfitsForecast(),CorporateSpread(),...\n[{lbf_strConfsUBDefaultRateRegions(in)}])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 541.43,
+    "x1": 431.36,
+    "y1": 638.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,10 @@
+Page 481
+================================================================================
+
+years = 1990:5:2021;
+xtick_idx = zeros(size(years));
+for yidx = 1:numel(years)
+    xtick_idx(yidx) = find(years(yidx) == year(priceData.Time),1,'first');
+end
+xticks(xtick_idx);
+xticklabels(string(years));

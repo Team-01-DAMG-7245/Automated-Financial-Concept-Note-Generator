@@ -1,0 +1,12 @@
+{
+  "page": 2127,
+  "original_text": "NumDays = days360isda(StartDate,EndDate) returns the number of days between StartDate\nand EndDate based on a 360-day year (that is, all months contain 30 days) and is International Swap\nDealer Association (ISDA) compliant. If EndDate is earlier than StartDate, NumDays is negative.\nUnder this convention, all months contain 30 days.",
+  "ocr_text": "NumDays=days360isda(StartDate,EndDate)returnsthenumberofdaysbetweenStartDate\nandEndDatebasedona360-dayyear(thatis,allmonthscontain30days)andisInternationalSwap\nDealerAssociation(ISDA)compliant.IfEndDateisearlierthanStartDate,NumDaysisnegative.\nUnderthisconvention,allmonthscontain30days.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 246.2,
+    "x1": 557.37,
+    "y1": 293.83
+  },
+  "confidence": "high"
+}

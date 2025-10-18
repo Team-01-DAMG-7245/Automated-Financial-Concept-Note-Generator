@@ -1,0 +1,55 @@
+fvfix
+
+Future value with fixed periodic payments
+
+Syntax
+
+FutureVal = fvfix(Rate,NumPeriods,Payment)
+FutureVal = fvfix( ___ ,PresentVal,Due)
+
+Description
+
+FutureVal = fvfix(Rate,NumPeriods,Payment) returns the future value of a series of equal
+payments.
+
+FutureVal = fvfix( ___ ,PresentVal,Due) specifies options using one or more optional
+argument in addition to the input arguments in the previous syntax.
+
+Examples
+
+Return the Future Value of a Series of Equal Payments
+
+This example shows how to compute the future value of a series of equal payments using a savings
+account that has a starting balance of $1500. $200 is added at the end of each month for 10 years
+and the account pays 9% interest compounded monthly.
+
+FutureVal = fvfix(0.09/12, 12*10, 200, 1500, 0)
+
+FutureVal = 
+4.2380e+04
+
+Input Arguments
+
+Rate — Interest-rate per period
+scalar numeric decimal
+
+Interest-rate per period, specified as a scalar numeric decimal.
+
+Data Types: double
+
+NumPeriods — Number of payment periods
+scalar numeric
+
+Number of payment periods, specified as a scalar numeric.
+
+Data Types: double
+
+Payment — Payment per period
+scalar numeric
+
+Payment per period, specified as a scalar numeric.
+
+15
+Functions
+
+15-1064

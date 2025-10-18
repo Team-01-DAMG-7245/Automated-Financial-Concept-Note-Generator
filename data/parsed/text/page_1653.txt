@@ -1,0 +1,55 @@
+simBySolution
+
+Simulate approximate solution of diagonal-drift Merton jump diffusion process
+
+Syntax
+
+[Paths,Times,Z,N] = simBySolution(MDL,NPeriods)
+[Paths,Times,Z,N] = simBySolution( ___ ,Name,Value)
+
+Description
+
+[Paths,Times,Z,N] = simBySolution(MDL,NPeriods) simulates NNTrials sample paths of
+NVars correlated state variables driven by NBrowns Brownian motion sources of risk and NJumps
+compound Poisson processes representing the arrivals of important events over NPeriods
+consecutive observation periods. The simulation approximates continuous-time Merton jump diffusion
+process by an approximation of the closed-form solution.
+
+[Paths,Times,Z,N] = simBySolution( ___ ,Name,Value) specifies options using one or more
+name-value pair arguments in addition to the input arguments in the previous syntax.
+
+You can perform quasi-Monte Carlo simulations using the name-value arguments for
+MonteCarloMethod, QuasiSequence, and BrownianMotionMethod. For more information, see
+“Quasi-Monte Carlo Simulation” on page 14-63.
+
+Examples
+
+Use simBySolution with merton Object
+
+Simulate the approximate solution of diagonal-drift Merton process.
+
+Create a merton object.
+
+AssetPrice = 80;
+            Return = 0.03;
+            Sigma = 0.16;
+            JumpMean = 0.02;
+            JumpVol = 0.08;
+            JumpFreq = 2;
+            
+            mertonObj = merton(Return,Sigma,JumpFreq,JumpMean,JumpVol,...
+                'startstat',AssetPrice)
+
+mertonObj = 
+   Class MERTON: Merton Jump Diffusion
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 80
+    Correlation: 1
+          Drift: drift rate function F(t,X(t))
+
+simBySolution
+
+15-347

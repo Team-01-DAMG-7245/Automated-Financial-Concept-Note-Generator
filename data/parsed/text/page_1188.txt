@@ -1,0 +1,18 @@
+8
+Select a date and click OK to display the date in the text field:
+
+See Also
+createholidays | holidays | nyseclosures
+
+Related Examples
+
+•
+“Trading Calendars User Interface” on page 12-2
+
+•
+“Handle and Convert Dates” on page 2-2
+
+12
+Trading Date Utilities
+
+12-6

@@ -1,0 +1,12 @@
+{
+  "page": 1891,
+  "original_text": "Yield = bndyield(Price,CouponRate,Settle,Maturity,Period,Basis)",
+  "ocr_text": "Yield=bndyield(Price,CouponRate,Settle,Maturity,Period,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.33,
+    "x1": 431.34,
+    "y1": 405.8
+  },
+  "confidence": "high"
+}

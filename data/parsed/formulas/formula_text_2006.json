@@ -1,0 +1,12 @@
+{
+  "page": 1040,
+  "original_text": "numObs = height(dataToImpute);\nk = round(sqrt(numObs));\nif ~mod(k,2)\n    k = k+1;\nend",
+  "ocr_text": "numObs=height(dataToImpute);\nk_=round(sqrt(numObs));\nif_mod(k,2)\n\nk=k+1;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 137.53,
+    "x1": 252.54,
+    "y1": 191.2
+  },
+  "confidence": "high"
+}

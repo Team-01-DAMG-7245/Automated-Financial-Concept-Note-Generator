@@ -1,0 +1,44 @@
+Rebalancing Period Actions for Efficient Portfolios
+
+The action at each rebalancing period is to choose the weights of the investment portfolio for the next
+time period. In this example assume that the possible portfolio weights are associated with the
+portfolios on the efficient frontier. This example also assumes that the choice of possible portfolios is
+fixed throughout the full investment period. However, weights are not required to be on the efficient
+frontier. The only requirement is that the set of actions (portfolio choices) remains fixed throughout
+the investment period.
+
+To simplify the computations, define a finite subset of the efficient portfolios for possible actions.
+Start by creating a Portfolio object with the asset information from
+BlueChipStockMoments.mat.
+
+p = Portfolio(AssetList=AssetList,AssetMean=AssetMean,...
+    AssetCovar=AssetCovar);
+
+Annualize the asset returns and the variance-covariance matrix.
+
+p.AssetMean  = 12*p.AssetMean;
+p.AssetCovar = 12*p.AssetCovar;
+
+Use setBounds to add constraints to the portfolio problem. Here, assets do not represent more than
+10% of the portfolio wealth and shorting is not allowed.
+
+p = setBounds(p,0,0.1);
+
+Use setBudget to specify that the portfolio must be fully invested.
+
+p = setBudget(p,1,1);
+
+Compute the weights of 15 portfolios on the efficient frontier using estimateFrontier. These
+portfolios represent the possible actions at each rebalancing period.
+
+nPortfolios = 15;
+pwgt = estimateFrontier(p,nPortfolios);
+
+Plot the efficient frontier using plotFrontier.
+
+[prsk,pret] = plotFrontier(p,pwgt);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-368

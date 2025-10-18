@@ -1,0 +1,58 @@
+load FundMarketCash 
+Returns = tick2ret(TestData);
+Benchmark = Returns(:,2);
+[InfoRatio, TrackingError] = inforatio(Returns, Benchmark)
+
+InfoRatio = 1×3
+
+0.0432       NaN   -0.0315
+
+TrackingError = 1×3
+
+0.0187         0    0.0390
+
+Tracking error, also know as active risk, measures the volatility of active returns. Tracking error is a
+useful measure of performance relative to a benchmark since it is in units of asset returns. For
+example, the tracking error of 1.87% for the fund relative to the market in this example is reasonable
+for an actively managed, large-cap value fund.
+
+Input Arguments
+
+Asset — Asset returns
+matrix
+
+Asset returns, specified as a NUMSAMPLES x NUMSERIES matrix with NUMSAMPLES observations of
+asset returns for NUMSERIES asset return series.
+
+Data Types: double
+
+Benchmark — Returns for a benchmark asset
+vector
+
+Returns for a benchmark asset, specified as a NUMSAMPLES vector of returns for a benchmark asset.
+The periodicity must be the same as the periodicity of Asset. For example, if Asset is monthly data,
+then Benchmark should be monthly returns.
+
+Data Types: double
+
+Output Arguments
+
+Ratio — Information ratios
+vector
+
+Information ratios, returned as a 1 x NUMSERIES row vector of information ratios for each series in
+Asset. Any series in Asset with a tracking error of 0 has a NaN value for its information ratio.
+
+TE — Tracking errors
+vector
+
+Tracking errors, returned as a 1 x NUMSERIES row vector of tracking errors, that is, the standard
+deviation of Asset relative to Benchmark returns, for each series.
+
+Note NaN values in the data are ignored. If the Asset and Benchmark series are identical, the
+information ratio is NaN since the tracking error is 0. The information ratio and the Sharpe ratio of an
+
+15
+Functions
+
+15-1126

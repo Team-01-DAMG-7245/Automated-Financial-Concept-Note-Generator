@@ -1,0 +1,4 @@
+Page 1593
+================================================================================
+
+This helper function plots the asset allocation as an area plot.

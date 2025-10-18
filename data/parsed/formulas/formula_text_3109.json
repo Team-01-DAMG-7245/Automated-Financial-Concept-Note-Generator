@@ -1,0 +1,12 @@
+{
+  "page": 1644,
+  "original_text": "[Paths,Times,Z] = simByHybrid( ___ ,Name=Value) specifies options using one or more\nname-value arguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "[Paths,Times,Z]=simByHybrid( ,Name=Value)specifiesoptionsusingoneormore\nname-valueargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 313.15,
+    "x1": 529.8,
+    "y1": 336.78
+  },
+  "confidence": "high"
+}

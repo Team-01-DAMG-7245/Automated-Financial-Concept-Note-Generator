@@ -1,0 +1,12 @@
+{
+  "page": 560,
+  "original_text": "function reward = sparseReward(loggedSignals,finalTimePeriod, ...\n    targetWealth,WMin,WMax)\n% Function that computes the reward obtained in the current state\n% following the sparse rule:\n%   R(W,t) =  1    if t >= T and W >= targetWealth\n%             0    if t < T or  W <  targetWealth",
+  "ocr_text": "functionreward=sparseReward(loggedSignals,finalTimePeriod,...\ntargetWealth,WMin,WMax)\n\nFunctionthatcomputestherewardobtainedinthecurrentstate\n\nfollowingthesparserule:\n\nR(W,t)=_1 ift-=TandW==targetWealth\n\n0 iftTorW_targetWealth",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 442.2,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

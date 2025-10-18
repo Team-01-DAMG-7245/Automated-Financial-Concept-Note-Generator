@@ -1,0 +1,12 @@
+{
+  "page": 1140,
+  "original_text": "env = rlFunctionEnv(ObservationInfo,ActionInfo, ...\n    @(Hedge, LoggedSignals) stepFcn(Hedge,LoggedSignals,rfRate,ExpVol,dT,Strike,ExpReturn,c,kappa\n    @() resetFcn(SpotPrice/Strike,Maturity,InitPosition));",
+  "ocr_text": "env=rlFunctionEnv(ObservationInfo,ActionInfo,...\nQ(Hedge,_LoggedSignals)_stepFcn(Hedge,LoggedSignals,rfRate,ExpVol,dT,Strike,ExpReturn,c,kappi\nQ()_resetFcn(SpotPrice/Strike,Maturity,InitPosition));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 482.31,
+    "x1": 615.54,
+    "y1": 514.38
+  },
+  "confidence": "high"
+}

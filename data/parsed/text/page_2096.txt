@@ -1,0 +1,10 @@
+Version History
+Introduced before R2006a
+
+See Also
+cur2str | frac2cur
+
+15
+Functions
+
+15-790

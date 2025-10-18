@@ -1,0 +1,26 @@
+References
+
+[1] The World Bank: Commodity Monthly Prices, located at: https://www.worldbank.org/en/research/
+commodity-markets and licensed under CC BY 4.0 Deed | Attribution 4.0 International | Creative
+Commons.
+
+[2] U.S. Bureau of Labor Statistics, Consumer Price Index for All Urban Consumers: Purchasing
+Power of the Consumer Dollar in U.S. City Average [CUUR0000SA0R]. Available at https://
+beta.bls.gov/dataViewer/view/timeseries/CUUR0000SA0R. Data provided by the U.S. Bureau of Labor
+Statistics through the BLS Data Viewer at BLS.gov. BLS.gov cannot vouch for the data or analyses
+derived from these data after the data have been retrieved from BLS.gov.
+
+Local Functions
+
+% Import the commodity data.
+function Prices = importCommodityData(filename)
+
+% Detect the import options for the file CMO-Historical-Data-Monthly.xlsx.
+opts = detectImportOptions(filename, ...
+    "Sheet", "Monthly Prices", ...
+    "VariableNamingRule", "preserve", ...
+    "TextType", "string");
+
+Volatility Modeling for Soft Commodities
+
+14-109

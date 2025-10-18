@@ -1,0 +1,8 @@
+Page 665
+================================================================================
+
+This example shows how to use the function simulateNormalScenariosByData to simulate
+multivariate normal scenarios when given either return or price data. Either returns or prices are
+stored as matrices with samples going down the rows and assets going across the columns. In
+addition, returns or prices can be stored in a table or timetable (see “Simulating Normal
+Scenarios from Time Series Data” on page 5-42).

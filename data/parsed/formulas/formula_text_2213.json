@@ -1,0 +1,12 @@
+{
+  "page": 1140,
+  "original_text": "initOpts = rlAgentInitializationOptions('NumHiddenUnit',64);\ncriticOpts = rlOptimizerOptions(\"LearnRate\",1e-4);\nactorOpts = rlOptimizerOptions(\"LearnRate\",1e-4);",
+  "ocr_text": "initOpts=rlAgentInitializationOptions(NumHiddenUnit,64);\ncriticOpts=rlOptimizerOptions(LearnRate,1le-4);\nactorOpts=rlOptimizerOptions(LearnRate,1e-4);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.43,
+    "x1": 415.1,
+    "y1": 643.49
+  },
+  "confidence": "high"
+}

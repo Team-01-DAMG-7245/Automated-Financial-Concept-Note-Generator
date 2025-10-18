@@ -1,0 +1,12 @@
+{
+  "page": 659,
+  "original_text": "p = PortfolioCVaR('NumAssets', 10, 'InitPort', 1/10);\ndisp(p.InitPort)",
+  "ocr_text": "p=PortfolioCVaR(NumAssets,10,InitPort,1/10);\ndisp(p.InitPort)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 369.63,
+    "x1": 377.17,
+    "y1": 390.89
+  },
+  "confidence": "high"
+}

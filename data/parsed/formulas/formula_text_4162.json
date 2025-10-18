@@ -1,0 +1,12 @@
+{
+  "page": 2334,
+  "original_text": "CorrMat = ExpCovariance./( STDVec*STDVec' )",
+  "ocr_text": "CorrMat=ExpCovariance./(STDVec*STDVec)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 578.23,
+    "x1": 350.06,
+    "y1": 588.7
+  },
+  "confidence": "high"
+}

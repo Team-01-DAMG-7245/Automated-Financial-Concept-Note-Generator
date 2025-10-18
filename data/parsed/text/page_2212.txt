@@ -1,0 +1,57 @@
+Mean — Maximum likelihood parameter estimates for mean of Data
+vector
+
+Maximum likelihood parameter estimates for the mean of the Data using the ECM algorithm,
+specified as a NUMSERIES-by-1 column vector.
+
+Covariance — Maximum likelihood parameter estimates for covariance of Data
+matrix
+
+Maximum likelihood parameter estimates for the covariance of the Data using the ECM algorithm,
+specified as a NUMSERIES-by-NUMSERIES matrix.
+
+Method — Method of estimation for standard error calculations
+'hessian' (default) | character vector
+
+(Optional) Method of estimation for standard error calculations, specified as a character vector. The
+estimation methods are:
+
+•
+'hessian' — The Hessian of the observed negative log-likelihood function. This method is
+recommended since the resultant standard errors incorporate the increase uncertainties due to
+missing data. In particular, standard errors calculated with the Hessian are generally larger than
+standard errors calculated with the Fisher information matrix.
+
+•
+'fisher' — The Fisher information matrix.
+
+Data Types: char
+
+Output Arguments
+
+StdMean — Standard errors of estimates for each element of Mean vector
+vector
+
+Standard errors of estimates for each element of Mean vector, returned as a NUMSERIES-by-1 column
+vector.
+
+StdCovar — Standard errors of estimates for each element of Covariance matrix
+matrix
+
+Standard errors of estimates for each element of Covariance matrix, returned as a NUMSERIES-by-
+NUMSERIES matrix.
+
+Version History
+Introduced before R2006a
+
+See Also
+ecmnmle
+
+Topics
+“Portfolios with Missing Data” on page 9-21
+“Mean and Covariance Estimation” on page 9-4
+
+15
+Functions
+
+15-906

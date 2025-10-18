@@ -1,0 +1,12 @@
+{
+  "page": 839,
+  "original_text": "p = PortfolioMAD('ConditionalBudgetThreshold', 0.99, 'ConditionalUpperBudget', 1);\ndisp(p.ConditionalBudgetThreshold)\ndisp(p.ConditionalUpperBudget)",
+  "ocr_text": "p=PortfolioMAD(ConditionalBudgetThreshold,0.99,ConditionalUpperBudget,1);\ndisp(p.ConditionalBudgetThreshold)\ndisp(p.ConditionalUpperBudget)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 329.14,
+    "x1": 534.31,
+    "y1": 361.2
+  },
+  "confidence": "high"
+}

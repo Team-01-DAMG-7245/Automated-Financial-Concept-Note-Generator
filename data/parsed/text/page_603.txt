@@ -1,0 +1,32 @@
+title("Reward (Testing, Sell)")
+xlim([0 NumTestingSteps+9])
+
+Display Summary of Training and Testing Results for Sell Trades
+
+You can summarize the results of the sell trade agent's training and testing.
+
+Display total Implementation Shortfall (IS) outperformance of the agent over TWAP for training data.
+
+Total_Outperformance_Train_Sell = sum(IS_TWAP_Horizon_Train_Sell - IS_Agent_Horizon_Train_Sell);
+table(Total_Outperformance_Train_Sell)
+
+ans=table
+    Total_Outperformance_Train_Sell
+    _______________________________
+
+164.47
+
+Display total-gain-to-loss ratio (TGLR) and gain-to-loss ratio (GLR) for the training data.
+
+[TGLR_Train_Sell, GLR_Train_Sell] = ...
+    ISTGLR(IS_TWAP_Horizon_Train_Sell - IS_Agent_Horizon_Train_Sell);
+
+table(TGLR_Train_Sell, GLR_Train_Sell)
+
+ans=1×2 table
+    TGLR_Train_Sell    GLR_Train_Sell
+    _______________    ______________
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-435

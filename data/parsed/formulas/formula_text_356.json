@@ -1,0 +1,12 @@
+{
+  "page": 224,
+  "original_text": "x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];\np = Portfolio('InitPort', x0, 'BuyCost', 0.002, 'SellCost', 0.002);",
+  "ocr_text": "xO=[0.4;0.2;0.2;0.1;0.1];\np=Portfolio(InitPort,x,BuyCost,0.002,_SellCost,0.002);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 335.34,
+    "x1": 380.42,
+    "y1": 352.35
+  },
+  "confidence": "high"
+}

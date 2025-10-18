@@ -1,0 +1,8 @@
+Page 765
+================================================================================
+
+if ~isempty(obj.RiskFreeRate)
+    sratio = -(ret - obj.RiskFreeRate)/risk;
+else
+    sratio = -ret/risk;
+end

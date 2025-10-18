@@ -1,0 +1,12 @@
+{
+  "page": 154,
+  "original_text": "PortWts = estimateFrontier(p, NumPorts);\n[PortRisk, PortReturn] = estimatePortMoments(p, PortWts);",
+  "ocr_text": "PortWts=estimateFrontier(p,NumPorts);\n[PortRisk,PortReturn]=estimatePortMoments(p,PortWts);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 516.31,
+    "x1": 309.61,
+    "y1": 531.44
+  },
+  "confidence": "high"
+}

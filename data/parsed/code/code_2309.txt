@@ -1,0 +1,8 @@
+Page 2180
+================================================================================
+
+•
+Info.Obj — A variable-extent column vector, with no more than MaxIterations elements, that
+contain each value of the objective function at each iteration of the estimation algorithm. The last
+value in this vector, Obj(end), is the terminal estimate of the objective function. If you do
+maximum likelihood estimation, the objective function is the log-likelihood function.

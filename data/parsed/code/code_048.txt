@@ -1,0 +1,7 @@
+Page 51
+================================================================================
+
+The datestr function converts a serial date number to one of 19 different date character vector
+output formats showing date, time, or both. The default output for dates is a day-month-year
+character vector, for example, 24-Aug-2000. The datestr function is useful for preparing output
+reports.

@@ -1,0 +1,12 @@
+{
+  "page": 1001,
+  "original_text": "ProbGood = 1-pd;\nPredictedOdds = ProbGood./pd;",
+  "ocr_text": "ProbGood=1-pd;\nPredictedOdds=ProbGood./pd;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.83,
+    "x1": 247.12,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,38 @@
+Set Constrained Coefficients Back Into the creditscorecard
+
+Now that you have solved for the constrained coefficients, use setmodel to set the model's
+coefficients and predictors. Then you can compute the (unscaled) points.
+
+ModelPreds = ModelPreds(2:end);
+sc = setmodel(sc,ModelPreds,ModelCoeff);
+p = displaypoints(sc);
+
+disp(p)
+
+Predictors               Bin              Points  
+    ______________    _____________________    _________
+
+{'CustAge'   }    {'[-Inf,33)'        }     -0.16725
+    {'CustAge'   }    {'[33,37)'          }     -0.14811
+    {'CustAge'   }    {'[37,40)'          }    -0.065607
+    {'CustAge'   }    {'[40,46)'          }     0.044404
+    {'CustAge'   }    {'[46,48)'          }      0.21761
+    {'CustAge'   }    {'[48,58)'          }      0.23404
+    {'CustAge'   }    {'[58,Inf]'         }      0.49029
+    {'CustAge'   }    {'<missing>'        }          NaN
+    {'ResStatus' }    {'Tenant'           }    0.0044307
+    {'ResStatus' }    {'Home Owner'       }      0.11932
+    {'ResStatus' }    {'Other'            }      0.30048
+    {'ResStatus' }    {'<missing>'        }          NaN
+    {'EmpStatus' }    {'Unknown'          }    -0.077028
+    {'EmpStatus' }    {'Employed'         }      0.31459
+    {'EmpStatus' }    {'<missing>'        }          NaN
+    {'CustIncome'}    {'[-Inf,29000)'     }     -0.43795
+    {'CustIncome'}    {'[29000,33000)'    }    -0.097814
+    {'CustIncome'}    {'[33000,35000)'    }     0.053667
+    {'CustIncome'}    {'[35000,40000)'    }     0.081921
+
+8
+Credit Risk Analysis
+
+8-98

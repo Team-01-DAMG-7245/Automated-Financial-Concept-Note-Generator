@@ -1,0 +1,10 @@
+Page 560
+================================================================================
+
+function reward = constantReturnReward(loggedSignals, ...
+    initialWealth,finalTimePeriod,targetWealth,constantReturn)
+% Function that computes the reward obtained in the current state
+% following the constant return rule:
+%   R(W,t) =  1    if t >= T and W >= targetWealth
+%             0.1  if t < T and  W >= W0 * (1+r)^t
+%             0    o.w.

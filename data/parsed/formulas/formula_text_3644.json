@@ -1,0 +1,12 @@
+{
+  "page": 2053,
+  "original_text": "NumCouponsRemaining = cpncount(Settle,Maturity) returns the whole number of coupon\npayments between the Settle and Maturity dates for a coupon bond or set of bonds. Coupons\nfalling on or before Settle are not counted, except for the Maturity payment which is always\ncounted.",
+  "ocr_text": "NumCouponsRemaining=cpncount(Settle,Maturity)returnsthewholenumberofcoupon\npaymentsbetweentheSettleandMaturitydatesforacouponbondorsetofbonds.Coupons\nfallingonorbeforeSettlearenotcounted,exceptfortheMaturitypaymentwhichisalways\ncounted.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 265.39,
+    "x1": 543.21,
+    "y1": 313.02
+  },
+  "confidence": "high"
+}

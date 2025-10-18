@@ -1,0 +1,35 @@
+plot(cumsum(Interest),':r')
+
+xlabel('Payment Month')
+ylabel('Dollars')
+grid('on')
+title('Outstanding Balance, Cumulative Principal & Interest')
+legend('Outstanding Balance', 'Cumulative Principal', ... 
+'Cumulative Interest')
+
+The solid blue line represents the declining principal over the 30-year period. The dotted red line
+indicates the increasing cumulative interest payments. Finally, the dashed black line represents the
+cumulative principal payments, reaching $100,000 after 30 years.
+
+Input Arguments
+
+Rate — Interest-rate per period
+scalar numeric decimal
+
+Interest-rate per period, specified as a scalar numeric decimal.
+
+Data Types: double
+
+NumPeriods — Number of payment periods
+scalar numeric
+
+Number of payment periods, specified as a scalar numeric.
+
+Data Types: double
+
+PresentValue — Present value of the loan
+scalar numeric
+
+amortize
+
+15-461

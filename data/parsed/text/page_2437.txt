@@ -1,0 +1,53 @@
+isbusday
+
+True for dates that are business days
+
+Syntax
+
+Busday = isbusday(Date)
+Busday = isbusday( ___ ,Holiday,Weekend)
+
+Description
+
+Busday = isbusday(Date) returns logical true (1) if Date is a business day and logical false (0)
+otherwise.
+
+Busday = isbusday( ___ ,Holiday,Weekend), using optional input arguments, returns logical
+true (1) if Date is a business day, and logical false (0) otherwise.
+
+Examples
+
+Determine If a Given Date Is a Business Day
+
+Determine if Date is a business day.
+
+Busday = isbusday('16 jun 2001')
+
+Busday = logical
+   0
+
+Determine if a Date vector are business days.
+
+Date = ['15 feb 2001'; '16 feb 2001'; '17 feb 2001'];
+Busday = isbusday(Date)
+
+Busday = 3×1 logical array
+
+1
+   1
+   0
+
+Determine if a Date vector are business days using a datetime array.
+
+Date = [datetime(2001,2,15); datetime(2001,2,16) ; datetime(2001,2,17)];
+Busday = isbusday(Date)
+
+Busday = 3×1 logical array
+
+1
+   1
+   0
+
+isbusday
+
+15-1131

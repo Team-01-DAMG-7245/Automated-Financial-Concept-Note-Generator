@@ -1,0 +1,9 @@
+Page 2074
+================================================================================
+
+PreviousCouponDate = cpndatep(Settle,Maturity) returns the previous coupon date on or
+before settlement for a portfolio of bonds. This function finds the previous coupon date whether or
+not the coupon structure is synchronized with the maturity date. For zero coupon bonds the previous
+coupon date is the issue date, if available. However, if the issue date is not supplied, the previous
+coupon date for zero coupon bonds is the previous quasi coupon date calculated as if the frequency is
+semiannual.

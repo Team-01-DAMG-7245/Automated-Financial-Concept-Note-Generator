@@ -1,0 +1,12 @@
+{
+  "page": 2409,
+  "original_text": "Y = getScenarios(p)",
+  "ocr_text": "Y=getScenarios(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 433.22,
+    "x1": 192.94,
+    "y1": 443.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,9 @@
+Page 143
+================================================================================
+
+The efficient frontier computation functions require information about each asset in the portfolio.
+This data is entered into the function via two matrices: an expected return vector and a covariance
+matrix. The expected return vector contains the average expected return for each asset in the
+portfolio. The covariance matrix is a square matrix representing the interrelationships between pairs
+of assets. This information can be directly specified or can be estimated from an asset return time
+series with the function ewstats.

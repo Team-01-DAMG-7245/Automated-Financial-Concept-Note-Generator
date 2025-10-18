@@ -1,0 +1,12 @@
+{
+  "page": 704,
+  "original_text": "x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ]; \np = PortfolioCVaR('BuyTurnover', 0.3, 'SellTurnover', 0.2, 'InitPort', x0);\ndisp(p.NumAssets)\ndisp(p.BuyTurnover)\ndisp(p.SellTurnover)\ndisp(p.InitPort)",
+  "ocr_text": "xO=[0.12;0.09;0.08;0.07;0.1;0.1;0.15;0.11;0.08;0.1];\np=PortfolioCVaR(BuyTurnover,0.3,_SellTurnover,0.2,_InitPort,x);\ndisp(p.NumAssets)\n\ndisp(p.BuyTurnover)\n\ndisp(p.SellTurnover)\n\ndisp(p.InitPort)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 332.24,
+    "x1": 415.1,
+    "y1": 383.81
+  },
+  "confidence": "high"
+}

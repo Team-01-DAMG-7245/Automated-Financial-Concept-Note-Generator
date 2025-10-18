@@ -1,0 +1,57 @@
+CustAge    ResStatus    EmpStatus    CustIncome    TmWBank    OtherCC    AMBalance
+    _______    _________    _________    __________    _______    _______    _________
+
+64.984      62.138       58.807        67.893      61.858     75.622      89.922  
+     78.86      74.125       58.807        82.439      61.061     75.622      89.922  
+     96.76      73.248       58.807        96.969      51.132     50.914      89.922  
+    69.636      90.828       58.807        29.375      61.858     50.914      89.922
+
+Four Approaches for Treating Missing Data and Developing a New Credit Scorecard
+
+There are four different approaches for treating missing data.
+
+Approach 1: Fill missing data using the fillmissing function of the creditscorecard
+object
+
+The creditscorecard object supports a fillmissing function. When you call the function on a
+predictor or group of predictors, the fillmissing function fills the missing data with the user-
+specified statistic. fillmissing supports the fill values 'mean', 'median', 'mode', and
+'constant', as well as the option to switch back to the original data.
+
+The advantage of using fillmissing is that the creditscorecard object keeps track of the fill
+value and also applies it to the validation data. The limitation of this approach is that only basic
+statistics are used to fill missing data.
+
+For more information on Approach 1, see fillmissing.
+
+Approach 2: Fill missing data using the MATLAB® fillmissing function
+
+MATLAB® supports a fillmissing function that you can use before creating a creditscorecard
+object to treat missing values in numeric and categorical data. The advantage of this method is that
+you can use all the options available in fillmissing to fill missing data, as well as other MATLAB
+functionality, such as standardizeMissing and features for the treatment of outliers. However, the
+downside is that you are responsible for the same transformations to the validation data before
+scoring as the fillmissing function is outside of the creditscorecard object.
+
+For more information on Approach 2, see “Treat Missing Data in a Credit Scorecard Workflow Using
+MATLAB fillmissing” on page 8-132.
+
+Approach 3: Impute missing data using the k-nearest neighbors (KNN) algorithm
+
+This KNN approach considers multiple predictors as compared to Approach 1 and Approach 2. Like
+Approach 2, the KNN approach is done outside the creditscoreacrd workflow, and consequently,
+you need to perform imputation for both the training and validation data.
+
+For more information on Approach 3, see “Impute Missing Data in the Credit Scorecard Workflow
+Using the k-Nearest Neighbors Algorithm” on page 8-121.
+
+Approach 4: Impute missing data using the random forest algorithm
+
+This random forest approach is similar to Approach 3 and uses multiple predictors to impute missing
+values. Because the approach is outside the creditscorecard workflow, you need to perform
+imputation for both the training and validation data.
+
+8
+Credit Risk Analysis
+
+8-62

@@ -1,0 +1,12 @@
+{
+  "page": 598,
+  "original_text": "InitialObservation = reset(RL_OptimalExecution_Testing_Environment_Sell);",
+  "ocr_text": "InitialObservation=reset(RL_OptimalExecution_Testing_Environment_Sell);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 198.25,
+    "x1": 485.51,
+    "y1": 208.72
+  },
+  "confidence": "high"
+}

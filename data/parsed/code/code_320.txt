@@ -1,0 +1,8 @@
+Page 319
+================================================================================
+
+The second example is when you explicitly set the three constraints, but all with inactive values. In
+this example, the BoundType is 'Conditional' and the LowerBound is 0, thus specifying
+ineffective 'Conditional' BoundType constraints, and the 'MinNumAssets' and
+'MaxNumAssets' values are 0 and 3, respectively. The setMinMaxNumAssets function specifies
+ineffective 'MinNumAssets' and 'MaxNumAssets' constraints.

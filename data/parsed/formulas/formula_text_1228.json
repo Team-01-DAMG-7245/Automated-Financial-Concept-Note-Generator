@@ -1,0 +1,12 @@
+{
+  "page": 616,
+  "original_text": "if BuyTrade\n    LOBPrices = AskPrices;\n    LOBSizes = AskSizes;\nelse\n    LOBPrices = BidPrices;\n    LOBSizes = BidSizes;\nend",
+  "ocr_text": "ifBuyTrade\nLOBPrices=AskPrices;\nLOBSizes=AskSizes;\nelse\nLOBPrices=BidPrices;\nLOBSizes=BidSizes;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 298.23,
+    "x1": 230.87,
+    "y1": 373.49
+  },
+  "confidence": "high"
+}

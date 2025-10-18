@@ -1,0 +1,61 @@
+Prepare the data for the LSTM neural network by associating each response with the past b = 100
+forward price movements and imbalance index values (b is arbitrarily chosen in this example). Store
+each successive feature series in a cell vector.
+
+b = 100;    % Hyperpatameter
+n = n - b + 1;
+XCell = cell(n,1);
+
+for k = 1:n
+    tmp = zeros(width(X),b);
+    for j = 1:b
+        tmp(:,j) = X(j+k-1,:)';
+    end
+    XCell{k} = tmp;
+end
+
+Because the first predictor observation contains measurements from times 1 through 100, the
+response data must start at time 101. In other words, the setting b causes the sample size reduction
+n −b.
+
+Synchronize the series.
+
+XCell = XCell(1:(end-1));
+y = y(b:(end-1));
+midprices = midprices(b-1:end-2);
+n = numel(y);
+head(table(XCell,y))
+
+XCell           y  
+    ______________    _____
+
+{2×100 double}    const
+    {2×100 double}    const
+    {2×100 double}    const
+    {2×100 double}    const
+    {2×100 double}    const
+    {2×100 double}    const
+    {2×100 double}    const
+    {2×100 double}    const
+
+Each response is associated with a 2-by-100 matrix of predictor data. In the first row of the table
+display, XCell{1,:} contains imbalance index values during times t(1:100) and XCell{2,:}
+contains forward price movements in the same period. y(1) is future forward price movement during
+time(101) (recall ΔtS = 1). Symbolically, the model is
+
+yt + 1 = f It, It −1, . . . , It −100, ΔSt, ΔSt −1, . . . , , ΔSt −100; W .
+
+Partition Data
+
+Partition the data into training, validation, and backtesting sets. Because the data are time series, you
+can use the tspartition function, which, among other features, cuts the data, rather than shuffles
+it before cutting it. Reserve half the data for backtesting, and partition the other half of the data so
+that 85% is for training the model and 15% is for validation.
+
+pBT = 0.5;
+tspFull = tspartition(n,Holdout=pBT);
+idxTV = training(tspFull);  % Training and validation indices
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data
+
+2-83

@@ -1,0 +1,12 @@
+{
+  "page": 429,
+  "original_text": "nAssets = size(signals,2);\nfinal_signal = signals{end,:};\nbuys = final_signal == 1;\ninitial_weights = zeros(1,nAssets);\ninitial_weights(buys) = 1 / nAssets;",
+  "ocr_text": "nAssets=size(signals,2);\nfinal_signal=signals{end,:};\nbuys=final_signal==1;\ninitial_weights=zeros(1,nAssets);\ninitial_weights(buys)=1/nAssets;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 515.56,
+    "x1": 285.05,
+    "y1": 569.22
+  },
+  "confidence": "high"
+}

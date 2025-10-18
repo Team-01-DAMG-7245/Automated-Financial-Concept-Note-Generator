@@ -1,0 +1,12 @@
+{
+  "page": 1045,
+  "original_text": "dataToImpute = dataMissing(:,setdiff(dataMissing.Properties.VariableNames,...\n    {'CustID','status'},'stable'));",
+  "ocr_text": "dataToImpute=dataMissing(:,setdiff(dataMissing.Properties.VariableNames,...\n{CustID,status},stable));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.91,
+    "x1": 507.22,
+    "y1": 557.18
+  },
+  "confidence": "high"
+}

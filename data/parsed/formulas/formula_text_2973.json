@@ -1,0 +1,12 @@
+{
+  "page": 1556,
+  "original_text": "% Don't change the weights\nnew_weights = current_weights;",
+  "ocr_text": "Dontchangetheweights\nnew_weights=current_weights;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 438.97,
+    "x1": 252.54,
+    "y1": 460.24
+  },
+  "confidence": "high"
+}

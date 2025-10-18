@@ -1,0 +1,12 @@
+{
+  "page": 86,
+  "original_text": "Volatility = blsimpv(100, 95, 0.10, 0.25, OptCall)",
+  "ocr_text": "Volatility=blsimpv(100,95,0.10,0.25,OptCall)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 360.9,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2192,
+  "original_text": "Fisher information matrix, returned as an NUMPARAMSNUMPARAMS matrix based on current parameter\nestimates, where NUMPARAMS = NUMSERIES * (NUMSERIES + 3)/2 if the MatrixFormat =\n'full'. If the MatrixFormat = 'meanonly', then the NUMPARAMS = NUMSERIES.",
+  "ocr_text": "Fisherinformationmatrix,returnedasanNUMPARAMSNUMPARAMSmatrixbasedoncurrentparameter\nestimates,whereNUMPARAMS=NUMSERIES*(NUMSERIES+3)/2iftheMatrixFormat=\nfull.IftheMatrixFormat=meanonly,thentheNUMPARAMS=NUMSERIES.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 417.44,
+    "x1": 556.03,
+    "y1": 453.07
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 480
+================================================================================
+
+if 0 < abssum
+    new_weights = signal / abssum;
+else
+    new_weights = zeros(size(current_weights));
+end

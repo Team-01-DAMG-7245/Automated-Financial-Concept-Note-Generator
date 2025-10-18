@@ -1,0 +1,61 @@
+AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [3×1 double]
+                    UpperBound: [3×1 double]
+                   LowerBudget: []
+                   UpperBudget: []
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [3×1 categorical]
+
+Setting the Limits on the Number of Assets Invested Using the
+setMinMaxNumAssets Function
+
+You can also set the MinNumAssets and MaxNumAssets properties to define a limit on the number of
+assets invested using setMinMaxNumAssets. For example, by setting
+MinNumAssets=MaxNumAssets=2, only two of the three assets are invested in the portfolio.
+
+p = PortfolioCVaR;
+p = setBounds(p, 0.02, 0.5,'BoundType', 'Conditional', 'NumAssets', 3)
+p = setMinMaxNumAssets(p, 2, 2)
+
+p =
+
+PortfolioCVaR with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+              ProbabilityLevel: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                  NumScenarios: []
+                          Name: []
+                     NumAssets: 3
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [3×1 double]
+                    UpperBound: [3×1 double]
+                   LowerBudget: []
+                   UpperBudget: []
+                   GroupMatrix: []
+
+Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using PortfolioCVaR Objects
+
+5-73

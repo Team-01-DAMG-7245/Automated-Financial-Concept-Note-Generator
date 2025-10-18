@@ -1,0 +1,12 @@
+{
+  "page": 2277,
+  "original_text": "symbol = T.Properties.VariableNames(3:12)';\ndailyReturn = tick2ret(T{:,3:12});\np = Portfolio('AssetList',symbol,'RiskFreeRate',0.01/252);",
+  "ocr_text": "symbol=T.Properties.VariableNames(3:12);\ndailyReturn=tick2ret(T{:,3:12});\np=Portfolio(AssetList,symbol,RiskFreeRate,0.01/252);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 316.4,
+    "x1": 404.26,
+    "y1": 348.47
+  },
+  "confidence": "high"
+}

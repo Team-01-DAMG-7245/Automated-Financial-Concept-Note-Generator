@@ -1,0 +1,8 @@
+Page 1419
+================================================================================
+
+In contrast, the simBySolution function provides a more accurate description of the underlying
+model. This function simulates the price paths by an approximation of the closed-form solution of
+separable models. Specifically, it applies a Euler approach to a transformed process, which in general
+is not the exact solution to this GBM model. This is because the probability distributions of the
+simulated and true state vectors are identical only for piecewise constant parameters.

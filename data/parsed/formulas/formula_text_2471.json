@@ -1,0 +1,12 @@
+{
+  "page": 1276,
+  "original_text": "f = struct with fields:\n    LongstaffSchwartz: @Example_LongstaffSchwartz/saveBasketPrices\n            CallPrice: @Example_LongstaffSchwartz/getCallPrice\n             PutPrice: @Example_LongstaffSchwartz/getPutPrice\n               Prices: @Example_LongstaffSchwartz/getBasketPrices",
+  "ocr_text": "f=structwithfields:\nLongstaffSchwartz:GExample_LongstaffSchwartz/saveBasketPrices\nCallPrice:GExample_LongstaffSchwartz/getCallPrice\nPutPrice:GExample_LongstaffSchwartz/getPutPrice\nPrices:QExample_LongstaffSchwartz/getBasketPrices",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 144.8,
+    "x1": 447.59,
+    "y1": 198.46
+  },
+  "confidence": "high"
+}

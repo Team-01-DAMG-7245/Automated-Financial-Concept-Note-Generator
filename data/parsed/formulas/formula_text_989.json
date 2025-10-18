@@ -1,0 +1,12 @@
+{
+  "page": 524,
+  "original_text": "function new_weights = markowitzFcn(~,pricesTT,portObj) \n% Traditional mean-variance portfolio maximum return allocation",
+  "ocr_text": "functionnew_weights=markowitzFcn(,pricesTT,portObj)\nTraditionalmean-varianceportfoliomaximumreturnallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 115.03,
+    "x1": 431.33,
+    "y1": 136.29
+  },
+  "confidence": "high"
+}

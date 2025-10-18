@@ -1,0 +1,61 @@
+Compute the traditional and denoised covariance estimates. Use covarianceDenoising to create a
+covariance estimate.
+
+Sigma = cov(retSeries);
+denoisedSigma = covarianceDenoising(retSeries);
+
+Compute the condition number of both covariance estimates. The denoised covariance
+denoisedSigma has a lower condition number than the traditional covariance estimate Sigma.
+
+conditionNum = [cond(Sigma); cond(denoisedSigma)];
+condNumT = table(conditionNum,'RowNames',{'Sigma','SigmaHat'})
+
+condNumT=2×1 table
+                conditionNum
+                ____________
+
+Sigma        3.1119e+18 
+    SigmaHat         1046.8
+
+Use Portfolio to construct Portfolio objects that use the different AssetCovar values. Then use
+setDefaultConstraints to set the portfolio constraints with nonnegative weights that sum to 1 for
+the three portfolios: the true mean with the true covariance, the traditional covariance estimate, and
+the denoised estimate.
+
+% Create a Portfolio object with the true parameters
+p = Portfolio(AssetMean=mean_return,AssetCovar=covariance);
+p = setDefaultConstraints(p);
+
+% Create a Portfolio object with true mean and traditional covariance estimate
+pTraditional = Portfolio(AssetMean=mean_return,AssetCovar=Sigma);
+pTraditional = setDefaultConstraints(pTraditional);
+
+% Create a Portfolio object with true mean and denoised covariance
+pDenoised = Portfolio(AssetMean=mean_return,AssetCovar=denoisedSigma);
+pDenoised = setDefaultConstraints(pDenoised);
+
+Use estimateFrontier to estimate the efficient frontier for each of the Portfolio objects.
+
+% Number of portfolios on the efficient frontier
+nPort = 20;
+
+% True efficient portfolios
+w = estimateFrontier(p,nPort);
+
+% Traditional covariance efficient portfolios
+wTraditional = estimateFrontier(pTraditional,nPort);
+
+% Denoised covariance efficient portfolios
+wDenoised = estimateFrontier(pDenoised,nPort);
+
+Use plotFrontier to plot the frontier obtained from the different weights using the true parameter
+values.
+
+figure
+plotFrontier(p,w)
+hold on
+plotFrontier(p,wTraditional)
+
+covarianceDenoising
+
+15-47

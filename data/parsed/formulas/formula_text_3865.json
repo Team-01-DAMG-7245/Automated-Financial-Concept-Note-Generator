@@ -1,0 +1,12 @@
+{
+  "page": 2203,
+  "original_text": "(Optional) Convergence tolerance for the ECM algorithm, specified as a numeric. If Tolerance ≤ 0,\nperform maximum iterations specified by MaxIterations and do not evaluate the objective function\nat each step unless in display mode.",
+  "ocr_text": "(Optional)ConvergencetolerancefortheECMalgorithm,specifiedasanumeric.IfTolerances0,\nperformmaximumiterationsspecifiedbyMaxIterationsanddonotevaluatetheobjectivefunction\nateachstepunlessindisplaymode.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 127.64,
+    "x1": 554.83,
+    "y1": 163.27
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1726,
+  "original_text": "AbsCons = portcons('PortValue',1,3,'AssetLims', [0; 0; 0], [1; 1; 1;]);",
+  "ocr_text": "AbsCons=portcons(PortValue,1,3,AssetLims,[0;0;0],[1;1;1;]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 498.63,
+    "x1": 474.7,
+    "y1": 509.09
+  },
+  "confidence": "high"
+}

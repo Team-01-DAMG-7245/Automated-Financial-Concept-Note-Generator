@@ -1,0 +1,55 @@
+Use these functions with sde to create an sde object to represent the market model in
+
+SDE = sde(F, G, 'Correlation', correlation, 'StartState', X)
+
+SDE = 
+   Class SDE: Stochastic Differential Equation
+   -------------------------------------------
+     Dimensions: State = 6, Brownian = 6
+   -------------------------------------------
+      StartTime: 0
+     StartState: 100 (6x1 double array) 
+    Correlation: 6x6 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+
+The sde object requires additional information to determine the dimensionality of the model, because
+the functions passed to the sde object are known only by their t, Xt  interface. In other words, the
+sde object requires only two inputs: a drift-rate function and a diffusion-rate function, both accessible
+by passing the sample time and the corresponding state vector t, Xt .
+
+In this case, this information is insufficient to determine unambiguously the dimensionality of the
+state vector and Brownian motion. You resolve the dimensionality by specifying an initial state vector,
+StartState. The SDE engine has assigned the default simulation method, simByEuler, to the
+Simulation parameter.
+
+Represent Market Models Using SDEDDO Models
+
+Create an sdeddo object using sdeddo to represent the market model in
+
+Load the Data_GlobalIdx2 data set from the matlabroot/examples/finance/data directory.
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+Dataset.NIK Dataset.FTSE Dataset.SP];
+
+Convert daily prices to returns.
+
+returns =  tick2ret(prices);
+
+Compute data statistics to input to simulation methods.
+
+nVariables  = size(returns, 2);
+expReturn   = mean(returns);
+sigma       = std(returns);
+correlation = corrcoef(returns);
+
+Create drift and diffusion objects using drift and diffusion.
+
+F = drift(zeros(nVariables,1), diag(expReturn))
+
+14
+Stochastic Differential Equations
+
+14-32

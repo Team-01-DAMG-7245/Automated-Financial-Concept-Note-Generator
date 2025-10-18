@@ -1,0 +1,58 @@
+Local Functions
+
+function [new_weights,userData] =...
+    factorModeling(~,pricesTT,userData)
+% Compute minimum variance portfolio using traditional covariance estimate.
+
+% Compute returns from prices timetable.
+assetReturns = tick2ret(pricesTT);
+
+% Compute the number of factors identified using covariance denoising.
+[~,numFactors] = covarianceDenoising(assetReturns.Variables);
+userData.numFactors = [userData.numFactors; numFactors];
+
+% Compute the covariance using the factors model
+%   SigmaFactorModel = F*Sigma_f*F' + D
+%   r_a = mu_a + F*r_f + epsilon_a
+[factorLoading,factorRetn,~,~,~,factorMean] = ...
+    pca(assetReturns.Variables,'NumComponents',numFactors);
+covFactor = cov(factorRetn);
+retnHat = factorRetn*factorLoading' + factorMean;
+unexplainedRetn = assetReturns.Variables - retnHat;
+unexplainedCovar = diag(cov(unexplainedRetn));
+D = diag(unexplainedCovar);
+
+% Define the mean and covariance of the returns.
+mu = mean(assetReturns.Variables);
+Sigma = factorLoading*covFactor*factorLoading' + D;
+
+% Create the portfolio problem.
+p = Portfolio(AssetMean=mu,AssetCovar=Sigma);
+% Specify long-only, fully-invested contraints
+p = setDefaultConstraints(p);
+
+% Compute the maximum return portfolio subject to the target risk.
+targetRisk = 0.008;
+new_weights = estimateFrontierByRisk(p,targetRisk);
+end
+
+function new_weights = denoising(~, pricesTT) 
+% Compute minimum variance portfolio using covariance denoising.
+
+% Compute the returns from the prices timetable.
+assetReturns = tick2ret(pricesTT);
+mu = mean(assetReturns.Variables);
+Sigma = covarianceDenoising(assetReturns.Variables);
+
+% Create the portfolio problem.
+p = Portfolio(AssetMean=mu,AssetCovar=Sigma);
+% Long-only fully invested contraints
+p = setDefaultConstraints(p);
+
+% Compute maximum return portfolio subject to the target risk.
+targetRisk = 0.008;
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-400

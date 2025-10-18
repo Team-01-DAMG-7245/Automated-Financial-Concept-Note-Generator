@@ -1,0 +1,12 @@
+{
+  "page": 758,
+  "original_text": "% Obtain the CVaR risk for the mean-variance efficient portfolio\npretTargetCVaR = estimatePortReturn(p,pwgtmvTarget); % Should be TargetRet\npriskTargetCVaR = estimatePortRisk(p,pwgtmvTarget);  % Risk proxy is CVaR",
+  "ocr_text": "ObtaintheCVaRriskforthemean-varianceefficientportfolio\npretTargetCVaR=estimatePortReturn(p,pwgtmvTarget);*ShouldbeTargetRet\npriskTargetCVaR=estimatePortRisk(p,pwgtmvTarget);RiskproxyisCVaR",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 425.53,
+    "x1": 490.95,
+    "y1": 457.6
+  },
+  "confidence": "high"
+}

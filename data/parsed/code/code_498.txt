@@ -1,0 +1,8 @@
+Page 473
+================================================================================
+
+layers_LSTM = [ ...
+    sequenceInputLayer(numFeatures) 
+    lstmLayer(numHiddenUnits_LSTM)
+    layerNormalizationLayer
+    lstmLayer(numHiddenUnits_LSTM)

@@ -1,0 +1,55 @@
+'TransactionCosts', transactionsFixed, ...
+    'InitialWeights', maxSharpeRatio_initial);
+
+% Aggregate the strategy objects into an array.
+strategies = [strat1, strat2];
+
+Run the Backtest
+
+Set an annual risk-free rate of 1%.
+
+% 1% annual risk-free rate
+annualRiskFreeRate = 0.01;
+
+Create the backtestEngine object using the two previously defined strategies. If the rebalancing
+date is missing in the prices timetable (this usually happens when the day falls on a weekend or a
+holiday), rebalance on the next available date.
+
+% Create the backtesting engine object
+backtester = backtestEngine(strategies,'RiskFreeRate',annualRiskFreeRate,...
+    'DateAdjustment','Next');
+
+Use runBacktest to run the backtest. Since this example uses the first two months of data to find
+the initial weights, use the 'Start' name-value argument to initiate the backtesting after the warm-
+up period. This is done to avoid the look-ahead bias (that is, "seeing the future").
+
+backtester = runBacktest(backtester,pricesTT,'Start',warmupPeriod(end));
+
+Examine Backtest Results
+
+Use the summary function to generate a table of strategy performance results for the backtest.
+
+summaryByStrategies = summary(backtester)
+
+summaryByStrategies=9×2 table
+                       Equal_Weighted    Max_Sharpe_Ratio
+                       ______________    ________________
+
+TotalReturn             0.19615           0.097125   
+    SharpeRatio             0.13059            0.04967   
+    Volatility            0.0063393          0.0088129   
+    AverageTurnover      0.00076232           0.012092   
+    MaxTurnover            0.030952            0.68245   
+    AverageReturn        0.00086517         0.00047599   
+    MaxDrawdown            0.072652            0.11764   
+    AverageBuyCost          0.04131            0.63199   
+    AverageSellCost         0.04131            0.63199
+
+Use equityCurve to plot the equity curve for the different investment strategies.
+
+equityCurve(backtester)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-454

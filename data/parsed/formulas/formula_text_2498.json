@@ -1,0 +1,12 @@
+{
+  "page": 1280,
+  "original_text": "Prices.Date = datetime(Prices.Date, ...\n    \"InputFormat\", \"yyyy'M'MM\", ...\n    \"Format\", \"MMM yyyy\");\nPrices = table2timetable(Prices);",
+  "ocr_text": "Prices.Date=datetime(Prices.Date,...\nInputFormat,yyyyMMM,...\nFormat,MMMyyyy);\n\nPrices=table2timetable(Prices);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 556.74,
+    "x1": 301.32,
+    "y1": 599.6
+  },
+  "confidence": "high"
+}

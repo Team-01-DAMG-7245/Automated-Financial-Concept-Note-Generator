@@ -1,0 +1,12 @@
+{
+  "page": 954,
+  "original_text": "tCrit = tinv(1-alpha/2,stats.tstat.dfe);\nXLast = [AGE(end),CPF(end),SPR(end)];",
+  "ocr_text": "tCrit_=tinv(1l-alpha/2,stats.tstat.dfe);\nXLast=[AGE(end),CPF(end),SPR(end)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 162.66,
+    "x1": 306.72,
+    "y1": 183.93
+  },
+  "confidence": "high"
+}

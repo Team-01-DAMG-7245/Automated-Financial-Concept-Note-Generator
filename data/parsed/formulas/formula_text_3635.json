@@ -1,0 +1,12 @@
+{
+  "page": 2047,
+  "original_text": "In either case, the number of series is NUMSERIES and the number of groups is NUMGROUPS, with\n1 ≤ NUMGROUPS ≤ NUMSERIES.",
+  "ocr_text": "Ineithercase,thenumberofseriesisNUMSERIESandthenumberofgroupsisNUMGROUPS,with\n1=.NUMGROUPS=NUMSERIES.",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 673.92,
+    "x1": 550.24,
+    "y1": 697.55
+  },
+  "confidence": "high"
+}

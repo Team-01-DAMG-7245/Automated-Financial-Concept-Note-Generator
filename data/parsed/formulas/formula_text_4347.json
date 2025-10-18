@@ -1,0 +1,12 @@
+{
+  "page": 2465,
+  "original_text": "q(x)\n1 −q(x) = A(x + B)C\n+ Dexp( −E(log x\nF)\n2\n) +\nGHX",
+  "ocr_text": "q(x) (+B) x2 GH*\n_it=A +Dexp(-E(log)_)++\nT-q) exp( (log) ) 14GH",
+  "bbox": {
+    "x0": 112.71,
+    "y0": 142.39,
+    "x1": 338.25,
+    "y1": 168.81
+  },
+  "confidence": "high"
+}

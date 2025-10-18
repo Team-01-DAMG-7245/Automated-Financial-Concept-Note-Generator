@@ -1,0 +1,6 @@
+Page 1635
+================================================================================
+
+Use simByEuler to simulate NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods. The
+function simByEuler approximates a continuous-time stochastic process by the Euler approach.

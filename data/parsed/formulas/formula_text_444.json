@@ -1,0 +1,12 @@
+{
+  "page": 315,
+  "original_text": "p = Portfolio;\np = Portfolio(p, 'assetmean', m, 'assetcovar', C);\np = Portfolio(p, 'lowerbudget', 1, 'upperbudget', 1);\np = Portfolio(p, 'lowerbound', 0);",
+  "ocr_text": "p=Portfolio;\np=Portfolio(p,assetmean,m,_assetcovar,C);\np=Portfolio(p,lowerbudget,1,upperbudget,1);\np=Portfolio(p,lowerbound,0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 158.63,
+    "x1": 294.22,
+    "y1": 189.11
+  },
+  "confidence": "high"
+}

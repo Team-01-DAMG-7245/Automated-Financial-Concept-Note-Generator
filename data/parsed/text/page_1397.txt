@@ -1,0 +1,64 @@
+Creation
+
+Syntax
+
+DiffusionRate = diffusion(Alpha,Sigma)
+
+Description
+
+DiffusionRate = diffusion(Alpha,Sigma) creates default DiffusionRate model
+component.
+
+Specify required input parameters A and B as one of the following types:
+
+•
+A MATLAB array. Specifying an array indicates a static (non-time-varying) parametric
+specification. This array fully captures all implementation details, which are clearly associated
+with a parametric form.
+
+•
+A MATLAB function. Specifying a function provides indirect support for virtually any static,
+dynamic, linear, or nonlinear model. This parameter is supported via an interface, because all
+implementation details are hidden and fully encapsulated by the function.
+
+Note You can specify combinations of array and function input parameters as needed.
+
+Moreover, a parameter is identified as a deterministic function of time if the function accepts a scalar
+time t as its only input argument. Otherwise, a parameter is assumed to be a function of time t and
+state X(t) and is invoked with both input arguments.
+
+The diffusion object that you create encapsulates the composite drift-rate specification and returns
+the following displayed parameters:
+
+•
+Rate — The diffusion-rate function, G. Rate is the diffusion-rate calculation engine. It accepts the
+current time t and an NVars-by-1 state vector Xt as inputs, and returns an NVars-by-1 diffusion-
+rate vector.
+
+•
+Alpha — Access function for the input argument Alpha.
+
+•
+Sigma — Access function for the input argument Sigma.
+
+Input Arguments
+
+Alpha — Return represents the parameter D
+array or deterministic function of time
+
+Alpha represents the parameter D, specified as an array or deterministic function of time.
+
+If you specify Alpha as an array, it represents an NVars-by-1 column vector of exponents.
+
+As a deterministic function of time, when Alpha is called with a real-valued scalar time t as its only
+input, Alpha must produce an NVars-by-1 matrix.
+
+If you specify it as a function of time and state, Alpha must return an NVars-by-1 column vector of
+exponents when invoked with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+diffusion
+
+15-91

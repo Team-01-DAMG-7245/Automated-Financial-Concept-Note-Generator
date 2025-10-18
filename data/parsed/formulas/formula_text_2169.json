@@ -1,0 +1,12 @@
+{
+  "page": 1116,
+  "original_text": "Settle   = datenum('15-Jan-1999');",
+  "ocr_text": "Settle =datenum(15-Jan-1999);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 433.8,
+    "x1": 274.23,
+    "y1": 444.26
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,62 @@
+Set Expanding Rolling Window
+
+Set the backtesting strategy to rebalance every two days.
+
+% Define the rebalance frequency.
+rebalFreq = 2;
+
+Set the lookback window to a minimum of four days and a maximum of eight days.
+
+% Define the lookback window.
+lookback = [4 8];
+
+% Set backtest strategy.
+strat = backtestStrategy('MaxSharpeRatio',@maxSharpeRatioFcn, ...
+    RebalanceFrequency=rebalFreq,LookbackWindow=lookback);
+
+% Define a backtest engine.
+backtester = backtestEngine(strat);
+% Run the backtest.
+runBacktest(backtester,pricesTT,Start=1);
+
+#################################################################################
+Rebalancing period: 09-Jan-2006
+Number of time periods in data: 5
+#################################################################################
+       Dates        AA       GM       MMM     MSFT      PG        T       XOM 
+    ___________    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    28.72    17.82    75.93    26.19    56.38     22.7    56.64
+    04-Jan-2006    28.89     18.3    75.54    26.32    56.48    22.87    56.74
+    05-Jan-2006    29.12    19.34    74.85    26.34     56.3    22.92    56.45
+    06-Jan-2006    29.02    19.61    75.47    26.26    56.24    23.21    57.57
+    09-Jan-2006    29.37    21.12    75.84    26.21    56.67     23.3    57.54
+
+#################################################################################
+
+#################################################################################
+Rebalancing period: 11-Jan-2006
+Number of time periods in data: 7
+#################################################################################
+       Dates        AA       GM       MMM     MSFT      PG        T       XOM 
+    ___________    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    28.72    17.82    75.93    26.19    56.38     22.7    56.64
+    04-Jan-2006    28.89     18.3    75.54    26.32    56.48    22.87    56.74
+    05-Jan-2006    29.12    19.34    74.85    26.34     56.3    22.92    56.45
+    06-Jan-2006    29.02    19.61    75.47    26.26    56.24    23.21    57.57
+    09-Jan-2006    29.37    21.12    75.84    26.21    56.67     23.3    57.54
+    10-Jan-2006    28.44    20.79    75.37    26.35    56.45    23.16    57.99
+    11-Jan-2006    28.05    20.61    75.22    26.63    56.65    23.34    58.38
+
+#################################################################################
+
+#################################################################################
+Rebalancing period: 13-Jan-2006
+Number of time periods in data: 8
+#################################################################################
+       Dates        AA       GM       MMM     MSFT      PG        T       XOM
+
+backtestStrategy
+
+15-255

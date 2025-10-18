@@ -1,0 +1,12 @@
+{
+  "page": 467,
+  "original_text": "% Sort the assets following quasi-diagonalization order.\nlabels = labels(sortedIdx);\nwMV = wMV(sortedIdx);\nwHRP = wHRP(sortedIdx);",
+  "ocr_text": "Sorttheassetsfollowingquasi-diagonalizationorder.\nlabels=labels(sortedIdx);\n\nwMV_=wMV(sortedIdx);\n\nwHRP=wHRP(sortedIdx);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.03,
+    "x1": 393.41,
+    "y1": 621.89
+  },
+  "confidence": "high"
+}

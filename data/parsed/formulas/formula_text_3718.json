@@ -1,0 +1,12 @@
+{
+  "page": 2107,
+  "original_text": "CharMat = datedisp(NumMat,DateForm) returns CharMat, character array representing\nNumMat. If no output variable is assigned, the function prints the array to the display.",
+  "ocr_text": "CharMat=datedisp(NumMat,DateForm)returnsCharMat,characterarrayrepresenting\nNumMat.Ifnooutputvariableisassigned,thefunctionprintsthearraytothedisplay.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 402.42,
+    "x1": 521.07,
+    "y1": 426.05
+  },
+  "confidence": "high"
+}

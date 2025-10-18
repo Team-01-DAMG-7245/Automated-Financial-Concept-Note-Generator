@@ -1,0 +1,12 @@
+{
+  "page": 1163,
+  "original_text": "residuals = residuals ./ sqrt(variances);",
+  "ocr_text": "residuals=residuals./sqrt(variances);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 417.13,
+    "x1": 312.14,
+    "y1": 427.6
+  },
+  "confidence": "high"
+}

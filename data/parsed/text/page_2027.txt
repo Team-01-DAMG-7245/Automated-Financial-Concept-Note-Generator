@@ -1,0 +1,63 @@
+Cash flow dates, specified as an NINST-by-MOSTCFS matrix using a datetime array, string array, or
+date character vectors. Each entry contains the date of the corresponding cash flow in
+CFlowAmounts.
+
+To support existing code, cfyield also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Price — Prices
+vector
+
+Prices specified as an NINST-by-1 vector.
+
+Data Types: double
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as an NINST-by-1 vector using a datetime array, string array, or date
+character vectors. The Settle date is the date on which the cash flows are priced.
+
+To support existing code, cfyield also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Note An optional input of size NINST-by-1 is also acceptable as a single value applicable to all
+contracts. Single values are internally expanded to an array of size NINST-by-1.
+
+Example: Yield =
+cfyield(CFAmounts,CFDates,Yield,Settle,'Basis',4,'CompoundingFrequency',4)
+
+Basis — Day-count basis
+0 (actual/actual) (default) | positive integers of the set [1...13] | vector of positive integers of the
+set [1...13]
+
+Day-count basis, specified as the comma-separated pair consisting of 'Basis' and a positive integer
+using a NINST-by-1 vector.
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+cfyield
+
+15-721

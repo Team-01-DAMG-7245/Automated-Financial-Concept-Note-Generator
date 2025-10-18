@@ -1,0 +1,12 @@
+{
+  "page": 355,
+  "original_text": "Blotter.Holding = Wealth * (Blotter.Port ./ Blotter.Price);",
+  "ocr_text": "Blotter.Holding=Wealth*(Blotter.Port./Blotter.Price);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 577.51,
+    "x1": 409.66,
+    "y1": 587.98
+  },
+  "confidence": "high"
+}

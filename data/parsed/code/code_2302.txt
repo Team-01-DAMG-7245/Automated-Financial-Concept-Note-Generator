@@ -1,0 +1,6 @@
+Page 2170
+================================================================================
+
+Objective = ecmlsrobj(Data,Design,Parameters) computes a least-squares objective
+function based on current parameter estimates with missing data. Objective is a scalar that
+contains the least-squares objective function.

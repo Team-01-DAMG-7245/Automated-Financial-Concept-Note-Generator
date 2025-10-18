@@ -1,0 +1,57 @@
+Simulating Normal Scenarios with Mean and Covariance
+
+This example shows how to use the simulateNormalScenariosByMoments function to simulate
+multivariate normal scenarios when given the mean and covariance of asset returns. The mean can
+be either a row or column vector and the covariance matrix must be a symmetric positive-
+semidefinite matrix. Various rules for scalar expansion apply.
+
+To illustrate using simulateNormalScenariosByMoments with a PortfolioCVaR object, start
+with moments in m and C and generate 20,000 scenarios.
+
+m = [ 0.0042; 0.0083; 0.01; 0.15 ];
+C = [ 0.005333 0.00034 0.00016 0;
+0.00034 0.002408 0.0017 0.000992;
+0.00016 0.0017 0.0048 0.0028;
+0 0.000992 0.0028 0.010208 ];
+
+p = PortfolioCVaR;
+p = simulateNormalScenariosByMoments(p, m, C, 20000);
+[passetmean, passetcovar] = estimateScenarioMoments(p)
+
+passetmean = 4×1
+
+0.0042
+    0.0082
+    0.0094
+    0.1497
+
+passetcovar = 4×4
+
+0.0052    0.0003    0.0001   -0.0000
+    0.0003    0.0024    0.0017    0.0010
+    0.0001    0.0017    0.0048    0.0028
+   -0.0000    0.0010    0.0028    0.0100
+
+simulateNormalScenariosByMoments performs scalar expansion on arguments for the moments
+of asset returns. If NumAssets has not already been set, a scalar argument is interpreted as a scalar
+with NumAssets set to 1. simulateNormalScenariosByMoments provides an additional optional
+argument to specify the number of assets so that scalar expansion works with the correct number of
+assets. In addition, if either a scalar or vector is input for the covariance of asset returns, a diagonal
+matrix is formed such that a scalar expands along the diagonal and a vector becomes the diagonal.
+
+See Also
+PortfolioCVaR | setCosts | setProbabilityLevel | setScenarios | estimatePortVaR |
+simulateNormalScenariosByMoments | simulateNormalScenariosByData
+
+Related Examples
+
+•
+“Working with a Riskless Asset” on page 5-46
+
+•
+“Working with Transaction Costs” on page 5-47
+
+5
+CVaR Portfolio Optimization Tools
+
+5-44

@@ -1,0 +1,29 @@
+Although discrate supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Mayle. "Standard Securities Calculation Methods." Volumes I-II, 3rd edition. Formula 2.
+
+See Also
+acrudisc | fvdisc | prdisc | ylddisc | datetime
+
+Topics
+“Term Structure of Interest Rates” on page 2-29
+“Fixed-Income Terminology” on page 2-15
+
+discrate
+
+15-859

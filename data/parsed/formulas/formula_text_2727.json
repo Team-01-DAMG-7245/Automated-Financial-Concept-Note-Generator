@@ -1,0 +1,12 @@
+{
+  "page": 1370,
+  "original_text": "BM = bm(Mu,Sigma) creates a default BM object.",
+  "ocr_text": "BM=bm(Mu,Sigma)createsadefaultBMobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 599.3,
+    "x1": 320.47,
+    "y1": 610.93
+  },
+  "confidence": "high"
+}

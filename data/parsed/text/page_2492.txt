@@ -1,0 +1,66 @@
+•
+"square-root" — In the square root method, the weights assigned to each data point decrease
+in a square root fashion as the data points move further back in time. The most recent data point
+has the highest weight, and the weights decrease progressively for older data points.
+
+•
+"linear" — The linear method assigns weights to each data point that decrease in a linear
+fashion as the data points move further back in time. This method can be useful for capturing
+trends and price movements while minimizing the impact of outliers or extreme values.
+
+•
+"square" — The square method assigns weights to each data point that decrease in a square
+fashion as the data points move further back in time. The most recent data point has the highest
+weight, and the weights decrease progressively for older data points.
+
+•
+"exponential" — An exponential moving average (EMA) places a greater weight and
+significance on the most recent data points. The exponential moving average is also referred to as
+the exponentially weighted moving average. An exponentially weighted moving average reacts
+more significantly to recent price changes than a simple moving average (SMA), which applies an
+equal weight to all observations in the period.
+
+•
+"triangular" — The triangular moving average (TMA) is a variation of the SMA that assigns
+weights to the data points in a triangular pattern. This method aims to give more weight to the
+data points in the middle of the moving average period and less weight to the data points at the
+beginning and end of the period.
+
+•
+"modified" — A modified moving average (MMA) is an indicator that shows the average value of
+a security's price over a period of time. It is also known as the running moving average (RMA) or
+smoothed moving average (SMMA). Modified moving averages are similar to simple moving
+averages, but all subsequent points are calculated by first adding the new price and then
+subtracting the last average from the resulting sum.
+
+•
+"custom" — A moving average using a custom method is a type of moving average that uses a
+custom measure of weights to calculate the average, instead of just taking the close price of each
+bar as most other moving averages do. The custom measure calculates the difference between the
+lowest lows and highest highs over different data points.
+
+Data Types: char | string
+
+windowSize — Number of observations of the input series to include in moving average
+positive integer
+
+Number of observations of the input series to include in moving average, specified as a scalar positive
+integer. The observations include (windowSize - 1) previous data points and the current data point.
+
+Note The windowSize argument applies only to moving averages whose type is 'simple',
+'square-root', 'linear', 'square', 'exponential', 'triangular', or 'modified'.
+
+Data Types: double
+
+weights — Custom weights used to compute moving average
+vector
+
+Custom weights used to compute the moving average, specified as a vector.
+
+Note The length of weights (N) determines the size of the moving average window (windowSize).
+The weights argument applies only to a 'custom' type of moving average.
+
+15
+Functions
+
+15-1186

@@ -1,0 +1,12 @@
+{
+  "page": 359,
+  "original_text": "wgt = estimateFrontier(p);\nwgtWithMinWeight = estimateFrontier(pWithMinWeight);\nfigure(1);\nplotFrontier(p, wgt); hold on;\nplotFrontier(pWithMinWeight, wgtWithMinWeight); hold off;\nlegend('Baseline portfolio', 'With minWeight constraint', 'location', 'best');",
+  "ocr_text": "wgt=estimateFrontier(p);\nwgtWithMinWeight=estimateFrontier(pWithMinWeight);\n\nfigure(1);\n\nplotFrontier(p,wgt);holdon;\nplotFrontier(pWithMinWeight,wgtWithMinWeight);holdoff;\nlegend(Baselineportfolio,WithminWeightconstraint,location,best);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 353.11,
+    "x1": 512.64,
+    "y1": 417.58
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 374
+================================================================================
+
+scatter(assetActRiskAnnual, assetActRetnAnnual, 12, 'm', 'Filled');
+hold on;
+for k = 1:length(assetNames)
+    text(assetActRiskAnnual(k) + 0.005, assetActRetnAnnual(k), assetNames{k}, 'FontSize', 8);
+end

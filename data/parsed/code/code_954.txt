@@ -1,0 +1,9 @@
+Page 949
+================================================================================
+
+% Update error
+   ErrorBT(k,:) = PredDefRate(k,:) - DefRate(T+1);
+   
+   % Move to next year
+   T = T + 1;
+end

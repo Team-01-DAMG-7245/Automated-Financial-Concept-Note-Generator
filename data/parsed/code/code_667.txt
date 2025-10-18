@@ -1,0 +1,7 @@
+Page 614
+================================================================================
+
+% Update Reward
+if LoggedSignals.IntervalIdx==1
+    LoggedSignals.ArrivalPrice = InitialPrice;
+end

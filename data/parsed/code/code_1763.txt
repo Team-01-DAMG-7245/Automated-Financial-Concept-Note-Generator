@@ -1,0 +1,5 @@
+Page 1499
+================================================================================
+
+Level — Reversion level or long-run average of CIR stochastic variance process
+array | deterministic function of time | deterministic function of time and state

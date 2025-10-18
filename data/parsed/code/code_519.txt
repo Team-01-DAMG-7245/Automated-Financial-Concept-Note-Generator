@@ -1,0 +1,5 @@
+Page 489
+================================================================================
+
+function weights = computeEqualWeights(num_assets)
+% Equal asset weight portfolio allocation

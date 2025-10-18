@@ -1,0 +1,12 @@
+{
+  "page": 2186,
+  "original_text": "Alpha = NaN(1, length(NumAssets));\nBeta = NaN(1, length(NumAssets));\nSigma = NaN(1, length(NumAssets));\nStdAlpha = NaN(1, length(NumAssets));\nStdBeta = NaN(1, length(NumAssets));\nStdSigma = NaN(1, length(NumAssets));\nfor i = 1:NumAssets\n    % Set up separate asset data and design matrices\n    TestData = zeros(NumSamples,1);\n    TestDesign = zeros(NumSamples,2);",
+  "ocr_text": "Alpha=NaN(1,_length(NumAssets));\nBeta=NaN(1,_length(NumAssets));\nSigma=NaN(1,_length(NumAssets));\nStdAlpha=NaN(1,_length(NumAssets));\nStdBeta=NaN(1,_length(NumAssets));\nStdSigma=NaN(1,_length(NumAssets));\nfori=1:NumAssets\nSetupseparateassetdataanddesignmatrices\nTestData=zeros(NumSamples,1);\nTestDesign=zeros(NumSamples,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 259.08,
+    "x1": 371.74,
+    "y1": 366.74
+  },
+  "confidence": "high"
+}

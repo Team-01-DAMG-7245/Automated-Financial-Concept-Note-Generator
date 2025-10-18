@@ -1,0 +1,7 @@
+Page 1050
+================================================================================
+
+Alternatively, after you create a creditscorecard object, you can use the fillmissing function
+for the creditscorecard object to fill missing values. For additional information on alternative
+approaches for "treating" missing data, see “Credit Scorecard Modeling with Missing Values” on page
+8-57.

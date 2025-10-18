@@ -1,0 +1,12 @@
+{
+  "page": 1240,
+  "original_text": "nTrials = 10000; % Number of independent trials (that is, paths)\nf = Example_BlackScholes(nPeriods,nTrials)",
+  "ocr_text": "nTrials=10000;Numberofindependenttrials(thatis,paths)\nf=Example_BlackScholes(nPeriods,nTrials)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 409.12,
+    "x1": 436.76,
+    "y1": 430.38
+  },
+  "confidence": "high"
+}

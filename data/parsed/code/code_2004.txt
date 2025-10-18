@@ -1,0 +1,5 @@
+Page 1594
+================================================================================
+
+This helper function generates a table of rebalance dates along with the available price history at
+each date.

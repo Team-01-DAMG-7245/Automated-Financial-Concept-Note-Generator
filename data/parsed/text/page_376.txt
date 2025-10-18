@@ -1,0 +1,38 @@
+scatter(assetActRiskAnnual, assetActRetnAnnual, 6, 'm', 'Filled');
+hold on
+for k = 1:length(assetNames)
+    text(assetActRiskAnnual(k) + 0.005,assetActRetnAnnual(k),assetNames{k},'FontSize',8);
+end
+plot(portRiskAnnual,portRetnAnnual,'bo-','MarkerSize',4,'MarkerFaceColor','b');
+plot(optPortRiskAnnual,optPortReturnAnnual,'ro-','MarkerFaceColor','r');
+hold off;
+
+xlabel('Risk (Std Dev of Active Return)');
+ylabel('Expected Active Return');
+grid on;
+
+subplot(2,1,2);
+plot(portRiskAnnual,portRetnAnnual./portRiskAnnual,'bo-','MarkerSize',4,'MarkerFaceColor','b');
+hold on
+plot(optPortRiskAnnual,optPortReturnAnnual./optPortRiskAnnual,'ro-','MarkerFaceColor','r');
+hold off;
+
+xlabel('Risk (Std Dev of Active Return)');
+ylabel('Information Ratio');
+title('Information Ratio with Optimal Portfolio');
+grid on;
+
+Display the Portfolio Optimization Solution
+
+Display the portfolio optimization solution.
+
+assetIndx = optWts > .001;
+results = table(assetNames(assetIndx)', optWts(assetIndx)*100, 'VariableNames',{'Asset', 'Weight
+disp('Maximum Information Ratio Portfolio:')
+
+Maximum Information Ratio Portfolio:
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-208

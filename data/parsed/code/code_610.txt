@@ -1,0 +1,13 @@
+Page 556
+================================================================================
+
+Using the sparse reward function, in simulation number 650 at time t = 1 the wealth drops below the
+initial wealth level. This drives the agent to choose a more conservative approach. Since the wealth is
+not recovering as fast as needed to achieve the goal by the end of the investment horizon, at t = 8 the
+agent chooses the most aggressive portfolio. By choosing an aggressive portfolio, the expected return
+increases at the cost of increasing the volatility. This extreme choice made by the agent is the result
+of the objective function not taking into account possible losses. The reward is only obtained if the
+goal is met, so an all-or-nothing strategy makes sense towards the end of the investment period. If the
+investor also wants to take their losses into account, they can add those losses into the reward
+function to penalize cases where the losses become too high. The entire agent's optimal strategy is
+illustrated in Heatmap of Optimal Policy on page 4-389.

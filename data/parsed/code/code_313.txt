@@ -1,0 +1,5 @@
+Page 316
+================================================================================
+
+Error using solveMICustomObjProb
+Objective function must be convex in problems with cardinality constraints and/or conditional bounds.

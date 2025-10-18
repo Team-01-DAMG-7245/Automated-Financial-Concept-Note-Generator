@@ -1,0 +1,6 @@
+Page 1472
+================================================================================
+
+DriftRate — DriftRate is a user-defined drift-rate function and represents the parameter
+F
+vector or object of class Drift

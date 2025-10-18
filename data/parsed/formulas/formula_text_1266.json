@@ -1,0 +1,12 @@
+{
+  "page": 625,
+  "original_text": "% Define tracking portfolio as the portfolio of the DJI\ntrackingPortfolio = returnsTT{:,2:end}\\returnsTT{:,1};",
+  "ocr_text": "sDefinetrackingportfolioastheportfoliooftheDJI\ntrackingPortfolio=returnsTT{:,2:end}returnsTT{:,1};",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 387.99,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

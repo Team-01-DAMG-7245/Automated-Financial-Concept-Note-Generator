@@ -1,0 +1,63 @@
+Default Portfolio Problem
+
+The default portfolio optimization problem has a risk and return proxy associated with a given
+problem, and a portfolio set that specifies portfolio weights to be nonnegative and to sum to 1. The
+lower bound combined with the budget constraint is sufficient to ensure that the portfolio set is
+nonempty, closed, and bounded. The default portfolio optimization problem characterizes a long-only
+investor who is fully invested in a collection of assets.
+
+•
+For mean-variance portfolio optimization, it is sufficient to set up the default problem. After
+setting up the problem, data in the form of a mean and covariance of asset returns are then used
+to solve portfolio optimization problems.
+
+•
+For conditional value-at-risk portfolio optimization, the default problem requires the additional
+specification of a probability level that must be set explicitly. Generally, “typical” values for this
+level are 0.90 or 0.95. After setting up the problem, data in the form of scenarios of asset returns
+are then used to solve portfolio optimization problems.
+
+•
+For MAD portfolio optimization, it is sufficient to set up the default problem. After setting up the
+problem, data in the form of scenarios of asset returns are then used to solve portfolio
+optimization problems.
+
+See Also
+PortfolioCVaR
+
+Related Examples
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object on page 5-8
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+CVaR Portfolio Optimization (4 min 56 sec)
+
+Default Portfolio Problem
+
+5-15

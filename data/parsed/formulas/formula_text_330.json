@@ -1,0 +1,12 @@
+{
+  "page": 206,
+  "original_text": "p = Portfolio('Turnover', 0.3, 'InitPort', [ 0.3; 0.2; 0.2; 0.0 ]);\ndisp(p.InitPort)",
+  "ocr_text": "p=Portfolio(Turnover,0.3,InitPort,[0.3;0.2;0.2;0.0]);\ndisp(p.InitPort)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 319.01,
+    "x1": 453.02,
+    "y1": 340.27
+  },
+  "confidence": "high"
+}

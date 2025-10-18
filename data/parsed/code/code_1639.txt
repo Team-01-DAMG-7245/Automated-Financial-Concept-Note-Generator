@@ -1,0 +1,5 @@
+Page 1472
+================================================================================
+
+•
+A — Access function for the drift-rate property A, callable as a function of time and state

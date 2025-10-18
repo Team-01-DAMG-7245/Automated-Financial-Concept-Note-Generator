@@ -1,0 +1,12 @@
+{
+  "page": 1858,
+  "original_text": "ZeroData = table(datetime(ZeroDates,'ConvertFrom','datenum','Locale','en_US'), ZeroRates);",
+  "ocr_text": "ZeroData=table(datetime(ZeroDates,ConvertFrom,datenum,Locale,en_US),ZeroRates);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 577.66,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

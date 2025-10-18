@@ -1,0 +1,55 @@
+FirstCouponDate — Date when bond makes first coupon payment
+datetime array | string array | date character vector
+
+Date when a bond makes its first coupon payment, specified as a NUMBONDS-by-1 vector using a
+datetime array, string array, or date character vectors.
+
+FirstCouponDate is used when a bond has an irregular first coupon period. When
+FirstCouponDate and LastCouponDate are both specified, FirstCouponDate takes precedence
+in determining the coupon payment structure. If you do not specify a FirstCouponDate, the cash
+flow payment dates are determined from other inputs.
+
+To support existing code, cpndatep also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+LastCouponDate — Last coupon date of bond before maturity date
+datetime array | string array | date character vector
+
+Last coupon date of a bond before maturity date, specified as a NUMBONDS-by-1 vector using a
+datetime array, string array, or date character vectors.
+
+LastCouponDate is used when a bond has an irregular last coupon period. In the absence of a
+specified FirstCouponDate, a specified LastCouponDate determines the coupon structure of the
+bond. The coupon structure of a bond is truncated at the LastCouponDate, regardless of where it
+falls, and is followed only by the bond's maturity cash flow date. If you do not specify a
+LastCouponDate, the cash flow payment dates are determined from other inputs.
+
+To support existing code, cpndatep also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+PreviousCouponDate — Previous coupon date on or before settlement for portfolio of
+bonds
+vector
+
+Previous coupon date on or before settlement for portfolio of bonds, returned as an NUMBONDS-by-1
+vector. If settlement is a coupon date, this function returns the settlement date. The actual coupon
+date strictly on or before settlement is returned, but not exceeding the issue date, if available. Thus,
+this function always returns the lesser of the actual issue date and the previous coupon payment date
+with respect to the settlement date.
+
+If all the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate are
+either strings or date character vectors, then PreviousCouponDate is returned as a serial date
+number. Use the function datetime to convert serial date numbers to formatted datetime arrays.
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate
+are datetime arrays, then PreviousCouponDate is returned as a datetime array.
+
+cpndatep
+
+15-771

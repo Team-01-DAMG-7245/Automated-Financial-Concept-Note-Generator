@@ -1,0 +1,12 @@
+{
+  "page": 110,
+  "original_text": "figure\nimagesc(Q)\naxis equal tight\nhCB = colorbar;\nhCB.Label.String = \"Prob(\\DeltaS_{future} | \\rho_{previous},\\rho_{current},\\DeltaS_{current})\";\nxticks(phiNums)\nxticklabels(stateNames)\nxlabel(\"(\\rho_{current},\\DeltaS_{future})\")\nyticks(phiNums)\nyticklabels(stateNames)\nylabel(\"(\\rho_{previous},\\DeltaS_{current})\")\ntitle(\"Trading Matrix\")",
+  "ocr_text": "figure\n\nimagesc(Q)\n\naxisequaltight\n\nhCB=colorbar;\nhCB.Label.String=Prob((DeltaS_{future}](rho_{previous},rho_{current},DeltaS_{current});\nxticks(phiNums)\n\nxticklabels(stateNames)\nxlabel(((rho_{current},DeltaS_{future}))\nyticks(phiNums)\n\nyticklabels(stateNames)\nylabel((rho_{previous},(DeltaS_{current}))\ntitle(TradingMatrix)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 577.61,
+    "x1": 604.76,
+    "y1": 706.87
+  },
+  "confidence": "high"
+}

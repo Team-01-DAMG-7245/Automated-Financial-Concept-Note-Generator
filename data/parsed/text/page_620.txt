@@ -1,0 +1,55 @@
+•
+Equal-weighted portfolio
+
+wEW = w1, w2, ⋯, wN , wi = 1
+N
+
+•
+Maximum Sharpe ratio portfolio
+
+wSR = argmax
+μTw
+
+wTQw
+| w ≥0, ∑i = 1
+N
+wi = 1 , where μ an N × 1 vector of returns and Q is the N × N
+
+covariance matrix.
+
+Compute Initial Weights
+
+By default, the initial weights allocate all capital to cash. To avoid this, the first two months (January
+and February) of the data are used to estimate the initial weights for the different strategies.
+
+t0 = datetime(2006,1,1);
+tEnd = datetime(2006,2,28);
+warmupPeriod = t0:tEnd;
+
+You calculate the initial weights by calling the backtestStrategy rebalance functions with only the
+dates in January and February.
+
+% No current weights (100% cash position).
+numAssets = size(pricesTT,2);
+current_weights = zeros(1,numAssets);
+
+% Warm-up partition of data set timetable.
+warmupTT = pricesTT(warmupPeriod,:);
+
+% Compute the initial portfolio weights for each strategy.
+equalWeight_initial     = equalWeightFcn(current_weights,warmupTT);
+maxSharpeRatio_initial  = maxSharpeRatioFcn(current_weights,warmupTT);
+
+Visualize the initial weight allocations from the strategies.
+
+strategyNames = {'Equally Weighted', 'Max Sharpe Ratio'};
+assetSymbols = pricesTT.Properties.VariableNames;
+initialWeights = [equalWeight_initial(:), maxSharpeRatio_initial(:)];
+bar(assetSymbols,initialWeights);
+legend(strategyNames);
+title('Initial Asset Allocations');
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-452

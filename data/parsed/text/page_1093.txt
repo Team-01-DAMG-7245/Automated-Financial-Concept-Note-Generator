@@ -1,0 +1,59 @@
+The residual errors V(i) are assumed to have moments
+
+E[V(i)] = 0
+
+and
+
+E[V(i) * V(j)] = S(i,j)
+
+for assets i,j = 1, ... , n, where the parameters S(1,1), ... , S(n,n) are called residual
+or non-systematic variances/covariances.
+
+The square root of the residual variance of each asset, i.e., sqrt(S(i,i)) for i = 1, ... , n, is
+said to be the residual or non-systematic risk of the asset since it characterizes the residual variation
+in asset prices that cannot be explained by variations in market prices.
+
+Estimation with Missing Data
+
+Although betas can be estimated for companies with sufficiently long histories of asset returns, it is
+extremely difficult to estimate betas for recent IPOs. However, if a collection of sufficiently-
+observable companies exists that can be expected to have some degree of correlation with the new
+company's stock price movements, for example, companies within the same industry as the new
+company, then it is possible to obtain imputed estimates for new company betas with the missing-data
+regression routines in the Financial Toolbox™.
+
+Separate Estimation of Some Technology Stock Betas
+
+To illustrate how to use the missing-data regression routines, we will estimate betas for twelve
+technology stocks, where one stock (GOOG) is an IPO.
+
+First, load dates, total returns, and ticker symbols for the twelve stocks from the MAT-file
+CAPMuniverse.
+
+load CAPMuniverse
+whos Assets Data Dates
+
+Name           Size             Bytes  Class     Attributes
+
+Assets         1x14              1792  cell                
+  Data        1471x14            164752  double              
+  Dates       1471x1              11768  double
+
+Dates = datetime(Dates,'ConvertFrom','datenum');
+
+The assets in the model have the following symbols, where the last two series are proxies for the
+market and the riskless asset.
+
+Assets(1:7)
+
+ans = 1×7 cell
+    {'AAPL'}    {'AMZN'}    {'CSCO'}    {'DELL'}    {'EBAY'}    {'GOOG'}    {'HPQ'}
+
+Assets(8:14)
+
+ans = 1×7 cell
+    {'IBM'}    {'INTC'}    {'MSFT'}    {'ORCL'}    {'YHOO'}    {'MARKET'}    {'CASH'}
+
+Capital Asset Pricing Model with Missing Data
+
+9-35

@@ -1,0 +1,4 @@
+Page 1497
+================================================================================
+
+The bates function creates a bates object, which represents a Bates model.

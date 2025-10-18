@@ -1,0 +1,12 @@
+{
+  "page": 949,
+  "original_text": "alpha = 0.05;\nPredDefLoBnd = zeros(nYearsBT,1);\nPredDefUpBnd = zeros(nYearsBT,1);",
+  "ocr_text": "alpha=0.05;\nPredDefLoBnd=zeros(nYearsBT,1);\nPredDefUpBnd=zeros(nYearsBT,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 268.79,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

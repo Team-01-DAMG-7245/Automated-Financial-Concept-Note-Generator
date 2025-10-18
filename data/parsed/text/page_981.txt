@@ -1,0 +1,17 @@
+For more information on Approach 4, see “Impute Missing Data in the Credit Scorecard Workflow
+Using the Random Forest Algorithm” on page 8-127.
+
+See Also
+creditscorecard | bininfo | plotbins | fillmissing
+
+More About
+
+•
+“About Credit Scorecards” on page 8-49
+
+•
+“Credit Scorecard Modeling Workflow” on page 8-52
+
+Credit Scorecard Modeling with Missing Values
+
+8-63

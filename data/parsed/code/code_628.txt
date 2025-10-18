@@ -1,0 +1,5 @@
+Page 568
+================================================================================
+
+function new_weights = denoising(~, pricesTT) 
+% Compute minimum variance portfolio using covariance denoising.

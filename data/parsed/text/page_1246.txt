@@ -1,0 +1,31 @@
+Y     = Y(i,:);
+plot(t, 100 * Y), hold('on')
+plot(t([1 end]), 100 * Y([1 end],1),'. black','MarkerSize',20)
+xlabel('Interpolation Time (Days into the Future)')
+ylabel('Yield (%)'), hold('off')
+title ('Euribor Yields from Brownian Bridge Interpolation')
+
+The short rates in this plot represent alternative sample paths that share the same initial and
+terminal values. They illustrate a special, though simplistic, case of a broader sampling technique
+known as stratified sampling. For a more sophisticated example of stratified sampling, see “Stratified
+Sampling” on page 14-58.
+
+Although this simple example simulated a univariate Vasicek interest rate model, it applies to
+problems of any dimensionality. Brownian-bridge methods also apply more general variance-reduction
+techniques. For more information, see “Stratified Sampling” on page 14-58.
+
+Simulate Positive Interest Rates
+
+All simulation and interpolation methods allow you to specify a sequence of functions, or background
+processes, to evaluate at the end of every sample time period. This period includes any intermediate
+time steps determined by the optional NSteps input, as discussed in “Optimizing Accuracy: About
+Solution Precision and Error” on page 14-66. These functions are specified as callable functions of
+time and state, and must return an updated state vector Xtas follows:
+
+You must specify multiple processing functions as a cell array of functions. These functions are
+invoked in the order in which they appear in the cell array.
+
+14
+Stochastic Differential Equations
+
+14-54

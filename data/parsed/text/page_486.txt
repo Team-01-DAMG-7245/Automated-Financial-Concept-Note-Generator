@@ -1,0 +1,60 @@
+period_dates = [rebalance_schedule(2:end), pricesTT.Dates(end)];
+
+Compute Brinson Attribution for Backtested Investment Strategy
+
+Select whether to analyze the equal category or risk budgeting strategy. Then, use the
+backtest2brinson function in Local Functions on page 4-320 to compute asset_table that is
+formatted for use with the brinsonAttribution function. For more information on the format of
+the asset_table, see the description for the AssetTable input argument in the
+brinsonAttribution function.
+
+% Select strategy to analyze
+
+strategy_name = 
+;
+
+asset_table = backtest2brinson(bt,strategy_name,benchmark_name,pricesTT,asset_categories,period_d
+head(asset_table)
+
+Period    Name      Return             Category           PortfolioWeight    BenchmarkWeight
+    ______    _____    _________    ______________________    _______________    _______________
+
+1       "AA"     -0.050283    Materials                    0.055556           0.033333    
+      1       "AIG"    0.0015356    Financials                   0.027778           0.033333    
+      1       "AXP"     0.028439    Financials                   0.027778           0.033333    
+      1       "BA"      0.022929    Industrials                  0.018519           0.033333    
+      1       "C"       0.015045    Financials                   0.027778           0.033333    
+      1       "CAT"     0.074416    Industrials                  0.018519           0.033333    
+      1       "DD"      0.037791    Materials                    0.055556           0.033333    
+      1       "DIS"      0.11182    Communication Services       0.037037           0.033333
+
+% Compute Brinson attribution
+brinson = brinsonAttribution(asset_table);
+summary(brinson)
+
+ans=11×1 table
+                                     Brinson Attribution Summary
+                                     ___________________________
+
+Total Number of Assets                            30        
+    Number of Assets in Portfolio                     30        
+    Number of Assets in Benchmark                     30        
+    Number of Periods                                 11        
+    Number of Categories                               9        
+    Portfolio Return                             0.19249        
+    Benchmark Return                             0.17811        
+    Active Return                               0.014376        
+    Allocation Effect                           0.014376        
+    Selection Effect                          8.5567e-18        
+    Interaction Effect                       -1.1701e-19
+
+Generate the attribution chart using attributionsChart with the brinson object. The attributions
+chart creates a horizontal bar chart of portfolio performance attributions by category, aggregated
+over all time periods.
+
+attributionsChart(brinson)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-318

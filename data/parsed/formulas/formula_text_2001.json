@@ -1,0 +1,12 @@
+{
+  "page": 1038,
+  "original_text": "Ind = string(data.ID)==CompanyID;\n   DatesOriginal = datetime(data.Date(Ind),'Locale','en_US');\n   RatingsOriginal = categorical(data.Rating(Ind),flipud(RatingLabels(:)),flipud(RatingLabels(:))\n   \n   stairs(DatesOriginal,RatingsOriginal,'LineWidth',2)\n   hold on;",
+  "ocr_text": "Ind=string(data.1ID)==CompanyID;\n\nDatesOriginal=datetime(data.Date(Ind),Locale,en_US);\nRatingsOriginal=categorical(data.Rating(Ind),flipud(RatingLabels(:)),flipud(RatingLabels(:)\nstairs(DatesOriginal,RatingsOriginal,LineWidth,2)\n\nholdon;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 168.63,
+    "x1": 615.55,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

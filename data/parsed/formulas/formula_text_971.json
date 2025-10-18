@@ -1,0 +1,12 @@
+{
+  "page": 517,
+  "original_text": "% Create a Portfolio object\nload('SixStocks.mat')\np = Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);",
+  "ocr_text": "CreateaPortfolioobject\nload(SixStocks.mat)\np=Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 229.44,
+    "x1": 398.83,
+    "y1": 261.5
+  },
+  "confidence": "high"
+}

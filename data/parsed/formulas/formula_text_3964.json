@@ -1,0 +1,12 @@
+{
+  "page": 2249,
+  "original_text": "p1 = setBounds(p1, 0.1, 0.5,'BoundType', 'Conditional');\npwgt = estimateFrontier(p1, 5);",
+  "ocr_text": "pl=setBounds(pl,0.1,0.5,BoundType,Conditional);\npwgt=estimateFrontier(pl,_5);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 208.89,
+    "x1": 393.44,
+    "y1": 230.16
+  },
+  "confidence": "high"
+}

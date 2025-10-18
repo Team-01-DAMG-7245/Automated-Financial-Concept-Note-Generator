@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "Geometric Brownian Motion (GBM)\ndXt = B(t)Xtdt + V(t)XtdWt",
+  "ocr_text": "GeometricBrownianMotion(GBM) dX;=B(t)X,dt+V(t)X;dW;",
+  "bbox": {
+    "x0": 44.25,
+    "y0": 147.85,
+    "x1": 421.17,
+    "y1": 161.6
+  },
+  "confidence": "high"
+}

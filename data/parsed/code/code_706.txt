@@ -1,0 +1,8 @@
+Page 648
+================================================================================
+
+•
+You must specify a collection of asset returns or prices known as scenarios such that all scenarios
+are finite asset returns or prices. These scenarios are meant to be samples from the underlying
+probability distribution of asset returns. This condition can be satisfied by the setScenarios
+function or with several canned scenario simulation functions.

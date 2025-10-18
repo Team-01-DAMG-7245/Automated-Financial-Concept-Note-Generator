@@ -1,0 +1,13 @@
+Page 1712
+================================================================================
+
+function displaySummary(optionPrice, standardError, lowerBound, upperBound)
+fprintf('  Up-and-In Barrier Option Price: %8.4f\n', ...
+            optionPrice);
+fprintf('         Standard Error of Price: %8.4f\n', ...
+            standardError);
+fprintf(' Confidence Interval Lower Bound: %8.4f\n', ...
+            lowerBound);
+fprintf(' Confidence Interval Upper Bound: %8.4f\n', ...
+            upperBound);
+end

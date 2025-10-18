@@ -1,0 +1,66 @@
+xt = ft −μ
+
+and define the deflated yields yt∼ as
+
+yt∼= yt −Λμ
+
+then you can substitute xt and yt∼ into the preceding equations to obtain the following Diebold-Li state-
+space system:
+
+xt = Axt −1 + ηt
+
+yt∼= Λxt + εt
+
+Load Yield Curve Data and ssm Model
+
+The yield data consists of 29 years of monthly, unsmoothed Fama-Bliss US Treasury zero-coupon yield
+measurements. The time series in the data represents maturities of 3, 6, 9, 12, 15, 18, 21, 24, 30, 36,
+48, 60, 72, 84, 96, 108, and 120 months. The data expresses the yields in percents and records them
+at the end of each month, beginning January 1972 and ending December 2000, for a total of 348
+monthly curves of 17 maturities each.
+
+Load the Diebold-Li data set and extract the yield series.
+
+load("Data_DieboldLi.mat")
+yieldsMaturity = maturities';
+yields = DataTimeTable{:,1:17};
+
+Load the Diebold-Li yield curve model.
+
+load("EstimatedDieboldLiSSM.mat")
+
+Simulate Bond Returns
+
+To simulate bond returns for the following investment period (t + 1), follow these steps:
+
+1
+Price bonds at time period t by using the zero-coupon bond yield curve, also known as the zero
+curve. Since some bonds have cash flows whose time to maturity do not match one of the tenors
+in the zero curve, you must use interpolation.
+
+2
+Simulate the t + 1 zero curve by using the period t factor estimates and their covariance matrix.
+
+3
+Price bonds at time period t + 1 by using the simulated zero curves.
+
+4
+Compute simulated returns by using the following formula for each bond i:
+
+Pi t + 1 −Pit
+
+Pit
+
+Start by loading the bonds information.
+
+load('BondsCouponsAndMaturities')
+couponRate = bondsTable.CouponRate;
+bondsMaturity = bondsTable.Maturity;
+
+Define the purchase date as the date at the end of the time horizon.
+
+settle = DataTimeTable.Time(end);
+
+Bond Portfolio CVaR Optimization Using Diebold-Li Model
+
+5-147

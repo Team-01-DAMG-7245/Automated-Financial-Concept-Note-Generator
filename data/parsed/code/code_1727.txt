@@ -1,0 +1,4 @@
+Page 1490
+================================================================================
+
+Sigma represents the parameter V, specified as an array or a deterministic function of time.

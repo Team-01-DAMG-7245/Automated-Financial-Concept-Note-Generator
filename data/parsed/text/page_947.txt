@@ -1,0 +1,55 @@
+•
+CPF: Corporate profits forecast
+
+•
+SPR: Corporate spread over treasuries
+
+This is the same model as in [6 on page 8-43], except the model in [6 on page 8-43] is for IG only.
+
+As previously discussed, age is known to be an important factor regarding default rates. The
+corporate profits provide information on the economic environment. The corporate spread is a proxy
+for credit quality. Age, environment, and quality are three dimensions frequently found in credit
+analysis models.
+
+inSample = 4:nYears-1;
+T = length(inSample);
+varNames = {'AGE','CPF','SPR'};
+X = [AGE CPF SPR];
+X = X(inSample,:);
+y = DefRate(inSample+1); % DefaultRate, year t+1
+stats = regstats(y,X);
+
+fprintf('\nConst   AGE   CPF   SPR   adjR^2\n')
+
+Const   AGE   CPF   SPR   adjR^2
+
+fprintf('%1.2f  %1.2f %1.2f  %1.2f   %1.4f\n',...
+   [stats.beta;stats.adjrsquare])
+
+-1.19  0.15 -0.10  0.71   0.7424
+
+The coefficients have the expected sign: default rates tend to increase with a higher proportion of 3-
+year issuers, decrease with good corporate profits, and increase when the corporate yields are
+higher. The adjusted R square shows a good fit.
+
+The in-sample fit, or how close the model predictions are from the sample points used to fit the
+model, is shown in the following figure.
+
+bHat = stats.beta;
+yHat = [ones(T,1),X]*bHat;
+
+figure
+plot(Years(inSample+1),DefRate(inSample+1),'ko','LineWidth',1.5, ...
+   'MarkerSize',10,'MarkerFaceColor','g')
+hold on
+plot(Years(inSample+1),yHat,'b-s','LineWidth',1.2,'MarkerSize',10)
+hold off
+grid on
+legend({'Actual','Model'},'location','NW')
+title('{\bf Corporate Default Rate Models: In-Sample Fit}')
+xlabel('Year')
+ylabel('Percent')
+
+Forecasting Corporate Default Rates
+
+8-29

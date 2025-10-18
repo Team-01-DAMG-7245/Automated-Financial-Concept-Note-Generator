@@ -1,0 +1,12 @@
+{
+  "page": 2315,
+  "original_text": "pwgt = estimateFrontierLimits(p);\npret = estimatePortReturn(p, pwgt)",
+  "ocr_text": "pwgt=estimateFrontierLimits(p);\npret=estimatePortReturn(p,_pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 259.38,
+    "x1": 274.21,
+    "y1": 280.65
+  },
+  "confidence": "high"
+}

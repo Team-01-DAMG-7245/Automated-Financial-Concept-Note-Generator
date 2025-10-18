@@ -1,0 +1,12 @@
+{
+  "page": 1436,
+  "original_text": "Heston = heston(Return,Speed,Level,Volatility)\nHeston = heston( ___ ,Name,Value)",
+  "ocr_text": "Heston=heston(Return,Speed,Level,Volatility)\nHeston=heston(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 540.63,
+    "x1": 366.94,
+    "y1": 564.26
+  },
+  "confidence": "high"
+}

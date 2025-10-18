@@ -1,0 +1,9 @@
+Page 849
+================================================================================
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioMAD('AInequality', A, 'bInequality', b);
+disp(p.NumAssets)
+disp(p.AInequality)
+disp(p.bInequality)

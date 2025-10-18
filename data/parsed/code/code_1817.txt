@@ -1,0 +1,5 @@
+Page 1510
+================================================================================
+
+If you specify JumpFreq as a deterministic function of time, when you call JumpFreq with a real-
+valued scalar time t as its only input, JumpFreq must produce an NJumps-by-1 vector.

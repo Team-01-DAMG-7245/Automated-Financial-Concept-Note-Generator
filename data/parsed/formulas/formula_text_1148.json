@@ -1,0 +1,12 @@
+{
+  "page": 580,
+  "original_text": "NumTrainingHorizons = round(TotalNumHorizons*0.75);\nNumTestingHorizons = TotalNumHorizons - NumTrainingHorizons;\nNumTrainingSteps = NumTrainingHorizons*NumIntervalsPerHorizon;\nNumTestingSteps = NumTestingHorizons*NumIntervalsPerHorizon;\nTrainingLOB = SampledBook(1:NumTrainingSteps,:);\nTestingLOB = SampledBook(NumTrainingSteps+1:end,:);",
+  "ocr_text": "NumTrainingHorizons=round(TotalNumHorizons*0.75);\nNumTestingHorizons=TotalNumHorizons-NumTrainingHorizons;\nNumTrainingSteps=NumTrainingHorizons*NumIntervalsPerHorizon;\nNumTestingSteps=NumTestingHorizons*NumIntervalsPerHorizon;\nTrainingLOB=SampledBook(1:NumTrainingSteps,:);\nTestingLOB=SampledBook(NumTrainingSteps+1:end,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 431.28,
+    "x1": 425.92,
+    "y1": 495.75
+  },
+  "confidence": "high"
+}

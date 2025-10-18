@@ -1,0 +1,12 @@
+{
+  "page": 2227,
+  "original_text": "% Minimize tracking error without a lower bound\nwTE = 1/p.NumAssets*ones(p.NumAssets,1);\ntrackingError = @(w) (w-wTE)'*p.AssetCovar*(w-wTE);\npInt2 = setSolverMINLP(pInt,'OuterApproximation',...\n    ExtendedFormulation=true);\ns = tic;\nwTE_NoBound = estimateCustomObjectivePortfolio(pInt2,trackingError);\ntimeTE_NoBound = toc(s)",
+  "ocr_text": "SMinimizetrackingerrorwithoutalower_bound\nwTE=1/p.NumAssets*ones(p.NumAssets,1);\ntrackingError=Q(w)(w-wTE)*p.AssetCovar*(w-wTE);\npInt2=setSolverMINLP(pInt,OuterApproximation,...\nExtendedFormulation=true);\ns=tic;\nwTE_NoBound=estimateCustom0bjectivePortfolio(pInt2,trackingError);\ntimeTE_NoBound=toc(s)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 172.76,
+    "x1": 458.43,
+    "y1": 258.83
+  },
+  "confidence": "high"
+}

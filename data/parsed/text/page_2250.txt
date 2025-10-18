@@ -1,0 +1,35 @@
+ExtendedFormulation: 0
+                            NumInnerCuts: 10
+                     NumInitialOuterCuts: 10
+
+Construct a PortfolioCVaR Object and Determine Efficient Portfolios
+
+Create efficient portfolios:
+
+load CAPMuniverse
+
+p = PortfolioCVaR('AssetList',Assets(1:12));
+p = simulateNormalScenariosByData(p, Data(:,1:12), 20000 ,'missingdata',true);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+plotFrontier(p);
+
+pwgt = estimateFrontier(p, 5);
+
+pnames = cell(1,5);
+for i = 1:5
+    pnames{i} = sprintf('Port%d',i);
+end
+
+Blotter = dataset([{pwgt},pnames],'obsnames',p.AssetList);
+
+disp(Blotter);
+
+Port1       Port2       Port3       Port4      Port5
+    AAPL    0.010223    0.073393     0.11939    0.13137    0
+
+15
+Functions
+
+15-944

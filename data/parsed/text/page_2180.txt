@@ -1,0 +1,58 @@
+Output Arguments
+
+Param — Estimates for parameters of the regression model
+vector
+
+Estimates for the parameters of the regression model, returned as a NUMPARAMS-by-1 column vector.
+
+Covar — Estimates for the covariance of regression model's residuals
+matrix
+
+Estimates for the covariance of the regression model's residuals, returned as a NUMSERIES-by-
+NUMSERIES matrix.
+
+Resid — Residuals from regression
+matrix
+
+Residuals from the regression, returned as a NUMSAMPLES-by-NUMSERIES matrix. For any missing
+values in Data, the corresponding residual is the difference between the conditionally imputed value
+for Data and the model, that is, the imputed residual.
+
+Note The covariance estimate Covariance cannot be derived from the residuals.
+
+Info — Additional information from regression
+structure
+
+Additional information from the regression, returned as a structure. The structure has these fields:
+
+•
+Info.Obj — A variable-extent column vector, with no more than MaxIterations elements, that
+contain each value of the objective function at each iteration of the estimation algorithm. The last
+value in this vector, Obj(end), is the terminal estimate of the objective function. If you do
+maximum likelihood estimation, the objective function is the log-likelihood function.
+
+•
+Info.PrevParameters — NUMPARAMS-by-1 column vector of estimates for the model parameters
+from the iteration just prior to the terminal iteration.Info.PrevCovariance – NUMSERIES-by-
+NUMSERIES matrix of estimates for the covariance parameters from the iteration just prior to the
+terminal iteration.
+
+More About
+
+Multivariate Normal Regression
+
+Multivariate normal regression is a statistical modeling approach that extends traditional regression
+techniques to situations where the dependent variable is multivariate, meaning it consists of multiple
+correlated outcomes.
+
+Multivariate normal regression is particularly useful in fields where researchers are interested in
+understanding the relationships between several response variables and one or more predictor
+variables.
+
+Version History
+Introduced in R2006a
+
+15
+Functions
+
+15-874

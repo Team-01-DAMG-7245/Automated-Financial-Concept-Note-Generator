@@ -1,0 +1,12 @@
+{
+  "page": 444,
+  "original_text": "% Variance + Herfindahl-Hirschman (HH) index\ntilt_HH = @(x) x'*p.AssetCovar*x + lambdaTiltHH'*(x.^2);\n% Solution that minimizes variance + HH term\nwTiltHH = estimateCustomObjectivePortfolio(p,tilt_HH,TargetReturn=ret0);",
+  "ocr_text": "SVariance+Herfindahl-Hirschman(HH)index\ntilt_HH=Q(x)x*p.AssetCovar*x+LambdaTiltHH*(x.*2);\nSolutionthatminimizesvariance+HHterm\nwTiltHH=estimateCustom0bjectivePortfolio(p,tilt_HH,TargetReturn=ret);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.7,
+    "x1": 480.1,
+    "y1": 686.56
+  },
+  "confidence": "high"
+}

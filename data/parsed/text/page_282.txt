@@ -1,0 +1,60 @@
+Choosing and Controlling the Solver for Mean-Variance
+Portfolio Optimization
+
+The default solver for mean-variance portfolio optimization is lcprog, which implements a linear
+complementarity programming (LCP) algorithm. Although lcprog works for most problems, you can
+adjust arguments to control the algorithm. Alternatively, the mean-variance portfolio optimization
+tools let you use any of the variations of quadprog from Optimization Toolbox™ software. Like
+Optimization Toolbox, which uses the interior-point-convex algorithm as the default algorithm
+for quadprog, the portfolio optimization tools also use the interior-point-convex algorithm as
+the default. For details about quadprog and quadratic programming algorithms and options, see
+“Quadratic Programming Algorithms”.
+
+Using 'lcprog' and 'quadprog'
+
+To modify either lcprog or to specify quadprog as your solver, use the setSolver function to set
+the hidden properties solverType and solverOptions that specify and control the solver. Because
+the solver properties are hidden, you cannot set these options using the Portfolio object. The
+default solver is lcprog so you do not need to use setSolver to specify this solver. To use
+quadprog, you can set the default interior-point-convex algorithm of quadprog using this
+code:
+
+p = Portfolio;
+p = setSolver(p, 'quadprog');
+display(p.solverType)
+display(p.solverOptions)
+
+quadprog options:
+
+Options used by current Algorithm ('interior-point-convex'):
+   (Other available algorithms: 'active-set', 'trust-region-reflective')
+
+Set properties:
+              Algorithm: 'interior-point-convex'
+                Display: 'off'
+    OptimalityTolerance: 1.0000e-12
+
+Default properties:
+    ConstraintTolerance: 1.0000e-08
+           LinearSolver: 'auto'
+          MaxIterations: 200
+          StepTolerance: 1.0000e-12
+
+You can switch back to lcprog with this code:
+
+p = setSolver(p, 'lcprog');
+display(p.solverType);
+display(p.solverOptions)
+
+lcprog
+     MaxIter: []
+    TieBreak: []
+      TolPiv: 5.0000e-08
+
+In both cases, setSolver sets up default options associated with either solver. If you want to specify
+additional options associated with a given solver, setSolver accepts these options with name-value
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-114

@@ -1,0 +1,8 @@
+Page 102
+================================================================================
+
+This example introduces the basics of working with big data, both in and out of memory. It shows how
+to set up, combine, and update external datastores, then create tall arrays for preprocessing data
+without allocating variables in the MATLAB workspace. The gather function transfers data into the
+workspace for computation and further analysis. The example shows how to visualize the data
+through data sampling or by MATLAB plotting functions that work directly with out-of-memory data.

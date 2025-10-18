@@ -1,0 +1,57 @@
+Busday = datetime
+   05-Jul-2001
+
+Also, you can bypass a holiday.
+
+busdate(datetime(2022,11,23),1,NaT)
+
+ans = datetime
+   24-Nov-2022
+
+Input Arguments
+
+Date — Reference business date
+datetime array | string array | date character vector
+
+Reference business date, specified as a scalar, vector, or matrix using a datetime array, string array,
+or date character vectors.
+
+To support existing code, busdate also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+DirFlag — Business day convention
+follow (default) | character vector with values of follow, modifiedfollow, previous, or
+modifiedprevious | cell array of character vectors with values of follow, modifiedfollow,
+previous, or modifiedprevious
+
+Business day convention, specified date character vector or cell array of date character vectors with
+values of follow, modifiedfollow, previous, or modifiedprevious.
+
+Also, DirFlag can be a scalar, vector, or matrix of search directions, where Next is DIREC = 1
+(default) or Previous is DIREC = -1.
+
+Data Types: char | string
+
+Holiday — Holidays and nontrading-day dates
+non-trading day vector is determined by the routine holidays (default) | datetime array | string
+array | date character vector
+
+Holidays and nontrading-day dates, specified as vector using a datetime array, string array, or date
+character vectors.
+
+All dates in Holiday must be the same format: either datetimes, strings, or date character vectors.
+
+Note To bypass holidays and nontrading dates, use NaT. For example,
+busdate(datetime(2022,11,23),1,NaT).
+
+To support existing code, busdate also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+15
+Functions
+
+15-602

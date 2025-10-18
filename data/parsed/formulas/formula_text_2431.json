@@ -1,0 +1,12 @@
+{
+  "page": 1246,
+  "original_text": "Y     = Y(i,:);\nplot(t, 100 * Y), hold('on')\nplot(t([1 end]), 100 * Y([1 end],1),'. black','MarkerSize',20)\nxlabel('Interpolation Time (Days into the Future)')\nylabel('Yield (%)'), hold('off')\ntitle ('Euribor Yields from Brownian Bridge Interpolation')",
+  "ocr_text": "Y =Y(i,:);\n\nplot(t,100*Y),hold(on)\nplot(t([1end]),100*Y([1end],1),.black,MarkerSize,20)\nxlabel(InterpolationTime(DaysintotheFuture))\nylabel(Yield()),hold(off)\ntitle(EuriborYieldsfromBrownianBridgeInterpolation)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 425.94,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

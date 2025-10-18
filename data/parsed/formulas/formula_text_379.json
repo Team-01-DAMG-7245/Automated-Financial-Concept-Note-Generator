@@ -1,0 +1,12 @@
+{
+  "page": 240,
+  "original_text": "GA = [ 1 1 1 0 0 0 ];    % financial companies\nGB = [ 0 0 0 1 1 1 ];    % nonfinancial companies\np = Portfolio('GroupA', GA, 'GroupB', GB, 'UpperRatio', 0.5);\ndisp(p.NumAssets)\ndisp(p.GroupA)\ndisp(p.GroupB)\ndisp(p.UpperRatio)",
+  "ocr_text": "GA=[111000]; *_financial_companies\nGB=[000111]; nonfinancial_companies\np=Portfolio(GroupA,GA,GroupB,GB,UpperRatio,0.5);\ndisp(p.NumAssets)\n\ndisp(p.GroupA)\n\ndisp(p.GroupB)\n\ndisp(p.UpperRatio)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 382.11,
+    "x1": 354.42,
+    "y1": 442.33
+  },
+  "confidence": "high"
+}

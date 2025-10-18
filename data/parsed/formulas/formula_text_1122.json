@@ -1,0 +1,12 @@
+{
+  "page": 569,
+  "original_text": "new_weights = estimateFrontierByRisk(p,targetRisk);\nend",
+  "ocr_text": "new_weights=estimateFrontierByRisk(p,targetRisk);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 366.32,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,10 @@
+Page 1573
+================================================================================
+
+1
+If user-controlled cash assets are not specified (that is, the CashAssets or DebtAssets
+parameters for runBacktest are not set), then expenses are paid from the unallocated cash
+account. This is the default behavior. The unallocated cash account contains the remaining
+portfolio value when the backtestStrategy rebalance function returns portfolio weights that
+do not sum to 1. Unallocated cash earns the RiskFreeRate (or CashBorrowRate if it goes
+negative).

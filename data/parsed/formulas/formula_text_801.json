@@ -1,0 +1,12 @@
+{
+  "page": 459,
+  "original_text": "% Set backtesting warm-up period to two 21-day months.\nwarmupPeriod = 21*2;\n% Set warm-up partition of timetable.\n% Invest only in assets. First column of pricesTT is the market index.\nwarmupTT = pricesTT(1:warmupPeriod,2:end);\n% Estimate the covariance matrix.\nassetReturns = tick2ret(warmupTT);\nassetCov = cov(assetReturns{:,:});\n% Compute the initial risk parity portfolio.\ninitialRiskParity = [0; riskBudgetingPortfolio(assetCov)];",
+  "ocr_text": "Setbacktestingwarm-upperiodtotwo21-daymonths.\nwarmupPeriod=21*2;\n\nSetwarm-uppartitionoftimetable.\nInvestonlyinassets.FirstcolumnofpricesTTisthemarketindex.\nwarmupTT=pricesTT(1:warmupPeriod,2:end);\nSEstimatethecovariancematrix.\n\nassetReturns=tick2ret(warmupTT);\n\nassetCov=cov(assetReturns{:,:});\nSComputetheinitialriskparityportfolio.\ninitialRiskParity=[0;riskBudgetingPortfolio(assetCov)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 471.03,
+    "x1": 469.26,
+    "y1": 578.69
+  },
+  "confidence": "high"
+}

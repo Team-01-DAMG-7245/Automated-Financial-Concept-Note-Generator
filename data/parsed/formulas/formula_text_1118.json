@@ -1,0 +1,12 @@
+{
+  "page": 568,
+  "original_text": "% Compute the maximum return portfolio subject to the target risk.\ntargetRisk = 0.008;\nnew_weights = estimateFrontierByRisk(p,targetRisk);\nend",
+  "ocr_text": "Computethemaximumreturnportfoliosubjecttothetargetrisk.\ntargetRisk=0.008;\nnew_weights=estimateFrontierByRisk(p,targetRisk);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 448.83,
+    "x1": 447.59,
+    "y1": 491.69
+  },
+  "confidence": "high"
+}

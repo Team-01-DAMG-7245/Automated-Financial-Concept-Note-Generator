@@ -1,0 +1,28 @@
+•
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+•
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+
+•
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+
+•
+“Sensitivity of Bond Prices to Interest Rates” on page 10-2
+
+•
+“Bond Portfolio for Hedging Duration and Convexity” on page 10-6
+
+•
+“Bond Prices and Yield Curve Parallel Shifts” on page 10-9
+
+•
+“Bond Prices and Yield Curve Nonparallel Shifts” on page 10-12
+
+•
+“Term Structure Analysis and Interest-Rate Swaps” on page 10-18
+
+10
+Solving Sample Problems
+
+10-24

@@ -1,0 +1,9 @@
+Page 694
+================================================================================
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioCVaR('AEquality', A, 'bEquality', b);
+disp(p.NumAssets)
+disp(p.AEquality)
+disp(p.bEquality)

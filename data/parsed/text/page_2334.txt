@@ -1,0 +1,60 @@
+Return series, specified the number of observations (NUMOBS) by number of assets (NASSETS) matrix
+of equally spaced incremental return observations. The first row is the oldest observation, and the
+last row is the most recent.
+
+Data Types: double
+
+DecayFactor — Controls how much less each observation is weighted than its successor
+1 (default) | numeric
+
+(Optional) Controls how much less each observation is weighted than its successor, specified as a
+numeric value. The kth observation back in time has weight DecayFactork. DecayFactor must lie
+in the range: 0 < DecayFactor <= 1.
+
+The default value of 1 is the equally weighted linear moving average model (BIS).
+
+Data Types: double
+
+WindowLength — Number of recent observations in computation
+NUMOBS (default) | numeric
+
+(Optional) Number of recent observations in the computation, specified as a numeric value.
+
+Data Types: double
+
+Output Arguments
+
+ExpReturn — Estimated expected returns
+vector
+
+Estimated expected returns, returned as a 1-by-NASSETS vector.
+
+ExpCovariance — Estimated covariance matrix
+matrix
+
+Estimated covariance matrix, returned as a NASSETS-by-NASSETS matrix.
+
+The standard deviations of the asset return processes are defined as
+
+STDVec = sqrt(diag(ExpCovariance))
+
+The correlation matrix is
+
+CorrMat = ExpCovariance./( STDVec*STDVec' )
+
+NumEffObs — Number of effective observations
+numeric
+
+NumEffObs is the number of effective observations where
+
+NumEf fObs = 1 −DecayFactorWindowLength
+
+1 −DecayFactor
+
+A smaller DecayFactor or WindowLength emphasizes recent data more strongly but uses less of
+the available data set.
+
+15
+Functions
+
+15-1028

@@ -1,0 +1,12 @@
+{
+  "page": 402,
+  "original_text": "variables, objective, and constraints for the problem: max μaT wa , s . t . FTwa = wf,",
+  "ocr_text": "eeeeeeeeeeeNNINBARADNGENERLDNADLINANNUAERLLIARIDNAPEEALILANANENAEERENANAABDDNSANINMS\nvariables,objective,andconstraintsfortheproblem:max pEwq,S.t. Fw, =wy,\nTT a Tp ee ee a _ re _",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 221.37,
+    "x1": 462.09,
+    "y1": 239.04
+  },
+  "confidence": "high"
+}

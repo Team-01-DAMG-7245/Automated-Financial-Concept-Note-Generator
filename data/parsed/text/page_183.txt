@@ -1,0 +1,61 @@
+x is the portfolio (n vector)
+
+1 is the vector of ones (n vector).
+
+x0 is the Initial portfolio (n vector).
+
+τB is the upper bound for turnover constraint on purchases (scalar).
+
+τS is the upper bound for turnover constraint on sales (scalar).
+
+To specify one-way turnover constraints, use the following properties in the Portfolio,
+PortfolioCVaR, or PortfolioMAD object:
+
+•
+BuyTurnover for τB
+•
+SellTurnover for τS
+•
+InitPort for x0
+
+The default is to ignore this constraint.
+
+Note The average turnover constraint (see “Working with Average Turnover Constraints Using
+Portfolio Object” on page 4-85) with τ is not a combination of the one-way turnover constraints with
+τ = τB = τS.
+
+Tracking Error Constraints
+
+Tracking error constraint, within a portfolio optimization framework, is an additional constraint to
+specify the set of feasible portfolios known as a portfolio set. Use setTrackingError to set tracking
+error constraints. The tracking-error constraint has the form
+
+(x −xT)TC(x −xT) ≤τT2
+
+where:
+
+x is the portfolio (n vector).
+
+xT is the tracking portfolio against which risk is to be measured (n vector).
+
+C is the covariance of asset returns.
+
+τT is the upper bound for tracking error (scalar).
+
+n is the number of assets in the universe.
+
+Portfolio object properties to specify the average turnover constraint are:
+
+•
+TrackingPort for xT
+•
+TrackingError for τT
+
+The default is to ignore this constraint.
+
+Note The tracking error constraints can be used with any of the other supported constraints in the
+Portfolio object without restrictions. However, since the portfolio set necessarily and sufficiently
+
+Supported Constraints for Portfolio Optimization Using Portfolio Objects
+
+4-15

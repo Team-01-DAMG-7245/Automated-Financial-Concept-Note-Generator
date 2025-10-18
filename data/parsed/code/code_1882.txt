@@ -1,0 +1,4 @@
+Page 1528
+================================================================================
+
+Forward variance curve, returned as an array, a numeric scalar, or a deterministic function of time.

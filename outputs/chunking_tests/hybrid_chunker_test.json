@@ -1,0 +1,41 @@
+{
+  "test_cases": [
+    {
+      "name": "Narrative Text",
+      "expected_type": "narrative_text",
+      "detected_type": "narrative_text",
+      "chunks_generated": 2
+    },
+    {
+      "name": "Code Block",
+      "expected_type": "code_blocks",
+      "detected_type": "code_blocks",
+      "chunks_generated": 3
+    },
+    {
+      "name": "Mathematical Formula",
+      "expected_type": "mathematical_formulas",
+      "detected_type": "mathematical_formulas",
+      "chunks_generated": 1
+    },
+    {
+      "name": "Mixed Content",
+      "expected_type": "mixed_content",
+      "detected_type": "code_blocks",
+      "chunks_generated": 3
+    }
+  ],
+  "routing_stats": {
+    "narrative_text": 2,
+    "code_blocks": 6,
+    "mathematical_formulas": 1,
+    "mixed_content": 0,
+    "total_chunks": 9,
+    "percentages": {
+      "narrative_text": 22.22222222222222,
+      "code_blocks": 66.66666666666666,
+      "mathematical_formulas": 11.11111111111111,
+      "mixed_content": 0.0
+    }
+  }
+}

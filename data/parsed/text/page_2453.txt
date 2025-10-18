@@ -1,0 +1,33 @@
+A life table provides a detailed breakdown of the probability of death and survival at various ages,
+allowing for the analysis of life expectancy and the assessment of the health status of a population.
+
+Forced Termination
+
+Most modern life tables have “forced” termination. Forced termination means that the last row of the
+life table applies for all persons with ages on or after the last age in the life table.
+
+This sample illustrates forced termination.
+
+In this case, the last row of the life table applies for all persons aged 100 or older. Specifically, qx
+probabilities are 1qx for ages less than 100 and, technically, ∞qx for age 100.
+
+Forced termination has terminal age values that apply to all ages after the terminal age so that lx is
+positive, qx is 1, and dx is positive. Ages after the terminal age are NaN values, although lx and dx
+can be 0 and qx can be 1 for input series. Forced termination is triggered by a naturally terminating
+series, the last age in a truncated series, or the first NaN value in a series.
+
+Natural Termination
+
+Before 1970, life tables were often published with data that included all ages for which persons
+associated with a given series were still alive. Tables in this form have "natural" termination. In
+natural termination, the last row of the life table for each series counts the deaths or probabilities of
+deaths of the last remaining person at the corresponding age. Tables in this form can be problematic
+due to the granularity of the data and the fact that groups of series can terminate at distinct ages.
+Natural termination is illustrated in the following sample of the last few years of a life table.
+
+This form for life tables poses a number of issues that go beyond the obvious statistical issues. First,
+the lx table on the left terminates at ages 108, 109, 109, and 113 for the four series in the table.
+
+lifetableconv
+
+15-1147

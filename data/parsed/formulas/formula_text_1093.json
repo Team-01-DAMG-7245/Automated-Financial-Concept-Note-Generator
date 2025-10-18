@@ -1,0 +1,12 @@
+{
+  "page": 560,
+  "original_text": "% Transform wealth to original space\nW = loggedSignals.Wealth*(WMax-WMin) + WMin;",
+  "ocr_text": "Transformwealthtooriginalspace\nW=loggedSignals.Wealth*(WMax-WMin)+WMin;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 328.39,
+    "y1": 297.89
+  },
+  "confidence": "high"
+}

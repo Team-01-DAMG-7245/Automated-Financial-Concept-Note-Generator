@@ -1,0 +1,12 @@
+{
+  "page": 1313,
+  "original_text": "BenchmarkWeight = repmat(1./NumAssets.*ones(NumAssets, 1),NumPeriods,1);\n  PortfolioWeight = repmat([1;0;1;1]./3,NumPeriods,1);",
+  "ocr_text": "BenchmarkWeight=repmat(1./NumAssets.*ones(NumAssets,1),NumPeriods,1);\nPortfolioWeight=repmat([1;0;1;1]./3,NumPeriods,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 480.1,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 107,
+  "original_text": "subplot(3,1,2)\nplot(t,rho,'co','MarkerSize',3)\nxlim(timeRange)\nylim([1 numBins])\nyticks(1:numBins)\nylabel(\"\\rho\")\ntitle(\"Imbalance Index (Discretized)\")\ngrid on",
+  "ocr_text": "subplot(3,1,2)\nplot(t,rho,co,MarkerSize,3)\nxlim(timeRange)\n\nylim([1numBins])\n\nyticks(1:numBins)\n\nylabel(rho)\ntitle(ImbalanceIndex(Discretized))\ngridon",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 499.83,
+    "x1": 295.9,
+    "y1": 585.89
+  },
+  "confidence": "high"
+}

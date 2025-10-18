@@ -1,0 +1,12 @@
+{
+  "page": 106,
+  "original_text": "sI = smoothdata(I,'movmean',[dI 0]);",
+  "ocr_text": "sI=smoothdata(I,movmean,[dI0]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 204.63,
+    "x1": 285.06,
+    "y1": 215.09
+  },
+  "confidence": "high"
+}

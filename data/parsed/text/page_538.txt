@@ -1,0 +1,82 @@
+The smallest realistic value of W is
+
+Wmin =
+min
+τ ∈
+0, 1, …, T
+
+W 0 e μmin −
+
+σmax
+2
+
+2
+τ −3σmax τ .
+
+% Define the minimum possible wealth.
+timeVec = 0:T;
+WMinVec = W0*exp((mu_min-(sigma_max^2)/2)*timeVec- ...
+    3*sigma_max*sqrt(timeVec));
+WHatMin = min(WMinVec);
+
+The largest realistic value of W is
+
+Wmax =
+max
+τ ∈
+0, 1, …, T
+W 0 e μmax −
+
+σmax
+2
+
+2
+τ + 3σmax τ .
+
+% Define the maximum possible wealth.
+WMaxVec = W0*exp((mu_max-(sigma_max^2)/2)*timeVec+ ...
+    3*sigma_max*sqrt(timeVec));
+WHatMax = max(WMaxVec);
+
+Now, you can fill in the grid points between Wmin and Wmax. When you set Z = 1and t = 1 and ignore
+
+the drift term μ −σ2/2 t, note that σ is proportional to the logarithm of the wealth. Thus, you can
+work in logarithmic space and add a grid point every σmin/ρgrid units. ρgrid is an exogenous parameter
+that determines the density of the grid. As ρgrid grows, the number of wealth nodes increases.
+
+% Transform to the logarithmic space.
+lWHatMin = log(WHatMin);
+lWHatMax = log(WHatMax);
+% Define the grid in the logarithmic space.
+rho = 3;
+lWGrid = (lWHatMin:sigma_min/rho:lWHatMax)';
+
+To guarantee that there exists a point in the wealth grid that matches W 0 , shift the logarithmic grid
+downwards by the smallest shift such that one of those values matches the logarithm of the initial
+portfolio value.
+
+% Compute the shift for wealth grid.
+lW0 = log(W0);
+difference = lWGrid-lW0;
+minDownShift = min(difference(difference>=0));
+% Define the wealth nodes.
+WGrid = exp(lWGrid - minDownShift);
+nWealthNodes = size(WGrid,1); % Number of wealth nodes
+
+Value Function and Optimal Strategy
+
+The problem in this example is a multi-period optimization problem. The goal is to find the action at
+each rebalancing period that maximizes the probability that the wealth exceeds the target goal at the
+end of the investment period. To solve this problem, use the Bellman equation, which in this case is
+given by
+
+V Wi t
+= max
+π
+∑jV W j t + 1 p W j t + 1
+Wi t , π .
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-370

@@ -1,0 +1,12 @@
+{
+  "page": 2119,
+  "original_text": "NumberDays = days252bus(StartDate,EndDate)\nNumberDays = days252bus( ___ HolidayVector)",
+  "ocr_text": "NumberDays=days252bus(StartDate,EndDate)\nNumberDays=days252bus(__HolidayVector)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.72,
+    "x1": 342.86,
+    "y1": 216.35
+  },
+  "confidence": "high"
+}

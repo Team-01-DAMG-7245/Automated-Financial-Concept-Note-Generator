@@ -1,0 +1,36 @@
+target portfolio risks of 12%, 20%, and 25%. This example uses the default 'direct' method to
+estimate the optimal portfolios with targeted portfolio risks. The 'direct' method uses fmincon to
+solve the optimization problem that maximizes portfolio return, subject to the target risk as the
+quadratic nonlinear constraint. setSolver specifies the solverType and SolverOptions for
+fmincon.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+rng(11);
+
+p = PortfolioMAD;
+p = simulateNormalScenariosByMoments(p, m, C, 2000);
+p = setDefaultConstraints(p);
+
+p = setSolver(p, 'fmincon', 'Display', 'off', 'Algorithm', 'sqp', ...
+        'SpecifyObjectiveGradient', true, 'SpecifyConstraintGradient', true, ...
+        'ConstraintTolerance', 1.0e-8, 'OptimalityTolerance', 1.0e-8, 'StepTolerance', 1.0e-8); 
+    plotFrontier(p);
+
+pwgt = estimateFrontierByRisk(p, [0.12 0.20, 0.25]);
+
+display(pwgt);
+
+pwgt = 4×3
+
+0.1613    0.0000    0.0000
+    0.4777    0.2139    0.0037
+    0.1118    0.1381    0.1214
+
+estimateFrontierByRisk
+
+15-977

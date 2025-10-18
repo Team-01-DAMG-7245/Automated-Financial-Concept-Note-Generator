@@ -1,0 +1,12 @@
+{
+  "page": 2246,
+  "original_text": "•\nIf the set is nonempty and bounded, isbounded = true.",
+  "ocr_text": "*Ifthesetisnonemptyandbounded,isbounded=true.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 108.96,
+    "x1": 369.88,
+    "y1": 120.59
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 403,
+  "original_text": "AssetName = stockReturns.Properties.VariableNames(assetWgt2>=percentage)';\nWeight = assetWgt2(assetWgt2>=percentage);\nT2 = table(AssetName, Weight)",
+  "ocr_text": "AssetName=stockReturns.Properties.VariableNames(assetWgt2=percentage);\nWeight=assetWgt2(assetWgt2-=percentage);\nT2=table(AssetName,Weight)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 392.06,
+    "x1": 490.93,
+    "y1": 424.13
+  },
+  "confidence": "high"
+}

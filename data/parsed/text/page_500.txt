@@ -1,0 +1,47 @@
+plotFrontier(p);
+
+The Portfolio object can also compute the weights associated with the minimum variance portfolio,
+which is defined by the following problem.
+
+min xTΣx
+
+st .
+∑
+i = 1
+
+n
+xi = 1
+
+x ≥0
+
+The minimum variance weights is the benchmark against which all the weights of the diversification
+strategies are compared.
+
+wMinVar = estimateFrontierLimits(p,'min');
+
+To learn more about the problems that you can solve with the Portfolio object, see “When to Use
+Portfolio Objects Over Optimization Toolbox” on page 4-132.
+
+Specify Diversification Techniques
+
+This section presents the three diversification methods. Each of the three diversification methods is
+associated with a diversification measure and that diversification measure defines a penalty term to
+achieve different diversification levels. The diversification, obtained by adding the penalty term to the
+objective function, ranges from the behavior achieved by the minimum variance portfolio to the
+behavior of the EW, ECR, and MDP, respectively.
+
+The default portfolio has only one equality constraint and a lower bound for the assets weights. The
+weights must be nonnegative and they must sum to 1. The feasible set is represented asX:
+
+X =
+x
+x ≥0, ∑
+i = 1
+
+n
+xi = 1
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-332

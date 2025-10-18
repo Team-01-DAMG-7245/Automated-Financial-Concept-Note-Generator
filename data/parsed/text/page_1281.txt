@@ -1,0 +1,62 @@
+repmat("Metals and Minerals", 1, 7), ...
+    repmat("Precious Metals", 1, 3)] );
+
+Prices = addprop(Prices, "CommodityClass", "variable");
+Prices.Properties.CustomProperties.CommodityClass = commodityClasses;
+
+Similarly, associate a hard and soft label with each commodity, using the previously defined
+commodity classes.
+
+commodityTypes = categorical(repmat("Soft", 1, width(Prices)));
+hardClasses = categorical(["Energy", "Fertilizers", "Metals and Minerals", "Precious Metals"]);
+hardIdx = ismember(commodityClasses, hardClasses);
+commodityTypes(hardIdx) = "Hard";
+
+Prices = addprop( Prices, "CommodityType", "variable" );
+Prices.Properties.CustomProperties.CommodityType = commodityTypes;
+
+Create Portfolio of Soft Commodities
+
+Extract the soft commodities that have no missing data for the entire period.
+
+soft = Prices.Properties.CustomProperties.CommodityType == "Soft";
+intact = all(~ismissing(Prices));
+Prices = Prices(:, soft & intact);
+
+Preview the soft commodity price data.
+
+disp(head(Prices))
+
+Date      Cocoa     Coffee, Arabica    Coffee, Robusta    Tea, avg 3 auctions    Tea, Colom
+    ________    ______    _______________    _______________    ___________________    __________
+
+Jan 1960     0.634        0.9409             0.69686              1.0297              0.9303 
+    Feb 1960     0.608        0.9469             0.68871              1.0297              0.9303 
+    Mar 1960    0.5789        0.9281             0.68871              1.0297              0.9303 
+    Apr 1960    0.5983        0.9303             0.68452              1.0297              0.9303 
+    May 1960    0.6001          0.92             0.69069              1.0297              0.9303 
+    Jun 1960    0.5944        0.9123             0.69686              1.0297              0.9303 
+    Jul 1960    0.6045         0.916             0.69069              1.0297              0.9303 
+    Aug 1960    0.5882        0.9292             0.69885              1.0297              0.9303
+
+Adjust Soft Commodity Price Data
+
+The price data is in nominal US dollars. You can use an external inflation metric to adjust the nominal
+commodity prices and approximate a real (inflation-adjusted) price series.
+
+First, obtain the external inflation metric (a consumer price index) over the same date range as
+observed in the commodity prices.
+
+You obtain the consumer price index series CUUR0000SA0R from the Bureau of Labor Statistics [2 on
+page 14-109]. Use this consumer price series index to create the inflation timetable.
+
+[startDate, endDate] = bounds(Prices.Date);
+inflation = readtimetable("CUUR0000SA0R.csv");
+inflation = inflation(timerange(startDate, endDate), :);
+
+Adjust the data to reflect January 2022 US dollars. First, rebase the inflation index so that January
+2022 has value 1.
+
+Volatility Modeling for Soft Commodities
+
+14-89

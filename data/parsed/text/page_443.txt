@@ -1,0 +1,36 @@
+sigma = sqrt(diag(p.AssetCovar));
+var_MDP = @(x) x'*p.AssetCovar*x - lambdaMDP*(sigma'*x);
+% Solution that accounts for risk and MDP diversification
+wMDPMix = estimateCustomObjectivePortfolio(p,var_MDP,TargetReturn=ret0);
+
+Plot the asset allocation from the penalized strategies.
+
+% Plot the asset allocation.
+figure
+t = tiledlayout(1,2);
+
+% HH penalized method
+nexttile    
+bar(wHHMix');
+title('Variance + HH')
+
+% MDP penalized method
+nexttile
+bar(wMDPMix')
+title('Variance + MDP')
+
+% General labels
+ylabel(t,'Asset Weight')
+xlabel(t,'Asset Number')
+
+The strategies that include the penalty function in the objective give weights that are between the
+minimum variance portfolio weights and the weights from the respective maximum diversification
+technique. In fact, for the problem with the HH penalty, choosing λHH = 0 returns the minimum
+variance solution, and as λHH →∞, the solution approaches the one that maximizes HH
+diversification. For the problem with the MDP penalty, choosing λMDP = 0 also returns the minimum
+
+variance solution, and there exists a value λMDP such that the MDP problem and the penalized
+
+Diversify ESG Portfolios
+
+4-275

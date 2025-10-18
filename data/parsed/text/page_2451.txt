@@ -1,0 +1,36 @@
+Input Arguments
+
+x0 — Increasing ages for raw data
+vector of nonnegative integer values
+
+Increasing ages for raw data, specified as nonnegative integer values in an N0 vector.
+
+The vector of ages x must contain nonnegative integer values. If the input series is the discrete
+survival function lx, then the starting age need only be nonnegative. Otherwise, the starting age
+must be 0.
+
+Data Types: double
+
+lx0 — Collection of num standardized survivor series
+matrix
+
+Collection of num standardized survivor series, specified as an N0-by-num matrix. The input lx0 series
+is the number of people alive at age x, given 100,000 alive at birth. Values of 0 or NaN in the input
+table lx0 are ignored.
+
+Data Types: double
+
+y0 — Collection of num life table series to be converted
+matrix
+
+Collection of num life table series to be converted, specified as an N0-by-num matrix. The default y0
+series is lx0.
+
+Data Types: double
+
+y0type — Type of mortality series for input y0 with default 'lx'
+'lx' (default) | character vector with values 'qx', 'lx', 'dx'
+
+lifetableconv
+
+15-1145

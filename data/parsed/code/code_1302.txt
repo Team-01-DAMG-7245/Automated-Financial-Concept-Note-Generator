@@ -1,0 +1,13 @@
+Page 1355
+================================================================================
+
+% Compute denoised correlation and store the maximum correlation
+% mismatch
+correlations = cell(numSizes);
+numFactors = zeros(numSizes,1);
+maxDiff = zeros(numSizes,1);
+for i = 1:numSizes
+    [correlations{i},numFactors(i)] = covarianceDenoising(stdCorr,...
+        sampleSizes(i)); 
+    maxDiff(i) = norm(correlations{i}(:)-denoisedCorr(:),inf);
+end

@@ -1,0 +1,12 @@
+{
+  "page": 85,
+  "original_text": "GammaVal = blsgamma(100, 95, 0.10, 0.25, 0.50, 0)",
+  "ocr_text": "GammaVal_=blsgamma(100,95,0.10,0.25,0.50,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 386.59,
+    "x1": 355.49,
+    "y1": 397.06
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 954,
+  "original_text": "fprintf('     Baseline: %4.2f%%\\n',yPred);",
+  "ocr_text": "fprintf( Baseline:4.2f*n,yPred);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 279.13,
+    "x1": 317.57,
+    "y1": 289.6
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,52 @@
+ecmmvnrstd
+
+Evaluate standard errors for multivariate normal regression model
+
+Syntax
+
+[StdParameters,StdCovariance] = ecmmvnrstd(Data,Design,Covariance)
+[StdParameters,StdCovariance] = ecmmvnrstd( ___ ,Method,CovarFormat)
+
+Description
+
+[StdParameters,StdCovariance] = ecmmvnrstd(Data,Design,Covariance) evaluates
+standard errors for a multivariate normal regression model with missing data. The model has the
+form
+
+Datak ∼N Designk × Parameters, Covariance
+
+for samples k = 1, ... , NUMSAMPLES.
+
+[StdParameters,StdCovariance] = ecmmvnrstd( ___ ,Method,CovarFormat) adds an
+optional arguments for Method and CovarFormat.
+
+Examples
+
+Compute Standard Errors for Multivariate Normal Regression
+
+This example shows how to compute standard errors for a multivariate normal regression model.
+
+First, load dates, total returns, and ticker symbols for the twelve stocks from the MAT-file.
+
+load CAPMuniverse
+whos Assets Data Dates
+
+Name           Size             Bytes  Class     Attributes
+
+Assets         1x14              1792  cell                
+  Data        1471x14            164752  double              
+  Dates       1471x1              11768  double
+
+Dates = datetime(Dates,'ConvertFrom','datenum');
+
+The assets in the model have the following symbols, where the last two series are proxies for the
+market and the riskless asset.
+
+Assets(1:14)
+
+ans = 1×14 cell
+    {'AAPL'}    {'AMZN'}    {'CSCO'}    {'DELL'}    {'EBAY'}    {'GOOG'}    {'HPQ'}    {'IBM'}
+
+ecmmvnrstd
+
+15-879

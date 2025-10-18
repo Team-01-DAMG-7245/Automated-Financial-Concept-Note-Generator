@@ -1,0 +1,32 @@
+More About
+
+Rho
+
+A rho sensitivity measures the rate at which the price of an option is expected to change in response
+to a change in the risk-free interest rate.
+
+Rho is expressed as the amount of money an option's price would gain or lose for a one percentage
+point (1%) change in the risk-free interest rate. For instance, if a call option has a rho of 0.05, it
+means that for every one percentage point increase in interest rates, the price of the call option is
+expected to increase by $0.05.
+
+Version History
+Introduced in R2006a
+
+References
+
+[1] Hull, John C. Options, Futures, and Other Derivatives. 5th edition, Prentice Hall, 2003.
+
+See Also
+blsgamma | blsdelta | blslambda | blsprice | blstheta | blsvega
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+15
+Functions
+
+15-504

@@ -1,0 +1,12 @@
+{
+  "page": 1125,
+  "original_text": "Range = 20:90;\nPLen = length(Range);\nExPrice = [75 70 50 55 75 50 40 75 60 35];",
+  "ocr_text": "Range=20:90;\nPLen=length(Range);\nExPrice=[75705055755040756035];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 239.66,
+    "x1": 317.56,
+    "y1": 271.72
+  },
+  "confidence": "high"
+}

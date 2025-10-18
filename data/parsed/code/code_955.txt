@@ -1,0 +1,5 @@
+Page 954
+================================================================================
+
+tCrit = tinv(1-alpha/2,stats.tstat.dfe);
+XLast = [AGE(end),CPF(end),SPR(end)];

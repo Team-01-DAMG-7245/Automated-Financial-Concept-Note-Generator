@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "simOBJ = gbm(mu,ExpVol,'StartState',SpotPrice);\n[simPaths,simTimes] = simulate(simOBJ,nSteps,'nTrials',nTrials,'deltaTime',dT);\nsimPaths = squeeze(simPaths);",
+  "ocr_text": "sim0BJ=gbm(mu,ExpVol,StartState,SpotPrice);\n[simPaths,simTimes]=simulate(simOBJ,nSteps,nTrials,nTrials,deltaTime,dT);\nsimPaths=squeeze(simPaths);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 518.06,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

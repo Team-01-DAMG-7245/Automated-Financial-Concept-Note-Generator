@@ -1,0 +1,12 @@
+{
+  "page": 1990,
+  "original_text": "CFlowDates = cfdates(Settle,Maturity) generates a matrix of actual cash flow payment\ndates for NUMBONDS fixed income securities. All cash flow dates are determined regardless of whether\nthe first and last coupon periods are normal, long or short.",
+  "ocr_text": "CFlowDates=cfdates(Settle,Maturity)generatesamatrixofactualcashflowpayment\ndatesforNUMBONDSfixedincomesecurities.Allcashflowdatesaredeterminedregardlessofwhether\nthefirstandlastcouponperiodsarenormal,longorshort.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 267.09,
+    "x1": 557.49,
+    "y1": 302.72
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,55 @@
+covarianceShrinkage
+
+Estimate covariance matrix using shrinkage estimators
+
+Syntax
+
+SigmaHat = covarianceShrinkage(AssetReturns)
+
+Description
+
+SigmaHat = covarianceShrinkage(AssetReturns) returns a covariance estimate using linear
+shrinkage to reduce the mean squared error (MSE).
+
+covarianceShrinkage computes an estimate of the covariance matrix from a sample of asset
+returns using the multiple of the identity shrinkage estimation method. For more information, see
+“Covariance Shrinkage” on page 15-62 and “covarianceShrinkage Algorithm” on page 15-62.
+
+In addition, you can use covarianceDenoising to compute an estimate of covariance matrix using
+denoising. For information on which covariance estimation method to choose, see “Comparison of
+Methods for Covariance Estimation” on page 4-138.
+
+Examples
+
+Perform Covariance Linear Shrinkage
+
+This example shows how to use covarianceShrinkage to compute covariance estimations that take
+into account the noise in the sample. In mean-variance portfolio optimization, a noisy estimate of the
+covariance estimate results in unstable solutions that cause high turnover and transaction costs.
+Ideally, to decrease the estimation error, it is desirable to increase the sample size. Yet, there are
+cases where this is not possible. In extreme cases in which the number of assets is larger than the
+number of observations, the traditional covariance matrix results in a singular matrix. Working with a
+nearly singular or an ill-conditioned covariance matrix magnifies the impact of estimation errors.
+
+Compute a portfolio efficient frontier using different covariance estimates with the same sample data.
+
+% Load portfolio data with 225 assets
+load port5.mat
+covariance = corr2cov(stdDev_return,Correlation);
+% Generate a sample with 200 observations
+rng('default')
+nScen = 200;
+retSeries = portsim(mean_return',covariance,nScen);
+
+Compute the traditional and shrunk covariance estimates. Use covarianceShrinkage to reduce the
+effect of noise in the covariance approximation.
+
+Sigma = cov(retSeries);
+shrunkSigma = covarianceShrinkage(retSeries);
+
+Compute the condition number of both covariance estimates. The shrunken covariance
+(shrunkSigma) has a lower condition number than the traditional covariance estimate Sigma.
+
+covarianceShrinkage
+
+15-57

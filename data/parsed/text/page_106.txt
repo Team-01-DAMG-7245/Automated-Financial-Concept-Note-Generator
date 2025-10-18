@@ -1,0 +1,36 @@
+dI = 10; % Hyperparameter
+dTI = dI*DTAvg
+
+dTI = duration
+   0.40273 sec
+
+The setting corresponds to an interval of 10 ticks, or about 0.4 seconds on average. Smooth the
+imbalance indices over a trailing window.
+
+sI = smoothdata(I,'movmean',[dI 0]);
+
+Visualize the degree of smoothing to assess the volatility lost or retained.
+
+figure
+hold on
+plot(t,I)
+plot(t,sI,'c','LineWidth',2)
+hold off
+
+xlabel("Time")
+xlim(timeRange)
+ylabel("Imbalance Index")
+title("Imbalance Data: One Minute")
+legend(["Raw","Smoothed"],'Location','SE')
+grid on
+
+Discretized Data
+
+To create a Markov model of the dynamics, collect the smoothed imbalance index sI into bins,
+discretizing it into a finite collection of states rho (ρ). The number of bins numBins is a
+hyperparameter.
+
+2
+Performing Common Financial Tasks
+
+2-62

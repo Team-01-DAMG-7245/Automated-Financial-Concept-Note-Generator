@@ -1,0 +1,12 @@
+{
+  "page": 440,
+  "original_text": "To compute the contours of the efficient surface, you add the average ESG score as a constraint using\nthe setInequality function. The coefficients of the linear constraint are the ESG scores associated\nwith each asset and the right-hand side is the target ESG score for the desired contour. Notice that\nthe convention of the inequalities in the Portfolio object is ≤. Because the goal is to maximize the\naverage ESG score, the target ESG value for the contour should be a lower bound. Therefore, you\nneed to flip the signs of the coefficients and the right-hand side of the added inequality. The function\nthat computes and plots the contours is in the Local Functions on page 4-282 section.",
+  "ocr_text": "Tocomputethecontoursoftheefficientsurface,youaddtheaverageESGscoreasaconstraintusing\nthesetInequalityfunction.ThecoefficientsofthelinearconstraintaretheESGscoresassociated\nwitheachassetandtheright-handsideisthetargetESGscoreforthedesiredcontour.Noticethat\ntheconventionoftheinequalitiesinthePortfolioobjectis=.Becausethegoalistomaximizethe\naverageESGscore,thetargetESGvalueforthecontourshouldbealowerbound.Therefore,you\nneedtoflipthesignsofthecoefficientsandtheright-handsideoftheaddedinequality.Thefunction\nthatcomputesandplotsthecontoursisintheLocalFunctionsonpage4-282section.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 248.76,
+    "x1": 556.4,
+    "y1": 332.39
+  },
+  "confidence": "high"
+}

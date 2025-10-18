@@ -1,0 +1,81 @@
+•
+- LOBSTER Limit Order Book Data — Contains bid and ask prices and corresponding shares
+
+•
+Optimal Execution for Sell Trades on page 4-412
+
+•
+- TWAP Baseline
+
+•
+- Train the DQN Agent
+
+•
+- Test the DQN Agent
+
+•
+- Summary of Selling Results
+
+•
+Optimal Execution for Buy Trades on page 4-436
+
+•
+Local Functions on page 4-441
+
+•
+- executeTWAPTrades — Executes TWAP Baseline trades and computes IS
+
+•
+- RL_OptimalExecution_LOB_ResetFcn — Reset function for training and testing
+environments
+
+•
+- RL_OptimalExecution_LOB_StepFcn — Step function for training and testing environments
+
+•
+- tradeLOB — Executes trades on current limit order book
+
+•
+- endingInventoryIS — Computes IS with ending inventory constraints
+
+•
+- ISTGLR — Computes total-gain-to-loss ratio and gain-to-loss ratio for IS
+
+Load and Prepare Message Data
+
+Extract the LOBSTER data files from the ZIP file included with Financial Toolbox™. The expanded
+files include two CSV files of data and the text file LOBSTER_SampleFiles_ReadMe.txt.
+
+unzip("LOBSTER_SampleFile_INTC_2012-06-21_5.zip");
+
+The limit order book file contains the bid and ask prices and corresponding shares for five levels,
+while the message file contains the description of the limit order book data including time stamps.
+
+LOBFileName = 'INTC_2012-06-21_34200000_57600000_orderbook_5.csv'; % Limit Order Book Data file
+MSGFileName = 'INTC_2012-06-21_34200000_57600000_message_5.csv'; % Message file (description of d
+
+Load the message file and define the time at the start and end of trading hours as seconds after
+midnight.
+
+TradeMessage = readmatrix(MSGFileName);
+StartTradingSec   = 9.5*60*60;  % Starting time 9:30 in seconds after midnight
+EndTradingSec     = 16*60*60;   % Ending time 16:00 in seconds after midnight
+
+Define the trading interval as five seconds and pick message index values corresponding to the five-
+second intervals.
+
+TradingIntervalSec = 5; % Trading interval length in seconds
+IntervalBoundSec = (StartTradingSec:TradingIntervalSec:EndTradingSec)';
+MessageSampleIdx = zeros(size(IntervalBoundSec));
+k1 = 1;
+for k2 = 1:size(TradeMessage,1)
+    if TradeMessage(k2,1) >= IntervalBoundSec(k1)
+        MessageSampleIdx(k1) = k2;
+        k1 = k1+1;
+    end
+end
+MessageSampleIdx(end) = length(TradeMessage);
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-411

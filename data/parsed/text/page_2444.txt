@@ -1,0 +1,59 @@
+Indicate that Saturday is a business day by appropriately setting the Weekend argument. May 31,
+2003, is a Saturday. Use lbusdate to check that this Saturday is actually the last business day of the
+month.
+
+Weekend = [1 0 0 0 0 0 0];
+Date = lbusdate(2003, 5, [], Weekend,'datetime')
+
+Date = datetime
+   31-May-2003
+
+Input Arguments
+
+Year — Year to determine occurrence of weekday
+4-digit integer | vector of 4-digit integers
+
+Year to determine occurrence of weekday, specified as a 4-digit integer or vector of 4-digit integers.
+
+Data Types: double
+
+Month — Month to determine occurrence of weekday
+integer with value 1 through 12 | vector of integers with values 1 through 12
+
+Month to determine occurrence of weekday, specified as an integer or vector of integers with values 1
+through 12.
+
+Data Types: double
+
+Holiday — Holidays and nontrading-day dates
+non-trading day vector is determined by the routine holidays (default) | datetime array | string
+array | date character vector
+
+Holidays and nontrading-day dates, specified as a vector using a datetime array, string array, or date
+character vectors.
+
+All dates in Holiday must be the same format: either datetimes, strings, or date character vectors.
+The holidays function supplies the default vector.
+
+If Holiday is a datetime array, then Date is returned as a datetime array. If outputType is
+specified, then its value determines the output type of Date. This overrides any influence of
+Holiday.
+
+To support existing code, lbusdate also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Weekend — Weekend days
+[1 0 0 0 0 0 1] (Saturday and Sunday form the weekend) (default) | vector of length 7,
+containing 0 and 1, where 1 indicates weekend days
+
+Weekend days, specified as a vector of length 7, containing 0 and 1, where 1 indicates weekend days
+and the first element of this vector corresponds to Sunday.
+
+Data Types: double
+
+15
+Functions
+
+15-1138

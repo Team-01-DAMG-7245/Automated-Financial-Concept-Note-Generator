@@ -1,0 +1,6 @@
+Page 128
+================================================================================
+
+•
+softmaxLayer — Softmax layer, which outputs a length 3 vector of class probabilities by
+applying the softmax function to the outputs of the previous fully connected layer.

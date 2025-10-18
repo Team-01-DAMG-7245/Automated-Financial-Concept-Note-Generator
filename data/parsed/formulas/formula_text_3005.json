@@ -1,0 +1,12 @@
+{
+  "page": 1577,
+  "original_text": "strategy = \n  backtestStrategy with properties:",
+  "ocr_text": "strategy=\nbacktestStrategywithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 464.43,
+    "x1": 279.63,
+    "y1": 485.69
+  },
+  "confidence": "high"
+}

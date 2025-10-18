@@ -1,0 +1,33 @@
+In the Equity Curve plot, the tilted MDP strategy is the one that performs the best by the end of the
+investment period, followed by the mixed MDP strategy with the ESG constraint. The performance of
+the mixed and tilted strategies depend on the choice of the penalty parameters. Both ESG methods,
+the constrained and the tilted methods, require defining two parameters for each strategy. The ESG
+constrained method requires you to provide a target ESG score and a penalty parameter for the
+diversification term. The ESG tilting requires one penalty parameter value for the assets with 'high'
+ESG scores and a different one for 'low' ESG scores. In addition, the ESG tilting requires a third
+parameter to determine the cutoff point between 'high' and 'low' ESG assets. Given the
+dependency of the penalized strategies on the value of their parameters, the performance of those
+strategies vary widely. However, this example shows that it is possible to find values of the
+parameters so that the resulting strategies obtain good returns while improving on the average ESG
+score.
+
+The ESG Curves plot shows the average ESG evolution computed throughout the investment period
+for the penalized investment strategies, both for the ESG constrained method and the ESG tilting
+method. You can see that, unlike the choice of the ESG target for the ESG constraint, the selection of
+the tilting penalty parameters has an effect on the ESG score of the optimal portfolios that is less
+explicit. Therefore, the average ESG score varies more with the tilting strategies than with the
+constrained strategies, as expected.
+
+Although not shown in this example, the traditional minimum variance portfolio strategy, subject to
+the same expected return and ESG levels, results in higher average turnover and transaction costs
+than any of the strategies covered in the example. Another advantage of adding a diversification
+measure to the formulation of the problem is to reduce the average turnover and transaction costs.
+
+References
+
+[1] Richard, J. C., and T. Roncalli. Smart Beta: Managing Diversification of Minimum Variance
+Portfolios. Risk-Based and Factor Investing. Elsevier, pp. 31-63, 2015.
+
+Diversify ESG Portfolios
+
+4-281

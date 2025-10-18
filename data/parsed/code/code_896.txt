@@ -1,0 +1,8 @@
+Page 860
+================================================================================
+
+Since it is necessary and sufficient that your MAD portfolio set must be a nonempty, closed, and
+bounded set to have a valid portfolio optimization problem, the estimateBounds function lets you
+examine your portfolio set to determine if it is nonempty and, if nonempty, whether it is bounded.
+Suppose that you have the following MAD portfolio set which is an empty set because the initial
+portfolio at 0 is too far from a portfolio that satisfies the budget and turnover constraint:

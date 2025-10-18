@@ -1,0 +1,65 @@
+These points concern how Design handles missing data:
+
+•
+Although Design should not have NaN values, ignored samples due to NaN values in Data are also
+ignored in the corresponding Design array.
+
+•
+If Design is a 1-by-1 cell array, which has a single Design matrix for each sample, no NaN values
+are permitted in the array. A model with this structure must have NUMSERIES ≥ NUMPARAMS with
+rank(Design{1}) = NUMPARAMS.
+
+•
+ecmlsrmle is more strict than mvnrmle about the presence of NaN values in the Design array.
+
+Data Types: double | cell
+
+MaxIterations — Maximum number of iterations for the estimation algorithm
+100 (default) | numeric
+
+(Optional) Maximum number of iterations for the estimation algorithm, specified as a numeric. The
+default value is 100.
+
+Data Types: double
+
+TolParam — Convergence tolerance for estimation algorithm
+sqrt(eps) (default) | numeric
+
+(Optional) Convergence tolerance for estimation algorithm based on changes in model parameter
+estimates, specified as a numeric. The Default value is sqrt(eps) which is about 1.0e-8 for double
+precision. The convergence test for changes in model parameters is
+
+Paramk −Paramk −1 < TolParam × 1 + Paramk
+
+where Param represents the output Parameters, and iteration k = 2, 3, ... . Convergence is assumed
+when both the TolParam and TolObj conditions are satisfied. If both TolParam ≤ 0 and TolObj ≤
+0, do the maximum number of iterations (MaxIterations), whatever the results of the convergence
+tests.
+
+Data Types: double | table | timetable
+
+TolObj — Convergence tolerance for estimation algorithm based on changes in objective
+function
+eps ∧ 3/4 (default) | numeric
+
+(Optional) Convergence tolerance for estimation algorithm based on changes in the objective
+function, specified as a numeric. The default value is eps ∧ 3/4 which is about 1.0e-12 for double
+precision. The convergence test for changes in the objective function is
+
+Ob jk −Ob jk −1 < TolOb j × 1 + Ob jk
+
+for iteration k = 2, 3, ... . Convergence is assumed when both the TolParam and TolObj conditions
+are satisfied. If both TolParam ≤ 0 and TolObj ≤ 0, do the maximum number of iterations
+(MaxIterations), whatever the results of the convergence tests.
+
+Data Types: double
+
+Param0 — User-supplied initial estimate for the parameters of regression model
+zero vector (default) | vector
+
+(Optional) User-supplied initial estimate for the parameters of the regression model, specified as an
+NUMPARAMS-by-1 column vector.
+
+ecmlsrmle
+
+15-861

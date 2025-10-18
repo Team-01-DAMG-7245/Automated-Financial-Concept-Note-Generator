@@ -1,0 +1,12 @@
+{
+  "page": 520,
+  "original_text": "% Define a traditional mean-variance portfolio.\np = Portfolio;\np = estimateAssetMoments(p,returnsTT,MissingData=true,GetAssetList=true);",
+  "ocr_text": "sDefineatraditionalmean-varianceportfolio.\np=Portfolio;\np=estimateAssetMoments(p,returnsTT,MissingData=true,GetAssetList=true);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 445.35,
+    "x1": 485.51,
+    "y1": 477.42
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2079,
+  "original_text": "NumDaysNext = cpndaysn('14-Sep-2000', '30-Jun-2001', 2, 0, 1)",
+  "ocr_text": "NumDaysNext=cpndaysn(14-Sep-2000,30-Jun-2001,2,0,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 597.66,
+    "x1": 420.52,
+    "y1": 608.13
+  },
+  "confidence": "high"
+}

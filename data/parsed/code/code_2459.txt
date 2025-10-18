@@ -1,0 +1,5 @@
+Page 2310
+================================================================================
+
+Use the plotFrontier function with the Portfolio object to visualize the full frontier. Other
+functions exist that allow you to probe into particular portfolios along the frontier.

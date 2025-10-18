@@ -1,0 +1,60 @@
+endDate = datetime(2000,12,31);
+
+%startDate = '31-Dec-1995';
+%endDate = '31-Dec-2000';
+
+[transMat,~,idTotals] = transprob(data,...
+   'startDate',startDate,'endDate',endDate);
+
+% Total time spent on each rating
+full(idTotals(end).totalsVec)
+
+ans = 1×8
+
+4.0820    0.9180         0         0         0         0         0         0
+
+% Total transitions out of each rating
+full(idTotals(end).totalsMat)
+
+ans = 8×8
+
+0     0     0     0     0     0     0     0
+     1     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0
+
+% Algorithm
+idTotals(end).algorithm
+
+ans = 
+'duration'
+
+Use bootstrp with transprobbytotals as the bootstrap function and idTotals as the data to
+sample from. Each bootstrap sample corresponds to a dataset made of companies sampled with
+replacement from the original data. However, you do not have to draw companies from the original
+data, because a bootstrap idTotals sample contains all the information required to compute the
+transition probabilities. transprobbytotals aggregates all structures in each bootstrap idTotals
+sample and finds the corresponding transition matrix.
+
+To estimate 95% confidence intervals for the transition matrix and display the probabilities of default
+together with its upper and lower confidence bounds:
+
+PD = transMat(1:7,8);
+
+bootstat = bootstrp(100,@(totals)transprobbytotals(totals),idTotals);
+ci = prctile(bootstat,[2.5 97.5]); % 95% confidence
+CIlower = reshape(ci(1,:),8,8);
+CIupper = reshape(ci(2,:),8,8);
+PD_LB = CIlower(1:7,8);
+PD_UB = CIupper(1:7,8);
+
+[PD_LB PD PD_UB]
+
+8
+Credit Risk Analysis
+
+8-14

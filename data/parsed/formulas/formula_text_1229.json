@@ -1,0 +1,12 @@
+{
+  "page": 616,
+  "original_text": "InitialPrice = LOBPrices(1);",
+  "ocr_text": "InitialPrice=LOBPrices(1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 384.63,
+    "x1": 241.7,
+    "y1": 395.09
+  },
+  "confidence": "high"
+}

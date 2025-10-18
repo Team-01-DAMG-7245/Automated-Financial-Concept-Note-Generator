@@ -1,0 +1,32 @@
+Step 2a. Automatically bin the data.
+
+Use the autobinning function to perform automatic binning for every predictor variable, using the
+default 'Monotone' algorithm with default algorithm options.
+
+sc = autobinning(sc);
+
+After the automatic binning step, every predictor bin must be reviewed using the bininfo and 
+plotbins functions and fine-tuned. A monotonic, ideally linear trend in the Weight of Evidence
+(WOE) is desirable for credit scorecards because this translates into linear points for a given
+predictor. The WOE trends can be visualized using plotbins.
+
+Predictor = 
+;
+plotbins(sc,Predictor)
+
+Unlike the initial plot of 'ResStatus' when the scorecard was created, the new plot for
+'ResStatus' shows an increasing WOE trend. This is because the autobinning function, by
+default, sorts the order of the categories by increasing odds.
+
+These plots show that the 'Monotone' algorithm does a good job finding monotone WOE trends for
+this dataset. To complete the binning process, it is necessary to make only a few manual adjustments
+for some predictors using the modifybins function.
+
+Step 2b. Fine-tune the bins using manual binning.
+
+Common steps to manually modify bins are:
+
+8
+Credit Risk Analysis
+
+8-74

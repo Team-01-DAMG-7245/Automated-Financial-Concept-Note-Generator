@@ -1,0 +1,12 @@
+{
+  "page": 2095,
+  "original_text": "Fraction = cur2frac(Decimal,Denominator) converts decimal currency values to fractional\nvalues. Fraction is returned as a character vector.",
+  "ocr_text": "Fraction=cur2frac(Decimal,Denominator)convertsdecimalcurrencyvaluestofractional\nvalues.Fractionisreturnedasacharactervector.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 250.71,
+    "x1": 545.66,
+    "y1": 274.34
+  },
+  "confidence": "high"
+}

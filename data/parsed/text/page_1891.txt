@@ -1,0 +1,54 @@
+Period = 2;
+Basis = 0;
+Yield = bndyield(Price, CouponRate, Settle,...
+Maturity, Period, Basis)
+
+Yield = 3×1
+
+0.0610
+    0.0500
+    0.0396
+
+Compute the Yield of a Treasury Bond Using the Same Basis for Discounting and Generating
+the Cash Flows
+
+Compute the yield of a Treasury bond.
+
+Price = [95; 100; 105];
+CouponRate = 0.0345;
+Settle = datetime(2016,5,15);
+Maturity = datetime(2026,2,2);
+Period = 2;
+Basis = 1;
+format long
+
+Yield = bndyield(Price,CouponRate,Settle,Maturity,Period,Basis)
+
+Yield = 3×1
+
+0.040764403932618
+   0.034482347625316
+   0.028554719853118
+
+Using the same data, compute the yield of a Treasury bond using the same basis for discounting and
+generating the cash flows.
+
+DiscountBasis = 1;
+
+Yield = bndyield(Price,CouponRate,Settle,Maturity,'Period',Period,'Basis',Basis, ...
+'DiscountBasis',DiscountBasis)
+
+Yield = 3×1
+
+0.040780176658036
+   0.034495592361619
+   0.028565614029497
+
+Input Arguments
+
+Price — Clean price of the bond
+numeric
+
+bndyield
+
+15-585

@@ -1,0 +1,67 @@
+recent years with increasing use of algorithmic trading, and it is also a highly effective strategy that
+is thought to be optimal when the price movement follows a Brownian motion [4 on page 4-440,5 on
+page 4-440,6 on page 4-440].
+
+Agents
+
+Different types of agents are used in the reinforcement learning for optimal execution studies,
+including Q-learning [3 on page 4-440], DQN [4 on page 4-440,5 on page 4-440], and PPO [6 on page
+4-440] agents. In this example, you design and train DQN agents using the Reinforcement Learning
+Designer (Reinforcement Learning Toolbox) after creating separate training environments for sell
+trades and buy trades. These DQN agents only have a critic without an actor, and they use the default
+setting of UseDoubleDQN set to true, while the DiscountFactor is set to 1 due to the short
+trading horizon [4 on page 4-440,5 on page 4-440,6 on page 4-440]. In addition, the critic network of
+these agents include a long short-term memory (LSTM) network because the trading data is
+sequential in time, and LSTM networks are effective in designing agents for optimal execution [6 on
+page 4-440]. For more information on setting options for DQN agents, see rlDQNAgentOptions
+(Reinforcement Learning Toolbox).
+
+Observation Space
+
+The observation space defines which information (or feature) to provide to the agents at each step.
+The agents use this observation to decide the next action, based on the policy learned and reinforced
+by the rewards received after taking the previous actions. Designing a good observation space for the
+agents is an area of active research in optimal execution studies. You can experiment with different
+observation spaces, using variables such as the bid-ask spread, the bid or ask volume, price trends, or
+even the entire limit order book prices and shares [6 on page 4-440]. This example uses the following
+observation variables:
+
+•
+Remaining shares to be traded by the agent in the current trading horizon
+
+•
+Remaining time intervals (steps) left in the current trading horizon
+
+•
+Cumulative implementation shortfall (IS) of agent until the previous step
+
+•
+Current limit order book price divergence from arrival price
+
+The first two observation variables (remaining shares to be traded and remaining time in horizon) are
+called "private" variables by Nevmyvaka et al. [3 on page 4-440], as they only apply to the specific
+situation of the trading agents, and they do not apply to other market participants. As the agent
+trained by Nevmyvaka et al. [3 on page 4-440] using only "private" variables was able to outperform
+the "submit and leave" baseline policy, the "private" variables are also used in the subsequent studies
+[4 on page 4-440,5 on page 4-440,6 on page 4-440].
+
+The third variable, cumulative IS, is a measure of trading cost that the agents seek to minimize. As
+the name "shortfall" indicates, a lower implementation shortfall implies better trade execution.
+Technically, Implementation Shortfall should include the opportunity cost of failing to execute all
+shares within the trading horizon. In this example, as with many of the previously mentioned studies,
+the Implementation Shortfall is computed under the ending inventory constraint:
+
+•
+For a sell trade, the constraint is to have zero ending inventory, assuming successful liquidation of
+all shares.
+
+•
+For a buy trade, the constraint is to have full ending inventory, assuming successful purchase of all
+shares.
+
+Under this ending inventory constraint, Implementation Shortfall is computed as follows:
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-408

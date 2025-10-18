@@ -1,0 +1,12 @@
+{
+  "page": 946,
+  "original_text": "% nSGEOY: Number of SG issuers at the end of the year\n% nSGEOY is similar to nEOY, but for SG only, from 5 ('BB') to 7 ('CCC')\nindSG = 5:7;\nnSGEOY = zeros(nYears,1);\nnSGEOY(1:end-1) = sum(nIssuers(2:end,indSG),2);\nnSGEOY(end) = sum(totalsIGSG(end).totalsMat(:,2)) + ...\n   sum(nNewIssuers(end,indSG));\n% Proportion of SG issuers\nSG = 100*nSGEOY./nEOY;\n% SG age proxy: new SG issuers in t-3 / total issuers at the end of year t\nAGESG = 100*[nan(3,1); sum(nNewIssuers(1:end-3,indSG),2)./nEOY(4:end)];",
+  "ocr_text": "nSGEOY:NumberofSGissuersattheendoftheyear\n\nnSGEOYissimilartonEOY,butforSGonly,from5(BB)to7(CCC)\n\nindSG=5:7;\n\nnSGEOY=zeros(nYears,1);\n\nnSGEOY(1:end-1)=sum(nIssuers(2:end,indSG),2);\n\nnSGEOY(end)=sum(totalsIGSG(end).totalsMat(:,2))+...\nsum(nNewIssuers(end,indSG));\n\nProportionofSGissuers\n\nSG_=100*nSGEOY./nEOY;\n\nSGageproxy:newSGissuersint-3/totalissuersattheendofyeart\n\nAGESG=100*[nan(3,1);sum(nNewIssuers(1:end-3,indSG),2)./nEOY(4:end)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 484.46,
+    "x1": 490.93,
+    "y1": 602.93
+  },
+  "confidence": "high"
+}

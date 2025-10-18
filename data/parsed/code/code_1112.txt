@@ -1,0 +1,7 @@
+Page 1143
+================================================================================
+
+The following histogram shows the range of different hedging costs for both approaches. The RL
+approach performs better, but with a larger variance than the BSM approach. The RL approach in
+this example would likely benefit from the two Q-function approach that Cao [2 on page 10-46]
+discusses and implements.

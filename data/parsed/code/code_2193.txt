@@ -1,0 +1,7 @@
+Page 1890
+================================================================================
+
+Price = [95; 100; 105];
+CouponRate = 0.05;
+Settle = datetime('20-Jan-1997','Locale','en_US');
+Maturity = datetime('15-Jun-2002','Locale','en_US');

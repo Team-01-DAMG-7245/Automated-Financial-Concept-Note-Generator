@@ -1,0 +1,5 @@
+Page 1460
+================================================================================
+
+This function performs a Brownian interpolation into a user-specified time series array, based on a
+piecewise-constant Euler sampling approach.

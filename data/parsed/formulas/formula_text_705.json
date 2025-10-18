@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "% Pull out the relevant signal data for the strategy.\nbuySellSignals = signalTT(:,signalNames);",
+  "ocr_text": "SPullouttherelevantsignaldataforthestrategy.\nbuySellSignals=signalTT(:,signalNames);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.03,
+    "x1": 377.15,
+    "y1": 416.29
+  },
+  "confidence": "high"
+}

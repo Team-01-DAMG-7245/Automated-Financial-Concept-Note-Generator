@@ -1,0 +1,12 @@
+{
+  "page": 233,
+  "original_text": "p = Portfolio(p, 'UpperBudget', []);",
+  "ocr_text": "p=Portfolio(p,UpperBudget,[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 641.17,
+    "x1": 285.06,
+    "y1": 651.64
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,60 @@
+EnvConstants_Train_Buy.NumHorizons = NumTrainingHorizons;
+EnvConstants_Train_Buy.NumSteps = NumTrainingSteps;
+EnvConstants_Train_Buy.NumLevels = NumLevels;
+EnvConstants_Train_Buy.IS_TWAP = IS_TWAP_Step_Train_Buy;
+ResetFunction_Buy = @() RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Train_Buy);
+
+NumActions = 39;
+LowerActionRange = linspace(0,TradingShares_Step_TWAP_Train_Buy(1), round(NumActions/2));
+ActionRange = round([LowerActionRange(1:end-1) ...
+    linspace(TradingShares_Step_TWAP_Train_Buy(1), ...
+    TradingShares_Step_TWAP_Train_Buy(1)*2,round(NumActions/2))]);
+NumActions = length(ActionRange);
+
+ActionInfo_Buy = rlFiniteSetSpec(ActionRange);
+ActionInfo_Buy.Name = 'Trading Action (Number of Shares)';
+ActionInfo_Buy.Description = 'Number of Shares to be Traded at Each Time Step';
+
+StepFunction_Train_Buy = @(Action,LoggedSignals) ...
+    RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvConstants_Train_Buy);
+
+RL_OptimalExecution_Training_Environment_Buy = rlFunctionEnv( ...
+    ObservationInfo_Train_Buy,ActionInfo_Buy,StepFunction_Train_Buy,ResetFunction_Buy)
+
+Reset!
+Reset!
+
+RL_OptimalExecution_Training_Environment_Buy = 
+  rlFunctionEnv with properties:
+
+StepFcn: @(Action,LoggedSignals)RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvCons
+    ResetFcn: @()RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Train_Buy)
+        Info: [1×1 struct]
+
+Use Reinforcement Learning Designer (Reinforcement Learning Toolbox) to create and train the
+agent for the buy trades. You use the same procedure (Optimal Execution for Sell Trades on page 4-
+412) as with the sell trades, except that the imported training environment is for buy trades
+(RL_OptimalExecution_Training_Environment_Buy). Once the training is complete, export the
+trained agent to the workspace. Since training can take a long time, this example uses a pretrained
+agent (DQN_agent_Buy_Trained.mat).
+
+load DQN_agent_Buy_Trained.mat
+
+Compute IS using the trained agent and training data for buy trades.
+
+rng('default');
+reset(RL_OptimalExecution_Training_Environment_Buy);
+
+Reset!
+
+simOptions = rlSimulationOptions(MaxSteps=NumTrainingSteps);
+Trained_Agent_Buy = DQN_agent_Buy_Trained;
+experience_Buy = sim(RL_OptimalExecution_Training_Environment_Buy,Trained_Agent_Buy,simOptions);
+
+Reset!
+Last Horizon. Episode is Done!
+HorizonIdx:
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-437

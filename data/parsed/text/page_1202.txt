@@ -1,0 +1,64 @@
+•
+Before simulation, the simulation method itself calls each function once to validate the size of the
+output at the initial time and state, obj.StartTime, and obj.StartState, respectively.
+
+•
+During simulation, the simulation method calls each function the same number of times:
+NPeriods * NSteps.
+
+However, there is an important distinction regarding the timing between these two types of functions.
+It is most clearly drawn directly from the generic SDE model:
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+
+This equation is expressed in continuous time, but the simulation methods approximate the model in
+discrete time as:
+
+Xt + Δt = Xt + F(t, Xt)Δt + G(t, Xt) ΔtZ(t, Xt)
+
+where Δt > 0 is a small (and not necessarily equal) period or time increment into the future. This
+equation is often referred to as a Euler approximation, a simulation technique that provides a
+discrete-time approximation of a continuous-time stochastic process. All functions on the rightmost
+side are evaluated at the current time and state (t, Xt).
+
+In other words, over the next small time increment, the simulation evolves the state vector based only
+on information available at the current time and state. In this sense, you can think of the noise
+function as a beginning-of-period function, or as a function evaluated from the left. This is also true
+for any user-supplied drift or diffusion function.
+
+In contrast, user-specified end-of-period processing functions are applied only at the end of each
+simulation period or time increment. For more information about processing functions, see “Price
+European Stock Options Using Monte Carlo Simulation” on page 14-47.
+
+Therefore, all simulation methods evaluate noise generation functions as:
+
+zt = Z(t, Xt)
+
+for t = t0, t0 + Δt, t0 + 2Δt, ..., T – Δt.
+
+Yet simulation methods evaluate end-of-period processing functions as:
+
+Xt = f(t, Xt)
+
+for t = t0 + Δt, t0 + 2Δt, ..., T.
+
+where t0 and T are the initial time (taken from the object) and the terminal time (derived from inputs
+to the simulation method), respectively. These evaluations occur on all sample paths. Therefore,
+during simulation, noise functions are never evaluated at the final (terminal) time, and end-of-period
+processing functions are never evaluated at the initial (starting) time.
+
+Drift and Diffusion
+
+For example, an SDE with a linear drift rate has the form:
+
+F(t, Xt) = A(t) + B(t)Xt
+ (14-2)
+
+where A is an NVars-by-1 vector-valued function and B is an NVars-by-NVars matrix-valued function.
+
+As an alternative, consider a drift-rate specification expressed in mean-reverting form:
+
+14
+Stochastic Differential Equations
+
+14-10

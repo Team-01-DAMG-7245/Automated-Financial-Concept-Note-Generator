@@ -1,0 +1,8 @@
+Page 1730
+================================================================================
+
+Settle = datetime(1997,3,14);
+Maturity = [datetime(2000,11,30) datetime(2000,12,31) datetime(2001,1,31)];
+Period = 2;
+Basis = 0;
+EndMonthRule = 1;

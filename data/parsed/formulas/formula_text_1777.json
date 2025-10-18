@@ -1,0 +1,12 @@
+{
+  "page": 895,
+  "original_text": "q = Portfolio('AssetList', p.AssetList);\nq = estimateAssetMoments(q, p.getScenarios);\nq = setDefaultConstraints(q);",
+  "ocr_text": "q=Portfolio(AssetList,p.AssetList);\nq=estimateAssetMoments(q,p.getScenarios);\nq=setDefaultConstraints(q);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 430.66,
+    "x1": 328.39,
+    "y1": 462.73
+  },
+  "confidence": "high"
+}

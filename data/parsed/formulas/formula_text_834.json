@@ -1,0 +1,12 @@
+{
+  "page": 472,
+  "original_text": "priceData = rmmissing(priceData);",
+  "ocr_text": "priceData=rmmissing(priceData);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 127.83,
+    "x1": 268.79,
+    "y1": 138.29
+  },
+  "confidence": "high"
+}

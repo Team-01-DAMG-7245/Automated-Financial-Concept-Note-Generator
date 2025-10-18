@@ -1,0 +1,55 @@
+lambda — Lambda
+numeric | structure
+
+Lambda, specified as a scalar numeric or structure.
+
+If the input data is a vector, lambda is a scalar. If the input is a financial time series object (tsobj),
+lambda is a structure with fields similar to the components of the object. For example, if tsobj
+contains series names Open and Close, lambda has fields lambda.Open and lambda.Close.
+
+Data Types: double | struct
+
+Output Arguments
+
+transdat — Data Box-Cox transformation
+vector
+
+Data Box-Cox transformation, returned as a vector.
+
+lambda — Lambda transformation parameter
+numeric
+
+Lambda transformation parameter, returned as a numeric.
+
+More About
+
+Box Cox Transformation
+
+boxcox transforms nonnormally distributed data to a set of data that has approximately normal
+distribution. The Box-Cox transformation is a family of power transformations.
+
+If λ is not = 0, then
+
+data(λ) = dataλ −1
+λ
+
+If λ is = 0, then
+
+data(λ) = log(data)
+
+The logarithm is the natural logarithm (log base e). The algorithm calls for finding the λ value that
+maximizes the Log-Likelihood Function (LLF). The search is conducted using fminsearch.
+
+Version History
+Introduced before R2006a
+
+R2023a: fints support for tsobj input argument and transfts output argument are
+removed
+Behavior changed in R2023a
+
+The tsobj input argument that supports a fints object is and the transfts output argument are
+removed from boxcox.
+
+boxcox
+
+15-599

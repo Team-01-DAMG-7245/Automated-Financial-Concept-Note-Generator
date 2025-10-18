@@ -1,0 +1,4 @@
+Page 41
+================================================================================
+
+Use the irr function to compute the internal rate of return of the cash flow stream.

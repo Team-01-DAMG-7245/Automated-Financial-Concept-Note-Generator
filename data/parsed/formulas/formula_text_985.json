@@ -1,0 +1,12 @@
+{
+  "page": 521,
+  "original_text": "% Define the initial Markowitz portfolio.\ninitialMarkowitz = markowitzFcn(zeros(p.NumAssets,1),warmupTT,p);\n% Define the initial robust portfolio.\ninitialRP = robustFcn(zeros(p.NumAssets,1),warmupTT,p,kappa);",
+  "ocr_text": "sDefinetheinitialMarkowitzportfolio.\ninitialMarkowitz=markowitzFcn(zeros(p.NumAssets,1),warmupTT,p);\nDefinetheinitialrobustportfolio.\ninitialRP=robustFcn(zeros(p.NumAssets,1),warmupTT,p,kappa);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 212.23,
+    "x1": 442.17,
+    "y1": 255.09
+  },
+  "confidence": "high"
+}

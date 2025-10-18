@@ -1,0 +1,60 @@
+Notice that the weights of the minimum risk portfolio are closer to the weights of the max Sharpe
+ratio than the weights of the constrained equally weighted portfolio (EWP). This happens because the
+priority of the constrained EWP is to make the weights as even as possible while still satisfying the
+constraints. Thus, the weights of the EWP are closer to each other than the rest of the portfolios.
+
+Add Risk Constraint to a Custom Objective Problem
+
+This example shows how to use estimateCustomObjectivePortfolio to define a risk-constrained
+long-only, fully-invested portfolio and then compare the maximum return portfolio against a minimum
+tracking error portfolio, where the tracking portfolio is the equally-weighted portfolio. You define the
+constraints for portfolio problems using functions for the Portfolio object and then you specify the
+objective function as an input to estimateCustomObjectivePortfolio. The objective function
+must be continuous (and preferably smooth).
+
+Create Portfolio Object
+
+Create a Portfolio object using the default constraints and then define the targetRisk.
+
+% Define initial data
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+% Create Portfolio object
+p = Portfolio(AssetMean=m,AssetCovar=C);
+
+% Set long-only, fully-invested constraints
+p2 = setDefaultConstraints(p);
+
+% Define maximum risk of the portfolio
+targetRisk = 0.1;
+
+To compute the maximum return portfolio subject to a risk constraint, use
+estimateFrontierByRisk.
+
+% Compute the max return risk constrained portfolio
+wMax = estimateFrontierByRisk(p2,targetRisk);
+
+Compute the minimum tracking error portfolio subject to a risk constraint using
+estimateCustomObjectivePortfolio, where the tracking portfolio is the equally weighted
+portfolio.
+
+% Compute the min tracking error portfolio with a risk constraint
+x0 = 1/4*ones(4,1);
+TE = @(w) (w-x0)'*p2.AssetCovar*(w-x0);
+wTE = estimateCustomObjectivePortfolio(p2,TE,...
+    TargetVolatility=targetRisk);
+
+Use a bar plot to observe the difference between the portfolios.
+
+figure
+bar([wMax wTE])
+legend('Max Return','Min TE')
+
+15
+Functions
+
+15-924

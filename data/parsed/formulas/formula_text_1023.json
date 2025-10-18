@@ -1,0 +1,12 @@
+{
+  "page": 536,
+  "original_text": "p = setBudget(p,1,1);",
+  "ocr_text": "p=setBudget(p,1,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 401.03,
+    "x1": 203.78,
+    "y1": 411.49
+  },
+  "confidence": "high"
+}

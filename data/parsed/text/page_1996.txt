@@ -1,0 +1,72 @@
+QuasiCouponDates = 1×4 datetime
+   31-May-1997   30-Nov-1997   31-May-1998   30-Nov-1998
+
+Input Arguments
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as an NINST-by-1 vector using a datetime array, string array, or date
+character vectors. Settle must be earlier than Maturity.
+
+To support existing code, cfdatesq also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime array | string array | date character vector
+
+Maturity date, specified as an NINST-by-1 vector using a datetime array, string array, or date
+character vectors.
+
+To support existing code, cfdatesq also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Period — Coupons per year of the bond
+2 (semiannual) (default) | vector of positive integers from the set [1,2,3,4,6,12]
+
+(Optional) Coupons per year of the bond, specified as a vector of positive integers from the set
+[1,2,3,4,6,12].
+
+Data Types: double
+
+Basis — Day-count basis
+0 (actual/actual) (default) | positive integers of the set [1...13] | vector of positive integers of the
+set [1...13]
+
+(Optional) Day-count basis, specified as positive integers using a NINST-by-1 vector.
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+15
+Functions
+
+15-690

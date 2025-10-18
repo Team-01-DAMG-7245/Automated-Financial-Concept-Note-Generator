@@ -1,0 +1,6 @@
+Page 1438
+================================================================================
+
+Volatility (often called the volatility of volatility or volatility of variance) represents the
+instantaneous volatility of the CIR stochastic variance model, specified as a scalar, or deterministic
+function of time.

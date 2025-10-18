@@ -1,0 +1,94 @@
+Saving and Loading PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . .
+5-18
+Estimating Efficient Portfolios and Frontiers . . . . . . . . . . . . . . . . . . . . . .
+5-18
+Arrays of PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-19
+Subclassing PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-20
+Conventions for Representation of Data . . . . . . . . . . . . . . . . . . . . . . . . .
+5-20
+
+Creating the PortfolioCVaR Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-22
+Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-22
+PortfolioCVaR Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-22
+PortfolioCVaR Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-23
+
+Common Operations on the PortfolioCVaR Object . . . . . . . . . . . . . . . . . .
+5-29
+Naming a PortfolioCVaR Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-29
+Configuring the Assets in the Asset Universe . . . . . . . . . . . . . . . . . . . . .
+5-29
+Setting Up a List of Asset Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-29
+Truncating and Padding Asset Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-31
+
+Setting Up an Initial or Current Portfolio . . . . . . . . . . . . . . . . . . . . . . . . .
+5-33
+
+Asset Returns and Scenarios Using PortfolioCVaR Object . . . . . . . . . . . .
+5-36
+How Stochastic Optimization Works . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-36
+What Are Scenarios? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-36
+Setting Scenarios Using the PortfolioCVaR Function . . . . . . . . . . . . . . . .
+5-37
+Setting Scenarios Using the setScenarios Function . . . . . . . . . . . . . . . . .
+5-38
+Estimating the Mean and Covariance of Scenarios . . . . . . . . . . . . . . . . .
+5-38
+Simulating Normal Scenarios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-39
+Simulating Normal Scenarios from Returns or Prices . . . . . . . . . . . . . . .
+5-39
+Simulating Normal Scenarios with Missing Data . . . . . . . . . . . . . . . . . . .
+5-40
+Simulating Normal Scenarios from Time Series Data . . . . . . . . . . . . . . .
+5-42
+Simulating Normal Scenarios with Mean and Covariance . . . . . . . . . . . .
+5-44
+
+Working with a Riskless Asset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-46
+
+Working with Transaction Costs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-47
+Setting Transaction Costs Using the PortfolioCVaR Function . . . . . . . . . .
+5-47
+Setting Transaction Costs Using the setCosts Function . . . . . . . . . . . . . .
+5-47
+Setting Transaction Costs with Scalar Expansion . . . . . . . . . . . . . . . . . .
+5-49
+
+Working with CVaR Portfolio Constraints Using Defaults . . . . . . . . . . . .
+5-51
+Setting Default Constraints for Portfolio Weights Using PortfolioCVaR
+Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-51
+
+Working with 'Simple' Bound Constraints Using PortfolioCVaR Object
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-55
+Setting 'Simple' Bounds Using the PortfolioCVaR Function . . . . . . . . . . .
+5-55
+Setting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .
+5-55
+Setting 'Simple' Bounds Using the PortfolioCVaR Function or setBounds
+Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5-56
+
+Working with Budget Constraints Using PortfolioCVaR Object . . . . . . . .
+5-58
+Setting Budget Constraints Using the PortfolioCVaR Function . . . . . . . .
+5-58
+Setting Budget Constraints Using the setBudget Function . . . . . . . . . . .
+5-58
+
+xiii

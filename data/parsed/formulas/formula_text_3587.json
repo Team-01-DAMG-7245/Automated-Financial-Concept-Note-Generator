@@ -1,0 +1,12 @@
+{
+  "page": 2022,
+  "original_text": "RateSpec = struct with fields:\n           FinObj: 'RateSpec'\n      Compounding: 2\n             Disc: [9×1 double]\n            Rates: [9×1 double]\n         EndTimes: [9×1 double]\n       StartTimes: [9×1 double]\n         EndDates: [9×1 double]\n       StartDates: 731763\n    ValuationDate: 731763\n            Basis: 0\n     EndMonthRule: 1",
+  "ocr_text": "RateSpec=structwithfields:\nFinObj:RateSpec\nCompounding:_2\nDisc:[9x1double]\nRates:_[9x1double]\nEndTimes:_[9x1double]\nStartTimes:[9x1double]\nEndDates:_[9x1double]\nStartDates:731763\nValuationDate:_731763\nBasis:0\nEndMonthRule:1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.02,
+    "x1": 257.96,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

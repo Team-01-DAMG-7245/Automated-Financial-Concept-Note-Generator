@@ -1,0 +1,4 @@
+Page 1184
+================================================================================
+
+Use the createholidays function to open the Trading Calendars user interface.

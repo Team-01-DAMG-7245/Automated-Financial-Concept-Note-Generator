@@ -1,0 +1,12 @@
+{
+  "page": 1945,
+  "original_text": "where the integral is approximated with a finite sum over the discretization τ0 = 0,τ1,...,τM = T.",
+  "ocr_text": "wheretheintegralisapproximatedwithafinitesumoverthediscretizationT)=0,T,...,Ty=T.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 345.58,
+    "x1": 526.01,
+    "y1": 358.41
+  },
+  "confidence": "high"
+}

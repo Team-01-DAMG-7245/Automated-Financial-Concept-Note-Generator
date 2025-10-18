@@ -1,0 +1,12 @@
+{
+  "page": 1763,
+  "original_text": "load SimulatedStock.mat\nADOsc = adosc(TMW);\nplot(ADOsc.dates, ADOsc.ADOscillator)\ntitle('A/D Oscillator for TMW')",
+  "ocr_text": "loadSimulatedStock.mat\nADOsc=adosc(TMW);\nplot(ADOsc.dates,ADOsc.ADOscillator)\ntitle(A/DOscillatorforTMw)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 382.83,
+    "x1": 290.46,
+    "y1": 425.69
+  },
+  "confidence": "high"
+}

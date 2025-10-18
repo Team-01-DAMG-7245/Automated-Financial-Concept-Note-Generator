@@ -1,0 +1,12 @@
+{
+  "page": 2490,
+  "original_text": "load SimulatedStock.mat \ntype = 'linear';\nmashort_term=movavg(TMW_CLOSE,type,3) % Short-term moving average",
+  "ocr_text": "loadSimulatedStock.mat\ntype=linear;\nmashort_term=movavg(TMW_CLOSE,type,3)Short-termmovingaverage",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 218.58,
+    "x1": 442.19,
+    "y1": 250.65
+  },
+  "confidence": "high"
+}

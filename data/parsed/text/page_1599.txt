@@ -1,0 +1,55 @@
+summary
+
+Generate summary table of backtest results
+
+Syntax
+
+summaryTable = summary(backtester)
+
+Description
+
+summaryTable = summary(backtester) generates a table of metrics to summarize the backtest.
+Each row of the table is a calculated metric and each column represents a strategy. You must run the
+summary function only after running the runBacktest function.
+
+Examples
+
+Examining Backtest Results
+
+The MATLAB® backtesting engine runs backtests of portfolio investment strategies over time series
+of asset price data. You can use summary to compare multiple strategies over the same market
+scenario. This example shows how to examine the results of a backtest with two strategies.
+
+Load Data
+
+Load one year of stock price data. For readability, this example uses a subset of the DJIA stocks.
+
+% Read table of daily adjusted close prices for 2006 DJIA stocks
+T = readtable('dowPortfolio.xlsx');
+
+% Prune the table to include only the dates and selected stocks
+timeColumn = "Dates";
+assetSymbols = ["BA", "CAT", "DIS", "GE", "IBM", "MCD", "MSFT"];
+T = T(:,[timeColumn assetSymbols]);
+
+% Convert to timetable
+pricesTT = table2timetable(T,'RowTimes','Dates');
+
+% View the final asset price timetable
+head(pricesTT)
+
+Dates        BA       CAT      DIS      GE       IBM      MCD     MSFT 
+    ___________    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    68.63    55.86    24.18     33.6    80.13    32.72    26.19
+    04-Jan-2006    69.34    57.29    23.77    33.56    80.03    33.01    26.32
+    05-Jan-2006    68.53    57.29    24.19    33.47    80.56    33.05    26.34
+    06-Jan-2006    67.57    58.43    24.52     33.7    82.96    33.25    26.26
+    09-Jan-2006    67.01    59.49    24.78    33.61    81.76    33.88    26.21
+    10-Jan-2006    67.33    59.25    25.09    33.43     82.1    33.91    26.35
+    11-Jan-2006     68.3    59.28    25.33    33.66    82.19     34.5    26.63
+    12-Jan-2006     67.9    60.13    25.41    33.25    81.61    33.96    26.48
+
+summary
+
+15-293

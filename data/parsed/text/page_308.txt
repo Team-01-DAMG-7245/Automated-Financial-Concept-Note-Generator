@@ -1,0 +1,135 @@
+Choose MINLP Solvers for Portfolio Problems
+
+The following table lists the type of Mixed Integer Nonlinear Programming (MINLP) solvers that you
+can select to find the solution to different portfolio problems using a Portfolio, PortfolioCVaR,
+or PortfolioMAD object. You can set the solvers using setSolverMINLP, where the first input
+argument, solverTypeMINLP, is one of the solvers listed in the table that follows.
+
+Available Solvers (Use setSolverMINLP to specify the
+solver)
+
+Portfolio
+Problem
+
+Use Function:
+Portfolio Object
+PortfolioCVaR
+Object
+
+PortfolioMAD
+Object
+
+Estimate efficient
+frontier
+
+estimateFronti
+er(p)
+
+(See
+estimateFronti
+er)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+Supports
+extended
+formulation
+using the name-
+value argument
+“ExtendedForm
+ulation” on
+page 15-0
+.
+
+•
+TrustRegionC
+P
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+Minimize risk
+without return
+constraint
+
+estimateFronti
+erLimits(p,'mi
+n')
+
+(See
+estimateFronti
+erLimits)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+Supports
+extended
+formulation
+using the name-
+value argument
+“ExtendedForm
+ulation” on
+page 15-0
+.
+
+•
+TrustRegionC
+P
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+
+•
+TrustRegionC
+P (default)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-140

@@ -1,0 +1,33 @@
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes, as follows.
+
+For more information, see “SDE Models” on page 14-7, “SDE Classes and Associated Simulation
+Methods” on page 14-13, and “SDE Class Hierarchy” on page 14-5.
+
+Algorithms
+
+The Bates model (Bates 1996) is an extension of the Heston model and adds not only stochastic
+volatility, but also the jump diffusion parameters as in Merton (1976) were also added to model
+sudden asset price movements.
+
+Under the risk-neutral measure the model is expressed as follows
+
+dSt = (γ −q −λpμj)Stdt +
+υtStdWt + JStdPt
+
+dυt = κ(θ −υt)dt + συ υtdWt
+υ
+
+E dWtdWt
+υ = pdt
+
+prob(dPt = 1) = λpdt
+
+Here:
+
+bates
+
+15-199

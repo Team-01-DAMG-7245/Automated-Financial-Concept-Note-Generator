@@ -1,0 +1,73 @@
+•
+modifiedfollow — Cash flows that fall on a non-business day are assumed to be distributed on
+the following business day. However if the following business day is in a different month, the
+previous business day is adopted instead.
+
+•
+previous — Cash flows that fall on a non-business day are assumed to be distributed on the
+previous business day.
+
+•
+modifiedprevious — Cash flows that fall on a non-business day are assumed to be distributed
+on the previous business day. However if the previous business day is in a different month, the
+following business day is adopted instead.
+
+Data Types: char
+
+PayAccruedPremium — Flag for accrued premiums paid upon default
+true (default) | integer with value 1 or 0
+
+Flag for accrued premiums paid upon default, specified as the comma-separated pair consisting of
+'PayAccruedPremium' and a N-by-1 vector of Boolean flags that is true (default) if accrued
+premiums are paid upon default, false otherwise.
+
+Data Types: logical
+
+TimeStep — Number of days as time step for numerical integration
+10 (days) (default) | nonnegative integer
+
+Number of days to take as time step for the numerical integration, specified as the comma-separated
+pair consisting of 'TimeStep' and a nonnegative integer.
+
+Data Types: double
+
+ZeroCompounding — Compounding frequency of the zero curve
+2 (semiannual) (default) | integer with value of 1,2,3,4,6,12, or –1
+
+Compounding frequency of the zero curve, specified as the comma-separated pair consisting of
+'ZeroCompounding' and an integer with values:
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+•
+−1 — Continuous compounding
+
+Data Types: double
+
+ZeroBasis — Basis of the zero curve
+0 (actual/actual) (default) | integer with value of 0 to 13
+
+Basis of the zero curve, specified as the comma-separated pair consisting of 'ZeroBasis' and a
+positive integer with values that are identical to Basis.
+
+Data Types: double
+
+cdsspread
+
+15-637

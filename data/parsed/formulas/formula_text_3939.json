@@ -1,0 +1,12 @@
+{
+  "page": 2238,
+  "original_text": "r = estimateAssetMoments(r,AssetsTimeTable,'GetAssetList',true);\ndisp(r.AssetList')",
+  "ocr_text": "r=estimateAssetMoments(r,AssetsTimeTable,GetAssetList,true);\ndisp(r.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 348.55,
+    "x1": 436.78,
+    "y1": 369.81
+  },
+  "confidence": "high"
+}

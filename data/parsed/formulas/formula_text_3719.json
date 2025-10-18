@@ -1,0 +1,12 @@
+{
+  "page": 2109,
+  "original_text": "Indices = datefind(Subset,Superset)\nIndices = datefind( ___ ,Tolerance)",
+  "ocr_text": "Indices=datefind(Subset,Superset)\nIndices=datefind(___,Tolerance)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.84,
+    "x1": 300.72,
+    "y1": 214.47
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,49 @@
+Stochastic Differential Equations
+
+•
+“SDEs” on page 14-2
+
+•
+“SDE Class Hierarchy” on page 14-5
+
+•
+“SDE Models” on page 14-7
+
+•
+“Base SDE Models” on page 14-16
+
+•
+“Drift and Diffusion Models” on page 14-19
+
+•
+“Linear Drift Models” on page 14-22
+
+•
+“Parametric Models” on page 14-24
+
+•
+“Simulating Equity Prices” on page 14-31
+
+•
+“Simulating Interest Rates” on page 14-50
+
+•
+“Stratified Sampling” on page 14-58
+
+•
+“Quasi-Monte Carlo Simulation” on page 14-63
+
+•
+“Performance Considerations” on page 14-65
+
+•
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation”
+on page 14-71
+
+•
+“Volatility Modeling for Soft Commodities” on page 14-88
+
+•
+“Improving Performance of Monte Carlo Simulation with Parallel Computing” on page 14-111
+
+14

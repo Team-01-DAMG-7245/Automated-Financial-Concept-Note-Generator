@@ -1,0 +1,12 @@
+{
+  "page": 456,
+  "original_text": "% Update the covariance matrix.\nSigma7 = corr2cov(sigma,C(0.7));\n% Compute the mean-variance portfolio.\np = Portfolio(AssetMean=mu,AssetCovar=Sigma7);\np = setDefaultConstraints(p);\nwMV_rho7 = estimateFrontierByRisk(p,targetRisk)",
+  "ocr_text": "SUpdatethecovariancematrix.\nSigma7=corr2cov(sigma,C(0.7));\nSComputethemean-varianceportfolio.\np=Portfolio(AssetMean=mu,AssetCovar=Sigma7);\np=setDefaultConstraints(p);\nwMV_rho7=estimateFrontierByRisk(p,targetRisk)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 159.94,
+    "x1": 344.65,
+    "y1": 224.41
+  },
+  "confidence": "high"
+}

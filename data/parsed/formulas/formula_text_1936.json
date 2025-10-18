@@ -1,0 +1,12 @@
+{
+  "page": 997,
+  "original_text": "sc = fitmodel(sc);",
+  "ocr_text": "sc=fitmodel(sc);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 657.05,
+    "x1": 187.52,
+    "y1": 667.52
+  },
+  "confidence": "high"
+}

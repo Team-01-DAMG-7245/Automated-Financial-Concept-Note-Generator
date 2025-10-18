@@ -1,0 +1,7 @@
+Page 2429
+================================================================================
+
+Note If StartDate, EndDate, and AltHolidays are all either strings or date character vectors, H
+is returned as serial date numbers. Use the function datetime to convert serial date numbers to
+formatted datetime arrays. If either StartDate, EndDate, or AltHolidays are datetime arrays, H is
+returned as a datetime array.

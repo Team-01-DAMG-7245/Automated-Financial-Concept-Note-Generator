@@ -1,0 +1,12 @@
+{
+  "page": 1016,
+  "original_text": "ModelPreds = ModelPreds(2:end);\nsc = setmodel(sc,ModelPreds,ModelCoeff);\np = displaypoints(sc);",
+  "ocr_text": "ModelPreds=ModelPreds(2:end);\nsc=setmodel(sc,ModelPreds,ModelCoeff);\np=displaypoints(sc);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 417.55,
+    "x1": 306.72,
+    "y1": 449.61
+  },
+  "confidence": "high"
+}

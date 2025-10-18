@@ -1,0 +1,12 @@
+{
+  "page": 1463,
+  "original_text": "SDE = sde(DriftRate,DiffusionRate)\nSDE = sde( ___ ,Name,Value)",
+  "ocr_text": "SDE=sde(DriftRate,DiffusionRate)\nSDE=sde(__,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 485.47,
+    "x1": 294.7,
+    "y1": 509.1
+  },
+  "confidence": "high"
+}

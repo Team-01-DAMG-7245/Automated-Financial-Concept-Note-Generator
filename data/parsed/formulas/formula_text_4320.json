@@ -1,0 +1,12 @@
+{
+  "page": 2444,
+  "original_text": "Weekend = [1 0 0 0 0 0 0];\nDate = lbusdate(2003, 5, [], Weekend,'datetime')",
+  "ocr_text": "Weekend=[1000000];\nDate=lbusdate(2003,5,[],Weekend,datetime)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.53,
+    "x1": 350.09,
+    "y1": 159.8
+  },
+  "confidence": "high"
+}

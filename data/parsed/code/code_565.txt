@@ -1,0 +1,10 @@
+Page 525
+================================================================================
+
+In “Risk Budgeting Portfolio” on page 4-286, the example describes some advantages of risk parity or
+budgeting portfolios. It shows how to use riskBudgetingPortfolio to solve long-only, fully
+invested risk parity or budgeting problems. When the only constraints of the risk budgeting problem
+enforce nonnegative weights that sum to 1, the risk budgeting problem is a feasibility problem. In
+other words, the solution to the problem is the one that exactly matches the target risk budget and it
+is unique. Therefore, there is no need for an objective function. The riskBudgetingPortfolio
+function is optimized to solve this specific type of problems.

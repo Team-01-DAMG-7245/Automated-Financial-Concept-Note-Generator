@@ -1,0 +1,37 @@
+higher in 1994 than in 1995, but the opposite is true for SG. More noticeably, the IG default rate
+peaked after the 2001 recession, in 2002, whereas the peak for SG is in 2001. This suggests that
+models for the dynamics of the IG and SG default rates could have important differences, a common
+situation when working with different segments. The overall corporate default rate is by construction
+a combination of the other two, and its pattern is closer to SG, most likely due to the relative
+magnitude of SG versus IG.
+
+minIG = min(DefRateIG(DefRateIG~=0));
+figure
+plot(Years,log(DefRateSG),'m-*')
+hold on
+plot(Years,log(DefRate),'b-o')
+plot(Years,log(max(DefRateIG,minIG-0.001)),'r-+')
+Example_RecessionBands
+hold off
+grid on
+title('{\bf Default Rates (log scale)}')
+ylabel('log %')
+legend({'SG','Overall','IG'},'location','NW')
+
+Getting Default Rates for Different Time Periods
+
+The default rates obtained are examples of point-in-time (PIT) rates, only the most recent information
+is used to estimate them. On the other extreme, you can use all the migrations observed in the 25
+years spanned by the dataset to estimate long-term, or through-the-cycle (TTC) default rates. Other
+rates of interest are the average default rates over recession or expansion years.
+
+All of these are easy to estimate with the example data and the same tools. For example, to estimate
+the average transition probabilities over recession years, pass to transprobbytotals the totals
+structures corresponding to the recession years only. You can use logical indexing, taking advantage
+of the Recession variable. transprobbytotals aggregates the information over time and returns
+the corresponding transition matrix.
+
+8
+Credit Risk Analysis
+
+8-26

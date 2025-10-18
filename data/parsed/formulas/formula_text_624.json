@@ -1,0 +1,12 @@
+{
+  "page": 403,
+  "original_text": "retn = stockReturns{test, :}*assetWgt1;\nplot(ret2tick(retn, 'method', 'simple')*100); hold off;\nxlabel('Timestep');\nylabel('Value');\ntitle('Portfolio Equity Curve');",
+  "ocr_text": "retn=stockReturns{test,:}*assetWgt1;\nplot(ret2tick(retn,method,simple)*100);holdoff;\nxlabel(Timestep);\n\nylabel(Value);\n\ntitle(PortfolioEquityCurve);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 388.02,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

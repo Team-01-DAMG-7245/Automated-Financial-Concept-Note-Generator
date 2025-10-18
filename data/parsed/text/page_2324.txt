@@ -1,0 +1,53 @@
+estimatePortStd
+
+Estimate standard deviation of portfolio returns
+
+Syntax
+
+pstd = estimatePortStd(obj,pwgt)
+
+Description
+
+pstd = estimatePortStd(obj,pwgt) estimate standard deviation of portfolio returns for
+PortfolioCVaR or PortfolioMAD objects. For details on the workflows, see “PortfolioCVaR Object
+Workflow” on page 5-16 and “PortfolioMAD Object Workflow” on page 6-16.
+
+Examples
+
+Estimate Standard Deviations for Portfolio Returns for a PortfolioCVaR Object
+
+Given a portfolio pwgt, use the estimatePortStd function to show the standard deviation of
+portfolio returns.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+rng(11);
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+pwgt = estimateFrontierLimits(p);
+
+pstd = estimatePortStd(p, pwgt);
+disp(pstd)
+
+0.0223
+    0.1010
+
+The function rng(seed) resets the random number generator to produce the documented results. It is
+not necessary to reset the random number generator to simulate scenarios.
+
+15
+Functions
+
+15-1018

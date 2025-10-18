@@ -1,0 +1,38 @@
+% Plot efficient frontier with turnover constraint.
+
+clf;
+portfolioexamples_plot('Efficient Frontier with Turnover Constraint', ...
+    {'line', prsk, pret, {'Unconstrained'}, ':b'}, ...
+    {'line', qrsk, qret, {sprintf('%g%% Turnover', 100*Turnover)}}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+displaySumOfTransactions(Turnover, qbuy, qsell)
+
+Sum of Purchases by Portfolio along Efficient Frontier (Max. Turnover 20%)
+20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 2
+Sum of Sales by Portfolio along Efficient Frontier (Max. Turnover 20%)
+20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 20.0000 2
+
+Tracking-Error Constraint
+
+The Portfolio object can handle tracking-error constraints, where tracking-error is the relative risk
+of a portfolio compared with a tracking portfolio. In this example, a sub-collection of nine assets
+forms an equally-weighted tracking portfolio. The goal is to find efficient portfolios with tracking
+errors that are within 5% of this tracking portfolio.
+
+ii = [15, 16, 20, 21, 23, 25, 27, 29, 30];    % Indexes of assets to include in the tracking port
+
+TrackingError = 0.05/sqrt(12);
+TrackingPort = zeros(30, 1);
+TrackingPort(ii) = 1;
+TrackingPort = (1/sum(TrackingPort))*TrackingPort;
+
+q = setTrackingError(p,TrackingError,TrackingPort);
+
+qwgt = estimateFrontier(q,20);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-168

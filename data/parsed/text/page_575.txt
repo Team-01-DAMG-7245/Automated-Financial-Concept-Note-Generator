@@ -1,0 +1,56 @@
+Deep Reinforcement Learning for Optimal Trade Execution
+
+This example shows how to use the Reinforcement Learning Toolbox™ and Deep Learning Toolbox™
+to design agents for optimal trade execution.
+
+Introduction
+
+Optimal trade execution seeks to minimize trading costs when selling or buying a set number of stock
+shares over a certain time horizon within the trading day. Optimization is necessary because
+executing trades too quickly results in suboptimal prices due to market impact, while executing
+trades too slowly results in exposure to the risk of adverse price changes or the inability to execute
+all trades within the time horizon. This optimization affects nearly all trading strategies and portfolio
+management practices, since minimizing trading costs is directly linked to profitability that is related
+to buying or selling decisions. Also, brokers compete to provide better trade order execution, and
+many jurisdictions legally require brokers to provide the best execution for their clients. Early studies
+by Bertsimas and Lo [1 on page 4-440] and Almgren and Chriss [2 on page 4-440] derived analytical
+solutions for the optimal trade execution problem by assuming a model for the underlying prices.
+Later, Nevmyvaka et al. [3 on page 4-440] demonstrated that the use of reinforcement learning (RL)
+for optimal execution did not require making assumptions about the market micro-structure. More
+recent studies use deep reinforcement learning, which combines reinforcement learning (RL) with
+deep learning, for optimal trade execution (Ning et al. [4 on page 4-440], Lin and Beling [5 on page 4-
+440,6 on page 4-440]). This approach overcomes the limitations of Q-learning as noted by Nevmyvaka
+et al. [3 on page 4-440].
+
+This example uses deep reinforcement learning to design and train two deep Q-network (DQN)
+agents for optimal trade execution. One DQN agent is for sell trades and the other agent is for buy
+trades.
+
+Data
+
+This example uses the intraday trading data on Intel Corporation stock (INTC) provided by LOBSTER
+[7 on page 4-441] and included with Financial Toolbox™. While the reinforcement learning for
+optimal execution literature typically uses trading data over one year or more to train and test RL
+agents [3 on page 4-440,4 on page 4-440,5 on page 4-440,6 on page 4-440], in this proof-of-concept
+example you use a shorter data set, which you can expand for further study. The intraday trading data
+on the Intel stock (INTC_2012-06-21_34200000_57600000_orderbook_5.csv) contains limit
+order book data over 6.5 hours, including bid and ask prices as well as corresponding shares for 5
+levels. This data is sampled at 5 second intervals to create 390 one minute trading horizons, such that
+each trading horizon contains 12 steps at five second intervals. Out of these 390 horizons, you use
+293 horizons (about 75 percent) to train the agents and the remaining 97 horizons (about 25 percent)
+to test the agents.
+
+Baseline Trade Execution Algorithm
+
+An agent's performance must be compared with a baseline trade execution algorithm. For this
+example, the baseline trade execution algorithm is the time-weighted average price (TWAP) policy.
+Under this policy, the total trading shares are divided equally over the trading horizon, so that the
+same number of shares are traded at each time step. In contrast, the original paper by Nevmyvaka et
+al. [3 on page 4-440] used a "submit and leave" policy as the baseline, where a limit order is placed at
+a fixed price for the entire trading shares for the entire horizon, and any remaining unfilled shares
+are traded with a market order at the last step. However, the TWAP baseline was adopted in later
+studies [4 on page 4-440,5 on page 4-440,6 on page 4-440], since it has become more popular in
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-407

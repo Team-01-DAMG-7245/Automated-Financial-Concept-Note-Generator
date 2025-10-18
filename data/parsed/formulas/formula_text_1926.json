@@ -1,0 +1,12 @@
+{
+  "page": 987,
+  "original_text": "newdata = data(1:10,:);\nnewdata.CustAge(1) = NaN;\n[Scores,Points] = score(sc,newdata)",
+  "ocr_text": "newdata=data(1:10,:);\nnewdata.CustAge(1)=NaN;\n[Scores,Points]=score(sc,newdata)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 333.61,
+    "x1": 279.63,
+    "y1": 365.68
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1857,
+  "original_text": "KeyRateDuration = bndkrdur(ZeroData,CouponRate,Settle,Maturity) computes the key\nrate durations for one or more bonds given a zero curve and a set of key rates.",
+  "ocr_text": "KeyRateDuration=bndkrdur(ZeroData,CouponRate,Settle,Maturity)computesthekey\nratedurationsforoneormorebondsgivenazerocurveandasetofkeyrates.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.32,
+    "x1": 552.54,
+    "y1": 278.95
+  },
+  "confidence": "high"
+}

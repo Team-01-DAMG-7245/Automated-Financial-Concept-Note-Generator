@@ -1,0 +1,12 @@
+{
+  "page": 669,
+  "original_text": "p = simulateNormalScenariosByData(p, stockTT, 20000 ,'missingdata',true, 'GetAssetList', true);\ndisp(p.AssetList)",
+  "ocr_text": "p=simulateNormalScenariosByData(p,stockTT,20000,missingdata,true,GetAssetList,true);\ndisp(p.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.11,
+    "x1": 604.75,
+    "y1": 654.38
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 247
+================================================================================
+
+p = Portfolio;
+A = [ 1 1 1 0 0 ];    % first inequality constraint
+b = 0.5;
+p = setInequality(p, A, b);

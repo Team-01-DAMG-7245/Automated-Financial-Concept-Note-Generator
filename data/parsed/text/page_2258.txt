@@ -1,0 +1,55 @@
+Sales relative to an initial portfolio for optimal portfolios on the efficient frontier, returned as a
+NumAssets-by-NumPorts matrix.
+
+Note If no initial portfolio is specified in obj.InitPort, that value is assumed to be 0 such that
+pbuy = max(0, pwgt) and psell = max(0, -pwgt).
+
+psell is returned for Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+More About
+
+Efficient Frontier
+
+The efficient frontier is a key concept in modern portfolio theory (MPT) that represents a set of
+optimal portfolios offering the highest expected return for a given level of risk, or the lowest risk for a
+given level of expected return.
+
+The efficient frontier illustrates the tradeoff between risk (often measured as the standard deviation
+of portfolio returns) and expected return. Investors aim to construct portfolios that lie on this frontier
+to maximize their returns for a given level of risk. Portfolios that lie on the efficient frontier are
+considered optimal because they provide the best possible expected return for their level of risk.
+Portfolios that lie below the frontier are suboptimal, as they do not provide sufficient return for the
+amount of risk taken. The efficient frontier emphasizes the importance of diversification. By
+combining different assets with varying returns and risks, investors can reduce the overall risk of the
+portfolio without sacrificing expected returns.
+
+Tips
+
+•
+You can also use dot notation to estimate the specified number of optimal portfolios over the entire
+efficient frontier.
+
+[pwgt, pbuy, psell] = obj.estimateFrontier(NumPorts);
+
+•
+When introducing transaction costs and turnover constraints to the Portfolio, PortfolioCVaR,
+or PortfolioMAD object, the portfolio optimization objective contains a term with an absolute
+value. For more information on how Financial Toolbox handles such cases algorithmically, see
+“References” on page 15-952.
+
+Version History
+Introduced in R2011a
+
+References
+
+[1] Cornuejols, G., and R. Tutuncu. Optimization Methods in Finance. Cambridge University Press,
+2007.
+
+See Also
+estimateFrontierByReturn | estimateFrontierByRisk | estimateFrontierLimits |
+setBounds | setMinMaxNumAssets
+
+15
+Functions
+
+15-952

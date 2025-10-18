@@ -1,0 +1,12 @@
+{
+  "page": 549,
+  "original_text": "% Observation space:\n%   [wealth; timePeriod]\nobservationInfo = rlNumericSpec([2 1]);",
+  "ocr_text": "Observationspace:\n[wealth;timePeriod]\nobservationInfo=rlNumericSpec([21]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 642.18,
+    "x1": 301.3,
+    "y1": 674.24
+  },
+  "confidence": "high"
+}

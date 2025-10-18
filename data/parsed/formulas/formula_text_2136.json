@@ -1,0 +1,12 @@
+{
+  "page": 1101,
+  "original_text": "Prices  =  CleanPrice + AccruedInterest",
+  "ocr_text": "Prices=CleanPrice+AccruedInterest",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 301.3,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

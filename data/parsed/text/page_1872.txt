@@ -1,0 +1,16 @@
+[3] Stigum, M., Robinson, F. Money Market and Bond Calculation. McGraw-Hill, 1996.
+
+See Also
+bndyield | cfamounts | datetime
+
+Topics
+“Bond Portfolio for Hedging Duration and Convexity” on page 10-6
+“Pricing Functions” on page 2-21
+“Sensitivity of Bond Prices to Interest Rates” on page 10-2
+“Bond Portfolio Optimization Using Portfolio Object” on page 10-30
+“Yield Conventions” on page 2-21
+
+15
+Functions
+
+15-566

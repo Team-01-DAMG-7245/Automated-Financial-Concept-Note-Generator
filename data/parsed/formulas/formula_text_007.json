@@ -1,0 +1,12 @@
+{
+  "page": 35,
+  "original_text": "X = x1, x2, …, xn",
+  "ocr_text": "X=[X1,X2,.-Xn]",
+  "bbox": {
+    "x0": 112.58,
+    "y0": 187.53,
+    "x1": 186.17,
+    "y1": 200.8
+  },
+  "confidence": "high"
+}

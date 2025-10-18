@@ -1,0 +1,8 @@
+Page 1705
+================================================================================
+
+The simByTransition function partitions each time increment dt into NSteps subintervals of
+length dt/NSteps, and refines the simulation by evaluating the simulated state vector at NSteps − 1
+intermediate points. Although simByTransition does not report the output state vector at these
+intermediate points, the refinement improves accuracy by enabling the simulation to more closely
+approximate the underlying continuous-time process.

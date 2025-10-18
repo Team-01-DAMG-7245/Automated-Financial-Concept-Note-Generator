@@ -1,0 +1,28 @@
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Beumee, J., D. Brigo, D. Schiemert, and G. Stoyle. “Charting a Course Through the CDS Big Bang.”
+Fitch Solutions, Quantitative Research, Global Special Report. April 7, 2009.
+
+[2] Hull, J., and A. White. “Valuing Credit Default Swaps I: No Counterparty Default Risk.” Journal of
+Derivatives. Vol. 8, pp. 29–40.
+
+[3] O'Kane, D. and S. Turnbull. “Valuation of Credit Default Swaps.” Lehman Brothers, Fixed Income
+Quantitative Credit Research, April 2003.
+
+See Also
+cdsspread | cdsprice | cdsrpv01 | IRDataCurve | defprobstrip
+
+Topics
+“Bootstrapping a Default Probability Curve” on page 8-101
+“Bootstrapping from Inverted Market Curves” on page 8-111
+“Credit Default Swap (CDS)” on page 8-100
+
+cdsbootstrap
+
+15-625

@@ -1,0 +1,62 @@
+NaN      62.161       58.846        67.938      61.818     75.642      89.788  
+    80.326         NaN       58.846          82.3      61.018     75.642      89.788  
+    97.559      73.305          NaN        96.647       51.05     50.806      89.788  
+    66.868      90.777       58.846           NaN      61.818     50.806      89.788
+
+To assign points to missing data, one possibility is to use the name-value pair argument 'Missing'
+in formatpoints to choose how to assign points to missing values.
+
+Use the 'MinPoints' option for the 'Missing' argument. This option assigns the minimum
+number of possible points in the scorecard to the missing data. In this example, the minimum number
+of possible points for CustIncome is 29.906, so the last row in the table gets 29.906 points for the
+missing CustIncome value.
+
+scTreated = formatpoints(scTreated,'Missing','MinPoints');
+[Scores,Points] = score(scTreated,tdata);
+disp(Scores)
+
+469.7003
+  510.0812
+  518.0013
+  448.8099
+
+disp(Points)
+
+CustAge    ResStatus    EmpStatus    CustIncome    TmWBank    OtherCC    AMBalance
+    _______    _________    _________    __________    _______    _______    _________
+
+53.507      62.161       58.846        67.938      61.818     75.642      89.788  
+    80.326      62.161       58.846          82.3      61.018     75.642      89.788  
+    97.559      73.305       58.846        96.647       51.05     50.806      89.788  
+    66.868      90.777       58.846        29.906      61.818     50.806      89.788
+
+However, for predictors treated in the training data, such as CustAge, the effect of the 'Missing'
+argument is inconsistent with the treatment of the training data. For example, for CustAge, the first
+observation gets 53.507 points for the missing value, yet if the new data were "treated," and the
+missing value for CustAge were replaced with the mode of the training data (age of 43), this
+observation falls in the [40,45) bin and receives 66.868 points.
+
+Therefore, before scoring, data sets must be treated the same way the training data was treated. The
+use of the 'Missing' argument is still important to assign points for untreated predictors and the
+treated predictors receive points in a way that is consistent with the way the model was developed.
+
+tdataTreated = tdata;
+tdataTreated.CustAge = fillmissing(tdataTreated.CustAge,'constant',modeCustAge);
+tdataTreated.ResStatus = fillmissing(tdataTreated.ResStatus,'constant',string(modeResStatus));
+disp(tdataTreated)
+
+CustAge    ResStatus      EmpStatus     CustIncome    TmWBank    OtherCC    AMBalance
+    _______    __________    ___________    __________    _______    _______    _________
+
+43       Tenant        Unknown          34000         44         Yes        119.8  
+      48       Home Owner    Unknown          44000         14         Yes       403.62  
+      65       Home Owner    <undefined>      48000          6         No        111.88  
+      44       Other         Unknown            NaN         35         No        436.41
+
+[Scores,Points] = score(scTreated,tdataTreated);
+disp(Scores)
+
+8
+Credit Risk Analysis
+
+8-138

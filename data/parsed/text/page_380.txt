@@ -1,0 +1,12 @@
+Visualize the Transaction Costs and Turnover
+
+Due to transaction costs, it can be expensive to shift holdings from the current portfolio to a portfolio
+along this efficient frontier. The following custom plot shows that you must turn over between 50%
+and 75% of the holdings to get to this frontier.
+
+TurnoverPlot(P)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-212

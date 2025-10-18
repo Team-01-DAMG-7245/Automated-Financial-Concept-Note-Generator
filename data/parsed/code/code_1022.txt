@@ -1,0 +1,5 @@
+Page 1040
+================================================================================
+
+•
+Call the fitcknn function to create a k-nearest neighbor classifier.

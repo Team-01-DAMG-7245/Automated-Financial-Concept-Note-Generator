@@ -1,0 +1,12 @@
+{
+  "page": 1691,
+  "original_text": "CIR = \n   Class CIR: Cox-Ingersoll-Ross\n   ----------------------------------------\n     Dimensions: State = 1, Brownian = 1\n   ----------------------------------------\n      StartTime: 0\n     StartState: 1\n    Correlation: 1\n          Drift: drift rate function F(t,X(t)) \n      Diffusion: diffusion rate function G(t,X(t)) \n     Simulation: simulation method/function simByEuler\n          Sigma: 0.05\n          Level: 0.1\n          Speed: 0.2",
+  "ocr_text": "CIR=\nClassCIR:Cox-Ingersoll-Ross\nDimensions:State=1,Brownian=1\nStartTime:0\nStartState:1\nCorrelation:1\nDrift:driftratefunctionF(t,X(t))\nDiffusion:diffusionratefunctionG(t,X(t))\nSimulation:simulationmethod/functionsimByEuler\nSigma:0.05\nLevel:0.1\nSpeed:0.2",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 184.12,
+    "x1": 382.57,
+    "y1": 334.98
+  },
+  "confidence": "high"
+}

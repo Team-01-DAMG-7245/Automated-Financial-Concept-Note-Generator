@@ -1,0 +1,55 @@
+Input Arguments
+
+Data — Data for a series of prices
+matrix | table | timetable
+
+Data for a series of prices, specified as a matrix, table, or timetable. Timetables and tables with M
+rows must contain a variable named 'Price' (case insensitive).
+
+Data Types: double | table | timetable
+
+ax — Valid axis object
+current axes (ax = gca) (default) | axes object
+
+(Optional) Valid axis object, specified as an axes object. The kagi plot is created in the axes specified
+by ax instead of in the current axes (ax = gca). The option ax can precede any of the input
+argument combinations.
+
+Data Types: object
+
+Output Arguments
+
+h — Graphic handle of the figure
+handle object
+
+Graphic handle of the figure, returned as a handle object.
+
+More About
+
+Kagi Chart
+
+A Kagi chart represents price movements of an asset over time, focusing on the direction of price
+rather than the time intervals.
+
+Kagi charts consist of a series of vertical lines that change direction based on price movements. The
+lines are drawn based on price changes and not on time intervals. The chart starts with a vertical line
+that represents the initial price level. If the price rises by a specified amount (called the "reversal
+amount"), a new line is drawn in the upward direction. Conversely, if the price falls by the same
+reversal amount, a line is drawn downward. The reversal amount is a key parameter in Kagi charts. It
+determines how much the price must change before a new line is drawn. This helps filter out minor
+price fluctuations and focuses on significant price movements.
+
+Version History
+Introduced in R2008a
+
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+R2018a: Support for matrix, time, or timetable input for data
+Behavior changed in R2018a
+
+kagi
+
+15-1135

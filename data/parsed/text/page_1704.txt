@@ -1,0 +1,61 @@
+----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+Define the quasi-Monte Carlo simulation using the optional name-value arguments for
+'MonteCarloMethod','QuasiSequence', and 'BrownianMotionMethod'.
+
+[paths,time] = simByTransition(cir_obj,10,'ntrials',4096,'montecarlomethod','quasi','quasisequenc
+
+Input Arguments
+
+MDL — Stochastic differential equation model
+object
+
+Stochastic differential equation model, specified as a cir object. For more information on creating a
+CIR object, see cir.
+
+Data Types: object
+
+NPeriods — Number of simulation periods
+positive scalar integer
+
+Number of simulation periods, specified as a positive scalar integer. The value of NPeriods
+determines the number of rows of the simulated output series.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [Paths,Times] = simByTransition(CIR,NPeriods,'DeltaTime',dt)
+
+NTrials — Simulated trials (sample paths)
+1 (single path of correlated state variables) (default) | positive integer
+
+Simulated trials (sample paths) of NPeriods observations each, specified as the comma-separated
+pair consisting of 'NTrials' and a positive scalar integer.
+
+Data Types: double
+
+DeltaTime — Positive time increments between observations
+1 (default) | scalar | column vector
+
+15
+Functions
+
+15-398

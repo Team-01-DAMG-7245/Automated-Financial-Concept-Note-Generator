@@ -1,0 +1,12 @@
+{
+  "page": 38,
+  "original_text": "To illustrate, consider this situation. There are two portfolios of mortgage-based instruments, M1 and\nM2. They have current annual cash payments of $100 and $70 per unit, respectively, based on today's\nprime rate. If the prime rate moves down one percentage point, their payments would be $80 and\n$40. An investor holds 10 units of M1 and 20 units of M2. The investor's receipts equal cash\npayments times units, or R = C * U, for each prime-rate scenario. As word equations:",
+  "ocr_text": "Toillustrate,considerthissituation.Therearetwoportfoliosofmortgage-basedinstruments,M1and\nM2.Theyhavecurrentannualcashpaymentsof100and70perunit,respectively,basedontodays\nprimerate.Iftheprimeratemovesdownonepercentagepoint,theirpaymentswouldbe80and\n40.Aninvestorholds10unitsofM1and20unitsofM2.Theinvestorsreceiptsequalcash\npaymentstimesunits,orR=C*U,foreachprime-ratescenario.Aswordequations:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 555.96,
+    "x1": 556.47,
+    "y1": 615.59
+  },
+  "confidence": "high"
+}

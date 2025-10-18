@@ -1,0 +1,12 @@
+{
+  "page": 2328,
+  "original_text": "pvar = obj.estimatePortVaR(pwgt);",
+  "ocr_text": "pvar=obj.estimatePortVaR(pwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 577.31,
+    "x1": 268.8,
+    "y1": 587.78
+  },
+  "confidence": "high"
+}

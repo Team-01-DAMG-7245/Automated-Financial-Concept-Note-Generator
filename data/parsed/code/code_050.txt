@@ -1,0 +1,6 @@
+Page 52
+================================================================================
+
+Financial Toolbox provides many functions for determining specific dates. For example, assume that
+you schedule an accounting procedure for the last Friday of every month. Use the lweekdate
+function to return those dates for the year 2000. The input argument 6 specifies Friday.

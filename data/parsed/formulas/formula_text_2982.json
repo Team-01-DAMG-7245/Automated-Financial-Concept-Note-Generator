@@ -1,0 +1,12 @@
+{
+  "page": 1558,
+  "original_text": "% Whole shares and equal weight for assets\newWhole = backtestStrategy(\"WholeShares\",@equalWeightShares,RebalanceFrequency=1,EngineDataList=\"",
+  "ocr_text": "Wholesharesandequalweightforassets\newwhole=backtestStrategy(WholeShares,equalWeightShares,RebalanceFrequency=1,EngineDataList=",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 263.81,
+    "x1": 615.59,
+    "y1": 285.07
+  },
+  "confidence": "high"
+}

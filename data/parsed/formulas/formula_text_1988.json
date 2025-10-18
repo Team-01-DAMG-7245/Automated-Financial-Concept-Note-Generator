@@ -1,0 +1,12 @@
+{
+  "page": 1028,
+  "original_text": "Maturity5 = MarketData(3,1);\nSpread5Run = MarketData(3,2);\nProbData5Run = cdsbootstrap(ZeroData,[Maturity5 Spread5Run],Settle);\nSpread5Std = 100;\nPrice5 = cdsprice(ZeroData,ProbData5Run,Settle,Maturity5,Spread5Std);\nUpfront5 = Price5/10000000;\nfprintf('Relative error of FHR-based upfront amount: %3.1f%%\\n', ...\n   ((Upfront5-Upfront3(3))/Upfront3(3))*100);",
+  "ocr_text": "Maturity5=MarketData(3,1);\nSpread5Run=MarketData(3,2);\nProbData5Run=cdsbootstrap(ZeroData,[Maturity5Spread5Run],Settle);\nSpread5Std=100;\nPrice5=cdsprice(ZeroData,ProbData5Run,Settle,Maturity5,Spread5Std);\nUpfront5=Price5/10000000;\nfprintf(RelativeerrorofFHR-basedupfrontamount:3.1f*n,...\n((Upfront5-Upfront3(3))/Upfront3(3))*100);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 469.83,
+    "x1": 463.84,
+    "y1": 555.89
+  },
+  "confidence": "high"
+}

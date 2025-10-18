@@ -1,0 +1,72 @@
+Cash flow amounts, returned as a NBONDS-by-NCFS (number of cash flows) matrix. The first entry in
+each row vector is the accrued interest due at settlement. This amount could be zero, positive or
+negative. If no accrued interest is due, the first column is zero. If the bond is trading ex-coupon then
+the accrued interest is negative.
+
+CFlowDates — Cash flow dates for a portfolio of bonds
+matrix
+
+Cash flow dates for a portfolio of bonds, returned as a NBONDS-by-NCFS matrix. Each row represents
+a single bond in the portfolio. Each element in a column represents a cash flow date of that bond.
+
+If all the above inputs (Settle, Maturity, IssueDate, FirstCouponDate, LastCouponDate, and
+StartDate) are either strings s or date character vectors, then CFlowDates is returned as a serial
+date number. Use the function datestr to convert serial date numbers to formatted date character
+vectors. If any of these inputs are datetime arrays, then CFlowDates is returned as a datetime array.
+
+TFactors — Matrix of time factors for a portfolio of bonds
+matrix
+
+Matrix of time factors for a portfolio of bonds, returned as a NBONDS-by-NCFS matrix. Each row
+corresponds to the vector of time factors for each bond. Each element in a column corresponds to the
+specific time factor associated with each cash flow of a bond.
+
+Time factors are for price/yield conversion and time factors are in units of whole semiannual coupon
+periods plus any fractional period using an actual day count. For more information on time factors,
+see “Time Factors” on page 15-679.
+
+CFlowFlags — Cash flow flags for a portfolio of bonds
+matrix
+
+Cash flow flags for a portfolio of bonds, returned as a NBONDS-by-NCFS matrix. Each row corresponds
+to the vector of cash flow flags for each bond. Each element in a column corresponds to the specific
+flag associated with each cash flow of a bond. Flags identify the type of each cash flow (for example,
+nominal coupon cash flow, front, or end partial, or "stub" coupon, maturity cash flow).
+
+Flag
+Cash Flow Type
+
+0
+Accrued interest due on a bond at settlement.
+
+1
+Initial cash flow amount smaller than normal due to a “stub” coupon period. A
+stub period is created when the time from issue date to first coupon date is
+shorter than normal.
+
+2
+Larger than normal initial cash flow amount because the first coupon period is
+longer than normal.
+
+3
+Nominal coupon cash flow amount.
+
+4
+Normal maturity cash flow amount (face value plus the nominal coupon amount).
+
+5
+End “stub” coupon amount (last coupon period is abnormally short and actual
+maturity cash flow is smaller than normal).
+
+6
+Larger than normal maturity cash flow because the last coupon period longer
+than normal.
+
+7
+Maturity cash flow on a coupon bond when the bond has less than one coupon
+period to maturity.
+
+15
+Functions
+
+15-678

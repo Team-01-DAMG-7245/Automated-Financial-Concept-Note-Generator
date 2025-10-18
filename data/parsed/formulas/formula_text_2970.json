@@ -1,0 +1,12 @@
+{
+  "page": 1555,
+  "original_text": "stopLossStrat = backtestStrategy(\"StopLoss\",@stopLossSingleAsset,RebalanceFrequency=1);",
+  "ocr_text": "stopLossStrat=backtestStrategy(StopLoss,stopLossSingleAsset,RebalanceFrequency=1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 284.03,
+    "x1": 561.39,
+    "y1": 294.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 468
+================================================================================
+
+function pwgt = hrpPortfolio(T,Sigma)
+% Function that computes a hierarchical risk parity portfolio. The
+% algorithm first computes a risk parity portfolio for each cluster. Then,
+% each cluster is assigned a weight based on a risk parity allocation of
+% the covariance between the cluster's portfolios.

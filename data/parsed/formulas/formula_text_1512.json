@@ -1,0 +1,12 @@
+{
+  "page": 764,
+  "original_text": "plotFrontier(p);\nhold on\n% Compute the risk level for the maximum reward-to-risk ratio portfolio.\noptrsk = estimatePortRisk(p,pwgt);\nscatter(optrsk,optret,50,'red','filled')\nhold off",
+  "ocr_text": "plotFrontier(p)\n\nholdon\nComputetherisklevelforthemaximumreward-to-riskratioportfolio.\noptrsk=estimatePortRisk(p,pwgt);\nscatter(optrsk,optret,50,red,filled)\n\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 548.83,
+    "x1": 480.09,
+    "y1": 613.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,33 @@
+Although bondDefaultBootstrap supports serial date numbers, datetime values are
+recommended instead. The datetime data type provides flexible date and time formats, storage out
+to nanosecond precision, and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Jarrow, Robert A., and Stuart Turnbull. "Pricing Derivatives on Financial Securities Subject to
+Credit Risk." Journal of Finance. 50.1, 1995, pp. 53–85.
+
+[2] Berd, A., Mashal, R. and Peili Wang. “Defining, Estimating and Using Credit Term Structures.”
+Research report, Lehman Brothers, 2004.
+
+See Also
+IRDataCurve | cdsbootstrap
+
+Topics
+“Creating an IRDataCurve Object” (Financial Instruments Toolbox)
+
+15
+Functions
+
+15-522

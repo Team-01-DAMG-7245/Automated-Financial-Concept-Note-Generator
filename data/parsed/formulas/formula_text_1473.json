@@ -1,0 +1,12 @@
+{
+  "page": 742,
+  "original_text": "p = PortfolioCVaR;\np = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');",
+  "ocr_text": "p=PortfolioCVaR;\np=setAssetList(p,_Bonds,Large-CapEquities,Small-CapEquities,EmergingEquities);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 114.63,
+    "x1": 583.08,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,65 @@
+Covariance denoising is a common method that is used to reduce the effect of noise in the covariance
+approximation. Covariance denoising reduces the ill-conditioning of the traditional covariance
+estimate by differentiating the eigenvalues associated with noise from the eigenvalues associated
+with signal. Random matrix theory is used in covariance denoising to pull only the eigenvalues that
+are associated with noise to a common mean.
+
+An intuitive example is when the number of variables is larger than the number of observations. In
+this case, the result is a noninvertible covariance matrix. Furthermore, because covariance
+estimation is performed using observations from random data, the estimator contains a certain
+amount of noise. This noise usually results in ill-conditioned covariance estimates. Working with an
+ill-conditioned matrix magnifies the impact of estimation errors.
+
+Unlike shrinkage methods, denoising does not require information from the full sample. In covariance
+denoising using covarianceDenoising you only need to know the number of scenarios that were
+used to estimate the covariance matrix.
+
+Algorithms
+
+The covarianceDenoising function shrinks only the part of the covariance that corresponds with
+noise as follows:
+
+1
+Compute the correlation matrix C associated with the traditional covariance estimate Σ.
+
+2
+Compute the eigendecomposition of C = VΛ VT.
+
+3
+Estimate the empirical distribution of the eigenvalues using kernel density estimation with
+fitdist(x,'Kernel'). For more information, see fitdist.
+
+4
+Fit the Marchenko-Pastur distribution to the empirical distribution by minimizing the mean
+squared error (MSE) between the empirical probability density function (pdf) and the fitted
+Marchenko-Pastur pdf. This gives the theoretical bounds λ+ and λ- on the eigenvalues associated
+with noise.
+
+5
+Let λ
+− be the average of the eigenvalues smaller than λ+. Set all eigenvalues smaller than λ+ to λ
+−.
+These are the eigenvalues associated with noise.
+
+6
+Compute the denoised version of the correlation matrix C = VΛ
+−VT and rescale C  so that the
+main diagonal only has ones. C  is a correlation matrix.
+
+7
+Compute the denoised covariance estimate Σ  from C .
+
+Version History
+Introduced in R2023a
+
+References
+
+[1] Lòpez de Prado, M. Machine Learning for Asset Managers (Elements in Quantitative Finance).
+Cambridge University Press, 2020.
+
+See Also
+covarianceShrinkage | corrcoef | partialcorr | corrcov | robustcov | nearcorr
+
+covarianceDenoising
+
+15-55

@@ -1,0 +1,5 @@
+Page 2194
+================================================================================
+
+Hessian = ecmnhess(Data,Covariance) computes an NUMPARAMS-by-NUMPARAMS Hessian
+matrix of the observed negative log-likelihood function based on current parameter estimates.

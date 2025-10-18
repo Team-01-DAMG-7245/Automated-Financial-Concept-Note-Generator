@@ -1,0 +1,7 @@
+Page 2222
+================================================================================
+
+[pwgt,pbuy,psell,exitflag] = estimateCustomObjectivePortfolio(obj,fun)
+estimates optimal portfolio with a user-defined objective function for a Portfolio object. For details
+on using estimateCustomObjectivePortfolio, see “Solver Guidelines for Custom Objective
+Problems Using Portfolio Objects” on page 4-119.

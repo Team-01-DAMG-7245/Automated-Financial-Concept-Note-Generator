@@ -1,0 +1,35 @@
+Ain = -WoB';
+bin = -minWoB; % Start with the smallest WoB.
+p = setInequality(p,Ain,bin);
+
+For each target WoB, targetWoB(i), find the efficient mean-variance frontier using
+estimateFrontier. At each iteration, the right-hand side of the WoB portfolio constraint should be
+changed to ensure that the returned portfolios achieve at least the target WoB. This method returns
+the weights of the portfolios on the mean-variance efficient frontier that have a WoB of at least
+targetWoB(i). Using the weights obtained for each target WoB, compute the portfolios' expected
+return, risk, and percentage of WoB.
+
+% Get the efficient surface values.
+prsk = cell(N,1);
+pret = cell(N,1);
+pWoB = cell(N,1);
+for i = 1:N
+    p.bInequality = -targetWoB(i);
+    pwgt = estimateFrontier(p,N);
+    [prsk{i},pret{i}] = estimatePortMoments(p,pwgt);
+    pWoB{i} = pwgt'*WoB;
+end
+
+Plot the efficient portfolios.
+
+% Plot the efficient surface.
+scatter3(cell2mat(prsk),cell2mat(pret),cell2mat(pWoB))
+title('Efficient Portfolios')
+xlabel('Risk Level')
+ylabel('Expected Return')
+zlabel('Percentage of WoB')
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-266

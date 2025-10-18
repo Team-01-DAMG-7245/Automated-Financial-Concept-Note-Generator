@@ -1,0 +1,12 @@
+{
+  "page": 2225,
+  "original_text": "% Add buy and sell costs to the Portfolio object\nbuyCost = 0.002;\nsellCost = 0.001;\ninitPort = zeros(p.NumAssets,1);\np = setCosts(p,buyCost,sellCost,initPort);\n% Solve portfolio problem with a net return constraint\n% wNet = estimateCustomObjectivePortfolio(p,objFun, ...\n%    TargetReturn=ret0)",
+  "ocr_text": "sAddbuyandsellcoststothePortfolioobject\nbuyCost=0.002;\n\nsellCost=0.001;\n\ninitPort=zeros(p.NumAssets,1);\np=setCosts(p,buyCost,sellCost,initPort);\nSolveportfolioproblemwithanetreturnconstraint\nswNet=estimateCustomObjectivePortfolio(p,objFun,...\nTargetReturn=ret0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 202.27,
+    "x1": 387.99,
+    "y1": 288.34
+  },
+  "confidence": "high"
+}

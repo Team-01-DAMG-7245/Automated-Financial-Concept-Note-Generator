@@ -1,0 +1,76 @@
+display(pbuy)
+
+pbuy = 4×10
+
+0.5891    0.4215    0.2540    0.0865         0         0         0         0         0       
+         0         0         0    0.0129    0.1049    0.1969    0.1049         0         0       
+         0         0         0         0         0         0         0         0         0       
+         0         0    0.0521    0.1113    0.1705    0.2297    0.3630    0.5292    0.6953    0.9
+
+display(psell)
+
+psell = 4×10
+
+0         0         0         0    0.0810    0.2485    0.3000    0.3000    0.3000    0.3
+    0.2631    0.1711    0.0791         0         0         0         0    0.0686    0.2421    0.3
+    0.1596    0.1433    0.1270    0.1107    0.0944    0.0781    0.0680    0.0606    0.0532    0.2
+    0.0664    0.0071         0         0         0         0         0         0         0
+
+If you do not specify an initial portfolio, the purchase and sale weights assume that your initial
+portfolio is 0.
+
+See Also
+Portfolio | estimateFrontier | estimateFrontierLimits | estimatePortMoments |
+estimateFrontierByReturn | estimatePortReturn | estimateFrontierByRisk |
+estimatePortRisk | estimateFrontierByRisk | estimateMaxSharpeRatio | setSolver
+
+Related Examples
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-100

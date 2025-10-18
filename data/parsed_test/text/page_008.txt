@@ -1,0 +1,99 @@
+Group Ratio Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-13
+Average Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-14
+One-Way Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-14
+Tracking Error Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-15
+Cardinality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-16
+
+Default Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-17
+
+Portfolio Object Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-18
+
+Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-20
+Portfolio Object Properties and Functions . . . . . . . . . . . . . . . . . . . . . . . .
+4-20
+Working with Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-20
+Setting and Getting Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-20
+Displaying Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-21
+Saving and Loading Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-21
+Estimating Efficient Portfolios and Frontiers . . . . . . . . . . . . . . . . . . . . . .
+4-21
+Arrays of Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-22
+Subclassing Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-23
+Conventions for Representation of Data . . . . . . . . . . . . . . . . . . . . . . . . .
+4-23
+
+Creating the Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-25
+Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-25
+Portfolio Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-25
+Portfolio Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-26
+
+Common Operations on the Portfolio Object . . . . . . . . . . . . . . . . . . . . . .
+4-33
+Naming a Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-33
+Configuring the Assets in the Asset Universe . . . . . . . . . . . . . . . . . . . . .
+4-33
+Setting Up a List of Asset Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-33
+Truncating and Padding Asset Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-35
+
+Setting Up an Initial or Current Portfolio . . . . . . . . . . . . . . . . . . . . . . . . .
+4-37
+
+Setting Up a Tracking Portfolio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-40
+
+Asset Returns and Moments of Asset Returns Using Portfolio Object . .
+4-42
+Assignment Using the Portfolio Function . . . . . . . . . . . . . . . . . . . . . . . .
+4-42
+Assignment Using the setAssetMoments Function . . . . . . . . . . . . . . . . .
+4-43
+Scalar Expansion of Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-44
+Estimating Asset Moments from Prices or Returns . . . . . . . . . . . . . . . . .
+4-45
+Estimating Asset Moments with Missing Data . . . . . . . . . . . . . . . . . . . . .
+4-47
+Estimating Asset Moments from Time Series Data . . . . . . . . . . . . . . . . .
+4-49
+
+Working with a Riskless Asset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-52
+
+Working with Transaction Costs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-54
+Setting Transaction Costs Using the Portfolio Function . . . . . . . . . . . . . .
+4-54
+Setting Transaction Costs Using the setCosts Function . . . . . . . . . . . . . .
+4-54
+Setting Transaction Costs with Scalar Expansion . . . . . . . . . . . . . . . . . .
+4-56
+
+Working with Portfolio Constraints Using Defaults . . . . . . . . . . . . . . . . .
+4-58
+Setting Default Constraints for Portfolio Weights Using Portfolio Object
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-58
+
+viii
+Contents

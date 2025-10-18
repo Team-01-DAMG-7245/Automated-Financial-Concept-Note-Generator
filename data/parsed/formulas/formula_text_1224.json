@@ -1,0 +1,12 @@
+{
+  "page": 615,
+  "original_text": "% Update LoggedSignals.Reward\nLoggedSignals.Reward(StepIdx) = Reward;",
+  "ocr_text": "UpdateLoggedSignals.Reward\nLoggedSignals.Reward(StepIdx)=Reward;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 309.03,
+    "x1": 301.3,
+    "y1": 330.29
+  },
+  "confidence": "high"
+}

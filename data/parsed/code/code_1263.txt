@@ -1,0 +1,5 @@
+Page 1303
+================================================================================
+
+To include a time series of riskless short rates, suppose that you derive the following deterministic
+short-rate process as a function of time.

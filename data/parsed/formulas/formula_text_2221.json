@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "Moneyness_prev = LoggedSignals.State(1);\nTTM_prev = LoggedSignals.State(2);\nPosition_prev = LoggedSignals.State(3);",
+  "ocr_text": "Moneyness_prev=LoggedSignals.State(1);\nTTM_prev=LoggedSignals.State(2);\nPosition_prev=LoggedSignals.State(3);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.63,
+    "x1": 306.72,
+    "y1": 362.69
+  },
+  "confidence": "high"
+}

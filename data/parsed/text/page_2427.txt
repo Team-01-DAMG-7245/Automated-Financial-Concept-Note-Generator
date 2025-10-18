@@ -1,0 +1,19 @@
+Output Arguments
+
+Weights — Portfolio weights
+matrix
+
+Portfolio weights, returned as an NPORTS-by-NASSETS matrix containing the normalized weights of
+NPORTS portfolios containing NASSETS assets.
+
+Data Types: double
+
+Version History
+Introduced before R2006a
+
+See Also
+weights2holdings
+
+holdings2weights
+
+15-1121

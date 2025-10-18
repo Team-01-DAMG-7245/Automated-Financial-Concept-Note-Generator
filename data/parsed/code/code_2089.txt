@@ -1,0 +1,6 @@
+Page 1697
+================================================================================
+
+The simByEuler function runs processing functions at each interpolation time. They must accept the
+current interpolation time t, and the current state vector Xt, and return a state vector that may be an
+adjustment to the input state.

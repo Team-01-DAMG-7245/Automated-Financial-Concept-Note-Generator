@@ -1,0 +1,4 @@
+Page 1724
+================================================================================
+
+Callable function F(t) of a real-valued scalar observation time t, returned as a function.

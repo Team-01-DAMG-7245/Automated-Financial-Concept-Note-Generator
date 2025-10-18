@@ -1,0 +1,6 @@
+Page 408
+================================================================================
+
+This fixed signature is the API that the backtest framework uses when rebalancing a portfolio. As the
+backtest runs, the backtesting engine calls the rebalance function of each strategy, passing in these
+inputs:

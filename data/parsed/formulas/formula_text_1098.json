@@ -1,0 +1,12 @@
+{
+  "page": 562,
+  "original_text": "% Create a timetable.\nrowTimes = datetime(\"today\"):datetime(\"today\")+numObservations;\npricesTT = table2timetable(pricesT,'RowTimes',rowTimes);",
+  "ocr_text": "Createatimetable.\nrowlimes=datetime(today):datetime(today)+numObservations;\npricesTT=table2timetable(pricesT,RowTimes,rowTimes);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 447.63,
+    "x1": 431.36,
+    "y1": 479.69
+  },
+  "confidence": "high"
+}

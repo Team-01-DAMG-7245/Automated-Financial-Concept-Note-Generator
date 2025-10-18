@@ -1,0 +1,12 @@
+{
+  "page": 777,
+  "original_text": "% Table of efficient portfolio non-zero weights\nidxNonZero = sum(pwgt >= 1e-4,2) >= 1;\nnonZeroWeightsTable = array2table(pwgt(idxNonZero,:), ...\n    RowNames=string(bondsMaturity(idxNonZero)), ...\n    VariableNames=\"Portfolio\"+string(1:10))",
+  "ocr_text": "Tableofefficientportfolionon-zeroweights\n\nidxNonZero=sum(pwgt-=le-4,2)-=1;\n\nnonZeroWeightsTable=array2table(pwgt(idxNonZero,:),...\nRowNames=string(bondsMaturity(idxNonZero)),...\nVariableNames=Portfolio+string(1:10))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 592.41,
+    "x1": 398.85,
+    "y1": 646.08
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,54 @@
+depgendb
+
+General declining-balance depreciation schedule
+
+Syntax
+
+Depreciation = depgendb(Cost,Salvage,Life,Factor)
+
+Description
+
+Depreciation = depgendb(Cost,Salvage,Life,Factor) computes the declining-balance
+depreciation for each period.
+
+Examples
+
+Calculate the Declining-Balance Depreciation
+
+A car is purchased for $10,000 and is to be depreciated over five years. The estimated salvage value
+is $1000. Using the double-declining-balance method, the function calculates the depreciation for
+each year and returns the remaining depreciable value at the end of the life of the car.
+
+Define the depreciation.
+
+Life = 5;
+Salvage = 0;
+Cost = 10000;
+Factor=2;
+
+Use depgendb to calculate the depreciation.
+
+Depreciation = depgendb(10000, 1000, 5, 2)
+
+Depreciation = 1×5
+103 ×
+
+4.0000    2.4000    1.4400    0.8640    0.2960
+
+The large value returned at the final year is the sum of the depreciation over the life time and is equal
+to the difference between the Cost and Salvage. The value of the asset in the final year is computed
+as (Cost - Salvage) = Sum_Depreciation_Upto_Final_Year.
+
+Input Arguments
+
+Cost — Initial value of the asset
+numeric
+
+initial value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+15
+Functions
+
+15-844

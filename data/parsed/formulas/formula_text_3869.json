@@ -1,0 +1,12 @@
+{
+  "page": 2206,
+  "original_text": "Objective = ecmnobj( ___ ,CholCovariance) adds an optional argument for\nCholCovariance.",
+  "ocr_text": "Objective=ecmnobj(__,CholCovariance)addsanoptionalargumentfor\nCholCovariance.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 307.73,
+    "x1": 470.41,
+    "y1": 331.36
+  },
+  "confidence": "high"
+}

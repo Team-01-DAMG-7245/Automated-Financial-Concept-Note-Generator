@@ -1,0 +1,12 @@
+{
+  "page": 2282,
+  "original_text": "p = PortfolioMAD;\np = simulateNormalScenariosByMoments(p, m, C, 2000);\np = setDefaultConstraints(p);",
+  "ocr_text": "p=PortfolioMAD;\np=simulateNormalScenariosByMoments(p,m,C,2000);\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 417.63,
+    "x1": 371.73,
+    "y1": 449.69
+  },
+  "confidence": "high"
+}

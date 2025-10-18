@@ -1,0 +1,69 @@
+whose weights are evenly distributed among all assets, but to obtain a portfolio whose selected
+(nonzero) assets have the same correlation to the portfolio as a whole.
+
+Diversification for Fixed ESG Level
+
+You can extend the traditional minimum variance portfolio problem subject to an expected return to
+include the ESG metric by setting an ESG constraint for the problem. The purpose of the ESG
+constraint is to force the portfolio to achieve an ESG score greater than a certain target. Then, add a
+penalty term to the objective function to guide the problem toward more or less diversified portfolios.
+How diversified a portfolio is depends on your choice of the penalty parameter.
+
+Choose an ESG level of 0.85 and an expected return of 0.001.
+
+% Minimum ESG and return levels
+ESG0 = 0.85;
+ret0 = 1e-3;
+
+Currently, the portfolio problem assumes that the weights must be nonnegative and sum to 1. Add the
+requirement that the return of the portfolio is at least ret0 and the ESG score is at least ESG0. The
+feasible set is represented as X, which is
+
+X =
+x
+x ≥0, ∑
+i = 1
+
+n
+xi = 1, μTx ≥ret0, ESG x ≥ESG0
+
+Add the ESG constraint using the setInequality function.
+
+% Add the ESG constraint.
+Ain = -ESGnumeric';
+bin = -ESG0; % Set the target ESG score.
+p = setInequality(p,Ain,bin);
+
+To add the return constraint, pass the name-value argument TargetReturn=ret0 to the
+estimateCustomObjectivePortfolio function for each of the different custom objective
+portfolios of interest.
+
+The portfolio that minimizes the variance with the HH penalty is
+
+min
+x ∈X xTΣx + λHHxTx
+
+% HH penalty parameter
+
+lambdaHH =
+;
+% Variance + Herfindahl-Hirschman (HH) index
+var_HH = @(x) x'*p.AssetCovar*x + lambdaHH*(x'*x);
+% Solution that accounts for risk and HH diversification
+wHHMix = estimateCustomObjectivePortfolio(p,var_HH,TargetReturn=ret0);
+
+The portfolio that minimizes the variance with the MDP penalty is
+
+min
+x ∈X xTΣx −λMDP σTx
+
+% MDP penalty parameter
+
+lambdaMDP =
+;
+% Variance + Most Diversified Portfolio (MDP)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-274

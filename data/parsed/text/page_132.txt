@@ -1,0 +1,26 @@
+cm.ColumnSummary = "column-normalized";
+cm.Title = "LSTM";
+
+The conservative LSTM neural network predicts into the constant class for all validation
+observations. The 91% accuracy comes for free because this model acts like the naive model
+discussed in Engineer Features and Prepare Response Variable on page 2-79, which only ever
+predicts into the constant class. Such a model does not make money.
+
+[predScoresRLSTM] = minibatchpredict(RiskyLSTMMdl,XV,InputDataFormats="CTB");
+predYRLSTM = scores2label(predScoresRLSTM,classes);
+accRiskyV = 100*mean(predYRLSTM == yV)
+
+accRiskyV = 
+60.8731
+
+figure
+cm = confusionchart(yV,predYRLSTM);
+cm.NormalizedValues;
+cm.RowSummary = "row-normalized";
+cm.ColumnSummary = "column-normalized";
+cm.Title = "Risky LSTM";
+
+2
+Performing Common Financial Tasks
+
+2-88

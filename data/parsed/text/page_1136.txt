@@ -1,0 +1,41 @@
+Use estimateMaxSharpeRatio to estimate efficient portfolio that maximizes Sharpe ratio for the
+Portfolio object.
+
+investorPortfolioWts = estimateMaxSharpeRatio(p);
+
+The investor percentage allocation in 10, 20, and 30 year treasuries is:
+
+disp(investorPortfolioWts);
+
+0.6078
+    0.1374
+    0.2548
+
+See Also
+tbilldisc2yield | tbillprice | tbillrepo | tbillval01 | tbillyield | tbillyield2disc |
+Portfolio | setDefaultConstraints
+
+Related Examples
+
+•
+“Pricing and Computing Yields for Fixed-Income Securities” on page 2-15
+
+•
+“Computing Treasury Bill Price and Yield” on page 2-26
+
+•
+“Term Structure of Interest Rates” on page 2-29
+
+•
+“Sensitivity of Bond Prices to Interest Rates” on page 10-2
+
+•
+“Bond Portfolio for Hedging Duration and Convexity” on page 10-6
+
+•
+“Term Structure Analysis and Interest-Rate Swaps” on page 10-18
+
+10
+Solving Sample Problems
+
+10-38

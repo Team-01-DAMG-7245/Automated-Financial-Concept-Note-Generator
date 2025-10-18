@@ -1,0 +1,51 @@
+•
+Info.PrevParameters – NUMPARAMS-by-1 column vector of estimates for the model parameters
+from the iteration just before the terminal iteration.
+
+•
+Info.PrevCovariance – NUMSERIES-by-NUMSERIES matrix of estimates for the covariance
+parameters from the iteration just before the terminal iteration.
+
+Use the estimates in the output structure Info for diagnostic purposes.
+
+More About
+
+Least Squares Regression
+
+Least squares regression is a statistical method used to estimate the relationships between variables.
+
+Least squares regression is commonly employed in linear regression analysis to find the best-fitting
+line through a set of data points. The goal is to minimize the sum of the squares of the differences
+(residuals) between the observed values and the values predicted by the model.
+
+Version History
+Introduced in R2006a
+
+References
+
+[1] Dempster A, P., N.M. Laird, and D. B. Rubin. “Maximum Likelihood from Incomplete Data via the
+EM Algorithm.” Journal of the Royal Statistical Society. Series B, Vol. 39, No. 1, 1977, pp. 1–
+37.
+
+[2] Roderick J., A. Little, and Donald B. Rubin. Statistical Analysis with Missing Data., 2nd Edition.
+John Wiley & Sons, Inc., 2002.
+
+[3] Sexton J. and Anders Rygh Swensen. “ECM Algorithms that Converge at the Rate of EM.”
+Biometrika. Vol. 87, No. 3, 2000, pp. 651–662.
+
+[4] Xiao-Li Meng and Donald B. Rubin. “Maximum Likelihood Estimation via the ECM Algorithm.”
+Biometrika. Vol. 80, No. 2, 1993, pp. 267–278.
+
+See Also
+ecmlsrobj | ecmmvnrmle | ecmmvnrmle
+
+Topics
+“Multivariate Normal Regression” on page 9-13
+“Least-Squares Regression” on page 9-14
+“Covariance-Weighted Least Squares” on page 9-14
+“Feasible Generalized Least Squares” on page 9-15
+“Seemingly Unrelated Regression” on page 9-16
+
+ecmlsrmle
+
+15-863

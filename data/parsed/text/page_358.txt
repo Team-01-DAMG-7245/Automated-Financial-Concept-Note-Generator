@@ -1,0 +1,58 @@
+Portfolio Optimization with Semicontinuous and Cardinality
+Constraints
+
+This example shows how to use a Portfolio object to directly handle semicontinuous and
+cardinality constraints when performing portfolio optimization. Portfolio optimization finds the asset
+allocation that maximizes the return or minimizes the risk, subject to a set of investment constraints.
+The Portfolio class in Financial Toolbox™ is designed and implemented based on the Markowitz
+Mean-Variance Optimization framework. The Mean-Variance Optimization framework handles
+problems where the return is the expected portfolio return, and the risk is the variance of portfolio
+returns. Using the Portfolio class, you can minimize the risk on the efficient frontier (EF),
+maximize the return on the EF, maximize the return for a given risk, and minimize the risk for a given
+return. You can also use PortfolioCVaR or PortfolioMAD classes in Financial Toolbox™ to specify
+semicontinuous and cardinality constraints. Such optimization problems integrate with constraints
+such as group, linear inequality, turnover, and tracking error constraints. These constraints are
+formulated as nonlinear programming (NLP) problems with continuous variables represented as the
+asset weights xi.
+
+Semicontinuous and cardinality constraints are two other common categories of portfolio constraints
+that are formulated mathematically by adding the binary variables vi.
+
+•
+A semicontinuous constraint confines the allocation of an asset. For example, you can use this
+constraint to confine the allocated weight of an allocated asset to between 5% and 50%. By using
+this constraint, you can avoid very small or large positions to minimize the churns and operational
+costs. To mathematically formulate this type of constraint, a binary variable vi is needed, where vi
+is 0 or 1. The value 0 indicates that asset i is not allocated and the value 1 indicates that asset i is
+allocated. The mathematical form is lb * vi ≤xi ≤ub * vi, where vi is 0 or 1. Specify this type of
+constraint as a 'Conditional' BoundType in the Portfolio class using the setBounds
+function.
+
+•
+A cardinality constraint limits the number of assets in the optimal allocation. For example, for a
+portfolio with a universe of 100 assets, you can specify an optimal portfolio allocation between 20
+and 40 assets. This capability helps limit the number of positions, and thus reduce operational
+costs. To mathematically formulate this type of constraint, binary variables represented as vi are
+needed, where vi is 0 or 1. The value 0 indicates that asset i is not allocated and the value 1
+indicates that asset i is allocated. The mathematical form is
+
+MinNumAssets ≤∑1
+NumAssetsvi ≤MaxNumAssets, where vi is 0 or 1. Specify this type of constraint
+by setting the 'MinNumAssets' and 'MaxNumAssets' constraints in the Portfolio class using
+the setMinMaxNumAssets function.
+
+For more information on semicontinuous and cardinality constraints, see “Algorithms” on page 15-
+1531.
+
+When semicontinuous and cardinality constraints are used for portfolio optimization, this leads to
+mixed integer nonlinear programming problems (MINLP). The Portfolio class allows you to
+configure these two constraints, specifically, semicontinuous constraints using setBounds with
+'Conditional' BoundType, and cardinality constraints using setMinMaxNumAssets. The
+Portfolio class automatically formulates the mathematical problems and validates the specified
+constraints. The Portfolio class also provides built-in MINLP solvers and flexible solver options for
+you to tune the solver performance using the setSolverMINLP function.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-190

@@ -1,0 +1,12 @@
+{
+  "page": 2437,
+  "original_text": "Busday = isbusday(Date)\nBusday = isbusday( ___ ,Holiday,Weekend)",
+  "ocr_text": "Busday=isbusday(Date)\nBusday=isbusday(___,Holiday,Weekend)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.75,
+    "x1": 322.78,
+    "y1": 214.38
+  },
+  "confidence": "high"
+}

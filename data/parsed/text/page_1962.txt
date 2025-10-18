@@ -1,0 +1,66 @@
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [exposures,exposurecpty] =
+creditexposures(values,counterparties,'NettingID','10','ExposureType','Additi
+ve')
+
+NettingID — Netting set IDs indicate which netting set each contract belongs
+vector | cell array
+
+Netting set IDs to indicate to which netting set each contract in values belongs, specified by a
+NumContracts-element vector of netting set IDs. NettingID can be a vector of numeric IDs or else
+a cell array of character vector identifiers. The creditexposures function uses counterparties
+and NettingID to define each unique netting set (all contracts in a netting set must be with the
+same counterparty). By default, each counterparty has a single netting set which covers all of their
+contracts. A value of NaN (or '' in a cell array) indicates that a contract is not included in any netting
+set. NettingID is case insensitive and leading or trailing white spaces are removed.
+
+Data Types: double | cell
+
+ExposureType — Calculation method for exposures
+'Counterparty' (default) | character vector with value of 'Counterparty' or 'Additive'
+
+Calculation method for exposures, specified with values:
+
+•
+'Counterparty' — Compute exposures per counterparty.
+
+•
+'Additive' — Compute additive exposures at the contract level. Exposures are computed per
+contract and sum to the total counterparty exposure.
+
+Data Types: char
+
+CollateralTable — Table containing information on collateral agreements of
+counterparties
+MATLAB table
+
+Table containing information on collateral agreements of counterparties, specified as a MATLAB
+table. The table consists of one entry (row) per collateralized counterparty and must have the
+following variables (columns):
+
+•
+'Counterparty' — Counterparty name or ID. The Counterparty name or ID should match the
+parameter 'Counterparty' for the ExposureType argument.
+
+•
+'PeriodOfRisk' — Margin period of risk in days. The number of days from a margin call until
+the posted collateral is available from the counterparty.
+
+•
+'Threshold' — Collateral threshold. When counterparty exposures exceed this amount, the
+counterparty must post collateral.
+
+•
+'MinimumTransfer' — Minimum transfer amount. The minimum amount over/under the
+threshold required to trigger transfer of collateral.
+
+Note When computing collateralized exposures, both the CollateralTable parameter and the
+Dates parameter must be specified.
+
+Data Types: table
+
+15
+Functions
+
+15-656

@@ -1,0 +1,12 @@
+{
+  "page": 2434,
+  "original_text": "Return = irr(CashFlow) calculates the internal rate of return for a series of periodic cash flows.",
+  "ocr_text": "Return=irr(CashFlow)calculatestheinternalrateofreturnforaseriesofperiodiccashflows.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 252.8,
+    "x1": 551.56,
+    "y1": 264.43
+  },
+  "confidence": "high"
+}

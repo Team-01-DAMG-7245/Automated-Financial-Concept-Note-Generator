@@ -1,0 +1,63 @@
+Mixed-Integer Mean-Variance Portfolio Optimization Problem
+
+This example shows how to solve a mean-variance portfolio optimization problem with constraints in
+the number of selected assets or conditional (semicontinuous) bounds. To solve this problem, you can
+use a Portfolio object along with different mixed integer nonlinear programming (MINLP) solvers.
+
+Mean-Variance Portfolio
+
+Load the returns data in CAPMuniverse.mat. Then, create a mean-variance Portfolio object with
+default constraints and a long-only portfolio whose weights sum to 1. For this example, you can define
+the feasible region of weights X as
+
+X =
+x| ∑
+i = 1
+
+n
+xi = 1, xi ≥0 .
+
+% Load data
+load CAPMuniverse.mat
+
+% Create a mean-variance Portfolio object with default constraints.
+p = Portfolio(AssetList=Assets(1:12));
+p = estimateAssetMoments(p,Data(:,1:12));
+p = setDefaultConstraints(p);
+
+Include binary variables for this scenario by setting conditional (semicontinuous) bounds. Conditional
+bounds are those such that xi = 0 or xi ≥ℓi. In this example, ℓi = 0 . 1 for all assets.
+
+% Set conditional bounds
+condLB = 0.1;
+condUB = 0.5;
+p = setBounds(p,condLB,condUB,BoundType="conditional");
+
+Use estimateFrontier to estimate a set of portfolios on the efficient frontier. The efficient frontier
+is a curve that shows the trade-off between the return and risk achieved by Pareto-optimal portfolios.
+For a given return level, the portfolio on the efficient frontier is the one that minimizes the risk while
+maintaining the desired return. Conversely, for a given risk level, the portfolio on the efficient frontier
+is the one that maximizes return while maintaining the desired risk level.
+
+% Compute the efficient frontier.
+pwgt = estimateFrontier(p)
+
+pwgt = 12×10
+
+0         0    0.1000    0.1253    0.1745    0.2236    0.2715    0.3327    0.4111    0.5
+         0         0         0         0         0         0         0         0         0       
+         0         0         0         0         0         0         0         0         0       
+    0.1350         0         0         0         0         0         0         0         0       
+         0         0         0         0         0         0         0         0         0       
+    0.1000    0.1450    0.1406    0.1910    0.2344    0.2778    0.3200    0.3726    0.4415    0.5
+    0.1000    0.1609    0.1642    0.2121    0.2415    0.2709    0.3085    0.2947    0.1474       
+    0.2354    0.1875    0.1290         0         0         0         0         0         0       
+         0         0         0         0         0         0         0         0         0       
+    0.4296    0.4066    0.3662    0.3717    0.2496    0.1277         0         0         0       
+         0    0.1000    0.1000    0.1000    0.1000    0.1000    0.1000         0         0       
+         0         0         0         0         0         0         0         0         0
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-402

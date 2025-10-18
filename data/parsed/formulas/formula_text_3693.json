@@ -1,0 +1,12 @@
+{
+  "page": 2083,
+  "original_text": "NumDaysPrevious = cpndaysp( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate) returns the number of days between the previous coupon\ndate and the settlement date for a bond or set of bonds using optional input arguments.",
+  "ocr_text": "NumDaysPrevious=cpndaysp(____,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)returnsthenumberofdaysbetweenthepreviouscoupon\ndateandthesettlementdateforabondorsetofbondsusingoptionalinputarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 372.53,
+    "x1": 541.89,
+    "y1": 408.16
+  },
+  "confidence": "high"
+}

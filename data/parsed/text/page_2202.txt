@@ -1,0 +1,62 @@
+-0.0003
+    0.0004
+      ⋮
+
+Covariance = 12×12
+
+0.0012    0.0005    0.0006    0.0005    0.0005    0.0003    0.0005    0.0003    0.0006    0.0
+    0.0005    0.0024    0.0007    0.0006    0.0010    0.0004    0.0005    0.0003    0.0006    0.0
+    0.0006    0.0007    0.0013    0.0007    0.0007    0.0003    0.0006    0.0004    0.0008    0.0
+    0.0005    0.0006    0.0007    0.0009    0.0006    0.0002    0.0005    0.0003    0.0007    0.0
+    0.0005    0.0010    0.0007    0.0006    0.0016    0.0006    0.0005    0.0003    0.0006    0.0
+    0.0003    0.0004    0.0003    0.0002    0.0006    0.0022    0.0001    0.0002    0.0002    0.0
+    0.0005    0.0005    0.0006    0.0005    0.0005    0.0001    0.0009    0.0003    0.0005    0.0
+    0.0003    0.0003    0.0004    0.0003    0.0003    0.0002    0.0003    0.0005    0.0004    0.0
+    0.0006    0.0006    0.0008    0.0007    0.0006    0.0002    0.0005    0.0004    0.0011    0.0
+    0.0003    0.0004    0.0005    0.0004    0.0004    0.0001    0.0004    0.0003    0.0005    0.0
+    0.0005    0.0006    0.0008    0.0005    0.0007    0.0003    0.0005    0.0004    0.0007    0.0
+    0.0006    0.0012    0.0008    0.0007    0.0011    0.0016    0.0006    0.0004    0.0007    0.0
+      ⋮
+
+Input Arguments
+
+Data — Data
+matrix
+
+Data, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a NUMSERIES-
+dimensional random vector. Missing values are indicated by NaNs.
+
+Data Types: double
+
+InitMethod — Initialization methods to compute initial estimates for mean and covariance
+of data
+'nanskip' (default) | character vector
+
+(Optional) Initialization methods to compute the initial estimates for the mean and covariance of data,
+specified as a character vector. The initialization methods are:
+
+•
+'nanskip' — Skip all records with NaNs.
+
+•
+'twostage' — Estimate mean. Fill NaNs with the mean. Then estimate the covariance.
+
+•
+'diagonal' — Form a diagonal covariance.
+
+Note If you supply Mean0 and Covar0, InitMethod is not executed.
+
+Data Types: char
+
+MaxIterations — Maximum number of iterations
+50 (default) | numeric
+
+(Optional) Maximum number of iterations for the expectation conditional maximization (ECM)
+algorithm, specified as a numeric.
+
+Data Types: double
+
+15
+Functions
+
+15-896

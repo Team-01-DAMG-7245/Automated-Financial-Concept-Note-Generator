@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf('        t Copula American Put  Basket Price: %8.4f\\n'  , tCopulaPutPrice)",
+  "ocr_text": "fprintf( tCopulaAmericanPutBasketPrice:8.4f(n,tCopulaPutPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 572.34,
+    "x1": 534.3,
+    "y1": 582.81
+  },
+  "confidence": "high"
+}

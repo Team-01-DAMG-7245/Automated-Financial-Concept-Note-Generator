@@ -1,0 +1,8 @@
+Page 1676
+================================================================================
+
+The simBySolution function simulates the state vector Xt by an approximation of the closed-form
+solution of diagonal drift Merton jump diffusion models. Specifically, it applies a Euler approach to
+the transformed log[Xt] process (using Ito's formula). In general, this is not the exact solution to the
+Merton jump diffusion model because the probability distributions of the simulated and true state
+vectors are identical only for piecewise constant parameters.

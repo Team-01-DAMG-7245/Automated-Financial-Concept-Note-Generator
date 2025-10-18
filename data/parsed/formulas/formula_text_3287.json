@@ -1,0 +1,12 @@
+{
+  "page": 1770,
+  "original_text": "Rate = annurate(NumPeriods,Payment,PresentValue) returns the periodic interest rate paid\non a loan or annuity.",
+  "ocr_text": "Rate=annurate(NumPeriods,Payment,PresentValue)returnstheperiodicinterestratepaid\nonaloanorannuity.",
+  "bbox": {
+    "x0": 89.99,
+    "y0": 252.39,
+    "x1": 555.77,
+    "y1": 276.02
+  },
+  "confidence": "high"
+}

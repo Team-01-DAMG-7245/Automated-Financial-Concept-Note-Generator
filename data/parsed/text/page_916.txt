@@ -1,0 +1,59 @@
+2
+    18
+
+The value of this investment is $50.84 in month 2, but by month 18 the value is down to $42.41, a
+drop of $8.43. This is the largest loss in dollar value from a previous high in the given time period. In
+this case, the maximum drawdown period, 2nd to 18th month, is the same independently of whether
+drawdown is measured as return or as dollar value loss.
+
+Finally, you can compute the maximum decline based on log-returns using the geometric argument.
+In this example, the log-returns result in a maximum drop of 18.13%, again from the second to the
+18th month, not far from the 16.58% obtained using standard returns.
+
+[MaxDD50LogRet, Ind50LogRet] = maxdrawdown(Fund50,'geometric')
+
+MaxDD50LogRet = 
+0.1813
+
+Ind50LogRet = 2×1
+
+2
+    18
+
+Note, the last measure is equivalent to finding the arithmetic maximum drawdown for the log of the
+series.
+
+MaxDD50LogRet2 = maxdrawdown(log(Fund50),'arithmetic')
+
+MaxDD50LogRet2 = 
+0.1813
+
+Expected Maximum Drawdown
+
+This example shows how to use the log-return moments of the fund to compute the expected
+maximum drawdown (EMaxDD) and then compare it with the realized maximum drawdown (MaxDD).
+
+load FundMarketCash
+logReturns = log(TestData(2:end,:) ./ TestData(1:end - 1,:));
+Mu = mean(logReturns(:,1));
+Sigma = std(logReturns(:,1),1);
+T = size(logReturns,1);
+
+MaxDD = maxdrawdown(TestData(:,1),'geometric')
+
+MaxDD = 
+0.1813
+
+EMaxDD = emaxdrawdown(Mu, Sigma, T)
+
+EMaxDD = 
+0.1545
+
+The drawdown observed in this time period is above the expected maximum drawdown. There is no
+contradiction here. The expected maximum drawdown is not an upper bound on the maximum losses
+from a peak, but an estimate of their average, based on a geometric Brownian motion assumption.
+
+7
+Investment Performance Metrics
+
+7-16

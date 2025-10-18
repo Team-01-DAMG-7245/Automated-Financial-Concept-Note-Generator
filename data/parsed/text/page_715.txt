@@ -1,0 +1,60 @@
+Obtaining Endpoints of the Efficient Frontier
+
+Often when using a PortfolioCVaR object, you might be interested in the endpoint portfolios for the
+efficient frontier. Suppose that you want to determine the range of returns from minimum to
+maximum to refine a search for a portfolio with a specific target return. Use the
+estimateFrontierLimits function to obtain the endpoint portfolios.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+pwgt = estimateFrontierLimits(p);
+
+disp(pwgt)
+
+0.8651         0
+    0.0600         0
+    0.0318         0
+    0.0430    1.0000
+
+The estimatePortMoments function shows the range of risks and returns for efficient portfolios:
+Note that the endpoints of the efficient frontier depend upon the Scenarios in the PortfolioCVaR
+object. If you change the Scenarios, you are likely to obtain different endpoints.
+
+Starting from an initial portfolio, estimateFrontierLimits also returns purchases and sales to get
+from the initial portfolio to the endpoint portfolios on the efficient frontier. For example, given an
+initial portfolio in pwgt0, you can obtain purchases and sales:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = setInitPort(p, pwgt0);
+[pwgt, pbuy, psell] = estimateFrontierLimits(p);
+
+Obtaining Endpoints of the Efficient Frontier
+
+5-89

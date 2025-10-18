@@ -1,0 +1,81 @@
+Period — Number of premium payments per year
+4 (default) | positive integer from the set [1,2,3,4,6,12] | vector of positive integers from the set
+[1,2,3,4,6,12]
+
+Number of premium payments per year, specified as the comma-separated pair consisting of
+'Period' and an N-by-1 vector. Values are 1, 2, 3, 4, 6, and 12.
+
+Data Types: double
+
+StartDate — Dates the CDS premium leg starts
+Settle date (default) | datetime array | string array | date character vector
+
+Dates when the CDS premium leg actually starts, specified as the comma-separated pair consisting of
+'StartDate' and an N-by-1 vector using a datetime array, string array, or date character vectors.
+Must be on or between the Settle and Maturity dates. For a forward-starting CDS, specify this
+date as a future date after Settle.
+
+To support existing code, cdsrpv01 also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Basis — Day-count basis of contract
+2 (actual/360) (default) | positive integers of the set [1...13] | vector of positive integers of the set
+[1...13]
+
+Day-count basis of the contract, specified as the comma-separated pair consisting of 'Basis' and a
+positive integer using a NINST-by-1 vector.
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+BusinessDayConvention — Business day conventions
+actual (default) | character vector | cell array of character vectors
+
+cdsrpv01
+
+15-643

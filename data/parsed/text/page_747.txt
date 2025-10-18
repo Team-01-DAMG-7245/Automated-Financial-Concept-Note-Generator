@@ -1,0 +1,61 @@
+Troubleshooting CVaR Portfolio Optimization Results
+
+PortfolioCVaR Object Destroyed When Modifying
+
+If a PortfolioCVaR object is destroyed when modifying, remember to pass an existing object into
+the PortfolioCVaR object if you want to modify it, otherwise it creates a new object. See “Creating
+the PortfolioCVaR Object” on page 5-22 for details.
+
+Matrix Incompatibility and "Non-Conformable" Errors
+
+If you get matrix incompatibility or "non-conformable" errors, the representation of data in the tools
+follows a specific set of basic rules described in “Conventions for Representation of Data” on page 5-
+20.
+
+CVaR Portfolio Optimization Warns About “Max Iterations”
+
+If the 'cuttingplane' solver displays the following warning:
+
+Warning: Max iterations reached. Consider modifying the solver options, or using fmincon. 
+> In @PortfolioCVaR\private\cvar_cuttingplane_solver at 255
+  In @PortfolioCVaR\private\cvar_optim_min_risk at 85
+  In PortfolioCVaR.estimateFrontier at 69
+
+this warning indicates that some of the reported efficient portfolios may not be accurate enough.
+
+This warning is usually related to portfolios in the lower-left end of the efficient frontier. The cutting
+plane solver may have gotten very close to the solution, but there may be too many portfolios with
+very similar risks and returns in that neighborhood, and the solver runs out of iterations before
+reaching the desired accuracy.
+
+To correct this problem, you can use setSolver to make any of these changes:
+
+•
+Increase the maximum number of iterations ('MaxIter').
+
+•
+Relax the stopping tolerances ('AbsTol' and/or 'RelTol').
+
+•
+Use a different main solver algorithm ('MainSolverOptions').
+
+•
+Alternatively, you can try the 'fmincon' solver.
+
+When the default maximum number of iterations of the 'cuttingplane' solver is reached, the
+solver usually needs many more iterations to reach the accuracy required by the default stopping
+tolerances. You may want to combine increasing the number of iterations (e.g., multiply by 5) with
+relaxing the stopping tolerances (for example, multiply by 10 or 100). Since the CVaR is a stochastic
+optimization problem, the accuracy of the solution is relative to the scenario sample, so a looser
+stopping tolerance may be acceptable. Keep in mind that the solution time may increase significantly
+when you increase the number of iterations. For example, doubling the number of iterations more
+than doubles the solution time. Sometimes using a different main solver (for example, switching to
+'interior-point' if you are using the default 'simplex') can get the 'cuttingplane' solver to
+converge without changing the maximum number of iterations.
+
+Alternatively, the 'fmincon' solver may be faster than the 'cuttingplane' solver for problems
+where cutting plane reaches the maximum number of iterations.
+
+Troubleshooting CVaR Portfolio Optimization Results
+
+5-121

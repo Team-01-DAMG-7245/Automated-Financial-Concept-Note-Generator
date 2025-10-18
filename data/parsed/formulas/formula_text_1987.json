@@ -1,0 +1,12 @@
+{
+  "page": 1028,
+  "original_text": "fprintf('    is equivalent to a running spread of %5.2f\\n',Spread4RunFromUpf);",
+  "ocr_text": "fprintf( isequivalenttoarunningspreadof*5.2fn,Spread4RunFromupf);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 354.63,
+    "x1": 512.63,
+    "y1": 365.09
+  },
+  "confidence": "high"
+}

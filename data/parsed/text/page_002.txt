@@ -1,0 +1,50 @@
+How to Contact MathWorks
+
+Latest news:
+www.mathworks.com
+
+Sales and services:
+www.mathworks.com/sales_and_services
+
+User community:
+www.mathworks.com/matlabcentral
+
+Technical support:
+www.mathworks.com/support/contact_us
+
+Phone:
+508-647-7000
+
+The MathWorks, Inc.
+1 Apple Hill Drive
+Natick, MA 01760-2098
+
+Financial Toolbox™ User's Guide
+
+© COPYRIGHT 1995–2025 by The MathWorks, Inc.
+
+The software described in this document is furnished under a license agreement. The software may be used or copied
+only under the terms of the license agreement. No part of this manual may be photocopied or reproduced in any form
+without prior written consent from The MathWorks, Inc.
+
+FEDERAL ACQUISITION: This provision applies to all acquisitions of the Program and Documentation by, for, or through
+the federal government of the United States. By accepting delivery of the Program or Documentation, the government
+hereby agrees that this software or documentation qualifies as commercial computer software or commercial computer
+software documentation as such terms are used or defined in FAR 12.212, DFARS Part 227.72, and DFARS 252.227-7014.
+Accordingly, the terms and conditions of this Agreement and only those rights specified in this Agreement, shall pertain
+to and govern the use, modification, reproduction, release, performance, display, and disclosure of the Program and
+Documentation by the federal government (or other entity acquiring for or through the federal government) and shall
+supersede any conflicting contractual terms or conditions. If this License fails to meet the government's needs or is
+inconsistent in any respect with federal procurement law, the government agrees to return the Program and
+Documentation, unused, to The MathWorks, Inc.
+
+Trademarks
+
+MATLAB and Simulink are registered trademarks of The MathWorks, Inc. See
+www.mathworks.com/trademarks for a list of additional trademarks. Other product or brand names may be
+trademarks or registered trademarks of their respective holders.
+
+Patents
+
+MathWorks products are protected by one or more U.S. patents. Please see www.mathworks.com/patents for
+more information.

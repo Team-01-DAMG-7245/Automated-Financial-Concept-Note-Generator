@@ -1,0 +1,36 @@
+Generate Horizontal Bar Chart for Category Returns
+
+Use the brinsonAttribution object with categoryReturnsChart to generate a horizontal bar
+chart of portfolio and benchmark category returns, aggregated over all time periods.
+
+categoryReturnsChart(BrinsonPAobj)
+
+Input Arguments
+
+BrinsonPAObj — brinsonAttribution object to analyze performance attribution
+brinsonAttribution object
+
+brinsonAttribution object to analyze performance attribution. Use brinsonAttribution to
+create the brinsonAttribution object.
+
+Data Types: object
+
+ax — Valid axis object
+ax object
+
+(Optional) Valid axis object, specified as an ax object that you create using axes.
+categoryReturnsChart creates the plot on the axes specified by the optional ax argument instead
+of on the current axes (gca). The optional argument ax can precede any of the input argument
+combinations. If you do not specify an axes object, categoryReturnsChart plots into the current
+axes.
+
+Data Types: object
+
+Output Arguments
+
+h — Figure handle
+handle object
+
+categoryReturnsChart
+
+15-39

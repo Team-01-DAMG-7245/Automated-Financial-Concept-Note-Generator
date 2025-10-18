@@ -1,0 +1,12 @@
+{
+  "page": 2474,
+  "original_text": "lpm(Data)\nlpm(Data,MAR,Order)\nMoment = lpm(Data,MAR,Order)",
+  "ocr_text": "Lpm(Data)\nLpm(Data,MAR,Order)\nMoment=lpm(Data,MAR,Order)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 194.3,
+    "x1": 258.57,
+    "y1": 229.93
+  },
+  "confidence": "high"
+}

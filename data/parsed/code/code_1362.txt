@@ -1,0 +1,5 @@
+Page 1379
+================================================================================
+
+Alpha — Return represents the parameter D
+array or deterministic function of time or deterministic function of time and state

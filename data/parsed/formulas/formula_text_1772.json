@@ -1,0 +1,12 @@
+{
+  "page": 894,
+  "original_text": "p = PortfolioMAD;\np = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');",
+  "ocr_text": "p=PortfolioMAD;\np=setAssetList(p,_Bonds,Large-CapEquities,Small-CapEquities,EmergingEquities);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 583.08,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

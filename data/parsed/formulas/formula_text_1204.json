@@ -1,0 +1,12 @@
+{
+  "page": 609,
+  "original_text": "% Execute trade\n        if IntervalIdx==NumIntervalsPerHorizon\n            if BuyTrade\n                % Enforce target ending inventory constraint for buy trade (buy missing shares)\n                CurrentTradingShares = max(TotalTradingShares - ...\n                    InventorySharesStepTWAP(IntervalIdx + NumIntervalsPerHorizon.*(HorizonIdx-1))\n            else\n                % Enforce zero ending inventory constraint for sell trade (sell remaining shares)\n                CurrentTradingShares = max(InventorySharesStepTWAP(IntervalIdx + ...\n                    NumIntervalsPerHorizon.*(HorizonIdx-1)), 0);\n            end\n        else\n            CurrentTradingShares = TradingSharesStepTWAP(IntervalIdx + ...\n                NumIntervalsPerHorizon.*(HorizonIdx-1));\n        end",
+  "ocr_text": "Executetrade\nif_IntervalIdx==NumIntervalsPerHorizon\nifBuyTrade\nEnforcetargetendinginventoryconstraintforbuytrade(buymissingshares)\nCurrentTradingShares=max(TotalTradingShares-...\nInventorySharesStepTWAP(IntervalIdx+NumIntervalsPerHorizon.*(HorizonIdx-1)\nelse\nEnforcezeroendinginventoryconstraintforselltrade(sellremainingshares\nCurrentTradingShares=max(InventorySharesStepTWAP(IntervalIdx+...\nNumIntervalsPerHorizon.*(HorizonIdx-1)),0);\nend\nelse\nCurrentTradingShares=TradingSharesStepTWAP(IntervalIdx+...\nNumIntervalsPerHorizon.*(HorizonIdx-1));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 460.23,
+    "x1": 615.55,
+    "y1": 621.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 1251
+================================================================================
+
+However, you can use the same stratified sampling function to stratify the terminal price of constant-
+parameter geometric Brownian motion models. In fact, you can use the stratified sampling function to
+stratify the terminal value of any constant-parameter model driven by Brownian motion if the model's
+terminal value is a monotonic transformation of the terminal value of the Brownian motion.

@@ -1,0 +1,12 @@
+{
+  "page": 595,
+  "original_text": "The top panel (ISTWAP 0, T −ISAgent 0, T ) shows the final performance of the agent for the training\ndata as the differences in IS between TWAP and the agent at the ends of the horizons at times T. For\nexample, in the top panel, you can see the outperformance of the agent (positive IS difference) in the\nfirst three horizons, while the agent underperforms in some of the other horizons. The middle panel\n(ISTWAP 0, t −ISAgent 0, t ) shows the differences in IS for all time steps t, including the ones before\nthe ends of the horizons. The middle panel does not appear to track the top panel values very well in\nsome steps (except for the very last steps in the horizons, which are the top panel values when t = T),\nas there are frequent trend reversals between negative and positive values at the last steps of the\nhorizons. Therefore, the simple difference in IS between TWAP and the agent at each step\n(ISTWAP 0, t −ISAgent 0, t ) shown in the middle panel may not be a good reward function. On the\nother hand, the bottom panel, which plots the rewards used by the agent in this example at each step,\nappears to track the top panel values more closely than the middle panel at most steps.",
+  "ocr_text": "Thetoppanel(IStwap(0,T)-ISagent(0,T))showsthefinalperformanceoftheagentforthetraining\ndataasthedifferencesinISbetweenTWAPandtheagentattheendsofthehorizonsattimesT.For\nexample,inthetoppanel,youcanseetheoutperformanceoftheagent(positiveISdifference)inthe\nfirstthreehorizons,whiletheagentunderperformsinsomeoftheotherhorizons.Themiddlepanel\n(ISpwap(0,t)-TSagent(0,t))showsthedifferencesinISforalltimestepst,includingtheonesbefore\ntheendsofthehorizons.Themiddlepaneldoesnotappeartotrackthetoppanelvaluesverywellin\nsomesteps(exceptfortheverylaststepsinthehorizons,whicharethetoppanelvalueswhent=T),\nastherearefrequenttrendreversalsbetweennegativeandpositivevaluesatthelaststepsofthe\nhorizons.Therefore,thesimpledifferenceinISbetweenTWAPandtheagentateachstep\n(IStwap(0,t)-ISagent(0,t))showninthemiddlepanelmaynotbeagoodrewardfunction.Onthe\notherhand,thebottompanel,whichplotstherewardsusedbytheagentinthisexampleateachstep,\nappearstotrackthetoppanelvaluesmorecloselythanthemiddlepanelatmoststeps.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 407.82,
+    "x1": 557.53,
+    "y1": 556.37
+  },
+  "confidence": "high"
+}

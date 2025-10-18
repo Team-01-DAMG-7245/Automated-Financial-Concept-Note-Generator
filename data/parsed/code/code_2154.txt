@@ -1,0 +1,6 @@
+Page 1756
+================================================================================
+
+This function "stacks" additional linear inequality constraints onto any existing linear inequality
+constraints that exist in the input portfolio object. If no constraints exist, this function is the same as
+setInequality.

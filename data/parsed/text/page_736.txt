@@ -1,0 +1,14 @@
+The Name property appears as the title of the efficient frontier plot if you set it in the
+PortfolioCVaR object. Without an explicit name, the title on the plot would be "Efficient Frontier."
+If you want to obtain a specific number of portfolios along the efficient frontier, use plotFrontier
+with the number of portfolios that you want.
+
+Suppose that you have this PortfolioCVaR object and you want to plot 20 portfolios along the
+efficient frontier and to obtain 20 risk and return values for each portfolio:
+
+[prsk, pret] = plotFrontier(p, 20);
+
+5
+CVaR Portfolio Optimization Tools
+
+5-110

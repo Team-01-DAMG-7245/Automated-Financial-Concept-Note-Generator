@@ -1,0 +1,5 @@
+Page 1368
+================================================================================
+
+The covarianceShrikage function applies a linear shrinkage method that shrinks the traditional
+covariance estimate to a multiple of the identity matrix.

@@ -1,0 +1,60 @@
+Note Unlike simulation methods, the interpolation function does not support user-specified noise
+processes.
+
+•
+The interpolate function assumes that all model parameters are piecewise-constant, and
+evaluates them from the most recent observation time in Times that precedes a specified
+interpolation time in T. This is consistent with the Euler approach of Monte Carlo simulation.
+
+•
+When an interpolation time falls outside the interval specified by Times, a Euler simulation
+extrapolates the time series by using the nearest available observation.
+
+•
+The user-defined time series Paths and corresponding observation Times must be fully observed
+(no missing observations denoted by NaNs).
+
+•
+The interpolate function assumes that the user-specified time series array Paths is associated
+with the sde object. For example, the Times and Paths input pair are the result of an initial
+course-grained simulation. However, the interpolation ignores the initial conditions of the sde
+object (StartTime and StartState), allowing the user-specified Times and Paths input series
+to take precedence.
+
+Version History
+Introduced in R2008a
+
+References
+
+[1] Aït-Sahalia, Y. “Testing Continuous-Time Models of the Spot Interest Rate.” The Review of
+Financial Studies, Spring 1996, Vol. 9, No. 2, pp. 385–426.
+
+[2] Aït-Sahalia, Y. “Transition Densities for Interest Rate and Other Nonlinear Diffusions.” The Journal
+of Finance, Vol. 54, No. 4, August 1999.
+
+[3] Glasserman, P. Monte Carlo Methods in Financial Engineering. New York, Springer-Verlag, 2004.
+
+[4] Hull, J. C. Options, Futures, and Other Derivatives, 5th ed. Englewood Cliffs, NJ: Prentice Hall,
+2002.
+
+[5] Johnson, N. L., S. Kotz, and N. Balakrishnan. Continuous Univariate Distributions. Vol. 2, 2nd ed.
+New York, John Wiley & Sons, 1995.
+
+[6] Shreve, S. E. Stochastic Calculus for Finance II: Continuous-Time Models. New York: Springer-
+Verlag, 2004.
+
+See Also
+sde | simulate
+
+Topics
+“Simulating Equity Prices” on page 14-31
+“Simulating Interest Rates” on page 14-50
+“Stratified Sampling” on page 14-58
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation” on
+page 14-71
+“Base SDE Models” on page 14-16
+“Drift and Diffusion Models” on page 14-19
+
+interpolate
+
+15-155

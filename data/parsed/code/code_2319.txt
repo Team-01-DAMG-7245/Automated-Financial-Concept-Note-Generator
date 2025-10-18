@@ -1,0 +1,6 @@
+Page 2194
+================================================================================
+
+This example shows how to compute the Hessian for the negative log-likelihood function for five years
+of daily total return data for 12 computer technology stocks, with six hardware and six software
+companies

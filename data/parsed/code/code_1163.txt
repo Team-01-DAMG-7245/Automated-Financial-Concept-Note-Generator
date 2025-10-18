@@ -1,0 +1,7 @@
+Page 1208
+================================================================================
+
+Evaluating object parameters by passing (t, Xt) to a common, published interface allows most
+parameters to be referenced by a common input argument list that reinforces common method
+programming. You can use this simple function evaluation approach to model or construct powerful
+analytics, as in the following example.

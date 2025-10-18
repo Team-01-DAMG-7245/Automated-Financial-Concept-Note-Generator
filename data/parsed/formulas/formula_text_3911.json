@@ -1,0 +1,12 @@
+{
+  "page": 2226,
+  "original_text": "% Add conditional bounds\npInt = setBounds(p,0.1,[],BoundType='cond');",
+  "ocr_text": "Addconditionalbounds\npInt=setBounds(p,0.1,[],BoundType=cond);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 328.41,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 767,
+  "original_text": "% Compute efficient frontier\np = setSolverMINLP(p,'TrustRegionCP',DeltaLowerBound=condLB);\npwgt = estimateFrontier(p)",
+  "ocr_text": "Computeefficientfrontier\np=setSolverMINLP(p,TrustRegionCP,DeltaLowerBound=condLB);\npwgt=estimateFrontier(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 538.16,
+    "x1": 420.51,
+    "y1": 570.22
+  },
+  "confidence": "high"
+}

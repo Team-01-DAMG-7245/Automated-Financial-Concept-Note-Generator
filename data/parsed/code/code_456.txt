@@ -1,0 +1,10 @@
+Page 444
+================================================================================
+
+The strategies in Diversification for Fixed ESG Level on page 4-274 explicitly set a target ESG
+average score. However, a different set of strategies controls the ESG score in a less direct way. The
+method in these strategies uses ESG tilting. With tilting, you discretize the ESG score into 'high'
+and 'low' levels and the objective function penalizes each level differently. In other words, you use
+the diversification measure to tilt the portfolio toward higher or lower ESG values. Therefore, instead
+of explicitly requiring that the portfolios maintain a target ESG average score, you select assets, with
+respect to their ESG score, implicitly through the choice of penalty parameters.

@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "IsDone = TTM_next < eps;",
+  "ocr_text": "IsDone=TTM_nexteps;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 438.63,
+    "x1": 220.03,
+    "y1": 449.09
+  },
+  "confidence": "high"
+}

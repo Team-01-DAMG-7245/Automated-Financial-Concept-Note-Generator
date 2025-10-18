@@ -1,0 +1,10 @@
+Page 959
+================================================================================
+
+CreditIndex = zeros(nYears,1);
+ExitFlag = zeros(nYears,1);
+options = optimset('LargeScale','Off','Display','Off');
+for i=1:nYears
+   errorfun = @(z)norm(squeeze(TransMat(:,:,i))-...
+      transprobfromthresholds(...
+      transprobtothresholds(tmTTC)+z),'fro');

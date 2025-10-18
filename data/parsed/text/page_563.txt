@@ -1,0 +1,36 @@
+Optimize Asset Allocation Using Covariance Denoising
+
+Covariance denoising is a technique that you can use to reduce the noise and enhance the signal in a
+covariance matrix. First, the eigenvalues that are associated with noise are separated from the
+eigenvalues associated with signal. Then, the eigenvalues associated with noise are shrunk towards a
+target value. This technique helps improve the stability of the covariance matrix over time as well as
+its condition number.
+
+The function covarianceDenoising computes the denoised estimate of the covariance matrix and
+returns as a second output the number of eigenvalues identified with signal. You use this number in
+the Optimize the Asset Allocation Using Factor Modeling on page 4-396 section to determine the
+number of factors that the factor model allocation uses.
+
+This example uses the first 42 days (approximately 2 months) of the data set to select the initial
+portfolio allocations.
+
+% Warm-up period
+warmupPeriod = 42;
+
+% No current weights (100% cash position)
+w0 = zeros(1,numAssets);
+
+% Warm-up partition of prices timetable
+warmupTT = pricesTT(1:warmupPeriod,:);
+
+Compute the maximum return portfolio subject to a target risk of 0.008 using the denoised
+covariance estimate.
+
+% Compute the weights with denoised strategy.
+wDenoised_initial = denoising(w0,warmupTT);
+
+Check for asset allocations that are over 5% to identify assets with large investment weights.
+
+Compare Performance of Covariance Denoising with Factor Modeling Using Backtesting
+
+4-395

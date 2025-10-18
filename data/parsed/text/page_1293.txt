@@ -1,0 +1,41 @@
+Visualize Estimated Volatility Series
+
+Select one of the soft commodities and visualize that commodity's price series, return series, and the
+inferred volatility.
+
+chosenCommodity = 
+;
+
+figure
+tiledlayout( 3, 1 )
+sgtitle( chosenCommodity )
+corder = colororder();
+
+nexttile
+plot( Prices.Date, Prices.(chosenCommodity{1}), ...
+    "LineWidth", 1.5, "Color", corder(1, :) )
+xlabel( "Date" )
+ylabel( "Price" )
+units = Prices.Properties.VariableUnits(chosenCommodity);
+title( "Prices " + units )
+grid on
+
+nexttile
+plot( Returns.Date, Returns.(chosenCommodity{1}), ...
+    "LineWidth", 1.5, "Color", corder(2, :) )
+xlabel( "Date" )
+ylabel( "Return" )
+title( "Returns" )
+grid on
+
+nexttile
+plot( InferredVolatility.Date, InferredVolatility.(chosenCommodity{1}), ...
+    "LineWidth", 1.5, "Color", corder(3, :) )
+xlabel( "Date" )
+ylabel( "Volatility" )
+title( "Estimated Volatility" )
+grid on
+
+Volatility Modeling for Soft Commodities
+
+14-101

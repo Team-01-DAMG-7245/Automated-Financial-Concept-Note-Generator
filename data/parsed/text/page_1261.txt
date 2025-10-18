@@ -1,0 +1,38 @@
+title('Exact Solution Minus Euler Approximation')
+legend({'# of Steps = 1'  '# of Steps = 2' ...
+    '# of Steps = 10' '# of Steps = 100'}, ...
+    'Location', 'Best')
+hold off
+
+As expected, the simulation error decreases as the number of intermediate time steps increases.
+Because the intermediate states are not reported, all simulated time series have the same number of
+observations regardless of the actual value of NSteps.
+
+Furthermore, since the previously simulated exact solutions are correct for any number of
+intermediate time steps, additional computations are not needed for this example. In fact, this
+assessment is correct. The exact solutions are sampled at intermediate times to ensure that the
+simulation uses the same sequence of Gaussian random variates in the same order. Without this
+assurance, there is no way to compare simulated prices on a pathwise basis. However, there might be
+valid reasons for sampling exact solutions at closely spaced intervals, such as pricing path-dependent
+options.
+
+See Also
+sde | bm | gbm | merton | bates | drift | diffusion | sdeddo | sdeld | cev | cir | heston | hwv |
+sdemrd | rvm | roughbergomi | roughheston | ts2func | simulate | simByEuler |
+interpolate | simByQuadExp | simBySolution | simBySolution
+
+Related Examples
+
+•
+“Simulating Equity Prices” on page 14-31
+
+•
+“Simulating Interest Rates” on page 14-50
+
+•
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo
+Simulation” on page 14-71
+
+Performance Considerations
+
+14-69

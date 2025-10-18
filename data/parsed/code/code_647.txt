@@ -1,0 +1,9 @@
+Page 600
+================================================================================
+
+for k=1:NumSimSteps
+    [~,SimReward_Test_Sell(k),~,LoggedSignals] = step( ...
+        RL_OptimalExecution_Testing_Environment_Sell,SimAction_Test_Sell(k));
+    SimInventory_Test_Sell(k) = LoggedSignals.CurrentInventoryShares;
+    SimExecutedShares_Test_Sell(k) = sum(LoggedSignals.ExecutedShares);
+end

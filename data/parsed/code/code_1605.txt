@@ -1,0 +1,9 @@
+Page 1461
+================================================================================
+
+•
+The interpolate function assumes that the user-specified time series array Paths is associated
+with the sde object. For example, the Times and Paths input pair are the result of an initial
+course-grained simulation. However, the interpolation ignores the initial conditions of the sde
+object (StartTime and StartState), allowing the user-specified Times and Paths input series
+to take precedence.

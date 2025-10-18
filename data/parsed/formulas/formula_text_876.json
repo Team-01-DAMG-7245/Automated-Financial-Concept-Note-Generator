@@ -1,0 +1,12 @@
+{
+  "page": 483,
+  "original_text": "% Display the stock categories.\nSymbol = pricesTT.Properties.VariableNames(:);\ntable(Symbol,asset_categories)",
+  "ocr_text": "Displaythestockcategories.\nSymbol=pricesTT.Properties.VariableNames(:);\ntable(Symbol,asset_categories)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 472.36,
+    "x1": 339.23,
+    "y1": 504.43
+  },
+  "confidence": "high"
+}

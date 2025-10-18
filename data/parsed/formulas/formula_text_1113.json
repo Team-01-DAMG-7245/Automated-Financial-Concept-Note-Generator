@@ -1,0 +1,12 @@
+{
+  "page": 567,
+  "original_text": "% Count the number of different factors\ncategoricalNumFactors = ...\n    categorical(backtester.Strategies(1).UserData.numFactors);\n[N,uniqueFactors] = histcounts(categoricalNumFactors);\nfactorFrequency = table(uniqueFactors',N', ...\n    'VariableNames',{'NumFactors','Frequency'})",
+  "ocr_text": "Countthenumberofdifferentfactors\ncategoricalNumFactors=...\ncategorical(backtester.Strategies(1).UserData.numFactors);\n[N,uniqueFactors]=histcounts(categoricalNumFactors);\nfactorFrequency=table(uniqueFactors,N,...\nVariableNames,{NumFactors,Frequency})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 444.24,
+    "x1": 425.91,
+    "y1": 508.71
+  },
+  "confidence": "high"
+}

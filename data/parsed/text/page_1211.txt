@@ -1,0 +1,69 @@
+Drift and Diffusion Models
+
+In this section...
+
+“Overview” on page 14-19
+
+“Specify Drift and Diffusion Rate Functions” on page 14-19
+
+“Specify SDEDDO with Drift and Diffusion Functions” on page 14-20
+
+Overview
+
+Because base-level sde objects accept drift and diffusion objects in lieu of functions accessible by (t,
+Xt), you can create sde objects with combinations of customized drift or diffusion functions and
+objects. The drift and diffusion rate objects encapsulate the details of input parameters to
+optimize run-time efficiency for any given combination of input parameters.
+
+Although drift and diffusion objects differ in the details of their representation, they are
+identical in their basic implementation and interface. They look, feel like, and are evaluated as
+functions:
+
+•
+The drift object allows you to create drift-rate objects of the form:
+
+F(t, Xt) = A(t) + B(t)Xt
+
+where:
+
+•
+A is an NVars-by-1 vector-valued function accessible using the (t, Xt) interface.
+
+•
+B is an NVars-by-NVars matrix-valued function accessible using the (t, Xt) interface.
+
+•
+Similarly, the diffusion object allows you to create diffusion-rate objects:
+
+G(t, Xt) = D(t, Xt
+α(t))V(t)
+
+where:
+
+•
+D is an NVars-by-NVars diagonal matrix-valued function.
+
+•
+Each diagonal element of D is the corresponding element of the state vector raised to the
+corresponding element of an exponent Alpha, which is an NVars-by-1 vector-valued function.
+
+•
+V is an NVars-by-NBrowns matrix-valued volatility rate function Sigma.
+
+•
+Alpha and Sigma are also accessible using the (t, Xt) interface.
+
+Note You can express drift and diffusion objects in the most general form to emphasize the
+functional (t, Xt) interface. However, you can specify the components A and B as functions that
+adhere to the common (t, Xt) interface, or as MATLAB arrays of appropriate dimension.
+
+Specify Drift and Diffusion Rate Functions
+
+In this example, you create drift and diffusion rate objects to create the same model as in
+“Specify Base Stochastic Differential Equation (SDE) Model” on page 14-16.
+
+Create a drift-rate function F and a diffusion-rate function G.
+
+Drift and Diffusion Models
+
+14-19

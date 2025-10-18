@@ -1,0 +1,56 @@
+RelativeGapTolerance: 1.0000e-05
+                  NonlinearScalingFactor: 1000
+                  ObjectiveScalingFactor: 1000
+                                 Display: 'off'
+                           CutGeneration: 'basic'
+                MaxIterationsInactiveCut: 30
+                      ActiveCutTolerance: 1.0000e-07
+                    IntMainSolverOptions: [1×1 optim.options.Intlinprog]
+    NumIterationsEarlyIntegerConvergence: 30
+                     ExtendedFormulation: 0
+                            NumInnerCuts: 10
+                     NumInitialOuterCuts: 10
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using a Portfolio object.
+
+Note The risk-free rate is obtained from the property RiskFreeRate in the Portfolio object. If you
+leave the RiskFreeRate unset, it is assumed to be 0. For more information on creating a portfolio
+object, see Portfolio.
+
+Data Types: object
+
+pwgt — Collection of portfolios
+matrix
+
+Collection of portfolios, specified as a NumAssets-by- NumPorts matrix where NumAssets is the
+number of assets in the universe and NumPorts is the number of portfolios in the collection of
+portfolios.
+
+Data Types: double
+
+Output Arguments
+
+psharpe — Sharpe ratios of the given portfolios
+vector
+
+Sharpe ratios of the given portfolios, returned as a NumPorts-by-1 vector.
+
+More About
+
+Sharpe Ratio
+
+The Sharpe ratio is the ratio of the difference between the mean of portfolio returns and the risk-free
+rate divided by the standard deviation of portfolio returns for each portfolio in pwgt.
+
+estimatePortSharpeRatio computes the Sharpe ratio with mean and standard deviation (which is
+the square-root of variance) of portfolio returns.
+
+15
+Functions
+
+15-1000

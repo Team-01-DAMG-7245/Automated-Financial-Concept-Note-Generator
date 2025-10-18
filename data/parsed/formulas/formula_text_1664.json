@@ -1,0 +1,12 @@
+{
+  "page": 837,
+  "original_text": "p = PortfolioMAD(p, 'UpperBudget', []);",
+  "ocr_text": "p=PortfolioMAD(p,UpperBudget,[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 642.44,
+    "x1": 301.32,
+    "y1": 652.91
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,31 @@
+hhigh
+
+Highest high
+
+Syntax
+
+values = hhigh(Data)
+values = hhigh( ___ ,Name,Value)
+
+Description
+
+values = hhigh(Data) generates a vector of highest high values from the series of high prices for
+the past n periods.
+
+values = hhigh( ___ ,Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Calculate the Highest High for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+values = hhigh(TMW);
+plot(values.Time,values.HighestHigh)
+title('Highest High for TMW')
+
+hhigh
+
+15-1113

@@ -1,0 +1,12 @@
+{
+  "page": 773,
+  "original_text": "load('BondsCouponsAndMaturities')\ncouponRate = bondsTable.CouponRate;\nbondsMaturity = bondsTable.Maturity;",
+  "ocr_text": "Load(BondsCouponsAndMaturities)\ncouponRate=bondsTable.CouponRate;\nbondsMaturity=bondsTable.Maturity;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 644.08,
+    "x1": 285.05,
+    "y1": 676.15
+  },
+  "confidence": "high"
+}

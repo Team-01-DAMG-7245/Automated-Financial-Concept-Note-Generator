@@ -1,0 +1,12 @@
+{
+  "page": 1325,
+  "original_text": "Name = repmat(string(MonthlyPrices.Properties.VariableNames(:)),NumPeriods,1);\n  Categories = repmat(categorical([ ...\n      \"Consumer Discretionary\"; ...\n      \"Consumer Discretionary\"; ...",
+  "ocr_text": "Name=repmat(string(MonthlyPrices.Properties.VariableNames(:)),NumPeriods,1);\nCategories=repmat(categorical([...\nConsumerDiscretionary;...\nConsumerDiscretionary;...",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 512.61,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,61 @@
+endDate = datetime(EndYear,12,31,'Locale','en_US');
+RatingLabels = ["AAA","AA","A","BBB","BB","B","CCC","D"];
+
+[tm,st,it] = transprob(data,'startDate',startDate,'endDate',endDate,'algorithm','cohort','labels
+
+The transition probabilities of the TransMat output indicate the probability of migrating between
+ratings. The probabilities are expressed in %, that is, they are multiplied by 100.
+
+hDisplayTransitions(tm,RatingLabels,"Transition Matrix")
+
+Transition Matrix
+
+AAA    AA     A     BBB    BB    B    CCC     D 
+           ___    __    ___    ___    __    _    ___    ___
+
+AAA    100     0      0      0     0    0      0      0
+    AA       0    50     50      0     0    0      0      0
+    A        0     0    100      0     0    0      0      0
+    BBB      0     0      0    100     0    0      0      0
+    BB       0     0      0     50    50    0      0      0
+    B        0     0      0      0     0    0    100      0
+    CCC      0     0      0      0     0    0      0    100
+    D        0     0      0      0     0    0      0    100
+
+The transition counts are stored in the sampleTotals optional output and indicate how many
+transitions occurred between ratings for the entire sample (that is, all companies).
+
+hDisplayTransitions(st.totalsMat,RatingLabels,"Transition counts, all companies")
+
+Transition counts, all companies
+
+AAA    AA    A    BBB    BB    B    CCC    D
+           ___    __    _    ___    __    _    ___    _
+
+AAA     0     0     0     0     0     0     0     0
+    AA      0     1     1     0     0     0     0     0
+    A       0     0     0     0     0     0     0     0
+    BBB     0     0     0     1     0     0     0     0
+    BB      0     0     0     1     1     0     0     0
+    B       0     0     0     0     0     0     1     0
+    CCC     0     0     0     0     0     0     0     1
+    D       0     0     0     0     0     0     0     1
+
+The third output of transprob is idTotals that contains information about transitions at an ID
+level, company by company (in the same order that the companies appear in the input data).
+
+Select a company to display the transition counts and a corresponding visualization of the transitions.
+The hPlotTransitions helper function (see the Local Functions on page 8-119 section) shows the
+transitions history for a company.
+
+CompanyID = 
+;
+UniqueIDs = unique(data.ID,'stable');
+[~,CompanyIndex] = ismember(CompanyID,UniqueIDs);
+hDisplayTransitions(it(CompanyIndex).totalsMat,RatingLabels,strcat("Transition counts, company ID
+
+Transition counts, company ID: ABC
+
+Visualize Transitions Data for transprob
+
+8-115

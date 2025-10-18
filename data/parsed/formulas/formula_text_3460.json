@@ -1,0 +1,12 @@
+{
+  "page": 1917,
+  "original_text": "AccrInt = cdai(CouponRate,Settle,Maturity,IssueDate)\nAccrInt = cdai( ___ ,Basis)",
+  "ocr_text": "AccrInt=cdai(CouponRate,Settle,Maturity,IssueDate)\nAccrInt=cdai(____,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 187.72,
+    "x1": 403.07,
+    "y1": 211.35
+  },
+  "confidence": "high"
+}

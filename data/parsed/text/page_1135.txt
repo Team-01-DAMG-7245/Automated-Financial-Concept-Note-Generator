@@ -1,0 +1,59 @@
+AssetMean: [3×1 double]
+                    AssetCovar: [3×3 double]
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: []
+                     NumAssets: 3
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [3×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [3×1 categorical]
+
+Calculate ten points along the projection of the efficient frontier using estimateFrontier and
+estimatePortMoments to estimate moments of portfolio returns for the Portfolio object.
+
+NumPorts = 10;
+PortWts = estimateFrontier(p,NumPorts);
+[PortRisk, PortReturn] = estimatePortMoments(p,PortWts);
+
+% Visualize the portfolio.
+figure;
+subplot(2,1,1)
+plot(PortRisk,PortReturn,'k-o');
+xlabel('Portfolio Risk');
+ylabel('Portfolio Return');
+title('Efficient Frontier Projection');
+legend('Optimal Portfolios','location','se');
+grid on;
+
+subplot(2,1,2)
+bar(PortWts','stacked');
+xlabel('Portfolio Number');
+ylabel('Portfolio Weights');
+title('Percentage Invested in Each Treasury');
+legend({'10 year','20 year','30 year'});
+
+Bond Portfolio Optimization Using Portfolio Object
+
+10-37

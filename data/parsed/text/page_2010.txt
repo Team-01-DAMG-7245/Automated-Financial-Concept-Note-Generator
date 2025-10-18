@@ -1,0 +1,78 @@
+Stack arrows if the cash flows are in the same direction on the same day, specified as the comma-
+separated pair consisting of 'Stacked' and the following values:
+
+•
+'off' — For all groups, all arrows originate from the horizontal line.
+
+•
+'all' — For all groups, arrows are stacked if the cash flows are in the same direction on the
+same day.
+
+•
+'GRPIndex' — For specified groups, arrows are stacked if the cash flows are in the same
+direction on the same day.
+
+Data Types: char
+
+ShowAmnt — Show amount on arrows
+'off' (default) | character vector with values 'off' or 'individual' | cell array of character
+vectors
+
+Show amount on the arrows, specified as the comma-separated pair consisting of 'ShowAmnt' and
+the following values:
+
+•
+'off' — Hide cash flow amounts on arrows.
+
+•
+'all' — Show cash flow amounts on arrows.
+
+•
+[INSTIndex or GRPIndex] — Show cash flow amounts for the specified vector of instruments
+(when 'Groups' is 'off') or groups.
+
+Data Types: char | cell
+
+DateSpacing — Control for date axis tick spacing
+'off' (default) | character vector with values 'off' or TickDateSpace | numeric value for
+TickDateSpace
+
+Control for data spacing, specified as the comma-separated pair consisting of 'DateSpacing' and
+the following values:
+
+•
+'off' — The date axis ticks are spaced regularly.
+
+•
+TickDateSpace — The date axis ticks are placed on actual cash flow dates. The ticks skip some
+cash flows if they are less than TickDateSpace apart.
+
+Data Types: char | double
+
+DateFormat — Date format
+'off' display in datetime format (default) | character vector with values 'off' or DateFormNum |
+numeric value for DateFormNum
+
+Date format, specified as the comma-separated pair consisting of 'DateFormat' and the following
+values:
+
+•
+'off' — The date axis tick labels (Xlabel) are in datetime format.
+
+•
+DateFormNum — The date format number (2 = 'mm/dd/yy', 6 = 'mm/dd', and 10 = 'yyyy').
+Additional values for DateFormNum are as follows:
+
+DateFormNum
+Example
+
+2
+03/01/00
+
+3
+Mar
+
+15
+Functions
+
+15-704

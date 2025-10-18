@@ -1,0 +1,10 @@
+Page 560
+================================================================================
+
+% Check if episode has ended
+if loggedSignals.TimePeriod >= finalTimePeriod
+    isDone = true;
+else
+    isDone = false;
+end
+end

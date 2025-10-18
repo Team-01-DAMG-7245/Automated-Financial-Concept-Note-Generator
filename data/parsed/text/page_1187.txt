@@ -1,0 +1,44 @@
+function uicalendarGUIExample
+f = figure('Name', 'uicalendarGUIExample');
+2
+Add a text control field.
+
+dateTextHandle = uicontrol(f, 'Style', 'Text', ...
+'String', 'Date:', ...
+'Horizontalalignment', 'left', ...
+'Position', [100 200 50 20]);
+3
+Add an uicontrol editable text field to display the selected date.
+
+dateEditBoxHandle = uicontrol(f, 'Style', 'Edit', ...  
+'Position', [140 200 100 20], ...  
+'BackgroundColor', 'w');
+4
+Create a push button that starts up the UICalendar.
+
+calendarButtonHandle = uicontrol(f, 'Style', 'PushButton', ...  
+'String', 'Select a single date', ...  
+'Position', [275 200 200 20], ...  
+'callback', @pushbutton_cb);
+5
+To start up UICalendar, create a nested function (callback function) for the push button.
+
+function pushbutton_cb(hcbo, eventStruct)  
+% Create a UICALENDAR with the following properties:  
+% 1) Highlight weekend dates.  
+% 2) Only allow a single date to be selected at a time.  
+% 3) Send the selected date to the edit box uicontrol.  
+uicalendar('Weekend', [1 0 0 0 0 0 1], ...  
+'SelectionType', 1, ...  
+'DestinationUI', dateEditBoxHandle);
+end  
+end
+6
+Run the function uicalendarGUIExample to display the application interface:
+
+7
+Click Select a single date to display the UICalendar user interface:
+
+UICalendar User Interface
+
+12-5

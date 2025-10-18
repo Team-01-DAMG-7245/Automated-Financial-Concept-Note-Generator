@@ -1,0 +1,5 @@
+Page 1033
+================================================================================
+
+endDate = datetime(EndYear,12,31,'Locale','en_US');
+RatingLabels = ["AAA","AA","A","BBB","BB","B","CCC","D"];

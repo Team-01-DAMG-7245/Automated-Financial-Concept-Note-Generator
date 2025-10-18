@@ -1,0 +1,12 @@
+{
+  "page": 348,
+  "original_text": "Blotter = table('RowNames', Asset);\nBlotter.Price = Price;\nBlotter.InitHolding = Holding;\nWealth = sum(Blotter.Price .* Blotter.InitHolding);\nBlotter.InitPort = (1/Wealth)*(Blotter.Price .* Blotter.InitHolding);\nBlotter.UnitCost = UnitCost;\nBlotter",
+  "ocr_text": "Blotter=table(RowNames:,Asset);\n\nBlotter.Price=Price;\n\nBlotter.InitHolding=Holding;\nWealth=sum(Blotter.Price.*Blotter.InitHolding);\nBlotter.InitPort=(1/Wealth)*(Blotter.Price.*Blotter.InitHolding);\nBlotter.UnitCost=UnitCost;\n\nBlotter",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 484.35,
+    "x1": 463.84,
+    "y1": 559.62
+  },
+  "confidence": "high"
+}

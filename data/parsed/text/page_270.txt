@@ -1,0 +1,61 @@
+Obtaining Endpoints of the Efficient Frontier
+
+Often when using a Portfolio object, you might be interested in the endpoint portfolios for the
+efficient frontier. Suppose that you want to determine the range of returns from minimum to
+maximum to refine a search for a portfolio with a specific target return. Use the
+estimateFrontierLimits function to obtain the endpoint portfolios.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+ 
+p = Portfolio;
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+pwgt = estimateFrontierLimits(p);
+
+disp(pwgt)
+
+0.8891         0
+    0.0369         0
+    0.0404         0
+    0.0336    1.0000
+
+The estimatePortMoments function shows the range of risks and returns for efficient portfolios:
+
+[prsk, pret] = estimatePortMoments(p, pwgt);
+disp([prsk, pret])
+
+0.0769    0.0590
+    0.3500    0.1800
+
+Starting from an initial portfolio, estimateFrontierLimits also returns purchases and sales to get
+from the initial portfolio to the endpoint portfolios on the efficient frontier. For example, given an
+initial portfolio in pwgt0, you can obtain purchases and sales:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+ 
+p = Portfolio;
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = setInitPort(p, pwgt0);
+[pwgt, pbuy, psell] = estimateFrontierLimits(p);
+    
+display(pwgt)
+
+pwgt = 4×2
+
+0.8891         0
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-102

@@ -1,0 +1,12 @@
+{
+  "page": 677,
+  "original_text": "p = PortfolioCVaR('NumAssets', 20, 'LowerBound', 0, 'Budget', 1);\ndisp(p)",
+  "ocr_text": "p=PortfolioCVaR(NumAssets,20,LowerBound,0,Budget,1);\ndisp(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 439.96,
+    "x1": 442.2,
+    "y1": 461.23
+  },
+  "confidence": "high"
+}

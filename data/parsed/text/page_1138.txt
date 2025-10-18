@@ -1,0 +1,65 @@
+Hedge Options Using Reinforcement Learning Toolbox
+
+This example shows how to outperform the traditional BSM approach using an optimal option
+hedging policy.
+
+Option Modeling Using Black-Scholes-Merton Model
+
+The Black-Scholes-Merton (BSM) model, which earned its creators a Nobel Prize in Economics in
+1997, provides a modeling framework for pricing and analyzing financial derivatives or options.
+Options are financial instruments that derive their value from a particular underlying asset. The
+concept of dynamic hedging is fundamental to the BSM model. Dynamic hedging is the idea that, by
+continuously buying and selling shares in the relevant underlying asset, you can hedge the risk of the
+derivative instrument such that the risk is zero. This "risk-neutral" pricing framework is used to
+derive pricing formulae for many different financial instruments.
+
+The simplest financial derivative is a European call option, which provides the buyer with the right,
+but not the obligation, to buy the underlying asset at a previously specified value (strike price) at a
+previously specified time (maturity).
+
+You can use a BSM model to price a European call option. The BSM model makes the following
+simplifying assumptions:
+
+•
+The behavior of the underlying asset is defined by geometric Brownian motion (GBM).
+
+•
+There are no transaction costs.
+
+•
+Volatility is constant.
+
+The BSM dynamic hedging strategy is also called "delta-hedging," after the quantity Delta, which is
+the sensitivity of the option with respect to the underlying asset. In an environment that meets the
+previously stated BSM assumptions, using a delta-hedging strategy is an optimal approach to hedging
+an option. However, it is well-known that in an environment with transaction costs, the use of the
+BSM model leads to an inefficient hedging strategy. The goal of this example is to use Reinforcement
+Learning Toolbox™ to learn a strategy that outperforms the BSM hedging strategy, in the presence of
+transaction costs.
+
+The goal of reinforcement learning (RL) is to train an agent to complete a task within an unknown
+environment. The agent receives observations and a reward from the environment and sends actions
+to the environment. The reward is a measure of how successful an action is with respect to
+completing the task goal.
+
+The agent contains two components: a policy and a learning algorithm.
+
+•
+The policy is a mapping that selects actions based on the observations from the environment.
+Typically, the policy is a function approximator with tunable parameters, such as a deep neural
+network.
+
+•
+The learning algorithm continuously updates the policy parameters based on the actions,
+observations, and reward. The goal of the learning algorithm is to find an optimal policy that
+maximizes the cumulative reward received during the task.
+
+In other words, reinforcement learning involves an agent learning the optimal behavior through
+repeated trial-and-error interactions with the environment without human involvement. For more
+information on reinforcement learning, see “What Is Reinforcement Learning?” (Reinforcement
+Learning Toolbox).
+
+10
+Solving Sample Problems
+
+10-40

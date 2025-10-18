@@ -1,0 +1,12 @@
+{
+  "page": 1355,
+  "original_text": "% Sample sizes to try\nnumSizes = 100;\nsampleSizes = ceil(logspace(0,4,numSizes));",
+  "ocr_text": "Samplesizestotry\nnumSizes=100;\nsampleSizes=ceil(logspace(0,4,numSizes));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 491.99,
+    "x1": 322.97,
+    "y1": 524.05
+  },
+  "confidence": "high"
+}

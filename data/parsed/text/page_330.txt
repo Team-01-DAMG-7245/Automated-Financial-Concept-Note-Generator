@@ -1,0 +1,26 @@
+Set up a Portfolio Optimization Problem
+
+Set up a "standard" or default mean-variance portfolio optimization problem with the
+setDefaultConstraints function that requires fully-invested long-only portfolios (non-negative
+weights that must sum to 1). Given this initial problem, estimate the efficient frontier with the
+functions estimateFrontier and estimatePortMoments, where estimateFrontier estimates
+efficient portfolios and estimatePortMoments estimates risks and returns for portfolios. The next
+figure overlays the efficient frontier on the previous plot.
+
+p = setDefaultConstraints(p);
+
+pwgt = estimateFrontier(p,20);
+[prsk,pret] = estimatePortMoments(p,pwgt);
+
+% Plot the efficient frontier.
+
+clf;
+portfolioexamples_plot('Efficient Frontier', ...
+    {'line', prsk, pret}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-162

@@ -1,0 +1,57 @@
+{'CustIncome'}    {'[40000,42000)'    }     0.092364
+    {'CustIncome'}    {'[42000,47000)'    }      0.23932
+    {'CustIncome'}    {'[47000,Inf]'      }      0.42477
+    {'CustIncome'}    {'<missing>'        }          NaN
+    {'TmWBank'   }    {'[-Inf,12)'        }     -0.15547
+    {'TmWBank'   }    {'[12,23)'          }    -0.031077
+    {'TmWBank'   }    {'[23,45)'          }    -0.021091
+    {'TmWBank'   }    {'[45,71)'          }      0.36703
+    {'TmWBank'   }    {'[71,Inf]'         }      0.86888
+    {'TmWBank'   }    {'<missing>'        }          NaN
+    {'OtherCC'   }    {'No'               }     -0.16832
+    {'OtherCC'   }    {'Yes'              }      0.15336
+    {'OtherCC'   }    {'<missing>'        }          NaN
+    {'AMBalance' }    {'[-Inf,558.88)'    }      0.34418
+    {'AMBalance' }    {'[558.88,1254.28)' }    -0.012745
+    {'AMBalance' }    {'[1254.28,1597.44)'}    -0.057879
+    {'AMBalance' }    {'[1597.44,Inf]'    }     -0.19896
+    {'AMBalance' }    {'<missing>'        }          NaN
+
+Using the unscaled points, you can follow the remainder of the “Credit Scorecard Modeling
+Workflow” on page 8-52 to compute scores and probabilities of default and to validate the model.
+
+See Also
+creditscorecard | autobinning | bininfo | predictorinfo | modifypredictor |
+modifybins | bindata | plotbins | fitmodel | displaypoints | formatpoints | score |
+setmodel | probdefault | validatemodel | compact
+
+Related Examples
+
+•
+“Troubleshooting Credit Scorecard Results” on page 8-64
+
+•
+“Credit Rating by Bagging Decision Trees”
+
+More About
+
+•
+“About Credit Scorecards” on page 8-49
+
+•
+“Credit Scorecard Modeling Workflow” on page 8-52
+
+•
+“Credit Scorecard Modeling Using Observation Weights” on page 8-55
+
+•
+Monotone Adjacent Pooling Algorithm (MAPA) on page 15-1979
+
+External Websites
+
+•
+Credit Risk Modeling with MATLAB (53 min 10 sec)
+
+Credit Scorecards with Constrained Logistic Regression Coefficients
+
+8-99

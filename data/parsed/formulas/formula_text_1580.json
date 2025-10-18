@@ -1,0 +1,12 @@
+{
+  "page": 798,
+  "original_text": "p = PortfolioMAD(p,'LowerBound', 0,'Budget',1);",
+  "ocr_text": "p=PortfolioMAD(p,LowerBound,0,Budget,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 266.78,
+    "x1": 344.67,
+    "y1": 277.25
+  },
+  "confidence": "high"
+}

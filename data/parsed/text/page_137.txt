@@ -1,0 +1,38 @@
+The equity curves indicate both strategies performed well, and are in close correspondence with each
+other.
+
+Local Function
+
+The rebalance function directs the backtest framework to perform the following trades:
+
+•
+When the model predicts a price gain, invest all available cash.
+
+•
+When the model predicts a price loss, cash out entirely.
+
+•
+When the model predicts a constant price, take no actions.
+
+You can use this function only from in this script.
+
+function [new_weights,user_data] = rebalance(weights,~,signalData,user_data,col,id)
+    new_weights = weights;
+    
+    direction = signalData{:,col};
+    if direction == "gain"
+        new_weights = 1;    % Expect a gain --> Fully invest 
+    end
+    if direction == "loss"
+        new_weights = 0;    % Expect loss --> Cash out, with risk-free rate of 0%
+    end
+    
+    % Print iteration information at command line 
+    user_data.Counter = user_data.Counter + 1;
+    if (mod(user_data.Counter,5000) == 0)
+        displayText = "Backtesting " + id + ". Total progress: " + num2str(user_data.Counter) + "
+        disp(displayText);
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data
+
+2-93

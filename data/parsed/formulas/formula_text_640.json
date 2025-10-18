@@ -1,0 +1,12 @@
+{
+  "page": 409,
+  "original_text": "% Compute the initial portfolio weights for each strategy.\nequalWeight_initial     = equalWeightFcn(current_weights,warmupTT);\nmaxSharpeRatio_initial  = maxSharpeRatioFcn(current_weights,warmupTT);\ninverseVariance_initial = inverseVarianceFcn(current_weights,warmupTT);\nmarkowitz_initial       = markowitzFcn(current_weights,warmupTT);\nrobustOptim_initial     = robustOptimFcn(current_weights,warmupTT);",
+  "ocr_text": "Computetheinitialportfolioweightsforeachstrategy.\nequalWeight_initial =equalWeightFcn(current_weights,warmupTT);\nmaxSharpeRatio_initial_=maxSharpeRatioFcn(current_weights,warmupTT);\ninverseVariance_initial=inverseVarianceFcn(current_weights,warmupTT);\nmarkowitz_initial =markowitzFcn(current_weights,warmupTT);\nrobustOptim_initial =robustOptimFcn(current_weights,warmupTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 136.23,
+    "x1": 474.68,
+    "y1": 200.69
+  },
+  "confidence": "high"
+}

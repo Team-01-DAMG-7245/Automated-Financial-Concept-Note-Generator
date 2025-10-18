@@ -1,0 +1,5 @@
+Page 1379
+================================================================================
+
+•
+Alpha — Access function for the input argument Alpha, callable as a function of time and state

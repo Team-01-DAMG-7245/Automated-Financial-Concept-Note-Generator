@@ -1,0 +1,6 @@
+Page 2058
+================================================================================
+
+NextCouponDate = cpndaten(Settle,Maturity) returns the next coupon date after the
+Settle date. This function finds the next coupon date whether or not the coupon structure is
+synchronized with the Maturity date.

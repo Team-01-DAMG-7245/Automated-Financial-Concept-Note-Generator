@@ -1,0 +1,12 @@
+{
+  "page": 954,
+  "original_text": "fprintf('\\nPredicted default rate:\\n');",
+  "ocr_text": "fprintf(nPredicteddefaultrate:(n);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 238.26,
+    "x1": 301.32,
+    "y1": 248.73
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,11 @@
+{
+  "total_chunks": 10,
+  "embedded_chunks": 10,
+  "cached_chunks": 0,
+  "failed_chunks": 0,
+  "total_tokens": 7272,
+  "total_cost": 0.00094536,
+  "total_time": 2.332040309906006,
+  "api_calls": 1,
+  "retries": 0
+}

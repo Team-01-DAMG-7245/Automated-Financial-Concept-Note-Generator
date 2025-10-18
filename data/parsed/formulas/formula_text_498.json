@@ -1,0 +1,12 @@
+{
+  "page": 340,
+  "original_text": "subplot(2,1,2);\nplot(prsk, psratio, 'LineWidth', 2);\nhold on\nscatter(srsk, ssratio, 'g', 'filled');\ntitle('\\bfSharpe Ratio');\nxlabel('Portfolio Risk');\nylabel('Sharpe Ratio');\nhold off",
+  "ocr_text": "subplot(2,1,2);\nplot(prsk,psratio,LineWidth,2);\nhold_on\nscatter(srsk,ssratio,g,filled);\ntitle(bfSharpeRatio);\nxlabel(PortfolioRisk);\nylabel(SharpeRatio);\n\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 416.23,
+    "x1": 295.9,
+    "y1": 502.29
+  },
+  "confidence": "high"
+}

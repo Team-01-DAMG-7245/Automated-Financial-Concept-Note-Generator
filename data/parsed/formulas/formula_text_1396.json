@@ -1,0 +1,12 @@
+{
+  "page": 696,
+  "original_text": "A = [ 1 1 1 0 0 ];\nb = 0.5;\np = PortfolioCVaR;\np = setInequality(p, A, b);\ndisp(p.NumAssets)\ndisp(p.AInequality)\ndisp(p.bInequality)",
+  "ocr_text": "A=[11100];\n\nb=0.5;\n\np=PortfolioCVaR;\np=setInequality(p,A,b);\ndisp(p.NumAssets)\ndisp(p.AInequality)\ndisp(p.bInequality)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 521.78,
+    "x1": 236.29,
+    "y1": 597.05
+  },
+  "confidence": "high"
+}

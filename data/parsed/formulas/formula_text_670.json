@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "% Define the Markowitz objective\npMrkwtz.Objective = -rPortfolio'*xMrkwtz + lambda*xMrkwtz'*Q*xMrkwtz;\nx0.x = zeros(nAssets,1);",
+  "ocr_text": "DefinetheMarkowitzobjective\npMrkwtz.Objective=-rPortfolio*xMrkwtz+Lambda*xMrkwtz*Q*xMrkwtz;\nx.x=zeros(nAssets,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 525.03,
+    "x1": 463.84,
+    "y1": 557.09
+  },
+  "confidence": "high"
+}

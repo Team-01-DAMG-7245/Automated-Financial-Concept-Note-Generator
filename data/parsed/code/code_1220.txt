@@ -1,0 +1,5 @@
+Page 1248
+================================================================================
+
+Repeat the simulation, this time specifying a processing function that takes the absolute magnitude of
+the short rate at the end of each period. You can access the processing function by time and state

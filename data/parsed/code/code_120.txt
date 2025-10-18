@@ -1,0 +1,9 @@
+Page 135
+================================================================================
+
+user_data = struct("Counter",0,"NumTestPoints",nBT);
+maxMoneyStrat = backtestStrategy("MaxProfit",@(w,p,s,u)rebalance(w,p,s,u,1,"MaxProfit"), ...
+    LookbackWindow=1,UserData=user_data);
+RiskyLSTMStrat = backtestStrategy("RiskyLSTM",@(w,p,s,u)rebalance(w,p,s,u,2,"RiskyLSTM"), ...
+    LookbackWindow=1,UserData=user_data);
+strategies = [maxMoneyStrat RiskyLSTMStrat];

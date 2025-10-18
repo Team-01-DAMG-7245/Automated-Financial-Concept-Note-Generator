@@ -1,0 +1,8 @@
+Page 486
+================================================================================
+
+Select whether to analyze the equal category or risk budgeting strategy. Then, use the
+backtest2brinson function in Local Functions on page 4-320 to compute asset_table that is
+formatted for use with the brinsonAttribution function. For more information on the format of
+the asset_table, see the description for the AssetTable input argument in the
+brinsonAttribution function.

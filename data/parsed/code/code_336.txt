@@ -1,0 +1,8 @@
+Page 326
+================================================================================
+
+Even though the red dashed tangent line cuts off only a small piece of the graph, that small piece
+already contains an important point, the global minima. In the worst case scenario, the Financial
+Toolbox solvers compute the tangent line at a point that removes all minima of the function, like the
+black dotted line does. Therefore, it is important to be aware of the type of function passed to a
+Financial Toolbox solver.

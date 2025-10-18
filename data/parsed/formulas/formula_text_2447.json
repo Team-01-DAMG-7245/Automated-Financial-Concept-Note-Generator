@@ -1,0 +1,12 @@
+{
+  "page": 1267,
+  "original_text": "returns = tick2ret(prices,'Method','continuous');  % Convert prices to returns\nreturns = returns - mean(returns);  % Center the returns\nindex   = 3;                        % Germany stored in column 3",
+  "ocr_text": "returns=tick2ret(prices,Method,continuous);Convertpricestoreturns\nreturns=returns-mean(returns);Centerthereturns\nindex =3; Germanystoredincolumn3",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 196.03,
+    "x1": 512.63,
+    "y1": 228.09
+  },
+  "confidence": "high"
+}

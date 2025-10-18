@@ -1,0 +1,5 @@
+Page 2269
+================================================================================
+
+The function rng(seed) is used to reset the random number generator to produce the documented
+results. It is not necessary to reset the random number generator to simulate scenarios.

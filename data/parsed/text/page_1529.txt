@@ -1,0 +1,39 @@
+Create roughbergomi Object
+
+The roughbergomi object is a bivariate composite model, composed of two coupled and dissimilar
+univariate models, each driven by a single Brownian motion source of risk over NPERIODS
+consecutive observation periods, approximating continuous-time rough stochastic volatility processes.
+
+Create a roughbegomi object.
+
+Return = 0.03;
+Alpha = -0.03;
+Xi = 0.2;
+Eta = 0.015;
+
+roughbergomiObj = roughbergomi(Return,Alpha,Xi,Eta)
+
+roughbergomiObj = 
+   Class ROUGHBERGOMI: Rough Bergomi
+   ----------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+         Return: 0.03
+          Alpha: -0.03
+             Xi: 0.2
+            Eta: 0.015
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+roughbergomi
+
+15-223

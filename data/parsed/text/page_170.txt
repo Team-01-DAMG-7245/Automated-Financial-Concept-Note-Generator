@@ -1,0 +1,117 @@
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Plotting the Efficient Frontier for a Portfolio Object” on page 4-125
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+•
+“When to Use Portfolio Objects Over Optimization Toolbox” on page 4-132
+
+•
+“Comparison of Methods for Covariance Estimation” on page 4-138
+
+•
+“Choose MINLP Solvers for Portfolio Problems” on page 4-140
+
+•
+“Troubleshooting Portfolio Optimization Results” on page 4-145
+
+•
+“Role of Convexity in Portfolio Problems” on page 4-157
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Portfolio Analysis with Turnover Constraints” on page 4-211
+
+•
+“Leverage in Portfolio Optimization with a Risk-Free Asset” on page 4-217
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+
+•
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify ESG Portfolios” on page 4-271
+
+•
+“Risk Budgeting Portfolio” on page 4-286
+
+•
+“Backtest Using Risk-Based Equity Indexation” on page 4-291
+
+•
+“Create Hierarchical Risk Parity Portfolio” on page 4-296
+
+•
+“Backtest Strategies Using Deep Learning” on page 4-302
+
+•
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+•
+“Analyze Performance Attribution Using Brinson Model” on page 4-323
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Solve Tracking Error Portfolio Problems” on page 4-343
+
+•
+“Solve Problem for Minimum Tracking Error with Net Return Constraint” on page 4-349
+
+•
+“Solve Robust Portfolio Maximum Return Problem with Ellipsoidal Uncertainty” on page 4-351
+
+•
+“Risk Parity or Budgeting with Constraints” on page 4-357
+
+•
+“Single Period Goal-Based Wealth Management” on page 4-362
+
+•
+“Dynamic Portfolio Allocation in Goal-Based Wealth Management for Multiple Time Periods”
+on page 4-367
+
+•
+“Multiperiod Goal-Based Wealth Management Using Reinforcement Learning” on page 4-379
+
+•
+“Compare Performance of Covariance Denoising with Factor Modeling Using Backtesting”
+on page 4-394
+
+•
+“Mixed-Integer Mean-Variance Portfolio Optimization Problem” on page 4-402
+
+•
+“Deep Reinforcement Learning for Optimal Trade Execution” on page 4-407
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-2

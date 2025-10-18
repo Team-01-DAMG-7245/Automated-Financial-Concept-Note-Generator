@@ -1,0 +1,12 @@
+{
+  "page": 1125,
+  "original_text": "for i = 1:10\n    Pad = ones(Time(i),PLen);\n    NewR = Range(ones(Time(i),1),:);",
+  "ocr_text": "fori=1:10\nPad=ones(Time(i),PLen);\nNewR=Range(ones(Time(i),1),:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 414.04,
+    "x1": 285.05,
+    "y1": 446.11
+  },
+  "confidence": "high"
+}

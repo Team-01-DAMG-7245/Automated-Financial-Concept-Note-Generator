@@ -1,0 +1,12 @@
+{
+  "page": 1260,
+  "original_text": "nPeriods = 1000;    \ndt       = 1/250;\nobj      = gbm(0.1,0.4,'StartState',100);\nrng(575,'twister')\n[X1,T1]    = simBySolution(obj,nPeriods,'DeltaTime',dt);\nrng(575,'twister')\n[Y1,T1]    = simByEuler(obj,nPeriods,'DeltaTime',dt);\nrng(575,'twister')\n[X2,T2]    = simBySolution(obj,nPeriods,'DeltaTime', ... \n    dt,'nSteps',2);\nrng(575,'twister')\n[Y2,T2]    = simByEuler(obj,nPeriods,'DeltaTime', ...\n    dt,'nSteps',2);\nrng(575,'twister')\n[X3,T3]    = simBySolution(obj,nPeriods, 'DeltaTime', ... \n    dt,'nSteps',10);\nrng(575,'twister')\n[Y3,T3]    = simByEuler(obj,nPeriods,'DeltaTime', ... \n    dt,'nSteps',10);\nrng(575,'twister')\n[X4,T4]    = simBySolution(obj,nPeriods,'DeltaTime', ... \n    dt,'nSteps',100);\nrng(575,'twister')\n[Y4,T4]    = simByEuler(obj,nPeriods,'DeltaTime', ... \n    dt,'nSteps',100);",
+  "ocr_text": "nPeriods=1000;\n\ndt =1/250;\n\nobj =gbm(0.1,0.4,StartState,100);\n\nrng(575,twister)\n\n[X1,T1] =simBySolution(obj,nPeriods,DeltaTime,dt);\n\nrng(575,twister)\n\n{[Y1,T1] =simByEuler(obj,nPeriods,DeltaTime,dt);\n\nrng(575,twister)\n\n[X2,T2] =simBySolution(obj,nPeriods,DeltaTime,...\ndt,nSteps,2);\n\nrng(575,twister)\n\n[Y2,T2] =simByEuler(obj,nPeriods,DeltaTime,...\ndt,nSteps,2);\n\nrng(575,twister)\n\n[X3,T3] =simBySolution(obj,nPeriods,DeltaTime,...\ndt,nSteps,10);\n\nrng(575,twister)\n\n[Y3,T3] =simByEuler(obj,nPeriods,DeltaTime,...\ndt,nSteps,10);\n\nrng(575,twister)\n\n[X4,T4] =simBySolution(obj,nPeriods,DeltaTime,...\ndt,nSteps,100);\n\nrng(575,twister)\n\n[Y4,T4] =simByEuler(obj,nPeriods,DeltaTime,...\ndt,nSteps,100);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 309.66,
+    "x1": 404.27,
+    "y1": 579.33
+  },
+  "confidence": "high"
+}

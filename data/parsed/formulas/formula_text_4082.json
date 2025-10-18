@@ -1,0 +1,12 @@
+{
+  "page": 2304,
+  "original_text": "psharpe = estimatePortSharpeRatio(p,pwgt)",
+  "ocr_text": "psharpe=estimatePortSharpeRatio(p,pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 317.55,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

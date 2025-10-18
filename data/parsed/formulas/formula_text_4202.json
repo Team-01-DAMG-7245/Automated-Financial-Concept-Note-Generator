@@ -1,0 +1,12 @@
+{
+  "page": 2367,
+  "original_text": "FutureVal = fvdisc(Settle,Maturity,Price,Discount)\nFutureVal = fvdisc( ___ ,Basis)",
+  "ocr_text": "FutureVal=fvdisc(Settle,Maturity,Price,Discount)\nFutureVal=fvdisc(__,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.61,
+    "x1": 391.03,
+    "y1": 215.24
+  },
+  "confidence": "high"
+}

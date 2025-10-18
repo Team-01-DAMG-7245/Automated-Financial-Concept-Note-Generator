@@ -1,0 +1,12 @@
+{
+  "page": 1268,
+  "original_text": "tailFraction = 0.1;        % Decimal fraction allocated to each tail\ntails = cell(nIndices,1);  % Cell array of Pareto tail objects",
+  "ocr_text": "tailFraction=0.1; Decimalfractionallocatedtoeachtail\ntails=cell(nIndices,1);CellarrayofParetotailobjects",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 196.9,
+    "x1": 458.44,
+    "y1": 218.17
+  },
+  "confidence": "high"
+}

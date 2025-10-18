@@ -1,0 +1,12 @@
+{
+  "page": 1117,
+  "original_text": "ForwardRates = zero2fwd(ZeroRates, Maturity, Settle)",
+  "ocr_text": "ForwardRates=zero2fwd(ZeroRates,Maturity,Settle)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 399.62,
+    "x1": 371.73,
+    "y1": 410.09
+  },
+  "confidence": "high"
+}

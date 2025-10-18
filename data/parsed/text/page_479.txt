@@ -1,0 +1,43 @@
+RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: 4
+                  Returns: [1462×4 timetable]
+                Positions: [1×1 struct]
+                 Turnover: [1462×4 timetable]
+                  BuyCost: [1462×4 timetable]
+                 SellCost: [1462×4 timetable]
+         TransactionCosts: [1×1 struct]
+                     Fees: [1×1 struct]
+
+Examine Backtest Results
+
+Use the summary and equityCurve functions to summarize and plot the backtest results. This
+model and its derivative trading strategies are not expected to be profitable in a realistic trading
+scenario. However, this example illustrates a workflow that should be useful for practitioners with
+more comprehensive data sets and more sophisticated models and strategies.
+
+summary(bt)
+
+ans=9×4 table
+                       LongOnly     LongShort     BestBet     EqualWeight
+                       _________    _________    _________    ___________
+
+TotalReturn           18.652       1.8281       17.652        4.8347 
+    SharpeRatio         0.085807     0.039827     0.070637      0.056775 
+    Volatility          0.027652     0.033492     0.037706      0.026712 
+    AverageTurnover       0.2372      0.28884      0.25958     0.0095931 
+    MaxTurnover                1       1.3867            1           0.5 
+    AverageReturn      0.0024119    0.0013733    0.0027024      0.001556 
+    MaxDrawdown          0.46656      0.86605      0.82556       0.70509 
+    AverageBuyCost        10.315        8.373       11.393       0.20262 
+    AverageSellCost       10.445       8.4198       11.386       0.19578
+
+figure;
+equityCurve(bt)
+
+Backtest Strategies Using Deep Learning
+
+4-311

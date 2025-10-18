@@ -1,0 +1,61 @@
+Initial values of the state variables on all trials, specified as a scalar, column vector, or matrix.
+
+•
+If StartState is a scalar, roughbergomi applies the same initial value to all state variables on
+all trials.
+
+•
+If StartState is a 2-by-1 column vector, roughbergomi applies a unique initial value to each
+state variable on all trials.
+
+•
+If StartState is a 2-by-NTRIALS matrix, roughbergomi applies a unique initial value to each
+state variable on each NTRIALS trials.
+
+Note Although no restrictions are enforced, for the rough Bergomi model, the StartState of the
+second variable (variance) is expected to always be 1. The initial forward variance value is specified
+using Xi.
+
+Data Types: double
+
+Correlation — Correlation between Gaussian random variates drawn to generate bivariate
+Brownian motion vector (Wiener processes)
+2-by-2 identity matrix representing independent Gaussian processes (default) | numeric scalar |
+positive semidefinite matrix | deterministic function
+
+Correlation between Gaussian random variates drawn to generate the bivariate Brownian motion
+vector (Wiener processes), specified as numeric scalar, a 2-by-2 positive semidefinite matrix, or a
+deterministic function C(t) that accepts the current time t and returns a 2-by-2 positive semidefinite
+correlation matrix. If Correlation is not a symmetric positive semidefinite matrix, use nearcorr to
+create a positive semidefinite matrix for a correlation matrix.
+
+A Correlation matrix represents a static condition.
+
+As a deterministic function of time, Correlation allows you to specify a dynamic correlation
+structure.
+
+Data Types: double
+
+Simulation — User-defined simulation function or SDE simulation method
+simulation by Euler approximation (simByEuler) (default) | function | SDE simulation method
+
+User-defined simulation function or SDE simulation method, specified as a function or SDE simulation
+method. The default is simByEuler.
+
+Data Types: function_handle
+
+Output Arguments
+
+RoughBergomi — Rough Bergomi model
+RoughBergomi object
+
+Rough Bergomi model, returned as a RoughBergomi object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+roughbergomi
+
+15-221

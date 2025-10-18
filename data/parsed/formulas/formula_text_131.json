@@ -1,0 +1,12 @@
+{
+  "page": 105,
+  "original_text": "figure\nbinEdges = seconds(0.01:0.01:1);\nhistogram(DT,binEdges)\nxlabel(\"Seconds\")\nylabel(\"Number of Orders\")\ntitle(\"LOB Interarrival Times\")",
+  "ocr_text": "figure\nbinEdges=seconds(0.01:0.01:1);\nhistogram(DT,binEdges)\nxlabel(Seconds)\nylabel(NumberofOrders)\ntitle(LOBInterarrivalTimes)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 195.36,
+    "x1": 263.37,
+    "y1": 259.83
+  },
+  "confidence": "high"
+}

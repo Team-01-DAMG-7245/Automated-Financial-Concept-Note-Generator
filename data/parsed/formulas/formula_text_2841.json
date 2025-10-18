@@ -1,0 +1,12 @@
+{
+  "page": 1463,
+  "original_text": "SDE = sde( ___ ,Name,Value) creates a SDE object with additional options specified by one or\nmore Name,Value pair arguments.",
+  "ocr_text": "SDE=sde(__,Name,Value)createsaSDEobjectwithadditionaloptionsspecifiedbyoneor\nmoreName,VaLluepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 562.96,
+    "x1": 537.83,
+    "y1": 586.59
+  },
+  "confidence": "high"
+}

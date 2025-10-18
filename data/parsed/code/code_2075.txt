@@ -1,0 +1,7 @@
+Page 1684
+================================================================================
+
+Direct specification of the dependent random noise process for generating the Brownian motion
+vector (Wiener process) that drives the simulation, specified as the comma-separated pair consisting
+of 'Z' and a function or an (NPeriods ⨉ NSteps)-by-NBrowns-by-NTrials three-dimensional
+array of dependent random variates.

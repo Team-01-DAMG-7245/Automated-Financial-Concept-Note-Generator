@@ -1,0 +1,52 @@
+Data Types: object
+
+Output Arguments
+
+summaryTable — Metrics summarizing backtest
+table
+
+Metrics summarizing the backtest, returned as a table where each row of the table is a calculated
+metric and each column represents a strategy. The reported metrics are as follows:
+
+•
+TotalReturn — The total return of the strategy over the entire backtest
+
+•
+SharpeRatio — The Sharpe ratio for each strategy
+
+•
+Volatility — The volatility of each strategy over the backtest
+
+•
+AverageTurnover — Average turnover per-time-step as a decimal percent
+
+•
+MaxTurnover — Maximum turnover in a single time step
+
+•
+AverageReturn — Average return per-time-step
+
+•
+MaxDrawdown — Maximum portfolio drawdown as a decimal percent
+
+•
+AverageBuyCost — Average per-time-step transaction costs for asset purchases
+
+•
+AverageSellCost — Average per-time-step transaction costs for asset sales
+
+Version History
+Introduced in R2020b
+
+See Also
+backtestStrategy | backtestEngine | runBacktest | equityCurve
+
+Topics
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+“Backtest Investment Strategies Using datetime and calendarDuration” on page 4-451
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+summary
+
+15-303

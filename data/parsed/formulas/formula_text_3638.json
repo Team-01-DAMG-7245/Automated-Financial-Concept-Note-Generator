@@ -1,0 +1,12 @@
+{
+  "page": 2049,
+  "original_text": "ExpCovariance = corr2cov(ExpSigma) converts standard deviation and correlation to\ncovariance.",
+  "ocr_text": "ExpCovariance=corr2cov(ExpSigma)convertsstandarddeviationandcorrelationto\ncovariance.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 262.5,
+    "x1": 509.98,
+    "y1": 286.13
+  },
+  "confidence": "high"
+}

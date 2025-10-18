@@ -1,0 +1,36 @@
+qwgt = estimateFrontier(q,20);
+[qrsk,qret] = estimatePortMoments(q,qwgt);
+
+% Plot efficient frontiers with gross and net returns.
+
+clf;
+portfolioexamples_plot('Efficient Frontier with and without Transaction Costs', ...
+    {'line', prsk, pret, {'Gross'}, ':b'}, ...
+    {'line', qrsk, qret, {'Net'}}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+Turnover Constraint
+
+In addition to transaction costs, the Portfolio object can handle turnover constraints. The following
+example demonstrates that a turnover constraint produces an efficient frontier in the neighborhood
+of an initial portfolio that may restrict trading. Moreover, the introduction of a turnover constraint
+often implies that multiple trades may be necessary to shift from an initial portfolio to an
+unconstrained efficient frontier. Consequently, the turnover constraint introduces a form of time
+diversification that can spread trades out over multiple time periods. In this example, note that the
+sum of purchases and sales from the estimateFrontier function confirms that the turnover
+constraint is satisfied.
+
+BuyCost = 0.0020;
+SellCost = 0.0020;
+Turnover = 0.2;
+
+q = setCosts(p, BuyCost,SellCost);
+q = setTurnover(q,Turnover);
+
+[qwgt,qbuy,qsell] = estimateFrontier(q,20);
+[qrsk,qret] = estimatePortMoments(q,qwgt);
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-167

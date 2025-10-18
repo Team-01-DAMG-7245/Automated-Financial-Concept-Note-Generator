@@ -1,0 +1,67 @@
+Note Although you can also set properties directly, it is not recommended since error-checking is not
+performed when you set a property directly.
+
+The Portfolio object supports setting properties with name-value pair arguments such that each
+argument name is a property and each value is the value to assign to that property. For example, to
+set the AssetMean and AssetCovar properties in an existing Portfolio object p with the values m
+and C, use the syntax:
+
+p = Portfolio(p, 'AssetMean', m, 'AssetCovar', C);
+
+In addition to Portfolio, which lets you set individual properties one at a time, groups of properties
+are set in a Portfolio object with various “set” and “add” functions. For example, to set up an
+average turnover constraint, use the setTurnover function to specify the bound on portfolio average
+turnover and the initial portfolio. To get individual properties from a Portfolio object, obtain
+properties directly or use an assortment of “get” functions that obtain groups of properties from a
+Portfolio object. The Portfolio object and the set functions have several useful features:
+
+•
+Portfolio and the set functions try to determine the dimensions of your problem with either
+explicit or implicit inputs.
+
+•
+Portfolio and the set functions try to resolve ambiguities with default choices.
+
+•
+Portfolio and the set functions perform scalar expansion on arrays when possible.
+
+•
+The associated Portfolio object functions try to diagnose and warn about problems.
+
+Displaying Portfolio Objects
+
+The Portfolio object uses the default display functions provided by MATLAB, where display and
+disp display a Portfolio object and its properties with or without the object variable name.
+
+Saving and Loading Portfolio Objects
+
+Save and load Portfolio objects using the MATLAB save and load commands.
+
+Estimating Efficient Portfolios and Frontiers
+
+Estimating efficient portfolios and efficient frontiers is the primary purpose of the portfolio
+optimization tools. An efficient portfolio are the portfolios that satisfy the criteria of minimum risk for
+a given level of return and maximum return for a given level of risk. A collection of “estimate” and
+“plot” functions provide ways to explore the efficient frontier. The “estimate” functions obtain either
+efficient portfolios or risk and return proxies to form efficient frontiers. At the portfolio level, a
+collection of functions estimates efficient portfolios on the efficient frontier with functions to obtain
+efficient portfolios:
+
+•
+At the endpoints of the efficient frontier
+
+•
+That attains targeted values for return proxies
+
+•
+That attains targeted values for risk proxies
+
+•
+Along the entire efficient frontier
+
+These functions also provide purchases and sales needed to shift from an initial or current portfolio to
+each efficient portfolio. At the efficient frontier level, a collection of functions plot the efficient
+
+Portfolio Object
+
+4-21

@@ -1,0 +1,12 @@
+{
+  "page": 2023,
+  "original_text": "Spread = cfspread(RateSpec, Price, CFAmounts, CFDates, Settle)",
+  "ocr_text": "Spread=cfspread(RateSpec,Price,CFAmounts,CFDates,Settle)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.4,
+    "x1": 425.91,
+    "y1": 167.86
+  },
+  "confidence": "high"
+}

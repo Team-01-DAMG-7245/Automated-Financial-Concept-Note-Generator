@@ -1,0 +1,9 @@
+Page 1752
+================================================================================
+
+p = PortfolioCVaR;
+G = [ true true true false false ];    % group matrix for first group constraint
+p = setGroups(p, G, [], 0.3);
+G = [ true false true false true ];    % group matrix for second group constraint
+p = addGroups(p, G, 0.2);
+disp(p.NumAssets);

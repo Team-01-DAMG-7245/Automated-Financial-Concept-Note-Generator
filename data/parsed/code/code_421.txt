@@ -1,0 +1,5 @@
+Page 426
+================================================================================
+
+% Put the benchmark strategy and three signal strategies into an array.
+strategies = [benchmarkStrategy smaStrategy macdStrategy rsiStrategy];

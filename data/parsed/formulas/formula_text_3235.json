@@ -1,0 +1,12 @@
+{
+  "page": 1737,
+  "original_text": "AccruInterest = acrudisc(datetime(1992,5,1), datetime(1992,7,15), 100,  0.1,  2,  0)",
+  "ocr_text": "AccruInterest=acrudisc(datetime(1992,5,1),datetime(1992,7,15),100,0.1,2,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 412.88,
+    "x1": 545.11,
+    "y1": 423.35
+  },
+  "confidence": "high"
+}

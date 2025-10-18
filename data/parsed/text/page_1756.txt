@@ -1,0 +1,57 @@
+addInequality
+
+Add linear inequality constraints for portfolio weights to existing constraints
+
+Syntax
+
+obj = addInequality(obj,AInequality,bInequality)
+
+Description
+
+obj = addInequality(obj,AInequality,bInequality) adds linear inequality constraints for
+portfolio weights to existing constraints for Portfolio, PortfolioCVaR, or PortfolioMAD objects.
+For details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+Given a linear inequality constraint matrix AInequality and vector bInequality, every weight in
+a portfolio Port must satisfy the following:
+
+AInequality * Port <= bInequality
+
+This function "stacks" additional linear inequality constraints onto any existing linear inequality
+constraints that exist in the input portfolio object. If no constraints exist, this function is the same as
+setInequality.
+
+Examples
+
+Add Linear Inequality Constraint to a Portfolio Object
+
+Set a linear inequality constraint to ensure that the first three assets constitute at most 50% of a
+portfolio. Then add another linear inequality constraint to ensure that the last three assets constitute
+at least 50% of a portfolio.
+
+p = Portfolio;
+A = [ 1 1 1 0 0 ];    % first inequality constraint
+b = 0.5;
+p = setInequality(p, A, b);
+
+A = [ 0 0 -1 -1 -1 ];    % second inequality constraint
+b = -0.5;
+p = addInequality(p, A, b);
+
+disp(p.NumAssets);
+
+5
+
+disp(p.AInequality);
+
+1     1     1     0     0
+     0     0    -1    -1    -1
+
+disp(p.bInequality);
+
+15
+Functions
+
+15-450

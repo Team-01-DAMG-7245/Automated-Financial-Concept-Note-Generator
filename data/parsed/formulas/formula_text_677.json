@@ -1,0 +1,12 @@
+{
+  "page": 419,
+  "original_text": "timeColumn = \"Dates\";\nT = T(:,[timeColumn symbols]);",
+  "ocr_text": "timeColumn=Dates;\nT=T(:,[timeColumnsymbols]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 508.25,
+    "x1": 252.54,
+    "y1": 529.52
+  },
+  "confidence": "high"
+}

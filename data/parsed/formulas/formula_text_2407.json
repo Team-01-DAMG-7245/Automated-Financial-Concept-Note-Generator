@@ -1,0 +1,12 @@
+{
+  "page": 1234,
+  "original_text": "covariance = cov(returns);\nsigma      = cholcov(covariance)';",
+  "ocr_text": "covariance=cov(returns);\nsigma =cholcov(covariance);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 549.24,
+    "x1": 274.21,
+    "y1": 570.51
+  },
+  "confidence": "high"
+}

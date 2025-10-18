@@ -1,0 +1,4 @@
+Page 2206
+================================================================================
+
+Compute Value of the Observed Negative Log-Likelihood Function for Data

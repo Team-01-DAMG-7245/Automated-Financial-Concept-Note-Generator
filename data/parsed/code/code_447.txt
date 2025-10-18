@@ -1,0 +1,20 @@
+Page 438
+================================================================================
+
+hold on
+labels = strings(nT+1,1);
+for i=1:nT
+    ub = zeros(p.NumAssets,1);
+    % Only select the assets above WoB threshold.
+    ub(WoB >= thresholdWoB(i)) = 1;
+    p.UpperBound = ub;
+    plotFrontier(p,nPort);
+    labels(i) = sprintf("%6.2f%% WoB",thresholdWoB(i)*100);
+end
+% Plot the "original" mean-variance frontier, i.e., the frontier
+% without the WoB threshold.
+p.UpperBound = [];
+plotFrontier(p,nPort);
+labels(i+1) = "No WoB restriction";
+legend(labels,'Location','northwest')
+hold off

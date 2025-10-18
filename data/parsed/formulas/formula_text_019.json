@@ -1,0 +1,12 @@
+{
+  "page": 37,
+  "original_text": "X = B/A solves for X in X*A = B.",
+  "ocr_text": "X=B/AsolvesforXinX*A=B.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 359.55,
+    "x1": 245.57,
+    "y1": 371.18
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,61 @@
+Return: 6x6 diagonal double array
+          Alpha: 6x1 double array
+          Sigma: 6x6 diagonal double array
+
+Create a gbm object using gbm.
+
+GBM = gbm(diag(expReturn), diag(sigma), 'Correlation', ...
+    correlation, 'StartState', X)
+
+GBM = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+     Dimensions: State = 6, Brownian = 6
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 100 (6x1 double array) 
+    Correlation: 6x6 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 6x6 diagonal double array
+          Sigma: 6x6 diagonal double array
+
+Note the succession of interface restrictions:
+
+•
+sdeld objects require you to specify A, B, Alpha, and Sigma.
+
+•
+cev objects require you to specify Return, Alpha, and Sigma.
+
+•
+gbm objects require you to specify only Return and Sigma.
+
+However, all three objects represent the same multidimensional market model.
+
+Also, cev and gbm objects display the underlying parameter B derived from the sdeld object as
+Return. This is an intuitive name commonly associated with equity models.
+
+Simulate Equity Markets Using the Default Simulate Method
+
+Load the Data_GlobalIdx2 data set from the matlabroot/examples/finance/data directory and
+use sde to specify the SDE model as in
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+    Dataset.NIK Dataset.FTSE Dataset.SP];
+
+returns =  tick2ret(prices);
+
+nVariables  = size(returns,2);
+expReturn   = mean(returns);
+sigma       = std(returns);
+correlation = corrcoef(returns);
+t           = 0;
+X           = 100;
+X           = X(ones(nVariables,1));
+
+Simulating Equity Prices
+
+14-35

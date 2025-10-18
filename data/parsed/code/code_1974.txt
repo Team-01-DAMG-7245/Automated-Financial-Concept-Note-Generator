@@ -1,0 +1,7 @@
+Page 1560
+================================================================================
+
+•
+Fixed-size rolling window — For a fixed-sized rolling window of data, set the LookbackWindow
+property to a single scalar value (N). The software then calls the rebalance function with a price
+timetable containing exactly N rows of rolling price data.

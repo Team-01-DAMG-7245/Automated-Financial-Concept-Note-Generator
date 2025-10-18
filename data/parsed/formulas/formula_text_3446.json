@@ -1,0 +1,12 @@
+{
+  "page": 1910,
+  "original_text": "bdates = busdays(sdate,edate)\nbdates = busdays( ___ ,bdmode,Holiday)",
+  "ocr_text": "bdates=busdays(sdate,edate)\nbdates=busdays(___,bdmode,Holiday)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 187.38,
+    "x1": 310.74,
+    "y1": 211.01
+  },
+  "confidence": "high"
+}

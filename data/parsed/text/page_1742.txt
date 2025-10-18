@@ -1,0 +1,56 @@
+addEquality
+
+Add linear equality constraints for portfolio weights to existing constraints
+
+Syntax
+
+obj = addEquality(obj,AEquality,bEquality)
+
+Description
+
+obj = addEquality(obj,AEquality,bEquality) adds linear equality constraints for portfolio
+weights to existing constraints for Portfolio, PortfolioCVaR, or PortfolioMAD objects. For
+details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+Given a linear equality constraint matrix AEquality and vector bEquality, every weight in a
+portfolio Port must satisfy the following:
+
+AEquality * Port = bEquality
+
+This function "stacks" additional linear equality constraints onto any existing linear equality
+constraints that exist in the input portfolio object. If no constraints exist, this method is the same as
+setEquality.
+
+Examples
+
+Add a Linear Equality Constraint for a Portfolio Object
+
+Use the addEquality method to create linear equality constraints. Add another linear equality
+constraint to ensure that the last three assets constitute 50% of a portfolio.
+
+p = Portfolio;
+A = [ 1 1 1 0 0 ];    % First equality constraint
+b = 0.5;
+p = setEquality(p, A, b);
+
+A = [ 0 0 1 1 1 ];    % Second equality constraint
+b = 0.5;
+p = addEquality(p, A, b);
+
+disp(p.NumAssets);
+
+5
+
+disp(p.AEquality);
+
+1     1     1     0     0
+     0     0     1     1     1
+
+disp(p.bEquality);
+
+15
+Functions
+
+15-436

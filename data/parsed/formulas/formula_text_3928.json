@@ -1,0 +1,12 @@
+{
+  "page": 2232,
+  "original_text": "Example: pwgt =\nestimateCustomObjectivePortfolio(p,fun,ObjectiveSense=\"maximize\",TargetReturn\n=0.05)",
+  "ocr_text": "Example:pwgt=\nestimateCustom0bjectivePortfolio(p,fun,ObjectiveSense=maximize,TargetReturn\n=0.05)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 233.48,
+    "x1": 553.54,
+    "y1": 269.11
+  },
+  "confidence": "high"
+}

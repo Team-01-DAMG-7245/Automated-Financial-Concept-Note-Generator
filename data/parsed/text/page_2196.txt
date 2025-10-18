@@ -1,0 +1,59 @@
+Maximum likelihood parameter estimates for the covariance of the Data using the ECM algorithm,
+specified as a NUMSERIES-by-NUMSERIES matrix.
+
+InvCovar — Cholesky decomposition of covariance matrix
+[ ] (default) | matrix
+
+(Optional) Inverse of covariance matrix, specified as a matrix using inv as:
+
+inv(Covariance)
+
+Data Types: double
+
+MatrixType — Matrix format
+'full' (default) | character vector
+
+(Optional) Matrix format, specified as a character vector with a value of:
+
+•
+'full' — Computes the full Hessian matrix.
+
+•
+'meanonly' — Computes only the components of the Hessian matrix associated with the mean.
+
+Data Types: char
+
+Output Arguments
+
+Hessian — Hessian matrix
+matrix
+
+Hessian matrix, returned as an NUMPARAMSNUMPARAMS matrix of the observed log-likelihood function
+based on current parameter estimates, where NUMPARAMS = NUMSERIES * (NUMSERIES + 3)/2
+if the MatrixFormat = 'full'. If the MatrixFormat = 'meanonly', then the NUMPARAMS =
+NUMSERIES.
+
+More About
+
+Hessian Matrix
+
+The Hessian matrix is a square matrix of second-order partial derivatives of a scalar-valued function.
+
+The Hessian matrix is a key concept in optimization, particularly in the context of multivariable
+calculus, and is used to study the local curvature of functions. The Hessian matrix provides important
+information about the behavior of functions near critical points, which are points where the gradient
+(first derivative) is zero.
+
+Version History
+Introduced before R2006a
+
+See Also
+ecmnfish | ecmnmle
+
+Topics
+“Maximum Likelihood Estimation” on page 9-3
+
+15
+Functions
+
+15-890

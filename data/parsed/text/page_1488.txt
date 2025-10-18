@@ -1,0 +1,65 @@
+sdemrd
+
+SDE with Mean-Reverting Drift (SDEMRD) model
+
+Description
+
+Creates and displays a SDE object whose drift rate is expressed in mean-reverting drift-rate form and
+which derives from the sdeddo class (SDE from drift and diffusion objects).
+
+Use sdemrd objects to simulate of sample paths of NVars state variables expressed in mean-
+reverting drift-rate form, and provide a parametric alternative to the linear drift form (see sdeld).
+These state variables are driven by NBrowns Brownian motion sources of risk over NPeriods
+consecutive observation periods, approximating continuous-time stochastic processes with mean-
+reverting drift-rate functions.
+
+The sdemrd object allows you to simulate any vector-valued SDEMRD of the form:
+
+dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+α(t))V(t)dWt
+
+where:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+S is an NVars-by-NVars matrix of mean reversion speeds.
+
+•
+L is an NVars-by-1 vector of mean reversion levels.
+
+•
+D is an NVars-by-NVars diagonal matrix, where each element along the main diagonal is the
+corresponding element of the state vector raised to the corresponding power of α.
+
+•
+V is an NVars-by-NBrowns instantaneous volatility rate matrix.
+
+•
+dWt is an NBrowns-by-1 Brownian motion vector.
+
+Creation
+
+Syntax
+
+SDEMRD = sdemrd(Speed,Level,Alpha,Sigma)
+SDEMRD = sdemrd( ___ ,Name,Value)
+
+Description
+
+SDEMRD = sdemrd(Speed,Level,Alpha,Sigma) creates a default SDEMRD object.
+
+SDEMRD = sdemrd( ___ ,Name,Value) creates a SDEMRD object with additional options specified
+by one or more Name,Value pair arguments.
+
+Name is a property name and Value is its corresponding value. Name must appear inside single
+quotes (''). You can specify several name-value pair arguments in any order as Name1,Value1,
+…,NameN,ValueN.
+
+The SDELD object has the following displayed “Properties” on page 15-184:
+
+15
+Functions
+
+15-182

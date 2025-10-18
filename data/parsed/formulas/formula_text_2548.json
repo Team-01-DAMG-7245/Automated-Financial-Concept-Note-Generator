@@ -1,0 +1,12 @@
+{
+  "page": 1302,
+  "original_text": "% Ensure that all variables apart from the first are numeric.\nnumVars = length(opts.VariableTypes);\nopts.VariableTypes = [\"string\", repmat(\"double\", 1, numVars - 1)];",
+  "ocr_text": "SEnsurethatallvariablesapartfromthefirstarenumeric.\nnumVars=length(opts.VariableTypes);\nopts.VariableTypes=[string,repmat(double,1,numVars-1)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.43,
+    "x1": 447.61,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

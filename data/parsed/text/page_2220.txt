@@ -1,0 +1,52 @@
+Input Arguments
+
+Mu — Drift term of a Brownian motion with drift
+numeric
+
+Drift term of a Brownian motion with drift., specified as a scalar numeric.
+
+Data Types: double
+
+Sigma — Diffusion term of a Brownian motion with drift
+numeric
+
+Diffusion term of a Brownian motion with drift, specified as a scalar numeric.
+
+Data Types: double
+
+T — A time period of interest
+numeric | vector
+
+A time period of interest, specified as a scalar numeric or vector.
+
+Data Types: double
+
+Output Arguments
+
+ExpDrawdown — Expected maximum drawdown
+numeric
+
+Expected maximum drawdown, returned as a numeric. ExpDrawdown is computed using an
+interpolation method. Values are accurate to a fraction of a basis point. Maximum drawdown is
+nonnegative since it is the change from a peak to a trough.
+
+Note To compare the actual results from maxdrawdown with the expected results of emaxdrawdown,
+set the Format input argument of maxdrawdown to either of the nondefault values ('arithmetic'
+or 'geometric'). These are the only two formats that emaxdrawdown supports.
+
+Version History
+Introduced in R2006b
+
+References
+
+[1] Malik, M. I., Amir F. Atiya, Amrit Pratap, and Yaser S. Abu-Mostafa. “On the Maximum Drawdown
+of a Brownian Motion.” Journal of Applied Probability. Vol. 41, Number 1, March 2004, pp.
+147–161.
+
+See Also
+maxdrawdown
+
+15
+Functions
+
+15-914

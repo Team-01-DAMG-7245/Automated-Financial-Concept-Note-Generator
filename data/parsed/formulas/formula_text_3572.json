@@ -1,0 +1,12 @@
+{
+  "page": 2018,
+  "original_text": "Price = cfprice(CFlowAmounts,CFlowDates,Yield,Settle)\nPrice = cfprice( ___ ,Name,Value)",
+  "ocr_text": "Price=cfprice(CFlowAmounts,CFlowDates,Yield,Settle)\nPrice=cfprice(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.18,
+    "x1": 409.08,
+    "y1": 211.81
+  },
+  "confidence": "high"
+}

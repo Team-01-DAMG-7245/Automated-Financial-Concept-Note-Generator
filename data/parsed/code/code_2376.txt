@@ -1,0 +1,6 @@
+Page 2241
+================================================================================
+
+If a table or timetable is passed into this function using the AssetReturns argument and the
+GetAssetList flag is true, the column names from the table or timetable object are used as asset
+names in obj.AssetList.

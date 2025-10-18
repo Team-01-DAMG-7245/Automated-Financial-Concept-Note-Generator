@@ -1,0 +1,36 @@
+??? Error using ==> ecmnmle
+Full covariance not positive-definite in iteration 218.
+
+From a practical standpoint, if in doubt, test your residual covariance matrix from the regression
+routines to ensure that it is positive-definite. This is important because a soft error has a matrix that
+appears to be positive-definite but actually has a near-zero-valued eigenvalue to within machine
+precision. To do this with a covariance estimate Covariance, use cond(Covariance), where any
+value greater than 1/eps should be considered suspect.
+
+If either type of failure occurs, however, note that the regression routine is indicating that something
+is probably wrong with the data. (Even with no missing data, two time series that are proportional to
+one another produce a singular covariance matrix.)
+
+See Also
+mvnrmle | mvnrstd | mvnrfish | mvnrobj | ecmmvnrmle | ecmmvnrstd | ecmmvnrfish |
+ecmmvnrobj | ecmlsrmle | ecmlsrobj | ecmmvnrstd | ecmmvnrfish | ecmnmle | ecmnstd |
+ecmnfish | ecmnhess | ecmnobj | convert2sur | ecmninit
+
+Related Examples
+
+•
+“Multivariate Normal Regression” on page 9-2
+
+•
+“Maximum Likelihood Estimation with Missing Data” on page 9-7
+
+•
+“Valuation with Missing Data” on page 9-26
+
+•
+“Portfolios with Missing Data” on page 9-21
+
+9
+Regression with Missing Data
+
+9-20

@@ -1,0 +1,32 @@
+linebreak
+
+Line break chart
+
+Syntax
+
+linebreak(Data)
+h = linebreak(ax,Data)
+
+Description
+
+linebreak(Data) plots the asset data, in a line break chart.
+
+h = linebreak(ax,Data) adds an optional argument for ax.
+
+Examples
+
+Generate a Line Break Chart for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock. This Linebreak chart is for closing prices of the stock TMW for the most recent 21 days. Note
+that the variable name of asset price is be renamed to 'Price' (case insensitive).
+
+load SimulatedStock.mat
+TMW.Properties.VariableNames{'Close'} = 'Price';
+linebreak(TMW(end-20:end,:))
+title('Line Break Chart for TMW')
+
+15
+Functions
+
+15-1162

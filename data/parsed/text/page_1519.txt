@@ -1,0 +1,60 @@
+Input Arguments
+
+Return — Expected (mean) instantaneous rate of return of GBM price process
+scalar numeric | function_handle
+
+Expected (mean) instantaneous of GBM price process, specified as an array, a numeric scalar, or a
+deterministic function of time as a function handle accepting time t or both time t and state X(t).
+
+Data Types: double | function_handle
+
+Volatility — Instantaneous volatility of BSS stochastic volatility process
+scalar numeric | function_handle
+
+Instantaneous volatility of the BSS stochastic volatility process, specified as an array, a numeric
+scalar, or a deterministic function of time as a function handle accepting time t. Volatility is also
+know as "volatility of volatility" or "volatility of variance" and is usually a nonnegative value.
+
+Data Types: double | function_handle
+
+Alpha — Kernel function parameter representing roughness index
+scalar numeric
+
+Kernel function parameter representing the roughness index, specified as numeric scalar. The value
+of Alpha should be in (-0.5, 0.5). The BSS process behaves locally like a fractional Brownian
+motion (fBm) with the Hurst index H = Alpha + 0.5.
+
+Data Types: double
+
+Beta — Kernel function parameter to control asymptotic memory properties
+scalar numeric
+
+Kernel function parameter to control asymptotic memory properties, specified as numeric scalar.
+
+When you specify Beta > 0 for a gamma kernel specified using KernelType, if Alpha is in (-0.5, 0),
+the gamma kernel generates processes with short memory both for short and long time horizons.
+
+When you specifyBeta > 0.5 for power-law kernel specified using KernelType, if you choose
+Alpha in (-0.5, 0) and Beta in (0.5, 1), the power-law kernel generates processes with short-
+memory property for small time scales and with long range memory for long time horizons.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Example: rvmObj = rvm(Return,Volatility,Alpha,Beta,KernelType="gamma")
+
+KernelType — Type of kernel function assembling BSS process
+"gamma" (default) | string with value "gamma" or "power-law" | character vector with value
+'gamma' or 'power-law'
+
+Type of kernel function (g(x)) assembling the kernel process, specified as a string or character vector
+for one of the following:
+
+rvm
+
+15-213

@@ -1,0 +1,6 @@
+Page 1724
+================================================================================
+
+•
+To support Monte Carlo simulation methods, the output function F returns an NVars-by-1 column
+vector or a two-dimensional matrix with NVars rows.

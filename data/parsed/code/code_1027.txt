@@ -1,0 +1,5 @@
+Page 1061
+================================================================================
+
+Given the multivariate normal model to characterize residual errors in the regression model, the log-
+likelihood function is

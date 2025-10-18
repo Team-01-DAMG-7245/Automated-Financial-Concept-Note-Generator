@@ -1,0 +1,61 @@
+Creating the PortfolioMAD Object
+
+In this section...
+
+“Syntax” on page 6-22
+
+“PortfolioMAD Problem Sufficiency” on page 6-22
+
+“PortfolioMAD Function Examples” on page 6-23
+
+To create a fully specified MAD portfolio optimization problem, instantiate the PortfolioMAD object
+using PortfolioMAD. For information on the workflow when using PortfolioMAD objects, see
+“PortfolioMAD Object Workflow” on page 6-16.
+
+Syntax
+
+Use PortfolioMAD to create an instance of an object of the PortfolioMAD class. You can use the
+PortfolioMAD object in several ways. To set up a portfolio optimization problem in a
+PortfolioMAD object, the simplest syntax is:
+
+p = PortfolioMAD;
+
+This syntax creates a PortfolioMAD object, p, such that all object properties are empty.
+
+The PortfolioMAD object also accepts collections of argument name-value pair arguments for
+properties and their values. The PortfolioMAD object accepts inputs for public properties with the
+general syntax:
+
+p = PortfolioMAD('property1', value1, 'property2', value2, ... );
+
+If a PortfolioMAD object already exists, the syntax permits the first (and only the first argument) of
+PortfolioMAD to be an existing object with subsequent argument name-value pair arguments for
+properties to be added or modified. For example, given an existing PortfolioMAD object in p, the
+general syntax is:
+
+p = PortfolioMAD(p, 'property1', value1, 'property2', value2, ... );
+
+Input argument names are not case-sensitive, but must be completely specified. In addition, several
+properties can be specified with alternative argument names (see “Shortcuts for Property Names” on
+page 6-26). The PortfolioMAD object tries to detect problem dimensions from the inputs and, once
+set, subsequent inputs can undergo various scalar or matrix expansion operations that simplify the
+overall process to formulate a problem. In addition, a PortfolioMAD object is a value object so that,
+given portfolio p, the following code creates two objects, p and q, that are distinct:
+
+q = PortfolioMAD(p, ...)
+
+PortfolioMAD Problem Sufficiency
+
+A MAD portfolio optimization problem is completely specified with the PortfolioMAD object if the
+following three conditions are met:
+
+•
+You must specify a collection of asset returns or prices known as scenarios such that all scenarios
+are finite asset returns or prices. These scenarios are meant to be samples from the underlying
+probability distribution of asset returns. This condition can be satisfied by the setScenarios
+function or with several canned scenario simulation functions.
+
+6
+MAD Portfolio Optimization Tools
+
+6-22

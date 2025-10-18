@@ -1,0 +1,12 @@
+{
+  "page": 1272,
+  "original_text": "for j = 1:nIndices\n    R(:,j) = icdf(tails{j}, U(:,j));\nend",
+  "ocr_text": "forj=1:nIndices\nR(:,j)=icdf(tails{j},U(:,j));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 470.08,
+    "x1": 285.05,
+    "y1": 502.15
+  },
+  "confidence": "high"
+}

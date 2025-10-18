@@ -1,0 +1,21 @@
+The resulting plot shows that smaller recovery rates produce higher premia, as expected, since in the
+event of default, the protection payments are higher.
+
+See Also
+cdsbootstrap | cdsprice | cdsspread | cdsrpv01
+
+Related Examples
+
+•
+“First-to-Default Swaps” (Financial Instruments Toolbox)
+
+•
+“Credit Default Swap Option” (Financial Instruments Toolbox)
+
+•
+“Counterparty Credit Risk and CVA” (Financial Instruments Toolbox)
+
+8
+Credit Risk Analysis
+
+8-106

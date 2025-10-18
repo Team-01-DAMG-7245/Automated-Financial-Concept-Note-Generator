@@ -1,0 +1,20 @@
+Fit a simple univariate Vasicek model to the daily equivalent yields of the three-month Euribor data:
+
+Given initial conditions, the distribution of the short rate at some time T in the future is Gaussian with
+mean:
+
+and variance:
+
+To calibrate this simple short-rate model, rewrite it in more familiar regression format:
+
+where:
+
+perform an ordinary linear regression where the model volatility is proportional to the standard error
+of the residuals:
+
+yields     = Dataset.EB3M;
+regressors = [ones(length(yields) - 1, 1) yields(1:end-1)];
+
+Simulating Interest Rates
+
+14-51

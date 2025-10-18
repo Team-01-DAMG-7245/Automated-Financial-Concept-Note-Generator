@@ -1,0 +1,65 @@
+If RatesConvention is "PerStep", then the CashBorrowRate value is a decimal percentage and
+represents the interest accrual rate for one time step in the backtest. For example, if the backtest is
+using daily asset price data, then the CashBorrowRate value must be the daily interest rate for
+negative cash balances.
+
+Data Types: double | timetable
+
+InitialPortfolioValue — Initial portfolio value
+10000 (default) | numeric
+
+Initial portfolio value, specified as the comma-separated pair consisting of
+'InitialPortfolioValue' and a scalar numeric.
+
+Data Types: double
+
+RatesConvention — Defines how backtest engine uses RiskFreeRate and CashBorrowRate
+to compute interest
+"Annualized" (default) | character vector with value 'Annualized' or 'PerStep' | string with
+value "Annualized" or "PerStep"
+
+Defines how backtest engine uses RiskFreeRate and CashBorrowRate to compute interest,
+specified as the comma-separated pair consisting of 'RatesConvention' and a character vector or
+string.
+
+•
+'Annualized' — The rates are treated as annualized rates and the backtest engine computes
+incremental interest based on the day count convention specified in the Basis property. This is
+the default.
+
+•
+'PerStep' — The rates are treated as per-step rates and the backtest engine computes interest
+at the provided rates at each step of the backtest.
+
+Data Types: char | string
+
+DateAdjustment — Date handling behavior for rebalance dates that are missing from asset
+prices timetable
+"Previous" (default) | character vector with value 'Previous', 'Next', or 'None' | string with
+value "Previous", "Next", or "None"
+
+Date handling behavior for rebalance dates that are missing from asset prices timetable, specified as
+the comma-separated pair consisting of 'DateAdjustment' and a character vector or string.
+
+•
+'Previous' — For each rebalance date in the rebalance schedule, the rebalance occurs on the
+nearest date in the asset timetable that occurs on or before the requested rebalance date. This is
+the default.
+
+•
+'Next' — Move to the next date.
+
+•
+'None' — Dates are not adjusted and the backtest engine errors when encountering a rebalance
+date that does not appear in the asset prices timetable.
+
+Data Types: char | string
+
+Basis — Defines day-count convention when computing interest at RiskFreeRate or
+CashBorrowRate
+0 (default) | numeric values: 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13
+
+15
+Functions
+
+15-266

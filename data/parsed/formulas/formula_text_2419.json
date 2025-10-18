@@ -1,0 +1,12 @@
+{
+  "page": 1240,
+  "original_text": "call = mean(exp(-rate*T)*max(squeeze(X(end,:,:)) - strike, 0))",
+  "ocr_text": "call_=mean(exp(-rate*T)*max(squeeze(X(end,:,:))-strike,0))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 608.48,
+    "x1": 425.91,
+    "y1": 618.95
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,58 @@
+LastCouponDate — Last coupon date of bond before maturity date
+datetime array | string array | date character vector
+
+Last coupon date of a bond before maturity date, specified as a NUMBONDS-by-1 vector using a
+datetime array, string array, or date character vectors.
+
+LastCouponDate is used when a bond has an irregular last coupon period. In the absence of a
+specified FirstCouponDate, a specified LastCouponDate determines the coupon structure of the
+bond. The coupon structure of a bond is truncated at the LastCouponDate, regardless of where it
+falls, and is followed only by the bond's maturity cash flow date. If you do not specify a
+LastCouponDate, the cash flow payment dates are determined from other inputs.
+
+To support existing code, cpndaysp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+NumDaysPrevious — Number of days between previous coupon date and settlement date
+vector
+
+Number of days between the previous coupon date and the settlement date, returned as an
+NUMBONDS-by-1 vector. If the settlement date is a coupon date, this function always returns the
+settlement date.
+
+When the coupon frequency is 0 (a zero coupon bond), the previous coupon date is calculated as if
+the frequency were semiannual.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cpndaysp supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+accrfrac | cfamounts | cfdates | cftimes | cpncount | cpndaten | cpndatenq | cpndatep |
+cpndaysn | cpndatepq | cpnpersz | datetime
+
+15
+Functions
+
+15-780

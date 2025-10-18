@@ -1,0 +1,12 @@
+{
+  "page": 1107,
+  "original_text": "Settle     = datetime(1995,1,15);\nMaturity   = datetime( [2020, 4, 3;...\n                        2025, 5,14;...\n                        2019, 6, 9;...\n                        2019, 2,25])",
+  "ocr_text": "Settle =datetime(1995,1,15);\n\nMaturity =datetime([2020,4,3;...\n2025,5,14;...\n2019,6,9;...\n2019,2,25])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 269.32,
+    "x1": 295.9,
+    "y1": 322.99
+  },
+  "confidence": "high"
+}

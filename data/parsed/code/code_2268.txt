@@ -1,0 +1,6 @@
+Page 2086
+================================================================================
+
+Number of days between the previous coupon date and the settlement date, returned as an
+NUMBONDS-by-1 vector. If the settlement date is a coupon date, this function always returns the
+settlement date.

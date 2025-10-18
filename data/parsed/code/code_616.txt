@@ -1,0 +1,5 @@
+Page 559
+================================================================================
+
+% Return observation
+nextObservation = [loggedSignals.Wealth;loggedSignals.TimePeriod];

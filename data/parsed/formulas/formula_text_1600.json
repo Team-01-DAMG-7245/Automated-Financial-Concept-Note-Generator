@@ -1,0 +1,12 @@
+{
+  "page": 807,
+  "original_text": "p = PortfolioMAD('scenario', AssetScenarios, 'lb', 0, 'budget', 1);\nplotFrontier(p);",
+  "ocr_text": "p=PortfolioMAD(scenario,AssetScenarios,lb,0,budget,1);\nplotFrontier(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 485.89,
+    "x1": 348.16,
+    "y1": 501.01
+  },
+  "confidence": "high"
+}

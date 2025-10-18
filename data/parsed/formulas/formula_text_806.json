@@ -1,0 +1,12 @@
+{
+  "page": 462,
+  "original_text": "% Obtain scenarios with losses below cutoff.\nidxLoss = returnsTT.Market_Index <= -cutoff | ...\n    returnsTT.Risk_Parity <= -cutoff;\n% Indices when risk parity outperforms the market\nidxLossMarketWorse = ...\n    returnsTT.Market_Index(idxLoss) <= returnsTT.Risk_Parity(idxLoss);\ncatLoss = categorical(idxLossMarketWorse, ...\n    [0 1], {'RiskParityWorse','MarketIndexWorse'});\n% Plot pie chart.\npie(catLoss)",
+  "ocr_text": "Obtainscenarioswithlossesbelowcutoff.\n\nidxLoss=returnsTT.Market_Index=-cutoff]...\nreturnsTT.Risk_Parity=-cutoff;\n\nIndiceswhenriskparityoutperformsthemarket\n\nidxLossMarketWorse=...\nreturnsTT.Market_Index(idxLoss)=returnsTT.Risk_Parity(idxLoss);\n\ncatLoss=categorical(idxLossMarketWorse,...\n[01],{RiskParityWorse,MarketIndexWorse});\n\nPlotpiechart.\n\npie(catLoss)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 136.55,
+    "x1": 469.26,
+    "y1": 244.22
+  },
+  "confidence": "high"
+}

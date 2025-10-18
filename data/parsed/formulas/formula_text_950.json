@@ -1,0 +1,12 @@
+{
+  "page": 510,
+  "original_text": "riskContribution = zeros(nX,nP);\nfor i = 1:nP\n    weights = portWeights(:,i);\n    % Portfolio variance\n    portVar = weights'*Sigma*weights;\n    % Marginal constribution to portfoli risk (MCR)\n    margRiskCont = weights.*(Sigma*weights)/sqrt(portVar);\n    % Percent contribution to portfolio risk\n    riskContribution(:,i) = margRiskCont/sqrt(portVar);\nend",
+  "ocr_text": "riskContribution=zeros(nX,nP);\nfori=1:nP\nweights=portWeights(:,i);\nPortfoliovariance\nportVar=weights*Sigma*weights;\nMarginalconstributiontoportfolirisk(MCR)\nmargRiskCont=weights.*(Sigma*weights)/sqrt(portVar);\nPercentcontributiontoportfoliorisk\nriskContribution(:,i)=margRiskCont/sqrt(portVar);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 136.23,
+    "x1": 404.24,
+    "y1": 243.89
+  },
+  "confidence": "high"
+}

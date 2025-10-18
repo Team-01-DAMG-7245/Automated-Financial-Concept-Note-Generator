@@ -1,0 +1,12 @@
+{
+  "page": 1121,
+  "original_text": "Total = sum(Weights, 2);     % Add the weights\nTotal = Total(:,ones(3,1));  % Make size-compatible matrix\nWeights = Weights./Total;    % Normalize so sum = 1",
+  "ocr_text": "Total_=sum(Weights,2); Add_theweights\nTotal_=Total(:,ones(3,1));_Makesize-compatiblematrix\nWeights=Weights./Total; Normalizesosum=1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.79,
+    "x1": 404.25,
+    "y1": 170.86
+  },
+  "confidence": "high"
+}

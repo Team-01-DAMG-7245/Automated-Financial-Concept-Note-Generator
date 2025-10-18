@@ -1,0 +1,12 @@
+{
+  "page": 473,
+  "original_text": "numFeatures = width(returnData);\nnumHiddenUnits_LSTM = 10;",
+  "ocr_text": "numFeatures=width(returnData);\nnumHiddenUnits_LSTM=10;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.03,
+    "x1": 263.38,
+    "y1": 654.29
+  },
+  "confidence": "high"
+}

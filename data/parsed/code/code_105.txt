@@ -1,0 +1,5 @@
+Page 117
+================================================================================
+
+The supporting function optimizeTrading.m uses bayesopt to optimize the trading strategy in
+tradeOnQ.

@@ -1,0 +1,12 @@
+{
+  "page": 2222,
+  "original_text": "% Create a Portfolio object\np = Portfolio(NumAssets=6);\n% Define the constraints of the portfolio methods\np = setDefaultConstraints(p); % Long-only, fully invested weights",
+  "ocr_text": "CreateaPortfolioobject\n\np=Portfolio(NumAssets=6);\nDefinetheconstraintsoftheportfoliomethods\np=setDefaultConstraints(p);*Long-only,fullyinvestedweights",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 442.19,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

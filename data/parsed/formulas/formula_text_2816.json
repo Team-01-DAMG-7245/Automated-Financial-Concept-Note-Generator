@@ -1,0 +1,12 @@
+{
+  "page": 1442,
+  "original_text": "obj = \n   Class HESTON: Heston Bivariate Stochastic Volatility\n   ----------------------------------------------------\n     Dimensions: State = 2, Brownian = 2\n   ----------------------------------------------------\n      StartTime: 0\n     StartState: 1 (2x1 double array) \n    Correlation: 2x2 diagonal double array \n          Drift: drift rate function F(t,X(t)) \n      Diffusion: diffusion rate function G(t,X(t)) \n     Simulation: simulation method/function simByEuler\n         Return: 0.1\n          Speed: 0.2\n          Level: 0.1\n     Volatility: 0.05",
+  "ocr_text": "obj=\nClassHESTON:HestonBivariateStochasticVolatility\nDimensions:State=2,Brownian=2\nStartTime:0\nStartState:1(2x1doublearray)\nCorrelation:2x2diagonaldoublearray\nDrift:driftratefunctionF(t,X(t))\nDiffusion:diffusionratefunctionG(t,X(t))\nSimulation:simulationmethod/functionsimByEuler\nReturn:0.1\nSpeed:0.2\nLevel:0.1\nVolatility:0.05",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 289.95,
+    "x1": 387.99,
+    "y1": 451.61
+  },
+  "confidence": "high"
+}

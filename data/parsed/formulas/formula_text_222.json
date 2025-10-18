@@ -1,0 +1,12 @@
+{
+  "page": 136,
+  "original_text": "mpTT = timetable(mpBT,RowTimes=tBT);",
+  "ocr_text": "mpTT=timetable(mpBT,RowTimes=tBT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 134.83,
+    "x1": 285.05,
+    "y1": 145.29
+  },
+  "confidence": "high"
+}

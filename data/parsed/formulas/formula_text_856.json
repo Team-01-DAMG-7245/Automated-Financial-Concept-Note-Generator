@@ -1,0 +1,12 @@
+{
+  "page": 478,
+  "original_text": "% Invest in long positions proportionally to their predicted return.\nLongStrategy = backtestStrategy('LongOnly',@LongOnlyRebalanceFcn, ...\n    'TransactionCosts',tradingCosts, ...\n    'LookbackWindow',1);",
+  "ocr_text": "Investinlongpositionsproportionallytotheirpredictedreturn.\nLongStrategy=backtestStrategy(LongOnly,LongOnlyRebalanceFcn,...\nTransactionCosts,tradingCosts,...\nLookbackWindow,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 304.44,
+    "x1": 463.87,
+    "y1": 347.31
+  },
+  "confidence": "high"
+}

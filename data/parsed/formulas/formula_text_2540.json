@@ -1,0 +1,12 @@
+{
+  "page": 1298,
+  "original_text": "firstComponentModel = arima( \"ARLags\", 1, ...\n    \"MALags\", 1, ...\n    \"Distribution\", \"t\", ...\n    \"Variance\", garch( 1, 1 ) );\nfirstComponentModel = estimate( firstComponentModel, firstComponent );",
+  "ocr_text": "firstComponentModel=arima(ARLags,1,...\n\nMALags,1,...\n\nDistribution,t,...\n\nVariance,garch(1,1));\nfirstComponentModel=estimate(firstComponentModel,firstComponent);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 515.91,
+    "x1": 469.26,
+    "y1": 569.58
+  },
+  "confidence": "high"
+}

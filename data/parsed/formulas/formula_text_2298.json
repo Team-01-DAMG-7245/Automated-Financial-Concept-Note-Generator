@@ -1,0 +1,12 @@
+{
+  "page": 1179,
+  "original_text": "index = timerange(datetime('01-Jan-2014','Locale','en_US'),datetime('31-Dec-2014','Locale','en_US",
+  "ocr_text": "index=timerange(datetime(01-Jan-2014,Locale,en_US),datetime(31-Dec-2014,Locale,en_U",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 615.59,
+    "y1": 287.09
+  },
+  "confidence": "high"
+}

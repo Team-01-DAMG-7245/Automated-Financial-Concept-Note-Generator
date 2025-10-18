@@ -1,0 +1,18 @@
+Page 1226
+================================================================================
+
+SDELD = 
+   Class SDELD: SDE with Linear Drift
+   ----------------------------------------
+     Dimensions: State = 6, Brownian = 6
+   ----------------------------------------
+      StartTime: 0
+     StartState: 100 (6x1 double array) 
+    Correlation: 6x6 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+              A: 6x1 double array
+              B: 6x6 diagonal double array
+          Alpha: 6x1 double array
+          Sigma: 6x6 diagonal double array

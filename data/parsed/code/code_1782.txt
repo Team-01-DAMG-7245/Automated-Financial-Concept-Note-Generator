@@ -1,0 +1,5 @@
+Page 1501
+================================================================================
+
+If you specify JumpVol as a function of time and state, JumpVol must return a scalar when you call it
+with two inputs:

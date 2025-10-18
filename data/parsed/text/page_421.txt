@@ -1,0 +1,35 @@
+% Get the total return of each stock for the duration of the data set.
+totalRet(end,:)
+
+ans=1×15 timetable
+       Dates         AA       CAT       DIS        GM       HPQ       JNJ       MCD       MMM    
+    ___________    ______    ______    ______    ______    ______    ______    ______    ______
+
+29-Dec-2006    1.0254    1.0781    1.4173    1.6852    1.4451    1.0965    1.3548    1.0087
+
+Build Signal Table
+
+In addition to the historical adjusted asset prices, the backtesting framework allows you to optionally
+specify signal data when running a backtest. Specify the signal data in a similar way as the prices by
+using a MATLAB® timetable. The "time" dimension of the signal timetable must match that of the
+prices timetable — that is, the rows of each table must have matching datetime values for the Time
+column.
+
+This example builds a signal timetable to support each of the three investment strategies:
+
+•
+Simple moving average crossover (SMA) strategy
+
+•
+Moving Average Convergence / Divergence (MACD) strategy
+
+•
+Relative Strength Index (RSI) strategy
+
+Each strategy has a timetable of signals that are precomputed. Before you run the backtest, you
+merge the three separate signal timetables into a single aggregate signal timetable to use for the
+backtest.
+
+Backtest Investment Strategies with Trading Signals
+
+4-253

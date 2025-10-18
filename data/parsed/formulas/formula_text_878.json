@@ -1,0 +1,12 @@
+{
+  "page": 484,
+  "original_text": "% Use first month as warm-up period for the risk budgeting strategy.\nstart_date = rebalance_schedule(2);",
+  "ocr_text": "Usefirstmonthaswarm-upperiodfortheriskbudgetingstrategy.\nstart_date=rebalance_schedule(2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 326.15,
+    "x1": 458.42,
+    "y1": 347.42
+  },
+  "confidence": "high"
+}

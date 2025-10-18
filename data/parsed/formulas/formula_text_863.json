@@ -1,0 +1,12 @@
+{
+  "page": 480,
+  "original_text": "function new_weights = LongOnlyRebalanceFcn(current_weights,pricesTT,signalTT)  \n% Long only strategy, in proportion to the signal.",
+  "ocr_text": "functionnew_weights=LongOnlyRebalanceFcn(current_weights,pricesTT,signalTT)\nLongonlystrategy,inproportiontothesignal.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 427.83,
+    "x1": 523.45,
+    "y1": 449.09
+  },
+  "confidence": "high"
+}

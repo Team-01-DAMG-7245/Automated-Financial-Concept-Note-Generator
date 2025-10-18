@@ -1,0 +1,12 @@
+{
+  "page": 2372,
+  "original_text": "FutureVal = fvvar(CashFlow,Rate) returns the future value of a varying cash flow.",
+  "ocr_text": "FutureVal=fvvar(CashFlow,Rate)returnsthefuturevalueofavaryingcashflow.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 252.3,
+    "x1": 499.39,
+    "y1": 263.93
+  },
+  "confidence": "high"
+}

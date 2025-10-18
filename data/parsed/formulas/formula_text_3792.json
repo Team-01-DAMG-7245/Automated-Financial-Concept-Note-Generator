@@ -1,0 +1,12 @@
+{
+  "page": 2143,
+  "original_text": "NumDays = daysdif('3/1/99', '3/1/00', 1)",
+  "ocr_text": "NumDays=daysdif(3/1/99,3/1/00,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 551.87,
+    "x1": 306.73,
+    "y1": 562.34
+  },
+  "confidence": "high"
+}

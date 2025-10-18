@@ -1,0 +1,9 @@
+Page 522
+================================================================================
+
+% Define strategies for backtest engine
+strategies = [stratMarkowitz stratRobust];
+% Define a backtest engine
+backtester = backtestEngine(strategies);
+% Run the backtest
+backtester = runBacktest(backtester,pricesTT,Start=warmupPeriod);

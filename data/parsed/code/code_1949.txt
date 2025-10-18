@@ -1,0 +1,10 @@
+Page 1551
+================================================================================
+
+The “RebalanceFrequency” on page 15-0
+ property determines how often the backtesting engine
+rebalances and reallocates the portfolio of a strategy using the rebalance function. Set the
+RebalanceFrequency in terms of time steps in the backtest. For example, if the backtesting engine
+is testing a strategy with a set of daily price data, then set the rebalance function in days. Essentially,
+RebalanceFrequency represents the number of rows of price data to process between each call to
+the strategy rebalance function.

@@ -1,0 +1,12 @@
+{
+  "page": 377,
+  "original_text": "fprintf('Tracking error for Max. Info Ratio portfolio is %0.2f%%\\n', optPortRisk*sqrt(252)*100);",
+  "ocr_text": "fprintf(TrackingerrorforMax.InfoRatioportfoliois0.2f*sn,optPortRisk*sqrt(252)*100);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 307.4,
+    "x1": 610.16,
+    "y1": 317.87
+  },
+  "confidence": "high"
+}

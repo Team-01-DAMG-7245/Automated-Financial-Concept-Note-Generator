@@ -1,0 +1,12 @@
+{
+  "page": 1680,
+  "original_text": "batesObj = bates(Return, Speed, Level, Volatility,...\n                JumpFreq, JumpMean, JumpVol,'startstate',StartState,...\n                'correlation',Correlation)",
+  "ocr_text": "batesObj=bates(Return,Speed,Level,Volatility,...\nJumpFreq,JumpMean,JumpVol,startstate,StartState,...\ncorrelation,Correlation)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 474.7,
+    "y1": 211.49
+  },
+  "confidence": "high"
+}

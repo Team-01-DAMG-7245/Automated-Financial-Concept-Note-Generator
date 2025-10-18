@@ -1,0 +1,12 @@
+{
+  "page": 336,
+  "original_text": "q = setTrackingError(p,TrackingError,TrackingPort);",
+  "ocr_text": "q=setTrackingError(p,TrackingError,TrackingPort);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 366.32,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

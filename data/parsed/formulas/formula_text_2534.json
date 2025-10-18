@@ -1,0 +1,12 @@
+{
+  "page": 1292,
+  "original_text": "InferredVolatility = array2timetable( InferredVolatility, ...\n    \"VariableNames\", commodityNames, ...\n    \"RowTimes\", Returns.Date );\nInferredVolatility.Properties.DimensionNames(1) = \"Date\";",
+  "ocr_text": "InferredVolatility=array2timetable(InferredVolatility,...\nVariableNames,commodityNames,...\nRowlimes,Returns.Date);\n\nInferredVolatility.Properties.DimensionNames(1)=Date;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 420.52,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

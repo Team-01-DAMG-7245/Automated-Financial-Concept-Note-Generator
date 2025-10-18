@@ -1,0 +1,78 @@
+Furthermore, you can aggregate simple returns through time using the formula
+
+ps(T)
+ps(1) −1 = ∏
+t = 2
+
+T
+
+rs(t) + 1 −1,
+
+where the left-hand side represents the simple return over the entire interval [0,T].
+
+Continuous returns add 1 to PC to move the range to (0,∞), the domain of the real logarithm.
+Continuous returns have the time aggregation property
+
+log pc(T)
+pc(1) −1 = log ∏
+t = 2
+
+T
+pc(t)
+pc(t −1)
+= ∑
+t = 2
+
+T
+log
+pc(t)
+pc(t −1) = ∑
+t = 2
+
+T
+rc(t) .
+
+This transformation ensures additivity of compound returns.
+
+If negative prices are allowed, the range of simple returns PC expands to (−∞,∞), that is, anything
+from unlimited loss to unlimited gain. In the formula for continuous returns, logarithms of negative
+numbers are unavoidable. The logarithm of a negative number is not a mathematical problem
+because the complex logarithm (the MATLAB default) interprets negative numbers as complex
+numbers with phase angle ±π, so that, for example,
+
+−2 = 2eiπ
+
+log( −2) = 2 + iπ
+
+If x < 0, log(x) = log(|x|) ± iπ. The log of a negative number has an imaginary part of ±π. The log of 0
+is undefined because the range of the exponential eiθ is positive. Therefore, zero prices (that is, free
+exchanges) are unsupported.
+
+Analysis of Negative Price Returns
+
+To illustrate negative price inputs, consider the following price series and its simple returns.
+
+p = [3; 1; -2; -1; 1]
+
+p =
+
+3
+     1
+    -2
+    -1
+     1
+
+rs = tick2ret(p)
+
+rs =
+
+-0.6667
+   -3.0000
+   -0.5000
+   -2.0000
+
+This table summarizes the recursions.
+
+Returns with Negative Prices
+
+2-33

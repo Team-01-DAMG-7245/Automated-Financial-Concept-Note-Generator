@@ -1,0 +1,12 @@
+{
+  "page": 621,
+  "original_text": "% Rebalance at the beginning of the month.\ntEnd = datetime(2006,12,31);\nrebalFreq = t0:calmonths(1):tEnd;",
+  "ocr_text": "Rebalanceatthebeginningofthemonth.\ntEnd=datetime(2006,12,31);\nrebalFreq=tQ:calmonths(1):tEnd;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 415.19,
+    "x1": 317.55,
+    "y1": 447.26
+  },
+  "confidence": "high"
+}

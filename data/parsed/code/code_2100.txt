@@ -1,0 +1,6 @@
+Page 1710
+================================================================================
+
+This example performs antithetic sampling by explicitly setting the Antithetic flag to true, and
+then specifies an end-of-period processing function to record the maximum and terminal stock prices
+on a path-by-path basis.

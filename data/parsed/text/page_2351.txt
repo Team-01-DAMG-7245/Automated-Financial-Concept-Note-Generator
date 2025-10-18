@@ -1,0 +1,55 @@
+Create an annualized zero-rate term structure to calculate the zero discount margin.
+
+Rates = [0.0500;
+         0.0505;
+         0.0510;
+         0.0520];
+StartDates = [datetime(2011,1,20);
+              datetime(2011,4,15);
+              datetime(2011,7,15);
+              datetime(2011,11,15)];
+EndDates =   [datetime(2011,4,15);
+              datetime(2011,7,15);
+              datetime(2011,11,15);
+              datetime(2012,1,15)];
+ValuationDate = datetime(2011,1,20);
+RateSpec = intenvset('Compounding', Reset, 'Rates', Rates,...
+'StartDates', StartDates, 'EndDates', EndDates,...
+'ValuationDate', ValuationDate, 'Basis', Basis);
+
+Calculate the zero discount margin using the previous yield curve.
+
+dMargin = floatdiscmargin(Price, Spread, Settle, Maturity, ...
+RateSpec, LatestFloatingRate,'Reset', Reset, 'Basis', Basis, ...
+'AdjustCashFlowsBasis', true)
+
+dMargin = 
+46.0689
+
+Input Arguments
+
+Price — Bond prices where discount margin is to be computed
+matrix
+
+Bond prices where discount margin is to be computed, specified as a NINST-by-1 matrix.
+
+Note The spread is calculated against the clean price (the function internally does not add the
+accrued interest to the price specified by the Price input). If the spread is required against the dirty
+price, the price of a bond that includes the accrued interest, you must supply the dirty price for the
+Price input.
+
+Data Types: double
+
+Spread — Number of basis points over the reference rate
+numeric
+
+Number of basis points over the reference rate, specified as a NINST-by-1 matrix.
+
+Data Types: double
+
+Settle — Settlement date of the floating-rate bonds
+datetime array | string array | date character vector
+
+floatdiscmargin
+
+15-1045

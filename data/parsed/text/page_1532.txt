@@ -1,0 +1,55 @@
+roughheston
+
+Rough Heston model
+
+Description
+
+Creates and displays a roughheston object.
+
+Use roughheston to create a rough Heston stochastic volatility model. Rough Heston models are
+bivariate composite models, composed of two coupled and dissimilar univariate models, each driven
+by a single Brownian motion source of risk over NPERIODS consecutive observation periods,
+approximating continuous-time rough Heston stochastic volatility processes.
+
+The first univariate model is a geometric Brownian motion (GBM) model with a stochastic volatility
+function, and usually corresponds to a price process whose variance rate is governed by the second
+univariate model. The second model incorporates the fractional Brownian motion (fBm) into a Cox-
+Ingersoll-Ross (CIR) square root diffusion process that describes the evolution of the variance rate of
+the coupled GBM price process.
+
+Creation
+
+Syntax
+
+RoughHeston = roughheston(Return,Speed,Level,Volatility,Alpha)
+RoughHeston = roughheston( ___ ,Name=Value)
+
+Description
+
+RoughHeston = roughheston(Return,Speed,Level,Volatility,Alpha) creates a default
+RoughHeston object with “Properties” on page 15-229 for these required arguments.
+
+Specify the required input parameters as one of the following types:
+
+•
+A MATLAB array. Specifying an array indicates a static (non-time-varying) parametric
+specification. This array fully captures all implementation details, which are clearly associated
+with a parametric form.
+
+•
+A MATLAB function. Specifying a function provides indirect support for virtually any static,
+dynamic, linear, or nonlinear model. This parameter is supported through an interface because all
+implementation details are hidden and fully encapsulated by the function.
+
+Note You can specify combinations of array and function input parameters as needed. Moreover, a
+parameter is identified as a deterministic function of time if the function accepts a scalar time t as its
+only input argument. Otherwise, a parameter is assumed to be a function of time t and state X(t) and
+is invoked with both input arguments.
+
+RoughHeston = roughheston( ___ ,Name=Value) creates a RoughHeston object with additional
+options specified by one or more name-value arguments to set the properties on page 15-229.
+
+15
+Functions
+
+15-226

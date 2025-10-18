@@ -1,0 +1,83 @@
+Creating Geometric Brownian Motion (GBM) Models . . . . . . . . . . . . . .
+14-25
+Creating Stochastic Differential Equations from Mean-Reverting Drift
+(SDEMRD) Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-26
+Creating Cox-Ingersoll-Ross (CIR) Square Root Diffusion Models . . . . .
+14-27
+Creating Hull-White/Vasicek (HWV) Gaussian Diffusion Models . . . . . . .
+14-28
+Creating Heston Stochastic Volatility Models . . . . . . . . . . . . . . . . . . . .
+14-29
+
+Simulating Equity Prices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-31
+Simulating Multidimensional Market Models . . . . . . . . . . . . . . . . . . . .
+14-31
+Induce Dependence and Correlation Between States . . . . . . . . . . . . . .
+14-41
+Dynamic Behavior of Market Parameters . . . . . . . . . . . . . . . . . . . . . . .
+14-43
+Price European Stock Options Using Monte Carlo Simulation . . . . . . . .
+14-47
+
+Simulating Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-50
+Simulate Interest Rates Through Interpolation . . . . . . . . . . . . . . . . . . .
+14-50
+Simulate Positive Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-54
+
+Stratified Sampling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-58
+
+Quasi-Monte Carlo Simulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-63
+
+Performance Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-65
+Managing Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-65
+Enhancing Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-66
+Optimizing Accuracy: About Solution Precision and Error . . . . . . . . . . .
+14-66
+
+Price American Basket Options Using Standard Monte Carlo and Quasi-
+Monte Carlo Simulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-71
+
+Volatility Modeling for Soft Commodities . . . . . . . . . . . . . . . . . . . . . . . .
+14-88
+
+Improving Performance of Monte Carlo Simulation with Parallel
+Computing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-111
+
+Functions
+15
+
+Bibliography
+A
+
+Bibliography . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-2
+Bond Pricing and Yields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-2
+Term Structure of Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-2
+Derivatives Pricing and Yields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-3
+Portfolio Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-3
+Investment Performance Metrics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-3
+Financial Statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-4
+Standard References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-4
+Credit Risk Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+A-5
+
+xxiv
+Contents

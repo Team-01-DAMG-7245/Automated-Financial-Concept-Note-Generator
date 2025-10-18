@@ -1,0 +1,12 @@
+{
+  "page": 2334,
+  "original_text": "STDVec = sqrt(diag(ExpCovariance))",
+  "ocr_text": "sTDVec=sqrt(diag(ExpCovariance))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 533.57,
+    "x1": 301.3,
+    "y1": 544.04
+  },
+  "confidence": "high"
+}

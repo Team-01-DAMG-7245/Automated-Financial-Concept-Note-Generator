@@ -1,0 +1,5 @@
+Page 135
+================================================================================
+
+Define the backtest strategies by passing the a function handle to rebalance to “Create
+backtestStrategy” on page 15-233. Set the following properties:

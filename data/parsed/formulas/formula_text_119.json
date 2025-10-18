@@ -1,0 +1,12 @@
+{
+  "page": 96,
+  "original_text": "DTTPreview = DTT(:,1:4)",
+  "ocr_text": "DTTPreview=DTT(:,1:4)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 402.59,
+    "x1": 214.61,
+    "y1": 413.06
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1308,
+  "original_text": "brinsonAttributionObj = brinsonAttribution(AssetTable) creates a\nbrinsonAttribution object and sets the properties on page 15-4. Use the\nbrinsonAttribution object with the categoryAttribution, categoryReturns,\ncategoryWeights, totalAttribution, and summary functions.",
+  "ocr_text": "brinsonAttributionObj=brinsonAttribution(AssetTable)createsa\nbrinsonAttributionobjectandsetsthepropertiesonpage15-4.Usethe\nbrinsonAttributionobjectwiththecategoryAttribution,categoryReturns,\ncategoryWeights,totalAttribution,andsummaryfunctions.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 571.1,
+    "x1": 485.72,
+    "y1": 618.73
+  },
+  "confidence": "high"
+}

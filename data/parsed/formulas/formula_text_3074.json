@@ -1,0 +1,12 @@
+{
+  "page": 1611,
+  "original_text": "ewStrategy = backtestStrategy(\"EqualWeighted\",equalWeightsRebalanceFcn, ...\n    'RebalanceFrequency',60, ...\n    'LookbackWindow',0, ...\n    'TransactionCosts',0.005, ...\n    'InitialWeights',equalWeightsVector)",
+  "ocr_text": "ewStrategy=backtestStrategy(EqualWeighted,equalWeightsRebalanceFcn,...\nRebalanceFrequency,60,...\nLookbackWindow,0,...\nTransactionCosts,0.005,...\nInitialWeights,equalWeightsVector)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 333.7,
+    "x1": 496.38,
+    "y1": 387.37
+  },
+  "confidence": "high"
+}

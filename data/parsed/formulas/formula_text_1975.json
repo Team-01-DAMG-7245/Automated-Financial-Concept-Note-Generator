@@ -1,0 +1,12 @@
+{
+  "page": 1025,
+  "original_text": "for k = 1:length(PaymentDates)\n   fprintf('%s \\t %5.4f \\t %8.2f\\n',datestr(PaymentDates(k)), ...",
+  "ocr_text": "fork=1:length(PaymentDates)\nfprintf(sst5.4f(t8.2f(n,datestr(PaymentDates(k)),...",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 442.2,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1590,
+  "original_text": "% Set the initial weights on the strategy in the backtester. You can do this when you \n% create the strategy as well, using the 'InitialWeights' parameter.\nbacktester.Strategies(1).InitialWeights = initWeights;",
+  "ocr_text": "Settheinitialweightsonthestrategyinthebacktester.Youcandothiswhenyou\ncreatethestrategyaswell,usingtheInitialWeightsparameter.\nbacktester.Strategies(1).InitialWeights=initWeights;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 577.03,
+    "x1": 555.95,
+    "y1": 609.09
+  },
+  "confidence": "high"
+}

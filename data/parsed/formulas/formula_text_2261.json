@@ -1,0 +1,12 @@
+{
+  "page": 1160,
+  "original_text": "returns = price2ret(Data);    % Logarithmic returns\nT       = size(returns,1);    % Number of returns (the historical sample size)",
+  "ocr_text": "returns=price2ret(Data); Logarithmicreturns\nT =size(returns,1); SNumberofreturns(thehistoricalsamplesize)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 462.13,
+    "x1": 512.62,
+    "y1": 483.4
+  },
+  "confidence": "high"
+}

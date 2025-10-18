@@ -1,0 +1,12 @@
+{
+  "page": 145,
+  "original_text": "U = E(r) - 0.005*A*sig^2",
+  "ocr_text": "U=E(r)-0.005*A*sig*2",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 309.25,
+    "x1": 220.03,
+    "y1": 319.71
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,60 @@
+Working with Average Turnover Constraints Using Portfolio
+Object
+
+The turnover constraint is an optional linear absolute value constraint (see “Average Turnover
+Constraints” on page 4-14) that enforces an upper bound on the average of purchases and sales. The
+turnover constraint can be set using the Portfolio object or the setTurnover function. The
+turnover constraint depends on an initial or current portfolio, which is assumed to be zero if not set
+when the turnover constraint is set. The turnover constraint has properties Turnover, for the upper
+bound on average turnover, and InitPort, for the portfolio against which turnover is computed.
+
+Setting Average Turnover Constraints Using the Portfolio Function
+
+The properties for the turnover constraints are set using the Portfolio object. Suppose that you
+have an initial portfolio of 10 assets in a variable x0 and you want to ensure that average turnover is
+no more than 30%. To set this turnover constraint:
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ]; 
+p = Portfolio('Turnover', 0.3, 'InitPort', x0);
+disp(p.NumAssets)
+disp(p.Turnover)
+disp(p.InitPort)
+
+10
+
+0.3000
+
+0.1200
+0.0900
+0.0800
+0.0700
+0.1000
+0.1000
+0.1500
+0.1100
+0.0800
+0.1000
+
+Note if the NumAssets or InitPort properties are not set before or when the turnover constraint is
+set, various rules are applied to assign default values to these properties (see “Setting Up an Initial or
+Current Portfolio” on page 4-37).
+
+Setting Average Turnover Constraints Using the setTurnover Function
+
+You can also set properties for portfolio turnover using setTurnover to specify both the upper
+bound for average turnover and an initial portfolio. Suppose that you have an initial portfolio of 10
+assets in a variable x0 and want to ensure that average turnover is no more than 30%. Given a
+Portfolio object p, use setTurnover to set the turnover constraint with and without the initial
+portfolio being set previously:
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];
+p = Portfolio('InitPort', x0);
+p = setTurnover(p, 0.3);
+
+disp(p.NumAssets)
+disp(p.Turnover)
+disp(p.InitPort)
+
+Working with Average Turnover Constraints Using Portfolio Object
+
+4-85

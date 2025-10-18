@@ -1,0 +1,12 @@
+{
+  "page": 903,
+  "original_text": "load FundMarketCash\nplot(TestData)\nhold on\ntitle('\\bfFive-Year Total Return Performance');\nlegend('Fund','Market','Cash','Location','SouthEast');\nhold off",
+  "ocr_text": "load_FundMarketCash\n\nplot(TestData)\n\nholdon\ntitle(bfFive-YearTotalReturnPerformance);\nLlegend(Fund,Market,Cash,Location,SouthEast);\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 260.41,
+    "x1": 382.6,
+    "y1": 324.88
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,58 @@
+Hedging Using CVaR Portfolio Optimization
+
+This example shows how to model two hedging strategies using CVaR portfolio optimization with a
+PortfolioCVaR object. First, you simulate the price movements of a stock by using a gbm object
+with simByEuler. Then you use CVaR portfolio optimization to estimate the efficient frontier of the
+portfolios for the returns at the horizon date. Finally, you compare the CVaR portfolio to a mean-
+variance portfolio to demonstrate the differences between these two types of risk measures.
+
+Monte Carlo Simulation of Asset Scenarios
+
+Scenarios are required to define and evaluate the CVaR portfolio. These scenarios can be generated
+in multiple ways, as well as obtained from historical observations. This example uses a Monte Carlo
+simulation of a geometric Brownian motion to generate the scenarios. The Monte Carlo simulation
+produces trials of a stock price after one year. These stock prices provide the returns of five different
+investment strategies that define the assets in the CVaR portfolio. This scenario generation strategy
+can be further generalized to simulations with more stocks, instruments, and strategies.
+
+Define a stock profile.
+
+% Price at time 0
+Price_0 = 200;
+
+% Drift (annualized)
+Drift = 0.08;
+
+% Volatility (annualized)
+Vol = 0.4;
+
+% Valuation date
+Valuation = datetime(2012,1,1);
+
+% Investment horizon date
+Horizon = datetime(2013,1,1);
+
+% Risk-free rate
+RiskFreeRate = 0.03;
+
+Simulate the price movements of the stock from the valuation date to the horizon date using a gbm
+object with simByEuler.
+
+% Number of trials for the Monte Carlo simulation
+NTRIALS = 100000;
+
+% Length (in years) of the simulation
+T = date2time(Valuation, Horizon, 1, 1);
+
+% Number of periods per trial (approximately 100 periods per year)
+NPERIODS = round(100*T);
+
+% Length (in years) of each time step per period
+dt = T/NPERIODS;
+
+% Instantiate the gbm object
+StockGBM = gbm(Drift, Vol, 'StartState', Price_0);
+
+Hedging Using CVaR Portfolio Optimization
+
+5-125

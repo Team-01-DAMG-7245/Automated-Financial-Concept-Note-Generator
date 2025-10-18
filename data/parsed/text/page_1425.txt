@@ -1,0 +1,58 @@
+simBySolution applies processing functions at the end of each observation period. These functions
+must accept the current observation time t and the current state vector Xt, and return a state vector
+that may be an adjustment to the input state.
+
+The end-of-period Processes argument allows you to terminate a given trial early. At the end of each
+time step, simBySolution tests the state vector Xt for an all-NaN condition. Thus, to signal an early
+termination of a given trial, all elements of the state vector Xt must be NaN. This test enables a user-
+defined Processes function to signal early termination of a trial, and offers significant performance
+benefits in some situations (for example, pricing down-and-out barrier options).
+
+If you specify more than one processing function, simBySolution invokes the functions in the order
+in which they appear in the cell array. You can use this argument to specify boundary conditions,
+prevent negative prices, accumulate statistics, plot graphs, and more.
+
+Data Types: cell | function
+
+Output Arguments
+
+Paths — Simulated paths of correlated state variables
+array
+
+Simulated paths of correlated state variables, returned as an (NPERIODS + 1)-by-NVARS-by-
+NTRIALS three-dimensional time series array.
+
+For a given trial, each row of Paths is the transpose of the state vector Xt at time t. When the input
+flag StorePaths = False, simBySolution returns Paths as an empty matrix.
+
+Times — Observation times associated with simulated paths
+column vector
+
+Observation times associated with the simulated paths, returned as an (NPERIODS + 1)-by-1
+column vector. Each element of Times is associated with the corresponding row of Paths.
+
+Z — Dependent random variates used to generate Brownian motion vector
+array
+
+Dependent random variates used to generate the Brownian motion vector (Wiener processes) that
+drive the simulation, returned as an (NPERIODS * NSTEPS)-by-NBROWNS-by-NTRIALS three-
+dimensional time series array.
+
+More About
+
+Antithetic Sampling
+
+Simulation methods allow you to specify a popular variance reduction technique called antithetic
+sampling.
+
+This technique attempts to replace one sequence of random observations with another of the same
+expected value, but smaller variance. In a typical Monte Carlo simulation, each sample path is
+independent and represents an independent trial. However, antithetic sampling generates sample
+paths in pairs. The first path of the pair is referred to as the primary path, and the second as the
+antithetic path. Any given pair is independent of any other pair, but the two paths within each pair
+are highly correlated. Antithetic sampling literature often recommends averaging the discounted
+payoffs of each pair, effectively halving the number of Monte Carlo trials.
+
+simBySolution
+
+15-119

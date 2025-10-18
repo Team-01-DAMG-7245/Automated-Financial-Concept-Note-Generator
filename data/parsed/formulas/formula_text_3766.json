@@ -1,0 +1,12 @@
+{
+  "page": 2130,
+  "original_text": "MoreDays = [datetime(2000,3,15) ; datetime(2000,4,15) ; datetime(2000,6,15)];\nNumDays = days360psa(datetime(2000,1,15), MoreDays)",
+  "ocr_text": "MoreDays=[datetime(2000,3,15);datetime(2000,4,15)_;datetime(2000,6,15)];\nNumDays=days360psa(datetime(2000,1,15),MoreDays)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 645.1,
+    "x1": 507.18,
+    "y1": 666.37
+  },
+  "confidence": "high"
+}

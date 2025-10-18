@@ -1,0 +1,12 @@
+{
+  "page": 367,
+  "original_text": "ii = [15, 16, 20, 21, 23, 25, 27, 29, 30];    % indexes of assets to include in tracking portfoli\ntrackingPort(ii) = 1/numel(ii);\nq = setTrackingError(p, 0.5, trackingPort);",
+  "ocr_text": "ii=[15,16,20,21,23,25,27,29,30]; Sindexesofassetstoincludeintrackingportfol-.\ntrackingPort(ii)=1/numel(ii);\nq=setTrackingError(p,0.5,trackingPort);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 512.05,
+    "x1": 615.57,
+    "y1": 544.12
+  },
+  "confidence": "high"
+}

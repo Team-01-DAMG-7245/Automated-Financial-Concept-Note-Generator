@@ -1,0 +1,10 @@
+Page 553
+================================================================================
+
+do_train = false;
+if do_train
+    % Train the agent
+    trainingStats = train(DQNagent,gbwmEnvironment,trainingOptions);
+else
+    load('trainedAgent');
+end

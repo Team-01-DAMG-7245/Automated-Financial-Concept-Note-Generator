@@ -1,0 +1,64 @@
+•
+Alpha and Sigma are also accessible using the (t, Xt) interface.
+
+The displayed parameters for a diffusion object are:
+
+•
+Rate: The diffusion-rate function, G(t,Xt).
+
+•
+Alpha: The state vector exponent, which determines the format of D(t,Xt) of G(t,Xt).
+
+•
+Sigma: The volatility rate, V(t,Xt), of G(t,Xt).
+
+Alpha and Sigma enable you to query the original inputs. (The combined effect of the individual
+Alpha and Sigma parameters is fully encapsulated by the function stored in Rate.) The Rate
+functions are the calculation engines for the drift and diffusion objects, and are the only
+parameters required for simulation.
+
+Note You can express drift and diffusion classes in the most general form to emphasize the
+functional (t, Xt) interface. However, you can specify the components A and B as functions that adhere
+to the common (t, Xt) interface, or as MATLAB arrays of appropriate dimension.
+
+Example: G = diffusion(1, 0.3) % Diffusion rate function G(t,X)
+
+Data Types: object
+
+Object Functions
+interpolate
+Brownian interpolation of stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simulate
+Simulate multivariate stochastic differential equations (SDEs) for SDE, BM, GBM, CEV,
+CIR, HWV, Heston, SDEDDO, SDELD, SDEMRD, Merton, or Bates models
+simByEuler
+Euler simulation of stochastic differential equations (SDEs) for SDE, BM, GBM, CEV,
+CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+
+Examples
+
+Create an SDE Object
+
+Construct an SDE object obj to represent a univariate geometric Brownian Motion model of the form:
+dXt = 0 . 1Xtdt + 0 . 3XtdWt.
+
+Create drift and diffusion functions that are accessible by the common (t, Xt) interface:
+
+F = @(t,X) 0.1 * X;
+G = @(t,X) 0.3 * X;
+
+Pass the functions to sde to create an object (obj) of class sde:
+
+obj = sde(F, G)    % dX = F(t,X)dt + G(t,X)dW
+
+obj = 
+   Class SDE: Stochastic Differential Equation
+   -------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   -------------------------------------------
+      StartTime: 0
+
+sde
+
+15-161

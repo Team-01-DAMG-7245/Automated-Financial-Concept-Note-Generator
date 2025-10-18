@@ -1,0 +1,12 @@
+{
+  "page": 293,
+  "original_text": "m = [ 0.05; 0.1; 0.12; 0.18 ];\nC = [ 0.0064 0.00408 0.00192 0; \n      0.00408 0.0289 0.0204 0.0119;\n      0.00192 0.0204 0.0576 0.0336;\n      0 0.0119 0.0336 0.1225 ];\npwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];\n \np = Portfolio('Name', 'Asset Allocation Portfolio', 'InitPort', pwgt0);\np = setAssetMoments(p, m, C);\np = setDefaultConstraints(p);\nplotFrontier(p)",
+  "ocr_text": "m=[0.05;0.1;0.12;0.18];\nC=[0.00640.004080.001920;\n0.004080.02890.02040.0119;\n0.001920.02040.05760.0336;\n00.01190.03360.1225];\npwgt=[0.3;0.3;0.2;0.1];\np=Portfolio(Name,AssetAllocationPortfolio,InitPort,_pwgtO);\np=setAssetMoments(p,m,C);\np=setDefaultConstraints(p);\nplotFrontier(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 287.4,
+    "x1": 474.7,
+    "y1": 405.86
+  },
+  "confidence": "high"
+}

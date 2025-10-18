@@ -1,0 +1,58 @@
+Set June 21, 2003 (a Saturday) as a business day.
+
+Weekend = [1 0 0 0 0 0 0];
+isbusday(datetime(2003,6,21), [], Weekend)
+
+ans = logical
+   1
+
+If the second argument, Holiday, is empty ([ ]), the default Holidays vector (generated with 
+holidays and then associated to the NYSE calendar) is used.
+
+Input Arguments
+
+Date — Date being checked
+datetime array | string array | date character vector
+
+Date being checked, specified as a scalar or a vector using a datetime array, string array, or date
+character vectors. Date can contain multiple dates, but they must all be in the same format. Dates
+are assumed to be whole date numbers or date stamps with no fractional or time values.
+
+To support existing code, isbusday also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Holiday — Holidays and nontrading-day dates
+non-trading day vector is determined by the routine holidays (default) | datetime array | string
+array | date character vector
+
+Holidays and nontrading-day dates, specified as a vector using a datetime array, string array, or date
+character vectors.
+
+All dates in Holiday must be the same format: either datetimes, strings, date character vectors, or
+serial date numbers. The holidays function supplies the default vector.
+
+To support existing code, isbusday also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Weekend — Weekend days
+[1 0 0 0 0 0 1] (Saturday and Sunday form the weekend) (default) | vector of length 7,
+containing 0 and 1, where 1 indicates weekend days
+
+Weekend days, specified as a vector of length 7, containing 0 and 1, where 1 indicates weekend days
+and the first element of this vector corresponds to Sunday.
+
+Data Types: double
+
+Output Arguments
+
+Busday — Logical true if a business day
+logical 0 or 1
+
+15
+Functions
+
+15-1132

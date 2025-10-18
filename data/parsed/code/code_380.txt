@@ -1,0 +1,9 @@
+Page 401
+================================================================================
+
+Alternatively, you can also use the covarianceDenoising function to estimate a covariance matrix
+(denoisedCov) using denoising to reduce the noise and enhance the signal of the empirical
+covariance matrix. [1 on page 4-236] The goal of denoising is to separate the eigenvalues associated
+with signal from the ones associated with noise and shrink the eigenvalues associated with noise to
+enhance the signal. Thus, covarianceDenoising is a reasonable tool to identify the number of
+factors.

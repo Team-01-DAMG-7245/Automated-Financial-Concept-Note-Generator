@@ -1,0 +1,47 @@
+Leverage in Portfolio Optimization with a Risk-Free Asset
+
+This example shows how to use the setBudget function for the Portfolio class to define the limits
+on the sum(AssetWeight_i) in risky assets.
+
+If the sum(AssetWeight_i) is less than 1, the extra cash is invested in a risk-free asset. If the
+sum(AssetWeight_i) is larger than 1, meaning that total risky asset investment is larger than
+initial available cash, the risk-free asset is shorted (borrowed) to fund the extra investment in a risky
+asset. The cost associated with borrowing a risk-free asset is automatically captured in the mean-
+variance optimization model for the Portfolio class. Therefore, you can use the setBudget
+function directly to control the level of leverage of cash for the portfolio.
+
+Portfolio Without Leverage
+
+Consider the following example that does not leverage a risk-free asset.
+
+assetsMean = [ 0.05; 0.1; 0.12; 0.18; ];
+assetCovar = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225];
+riskFreeRate = 0.03;
+
+% create a portfolio and define risk-free rate.
+p = Portfolio('RiskFreeRate', riskFreeRate, 'assetmean', assetsMean, 'assetcovar', assetCovar, 'l
+
+Create multiple portfolios with different budgets on risky assets to control the limits for investing in a
+risk-free asset.
+
+p = setBudget(p, 1, 1);     % allow 0% risk free asset allocation, meaning fully invested in risk
+p1 = setBudget(p, 0, 1);    % allow 0% to 100% risk free asset allocation
+p2 = setBudget(p, 0.7, 1);  % allow 0% to 30% risk free asset allocation
+[risk, retn] = estimatePortMoments(p, estimateMaxSharpeRatio(p));
+
+figure;
+plotFrontier(p); hold on; 
+plotFrontier(p1);hold on;
+plotFrontier(p2); hold on;
+plot(risk, retn, 'g*'); hold off;
+legend('without risk-free asset', ...
+    'with risk-free asset in range [0,1]', ...
+    'with risk-free asset in range [0, 0.3]', ...
+    'Max Sharpe Ratio', 'location','southeast');
+
+Leverage in Portfolio Optimization with a Risk-Free Asset
+
+4-217

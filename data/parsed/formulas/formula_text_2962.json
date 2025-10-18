@@ -1,0 +1,12 @@
+{
+  "page": 1553,
+  "original_text": "function new_weights = equalWeight(current_weights,assetPrices) %#ok<INUSD>",
+  "ocr_text": "functionnew_weights=equalWeight(current_weights,assetPrices)okINUSD=",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.09,
+    "x1": 501.79,
+    "y1": 589.56
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,66 @@
+Performance Metrics Overview
+
+Performance Metrics Types
+
+Sharpe first proposed a ratio of excess return to total risk as an investment performance metric.
+Subsequent work by Sharpe, Lintner, and Mossin extended these ideas to entire asset markets in
+what is called the Capital Asset Pricing Model (CAPM). Since the development of the CAPM, various
+investment performance metrics has evolved.
+
+This section presents four types of investment performance metrics:
+
+•
+The first type of metrics is absolute investment performance metrics that are called “classic”
+metrics since they are based on the CAPM. They include the Sharpe ratio, the information ratio,
+and tracking error. To compute the Sharpe ratio from data, use sharpe to calculate the ratio for
+one or more asset return series. To compute the information ratio and associated tracking error,
+use inforatio to calculate these quantities for one or more asset return series.
+
+•
+The second type of metrics is relative investment performance metrics to compute risk-adjusted
+returns. These metrics are also based on the CAPM and include Beta, Jensen's Alpha, the Security
+Market Line (SML), Modigliani and Modigliani Risk-Adjusted Return, and the Graham-Harvey
+measures. To calculate risk-adjusted alpha and return, use portalpha.
+
+•
+The third type of metrics is alternative investment performance metrics based on lower partial
+moments. To calculate lower partial moments, use lpm for sample lower partial moments and
+elpm for expected lower partial moments.
+
+•
+The fourth type of metrics is performance metrics based on maximum drawdown and expected
+maximum drawdown. Drawdown is the peak to trough decline during a specific record period of
+an investment or fund. To calculate maximum or expected maximum drawdowns, use
+maxdrawdown and emaxdrawdown.
+
+See Also
+sharpe | inforatio | portalpha | lpm | elpm | maxdrawdown | emaxdrawdown | ret2tick |
+tick2ret
+
+Related Examples
+
+•
+“Performance Metrics Illustration” on page 7-3
+
+•
+“Using the Sharpe Ratio” on page 7-5
+
+•
+“Using the Information Ratio” on page 7-7
+
+•
+“Using Tracking Error” on page 7-8
+
+•
+“Using Risk-Adjusted Return” on page 7-9
+
+•
+“Using Sample and Expected Lower Partial Moments” on page 7-11
+
+•
+“Using Maximum and Expected Maximum Drawdown” on page 7-14
+
+7
+Investment Performance Metrics
+
+7-2

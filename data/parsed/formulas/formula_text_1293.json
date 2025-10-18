@@ -1,0 +1,12 @@
+{
+  "page": 644,
+  "original_text": "p = PortfolioCVaR(p,'LowerBound', 0, 'Budget', 1, 'ProbabilityLevel', 0.95);",
+  "ocr_text": "p=PortfolioCVaR(p,LowerBound,,Budget,1,_ProbabilityLevel,0.95);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 264.91,
+    "x1": 382.84,
+    "y1": 272.35
+  },
+  "confidence": "high"
+}

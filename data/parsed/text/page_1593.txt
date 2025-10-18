@@ -1,0 +1,61 @@
+First Day of Data    Backtest Start Date    Minimum Days to Rebalance
+    _________________    ___________________    _________________________
+
+03-Jan-2006           14-Feb-2006                   30
+
+Rebalance Dates    Days of Available Price History    Enough Data to Rebalance
+    _______________    _______________________________    ________________________
+
+22-Mar-2006                     55                           "Yes"          
+      27-Apr-2006                     80                           "Yes"          
+      02-Jun-2006                    105                           "Yes"          
+      10-Jul-2006                    130                           "Yes"          
+      14-Aug-2006                    155                           "Yes"          
+      19-Sep-2006                    180                           "Yes"          
+      24-Oct-2006                    205                           "Yes"          
+      29-Nov-2006                    230                           "Yes"
+
+The inverse variance strategy now has enough data to rebalance on the first rebalance date (March
+22) and the backtest is "warm started." By using the original data set, the first day of data remains
+January 3, and the 'Start' parameter allows you to move the backtest start date forward to avoid
+the warm-up range.
+
+Even though the results are not dramatically different, this example illustrates the interaction
+between the “LookbackWindow” on page 15-0
+ and “RebalanceFrequency” on page 15-0
+ name-
+value arguments for a backtestStrategy object and the range of data used in the runBacktest
+when you evaluate the performance of a strategy in a backtest.
+
+Local Functions
+
+The strategy rebalance function is implemented as follows. For more information on creating
+strategies and writing rebalance functions, see backtestStrategy.
+
+function new_weights = inverseVarianceFcn(current_weights, pricesTT) 
+% Inverse-variance portfolio allocation.
+
+assetReturns = tick2ret(pricesTT);
+assetCov = cov(assetReturns{:,:});
+new_weights = 1 ./ diag(assetCov);
+new_weights = new_weights / sum(new_weights);
+
+end
+
+This helper function plots the asset allocation as an area plot.
+
+function assetAreaPlot(backtester,strategyName)
+
+t = backtester.Positions.(strategyName).Time;
+positions = backtester.Positions.(strategyName).Variables;
+h = area(t,positions);
+title(sprintf('%s Positions',strategyName));
+xlabel('Date');
+ylabel('Asset Positions');
+xtickformat('MM/dd');
+xlim([t(1) t(end)])
+oldylim = ylim;
+
+runBacktest
+
+15-287

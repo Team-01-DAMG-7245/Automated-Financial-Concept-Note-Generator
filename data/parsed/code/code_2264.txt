@@ -1,0 +1,8 @@
+Page 2077
+================================================================================
+
+Previous coupon date on or before settlement for portfolio of bonds, returned as an NUMBONDS-by-1
+vector. If settlement is a coupon date, this function returns the settlement date. The actual coupon
+date strictly on or before settlement is returned, but not exceeding the issue date, if available. Thus,
+this function always returns the lesser of the actual issue date and the previous coupon payment date
+with respect to the settlement date.

@@ -1,0 +1,12 @@
+{
+  "page": 1740,
+  "original_text": "AbsConSet = active2abs(ActiveConSet,Index) transforms a constraint matrix to an\nequivalent matrix expressed in absolute weight format. The transformation equation is",
+  "ocr_text": "AbsConSet=active2abs(ActiveConSet,Index)transformsaconstraintmatrixtoan\nequivalentmatrixexpressedinabsoluteweightformat.Thetransformationequationis",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 249.98,
+    "x1": 511.61,
+    "y1": 273.61
+  },
+  "confidence": "high"
+}

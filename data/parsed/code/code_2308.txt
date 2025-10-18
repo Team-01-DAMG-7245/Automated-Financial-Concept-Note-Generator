@@ -1,0 +1,5 @@
+Page 2179
+================================================================================
+
+(Optional) Convergence tolerance for estimation algorithm based on changes in the objective
+function, specified as a numeric. The convergence test for changes in the objective function is

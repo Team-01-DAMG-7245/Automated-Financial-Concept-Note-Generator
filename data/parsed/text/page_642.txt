@@ -1,0 +1,72 @@
+PortfolioCVaR Object Workflow
+
+The PortfolioCVaR object workflow for creating and modeling a CVaR portfolio is:
+
+1
+Create a CVaR Portfolio.
+
+Create a PortfolioCVaR object for conditional value-at-risk (CVaR) portfolio optimization. For
+more information, see “Creating the PortfolioCVaR Object” on page 5-22.
+
+2
+Define asset returns and scenarios.
+
+Evaluate scenarios for portfolio asset returns, including assets with missing data and financial
+time series data. For more information, see “Asset Returns and Scenarios Using PortfolioCVaR
+Object” on page 5-36.
+
+3
+Specify the CVaR Portfolio Constraints.
+
+Define the constraints for portfolio assets such as linear equality and inequality, bound, budget,
+conditional budget, group, group ratio, turnover constraints, 'Conditional' BoundType, and
+MinNumAssets, MaxNumAssets constraints. For more information, see “Working with CVaR
+Portfolio Constraints Using Defaults” on page 5-51 and “Working with 'Conditional' BoundType,
+MinNumAssets, and MaxNumAssets Constraints Using PortfolioCVaR Objects” on page 5-72.
+
+4
+Validate the CVaR Portfolio.
+
+Identify errors for the portfolio specification. For more information, see “Validate the CVaR
+Portfolio Problem” on page 5-81.
+
+5
+Estimate the efficient portfolios and frontiers.
+
+Analyze the efficient portfolios and efficient frontiers for a CVaR portfolio. For more information,
+see “Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85 and
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105.
+
+6
+Postprocess the results.
+
+Use the efficient portfolios and efficient frontiers results to set up trades. For more information,
+see “Postprocessing Results to Set Up Tradable Portfolios” on page 5-115.
+
+See Also
+
+Related Examples
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“Portfolio Optimization Theory” on page 5-3
+
+•
+“Choosing and Controlling the Solver for PortfolioCVaR Optimizations” on page 5-98
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+5
+CVaR Portfolio Optimization Tools
+
+5-16

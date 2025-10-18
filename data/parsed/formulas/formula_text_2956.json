@@ -1,0 +1,12 @@
+{
+  "page": 1552,
+  "original_text": "equalWeightStrategy = \n  backtestStrategy with properties:",
+  "ocr_text": "equalWeightStrategy=\nbacktestStrategywithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 312.33,
+    "x1": 279.63,
+    "y1": 333.6
+  },
+  "confidence": "high"
+}

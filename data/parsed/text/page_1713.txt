@@ -1,0 +1,67 @@
+Use simulate with Quasi-Monte Carlo Simulation with simByEuler Using a CIR Model
+
+The Cox-Ingersoll-Ross (CIR) short rate class derives directly from SDE with mean-reverting drift
+
+(SDEMRD): dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+
+1
+2)V(t)dW
+
+where D is a diagonal matrix whose elements are the square root of the corresponding element of the
+state vector.
+
+Create a cir object to represent the model: dXt = 0 . 2(0 . 1 −Xt)dt + 0 . 05Xt
+
+1
+2dW.
+
+cir_obj = cir(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)
+
+cir_obj = 
+   Class CIR: Cox-Ingersoll-Ross
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+Use optional name-value inputs for the simByEuler method that you can call through simulate
+interface using the simulate 'Scheme' for 'quadratic-exponential'. The optional inputs for
+simByEuler define a quasi-Monte Carlo simulation using the name-value arguments for
+'MonteCarloMethod','QuasiSequence', and 'BrownianMotionMethod'.
+
+[paths,time] = simulate(cir_obj,10,'ntrials',4096,'montecarlomethod','quasi','quasisequence','sob
+
+Use simulate with Quasi-Monte Carlo Simulation with simByMilstein Using a CIR Model
+
+The Cox-Ingersoll-Ross (CIR) short rate class derives directly from SDE with mean-reverting drift
+
+(SDEMRD): dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+
+1
+2)V(t)dW
+
+where D is a diagonal matrix whose elements are the square root of the corresponding element of the
+state vector.
+
+Create a cir object to represent the model: dXt = 0 . 2(0 . 1 −Xt)dt + 0 . 05Xt
+
+1
+2dW.
+
+cir_obj = cir(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)
+
+cir_obj = 
+   Class CIR: Cox-Ingersoll-Ross
+   ----------------------------------------
+
+simulate
+
+15-407

@@ -1,0 +1,62 @@
+% Specify warm-up partition of data set timetable.
+warmupTT = pricesTT(1:warmupPeriod,:);
+
+% Compute the initial portfolio weights for each strategy.
+traditional_initial = traditionalStrat(w0,warmupTT);
+shrunk_initial = shrunkStrat(w0,warmupTT);
+
+Create traditional and shrinkage backtest strategy objects using backtestStrategy.
+
+% Rebalance approximately every month.
+rebalFreq = 21;
+
+% Set the rolling lookback window to be at least 2 months and at
+% most 6 months.
+lookback  = [42 126];
+
+% Use a fixed transaction cost (buy and sell costs are both 0.5%
+% of amount traded).
+transactionsFixed = 0.005;
+
+% Specify the strategy objects.
+strat1 = backtestStrategy('Traditional', @traditionalStrat, ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionsFixed, ...
+    InitialWeights=traditional_initial);
+
+strat2 = backtestStrategy('Shrinkage', @shrunkStrat, ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionsFixed, ...
+    InitialWeights=shrunk_initial);
+
+% Aggregate the two strategy objects into an array.
+strategies = [strat1, strat2];
+
+Create a backtestEngine object then use runBacktest to run the backtest.
+
+% Create the backtesting engine object.
+backtester = backtestEngine(strategies);
+
+% Run the backtest.
+backtester = runBacktest(backtester,pricesTT,'Start',warmupPeriod);
+
+% Generate summary table of the performance of the strategies.
+summary(backtester)
+
+ans=9×2 table
+                       Traditional    Shrinkage 
+                       ___________    __________
+
+TotalReturn           0.13431        0.14101
+    SharpeRatio           0.10807        0.11565
+    Volatility          0.0057472      0.0056077
+    AverageTurnover     0.0098378      0.0077384
+    MaxTurnover           0.36237        0.31835
+    AverageReturn       0.0006196     0.00064699
+
+15
+Functions
+
+15-60

@@ -1,0 +1,58 @@
+Covariance — Estimates for covariance matrix of residuals of the regression
+matrix
+
+Estimates for the covariance matrix of the residuals of the regression, specified as an NUMSERIES-by-
+NUMSERIES matrix.
+
+Data Types: double
+
+CovarFormat — Format for covariance matrix
+'full' (default) | character vector with value 'full' or 'diagonal'
+
+(Optional) Format for the covariance matrix, specified as a character vector. The choices are:
+
+•
+'full' — This is the default method that computes the full covariance matrix.
+
+•
+'diagonal' — This forces the covariance matrix to be a diagonal matrix.
+
+Data Types: char
+
+Output Arguments
+
+Objective — Least-squares objective function
+scalar
+
+Least-squares objective function, returned as scalar.
+
+More About
+
+Multivariate Normal Regression
+
+Multivariate normal regression is a statistical modeling approach that extends traditional regression
+techniques to situations where the dependent variable is multivariate, meaning it consists of multiple
+correlated outcomes.
+
+Multivariate normal regression is particularly useful in fields where researchers are interested in
+understanding the relationships between several response variables and one or more predictor
+variables.
+
+Version History
+Introduced in R2006a
+
+See Also
+ecmmvnrmle | mvnrmle | mvnrobj
+
+Topics
+“Multivariate Normal Regression With Missing Data” on page 9-14
+“Portfolios with Missing Data” on page 9-21
+“Multivariate Normal Regression” on page 9-13
+“Least-Squares Regression” on page 9-14
+“Covariance-Weighted Least Squares” on page 9-14
+“Feasible Generalized Least Squares” on page 9-15
+“Seemingly Unrelated Regression” on page 9-16
+
+ecmmvnrobj
+
+15-877

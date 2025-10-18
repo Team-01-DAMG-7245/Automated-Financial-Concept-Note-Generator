@@ -1,0 +1,12 @@
+{
+  "page": 998,
+  "original_text": "Generalized linear regression model:\n    logit(status) ~ 1 + CustAge + ResStatus + EmpStatus + CustIncome + TmWBank + OtherCC + AMBala\n    Distribution = Binomial",
+  "ocr_text": "Generalizedlinearregressionmodel:\nlogit(status)1+CustAge+ResStatus+EmpStatus+CustIncome+TmWBank+OtherCC+AMBali\nDistribution=Binomial",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 136.23,
+    "x1": 615.55,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

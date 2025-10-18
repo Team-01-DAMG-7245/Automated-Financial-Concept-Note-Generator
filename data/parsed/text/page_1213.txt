@@ -1,0 +1,53 @@
+F = drift(0, 0.1);      % Drift rate function F(t,X)
+G = diffusion(1, 0.3);  % Diffusion rate function G(t,X)
+
+Pass these drift and diffusion objects to the sdeddo object.
+
+obj = sdeddo(F, G)      % dX = F(t,X)dt + G(t,X)dW
+
+obj = 
+   Class SDEDDO: SDE from Drift and Diffusion Objects
+   --------------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   --------------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+              A: 0
+              B: 0.1
+          Alpha: 1
+          Sigma: 0.3
+
+See Also
+sde | bm | gbm | merton | bates | drift | diffusion | sdeddo | sdeld | cev | cir | heston | hwv |
+sdemrd | rvm | roughbergomi | roughheston | ts2func | simulate | simByEuler |
+simBySolution | simBySolution | interpolate | simByQuadExp
+
+Related Examples
+
+•
+“Base SDE Models” on page 14-16
+
+•
+“Linear Drift Models” on page 14-22
+
+•
+“Parametric Models” on page 14-24
+
+More About
+
+•
+“SDEs” on page 14-2
+
+•
+“SDE Models” on page 14-7
+
+•
+“SDE Class Hierarchy” on page 14-5
+
+Drift and Diffusion Models
+
+14-21

@@ -1,0 +1,59 @@
+The output returned is the asset price and American option value at each node of the binary tree.
+
+Input Arguments
+
+Price — Current price of underlying asset
+numeric
+
+Current price of underlying asset, specified as a scalar numeric value.
+
+Data Types: double
+
+Strike — Exercise price of the option
+numeric
+
+Exercise price of the option, specified as a scalar numeric value.
+
+Data Types: double
+
+Rate — Risk-free interest rate
+decimal
+
+Risk-free interest rate, specified as scalar decimal fraction.
+
+Data Types: double
+
+Time — Option time until maturity
+numeric
+
+Option time until maturity, specified as a scalar for the number of years.
+
+Data Types: double
+
+Increment — Time increment
+numeric
+
+Time increment, specified as a scalar numeric. Increment is adjusted so that the length of each
+interval is consistent with the maturity time of the option. (Increment is adjusted so that Time
+divided by Increment equals an integer number of increments.)
+
+Data Types: double
+
+Volatility — Asset volatility
+numeric
+
+Asset volatility, specified as a scalar numeric.
+
+Data Types: double
+
+Flag — Flag indicating whether option is a call or put
+integer with values 0 or 1
+
+Flag indicating whether option is a call or put, specified as a scalar Flag = 1 for a call option, or
+Flag = 0 for a put option.
+
+Data Types: logical
+
+binprice
+
+15-475

@@ -1,0 +1,12 @@
+{
+  "page": 894,
+  "original_text": "Blotter = \n                          Initial    Weight    Purchases    Sales \n    Bonds                 30              0         0           30\n    Large-Cap Equities    30         50.597    20.597            0\n    Small-Cap Equities    20         12.416         0       7.5843\n    Emerging Equities     10         36.987    26.987            0",
+  "ocr_text": "Blotter=\nInitial Weight Purchases Sales\nBonds 30 0 0 30\nLarge-CapEquities 30 50.597 20.597 0\nSmall-CapEquities 20 12.416 0 7.5843\nEmergingEquities 10 36.987 26.987 0",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 242.43,
+    "x1": 447.59,
+    "y1": 306.89
+  },
+  "confidence": "high"
+}

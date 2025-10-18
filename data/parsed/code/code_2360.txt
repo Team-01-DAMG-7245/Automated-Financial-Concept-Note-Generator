@@ -1,0 +1,5 @@
+Page 2231
+================================================================================
+
+Function handle that defines the objective function, specified using a function handle in terms of the
+portfolio weights.

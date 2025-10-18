@@ -1,0 +1,12 @@
+{
+  "page": 1634,
+  "original_text": "rvmObj = \n   Class RVM: Rough Stochastic Volatility\n   ----------------------------------------\n     Dimensions: State = 2, Brownian = 2\n   ----------------------------------------\n      StartTime: 0\n     StartState: 1 (2x1 double array) \n    Correlation: 2x2 diagonal double array \n         Return: 0.03",
+  "ocr_text": "rvm0bj=\nClassRVM:RoughStochasticVolatility\nDimensions:State=2,Brownian=2\nStartTime:0\nStartState:1(2x1doublearray)\nCorrelation:2x2diagonaldoublearray\nReturn:0.03",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 322.98,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

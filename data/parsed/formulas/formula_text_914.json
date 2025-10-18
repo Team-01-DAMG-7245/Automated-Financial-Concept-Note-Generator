@@ -1,0 +1,12 @@
+{
+  "page": 499,
+  "original_text": "% Load data\nload('port5.mat');\n% Store the returns and covariance.\nmu = mean_return;\nSigma = Correlation .* (stdDev_return * stdDev_return');",
+  "ocr_text": "Loaddata\n\nload(port5.mat);\n\nStorethereturnsandcovariance.\n\nmu_=mean_return;\nSigma=Correlation.*(stdDev_return*stdDev_return);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 405.3,
+    "x1": 393.41,
+    "y1": 458.97
+  },
+  "confidence": "high"
+}

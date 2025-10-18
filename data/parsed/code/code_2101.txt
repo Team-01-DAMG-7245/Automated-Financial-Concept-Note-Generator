@@ -1,0 +1,9 @@
+Page 1711
+================================================================================
+
+To price the European barrier option, specify an end-of-period processing function to record the
+maximum and terminal stock prices. This processing function is accessible by time and state, and is
+implemented as a nested function with access to shared information that allows the option price and
+corresponding standard error to be calculated. For more information on using an end-of-period
+processing function, see “Price European Stock Options Using Monte Carlo Simulation” on page 14-
+47.

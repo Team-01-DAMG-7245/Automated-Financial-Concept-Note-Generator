@@ -1,0 +1,6 @@
+Page 1416
+================================================================================
+
+•
+A simBySolution function that provides an approximate solution of the underlying stochastic
+differential equation, designed for accuracy.

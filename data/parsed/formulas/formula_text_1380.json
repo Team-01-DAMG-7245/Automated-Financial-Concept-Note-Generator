@@ -1,0 +1,12 @@
+{
+  "page": 688,
+  "original_text": "G = [ 1 1 1 0 0 ];\np = PortfolioCVaR('GroupMatrix', G, 'UpperGroup', 0.3);\ndisp(p.NumAssets)\ndisp(p.GroupMatrix)\ndisp(p.UpperGroup)",
+  "ocr_text": "G=[11100];\np=PortfolioCVaR(GroupMatrix,G,UpperGroup,0.3);\ndisp(p.NumAssets)\n\ndisp(p.GroupMatrix)\n\ndisp(p.UpperGroup)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 290.68,
+    "x1": 388.01,
+    "y1": 344.35
+  },
+  "confidence": "high"
+}

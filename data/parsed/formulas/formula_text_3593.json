@@ -1,0 +1,12 @@
+{
+  "page": 2026,
+  "original_text": "Yield = cfyield(CFlowAmounts,CFlowDates,Price,Settle) computes yield to maturity for\na cash flow given price.",
+  "ocr_text": "Yield=cfyield(CFlowAmounts,CFlowDates,Price,Settle)computesyieldtomaturityfor\nacashflowgivenprice.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.08,
+    "x1": 550.65,
+    "y1": 278.71
+  },
+  "confidence": "high"
+}

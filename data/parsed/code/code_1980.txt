@@ -1,0 +1,5 @@
+Page 1568
+================================================================================
+
+When using a function handle with the TransactionCosts name-value argument, you can define a
+detailedCosts output argument to generate per-asset transaction costs when the backtest runs.

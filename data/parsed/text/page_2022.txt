@@ -1,0 +1,55 @@
+cfspread
+
+Compute spread over yield curve for cash flow
+
+Syntax
+
+Spread = cfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle)
+Spread = cfspread( ___ ,Name,Value)
+
+Description
+
+Spread = cfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle) computes spread
+over a yield curve for a cash flow.
+
+Spread = cfspread( ___ ,Name,Value) specifies options using one or more name-value pair
+arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Compute Spread Over a Yield Curve for a Cash Flow
+
+Use cfspread to compute the spread over a yield curve for a cash flow.
+
+Define data for the yield curve.
+
+Settle = datetime(2003,7,1) %datenum('01-Jul-2003');
+
+Settle = datetime
+   01-Jul-2003
+
+CurveDates = daysadd(Settle,360*[.25 .5 1 2 3 5 7 10 20],1);
+ZeroRates = [.0089 .0096 .0107 .0130 .0166 .0248 .0306 .0356 .0454]';
+
+Compute the RateSpec.
+
+RateSpec = intenvset('StartDates', Settle, 'EndDates', CurveDates,...
+'Rates', ZeroRates)
+
+RateSpec = struct with fields:
+           FinObj: 'RateSpec'
+      Compounding: 2
+             Disc: [9×1 double]
+            Rates: [9×1 double]
+         EndTimes: [9×1 double]
+       StartTimes: [9×1 double]
+         EndDates: [9×1 double]
+       StartDates: 731763
+    ValuationDate: 731763
+            Basis: 0
+     EndMonthRule: 1
+
+15
+Functions
+
+15-716

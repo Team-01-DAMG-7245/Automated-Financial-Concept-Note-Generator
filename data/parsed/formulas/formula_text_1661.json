@@ -1,0 +1,12 @@
+{
+  "page": 835,
+  "original_text": "p = PortfolioMAD(p, 'UpperBound', []);",
+  "ocr_text": "p=PortfolioMAD(p,UpperBound,[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 456.0,
+    "x1": 295.9,
+    "y1": 466.47
+  },
+  "confidence": "high"
+}

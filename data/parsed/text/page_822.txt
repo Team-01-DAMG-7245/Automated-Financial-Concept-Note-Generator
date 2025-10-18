@@ -1,0 +1,59 @@
+Use the 'MissingData' option offered by PortfolioMAD to account for the missing data.
+
+p = PortfolioMAD;
+p = simulateNormalScenariosByData(p, stockTT, 20000 ,'missingdata',true);
+[passetmean, passetcovar] = estimateScenarioMoments(p)
+
+passetmean = 14×1
+
+0.0012
+    0.0007
+   -0.0004
+   -0.0000
+    0.0016
+    0.0043
+   -0.0000
+    0.0001
+    0.0001
+   -0.0003
+    0.0001
+    0.0003
+    0.0001
+    0.0001
+      ⋮
+
+passetcovar = 14×14
+
+0.0013    0.0005    0.0006    0.0005    0.0005    0.0003    0.0005    0.0003    0.0006    0.0
+    0.0005    0.0024    0.0007    0.0005    0.0010    0.0005    0.0005    0.0003    0.0006    0.0
+    0.0006    0.0007    0.0013    0.0006    0.0007    0.0004    0.0006    0.0004    0.0008    0.0
+    0.0005    0.0005    0.0006    0.0009    0.0006    0.0002    0.0005    0.0003    0.0006    0.0
+    0.0005    0.0010    0.0007    0.0006    0.0018    0.0007    0.0005    0.0003    0.0006    0.0
+    0.0003    0.0005    0.0004    0.0002    0.0007    0.0013    0.0002    0.0002    0.0002    0.0
+    0.0005    0.0005    0.0006    0.0005    0.0005    0.0002    0.0010    0.0003    0.0005    0.0
+    0.0003    0.0003    0.0004    0.0003    0.0003    0.0002    0.0003    0.0005    0.0004    0.0
+    0.0006    0.0006    0.0008    0.0006    0.0006    0.0002    0.0005    0.0004    0.0011    0.0
+    0.0004    0.0004    0.0005    0.0004    0.0005    0.0002    0.0003    0.0002    0.0005    0.0
+    0.0005    0.0006    0.0008    0.0005    0.0007    0.0003    0.0005    0.0004    0.0007    0.0
+    0.0006    0.0011    0.0008    0.0006    0.0011    0.0011    0.0006    0.0004    0.0007    0.0
+    0.0002    0.0002    0.0002    0.0002    0.0002    0.0001    0.0002    0.0002    0.0002    0.0
+   -0.0000   -0.0000   -0.0000   -0.0000   -0.0000   -0.0000   -0.0000    0.0000   -0.0000   -0.0
+      ⋮
+
+Use the name-value input 'DataFormat' to handle return or price data and 'MissingData' to
+ignore or use samples with missing values. In addition, simulateNormalScenariosByData
+extracts asset names or identifiers from a table or timetable if the argument 'GetAssetList' is
+set to true (the default value is false). If the 'GetAssetList' value is true, the identifiers are
+used to set the AssetList property of the PortfolioMAD object. Thus, repeating the formation of
+the PortfolioMAD object p with the 'GetAssetList' flag set to true extracts the column names
+from the timetable object:
+
+p = simulateNormalScenariosByData(p, stockTT, 20000 ,'missingdata',true, 'GetAssetList', true);
+disp(p.AssetList)
+
+{'AAPL'}    {'AMZN'}    {'CSCO'}    {'DELL'}    {'EBAY'}    {'GOOG'}    {'HPQ'}    {'IBM'}
+
+6
+MAD Portfolio Optimization Tools
+
+6-42

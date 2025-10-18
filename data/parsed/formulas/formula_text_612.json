@@ -1,0 +1,12 @@
+{
+  "page": 402,
+  "original_text": "targetRisk = 0.007;  % Standard deviation of portfolio return\ntRisk = targetRisk*targetRisk;  % Variance of portfolio return\nmeanStockRetn = mean(stockReturns{training,:});",
+  "ocr_text": "targetRisk=0.007;Standarddeviationofportfolioreturn\ntRisk=targetRisk*targetRisk;Varianceofportfolioreturn\nmeanStockRetn=mean(stockReturns{training,:});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 300.58,
+    "x1": 425.93,
+    "y1": 332.65
+  },
+  "confidence": "high"
+}

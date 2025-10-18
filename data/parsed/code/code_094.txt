@@ -1,0 +1,6 @@
+Page 110
+================================================================================
+
+binNames = string(1:numBins);
+stateNames = ["("+binNames+",-1)","("+binNames+",0)","("+binNames+",1)"];
+QTable = array2table(Q,'RowNames',stateNames,'VariableNames',stateNames)

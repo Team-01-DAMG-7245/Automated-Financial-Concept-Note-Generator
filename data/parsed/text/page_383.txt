@@ -1,0 +1,44 @@
+The Portfolio object is a powerful and efficient tool for performing various portfolio analysis tasks.
+In addition to turnover constraints, you can also optimize a Portfolio object for transaction costs
+for buying and selling portfolio assets using the setCosts function.
+
+See Also
+Portfolio | setBounds | addGroups | setAssetMoments | estimateAssetMoments |
+estimateBounds | plotFrontier | estimateFrontierLimits | estimateFrontierByRisk |
+estimatePortRisk
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+Portfolio Analysis with Turnover Constraints
+
+4-215

@@ -1,0 +1,28 @@
+The tracking portfolio w0 is:
+
+w0 = [ 0.1; 0.55; 0.35 ];
+
+Use abs2active to compute the constraints for active portfolio weights.
+
+ActCons = abs2active(AbsCons, w0)
+
+ActCons = 8×4
+
+1.0000    1.0000    1.0000         0
+   -1.0000   -1.0000   -1.0000         0
+    1.0000         0         0    0.9000
+         0    1.0000         0    0.4500
+         0         0    1.0000    0.6500
+   -1.0000         0         0    0.1000
+         0   -1.0000         0    0.5500
+         0         0   -1.0000    0.3500
+
+Use the Portfolio object p and its efficient frontier to demonstrate expected returns and risk
+relative to the tracking portfolio w0.
+
+p = p.setInequality(ActCons(:,1:end-1), ActCons(:,end));
+p.plotFrontier;
+
+abs2active
+
+15-421

@@ -1,0 +1,61 @@
+plot(ESGTimetable.Time, targetESG*ones(size(ESGTimetable.Time)), ...
+    'k--','LineWidth',1); % Plots target ESG scores
+title('ESG Curves');
+ylabel('Averagde ESG Score');
+legend('MixedHH','MixedMDP','TiltedHH','TiltedMDP', 'TargetESG', ...
+    'Location','southwest');
+
+end
+
+function new_weights = MixHH(~, assetPrices, struct)
+% Min variance + max HH diversification strategy
+
+% Retrieve the portfolio information.
+p = struct.p;
+ret0 = struct.ret0;
+
+% Define the returns and covariance matrix.
+assetReturns = tick2ret(assetPrices);
+p = estimateAssetMoments(p,assetReturns{:,:});
+
+% Objective function: Variance + Herfindahl-Hirschman
+% diversification term
+%   min x'*Sigma*x + lambda*x'*x
+objFun = @(x) x'*p.AssetCovar*x + struct.lambdaHH*(x'*x);
+
+% Solve problem
+% Solution that minimizes the variance + HH index
+new_weights = estimateCustomObjectivePortfolio(p,objFun, ...
+    TargetReturn=ret0);
+
+end
+
+function new_weights = MixMDP(~, assetPrices, struct)
+% Min variance + MDP diversification strategy
+
+% Retrieve the portfolio information.
+p = struct.p;
+ret0 = struct.ret0;
+
+% Define the returns and covariance matrix.
+assetReturns = tick2ret(assetPrices);
+p = estimateAssetMoments(p,assetReturns{:,:});
+sigma = sqrt(diag(p.AssetCovar));
+
+% Objective function: Variance + MDP diversification term
+%   min x'*Sigma*x - lambda*sigma'*x
+objFun = @(x) x'*p.AssetCovar*x - struct.lambdaMDP*(sigma'*x);
+
+% Solve problem
+% Solution that minimizes variance + MDP term
+new_weights = estimateCustomObjectivePortfolio(p,objFun, ...
+    TargetReturn=ret0);
+
+end
+
+function new_weights = tiltedHH(~,assetPrices,struct)
+% Tilted HH approach
+
+Diversify ESG Portfolios
+
+4-283

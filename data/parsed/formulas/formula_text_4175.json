@@ -1,0 +1,12 @@
+{
+  "page": 2343,
+  "original_text": "•\nWhen N = ceil(NumQuantiles/2), the specified colors represent the bottom half of the fans. The\ncolors of the top half are determined by reversing the order of these colors. For more information,\nsee ceil.",
+  "ocr_text": "*WhenN=ceil(NumQuantiles/2),thespecifiedcolorsrepresentthebottomhalfofthefans.The\ncolorsofthetophalfaredeterminedbyreversingtheorderofthesecolors.Formoreinformation,\nseeceil.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 212.36,
+    "x1": 554.8,
+    "y1": 247.99
+  },
+  "confidence": "high"
+}

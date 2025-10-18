@@ -1,0 +1,10 @@
+Page 224
+================================================================================
+
+Both the Portfolio object and the setCosts function implement scalar expansion on the
+arguments for transaction costs and the initial portfolio. If the NumAssets property is already set in
+the Portfolio object, scalar arguments for these properties are expanded to have the same value
+across all dimensions. In addition, setCosts lets you specify NumAssets as an optional final
+argument. For example, assume that you have an initial portfolio x0 and you want to set common
+transaction costs on all assets in your universe. You can set these costs in any of these equivalent
+ways:

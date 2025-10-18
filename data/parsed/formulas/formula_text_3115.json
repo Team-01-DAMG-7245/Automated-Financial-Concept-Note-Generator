@@ -1,0 +1,12 @@
+{
+  "page": 1647,
+  "original_text": "Example: [Paths,Times,Z] = simByHybrid(rvm,NPeriods,DeltaTime=dt)",
+  "ocr_text": "Example:[Paths,Times,Z]=simByHybrid(rvm,NPeriods,DeltaTime=dt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 444.23,
+    "x1": 472.5,
+    "y1": 455.86
+  },
+  "confidence": "high"
+}

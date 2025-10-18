@@ -1,0 +1,6 @@
+Page 263
+================================================================================
+
+Given a portfolio set specified in a Portfolio object, you often want to check if specific portfolios
+are feasible with respect to the portfolio set. This can occur with, for example, initial portfolios and
+with portfolios obtained from other procedures. The checkFeasibility function determines

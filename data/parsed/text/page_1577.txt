@@ -1,0 +1,58 @@
+Object Functions
+runBacktest
+Run backtest on one or more strategies
+summary
+Generate summary table of backtest results
+equityCurve
+Plot equity curves of strategies
+
+Examples
+
+Backtest Strategy Using backtestEngine
+
+Use a backtesting engine in MATLAB® to run a backtest on an investment strategy over a time series
+of market data. You can define a backtesting engine by using backtestEngine object. A
+backtestEngine object sets properties of the backtesting environment, such as the risk-free rate,
+and holds the results of the backtest. In this example, you can create a backtesting engine to run a
+simple backtest and examine the results.
+
+Create Strategy
+
+Define an investment strategy by using the backtestStrategy function. This example builds a
+simple equal-weighted investment strategy that invests equally across all assets. For more
+information on creating backtest strategies, see backtestStrategy.
+
+% The rebalance function is simple enough that you can use an anonymous function
+equalWeightRebalanceFcn = @(current_weights,~) ones(size(current_weights)) / numel(current_weight
+
+% Create the strategy
+strategy = backtestStrategy("EqualWeighted",equalWeightRebalanceFcn,...
+    'RebalanceFrequency',20,...
+    'TransactionCosts',[0.0025 0.005],...
+    'LookbackWindow',0)
+
+strategy = 
+  backtestStrategy with properties:
+
+Name: "EqualWeighted"
+              RebalanceFcn: @(current_weights,~)ones(size(current_weights))/numel(current_weights
+        RebalanceFrequency: 20
+          TransactionCosts: [0.0025 0.0050]
+            LookbackWindow: 0
+            InitialWeights: [1×0 double]
+             ManagementFee: 0
+     ManagementFeeSchedule: 1y
+            PerformanceFee: 0
+    PerformanceFeeSchedule: 1y
+         PerformanceHurdle: 0
+                  UserData: [0×0 struct]
+            EngineDataList: [0×0 string]
+
+Set Backtesting Engine Properties
+
+The backtesting engine has several properties that you set by using parameters to the
+backtestEngine function.
+
+backtestEngine
+
+15-271

@@ -1,0 +1,36 @@
+When to Use Portfolio Objects Over Optimization Toolbox
+
+While you can use Optimization Toolbox to solve portfolio optimization problems, Financial Toolbox
+has the Portfolio, PortfolioCVaR, and PortfolioMAD objects that you can use as well. Which
+tool you use depends on the problem case:
+
+•
+Always use a Portfolio, PortfolioCVaR, or PortfolioMAD object when the problem can
+most easily be written and implemented using one of these objects. This case includes problems
+that can be solved only with the internal solvers of the Portfolio, PortfolioCVaR, or
+PortfolioMAD object. The Optimization Toolbox solvers cannot directly handle these problems.
+For details, see “Always Use Portfolio, PortfolioCVaR, or PortfolioMAD Object” on page 4-134.
+
+•
+Prefer to use a Portfolio, PortfolioCVaR, or PortfolioMAD object when the problem can be
+modeled and implemented using both the Portfolio, PortfolioCVaR, or PortfolioMAD object
+and the Optimization Toolbox problem-based framework. The advantage of using a Portfolio,
+PortfolioCVaR, or PortfolioMAD object instead of the Optimization Toolbox is that the internal
+tools of these objects simplify the analysis. For details, see “Preferred Use of Portfolio,
+PortfolioCVaR, or PortfolioMAD Object” on page 4-135.
+
+•
+Opt to use Optimization Toolbox for problems that cannot be solved with the internal solvers of
+the Portfolio, PortfolioCVaR, or PortfolioMAD object. Some of the problems that the
+Portfolio, PortfolioCVaR, or PortfolioMAD object cannot solve can be addressed using the
+Optimization Toolbox problem-based framework. Problems that cannot be directly solved with
+either framework require either some restructuring of the model or an implementation of a
+specialized solver. For details, see “Use Optimization Toolbox” on page 4-136.
+
+The following table summarizes the objective functions, constraints, and variables that apply in each
+case for solving a portfolio problem.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-132

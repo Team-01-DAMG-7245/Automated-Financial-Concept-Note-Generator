@@ -1,0 +1,12 @@
+{
+  "page": 95,
+  "original_text": "DSMSG = tabularTextDatastore(MSGFileName,'ReadVariableNames',false,'ReadSize','file');\nDSMSG.VariableNames = [\"Time\",\"Type\",\"OrderID\",\"Size\",\"Price\",\"Direction\"];",
+  "ocr_text": "DSMSG=tabularTextDatastore(MSGFileName,ReadVariableNames,false,ReadSize,file);\nDSMSG.VariableNames=[Time,Type,OrderID,Size,Price,Direction];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.72,
+    "x1": 555.99,
+    "y1": 147.98
+  },
+  "confidence": "high"
+}

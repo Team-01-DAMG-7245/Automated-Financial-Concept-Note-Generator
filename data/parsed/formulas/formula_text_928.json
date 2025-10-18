@@ -1,0 +1,12 @@
+{
+  "page": 502,
+  "original_text": "The diversification ratio φ x  is equal to 1 if the portfolio is fully invested in one asset or if all assets\nare perfectly correlated. For all other cases, φ x > 1. If φ x ≈1, there is no diversification, so the\ngoal is to find the portfolio that maximizes φ x :",
+  "ocr_text": "Thediversificationratiog(x)isequalto_1iftheportfolioisfullyinvestedinoneassetorifallassets\nareperfectlycorrelated.Forallothercases,(x)1.Ifw(x)=1,thereisnodiversification,sothe\ngoalistofindtheportfoliothatmaximizes(x):",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 584.35,
+    "x1": 546.5,
+    "y1": 619.98
+  },
+  "confidence": "high"
+}

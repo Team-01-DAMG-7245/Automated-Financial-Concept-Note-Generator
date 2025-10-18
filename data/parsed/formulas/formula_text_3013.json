@@ -1,0 +1,12 @@
+{
+  "page": 1584,
+  "original_text": "backtester = runBacktest(backtester,pricesTT) runs the backtest over the timetable of\nadjusted asset price data.",
+  "ocr_text": "backtester=runBacktest(backtester,pricesTT)runsthebacktestoverthetimetableof\nadjustedassetpricedata.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 270.93,
+    "x1": 541.81,
+    "y1": 294.56
+  },
+  "confidence": "high"
+}

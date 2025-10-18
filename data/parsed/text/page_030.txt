@@ -1,0 +1,60 @@
+Analyze Sets of Numbers Using Matrix Functions
+
+In this section...
+
+“Introduction” on page 1-4
+
+“Key Definitions” on page 1-4
+
+“Referencing Matrix Elements” on page 1-4
+
+“Transposing Matrices” on page 1-5
+
+Introduction
+
+Many financial analysis procedures involve sets of numbers; for example, a portfolio of securities at
+various prices and yields. Matrices, matrix functions, and matrix algebra are the most efficient ways
+to analyze sets of numbers and their relationships. Spreadsheets focus on individual cells and the
+relationships between cells. While you can think of a set of spreadsheet cells (a range of rows and
+columns) as a matrix, a matrix-oriented tool like MATLAB® software manipulates sets of numbers
+more quickly, easily, and naturally. For more information, see “Matrix Algebra Refresher” on page 1-
+7.
+
+Key Definitions
+
+Matrix
+
+A rectangular array of numeric or algebraic quantities subject to mathematical operations; the
+regular formation of elements into rows and columns. Described as a “m-by-n” matrix, with m the
+number of rows and n the number of columns. The description is always “row-by-column.” For
+example, here is a 2-by-3 matrix of two bonds (the rows) with different par values, coupon rates, and
+coupon payment frequencies per year (the columns) entered using MATLAB notation:
+
+Bonds = [1000   0.06   2
+          500   0.055  4]
+
+Vector
+
+A matrix with only one row or column. Described as a “1-by-n” or “m-by-1” matrix. The description is
+always “row-by-column.” For example, here is a 1-by-4 vector of cash flows in MATLAB notation:
+
+Cash = [1500   4470   5280   -1299]
+
+Scalar
+
+A 1-by-1 matrix; that is, a single number.
+
+Referencing Matrix Elements
+
+To reference specific matrix elements, use (row, column) notation. For example:
+
+Bonds(1,2)
+
+ans =
+
+0.06
+
+1
+Getting Started
+
+1-4

@@ -1,0 +1,12 @@
+{
+  "page": 1957,
+  "original_text": "profilesAfter = struct with fields:\n     Dates: [37×1 double]\n        EE: [37×1 double]\n       PFE: [37×1 double]",
+  "ocr_text": "profilesAfter=structwithfields:\nDates:[37x1double]\nEE:[37x1double]\nPFE:_[37x1double]",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 279.64,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

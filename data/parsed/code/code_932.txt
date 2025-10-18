@@ -1,0 +1,6 @@
+Page 905
+================================================================================
+
+When using the Portfolio object, you can use the estimateMaxSharpeRatio function to estimate
+an efficient portfolio that maximizes the Sharpe ratio. For more information, see “Efficient Portfolio
+That Maximizes Sharpe Ratio” on page 4-111.

@@ -1,0 +1,12 @@
+{
+  "page": 2143,
+  "original_text": "NumDays = daysdif(StartDate,EndDate) returns the number of days between dates\nStartDate and EndDate. The first date for StartDate is not included when determining the\nnumber of days between first and last date.",
+  "ocr_text": "NumDays=daysdif(StartDate,EndDate)returnsthenumberofdaysbetweendates\nStartDateandEndDate.ThefirstdateforStartDateisnotincludedwhendeterminingthe\nnumberofdaysbetweenfirstandlastdate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.12,
+    "x1": 523.06,
+    "y1": 291.75
+  },
+  "confidence": "high"
+}

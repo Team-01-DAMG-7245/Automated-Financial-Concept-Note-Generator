@@ -1,0 +1,12 @@
+{
+  "page": 763,
+  "original_text": "p = PortfolioCVaR('AssetList',Assets(1:12));\np = simulateNormalScenariosByData(p, Data(:,1:12), 20000 ,'missingdata',true);\np = setProbabilityLevel(p, 0.95);\np = setDefaultConstraints(p);\ndisp(p)",
+  "ocr_text": "p=PortfolioCVaR(AssetList,Assets(1:12));\np=simulateNormalScenariosByData(p,Data(:,1:12),20000,missingdata,true);\np=setProbabilityLevel(p,0.95);\n\np=setDefaultConstraints(p);\n\ndisp(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 210.81,
+    "x1": 512.63,
+    "y1": 264.47
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,54 @@
+daysadd
+
+Date away from starting date for any day-count basis
+
+Syntax
+
+NewDate = daysadd(StartDate,NumDays)
+NewDate = daysadd( ___ ,Basis)
+
+Description
+
+NewDate = daysadd(StartDate,NumDays) returns a date NewDate number of days away from
+StartDate.
+
+If StartDate is a string or date character vector, NewDate is returned as a serial date number.
+
+If StartDate is a datetime array, then NewDate is returned as a datetime array.
+
+NewDate = daysadd( ___ ,Basis) returns a date NewDate number of days away from
+StartDate, using the optional argument Basis for day-count.
+
+If StartDate is a string or date character vector, NewDate is returned as a serial date number. Use
+the function datetime to convert serial date numbers to formatted datetime arrays.
+
+If StartDate is a datetime array, then NewDate is returned as a datetime array.
+
+Examples
+
+Determine the Date for Given Number of Days Away From StartDate
+
+Determine the NewDate using a date character vector for StartDate.
+
+NewDate = daysadd('01-Feb-2004', 31)
+
+NewDate = 
+732009
+
+datestr(NewDate)
+
+ans = 
+'03-Mar-2004'
+
+Determine the NewDate using a datetime for StartDate.
+
+NewDate = daysadd(datetime(2004,2,1), 31)
+
+NewDate = datetime
+   03-Mar-2004
+
+Determine the NewDate using a datetime arraay for StartDate.
+
+daysadd
+
+15-833

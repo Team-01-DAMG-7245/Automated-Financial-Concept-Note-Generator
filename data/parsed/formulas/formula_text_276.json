@@ -1,0 +1,12 @@
+{
+  "page": 168,
+  "original_text": "AbsoluteWeights = ActiveWeights + repmat(Index, 1, 21)",
+  "ocr_text": "AbsoluteWeights=ActiveWeights+repmat(Index,1,21)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.23,
+    "x1": 382.57,
+    "y1": 263.69
+  },
+  "confidence": "high"
+}

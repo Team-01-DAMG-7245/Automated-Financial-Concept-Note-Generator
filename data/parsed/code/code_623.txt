@@ -1,0 +1,7 @@
+Page 565
+================================================================================
+
+% Compute the weights with denoised strategy.
+userData.numFactors = [];
+[wFactorModel_initial,userData] = factorModeling(w0,warmupTT, ...
+    userData);

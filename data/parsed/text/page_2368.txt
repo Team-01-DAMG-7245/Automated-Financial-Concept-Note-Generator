@@ -1,0 +1,83 @@
+Maturity date, specified as a scalar datetime, string, or date character vector.
+
+To support existing code, fvdisc also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Price — Price (present value) of security
+scalar numeric
+
+Price (present value) of the security, specified as a scalar numeric.
+
+Data Types: double
+
+Discount — Bank discount rate of security
+scalar decimal
+
+Bank discount rate of security, specified as a scalar decimal.
+
+Data Types: double
+
+Basis — Day-count basis of instrument
+0 (default) | numeric values: 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13
+
+Day-count basis of the instrument, specified as a scalar integer using one of the following values:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+Output Arguments
+
+FutureVal — Amount received at maturity for fully vested security
+scalar numeric
+
+Amount received at maturity for a fully vested security, returned as a scalar numeric.
+
+15
+Functions
+
+15-1062

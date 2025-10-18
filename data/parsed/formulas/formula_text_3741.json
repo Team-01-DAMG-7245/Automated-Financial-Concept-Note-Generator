@@ -1,0 +1,12 @@
+{
+  "page": 2119,
+  "original_text": "NumberDays = days252bus( ___ HolidayVector) adds an optional argument for\nHolidayVector. If a holiday vector is not optionally specified, then the holidays.m file is used to\ndetermine the holidays.",
+  "ocr_text": "NumberDays=days252bus(__HolidayVector)addsanoptionalargumentfor\nHolidayVector.Ifaholidayvectorisnotoptionallyspecified,thentheholidays.mfileisusedto\ndeterminetheholidays.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 294.88,
+    "x1": 546.76,
+    "y1": 330.51
+  },
+  "confidence": "high"
+}

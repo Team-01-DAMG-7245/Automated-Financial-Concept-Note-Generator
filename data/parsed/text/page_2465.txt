@@ -1,0 +1,77 @@
+for ages x ≥ 0, with parameters A, B, C, D, E, F, G, H ≥ 0.
+
+•
+'heligman-pollard-2' — Eight-parameter Heligman-Pollard model (version 2), specified in
+terms of the discrete hazard function:
+
+q(x)
+1 −q(x) = A(x + B)C
++ Dexp( −E(log x
+F)
+2
+) +
+GHX
+
+1 + GHX
+
+for ages x ≥ 0, with parameters A, B, C, D, E, F, G, H ≥ 0.
+
+•
+'heligman-pollard-3' — Eight-parameter Heligman-Pollard model (version 3), specified in
+terms of the discrete hazard function:
+
+q(x) = A(x + B)C
++ Dexp( −E(log x
+F)
+2
+) + GHX
+
+for ages x ≥ 0, with parameters A, B, C, D, E, F, G, H ≥ 0.
+
+•
+'gompertz' — Two-parameter Gompertz model, specified in terms of the continuous hazard
+function:
+
+h(x) = A exp(Bx)
+
+for ages x ≥ 0, with parameters A, B ≥ 0.
+
+•
+'makeham' — Three-parameter Gompertz-Makeham model, specified in terms of the continuous
+hazard function:
+
+h(x) = A exp(Bx) + C
+
+for ages x ≥ 0, with parametersA, B, C ≥ 0.
+
+•
+'siler' — Five-parameter Siler model, specified in terms of the continuous hazard function:
+
+h(x) = A exp(Bx) + C + D exp(-Ex)
+
+for ages x ≥ 0, with parameters A, B, C, D, E ≥ 0.
+
+Data Types: char
+
+Output Arguments
+
+qx — Conditional probabilities of dying for N ages and num series
+matrix
+
+Conditional probabilities of dying for N ages and num series, returned as an N-by-num matrix. The
+series qx is the conditional probability that a person at age x will die between age x and the next age
+in the series. For the last age, qx represents probabilities or counts for all ages after the last age.
+
+The last row of the N-by-num output for qx is the values for all ages on or after the last age in x (due
+to “Forced Termination” on page 15-1160). Therefore, the last row of qx contains 1 (100% probability
+of dying on or after the last age).
+
+lx — Survival counts for N ages and num series
+matrix
+
+Survival counts for N ages and num series, returned as an N-by-num matrix. The series lx is the
+number of people alive at age x, given 100,000 alive at birth.
+
+lifetablegen
+
+15-1159

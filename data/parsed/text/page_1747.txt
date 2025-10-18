@@ -1,0 +1,60 @@
+GB = [ false false false true true true ];    % nonfinancial companies
+p = setGroupRatio(p, GA, GB, [], 0.5);
+
+GA = [ true false true false true false ];    % odd-numbered companies
+GB = [ false false false true true true ];    % nonfinancial companies
+p = addGroupRatio(p, GA, GB, 0.2);
+
+disp(p.NumAssets);
+
+6
+
+disp(p.GroupA);
+
+1     1     1     0     0     0
+     1     0     1     0     1     0
+
+disp(p.GroupB);
+
+0     0     0     1     1     1
+     0     0     0     1     1     1
+
+disp(p.LowerRatio);
+
+-Inf
+    0.2000
+
+disp(p.UpperRatio);
+
+0.5000
+       Inf
+
+Add Group Ratio Constraints to a PortfolioCVaR Object
+
+Set a group ratio constraint to ensure that the weight in financial assets does not exceed 50% of the
+weight in nonfinancial assets. Then add another group ratio constraint to ensure that the weight in
+financial assets constitute at least 20% of the weight in nonfinancial assets of the portfolio.
+
+p = PortfolioCVaR;
+GA = [ true true true false false false ];    % financial companies
+GB = [ false false false true true true ];    % nonfinancial companies
+p = setGroupRatio(p, GA, GB, [], 0.5);
+
+GA = [ true false true false true false ];    % odd-numbered companies
+GB = [ false false false true true true ];    % nonfinancial companies
+p = addGroupRatio(p, GA, GB, 0.2);
+
+disp(p.NumAssets);
+
+6
+
+disp(p.GroupA);
+
+1     1     1     0     0     0
+     1     0     1     0     1     0
+
+disp(p.GroupB);
+
+addGroupRatio
+
+15-441

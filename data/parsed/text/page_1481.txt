@@ -1,0 +1,62 @@
+If you specify Alpha as an array, it represents an NVars-by-1 column vector of exponents.
+
+As a deterministic function of time, when Alpha is called with a real-valued scalar time t as its only
+input, Alpha must produce an NVars-by-1 matrix.
+
+If you specify it as a function of time and state, Alpha must return an NVars-by-1 column vector of
+exponents when invoked with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Sigma — Sigma represents the parameter V
+array or deterministic function of time or deterministic function of time and state
+
+Sigma represents the parameter V, specified as an array or a deterministic function of time.
+
+If you specify Sigma as an array, it must be an NVars-by-NBrowns matrix of instantaneous volatility
+rates or as a deterministic function of time. In this case, each row of Sigma corresponds to a
+particular state variable. Each column corresponds to a particular Brownian source of uncertainty,
+and associates the magnitude of the exposure of state variables with sources of uncertainty.
+
+As a deterministic function of time, when Sigma is called with a real-valued scalar time t as its only
+input, Sigma must produce an NVars-by-NBrowns matrix. If you specify Sigma as a function of time
+and state, it must return an NVars-by-NBrowns matrix of volatility rates when invoked with two
+inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Although the gbm constructor enforces no restrictions on the sign of Sigma volatilities, they are
+specified as positive values.
+
+Data Types: double | function_handle
+
+Note Although sdeld does not enforce restrictions on the signs of Alpha or Sigma, each parameter
+is specified as a positive value.
+
+Output Arguments
+
+SDELD — SDELD model
+SDELD object
+
+SDELD model, returned as a SDELD object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of first observation, applied to all state variables, specified as a scalar
+
+sdeld
+
+15-175

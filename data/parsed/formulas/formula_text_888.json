@@ -1,0 +1,12 @@
+{
+  "page": 489,
+  "original_text": "weights = ones(1,num_assets) / num_assets;",
+  "ocr_text": "weights=ones(1,num_assets)/num_assets;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 136.23,
+    "x1": 317.56,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

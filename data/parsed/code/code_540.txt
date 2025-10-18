@@ -1,0 +1,7 @@
+Page 501
+================================================================================
+
+constraints, the solution of this problem is the equally weighted (EW) portfolio. If X had extra
+constraints, the solution would be the portfolio that satisfies all the constraints and, at the same time,
+keeps the weights as equal as possible. Use the function handle HHObjFun for the Herfindahl-
+Hirschman (HH) index with the estimateCustomObjectivePortfolio function.

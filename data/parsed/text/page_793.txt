@@ -1,0 +1,64 @@
+Average Turnover Constraints
+
+Turnover constraint is a linear absolute value constraint that ensures estimated optimal portfolios
+differ from an initial portfolio by no more than a specified amount. Although portfolio turnover is
+defined in many ways, the turnover constraints implemented in Financial Toolbox compute portfolio
+turnover as the average of purchases and sales. Average turnover constraints take the form
+
+1
+21T x −x0
+≤τ
+
+where:
+
+x is the portfolio (n vector).
+
+1 is the vector of ones (n vector).
+
+x0 is the initial portfolio (n vector).
+
+τ is the upper bound for turnover (scalar).
+
+n is the number of assets in the universe.
+
+PortfolioMAD object properties to specify the average turnover constraint are:
+
+•
+Turnover for τ
+
+•
+InitPort for x0
+•
+NumAssets for n
+
+The default is to ignore this constraint.
+
+One-way Turnover Constraints
+
+One-way turnover constraints ensure that estimated optimal portfolios differ from an initial portfolio
+by no more than specified amounts according to whether the differences are purchases or sales. The
+constraints take the forms
+
+1T × max 0, x −x0
+≤τB
+
+1T × max 0, x0 −x
+≤τS
+
+where:
+
+x is the portfolio (n vector)
+
+1 is the vector of ones (n vector).
+
+x0 is the Initial portfolio (n vector).
+
+τB is the upper bound for turnover constraint on purchases (scalar).
+
+τS is the upper bound for turnover constraint on sales (scalar).
+
+To specify one-way turnover constraints, use the following properties in the PortfolioMAD object:
+
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object
+
+6-13

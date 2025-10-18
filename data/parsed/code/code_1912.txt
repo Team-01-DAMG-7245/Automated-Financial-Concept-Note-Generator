@@ -1,0 +1,4 @@
+Page 1536
+================================================================================
+
+Kernel function parameter representing the roughness index, returned as a numeric scalar.

@@ -1,0 +1,82 @@
+About Credit Scorecards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-49
+What Is a Credit Scorecard? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-49
+Credit Scorecard Development Process . . . . . . . . . . . . . . . . . . . . . . . . .
+8-50
+
+Credit Scorecard Modeling Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-52
+
+Credit Scorecard Modeling Using Observation Weights . . . . . . . . . . . . .
+8-55
+
+Credit Scorecard Modeling with Missing Values . . . . . . . . . . . . . . . . . . .
+8-57
+
+Troubleshooting Credit Scorecard Results . . . . . . . . . . . . . . . . . . . . . . . .
+8-64
+Predictor Name Is Unspecified and the Parser Returns an Error . . . . . . .
+8-64
+Using bininfo or plotbins Before Binning . . . . . . . . . . . . . . . . . . . . . . . . .
+8-64
+If Categorical Data Is Given as Numeric . . . . . . . . . . . . . . . . . . . . . . . . .
+8-66
+NaNs Returned When Scoring a “Test” Dataset . . . . . . . . . . . . . . . . . . .
+8-68
+
+Case Study for Credit Scorecard Analysis . . . . . . . . . . . . . . . . . . . . . . . . .
+8-71
+
+Credit Scorecards with Constrained Logistic Regression Coefficients . .
+8-91
+
+Credit Default Swap (CDS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-100
+
+Bootstrapping a Default Probability Curve . . . . . . . . . . . . . . . . . . . . . . .
+8-101
+
+Finding Breakeven Spread for New CDS Contract . . . . . . . . . . . . . . . . .
+8-104
+
+Valuing an Existing CDS Contract . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-107
+
+Converting from Running to Upfront . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-109
+
+Bootstrapping from Inverted Market Curves . . . . . . . . . . . . . . . . . . . . .
+8-111
+
+Visualize Transitions Data for transprob . . . . . . . . . . . . . . . . . . . . . . . . .
+8-114
+
+Impute Missing Data in the Credit Scorecard Workflow Using the k-
+Nearest Neighbors Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-121
+
+Impute Missing Data in the Credit Scorecard Workflow Using the Random
+Forest Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-127
+
+Treat Missing Data in a Credit Scorecard Workflow Using MATLAB
+fillmissing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8-132
+
+Regression with Missing Data
+9
+
+Multivariate Normal Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-2
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-2
+Multivariate Normal Linear Regression . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-2
+Maximum Likelihood Estimation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+9-3
+Special Case of Multiple Linear Regression Model . . . . . . . . . . . . . . . . . .
+9-4
+
+xx
+Contents

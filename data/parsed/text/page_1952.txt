@@ -1,0 +1,60 @@
+Payment times, returned as an N-by-numCF matrix of accrual fractions.
+
+More About
+
+Credit Default Swap
+
+A Credit Default Swap (CDS) is a financial derivative contract that allows an investor to "swap" or
+transfer the credit risk of a borrower (usually a corporation or government) to another party.
+
+The parties involved are:
+
+•
+Protection Buyer — The party that purchases the CDS to protect against the risk of default. They
+pay periodic premiums (known as the CDS spread) to the protection seller.
+
+•
+Protection Seller — The party that provides the credit protection and receives the premiums
+from the protection buyer. In the event of a default, the protection seller is obligated to
+compensate the protection buyer.
+
+RPV01
+
+RPV01, associated with a CDS, is the value of a stream of 1-basis-point premiums according to the
+payment structure of the CDS contract, and considering the default probability over time.
+
+For more information, see [3] and [4] for details.
+
+Version History
+Introduced in R2013b
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cdsrpv01 supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Beumee, J., D. Brigo, D. Schiemert, and G. Stoyle. “Charting a Course Through the CDS Big Bang.”
+Fitch Solutions, Quantitative Research. Global Special Report. April 7, 2009.
+
+[2] Hull, J., and A. White. “Valuing Credit Default Swaps I: No Counterparty Default Risk.” Journal of
+Derivatives. Vol. 8, pp. 29–40.
+
+15
+Functions
+
+15-646

@@ -1,0 +1,12 @@
+{
+  "page": 553,
+  "original_text": "trainingOptions = rlTrainingOptions;",
+  "ocr_text": "trainingOptions=rlTrainingOptions;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.43,
+    "x1": 285.05,
+    "y1": 211.89
+  },
+  "confidence": "high"
+}

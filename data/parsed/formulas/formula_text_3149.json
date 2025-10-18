@@ -1,0 +1,12 @@
+{
+  "page": 1691,
+  "original_text": "CIR = cir(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)",
+  "ocr_text": "CIR=cir(0.2,0.1,0.05)(Speed,Level,Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 164.24,
+    "x1": 360.92,
+    "y1": 174.71
+  },
+  "confidence": "high"
+}

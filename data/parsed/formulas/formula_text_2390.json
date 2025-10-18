@@ -1,0 +1,12 @@
+{
+  "page": 1226,
+  "original_text": "CEV = \n   Class CEV: Constant Elasticity of Variance\n   ------------------------------------------\n     Dimensions: State = 6, Brownian = 6\n   ------------------------------------------\n      StartTime: 0\n     StartState: 100 (6x1 double array) \n    Correlation: 6x6 double array \n          Drift: drift rate function F(t,X(t)) \n      Diffusion: diffusion rate function G(t,X(t)) \n     Simulation: simulation method/function simByEuler",
+  "ocr_text": "CEV=\nClassCEV:ConstantElasticityofVariance\n\nDimensions:State=6,Brownian=6\nStartTime:0\n\nStartState:100(6x1doublearray)\n\nCorrelation:6x6doublearray\nDrift:driftratefunctionF(t,X(t))\n\nDiffusion:diffusionratefunctionG(t,X(t))\n\nSimulation:simulationmethod/functionsimByEuler",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.62,
+    "x1": 382.57,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

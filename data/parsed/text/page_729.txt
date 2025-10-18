@@ -1,0 +1,117 @@
+PortfolioCVaR
+Problem
+
+PortfolioCVaR
+Function
+
+Type of
+Optimization
+Problem
+
+Main Solver
+Helper Solver
+
+PortfolioCVaR with
+active
+'Conditional'
+BoundType,
+MinNumAssets,
+MaxNumAssets, or
+conditional budget
+constraints
+
+estimateFronti
+erLimits
+
+The problem is
+formulated by
+introducing
+NumAssets binary
+variables to
+indicate whether
+the corresponding
+asset is invested or
+not. Therefore, it
+requires a mixed
+integer nonlinear
+programming
+solver. Three types
+of MINLP solvers
+are offered, see
+setSolverMINLP.
+
+Mixed integer
+nonlinear
+programming
+solver (MINLP)
+using
+setSolverMINLP
+
+'fmincon' is used
+when the
+estimate
+functions reduce
+the problem into
+NLP. This solver is
+configured through
+setSolver
+
+See Also
+PortfolioCVaR | estimateFrontier | estimateFrontierLimits |
+estimateFrontierByReturn | estimatePortReturn | estimateFrontierByRisk |
+estimatePortRisk | estimateFrontierByRisk | setConditionalBudget | setSolver |
+setSolverMINLP
+
+Related Examples
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Troubleshooting CVaR Portfolio Optimization Results” on page 5-121
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+•
+“Mixed-Integer CVaR Portfolio Optimization Problem” on page 5-141
+
+•
+“Adding Constraints to Satisfy UCITS Directive” on page 4-457
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+“Portfolio Optimization Theory” on page 5-3
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+•
+“Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using
+Portfolio Objects” on page 4-81
+
+Choosing and Controlling the Solver for PortfolioCVaR Optimizations
+
+5-103

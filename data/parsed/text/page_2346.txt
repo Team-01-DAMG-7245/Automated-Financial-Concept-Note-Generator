@@ -1,0 +1,55 @@
+fbusdate
+
+First business date of month
+
+Syntax
+
+Date = fbusdate(Year,Month)
+Date = fbusdate( ___ ,Holiday,Weekend,outputType)
+
+Description
+
+Date = fbusdate(Year,Month) returns the serial date number for the first business date of the
+given year and month.
+
+Year and Month can contain multiple values. If one contains multiple values, the other must contain
+the same number of values or a single value that applies to all. For example, ifYear is a 1-by-N vector
+of integers, then Month must be a 1-by-N vector of integers or a single integer. Date is then a 1-by-N
+vector of datetimes or serial date numbers.
+
+Use the function datetime to convert serial date numbers to formatted datetime arrays.
+
+Date = fbusdate( ___ ,Holiday,Weekend,outputType) returns the serial date number for the
+first business date of the given year and month using optional input arguments. The optional
+argument Holiday specifies nontrading days.
+
+If neither Holiday nor outputType are specified, Date is returned as a serial date number. If
+Holiday is specified, but not outputType, then the type of the holiday variable controls the type of
+date. If Holiday is a string or date character vector, then Date is returned as a serial date number.
+
+Examples
+
+Return a Serial Date Number for the First Business Date
+
+This example shows how to return serial date numbers for the first business date, given year and
+month.
+
+Date = fbusdate(2001, 11)
+
+Date = 
+731156
+
+datestr(Date)
+
+ans = 
+'01-Nov-2001'
+
+Year = [2002 2003 2004];
+Date = fbusdate(Year, 11)
+
+Date = 1×3
+
+15
+Functions
+
+15-1040

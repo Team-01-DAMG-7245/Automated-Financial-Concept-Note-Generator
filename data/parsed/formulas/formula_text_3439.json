@@ -1,0 +1,12 @@
+{
+  "page": 1907,
+  "original_text": "Busday = busdate( ___ ,DirFlag,Holiday,Weekend) returns the scalar, vector, or matrix of\nthe next or previous business days, depending on the optional input arguments, including Holiday.",
+  "ocr_text": "Busday=busdate(___,DirFlag,Holiday,Weekend)returnsthescalar,vector,ormatrixof\nthenextorpreviousbusinessdays,dependingontheoptionalinputarguments,includingHoliday.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 293.34,
+    "x1": 548.16,
+    "y1": 316.97
+  },
+  "confidence": "high"
+}

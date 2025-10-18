@@ -1,0 +1,12 @@
+{
+  "page": 2069,
+  "original_text": "PreviousQuasiCouponDate = cpndatepq( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate), using optional input arguments, determines the previous\nquasi-coupon date for a set of NUMBONDS fixed income securities.",
+  "ocr_text": "PreviousQuasiCouponDate=cpndatepq(__,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate),usingoptionalinputarguments,determinestheprevious\nquasi-coupondateforasetofNUMBONDSfixedincomesecurities.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 377.7,
+    "x1": 551.56,
+    "y1": 413.33
+  },
+  "confidence": "high"
+}

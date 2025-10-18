@@ -1,0 +1,12 @@
+{
+  "page": 1133,
+  "original_text": "% Calculate the returns statistics.\nretsMean = mean(treasuryReturns);\nretsCov  = cov(treasuryReturns);\n[retsStd,retsCor] = cov2corr(retsCov);",
+  "ocr_text": "Calculatethereturnsstatistics.\nretsMean=mean(treasuryReturns);\nretsCov=cov(treasuryReturns);\n[retsStd,retsCor]=cov2corr(retsCov);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 295.88,
+    "y1": 665.09
+  },
+  "confidence": "high"
+}

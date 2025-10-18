@@ -1,0 +1,18 @@
+483.0606
+  521.2249
+  518.0013
+  448.8099
+
+disp(Points)
+
+CustAge    ResStatus    EmpStatus    CustIncome    TmWBank    OtherCC    AMBalance
+    _______    _________    _________    __________    _______    _______    _________
+
+66.868      62.161       58.846        67.938      61.818     75.642      89.788  
+    80.326      73.305       58.846          82.3      61.018     75.642      89.788  
+    97.559      73.305       58.846        96.647       51.05     50.806      89.788  
+    66.868      90.777       58.846        29.906      61.818     50.806      89.788
+
+Treat Missing Data in a Credit Scorecard Workflow Using MATLAB fillmissing
+
+8-139

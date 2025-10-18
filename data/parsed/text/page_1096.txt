@@ -1,0 +1,59 @@
+end
+
+% Estimate the CAPM for all assets together with initial parameter estimates.
+[Param, Covar] = ecmmvnrmle(TestData, TestDesign, [], [], [], Param0, Covar0);
+
+% Estimate the ideal standard errors for covariance parameters.
+[StdParam, StdCovar] = ecmmvnrstd(TestData, TestDesign, Covar, 'fisher');
+
+% Estimate the sample standard errors for model parameters.
+StdParam = ecmmvnrstd(TestData, TestDesign, Covar, 'hessian');
+
+% Set up results for the output.
+Alpha = Param(1:2:end-1);
+Beta = Param(2:2:end);
+Sigma = sqrt(diag(Covar));
+
+StdAlpha = StdParam(1:2:end-1);
+StdBeta = StdParam(2:2:end);
+StdSigma = sqrt(diag(StdCovar));
+
+displaySummary('Grouped', StartDate, EndDate, NumAssets, Assets, Alpha, StdAlpha, Beta, StdBeta,
+
+Grouped regression with daily total return data from 03-Jan-2000 to 07-Nov-2005 ...
+       Alpha                Beta                 Sigma               
+  ---- -------------------- -------------------- --------------------
+  AAPL    0.0012 (  1.3882)    1.2294 ( 17.1839)    0.0322 (  0.0062)
+  AMZN    0.0007 (  0.6086)    1.3673 ( 13.6427)    0.0450 (  0.0086)
+  CSCO   -0.0002 (  0.2878)    1.5653 ( 23.6085)    0.0298 (  0.0057)
+  DELL   -0.0000 (  0.0368)    1.2594 ( 22.2164)    0.0255 (  0.0049)
+  EBAY    0.0014 (  1.4326)    1.3441 ( 16.0732)    0.0376 (  0.0072)
+  GOOG    0.0041 (  2.8907)    0.6173 (  3.1100)    0.0337 (  0.0065)
+   HPQ    0.0001 (  0.1747)    1.3745 ( 24.2390)    0.0255 (  0.0049)
+   IBM   -0.0000 (  0.0312)    1.0807 ( 28.7576)    0.0169 (  0.0032)
+  INTC    0.0001 (  0.1608)    1.6002 ( 27.3684)    0.0263 (  0.0050)
+  MSFT   -0.0002 (  0.4871)    1.1765 ( 27.4554)    0.0193 (  0.0037)
+  ORCL    0.0000 (  0.0389)    1.5010 ( 21.1855)    0.0319 (  0.0061)
+  YHOO    0.0001 (  0.1282)    1.6543 ( 19.3838)    0.0384 (  0.0074)
+
+Although the results for complete-data stocks are the same, notice that the beta estimates for AMZN
+and GOOG (which are the two stocks with missing values) are different from the estimates derived for
+each stock separately. Since AMZN has few missing values, the differences in the estimates are small.
+With GOOG, however, the differences are more pronounced.
+
+The t-statistic for the beta estimate of GOOG is now significant at the 99.5% level of significance.
+Note, however, that the t-statistics for beta estimates are based on standard errors from the sample
+Hessian which, in contrast to the Fisher information matrix, accounts for the increased uncertainty in
+an estimate due to missing values. If the t-statistic is obtained from the more optimistic Fisher
+information matrix, the t-statistic for GOOG is 8.25. Thus, despite the increase in uncertainty due to
+missing data, GOOG nonetheless has a statistically-significant estimate for beta.
+
+Finally, note that the beta estimate for GOOG is 0.62 - a value that may require some explanation.
+Whereas the market has been volatile over this period with sideways price movements, GOOG has
+steadily appreciated in value. Consequently, it is less correlated than the market, which, in turn,
+implies that it is less volatile than the market with a beta less than 1.
+
+9
+Regression with Missing Data
+
+9-38

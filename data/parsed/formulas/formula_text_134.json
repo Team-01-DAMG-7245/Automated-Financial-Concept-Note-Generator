@@ -1,0 +1,12 @@
+{
+  "page": 106,
+  "original_text": "dI = 10; % Hyperparameter\ndTI = dI*DTAvg",
+  "ocr_text": "dI=10;Hyperparameter\ndTI_=dI*DTAvg",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 225.45,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

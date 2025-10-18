@@ -1,0 +1,4 @@
+Page 1402
+================================================================================
+
+The drift-rate specification can be any NVars-by-1 vector-valued function F of the general form:

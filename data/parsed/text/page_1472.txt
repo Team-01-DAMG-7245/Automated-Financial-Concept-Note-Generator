@@ -1,0 +1,79 @@
+•
+StartState — Initial state at time StartTime
+
+•
+Correlation — Access function for the Correlation input argument, callable as a function of
+time
+
+•
+Drift — Composite drift-rate function, callable as a function of time and state
+
+•
+Diffusion — Composite diffusion-rate function, callable as a function of time and state
+
+•
+A — Access function for the drift-rate property A, callable as a function of time and state
+
+•
+B — Access function for the drift-rate property B, callable as a function of time and state
+
+•
+Alpha — Access function for the diffusion-rate property Alpha, callable as a function of time and
+state
+
+•
+Sigma — Access function for the diffusion-rate property Sigma, callable as a function of time and
+state
+
+•
+Simulation — A simulation function or method
+
+Input Arguments
+
+DriftRate — DriftRate is a user-defined drift-rate function and represents the parameter
+F
+vector or object of class Drift
+
+DriftRate is a user-defined drift-rate function and represents the parameter F, specified as a vector
+or object of class drift.
+
+DriftRate is a function that returns an NVars-by-1 drift-rate vector when called with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Alternatively, DriftRate can also be an object of class drift that encapsulates the drift-rate
+specification. In this case, however, sde uses only the Rate parameter of the object. For more
+information on the drift object, see drift.
+
+Data Types: double
+
+DiffusionRate — DiffusionRate is a user-defined diffusion-rate function and represents
+the parameter G
+matrix or object of class Diffusion
+
+DiffusionRate is a user-defined diffusion-rate function and represents the parameter G, specified
+as a matrix or object of class diffusion.
+
+DiffusionRate is a function that returns an NVars-by-NBrowns diffusion-rate matrix when called
+with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Alternatively, DiffusionRate can also be an object of class diffusion that encapsulates the
+diffusion-rate specification. In this case, however, sde uses only the Rate parameter of the object.
+For more information on the diffusion object, see diffusion.
+
+Data Types: double
+
+15
+Functions
+
+15-166

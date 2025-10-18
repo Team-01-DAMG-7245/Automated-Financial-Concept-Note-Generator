@@ -1,0 +1,7 @@
+Page 238
+================================================================================
+
+Suppose that you want to add another group constraint to make odd-numbered assets constitute at
+least 20% of your portfolio. Set up an augmented group matrix and introduce infinite bounds for
+unconstrained group bounds or use the addGroups function to build up group constraints. For this
+example, create another group matrix for the second group constraint:

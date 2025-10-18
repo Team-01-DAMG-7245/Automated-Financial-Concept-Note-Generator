@@ -1,0 +1,42 @@
+Diversification Techniques
+
+In this example, the two diversification measures are the equally weighted (EW) portfolio and the
+most diversified portfolio (MDP).
+
+You obtain the EW portfolio using the Herfindahl-Hirschman (HH) index as the diversification
+measure
+
+HH x = ∑
+i = 1
+
+n
+xi
+2
+
+An equally weighted portfolio minimizes this index. Therefore, the portfolios that you obtain from
+using this index as a penalty have weights that satisfy the portfolio constraints and are more evenly
+weighted.
+
+The diversification measure for the most diversified portfolio (MDP) is
+
+MDP x = −∑
+i = 1
+
+n
+σixi
+
+where σi represents the standard deviation of asset i. Using this measure as a penalty function
+maximizes the diversification ratio [1 on page 4-281].
+
+φ x =
+xTσ
+
+xTΣx
+
+If the portfolio is fully invested in one asset, or if all assets are perfectly correlated, the diversification
+ratio φ x  is equal to 1. For all other cases, φ x > 1. Therefore, if φ x ≈1, there is no diversification,
+so the goal is to maximize φ x . Unlike the HH index, the goal of MDP is not to obtain a portfolio
+
+Diversify ESG Portfolios
+
+4-273

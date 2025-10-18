@@ -1,0 +1,43 @@
+Expected Users
+
+In general, this guide assumes experience working with financial derivatives and some familiarity
+with the underlying models.
+
+In designing Financial Toolbox documentation, we assume that your title is like one of these:
+
+•
+Analyst, quantitative analyst
+
+•
+Risk manager
+
+•
+Portfolio manager
+
+•
+Asset allocator
+
+•
+Financial engineer
+
+•
+Trader
+
+•
+Student, professor, or other academic
+
+We also assume that your background, education, training, and responsibilities match some aspects
+of this profile:
+
+•
+Finance, economics, perhaps accounting
+
+•
+Engineering, mathematics, physics, other quantitative sciences
+
+•
+Focus on quantitative approaches to financial problems
+
+Expected Users
+
+1-3

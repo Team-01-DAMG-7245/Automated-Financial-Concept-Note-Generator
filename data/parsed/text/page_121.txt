@@ -1,0 +1,48 @@
+identify an optimal strategy yielding a positive return. The approach has many options for further
+customization.
+
+References
+
+[1] Bull, Adam D. "Convergence Rates of Efficient Global Optimization Algorithms." Journal of
+Machine Learning Research 12, (November 2011): 2879–904.
+
+[2] Rubisov, Anton D. "Statistical Arbitrage Using Limit Order Book Imbalance." Master's thesis,
+University of Toronto, 2015.
+
+[3] Snoek, Jasper, Hugo Larochelle, and Ryan P. Adams. "Practical Bayesian Optimization of Machine
+Learning Algorithms." In Advances in Neural Information Processing Systems 25, F. Pereira
+et. al. editors, 2012.
+
+[4] Tan, Barış, and Kamil Yılmaz. “Markov Chain Test for Time Dependence and Homogeneity: An
+Analytical and Empirical Evaluation.” European Journal of Operational Research 137, no. 3
+(March 2002): 524–43. https://doi.org/10.1016/S0377-2217(01)00081-9.
+
+[5] Weißbach, Rafael, and Ronja Walter. “A Likelihood Ratio Test for Stationarity of Rating
+Transitions.” Journal of Econometrics 155, no. 2 (April 2010): 188–94.https://doi.org/10.1016/
+j.jeconom.2009.10.016.
+
+See Also
+
+More About
+
+•
+“Machine Learning for Statistical Arbitrage: Introduction” on page 2-48
+
+•
+“Machine Learning for Statistical Arbitrage I: Data Management and Visualization” on page 2-
+50
+
+•
+“Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development” on
+page 2-59
+
+•
+“Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data” on page 2-
+78
+
+•
+“Deep Reinforcement Learning for Optimal Trade Execution” on page 4-407
+
+Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction
+
+2-77

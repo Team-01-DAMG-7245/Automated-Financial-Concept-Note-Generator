@@ -1,0 +1,5 @@
+Page 2075
+================================================================================
+
+Maturity = [datetime(2000,4,30) ; datetime(2000,5,31) ; datetime(2000,6,30)];
+PreviousCouponDate = cpndatep(datetime(1997,3,14), Maturity)

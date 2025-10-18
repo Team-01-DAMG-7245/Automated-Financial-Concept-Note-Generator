@@ -1,0 +1,59 @@
+Volatility — Annualized asset price volatility
+positive decimal
+
+Annualized asset price volatility (that is, annualized standard deviation of the continuously
+compounded asset return), specified as a positive decimal number.
+
+Data Types: double
+
+Yield — Annualized continuously compounded yield of underlying asset over life of the
+option
+0 (default) | decimal
+
+(Optional) Annualized continuously compounded yield of the underlying asset over the life of the
+option, specified as a decimal number. If Yield is empty or missing, the default value is 0.
+
+For example, Yield could represent the dividend yield (annual dividend rate expressed as a
+percentage of the price of the security) or foreign risk-free interest rate for options written on stock
+indices and currencies.
+
+Note blsprice can handle other types of underlies like Futures and Currencies. When pricing
+Futures (Black model), enter the input argument Yield as:
+
+Yield = Rate
+
+When pricing currencies (Garman-Kohlhagen model), enter the input argument Yield as:
+
+Yield = ForeignRate
+
+where ForeignRate is the continuously compounded, annualized risk-free interest rate in the
+foreign country.
+
+Data Types: double
+
+Output Arguments
+
+Call — Price of a European call option
+matrix
+
+Price of a European call option, returned as a matrix.
+
+Put — Price of a European put option
+matrix
+
+Price of a European put option, returned as a matrix.
+
+More About
+
+Black-Scholes Model
+
+The Black-Scholes model is a mathematical model used for pricing European-style options, which can
+only be exercised at expiration.
+
+Developed by economists Fischer Black, Myron Scholes, and Robert Merton in the early 1970s, the
+model provides a theoretical framework for determining the fair value of options. The primary
+
+15
+Functions
+
+15-500

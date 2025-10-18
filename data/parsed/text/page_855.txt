@@ -1,0 +1,64 @@
+disp(p.Turnover)
+disp(p.InitPort)
+
+10
+
+0.3000
+
+0.1200
+0.0900
+0.0800
+0.0700
+0.1000
+0.1000
+0.1500
+0.1100
+0.0800
+0.1000
+
+or
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];
+p = PortfolioMAD;
+p = setTurnover(p, 0.3, x0);
+disp(p.NumAssets)
+disp(p.Turnover)
+disp(p.InitPort)
+
+10
+
+0.3000
+
+0.1200
+0.0900
+0.0800
+0.0700
+0.1000
+0.1000
+0.1500
+0.1100
+0.0800
+0.1000
+
+setTurnover implements scalar expansion on the argument for the initial portfolio. If the
+NumAssets property is already set in the PortfolioMAD object, a scalar argument for InitPort
+expands to have the same value across all dimensions. In addition, setTurnover lets you specify
+NumAssets as an optional argument. To clear turnover from your PortfolioMAD object, use the
+PortfolioMAD object or setTurnover with empty inputs for the properties to be cleared.
+
+See Also
+PortfolioMAD | setDefaultConstraints | setBounds | setBudget | setConditionalBudget
+| setGroups | setGroupRatio | setEquality | setInequality | setTurnover |
+setOneWayTurnover
+
+Related Examples
+
+•
+“Setting Default Constraints for Portfolio Weights Using PortfolioMAD Object” on page 6-50
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+Working with Average Turnover Constraints Using PortfolioMAD Object
+
+6-75

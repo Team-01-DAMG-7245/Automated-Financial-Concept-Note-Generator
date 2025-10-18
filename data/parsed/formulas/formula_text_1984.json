@@ -1,0 +1,12 @@
+{
+  "page": 1028,
+  "original_text": "Maturity4 = datenum('20-Sep-13');\nSpread4Run = 550;\nProbData4Run = cdsbootstrap(ZeroData,[Maturity4 Spread4Run],Settle);\nSpread4Std = 500;\nPrice4 = cdsprice(ZeroData,ProbData4Run,Settle,Maturity4,Spread4Std);\nUpfront4 = Price4/10000000;\nfprintf('A running spread of %5.2f is equivalent to\\n',Spread4Run);",
+  "ocr_text": "Maturity4=datenum(20-Sep-13);\n\nSpread4Run=550;\nProbData4Run=cdsbootstrap(ZeroData,[Maturity4Spread4Run],Settle);\nSpread4Std=500;\nPrice4=cdsprice(ZeroData,ProbData4Run,Settle,Maturity4,Spread4Std);\nUpfront4=Price4/10000000;\nfprintf(Arunningspreadof5.2fisequivalentton,Spread4Run);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 463.84,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1009,
+  "original_text": "load CreditCardData.mat\nsc = creditscorecard(data,'IDVar','CustID');\nsc = autobinning(sc);",
+  "ocr_text": "loadCreditCardData.mat\nsc=creditscorecard(data,IDVar,CustID);\nsc_=autobinning(sc);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.43,
+    "x1": 328.41,
+    "y1": 333.49
+  },
+  "confidence": "high"
+}

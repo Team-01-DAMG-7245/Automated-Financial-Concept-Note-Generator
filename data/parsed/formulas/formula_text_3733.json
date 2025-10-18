@@ -1,0 +1,12 @@
+{
+  "page": 2116,
+  "original_text": "EndDate = datewrkdy(StartDate,NumberWorkDays,NumberHolidays) returns the datetime\nof the date a given number of workdays before or after the start date.",
+  "ocr_text": "EndDate=datewrkdy(StartDate,NumberWorkDays,NumberHolidays)returnsthedatetime\nofthedateagivennumberofworkdaysbeforeorafterthestartdate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 240.75,
+    "x1": 548.66,
+    "y1": 264.38
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1905,
+  "original_text": "data(λ) = log(data)",
+  "ocr_text": "data(A)=log(data)",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 535.15,
+    "x1": 198.99,
+    "y1": 546.78
+  },
+  "confidence": "high"
+}

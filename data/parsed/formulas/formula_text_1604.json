@@ -1,0 +1,12 @@
+{
+  "page": 807,
+  "original_text": "p = setScenarios(p, AssetScenarios);",
+  "ocr_text": "p=setScenarios(p,AssetScenarios);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 285.05,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

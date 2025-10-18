@@ -1,0 +1,12 @@
+Page 426
+================================================================================
+
+% Each anonymous function takes the current weights (w), prices (p), 
+% and signal (s) data from the backtest engine and passes it to the
+% crossoverRebalanceFcn function with the signal name string.
+smaInitWeights = computeInitialWeights(smaSignal(20,:));
+smaRebalanceFcn = @(w,p,s) crossoverRebalanceFcn(w,p,s,smaSignalNameEnding);
+smaStrategy = backtestStrategy('SMA',smaRebalanceFcn,...
+    'TransactionCosts',tradingCosts,...
+    'LookbackWindow',2,...
+    'InitialWeights',smaInitWeights);

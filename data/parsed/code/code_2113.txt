@@ -1,0 +1,6 @@
+Page 1719
+================================================================================
+
+The following example illustrates a technique that includes dynamic behavior by mapping a
+traditional MATLAB® time series array to a callable function with a t, Xt  interface. It also compares
+the function with an otherwise identical model with constant parameters.

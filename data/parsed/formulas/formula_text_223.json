@@ -1,0 +1,12 @@
+{
+  "page": 136,
+  "original_text": "bte = runBacktest(bte,mpTT,signalTT);",
+  "ocr_text": "bte=runBacktest(bte,mpTT,signalTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 176.63,
+    "x1": 290.47,
+    "y1": 187.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,62 @@
+RC_extra = portfolioRiskContribution(w_extra,Sigma);
+% Table with weights and risk contributions
+T_extra = table(w_extra,RC_extra,budget, ...
+    VariableNames={'RB Portfolio','RB Contribution','Budget'})
+
+T_extra=4×3 table
+    RB Portfolio    RB Contribution    Budget
+    ____________    _______________    ______
+
+0.3           0.15505          0.3 
+          0.3           0.24998          0.3 
+       0.2465           0.30862        0.195 
+       0.1535           0.28635        0.205
+
+Now that you have added additional constraints, the risk contribution of the resulting portfolio does
+not match the budget. Yet, the solution to the problem is minimizing the deviation of the risk
+contribution to the target risk budget. Because the risk budgeting portfolio without the extra
+constraints assigns weights larger than 30% to the first and second assets, the solution to the
+problem that minimizes the deviation assigns as much as possible to the first and second assets and
+distributes the rest to the other assets.
+
+As explained in “Role of Convexity in Portfolio Problems” on page 4-157, because the objective
+function is nonconvex, this formulation cannot be solved by the Portfolio object solvers if you add
+cardinality constraints or conditional bounds to the problem.
+
+Compare Risk Parity and Mean-Variance Portfolios
+
+You can examine the difference in the allocation between the traditional minimum variance portfolio
+and the risk parity portfolio.
+
+First compute the minimum variance portfolio. The traditional mean-variance framework requires the
+assets mean return to be defined before you compute any of the portfolios on the efficient frontier.
+
+% Define assets mean
+p.AssetMean = [0.1; 0.1; 0.15; 0.2];
+% Minimum variance portfolio
+wMinVar = estimateFrontierLimits(p,'min');
+
+To compute the risk parity portfolio, make sure all assets contribute equally to the risk. Set bi = 1
+n and
+
+update the objective function.
+
+% Update budget
+budget = 1/p.NumAssets*ones(p.NumAssets,1);
+% Update objective
+objFun = @(w) sum(((w.*(Sigma*w))/(w'*Sigma*w) - budget).^2);
+
+Solve the risk parity problem using estimateCustomObjectivePortfolio.
+
+% Risk parity portfolio with extra constraints
+wRP = estimateCustomObjectivePortfolio(p,objFun);
+
+Compare the weight allocation concentrations.
+
+% Plot pie charts
+tiledlayout(1,2);
+% Minimum variance portfolio
+
+Risk Parity or Budgeting with Constraints
+
+4-359

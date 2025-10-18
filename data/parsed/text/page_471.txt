@@ -1,0 +1,33 @@
+priceData = load('energyPrices.mat','energyPrices');
+priceData = priceData.energyPrices;
+tail(priceData)
+
+Time         WTI     Brent    NaturalGas    Propane    Kerosene    HeatingOil    GulfRegul
+    ___________    _____    _____    __________    _______    ________    __________    _________
+
+22-Oct-2021    84.53    85.43        5.1        1.485      2.312        2.414          2.481 
+    25-Oct-2021    84.64    84.85       5.72        1.378      2.326        2.429          2.506 
+    26-Oct-2021    85.64    85.11       5.59        1.398      2.339        2.436          2.552 
+    27-Oct-2021    82.66    84.12       5.91        1.365      2.271        2.368          2.469 
+    28-Oct-2021    82.78     83.4       5.68         1.36      2.278        2.363          2.471 
+    29-Oct-2021     83.5     83.1       5.49        1.383      2.285        2.342          2.485 
+    01-Nov-2021    84.08    84.51       5.22        1.385      2.301        2.364          2.457 
+    02-Nov-2021    83.91    84.42       5.33        1.388        2.3        2.405          2.466
+
+Clean and Trim Data
+
+The price datasets do not all start at the same time. Some datasets start later than others and have
+fewer data points. The following plot shows the time span for each price series.
+
+seriesLifespanPlot(priceData)
+
+To avoid large spans of missing data, remove the series with shorter histories.
+
+priceData = removevars(priceData,["NYDiesel","GulfDiesel","LARegular"]);
+
+The remaining table variables contain sporadic missing elements (NaNs) due to holidays or other
+reasons. Missing data is handled in a variety of ways depending on the dataset. In some cases, it may
+
+Backtest Strategies Using Deep Learning
+
+4-303

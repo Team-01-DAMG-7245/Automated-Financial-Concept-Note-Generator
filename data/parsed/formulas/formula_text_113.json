@@ -1,0 +1,12 @@
+{
+  "page": 95,
+  "original_text": "TimeVariable = \"Time\";\nDSMSG.SelectedVariableNames = TimeVariable;",
+  "ocr_text": "TimeVariable=Time;\nDSMSG.SelectedVariableNames=TimeVariable;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.38,
+    "x1": 322.97,
+    "y1": 277.65
+  },
+  "confidence": "high"
+}

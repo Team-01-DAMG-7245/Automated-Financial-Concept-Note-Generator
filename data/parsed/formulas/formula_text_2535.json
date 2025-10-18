@@ -1,0 +1,12 @@
+{
+  "page": 1293,
+  "original_text": "figure\ntiledlayout( 3, 1 )\nsgtitle( chosenCommodity )\ncorder = colororder();",
+  "ocr_text": "figure\ntiledlayout(3,1)\nsgtitle(chosenCommodity)\ncorder=colororder();",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 180.75,
+    "x1": 230.87,
+    "y1": 223.62
+  },
+  "confidence": "high"
+}

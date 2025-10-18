@@ -1,0 +1,12 @@
+{
+  "page": 2437,
+  "original_text": "Busday = isbusday( ___ ,Holiday,Weekend), using optional input arguments, returns logical\ntrue (1) if Date is a business day, and logical false (0) otherwise.",
+  "ocr_text": "Busday=isbusday(___,Holiday,Weekend),usingoptionalinputarguments,returnslogical\ntrue(1)ifDateisabusinessday,andlogicalfalse(0)otherwise.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 290.95,
+    "x1": 544.54,
+    "y1": 314.58
+  },
+  "confidence": "high"
+}

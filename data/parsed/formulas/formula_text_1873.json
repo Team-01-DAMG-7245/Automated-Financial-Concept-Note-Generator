@@ -1,0 +1,12 @@
+{
+  "page": 951,
+  "original_text": "Reservest = Reservest −1 + ELt −ALt",
+  "ocr_text": "Reserves;=Reserves;1+(EL;-AL;)",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 640.73,
+    "x1": 286.43,
+    "y1": 654.48
+  },
+  "confidence": "high"
+}

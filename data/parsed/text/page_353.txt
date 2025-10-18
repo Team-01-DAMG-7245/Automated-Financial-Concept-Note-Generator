@@ -1,0 +1,60 @@
+UpperBudget: 1
+                   GroupMatrix: [2×4 double]
+                    LowerGroup: []
+                    UpperGroup: [2×1 double]
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [4×1 categorical]
+
+Step 7. Analyzing descriptive properties of the Portfolio structures.
+
+To be more concrete about the ranges of efficient portfolio returns and risks, use the
+estimateFrontierLimits function to obtain portfolios at the endpoints of the efficient frontier.
+Given these portfolios, compute their moments using the estimatePortMoments function. The
+following code generates a table that lists the risk and return of the initial portfolio as well as the
+gross and net moments of portfolio returns for the portfolios at the endpoints of the efficient frontier:
+
+[prsk0, pret0] = estimatePortMoments(p, p.InitPort);
+
+pret = estimatePortReturn(p, p.estimateFrontierLimits);
+qret = estimatePortReturn(q, q.estimateFrontierLimits);
+
+displayReturns(pret0, pret, qret)
+
+Annualized Portfolio Returns ...
+                                    Gross       Net
+Initial Portfolio Return             9.70 %    9.70 %
+Minimum Efficient Portfolio Return   5.90 %    5.77 %
+Maximum Efficient Portfolio Return  13.05 %   12.86 %
+
+The results show that the cost to trade ranges from 14 to 19 basis points to get from the current
+portfolio to the efficient portfolios at the endpoints of the efficient frontier (these costs are the
+difference between gross and net portfolio returns.) In addition, notice that the maximum efficient
+portfolio return (13%) is less than the maximum asset return (18%) due to the constraints on equity
+allocations.
+
+Step 8. Obtaining a Portfolio at the specified return level on the efficient frontier.
+
+A common approach to select efficient portfolios is to pick a portfolio that has a desired fraction of
+the range of expected portfolio returns. To obtain the portfolio that is 30% of the range from the
+minimum to maximum return on the efficient frontier, obtain the range of net returns in qret using
+the Portfolio object q and interpolate to obtain a 30% level with the interp1 function to obtain a
+portfolio qwgt.
+
+Level = 0.3;
+
+qret = estimatePortReturn(q, q.estimateFrontierLimits);
+qwgt = estimateFrontierByReturn(q, interp1([0, 1], qret, Level));
+[qrsk, qret] = estimatePortMoments(q, qwgt);
+
+displayReturnLevel(Level, qret, qrsk);
+
+Asset Allocation Case Study
+
+4-185

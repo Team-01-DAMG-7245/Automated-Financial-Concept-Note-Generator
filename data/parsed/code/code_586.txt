@@ -1,0 +1,15 @@
+Page 540
+================================================================================
+
+% Compute the optimal value function and portfolio at different
+% wealth nodes and time periods.
+portIdx = zeros(nWealthNodes,T);
+for t = T:-1:1
+    pTilde = zeros(nWealthNodes,nPortfolios);
+    for k = 1:nPortfolios
+        % sum_j ( V(Wj(t+1)) * p(Wj|Wi,mu_k) )
+        pTilde(:,k) = pTransition(:,:,k)*V(:,t+1);
+    end
+    % Choose the portfolios that achieve the best probabilities.
+    [V(:,t),portIdx(:,t)] = max(pTilde,[],2);
+end

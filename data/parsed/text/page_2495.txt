@@ -1,0 +1,56 @@
+mvnrfish
+
+Fisher information matrix for multivariate normal or least-squares regression
+
+Syntax
+
+Fisher = mvnrfish(Data,Design,Covariance)
+Fisher = mvnrfish( ___ ,MatrixFormat,CovarFormat)
+
+Description
+
+Fisher = mvnrfish(Data,Design,Covariance) computes a Fisher information matrix based on
+current maximum likelihood or least-squares parameter estimates.
+
+Fisher is a TOTALPARAMS-by-TOTALPARAMS Fisher information matrix. The size of TOTALPARAMS
+depends on MatrixFormat and on current parameter estimates. If MatrixFormat = 'full',
+
+TOTALPARAMS = NUMPARAMS + NUMSERIES * (NUMSERIES + 1)/2
+
+If MatrixFormat = 'paramonly',
+
+TOTALPARAMS = NUMPARAMS
+
+Note mvnrfish operates slowly if you calculate the full Fisher information matrix.
+
+Fisher = mvnrfish( ___ ,MatrixFormat,CovarFormat) computes a Fisher information matrix
+based on current maximum likelihood or least-squares parameter estimates using optional
+arguments.
+
+Input Arguments
+
+Data — Data sample
+matrix
+
+Data sample, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a
+NUMSERIES-dimensional random vector. If a data sample has missing values, represented as NaNs,
+the sample is ignored. (Use mvnrmle to handle missing data.)
+
+Data Types: double
+
+Design — Model design
+matrix | cell array of character vectors
+
+Model design, specified as a matrix or a cell array that handles two model structures:
+
+•
+If NUMSERIES = 1, Design is a NUMSAMPLES-by-NUMPARAMS matrix with known values. This
+structure is the standard form for regression on a single series.
+
+•
+If NUMSERIES ≥ 1, Design is a cell array. The cell array contains either one or NUMSAMPLES cells.
+Each cell contains a NUMSERIES-by-NUMPARAMS matrix of known values.
+
+mvnrfish
+
+15-1189

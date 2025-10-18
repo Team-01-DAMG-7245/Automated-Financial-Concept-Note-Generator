@@ -1,0 +1,12 @@
+{
+  "page": 1153,
+  "original_text": "AssetScenarios = zeros(NTRIALS, 5);",
+  "ocr_text": "AssetScenarios=zeros(NTRIALS,5);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 352.72,
+    "x1": 279.63,
+    "y1": 363.19
+  },
+  "confidence": "high"
+}

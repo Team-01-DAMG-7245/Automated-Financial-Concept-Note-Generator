@@ -1,0 +1,12 @@
+{
+  "page": 926,
+  "original_text": "fprintf('Transition probability, cohort, after postprocessing to remove NR:\\n')",
+  "ocr_text": "fprintf(Transitionprobability,cohort,afterpostprocessingtoremoveNR:n)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 214.54,
+    "x1": 518.05,
+    "y1": 225.01
+  },
+  "confidence": "high"
+}

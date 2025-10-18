@@ -1,0 +1,12 @@
+{
+  "page": 2139,
+  "original_text": "NewDate = daysadd(StartDate,NumDays) returns a date NewDate number of days away from\nStartDate.",
+  "ocr_text": "NewDate=daysadd(StartDate,NumDays)returnsadateNewDatenumberofdaysawayfrom\nStartDate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 258.43,
+    "x1": 543.91,
+    "y1": 282.06
+  },
+  "confidence": "high"
+}

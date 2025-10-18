@@ -1,0 +1,6 @@
+Page 2179
+================================================================================
+
+TolObj — Convergence tolerance for estimation algorithm based on changes in objective
+function
+1.0e-12 (default) | numeric

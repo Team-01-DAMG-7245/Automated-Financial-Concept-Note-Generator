@@ -1,0 +1,29 @@
+StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+         Return: 0.1
+          Speed: 0.2
+          Level: 0.1
+     Volatility: 0.05
+          Alpha: -0.03
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+For more information, see “SDE Models” on page 14-7, “SDE Classes and Associated Simulation
+Methods” on page 14-13, and “SDE Class Hierarchy” on page 14-5.
+
+Algorithms
+
+The rough Heston model is a type of stochastic volatility model, which means it assumes that the
+volatility of the underlying asset is not constant but varies over time and is not necessarily correlated
+with the asset price.
+
+roughheston
+
+15-231

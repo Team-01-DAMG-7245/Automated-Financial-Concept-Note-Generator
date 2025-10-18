@@ -1,0 +1,12 @@
+{
+  "page": 1300,
+  "original_text": "simDates = InferredVolatility.Date(end) + calmonths(0:numForecastSteps).';\napproxVolatility = array2timetable( approxVolatility, ...\n    \"RowTimes\", simDates, \"VariableNames\", commodityNames );\napproxVolatility.Properties.DimensionNames(1) = \"Date\";",
+  "ocr_text": "simDates=InferredVolatility.Date(end)+calmonths(0:numForecastSteps).;\n\napproxVolatility=array2timetable(approxVolatility,...\nRowlimes,simDates,VariableNames,commodityNames);\n\napproxVolatility.Properties.DimensionNames(1)=Date;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 202.63,
+    "x1": 490.93,
+    "y1": 245.49
+  },
+  "confidence": "high"
+}

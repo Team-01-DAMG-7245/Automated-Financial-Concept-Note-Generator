@@ -1,0 +1,55 @@
+CFDates = [datetime(2000,1,12)
+           datetime(2001,2,14)
+           datetime(2001,3,3)
+           datetime(2001,6,14)
+           datetime(2001,12,1)];
+
+FutureVal = fvvar(CashFlow, 0.03, CFDates)
+
+FutureVal = 
+1.0731e+03
+
+Input Arguments
+
+CashFlow — Varying cash flows
+vector
+
+Varying cash flows, specified as a vector.
+
+Note You must include the initial investment as the initial cash flow value (a negative number).
+
+.
+
+Data Types: double
+
+Rate — Periodic Interest rate
+scalar numeric decimal
+
+Periodic interest rate, specified as a scalar numeric decimal.
+
+Data Types: double
+
+CFDates — Dates on which the cash flows occur
+assumes CashFlow contains regular (periodic) cash flows (default) | datetime array | string array |
+date character vector | serial date number
+
+(Optional) Dates on which the cash flows occur, specified as a vector using a datetime array, string
+array, or date character vectors.
+
+Note Use CFDates for irregular (nonperiodic) cash flows.
+
+To support existing code, fvvar also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+FutureVal — Future value of a varying cash flow
+scalar numeric
+
+Future value of a varying cash flow, returned as a scalar numeric.
+
+fvvar
+
+15-1067

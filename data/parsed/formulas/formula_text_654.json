@@ -1,0 +1,12 @@
+{
+  "page": 415,
+  "original_text": "assetReturns = tick2ret(pricesTT);\nassetCov = cov(assetReturns{:,:});\nnew_weights = 1 ./ diag(assetCov);\nnew_weights = new_weights / sum(new_weights);",
+  "ocr_text": "assetReturns=tick2ret(pricesTT);\nassetCov=cov(assetReturns{:,:});\nnew_weights=1./diag(assetCov);\nnew_weights=new_weights/sum(new_weights);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 409.04,
+    "x1": 333.81,
+    "y1": 451.91
+  },
+  "confidence": "high"
+}

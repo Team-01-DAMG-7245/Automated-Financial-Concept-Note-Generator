@@ -1,0 +1,62 @@
+Take a baseline scenario of predictors, in this case, the latest known values of the age proxy AGE,
+corporate profits forecast, CPF, and corporate spread, SPR. Then use the linear regression model to
+compute a 95% confidence upper bound for the predicted default rate. The motivation for this is
+illustrated in the last plot of the backtesting section, where the 95% confidence upper limit acts as a
+conservative bound when the prediction underestimates the actual default rates.
+
+tCrit = tinv(1-alpha/2,stats.tstat.dfe);
+XLast = [AGE(end),CPF(end),SPR(end)];
+
+yPred = [1 XLast]*stats.beta;
+PredStd = sqrt([1 XLast]*stats.covb*[1 XLast]'+stats.mse);
+yPredUB = yPred + tCrit*PredStd;
+
+fprintf('\nPredicted default rate:\n');
+
+Predicted default rate:
+
+fprintf('     Baseline: %4.2f%%\n',yPred);
+
+Baseline: 1.18%
+
+fprintf('     %g%% Upper Bound: %4.2f%%\n',(1-alpha)*100,yPredUB);
+
+95% Upper Bound: 2.31%
+
+The next step is to incorporate stressed scenarios of the predictors in the analysis. CPF and SPR can
+change in the short term, whereas AGE cannot. This is important. The corporate profits forecast and
+the corporate spread are influenced by world events, including, for example, natural disasters. These
+predictors can significantly change overnight. On the other hand, AGE depends on managerial
+decisions that can alter the proportion of old and new loans in time, but these decisions take months,
+if not years, to reflect in the AGE time series. Scenarios for AGE are compatible with longer term
+analyses. Here you look at one year ahead only, and keep AGE fixed for the remainder of this section.
+
+It is convenient to define the predicted default rate and the confidence bounds as functions of CPF
+and SPR to simplify the scenario analysis.
+
+yPredFn = @(cpf,spr) [1 AGE(end) cpf spr]*stats.beta;
+PredStdFn = @(cpf,spr) sqrt([1 AGE(end) cpf spr]*stats.covb*...
+   [1 AGE(end) cpf spr]'+stats.mse);
+yPredUBFn = @(cpf,spr) (yPredFn(cpf,spr) + tCrit*PredStdFn(cpf,spr));
+yPredLBFn = @(cpf,spr) (yPredFn(cpf,spr) - tCrit*PredStdFn(cpf,spr));
+
+Two extreme scenarios of interest can be a drop in the corporate profits forecast of 4% relative to the
+baseline, and an increase in the corporate spread of 100 basis points over the baseline.
+
+Moving one predictor at a time is not unreasonable in this case, because the correlation between CPF
+and SPR is very low. Moderate correlation levels may require perturbing predictors together to get
+more reliable results. Highly correlated predictors usually do not coexist in the same model, since
+they offer redundant information.
+
+fprintf('\n\n         What-if Analysis\n');
+
+What-if Analysis
+
+fprintf('Scenario         LB    Pred    UB\n');
+
+Scenario         LB    Pred    UB
+
+8
+Credit Risk Analysis
+
+8-36

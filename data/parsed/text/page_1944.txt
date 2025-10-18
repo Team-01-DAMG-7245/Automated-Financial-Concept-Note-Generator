@@ -1,0 +1,65 @@
+Output Arguments
+
+Spread — Spreads (in basis points)
+vector
+
+Spreads (in basis points), returned as a N-by-1 vector.
+
+PaymentDates — Payment dates
+matrix
+
+Payment dates, returned as a N-by-numCF matrix.
+
+PaymentTimes — Payment times
+matrix
+
+Payment times, returned as a N-by-numCF matrix of accrual fractions.
+
+More About
+
+Credit Default Swap
+
+A Credit Default Swap (CDS) is a financial derivative contract that allows an investor to "swap" or
+transfer the credit risk of a borrower (usually a corporation or government) to another party.
+
+The parties involved are:
+
+•
+Protection Buyer — The party that purchases the CDS to protect against the risk of default. They
+pay periodic premiums (known as the CDS spread) to the protection seller.
+
+•
+Protection Seller — The party that provides the credit protection and receives the premiums
+from the protection buyer. In the event of a default, the protection seller is obligated to
+compensate the protection buyer.
+
+CDS Spread
+
+The market, or breakeven, spread value of a CDS.
+
+The CDS spread can be computed by equating the value of the protection leg with the value of the
+premium leg:
+
+Market Spread * RPV01 = Value of Protection Leg
+
+The left side corresponds to the value of the premium leg, and this has been decomposed as the
+product of the market or breakeven spread times the RPV01 or 'risky present value of a basis point' of
+the contract. The latter is the present value of the premium payments, considering the default
+probability. The Market Spread can be computed as the ratio of the value of the protection leg, to
+the RPV01 of the contract. cdsspread returns the resulting spread in basis points.
+
+Algorithms
+
+The premium leg is computed as the product of a spread S and the risky present value of a basis point
+(RPV01). The RPV01 is given by:
+
+RPV01 = ∑
+j = 1
+
+N
+Z(t j)Δ(t j −1, t j, B)Q(t j)
+
+15
+Functions
+
+15-638

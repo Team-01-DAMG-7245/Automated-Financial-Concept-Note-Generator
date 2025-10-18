@@ -1,0 +1,12 @@
+{
+  "page": 2340,
+  "original_text": "historicalDates = datetime(2006:2010,1,1)';\nhistoricalData = [-0.0110;0.0120;0.0090;0.0120;0.0150];\nhistorical = table(historicalDates,historicalData,'VariableNames',{'Dates','Data'});",
+  "ocr_text": "historicalDates=datetime(2006:2010,1,1);\nhistoricalData=[-0.0110;0.0120;0.0090;0.0120;0.0150];\nhistorical=table(historicalDates,historicalData,VariableNames,{Dates,Data});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 433.13,
+    "x1": 545.15,
+    "y1": 465.2
+  },
+  "confidence": "high"
+}

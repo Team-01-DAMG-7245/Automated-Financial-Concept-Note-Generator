@@ -1,0 +1,12 @@
+{
+  "page": 1541,
+  "original_text": "Example: strat =\nbacktestStrategy('MyStrategy',@myRebalFcn,'TransactionCost',0.005,'LookbackWi\nndow',20)",
+  "ocr_text": "Example:strat=\nbacktestStrategy(MyStrategy,myRebalFcn,TransactionCost,0.005,LookbackWi\nndow,20)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 683.36,
+    "x1": 553.54,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

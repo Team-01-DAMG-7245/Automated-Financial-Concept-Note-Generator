@@ -1,0 +1,12 @@
+{
+  "page": 1941,
+  "original_text": "Example: Spread =\ncdsspread(ZeroData,ProbData,Settle,Maturity,'Basis',7,'BusinessDayConvention'\n,'previous')",
+  "ocr_text": "Example:Spread=\ncdsspread(ZeroData,ProbData,Settle,Maturity,Basis,7,BusinessDayConvention\n,previous)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 616.84,
+    "x1": 553.54,
+    "y1": 652.47
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,36 @@
+Calibrate t Copula
+
+Given the standardized residuals, you can estimate the scalar degrees of freedom parameter (DoF)
+and the linear correlation matrix (R) of the t copula using the copulafit function. To transform the
+residuals, you can use the inverse of the cumulative distribution function (CDF) of the fitted extreme
+value distribution. This transformation ensures that the residuals follow a uniform distribution, which
+is a requirement for copula fitting. Then by fitting the t copula to the transformed residuals, you can
+capture the dependence structure between the equity index returns.
+
+U = zeros(size(residuals));
+
+for i = 1:nIndices
+    U(:,i) = cdf(tails{i}, residuals(:,i)); % Transform margin to uniform
+end
+
+[R, DoF] = copulafit('t', U, 'Method', 'approximateml'); % Fit the copula
+
+Simulate Index Returns with t Copula
+
+Having fitted the copula, you can generate synthetic equity index return data by sampling from the
+fitted copula and transforming the samples to standardized residuals by using the inversion of the
+semiparametric marginal CDF of each index. This process involves extrapolating into the generalized
+Pareto tails and then interpolating into the smoothed interior. The process ensures that the simulated
+standardized residuals align with those obtained from the AR(1) + GJR(1,1) filtering process. The
+simulated standardized residuals are independent in time but exhibit dependence at any given point
+in time. Each column of the simulated standardized residuals array represents an iid univariate
+stochastic process when examined individually. However, each row shares the rank correlation
+induced by the copula.
+
+By simulating the dependent standardized residuals using copularnd, you can create new data that
+possesses similar statistical properties and dependence structure as the original equity index returns.
+This new data enables the generation of jointly dependent equity index returns.
+
+Using Extreme Value Theory and Copula Fitting to Generate Synthetic Data
+
+10-69

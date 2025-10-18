@@ -1,0 +1,74 @@
+Working with a Riskless Asset
+
+The PortfolioCVaR object has a separate RiskFreeRate property that stores the rate of return of
+a riskless asset. Thus, you can separate your universe into a riskless asset and a collection of risky
+assets. For example, assume that your riskless asset has a return in the scalar variable r0, then the
+property for the RiskFreeRate is set using the PortfolioCVaR object:
+
+r0 = 0.01/12;
+
+p = PortfolioCVaR;
+p = PortfolioCVaR('RiskFreeRate', r0);
+disp(p.RiskFreeRate)
+
+8.3333e-04
+
+Note If your portfolio problem has a budget constraint such that your portfolio weights must sum to
+1, then the riskless asset is irrelevant.
+
+See Also
+PortfolioCVaR | setCosts | setProbabilityLevel | setScenarios | estimatePortVaR |
+simulateNormalScenariosByMoments | simulateNormalScenariosByData
+
+Related Examples
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Working with Transaction Costs” on page 5-47
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Validate the CVaR Portfolio Problem” on page 5-81
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+“Portfolio Optimization Theory” on page 5-3
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+CVaR Portfolio Optimization (4 min 56 sec)
+
+5
+CVaR Portfolio Optimization Tools
+
+5-46

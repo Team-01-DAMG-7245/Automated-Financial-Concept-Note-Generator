@@ -1,0 +1,12 @@
+{
+  "page": 98,
+  "original_text": "dateTimeBase = datetime(date) + timeBase; \nToday = timetable(dateTimeBase,MidPrice,ImbalanceIndex)",
+  "ocr_text": "dateTimeBase=datetime(date)+timeBase;\nToday=timetable(dateTimeBase,MidPrice,ImbalanceIndex)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 225.52,
+    "x1": 387.99,
+    "y1": 246.78
+  },
+  "confidence": "high"
+}

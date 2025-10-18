@@ -1,0 +1,12 @@
+{
+  "page": 2426,
+  "original_text": "Weights = holdings2weights(Holdings,Prices)\nWeights = holdings2weights( ___ ,Budget)",
+  "ocr_text": "Weights=holdings2weights(Holdings,Prices)\nWeights=holdings2weights(__,Budget)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.38,
+    "x1": 348.89,
+    "y1": 216.01
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1132,
+  "original_text": "% Initialize arrays for later use.\ntreasuryYTMAtHorizonSim = zeros(numSim,3);\ntreasuryPricesAtSettle = zeros(1,3);\ntreasuryPricesAtHorizonSim = zeros(numSim,3);",
+  "ocr_text": "SInitializearraysforlateruse.\ntreasuryYTMAtHorizonSim=zeros(numSim,3);\ntreasuryPricesAtSettle=zeros(1,3);\ntreasuryPricesAtHorizonSim=zeros(numSim,3);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 222.63,
+    "x1": 333.81,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1364,
+  "original_text": "% Denoised covariance efficient portfolios\nwShrunk = estimateFrontier(pShrunk,nPort);",
+  "ocr_text": "Denoisedcovarianceefficientportfolios\nwShrunk=estimateFrontier(pShrunk,nPort);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 513.23,
+    "x1": 317.55,
+    "y1": 534.49
+  },
+  "confidence": "high"
+}

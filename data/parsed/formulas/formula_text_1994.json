@@ -1,0 +1,12 @@
+{
+  "page": 1032,
+  "original_text": "EndYear = \n;\nstartDate = datetime(StartYear,12,31,'Locale','en_US');",
+  "ocr_text": "2017\nEndYear= ;\nstartDate=datetime(StartYear,12,31,Locale,en_US);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 388.02,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

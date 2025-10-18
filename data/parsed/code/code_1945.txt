@@ -1,0 +1,4 @@
+Page 1548
+================================================================================
+
+Transaction costs, specified as a scalar numeric, vector, or function handle.

@@ -1,0 +1,5 @@
+Page 1629
+================================================================================
+
+of 'Z' and a function or as an (NPeriods ⨉ NSteps)-by-NBrowns-by-NTrials three-dimensional
+array of dependent random variates.

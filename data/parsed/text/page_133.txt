@@ -1,0 +1,33 @@
+The risky LSTM model accuracy is about 61%. Despite this low value, the confusion chart suggests
+the following other aspects about the model's performance as it pertains to the trading strategy.
+
+•
+It correctly predicted about 65% of the 86 true gains, which makes money.
+
+•
+It correctly predicted about 79% of the 131 true losses, which prevents money loss.
+
+•
+It incorrectly predicted about 35% of the true gains as losses or constant, which results is a
+missed opportunity to make money.
+
+•
+It incorrectly predicted about 2% of the true losses as gains, which results in a money loss.
+
+Plot ROC curves for both deep learning models.
+
+rocLSTM = rocmetrics(yV,predScoresLSTM,classes);
+rocRLSTM = rocmetrics(yV,predScoresRLSTM,classes);
+
+figure
+tiledlayout(1,2,TileSpacing="compact")
+nexttile
+plot(rocLSTM,ShowModelOperatingPoint=false)
+title("ROC Curve: LSTM")
+nexttile
+plot(rocRLSTM,ShowModelOperatingPoint=false)
+title("ROC Curve: Risky LSTM")
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data
+
+2-89

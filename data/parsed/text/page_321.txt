@@ -1,0 +1,79 @@
+constraints are not compatible with the equality constraint because there is no way to get x1 + x3 to
+equal 0.04. Therefore, the error message is displayed.
+
+AssetMean = [ 0.05; 0.1; 0.12; 0.18 ];
+AssetCovar = [ 0.0064   0.00408  0.00192      0;
+               0.00408  0.0289   0.0204   0.0119;
+               0.00192  0.0204   0.0576   0.0336;
+               0        0.0119   0.0336   0.1225 ];
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+A = [ 1 0 1 0 ];
+b = 0.04;
+p = setEquality(p, A, b);
+p = setBounds(p, 0.1, 2.5, 'BoundType','Conditional');
+p = setMinMaxNumAssets(p, 2, 2);  
+pwgt = estimateFrontierLimits(p)
+
+Error using Portfolio/buildMixedIntegerProblem (line 109)
+Infeasible problem when considering constraints involving integer variables. 
+Verify constraints compatibility or decrease 'AbsoluteGapTolerance' or 'RelativeGapTolerance'.
+
+Error in Portfolio/estimateFrontierLimits>int_frontierLimits (line 93)
+ProbStruct = buildMixedIntegerProblem(obj);
+
+Error in Portfolio/estimateFrontierLimits (line 73)
+    pwgt = int_frontierLimits(obj, minsolution, maxsolution);
+
+To correct this error, change the bEquality parameter from 0.04 to .4.
+
+AssetMean = [ 0.05; 0.1; 0.12; 0.18 ];
+AssetCovar = [ 0.0064   0.00408  0.00192      0;
+               0.00408  0.0289   0.0204   0.0119;
+               0.00192  0.0204   0.0576   0.0336;
+               0        0.0119   0.0336   0.1225 ];
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+A = [ 1 0 1 0 ];
+b = 0.4;
+p = setEquality(p, A, b);
+p = setBounds(p, 0.1, 2.5, 'BoundType','Conditional');
+p = setMinMaxNumAssets(p, 2, 2);  
+pwgt = estimateFrontierLimits(p)
+
+pwgt =
+
+0.4000         0
+    0.6000         0
+         0    0.4000
+         0    0.6000
+
+Redundant Conditional Budget Constraint
+
+This redundant conditional budget constraint warning occurs when you are using
+setConditionalBudget with a Portfolio, PortfolioCVaR, or PortfolioMAD object and the
+conditional threshold of all assets is greater than or equal to their respective upper bounds. This
+happens when the UpperBound ≤ ConditionalBudgetThreshold. In this case, assets are not
+allowed to invest more than the conditional threshold, which makes the conditional budget constraint
+unnecessary. The following example shows the case where this happens:
+
+assetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+assetCovar = [ 0.00324625 0.00022983 0.00420395;
+    0.00022983 0.00049937 0.00019247;
+    0.00420395 0.00019247 0.00764097 ];
+p = Portfolio(AssetMean=assetMean,AssetCovar=assetCovar);
+p = setBounds(p,0,0.5);
+p = setConditionalBudget(p,0.5,0.75);   
+estimateFrontier(p)
+
+Warning: Redundant conditional budget constraint. 
+> In internal.finance.PortfolioMixedInteger/hasIntegerConstraints (line 59)
+In Portfolio/estimateFrontier (line 54)
+
+ans =
+
+0    0.0454    0.0909    0.1825    0.3186    0.4547    0.5000    0.5000    0.5000    0.5000
+
+Troubleshooting Portfolio Optimization Results
+
+4-153

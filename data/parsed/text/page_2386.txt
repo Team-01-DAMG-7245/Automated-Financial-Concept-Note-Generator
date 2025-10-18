@@ -1,0 +1,47 @@
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using a Portfolio object. For more information on creating a portfolio
+object, see
+
+•
+Portfolio
+
+Data Types: object
+
+Output Arguments
+
+AssetMean — Mean of asset returns
+vector
+
+Mean of asset returns, returned as a vector.
+
+AssetCovar — Covariance of asset returns
+matrix
+
+Covariance of asset returns, returned as a matrix.
+
+Tips
+
+You can also use dot notation to obtain the mean and covariance of asset returns from a Portfolio
+object:
+
+[AssetMean, AssetCovar] = obj.getAssetMoments;
+
+Version History
+Introduced in R2011a
+
+See Also
+setAssetMoments
+
+Topics
+“Asset Returns and Moments of Asset Returns Using Portfolio Object” on page 4-42
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+“Portfolio Optimization Theory” on page 4-4
+
+15
+Functions
+
+15-1080

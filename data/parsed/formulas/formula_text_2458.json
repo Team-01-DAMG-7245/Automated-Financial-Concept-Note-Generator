@@ -1,0 +1,12 @@
+{
+  "page": 1271,
+  "original_text": "R = zeros(nPoints, nIndices);             % Pre-allocate simulated returns array\nU = copularnd('t', rhoT, DoF, nPoints);   % Simulate U(0,1) from t copula",
+  "ocr_text": "R=zeros(nPoints,_nIndices); Pre-allocatesimulatedreturnsarray\nU=copularnd(t,rhoT,DoF,nPoints); SimulateU(0,1)_fromtcopula",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.83,
+    "x1": 523.46,
+    "y1": 525.09
+  },
+  "confidence": "high"
+}

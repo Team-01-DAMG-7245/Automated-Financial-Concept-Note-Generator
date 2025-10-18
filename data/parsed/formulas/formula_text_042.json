@@ -1,0 +1,12 @@
+{
+  "page": 49,
+  "original_text": "x = hours(dt)",
+  "ocr_text": "x=hours(dt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 313.96,
+    "x1": 160.43,
+    "y1": 324.43
+  },
+  "confidence": "high"
+}

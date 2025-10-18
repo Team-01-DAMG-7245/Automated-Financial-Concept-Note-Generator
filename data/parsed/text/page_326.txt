@@ -1,0 +1,45 @@
+Even though the red dashed tangent line cuts off only a small piece of the graph, that small piece
+already contains an important point, the global minima. In the worst case scenario, the Financial
+Toolbox solvers compute the tangent line at a point that removes all minima of the function, like the
+black dotted line does. Therefore, it is important to be aware of the type of function passed to a
+Financial Toolbox solver.
+
+All the above applies to minimization problems. Conversely, maximization problems with cardinality
+constraints or conditional bounds can be solved by the Financial Toolbox solvers only if the functions
+are concave.
+
+Examples of Convex Functions
+
+Here are some examples of common convex functions used in finance. You can use these convex
+functions in minimization problems when using a Portfolio object with the
+estimateCustomObjectivePortfolio function:
+
+•
+Variance:
+
+xTΣx
+
+•
+Tracking error:
+
+(x −x0)TΣ(x −x0)
+
+•
+Herfindahl-Hirschman index:
+
+xTx
+
+•
+Any linear function
+
+•
+Any positive combination of convex functions:
+
+xTΣx + λ(xΣ(x −x0),  λ ≥0
+
+xTΣx + λ1xTx + λ2(xΣ(x −x0),  λ1, λ2 ≥0
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-158

@@ -1,0 +1,12 @@
+{
+  "page": 2213,
+  "original_text": "Return = effrr(Rate,NumPeriods) calculates the annual effective rate of return. Compounding\ncontinuously returns Return equivalent to (e^Rate-1).",
+  "ocr_text": "Return=effrr(Rate,NumPeriods)calculatestheannualeffectiverateofreturn.Compounding\ncontinuouslyreturnsReturnequivalentto(e*Rate-1).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 250.71,
+    "x1": 553.23,
+    "y1": 274.34
+  },
+  "confidence": "high"
+}

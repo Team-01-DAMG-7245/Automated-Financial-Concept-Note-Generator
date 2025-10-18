@@ -1,0 +1,12 @@
+{
+  "page": 1785,
+  "original_text": "Example: Volatility =\nblkimpv(Yield,CouponRate,Settle,Maturity,'Method','jackel2016')",
+  "ocr_text": "Example:Volatility=\nblkimpv(Yield,CouponRate,Settle,Maturity,Method,jackel2016)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 549.13,
+    "x1": 469.26,
+    "y1": 572.76
+  },
+  "confidence": "high"
+}

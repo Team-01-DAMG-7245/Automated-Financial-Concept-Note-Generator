@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "% Find the new buys (signal is 1 and weights are currently 0).\nidx = new_weights == 0 & buySellSignals{end,:} == 1;",
+  "ocr_text": "sFindthenewbuys(signalis1andweightsarecurrently0).\nidx=new_weights==0buySellSignals{end,:}==1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.03,
+    "x1": 425.92,
+    "y1": 524.29
+  },
+  "confidence": "high"
+}

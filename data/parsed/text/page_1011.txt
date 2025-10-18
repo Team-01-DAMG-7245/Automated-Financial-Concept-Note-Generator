@@ -1,0 +1,70 @@
+As both the tables and the plot show, the model coefficients match. You can be confident that this
+implementation of fitConstrainedModel is well calibrated.
+
+Constrained Model
+
+In the constrained model approach, you solve for the values of the coefficients bi of the logistic model,
+subject to constraints. The supported constraints are bound, equality, or inequality. The coefficients
+maximize the likelihood-of-default function defined, for observation i, as:
+
+Li = p Defaulti
+
+yi × 1 −p Defaulti
+
+1 −yi
+
+where:
+
+•
+p Defaulti =
+1
+
+1 + e−bxi
+
+•
+b = b1 b2 . . . bK  is an unknown model coefficient
+
+•
+xi = xi1 x2 . . . xiK  is the predictor values at observation i
+
+•
+yi is the response value; a value of 1 represents default and a value of 0 represents non-default
+
+This formula is for non-weighted data. When observation i has weight wi, it means that there are wi as
+many observations i. Therefore, the probability that default occurs at observation i is the product of
+the probabilities of default:
+
+pi = p Defaulti
+
+yi * p Defaulti
+
+yi * . . . * p Defaulti
+
+yi
+
+wi times
+= p Defaulti
+
+wi * yi
+
+Likewise, the probability of non-default for weighted observation i is:
+
+pi = p
+Defaulti
+
+1 −yi * p
+Defaulti
+
+1 −yi * . . . * p
+Defaulti
+
+1 −yi
+
+wi times
+= 1 −p Defaulti
+
+wi * 1 −yi
+
+Credit Scorecards with Constrained Logistic Regression Coefficients
+
+8-93

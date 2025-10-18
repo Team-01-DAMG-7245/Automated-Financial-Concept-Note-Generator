@@ -1,0 +1,12 @@
+{
+  "page": 393,
+  "original_text": "ax1 = subplot(1,2,1);\nidx = wts>0.001;\npie(ax1, wts(idx), assetNames(idx));\ntitle(ax1, port.Name ,'Position', [-0.05, 1.6, 0]);",
+  "ocr_text": "axl_=subplot(1,2,1);\n\nidx=wts0.001;\npie(axl,wts(idx),assetNames(idx));\ntitle(axl,port.Name,Position,[-0.05,1.6,0]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 519.63,
+    "x1": 366.34,
+    "y1": 562.49
+  },
+  "confidence": "high"
+}

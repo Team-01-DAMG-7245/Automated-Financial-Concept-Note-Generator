@@ -1,0 +1,68 @@
+For the purpose of this example, choose 'k' as the square root of the number of samples in the data
+set. This is a generally accepted value for 'k'. Choose a value of 'k' that is odd in order to break a
+tie between two classes of data.
+
+numObs = height(dataToImpute);
+k = round(sqrt(numObs));
+if ~mod(k,2)
+    k = k+1;
+end
+
+Get the missing values from the CustAge and ResStatus predictors.
+
+missingResStatus = ismissing(dataToImpute.ResStatus);
+missingCustAge = ismissing(dataToImpute.CustAge);
+
+Next, follow these steps:
+
+•
+Modify the dataset to incorporate the dummy variables.
+
+•
+Call the fitcknn function to create a k-nearest neighbor classifier.
+
+•
+Call the predict method on that class to predict the imputed values.
+
+custAgeToImpute = dataToImpute;
+custAgeToImpute.HomeOwner = dResStatus(:,1);
+custAgeToImpute.Tenant = dResStatus(:,2);
+custAgeToImpute.Employed = dEmpStatus(:,1);
+custAgeToImpute.HasOtherCC = dOtherCC(:,2);
+custAgeToImpute = removevars(custAgeToImpute, 'ResStatus');
+custAgeToImpute = removevars(custAgeToImpute, 'EmpStatus');
+custAgeToImpute = removevars(custAgeToImpute, 'OtherCC');
+
+knnCustAge = fitcknn(custAgeToImpute, 'CustAge', 'NumNeighbors', k, 'Standardize',true);
+imputedCustAge = predict(knnCustAge,custAgeToImpute(missingCustAge,:));
+
+resStatusToImpute = dataToImpute;
+resStatusToImpute.Employed = dEmpStatus(:,1);
+resStatusToImpute.HasOtherCC = dOtherCC(:,2);
+resStatusToImpute = removevars(resStatusToImpute, 'EmpStatus');
+resStatusToImpute = removevars(resStatusToImpute, 'OtherCC');
+
+knnResStatus = fitcknn(resStatusToImpute, 'ResStatus', 'NumNeighbors', k, 'Standardize', true);
+imputedResStatus = predict(knnResStatus,resStatusToImpute(missingResStatus,:));
+
+Compare Imputed Data to Original Data
+
+Create a new data set with the imputed data.
+
+knnImputedData = dataMissing;
+knnImputedData.CustAge(missingCustAge) = imputedCustAge;
+knnImputedData.ResStatus(missingResStatus) = imputedResStatus;
+disp(knnImputedData(5:10,:));
+
+CustID    CustAge    TmAtAddress    ResStatus     EmpStatus    CustIncome    TmWBank    Other
+    ______    _______    ___________    __________    _________    __________    _______    _____
+
+5        68           56         Home Owner    Employed       53000         14         Yes
+       6        65           13         Home Owner    Employed       48000         59         Yes
+       7        34           32         Home Owner    Unknown        32000         26         Yes
+       8        50           57         Other         Employed       51000         33         No
+
+8
+Credit Risk Analysis
+
+8-122

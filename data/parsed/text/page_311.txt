@@ -1,0 +1,127 @@
+Available Solvers (Use setSolverMINLP to specify the
+solver)
+
+Portfolio
+Problem
+
+Use Function:
+Portfolio Object
+PortfolioCVaR
+Object
+
+PortfolioMAD
+Object
+
+Optimize custom
+linear objective
+with risk or/or
+tracking error
+constraint
+
+estimateCustom
+ObjectivePortf
+olio(p,linFun)
+
+(See
+estimateCustom
+ObjectivePortf
+olio)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+Supports
+extended
+formulation
+using the name-
+value argument
+“ExtendedForm
+ulation” on
+page 15-0
+.
+
+•
+TrustRegionC
+P
+
+Not supported
+Not supported
+
+Optimize custom
+quadratic objective
+
+estimateCustom
+ObjectivePortf
+olio(p,quadFun
+)
+
+(See
+estimateCustom
+ObjectivePortf
+olio)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+Supports
+extended
+formulation
+using the name-
+value argument
+“ExtendedForm
+ulation” on
+page 15-0
+.
+
+•
+TrustRegionC
+P
+
+Not supported
+Not supported
+
+Optimize custom
+nonlinear
+nonquadratic
+objective
+
+estimateCustom
+ObjectivePortf
+olio(p,NLFun)
+
+(See
+estimateCustom
+ObjectivePortf
+olio)
+
+•
+ExtendedCP
+
+•
+OuterApproxi
+mation
+(default)
+
+•
+TrustRegionC
+P
+
+Not supported
+Not supported
+
+See Also
+Portfolio | PortfolioCVaR | PortfolioMAD
+
+Choose MINLP Solvers for Portfolio Problems
+
+4-143

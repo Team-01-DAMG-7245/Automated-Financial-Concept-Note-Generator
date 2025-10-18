@@ -1,0 +1,12 @@
+{
+  "page": 1270,
+  "original_text": "options     = statset('Display', 'off', 'TolX', 1e-4);\n[rhoT, DoF] = copulafit('t', U, 'Method', 'ApproximateML', 'Options', options);\nrhoG        = copulafit('Gaussian', U);",
+  "ocr_text": "options =statset(Display,off,TolX,le-4);\n[rhoT,DoF]=copulafit(t,U,Method,ApproximateML,Options,options);\nrhoG =copulafit(Gaussian,U);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 337.97,
+    "x1": 518.05,
+    "y1": 370.04
+  },
+  "confidence": "high"
+}

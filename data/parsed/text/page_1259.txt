@@ -1,0 +1,67 @@
+In the most general case, a given simulation derives directly from an SDE. Therefore, the simulated
+discrete-time process approaches the underlying continuous-time process only in the limit as the time
+increment dt approaches zero. In other words, the simulation architecture places more importance on
+ensuring that the probability distributions of the discrete-time and continuous-time processes are
+close, than on the pathwise proximity of the processes.
+
+Before illustrating techniques to improve the approximation of solutions, it is helpful to understand
+the source of error. Throughout this architecture, all simulation methods assume that model
+parameters are piecewise constant over any time interval of length dt. In fact, the methods even
+evaluate dynamic parameters at the beginning of each time interval and hold them fixed for the
+duration of the interval. This sampling approach introduces discretization error.
+
+However, there are certain models for which the piecewise constant approach provides exact
+solutions:
+
+•
+“Creating Brownian Motion (BM) Models” on page 14-24 with constant parameters, simulated by
+Euler approximation (simByEuler).
+
+•
+“Creating Geometric Brownian Motion (GBM) Models” on page 14-25 with constant parameters,
+simulated by closed-form solution (simBySolution).
+
+•
+“Creating Hull-White/Vasicek (HWV) Gaussian Diffusion Models” on page 14-28 with constant
+parameters, simulated by closed-form solution (simBySolution)
+
+More generally, you can simulate the exact solutions for these models even if the parameters vary
+with time, if they vary in a piecewise constant way such that parameter changes coincide with the
+specified sampling times. However, such exact coincidence is unlikely; therefore, the previously
+discussed constant parameter condition is commonly used in practice.
+
+One obvious way to improve accuracy involves sampling the discrete-time process more frequently.
+This decreases the time increment (dt), causing the sampled process to more closely approximate the
+underlying continuous-time process. Although decreasing the time increment is universally
+applicable, however, there is a tradeoff among accuracy, run-time performance, and memory usage.
+
+To manage this tradeoff, specify an optional input argument, NSteps, for all simulation methods.
+NSteps indicates the number of intermediate time steps within each time increment dt, at which the
+process is sampled but not reported.
+
+It is important and convenient at this point to emphasize the relationship of the inputs NSteps,
+NPeriods, and DeltaTime to the output vector Times, which represents the actual observation
+times at which the simulated paths are reported.
+
+•
+NPeriods, a required input, indicates the number of simulation periods of length DeltaTime,
+and determines the number of rows in the simulated three-dimensional Paths time series array (if
+an output is requested).
+
+•
+DeltaTime is optional, and indicates the corresponding NPeriods-length vector of positive time
+increments between successive samples. It represents the familiar dt found in stochastic
+differential equations. If DeltaTime is unspecified, the default value of 1 is used.
+
+•
+NSteps is also optional, and is only loosely related to NPeriods and DeltaTime. NSteps
+specifies the number of intermediate time steps within each time increment DeltaTime.
+
+Specifically, each time increment DeltaTime is partitioned into NSteps subintervals of length
+DeltaTime/NSteps each, and refines the simulation by evaluating the simulated state vector at
+(NSteps - 1) intermediate times. Although the output state vector (if requested) is not reported
+at these intermediate times, this refinement improves accuracy by causing the simulation to more
+
+Performance Considerations
+
+14-67

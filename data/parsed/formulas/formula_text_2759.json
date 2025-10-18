@@ -1,0 +1,12 @@
+{
+  "page": 1399,
+  "original_text": "G = diffusion(1, 0.3)  % Diffusion rate function G(t,X)",
+  "ocr_text": "G=diffusion(1,0.3)DiffusionratefunctionG(t,X)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 135.58,
+    "x1": 388.0,
+    "y1": 146.05
+  },
+  "confidence": "high"
+}

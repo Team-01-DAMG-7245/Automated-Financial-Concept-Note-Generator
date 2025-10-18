@@ -1,0 +1,59 @@
+Compute the spread.
+
+Price = 98;
+CFAmounts = [30;40;30];
+CFDates = [datetime(2004,7,15); datetime(2005,7,15) ; datetime(2006,7,15)];
+
+Spread = cfspread(RateSpec, Price, CFAmounts, CFDates, Settle)
+
+Spread = 3×1
+103 ×
+
+-8.7956
+   -4.0774
+   -3.7073
+
+Input Arguments
+
+RateSpec — Interest-rate specification for initial risk-free rate curve
+structure
+
+Interest-rate specification for initial risk-free rate curve, specified by the RateSpec obtained from
+intenvset. For information on the interest-rate specification, see intenvset.
+
+Data Types: struct
+
+Price — Price of cash flows
+vector
+
+Price of cash flows, specified as an NINST-by-1 vector.
+
+Data Types: double
+
+CFlowAmounts — Cash flow amounts
+vector
+
+Cash flow amounts, specified as an NINST-by-MOSTCFS matrix. Each row is a list of cash flow values
+for one instrument. If an instrument has fewer than MOSTCFS cash flows, the end of the row is padded
+with NaNs.
+
+Data Types: double
+
+CFlowDates — Cash flow dates
+datetime array | string array | date character vector
+
+Cash flow dates, specified as an NINST-by-MOSTCFS matrix using a datetime array, string array, or
+date character vectors. Each entry contains the date of the corresponding cash flow in
+CFlowAmounts.
+
+To support existing code, cfspread also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+cfspread
+
+15-717

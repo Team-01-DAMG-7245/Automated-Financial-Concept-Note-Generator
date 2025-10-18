@@ -1,0 +1,6 @@
+Page 2340
+================================================================================
+
+historicalDates = datetime(2006:2010,1,1)';
+historicalData = [-0.0110;0.0120;0.0090;0.0120;0.0150];
+historical = table(historicalDates,historicalData,'VariableNames',{'Dates','Data'});

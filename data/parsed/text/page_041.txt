@@ -1,0 +1,59 @@
+Using Input and Output Arguments with Functions
+
+In this section...
+
+“Input Arguments” on page 1-15
+
+“Output Arguments” on page 1-16
+
+Input Arguments
+
+Vector and Matrix Input
+
+By design, MATLAB software can efficiently perform repeated operations on collections of data stored
+in vectors and matrices. MATLAB code that is written to operate simultaneously on different arrays is
+said to be vectorized. Vectorized code is not only clean and concise, but is also efficiently processed
+by MATLAB.
+
+Because MATLAB is optimized for processing vectorized code, many Financial Toolbox functions
+accept either vector or matrix input arguments, rather than single (scalar) values.
+
+One example of such a function is the irr function, which computes the internal rate of return of a
+cash flow stream. If you input a vector of cash flows from a single cash flow stream, then irr returns
+a scalar rate of return. If you input a matrix of cash flows from multiple cash flow streams, where
+each matrix column represents a different stream, then irr returns a vector of internal rates of
+return, where the columns correspond to the columns of the input matrix. Many other Financial
+Toolbox functions work similarly.
+
+As an example, suppose that you make an initial investment of $100, from which you then receive by
+a series of annual cash receipts of $10, $20, $30, $40, and $50. This cash flow stream is stored in a
+vector
+
+CashFlows = [-100 10 20 30 40 50]'
+
+CashFlows =
+  -100
+    10
+    20
+    30
+    40
+    50
+
+Use the irr function to compute the internal rate of return of the cash flow stream.
+
+Rate = irr(CashFlows)
+
+Rate =
+
+0.1201
+
+For the single cash flow stream CashFlows, the function returns a scalar rate of return of 0.1201, or
+12.01%.
+
+Now, use the irr function to compute internal rates of return for multiple cash flow streams.
+
+Rate = irr([CashFlows CashFlows CashFlows])
+
+Using Input and Output Arguments with Functions
+
+1-15

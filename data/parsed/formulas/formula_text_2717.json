@@ -1,0 +1,12 @@
+{
+  "page": 1367,
+  "original_text": "function new_weights = traditionalStrat(~, pricesTT) \n% Function for minimum variance portfolio using traditional covariance estimate.",
+  "ocr_text": "functionnew_weights=traditionalStrat(,_pricesTT)\nSFunctionforminimumvarianceportfoliousingtraditionalcovarianceestimate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.83,
+    "x1": 523.44,
+    "y1": 557.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1564,
+  "original_text": "% Compute asset returns.\nassetReturns = tick2ret(pricesTT);",
+  "ocr_text": "SComputeassetreturns.\nassetReturns=tick2ret(pricesTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 274.21,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2269,
+  "original_text": "p = PortfolioCVaR;\np = simulateNormalScenariosByMoments(p, m, C, 2000);\np = setDefaultConstraints(p);\np = setProbabilityLevel(p, 0.95);",
+  "ocr_text": "p=PortfolioCVaR;\np=simulateNormalScenariosByMoments(p,m,C,2000);\np=setDefaultConstraints(p);\np=setProbabilityLevel(p,0.95);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 211.29,
+    "x1": 371.74,
+    "y1": 254.16
+  },
+  "confidence": "high"
+}

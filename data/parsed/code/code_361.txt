@@ -1,0 +1,6 @@
+Page 354
+================================================================================
+
+TargetRisk = [ 0.10; 0.15; 0.20 ];
+qwgt = estimateFrontierByRisk(q, TargetRisk);
+display(qwgt)

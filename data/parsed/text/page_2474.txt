@@ -1,0 +1,53 @@
+lpm
+
+Compute sample lower partial moments of data
+
+Syntax
+
+lpm(Data)
+lpm(Data,MAR,Order)
+Moment = lpm(Data,MAR,Order)
+
+Description
+
+lpm(Data) computes lower partial moments for asset returns Data relative to a default value for
+MAR for each asset in a NUMORDERS x NUMSERIES matrix and a default value for Order.
+
+lpm(Data,MAR,Order) computes lower partial moments for asset returns Data relative to MAR for
+each asset in a NUMORDERS x NUMSERIES matrix.
+
+Moment = lpm(Data,MAR,Order) computes lower partial moments for asset returns Data relative
+to MAR for each asset in a NUMORDERS x NUMSERIES matrix Moment.
+
+Examples
+
+Compute Lower Partial Moments
+
+This example shows how to compute the zero-order, first-order, and second-order lower partial
+moments for the three time series, where the mean of the third time series is used to compute MAR
+(minimum acceptable return) with the so-called risk-free rate.
+
+load FundMarketCash 
+Returns = tick2ret(TestData);
+Assets
+
+Assets = 1×3 cell
+    {'Fund'}    {'Market'}    {'Cash'}
+
+MAR = mean(Returns(:,3))
+
+MAR = 
+0.0017
+
+LPM = lpm(Returns, MAR, [0 1 2])
+
+LPM = 3×3
+
+0.4333    0.4167    0.6167
+    0.0075    0.0140    0.0004
+    0.0003    0.0008    0.0000
+
+15
+Functions
+
+15-1168

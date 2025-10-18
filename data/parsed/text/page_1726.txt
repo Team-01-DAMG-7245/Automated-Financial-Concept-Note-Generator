@@ -1,0 +1,43 @@
+abs2active
+
+Convert constraints from absolute to active format
+
+Syntax
+
+ActiveConSet = abs2active(AbsConSet,Index)
+
+Description
+
+ActiveConSet = abs2active(AbsConSet,Index) transforms a constraint matrix to an
+equivalent matrix expressed in active weight format (relative to the index).
+
+Examples
+
+Convert Constraints in Terms of Absolute Weights Into Constraints in Terms of Active
+Portfolio Weights
+
+Set up constraints for a portfolio optimization for portfolio w0 with constraints in the form A*w <= b,
+where w is absolute portfolio weights. (Absolute weights do not depend on the tracking portfolio.) Use
+abs2active to convert constraints in terms of absolute weights into constraints in terms of active
+portfolio weights, defined relative to the tracking portfolio w0. Assume three assets with the following
+mean and covariance of asset returns:
+
+m = [ 0.14; 0.10; 0.05 ];
+C = [ 0.29^2 0.4*0.29*0.17 0.1*0.29*0.08; 0.4*0.29*0.17 0.17^2 0.3*0.17*0.08;...
+0.1*0.29*0.08 0.3*0.17*0.08 0.08^2 ];
+
+Absolute portfolio constraints are the typical ones (weights sum to 1 and fall from 0 through 1),
+create the A and b matrices using portcons.
+
+AbsCons = portcons('PortValue',1,3,'AssetLims', [0; 0; 0], [1; 1; 1;]);
+
+Use the Portfolio object to determine the efficient frontier.
+
+p = Portfolio('AssetMean', m, 'AssetCovar', C);
+p = p.setInequality(AbsCons(:,1:end-1), AbsCons(:,end));
+p.plotFrontier;
+
+15
+Functions
+
+15-420

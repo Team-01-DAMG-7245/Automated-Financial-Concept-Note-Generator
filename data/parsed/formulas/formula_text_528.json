@@ -1,0 +1,12 @@
+{
+  "page": 358,
+  "original_text": "MinNumAssets ≤∑1\nNumAssetsvi ≤MaxNumAssets, where vi is 0 or 1. Specify this type of constraint\nby setting the 'MinNumAssets' and 'MaxNumAssets' constraints in the Portfolio class using\nthe setMinMaxNumAssets function.",
+  "ocr_text": "MinNumAssets=_SNU4ssetsy,,MaxNumAssets,wherev;is0or1.Specifythistypeofconstraint\nbysettingtheMinNumAssetsandMaxNumAssetsconstraintsinthePortfolioclassusing\nthesetMinMaxNumAssetsfunction.",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 540.54,
+    "x1": 555.18,
+    "y1": 580.88
+  },
+  "confidence": "high"
+}

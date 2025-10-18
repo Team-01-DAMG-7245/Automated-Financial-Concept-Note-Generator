@@ -1,0 +1,12 @@
+{
+  "page": 2309,
+  "original_text": "pwgt = estimateFrontierLimits(p);\n[prsk, pret] = estimatePortMoments(p, pwgt)",
+  "ocr_text": "pwgt=estimateFrontierLimits(p);\n[prsk,pret]=estimatePortMoments(p,_pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 297.8,
+    "x1": 322.98,
+    "y1": 319.07
+  },
+  "confidence": "high"
+}

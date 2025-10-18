@@ -1,0 +1,12 @@
+{
+  "page": 2223,
+  "original_text": "% Solve portfolio problem\nwMin = estimateCustomObjectivePortfolio(p,objFun)",
+  "ocr_text": "Solveportfolioproblem\nwMin=estimateCustom0bjectivePortfolio(p,objFun)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 214.01,
+    "x1": 355.48,
+    "y1": 235.28
+  },
+  "confidence": "high"
+}

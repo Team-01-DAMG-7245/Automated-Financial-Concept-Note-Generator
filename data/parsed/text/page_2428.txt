@@ -1,0 +1,54 @@
+holidays
+
+Holidays and nontrading days
+
+Syntax
+
+H = holidays
+H = holidays(StartDate,EndDate)
+H = holidays( ___ ,AltHolidays)
+
+Description
+
+H = holidays returns a vector or datetime array corresponding to all holidays and nontrading days.
+
+H = holidays(StartDate,EndDate) returns a vector or datetime array corresponding to the
+holidays and nontrading days between StartDate and EndDate, inclusive.
+
+H = holidays( ___ ,AltHolidays) returns a vector or datetime array corresponding to the
+alternate list of holidays and nontrading days.
+
+Examples
+
+Determine Holidays for a Given StartDate and EndDate
+
+Create a vector of serial date numbers corresponding to all holidays and nontrading dates between a
+specified StartDate and EndDate:
+
+H = holidays('jan 1 2001', 'jun 23 2001')
+
+H = 5×1
+
+730852
+      730866
+      730901
+      730954
+      730999
+
+datestr(H)
+
+ans = 5×11 char array
+    '01-Jan-2001'
+    '15-Jan-2001'
+    '19-Feb-2001'
+    '13-Apr-2001'
+    '28-May-2001'
+
+Alternatively, using a datetime array for StartDate and EndDate returns a datetime array for H.
+
+H = holidays(datetime(2001,1,1),datetime(2001,6,23))
+
+15
+Functions
+
+15-1122

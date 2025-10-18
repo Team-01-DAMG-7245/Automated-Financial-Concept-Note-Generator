@@ -1,0 +1,6 @@
+Page 1533
+================================================================================
+
+Expected (mean) instantaneous rate of return of the GBM price process, specified as an array, a
+numeric scalar, or a deterministic function of time as a function handle accepting scalar time t or as a
+function of time and state as scalar time t followed by a 2-by-1 bivariate state vector X(t).

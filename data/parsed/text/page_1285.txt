@@ -1,0 +1,43 @@
+irregularComponent = NaN( numObservations, numCommodities );
+regularComponent = NaN( numObservations, numCommodities );
+
+Create tiled layouts for the visualization. You can visualize the trend components (for example, the
+sum of Lt and St) separately from the irregular components (Ct).
+
+figure
+tlTrend = tiledlayout(8,4, "TileSpacing", "tight");
+title( tlTrend, "Trend Components" )
+
+figure
+tlIrregular = tiledlayout(8,4, "TileSpacing", "tight");
+title( tlIrregular, "Irregular Components")
+
+For each soft commodity price series, perform the trend decomposition by using trenddecomp.
+
+for k = 1:numCommodities
+
+% Decompose the price series and store the results. This process might identify 
+    % more than one seasonal component, so sum the resulting matrix of seasonal 
+    % components to obtain the overall seasonal trend.
+    [L, S, C] = trenddecomp( Prices{:, k} );
+    longTermComponent(:, k) = L;
+    seasonalComponent(:, k) = sum( S, 2 );
+    irregularComponent(:, k) = C;
+    regularComponent(:, k) = longTermComponent(:, k) + seasonalComponent(:, k);
+
+% Add the components to the visualization.
+    nexttile(tlTrend)
+    plot(Prices.Date, regularComponent(:, k) )
+    title(commodityNames(k))
+    axis off
+
+nexttile(tlIrregular)
+    plot(Prices.Date, irregularComponent(:, k))
+    title(commodityNames(k))
+    axis off
+
+end
+
+Volatility Modeling for Soft Commodities
+
+14-93

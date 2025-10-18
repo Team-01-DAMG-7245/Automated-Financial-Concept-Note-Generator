@@ -1,0 +1,12 @@
+{
+  "page": 1445,
+  "original_text": "HWV = hwv(Speed,Level,Sigma) creates a default HWV object.",
+  "ocr_text": "HWV=hwv(Speed,Level,Sigma)createsadefaultHWVobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.41,
+    "x1": 392.71,
+    "y1": 580.04
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1062,
+  "original_text": "Another simplification of the general model is called least-squares regression. If b(0) = 0 and C(0) = I,\nthen b(1) and C(1) from the two-stage iterative process are least-squares estimates for b and C, where",
+  "ocr_text": "Anothersimplificationofthegeneralmodeliscalledleast-squaresregression.Ifb=andC=IJ,\nthenbandCfromthetwo-stageiterativeprocessareleast-squaresestimatesforbandC,where",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 217.46,
+    "x1": 550.31,
+    "y1": 241.27
+  },
+  "confidence": "high"
+}

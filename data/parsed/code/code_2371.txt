@@ -1,0 +1,9 @@
+Page 2238
+================================================================================
+
+Notice that GOOG has missing data (NaN), because it was not listed before Aug 2004. The
+estimateAssetMoments function has a name-value pair argument 'MissingData' that indicates
+with a Boolean value whether to use the missing data capabilities of Financial Toolbox™ software.
+The default value for 'MissingData' is false which removes all samples with NaN values. If,
+however, 'MissingData' is set to true, estimateAssetMoments uses the ECM algorithm to
+estimate asset moments.

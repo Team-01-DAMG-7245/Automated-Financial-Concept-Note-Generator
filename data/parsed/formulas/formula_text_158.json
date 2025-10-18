@@ -1,0 +1,12 @@
+{
+  "page": 114,
+  "original_text": "cash = cash + MOBid(tt); % Sell\n        assets = assets - 1;\n            \n    % If predicting upward price move",
+  "ocr_text": "cash=cash+MOBid(tt);Sell\nassets=assets-1;\nIfpredictingupwardpricemove",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 384.63,
+    "x1": 301.32,
+    "y1": 427.49
+  },
+  "confidence": "high"
+}

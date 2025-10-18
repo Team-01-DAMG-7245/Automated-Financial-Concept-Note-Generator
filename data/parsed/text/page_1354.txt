@@ -1,0 +1,35 @@
+plotFrontier(p,wDenoised)
+legend('True frontier','Traditional frontier','Denoised frontier', ...
+    Location='southeast');
+hold off
+
+The efficient frontier obtained by denoising is closer to the true frontier than the frontier obtained
+using the traditional covariance estimate. This improvement shows the robustness of the denoised
+covariance estimate.
+
+Sample Size Selection for Covariance Denoising
+
+This example shows the effect of the sample size in covarianceDenoising to compute a denoised
+version of an initial covariance estimate. The covarianceDenoising function has two different
+syntaxes. This example focuses on the syntax with two inputs: a covariance estimate and the size of
+the sample that you use to compute the initial covariance estimate. This example demonstrates an
+empirical study of the effect of the sample size on the accuracy of the denoised estimate. The goal of
+this example is to provide insight for the choice of the sample size when this information is not
+available. This scenario can happen if the initial covariance estimate is stored but the information of
+the sample used to compute the estimate is not available.
+
+Create Random Sample
+
+Create a random sample using mvnrnd.
+
+% Load data
+load('port5.mat','mean_return','Correlation')
+
+% Select the number of assets
+numObservations = 300;
+numAssets = 100;
+
+15
+Functions
+
+15-48

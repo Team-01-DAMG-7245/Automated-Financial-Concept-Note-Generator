@@ -1,0 +1,12 @@
+{
+  "page": 1200,
+  "original_text": "A = obj.A",
+  "ocr_text": "A=obj.A",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 147.05,
+    "x1": 159.18,
+    "y1": 157.52
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,76 @@
+Note If OutputCompounding is not specified, then OutputCompounding is assigned the value
+specified for InputCompounding. If either InputCompounding or OutputCompounding are not
+specified, the default is 2 (semiannual) for both.
+
+Data Types: double
+
+OutputBasis — Day-count basis of output zero rates
+0 (default) | numeric values: 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13
+
+Day count basis of output zero rates, specified as a numeric value. Allowed values are:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Note If OutputBasis is not specified, then OutputBasis is assigned the value specified for
+InputBasis. If either InputBasis or OutputBasis are not specified, the default is 0 (actual/
+actual) for both.
+
+Data Types: double
+
+Output Arguments
+
+ZeroRates — Zero curve for investment horizon represented by CurveDates
+numeric
+
+Zero curve for the investment horizon represented by CurveDates, returned as a NUMBONDS-by-1
+vector of decimal fractions. In aggregate, the rates in ZeroRates constitute a zero curve for the
+investment horizon represented by CurveDates.
+
+CurveDates — Maturity dates that correspond to ZeroRates
+datetime | serial date number
+
+fwd2zero
+
+15-1073

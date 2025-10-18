@@ -1,0 +1,8 @@
+Page 2061
+================================================================================
+
+Next coupon date after the settlement date, returned as an NUMBONDS-by-1 vector of next actual
+coupon dates after settlement. If settlement is a coupon date, this function never returns the
+settlement date. Instead, the actual coupon date strictly after settlement is returned, but not
+exceeding the maturity date. Thus, this function will always return the lesser of the actual maturity
+date and the next coupon payment date.

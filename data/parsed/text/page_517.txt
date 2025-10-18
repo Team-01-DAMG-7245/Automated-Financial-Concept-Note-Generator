@@ -1,0 +1,65 @@
+Solve Problem for Minimum Tracking Error with Net Return
+Constraint
+
+This example shows how to use estimateCustomObjectivePortfolio to solve a portfolio
+problem for minimum tracking error with a net return constraint using a custom objective.
+
+Create Portfolio Object
+
+Create a Portfolio object.
+
+% Create a Portfolio object
+load('SixStocks.mat')
+p = Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);
+
+Define Problem
+
+The portfolio problem for a minimum tracking error problem with a net return constraint is defined as
+
+min
+x
+x −x0
+
+TΣ x −x0
+
+s . t . μTx −cB
+Tmax 0, x −x0 −cS
+Tmax 0, x0 −x ≥μ0
+∑
+i
+xi = 1
+
+x ≥0
+
+Define Problem Parameters
+
+Define the problem parameters for the Portfolio object.
+
+% Initial portfolio
+initPort = 1/p.NumAssets*ones(p.NumAssets,1);
+% Buy cost
+buyCost = 0.001*ones(p.NumAssets,1);
+% Sell cost
+sellCost = 0.002*ones(p.NumAssets,1);
+% Net return target
+ret0 = 0.03;
+
+Solve Portfolio Problem
+
+Use estimateCustomObjectivePortfolio to solve this portfolio problem for a minimum tracking
+error with a net return constraint. When using the estimateCustomObjectivePortfolio function
+with a Portfolio object, you add return constraints by using the
+estimateCustomObjectivePortfolio name-value argument TargetReturn with a return target
+value.
+
+% Long-only, fully invested portfolio
+p = setDefaultConstraints(p);
+% Set the buy and sell costs
+p = setCosts(p,buyCost,sellCost,initPort);
+
+% Set the objective
+fun = @(x) (x-initPort)'*p.AssetCovar*(x-initPort);
+
+Solve Problem for Minimum Tracking Error with Net Return Constraint
+
+4-349

@@ -1,0 +1,12 @@
+{
+  "page": 609,
+  "original_text": "[ExecutedShares,ExecutedPrices,InitialPrice,TradedLevels] = ...\n            tradeLOB(CurrentBook,CurrentTradingShares,BuyTrade);\n        if IntervalIdx==1\n            ArrivalPrice = InitialPrice;\n        end\n        HorizonExecutedShares((1:TradedLevels) + (IntervalIdx-1)*NumLevels) = ExecutedShares;\n        HorizonExecutedPrices((1:TradedLevels) + (IntervalIdx-1)*NumLevels) = ExecutedPrices;",
+  "ocr_text": "[ExecutedShares,ExecutedPrices,InitialPrice,TradedLevels]=...\ntradeLOB(CurrentBook,CurrentTradingShares,BuyTrade);\nifIntervalIdx==1\nArrivalPrice=InitialPrice;\nend\nHorizonExecutedShares((1:TradedLevels)+(IntervalIdx-1)*NumLevels)=ExecutedShares;\nHorizonExecutedPrices((1:TradedLevels)+(IntervalIdx-1)*NumLevels)=ExecutedPrices;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.03,
+    "x1": 593.87,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

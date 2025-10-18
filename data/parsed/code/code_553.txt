@@ -1,0 +1,4 @@
+Page 513
+================================================================================
+
+Define a function handle for the objective function xTΣRx.

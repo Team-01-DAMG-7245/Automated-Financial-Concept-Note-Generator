@@ -1,0 +1,9 @@
+Page 1801
+================================================================================
+
+[CallEl,PutEl] = blslambda(Price,Strike,Rate,Time,Volatility) returns the elasticity
+of an option. CallEl is the call option elasticity or leverage factor, and PutEl is the put option
+elasticity or leverage factor. Elasticity (the leverage of an option position) measures the percent
+change in an option price per 1 percent change in the underlying asset price. blslambda uses
+normcdf, the normal cumulative distribution function in the Statistics and Machine Learning
+Toolbox.

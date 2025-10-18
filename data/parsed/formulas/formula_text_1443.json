@@ -1,0 +1,12 @@
+{
+  "page": 725,
+  "original_text": "To modify fmincon options for CVaR portfolio optimizations, use setSolver to set the hidden\nproperties solverType and solverOptions to specify and control the solver. (Note that you can\nsee the default options by creating a dummy PortfolioCVaR object, using p = PortfolioCVaR\nand then type p.solverOptions.) Since these solver properties are hidden, you cannot set them\nusing the PortfolioCVaR object. The default for the fmincon solver is to use the sqp algorithm\nobjective function, gradients turned on, and no displayed output, so you do not need to use\nsetSolver to specify the sqp algorithm.",
+  "ocr_text": "TomodifyfminconoptionsforCVaRportfoliooptimizations,usesetSolvertosetthehidden\npropertiessolverTypeandsolverOptionstospecifyandcontrolthesolver.(Notethatyoucan\nseethedefaultoptionsbycreatingadummyPortfolioCVaRobject,usingp=PortfolioCVaR\nandthentypep.solverOptions.)Sincethesesolverpropertiesarehidden,youcannotsetthem\nusingthePortfolioCVaRobject.Thedefaultforthefminconsolveristousethesqpalgorithm\nobjectivefunction,gradientsturnedon,andnodisplayedoutput,soyoudonotneedtouse\nsetSolvertospecifythesqpalgorithm.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 300.16,
+    "x1": 541.16,
+    "y1": 383.79
+  },
+  "confidence": "high"
+}

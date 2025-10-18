@@ -1,0 +1,12 @@
+{
+  "page": 1413,
+  "original_text": "fprintf('European Put Option Price: %.4f\\n', putPrice);",
+  "ocr_text": "fprintf(EuropeanPutOptionPrice:*.4fn,putPrice);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.23,
+    "x1": 388.01,
+    "y1": 578.69
+  },
+  "confidence": "high"
+}

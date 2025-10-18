@@ -1,0 +1,12 @@
+{
+  "page": 1168,
+  "original_text": "for i = 1:nIndices\n    simulatedReturns(:,:,i) = filter(fit{i}, Z(:,:,i), ...\n                                    'Y0', Y0(i), 'Z0', Z0(i), 'V0', V0(i));\nend",
+  "ocr_text": "fori=1:nIndices\nsimulatedReturns(:,:,i1)=filter(fit{i},Z(:,:,i),...\nYO,YO(i),ZO,ZO(i),_VO,VO(i));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 457.56,
+    "x1": 496.38,
+    "y1": 500.43
+  },
+  "confidence": "high"
+}

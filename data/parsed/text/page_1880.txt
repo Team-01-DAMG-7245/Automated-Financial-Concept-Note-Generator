@@ -1,0 +1,60 @@
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Note If a SIA day-count basis is defined in the Basis input argument and there is no value assigned
+for DiscountBasis, the default behavior is for SIA bases to use the actual/actual day count to
+compute discount factors.
+
+If an ICMA day-count basis or BUS/252 is defined in the Basis input argument and there is no value
+assigned for DiscountBasis, the specified bases from the Basis input argument are used.
+
+Data Types: double
+
+LastCouponInterest — Compounding convention for computing yield of a bond in last
+coupon period
+compound (default) | values are simple or compound
+
+Compounding convention for computing the yield of a bond in the last coupon period, specified as the
+comma-separated pair consisting of 'LastCouponInterest' and a scalar or a NUMBONDS-by-1 or 1-
+by-NUMBONDS vector. LastCouponInterest is based on only the last coupon and the face value to
+be repaid. Acceptable values are:
+
+•
+simple
+
+•
+compound
+
+Data Types: char | cell
+
+Output Arguments
+
+Spread — Static spread to benchmark in basis points
+numeric
+
+Static spread to benchmark, returned in basis points as a scalar or a NUMBONDS-by-1 vector.
+
+More About
+
+Z-Spread
+
+Z-spread, or static spread, is a measure used in fixed-income analysis to assess the yield spread of a
+bond over the benchmark yield curve, specifically the risk-free rate, when the bond is assumed to be
+held to maturity.
+
+The Z-spread represents the constant spread that an investor would add to the yield of a benchmark
+yield curve (typically the Treasury yield curve) to discount the bond's future cash flows to its current
+market price.
+
+Version History
+Introduced before R2006a
+
+15
+Functions
+
+15-574

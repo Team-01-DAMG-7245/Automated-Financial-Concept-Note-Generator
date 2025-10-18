@@ -1,0 +1,48 @@
+You can see the differences between the TWAP baseline (blue) and the agent (red) in their IS,
+executed shares, and inventory shares. Also, the agent tends to behave differently when the IS trends
+negative as compared to positive.
+
+•
+For example, in the first horizon (step numbers 1 to 12) and the third horizon (step numbers 25 to
+36), the IS trends negative (more favorable prices than the arrival price) and the agent initially
+trades fewer shares than TWAP, until there are large spikes in the executed shares at the ends of
+the horizons to meet the ending inventory constraint. Also, the inventories initially declines more
+slowly than TWAP, until the abrupt declines to zero at the end of the horizon. This coincided with
+negative pulls in the agent's IS at the end of the first and the third horizons that go even lower
+than the IS of TWAP.
+
+•
+On the other hand, in the second horizon (step numbers 13 to 24), the IS trends positive (less
+favorable prices than the arrival price), and the agent initially trades more shares than TWAP to
+liquidate the inventory faster than TWAP. This has a limiting effect on the agent's IS at the end of
+the horizon, which is also lower than the IS of TWAP.
+
+You can see similar behaviors in other horizons, although they do not always lead to an
+outperformance of the agent over TWAP.
+
+Also, you can plot the differences in IS between TWAP and the agent, and then compare them with
+the rewards.
+
+figure
+subplot(3,1,1)
+bar(1:NumTrainingHorizons, IS_TWAP_Horizon_Train_Sell - IS_Agent_Horizon_Train_Sell)
+xlabel(strcat("Horizon number (", num2str(NumTrainingHorizons), " horizons total.)"))
+title("IS TWAP - IS Agent Over Horizon (Training, Sell)")
+xlim([0 43])
+subplot(3,1,2)
+bar(1:NumTrainingSteps, IS_TWAP_Step_Train_Sell - IS_Agent_Step_Train_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTrainingSteps), " steps total.)"))
+title("IS TWAP - IS Agent Each Step (Training, Sell)")
+xlim([0 510])
+subplot(3,1,3)
+bar(1:NumTrainingSteps, SimReward_Train_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTrainingSteps), " steps total.)"))
+title("Reward (Training, Sell)")
+xlim([0 510])
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-426

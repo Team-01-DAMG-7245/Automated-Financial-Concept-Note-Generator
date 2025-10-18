@@ -1,0 +1,12 @@
+{
+  "page": 1413,
+  "original_text": "% Extract the final prices for all trials\nST = Paths(end, :, 1);",
+  "ocr_text": "sExtractthefinalpricesforalltrials\nST=Paths(end,:,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 160.23,
+    "x1": 312.14,
+    "y1": 181.49
+  },
+  "confidence": "high"
+}

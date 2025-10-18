@@ -1,0 +1,12 @@
+{
+  "page": 538,
+  "original_text": "% Define the minimum possible wealth.\ntimeVec = 0:T;\nWMinVec = W0*exp((mu_min-(sigma_max^2)/2)*timeVec- ...\n    3*sigma_max*sqrt(timeVec));\nWHatMin = min(WMinVec);",
+  "ocr_text": "Definetheminimumpossiblewealth.\n\ntimeVec=0:T;\n\nWMinVec=WO*exp((mu_min-(sSigma_max*2)/2)*timeVec-...\n3*sigma_max*sqrt(timeVec));\n\nWHatMin=min(WMinVec);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 161.14,
+    "x1": 382.59,
+    "y1": 214.81
+  },
+  "confidence": "high"
+}

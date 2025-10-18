@@ -1,0 +1,60 @@
+disp(array2table(MatrixCohort2,'VariableNames',RatingsLabels, ...
+   'RowNames',RatingsLabels))
+
+AAA         AA          A          BBB         BB          B          CCC          D
+           ________    _______    ________    _______    ________    ________    ________    ____
+
+AAA      93.135     5.9335     0.74557    0.15533    0.031066           0           0        
+    AA       1.7346     92.945       4.541    0.58468     0.15592           0           0    0.03
+    A       0.12683     2.9716      91.991     4.3124      0.4711    0.054358           0    0.07
+    BBB    0.021048    0.37887      5.0726     89.771      4.0413     0.46306    0.042096     0.2
+    BB     0.022099     0.1105     0.68508      6.232      88.376      3.6464     0.28729     0.6
+    B             0          0    0.076161    0.72353       7.997      86.215      2.7037      2
+    CCC           0          0           0    0.30888      1.8533      4.4788      81.004      12
+    D             0          0           0          0           0           0           0
+
+fprintf('Total transitions out of given rating, many more out of CCC and AA:\n')
+
+Total transitions out of given rating, many more out of CCC and AA:
+
+disp(array2table(TotalsCohort2.totalsVec,'VariableNames',RatingsLabels))
+
+AAA      AA      A      BBB      BB      B      CCC      D  
+    ____    ____    ____    ____    ____    ____    ____    ____
+
+3219    5131    5519    4751    4525    2626    1295    4050
+
+Estimate Point-in-Time and Through-the-Cycle Probabilities
+
+This example shows how transition probability estimates are sensitive to the length of the estimation
+window.
+
+Transition probability estimates are sensitive to the length of the estimation window. When the
+estimation window is small, the estimates only capture recent credit events, and these can change
+significantly from one year to the next. These are called point-in-time (PIT) estimates. In contrast, a
+large time window yields fairly stable estimates that average transition rates over a longer period of
+time. These are called through-the-cycle (TTC) estimates.
+
+The estimation of PIT probabilities requires repeated calls to transprob with a rolling estimation
+window. Use transprobprep every time repeated calls to transprob are required.
+transprobprep performs a preprocessing step on the raw dataset that is independent of the
+estimation window. The benefits of transprobprep are greater as the number of repeated calls to
+transprob increases. Also, the performance gains from transprobprep are more significant for
+the cohort algorithm.
+
+load Data_TransProb
+prepData = transprobprep(data);
+
+Years = 1991:2000;
+nYears = length(Years);
+nRatings = length(prepData.ratingsLabels);
+transMatPIT = zeros(nRatings,nRatings,nYears);
+algorithm = 'duration';
+sampleTotals(nYears,1) = struct('totalsVec',[],'totalsMat',[], ...
+'algorithm',algorithm);
+for t = 1:nYears
+
+8
+Credit Risk Analysis
+
+8-10

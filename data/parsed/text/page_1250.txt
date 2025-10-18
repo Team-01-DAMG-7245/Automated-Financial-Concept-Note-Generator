@@ -1,0 +1,53 @@
+Stratified Sampling
+
+This example specifies a noise function to stratify the terminal value of a univariate equity price
+series. Simulation methods allow you to specify a noise process directly, as a callable function of time
+and state:
+
+Stratified sampling is a variance reduction technique that constrains a proportion of sample paths to
+specific subsets (or strata) of the sample space.
+
+This example specifies a noise function to stratify the terminal value of a univariate equity price
+series. Starting from known initial conditions, the function first stratifies the terminal value of a
+standard Brownian motion, and then samples the process from beginning to end by drawing
+conditional Gaussian samples using a Brownian bridge.
+
+The stratification process assumes that each path is associated with a single stratified terminal value
+such that the number of paths is equal to the number of strata. This technique is called proportional
+sampling. This example is similar to, yet more sophisticated than, the one discussed in “Simulating
+Interest Rates” on page 14-50. Since stratified sampling requires knowledge of the future, it also
+requires more sophisticated time synchronization; specifically, the function in this example requires
+knowledge of the entire sequence of sample times.
+
+The function implements proportional sampling by partitioning the unit interval into bins of equal
+probability by first drawing a random number uniformly distributed in each bin. The inverse
+cumulative distribution function of a standard N(0,1) Gaussian distribution then transforms these
+stratified uniform draws. Finally, the resulting stratified Gaussian draws are scaled by the square root
+of the terminal time to stratify the terminal value of the Brownian motion.
+
+The noise function does not return the actual Brownian paths, but rather the Gaussian draws Z t, Xt
+that drive it.
+
+This example first stratifies the terminal value of a univariate, zero-drift, unit-variance-rate Brownian
+motion (bm) model:
+
+Assume that 10 paths of the process are simulated daily over a three-month period. Also assume that
+each calendar month and year consist of 21 and 252 trading days, respectively.
+
+rng(10203,'twister')
+dt       = 1 / 252;        % 1 day = 1/252 years
+nPeriods = 63;             % 3 months = 63 trading days
+T        = nPeriods * dt;  % 3 months = 0.25 years
+nPaths   = 10;            % # of simulated paths
+obj      = bm(0, 1, 'StartState', 0);
+sampleTimes = cumsum([obj.StartTime; ...
+    dt(ones(nPeriods,1))]);
+z        = Example_StratifiedRNG(nPaths, sampleTimes);
+
+Simulate the standard Brownian paths by explicitly passing the stratified sampling function to the
+simulation (simulate) method.
+
+14
+Stochastic Differential Equations
+
+14-58

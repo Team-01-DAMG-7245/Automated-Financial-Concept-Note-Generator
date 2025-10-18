@@ -1,0 +1,12 @@
+{
+  "page": 1778,
+  "original_text": "Yield = beytbill(datetime(2000,2,11),datetime(2000,8,7), 0.0577)",
+  "ocr_text": "Yield=beytbill(datetime(2000,2,11),datetime(2000,8,7),0.0577)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 369.5,
+    "x1": 436.75,
+    "y1": 379.96
+  },
+  "confidence": "high"
+}

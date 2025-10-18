@@ -1,0 +1,8 @@
+Page 354
+================================================================================
+
+Although you could accept this result, suppose that you want to target values for portfolio risk.
+Specifically, suppose that you have a conservative target risk of 10%, a moderate target risk of 15%,
+and an aggressive target risk of 20% and you want to obtain portfolios that satisfy each risk target.
+Use the estimateFrontierByRisk function to obtain targeted risks specified in the variable
+TargetRisk. The resultant three efficient portfolios are obtained in qwgt.

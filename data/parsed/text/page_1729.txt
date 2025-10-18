@@ -1,0 +1,33 @@
+Output Arguments
+
+ActiveConSet — Transformed portfolio linear inequality constraint matrix expressed in
+active weight format
+matrix
+
+Transformed portfolio linear inequality constraint matrix expressed in active weight format, returned
+in the form [A b] such that A*w <= b. The value w represents a vector of active asset weights
+(relative to the index portfolio) whose elements sum to zero.
+
+Algorithms
+
+abs2active transforms a constraint matrix to an equivalent matrix expressed in active weight
+format (relative to the index). The transformation equation is
+
+Awabsolute = A wactive + windex ≤babsolute .
+
+Therefore
+
+Awactive ≤babsolute −Awindex = bactive .
+
+The initial constraint matrix consists of NCONSTRAINTS portfolio linear inequality constraints
+expressed in absolute weight format. The index portfolio vector contains NASSETS assets.
+
+Version History
+Introduced before R2006a
+
+See Also
+active2abs | pcalims | pcglims | pcpval | portcons | Portfolio | setInequality
+
+abs2active
+
+15-423

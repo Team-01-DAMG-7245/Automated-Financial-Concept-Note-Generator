@@ -1,0 +1,12 @@
+{
+  "page": 2133,
+  "original_text": "NumDays = days365(StartDate,EndDate) returns the number of days between StartDate and\nEndDate based on a 365-day year. All months contain their actual number of days. February always\ncontains 28 days.",
+  "ocr_text": "NumDays=days365(StartDate,EndDate)returnsthenumberofdaysbetweenStartDateand\nEndDatebasedona365-dayyear.Allmonthscontaintheiractualnumberofdays.Februaryalways\ncontains28days.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 243.86,
+    "x1": 553.07,
+    "y1": 279.49
+  },
+  "confidence": "high"
+}

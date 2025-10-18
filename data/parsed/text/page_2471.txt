@@ -1,0 +1,31 @@
+llow
+
+Lowest low
+
+Syntax
+
+values = llow(Data)
+values = llow( ___ ,Name,Value)
+
+Description
+
+values = llow(Data) generates a vector of lowest low values from the series of low prices for the
+past n periods.
+
+values = llow( ___ ,Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Calculate the Lowest Low for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+values = llow(TMW);
+plot(values.Time,values.LowestLow)
+title('Lowest Low for TMW')
+
+llow
+
+15-1165

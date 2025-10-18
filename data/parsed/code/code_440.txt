@@ -1,0 +1,6 @@
+Page 435
+================================================================================
+
+To visualize the tradeoff between a portfolio's average percentage of WoB and the traditional mean-
+variance efficient frontier, a set of contour plots are computed for some target WoB percentages using
+the plotContours function in Local Functions on page 4-269.

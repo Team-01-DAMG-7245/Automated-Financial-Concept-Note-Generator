@@ -1,0 +1,12 @@
+{
+  "page": 604,
+  "original_text": "EnvConstants_Train_Buy.SampledBook = TrainingLOB;\nEnvConstants_Train_Buy.BuyTrade = BuyTrade;\nEnvConstants_Train_Buy.TotalTradingShares = TotalTradingShares_Buy;\nEnvConstants_Train_Buy.NumIntervalsPerHorizon = NumIntervalsPerHorizon;",
+  "ocr_text": "EnvConstants_Train_Buy.SampledBook=TrainingLOB;\nEnvConstants_Train_Buy.BuyTrade=BuyTrade;\nEnvConstants_Train_Buy.TotalTradingShares=TotalTradingShares_Buy;\nEnvConstants_Train_Buy.NumIntervalsPerHorizon=NumIntervalsPerHorizon;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 474.68,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

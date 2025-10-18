@@ -1,0 +1,12 @@
+{
+  "page": 126,
+  "original_text": "classes = [\"loss\" \"const\" \"gain\"];\ny = DS((dtS+1):end);\ny = categorical(y,[-1 0 1],classes);\nn = numel(y);\nnumClasses = numel(classes);",
+  "ocr_text": "classes=[lossconstgain];\ny=DS((dtS+1):end);\ny=categorical(y,[-101],classes);\nn=numel(y);\nnumClasses=numel(classes);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 181.67,
+    "x1": 285.04,
+    "y1": 235.34
+  },
+  "confidence": "high"
+}

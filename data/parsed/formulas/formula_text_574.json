@@ -1,0 +1,12 @@
+{
+  "page": 385,
+  "original_text": "% create a portfolio and define risk-free rate.\np = Portfolio('RiskFreeRate', riskFreeRate, 'assetmean', assetsMean, 'assetcovar', assetCovar, 'l",
+  "ocr_text": "Screateaportfolioanddefinerisk-freerate.\np=Portfolio(RiskFreeRate,riskFreeRate,assetmean,assetsMean,assetcovar,assetCovar,",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 367.83,
+    "x1": 615.59,
+    "y1": 389.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 845
+================================================================================
+
+p = PortfolioMAD;
+GA = [ true true true false false false ];   % financial companies
+GB = [ false false false true true true ];   % nonfinancial companies
+p = setGroupRatio(p, GA, GB, [], 0.5);

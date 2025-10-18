@@ -1,0 +1,4 @@
+Page 1202
+================================================================================
+
+where A is an NVars-by-1 vector-valued function and B is an NVars-by-NVars matrix-valued function.

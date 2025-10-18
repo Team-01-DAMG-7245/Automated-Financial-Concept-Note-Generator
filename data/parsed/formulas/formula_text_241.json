@@ -1,0 +1,12 @@
+{
+  "page": 155,
+  "original_text": "•\nA = ConSet(:,1:end-1);",
+  "ocr_text": "A=ConSet(:,1l:end-1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.33,
+    "x1": 237.44,
+    "y1": 264.96
+  },
+  "confidence": "high"
+}

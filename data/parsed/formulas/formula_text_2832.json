@@ -1,0 +1,12 @@
+{
+  "page": 1457,
+  "original_text": "average  = zeros(length(times),1);\nvariance = zeros(length(times),1);\nfor i = 1:length(times)\n    t = times(i);\n    x = interpolate(obj,t(ones(nTrials,1)),...\n        X,'Times',T);\n    average(i)  = mean(x(:,1));\n    variance(i) = var(x(:,1));\nend",
+  "ocr_text": "average=zeros(length(times),1);\nvariance=zeros(length(times),1);\nfori=1:length(times)\nt=times(i);\nx=interpolate(obj,t(ones(nTrials,1)),...\nX,Times,T);\naverage(i)=mean(x(:,1));\nvariance(i)=var(x(:,1));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.43,
+    "x1": 339.25,
+    "y1": 286.29
+  },
+  "confidence": "high"
+}

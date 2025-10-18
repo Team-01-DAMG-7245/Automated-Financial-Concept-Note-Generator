@@ -1,0 +1,12 @@
+{
+  "page": 1134,
+  "original_text": "% Create a portfolio object.\np = Portfolio;\np = setAssetMoments(p,retsMean,retsCov);\np = setDefaultConstraints(p)",
+  "ocr_text": "Createaportfolioobject.\np=Portfolio;\np=setAssetMoments(p,retsMean,retsCov);\np=setDefaultConstraints(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 602.66,
+    "x1": 306.72,
+    "y1": 645.53
+  },
+  "confidence": "high"
+}

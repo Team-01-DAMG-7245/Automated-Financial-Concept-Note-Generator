@@ -1,0 +1,12 @@
+{
+  "page": 1991,
+  "original_text": "Maturity = ['30-Sep-1997'; '31-Oct-1998'; '30-Nov-1998'];\nCFlowDates = cfdates('14-Mar-1997', Maturity)",
+  "ocr_text": "Maturity=[30-Sep-1997;_31-Oct-1998;30-Nov-1998];\nCFlowDates=cfdates(14-Mar-1997,Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 398.85,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 2282
+================================================================================
+
+To obtain efficient portfolios that have targeted portfolio risks, the estimateFrontierByRisk
+function accepts one or more target portfolio risks and obtains efficient portfolios with the specified
+risks. Assume you have a universe of four assets where you want to obtain efficient portfolios with
+target portfolio risks of 12%, 20%, and 25%. This example uses the default 'direct' method to
+estimate the optimal portfolios with targeted portfolio risks.

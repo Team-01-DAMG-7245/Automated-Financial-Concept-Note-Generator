@@ -1,0 +1,12 @@
+{
+  "page": 396,
+  "original_text": "q = P * μ + ε, ε N 0, Ω , Ω = diag ω1, ω2, . . . ωv .",
+  "ocr_text": "q=P*i+,_E-N(0,Q),Q=diag(w,w2,...wy).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 477.79,
+    "x1": 329.4,
+    "y1": 491.63
+  },
+  "confidence": "high"
+}

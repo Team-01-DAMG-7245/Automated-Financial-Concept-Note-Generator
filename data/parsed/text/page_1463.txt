@@ -1,0 +1,64 @@
+sde
+
+Stochastic Differential Equation (SDE) model
+
+Description
+
+Creates and displays a general stochastic differential equation (SDE) model from user-defined drift
+and diffusion rate functions.
+
+Use sde objects to simulate sample paths of NVars state variables driven by NBROWNS Brownian
+motion sources of risk over NPeriods consecutive observation periods, approximating continuous-
+time stochastic processes.
+
+An sde object enables you to simulate any vector-valued SDE of the form:
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+
+where:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+dWt is an NBROWNS-by-1 Brownian motion vector.
+
+•
+F is an NVars-by-1 vector-valued drift-rate function.
+
+•
+G is an NVars-by-NBROWNS matrix-valued diffusion-rate function.
+
+Creation
+
+Syntax
+
+SDE = sde(DriftRate,DiffusionRate)
+SDE = sde( ___ ,Name,Value)
+
+Description
+
+SDE = sde(DriftRate,DiffusionRate) creates a default SDE object.
+
+SDE = sde( ___ ,Name,Value) creates a SDE object with additional options specified by one or
+more Name,Value pair arguments.
+
+Name is a property name and Value is its corresponding value. Name must appear inside single
+quotes (''). You can specify several name-value pair arguments in any order as Name1,Value1,
+…,NameN,ValueN.
+
+The SDE object has the following “Properties” on page 15-158:
+
+•
+StartTime — Initial observation time
+
+•
+StartState — Initial state at time StartTime
+
+•
+Correlation — Access function for the Correlation input argument, callable as a function of
+time
+
+sde
+
+15-157

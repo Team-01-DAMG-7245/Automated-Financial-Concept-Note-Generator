@@ -1,0 +1,12 @@
+{
+  "page": 1240,
+  "original_text": "strike   = 95;\nrate     = 0.1;\nsigma    = 0.5;\ndt       = 1/252;\nnPeriods = 63;\nT        = nPeriods*dt;\nobj = gbm(rate,sigma,'StartState',100);",
+  "ocr_text": "strike =95;\n\nrate =0.1;\n\nsigma =0.5;\n\ndt =1/252;\n\nnPeriods=63;\n\nT =nPeriods*dt;\nobj=gbm(rate,sigma,StartState,100);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 186.53,
+    "x1": 301.32,
+    "y1": 261.8
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1407,
+  "original_text": "GBM = gbm(Return,Sigma) creates a default GBM object.",
+  "ocr_text": "GBM_=gbm(Return,Sigma)createsadefaultGBMobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 567.22,
+    "x1": 362.61,
+    "y1": 578.85
+  },
+  "confidence": "high"
+}

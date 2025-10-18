@@ -1,0 +1,5 @@
+Page 992
+================================================================================
+
+Use the autobinning function to perform automatic binning for every predictor variable, using the
+default 'Monotone' algorithm with default algorithm options.

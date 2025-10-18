@@ -1,0 +1,12 @@
+{
+  "page": 549,
+  "original_text": "actionInfo = rlFiniteSetSpec(1:15);",
+  "ocr_text": "actionInfo=rlFiniteSetSpec(1:15);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 541.73,
+    "x1": 279.63,
+    "y1": 552.2
+  },
+  "confidence": "high"
+}

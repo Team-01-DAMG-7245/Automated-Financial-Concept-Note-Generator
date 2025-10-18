@@ -1,0 +1,5 @@
+Page 2411
+================================================================================
+
+Use the getInequality function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain inequality constraint arrays from portfolio objects.

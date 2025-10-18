@@ -1,0 +1,12 @@
+{
+  "page": 2166,
+  "original_text": "•\nIf NUMSERIES ≥ 1, Design is a cell array. The cell array contains either one or NUMSAMPLES cells.\nEach cell contains a NUMSERIES-by-NUMPARAMS matrix of known values.",
+  "ocr_text": "*IfNUMSERIES=1,Designisacellarray.ThecellarraycontainseitheroneorNUMSAMPLEScells.\nEachcellcontainsaNUMSERIES-by-NUMPARAMSmatrixofknownvalues.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 661.96,
+    "x1": 555.5,
+    "y1": 685.59
+  },
+  "confidence": "high"
+}

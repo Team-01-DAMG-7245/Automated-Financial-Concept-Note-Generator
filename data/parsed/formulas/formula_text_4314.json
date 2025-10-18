@@ -1,0 +1,12 @@
+{
+  "page": 2443,
+  "original_text": "Date = lbusdate(Year,Month)\nDate = lbusdate( ___ ,Holiday,Weekend,outputType)",
+  "ocr_text": "Date=lLbusdate(Year,Month)\nDate=lbusdate(__,Holiday,Weekend,outputType)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.28,
+    "x1": 376.97,
+    "y1": 212.91
+  },
+  "confidence": "high"
+}

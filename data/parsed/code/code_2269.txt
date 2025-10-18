@@ -1,0 +1,5 @@
+Page 2088
+================================================================================
+
+Maturity = [datetime(2001,6,30) ; datetime(2001,5,31) ; datetime(2001,6,30)];
+NumDaysPeriod = cpnpersz('14-Sep-2000', Maturity)

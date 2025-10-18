@@ -1,0 +1,12 @@
+{
+  "page": 1076,
+  "original_text": "where Count is the actual number of samples used in the estimation with Count ≤ NumSamples.\nNone of the regression functions perform this adjustment.",
+  "ocr_text": "whereCountistheactualnumberofsamplesusedintheestimationwithCount=NumSamples.\nNoneoftheregressionfunctionsperformthisadjustment.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 287.25,
+    "x1": 536.59,
+    "y1": 310.88
+  },
+  "confidence": "high"
+}

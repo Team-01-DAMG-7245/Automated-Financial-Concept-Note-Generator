@@ -1,0 +1,12 @@
+{
+  "page": 1420,
+  "original_text": "% Calculate payoffs for the call option\nPayoffs = max(FuturePrices(:, end) - K, 0);",
+  "ocr_text": "Calculatepayoffsforthecalloption\nPayoffs=max(FuturePrices(:,end)-K,0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 322.98,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

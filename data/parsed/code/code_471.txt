@@ -1,0 +1,6 @@
+Page 454
+================================================================================
+
+Use riskBudgetingPortfolio with the covariance matrix (Sigma) and a vector of risk budgets
+(budget) to compute the long-only fully invested risk budgeting portfolio. When you specify the
+target risk budget, the function computes the risk parity portfolio.

@@ -1,0 +1,12 @@
+{
+  "page": 1084,
+  "original_text": "βi = cov Ri, M",
+  "ocr_text": "cov(R;,M)\nB= var(M)",
+  "bbox": {
+    "x0": 111.91,
+    "y0": 610.35,
+    "x1": 174.92,
+    "y1": 631.57
+  },
+  "confidence": "high"
+}

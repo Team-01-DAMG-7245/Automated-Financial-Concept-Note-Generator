@@ -1,0 +1,25 @@
+Standard deviation of each process, returned as an 1-by-n vector.
+
+The entries of ExpCorrC range from 1 (completely correlated) to -1 (completely anti-correlated). A
+value of 0 in the (i,j) entry indicates that the i'th and j'th processes are uncorrelated.
+
+ExpSigma(i) = sqrt( ExpCovariance(i,i) );
+ExpCorrC(i,j) = ExpCovariance(i,j)/( ExpSigma(i)*ExpSigma(j) );
+
+Data Types: double
+
+ExpCorrC — Correlation coefficients
+matrix
+
+Correlation coefficients, returned as an n-by-n matrix.
+
+Version History
+Introduced before R2006a
+
+See Also
+corr2cov | corrcoef | ewstats | nearcorr
+
+15
+Functions
+
+15-746

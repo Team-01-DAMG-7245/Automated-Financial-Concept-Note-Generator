@@ -1,0 +1,62 @@
+axis([0 225 0 0.203])
+title('Minimum Variance')
+nexttile
+bar(wMix')
+axis([0 225 0 0.203])
+title('Mixed Strategy')
+nexttile
+bar(wMaxDiv')
+axis([0 225 0 0.203])
+title('Maximum Diversity')
+ylabel(t,'Asset Weight')
+xlabel(t,'Asset Number')
+
+end
+
+function [weightsTable,TnonZero] = ...
+    tableWithNonZeroWeights(weightsTable,cutOff,varNames)
+% Creates a table with the number of nonzero weights for each strategy
+
+% Select only meaningful weights
+funSelect = @(x) (x >= cutOff).*x./sum(x(x >= cutOff));
+weightsTable = varfun(funSelect,weightsTable);
+
+% Number of assets with positive weights
+funSum = @(x) sum(x > 0);
+TnonZero = varfun(funSum,weightsTable);
+TnonZero.Properties.VariableNames = varNames;
+TnonZero.Properties.RowNames = {'Nonzero weights'};
+
+end
+
+function [corrAsset2Port] = correlationInfo(Sigma,portWeights)
+% Returns a matrix with the correlation of each individual asset to its
+% portfolio.
+
+nX = size(portWeights,1); % Number of assets
+nP = size(portWeights,2); % Number of portfolios
+
+auxM = eye(nX);
+corrAsset2Port = zeros(nX,nP);
+for j = 1:nP
+    % Portfolio's standard deviation
+    sigmaPortfolio = sqrt(portWeights(:,j)'*Sigma*portWeights(:,j));
+    for i = 1:nX
+        % Assets's standard deviation
+        sigmaAsset = sqrt(Sigma(i,i));
+        % Asset to portfolio correlation
+        corrAsset2Port(i,j) = (auxM(:,i)'*Sigma*portWeights(:,j))/ ...
+            (sigmaAsset*sigmaPortfolio);
+    end
+end
+
+end
+
+function [riskContribution] = portfolioRiskContribution(Sigma,...
+    portWeights)
+% Returns a matrix with the risk contribution of each asset to
+% the underlying portfolio.
+
+Diversify Portfolios Using Custom Objective
+
+4-341

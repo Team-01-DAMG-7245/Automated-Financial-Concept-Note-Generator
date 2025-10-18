@@ -1,0 +1,70 @@
+Use Timetables in Finance
+
+Use timetables to visualize and calculate weekly statistics from simulated daily stock data.
+
+Step 1. Load the data.
+
+The data for this example is in the MAT-file SimulatedStock.mat, which loads the following:
+
+•
+Dates corresponding to the closing stock prices, TMW_DATES
+
+•
+Opening stock prices, TMW_OPEN
+
+•
+Daily high of stock prices, TMW_HIGH
+
+•
+Daily low of stock prices, TMW_LOW
+
+•
+Closing stock prices, TMW_CLOSE, TMW_CLOSE_MISSING
+
+•
+Daily volume of traded, TMW_VOLUME
+
+•
+Data in a table, TMW_TB
+
+load SimulatedStock.mat TMW_*
+
+Step 2. Create timetables.
+
+In timetables, you can work with financial time series rather than with vectors. When using a
+timetable, you can easily track the dates. You can manipulate the data series based on the dates,
+because a timetable object tracks the administration of a time series.
+
+Use the MATLAB® timetable function to create a timetable object. Alternatively, you can use the
+MATLAB conversion function table2timetable to convert a table to a timetable. In this example,
+the timetable TMW_TT is constructed from a table and is only for illustration purposes. After you
+create a timetable object, you can use the Description field of the timetable object to store
+meta-information about the timetable.
+
+% Create a timetable from vector input
+TMW = timetable(TMW_OPEN,TMW_HIGH,TMW_LOW,TMW_CLOSE_MISSING,TMW_VOLUME, ... 
+    'VariableNames',{'Open','High','Low','Close','Volume'},'RowTimes',TMW_DATES);
+
+% Convert from a table to a timetable
+TMW_TT = table2timetable(TMW_TB,'RowTimes',TMW_DATES);
+
+TMW.Properties.Description = 'Simulated stock data.';
+
+TMW.Properties
+
+ans = 
+  TimetableProperties with properties:
+
+Description: 'Simulated stock data.'
+                UserData: []
+          DimensionNames: {'Time'  'Variables'}
+           VariableNames: {'Open'  'High'  'Low'  'Close'  'Volume'}
+           VariableTypes: ["double"    "double"    "double"    "double"    "double"]
+    VariableDescriptions: {}
+           VariableUnits: {}
+      VariableContinuity: []
+                RowTimes: [1000×1 datetime]
+
+Use Timetables in Finance
+
+11-7

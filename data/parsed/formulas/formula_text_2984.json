@@ -1,0 +1,12 @@
+{
+  "page": 1560,
+  "original_text": "function new_weights = equalWeightShares(engine_data,prices)",
+  "ocr_text": "functionnew_weights=equalWeightShares(engine_data,prices)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 115.03,
+    "x1": 415.09,
+    "y1": 125.49
+  },
+  "confidence": "high"
+}

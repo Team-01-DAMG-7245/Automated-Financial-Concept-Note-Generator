@@ -1,0 +1,12 @@
+{
+  "page": 2428,
+  "original_text": "H = holidays('jan 1 2001', 'jun 23 2001')",
+  "ocr_text": "H=holidays(jan12001,jun232001)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 463.72,
+    "x1": 317.57,
+    "y1": 474.18
+  },
+  "confidence": "high"
+}

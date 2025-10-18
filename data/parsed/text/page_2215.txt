@@ -1,0 +1,53 @@
+elpm
+
+Compute expected lower partial moments for normal asset returns
+
+Syntax
+
+elpm(Mean,Sigma)
+elpm(Mean,Sigma,MAR)
+elpm(Mean,Sigma,MAR,Order)
+Moment = elpm(MeanSigmaMAROrder)
+
+Description
+
+elpm(Mean,Sigma) compute expected lower partial moments (elpm) relative to a default value of
+MAR for each asset in a NUMORDERS-by-NUMSERIES matrix.
+
+elpm(Mean,Sigma,MAR) computes expected lower partial moments (elpm) relative to a MAR for
+each asset in a NUMORDERS-by-NUMSERIES matrix.
+
+elpm(Mean,Sigma,MAR,Order) computes expected lower partial moments (elpm) relative to a MAR
+and Order for each asset in a NUMORDERS-by-NUMSERIES matrix.
+
+Moment = elpm(MeanSigmaMAROrder) computes expected lower partial moments (elpm) relative
+to a default value of MAR for each asset in a NUMORDERS-by-NUMSERIES matrix Moment.
+
+Examples
+
+Compute Expected Lower Partial Moments
+
+This example shows how to compute expected lower partial moments based on the mean and
+standard deviations of normally distributed asset returns. The elpm function works with the mean
+and standard deviations for multiple assets and multiple orders.
+
+load FundMarketCash
+Returns = tick2ret(TestData);
+MAR = mean(Returns(:,3))
+
+MAR = 
+0.0017
+
+Mean = mean(Returns)
+
+Mean = 1×3
+
+0.0038    0.0030    0.0017
+
+Sigma = std(Returns, 1)
+
+Sigma = 1×3
+
+elpm
+
+15-909

@@ -1,0 +1,12 @@
+{
+  "page": 1532,
+  "original_text": "RoughHeston = roughheston(Return,Speed,Level,Volatility,Alpha) creates a default\nRoughHeston object with “Properties” on page 15-229 for these required arguments.",
+  "ocr_text": "RoughHeston=roughheston(Return,Speed,Level,Volatility,Alpha)createsadefault\nRoughHestonobjectwithPropertiesonpage15-229fortheserequiredarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 475.89,
+    "x1": 542.83,
+    "y1": 499.52
+  },
+  "confidence": "high"
+}

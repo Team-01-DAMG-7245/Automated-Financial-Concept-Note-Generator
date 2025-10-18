@@ -1,0 +1,32 @@
+Notice that the weights of the minimum tracking portfolio tries to keep the weights of the assets
+more evenly weighted. However, in order to satisfy the risk constraint, the minimum tracking error
+portfolio still allocates a larger weight to the less risky asset.
+
+Input Arguments
+
+obj — Object for portfolio optimization
+Portfolio object
+
+Object for portfolio optimization, specified using a Portfolio object. When using a Portfolio
+object in the custom objective workflow, you do not need to specify both the mean and covariance.
+However, the custom objective workflow requires that you specify either the mean, the covariance, or
+the number of assets.
+
+Note If no initial portfolio is specified in obj.InitPort, the initial portfolio is assumed to be 0 so
+that pbuy = max(0, pwgt) and psell = max(0, -pwgt). If no tracking portfolio is specified in
+obj.TrackingPort, the tracking portfolio is assumed to be 0.
+
+Data Types: object
+
+fun — Function handle that defines objective function
+function handle
+
+Function handle that defines the objective function, specified using a function handle in terms of the
+portfolio weights.
+
+Note The objective function must be continuous and defined using only the portfolio weights as
+variables. If the portfolio problem has cardinality constraints and/or conditional bounds using
+
+estimateCustomObjectivePortfolio
+
+15-925

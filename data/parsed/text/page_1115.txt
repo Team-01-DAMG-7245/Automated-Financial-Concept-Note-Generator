@@ -1,0 +1,37 @@
+You can verify that the portfolio value is $17,000 and that the option portfolio is indeed delta, gamma,
+and vega neutral, as desired. Hedges based on these measures are effective only for small changes in
+the underlying variables.
+
+See Also
+bnddury | bndconvy | bndprice | bndkrdur | blsprice | blsdelta | blsgamma | blsvega |
+zbtprice | zero2fwd | zero2disc
+
+Related Examples
+
+•
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+
+•
+“Sensitivity of Bond Prices to Interest Rates” on page 10-2
+
+•
+“Bond Portfolio for Hedging Duration and Convexity” on page 10-6
+
+•
+“Bond Prices and Yield Curve Parallel Shifts” on page 10-9
+
+•
+“Bond Prices and Yield Curve Nonparallel Shifts” on page 10-12
+
+•
+“Term Structure Analysis and Interest-Rate Swaps” on page 10-18
+
+•
+“Plotting Sensitivities of an Option” on page 10-25
+
+•
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+Greek-Neutral Portfolios of European Stock Options
+
+10-17

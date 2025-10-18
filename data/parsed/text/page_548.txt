@@ -1,0 +1,68 @@
+Specify the initial wealth.
+
+initialWealth = 100;
+
+Specify the target wealth at the end of the investment horizon.
+
+targetWealth = 200;
+
+Specify a time horizon.
+
+finalTimePeriod = 10;
+
+Define the mean and covariance of the annual returns.
+
+returnMean = [0.05; 0.1; 0.25];
+returnCovariance = [0.0025  0       0     ;
+                    0       0.04    0.02  ;
+                    0       0.02    0.25  ];
+
+To solve the problem using RL, you need to define:
+
+•
+Actions on page 4-380 — Portfolio weights for investment portfolio.
+
+•
+Observations on page 4-381 — Time period t and wealth at time period t.
+
+•
+Environment on page 4-382 — Model of the evolution of the problem. The environment simulates
+the next observation after receiving an action and computes its associated reward.
+
+•
+Reward on page 4-383 — Part of the environment that measures how well the received action
+contributes to achieving the task.
+
+•
+Agent on page 4-384 — Component trained to complete the task within the environment. The
+agent is responsible for choosing the actions required to complete the task.
+
+Define Actions
+
+The action at each rebalancing period is to choose the weights of the investment portfolio for the next
+time period. In this example, assume that the possible portfolio weights are those of portfolios on the
+efficient frontier. Also, you can assume that the choice of possible portfolios is fixed throughout the
+full investment period and that they represent a finite subset of the efficient portfolios. By avoiding
+working with a set of continuous actions in this way, you simplify the training and easily account for
+the constraints on the portfolio weights (for example, that they sum to 1). However, you do have to
+assume that the distribution of the returns is time-homogeneous; that is, the underlying mean and
+covariance of the returns is the same at every time period.
+
+Start by creating a Portfolio object with the asset information from the Problem Definition on page
+4-379.
+
+p = Portfolio(AssetMean=returnMean,AssetCovar=returnCovariance);
+
+Add constraints to the portfolio problem. Use setBounds to bound the portfolio weights. Individual
+assets cannot represent more than 50% of the portfolio wealth and shorting is not allowed.
+
+p = setBounds(p,0,0.5);
+
+Use setBudget to specify that the portfolio must be fully invested.
+
+p = setBudget(p,1,1);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-380

@@ -1,0 +1,12 @@
+{
+  "page": 955,
+  "original_text": "fprintf('\\nCorrelation between CPF and SPR: %4.3f\\n',corr(CPF,SPR));",
+  "ocr_text": "fprintf(nCorrelationbetweenCPFandSPR:4.3fn,corr(CPF,SPR));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 319.83,
+    "x1": 458.45,
+    "y1": 330.29
+  },
+  "confidence": "high"
+}

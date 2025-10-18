@@ -1,0 +1,12 @@
+{
+  "page": 1479,
+  "original_text": "SDELD = sdeld(A,B,Alpha,Sigma)\nSDELD = sdeld( ___ ,Name,Value)",
+  "ocr_text": "SDELD=sdeld(A,B,Alpha,Sigma)\nSDELD=sdeld(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 570.98,
+    "x1": 270.61,
+    "y1": 594.61
+  },
+  "confidence": "high"
+}

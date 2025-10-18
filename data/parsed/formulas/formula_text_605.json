@@ -1,0 +1,12 @@
+{
+  "page": 400,
+  "original_text": "wf = FTwa,",
+  "ocr_text": "Wf =",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 494.78,
+    "x1": 140.95,
+    "y1": 511.64
+  },
+  "confidence": "high"
+}

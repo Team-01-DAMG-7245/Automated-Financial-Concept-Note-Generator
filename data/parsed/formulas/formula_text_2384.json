@@ -1,0 +1,12 @@
+{
+  "page": 1225,
+  "original_text": "SDEDDO = \n   Class SDEDDO: SDE from Drift and Diffusion Objects\n   --------------------------------------------------\n     Dimensions: State = 6, Brownian = 6\n   --------------------------------------------------\n      StartTime: 0\n     StartState: 100 (6x1 double array) \n    Correlation: 6x6 double array \n          Drift: drift rate function F(t,X(t)) \n      Diffusion: diffusion rate function G(t,X(t)) \n     Simulation: simulation method/function simByEuler\n              A: 6x1 double array\n              B: 6x6 diagonal double array\n          Alpha: 6x1 double array\n          Sigma: 6x6 diagonal double array",
+  "ocr_text": "SDEDDO=\nClassSDEDDO:SDEfromDriftandDiffusionObjects\nDimensions:State=6,Brownian=6\nStartTime:0\nStartState:100(6x1doublearray)\nCorrelation:6x6doublearray\nDrift:driftratefunctionF(t,X(t))\nDiffusion:diffusionratefunctionG(t,X(t))\nSimulation:simulationmethod/functionsimByEuler\nA:6x1doublearray\nB:6x6diagonaldoublearray\nAlpha:6x1doublearray\nSigma:6x6diagonaldoublearray",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 316.74,
+    "x1": 382.57,
+    "y1": 478.41
+  },
+  "confidence": "high"
+}

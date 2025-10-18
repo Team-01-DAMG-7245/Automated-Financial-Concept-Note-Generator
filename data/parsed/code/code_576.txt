@@ -1,0 +1,5 @@
+Page 532
+================================================================================
+
+Define the objective function handle using the definition above and then use
+estimateCustomObjectivePortfolio to solve the problem.

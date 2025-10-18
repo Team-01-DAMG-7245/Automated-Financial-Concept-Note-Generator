@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "dXt = S(t)(L(t) −Xt)dt + V(t)Xt",
+  "ocr_text": "dX;=S(t)(L()-Xpdt+ ViO)X?",
+  "bbox": {
+    "x0": 298.05,
+    "y0": 199.4,
+    "x1": 438.17,
+    "y1": 215.83
+  },
+  "confidence": "high"
+}

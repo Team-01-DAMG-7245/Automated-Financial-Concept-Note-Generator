@@ -1,0 +1,9 @@
+attributionsChart(BrinsonPAobj, Style="stacked")
+
+See Also
+brinsonAttribution | categoryAttribution | categoryReturns | categoryWeights |
+totalAttribution | summary
+
+Analyze Performance Attribution Using Brinson Model
+
+4-329

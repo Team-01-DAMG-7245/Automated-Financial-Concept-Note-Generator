@@ -1,0 +1,12 @@
+{
+  "page": 681,
+  "original_text": "lb = [ 0.5; 0.25 ];\nub = [ 0.75; 0.5 ];\np = PortfolioCVaR;\np = setBounds(p, lb, ub,'BoundType', 'Simple');\ndisp(p.NumAssets)\ndisp(p.LowerBound)\ndisp(p.UpperBound)",
+  "ocr_text": "lb=[0.5;0.25];\n\nub=[0.75;0.5J;\n\np=PortfolioCVaR;\np=setBounds(p,lb,ub,BoundType,Simple);\ndisp(p.NumAssets)\n\ndisp(p.LowerBound)\n\ndisp(p.UpperBound)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 602.67,
+    "x1": 344.66,
+    "y1": 677.94
+  },
+  "confidence": "high"
+}

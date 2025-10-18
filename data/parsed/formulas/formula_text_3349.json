@@ -1,0 +1,12 @@
+{
+  "page": 1819,
+  "original_text": "BondList = array2table(MarketData, 'VariableNames', {'Maturity', 'Price','Coupon'});\nBondList.Maturity = datetime(BondList.Maturity,'Locale','en_US','ConvertFrom','datenum');\nBondList.Maturity.Format = 'MMM-dd-yyyy'",
+  "ocr_text": "BondList=array2table(MarketData,VariableNames,{Maturity,_Price,Coupon});\nBondList.Maturity=datetime(BondList.Maturity,Locale,en_US,ConvertFrom,datenum);\nBondList.Maturity.Format=MMM-dd-yyyy",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.83,
+    "x1": 572.24,
+    "y1": 333.89
+  },
+  "confidence": "high"
+}

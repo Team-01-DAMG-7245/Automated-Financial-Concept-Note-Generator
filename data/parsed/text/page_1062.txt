@@ -1,0 +1,73 @@
+Special Case of Multiple Linear Regression Model
+
+The special case mentioned in “Maximum Likelihood Estimation” on page 9-3 occurs if n = 1 so that
+the sequence of observations is a sequence of scalar observations. This model is known as a multiple
+linear regression model. In this case, the covariance matrix C is a 1-by-1 matrix that drops out of the
+maximum likelihood iterates so that a single-step estimate for b and C can be obtained with
+converged estimates b(1) and C(1).
+
+Least-Squares Regression
+
+Another simplification of the general model is called least-squares regression. If b(0) = 0 and C(0) = I,
+then b(1) and C(1) from the two-stage iterative process are least-squares estimates for b and C, where
+
+bLS =
+∑
+k = 1
+
+m
+HkTHk
+
+−1
+
+∑
+k = 1
+
+m
+HkTzk
+
+and
+
+CLS = 1
+m ∑
+k = 1
+
+m
+
+zk −HkbLS zk −HkbLS T .
+
+Mean and Covariance Estimation
+
+A final simplification of the general model is to estimate the mean and covariance of a sequence of n-
+dimensional observations z1, ..., zm. In this case, the number of series is equal to the number of model
+parameters with n = p and the design matrices are identity matrices with Hk = I for i = 1, ..., m so
+that b is an estimate for the mean and C is an estimate of the covariance of the collection of
+observations z1, ..., zm.
+
+Convergence
+
+If the iterative process continues until the log-likelihood function increases by no more than a
+specified amount, the resultant estimates are said to be maximum likelihood estimates bML and CML.
+
+If n = 1 (which implies a single data series), convergence occurs after only one iterative step, which,
+in turn, implies that the least-squares and maximum likelihood estimates are identical. If, however, n
+> 1, the least-squares and maximum likelihood estimates are usually distinct.
+
+In Financial Toolbox software, both the changes in the log-likelihood function and the norm of the
+change in parameter estimates are monitored. Whenever both changes fall below specified tolerances
+(which should be something between machine precision and its square root), the toolbox functions
+terminate under an assumption that convergence has been achieved.
+
+Fisher Information
+
+Since maximum likelihood estimates are formed from samples of random variables, their estimators
+are random variables; an estimate derived from such samples has an uncertainty associated with it.
+To characterize these uncertainties, which are called standard errors, two quantities are derived from
+the total log-likelihood function.
+
+The Hessian of the total log-likelihood function is
+
+9
+Regression with Missing Data
+
+9-4

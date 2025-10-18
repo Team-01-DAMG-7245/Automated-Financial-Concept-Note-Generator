@@ -1,0 +1,79 @@
+Settlement date, specified as an NINST-by-1 vector using a datetime array, string array, or date
+character vectors. The Settle date is the date on which the cash flows are priced.
+
+To support existing code, cfspread also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Note An optional input of size NINST-by-1 is also acceptable as a single value applicable to all
+contracts. Single values are internally expanded to an array of size NINST-by-1.
+
+Example: Spread =
+cfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle,'Basis',4)
+
+Basis — Day-count basis
+0 (actual/actual) (default) | positive integers of the set [1...13] | vector of positive integers of the
+set [1...13]
+
+Day-count basis, specified as the comma-separated pair consisting of 'Basis' and a positive integer
+using a NINST-by-1 vector.
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+15
+Functions
+
+15-718

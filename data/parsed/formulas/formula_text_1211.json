@@ -1,0 +1,12 @@
+{
+  "page": 613,
+  "original_text": "StepIdx = LoggedSignals.IntervalIdx + ...\n    LoggedSignals.NumIntervalsPerHorizon.*(LoggedSignals.HorizonIdx-1);\nRemainingIntervals = LoggedSignals.NumIntervalsPerHorizon - LoggedSignals.IntervalIdx + 1;\nIS_TWAP = EnvConstants.IS_TWAP(StepIdx);",
+  "ocr_text": "StepIdx=LoggedSignals.IntervalIdx+...\n\nLoggedSignals.NumIntervalsPerHorizon.*(LoggedSignals.HorizonIdx-1);\nRemainingIntervals=LoggedSignals.NumIntervalsPerHorizon-LoggedSignals.IntervalIdx+1;\nIS_TWAP=EnvConstants.1IS_TWAP(StepIdx);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 114.63,
+    "x1": 577.62,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

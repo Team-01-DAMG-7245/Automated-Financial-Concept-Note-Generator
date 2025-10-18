@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "rPortfolio = mean(table2array(assetReturns))';",
+  "ocr_text": "rPortfolio=mean(table2array(assetReturns));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.43,
+    "x1": 339.23,
+    "y1": 405.89
+  },
+  "confidence": "high"
+}

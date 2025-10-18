@@ -1,0 +1,12 @@
+{
+  "page": 1139,
+  "original_text": "% Simulation parameters\nrfRate = 0;\ndT = 1/250;\nnSteps = Maturity/dT;\nnTrials = 5000;",
+  "ocr_text": "Simulationparameters\nrfRate=0;\n\ndT=1/250;\nnSteps=Maturity/dT;\nnTrials=5000;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 456.71,
+    "x1": 214.61,
+    "y1": 510.38
+  },
+  "confidence": "high"
+}

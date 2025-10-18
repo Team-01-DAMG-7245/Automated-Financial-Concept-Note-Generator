@@ -1,0 +1,12 @@
+Page 1112
+================================================================================
+
+The greeks of a particular option are a function of the model used to price the option. However, given
+enough different options to work with, a trader can construct a portfolio with any desired values for
+its greeks. For example, to insulate the value of an option portfolio from small changes in the price of
+the underlying asset, one trader might construct an option portfolio whose delta is zero. Such a
+portfolio is then said to be "delta neutral." Another trader may want to protect an option portfolio
+from larger changes in the price of the underlying asset, and so might construct a portfolio whose
+delta and gamma are both zero. Such a portfolio is both delta and gamma neutral. A third trader may
+want to construct a portfolio insulated from small changes in the volatility of the underlying asset in
+addition to delta and gamma neutrality. Such a portfolio is then delta, gamma, and vega neutral.

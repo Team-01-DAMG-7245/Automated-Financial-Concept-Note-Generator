@@ -1,0 +1,35 @@
+dateaxis
+
+Convert serial-date axis labels to calendar-date axis labels
+
+Syntax
+
+dateaxis(Tickaxis,DateForm,StartDate)
+
+Description
+
+dateaxis(Tickaxis,DateForm,StartDate) replaces axis tick labels with date labels.
+
+Examples
+
+Replace Axis Tick Labels with Date Labels
+
+This example shows how to use dateaxis to replaces axis tick labels with date labels on a graphic
+figure.
+
+Convert the x-axis labels to an automatically determined date format.
+
+dateaxis('y', 6)
+
+Convert the y-axis labels to the month/day format.
+
+dateaxis('x', 2, datetime(1999,3,3))
+
+Convert the x-axis labels to the month/day/year format. The minimum x-tick value is treated as March
+3, 1999.
+
+dateaxis('x', 2, datetime(1999,3,3))
+
+dateaxis
+
+15-797

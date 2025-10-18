@@ -1,0 +1,31 @@
+For more information, see “SDE Models” on page 14-7, “SDE Classes and Associated Simulation
+Methods” on page 14-13, and “SDE Class Hierarchy” on page 14-5.
+
+Algorithms
+
+The Merton jump diffusion model (Merton 1976) is an extension of the Black-Scholes model, and
+models sudden asset price movements (both up and down) by adding the jump diffusion parameters
+with the Poisson process Pt.
+
+Under the risk-neutral measure the model is expressed as follows
+
+dSt = (γ −q −λpμj)Stdt + σMStdWt + JStdPt
+prob(dPt = 1) = λpdt
+
+Here:
+
+ᵞ is the continuous risk-free rate.
+
+q is the continuous dividend yield.
+
+J is the random percentage jump size conditional on the jump occurring, where
+
+ln(1 + J) N(ln(1+uj) −δ2
+
+2 , δ2
+
+(1+J) has a lognormal distribution:
+
+merton
+
+15-209

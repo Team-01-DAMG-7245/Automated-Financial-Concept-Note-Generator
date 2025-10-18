@@ -1,0 +1,6 @@
+Page 472
+================================================================================
+
+% Model predicts returns for oil, natural gas, propane, and kerosene.
+outputVarName = ["Brent" "NaturalGas", "Propane" "Kerosene"];
+numOutputs = numel(outputVarName);

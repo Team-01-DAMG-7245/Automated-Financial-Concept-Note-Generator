@@ -1,0 +1,20 @@
+The associated hazard rates are returned as an optional output. The convention is that the first
+hazard rate applies from the settlement date to the first market date, the second hazard rate from the
+first to the second market date, and so on, and the last hazard rate applies from the second-to-last
+market date onwards. The following plot displays the bootstrapped hazard rates, plotted against time,
+in years, from the valuation date:
+
+HazTimes = yearfrac(Settle,HazData(:,1));
+figure
+stairs([0; HazTimes(1:end-1,1); HazTimes(end,1)+1], ...
+[HazData(:,2);HazData(end,2)])
+grid on
+axis([0 HazTimes(end,1)+1 0.9*HazData(1,2) 1.1*HazData(end,2)])
+xlabel('Time (Years)')
+ylabel('Hazard Rate')
+title('Bootstrapped Hazard Rates')
+
+8
+Credit Risk Analysis
+
+8-102

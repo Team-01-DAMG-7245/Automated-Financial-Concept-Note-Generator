@@ -1,0 +1,57 @@
+Analyzing and Computing Cash Flows
+
+In this section...
+
+“Introduction” on page 2-11
+
+“Interest Rates/Rates of Return” on page 2-11
+
+“Present or Future Values” on page 2-12
+
+“Depreciation” on page 2-13
+
+“Annuities” on page 2-13
+
+Introduction
+
+Financial Toolbox cash-flow functions compute interest rates and rates of return, present or future
+values, depreciation streams, and annuities.
+
+Some examples in this section use this income stream: an initial investment of $20,000 followed by
+three annual return payments, a second investment of $5,000, then four more returns. Investments
+are negative cash flows, return payments are positive cash flows.
+
+Stream = [-20000,  2000,  2500,  3500, -5000,  6500,...
+            9500,  9500,  9500];
+
+Interest Rates/Rates of Return
+
+This example shows how to compute the internal rate of return of the cash stream using irr.
+
+Specify the income stream as an initial investment of $20,000 followed by three annual return
+payments, a second investment of $5,000, then four more returns. Investments are negative cash
+flows, return payments are positive cash flows.
+
+Stream = [-20000,  2000,  2500,  3500, -5000,  6500, ...
+            9500,  9500,  9500];
+
+Use irr to compute the internal rate of return of the cash stream.
+
+ROR = irr(Stream)
+
+ROR = 
+0.1172
+
+The rate of return is 11.72%.
+
+The internal rate of return of a cash flow may not have a unique value. Every time the sign changes in
+a cash flow, the equation defining irr can give up to two additional answers. An irr computation
+requires solving a polynomial equation, and the number of real roots of such an equation can depend
+on the number of sign changes in the coefficients. The equation for internal rate of return is
+
+where Investment is a (negative) initial cash outlay at time 0, cfn is the cash flow in the nth period,
+and n is the number of periods. irr finds the rate r such that the present value of the cash flow
+
+Analyzing and Computing Cash Flows
+
+2-11

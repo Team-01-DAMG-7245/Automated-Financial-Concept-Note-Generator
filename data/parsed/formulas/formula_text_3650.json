@@ -1,0 +1,12 @@
+{
+  "page": 2058,
+  "original_text": "NextCouponDate = cpndaten(Settle,Maturity) returns the next coupon date after the\nSettle date. This function finds the next coupon date whether or not the coupon structure is\nsynchronized with the Maturity date.",
+  "ocr_text": "NextCouponDate=cpndaten(Settle,Maturity)returnsthenextcoupondateafterthe\nSettledate.Thisfunctionfindsthenextcoupondatewhetherornotthecouponstructureis\nsynchronizedwiththeMaturitydate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 264.18,
+    "x1": 521.08,
+    "y1": 299.81
+  },
+  "confidence": "high"
+}

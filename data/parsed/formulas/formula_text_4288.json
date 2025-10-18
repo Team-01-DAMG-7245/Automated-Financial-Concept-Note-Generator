@@ -1,0 +1,12 @@
+{
+  "page": 2428,
+  "original_text": "H = holidays\nH = holidays(StartDate,EndDate)\nH = holidays( ___ ,AltHolidays)",
+  "ocr_text": "H=holidays\nH=holidays(StartDate,EndDate)\nH=holidays(__,AltHolidays)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.14,
+    "x1": 276.63,
+    "y1": 227.77
+  },
+  "confidence": "high"
+}

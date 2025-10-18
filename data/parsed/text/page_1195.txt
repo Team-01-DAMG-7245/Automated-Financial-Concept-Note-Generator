@@ -1,0 +1,63 @@
+To perform this task ...
+Use these types of models ...
+
+“Performance Considerations” on page 14-65
+All supported models on page 14-11
+
+Trials vs. Paths
+
+Monte Carlo simulation literature often uses different terminology for the evolution of the simulated
+variables of interest, such as trials and paths. The following sections use the terms trial and path
+interchangeably.
+
+However, there are situations where you should distinguish between these terms. Specifically, the
+term trial often implies the result of an independent random experiment (for example, the evolution
+of the price of a single stock or portfolio of stocks). Such an experiment computes the average or
+expected value of a variable of interest (for example, the price of a derivative security) and its
+associated confidence interval.
+
+By contrast, the term path implies the result of a random experiment that is different or unique from
+other results, but that may or may not be independent.
+
+The distinction between these terms is unimportant. It may, however, be useful when applied to
+variance reduction techniques that attempt to increase the efficiency of Monte Carlo simulation by
+inducing dependence across sample paths. A classic example involves pairwise dependence induced
+by antithetic sampling, and applies to more sophisticated variance reduction techniques, such as
+stratified sampling which is a variance reduction technique that constrains a proportion of sample
+paths to specific subsets (or strata) of the sample space.
+
+NTrials, NPeriods, and NSteps
+
+SDE functions in the Financial Toolbox software use the parameters NTrials, NPeriods, and
+NSteps as follows:
+
+•
+The input argument NTrials specifies the number of simulated trials or sample paths to
+generate. This argument always determines the size of the third dimension (the number of pages)
+of the output three-dimensional time series array Paths. Indeed, in a traditional Monte Carlo
+simulation of one or more variables, each sample path is independent and represents an
+independent trial.
+
+•
+The parameters NPeriods and NSteps represent the number of simulation periods and time
+steps, respectively. Both periods and time steps are related to time increments that determine the
+exact sequence of observed sample times. The distinction between these terms applies only to
+issues of accuracy and memory management. For more information, see “Optimizing Accuracy:
+About Solution Precision and Error” on page 14-66 and “Managing Memory” on page 14-65.
+
+See Also
+sde | bm | gbm | bates | merton | drift | diffusion | sdeddo | sdeld | cev | cir | heston | hwv |
+sdemrd | rvm | roughbergomi | roughheston | ts2func | simulate | simByQuadExp |
+simByEuler | simBySolution | | interpolate
+
+Related Examples
+
+•
+“Base SDE Models” on page 14-16
+
+•
+“Drift and Diffusion Models” on page 14-19
+
+SDEs
+
+14-3

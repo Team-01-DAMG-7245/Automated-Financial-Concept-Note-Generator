@@ -1,0 +1,12 @@
+{
+  "page": 2210,
+  "original_text": "StdMeanF = ecmnstd(Data,ECMMean,ECMCovar,'fisher')",
+  "ocr_text": "StdMeanF=ecmnstd(Data,ECMMean,ECMCovar,fisher)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 440.49,
+    "x1": 360.92,
+    "y1": 450.96
+  },
+  "confidence": "high"
+}

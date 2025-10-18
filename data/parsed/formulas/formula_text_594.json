@@ -1,0 +1,12 @@
+{
+  "page": 393,
+  "original_text": "ax2 = subplot(1,2,2);\nidx_BL = wtsBL>0.001;\npie(ax2, wtsBL(idx_BL), assetNames(idx_BL));\ntitle(ax2, portBL.Name ,'Position', [-0.05, 1.6, 0]);",
+  "ocr_text": "ax2_=subplot(1,2,2);\n\nidx_BL=wtsBL=0.001;\npie(ax2,wtsBL(idx_BL),assetNames(idx_BL));\ntitle(ax2,portBL.Name,Position,[-0.05,1.6,0]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 573.63,
+    "x1": 377.17,
+    "y1": 616.49
+  },
+  "confidence": "high"
+}

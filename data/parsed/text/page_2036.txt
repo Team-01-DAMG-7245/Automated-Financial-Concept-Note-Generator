@@ -1,0 +1,28 @@
+chaikosc
+
+Chaikin oscillator
+
+Syntax
+
+chosc = chaikosc(Data)
+
+Description
+
+chosc = chaikosc(Data) calculates the Chaikin oscillator.
+
+Examples
+
+Calculate the Chaikin Oscillator for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+oscillator = chaikosc(TMW);
+plot(oscillator.Time, oscillator.ChaikinOscillator)
+title('Chaikin Oscillator for TMW')
+
+15
+Functions
+
+15-730

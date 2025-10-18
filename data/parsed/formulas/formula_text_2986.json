@@ -1,0 +1,12 @@
+{
+  "page": 1560,
+  "original_text": "% Dollars per asset for equal weight with partial shares\ndollars_per_asset = engine_data.PortfolioValue / numAssets;\n% Compute shares (partial shares first, then round down)\nasset_shares = floor(dollars_per_asset ./ prices{end,:});\n% Convert number of shares into dollars\nasset_dollars = asset_shares .* prices{end,:};\n% Convert dollars into weights\nnew_weights = asset_dollars / engine_data.PortfolioValue;",
+  "ocr_text": "sDollarsperassetforequalweightwithpartialshares\ndollars_per_asset=engine_data.PortfolioValue/numAssets;\nComputeshares(partialsharesfirst,thenrounddown)\nasset_shares=floor(dollars_per_asset./prices{end,:});\nConvertnumberofsharesintodollars\nasset_dollars=asset_shares.*prices{end,:};\nConvertdollarsintoweights\nnew_weights=asset_dollars/engine_data.PortfolioValue;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 158.23,
+    "x1": 409.66,
+    "y1": 244.29
+  },
+  "confidence": "high"
+}

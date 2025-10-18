@@ -1,0 +1,12 @@
+{
+  "page": 125,
+  "original_text": "dtav = duration\n   0.7214 sec",
+  "ocr_text": "dtav=duration\n0.7214sec",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 407.38,
+    "x1": 171.27,
+    "y1": 428.64
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1601
+================================================================================
+
+% Aggregate the strategies into an array
+strategies = [ewStrategy ivStrategy];

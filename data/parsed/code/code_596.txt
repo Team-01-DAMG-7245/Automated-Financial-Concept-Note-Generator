@@ -1,0 +1,5 @@
+Page 551
+================================================================================
+
+The myResetFunction function (see Local Functions on page 4-391) sets the wealth level to its
+initial state, initialWealth, and the time period to 0.

@@ -1,0 +1,7 @@
+Page 351
+================================================================================
+
+Given the constructed Portfolio object, use the plotFrontier function to view the efficient
+frontier. Instead of using the default of 10 portfolios along the frontier, you can display the frontier
+with 40 portfolios. Notice gross efficient portfolio returns fall between approximately 6% and 16% per
+years.

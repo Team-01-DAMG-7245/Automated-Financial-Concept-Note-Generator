@@ -1,0 +1,12 @@
+{
+  "page": 2170,
+  "original_text": "Objective = ecmlsrobj(Data,Design,Parameters)\nObjective = ecmlsrobj( ___ ,Covariance)",
+  "ocr_text": "Objective=ecmlsrobj(Data,Design,Parameters)\nObjective=ecmlsrobj(__,Covariance)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.21,
+    "x1": 360.92,
+    "y1": 214.84
+  },
+  "confidence": "high"
+}

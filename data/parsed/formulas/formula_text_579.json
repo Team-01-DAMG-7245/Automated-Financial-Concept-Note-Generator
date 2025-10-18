@@ -1,0 +1,12 @@
+{
+  "page": 390,
+  "original_text": "retnsT = tick2ret(T(:, 2:end));\nassetRetns = retnsT(:, assetNames);",
+  "ocr_text": "retnsT=tick2ret(T(:,2:end));\nassetRetns=retnsT(:,assetNames);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 279.63,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

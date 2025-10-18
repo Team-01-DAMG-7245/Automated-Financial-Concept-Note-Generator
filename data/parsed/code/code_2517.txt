@@ -1,0 +1,5 @@
+Page 2384
+================================================================================
+
+This function requires that the input mean must satisfy 1 + mg > 0 and that the input covariance Cg
+must be a symmetric, positive, semidefinite matrix.

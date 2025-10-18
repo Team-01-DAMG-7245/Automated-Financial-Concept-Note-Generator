@@ -1,0 +1,6 @@
+Page 532
+================================================================================
+
+Since the relationship of μ and σ to the weights w is represented by equality constraints in the
+problem, you can substitute these values in the objective function and remove the equality
+constraints that show the relationship between these three variables.

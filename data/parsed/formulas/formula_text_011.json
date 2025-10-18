@@ -1,0 +1,12 @@
+{
+  "page": 35,
+  "original_text": "WeekPortValue = WeekClosePr * PortQuan",
+  "ocr_text": "WeekPortValue=WeekClosePr*PortQuan",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 634.54,
+    "x1": 295.89,
+    "y1": 645.01
+  },
+  "confidence": "high"
+}

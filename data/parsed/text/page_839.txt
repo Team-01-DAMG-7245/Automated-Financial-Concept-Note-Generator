@@ -1,0 +1,56 @@
+Working with Conditional Budget Constraints Using
+PortfolioMAD Object
+
+The conditional budget constraint supports the Undertakings for Collective Investment in
+Transferable Securities (UCITS) directive for PortfolioMAD objects. The UCITS asset allocation
+regulation states that funds can only invest up to 10% in a single issuer, and that investments in
+excess of 5% must not exceed 40% of the total portfolio. This is known as the 5/10/40 rule. For more
+information, see “Undertakings for Collective Investment in Transferable Securities” on page 15-1452
+and “Adding Constraints to Satisfy UCITS Directive” on page 4-457.
+
+Setting Conditional Budget Constraints Using the PortfolioMAD
+Function
+
+The properties for the conditional budget constraint can also be set using the PortfolioMAD object.
+Suppose that you have an asset universe with many risky assets and a riskless asset and you want to
+ensure that your portfolio never holds more than 1% cash, that is, you want to ensure that you are
+99–100% invested in risky assets. The conditional budget constraint for this portfolio can be set with:
+
+p = PortfolioMAD('ConditionalBudgetThreshold', 0.99, 'ConditionalUpperBudget', 1);
+disp(p.ConditionalBudgetThreshold)
+disp(p.ConditionalUpperBudget)
+
+0.9900
+
+1
+
+Setting Conditional Budget Constraints Using the
+setConditionalBudget Function
+
+You can also set the properties for a conditional budget constraint using setConditionalBudget.
+Suppose that you have a fund that permits up to 10% leverage which means that your portfolio can be
+from 100% to 110% invested in risky assets. Given a PortfolioMAD object p, use
+setConditionalBudget to set the conditional budget constraints:
+
+p = PortfolioMAD;
+p = setConditionBudget(p, .40, 1.5);
+disp(p.threshold)
+disp(p.upperBudget)
+
+.40
+
+1.500o
+
+See Also
+Portfolio | setDefaultConstraints | setBounds | setBudget | setGroups | setGroupRatio
+| setEquality | setInequality | setTurnover | setOneWayTurnover | setTrackingPort |
+setTrackingError
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+Working with Conditional Budget Constraints Using PortfolioMAD Object
+
+6-59

@@ -1,0 +1,12 @@
+{
+  "page": 2419,
+  "original_text": "values = hhigh( ___ ,Name,Value) adds optional name-value pair arguments.",
+  "ocr_text": "values=hhigh(____,Name,Value)addsoptionalname-valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 289.48,
+    "x1": 470.27,
+    "y1": 301.11
+  },
+  "confidence": "high"
+}

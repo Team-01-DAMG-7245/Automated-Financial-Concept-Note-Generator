@@ -1,0 +1,41 @@
+cfport
+
+Portfolio form of cash flow amounts
+
+Syntax
+
+[CFBondDate,AllDates,AllTF,IndByBond] = cfport(CFlowAmounts,CFlowDates)
+[CFBondDate,AllDates,AllTF,IndByBond] = cfport( ___ ,TFactors)
+
+Description
+
+[CFBondDate,AllDates,AllTF,IndByBond] = cfport(CFlowAmounts,CFlowDates)
+computes a vector of all cash flow dates of a bond portfolio, and a matrix mapping the cash flows of
+each bond to those dates. Use the matrix for pricing the bonds against a curve of discount factors.
+
+[CFBondDate,AllDates,AllTF,IndByBond] = cfport( ___ ,TFactors) specifies options
+using one or more optional arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Calculate the Cash Flow Amounts, Cash Flow Dates, and Time Factors for Each of Two
+Bonds
+
+Use the function cfamounts to calculate the cash flow amounts, cash flow dates, and time factors for
+each of two bonds. Then use the function cfplot to plot the cash flow diagram.
+
+Settle = '03-Aug-1999';
+Maturity = ['15-Aug-2000';'15-Dec-2000'];
+CouponRate= [0.06; 0.05];
+Period = [3;2];
+Basis = [1;0];
+[CFlowAmounts, CFlowDates, TFactors] = cfamounts(CouponRate,... 
+Settle, Maturity, Period, Basis);
+cfplot(CFlowDates,CFlowAmounts)
+xlabel('Numeric Cash Flow Dates')
+ylabel('Bonds')
+title('Cash Flow Diagram')
+
+cfport
+
+15-707

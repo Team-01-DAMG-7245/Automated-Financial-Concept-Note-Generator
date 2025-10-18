@@ -1,0 +1,38 @@
+0 0.0119 0.0336 0.1225 ];
+
+% Create Portfolio object
+p = Portfolio(AssetMean=m,AssetCovar=C);
+
+% Weight bounds
+p1 = setBounds(p,0.15,1,BoundType='conditional');
+% Weights must sum to one
+p1 = setBudget(p1,1,1);
+
+Add a tracking error constraint using setTrackingError to bound deviations from the max Sharpe
+ratio portfolio to 3%.
+
+% Compute max Sharpe ratio portfolio
+wSR = estimateMaxSharpeRatio(p1,Method='iterative');
+
+% Set tracking error constraint
+p1 = setTrackingError(p1,0.03,wSR);
+
+Solve and compare the minimum risk portfolio and the constrained equally weighted portfolio.
+
+% Compute max return portfolio
+wMin = estimateFrontierLimits(p1,'min');
+
+% Compute equally weighted portfolio by minimizing the
+% Herfindahl-Hirshman index
+HH = @(w) w'*w;
+wHH = estimateCustomObjectivePortfolio(p1,HH);
+
+Use a bar plot to observe the difference between the portfolios.
+
+figure
+bar([wMin wHH wSR])
+legend('Minimum Risk','Equally Weighted','Max Sharpe')
+
+estimateCustomObjectivePortfolio
+
+15-923

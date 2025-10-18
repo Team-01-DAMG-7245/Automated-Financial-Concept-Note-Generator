@@ -1,0 +1,32 @@
+Examine these two figures. There is a strong similarity between the miniature histograms on the
+corresponding axes of each figure. This similarity is not coincidental.
+
+Both copulas simulate uniform random variables, which are then transformed to daily centered
+returns by the inverse CDF of the piecewise distribution of each index. Therefore, the simulated
+returns of any given index are identically distributed regardless of the copula.
+
+However, the scatter graph of each figure indicates the dependence structure associated with the
+given copula, and in contrast to the univariate margins shown in the histograms, the scatter graphs
+are distinct.
+
+Once again, the copula defines a dependence structure regardless of its margins, and therefore offers
+many features not limited to calibration alone.
+
+For reference, simulate and plot centered returns using the Gaussian distribution, which underlies
+the traditional Brownian motion model.
+
+reset(s)
+R = mvnrnd(zeros(1,nIndices), cov(returns), nPoints);
+h = scatterhist(R(:,2), R(:,3),'Color','r','Marker','.','MarkerSize',1); 
+fig = gcf;
+fig.Color = [1 1 1];
+y1 = ylim(h(1));
+y3 = ylim(h(3));
+xlim(h(1), [-.1 .1])
+ylim(h(1), [-.1 .1])
+xlim(h(2), [-.1 .1])
+ylim(h(3), [(y3(1) + (-0.1 - y1(1)))  (y3(2) + (0.1 - y1(2)))])
+
+Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation
+
+14-81

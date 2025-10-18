@@ -1,0 +1,12 @@
+{
+  "page": 1375,
+  "original_text": "obj = bm(0, 0.3) % (A = Mu, Sigma)",
+  "ocr_text": "obj=bm(0,0.3)(A=Mu,Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 271.27,
+    "x1": 274.22,
+    "y1": 281.73
+  },
+  "confidence": "high"
+}

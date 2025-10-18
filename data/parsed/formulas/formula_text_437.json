@@ -1,0 +1,12 @@
+{
+  "page": 299,
+  "original_text": "p = setDefaultConstraints(p);\n[pwgt, pbuy, psell] = estimateFrontierByRisk(p, 0.15);\n \nBlotter = dataset([{100*[pwgt0, pwgt, pbuy, psell]}, ...\n     {'Initial','Weight', 'Purchases','Sales'}],'obsnames',p.AssetList);\n \ndisplay(Blotter)",
+  "ocr_text": "p=setDefaultConstraints(p);\n[pwgt,pbuy,psell]=estimateFrontierByRisk(p,0.15);\nBlotter=dataset([{100*[pwgt0,pwgt,pbuy,psell]},...\n\n{Initial,Weight,Purchases,Sales}],obsnames,p.AssetList);\ndisplay(Blotter)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 480.12,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

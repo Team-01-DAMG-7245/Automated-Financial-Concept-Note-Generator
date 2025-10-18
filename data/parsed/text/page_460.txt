@@ -1,0 +1,39 @@
+Create the risk parity backtesting strategy using a backtestStrategy object. Set the risk parity
+strategy to rebalance every month.
+
+% Rebalance frequency
+rebalFreq = 21; % Every month
+
+To gather enough data, set the lookback window to at least 2 months. To remove old data from the
+covariance estimation, set the lookback window to no more than 6 months.
+
+% Lookback window
+lookback = [42 126];
+
+Use a fixed transaction cost equal to 0.5% of the amount traded.
+
+% Fixed transaction cost
+transactionCost = 0.005;
+
+Define the risk parity allocation strategy using the riskParityFcn rebalancing function that is
+defined in Local Functions on page 4-294. Notice that the riskBudgetingPortfolio function is at
+the core of riskParityFcn.
+
+% Risk parity allocation strategy
+stratRP = backtestStrategy('Risk Parity', @riskParityFcn, ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionCost, ...
+    InitialWeights=initialRiskParity);
+
+Define Benchmark Strategy
+
+Next, compare the risk parity strategy against the portfolio that follows the Dow Jones Industrial
+Average (DJI) market index. To obtain the market-following portfolio, invest all assets to the first
+entry of the weights vector because the first column of the prices timetable (pricesTT) represents
+the market index.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-292

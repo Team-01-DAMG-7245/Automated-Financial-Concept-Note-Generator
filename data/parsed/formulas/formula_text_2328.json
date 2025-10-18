@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t",
+  "ocr_text": "AXyy=S(t)LL(L)-Xpeldt+V(t)h/XodWoe",
+  "bbox": {
+    "x0": 298.05,
+    "y0": 265.26,
+    "x1": 480.71,
+    "y1": 279.0
+  },
+  "confidence": "high"
+}

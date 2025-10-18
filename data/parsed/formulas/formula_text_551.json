@@ -1,0 +1,12 @@
+{
+  "page": 371,
+  "original_text": "benchPrice = data.DJI;\nassetNames = data.Properties.VariableNames(3:2:end); % Use half of the assets for display.\nassetPrice = data(:,assetNames).Variables;",
+  "ocr_text": "benchPrice=data.DJI;\nassetNames=data.Properties.VariableNames(3:2:end);*Usehalfoftheassetsfordisplay.\nassetPrice=data(:,assetNames).Variables;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 158.7,
+    "x1": 577.65,
+    "y1": 190.77
+  },
+  "confidence": "high"
+}

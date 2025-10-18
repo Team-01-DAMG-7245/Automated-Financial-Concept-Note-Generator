@@ -1,0 +1,12 @@
+{
+  "page": 457,
+  "original_text": "% Update the returns vector.\nmu1 = mu;\nmu1(1) = 0.09;\n% Compute the mean-variance portfolio.\np = Portfolio(AssetMean=mu1,AssetCovar=Sigma);\np = setDefaultConstraints(p);\nwMV_mu1 = estimateFrontierByRisk(p,targetRisk)",
+  "ocr_text": "Updatethereturnsvector.\n\nmul_=mu;\n\nmul(1)=0.09;\nSComputethemean-varianceportfolio.\np=Portfolio(AssetMean=mul1,AssetCovar=Sigma);\np=setDefaultConstraints(p);\nwMV_mul_=estimateFrontierByRisk(p,targetRisk)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.6,
+    "x1": 339.23,
+    "y1": 200.86
+  },
+  "confidence": "high"
+}

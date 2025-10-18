@@ -1,0 +1,12 @@
+{
+  "page": 999,
+  "original_text": "sc = modifybins(sc,'CustAge','BinLabels',...\n{'Up to 36' '37 to 39' '40 to 45' '46 to 57' '58 and up'});",
+  "ocr_text": "sc_=modifybins(sc,CustAge,BinLabels,...\n{Upto3637to3940to4546to5758andup});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.18,
+    "x1": 409.69,
+    "y1": 277.45
+  },
+  "confidence": "high"
+}

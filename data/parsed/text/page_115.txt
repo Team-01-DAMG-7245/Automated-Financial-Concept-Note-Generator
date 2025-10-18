@@ -1,0 +1,72 @@
+to larger trading volumes. Using the conditional probabilities obtained from Q, the tradeOnQ
+function takes one of these actions:
+
+•
+Executes a buy if the probability of an upward forward price change is greater than 0.5.
+
+•
+Executes a sell if the probability of a downward forward price change is greater than 0.5.
+
+At the end of the trading day, the function liquidates the position at the touch.
+
+The strategy requires Data with tick times t and the corresponding market order bid and ask prices
+MOBid and MOAsk, respectively. In real-time trading, data is provided by the exchange. This example
+evaluates the strategy by dividing the historical sample into training (calibration) and validation
+subsamples. The validation subsample serves as a proxy for real-time trading data. The strategy
+depends on Q, the trading matrix itself, which you estimate after you make a number of
+hyperparameter choices. The inputs n and N are hyperparameters to tune when you optimize the
+strategy.
+
+Hyperparameters
+
+The continuous-time Markov model and the resulting trading matrix Q depend on the values of four
+hyperparameters:
+
+•
+lambda — The weighting parameter used to compute the imbalance index I
+
+•
+dI — The number of backward ticks used to average I during smoothing
+
+•
+numBins — The number of bins used to partition smoothed I for discretization
+
+•
+dS — The number of forward ticks used to convert the prices S to discrete DS
+
+In general, all four hyperparameters are tunable. However, to facilitate visualization, the example
+reduces the number of dimensions by tuning only numBins and N. The example:
+
+•
+Fixes lambda
+
+•
+Leaves numBins = n, where n is free to vary
+
+•
+Equalizes the window lengths dI = dS = N, where N is free to vary
+
+The restrictions do not significantly affect optimization outcomes. The optimization algorithm
+searches over the two-dimensional parameter space (n,N) for the configuration yielding the maximum
+return on trading.
+
+Training and Validation Data
+
+Machine learning requires a subsample on which to estimate Q and another subsample on which to
+evaluate the hyperparameter selections.
+
+Specify a breakpoint to separate the data into training and validation subsamples. The breakpoint
+affects evaluation of the objective function, and is essentially another hyperparameter. However,
+because you do not tune the breakpoint, it is external to the optimization process.
+
+bp = round((0.80)*length(t)); % Use 80% of data for training
+
+Collect data in a timetable to pass to tradeOnQ.
+
+Data = timetable(t,S,I,MOBid,MOAsk);
+TData = Data(1:bp,:);       % Training data
+VData = Data(bp+1:end,:);   % Validation data
+
+Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction
+
+2-71

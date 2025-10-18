@@ -1,0 +1,12 @@
+{
+  "page": 1578,
+  "original_text": "% The backtesting engine takes an array of backtestStrategy objects as the first argument\nbacktester = backtestEngine(strategy,...\n    'RiskFreeRate',riskFreeRate,...\n    'CashBorrowRate',cashBorrowRate,...\n    'InitialPortfolioValue',initPortfolioValue)",
+  "ocr_text": "ThebacktestingenginetakesanarrayofbacktestStrategyobjectsasthefirstargument\nbacktester=backtestEngine(strategy,...\n\nRiskFreeRate,riskFreeRate,...\n\nCashBorrowRate,cashBorrowRate,...\n\nInitialPortfolioValue,initPortfolioValue)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 473.19,
+    "x1": 572.2,
+    "y1": 526.85
+  },
+  "confidence": "high"
+}

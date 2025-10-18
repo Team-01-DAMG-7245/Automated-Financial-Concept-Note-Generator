@@ -1,0 +1,12 @@
+{
+  "page": 862,
+  "original_text": "q = setTurnover(p, 0.3, 0.25);\ncheckFeasibility(q, pwgt)",
+  "ocr_text": "q=setTurnover(p,0.3,0.25);\ncheckFeasibility(q,_pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 363.68,
+    "x1": 252.54,
+    "y1": 384.95
+  },
+  "confidence": "high"
+}

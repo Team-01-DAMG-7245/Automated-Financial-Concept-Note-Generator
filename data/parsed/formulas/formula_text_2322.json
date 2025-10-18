@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "Brownian Motion (BM)\ndXt = A(t)dt + V(t)dWt",
+  "ocr_text": "BrownianMotion(BM) dX;=A(t)dt+V(t)dW;",
+  "bbox": {
+    "x0": 44.25,
+    "y0": 129.71,
+    "x1": 401.97,
+    "y1": 143.45
+  },
+  "confidence": "high"
+}

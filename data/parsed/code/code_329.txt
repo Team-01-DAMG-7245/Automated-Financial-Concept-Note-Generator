@@ -1,0 +1,10 @@
+Page 321
+================================================================================
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+A = [ 1 0 1 0 ];
+b = 0.4;
+p = setEquality(p, A, b);
+p = setBounds(p, 0.1, 2.5, 'BoundType','Conditional');
+p = setMinMaxNumAssets(p, 2, 2);  
+pwgt = estimateFrontierLimits(p)

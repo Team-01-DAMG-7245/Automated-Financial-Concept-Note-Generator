@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "S_prev = Moneyness_prev*X;",
+  "ocr_text": "S_prev=Moneyness_prev*X;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 373.83,
+    "x1": 230.87,
+    "y1": 384.29
+  },
+  "confidence": "high"
+}

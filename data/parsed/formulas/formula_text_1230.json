@@ -1,0 +1,12 @@
+{
+  "page": 616,
+  "original_text": "% Execute trade\nCumulativeLOBSizes = cumsum(LOBSizes);\nTradedLevels = sum(CumulativeLOBSizes <= TradingShares);\nif TradedLevels < 1\n    TradedLevels = 1;\nelseif CumulativeLOBSizes(TradedLevels) < TradingShares\n    TradedLevels = TradedLevels + 1;\nend",
+  "ocr_text": "Executetrade\nCumulativeLOBSizes=cumsum(LOBSizes);\nTradedLevels=sum(CumulativeLOBSizes=TradingShares);\nifTradedLevels1\nTradedLevels=1;\nelseifCumulativeLOBSizes(TradedLevels)TradingShares\nTradedLevels=TradedLevels+1;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 406.23,
+    "x1": 393.41,
+    "y1": 492.29
+  },
+  "confidence": "high"
+}

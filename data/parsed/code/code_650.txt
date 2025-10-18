@@ -1,0 +1,9 @@
+Page 607
+================================================================================
+
+for k=1:NumSimSteps
+    [NextObs1,SimReward_Test_Buy(k),IsDone1,LoggedSignals] = step( ...
+        RL_OptimalExecution_Testing_Environment_Buy,SimAction_Test_Buy(k));
+    SimInventory_Test_Buy(k) = LoggedSignals.CurrentInventoryShares;
+    SimExecutedShares_Test_Buy(k) = sum(LoggedSignals.ExecutedShares);
+end

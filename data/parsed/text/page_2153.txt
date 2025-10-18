@@ -1,0 +1,21 @@
+Data Types: double
+
+Output Arguments
+
+Depreciation — Depreciation
+numeric
+
+Depreciation, returned as the remaining depreciable value for an asset.
+
+Version History
+Introduced before R2006a
+
+See Also
+depfixdb | depgendb | depsoyd | depstln
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+deprdv
+
+15-847

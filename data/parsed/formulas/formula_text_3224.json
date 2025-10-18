@@ -1,0 +1,12 @@
+{
+  "page": 1730,
+  "original_text": "Settle = datetime(1997,3,14);\nMaturity = [datetime(2000,11,30) datetime(2000,12,31) datetime(2001,1,31)];\nPeriod = 2;\nBasis = 0;\nEndMonthRule = 1;",
+  "ocr_text": "Settle=datetime(1997,3,14);\nMaturity=[datetime(2000,11,30)datetime(2000,12,31)datetime(2001,1,31)];\nPeriod=2;\n\nBasis=0;\n\nEndMonthRule=1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 547.74,
+    "x1": 496.35,
+    "y1": 601.41
+  },
+  "confidence": "high"
+}

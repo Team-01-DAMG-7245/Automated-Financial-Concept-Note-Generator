@@ -1,0 +1,37 @@
+X           = X(ones(nVariables,1));
+
+F = @(t,X) diag(expReturn)* X;
+G = @(t,X) diag(X) * diag(sigma);
+
+SDE = sde(F, G, 'Correlation', ...
+    correlation, 'StartState', X);
+
+GBM = gbm(diag(expReturn),diag(sigma), 'Correlation', ...
+    correlation, 'StartState', X);
+
+To illustrate the performance benefit of the overloaded Euler approximation method, increase the
+number of trials to 10000.
+
+nPeriods = 249;      % # of simulated observations
+dt       =   1;      % time increment = 1 day
+rng(142857,'twister')
+[X,T] = simulate(GBM, nPeriods, 'DeltaTime', dt, ...
+    'nTrials', 10000);
+
+whos X
+
+Name        Size                     Bytes  Class     Attributes
+
+X         250x6x10000            120000000  double
+
+The output X is a much larger time series array.
+
+Using this sample size, plot a histogram to examine the terminal distribution of Canada's TSX
+Composite to verify qualitatively the lognormal character of the data.
+
+histogram(squeeze(X(end,1,:)), 30), xlabel('Price'), ylabel('Frequency')
+title('Histogram of Prices after One Year: Canada (TSX Composite)')
+
+Simulating Equity Prices
+
+14-39

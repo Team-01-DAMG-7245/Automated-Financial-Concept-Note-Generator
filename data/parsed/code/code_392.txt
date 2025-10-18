@@ -1,0 +1,6 @@
+Page 410
+================================================================================
+
+The backtestEngine function takes as input an array of backtestStrategy objects. Additionally,
+when using backtestEngine, you can set several options, such as the risk-free rate and the initial
+portfolio value. When the risk-free rate is specified in annualized terms, the backtestEngine uses

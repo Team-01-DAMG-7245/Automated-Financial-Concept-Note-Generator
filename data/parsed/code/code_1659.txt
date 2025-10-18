@@ -1,0 +1,6 @@
+Page 1474
+================================================================================
+
+When specified as MATLAB double arrays, the inputs A and B are clearly associated with a linear drift
+rate parametric form. However, specifying either A or B as a function allows you to customize
+virtually any drift rate specification.

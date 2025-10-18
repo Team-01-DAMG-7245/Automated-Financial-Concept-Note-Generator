@@ -1,0 +1,12 @@
+{
+  "page": 1250,
+  "original_text": "rng(10203,'twister')\ndt       = 1 / 252;        % 1 day = 1/252 years\nnPeriods = 63;             % 3 months = 63 trading days\nT        = nPeriods * dt;  % 3 months = 0.25 years\nnPaths   = 10;            % # of simulated paths\nobj      = bm(0, 1, 'StartState', 0);\nsampleTimes = cumsum([obj.StartTime; ...\n    dt(ones(nPeriods,1))]);\nz        = Example_StratifiedRNG(nPaths, sampleTimes);",
+  "ocr_text": "rng(10203,twister)\n\ndt =1/252; 1day=1/252years\n\nnPeriods=63; 3months=63tradingdays\n\nT =nPeriods*dt;3months=0.25years\n\nnPaths =10; S4ofsimulatedpaths\n\nobj =bm(0,1,_StartState,0);\n\nsampleTimes=cumsum([obj.StartTime;...\ndt(ones(nPeriods,1))]);\n\nz =Example_StratifiedRNG(nPaths,sampleTimes);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 587.8,
+    "x1": 388.0,
+    "y1": 684.67
+  },
+  "confidence": "high"
+}

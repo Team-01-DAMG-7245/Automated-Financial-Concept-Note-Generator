@@ -1,0 +1,38 @@
+Simulate a Single Path Over a Year
+
+nPeriods = 249;      % # of simulated observations
+dt       =   1;      % time increment = 1 day
+rng(142857,'twister')
+[S,T] = simByEuler(SDE, nPeriods, 'DeltaTime', dt);
+
+Simulate 10 trials and examine the SDE model
+
+rng(142857,'twister')
+[S,T] = simulate(SDE, nPeriods, 'DeltaTime', dt, 'nTrials', 10);
+
+whos S
+
+Name        Size               Bytes  Class     Attributes
+
+S         250x6x10            120000  double
+
+Plot the paths
+
+plot(T, S(:,:,1)), xlabel('Trading Day'), ylabel('Price')
+title('First Path of Multi-Dimensional Market Model')
+legend({'Canada' 'France' 'Germany' 'Japan' 'UK' 'US'},...
+    'Location', 'Best')
+
+Euler Simulation for a CIR Object
+
+The Cox-Ingersoll-Ross (CIR) short rate class derives directly from SDE with mean-reverting drift
+
+(SDEMRD): dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+
+1
+2)V(t)dW
+
+15
+Functions
+
+15-384

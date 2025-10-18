@@ -1,0 +1,63 @@
+Local Functions
+
+function [] = plotESGContours(p,ESGscores,minESG,maxESG,nCont, ...
+    nPort)
+% Plot the mean-variance frontier for different ESG levels.
+
+% Add ESG constraint
+p.AInequality = -ESGscores';
+
+% Compute the mean-variance risks and returns for different ESG levels.
+contourESG = linspace(minESG,maxESG,nCont+1);
+figure
+hold on
+labels = strings(nCont+1,1);
+for i = 1:nCont
+    p.bInequality = -contourESG(i); % Change target ESG score
+    plotFrontier(p,nPort);
+    labels(i) = sprintf("%6.2f ESG",contourESG(i)*100);
+end
+
+% Plot the original mean-variance frontier.
+p.AInequality = []; p.bInequality = [];
+plotFrontier(p,nPort);
+labels(i+1) = "No ESG restriction";
+title('Efficient Frontiers')
+legend(labels,'Location','southeast')
+hold off
+
+end
+
+function [ESGTimetable] = averageESGTimetable(backtester, ...
+    ESGscores,targetESG)
+% Create a table of the average ESG score for the mix and tilted
+% strategies throughout the investment period and plot it.
+
+% Normalize weights
+wMixedHH = backtester.Positions.MixedHH{:,2:end}./...
+    sum(backtester.Positions.MixedHH.Variables,2);
+wMixedMDP = backtester.Positions.MixedMDP{:,2:end}./...
+    sum(backtester.Positions.MixedMDP.Variables,2);
+wTiltedHH = backtester.Positions.TiltedHH{:,2:end}./...
+    sum(backtester.Positions.TiltedHH.Variables,2);
+wTiltedMDP = backtester.Positions.TiltedMDP{:,2:end}./...
+    sum(backtester.Positions.TiltedMDP.Variables,2);
+
+% Compute the ESG scores for the different strategies.
+consHH_ESG = wMixedHH*ESGscores;
+consMDP_ESG = wMixedMDP*ESGscores;
+tiltedHH_ESG = wTiltedHH*ESGscores;
+tiltedMDP_ESG = wTiltedMDP*ESGscores;
+
+% Create timetable
+ESGTimetable = timetable(backtester.Positions.TiltedHH.Time, ...
+    consHH_ESG,consMDP_ESG,tiltedHH_ESG,tiltedMDP_ESG);
+
+% Plot ESG curves
+plot(ESGTimetable.Time, ESGTimetable.Variables);
+hold on
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-282

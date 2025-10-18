@@ -1,0 +1,5 @@
+Page 1404
+================================================================================
+
+Composite drift-rate function, specified as F(t,Xt). The function stored in Rate fully encapsulates the
+combined effect of A and B, where A and B are:

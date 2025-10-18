@@ -1,0 +1,20 @@
+Estimate Efficient Portfolios for Entire Efficient Frontier for
+Portfolio Object
+
+There are two ways to look at a portfolio optimization problem and this depends on what is your goal:
+
+•
+To estimate efficient portfolios, see “Obtaining Portfolios Along the Entire Efficient Frontier” on
+page 4-99.
+
+•
+To estimate efficient frontiers, see “Estimate Efficient Frontiers for Portfolio Object” on page 4-
+122.
+
+For information on the workflow when using Portfolio objects, see “Portfolio Object Workflow” on
+page 4-18.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-98

@@ -1,0 +1,12 @@
+{
+  "page": 984,
+  "original_text": "load CreditCardData\ndata.ResStatus = double(data.ResStatus);\nsc = creditscorecard(data,'IDVar','CustID')",
+  "ocr_text": "loadCreditCardData\ndata.ResStatus=double(data.ResStatus);\nsc=creditscorecard(data,IDVar,CustID)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 656.37,
+    "x1": 322.99,
+    "y1": 688.44
+  },
+  "confidence": "high"
+}

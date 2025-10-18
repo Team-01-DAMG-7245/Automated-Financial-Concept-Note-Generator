@@ -1,0 +1,62 @@
+Setting Up a Tracking Portfolio
+
+Given a benchmark or tracking portfolio, you can ensure that the risk of a portfolio relative to the
+benchmark portfolio is no greater than a specified amount. The Portfolio object property
+TrackingPort lets you identify a tracking portfolio. For more information on using a tracking
+portfolio with tracking error constraints, see “Working with Tracking Error Constraints Using
+Portfolio Object” on page 4-91.
+
+The tracking error constraints can be used with any of the other supported constraints in the
+Portfolio object without restrictions. However, since the portfolio set necessarily and sufficiently
+must be a non-empty compact set, the application of a tracking error constraint can result in an
+empty portfolio set. Use estimateBounds to confirm that the portfolio set is non-empty and
+compact.
+
+Suppose that you have an initial portfolio in x0, then use the Portfolio object to set up a tracking
+portfolio:
+
+x0 = [ 0.3; 0.2; 0.2; 0.0 ];
+p = Portfolio('TrackingPort', x0);
+disp(p.TrackingPort)
+
+0.3000
+    0.2000
+    0.2000
+         0
+
+As with all array properties, you can set TrackingPort with scalar expansion. This is helpful to set
+up an equally weighted tracking portfolio of, for example, 10 assets:
+
+p = Portfolio('NumAssets', 10, 'TrackingPort', 1/10);
+disp(p.TrackingPort)
+
+0.1000
+    0.1000
+    0.1000
+    0.1000
+    0.1000
+    0.1000
+    0.1000
+    0.1000
+    0.1000
+    0.1000
+
+To clear a tracking portfolio from your Portfolio object, use either the Portfolio object or the
+setTrackingPort function with an empty input for the TrackingPort property. If transaction
+costs or turnover constraints are set, it is not possible to clear the TrackingPort property in this
+way. In this case, to clear TrackingPort, first clear the dependent properties and then clear
+theTrackingPort property.
+
+The TrackingPort property can also be set with setTrackingPort which lets you specify the
+number of assets if you want to use scalar expansion. For example, given an initial portfolio in x0, use
+setTrackingPort to set the TrackingPort property:
+
+p = Portfolio;
+x0 = [ 0.3; 0.2; 0.2; 0.0 ];
+p = setTrackingPort(p, x0);
+disp(p.TrackingPort)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-40

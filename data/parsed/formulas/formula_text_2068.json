@@ -1,0 +1,12 @@
+{
+  "page": 1072,
+  "original_text": "Given m = NumSamples observations, the typical least-squares regression model seeks to minimize\nthe objective function",
+  "ocr_text": "Givenm=NumSamplesobservations,thetypicalleast-squaresregressionmodelseekstominimize\ntheobjectivefunction",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 283.15,
+    "x1": 545.92,
+    "y1": 306.78
+  },
+  "confidence": "high"
+}

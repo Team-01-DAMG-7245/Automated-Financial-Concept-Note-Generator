@@ -1,0 +1,37 @@
+Examine Detailed Results
+
+After you run the backtest, the backtestEngine object updates the read-only fields with the
+detailed results of the backtest. The Returns, Positions, Turnover, BuyCost, SellCost, and
+Fees properties each contain a timetable of results. Since this example uses daily price data in the
+backtest, these timetables hold daily results.
+
+backtester
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×2 backtestStrategy]
+             RiskFreeRate: 0
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: 7
+                  Returns: [230×2 timetable]
+                Positions: [1×1 struct]
+                 Turnover: [230×2 timetable]
+                  BuyCost: [230×2 timetable]
+                 SellCost: [230×2 timetable]
+         TransactionCosts: [1×1 struct]
+                     Fees: [1×1 struct]
+
+Returns
+
+The Returns property holds a timetable of strategy (simple) returns for each time step. These
+returns are inclusive of all transaction fees.
+
+summary
+
+15-297

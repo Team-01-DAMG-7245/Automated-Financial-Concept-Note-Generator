@@ -1,0 +1,12 @@
+{
+  "page": 107,
+  "original_text": "numBins = 3; % Hyperparameter\nbinEdges = linspace(-1,1,numBins+1);\nrho = discretize(sI,binEdges);",
+  "ocr_text": "numBins=3;Hyperparameter\nbinEdges=linspace(-1,1,numBins+1);\nrho=discretize(sI,binEdges);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 285.05,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,6 @@
+Page 551
+================================================================================
+
+% Sparse reward function handle
+sparseRewardFcnHandle = @(loggedSignals) sparseReward(loggedSignals, ...
+    finalTimePeriod,targetWealth,WMin,WMax);

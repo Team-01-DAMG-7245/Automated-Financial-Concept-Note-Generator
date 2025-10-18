@@ -1,0 +1,59 @@
+Input Arguments
+
+Data — Data with high, low, open, close information
+matrix | table | timetable
+
+Data with high, low, open, close information, specified as a vector, matrix, table, or timetable. For
+matrix input, Data is an M-by-2 matrix of high and low prices stored in the first and second columns.
+Timetables and tables with M rows must contain variables named 'High' and 'Low' (case
+insensitive).
+
+Data Types: double | table | timetable
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: volatility = chaikvolat(TMW,'NumPeriods',10,'WindowSize',10)
+
+NumPeriods — Period difference
+10 (default) | positive integer
+
+Period difference, specified as the comma-separated pair consisting of 'NumPeriods' and a scalar
+positive integer.
+
+Data Types: double
+
+WindowSize — Length of the exponential moving average in periods
+10 (default) | positive integer
+
+Length of the exponential moving average in periods, specified as the comma-separated pair
+consisting of 'WindowSize' and a scalar positive integer.
+
+Data Types: double
+
+Output Arguments
+
+volatility — Chaikin volatility
+matrix | table | timetable
+
+Chaikin volatility, returned with the same number of rows (M) and the same type (matrix, table, or
+timetable) as the input Data.
+
+More About
+
+Chaikin volatility
+
+Chaikin volatility calculates the Chaikin's volatility from the series of high and low stock prices.
+
+Chaikin volatility is calculated by taking the difference between the highest high and the lowest low
+over a specified period and then smoothing this difference using an exponential moving average
+
+15
+Functions
+
+15-734

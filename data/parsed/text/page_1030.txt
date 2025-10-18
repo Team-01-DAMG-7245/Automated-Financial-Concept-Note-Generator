@@ -1,0 +1,36 @@
+hold on
+plot([0; ProbTimes],[0; ProbDataInv2(:,2)],'--')
+hold off
+grid on
+axis([0 ProbTimes(end,1) 0 ProbDataInv1(end,2)])
+xlabel('Time (years)')
+ylabel('Cumulative Default Probability')
+title('Probability Curves for Inverted Spread Curves')
+legend('1st instance','2nd instance','location','SouthEast')
+
+The resulting plot
+
+Also in line with the previous plot, the hazard rates for these bootstrapped curves are decreasing
+because the short-term risk is higher. Some bootstrapped parameters in the second curve are
+negative, as indicated by the warning.
+
+HazTimes = yearfrac(Settle, MarketDates);
+figure
+stairs([0; HazTimes(1:end-1,1); HazTimes(end,1)+1],...
+   [HazDataInv1(:,2);HazDataInv1(end,2)])
+hold on
+stairs([0; HazTimes(1:end-1,1); HazTimes(end,1)+1],...
+   [HazDataInv2(:,2);HazDataInv2(end,2)],'--')
+hold off
+grid on
+xlabel('Time (years)')
+ylabel('Hazard Rate')
+title('Hazard Rates for Inverted Spread Curves')
+legend('1st instance','2nd instance','location','NorthEast')
+
+The resulting plot shows the hazard rates for both bootstrapped curves:
+
+8
+Credit Risk Analysis
+
+8-112

@@ -1,0 +1,12 @@
+{
+  "page": 539,
+  "original_text": "p W j t + 1 |Wi t , π = ℙW j ≤W t + 1 < W j + 1|W t = Wi, π = p∼W j + 1|Wi, π −p∼W j|Wi, π , ∀t\n∈\n0, …, T",
+  "ocr_text": "p(w(t + 1)[W;(t),m) = P(W; =W(t+1)Wj41/W(t)= W;,,) = B(Wj+ 1/Wi, 11) - B(W,lW;,), Vt,\n{0,...,T}",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 221.23,
+    "x1": 546.01,
+    "y1": 250.84
+  },
+  "confidence": "high"
+}

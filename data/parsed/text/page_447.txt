@@ -1,0 +1,64 @@
+% Combined penalty terms for HH
+tiltStruct.lambdaHH = (ESG.ESGlabel=='low').*HHlambdaLow + ...
+    (ESG.ESGlabel=='high').*HHlambdaHigh;
+% MDP tilting penalty parameters
+% Penalty parameter for assets with 'low' ESG score
+
+MDPlambdaLow =
+;
+% Penalty parameter for assets with 'high' ESG score
+
+MDPlambdaHigh =
+;
+% Combined penalty terms for MDP
+tiltStruct.lambdaMDP = (ESG.ESGlabel=='low').*MDPlambdaLow + ...
+    (ESG.ESGlabel=='high').*MDPlambdaHigh;
+
+Define the investment strategies that you want to use to make the asset allocation decisions at each
+investment period. For this example, four investment strategies are defined as input to
+backtestStrategy. The first two strategies require a minimum ESG score and the last two use the
+ESG tilting method.
+
+% Define backtesting parameters
+warmupPeriod = 84;       % Warmup period
+rebalFreq = 42;          % Rebalance frequency
+lookback  = [42 126];     % Lookback window
+transactionCost = 0.001; % Transaction cost for trade
+% Constrained variance + HH strategy
+strat1 = backtestStrategy('MixedHH', @(w,P) MixHH(w,P,conStruct), ...
+    'RebalanceFrequency', rebalFreq, ...
+    'LookbackWindow', lookback, ...
+    'TransactionCosts', transactionCost, ...
+    'InitialWeights', wHHMix);
+% Constrained variance + MDP
+strat2 = backtestStrategy('MixedMDP', @(w,P) MixMDP(w,P,conStruct), ...
+    'RebalanceFrequency', rebalFreq, ...
+    'LookbackWindow', lookback, ...
+    'TransactionCosts', transactionCost, ...
+    'InitialWeights', wMDPMix);
+% HH tilted strategy
+strat3 = backtestStrategy('TiltedHH', @(w,P) tiltedHH(w,P,tiltStruct), ...
+    'RebalanceFrequency', rebalFreq, ...
+    'LookbackWindow', lookback, ...
+    'TransactionCosts', transactionCost, ...
+    'InitialWeights', wTiltHH);
+% MDP tilted strategy
+strat4 = backtestStrategy('TiltedMDP', @(w,P) tiltedMDP(w,P,tiltStruct), ...
+    'RebalanceFrequency', rebalFreq, ...
+    'LookbackWindow', lookback, ...
+    'TransactionCosts', transactionCost, ...
+    'InitialWeights', wTiltMDP);
+% All strategies
+strategies = [strat1,strat2,strat3,strat4];
+
+Run the backtest using runBacktest and generate a summary for each strategy's performance
+results.
+
+% Create the backtesting engine object.
+backtester = backtestEngine(strategies);
+% Run backtest
+backtester = runBacktest(backtester,assetPrices, ...
+
+Diversify ESG Portfolios
+
+4-279

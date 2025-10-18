@@ -1,0 +1,12 @@
+{
+  "page": 2002,
+  "original_text": "h = cfplot( ___ ,Name,Value)\n[h,axes_handle] = cfplot( ___ ,Name,Value)",
+  "ocr_text": "h=cfplot(__,Name,Value)\n[h,axes_handle]=cfplot(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 238.94,
+    "x1": 334.82,
+    "y1": 262.57
+  },
+  "confidence": "high"
+}

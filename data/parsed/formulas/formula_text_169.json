@@ -1,0 +1,12 @@
+{
+  "page": 117,
+  "original_text": "results = bayesopt(f,[n,N],...\n                   'IsObjectiveDeterministic',true,...\n                   'AcquisitionFunctionName','expected-improvement-plus',...\n                   'MaxObjectiveEvaluations',25,...\n                   'ExplorationRatio',2,...\n                   'Verbose',0);",
+  "ocr_text": "results=bayesopt(f,[n,N],...\nIsObjectiveDeterministic,true,...\nAcquisitionFunctionName,expected-improvement-plus,...\nMaxObjectiveEvaluations,25,...\nExplorationRatio,2,...\nVerbose,Q);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 546.62,
+    "x1": 501.8,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

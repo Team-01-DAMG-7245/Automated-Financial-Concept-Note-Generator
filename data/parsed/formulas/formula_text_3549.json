@@ -1,0 +1,12 @@
+{
+  "page": 1988,
+  "original_text": "CFlowConvexity = cfconv(CashFlow,Yield)",
+  "ocr_text": "CFlowConvexity=cfconv(CashFlow,Yield)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.73,
+    "x1": 324.8,
+    "y1": 204.36
+  },
+  "confidence": "high"
+}

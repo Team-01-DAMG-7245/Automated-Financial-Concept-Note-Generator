@@ -1,0 +1,19 @@
+Compute the exposures.
+
+netting = swaps.NettingID(cpIdx);
+exposures = creditexposures(cpValues,cpID,'NettingID',netting);
+
+View the credit exposure over time for the counterparty.
+
+figure;
+plot(simulationDates,squeeze(exposures));
+grid on
+title(sprintf('Exposure for Counterparty: %d',cpID));
+xtickformat('MMMyy');
+ylabel('Exposure ($)')
+xlabel('Simulation Dates')
+
+15
+Functions
+
+15-650

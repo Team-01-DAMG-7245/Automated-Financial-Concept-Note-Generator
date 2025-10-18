@@ -1,0 +1,12 @@
+{
+  "page": 1913,
+  "original_text": "h = candle(ax ___ ) adds an optional argument for ax.",
+  "ocr_text": "h=candle(ax____)addsanoptionalargumentforax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 334.96,
+    "x1": 355.67,
+    "y1": 346.59
+  },
+  "confidence": "high"
+}

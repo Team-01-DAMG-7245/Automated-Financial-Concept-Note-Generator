@@ -1,0 +1,40 @@
+with the desired mean and covariance. Specifically, portsim is used to simulate five years of monthly
+total returns and then plotted to show the log of the simulated total return prices.
+
+The mean and covariance of annual asset total returns are maintained in the variables AssetMean
+and AssetCovar. The simulated asset total return prices (which are compounded total returns) are
+maintained in the variable Y. All initial asset total return prices are normalized to 1 in this example.
+
+AssetMean = [ 0.05; 0.1; 0.12; 0.18 ];
+AssetCovar = [ 0.0064 0.00408 0.00192 0;
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+X = portsim(AssetMean'/12, AssetCovar/12, 60); % Monthly total returns for 5 years (60 months)
+[Y, T] = ret2tick(X, [], 1/12);                % form total return prices.
+plot(T, log(Y));
+title('\bfSimulated Asset Class Total Return Prices');
+xlabel('Year');
+ylabel('Log Total Return Price');
+legend(Asset,'Location','best');
+
+Step 3. Setting up the Portfolio object.
+
+To explore portfolios on the efficient frontier, set up a Portfolio object using these specifications:
+
+•
+Portfolio weights are nonnegative and sum to 1.
+
+•
+Equity allocation is no more than 85% of the portfolio.
+
+•
+Emerging equity is no more than 35% of the portfolio.
+
+These specifications are incorporated into the Portfolio object p in the following sequence of using
+functions that starts with using the Portfolio object.
+
+Asset Allocation Case Study
+
+4-181

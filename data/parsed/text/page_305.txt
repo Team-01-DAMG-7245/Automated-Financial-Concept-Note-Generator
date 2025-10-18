@@ -1,0 +1,17 @@
+•
+“Portfolio Object Workflow” on page 4-18
+
+•
+“Problem-Based Optimization Workflow”
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+When to Use Portfolio Objects Over Optimization Toolbox
+
+4-137

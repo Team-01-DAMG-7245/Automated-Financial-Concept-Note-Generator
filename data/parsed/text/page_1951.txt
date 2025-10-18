@@ -1,0 +1,80 @@
+•
+−1 — Continuous compounding
+
+Note  When ZeroData is an IRDataCurve object, the arguments ZeroCompounding and
+ZeroBasis are implicit in ZeroData and are redundant inside this function. In that case, specify
+these optional arguments when constructing the IRDataCurve object before calling this function.
+
+Data Types: double
+
+ZeroBasis — Basis of zero curve
+0 (actual/actual) (default) | positive integers of the set [1...13] | vector of positive integers of the
+set [1...13]
+
+Basis of the zero curve, specified as the comma-separated pair consisting of 'ZeroBasis' and a
+positive integer using a NINST-by-1 vector.
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+Output Arguments
+
+RPV01 — RPV01 value
+scalar | vector
+
+RPV01 value, returned as an N-by-1 vector.
+
+PaymentDates — Payment dates
+scalar | vector
+
+Payment dates, returned as an N-by-numCF matrix of dates.
+
+PaymentTimes — Payment times
+scalar | vector
+
+cdsrpv01
+
+15-645

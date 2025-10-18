@@ -1,0 +1,7 @@
+Page 1584
+================================================================================
+
+3
+For strategies that need rebalancing, the runBacktest function calls their rebalance functions
+with a rolling window of asset price data based on the LookbackWindow property of each
+backtestStrategy.

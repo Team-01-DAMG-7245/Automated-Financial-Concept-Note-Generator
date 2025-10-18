@@ -1,0 +1,6 @@
+Page 1438
+================================================================================
+
+Volatility — Volatility represents the instantaneous volatility of the CIR stochastic
+variance model
+scalar or deterministic function of time or deterministic function of time and state

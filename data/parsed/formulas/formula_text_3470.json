@@ -1,0 +1,12 @@
+{
+  "page": 1930,
+  "original_text": "PD(t) = P[τ ≤t] = 1 −P[τ > t] = 1 −Q(t)",
+  "ocr_text": "PD(t)=P[itst]=1-Pl[tt]=1-Q(t)",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 257.67,
+    "x1": 299.02,
+    "y1": 269.3
+  },
+  "confidence": "high"
+}

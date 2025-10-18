@@ -1,0 +1,12 @@
+{
+  "page": 1141,
+  "original_text": "doTraining = false;\nif doTraining\n    % Train the agent.\n    trainingStats = train(agent,env,trainOpts);\nelse",
+  "ocr_text": "doTraining=false;\nifdoTraining\nTraintheagent.\ntrainingStats=train(agent,env,trainOpts);\nelse",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 344.64,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

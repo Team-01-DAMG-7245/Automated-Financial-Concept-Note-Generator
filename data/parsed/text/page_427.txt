@@ -1,0 +1,40 @@
+% Create the backtesting engine.
+bt = backtestEngine(strategies,'RiskFreeRate',0.01)
+
+bt = 
+  backtestEngine with properties:
+
+Strategies: [1×4 backtestStrategy]
+             RiskFreeRate: 0.0100
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: []
+                  Returns: []
+                Positions: []
+                 Turnover: []
+                  BuyCost: []
+                 SellCost: []
+         TransactionCosts: []
+                     Fees: []
+
+Backtest Strategies
+
+% Start with the end of the initial weights calculation warm-up period.
+startIdx = 20;
+
+% Run the backtest.
+bt = runBacktest(bt,pricesTT,signalTT,'Start',startIdx);
+
+Examine Backtest Results
+
+Use equityCurve to plot the strategy equity curves to visualize their performance over the backtest.
+
+equityCurve(bt)
+
+Backtest Investment Strategies with Trading Signals
+
+4-259

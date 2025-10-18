@@ -1,0 +1,12 @@
+{
+  "page": 433,
+  "original_text": "N = 20; % Size of the grid.\ntargetWoB = linspace(minWoB,maxWoB,N);",
+  "ocr_text": "N=20;Sizeofthegrid.\ntargetWoB=Linspace(minWoB,maxWoB,N);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 623.83,
+    "x1": 295.88,
+    "y1": 645.09
+  },
+  "confidence": "high"
+}

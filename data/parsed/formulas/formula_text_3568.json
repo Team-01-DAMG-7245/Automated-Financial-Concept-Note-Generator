@@ -1,0 +1,12 @@
+{
+  "page": 2007,
+  "original_text": "SwapRate = \nNaN",
+  "ocr_text": "SwapRate=\nNaN",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 583.24,
+    "x1": 149.6,
+    "y1": 604.51
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,6 @@
+Page 1907
+================================================================================
+
+If both Date and Holiday are either strings or date character vectors, Busday is returned as a serial
+date number. Use the function datetime to convert serial date numbers to formatted datetime
+arrays.

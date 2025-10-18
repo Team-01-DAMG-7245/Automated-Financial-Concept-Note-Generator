@@ -1,0 +1,25 @@
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+R2017b: Name-value arguments added for Compounding and Basis
+Behavior changed in R2017b
+
+The specification of optional input arguments has changed. While the previous ordered inputs syntax
+is still supported, it may no longer be supported in a future release. Use the optional name-value pair
+inputs: Compounding and Basis.
+
+See Also
+zero2disc | datetime | fwd2zero | prbyzero | pyld2zero | zbtprice | zbtyield | zero2disc
+| zero2fwd | zero2pyld
+
+Topics
+“Term Structure of Interest Rates” on page 2-29
+“Fixed-Income Terminology” on page 2-15
+
+15
+Functions
+
+15-856

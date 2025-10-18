@@ -1,0 +1,6 @@
+Page 993
+================================================================================
+
+cp([1 5]) = []; % To merge bins 1 and 2, and bins 5 and 6
+sc = modifybins(sc,'CustAge','CutPoints',cp);
+plotbins(sc,'CustAge')

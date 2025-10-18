@@ -1,0 +1,8 @@
+Page 2412
+================================================================================
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioMAD;
+p = setInequality(p, A, b);
+[AInequality, bInequality] = getInequality(p)

@@ -1,0 +1,12 @@
+{
+  "page": 50,
+  "original_text": "Yield       = 0.07;\nCouponRate  = 0.08;\nSettle      = datenum('17-May-2000');\nMaturity    = datenum('01-Oct-2000');",
+  "ocr_text": "Yield =0.07;\nCouponRate=0.08;\nSettle =datenum(17-May-2000);\nMaturity =datenum(01-Oct-2000);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 285.07,
+    "x1": 290.49,
+    "y1": 327.94
+  },
+  "confidence": "high"
+}

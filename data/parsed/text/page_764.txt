@@ -1,0 +1,52 @@
+To do so, use the sratio function, defined in the Local Functions on page 5-139 section, to return
+the negative reward-to-risk ratio for a target return. Then, pass this function to fminbnd. fminbnd
+iterates through the possible return values and evaluates their associated reward-to-risk ratio.
+fminbnd returns the optimal return for which the maximum reward-to-risk ratio is achieved (or that
+minimizes the negative of the reward-to-risk ratio).
+
+% Obtain the minimum and maximum returns of the portfolio.
+pwgtLimits = estimateFrontierLimits(p);
+retLimits = estimatePortReturn(p,pwgtLimits);
+minret = retLimits(1);
+maxret = retLimits(2);
+
+% Search on the frontier iteratively. Find the return that minimizes the
+% negative of the reward-to-risk ratio.
+fhandle = @(ret) iterative_local_obj(ret,p);
+options = optimset('Display', 'off', 'TolX', 1.0e-8);
+optret = fminbnd(fhandle, minret, maxret, options);
+
+% Obtain the portfolio weights associated with the return that achieves
+% the maximum reward-to-risk ratio.
+pwgt = estimateFrontierByReturn(p,optret)
+
+pwgt = 12×1
+
+0.0885
+         0
+         0
+         0
+         0
+    0.9115
+         0
+         0
+         0
+         0
+         0
+         0
+      ⋮
+
+Use plotFrontier to plot the efficient frontier and estimatePortRisk to estimate the maximum
+reward-to-risk ratio portfolio.
+
+plotFrontier(p);
+hold on
+% Compute the risk level for the maximum reward-to-risk ratio portfolio.
+optrsk = estimatePortRisk(p,pwgt);
+scatter(optrsk,optret,50,'red','filled')
+hold off
+
+5
+CVaR Portfolio Optimization Tools
+
+5-138

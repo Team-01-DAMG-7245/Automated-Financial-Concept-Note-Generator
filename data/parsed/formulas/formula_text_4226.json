@@ -1,0 +1,12 @@
+{
+  "page": 2383,
+  "original_text": "Note If t = 1, then X = log(Y).",
+  "ocr_text": "NoteIft=1,thenX=log(Y).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 706.76,
+    "x1": 231.13,
+    "y1": 718.49
+  },
+  "confidence": "high"
+}

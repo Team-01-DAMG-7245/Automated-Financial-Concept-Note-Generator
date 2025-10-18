@@ -1,0 +1,12 @@
+{
+  "page": 1292,
+  "original_text": "instantVariance = filter(b, a, Returns.Variables.^2);\nInferredVolatility = sqrt( instantVariance );",
+  "ocr_text": "instantVariance=filter(b,a,Returns.Variables.*2);\nInferredVolatility=sqrt(instantVariance);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 621.51,
+    "x1": 377.15,
+    "y1": 642.78
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1518,
+  "original_text": "RVM = rvm(Return,Volatility,Alpha,Beta) creates a default RVM object with “Properties” on\npage 15-215 for these required arguments.",
+  "ocr_text": "RVM=rvm(Return,Volatility,Alpha,Beta)createsadefaultRVMobjectwithPropertieson\npage15-215fortheserequiredarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 460.83,
+    "x1": 552.62,
+    "y1": 484.46
+  },
+  "confidence": "high"
+}

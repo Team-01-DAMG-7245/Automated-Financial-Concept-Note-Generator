@@ -1,0 +1,7 @@
+Page 1240
+================================================================================
+
+•
+An end-of-period processing function, accessible by time and state, that records the terminal stock
+price of each sample path. This processing function is implemented as a nested function with
+access to shared information.

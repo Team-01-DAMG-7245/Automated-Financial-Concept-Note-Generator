@@ -1,0 +1,58 @@
+Backtest Investment Strategies Using datetime and
+calendarDuration
+
+This example shows how to use datetime inputs in the backtesting workflow. Backtesting is a useful
+tool to compare how investment strategies perform over historical or simulated market data. Using
+datetime inputs allows you to accurately specify the exact days that you can then use during the
+investment period to obtain initial weights from a warm up period, to select a start date to begin the
+backtest, and to establish a rebalancing frequency.
+
+Load Data
+
+The backtesting framework requires adjusted asset prices, meaning prices adjusted for dividends,
+splits, or other events. The prices must be stored in a MATLAB® timetable with each column
+holding a time series of asset prices for an investable asset.
+
+In this example, you use the closing prices of the Dow Jones Industrial Average for 2006.
+
+% Read a table of daily adjusted close prices for 2006 DJIA stocks.
+T = readtable('dowPortfolio.xlsx');
+
+% For readability, use only 15 of the 30 DJI component stocks.
+assetSymbols = ["AA","CAT","DIS","GM","HPQ","JNJ","MCD","MMM","MO","MRK","MSFT","PFE","PG","T","X
+
+% Prune the table to hold only the dates and selected stocks.
+timeColumn = "Dates";
+T = T(:,[timeColumn assetSymbols]);
+
+% Convert to the table to a timetable.
+pricesTT = table2timetable(T,'RowTimes','Dates');
+
+% View the structure of the prices timetable.
+head(pricesTT)
+
+Dates        AA       CAT      DIS      GM       HPQ      JNJ      MCD      MMM      MO   
+    ___________    _____    _____    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    28.72    55.86    24.18    17.82    28.35    59.08    32.72    75.93    52.27 
+    04-Jan-2006    28.89    57.29    23.77     18.3    29.18    59.99    33.01    75.54    52.65 
+    05-Jan-2006    29.12    57.29    24.19    19.34    28.97    59.74    33.05    74.85    52.52 
+    06-Jan-2006    29.02    58.43    24.52    19.61     29.8    60.01    33.25    75.47    52.95 
+    09-Jan-2006    29.37    59.49    24.78    21.12    30.17    60.38    33.88    75.84    53.11 
+    10-Jan-2006    28.44    59.25    25.09    20.79    30.33    60.49    33.91    75.37    53.04 
+    11-Jan-2006    28.05    59.28    25.33    20.61    30.88    59.91     34.5    75.22    53.31 
+    12-Jan-2006    27.68    60.13    25.41    19.76    30.57    59.63    33.96    74.57    53.23
+
+Define the Strategies
+
+You use backtestStrategy to define investment strategies that capture the logic used to make
+asset allocation decisions while a backtest is running. Each strategy is periodically given the
+opportunity to update its portfolio allocation. When you use backtestStrategy, you specify the
+allocation frequency with the RebalanceFrequency name-value argument. This argument can be an
+integer, a duration object, a calendarDuration object, or a datetime object.
+
+This example uses two backtesting strategies:
+
+Backtest Investment Strategies Using datetime and calendarDuration
+
+4-451

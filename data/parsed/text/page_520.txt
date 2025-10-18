@@ -1,0 +1,66 @@
+Goldfarb and Iyengar [1 on page 4-355] show that the robust maximization return problem with
+ellipsoidal uncertainty in the return is formulated as
+
+max
+x ∈X
+r0
+Tx −κ xTΣrx .
+
+Build Matrix of Estimated Errors in Expected Returns
+
+Assume that the covariance matrix of estimation errors Σr is a diagonal matrix whose entries are
+proportional to the assets variance.
+
+Load the data.
+
+% Read the table of daily adjusted close prices for 2006 DJI stocks.
+T = readtable('dowPortfolio.xlsx');
+% Convert the table to a timetable.
+pricesTT = table2timetable(T);
+% Remove the DJI stock from the table.
+pricesTT = pricesTT(:,2:end);
+
+Build the covariance matrix of estimation errors in the expected returns.
+
+% Compute the returns from the prices.
+returnsTT = tick2ret(pricesTT);
+% Compute the assets covariance matrix.
+Sigma = cov(returnsTT.Variables);
+% Compute the covariance matrix of estimation errors in the expected returns.
+SigmaR = diag(diag(Sigma));
+
+Solve Robust Problem
+
+Define a Portfolio object.
+
+% Define a traditional mean-variance portfolio.
+p = Portfolio;
+p = estimateAssetMoments(p,returnsTT,MissingData=true,GetAssetList=true);
+
+Add constraints to the Portfolio object. The portfolio is a fully invested, long-short portfolio with
+bounds [-0.2,0.2].
+
+% Specify a fully invested constraint.
+p = setBudget(p,1,1);
+% Specify the long-short bounds.
+p = setBounds(p,-0.2,0.2);
+
+Define the objective function with κ = 0 . 5 as the ellipsoidal uncertainty parameter.
+
+% Objective function handle
+kappa = 0.5;
+robustObjective = @(x) p.AssetMean'*x - kappa*sqrt(x'*SigmaR*x);
+
+Solve the robust maximum return problem using estimateCustomObjectivePortfolio.
+
+wRobustMaxRet = estimateCustomObjectivePortfolio(p,robustObjective,ObjectiveSense="maximize");
+
+Compare Mean-Variance and Robust Portfolio Strategies
+
+Compare the performance of the traditional maximum return portfolio against its robust counterpart
+using backtesting.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-352

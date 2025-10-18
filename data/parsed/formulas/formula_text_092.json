@@ -1,0 +1,12 @@
+{
+  "page": 81,
+  "original_text": "If pc(t − 1) = −4 and pc(t) = 2, the real part of log(pc(t)) − log(pc(t − 1)) is negative (line slopes\ndown), corresponding to a decrease in absolute price. The imaginary part is 0 – π = −π,\ncorresponding to a change of sign from negative to positive. If the direction of the price movement is\nreversed, so that pc(t − 1) = 2 and pc(t) = −4, the positive difference in the real part corresponds to\nan increase in absolute price, and the positive difference in the imaginary part corresponds to a\nchange of sign from positive to negative.",
+  "ocr_text": "Ifp.(t-1)=-4andp,(t)=2,therealpartoflog(p,(t))-log(p,(t-1))isnegative(lineslopes\ndown),correspondingtoadecreaseinabsoluteprice.Theimaginarypartis0-7=-n,\ncorrespondingtoachangeofsignfromnegativetopositive.Ifthedirectionofthepricemovementis\nreversed,sothatp,(t-1)=2andp,(t)=-4,thepositivedifferenceintherealpartcorrespondsto\nanincreaseinabsoluteprice,andthepositivedifferenceintheimaginarypartcorrespondstoa\nchangeofsignfrompositivetonegative.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 359.29,
+    "x1": 552.72,
+    "y1": 430.92
+  },
+  "confidence": "high"
+}

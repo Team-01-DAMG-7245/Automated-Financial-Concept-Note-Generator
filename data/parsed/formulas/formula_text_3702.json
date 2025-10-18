@@ -1,0 +1,12 @@
+{
+  "page": 2088,
+  "original_text": "NumDaysPeriod = cpnpersz('14-Sep-2000', '30-Jun-2001', 2, 0, 1)",
+  "ocr_text": "NumDaysPeriod=cpnpersz(14-Sep-2000,30-Jun-2001,2,0,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 626.32,
+    "x1": 431.36,
+    "y1": 636.79
+  },
+  "confidence": "high"
+}

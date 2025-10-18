@@ -1,0 +1,12 @@
+{
+  "page": 81,
+  "original_text": "If you convert the continuous returns rc(t) = log(pc(t)/pc(t − 1) ) to simple returns rs = (ps(t)/ps(t − 1)\n− 1) by the following computation, the result is the same simple returns series as before.",
+  "ocr_text": "Ifyouconvertthecontinuousreturnsr,(t)=log(p,(t)/p,(t-1))tosimplereturnsr,=(p,(t)/p,(t-1)\n-1)bythefollowingcomputation,theresultisthesamesimplereturnsseriesasbefore.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 441.29,
+    "x1": 549.57,
+    "y1": 464.92
+  },
+  "confidence": "high"
+}

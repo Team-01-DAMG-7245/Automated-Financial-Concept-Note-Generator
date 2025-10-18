@@ -1,0 +1,9 @@
+Page 230
+================================================================================
+
+lb = [ 0.5; 0.25 ];
+ub = [ 0.75; 0.5 ];
+p = Portfolio('LowerBound', lb, 'UpperBound', ub, 'BoundType', 'Simple');
+disp(p.NumAssets)
+disp(p.LowerBound)
+disp(p.UpperBound)

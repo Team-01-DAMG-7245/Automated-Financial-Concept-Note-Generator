@@ -1,0 +1,6 @@
+Page 1388
+================================================================================
+
+•
+Correlation — Access function for the Correlation input argument, callable as a function of
+time

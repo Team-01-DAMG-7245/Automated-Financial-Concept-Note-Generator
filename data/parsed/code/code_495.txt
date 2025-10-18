@@ -1,0 +1,12 @@
+Page 469
+================================================================================
+
+nLeaves= size(link, 1)+1;
+if nodeId > nLeaves
+    tempNodeIds = link(nodeId-nLeaves,1:2);
+    idxInGroup = [getLeafNodesInGroup(tempNodeIds(1), link), ...
+        getLeafNodesInGroup(tempNodeIds(2), link)];
+else
+    idxInGroup = nodeId;
+end
+end

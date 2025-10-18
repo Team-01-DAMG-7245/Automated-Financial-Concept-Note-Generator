@@ -1,0 +1,6 @@
+Page 1519
+================================================================================
+
+Instantaneous volatility of the BSS stochastic volatility process, specified as an array, a numeric
+scalar, or a deterministic function of time as a function handle accepting time t. Volatility is also
+know as "volatility of volatility" or "volatility of variance" and is usually a nonnegative value.

@@ -1,0 +1,6 @@
+Page 2203
+================================================================================
+
+(Optional) Convergence tolerance for the ECM algorithm, specified as a numeric. If Tolerance ≤ 0,
+perform maximum iterations specified by MaxIterations and do not evaluate the objective function
+at each step unless in display mode.

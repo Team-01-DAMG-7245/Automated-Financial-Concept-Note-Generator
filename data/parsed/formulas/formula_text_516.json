@@ -1,0 +1,12 @@
+{
+  "page": 353,
+  "original_text": "qret = estimatePortReturn(q, q.estimateFrontierLimits);\nqwgt = estimateFrontierByReturn(q, interp1([0, 1], qret, Level));\n[qrsk, qret] = estimatePortMoments(q, qwgt);",
+  "ocr_text": "qret=estimatePortReturn(q,q.estimateFrontierLimits);\nqwgt_=estimateFrontierByReturn(q,interp1([0,1],qret,Level));\n[arsk,qret]=estimatePortMoments(q,_qwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 442.17,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

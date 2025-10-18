@@ -1,0 +1,7 @@
+Page 955
+================================================================================
+
+cpf = CPF(end);
+spr = SPR(end);
+yPredRange = [yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];
+fprintf('    Baseline    %4.2f%%  %4.2f%%  %4.2f%%\n',yPredRange);

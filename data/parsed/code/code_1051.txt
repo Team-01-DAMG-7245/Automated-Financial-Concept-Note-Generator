@@ -1,0 +1,7 @@
+Page 1077
+================================================================================
+
+This case, which is based on 20 observations of five assets with 30% of data missing, shows that the
+log-likelihood goes linearly to infinity as the likelihood function goes to 0. In this case, the function
+converges but the covariance matrix is effectively singular with a smallest eigenvalue on the order of
+machine precision (eps).

@@ -1,0 +1,16 @@
+{
+  "page": 967,
+  "image_index": 1,
+  "filename": "page_967_img_01.png",
+  "filepath": "parsed\\figures\\images\\page_967_img_01.png",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 456.68,
+    "x1": 325.17,
+    "y1": 657.65
+  },
+  "width": 392,
+  "height": 335,
+  "type": "figure",
+  "caption": ""
+}

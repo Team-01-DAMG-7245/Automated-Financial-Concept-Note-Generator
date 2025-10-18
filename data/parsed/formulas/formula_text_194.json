@@ -1,0 +1,12 @@
+{
+  "page": 125,
+  "original_text": "DS = NaN(size(midprices));\nshiftS = midprices((dtS+1):end);\nDS(1:(end-dtS)) = sign(shiftS-midprices(1:(end-dtS)));",
+  "ocr_text": "DS=NaN(size(midprices));\nshiftS=midprices((dtS+1):end);\nDS(1:(end-dtS))=sign(shiftS-midprices(1:(end-dtS)));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.2,
+    "x1": 382.58,
+    "y1": 621.27
+  },
+  "confidence": "high"
+}

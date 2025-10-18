@@ -1,0 +1,6 @@
+Page 526
+================================================================================
+
+where Ω represents the feasible set that is defined by the desired constraints. The objective function
+is the sum of squares of the deviation of the risk contributions from the target. Notice that the
+objective function is nonconvex.

@@ -1,0 +1,38 @@
+Algorithms
+
+For a return series r(1),…,r(n), where (n) is the most recent observation, and w is the decay factor,
+the expected returns (ExpReturn) are calculated by
+
+E(r) = (r(n) + wr(n −1) + w2r(n −2) + ... + wn −1r(1))
+NumEf fObs
+
+where the number of effective observations NumEffObs is defined as
+
+NumEf fObs = 1 + w + w2 + ... + wn −1 = 1 −wn
+
+1 −w
+
+E(r) is the weighed average of r(n),…,r(1). The unnormalized weights are w, w2, …, w(n-1). The
+unnormalized weights do not sum up to 1, so NumEffObs rescales the unnormalized weights. After
+rescaling, the normalized weights (which sum up to 1) are used for averaging. When w = 1, then
+NumEffObs = n, which is the number of observations. When w < 1, NumEffObs is still interpreted as
+the sample size, but it is less than n due to the down-weight on the observations of the remote past.
+
+Note The ewstats function may give slightly different results from the RiskMetrics® approach for
+determining expected return and covariance from a time series. This is because ewstats calculates
+NumEffObs by directly summing the unnormalized weights, while RiskMetrics® uses an
+approximation. Additionally, RiskMetrics® assumes a mean of 0 in the return series when calculating
+the covariance, while ewstats uses the calculated ExpReturn output.
+
+Version History
+Introduced before R2006a
+
+See Also
+cov | mean | cov2corr
+
+Topics
+“Portfolio Optimization Functions” on page 3-3
+
+ewstats
+
+15-1029

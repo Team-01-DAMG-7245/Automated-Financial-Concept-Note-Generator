@@ -1,0 +1,58 @@
+Linear Drift Models
+
+In this section...
+
+“Overview” on page 14-22
+
+“Specify SDELD Model” on page 14-22
+
+Overview
+
+The sdeld class derives from the sdeddo class. The sdeld objects allow you to simulate correlated
+paths of NVars state variables expressed in linear drift-rate form:
+
+dXt = (A(t) + B(t)Xt)dt + D(t, Xt
+α(t))V(t)dWt
+
+sdeld objects provide a parametric alternative to the mean-reverting drift form, as discussed in
+“Specify SDE from a Mean-Reverting Drift Model” on page 14-27. They also provide an alternative
+interface to the sdeddo parent class, because you can create an object without first having to create
+its drift and diffusion-rate components.
+
+Specify SDELD Model
+
+Create the same model as in “Specify Base Stochastic Differential Equation (SDE) Model” on page 14-
+16.
+
+obj = sdeld(0, 0.1, 1, 0.3) % (A, B, Alpha, Sigma)
+
+obj = 
+   Class SDELD: SDE with Linear Drift
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+              A: 0
+              B: 0.1
+          Alpha: 1
+          Sigma: 0.3
+
+See Also
+sde | bm | gbm | merton | bates | drift | diffusion | sdeddo | sdeld | cev | cir | heston | hwv |
+sdemrd | rvm | roughbergomi | roughheston | ts2func | simulate | simByQuadExp |
+simByEuler | simBySolution | simBySolution | interpolate
+
+Related Examples
+
+•
+“Base SDE Models” on page 14-16
+
+14
+Stochastic Differential Equations
+
+14-22

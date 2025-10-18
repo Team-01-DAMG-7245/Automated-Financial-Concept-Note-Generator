@@ -1,0 +1,12 @@
+{
+  "page": 434,
+  "original_text": "% Get the efficient surface values.\nprsk = cell(N,1);\npret = cell(N,1);\npWoB = cell(N,1);\nfor i = 1:N\n    p.bInequality = -targetWoB(i);\n    pwgt = estimateFrontier(p,N);\n    [prsk{i},pret{i}] = estimatePortMoments(p,pwgt);\n    pWoB{i} = pwgt'*WoB;\nend",
+  "ocr_text": "Gettheefficientsurfacevalues.\n\nprsk=cell(N,1);\n\npret=cell(N,1);\n\npWoB=cell(N,1);\n\nfori=1:N\np.bInequality=-targetWoB(i);\npwgt=estimateFrontier(p,N);\n[prsk{i},pret{i}]=estimatePortMoments(p,pwgt);\npWoB{i}=pwgt*WoB;\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 216.43,
+    "x1": 371.74,
+    "y1": 324.09
+  },
+  "confidence": "high"
+}

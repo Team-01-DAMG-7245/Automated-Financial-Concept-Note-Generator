@@ -1,0 +1,12 @@
+{
+  "page": 1955,
+  "original_text": "subplot(2,1,2)\ncpIdx = find(expcpty == cpID);\nplot(simulationDates,squeeze(exposures(:,cpIdx,:)));\ntitle(sprintf('Exposure for Counterparty: %d',cpIdx));\nxtickformat('MMMyy');\nylabel('Exposure ($)')\nxlabel('Simulation Dates')",
+  "ocr_text": "subplot(2,1,2)\n\ncpIdx=find(expcpty==cpID);\nplot(simulationDates,squeeze(exposures(:,cpIdx,:)));\ntitle(sprintf(ExposureforCounterparty:d,cpIdx));\nxtickformat(MMMyy);\n\nylabel(Exposure(S))\n\nxlabel(SimulationDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 382.59,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

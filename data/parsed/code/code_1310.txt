@@ -1,0 +1,5 @@
+Page 1364
+================================================================================
+
+conditionNum = [cond(Sigma); cond(shrunkSigma)];
+condNumT = table(conditionNum,'RowNames',{'Sigma','SigmaHat'})

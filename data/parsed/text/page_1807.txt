@@ -1,0 +1,24 @@
+purpose of the Black-Scholes model is to calculate the theoretical price of options, allowing traders
+and investors to assess whether an option is fairly priced, underpriced, or overpriced in the market.
+
+Version History
+Introduced in R2006a
+
+References
+
+[1] Hull, John C. Options, Futures, and Other Derivatives. 5th edition, Prentice Hall, 2003.
+
+[2] Luenberger, David G. Investment Science. Oxford University Press, 1998.
+
+See Also
+blsimpv | blkprice | blsgamma | blsdelta | blslambda | blsrho | blstheta | blsvega
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+blsprice
+
+15-501

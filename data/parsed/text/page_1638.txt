@@ -1,0 +1,64 @@
+Name-Value Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Example: [Paths,Times,Z] = simByEuler(rvm,NPeriods,DeltaTime=dt)
+
+NTrials — Simulated trials (sample paths) of NPeriods observations each
+1 (single path of correlated state variables) (default) | positive scalar integer
+
+Simulated trials (sample paths) of NPeriods observations each, specified as a positive scalar integer.
+
+Data Types: double
+
+DeltaTime — Positive time increments between observations
+1 (default) | positive scalar numeric
+
+Positive time increments between observations, specified as a positive scalar numeric.
+
+DeltaTime represents the dt found in stochastic differential equations, and determines the times at
+which the simulated paths of the output state variables are reported.
+
+Data Types: double
+
+NSteps — Number of intermediate time steps within each time increment dt (specified as
+DeltaTime)
+1 (indicating no intermediate evaluation) (default) | positive scalar integer
+
+Number of intermediate time steps within each time increment dt (specified as DeltaTime),
+specified as a positive scalar integer.
+
+The simByEuler function partitions each time increment dt into NSteps subintervals of length dt/
+NSteps, and refines the simulation by evaluating the simulated state vector at NSteps − 1
+intermediate points. Although simByEuler does not report the output state vector at these
+intermediate points, the refinement improves accuracy by allowing the simulation to more closely
+approximate the underlying continuous-time process.
+
+Data Types: double
+
+Antithetic — Flag to indicate whether simByEuler uses antithetic sampling to generate
+Gaussian random variates
+False (no antithetic sampling) (default) | logical with values True or False
+
+Flag that indicates whether simByEuler uses “Antithetic Sampling” on page 15-335 to generate the
+Gaussian random variates that drive the Brownian motion vector (Wiener processes). This argument
+is specified as a scalar logical flag with a value of True or False.
+
+When you specify True, simByEuler performs sampling such that all primary and antithetic paths
+are simulated and stored in successive matching pairs:
+
+•
+Odd trials (1,3,5,...) correspond to the primary Gaussian paths.
+
+•
+Even trials (2,4,6,...) are the matching antithetic paths of each pair derived by negating the
+Gaussian draws of the corresponding primary (odd) trial.
+
+Note If you specify an input noise process (see Z), simByEuler ignores the value of Antithetic.
+
+15
+Functions
+
+15-332

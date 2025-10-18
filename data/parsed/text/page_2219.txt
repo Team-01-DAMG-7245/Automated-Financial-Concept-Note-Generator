@@ -1,0 +1,57 @@
+emaxdrawdown
+
+Compute expected maximum drawdown for Brownian motion
+
+Syntax
+
+ExpDrawdown = emaxdrawdown(Mu,Sigma,T)
+
+Description
+
+ExpDrawdown = emaxdrawdown(Mu,Sigma,T) computes the expected maximum drawdown for a
+Brownian motion for each time period in T using the following equation:
+
+dX t = μdt + σdW t .
+
+If the Brownian motion is geometric with the stochastic differential equation
+
+dS t = μ0S t dt + σ0S t dW t
+
+then use Ito's lemma with X(t) = log(S(t)) such that
+
+μ = μ0 −0.5σ02,
+
+σ = σ0
+
+converts it to the form used here.
+
+Examples
+
+Compute Expected Maximum Drawdown
+
+This example shows how to use log-return moments of a fund to compute the expected maximum
+drawdown (EMaxDD) and then compare it with the realized maximum drawdown (MaxDD).
+
+load FundMarketCash
+logReturns = log(TestData(2:end,:) ./ TestData(1:end - 1,:));
+Mu = mean(logReturns(:,1));
+Sigma = std(logReturns(:,1),1);
+T = size(logReturns,1);
+
+MaxDD = maxdrawdown(TestData(:,1),'geometric')
+
+MaxDD = 
+0.1813
+
+EMaxDD = emaxdrawdown(Mu, Sigma, T)
+
+EMaxDD = 
+0.1545
+
+The drawdown observed in this time period is above the expected maximum drawdown. There is no
+contradiction here. The expected maximum drawdown is not an upper bound on the maximum losses
+from a peak, but an estimate of their average, based on a geometric Brownian motion assumption.
+
+emaxdrawdown
+
+15-913

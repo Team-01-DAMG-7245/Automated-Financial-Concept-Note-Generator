@@ -1,0 +1,12 @@
+{
+  "page": 533,
+  "original_text": "Tprobabilities = table(1-probability(wSR),1-probability(wGBWM),...\n    RowNames={'P(W_T >= G)'},VariableNames={'SR','GBWM'})",
+  "ocr_text": "Tprobabilities=table(1-probability(wSR),1-probability(wGBWM),...\nRowNames={P(W_T==G)},VariableNames={SR,GBWM})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 473.65,
+    "x1": 447.62,
+    "y1": 494.92
+  },
+  "confidence": "high"
+}

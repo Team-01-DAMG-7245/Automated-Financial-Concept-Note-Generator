@@ -1,0 +1,5 @@
+Page 1601
+================================================================================
+
+The summary function uses the results of the backtest and returns a table of high-level results from
+the backtest.

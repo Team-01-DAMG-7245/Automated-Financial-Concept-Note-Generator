@@ -1,0 +1,12 @@
+{
+  "page": 573,
+  "original_text": "rskTable = table(rsk,rskEOA,rskTR,rskECP,...\n    'VariableNames',{'OA','EOA','TR','ECP'})",
+  "ocr_text": "rskTable=table(rsk,rskEOA,rskTR,rskECP,...\nVariableNames,{OA,EOA,TR,ECP})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 438.34,
+    "x1": 328.41,
+    "y1": 459.6
+  },
+  "confidence": "high"
+}

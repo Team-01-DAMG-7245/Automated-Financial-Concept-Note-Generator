@@ -1,0 +1,12 @@
+{
+  "page": 1508,
+  "original_text": "Merton = merton(Return,Sigma,JumpFreq,JumpMean,JumpVol) creates a default merton\nobject. Specify the required inputs as one of two types:",
+  "ocr_text": "Merton=merton(Return,Sigma,JumpFreq,JumpMean,JumpVol)createsadefaultmerton\nobject.Specifytherequiredinputsasoneoftwotypes:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 610.1,
+    "x1": 539.66,
+    "y1": 633.73
+  },
+  "confidence": "high"
+}

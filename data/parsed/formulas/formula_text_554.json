@@ -1,0 +1,12 @@
+{
+  "page": 372,
+  "original_text": "benchRetn = mean(benchReturn);\nbenchRisk =  std(benchReturn);\nassetRetn = mean(assetReturn);\nassetRisk =  std(assetReturn);",
+  "ocr_text": "benchRetn=mean(benchReturn);\nbenchRisk=_std(benchReturn);\nassetRetn=mean(assetReturn);\nassetRisk=std(assetReturn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 252.54,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

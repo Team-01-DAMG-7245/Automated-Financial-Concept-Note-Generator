@@ -1,0 +1,14 @@
+Page 2013
+================================================================================
+
+Settle = '03-Aug-1999';
+Maturity = ['15-Aug-2000';'15-Dec-2000'];
+CouponRate= [0.06; 0.05];
+Period = [3;2];
+Basis = [1;0];
+[CFlowAmounts, CFlowDates, TFactors] = cfamounts(CouponRate,... 
+Settle, Maturity, Period, Basis);
+cfplot(CFlowDates,CFlowAmounts)
+xlabel('Numeric Cash Flow Dates')
+ylabel('Bonds')
+title('Cash Flow Diagram')

@@ -1,0 +1,4 @@
+Page 1698
+================================================================================
+
+This function simulates any vector-valued SDE of the form

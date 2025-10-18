@@ -1,0 +1,12 @@
+{
+  "page": 538,
+  "original_text": "V Wi t\n= max\nπ\n∑jV W j t + 1 p W j t + 1\nWi t , π .",
+  "ocr_text": "V(W;(t))=max[SjV(Wi(E+1))p(Wj(t_+1)[Wi(t),m)].",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 703.89,
+    "x1": 328.25,
+    "y1": 720.88
+  },
+  "confidence": "high"
+}

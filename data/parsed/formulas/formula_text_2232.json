@@ -1,0 +1,12 @@
+{
+  "page": 1146,
+  "original_text": "if timeidx == nSteps+1\n         rew(timeidx-1,:) =  rew(timeidx-1,:) - Position_next.*simPaths(timeidx,:,:)*kappa;\n    else\n        Position_prev = Position_next;\n        Position_next = policy(simPaths(timeidx,:,:)/Strike,(T - simTimes(timeidx)).*ones(1,nTria\n    end\nend",
+  "ocr_text": "iftimeidx==nSteps+1\nrew(timeidx-1,:)=rew(timeidx-1,:)-Position_next.*simPaths(timeidx,:,:)*kappa;\nelse\nPosition_prev=Position_next;\nPosition_next=policy(simPaths(timeidx,:,:)/Strike,(T-simTimes(timeidx)).*ones(1,nTrii\nend\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.23,
+    "x1": 615.55,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

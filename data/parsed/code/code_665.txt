@@ -1,0 +1,32 @@
+Page 613
+================================================================================
+
+% Enforce ending inventory constraint
+if LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon
+    if EnvConstants.BuyTrade
+        TradingShares = max(EnvConstants.TotalTradingShares - ...
+            LoggedSignals.CurrentInventoryShares, 0);
+    else
+        TradingShares = LoggedSignals.CurrentInventoryShares;
+    end
+else
+    if EnvConstants.BuyTrade
+        if PriceDivergence > 0
+            AgentRemainingSharestoTrade = max(EnvConstants.TotalTradingShares - ...
+                LoggedSignals.CurrentInventoryShares,0);
+            TradingShares = round(AgentRemainingSharestoTrade./RemainingIntervals./2);
+            TradingShares = min(TradingShares,Action);
+        else
+            TradingShares = min(EnvConstants.TotalTradingShares - ...
+                LoggedSignals.CurrentInventoryShares, Action);
+        end
+    else
+        if PriceDivergence > 0
+            AgentRemainingSharestoTrade = max(LoggedSignals.CurrentInventoryShares, 0);
+            TradingShares = round(AgentRemainingSharestoTrade./RemainingIntervals./2);
+            TradingShares = min(TradingShares,Action);
+        else
+            TradingShares = min(LoggedSignals.CurrentInventoryShares, Action);
+        end
+    end
+end

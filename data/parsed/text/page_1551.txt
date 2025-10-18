@@ -1,0 +1,66 @@
+You can also set the TransactionCosts property to a function handle if you need to implement
+arbitrarily complex transaction cost structures. For more information on creating transaction cost
+functions, see backtestStrategy.
+
+Rebalance Frequency
+
+The “RebalanceFrequency” on page 15-0
+ property determines how often the backtesting engine
+rebalances and reallocates the portfolio of a strategy using the rebalance function. Set the
+RebalanceFrequency in terms of time steps in the backtest. For example, if the backtesting engine
+is testing a strategy with a set of daily price data, then set the rebalance function in days. Essentially,
+RebalanceFrequency represents the number of rows of price data to process between each call to
+the strategy rebalance function.
+
+% Both strategies rebalance every 4 weeks (20 days).
+rebalFreq = 20;
+
+Lookback Window
+
+Each time the backtest engine calls a strategy rebalance function, a rolling window of asset price
+data (and possibly signal data) is passed to the rebalance function. The rebalance function can then
+make trading and allocation decisions based on that data. The “LookbackWindow” on page 15-0
+property sets the size of these rolling windows in terms of time steps. The window determines the
+amount of data from the asset price timetable that are passed to the rebalance function.
+
+The LookbackWindow property can be set in two ways. For a fixed-sized rolling window of data (for
+example, "50 days of price history"), the LookbackWindow property is set to a single scalar value (N
+= 50). The software then calls the rebalance function with a price timetable containing exactly N rows
+of rolling price data.
+
+Alternatively, you can define the LookbackWindow property by using a 1-by-2 vector [min max] that
+specifies the minimum and maximum size of the rolling window. This way of defining the
+LookbackWindows allows for an expanding window of data. For example:
+
+•
+[10 Inf] — At least 10 rows of data must be available before the current rebalancing period.
+
+•
+[0 50] — At most 50 rows of data prior to the current rebalancing period are passed to the
+rebalancing function.
+
+•
+[0 Inf] — Use all available data up to the current rebalancing period; there is no minimum and
+no maximum. This the default value.
+
+•
+[20 20] — Exactly 20 rows of data prior to the current rebalancing period are passed to the
+rebalancing function; this is equivalent to setting LookbackWindow to the scalar value 20.
+
+The software does not call the rebalance function if the data is insufficient to create a valid rolling
+window, regardless of the value of the RebalanceFrequency property.
+
+If the strategy does not require any price or signal data history, then you can indicate that the
+rebalance function requires no data by setting the LookbackWindow property to 0.
+
+% The equal weight strategy does not require any price history data.
+ewLookback = 0;
+
+% The "chase returns" strategy bases its decisions on the trailing
+% 10-day asset returns. The lookback window is set to 11 since computing 10 days 
+% of returns requires the close price from day 0.
+chaseLookback = 11;
+
+backtestStrategy
+
+15-245

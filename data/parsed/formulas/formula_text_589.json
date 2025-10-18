@@ -1,0 +1,12 @@
+{
+  "page": 392,
+  "original_text": "tau = 1/size(assetRetns.Variables, 1);\nC = tau*Sigma;",
+  "ocr_text": "tau_=1/size(assetRetns.Variables,1);\nC=tau*Sigma;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 325.22,
+    "x1": 295.88,
+    "y1": 346.48
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2495,
+  "original_text": "Fisher = mvnrfish(Data,Design,Covariance)\nFisher = mvnrfish( ___ ,MatrixFormat,CovarFormat)",
+  "ocr_text": "Fisher=mvnrfish(Data,Design,Covariance)\nFisher=mvnrfish(_,MatrixFormat,CovarFormat)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.78,
+    "x1": 376.96,
+    "y1": 215.41
+  },
+  "confidence": "high"
+}

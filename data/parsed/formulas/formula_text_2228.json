@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "function perCosts = computeCosts(policy,nTrials,nSteps,SpotPrice,Strike,T,r,ExpVol,InitPos,dT,mu,\n% Helper function to compute costs for any hedging approach.",
+  "ocr_text": "functionperCosts=computeCosts(policy,nTrials,nSteps,SpotPrice,Strike,T,r,ExpVol,InitPos,dT,mu\nHelperfunctiontocomputecostsforanyhedgingapproach.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 615.55,
+    "y1": 632.69
+  },
+  "confidence": "high"
+}

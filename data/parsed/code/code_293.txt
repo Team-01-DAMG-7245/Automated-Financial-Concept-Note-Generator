@@ -1,0 +1,10 @@
+Page 290
+================================================================================
+
+This example shows how to calculate the risk and returns for a portfolio. Given any portfolio and, in
+particular, efficient portfolios, the functions estimatePortReturn, estimatePortRisk, and
+estimatePortMoments provide estimates for the return (or return proxy), risk (or the risk proxy),
+and, in the case of mean-variance portfolio optimization, the moments of expected portfolio returns.
+Each function has the same input syntax but with different combinations of outputs. Suppose that you
+have this following portfolio optimization problem that gave you a collection of portfolios along the
+efficient frontier in pwgt:

@@ -1,0 +1,6 @@
+Page 785
+================================================================================
+
+The proxy for portfolio risk is a function σ: X
+R on a portfolio set X ⊂Rn that characterizes the risks
+associated with portfolio choices.

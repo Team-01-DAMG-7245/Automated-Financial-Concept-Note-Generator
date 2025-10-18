@@ -1,0 +1,5 @@
+Page 1440
+================================================================================
+
+Drift rate component of continuous-time stochastic differential equations (SDEs), specified as a drift
+object or function accessible by (t, Xt.

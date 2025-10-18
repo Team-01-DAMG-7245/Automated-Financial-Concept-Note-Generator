@@ -1,0 +1,7 @@
+Page 1481
+================================================================================
+
+As a deterministic function of time, when Sigma is called with a real-valued scalar time t as its only
+input, Sigma must produce an NVars-by-NBrowns matrix. If you specify Sigma as a function of time
+and state, it must return an NVars-by-NBrowns matrix of volatility rates when invoked with two
+inputs:

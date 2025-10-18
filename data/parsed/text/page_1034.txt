@@ -1,0 +1,32 @@
+AAA    AA    A    BBB    BB    B    CCC    D
+           ___    __    _    ___    __    _    ___    _
+
+AAA     0     0     0     0     0     0     0     0
+    AA      0     1     1     0     0     0     0     0
+    A       0     0     0     0     0     0     0     0
+    BBB     0     0     0     0     0     0     0     0
+    BB      0     0     0     0     0     0     0     0
+    B       0     0     0     0     0     0     0     0
+    CCC     0     0     0     0     0     0     0     0
+    D       0     0     0     0     0     0     0     0
+
+hPlotTransitions(CompanyID,startDate,endDate,data,RatingLabels)
+
+To understand how transprob handles data when the first observed date is after the start date of
+the analysis, or whose last observed date occurs before the end date of the analysis, consider the
+following example. For company 'ABC' suppose that the analysis has a start date of 31-Dec-2014
+and end date of 31-Dec-2017. There are only two transitions reported for this company for that
+analysis time window. The first observation for 'ABC' happened on 17-Feb-2015. So the 31-
+Dec-2015 snapshot is the first time the company is observed. By 31-Dec-2016, the company
+remained in the original 'AA' rating. By 31-Dec-2017, a downgrade to 'A' is recorded. Consistent
+with this, the transition counts show one transition from 'AA' to 'AA' (from the end of 2015 to the
+end of 2016), and one transition from 'AA' to 'A' (from the end of 2016 to the end of 2017). The plot
+shows the last rating as a dotted red line to emphasize that the last rating in the data is extrapolated
+indefinitely into the future. There is no extrapolation into the past; the company's history is ignored
+until a company rating is known for an entire transition period (31-Dec-2015 through 31-Dec-2016
+in the case of 'ABC').
+
+8
+Credit Risk Analysis
+
+8-116

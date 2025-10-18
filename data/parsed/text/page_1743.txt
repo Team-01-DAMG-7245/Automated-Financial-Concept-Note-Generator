@@ -1,0 +1,57 @@
+0.5000
+    0.5000
+
+Add a Linear Equality Constraint for a PortfolioCVaR Object
+
+Use the addEquality method to create linear equality constraints. Add another linear equality
+constraint to ensure that the last three assets constitute 50% of a portfolio.
+
+p = PortfolioCVaR;
+A = [ 1 1 1 0 0 ];    % First equality constraint
+b = 0.5;
+p = setEquality(p, A, b);
+
+A = [ 0 0 1 1 1 ];    % Second equality constraint
+b = 0.5;
+p = addEquality(p, A, b);
+
+disp(p.NumAssets);
+
+5
+
+disp(p.AEquality);
+
+1     1     1     0     0
+     0     0     1     1     1
+
+disp(p.bEquality);
+
+0.5000
+    0.5000
+
+Add a Linear Equality Constraint for a PortfolioMAD Object
+
+Use the addEquality method to create linear equality constraints. Add another linear equality
+constraint to ensure that the last three assets constitute 50% of a portfolio.
+
+p = PortfolioMAD;
+A = [ 1 1 1 0 0 ];    % First equality constraint
+b = 0.5;
+p = setEquality(p, A, b);
+
+A = [ 0 0 1 1 1 ];    % Second equality constraint
+b = 0.5;
+p = addEquality(p, A, b);
+
+disp(p.NumAssets);
+
+5
+
+disp(p.AEquality);
+
+1     1     1     0     0
+     0     0     1     1     1
+
+addEquality
+
+15-437

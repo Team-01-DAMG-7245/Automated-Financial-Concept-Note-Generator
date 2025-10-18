@@ -1,0 +1,12 @@
+{
+  "page": 1066,
+  "original_text": "For observations with missing values partitioned into missing values Xk and observed values Yk = yk,\nyou can form conditional estimates for any subcollection of random variables within a given\nobservation. Thus, given estimates E[ Zk ] and cov(Zk) based on the parameter estimates, you can\ncreate conditional estimates",
+  "ocr_text": "ForobservationswithmissingvaluespartitionedintomissingvaluesX;andobservedvaluesY;=yy,\nyoucanformconditionalestimatesforanysubcollectionofrandomvariableswithinagiven\nobservation.Thus,givenestimatesE[Z,]andcov(Z,)basedontheparameterestimates,youcan\ncreateconditionalestimates",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 546.18,
+    "x1": 549.19,
+    "y1": 593.81
+  },
+  "confidence": "high"
+}

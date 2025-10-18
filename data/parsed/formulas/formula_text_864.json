@@ -1,0 +1,12 @@
+{
+  "page": 480,
+  "original_text": "signal = signalTT.backtestPred_LSTM(end,:);",
+  "ocr_text": "signal=signalTT.backtestPred_LSTM(end,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 460.23,
+    "x1": 322.97,
+    "y1": 470.69
+  },
+  "confidence": "high"
+}

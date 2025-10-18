@@ -1,0 +1,12 @@
+{
+  "page": 1402,
+  "original_text": "F(t, Xt) = A(t) + B(t)Xt",
+  "ocr_text": "F(t,X,)=A(t)+BO)X;",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 308.45,
+    "x1": 213.38,
+    "y1": 321.73
+  },
+  "confidence": "high"
+}

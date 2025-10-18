@@ -1,0 +1,12 @@
+{
+  "page": 1730,
+  "original_text": "Fraction = accrfrac(Settle,Maturity) returns the fraction of the coupon period before\nsettlement.",
+  "ocr_text": "Fraction=accrfrac(Settle,Maturity)returnsthefractionofthecouponperiodbefore\nsettlement.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.91,
+    "x1": 529.43,
+    "y1": 300.54
+  },
+  "confidence": "high"
+}

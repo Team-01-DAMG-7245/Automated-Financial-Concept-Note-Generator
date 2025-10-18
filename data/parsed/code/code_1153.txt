@@ -1,0 +1,7 @@
+Page 1202
+================================================================================
+
+In other words, over the next small time increment, the simulation evolves the state vector based only
+on information available at the current time and state. In this sense, you can think of the noise
+function as a beginning-of-period function, or as a function evaluated from the left. This is also true
+for any user-supplied drift or diffusion function.

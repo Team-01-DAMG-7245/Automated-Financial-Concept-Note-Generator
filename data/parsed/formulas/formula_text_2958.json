@@ -1,0 +1,12 @@
+{
+  "page": 1552,
+  "original_text": "chaseReturnsStrategy = \n  backtestStrategy with properties:",
+  "ocr_text": "chaseReturnsStrategy=\nbacktestStrategywithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.82,
+    "x1": 279.63,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

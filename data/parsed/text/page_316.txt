@@ -1,0 +1,31 @@
+Troubleshooting estimateCustomObjectivePortfolio
+
+When using estimateCustomObjectivePortfolio, nonconvex functions are not supported for
+problems with cardinality constraints or conditional bounds. Specifically, the following error displays
+when using estimateCustomObjectivePortfolio with a Portfolio object that includes
+'Conditional' BoundType (semicontinuous) constraints using setBounds or MinNumAssets and
+MaxNumAssets (cardinality) constraints using setMinMaxNumAssets.
+
+Error using solveMICustomObjProb
+Objective function must be convex in problems with cardinality constraints and/or conditional bounds.
+
+Error in Portfolio/estimateCustomObjectivePortfolio (line 88)
+    [pwgt,exitflag] = solveMICustomObjProb(obj,prob,fun,flags);
+
+Note This error applies only to quadratic functions. This error is not detected in nonlinear functions.
+Therefore, if you are using a nonlinear function, you must validate your input.
+
+For more information, see “Role of Convexity in Portfolio Problems” on page 4-157.
+
+Troubleshooting for Setting 'Conditional' BoundType, MinNumAssets,
+and MaxNumAssets Constraints
+
+When configuring a Portfolio, PortfolioCVaR, or PortfolioMAD object to include
+'Conditional' BoundType (semicontinuous) constraints using setBounds or MinNumAssets and
+MaxNumAssets (cardinality) constraints using setMinMaxNumAssets, the values of the inputs that
+you supply can result in warning messages.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-148

@@ -1,0 +1,36 @@
+It can be shown that there is no strong statistical evidence to conclude that the linear regression
+assumptions are violated. It is apparent that default rates are not normally distributed. The model,
+however, does not make that assumption. The only normality assumption in the model is that, given
+the predictors values, the error between the predicted and the observed default rates is normally
+distributed. By looking at the in-sample fit, this does not seem unreasonable. The magnitude of the
+errors certainly seems independent of whether the default rates are high or low. Year 2001 has a high
+default rate and a high error, but years 1991 or 2002 also have high rates and yet very small errors.
+Likewise, low default rate years like 1996 and 1997 show considerable errors, but years 2004 or 2005
+have similarly low rates and tiny errors.
+
+A thorough statistical analysis of the model is out of scope here, but there are several detailed
+examples in Statistics and Machine Learning Toolbox™ and Econometrics Toolbox™.
+
+Backtesting
+
+To evaluate how this model performs out-of-sample, you can set up a backtesting exercise. Starting at
+the end of 1995, fit the linear regression model with the information available up to that date, and
+compare the model prediction to the actual default rate observed the following year. Repeat the same
+procedure for all subsequent years until the end of the sample.
+
+For backtesting, relative performance of a model, when compared to alternatives, is easier to assess
+than the performance of a model in isolation. This example includes two alternatives to determine
+next year's default rate, both likely candidates in practice. One is the TTC default rate, estimated with
+data from the beginning of the sample to the current year, a very stable default rate estimate. The
+other is the PIT rate, estimated using data from the most recent year only, much more sensitive to
+recent events.
+
+XBT = [AGE,CPF,SPR];
+yBT = DefRate;
+
+iYear0 = find(Years==1984); % Index of first year in sample, 1984
+
+8
+Credit Risk Analysis
+
+8-30

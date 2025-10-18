@@ -1,0 +1,12 @@
+{
+  "page": 473,
+  "original_text": "for j = 1:numSamples\n    network_features{j} = (returnData(j:j+historySize-1,:).Variables)';\n    network_responses(j,:) = ...\n        (returnData(j+historySize:j+historySize+futureSize-1,outputVarName).Variables)';\nend",
+  "ocr_text": "forj=1:numSamples\nnetwork_features{j}=(returnData(j:j+historySize-1,:).Variables);\nnetwork_responses(j,:)=...\n(returnData(j+historySize:j+historySize+futureSize-1,outputVarName).Variables);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 171.33,
+    "x1": 566.79,
+    "y1": 224.99
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 842,
+  "original_text": "p = PortfolioMAD;\nG = [ true true true false false ];    % group matrix for first group constraint\np = setGroups(p, G, [], 0.3);\nG = [ true false true false true ];    % group matrix for second group constraint\np = addGroups(p, G, 0.2);\ndisp(p.NumAssets)\ndisp(p.GroupMatrix)\ndisp(p.LowerGroup)\ndisp(p.UpperGroup)",
+  "ocr_text": "p=PortfolioMAD;\n\nG=[truetruetruefalsefalse]; groupmatrixforfirstgroupconstraint\np=setGroups(p,G,[],0.3);\n\nG=[truefalsetruefalsetrue]; groupmatrixforsecondgroupconstraint\np=addGroups(p,G,0.2);\n\ndisp(p.NumAssets)\n\ndisp(p.GroupMatrix)\n\ndisp(p.LowerGroup)\n\ndisp(p.UpperGroup)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 234.82,
+    "x1": 402.09,
+    "y1": 303.7
+  },
+  "confidence": "high"
+}

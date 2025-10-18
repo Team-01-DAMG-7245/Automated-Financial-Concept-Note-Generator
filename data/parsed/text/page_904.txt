@@ -1,0 +1,35 @@
+0.0038    0.0030    0.0017
+Sigma =
+    0.0229    0.0389    0.0009
+
+Note Functions for investment performance metrics use total return price and total returns. To
+convert between total return price and total returns, use ret2tick and tick2ret.
+
+See Also
+sharpe | inforatio | portalpha | lpm | elpm | maxdrawdown | emaxdrawdown | ret2tick |
+tick2ret
+
+Related Examples
+
+•
+“Using the Sharpe Ratio” on page 7-5
+
+•
+“Using the Information Ratio” on page 7-7
+
+•
+“Using Tracking Error” on page 7-8
+
+•
+“Using Risk-Adjusted Return” on page 7-9
+
+•
+“Using Sample and Expected Lower Partial Moments” on page 7-11
+
+•
+“Using Maximum and Expected Maximum Drawdown” on page 7-14
+
+7
+Investment Performance Metrics
+
+7-4

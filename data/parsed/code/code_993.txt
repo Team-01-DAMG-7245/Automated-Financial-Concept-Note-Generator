@@ -1,0 +1,8 @@
+Page 1009
+================================================================================
+
+To compute scores for a creditscorecard object with constraints for equality, inequality, or bounds
+on the coefficients of the logistic regression model, use fitConstrainedModel. Unlike fitmodel,
+fitConstrainedModel solves for both the unconstrained and constrained problem. The current
+solver used to minimize an objective function for fitConstrainedModel is fmincon, from the
+Optimization Toolbox™.

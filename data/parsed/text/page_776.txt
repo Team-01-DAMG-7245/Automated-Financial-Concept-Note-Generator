@@ -1,0 +1,38 @@
+As the maturity increases, the variance of the returns increases and the distribution gets positively
+skewed.
+
+Solve CVaR Bond Portfolio Optimization
+
+Now use the simulated returns (simMonthlyReturns) to solve conditional value-at-risk (CVaR)
+optimization problems of fixed-income portfolios.
+
+To solve the CVaR problem, use the PortfolioCVaR object. The optimal portfolio must invest in at
+least 10 types of bonds and no more than 30. At least 5% of the portfolio value must be invested in
+any chosen bond. This example also requires that you invest the entire capital in the portfolio.
+
+% 95% CVaR Portfolio
+p = PortfolioCVaR(Scenarios=simMonthlyReturns,ProbabilityLevel=0.95);
+
+% Semi-continuous bounds
+p = setBounds(p,0.05,0.5,BoundType="conditional");
+
+% Cardinality constraint
+p = setMinMaxNumAssets(p,10,30);
+
+% Fully-invested portfolio
+p = setBudget(p,1,1);
+
+Use setInequality to add a constraint to the portfolio duration to match a given benchmark
+portfolio duration.
+
+% Duration constraint
+targetDuration = 10;
+durationTol = 1;
+bondsDuration = bnddurp(bondsPrices,couponRate,settle,bondsMaturity);
+p = setInequality(p,[bondsDuration';-bondsDuration'], ...
+    [targetDuration+durationTol;durationTol-targetDuration]);
+
+5
+CVaR Portfolio Optimization Tools
+
+5-150

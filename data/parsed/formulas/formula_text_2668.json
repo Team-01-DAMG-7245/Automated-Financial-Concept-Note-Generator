@@ -1,0 +1,12 @@
+{
+  "page": 1353,
+  "original_text": "% Create a Portfolio object with true mean and traditional covariance estimate\npTraditional = Portfolio(AssetMean=mean_return,AssetCovar=Sigma);\npTraditional = setDefaultConstraints(pTraditional);",
+  "ocr_text": "CreateaPortfolioobjectwithtruemeanandtraditionalcovarianceestimate\npTraditional=Portfolio(AssetMean=mean_return,AssetCovar=Sigma);\npTraditional=setDefaultConstraints(pTraditional);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 407.5,
+    "x1": 512.6,
+    "y1": 439.57
+  },
+  "confidence": "high"
+}

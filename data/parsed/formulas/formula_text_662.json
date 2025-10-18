@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "% Define the robust constraint\npRobust.Constraints.robust = xRobust'*SIGMAx*xRobust - zRobust*zRobust <=0;\npRobust.Objective = -rPortfolio'*xRobust + k*zRobust + lambda*xRobust'*Q*xRobust;\nx0.x = zeros(nAssets,1);\nx0.z = 0;\nopt = optimoptions('fmincon','Display','off');\n[solRobust,~,~] = solve(pRobust,x0,'Options',opt);\nnew_weights = solRobust.x;",
+  "ocr_text": "Definetherobustconstraint\npRobust.Constraints.robust=xRobust*SIGMAx*xRobust-zRobust*zRobust=0;\npRobust.Objective=-rPortfolio*xRobust+k*zRobust+lLambda*xRobust*Q*xRobust;\nx.x=zeros(nAssets,1);\n\nx0.z=0;\n\nopt=optimoptions(fmincon,Display,off);\n[solRobust,,]=solve(pRobust,x0,Options,opt);\n\nnew_weights=solRobust.x;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 528.86,
+    "y1": 243.89
+  },
+  "confidence": "high"
+}

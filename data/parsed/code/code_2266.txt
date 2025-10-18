@@ -1,0 +1,5 @@
+Page 2079
+================================================================================
+
+Maturity = [datetime(2001,4,30) ; datetime(2001,5,31) ; datetime(2001,6,30)];
+NumDaysNext = cpndaysn(datetime(2000,9,14), Maturity)

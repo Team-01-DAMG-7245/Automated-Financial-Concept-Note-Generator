@@ -1,0 +1,12 @@
+{
+  "page": 417,
+  "original_text": "% Buys\nidx = 0 < deltaPositions & deltaPositions < 1e4;\nbuy(idx) = 0.005 * deltaPositions(idx); % 50 basis points\nidx = 1e4 <= deltaPositions;\nbuy(idx) = 0.0035 * deltaPositions(idx); % 35 basis ponits\nbuy = sum(buy);",
+  "ocr_text": "SBuys\n\nidx=0xdeltaPositionsdeltaPositions1e4;\nbuy(idx)=0.005*deltaPositions(idx);50basispoints\nidx=1e4=deltaPositions;\nbuy(idx)=0.0035*deltaPositions(idx);*35basisponits\nbuy=sum(buy);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 404.26,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1857,
+  "original_text": "KeyRateDuration = bndkrdur( ___ ,Name,Value) adds optional name-value pair arguments.",
+  "ocr_text": "KeyRateDuration=bndkrdur(___,Name,Value)addsoptionalname-valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 289.38,
+    "x1": 542.52,
+    "y1": 301.01
+  },
+  "confidence": "high"
+}

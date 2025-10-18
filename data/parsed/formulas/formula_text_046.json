@@ -1,0 +1,12 @@
+{
+  "page": 52,
+  "original_text": "MLKDates = nweekdate(3,2,2011:2014,1);\nMLKDays = datestr(MLKDates)",
+  "ocr_text": "MLKDates=nweekdate(3,2,2011:2014,1);\nMLKDays=datestr(MLKDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 512.53,
+    "x1": 295.88,
+    "y1": 533.79
+  },
+  "confidence": "high"
+}

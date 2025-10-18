@@ -1,0 +1,12 @@
+{
+  "page": 949,
+  "original_text": "% Method 3: Through-the-cycle (TTC) default rate\n   tmAll = transprobbytotals(totalsAll(iYear0:T));\n   PredDefRate(k,3) = tmAll(1,2);",
+  "ocr_text": "Method3:Through-the-cycle(TTC)defaultrate\ntmALL=transprobbytotals(totalsAll(iYearQ:T));\nPredDefRate(k,3)=tmAll(1,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 438.63,
+    "x1": 366.32,
+    "y1": 470.69
+  },
+  "confidence": "high"
+}

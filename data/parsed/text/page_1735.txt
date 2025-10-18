@@ -1,0 +1,73 @@
+Settlement date of the security, specified as a scalar or a NINST-by-1 vector using a datetime array,
+string array, or date character vectors. The Settle date must be before the Maturity date.
+
+To support existing code, acrubond also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+FirstCouponDate — First coupon date of security
+datetime array | string array | date character vector
+
+First coupon date of the security, specified as a scalar or a NINST-by-1 vector using a datetime array,
+string array, or date character vectors.
+
+To support existing code, acrubond also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Face — Redemption value of security
+numeric
+
+Redemption value (par value) of the security, specified as a scalar or a NINST-by-1 vector.
+
+Data Types: double
+
+CouponRate — Coupon rate of security
+decimal fraction
+
+Coupon rate of the security, specified as a scalar or a NINST-by-1 vector of decimal fraction values.
+
+Data Types: double
+
+Period — Number of coupon payments per year
+2 (default) | numeric with values 0, 1, 2, 3, 4, 6 or 12
+
+(Optional) Number of coupon payments per year for the security, specified as scalar or a NINST-by-1
+vector using the values: 0, 1, 2, 3, 4, 6, or 12.
+
+Data Types: double
+
+Basis — Day-count basis
+0 (actual/actual) (default) | integers of the set [0...13] | vector of integers of the set [0...13]
+
+(Optional) Day-count basis for the security, specified as a scalar or a NINST-by-1 vector. Values are:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+acrubond
+
+15-429

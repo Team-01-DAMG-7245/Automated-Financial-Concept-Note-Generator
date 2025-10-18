@@ -1,0 +1,8 @@
+Page 1654
+================================================================================
+
+Use simBySolution to simulate NTrials sample paths of NVARS correlated state variables driven
+by NBrowns Brownian motion sources of risk and NJumps compound Poisson processes representing
+the arrivals of important events over NPeriods consecutive observation periods. The function
+approximates continuous-time Merton jump diffusion process by an approximation of the closed-form
+solution.

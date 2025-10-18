@@ -1,0 +1,12 @@
+{
+  "page": 984,
+  "original_text": "load CreditCardData\nsc = creditscorecard(data,'IDVar','CustID','GoodLabel',0);\nAlgoOptions = {'NumBins',4};\nsc = autobinning(sc,'CustAge','Algorithm','EqualFrequency',...\n'AlgorithmOptions',AlgoOptions);\nbininfo(sc,'CustAge','Totals','off')\nplotbins(sc,'CustAge')",
+  "ocr_text": "load_CreditCardData\nsc_=creditscorecard(data,IDVar,CustID,GoodLabel,);\nAlgoOptions={NumBins,4};\nsc_=autobinning(sc,CustAge,Algorithm,EqualFrequency,...\nAlgorithmOptions,AlgoOptions);\nbininfo(sc,CustAge,Totals,off)\n\nplotbins(sc,CustAge)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.63,
+    "x1": 328.9,
+    "y1": 201.15
+  },
+  "confidence": "high"
+}

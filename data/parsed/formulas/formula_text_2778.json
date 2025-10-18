@@ -1,0 +1,12 @@
+{
+  "page": 1413,
+  "original_text": "% Calculate payoffs for call and put options\ncallPayoff = max(ST - K, 0)",
+  "ocr_text": "Calculatepayoffsforcallandputoptions\ncallPayoff=max(ST-K,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 216.63,
+    "x1": 328.39,
+    "y1": 237.89
+  },
+  "confidence": "high"
+}

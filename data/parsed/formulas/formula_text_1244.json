@@ -1,0 +1,12 @@
+{
+  "page": 620,
+  "original_text": "t0 = datetime(2006,1,1);\ntEnd = datetime(2006,2,28);\nwarmupPeriod = t0:tEnd;",
+  "ocr_text": "tO=datetime(2006,1,1);\ntEnd=datetime(2006,2,28);\nwarmupPeriod=t0:tEnd;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 273.28,
+    "x1": 236.28,
+    "y1": 305.35
+  },
+  "confidence": "high"
+}

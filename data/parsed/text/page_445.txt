@@ -1,0 +1,64 @@
+min xTΣx −λMDP
+high ∑
+i ∈H
+σixi −λMDP
+low ∑
+i ∈L
+σixi
+
+s . t .
+∑
+i = 1
+
+n
+xi = 1, μTx ≥ret0, x ≥0
+
+In this case, to achieve a portfolio with a high average ESG score, the penalty terms must satisfy that
+
+0 ≤λMDP
+low ≤λMDP
+high.
+
+% MDP penalty parameters
+% Penalty parameter for assets with 'low' ESG score
+
+lambdaLowMDP =
+;
+% Penalty parameter for assets with 'high' ESG score
+
+lambdaHighMDP =
+;
+% Lambda for MDP 'tilted' penalty
+lambdaTiltMDP = (ESG.ESGlabel=='low').*lambdaLowMDP + (ESG.ESGlabel=='high').*lambdaHighMDP;
+
+% Variance + MDP index
+tilt_MDP = @(x) x'*p.AssetCovar*x - lambdaTiltMDP'*(sigma.*x);
+% Solution that minimizes variance + HH term
+wTiltMDP = estimateCustomObjectivePortfolio(p,tilt_MDP,TargetReturn=ret0);
+
+Compare ESG Scores
+
+Compare the ESG scores using tilting and a target ESG constraint. For the comparison to be more
+meaningful, compute the minimum variance portfolio without ESG constraints or penalty terms, and
+use the ESG score of the minimum variance portfolio as benchmark.
+
+% Compute the minimum variance portfolio without ESG constraints.
+p = setInequality(p,[],[]);
+wBmk = estimateFrontierByReturn(p,ret0);
+
+% Compute the ESG scores for the different strategies.
+Benchmark = ESGnumeric'*wBmk;
+ConstrainedHH = ESGnumeric'*wHHMix;
+ConstrainedMD = ESGnumeric'*wMDPMix;
+TiltedHH = ESGnumeric'*wTiltHH;
+TiltedMDP = ESGnumeric'*wTiltMDP;
+
+% Create table
+strategiesESG = table(Benchmark,ConstrainedHH,ConstrainedMD,TiltedHH,TiltedMDP);
+figure;
+bar(categorical(strategiesESG.Properties.VariableNames),strategiesESG.Variables)
+title('ESG Scores')
+
+Diversify ESG Portfolios
+
+4-277

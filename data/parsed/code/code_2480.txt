@@ -1,0 +1,5 @@
+Page 2321
+================================================================================
+
+Given a portfolio pwgt, use the estimatePortRisk function to show the mean-absolute deviation of
+portfolio returns for each portfolio.

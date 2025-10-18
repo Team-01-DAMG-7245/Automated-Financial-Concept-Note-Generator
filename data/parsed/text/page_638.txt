@@ -1,0 +1,64 @@
+Each row of G identifies which assets belong to a group associated with that row. Each row contains
+either 0s or 1s with 1 indicating that an asset is part of the group or 0 indicating that the asset is not
+part of the group.
+
+PortfolioCVaR object properties to specify group constraints are:
+
+•
+GroupMatrix for G
+
+•
+LowerGroup for lG
+•
+UpperGroup for uG
+•
+NumAssets for n
+
+The default is to ignore these constraints.
+
+Group Ratio Constraints
+
+Group ratio constraints are specialized linear constraints that enforce relationships among groups of
+assets. The constraints take the form
+
+lRi(GBx)i ≤(GAx)i ≤uRi(GBx)i
+
+for i = 1,..., nR where:
+
+x is the portfolio (n vector).
+
+lR is the vector of lower-bound group ratio constraints (nR vector).
+
+uR is the vector matrix of upper-bound group ratio constraints (nR vector).
+
+GA is the matrix of base group membership indexes (nR-by-n matrix).
+
+GB is the matrix of comparison group membership indexes (nR-by-n matrix).
+
+n is the number of assets in the universe and nR is the number of constraints.
+
+Each row of GA and GB identifies which assets belong to a base and comparison group associated with
+that row.
+
+Each row contains either 0s or 1s with 1 indicating that an asset is part of the group or 0 indicating
+that the asset is not part of the group.
+
+PortfolioCVaR object properties to specify group ratio constraints are:
+
+•
+GroupA for GA
+•
+GroupB for GB
+•
+LowerRatio for lR
+•
+UpperRatio for uR
+•
+NumAssets for n
+
+The default is to ignore these constraints.
+
+5
+CVaR Portfolio Optimization Tools
+
+5-12

@@ -1,0 +1,43 @@
+Using fitmodel to Compare the Results and Calibrate the Model
+
+fitmodel fits a logistic regression model to the Weight-of-Evidence (WOE) data and there are no
+constraints. You can compare the results from the "Unconstrained Model Using fitConstrainedModel"
+section with those of fitmodel to verify that the model is well calibrated.
+
+Now, solve the unconstrained problem by using fitmodel. Note that fitmodel and
+fitConstrainedModel use different solvers. While fitConstrainedModel uses fmincon,
+fitmodel uses stepwiseglm by default. To include all predictors from the start, set the
+'VariableSelection' name-value pair argument of fitmodel to 'fullmodel'.
+
+[sc2,mdl2] = fitmodel(sc,'VariableSelection','fullmodel','Display','off');
+coeff2 = mdl2.Coefficients.Estimate;
+disp(mdl2.Coefficients);
+
+Estimate        SE         tStat        pValue  
+                   _________    ________    _________    __________
+
+(Intercept)      0.70246    0.064039       10.969    5.3719e-28
+    CustAge           0.6057     0.24934       2.4292      0.015131
+    TmAtAddress       1.0381     0.94042       1.1039       0.26963
+    ResStatus         1.3794      0.6526       2.1137      0.034538
+    EmpStatus        0.89648     0.29339       3.0556     0.0022458
+    CustIncome       0.70179     0.21866       3.2095     0.0013295
+    TmWBank           1.1132     0.23346       4.7683    1.8579e-06
+    OtherCC           1.0598     0.53005       1.9994      0.045568
+    AMBalance         1.0572     0.36601       2.8884     0.0038718
+    UtilRate       -0.047597     0.61133    -0.077858       0.93794
+
+figure
+plot(coeff1,'*')
+hold on
+plot(coeff2,'s')
+xticklabels(mdl1.Coefficients.Properties.RowNames)
+ylabel('Model Coefficients')
+title('Unconstrained Model Coefficients')
+legend({'Calculated by fitConstrainedModel with defaults','Calculated by fimodel'},'Location','be
+grid on
+
+8
+Credit Risk Analysis
+
+8-92

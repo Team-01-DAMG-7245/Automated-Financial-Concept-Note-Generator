@@ -1,0 +1,12 @@
+{
+  "page": 1986,
+  "original_text": "TF =\nTime factor for a given cash flow. The time factor is computed using the\ncompounding frequency and the discount basis. If these values are not specified,\nthen the defaults are as follows: CompoundingFrequency default is 2 for Basis\nvalues 0 to 7 and 13 and 1 for Basis values 8 to 12.",
+  "ocr_text": "TF= Timefactorforagivencashflow.Thetimefactoriscomputedusingthe\ncompoundingfrequencyandthediscountbasis.Ifthesevaluesarenotspecified,\nthenthedefaultsareasfollows:CompoundingFrequencydefaultis2forBasis\nvalues0to7and13and1forBasisvalues8to12.",
+  "bbox": {
+    "x0": 92.25,
+    "y0": 95.21,
+    "x1": 553.86,
+    "y1": 142.84
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,56 @@
+passetmean = 4×1
+
+0.0042
+    0.0082
+    0.0094
+    0.1498
+
+passetcovar = 4×4
+
+0.0052    0.0003    0.0001   -0.0000
+    0.0003    0.0024    0.0017    0.0010
+    0.0001    0.0017    0.0048    0.0028
+   -0.0000    0.0010    0.0028    0.0100
+
+The moments that you obtain from this simulation will likely differ from the moments listed here
+because the scenarios are random samples from the estimated multivariate normal probability
+distribution of the input returns X.
+
+The default behavior of simulateNormalScenariosByData is to work with asset returns. If,
+instead, you have asset prices as in the variable Y, simulateNormalScenariosByData accepts a
+name-value pair argument name 'DataFormat' with a corresponding value set to 'prices' to
+indicate that the input to the function is in the form of asset prices and not returns (the default value
+for the 'DataFormat' argument is 'returns'). The following code simulates scenarios with the
+asset price data in Y for the PortfolioCVaR object q:
+
+p = PortfolioCVaR;
+p = simulateNormalScenariosByData(p, Y, 20000, 'dataformat', 'prices');
+
+[passetmean, passetcovar] = estimateScenarioMoments(p)
+
+passetmean = 4×1
+
+0.0046
+    0.0086
+    0.0097
+    0.1501
+
+passetcovar = 4×4
+
+0.0054    0.0003    0.0002    0.0000
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0029
+    0.0000    0.0010    0.0029    0.0103
+
+Simulating Normal Scenarios with Missing Data
+
+This example shows how to simulate normal scenarios when you have missing data indicated by NaN
+values in your return or price data. Although “Multivariate Normal Regression” on page 9-2 goes
+into detail about regression with missing data, the simulateNormalScenariosByData function has
+a name-value pair argument name 'MissingData' that indicates with a Boolean value whether to
+use the missing data capabilities of Financial Toolbox™. The default value for 'MissingData' is
+
+5
+CVaR Portfolio Optimization Tools
+
+5-40

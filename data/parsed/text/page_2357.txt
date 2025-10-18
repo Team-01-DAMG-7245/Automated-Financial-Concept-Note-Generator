@@ -1,0 +1,61 @@
+Calculate adjustedsimple margin.
+
+[Margin, AdjPrice] = floatmargin(Price, Spread, Settle, Maturity, ...
+'SpreadType', 'adjustedsimple', 'RateInfo', [StubRate, SpotRate], ...
+'LatestFloatingRate', LatestFloatingRate, 'Reset', Reset, 'Basis', Basis)
+
+Margin = 
+53.2830
+
+AdjPrice = 
+99.9673
+
+Calculate adjustedtotal margin.
+
+[Margin, AdjPrice] = floatmargin(Price, Spread, Settle, Maturity, ...
+'SpreadType', 'adjustedtotal', 'RateInfo', [StubRate, SpotRate], ...
+'LatestFloatingRate', LatestFloatingRate, 'Reset', Reset, 'Basis', Basis)
+
+Margin = 
+53.4463
+
+AdjPrice = 
+99.9673
+
+Input Arguments
+
+Price — Bond prices where spreads are to be computed
+matrix
+
+Bond prices where spreads are to be computed, specified as a NINST-by-1 matrix.
+
+Data Types: double
+
+Spread — Number of basis points over the reference rate
+numeric
+
+Number of basis points over the reference rate, specified as a NINST-by-1 matrix.
+
+Data Types: double
+
+Settle — Settlement date of the floating-rate bonds
+datetime array | string array | date character vector
+
+Settlement date of the floating-rate bonds, specified as a scalar or a NINST-by-1 vector using a
+datetime array, string array, or date character vectors. If supplied as a NINST-by-1 vector of dates, all
+settlement dates must be the same (only a single settlement date is supported)
+
+To support existing code, floatmargin also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of the floating-rate bond
+datetime array | string array | date character vector
+
+Maturity date of the floating-rate bond, specified as a NINST-by-1 vector using a datetime array,
+string array, or date character vectors.
+
+floatmargin
+
+15-1051

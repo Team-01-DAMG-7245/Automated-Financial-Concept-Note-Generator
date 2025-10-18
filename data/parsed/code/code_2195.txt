@@ -1,0 +1,9 @@
+Page 1899
+================================================================================
+
+load SimulatedStock.mat
+[middle,upper,lower]= bollinger(TMW);
+CloseBolling = [middle.Close, upper.Close,... 
+lower.Close];
+plot(middle.Time,CloseBolling)
+title('Bollinger Bands for TMW Closing Prices')

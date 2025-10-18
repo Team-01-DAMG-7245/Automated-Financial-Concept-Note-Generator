@@ -1,0 +1,53 @@
+cftimes
+
+Time factors corresponding to bond cash flow dates
+
+Syntax
+
+TFactors = cftimes(Settle,Maturity)
+TFactors = cftimes( ___ ,Name,Value)
+
+Description
+
+TFactors = cftimes(Settle,Maturity) determines the time factors corresponding to the cash
+flows of a bond or set of bonds.
+
+cftimes computes the time factor of a cash flow, which is the difference between the settlement date
+and the cash flow date, in units of semiannual coupon periods. In computing time factors, use SIA
+actual/actual day count conventions for all time factor calculations.
+
+TFactors = cftimes( ___ ,Name,Value) specifies options using one or more name-value pair
+arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Compute the Time Factor of a Cash Flow
+
+This example shows how to calculate a cash flow time factor.
+
+Settle = datetime(1997,3,15);
+Maturity = datetime(1999,9,1);
+Period = 2;
+TFactors = cftimes(Settle, Maturity, Period)
+
+TFactors = 1×5
+
+0.9239    1.9239    2.9239    3.9239    4.9239
+
+Input Arguments
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as an NINST-by-1 vector using a datetime array, string array, or date
+character vectors. Settle must be earlier than Maturity.
+
+To support existing code, cftimes also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+15
+Functions
+
+15-724

@@ -1,0 +1,12 @@
+{
+  "page": 1772,
+  "original_text": "NumPeriods = annuterm(0.09/12, 200, 1500, 5000, 0)",
+  "ocr_text": "NumPeriods=annuterm(0.09/12,200,1500,5000,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 451.41,
+    "x1": 360.9,
+    "y1": 461.88
+  },
+  "confidence": "high"
+}

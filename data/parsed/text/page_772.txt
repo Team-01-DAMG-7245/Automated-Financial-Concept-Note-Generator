@@ -1,0 +1,130 @@
+Bond Portfolio CVaR Optimization Using Diebold-Li Model
+
+This example shows how to perform bond portfolio optimization by using the Diebold-Li dynamic
+factor model of the yield curve to simulate and compute bond returns.
+
+For observation date t and time to maturity τ, the Diebold-Li model of the yield is given by
+
+yt τ = Lt + St
+
+1 −e−λτ
+
+λτ
++ Ct
+
+1 −e−λτ
+
+λτ
+−e−λτ ,
+
+where:
+
+•
+Lt is the long-term factor (level).
+
+•
+St is the short-term factor (slope).
+
+•
+Ct is the medium-term factor (curvature).
+
+•
+λ determines the maturity at which the loading curve is maximized and goversn the exponential
+decay rate of the model.
+
+State-Space Formulation of Diebold-Li Model
+
+In this example, you use the model from the “Apply State-Space Methodology to Analyze Diebold-Li
+Yield Curve Model” (Econometrics Toolbox) example to calculate the monthly returns. The associated
+ssm (Econometrics Toolbox) model is described in Load Yield Curve Data and ssm Model on page 5-
+147.
+
+The level, slope, and curvature factors of the Diebold-Li model follow the state transition equation
+given by
+
+Lt −μL
+St −μS
+Ct −μC
+
+=
+
+a11 a12 a13
+a21 a22 a23
+a31 a32 a33
+
+Lt −1 −μL
+St −1 −μS
+Ct −1 −μC
+
++
+
+ηLt
+ηSt
+ηCt
+
+where μ is the vector of means for each factor, and the corresponding observation equation is
+
+yτ1t
+
+yτ2t
+
+⋮
+yτNt
+
+=
+
+1 1 −e−λτ1
+
+λτ1
+
+1 −e−λτ1
+
+λτ1
+−e−λτ1
+
+1 1 −e−λτ2
+
+λτ2
+
+1 −e−λτ2
+
+λτ2
+−e−λτ2
+
+⋮
+⋮
+⋮
+
+1 1 −e−λτN
+
+λτN
+
+1 −e−λτN
+
+λτN
+−e−λτN
+
+Lt
+St
+Ct
+
++
+
+ετ1t
+
+ετ2t
+
+⋮
+ετNt
+
+You can represent these two sets of equations in the following vector representation
+
+ft −μ = A ft −1 −μ + ηt
+yt = Λft + εt
+
+If you define the latent states xt as the mean-adjusted factors
+
+5
+CVaR Portfolio Optimization Tools
+
+5-146

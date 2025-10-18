@@ -1,0 +1,9 @@
+Page 1250
+================================================================================
+
+The stratification process assumes that each path is associated with a single stratified terminal value
+such that the number of paths is equal to the number of strata. This technique is called proportional
+sampling. This example is similar to, yet more sophisticated than, the one discussed in “Simulating
+Interest Rates” on page 14-50. Since stratified sampling requires knowledge of the future, it also
+requires more sophisticated time synchronization; specifically, the function in this example requires
+knowledge of the entire sequence of sample times.

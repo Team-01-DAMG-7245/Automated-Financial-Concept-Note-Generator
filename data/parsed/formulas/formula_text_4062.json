@@ -1,0 +1,12 @@
+{
+  "page": 2296,
+  "original_text": "p = setDefaultConstraints(p);\npwgt = estimateFrontier(p, 20);\n[prsk, pret] = estimatePortMoments(p, pwgt);\npwgtshpr_fully = estimateMaxSharpeRatio(p,'Method','direct');\n[riskshpr_fully, retshpr_fully] = estimatePortMoments(p,pwgtshpr_fully);",
+  "ocr_text": "p=setDefaultConstraints(p);\n\npwgt=estimateFrontier(p,20);\n[prsk,pret]=estimatePortMoments(p,_pwgt);\npwgtshpr_fully=estimateMaxSharpeRatio(p,Method,direct);\n[riskshpr_fully,retshpr_fully]=estimatePortMoments(p,pwgtshpr_fully);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 480.1,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

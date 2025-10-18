@@ -1,0 +1,38 @@
+hDisplayTransitions(itNR.totalsMat,RatingLabels,strcat("Transition counts, company ID: ",CompanyI
+
+Transition counts, company ID: DEF
+
+AAA    AA    A    BBB    BB    B    CCC    D
+           ___    __    _    ___    __    _    ___    _
+
+AAA     0     0     0     0     0     0     0     0
+    AA      0     0     0     0     0     0     0     0
+    A       0     0     2     0     0     0     0     0
+    BBB     0     0     0     2     0     0     0     0
+    BB      0     0     0     0     0     0     0     0
+    B       0     0     0     0     0     0     0     0
+    CCC     0     0     0     0     0     0     0     0
+    D       0     0     0     0     0     0     0     0
+
+hPlotTransitions(CompanyID_NR,startDateNR,endDateNR,dataNR,RatingLabels)
+
+Consistent with the previous plot, the transition counts still show two transitions from 'A' to 'A'
+(from the end of 2012 to the end of 2014), and two transitions from 'BBB' to 'BBB' (from the end of
+2017 to the end of 2019).
+
+However, different from the previous plot, specifying 'NR' using the 'excludeLabels' name-value
+input argument of transprob removes any transitions into and out of the 'NR' rating.
+
+Local Functions
+
+function hDisplayTransitions(TransitionsData,RatingLabels,Title)
+% Helper function to format transition information outputs
+
+TransitionsAsTable = array2table(TransitionsData,...
+   'VariableNames',RatingLabels,'RowNames',RatingLabels);
+
+fprintf('\n%s\n\n',Title)
+
+Visualize Transitions Data for transprob
+
+8-119

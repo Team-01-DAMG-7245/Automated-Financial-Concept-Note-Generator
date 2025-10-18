@@ -1,0 +1,12 @@
+{
+  "page": 98,
+  "original_text": "location = fullfile(pwd,\"ExchangeData\",ticker,date);\nwrite(location,Today,'FileType','mat')",
+  "ocr_text": "location=fullfile(pwd,ExchangeData,ticker,date);\nwrite(location,Today,FileType,mat)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 449.9,
+    "x1": 371.75,
+    "y1": 471.17
+  },
+  "confidence": "high"
+}

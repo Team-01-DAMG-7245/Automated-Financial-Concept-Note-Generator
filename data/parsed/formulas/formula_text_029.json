@@ -1,0 +1,12 @@
+{
+  "page": 39,
+  "original_text": "In other words, solve for U (units) in the equation R (receipts) = C (cash) * U (units). Using MATLAB\nleft division",
+  "ocr_text": "Inotherwords,solveforU(units)intheequationR(receipts)=C(cash)*U(units).UsingMATLAB\nleftdivision",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 363.57,
+    "x1": 550.23,
+    "y1": 387.2
+  },
+  "confidence": "high"
+}

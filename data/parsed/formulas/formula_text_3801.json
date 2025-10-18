@@ -1,0 +1,12 @@
+{
+  "page": 2150,
+  "original_text": "Depreciation = depgendb(Cost,Salvage,Life,Factor) computes the declining-balance\ndepreciation for each period.",
+  "ocr_text": "Depreciation=depgendb(Cost,Salvage,Life,Factor)computesthedeclining-balance\ndepreciationforeachperiod.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 243.57,
+    "x1": 533.08,
+    "y1": 267.2
+  },
+  "confidence": "high"
+}

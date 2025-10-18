@@ -1,0 +1,12 @@
+{
+  "page": 524,
+  "original_text": "function new_weights = robustFcn(~,pricesTT,portObj, ...\n    kappa) \n% Robust portfolio maximum return allocation",
+  "ocr_text": "functionnew_weights=robustFcn(,pricesTT,portObj,...\nkappa)\nRobustportfoliomaximumreturnallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.63,
+    "x1": 393.43,
+    "y1": 276.69
+  },
+  "confidence": "high"
+}

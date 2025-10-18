@@ -1,0 +1,13 @@
+Page 459
+================================================================================
+
+% Set backtesting warm-up period to two 21-day months.
+warmupPeriod = 21*2;
+% Set warm-up partition of timetable.
+% Invest only in assets. First column of pricesTT is the market index.
+warmupTT = pricesTT(1:warmupPeriod,2:end);
+% Estimate the covariance matrix.
+assetReturns = tick2ret(warmupTT);
+assetCov = cov(assetReturns{:,:});
+% Compute the initial risk parity portfolio.
+initialRiskParity = [0; riskBudgetingPortfolio(assetCov)];

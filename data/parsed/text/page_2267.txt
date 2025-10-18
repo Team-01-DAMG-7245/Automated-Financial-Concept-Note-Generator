@@ -1,0 +1,59 @@
+w2 = estimateFrontierByReturn(p,TargetReturn)
+
+w2 = 10×1
+
+0.0500
+    0.0500
+    0.0500
+    0.0500
+    0.1668
+    0.0500
+    0.0870
+    0.2949
+    0.1105
+    0.0908
+
+Estimate moments of portfolio returns using estimatePortMoments, where risk2 is estimates for
+standard deviations of portfolio returns for each portfolio and ret2 is estimates for means of portfolio
+returns for each portfolio.
+
+[risk2,ret2] = estimatePortMoments(p,w2)
+
+risk2 = 
+0.0076
+
+ret2 = 
+1.0000e-03
+
+Obtain Portfolios with Targeted Portfolio Returns for a Portfolio Object with BoundType,
+MinNumAsset, and MaxNumAsset Constraints
+
+When any one, or any combination of the constraints from 'Conditional' BoundType,
+MinNumAssets, and MaxNumAssets are active, the portfolio problem is formulated as mixed integer
+programming problem and the MINLP solver is used.
+
+Create a Portfolio object for three assets.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+               0.00022983 0.00049937 0.00019247;
+               0.00420395 0.00019247 0.00764097 ];  
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);
+p = setDefaultConstraints(p);
+
+Use setBounds with semicontinuous constraints to set xi = 0 or 0.02 <= xi <= 0.5 for all i =
+1,...NumAssets.
+
+p = setBounds(p, 0.02, 0.7,'BoundType', 'Conditional', 'NumAssets', 3);
+
+When working with a Portfolio object, the setMinMaxNumAssets function enables you to set up
+the limits on the number of assets invested (as known as cardinality) constraints. This sets the total
+number of allocated assets satisfying the Bound constraints that are between MinNumAssets and
+MaxNumAssets. By setting MinNumAssets = MaxNumAssets = 2, only two of the three assets are
+invested in the portfolio.
+
+p = setMinMaxNumAssets(p, 2, 2);
+
+estimateFrontierByReturn
+
+15-961

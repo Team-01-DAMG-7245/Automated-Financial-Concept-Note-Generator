@@ -1,0 +1,42 @@
+-0.1338         0
+    0.1681         0
+   -0.3236         0
+      ⋮
+
+% Strategy 2: Stock with put option cover
+AssetScenarios(:, 2) = (max(Price_T, Strike) - (Price_0 + Put)) ./ ...
+    (Price_0 + Put)
+
+AssetScenarios = 100000×2
+
+0.5927    0.4266
+   -0.4069   -0.1490
+   -0.2526   -0.1490
+    0.3365    0.1972
+   -0.3606   -0.1490
+    0.5549    0.3928
+   -0.2211   -0.1490
+    0.3080    0.1716
+    0.0849   -0.0282
+   -0.0416   -0.1415
+    0.1977    0.0728
+   -0.1537   -0.1490
+   -0.1338   -0.1490
+    0.1681    0.0463
+   -0.3236   -0.1490
+      ⋮
+
+Plot Distributions
+
+The returns for the two strategies are not normally distributed.
+
+% Create histogram
+figure;
+subplot(2,1,1);
+histogram(AssetScenarios(:,1),'Normalization','probability')
+subplot(2,1,2);
+histogram(AssetScenarios(:,2),'Normalization','probability')
+
+Hedge Using Monte Carlo Simulation
+
+10-51

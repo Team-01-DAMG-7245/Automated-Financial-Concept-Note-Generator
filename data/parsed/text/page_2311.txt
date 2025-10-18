@@ -1,0 +1,59 @@
+P_Weights1 = P.estimateFrontierLimits;
+[P_risklimits, P_returnlimits] = P.estimatePortMoments(P_Weights1)
+
+P_risklimits = 2×1
+
+0.0786
+    0.2868
+
+P_returnlimits = 2×1
+
+0.0954
+    0.2370
+
+Estimate Efficient Portfolio with Target Return
+
+Select a target return for the portfolio somewhere in the feasible region. You can estimate its makeup
+with estimateFrontierByRisk and then confirm its moments using estimatePortMoments.
+
+targetReturn = 0.15;
+
+P_Weights2 = P.estimateFrontierByReturn(targetReturn);
+[P_risk2, P_return2] = P.estimatePortMoments(P_Weights2)
+
+P_risk2 = 
+0.1068
+
+P_return2 = 
+0.1500
+
+The return matches the targetReturn value and the risk is in agreement with the efficient frontier
+plot.
+
+Estimate Efficient Portfolio with Target Risk
+
+The Portfolio object is able to find an efficient portfolio with a specified target risk.
+
+targetRisk = 0.2;
+
+P_Weights3 = P.estimateFrontierByRisk(targetRisk);
+[P_risk3, P_return3] = P.estimatePortMoments(P_Weights3)
+
+P_risk3 = 
+0.2000
+
+P_return3 = 
+0.2182
+
+Another useful feature of the estimateFrontierByReturn and estimateFrontierByRisk
+functions is what happens if you specify an infeasible (too high or too low) target. In this case, these
+functions provide a warning message to suggest the best solution.
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+estimatePortMoments
+
+15-1005

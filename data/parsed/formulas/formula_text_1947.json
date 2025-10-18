@@ -1,0 +1,12 @@
+{
+  "page": 1005,
+  "original_text": "% The TrueBads and FalseBads columns contain cumulative data\nbads = diff([0;T.TrueBads]);\ngoods = diff([0;T.FalseBads]);\nobsPD = bads./(bads+goods);\npredPD = T.ProbDefault;\nbar(T.Scores,obsPD)\nhold on\nscatter(T.Scores,predPD,'*')\nxlabel('Score')\nylabel('Probability of Default')\ntitle('Probability of Default vs. Score')\ngrid\nlegend('Actual Probability of Default', 'Predicted Probability of Default')\nhold off",
+  "ocr_text": "TheTrueBadsandFalseBadscolumnscontaincumulativedata\nbads=diff([0;T.TrueBads]);\n\ngoods=diff([0;T.FalseBads]);\n\nobsPD=bads./(bads+goods);\n\npredPD=T.ProbDefault;\n\nbar(T.Scores,obsPD)\n\nholdon\n\nscatter(T.Scores,predPD,*)\n\nxlabel(Score)\n\nylabel(ProbabilityofDefault)\ntitle(ProbabilityofDefaultvs.Score)\n\ngrid\nLlegend(ActualProbabilityofDefault,PredictedProbabilityofDefault)\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 478.43,
+    "x1": 496.38,
+    "y1": 629.29
+  },
+  "confidence": "high"
+}

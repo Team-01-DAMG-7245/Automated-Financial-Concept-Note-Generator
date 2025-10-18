@@ -1,0 +1,54 @@
+cdsspread
+
+Determine spread of credit default swap
+
+Syntax
+
+[Spread,PaymentDates,PaymentTimes,] = cdsspread(ZeroData,ProbData,Settle,
+Maturity,)
+[Spread,PaymentDates,PaymentTimes,] = cdsspread( ___ ,Name,Value)
+
+Description
+
+[Spread,PaymentDates,PaymentTimes,] = cdsspread(ZeroData,ProbData,Settle,
+Maturity,) computes the spread of the CDS.
+
+[Spread,PaymentDates,PaymentTimes,] = cdsspread( ___ ,Name,Value) adds optional
+name-value pair arguments.
+
+Examples
+
+Determine the Spread of a Credit Default Swap
+
+This example shows how to use cdsspread to compute the spread (in basis points) for a CDS
+contract with the following data.
+
+Settle = '17-Jul-2009'; % valuation date for the CDS
+Zero_Time = [.5 1 2 3 4 5]';
+Zero_Rate = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+Zero_Dates = daysadd(Settle,360*Zero_Time,1);
+ZeroData = [Zero_Dates Zero_Rate];
+ProbData = [daysadd(datenum(Settle),360,1), 0.0247];
+Maturity = datetime(2010,9,20);
+
+Spread = cdsspread(ZeroData,ProbData,Settle,Maturity)
+
+Spread = 
+148.2705
+
+Input Arguments
+
+ZeroData — Zero rate data
+vector | IRDataCurve object
+
+Zero rate data, specified as a M-by-2 vector of dates, using a serial date number format, and zero
+rates or an IRDataCurve object of zero rates.
+
+When ZeroData is an IRDataCurve object, ZeroCompounding and ZeroBasis are implicit in
+ZeroData and are redundant inside this function. In this case, specify these optional parameters
+when constructing the IRDataCurve object before using the cdsspread function.
+
+15
+Functions
+
+15-634

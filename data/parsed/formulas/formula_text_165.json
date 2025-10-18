@@ -1,0 +1,12 @@
+{
+  "page": 115,
+  "original_text": "Data = timetable(t,S,I,MOBid,MOAsk);\nTData = Data(1:bp,:);       % Training data\nVData = Data(bp+1:end,:);   % Validation data",
+  "ocr_text": "Data=timetable(t,S,I,MOBid,MOAsk);\nTData=Data(1:bp,:); Trainingdata\nVData=Data(bp+1l:end,:); SValidationdata",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 333.82,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

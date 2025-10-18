@@ -1,0 +1,12 @@
+{
+  "page": 774,
+  "original_text": "% Simulate 100,000 yields\nrng('default')\nsimDeflatedYields = simulate(EstMdlSSM,1,NumPaths=1e5);\nsimDeflatedYields = squeeze(simDeflatedYields(:,:,:));\nsimDeflatedYields = simDeflatedYields';",
+  "ocr_text": "Simulate100,000yields\n\nrng(default)\nsimDeflatedYields=simulate(EstMdlSSM,1,NumPaths=1e5);\nsimDeflatedYields=squeeze(simDeflatedYields(:,:,:));\nsimDeflatedYields=simDeflatedYields;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 581.81,
+    "x1": 387.99,
+    "y1": 635.48
+  },
+  "confidence": "high"
+}

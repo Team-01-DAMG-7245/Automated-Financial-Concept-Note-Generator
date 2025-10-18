@@ -1,0 +1,12 @@
+{
+  "page": 2394,
+  "original_text": "p = Portfolio;\np = setCosts(p, 0.001, 0.001, 5);\n[BuyCost, SellCost] = getCosts(p)",
+  "ocr_text": "p=Portfolio;\np=setCosts(p,0.001,0.001,5);\n[BuyCost,SellCost]=getCosts(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 441.44,
+    "x1": 268.8,
+    "y1": 473.5
+  },
+  "confidence": "high"
+}

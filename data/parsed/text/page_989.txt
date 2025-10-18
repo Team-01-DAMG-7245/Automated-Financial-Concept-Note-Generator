@@ -1,0 +1,59 @@
+Case Study for Credit Scorecard Analysis
+
+This example shows how to create a creditscorecard object, bin data, display, and plot binned
+data information. This example also shows how to fit a logistic regression model, obtain a score for
+the scorecard model, and determine the probabilities of default and validate the credit scorecard
+model using three different metrics.
+
+Step 1. Create a creditscorecard object.
+
+Use the CreditCardData.mat file to load the data (using a dataset from Refaat 2011). If your data
+contains many predictors, you can first use screenpredictors (Risk Management Toolbox) to pare
+down a potentially large set of predictors to a subset that is most predictive of the credit scorecard
+response variable. You can then use this subset of predictors when creating the creditscorecard
+object. In addition, you can use Threshold Predictors (Risk Management Toolbox) to interactively set
+credit scorecard predictor thresholds using the output from screenpredictors (Risk Management
+Toolbox).
+
+When creating a creditscorecard object, by default, 'ResponseVar' is set to the last column in
+the data ('status' in this example) and the 'GoodLabel' to the response value with the highest
+count (0 in this example). The syntax for creditscorecard indicates that 'CustID' is the 'IDVar'
+to remove from the list of predictors. Also, while not demonstrated in this example, when creating a
+creditscorecard object using creditscorecard, you can use the optional name-value pair
+argument 'WeightsVar' to specify observation (sample) weights or 'BinMissingData' to bin
+missing data.
+
+load CreditCardData
+head(data)
+
+CustID    CustAge    TmAtAddress    ResStatus     EmpStatus    CustIncome    TmWBank    Other
+    ______    _______    ___________    __________    _________    __________    _______    _____
+
+1         53           62         Tenant        Unknown        50000         55         Yes
+      2         61           22         Home Owner    Employed       52000         25         Yes
+      3         47           30         Tenant        Employed       37000         61         No 
+      4         50           75         Home Owner    Employed       53000         20         Yes
+      5         68           56         Home Owner    Employed       53000         14         Yes
+      6         65           13         Home Owner    Employed       48000         59         Yes
+      7         34           32         Home Owner    Unknown        32000         26         Yes
+      8         50           57         Other         Employed       51000         33         No
+
+The variables in CreditCardData are customer ID, customer age, time at current address,
+residential status, employment status, customer income, time with bank, other credit card, average
+monthly balance, utilization rate, and the default status (response).
+
+sc = creditscorecard(data,'IDVar','CustID')
+
+sc = 
+  creditscorecard with properties:
+
+GoodLabel: 0
+              ResponseVar: 'status'
+               WeightsVar: ''
+                 VarNames: {'CustID'  'CustAge'  'TmAtAddress'  'ResStatus'  'EmpStatus'  'CustIn
+        NumericPredictors: {'CustAge'  'TmAtAddress'  'CustIncome'  'TmWBank'  'AMBalance'  'Util
+    CategoricalPredictors: {'ResStatus'  'EmpStatus'  'OtherCC'}
+
+Case Study for Credit Scorecard Analysis
+
+8-71

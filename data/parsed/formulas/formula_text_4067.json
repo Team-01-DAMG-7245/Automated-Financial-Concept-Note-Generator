@@ -1,0 +1,12 @@
+{
+  "page": 2298,
+  "original_text": "pwgtshpr_iter_largerTol = estimateMaxSharpeRatio(q, 'Method', 'iterative',...\n    'TolX', 1e-4);\ndisplay(table(pwgtshpr_iter, pwgtshpr_iter_largerTol,...\n    'VariableNames', {'Default TolX = 1e-8','TolX = 1e-4'}))",
+  "ocr_text": "pwgtshpr_iter_largerTol=estimateMaxSharpeRatio(q,Method,iterative,...\nTolX,_le-4);\n\ndisplay(table(pwgtshpr_iter,pwgtshpr_iter_largerTol,...\nVariableNames,{DefaultTolX=le-8,TolX=le-4}))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 200.23,
+    "x1": 507.22,
+    "y1": 243.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 982,
+  "original_text": "load CreditCardData\nsc = creditscorecard(data,'IDVar','CustID','GoodLabel',0);\nbininfo(sc,'CustAge')\nplotbins(sc,'CustAge')",
+  "ocr_text": "loadCreditCardData\nsc=creditscorecard(data,IDVar,CustID,GoodLabel,0);\nbininfo(sc,CustAge)\n\nplotbins(sc,CustAge)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 521.11,
+    "x1": 404.26,
+    "y1": 563.97
+  },
+  "confidence": "high"
+}

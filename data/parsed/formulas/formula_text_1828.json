@@ -1,0 +1,12 @@
+{
+  "page": 934,
+  "original_text": "sampleTotalsIGSG = struct with fields:\n    totalsVec: [4.8591e+03 1.5034e+03 1.1621e+03]\n    totalsMat: [3×3 double]\n    algorithm: 'duration'",
+  "ocr_text": "sampleTotalsIGSG=structwithfields:\ntotalsVec:[4.8591e+031.5034e+031.1621e+03]\ntotalsMat:[3x3double]\nalgorithm:duration",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.65,
+    "x1": 355.49,
+    "y1": 373.52
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 408
+================================================================================
+
+function new_weights = allocationFunctionName(current_weights,
+pricesTimetable)

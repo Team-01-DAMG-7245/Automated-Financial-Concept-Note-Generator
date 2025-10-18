@@ -1,0 +1,12 @@
+{
+  "page": 1488,
+  "original_text": "SDEMRD = sdemrd( ___ ,Name,Value) creates a SDEMRD object with additional options specified\nby one or more Name,Value pair arguments.",
+  "ocr_text": "SDEMRD=sdemrd(___,Name,VaLue)createsaSDEMRDobjectwithadditionaloptionsspecified\nbyoneormoreName,Valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 628.47,
+    "x1": 546.29,
+    "y1": 652.1
+  },
+  "confidence": "high"
+}

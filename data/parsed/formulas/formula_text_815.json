@@ -1,0 +1,12 @@
+{
+  "page": 466,
+  "original_text": "% Get the clusters.\nT = cluster(link, MaxClust=6);",
+  "ocr_text": "Gettheclusters.\nT=cluster(link,MaxClust=6);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 391.53,
+    "x1": 252.54,
+    "y1": 412.8
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 99,
+  "original_text": "sampleTimeTarget = seconds(11*60*60);               % Seconds after midnight\nsampleTimes = withtol(sampleTimeTarget,seconds(1)); % 1 second tolerance\nsampleLOB = DTT(sampleTimes,:);",
+  "ocr_text": "sampleTimeTarget=seconds(11*60*60); SSecondsaftermidnight\nsampleTimes=withtol(sampleTimeTarget,seconds(1));1secondtolerance\nsampleLOB=DTT(sampleTimes,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 307.28,
+    "x1": 501.8,
+    "y1": 339.34
+  },
+  "confidence": "high"
+}

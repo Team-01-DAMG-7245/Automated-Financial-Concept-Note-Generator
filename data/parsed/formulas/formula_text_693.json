@@ -1,0 +1,12 @@
+{
+  "page": 427,
+  "original_text": "% Run the backtest.\nbt = runBacktest(bt,pricesTT,signalTT,'Start',startIdx);",
+  "ocr_text": "SRunthebacktest.\nbt=runBacktest(bt,pricesTT,signalTT,Start,startIdx);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 402.03,
+    "x1": 393.43,
+    "y1": 423.29
+  },
+  "confidence": "high"
+}

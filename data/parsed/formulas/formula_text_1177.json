@@ -1,0 +1,12 @@
+{
+  "page": 604,
+  "original_text": "Total_Outperformance_Test_Sell = sum(IS_TWAP_Horizon_Test_Sell - IS_Agent_Horizon_Test_Sell);\ntable(Total_Outperformance_Test_Sell)",
+  "ocr_text": "Total_OutperformanceTest_Sell=sum(IS_TWAP_Horizon_Test_Sell-IS_Agent_Horizon_Test_Sell);\ntable(Total_Outperformance_Test_Sell)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 145.11,
+    "x1": 593.87,
+    "y1": 166.38
+  },
+  "confidence": "high"
+}

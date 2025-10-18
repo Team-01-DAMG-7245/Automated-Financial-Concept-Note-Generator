@@ -1,0 +1,6 @@
+Page 581
+================================================================================
+
+Execute TWAP trades and compute Implementation Shortfall (IS) using the executeTWAPTrades
+function, which uses the tradeLOB function to execute the trades and the endingInventoryIS
+function to compute IS. These functions are in the Local Functions on page 4-441 section.

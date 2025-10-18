@@ -1,0 +1,12 @@
+{
+  "page": 503,
+  "original_text": "% MDP penalty parameter\nlambdaMDP = 1e-2;\n% Variance + Most Diversified Portfolio (MDP)\nMDPMixObjFun = @(x) x'*p.AssetCovar*x - lambdaMDP*(sigma'*x);\n% Solution that accounts for risk and MDP diversification\nwMDPMix = estimateCustomObjectivePortfolio(p,MDPMixObjFun);",
+  "ocr_text": "MDPpenaltyparameter\n\nLambdaMDP=1e-2;\nSVariance+MostDiversifiedPortfolio(MDP)\nMDPMixObjFun=Q(x)x*p.AssetCovar*x-LambdaMDP*(sigma*x);\nSolutionthataccountsforriskandMDPdiversification\nwMDPMix=estimateCustom0bjectivePortfolio(p,MDPMix0bjFun);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 263.97,
+    "x1": 420.5,
+    "y1": 328.44
+  },
+  "confidence": "high"
+}

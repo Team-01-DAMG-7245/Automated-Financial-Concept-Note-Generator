@@ -1,0 +1,12 @@
+{
+  "page": 2367,
+  "original_text": "FutureVal = fvdisc(Settle,Maturity,Price,Discount) finds the amount received at\nmaturity for a fully vested security.",
+  "ocr_text": "FutureVal=fvdisc(Settle,Maturity,Price,Discount)findstheamountreceivedat\nmaturityforafullyvestedsecurity.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 258.1,
+    "x1": 524.73,
+    "y1": 281.73
+  },
+  "confidence": "high"
+}

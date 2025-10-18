@@ -1,0 +1,5 @@
+Page 429
+================================================================================
+
+function initial_weights = computeInitialWeights(signals)
+% Compute initial weights based on most recent signal.

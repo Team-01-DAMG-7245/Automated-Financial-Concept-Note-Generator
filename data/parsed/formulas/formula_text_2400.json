@@ -1,0 +1,12 @@
+{
+  "page": 1230,
+  "original_text": "nVariables  = size(returns,2);\nexpReturn   = mean(returns);\nsigma       = std(returns);\ncorrelation = corrcoef(returns);\nt           = 0;\nX           = 100;",
+  "ocr_text": "nVariables=size(returns,2);\nexpReturn =mean(returns);\nsigma =std(returns);\ncorrelation=corrcoef(returns);\nt =0;\n\nxX =100;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 263.38,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

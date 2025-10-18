@@ -1,0 +1,12 @@
+{
+  "page": 1304,
+  "original_text": "tStart = tic;\nparPaths = zeros(NPeriods+1,1,NTrials);\nparfor i = 1:NTrials\n    parPaths(:,:,i) = simBySolution(mdl,NPeriods,'DeltaTime',dt,'Z',Z(:,:,i));\nend\ntime2 = toc(tStart);",
+  "ocr_text": "tStart=tic;\n\nparPaths=zeros(NPeriods+1,1,NTrials);\n\nparfori=1:NTrials\nparPaths(:,:,i)=simBySolution(mdl,NPeriods,DeltaTime,dt,Z,Z(:,:,1i));\n\nend\n\ntime2=toc(tStart);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 474.63,
+    "x1": 512.63,
+    "y1": 539.09
+  },
+  "confidence": "high"
+}

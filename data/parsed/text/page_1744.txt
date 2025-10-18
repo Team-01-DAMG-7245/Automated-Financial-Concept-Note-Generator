@@ -1,0 +1,63 @@
+disp(p.bEquality);
+
+0.5000
+    0.5000
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+AEquality — Linear equality constraints formed from matrix
+matrix
+
+Linear equality constraints, specified as a matrix.
+
+Note An error results if AEquality is empty and bEquality is nonempty.
+
+Data Types: double
+
+bEquality — Linear equality constraints formed from vector
+vector
+
+Linear equality constraints, specified as a vector.
+
+Note An error results if bEquality is empty and AEquality is nonempty.
+
+Data Types: double
+
+Output Arguments
+
+obj — Updated portfolio object
+object for portfolio
+
+Updated portfolio object, returned as a Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+15
+Functions
+
+15-438

@@ -1,0 +1,62 @@
+% LoggedSignals.HorizonIdx
+else
+    IsDone = false;
+end
+
+% Execute trade
+CurrentLOB = EnvConstants.SampledBook(LoggedSignals.IntervalIdx + ...
+    LoggedSignals.NumIntervalsPerHorizon*(LoggedSignals.HorizonIdx-1),:);
+
+[ExecutedShares,ExecutedPrices,InitialPrice,TradedLevels] = ...
+    tradeLOB(CurrentLOB,TradingShares,EnvConstants.BuyTrade);
+
+% Update Reward
+if LoggedSignals.IntervalIdx==1
+    LoggedSignals.ArrivalPrice = InitialPrice;
+end
+
+LoggedSignals.HorizonExecutedShares((1:TradedLevels) + ...
+    (LoggedSignals.IntervalIdx-1)*LoggedSignals.NumLevels) = ExecutedShares;
+LoggedSignals.HorizonExecutedPrices((1:TradedLevels) + ...
+    (LoggedSignals.IntervalIdx-1)*LoggedSignals.NumLevels) = ExecutedPrices;
+
+IS_Agent = endingInventoryIS(LoggedSignals.ArrivalPrice,LoggedSignals.HorizonExecutedPrices, ...
+    LoggedSignals.HorizonExecutedShares,EnvConstants.BuyTrade);
+
+if EnvConstants.BuyTrade
+    AgentRemainingSharestoTrade = max(EnvConstants.TotalTradingShares - ...
+        LoggedSignals.CurrentInventoryShares - sum(ExecutedShares),0);
+else
+    AgentRemainingSharestoTrade = max(LoggedSignals.CurrentInventoryShares - ...
+        sum(ExecutedShares), 0);
+end
+
+[PenaltyAgentExecutedShares,PenaltyAgentExecutedPrices] = tradeLOB(CurrentLOB, ...
+    round(AgentRemainingSharestoTrade./RemainingIntervals),EnvConstants.BuyTrade);
+
+IS_Agent_Penalty = RemainingIntervals.*endingInventoryIS(LoggedSignals.ArrivalPrice, ...
+    PenaltyAgentExecutedPrices,PenaltyAgentExecutedShares,EnvConstants.BuyTrade);
+
+TWAPRemainingSharestoTrade = (EnvConstants.NumIntervalsPerHorizon - LoggedSignals.IntervalIdx)* 
+    EnvConstants.TotalTradingShares/EnvConstants.NumIntervalsPerHorizon;
+
+[PenaltyTWAPExecutedShares,PenaltyTWAPExecutedPrices] = tradeLOB(CurrentLOB, ...
+    round(TWAPRemainingSharestoTrade./RemainingIntervals),EnvConstants.BuyTrade);
+
+IS_TWAP_Penalty = RemainingIntervals.*endingInventoryIS(LoggedSignals.ArrivalPrice, ...
+    PenaltyTWAPExecutedPrices,PenaltyTWAPExecutedShares,EnvConstants.BuyTrade);
+
+Reward = ((IS_TWAP + IS_TWAP_Penalty) - (IS_Agent + IS_Agent_Penalty)) .* ...
+    LoggedSignals.IntervalIdx./ LoggedSignals.NumIntervalsPerHorizon;
+
+% No reward if trading target already met
+if EnvConstants.BuyTrade
+    if LoggedSignals.CurrentInventoryShares >= EnvConstants.TotalTradingShares
+        Reward = 0;
+    end
+else
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-446

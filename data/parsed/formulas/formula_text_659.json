@@ -1,0 +1,12 @@
+{
+  "page": 415,
+  "original_text": "% Create the optimization problem\npRobust = optimproblem('Description','Robust Portfolio');",
+  "ocr_text": "Createtheoptimizationproblem\npRobust=optimproblem(Description,RobustPortfolio);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 398.85,
+    "y1": 686.69
+  },
+  "confidence": "high"
+}

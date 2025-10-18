@@ -1,0 +1,65 @@
+Holidays — Dates for holidays
+holidays.m used (default) | datetime array | string array | date character vector
+
+Dates for holidays, specified as NHOLIDAYS-by-1 vector using a datetime array, string array, or date
+character vectors. Holidays are used in computing business days.
+
+To support existing code, floatmargin also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+BusinessDayConvention — Business day conventions
+'actual' (default) | character vector with values'actual', 'follow', 'modifiedfollow',
+'previous'or 'modifiedprevious'
+
+Business day conventions, specified as a NINST-by-1 cell array of character vectors of business day
+conventions to be used in computing payment dates. The selection for business day convention
+determines how nonbusiness days are treated. Nonbusiness days are defined as weekends plus any
+other date that businesses are not open (for example, statutory holidays). Values are:
+
+•
+'actual' — Nonbusiness days are effectively ignored. Cash flows that fall on non-business days
+are assumed to be distributed on the actual date.
+
+•
+'follow' — Cash flows that fall on a nonbusiness day are assumed to be distributed on the
+following business day.
+
+•
+'modifiedfollow' — Cash flows that fall on a non-business day are assumed to be distributed
+on the following business day. However if the following business day is in a different month, the
+previous business day is adopted instead.
+
+•
+'previous' — Cash flows that fall on a nonbusiness day are assumed to be distributed on the
+previous business day.
+
+•
+'modifiedprevious' — Cash flows that fall on a nonbusiness day are assumed to be distributed
+on the previous business day. However if the previous business day is in a different month, the
+following business day is adopted instead.
+
+Data Types: char | cell
+
+Output Arguments
+
+Margin — Spreads for floating-rate bond
+numeric
+
+Spreads for the floating-rate bond, returned as a NINST-by-1 vector.
+
+AdjPrice — Adjusted price used to calculate spreads for SpreadType of adjustedsimple
+and adjustedtotal
+numeric
+
+Adjusted price used to calculate spreads for SpreadType of adjustedsimple and adjustedtotal,
+returned as a NINST-by-1 vector.
+
+Version History
+Introduced in R2012b
+
+15
+Functions
+
+15-1054

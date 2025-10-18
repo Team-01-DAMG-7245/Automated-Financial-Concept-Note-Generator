@@ -1,0 +1,12 @@
+{
+  "page": 1570,
+  "original_text": "backtester = backtestEngine(strategies)\nbacktester = backtestEngine( ___ ,Name,Value)",
+  "ocr_text": "backtester=backtestEngine(strategies)\nbacktester=backtestEngine(____,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 468.89,
+    "x1": 352.89,
+    "y1": 492.52
+  },
+  "confidence": "high"
+}

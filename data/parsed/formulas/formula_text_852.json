@@ -1,0 +1,12 @@
+{
+  "page": 476,
+  "original_text": "% Examine the residuals.\nresiduals = actual(:,output_idx) - predicted(:,output_idx);\nfigure;\nnormplot(residuals);",
+  "ocr_text": "SExaminetheresiduals.\nresiduals=actual(:,output_idx)-predicted(:,output_idx);\nfigure;\n\nnormplot(residuals);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 404.88,
+    "x1": 409.66,
+    "y1": 447.75
+  },
+  "confidence": "high"
+}

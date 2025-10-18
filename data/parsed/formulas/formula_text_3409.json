@@ -1,0 +1,12 @@
+{
+  "page": 1883,
+  "original_text": "Price = 101;\nCouponRate = 0.05;\nSettle = datetime('15-Nov-2011','Locale','en_US');\nMaturity = datetime('15-Nov-2031','Locale','en_US');\nHorizonDate = datetime('15-Nov-2021','Locale','en_US');\nReinvestRate = 0.04;\n[BondEquiv, EffectiveRate] = bndtotalreturn(Price, CouponRate, ...\nSettle, Maturity, ReinvestRate, 'HorizonDate', HorizonDate)",
+  "ocr_text": "Price=101;\n\nCouponRate=0.05;\nSettle=datetime(15-Nov-2011,Locale,en_US);\nMaturity=datetime(15-Nov-2031,Locale,en_US);\nHorizonDate=datetime(15-Nov-2021,Locale,en_US);\nReinvestRate=0.04;\n[BondEquiv,EffectiveRate]=bndtotalreturn(Price,CouponRate,...\nSettle,Maturity,ReinvestRate,_HorizonDate,HorizonDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 460.26,
+    "x1": 447.62,
+    "y1": 546.32
+  },
+  "confidence": "high"
+}

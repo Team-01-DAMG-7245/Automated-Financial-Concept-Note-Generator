@@ -1,0 +1,6 @@
+Page 313
+================================================================================
+
+If asset return data has missing or NaN values, the estimateAssetMoments function with the
+'missingdata' flag set to true may fail with either too many iterations or a singular covariance. To
+correct this problem, consider this:

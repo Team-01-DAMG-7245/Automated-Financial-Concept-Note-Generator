@@ -1,0 +1,12 @@
+{
+  "page": 731,
+  "original_text": "prsk0 = estimatePortRisk(p, pwgt0);\npret0 = estimatePortReturn(p, pwgt0);\nprsk = estimatePortRisk(p, pwgt);\npret = estimatePortReturn(p, pwgt);",
+  "ocr_text": "prskO=estimatePortRisk(p,_pwgt0);\npretO=estimatePortReturn(p,_pwgtO);\nprsk=estimatePortRisk(p,_pwgt);\npret=estimatePortReturn(p,_pwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 605.13,
+    "x1": 290.47,
+    "y1": 648.0
+  },
+  "confidence": "high"
+}

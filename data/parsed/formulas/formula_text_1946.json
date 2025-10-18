@@ -1,0 +1,12 @@
+{
+  "page": 1002,
+  "original_text": "yLimits = ylim;",
+  "ocr_text": "yLimits=ylim;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 171.27,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

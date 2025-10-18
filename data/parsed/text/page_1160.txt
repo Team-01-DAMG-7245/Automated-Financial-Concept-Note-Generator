@@ -1,0 +1,21 @@
+Filter Returns for Equity Index
+
+To accurately model the tails of a distribution using a GPD, you must make sure the observations are
+approximately independent and identically distributed. However, financial return series often deviate
+from this requirement due to autocorrelation and heteroskedasticity. To see an example of this
+deviation, use autocorr (Econometrics Toolbox) to analyze the sample autocorrelation function
+(ACF) of the returns associated with the TSX Composite index. The result indicates the presence of
+mild serial correlation.
+
+returns = price2ret(Data);    % Logarithmic returns
+T       = size(returns,1);    % Number of returns (the historical sample size)
+
+index = 1;
+figure
+autocorr(returns(:,index))
+title('Sample ACF of Returns')
+
+10
+Solving Sample Problems
+
+10-62

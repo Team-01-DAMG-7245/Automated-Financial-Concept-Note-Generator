@@ -1,0 +1,8 @@
+Page 353
+================================================================================
+
+A common approach to select efficient portfolios is to pick a portfolio that has a desired fraction of
+the range of expected portfolio returns. To obtain the portfolio that is 30% of the range from the
+minimum to maximum return on the efficient frontier, obtain the range of net returns in qret using
+the Portfolio object q and interpolate to obtain a 30% level with the interp1 function to obtain a
+portfolio qwgt.

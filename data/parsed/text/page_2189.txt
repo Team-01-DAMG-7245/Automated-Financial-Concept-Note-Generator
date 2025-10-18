@@ -1,0 +1,47 @@
+Output Arguments
+
+StdParameters — Standard errors for each element of Parameters
+vector
+
+Standard errors for each element of Parameters, returned as an NUMPARAMS-by-1 column vector.
+
+StdCovariance — Standard errors for each element of Covariance
+matrix
+
+Standard errors for each element of Covariance, returned as an NUMSERIES-by-NUMSERIES matrix.
+
+More About
+
+Multivariate Normal Regression
+
+Multivariate normal regression is a statistical modeling approach that extends traditional regression
+techniques to situations where the dependent variable is multivariate, meaning it consists of multiple
+correlated outcomes.
+
+Multivariate normal regression is particularly useful in fields where researchers are interested in
+understanding the relationships between several response variables and one or more predictor
+variables.
+
+Version History
+Introduced in R2006a
+
+References
+
+[1] Little, Roderick J. A. and Donald B. Rubin. Statistical Analysis with Missing Data. 2nd Edition. John
+Wiley & Sons, Inc., 2002.
+
+See Also
+ecmmvnrmle
+
+Topics
+“Multivariate Normal Regression” on page 9-13
+“Least-Squares Regression” on page 9-14
+“Covariance-Weighted Least Squares” on page 9-14
+“Feasible Generalized Least Squares” on page 9-15
+“Seemingly Unrelated Regression” on page 9-16
+“Multivariate Normal Regression With Missing Data” on page 9-14
+“Multivariate Normal Linear Regression” on page 9-2
+
+ecmmvnrstd
+
+15-883

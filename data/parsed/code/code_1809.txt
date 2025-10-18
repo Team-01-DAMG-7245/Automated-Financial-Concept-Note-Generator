@@ -1,0 +1,5 @@
+Page 1509
+================================================================================
+
+If you specify Return as a deterministic function of time and state, it must return an NVars-by-
+NVars matrix when you call it with two inputs:

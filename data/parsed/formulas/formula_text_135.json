@@ -1,0 +1,12 @@
+{
+  "page": 106,
+  "original_text": "dTI = duration\n   0.40273 sec",
+  "ocr_text": "dTI_=duration\n0.40273sec",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.43,
+    "x1": 165.85,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

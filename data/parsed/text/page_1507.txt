@@ -1,0 +1,41 @@
+References
+
+[1] Aït-Sahalia, Yacine. “Testing Continuous-Time Models of the Spot Interest Rate.” Review of
+Financial Studies 9, no. 2 ( Apr. 1996): 385–426.
+
+[2] Aït-Sahalia, Yacine. “Transition Densities for Interest Rate and Other Nonlinear Diffusions.” The
+Journal of Finance 54, no. 4 (Aug. 1999): 1361–95.
+
+[3] Glasserman, Paul. Monte Carlo Methods in Financial Engineering. New York: Springer-Verlag,
+2004.
+
+[4] Hull, John C. Options, Futures and Other Derivatives. 7th ed, Prentice Hall, 2009.
+
+[5] Johnson, Norman Lloyd, Samuel Kotz, and Narayanaswamy Balakrishnan. Continuous Univariate
+Distributions. 2nd ed. Wiley Series in Probability and Mathematical Statistics. New York:
+Wiley, 1995.
+
+[6] Shreve, Steven E. Stochastic Calculus for Finance. New York: Springer-Verlag, 2004.
+
+See Also
+simByEuler | merton | simulate
+
+Topics
+“Simulating Equity Prices” on page 14-31
+“Simulating Interest Rates” on page 14-50
+“Stratified Sampling” on page 14-58
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation” on
+page 14-71
+“Base SDE Models” on page 14-16
+“Drift and Diffusion Models” on page 14-19
+“Linear Drift Models” on page 14-22
+“Parametric Models” on page 14-24
+“SDEs” on page 14-2
+“SDE Models” on page 14-7
+“SDE Class Hierarchy” on page 14-5
+“Quasi-Monte Carlo Simulation” on page 14-63
+“Performance Considerations” on page 14-65
+
+bates
+
+15-201

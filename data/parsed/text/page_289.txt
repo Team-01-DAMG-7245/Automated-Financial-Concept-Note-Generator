@@ -1,0 +1,40 @@
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Mixed-Integer Mean-Variance Portfolio Optimization Problem” on page 4-402
+
+•
+“Adding Constraints to Satisfy UCITS Directive” on page 4-457
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Choose MINLP Solvers for Portfolio Problems” on page 4-140
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+•
+“Role of Convexity in Portfolio Problems” on page 4-157
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+Choosing and Controlling the Solver for Mean-Variance Portfolio Optimization
+
+4-121

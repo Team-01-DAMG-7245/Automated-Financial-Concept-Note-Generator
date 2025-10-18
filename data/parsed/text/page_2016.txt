@@ -1,0 +1,57 @@
+2.0663
+    2.7322
+
+IndByBond = 2×5
+
+1     2     3     4     6
+     1     3     5     7   NaN
+
+Input Arguments
+
+CFlowAmounts — Cash flow amounts
+matrix
+
+Cash flow amounts, specified as number of bonds (NUMBONDS) by number of cash flows (NUMCFS)
+matrix with entries listing cash flow amounts corresponding to each date in CFlowDates.
+
+Data Types: double
+
+CFlowDates — Cash flow dates
+datetime array | string array | date character vector
+
+Cash flow dates, specified as an NUMBONDS-by-NUMCFS matrix with rows listing cash flow dates using
+a datetime array, string array, or date character vectors for each bond and padded with NaNs. If
+CFlowDates is a serial date number or a date character vector, AllDates is returned as an array of
+serial date numbers. If CFlowDates is a datetime array, then AllDates is returned as a datetime
+array.
+
+To support existing code, cfport also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+TFactors — Time between settlement and the cash flow date
+matrix
+
+(Optional) Time between settlement and the cash flow date, specified as an NUMBONDS-by-NUMCFS
+matrix with entries listing the time between settlement and the cash flow date measured in
+semiannual coupon periods.
+
+Data Types: double
+
+Output Arguments
+
+CFBondDate — Cash flows indexed by bond and by date
+matrix
+
+Cash flows indexed by bond and by date, returned as an NUMBONDS by number of dates (NUMDATES)
+matrix. Each row contains a bond's cash flow values at the indices corresponding to entries in
+AllDates. Other indices in the row contain zeros.
+
+AllDates — List of all dates that have any cash flow from the bond portfolio
+matrix
+
+15
+Functions
+
+15-710

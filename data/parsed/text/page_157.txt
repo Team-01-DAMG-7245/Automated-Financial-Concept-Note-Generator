@@ -1,0 +1,67 @@
+Constraint Specification Using a Portfolio Object
+
+When constructing the efficient frontier, several constraints are typically considered. You can use
+linear constraints that define the limits within which the portfolio optimization problem must operate
+and you can also use group constraints to limit the exposure to certain sectors or groups.
+
+Constraints for Efficient Frontier
+
+This example shows how to compute the efficient frontier of portfolios consisting of three different
+assets, INTC, XON, and RD, given a list of constraints.
+
+The expected returns for INTC, XON, and RD are respectively as follows:
+
+ExpReturn = [0.1 0.2 0.15];
+
+The covariance matrix is
+
+ExpCovariance  =  [ 0.005   -0.010    0.004;
+                   -0.010    0.040   -0.002;
+                    0.004   -0.002    0.023];
+
+•
+Constraint 1: Allow short selling up to 10% of the portfolio value in any asset, but limit the
+investment in any one asset to 110% of the portfolio value.
+
+•
+Constraint 2: Consider two different sectors, technology and energy, with the following table
+indicating the sector each asset belongs to.
+
+Asset
+INTC
+XON
+RD
+
+Sector
+Technology
+Energy
+Energy
+
+Constrain the investment in the Energy sector to 80% of the portfolio value, and the investment in the
+Technology sector to 70%.To solve this problem, use Portfolio, passing in a list of asset
+constraints. Consider eight different portfolios along the efficient frontier:
+
+NumPorts = 8;
+
+To introduce the asset bounds constraints specified in Constraint 1, create the matrix
+AssetBounds, where each column represents an asset. The upper row represents the lower bounds,
+and the lower row represents the upper bounds. Since the bounds are the same for each asset, only
+one pair of bounds is needed because of scalar expansion.
+
+AssetBounds = [-0.1, 1.1];
+
+Constraint 2 must be entered in two parts, the first part defining the groups, and the second part
+defining the constraints for each group. Given the information above, you can build a matrix of 1s and
+0s indicating whether a specific asset belongs to a group. Each column represents an asset, and each
+row represents a group. This example has two groups: the technology group, and the energy group.
+Create the matrix Groups as follows:
+
+Groups =  [0   1   1; 
+           1   0   0];
+
+The GroupBounds matrix allows you to specify an upper and lower bound for each group. Each row
+in this matrix represents a group. The first column represents the minimum allocation, and the
+
+Constraint Specification Using a Portfolio Object
+
+3-19

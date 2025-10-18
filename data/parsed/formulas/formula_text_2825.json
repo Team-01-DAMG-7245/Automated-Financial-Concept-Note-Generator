@@ -1,0 +1,12 @@
+{
+  "page": 1450,
+  "original_text": "The Hull-White/Vasicek (HWV) short rate class derives directly from SDE with mean-reverting drift\n(that is, sdemrd): dXt = S(t)[L(t) −Xt]dt + V(t)dWt.",
+  "ocr_text": "TheHull-White/Vasicek(HWV)shortrateclassderivesdirectlyfromSDEwithmean-revertingdrift\n(thatis,sdemrd):dX;=S(t)[L(t)-X;]dt+V(t)dW;.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 523.07,
+    "x1": 542.88,
+    "y1": 548.81
+  },
+  "confidence": "high"
+}

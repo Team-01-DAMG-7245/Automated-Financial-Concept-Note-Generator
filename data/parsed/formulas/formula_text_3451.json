@@ -1,0 +1,12 @@
+{
+  "page": 1910,
+  "original_text": "vec = datestr(busdays('1/8/16','3/1/16','monthly'))",
+  "ocr_text": "vec=datestr(busdays(1/8/16,3/1/16,monthly))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 678.67,
+    "x1": 366.34,
+    "y1": 689.14
+  },
+  "confidence": "high"
+}

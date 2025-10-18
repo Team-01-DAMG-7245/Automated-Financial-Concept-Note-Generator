@@ -1,0 +1,5 @@
+Page 1337
+================================================================================
+
+This example shows how to create a brinsonAttribution object that you can then use with the
+attributionsChart function to generate a bar chart of performance attribution.

@@ -1,0 +1,12 @@
+{
+  "page": 604,
+  "original_text": "BuyTrade = true;\nTotalTradingShares_Buy = 2551;",
+  "ocr_text": "BuyTrade=true;\nTotalTradingShares_Buy=2551;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 464.06,
+    "x1": 252.54,
+    "y1": 485.32
+  },
+  "confidence": "high"
+}

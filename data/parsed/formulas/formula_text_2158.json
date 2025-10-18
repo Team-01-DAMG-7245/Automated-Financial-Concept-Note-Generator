@@ -1,0 +1,12 @@
+{
+  "page": 1111,
+  "original_text": "PortfolioDD = 100*Price* BondKRD;\nHedgeDD = HedgeKRD.*[Price_30;Price_10;Price_05;Price_02]",
+  "ocr_text": "PortfolioDD=100*Price*BondKRD;\nHedgeDD=HedgeKRD.*[Price_30;Price_10;Price05;Price02]",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.03,
+    "x1": 398.83,
+    "y1": 147.29
+  },
+  "confidence": "high"
+}

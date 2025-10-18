@@ -1,0 +1,12 @@
+{
+  "page": 154,
+  "original_text": "ConSet = portcons('default', 5, 'grouplims', Groups, LowerGroup, UpperGroup);",
+  "ocr_text": "ConSet=portcons(default,5,grouplims,Groups,LowerGroup,UpperGroup);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 200.71,
+    "x1": 386.68,
+    "y1": 208.15
+  },
+  "confidence": "high"
+}

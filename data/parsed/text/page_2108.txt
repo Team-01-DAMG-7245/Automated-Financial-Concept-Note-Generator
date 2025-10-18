@@ -1,0 +1,28 @@
+DateForm — Date format
+scalar character vector to indicate format of text representing dates
+
+Date format, specified as a scalar character vector to indicate the format of text representing dates.
+
+Data Types: char
+
+Output Arguments
+
+CharMat — Character array representing NumMat
+array of date character vectors
+
+Character array representing NumMat, returned as an array of date character vectors. If no output
+variable is assigned, the function prints the array to the display.
+
+Version History
+Introduced before R2006a
+
+See Also
+datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+
+15
+Functions
+
+15-802

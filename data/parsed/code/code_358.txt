@@ -1,0 +1,8 @@
+Page 353
+================================================================================
+
+To be more concrete about the ranges of efficient portfolio returns and risks, use the
+estimateFrontierLimits function to obtain portfolios at the endpoints of the efficient frontier.
+Given these portfolios, compute their moments using the estimatePortMoments function. The
+following code generates a table that lists the risk and return of the initial portfolio as well as the
+gross and net moments of portfolio returns for the portfolios at the endpoints of the efficient frontier:

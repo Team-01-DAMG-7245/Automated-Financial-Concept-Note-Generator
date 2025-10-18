@@ -1,0 +1,12 @@
+{
+  "page": 1168,
+  "original_text": "Z = zeros(horizon, nTrials, nIndices);            % Standardized residuals array\nU = copularnd('t', R, DoF, horizon * nTrials);    % t copula simulation",
+  "ocr_text": "Z=zeros(horizon,nTrials,nIndices); Standardizedresidualsarray\nU=copularnd(t,R,DoF,horizon*nTrials); Stcopulasimulation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.23,
+    "x1": 523.46,
+    "y1": 212.49
+  },
+  "confidence": "high"
+}

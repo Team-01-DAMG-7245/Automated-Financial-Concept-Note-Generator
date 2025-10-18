@@ -1,0 +1,12 @@
+{
+  "page": 621,
+  "original_text": "% Set the rolling lookback window to be at least 2 calendar months and at\n% most 6 calendar months.\nminLookback = calmonths(2);\nmaxLookback = calmonths(6);\nlookback  = [minLookback maxLookback];",
+  "ocr_text": "Settherollinglookbackwindowtobeatleast2calendarmonthsandat\nSmost6calendarmonths.\n\nminLookback=calmonths(2);\n\nmaxLookback=calmonths(6);\n\nlookback=[minLookbackmaxLookback];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.43,
+    "x1": 485.51,
+    "y1": 557.09
+  },
+  "confidence": "high"
+}

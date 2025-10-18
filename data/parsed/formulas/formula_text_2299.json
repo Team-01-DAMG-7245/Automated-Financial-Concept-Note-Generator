@@ -1,0 +1,12 @@
+{
+  "page": 1180,
+  "original_text": "weeklyOpen = retime(TMW(:,'Open'),'weekly','firstvalue');\nweeklyHigh = retime(TMW(:,'High'),'weekly','max');\nweeklyLow = retime(TMW(:,'Low'),'weekly','min');\nweeklyClose = retime(TMW(:,'Close'),'weekly','lastvalue');\nweeklyTMW = [weeklyOpen,weeklyHigh,weeklyLow,weeklyClose];",
+  "ocr_text": "weeklyOpen=retime(TMW(:,Open),weekly,firstvalue);\nweeklyHigh=retime(TMW(:,High),weekly,max);\nweeklyLow=retime(TMW(:,Low),weekly,min);\nweeklyClose=retime(TMW(:,Close),weekly,lastvalue);\nweeklyTMW=[weeklyOpen,weeklyHigh,weeklyLow,weeklyClose];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 547.78,
+    "x1": 404.27,
+    "y1": 601.44
+  },
+  "confidence": "high"
+}

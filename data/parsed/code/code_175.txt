@@ -1,0 +1,5 @@
+Page 162
+================================================================================
+
+setInequality function is the same as using the setGroups function in the example “Specifying
+Group Constraints” on page 3-24.

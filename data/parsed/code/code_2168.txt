@@ -1,0 +1,7 @@
+Page 1808
+================================================================================
+
+[CallRho,PutRho] = blsrho(Price,Strike,Rate,Time,Volatility) returns the call option
+rho CallRho, and the put option rho PutRho. Rho is the rate of change in value of derivative
+securities with respect to interest rates. blsrho uses normcdf, the normal cumulative distribution
+function in the Statistics and Machine Learning Toolbox.

@@ -1,0 +1,57 @@
+Compounding = 365;
+Basis = 3;
+
+Execute the function disc2zero which returns the zero curve ZeroRates at the maturity dates
+CurveDates.
+
+[ZeroRates, CurveDates] = disc2zero(DiscRates, CurveDates, Settle, Compounding, Basis)
+
+ZeroRates = 10×1
+
+0.0487
+    0.0510
+    0.0523
+    0.0524
+    0.0530
+    0.0526
+    0.0530
+    0.0532
+    0.0549
+    0.0536
+
+CurveDates = 10×1 datetime
+   06-Nov-2000
+   11-Dec-2000
+   15-Jan-2001
+   05-Feb-2001
+   04-Mar-2001
+   02-Apr-2001
+   30-Apr-2001
+   25-Jun-2001
+   04-Sep-2001
+   12-Nov-2001
+
+For readability, DiscRates and ZeroRates are shown here only to the basis point. However,
+MATLAB® software computed them at full precision. If you enter DiscRates as shown, ZeroRates
+may differ due to rounding.
+
+Input Arguments
+
+DiscRates — Discount factors
+decimal fraction
+
+Discount factors, specified as a NDATES-by-1 column vector of decimal fractions. In aggregate, the
+factors in DiscRates constitute a discount curve for the investment horizon represented by
+CurveDates.
+
+Data Types: double
+
+CurveDates — Maturity dates
+datetime array | string array | date character vector
+
+Maturity dates that correspond to the discount factors in DiscRates, specified as a NDATES-by-1
+column vector using a datetime array, string array, or date character vectors.
+
+disc2zero
+
+15-853

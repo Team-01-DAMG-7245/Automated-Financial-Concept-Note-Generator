@@ -1,0 +1,7 @@
+Page 1791
+================================================================================
+
+[CallDelta,PutDelta] = blsdelta(Price,Strike,Rate,Time,Volatility) returns delta,
+the sensitivity in option value to change in the underlying asset price. Delta is also known as the
+hedge ratio. blsdelta uses normcdf, the normal cumulative distribution function in the Statistics
+and Machine Learning Toolbox.

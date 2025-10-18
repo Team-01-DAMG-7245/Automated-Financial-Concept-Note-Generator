@@ -1,0 +1,30 @@
+From time t = 0 to t = 5 the wealth evolution is favorable so the action remains the same. At t = 6,
+the wealth drops so the agent chooses a more conservative approach in this time period. Since the
+wealth level does not recover greatly as time passes, the agent holds the conservative approach to
+decrease risk all the way until the end of the investment horizon. These results show how the agent
+incorporates not only the wealth level but also the time period information into its decisions. Notice
+that even when the wealth level at t = 9 goes well above the target goal, the action is still
+conservative. This is because as time progresses, the agent needs to decrease the risk level to ensure
+that the goal is attained by the end.
+
+Heatmap of Optimal Policy
+
+Compute a set of possible wealth levels using 25 logarithmically spaced points between the maximum
+and minimum. Then, create a grid of possible observations using these levels and the time steps.
+
+% Logarithmic wealth levels
+numWealthPoints = 25;
+wealthLevel = logspace(log10(WMin),log10(WMax),numWealthPoints);
+
+% Possible observations
+wVar = repmat(wealthLevel',finalTimePeriod,1);
+tVar = repelem((0:finalTimePeriod-1)',numWealthPoints);
+
+% Transform wealth to [0,1] space to feed to agent
+wVarAgent = (wVar-WMin)/(WMax-WMin);
+
+% Create a grid for agent to evaluate
+
+Multiperiod Goal-Based Wealth Management Using Reinforcement Learning
+
+4-389

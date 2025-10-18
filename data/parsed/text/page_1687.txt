@@ -1,0 +1,80 @@
+Algorithms
+
+Heston
+
+In the Heston stochastic volatility model, the asset value process and volatility process are defined as
+
+dS(t) = γ(t)S(t)dt +
+V(t)S(t)dWS(t)
+
+dV(t) = κ(θ −V(t))dt + σ V(t)dWV(t)
+
+Here:
+
+•
+γ is the continuous risk-free rate.
+
+•
+θ is a long-term variance level.
+
+•
+κ is the mean reversion speed for the variance.
+
+•
+σ is the volatility of volatility.
+
+CIR
+
+You can simulate any vector-valued CIR process of the form
+
+dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+
+1
+2)V(t)dWt
+
+Here:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+S is an NVars-by-NVars matrix of mean reversion speeds (the rate of mean reversion).
+
+•
+L is an NVars-by-1 vector of mean reversion levels (long-run mean or level).
+
+•
+D is an NVars-by-NVars diagonal matrix, where each element along the main diagonal is the
+square root of the corresponding element of the state vector.
+
+•
+V is an NVars-by-NBrowns instantaneous volatility rate matrix.
+
+•
+dWt is an NBrowns-by-1 Brownian motion vector.
+
+Bates
+
+Bates models are bivariate composite models. Each Bates model consists of two coupled univariate
+models.
+
+•
+A geometric Brownian motion (gbm) model with a stochastic volatility function and jumps that is
+expressed as follows.
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t + Y(t)X1tdNt
+
+This model usually corresponds to a price process whose volatility (variance rate) is governed by
+the second univariate model.
+
+•
+A Cox-Ingersoll-Ross (cir) square root diffusion model that is expressed as follows.
+
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+
+This model describes the evolution of the variance rate of the coupled Bates price process.
+
+simByQuadExp
+
+15-381

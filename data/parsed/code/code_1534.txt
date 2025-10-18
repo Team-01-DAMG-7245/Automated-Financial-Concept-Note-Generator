@@ -1,0 +1,4 @@
+Page 1438
+================================================================================
+
+Level represents the parameter L, specified as an array or deterministic function of time.

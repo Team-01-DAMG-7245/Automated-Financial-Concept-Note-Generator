@@ -1,0 +1,12 @@
+{
+  "page": 52,
+  "original_text": "Fridates = lweekdate(6,2000,1:12);\nFridays = datestr(Fridates)",
+  "ocr_text": "Fridates=lweekdate(6,2000,1:12);\nFridays=datestr(Fridates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.52,
+    "x1": 274.21,
+    "y1": 274.78
+  },
+  "confidence": "high"
+}

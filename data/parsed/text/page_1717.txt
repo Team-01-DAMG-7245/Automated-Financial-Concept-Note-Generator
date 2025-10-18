@@ -1,0 +1,61 @@
+where:
+
+•
+X is an NVars-by-1 state vector of process variables (for example, short rates or equity prices) to
+simulate.
+
+•
+W is an NBrowns-by-1 Brownian motion vector.
+
+•
+F is an NVars-by-1 vector-valued drift-rate function.
+
+•
+G is an NVars-by-NBrowns matrix-valued diffusion-rate function.
+
+Version History
+Introduced in R2008a
+
+R2023b: Added "milstein2" value to Scheme name-value argument
+Behavior changed in R2023b
+
+When the MDL input argument is a sdeddo, sdeld, sdemrd, bm, cev, gbm, merton, hwv, cir,
+heston, or bates object, you can use a Scheme value of "milstein2".
+
+Use the simByMilstein method to approximate a numerical solution of a stochastic differential
+equation.
+
+R2023a: Added "milstein" value to Scheme name-value argument
+Behavior changed in R2023a
+
+When the MDL input argument is a sdeddo, sdeld, sdemrd, bm, cev, gbm, merton, hwv, cir,
+heston, or bates object, you can use a Scheme value of "milstein".
+
+Use the simByMilstein method to approximate a numerical solution of a stochastic differential
+equation.
+
+R2022b: Approximation scheme to simulate the sample paths
+Behavior changed in R2022b
+
+When you specify Scheme, the MDL simulation method using the corresponding scheme is used
+instead of the one defined in the MDL.Simulation property.
+
+References
+
+[1] Aït-Sahalia, Y. “Testing Continuous-Time Models of the Spot Interest Rate.” The Review of
+Financial Studies, Spring 1996, Vol. 9, No. 2, pp. 385–426.
+
+[2] Aït-Sahalia, Y. “Transition Densities for Interest Rate and Other Nonlinear Diffusions.” The Journal
+of Finance, Vol. 54, No. 4, August 1999.
+
+[3] Glasserman, P. Monte Carlo Methods in Financial Engineering, New York, Springer-Verlag, 2004.
+
+[4] Hull, J. C. Options, Futures, and Other Derivatives, 5th ed. Englewood Cliffs, NJ: Prentice Hall,
+2002.
+
+[5] Johnson, N. L., S. Kotz, and N. Balakrishnan. Continuous Univariate Distributions, Vol. 2, 2nd ed.
+New York, John Wiley & Sons, 1995.
+
+simulate
+
+15-411

@@ -1,0 +1,12 @@
+{
+  "page": 417,
+  "original_text": "buy  = zeros(1,numel(deltaPositions));\nsell = zeros(1,numel(deltaPositions));",
+  "ocr_text": "buy=zeros(1,numel(deltaPositions));\nsell=zeros(1,numel(deltaPositions));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 168.63,
+    "x1": 295.88,
+    "y1": 189.89
+  },
+  "confidence": "high"
+}

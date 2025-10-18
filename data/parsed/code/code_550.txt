@@ -1,0 +1,13 @@
+Page 510
+================================================================================
+
+riskContribution = zeros(nX,nP);
+for i = 1:nP
+    weights = portWeights(:,i);
+    % Portfolio variance
+    portVar = weights'*Sigma*weights;
+    % Marginal constribution to portfoli risk (MCR)
+    margRiskCont = weights.*(Sigma*weights)/sqrt(portVar);
+    % Percent contribution to portfolio risk
+    riskContribution(:,i) = margRiskCont/sqrt(portVar);
+end

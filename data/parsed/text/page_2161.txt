@@ -1,0 +1,78 @@
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+Output Arguments
+
+ZeroRates — Zero curve for investment horizon represented by CurveDates
+vector
+
+Zero curve for the investment horizon represented by CurveDates, returned as a NDATES-by-1
+column vector of decimal fractions. The zero rates are the yields to maturity on theoretical zero-
+coupon bonds.
+
+CurveDates — Maturity dates that correspond to ZeroRates
+vector
+
+Maturity dates that correspond to the ZeroRates, returned as a NDATES-by-1 column vector. This
+vector is the same as the input vector CurveDates, but the output is sorted by ascending maturity. If
+either inputs for CurveDates or Settle are datetime arrays, the output CurveDates is returned as
+datetime arrays.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although disc2zero supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+disc2zero
+
+15-855

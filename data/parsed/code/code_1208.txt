@@ -1,0 +1,5 @@
+Page 1237
+================================================================================
+
+ts2func packages a specified time series array inside a callable function of time and state, and
+synchronizes it with an optional time vector. For instance:

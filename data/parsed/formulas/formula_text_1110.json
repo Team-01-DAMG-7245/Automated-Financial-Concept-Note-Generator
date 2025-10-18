@@ -1,0 +1,12 @@
+{
+  "page": 566,
+  "original_text": "strat2 = backtestStrategy('Denoising', @denoising, ...\n    RebalanceFrequency=rebalFreq, ...\n    LookbackWindow=lookback, ...\n    TransactionCosts=transactionsFixed, ...\n    InitialWeights=wDenoised_initial);",
+  "ocr_text": "strat2=backtestStrategy(Denoising,Qdenoising,...\nRebalanceFrequency=rebalFreq,...\nLookbackWindow=Lookback,...\nTransactionCosts=transactionsFixed,...\nInitialWeights=wDenoised_initial);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 168.63,
+    "x1": 382.6,
+    "y1": 222.29
+  },
+  "confidence": "high"
+}

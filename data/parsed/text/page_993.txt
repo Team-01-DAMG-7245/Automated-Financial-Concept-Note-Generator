@@ -1,0 +1,47 @@
+•
+Use the bininfo function with two output arguments where the second argument contains
+binning rules.
+
+•
+Manually modify the binning rules using the second output argument from bininfo.
+
+•
+Set the updated binning rules with modifybins and then use plotbins or bininfo to review
+the updated bins.
+
+For example, based on the plot for 'CustAge' in Step 2a, bins number 1 and 2 have similar WOE's
+as do bins number 5 and 6. To merge these bins using the steps outlined above:
+
+Predictor = 
+;
+[bi,cp] = bininfo(sc,Predictor)
+
+bi=8×6 table
+         Bin         Good    Bad     Odds        WOE       InfoValue
+    _____________    ____    ___    ______    _________    _________
+
+{'[-Inf,33)'}     70      53    1.3208     -0.42622     0.019746
+    {'[33,37)'  }     64      47    1.3617     -0.39568     0.015308
+    {'[37,40)'  }     73      47    1.5532     -0.26411    0.0072573
+    {'[40,46)'  }    174      94    1.8511    -0.088658     0.001781
+    {'[46,48)'  }     61      25      2.44      0.18758    0.0024372
+    {'[48,58)'  }    263     105    2.5048      0.21378     0.013476
+    {'[58,Inf]' }     98      26    3.7692      0.62245       0.0352
+    {'Totals'   }    803     397    2.0227          NaN     0.095205
+
+cp = 6×1
+
+33
+    37
+    40
+    46
+    48
+    58
+
+cp([1 5]) = []; % To merge bins 1 and 2, and bins 5 and 6
+sc = modifybins(sc,'CustAge','CutPoints',cp);
+plotbins(sc,'CustAge')
+
+Case Study for Credit Scorecard Analysis
+
+8-75

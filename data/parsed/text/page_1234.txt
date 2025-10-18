@@ -1,0 +1,61 @@
+The first technique generates correlated Gaussian variates to form a Brownian motion process with
+dependent components. These components are then weighted by a diagonal volatility or exposure
+matrix Sigma.
+
+The second technique generates independent Gaussian variates to form a standard Brownian motion
+process, which is then weighted by the lower Cholesky factor of the desired covariance matrix.
+Although these techniques can be used on many models, the relationship between them is most easily
+illustrated by working with a separable GBM model (see “Simulate Equity Markets Using GBM
+Simulation Methods” on page 14-38).
+
+The market model to simulate is:
+
+where μ is a diagonal matrix.
+
+Load the data set.
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+    Dataset.NIK Dataset.FTSE Dataset.SP];
+
+Convert the daily prices to returns using tick2ret.
+
+returns =  tick2ret(prices);
+
+Specify Sigma and Correlation using the first technique where you specify Sigma as a diagonal
+matrix of asset return standard deviations.
+
+expReturn   = diag(mean(returns));  % expected return vector
+sigma       = diag(std(returns));   % volatility of returns
+
+Specify Correlation as the sample correlation matrix of those returns. In this case, the components
+of the Brownian motion are dependent.
+
+correlation = corrcoef(returns);    
+GBM1        = gbm(expReturn,sigma,'Correlation',...
+                  correlation);
+
+Specify Sigma and Correlation using the second technique where you specify Sigma as the lower
+Cholesky factor of the asset return covariance matrix.
+
+covariance = cov(returns);
+sigma      = cholcov(covariance)';
+
+Set Correlation to an identity matrix.
+
+GBM2       = gbm(expReturn,sigma);
+
+Here, sigma captures both the correlation and magnitude of the asset return uncertainty. In contrast
+to the first technique, the components of the Brownian motion are independent. Also, this technique
+accepts the default assignment of an identity matrix to Correlation, and is more straightforward.
+
+Simulate a single trial of 1000 observations (roughly four years of daily data) using both techniques.
+By default, all state variables start at 1.
+
+rng(22814,'twister')
+[X1,T] = simByEuler(GBM1,1000);  % correlated Brownian motion
+
+14
+Stochastic Differential Equations
+
+14-42

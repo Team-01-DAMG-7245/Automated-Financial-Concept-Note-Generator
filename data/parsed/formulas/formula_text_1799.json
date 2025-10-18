@@ -1,0 +1,12 @@
+{
+  "page": 915,
+  "original_text": "Start = MaxDDIndex(1,:);\nEnd = MaxDDIndex(2,:);\n(TestData(Start(1),1) - TestData(End(1),1))/TestData(Start(1),1)",
+  "ocr_text": "Start=MaxDDIndex(1,:);\nEnd=MaxDDIndex(2,:);\n(TestData(Start(1),1)-TestData(End(1),1))/TestData(Start(1),1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 436.75,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

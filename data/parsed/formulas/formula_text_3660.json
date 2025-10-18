@@ -1,0 +1,12 @@
+{
+  "page": 2063,
+  "original_text": "NextQuasiCouponDate = cpndatenq( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate) determines the next quasi coupon date for a portfolio of\nNUMBONDS fixed income securities whether or not the first or last coupon is normal, short, or long\nusing optional input arguments.",
+  "ocr_text": "NextQuasiCouponDate=cpndatenq(___,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)determinesthenextquasicoupondateforaportfolioof\nNUMBONDSfixedincomesecuritieswhetherornotthefirstorlastcouponisnormal,short,orlong\nusingoptionalinputarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 389.7,
+    "x1": 537.29,
+    "y1": 437.33
+  },
+  "confidence": "high"
+}

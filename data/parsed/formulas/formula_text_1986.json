@@ -1,0 +1,12 @@
+{
+  "page": 1028,
+  "original_text": "ProbData4Upf = cdsbootstrap(ZeroData,[Maturity4 Upfront4 Spread4Std],Settle);\nSpread4RunFromUpf = cdsspread(ZeroData,ProbData4Upf,Settle,Maturity4);\nfprintf('A standard spread of %5.2f with an upfront of %8.7f\\n', ...\n   Spread4Std,Upfront4);",
+  "ocr_text": "ProbData4Upf=cdsbootstrap(ZeroData,[Maturity4Upfront4Spread4Std],Settle);\n\nSpread4RunFromUpf=cdsspread(ZeroData,ProbData4Upf,Settle,Maturity4);\n\nfprintf(Astandardspreadof*5.2fwithanupfrontof8.7fn,...\nSpread4Std,Upfront4);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 279.03,
+    "x1": 507.18,
+    "y1": 321.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 539,
+  "original_text": "% Compute p tilde before the cdf.\n    pTilde = 1/sigma*(log(WGrid'./WGrid) - (mu-(sigma^2)/2));\n    % Auxiliary matrices for edge cases (j = 1 and j = i_max)\n    pTildeAuxUB = [pTilde(:,2:end) inf(nWealthNodes,1)];\n    pTildeAuxLB = [-inf(nWealthNodes,1) pTilde(:,2:end)];",
+  "ocr_text": "Computeptildebeforethecdf.\npTilde=1/sigma*(log(WGrid./WGrid)-(mu-(sigma*2)/2));\nsAuxiliarymatricesforedgecases(j=1andj=i_max)\npTildeAuxUB=[pTilde(:,2:end)inf(nWealthNodes,1)];\npTildeAuxLB=[-inf(nWealthNodes,1)pTilde(:,2:end)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 567.36,
+    "x1": 420.5,
+    "y1": 621.03
+  },
+  "confidence": "high"
+}

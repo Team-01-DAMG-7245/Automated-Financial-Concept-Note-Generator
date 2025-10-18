@@ -1,0 +1,12 @@
+{
+  "page": 545,
+  "original_text": "function [Z,WPath,portPath,VPath] = DynamicPortSim(W0,WGrid,...\n    pret,prsk,portIdx,V)\n% Define time periods.\nT = size(V,2)-1;",
+  "ocr_text": "function[Z,WPath,portPath,VPath]=DynamicPortSim(WO,WGrid,...\npret,prsk,portIdx,V)\n\nDefinetimeperiods.\n\nT=size(V,2)-1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 449.43,
+    "x1": 431.36,
+    "y1": 492.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2476,
+  "original_text": "•\nOmega = lpm(-Data, -MAR, 1) / lpm(Data, MAR, 1)",
+  "ocr_text": "*Omega=lpm(-Data,-MAR,1)/lpm(Data,MAR,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.96,
+    "x1": 387.94,
+    "y1": 137.59
+  },
+  "confidence": "high"
+}

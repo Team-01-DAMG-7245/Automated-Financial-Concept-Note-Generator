@@ -1,0 +1,57 @@
+transMat2 = transprob(data,'startDate',startDate,'endDate',endDate, ...
+'algorithm','cohort')
+
+transMat2 = 8×8
+
+90.1554    8.5492    0.9067    0.3886         0         0         0         0
+    4.9512   88.5221    5.1763    1.0503    0.2251         0         0    0.0750
+    0.2770    6.6482   86.2188    6.0942    0.6233    0.0693         0    0.0693
+    0.0794    0.8737   11.6759   81.6521    4.3685    0.7943    0.1589    0.3971
+    0.1002    0.4008    1.9038   15.4309   77.8557    3.4068         0    0.9018
+         0         0    0.2262    2.4887   17.4208   74.2081    2.2624    3.3937
+         0         0    0.7576    1.5152    6.0606   10.6061   75.0000    6.0606
+         0         0         0         0         0         0         0  100.0000
+
+By default, the cohort algorithm internally gets yearly snapshots of the credit ratings, but the
+number of snapshots per year is definable using the parameter/value pair snapsPerYear. To get the
+estimates using quarterly snapshots:
+
+transMat3 = transprob(data,'startDate',startDate,'endDate',endDate, ...
+'algorithm','cohort','snapsPerYear',4)
+
+transMat3 = 8×8
+
+90.4765    8.0881    1.0072    0.4069    0.0164    0.0015    0.0002    0.0032
+    4.5949   89.3216    4.6489    1.1239    0.2276    0.0074    0.0007    0.0751
+    0.3747    6.3158   86.7380    5.6344    0.7675    0.0856    0.0040    0.0800
+    0.0958    0.7967   11.0441   82.6138    4.1906    0.7230    0.1372    0.3987
+    0.1028    0.3571    2.3312   14.4954   78.4276    3.1489    0.0383    1.0987
+    0.0084    0.0399    0.6465    3.0962   16.0789   75.1300    1.9044    3.0956
+    0.0031    0.0125    0.1445    1.8759    6.2613   10.7022   75.6300    5.3705
+         0         0         0         0         0         0         0  100.0000
+
+Both duration and cohort compute one-year transition probabilities by default, but the time
+interval for the transitions is definable using the name-value pair transInterval. For example, to
+get the two-year transition probabilities using the cohort algorithm with the same snapshot
+periodicity and estimation window:
+
+transMat4 = transprob(data,'startDate',startDate,'endDate',endDate, ...
+'algorithm','cohort','snapsPerYear',4,'transInterval',2)
+
+transMat4 = 8×8
+
+82.2358   14.6092    2.2062    0.8543    0.0711    0.0074    0.0011    0.0149
+    8.2803   80.4584    8.3606    2.2462    0.4665    0.0316    0.0030    0.1533
+    0.9604   11.1975   76.1729    9.7284    1.5322    0.2044    0.0162    0.1879
+    0.2483    2.0903   18.8440   69.5145    6.9601    1.2966    0.2329    0.8133
+    0.2129    0.8713    5.4893   23.5776   62.6438    4.9464    0.1390    2.1198
+    0.0378    0.1895    1.7679    7.2875   24.9444   57.1783    2.8816    5.7132
+    0.0154    0.0716    0.6576    4.2157   11.4465   16.3455   57.4078    9.8399
+         0         0         0         0         0         0         0  100.0000
+
+Estimate Transition Probabilities for Different Rating Scales
+
+8
+Credit Risk Analysis
+
+8-4

@@ -1,0 +1,12 @@
+{
+  "page": 484,
+  "original_text": "% Define the equal category strategy.\nequalCategory = backtestStrategy('EqualCategory',@equalCategoryRebalanceFcn, ...\n    'RebalanceFrequency',rebalance_schedule, ...\n    'InitialWeights',computeEqualCategory(asset_categories), ...\n    'UserData',struct('Categories',asset_categories));",
+  "ocr_text": "Definetheequalcategorystrategy.\n\nequalCategory=backtestStrategy(EqualCategory,GequalCategoryRebalanceFcn,...\nRebalanceFrequency,rebalance_schedule,...\nInitialWeights,computeEqualCategory(asset_categories),...\nUserData,struct(Categories,asset_categories));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 523.48,
+    "y1": 665.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 400,
+  "original_text": "Var Rp = Var raTwa = Var μa + F rf + εa",
+  "ocr_text": "Var(Rp)= Var(ra?wa) = Var((10 +Fryet+ a)",
+  "bbox": {
+    "x0": 90.09,
+    "y0": 476.25,
+    "x1": 283.82,
+    "y1": 492.13
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 189,
+  "original_text": "p = Portfolio(p, 'AssetMean', m, 'AssetCovar', C);",
+  "ocr_text": "p=Portfolio(p,AssetMean,m,AssetCovar,C);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 195.36,
+    "x1": 360.92,
+    "y1": 205.83
+  },
+  "confidence": "high"
+}

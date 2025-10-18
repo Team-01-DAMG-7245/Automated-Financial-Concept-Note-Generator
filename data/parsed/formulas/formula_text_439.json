@@ -1,0 +1,12 @@
+{
+  "page": 301,
+  "original_text": "•\nConditional\n(semicontinuous)\nbounds (for example,\nif asset i is selected,\nthen xi ≥ lbi,\notherwise xi = 0)",
+  "ocr_text": "*Conditional\n(semicontinuous)\nbounds(forexample,\nifassetiisselected,\nthenx;=[b;,,\notherwisex;=0)",
+  "bbox": {
+    "x0": 443.25,
+    "y0": 227.71,
+    "x1": 554.78,
+    "y1": 300.54
+  },
+  "confidence": "high"
+}

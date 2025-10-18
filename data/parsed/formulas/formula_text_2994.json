@@ -1,0 +1,12 @@
+{
+  "page": 1563,
+  "original_text": "function new_weights = maxSharpeRatioFcn(~, pricesTT)\n% Maximum Sharpe Ratio allocation",
+  "ocr_text": "functionnew_weights=maxSharpeRatioFcn(,pricesTT)\nSMaximumSharpeRatioallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 377.16,
+    "y1": 632.69
+  },
+  "confidence": "high"
+}

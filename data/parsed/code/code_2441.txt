@@ -1,0 +1,9 @@
+Page 2294
+================================================================================
+
+Estimate the efficient portfolio that maximizes the Sharpe ratio. The estimateMaxSharpeRatio
+function maximizes the Sharpe ratio among portfolios on the efficient frontier. This example uses the
+'direct' method for a Portfolio object (p) that does not specify a tracking error and only uses
+linear constraints. The setSolver function is used to control the SolverType and
+SolverOptions. In this case, the SolverType is quadprog. For more information on the
+'direct' method, see “Algorithms” on page 15-996.

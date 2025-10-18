@@ -1,0 +1,56 @@
+annurate
+
+Periodic interest rate of annuity
+
+Syntax
+
+Rate = annurate(NumPeriods,Payment,PresentValue)
+Rate = annurate( ___ ,FutureValue,Due)
+
+Description
+
+Rate = annurate(NumPeriods,Payment,PresentValue) returns the periodic interest rate paid
+on a loan or annuity.
+
+Rate = annurate( ___ ,FutureValue,Due) specifies options using one or more optional
+arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Calculate the Periodic Interest Rate Paid on a Loan or Annuity
+
+This example shows how to find the periodic interest rate of a four-year, $5000 loan with a $130
+monthly payment made at the end of each month.
+
+Rate = annurate(4*12, 130, 5000, 0, 0)
+
+Rate = 
+0.0094
+
+Rate multiplied by 12 gives an annual interest rate of 11.32% on the loan.
+
+Input Arguments
+
+NumPeriods — Number of payment periods
+scalar numeric
+
+Number of payment periods, specified as a scalar numeric.
+
+Data Types: double
+
+Payment — Payment per period
+scalar numeric
+
+Payment per period, specified as a scalar numeric.
+
+Data Types: double
+
+PresentValue — Present value of the loan
+scalar numeric
+
+Present value of the loan, specified as a scalar numeric.
+
+15
+Functions
+
+15-464

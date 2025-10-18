@@ -1,0 +1,58 @@
+0.4858    0.8871    1.0000    0.2326    0.7723    0.5877
+    0.1907    0.2567    0.2326    1.0000    0.2503    0.1539
+    0.4734    0.8500    0.7723    0.2503    1.0000    0.4769
+    0.6521    0.5122    0.5877    0.1539    0.4769    1.0000
+
+Note the relatively low degrees of freedom parameter obtained from the t copula calibration,
+indicating a significant departure from a Gaussian situation.
+
+DoF                % Scalar degrees of freedom parameter of the optimized t copula
+
+DoF = 
+4.8613
+
+Copula Simulation
+
+Now that the copula parameters have been estimated, simulate jointly-dependent uniform variates
+using the function copularnd.
+
+Then, by extrapolating the Pareto tails and interpolating the smoothed interior, transform the uniform
+variates derived from copularnd to daily centered returns via the inverse CDF of each index. These
+simulated centered returns are consistent with those obtained from the historical dataset. The
+returns are assumed to be independent in time, but at any point in time possess the dependence and
+rank correlation induced by the given copula.
+
+The following code segment illustrates the dependence structure by simulating centered returns
+using the t copula. It then plots a 2-D scatter plot with marginal histograms for the French CAC 40
+and German DAX using the Statistics and Machine Learning Toolbox scatterhist function. The
+French and German indices were chosen simply because they have the highest correlation of the
+available data.
+
+nPoints = 10000;                          % Number of simulated observations
+
+s = RandStream.getGlobalStream();
+reset(s)
+
+R = zeros(nPoints, nIndices);             % Pre-allocate simulated returns array
+U = copularnd('t', rhoT, DoF, nPoints);   % Simulate U(0,1) from t copula
+
+for j = 1:nIndices
+    R(:,j) = icdf(tails{j}, U(:,j));
+end
+
+h = scatterhist(R(:,2), R(:,3),'Color','r','Marker','.','MarkerSize',1); 
+fig = gcf;
+fig.Color = [1 1 1];
+y1 = ylim(h(1));
+y3 = ylim(h(3));
+xlim(h(1), [-.1 .1])
+ylim(h(1), [-.1 .1])
+xlim(h(2), [-.1 .1])
+ylim(h(3), [(y3(1) + (-0.1 - y1(1)))  (y3(2) + (0.1 - y1(2)))])
+xlabel('France')
+ylabel('Germany')
+title(['t Copula (\nu = ' num2str(DoF,2) ')'])
+
+Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation
+
+14-79

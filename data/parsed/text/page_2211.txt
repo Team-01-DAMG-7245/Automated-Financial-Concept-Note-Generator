@@ -1,0 +1,57 @@
+0.0010
+    0.0014
+    0.0010
+    0.0009
+    0.0011
+    0.0021
+    0.0009
+    0.0006
+    0.0009
+    0.0007
+    0.0010
+    0.0012
+      ⋮
+
+The difference in the standard errors shows the increase in uncertainty of estimation of asset
+expected returns due to missing data. To view the differences:
+
+Assets
+
+Assets = 1×12 cell
+    {'AAPL'}    {'AMZN'}    {'CSCO'}    {'DELL'}    {'EBAY'}    {'GOOG'}    {'HPQ'}    {'IBM'}
+
+StdMeanH'
+
+ans = 1×12
+
+0.0010    0.0014    0.0010    0.0009    0.0011    0.0021    0.0009    0.0006    0.0009    0.0
+
+StdMeanF'
+
+ans = 1×12
+
+0.0010    0.0014    0.0010    0.0009    0.0011    0.0013    0.0009    0.0006    0.0009    0.0
+
+StdMeanH' - StdMeanF'
+
+ans = 1×12
+10-3 ×
+
+-0.0000    0.0021   -0.0000   -0.0000   -0.0000    0.7742   -0.0000   -0.0000   -0.0000   -0.0
+
+The two assets with missing data, AMZN and GOOG, are the only assets to have differences due to
+missing information.
+
+Input Arguments
+
+Data — Data
+matrix
+
+Data, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a NUMSERIES-
+dimensional random vector. Missing values are indicated by NaNs.
+
+Data Types: double
+
+ecmnstd
+
+15-905

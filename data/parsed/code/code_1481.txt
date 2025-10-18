@@ -1,0 +1,5 @@
+Page 1410
+================================================================================
+
+As a deterministic function of time, Correlation allows you to specify a dynamic correlation
+structure.

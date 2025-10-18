@@ -1,0 +1,62 @@
+For ResStatus, the value of 'Home Owner' is the value of the mode of the data, and the WOE value
+of the <missing> bin is closest to that of the 'Home Owner' bin.
+
+modeResStatus = mode(dataMissing.ResStatus);
+disp(modeResStatus)
+
+Home Owner
+
+Use MATLAB® fillmissing to replace the missing data with 'Home Owner'.
+
+dataTreated.ResStatus = fillmissing(dataTreated.ResStatus,'constant',string(modeResStatus));
+
+The treated data set now has no missing values.
+
+disp(any(any(ismissing(dataTreated))))
+
+0
+
+Using the treated data set, apply the typical creditscorecard workflow. First, create a
+creditscorecard object with the treated data and then apply automatic binning.
+
+scTreated = creditscorecard(dataTreated,'IDVar','CustID');
+scTreated = autobinning(scTreated);
+
+Compare the bin information of the untreated data for CustAge with the bin information of the
+treated data for CustAge.
+
+bi = bininfo(sc,'CustAge');
+disp(bi)
+
+Bin         Good    Bad     Odds       WOE       InfoValue 
+    _____________    ____    ___    ______    ________    __________
+
+{'[-Inf,33)'}     69      52    1.3269    -0.42156      0.018993
+    {'[33,37)'  }     63      45       1.4    -0.36795      0.012839
+    {'[37,40)'  }     72      47    1.5319     -0.2779     0.0079824
+    {'[40,46)'  }    172      89    1.9326    -0.04556     0.0004549
+    {'[46,48)'  }     59      25      2.36     0.15424     0.0016199
+    {'[48,51)'  }     99      41    2.4146     0.17713     0.0035449
+    {'[51,58)'  }    157      62    2.5323     0.22469     0.0088407
+    {'[58,Inf]' }     93      25      3.72     0.60931      0.032198
+    {'<missing>'}     19      11    1.7273    -0.15787    0.00063885
+    {'Totals'   }    803     397    2.0227         NaN      0.087112
+
+biTreated = bininfo(scTreated,'CustAge');
+disp(biTreated)
+
+Bin         Good    Bad     Odds       WOE       InfoValue
+    _____________    ____    ___    ______    ________    _________
+
+{'[-Inf,33)'}     69      52    1.3269    -0.42156     0.018993
+    {'[33,37)'  }     63      45       1.4    -0.36795     0.012839
+    {'[37,40)'  }     72      47    1.5319     -0.2779    0.0079824
+    {'[40,45)'  }    156      86     1.814    -0.10891    0.0024345
+    {'[45,48)'  }     94      39    2.4103     0.17531    0.0033002
+    {'[48,58)'  }    256     103    2.4854     0.20603      0.01223
+    {'[58,Inf]' }     93      25      3.72     0.60931     0.032198
+    {'Totals'   }    803     397    2.0227         NaN     0.089977
+
+Treat Missing Data in a Credit Scorecard Workflow Using MATLAB fillmissing
+
+8-135

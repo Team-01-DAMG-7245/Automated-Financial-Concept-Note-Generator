@@ -1,0 +1,56 @@
+7.3085         0    0.0010         0         0    0.0000
+    7.3116    0.0000    0.0010    0.0000         0    0.0000
+
+Prices = 2×1
+
+99.2654
+  103.1875
+
+Yields = 2×1
+
+0.0510
+    0.0564
+
+Use a bootstrapping function to derive an implied zero curve. Bootstrapping is a process whereby you
+begin with known data points and solve for unknown data points using an underlying arbitrage
+theory. Every coupon bond can be valued as a package of zero-coupon bonds which mimic its cash
+flow and risk characteristics. By mapping yields-to-maturity for each theoretical zero-coupon bond, to
+the dates spanning the investment horizon, you can create a theoretical zero-rate curve. The
+Financial Toolbox™ software provides two bootstrapping functions: zbtprice derives a zero curve
+from bond data and prices, and zbtyield derives a zero curve from bond data and yields. Using
+zbtprice
+
+[ZeroRates, CurveDates] = zbtprice(Bonds, Prices, Settle)
+
+ZeroRates = 2×1
+
+0.0516
+    0.0558
+
+CurveDates = 2×1
+
+730846
+      731160
+
+CurveDates gives the investment horizon.
+
+datestr(CurveDates)
+
+ans = 2×11 char array
+    '26-Dec-2000'
+    '05-Nov-2001'
+
+Use the functions zero2disc, zero2fwd, and zero2pyld to construct discount, forward, and par
+yield curves from the zero curve, and vice versa.
+
+[DiscRates, CurveDates] = zero2disc(ZeroRates, CurveDates, Settle)
+
+DiscRates = 2×1
+
+0.9926
+    0.9462
+
+2
+Performing Common Financial Tasks
+
+2-30

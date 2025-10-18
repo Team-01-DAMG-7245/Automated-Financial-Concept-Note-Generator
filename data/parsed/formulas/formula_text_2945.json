@@ -1,0 +1,12 @@
+{
+  "page": 1539,
+  "original_text": "strategy = backtestStrategy( ___ ,Name,Value) sets properties on page 15-242 using name-\nvalue pair arguments and any of the arguments in the previous syntax. You can specify multiple\nname-value pair arguments. For example, strat =\nbacktestStrategy('MyStrategy',@myRebalFcn,'TransactionCost',0.005,'LookbackWi\nndow',20).",
+  "ocr_text": "strategy=backtestStrategy(_,Name,Value)setspropertiesonpage15-242usingname-\nvaluepairargumentsandanyoftheargumentsintheprevioussyntax.Youcanspecifymultiple\nname-valuepairarguments.Forexample,strat=\nbacktestStrategy(MyStrategy,QmyRebalFcn,TransactionCost,0.005,LookbackWi\nndow,20).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 576.13,
+    "x1": 556.28,
+    "y1": 635.76
+  },
+  "confidence": "high"
+}

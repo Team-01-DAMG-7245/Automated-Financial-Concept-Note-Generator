@@ -1,0 +1,59 @@
+Backtest with Brinson Attribution to Evaluate Portfolio
+Performance
+
+This example shows how to compute Brinson attribution using the output of the MATLAB® backtest
+framework. The backtest framework allows you to build custom trading strategies and then backtest
+them against historical or simulated market data. The example uses the Brinson attribution function
+(brinsonAttribution) to explain a portfolio's performance versus a benchmark.
+
+Load Data
+
+Brinson attribution requires that a category is assigned to each asset. Load the dowPortfolio.xlsx
+data set, then assign each of the 30 stocks to a category.
+
+% Read a table of daily adjusted close prices for 2006 DJIA stocks.
+pricesTT = readtimetable('dowPortfolio.xlsx');
+
+% Remove the index from the dataset.
+pricesTT= removevars(pricesTT,'DJI');
+num_assets = width(pricesTT);
+
+% Set the sectors for each stock.
+asset_categories = categorical(["Materials";"Financials";"Financials"; ...
+    "Industrials";"Financials";"Industrials";"Materials"; ...
+    "Communication Services";"Industrials";"Consumer Discretionary"; ...
+    "Consumer Discretionary";"Industrials";"Information Technology"; ...
+    "Information Technology";"Information Technology";"Health Care"; ...
+    "Financials";"Consumer Staples";"Consumer Discretionary"; ...
+    "Industrials";"Consumer Staples";"Health Care"; ...
+    "Information Technology";"Health Care";"Consumer Staples"; ...
+    "Communication Services";"Industrials";"Communication Services"; ...
+    "Consumer Staples";"Energy"]);
+
+% Display the stock categories.
+Symbol = pricesTT.Properties.VariableNames(:);
+table(Symbol,asset_categories)
+
+ans=30×2 table
+     Symbol        asset_categories   
+    ________    ______________________
+
+{'AA'  }    Materials             
+    {'AIG' }    Financials            
+    {'AXP' }    Financials            
+    {'BA'  }    Industrials           
+    {'C'   }    Financials            
+    {'CAT' }    Industrials           
+    {'DD'  }    Materials             
+    {'DIS' }    Communication Services
+    {'GE'  }    Industrials           
+    {'GM'  }    Consumer Discretionary
+    {'HD'  }    Consumer Discretionary
+    {'HON' }    Industrials           
+    {'HPQ' }    Information Technology
+    {'IBM' }    Information Technology
+    {'INTC'}    Information Technology
+
+Backtest with Brinson Attribution to Evaluate Portfolio Performance
+
+4-315

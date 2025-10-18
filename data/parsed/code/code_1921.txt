@@ -1,0 +1,5 @@
+Page 1542
+================================================================================
+
+TransactionCosts — Transaction costs for trades
+0 (not computed) (default) | numeric | vector | function handle

@@ -1,0 +1,12 @@
+{
+  "page": 95,
+  "original_text": "LOB3Variables = [\"AskPrice1\",\"AskSize1\",\"BidPrice1\",\"BidSize1\",...\n                 \"AskPrice2\",\"AskSize2\",\"BidPrice2\",\"BidSize2\",...\n                 \"AskPrice3\",\"AskSize3\",\"BidPrice3\",\"BidSize3\"];\nDSLOB.SelectedVariableNames = LOB3Variables;\n                               \nDS = combine(DSMSG,DSLOB);",
+  "ocr_text": "LOB3Variables=[AskPricel,AskSizel,BidPricel,BidSizel,...\nAskPrice2,AskSize2,BidPrice2,BidSize2,...\nAskPrice3,AskSize3,BidPrice3,BidSize3];\n\nDSLOB.SelectedVariableNames=LOB3Variables;\n\nDS=combine(DSMSG,DSLOB);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 288.78,
+    "x1": 447.61,
+    "y1": 353.25
+  },
+  "confidence": "high"
+}

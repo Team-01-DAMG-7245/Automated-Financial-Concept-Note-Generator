@@ -1,0 +1,12 @@
+{
+  "page": 675,
+  "original_text": "x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];\np = PortfolioCVaR('InitPort', x0);\np = setCosts(p, 0.002, 0.002);",
+  "ocr_text": "xO=[0.4;0.2;0.2;0.1;0.1];\np=PortfolioCVaR(InitPort,x0);\np=setCosts(p,0.002,0.002);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 365.37,
+    "x1": 274.22,
+    "y1": 397.44
+  },
+  "confidence": "high"
+}

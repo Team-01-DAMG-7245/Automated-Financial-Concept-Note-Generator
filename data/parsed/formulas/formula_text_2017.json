@@ -1,0 +1,12 @@
+{
+  "page": 1043,
+  "original_text": "missingCustAgeNewCustomers = isnan(dataNewCustomers.CustAge);\nmissingResStatusNewCustomers = ismissing(dataNewCustomers.ResStatus);",
+  "ocr_text": "missingCustAgeNewCustomers=isnan(dataNewCustomers.CustAge);\nmissingResStatusNewCustomers=ismissing(dataNewCustomers.ResStatus);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 463.85,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

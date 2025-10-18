@@ -1,0 +1,12 @@
+{
+  "page": 2124,
+  "original_text": "StartDate = '1-Jan-2002';\nEndDate = '1-Feb-2002';\nNumDays = days360e(StartDate, EndDate)",
+  "ocr_text": "StartDate=1-Jan-2002;\nEndDate=1-Feb-2002;\nNumDays=days360e(StartDate,EndDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 475.47,
+    "x1": 295.89,
+    "y1": 507.54
+  },
+  "confidence": "high"
+}

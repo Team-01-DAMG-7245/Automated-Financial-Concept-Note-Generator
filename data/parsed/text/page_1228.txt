@@ -1,0 +1,36 @@
+F = @(t,X) diag(expReturn)* X;
+G = @(t,X) diag(X) * diag(sigma);
+
+SDE = sde(F, G, 'Correlation', ...
+    correlation, 'StartState', X);
+
+Simulate a single path of correlated equity index prices over one calendar year (defined as
+approximately 250 trading days) using the default simulate method.
+
+nPeriods = 249;      % # of simulated observations
+dt       =   1;      % time increment = 1 day
+rng(142857,'twister')
+[S,T] = simulate(SDE, nPeriods, 'DeltaTime', dt);
+
+whos S
+
+Name        Size            Bytes  Class     Attributes
+
+S         250x6             12000  double
+
+The output array S is a 250-by-6 = (NPeriods + 1-by-nVariables-by-1) array with the same initial
+value, 100, for all indices. Each row of S is an observation of the state vector Xtat time t.
+
+Plot the simulated paths.
+
+plot(T, S), xlabel('Trading Day'), ylabel('Price')
+title('Single Path of Multi-Dimensional Market Model')
+legend({'Canada' 'France' 'Germany' 'Japan' 'UK' 'US'}, ... 
+    'Location', 'Best')
+
+Simulate Equity Markets Using simByEuler Method
+
+14
+Stochastic Differential Equations
+
+14-36

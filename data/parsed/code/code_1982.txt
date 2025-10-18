@@ -1,0 +1,7 @@
+Page 1568
+================================================================================
+
+The backtestStrategy name-value argument for UserData supports strategy-specific user data
+for use in the user-defined function handles for the rebalance function. Also the backtestStrategy
+name-value argument for EngineDataList enables you to specify the set of optional backtest state
+data that a strategy needs in the user-defined function handles.

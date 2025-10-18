@@ -1,0 +1,12 @@
+{
+  "page": 558,
+  "original_text": "obs = zeros(2,1,finalTimePeriod*numWealthPoints);\nobs(:,1,:) = [wVarAgent';tVar'];",
+  "ocr_text": "obs=zeros(2,1,finalTimePeriod*numWealthPoints);\nobs(:,1,:)=[warAgent;tVar];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 355.48,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

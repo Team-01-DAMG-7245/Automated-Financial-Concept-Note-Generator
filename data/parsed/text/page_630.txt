@@ -1,0 +1,71 @@
+with the same return proxies and portfolio sets as mean-variance portfolio optimization but uses
+conditional value-at-risk of portfolio returns as the risk proxy.
+
+•
+The PortfolioMAD object implements what is known as mean-absolute deviation portfolio
+optimization (see Konno and Yamazaki [50] at “Portfolio Optimization” on page A-5), which is
+referred to as MAD portfolio optimization. MAD portfolio optimization works with the same return
+proxies and portfolio sets as mean-variance portfolio optimization but uses mean-absolute
+deviation portfolio returns as the risk proxy.
+
+Return Proxy
+
+The proxy for portfolio return is a function μ: X
+R on a portfolio set X ⊂Rn that characterizes the
+rewards associated with portfolio choices. Usually, the proxy for portfolio return has two general
+forms, gross and net portfolio returns. Both portfolio return forms separate the risk-free rate r0 so
+that the portfolio x ∈X contains only risky assets.
+
+Regardless of the underlying distribution of asset returns, a collection of S asset returns y1,...,yS has a
+mean of asset returns
+
+m = 1
+S ∑
+s = 1
+
+S
+ys,
+
+and (sample) covariance of asset returns
+
+C =
+1
+S −1 ∑
+s = 1
+
+S
+(ys −m)(ys −m)T .
+
+These moments (or alternative estimators that characterize these moments) are used directly in
+mean-variance portfolio optimization to form proxies for portfolio risk and return.
+
+Gross Portfolio Returns
+
+The gross portfolio return for a portfolio x ∈X is
+
+μ(x) = r0 + (m −r01)Tx,
+
+where:
+
+r0 is the risk-free rate (scalar).
+
+m is the mean of asset returns (n vector).
+
+If the portfolio weights sum to 1, the risk-free rate is irrelevant. The properties in the Portfolio
+object to specify gross portfolio returns are:
+
+•
+RiskFreeRate for r0
+•
+AssetMean for m
+
+Net Portfolio Returns
+
+The net portfolio return for a portfolio x ∈X is
+
+μ(x) = r0 + (m −r01)Tx −bTmax 0, x −x0 −sTmax 0, x0 −x ,
+
+5
+CVaR Portfolio Optimization Tools
+
+5-4

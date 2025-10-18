@@ -1,0 +1,64 @@
+Data Types: double
+
+Covar0 — User-supplied initial or known estimate for the covariance matrix of the
+regression residuals
+identity matrix (default) | matrix
+
+(Optional) User-supplied initial or known estimate for the covariance matrix of the regression
+residuals, specified as an NUMSERIES-by-NUMSERIES matrix.
+
+For covariance-weighted least-squares calculations, this matrix corresponds with weights for each
+series in the regression. The matrix also serves as an initial guess for the residual covariance in the
+expectation conditional maximization (ECM) algorithm.
+
+Data Types: double
+
+CovarFormat — Format for covariance matrix
+'full' (default) | character vector with value 'full' or 'diagonal'
+
+(Optional) Format for the covariance matrix, specified as a character vector. The choices are:
+
+•
+'full' — This is the default method that computes the full covariance matrix.
+
+•
+'diagonal' — This forces the covariance matrix to be a diagonal matrix.
+
+Data Types: char
+
+Output Arguments
+
+Parameters — Parameters of the regression model
+vector
+
+Parameters of the regression model, returned as an NUMPARAMS-by-1 column vector of estimates for
+the parameters of the regression model.
+
+Covariance — Covariance of the regression model's residuals
+matrix
+
+Covariance of the regression model's residuals, returned as an NUMSERIES-by-NUMSERIES matrix of
+estimates for the covariance of the regression model's residuals.
+
+Resid — Residuals from the regression
+matrix
+
+Residuals from the regression, returned as an NUMSAMPLES-by-NUMSERIES matrix of residuals from
+the regression.
+
+Info — Structure containing additional information from the regression
+structure
+
+Structure containing additional information from the regression, returned as a structure. The
+structure has these fields:
+
+•
+Info.Obj – A variable-extent column vector, with no more than MaxIterations elements, that
+contain each value of the objective function at each iteration of the estimation algorithm. The last
+value in this vector, Obj(end), is the terminal estimate of the objective function. If you do least
+squares, the objective function is the least squares objective function.
+
+15
+Functions
+
+15-862

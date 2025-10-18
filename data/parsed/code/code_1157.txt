@@ -1,0 +1,6 @@
+Page 1203
+================================================================================
+
+where S is an NVars-by-NVars matrix-valued function of mean reversion speeds (that is, rates of mean
+reversion), and L is an NVars-by-1 vector-valued function of mean reversion levels (that is, long run
+average level).

@@ -1,0 +1,12 @@
+{
+  "page": 1025,
+  "original_text": "fprintf('Accrued Premium: %8.2f\\n',AccPrem);",
+  "ocr_text": "fprintf(AccruedPremium:8.2fn,AccPrem);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 539.76,
+    "x1": 328.41,
+    "y1": 550.23
+  },
+  "confidence": "high"
+}

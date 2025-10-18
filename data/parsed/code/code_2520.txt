@@ -1,0 +1,5 @@
+Page 2387
+================================================================================
+
+Use the getBounds function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain bounds for portfolio weights from portfolio objects.

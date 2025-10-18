@@ -1,0 +1,12 @@
+{
+  "page": 935,
+  "original_text": "transMat = transprobbytotals(totals)",
+  "ocr_text": "transMat=transprobbytotals(totals)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 656.16,
+    "x1": 285.05,
+    "y1": 666.63
+  },
+  "confidence": "high"
+}

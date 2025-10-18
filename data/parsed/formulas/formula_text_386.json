@@ -1,0 +1,12 @@
+{
+  "page": 243,
+  "original_text": "p = Portfolio;\nA = [ 1 1 1 0 0 ];    % first equality constraint",
+  "ocr_text": "p=Portfolio;\nA=[11100]; 8firstequalityconstraint",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 355.49,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

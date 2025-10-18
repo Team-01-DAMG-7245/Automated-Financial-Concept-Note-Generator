@@ -1,0 +1,12 @@
+{
+  "page": 2058,
+  "original_text": "NextCouponDate = datetime\n   30-May-1997",
+  "ocr_text": "NextCouponDate=datetime\n30-May-1997",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 225.46,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

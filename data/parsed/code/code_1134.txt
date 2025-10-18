@@ -1,0 +1,6 @@
+Page 1178
+================================================================================
+
+Use the MATLAB summary function to view basic statistics of the timetable data. By reviewing the
+summary for each variable, you can identify missing values. You can then use the MATLAB
+fillmissing function to fill in missing data in a timetable by specifying a fill method.

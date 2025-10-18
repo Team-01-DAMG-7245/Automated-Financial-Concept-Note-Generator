@@ -1,0 +1,35 @@
+% Run the backtest.
+backtester = runBacktest(backtester,pricesTT);
+
+Use the assetAreaPlot helper function, defined in the Local Functions on page 15-287 section of
+this example, to display the change in the asset allocation over the course of the backtest.
+
+assetAreaPlot(backtester,"InverseVariance")
+
+Notice that the inverse variance strategy begins all in cash and remains in that state for about 2.5
+months. This is because the backtestStrategy object does not have a specified set of initial
+weights, which you specify using the InitialPortfolioValue name-value pair argument. The
+inverse variance strategy requires 30 days of trailing asset price history before rebalancing. You can
+use the printRebalanceTable helper function, defined in the Local Functions on page 15-287
+section, to display the rebalance schedule.
+
+printRebalanceTable(ivStrategy,pricesTT,minLookback);
+
+First Day of Data    Backtest Start Date    Minimum Days to Rebalance
+    _________________    ___________________    _________________________
+
+03-Jan-2006           03-Jan-2006                   30
+
+Rebalance Dates    Days of Available Price History    Enough Data to Rebalance
+    _______________    _______________________________    ________________________
+
+08-Feb-2006                     26                           "No"           
+      16-Mar-2006                     51                           "Yes"          
+      21-Apr-2006                     76                           "Yes"          
+      26-May-2006                    101                           "Yes"          
+      03-Jul-2006                    126                           "Yes"          
+      08-Aug-2006                    151                           "Yes"
+
+runBacktest
+
+15-283

@@ -1,0 +1,12 @@
+{
+  "page": 752,
+  "original_text": "% Run the simulation\nPaths = StockGBM.simByEuler(NPERIODS, 'NTRIALS', NTRIALS, ...\n    'DeltaTime', dt, 'Antithetic', true);",
+  "ocr_text": "SRunthesimulation\nPaths=StockGBM.simByEuler(NPERIODS,NTRIALS,NTRIALS,...\nDeltaTime,dt,Antithetic,true);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 420.52,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

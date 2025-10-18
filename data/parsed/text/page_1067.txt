@@ -1,0 +1,31 @@
+The samples from this distribution reflect the pattern of missing and nonmissing values for
+observations k = 1, ..., m. You must sample from conditional distributions for each observation to
+preserve the correlation structure with the nonmissing values at each observation.
+
+If you follow this procedure, the resultant filled-in values are random and generate mean and
+covariance estimates that are asymptotically equivalent to the ECM-derived mean and covariance
+estimates. Note, however, that the filled-in values are random and reflect likely samples from the
+distribution estimated over all the data and may not reflect “true” values for a particular observation.
+
+See Also
+mvnrmle | mvnrstd | mvnrfish | mvnrobj | ecmmvnrmle | ecmmvnrstd | ecmmvnrfish |
+ecmmvnrobj | ecmlsrmle | ecmlsrobj | ecmmvnrstd | ecmmvnrfish | ecmnmle | ecmnstd |
+ecmnfish | ecmnhess | ecmnobj | convert2sur | ecmninit
+
+Related Examples
+
+•
+“Multivariate Normal Regression” on page 9-2
+
+•
+“Multivariate Normal Regression Types” on page 9-13
+
+•
+“Valuation with Missing Data” on page 9-26
+
+•
+“Portfolios with Missing Data” on page 9-21
+
+Maximum Likelihood Estimation with Missing Data
+
+9-9

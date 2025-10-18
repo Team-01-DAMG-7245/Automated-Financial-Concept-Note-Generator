@@ -1,0 +1,38 @@
+[macdLine, signalLine] = macd(TMW(:,'Close'));
+
+plot(macdLine.Time,macdLine.Close);
+hold on
+plot(signalLine.Time,signalLine.Close);
+hold off
+
+title('MACD for TMW')
+legend('MACD Line', 'Signal Line')
+
+Step 5. Create a weekly return and volatility series.
+
+To calculate weekly return from the daily stock prices, you must resample the data frequency from
+daily to weekly. When working with timetables, use the MATLAB functions retime or synchronize
+with various aggregation methods to calculate weekly statistics. To adjust the timetable data to a
+time-vector basis, use retime and use synchronize with multiple timetables.
+
+weeklyOpen = retime(TMW(:,'Open'),'weekly','firstvalue');
+weeklyHigh = retime(TMW(:,'High'),'weekly','max');
+weeklyLow = retime(TMW(:,'Low'),'weekly','min');
+weeklyClose = retime(TMW(:,'Close'),'weekly','lastvalue');
+weeklyTMW = [weeklyOpen,weeklyHigh,weeklyLow,weeklyClose];
+
+weeklyTMW = synchronize(weeklyTMW,TMW(:,'Volume'),'weekly','sum');
+head(weeklyTMW)
+
+Time         Open      High      Low      Close       Volume  
+    ___________    ______    ______    ______    ______    __________
+
+02-Sep-2012       100    102.38     98.45     99.51    2.7279e+07
+    09-Sep-2012     99.72    101.55     96.52     97.52    2.8518e+07
+    16-Sep-2012     97.35     97.52      92.6     93.73    2.9151e+07
+    23-Sep-2012     93.55     98.03     92.25     97.35     3.179e+07
+
+11
+Using Financial Timetables
+
+11-10

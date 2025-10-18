@@ -1,0 +1,12 @@
+{
+  "page": 1302,
+  "original_text": "% Rename the first variable to Date.\nopts.VariableNames = replace(opts.VariableNames, \"Var1\", \"Date\");",
+  "ocr_text": "SRenamethefirstvariabletoDate.\nopts.VariableNames=replace(opts.VariableNames,Varl,Date);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 442.2,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

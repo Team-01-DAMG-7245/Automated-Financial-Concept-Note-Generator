@@ -1,0 +1,12 @@
+{
+  "page": 2163,
+  "original_text": "DiscRate = discrate(datetime(2000,1,12),datetime(2000,6,25), 100, 97.74, 0)",
+  "ocr_text": "DiscRate=discrate(datetime(2000,1,12),datetime(2000,6,25),100,97.74,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 416.2,
+    "x1": 501.76,
+    "y1": 426.67
+  },
+  "confidence": "high"
+}

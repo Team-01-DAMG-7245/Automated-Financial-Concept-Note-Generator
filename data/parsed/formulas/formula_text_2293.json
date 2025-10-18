@@ -1,0 +1,12 @@
+{
+  "page": 1178,
+  "original_text": "summaryTMW = summary(TMW);\nsummaryTMW.Close",
+  "ocr_text": "summaryTMW=summary(TMW);\nsummaryTMW.Close",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.37,
+    "x1": 230.87,
+    "y1": 265.64
+  },
+  "confidence": "high"
+}

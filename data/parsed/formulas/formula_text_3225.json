@@ -1,0 +1,12 @@
+{
+  "page": 1730,
+  "original_text": "Fraction = accrfrac(Settle, Maturity, Period, Basis,... \nEndMonthRule)",
+  "ocr_text": "Fraction=accrfrac(Settle,Maturity,Period,Basis,...\nEndMonthRule)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 612.54,
+    "x1": 393.43,
+    "y1": 633.81
+  },
+  "confidence": "high"
+}

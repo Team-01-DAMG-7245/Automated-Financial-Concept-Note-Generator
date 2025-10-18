@@ -1,0 +1,12 @@
+{
+  "page": 1355,
+  "original_text": "stdCorr = corr(randSample);",
+  "ocr_text": "stdCorr=corr(randSample);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 213.66,
+    "x1": 236.29,
+    "y1": 224.13
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,39 @@
+Output Arguments
+
+Fisher — Fisher information matrix
+matrix
+
+Fisher information matrix, returned as an NUMPARAMS-by-NUMPARAMS Fisher information matrix or
+Hessian matrix, depending on the optional input argument Method.
+
+More About
+
+Fisher Information Matrix
+
+The Fisher information matrix is a key concept in statistics and information theory that measures the
+amount of information that an observable random variable carries about an unknown parameter upon
+which the probability of the random variable depends.
+
+The Fisher information matrix is used to evaluate the efficiency of estimators and to derive
+confidence intervals.
+
+Version History
+Introduced in R2006a
+
+See Also
+ecmnmle | ecmnstd
+
+Topics
+“Multivariate Normal Regression Without Missing Data” on page 9-13
+“Multivariate Normal Regression” on page 9-13
+“Least-Squares Regression” on page 9-14
+“Covariance-Weighted Least Squares” on page 9-14
+“Feasible Generalized Least Squares” on page 9-15
+“Seemingly Unrelated Regression” on page 9-16
+“Fisher Information” on page 9-4
+“Multivariate Normal Linear Regression” on page 9-2
+
+15
+Functions
+
+15-868

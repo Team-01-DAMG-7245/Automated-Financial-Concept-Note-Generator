@@ -1,0 +1,12 @@
+{
+  "page": 1707,
+  "original_text": "The SDE has no solution such that r(t) = f(r(0),⋯).",
+  "ocr_text": "TheSDEhasnosolutionsuchthatr(t)=f(r(0),---).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 501.96,
+    "x1": 319.32,
+    "y1": 517.31
+  },
+  "confidence": "high"
+}

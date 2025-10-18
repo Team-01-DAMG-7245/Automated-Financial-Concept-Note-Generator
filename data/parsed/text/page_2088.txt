@@ -1,0 +1,57 @@
+cpnpersz
+
+Number of days in coupon period
+
+Syntax
+
+NumDaysPeriod = cpnpersz(Settle,Maturity)
+NumDaysPeriod = cpnpersz( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate)
+
+Description
+
+NumDaysPeriod = cpnpersz(Settle,Maturity) returns the number of days in the coupon
+period containing the settlement date. For zero coupon bonds, coupon dates are computed as if the
+bonds have a semiannual coupon structure. NumDaysPeriod returns a NUMBONDS-by-1 vector
+containing the number of days in the coupon period containing the settlement date.
+
+.
+
+Required input arguments must be number of bonds, NUMBONDS-by-1 or 1-by-NUMBONDS, conforming
+vectors or scalars.
+
+NumDaysPeriod = cpnpersz( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate) returns the number of days in the coupon period containing
+the settlement date using optional input arguments.
+
+Optional input arguments must be either NUMBONDS-by-1 or 1-by-NUMBONDS conforming vectors,
+scalars, or empty matrices.
+
+Examples
+
+Calculate the Number of Days in the Coupon Period Containing Settlement Date
+
+Determine the NumDaysPeriod when using datetimes for input arguments.
+
+NumDaysPeriod = cpnpersz(datetime(2000,9,14),datetime(2001,6,30), 2, 0, 0)
+
+NumDaysPeriod = 
+183
+
+Determine the NumDaysPeriod when using character vectors for input arguments and the optional
+argument for EndMonthRule.
+
+NumDaysPeriod = cpnpersz('14-Sep-2000', '30-Jun-2001', 2, 0, 1)
+
+NumDaysPeriod = 
+184
+
+Determine the NumDaysPeriod when using an input vector for Maturity.
+
+Maturity = [datetime(2001,6,30) ; datetime(2001,5,31) ; datetime(2001,6,30)];
+NumDaysPeriod = cpnpersz('14-Sep-2000', Maturity)
+
+15
+Functions
+
+15-782

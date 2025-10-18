@@ -1,0 +1,54 @@
+bndspread
+
+Static spread over spot curve
+
+Note In R2017b, the specification of optional input arguments has changed. While the previous
+ordered inputs syntax is still supported, it may no longer be supported in a future release. Use the
+optional name-value pair inputs: Period, Basis, EndMonthRule, IssueDate,FirstCouponDate,
+LastCouponDate, StartDate,Face, CompoundingFrequency, DiscountBasis, and
+LastCouponInterest.
+
+Syntax
+
+Spread = bndspread(SpotInfo,Price,Coupon,Settle,Maturity)
+Spread = bndspread( ___ ,Name,Value)
+
+Description
+
+Spread = bndspread(SpotInfo,Price,Coupon,Settle,Maturity) computes the static
+spread (Z-spread) to benchmark in basis points.
+
+Spread = bndspread( ___ ,Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Compute the Static Spread Over a Spot Curve Using datetime Inputs
+
+This example shows how to compute a Federal National Mortgage Association (FNMA) 4 3/8 spread
+over a Treasury spot curve using datetime inputs for Settle and Maturity and a table for
+SpotInfo and plot the results.
+
+RefMaturity = [datenum('02/27/2003');
+               datenum('05/29/2003');
+               datenum('10/31/2004');
+               datenum('11/15/2007');
+               datenum('11/15/2012');
+               datenum('02/15/2031')];
+
+RefCpn = [0;
+          0;
+          2.125;
+          3;
+          4;
+          5.375] / 100;
+
+RefPrices =  [99.6964;
+              99.3572;
+             100.3662;
+              99.4511;
+              99.4299;
+             106.5756];
+
+bndspread
+
+15-567

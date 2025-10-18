@@ -1,0 +1,85 @@
+•
+0 = actual/actual (default)
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (BMA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: single | double
+
+EndMonthRule — End-of-month rule flag for month having 30 or fewer days
+0 (not in effect) (default) | nonnegative integer [0,1]
+
+End-of-month rule flag for month having 30 or fewer days, specified as a scalar with a nonnegative
+integer 0 or 1, or as an N-by-1 or 1-by-N vector of values 0 or 1.
+
+•
+0 = Ignore rule, meaning that rule is not in effect.
+
+•
+1 = Set rule on, meaning that if you are beginning on the last day of a month, and the month has
+30 or fewer days, you will end on the last actual day of the future or past month regardless of
+whether that month has 28, 29, 30 or 31 days.
+
+Note EndOfMonthRule only applies when you input a date that corresponds to the end of month
+as the StartDate. For example, if you enter 02/28/2023 as the StartDate, the
+EndOfMonthRule guarantees that the return date matches the last day of the month in the target
+output date.
+
+datestr(datemnth('02/28/2023',4,1,0,1))
+
+ans =
+
+'30-Jun-2023'
+
+datemnth returns the target date as the last day of June even though the DayFlag is specified to
+return the first day of June.
+
+Data Types: logical
+
+Output Arguments
+
+TargetDate — Target date in the future or past month
+vector
+
+15
+Functions
+
+15-808

@@ -1,0 +1,12 @@
+{
+  "page": 1756,
+  "original_text": "obj = addInequality(obj,AInequality,bInequality)",
+  "ocr_text": "obj=addInequality(obj,AInequality,bInequality)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.44,
+    "x1": 378.98,
+    "y1": 201.07
+  },
+  "confidence": "high"
+}

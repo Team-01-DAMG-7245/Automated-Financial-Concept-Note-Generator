@@ -1,0 +1,12 @@
+{
+  "page": 89,
+  "original_text": "s(x) = Pr[X > x]\n= 1 −F(x)",
+  "ocr_text": "s(x)=Pr[X=x]\n=1-F(x)",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 92.96,
+    "x1": 184.91,
+    "y1": 119.59
+  },
+  "confidence": "high"
+}

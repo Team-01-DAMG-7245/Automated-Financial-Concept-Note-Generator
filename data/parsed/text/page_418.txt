@@ -1,0 +1,10 @@
+•
+“Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data” on page 2-78
+
+•
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-250

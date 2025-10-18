@@ -1,0 +1,38 @@
+Present value of the loan, specified as a scalar numeric.
+
+Data Types: double
+
+FutureValue — Future value of the loan
+0 (default) | scalar numeric
+
+(Optional) Future value of the loan, specified as a scalar numeric.
+
+Data Types: double
+
+Due — When payments are due
+0 (end of period) (default) | scalar integer with value of 0 or 1
+
+(Optional) When payments are due, specified as a scalar integer with value of 0 (end of period) or 1
+(beginning of period).
+
+Data Types: double
+
+Output Arguments
+
+NumPeriods — Number of payment periods
+scalar numeric
+
+Number of payment periods, returned as a scalar numeric.
+
+Version History
+Introduced before R2006a
+
+See Also
+annurate | amortize | fvfix | pvfix
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+annuterm
+
+15-467

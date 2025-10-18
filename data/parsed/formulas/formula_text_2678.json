@@ -1,0 +1,12 @@
+{
+  "page": 1355,
+  "original_text": "% Compute denoised correlation and store the maximum correlation\n% mismatch\ncorrelations = cell(numSizes);\nnumFactors = zeros(numSizes,1);\nmaxDiff = zeros(numSizes,1);\nfor i = 1:numSizes\n    [correlations{i},numFactors(i)] = covarianceDenoising(stdCorr,...\n        sampleSizes(i)); \n    maxDiff(i) = norm(correlations{i}(:)-denoisedCorr(:),inf);\nend",
+  "ocr_text": "Computedenoisedcorrelationandstorethemaximumcorrelation\n\nSmismatch\n\ncorrelations=cell(numSizes);\n\nnumFactors=zeros(numSizes,1);\n\nmaxDiff=zeros(numSizes,1);\n\nfori=1:numSizes\n[correlations{i},numFactors(i)]=covarianceDenoising(stdCorr,...\n\nsampleSizes(i));\n\nmaxDiff(i)=norm(correlations{i}(:)-denoisedCorr(:),inf);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.19,
+    "x1": 463.87,
+    "y1": 642.85
+  },
+  "confidence": "high"
+}

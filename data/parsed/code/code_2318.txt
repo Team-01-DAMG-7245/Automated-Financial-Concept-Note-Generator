@@ -1,0 +1,4 @@
+Page 2194
+================================================================================
+
+Compute Hessian for Negative Log-Likelihood Function for Data

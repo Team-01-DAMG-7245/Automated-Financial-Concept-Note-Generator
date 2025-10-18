@@ -1,0 +1,12 @@
+{
+  "page": 1053,
+  "original_text": "biTreated = bininfo(scTreated,'CustAge');\ndisp(biTreated)",
+  "ocr_text": "biTreated=bininfo(scTreated,CustAge);\ndisp(biTreated)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 569.22,
+    "x1": 312.15,
+    "y1": 590.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 947,
+  "original_text": "fprintf('%1.2f  %1.2f %1.2f  %1.2f   %1.4f\\n',...\n   [stats.beta;stats.adjrsquare])",
+  "ocr_text": "fprintf(s1.2f1.2fS1.2f1.2f1.4fn,...\n[stats.beta;stats.adjrsquare])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 336.03,
+    "x1": 355.5,
+    "y1": 357.29
+  },
+  "confidence": "high"
+}

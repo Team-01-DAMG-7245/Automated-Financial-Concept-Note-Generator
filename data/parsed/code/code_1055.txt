@@ -1,0 +1,6 @@
+Page 1085
+================================================================================
+
+The square root of the residual variance of each asset, for example, sqrt(Sii) for i = 1, ..., n, is said to
+be the residual or nonsystematic risk of the asset since it characterizes the residual variation in asset
+prices that are not explained by variations in market prices.

@@ -1,0 +1,39 @@
+Convergence
+
+The ECM algorithm does not work for all patterns of missing values. Although it works in most cases,
+it can fail to converge if the covariance becomes singular. If this occurs, plots of the log-likelihood
+function tend to have a constant upward slope over many iterations as the log of the negative
+determinant of the covariance goes to zero. In some cases, the objective fails to converge due to
+machine precision errors. No general theory of missing data patterns exists to determine these cases.
+An example of a known failure occurs when two time series are proportional wherever both series
+contain nonmissing values.
+
+Version History
+Introduced before R2006a
+
+References
+
+[1] Little, Roderick J. A. and Donald B. Rubin. Statistical Analysis with Missing Data. 2nd Edition. John
+Wiley & Sons, Inc., 2002.
+
+[2] Meng, Xiao-Li and Donald B. Rubin. “Maximum Likelihood Estimation via the ECM Algorithm.”
+Biometrika. Vol. 80, No. 2, 1993, pp. 267–278.
+
+[3] Sexton, Joe and Anders Rygh Swensen. “ECM Algorithms that Converge at the Rate of EM.”
+Biometrika. Vol. 87, No. 3, 2000, pp. 651–662.
+
+[4] Dempster, A. P., N. M. Laird, and Donald B. Rubin. “Maximum Likelihood from Incomplete Data via
+the EM Algorithm.” Journal of the Royal Statistical Society. Series B, Vol. 39, No. 1, 1977, pp.
+1–37.
+
+See Also
+ecmnfish | ecmnhess | ecmninit | ecmnobj | ecmnstd
+
+Topics
+“Multivariate Normal Regression With Missing Data” on page 9-14
+“Portfolios with Missing Data” on page 9-21
+“Mean and Covariance Estimation” on page 9-4
+
+ecmnmle
+
+15-899

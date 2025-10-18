@@ -1,0 +1,63 @@
+The data covers the period from January 1, 2000 to November 7, 2005 with daily total returns. Two
+stocks in this universe have missing values that are represented by NaNs. One of the two stocks had
+an IPO during this period and, consequently, has significantly less data than the other stocks.
+
+The first step is to compute separate regressions for each stock, where the stocks with missing data
+have estimates that reflect their reduced observability.
+
+[NumSamples, NumSeries] = size(Data);
+NumAssets = NumSeries - 2;
+
+StartDate = Dates(1);
+EndDate = Dates(end);
+
+Alpha = NaN(1, length(NumAssets));
+Beta = NaN(1, length(NumAssets));
+Sigma = NaN(1, length(NumAssets));
+StdAlpha = NaN(1, length(NumAssets));
+StdBeta = NaN(1, length(NumAssets));
+StdSigma = NaN(1, length(NumAssets));
+for i = 1:NumAssets
+    % Set up separate asset data and design matrices.
+    TestData = zeros(NumSamples,1);
+    TestDesign = zeros(NumSamples,2);
+
+TestData(:) = Data(:,i) - Data(:,14);
+    TestDesign(:,1) = 1.0;
+    TestDesign(:,2) = Data(:,13) - Data(:,14);
+
+% Estimate the CAPM for each asset separately.
+    [Param, Covar] = ecmmvnrmle(TestData, TestDesign);
+
+% Estimate the ideal standard errors for covariance parameters.
+    [StdParam, StdCovar] = ecmmvnrstd(TestData, TestDesign, Covar, 'fisher');
+    
+    % Estimate the sample standard errors for model parameters.
+    StdParam = ecmmvnrstd(TestData, TestDesign, Covar, 'hessian');
+
+% Set up results for the output.
+    Alpha(i) = Param(1);
+    Beta(i) = Param(2);
+    Sigma(i) = sqrt(Covar);
+
+StdAlpha(i) = StdParam(1);
+    StdBeta(i) = StdParam(2);
+    StdSigma(i) = sqrt(StdCovar);
+end
+
+displaySummary('Separate', StartDate, EndDate, NumAssets, Assets, Alpha, StdAlpha, Beta, StdBeta,
+
+Separate regression with daily total return data from 03-Jan-2000 to 07-Nov-2005 ...
+       Alpha                Beta                 Sigma               
+  ---- -------------------- -------------------- --------------------
+  AAPL    0.0012 (  1.3882)    1.2294 ( 17.1839)    0.0322 (  0.0062)
+  AMZN    0.0006 (  0.5326)    1.3661 ( 13.6579)    0.0449 (  0.0086)
+  CSCO   -0.0002 (  0.2878)    1.5653 ( 23.6085)    0.0298 (  0.0057)
+  DELL   -0.0000 (  0.0368)    1.2594 ( 22.2164)    0.0255 (  0.0049)
+  EBAY    0.0014 (  1.4326)    1.3441 ( 16.0732)    0.0376 (  0.0072)
+  GOOG    0.0046 (  3.2107)    0.3742 (  1.7328)    0.0252 (  0.0071)
+
+9
+Regression with Missing Data
+
+9-36

@@ -1,0 +1,53 @@
+discrate
+
+Bank discount rate of security
+
+Syntax
+
+DiscRate = discrate(Settle,Maturity,Face,Price)
+DiscRate = discrate( ___ ,Basis)
+
+Description
+
+DiscRate = discrate(Settle,Maturity,Face,Price)computes the bank discount rate of a
+security. The bank discount rate normalizes by the face value of the security (for example, U. S.
+Treasury Bills) and understates the true yield earned by investors.
+
+DiscRate = discrate( ___ ,Basis) adds an optional argument for Basis.
+
+Examples
+
+Compute the Bank Discount Rate of a Security
+
+This example shows how to find the bank discount rate of a security.
+
+DiscRate = discrate(datetime(2000,1,12),datetime(2000,6,25), 100, 97.74, 0)
+
+DiscRate = 
+0.0501
+
+Input Arguments
+
+Settle — Settlement date
+datetime scalar | string scalar | date character vector
+
+Settlement date, specified as a scalar datetime, string, or date character vector.
+
+To support existing code, discrate also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: datetime | string | char
+
+Maturity — Maturity date
+datetime scalar | string scalar | date character vector
+
+Maturity date, specified as scalar datetime, string, or date character vector.
+
+To support existing code, discrate also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+discrate
+
+15-857

@@ -1,0 +1,12 @@
+{
+  "page": 452,
+  "original_text": "% Define the returns and covariance matrix.\nassetReturns = tick2ret(assetPrices);\np = estimateAssetMoments(p,assetReturns{:,:});",
+  "ocr_text": "Definethereturnsandcovariancematrix.\nassetReturns=tick2ret(assetPrices);\np=estimateAssetMoments(p,assetReturns{:,:});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 339.23,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 513,
+  "original_text": "x = 0 or x ≥0 . 1",
+  "ocr_text": "x=Oorx20.1",
+  "bbox": {
+    "x0": 129.6,
+    "y0": 211.56,
+    "x1": 202.93,
+    "y1": 223.19
+  },
+  "confidence": "high"
+}

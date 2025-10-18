@@ -1,0 +1,56 @@
+% Select 'TrustRegionCP' as the solver.
+p_TR = setSolverMINLP(p,'TrustRegionCP');
+pwgt_TR = estimateFrontier(p_TR);
+[rskTR,retTR] = estimatePortMoments(p_TR,pwgt_TR);
+
+% Select 'ExtendedCP' as the solver using 'midway' cuts as 'CutGeneration'.
+p_ECP = setSolverMINLP(p,'ExtendedCP','CutGeneration','midway');
+pwgt_ECP = estimateFrontier(p_ECP);
+[rskECP,retECP] = estimatePortMoments(p_ECP,pwgt_ECP);
+
+Compare the returns and risks obtained by the portfolios on the efficient frontier from the different
+
+solvers. These are same within a numerical accuracy, where the absolute difference is ≤10−4.
+
+retTable = table(ret,retEOA,retTR,retECP,...
+    'VariableNames',{'OA','EOA','TR','ECP'})
+
+retTable=10×4 table
+        OA           EOA            TR           ECP    
+    __________    __________    __________    __________
+
+0.00078336    0.00078336    0.00078334    0.00078348
+     0.0012267     0.0012267     0.0012267     0.0012268
+       0.00167       0.00167       0.00167     0.0016701
+     0.0021133     0.0021133     0.0021133     0.0021134
+     0.0025566     0.0025566     0.0025566     0.0025567
+     0.0029999     0.0029999     0.0029999         0.003
+     0.0034432     0.0034432     0.0034432     0.0034433
+     0.0038865     0.0038865     0.0038865     0.0038866
+     0.0043298     0.0043298     0.0043298     0.0043299
+     0.0047731     0.0047731     0.0047731     0.0047731
+
+rskTable = table(rsk,rskEOA,rskTR,rskECP,...
+    'VariableNames',{'OA','EOA','TR','ECP'})
+
+rskTable=10×4 table
+       OA           EOA          TR           ECP   
+    _________    _________    _________    _________
+
+0.0075778    0.0075778    0.0075778    0.0075778
+    0.0080234    0.0080234    0.0080235    0.0080236
+    0.0085488    0.0085488    0.0085488     0.008549
+    0.0094024    0.0094024     0.009405    0.0094025
+     0.010456     0.010456     0.010456     0.010456
+     0.011727     0.011727     0.011727     0.011728
+     0.013155     0.013155     0.013155     0.013155
+     0.014729     0.014729     0.014729     0.014729
+     0.016764     0.016764     0.016764     0.016764
+     0.019273     0.019273     0.019273     0.019273
+
+% Compare the risks from the different OuterApproximation formulations.
+norm(rskTable.OA-rskTable.EOA,Inf) <= 1e-4
+
+Mixed-Integer Mean-Variance Portfolio Optimization Problem
+
+4-405

@@ -1,0 +1,12 @@
+{
+  "page": 1202,
+  "original_text": "Xt = f(t, Xt)",
+  "ocr_text": "X;=f(t,Xp)",
+  "bbox": {
+    "x0": 112.19,
+    "y0": 510.87,
+    "x1": 164.76,
+    "y1": 524.61
+  },
+  "confidence": "high"
+}

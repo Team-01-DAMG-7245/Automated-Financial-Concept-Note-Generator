@@ -1,0 +1,6 @@
+Page 1205
+================================================================================
+
+You can use the simBySolution function with the name-value arguments for MonteCarloMethod
+and QuasiSequence to simulates approximate solutions of quasi-Monte Carlo simulations for the
+following classes:

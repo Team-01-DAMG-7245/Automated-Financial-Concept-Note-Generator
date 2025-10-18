@@ -1,0 +1,5 @@
+Page 1218
+================================================================================
+
+The sdemrd object derives directly from the sdeddo object. It provides an interface in which the
+drift-rate function is expressed in mean-reverting drift form:

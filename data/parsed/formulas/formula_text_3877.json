@@ -1,0 +1,12 @@
+{
+  "page": 2215,
+  "original_text": "Moment = elpm(MeanSigmaMAROrder) computes expected lower partial moments (elpm) relative\nto a default value of MAR for each asset in a NUMORDERS-by-NUMSERIES matrix Moment.",
+  "ocr_text": "Moment=elpm(MeanSigmaMAROrder)computesexpectedlowerpartialmoments(elpm)relative\ntoadefaultvalueofMARforeachassetinaNUMORDERS-by-NUMSERIESmatrixMoment.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 385.34,
+    "x1": 551.38,
+    "y1": 408.97
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 2351
+================================================================================
+
+Note The spread is calculated against the clean price (the function internally does not add the
+accrued interest to the price specified by the Price input). If the spread is required against the dirty
+price, the price of a bond that includes the accrued interest, you must supply the dirty price for the
+Price input.

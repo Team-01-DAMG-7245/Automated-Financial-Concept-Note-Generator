@@ -1,0 +1,5 @@
+Page 1540
+================================================================================
+
+If you do not specify UserData, the rebalance function returns a single output argument,
+new_weights, which is a vector of asset weights specified as decimal percentages.

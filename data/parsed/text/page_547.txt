@@ -1,0 +1,61 @@
+Multiperiod Goal-Based Wealth Management Using
+Reinforcement Learning
+
+This example shows a reinforcement learning (RL) approach to maximize the probability of obtaining
+an investor's wealth goal at the end of the investment horizon. This problem is known in the literature
+as goal-based wealth management (GBWM). In GBWM, risk is not necessarily measured using the
+standard deviation, the value-at-risk, or any other common risk metric. Instead, risk is understood as
+the likelihood of not attaining an investor's goal. This alternative concept of risk implies that,
+sometimes, in order to increase the probability of attaining an investor’s goal, the optimal portfolio’s
+traditional risk (that is, standard deviation) must increase if the portfolio is underfunded. In other
+words, for the investor’s view of risk to decrease, the traditional view of risk must increase if the
+portfolio’s wealth is too low.
+
+The purpose of the investment strategy is to determine a dynamic portfolio allocation that maximizes
+the probability of achieving a wealth goal G at the time horizon T. The dynamic allocation strategy is
+the optimal solution of the following multiperiod portfolio optimization problem
+
+max
+A 0 , A 1 , …, A T −1
+
+ℙW T ≥G ,
+
+where W T  is the terminal portfolio wealth and A t  are the possible actions and allocations at time
+t = 0, 1, …, T −1.
+
+To solve this problem, this example follows the GBWM strategy of Das and Varma [1 on page 4-391]
+uses RL to optimize the probability of attaining an investment goal. The goal of RL is to train an agent
+to complete a task within an unknown environment. The agent receives observations and a reward
+from the environment and sends actions to the environment. The reward is a measure of how
+successful an action is with respect to completing the task goal.
+
+The agent contains two components: a policy and a learning algorithm.
+
+•
+The policy is a mapping that selects actions based on the observations from the environment.
+Typically, the policy is a function approximator with tunable parameters, such as a deep neural
+network.
+
+•
+The learning algorithm continuously updates the policy parameters based on the actions,
+observations, and reward. The goal of the learning algorithm is to find an optimal policy that
+maximizes the cumulative reward received during the task.
+
+In other words, reinforcement learning involves an agent learning the optimal behavior through
+repeated trial-and-error interactions with the environment without human involvement. For more
+information on reinforcement learning, see “What Is Reinforcement Learning?” (Reinforcement
+Learning Toolbox).
+
+The main advantage of leveraging reinforcement learning is that you can use an unknown
+environment. That is, in theory, you do not need to make assumptions about the state transition
+probabilities, you do not need to define the probability that the investment achieves a certain wealth
+level in a given time period. However, reinforcement learning assumes that there is an accurate way
+to simulate the transition from one state to the next for a given time period.
+
+Problem Definition
+
+rng(0,'twister');
+
+Multiperiod Goal-Based Wealth Management Using Reinforcement Learning
+
+4-379

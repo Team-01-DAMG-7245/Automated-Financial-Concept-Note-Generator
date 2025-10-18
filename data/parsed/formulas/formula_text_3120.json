@@ -1,0 +1,12 @@
+{
+  "page": 1654,
+  "original_text": "Paths = \nPaths(:,:,1) =",
+  "ocr_text": "Paths=\nPaths(:,:,1)=",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 165.85,
+    "y1": 297.89
+  },
+  "confidence": "high"
+}

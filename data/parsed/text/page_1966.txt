@@ -1,0 +1,36 @@
+simulationDates = datetime(simulationDates,"ConvertFrom","datenum");
+plot(simulationDates,cpProfiles(cpIdx).PFE, ...
+        simulationDates,cpProfiles(cpIdx).MPFE * ones(numDates,1), ...
+        simulationDates,cpProfiles(cpIdx).EE,...
+        simulationDates,cpProfiles(cpIdx).EPE * ones(numDates,1), ...
+        simulationDates,cpProfiles(cpIdx).EffEE,...
+        simulationDates,cpProfiles(cpIdx).EffEPE * ones(numDates,1));
+legend({'PFE (95%)','Max PFE','Exp Exposure (EE)', ...
+        'Time-Avg EE (EPE)','Max past EE (EffEE)', ...
+        'Time-Avg EffEE (EffEPE)'})
+xtickformat('MMMyy');
+title(sprintf('Counterparty %d Exposure Profiles',cpIdx));
+ylabel('Exposure ($)')
+xlabel('Simulation Dates')
+
+Input Arguments
+
+dates — Simulation dates
+vector of date numbers | cell array of character vectors
+
+Simulation dates, specified as vector of date numbers or a cell array of character vectors in a known
+date format. For more information for known date formats, see the function datetime.
+
+Data Types: double | char | cell
+
+exposures — 3-D array of potential losses due to counterparty default
+array
+
+3-D array of potential losses due to counterparty default on a set of instruments simulated over a
+series of simulation dates and across many scenarios, specified as a NumDates-by-
+NumCounterParties-by-NumScenarios “cube” of credit exposures. Each row represents a different
+
+15
+Functions
+
+15-660

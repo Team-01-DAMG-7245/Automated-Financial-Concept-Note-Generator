@@ -1,0 +1,12 @@
+{
+  "page": 963,
+  "original_text": "TRANS(i,N) = P[z < THRESH(i,N)],",
+  "ocr_text": "TRANS(i,N)=P[zTHRESH(i,N)],",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 319.72,
+    "x1": 228.7,
+    "y1": 328.1
+  },
+  "confidence": "high"
+}

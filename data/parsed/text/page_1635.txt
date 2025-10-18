@@ -1,0 +1,56 @@
+Volatility: 0.2
+         Kernel: gamma
+          Alpha: 0.03
+           Beta: 0.015
+
+Use simByEuler to simulate NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods. The
+function simByEuler approximates a continuous-time stochastic process by the Euler approach.
+
+NPeriods = 2;
+[Paths,Times,Z] = simByEuler(rvmObj,NPeriods)
+
+Paths = 3×2
+
+1.0000    1.0000
+    1.0700    1.4352
+    0.0154    1.7045
+
+Times = 3×1
+
+0
+     1
+     2
+
+Z = 2×2
+
+0.5377    1.8339
+   -2.2588    0.8622
+
+Paths is a 3-by-2 matrix and the output Z is a matrix used to generate the Brownian motion vector.
+
+Simulate Rough Bergomi Model Sample Paths by Euler Approximation
+
+The rough Bergomi model is a roughbergomi object that is a bivariate composite model, composed
+of two coupled and dissimilar univariate models, each driven by a single Brownian motion source of
+risk over NPeriods consecutive observation periods, approximating continuous-time rough
+stochastic volatility processes.
+
+Create an roughbergomi object.
+
+Return = 0.03;
+Alpha = -0.03;
+Xi = 0.2;
+Eta = 0.015;
+
+roughbergomiObj = roughbergomi(Return,Alpha,Xi,Eta)
+
+roughbergomiObj = 
+   Class ROUGHBERGOMI: Rough Bergomi
+   ----------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   ----------------------------------------
+
+simByEuler
+
+15-329

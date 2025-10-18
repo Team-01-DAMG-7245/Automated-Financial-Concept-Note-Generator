@@ -1,0 +1,12 @@
+{
+  "page": 306,
+  "original_text": "Any (≥ 3 recommended) Any (≤ 25,000\nrecommended)",
+  "ocr_text": "Any(2=3recommended)Any(s25,000\nrecommended)",
+  "bbox": {
+    "x0": 209.25,
+    "y0": 686.06,
+    "x1": 394.86,
+    "y1": 709.69
+  },
+  "confidence": "high"
+}

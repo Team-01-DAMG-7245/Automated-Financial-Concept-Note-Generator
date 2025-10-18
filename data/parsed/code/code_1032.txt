@@ -1,0 +1,7 @@
+Page 1062
+================================================================================
+
+In Financial Toolbox software, both the changes in the log-likelihood function and the norm of the
+change in parameter estimates are monitored. Whenever both changes fall below specified tolerances
+(which should be something between machine precision and its square root), the toolbox functions
+terminate under an assumption that convergence has been achieved.

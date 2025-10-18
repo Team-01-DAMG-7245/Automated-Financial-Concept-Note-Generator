@@ -1,0 +1,59 @@
+Risk Parity or Budgeting with Constraints
+
+This example shows how to solve risk parity or budgeting problems with constraints using
+estimateCustomObjectivePortfolio.
+
+Risk parity is a portfolio allocation strategy that focuses on the allocation of risk to define the weights
+of a portfolio. You construct the risk parity portfolio, or equal risk contribution portfolio, by ensuring
+that all assets in a portfolio have the same risk contribution to the overall portfolio risk. The
+generalization of this problem is the risk budgeting portfolio in which you set the risk contribution of
+each asset to the overall portfolio risk. In other words, instead of all assets contributing equally to the
+risk of the portfolio, the assets' risk contribution must match a target risk budget.
+
+In “Risk Budgeting Portfolio” on page 4-286, the example describes some advantages of risk parity or
+budgeting portfolios. It shows how to use riskBudgetingPortfolio to solve long-only, fully
+invested risk parity or budgeting problems. When the only constraints of the risk budgeting problem
+enforce nonnegative weights that sum to 1, the risk budgeting problem is a feasibility problem. In
+other words, the solution to the problem is the one that exactly matches the target risk budget and it
+is unique. Therefore, there is no need for an objective function. The riskBudgetingPortfolio
+function is optimized to solve this specific type of problems.
+
+When you add more constraints to the risk parity problem, you must find the weight allocation that
+satisfies the extra constraints while trying to match the target risk budget as much as possible. The
+next section explains how.
+
+Define Problem
+
+Start by defining the problem data.
+
+% Assets variance
+vol = [0.1;0.15;0.2;0.3];
+% Assets correlation
+rho = [1.00  0.50  0.50  0.50;
+       0.50  1.00  0.50  0.50;
+       0.50  0.50  1.00  0.75;
+       0.50  0.50  0.75  1.00];
+% Assets covariance matrix
+Sigma = corr2cov(vol,rho);
+% Risk budget
+budget = [0.3;0.3;0.195;0.205];
+
+Obtain the long-only, fully invested risk budgeting portfolio to use as benchmark.
+
+% Long-only fully invested risk budgeting portfolio
+w_simple = riskBudgetingPortfolio(Sigma,budget);
+% Compute the risk contribution of the weight allocation
+RC_simple = portfolioRiskContribution(w_simple,Sigma);
+% Table with weights and risk contributions
+T_simple = table(w_simple,RC_simple,budget, ...
+    VariableNames={'RB Portfolio','RB Contribution','Budget'})
+
+T_simple=4×3 table
+    RB Portfolio    RB Contribution    Budget
+    ____________    _______________    ______
+
+0.45053              0.3           0.3
+
+Risk Parity or Budgeting with Constraints
+
+4-357

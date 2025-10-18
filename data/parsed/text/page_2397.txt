@@ -1,0 +1,53 @@
+getEquality
+
+Obtain equality constraint arrays from portfolio object
+
+Syntax
+
+[AEquality,bEquality] = getEquality(obj)
+
+Description
+
+Use the getEquality function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain equality constraint arrays from portfolio objects.
+
+For details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+[AEquality,bEquality] = getEquality(obj) obtains equality constraint arrays from portfolio
+objects.
+
+Examples
+
+Obtain Equality Constraints for a Portfolio Object
+
+Suppose you have a portfolio of five assets and you want to ensure that the first three assets are
+exactly 50% of your portfolio. Given a Portfolio object p, set the linear equality constraints and obtain
+the values for AEquality and bEquality:
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = Portfolio;
+p = setEquality(p, A, b);
+[AEquality, bEquality] = getEquality(p)
+
+AEquality = 1×5
+
+1     1     1     0     0
+
+bEquality = 
+0.5000
+
+Obtain Equality Constraints for a PortfolioCVaR Object
+
+Suppose you have a portfolio of five assets and you want to ensure that the first three assets are 50%
+of your portfolio. Given a PortfolioCVaR object p, set the linear equality constraints and obtain the
+values for AEquality and bEquality:
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+
+getEquality
+
+15-1091

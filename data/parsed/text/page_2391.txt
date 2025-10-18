@@ -1,0 +1,52 @@
+getBudget
+
+Obtain budget constraint bounds from portfolio object
+
+Syntax
+
+[LowerBudget,UpperBudget] = getBudget(obj)
+
+Description
+
+Use the getBudget function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain budget constraint bounds from portfolio objects.
+
+For details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+[LowerBudget,UpperBudget] = getBudget(obj) obtains budget constraint bounds from
+portfolio objects.
+
+Examples
+
+Obtain Values for Lower and Upper Budgets for a Portfolio Object
+
+Given portfolio p with the default constraints set, obtain the values for LowerBudget and
+UpperBudget.
+
+p = Portfolio;
+p = setDefaultConstraints(p, 5);
+[LowerBudget, UpperBudget] = getBudget(p)
+
+LowerBudget = 
+1
+
+UpperBudget = 
+1
+
+Obtain Values for Lower and Upper Budgets for a PortfolioCVaR Object
+
+Given a PortfolioCVaR object p with the default constraints set, obtain the values for LowerBudget
+and UpperBudget.
+
+p = PortfolioCVaR;
+p = setDefaultConstraints(p, 5);
+[LowerBudget, UpperBudget] = getBudget(p)
+
+LowerBudget = 
+1
+
+getBudget
+
+15-1085

@@ -1,0 +1,71 @@
+To create an equally weighted portfolio of four assets, use setInitPort:
+
+p = PortfolioMAD;
+p = setInitPort(p, 1/4, 4);
+disp(p.InitPort)
+
+0.2500
+ 0.2500
+ 0.2500
+ 0.2500
+
+PortfolioMAD object functions that work with either transaction costs or turnover constraints also
+depend on the InitPort property. So, the set functions for transaction costs or turnover constraints
+permit the assignment of a value for the InitPort property as part of their implementation. For
+details, see “Working with Average Turnover Constraints Using PortfolioMAD Object” on page 6-74,
+“Working with One-Way Turnover Constraints Using PortfolioMAD Object” on page 6-77, and
+“Working with Transaction Costs” on page 6-46. If either transaction costs or turnover constraints
+are used, then the InitPort property must have a nonempty value. Absent a specific value assigned
+through the PortfolioMAD object or various set functions, the PortfolioMAD object sets
+InitPort to 0 and warns if BuyCost, SellCost, or Turnover properties are set. This example
+shows what happens if you specify an average turnover constraint with an initial portfolio:
+
+p = PortfolioMAD('Turnover', 0.3, 'InitPort', [ 0.3; 0.2; 0.2; 0.0 ]);
+disp(p.InitPort)
+
+0.3000
+ 0.2000
+ 0.2000
+      0
+
+In contrast, this example shows what happens if an average turnover constraint is specified without
+an initial portfolio:
+
+p = PortfolioMAD('Turnover', 0.3);
+disp(p.InitPort)
+
+Warning: InitPort and NumAssets are empty and either transaction costs or
+turnover constraints specified. Will set NumAssets = 1 and InitPort = 0. 
+> In PortfolioMAD.checkarguments at 446
+  In PortfolioMAD.PortfolioMAD>PortfolioMAD.PortfolioMAD at 190 
+     0
+
+See Also
+PortfolioMAD | setAssetList | setInitPort | estimateBounds | checkFeasibility
+
+Related Examples
+
+•
+“Common Operations on the PortfolioMAD Object” on page 6-29
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+6
+MAD Portfolio Optimization Tools
+
+6-34

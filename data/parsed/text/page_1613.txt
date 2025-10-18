@@ -1,0 +1,33 @@
+Input Arguments
+
+backtester — Backtesting engine
+backtestEngine object
+
+Backtesting engine, specified as a backtestEngine object. Use backtestEngine to create the
+backtester object.
+
+Note The backtester argument must use a backtestEngine object that has been run using
+runBacktest.
+
+Data Types: object
+
+ax — Valid axes object in which to display equity curve plot
+ax object
+
+(Optional) Valid axes object in which to display equity curve plot, specified as an ax object that you
+create using axes. The equity curve plot is created on the axes specified by the optional ax argument
+instead of on the current axes (gca). The optional argument ax can precede any of the input
+argument combinations.
+
+Data Types: object
+
+Output Arguments
+
+h — Figure handle for the equity curve plot
+handle object
+
+Figure handle for the equity curve plot, returned as a handle object.
+
+equityCurve
+
+15-307

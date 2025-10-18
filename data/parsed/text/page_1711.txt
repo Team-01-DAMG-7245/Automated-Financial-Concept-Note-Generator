@@ -1,0 +1,37 @@
+To price the European barrier option, specify an end-of-period processing function to record the
+maximum and terminal stock prices. This processing function is accessible by time and state, and is
+implemented as a nested function with access to shared information that allows the option price and
+corresponding standard error to be calculated. For more information on using an end-of-period
+processing function, see “Price European Stock Options Using Monte Carlo Simulation” on page 14-
+47.
+
+Simulate 200 paths using the processing function method.
+
+rng('default')             % make output reproducible
+barrier  = 120;            % barrier
+strike   = 100;            % exercise price
+rate     = 0.05;           % annualized risk-free rate
+sigma    = 0.3;            % annualized volatility
+nPeriods = 63;             % 63 trading days
+dt       = 1 / 252;        % time increment = 252 days
+Time     = nPeriods * dt;  % expiration time = 0.25 years
+obj    = gbm(rate, sigma, 'StartState', 105);
+nPaths = 200;         % # of paths = 100 sets of pairs
+f      = Example_BarrierOption(nPeriods, nPaths);
+simulate(obj, nPeriods, 'DeltaTime' , dt, ... 
+            'nTrials', nPaths, 'Antithetic', true, ...
+            'Processes', f.SaveMaxLast);
+
+Approximate the option price with a 95% confidence interval.
+
+optionPrice   = f.OptionPrice(strike, rate, barrier);
+standardError = f.StandardError(strike, rate, barrier,...
+                         true);
+lowerBound    = optionPrice - 1.96 * standardError;
+upperBound    = optionPrice + 1.96 * standardError;
+
+displaySummary(optionPrice, standardError, lowerBound, upperBound);
+
+simulate
+
+15-405

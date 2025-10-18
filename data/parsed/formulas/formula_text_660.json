@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "xRobust = optimvar('x',nAssets,1,'Type','continuous','LowerBound',0.0,'UpperBound',0.1);\nzRobust = optimvar('z','LowerBound',0);",
+  "ocr_text": "xRobust=optimvar(x,nAssets,1,Type,continuous,LowerBound,0.0,UpperBound,0.1);\nzRobust=optimvar(z,LowerBound,0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 566.82,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

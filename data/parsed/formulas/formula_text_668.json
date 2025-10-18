@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "% Define the variables\n% xRobust - x  allocation vector\nxMrkwtz = optimvar('x',nAssets,1,'Type','continuous','LowerBound',0.0,'UpperBound',0.1);",
+  "ocr_text": "Definethevariables\nxRobust-xallocationvector\nxMrkwtz_=optimvar(x,nAssets,1,Type,continuous,LowerBound,0.0,UpperBound,0.1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 449.43,
+    "x1": 566.82,
+    "y1": 481.49
+  },
+  "confidence": "high"
+}

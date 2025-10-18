@@ -1,0 +1,12 @@
+{
+  "page": 1653,
+  "original_text": "AssetPrice = 80;\n            Return = 0.03;\n            Sigma = 0.16;\n            JumpMean = 0.02;\n            JumpVol = 0.08;\n            JumpFreq = 2;\n            \n            mertonObj = merton(Return,Sigma,JumpFreq,JumpMean,JumpVol,...\n                'startstat',AssetPrice)",
+  "ocr_text": "AssetPrice=80;\nReturn=0.03;\nSigma=0.16;\nJumpMean=0.02;\nJumpVol_=0.08;\nJumpFreq=2;\nmertonObj=merton(Return,Sigma,JumpFreq,JumpMean,JumpVol,...\nstartstat,AssetPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 515.84,
+    "x1": 485.55,
+    "y1": 612.71
+  },
+  "confidence": "high"
+}

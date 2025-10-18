@@ -1,0 +1,6 @@
+Page 1543
+================================================================================
+
+When the optional name-value argument UserData is specified, but the optional name-value
+argument EngineDataList is not specified and buyCosts and sellCosts outputs are used,
+the computeTransactionCostsFcn function handle has the following signatures:

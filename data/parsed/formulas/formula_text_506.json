@@ -1,0 +1,12 @@
+{
+  "page": 346,
+  "original_text": "function displayPortfolio(Description, Blotter, LongShortFlag, portfolioType)\nfprintf('%s\\n', Description);\ndisp(Blotter);\nif (LongShortFlag)\n    fprintf('Confirm %s Portfolio\\n', portfolioType);\n    fprintf('  (Net, Long, Short)\\n');\n    fprintf('%.4f ' , [ sum(Blotter.Weight), sum(Blotter.Long), sum(Blotter.Short) ]);\nend\nend",
+  "ocr_text": "functiondisplayPortfolio(Description,Blotter,LongShortFlag,_portfolioType)\n\nfprintf(ssn,Description);\n\ndisp(Blotter);\n\nif(LongShortFlag)\nfprintf(Confirms_Portfolion,portfolioType);\nfprintf((Net,Long,Short)n);\nfprintf(s.4f,[sum(Blotter.Weight),sum(Blotter.Long),sum(Blotter.Short)]);\n\nend\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 387.46,
+    "x1": 555.96,
+    "y1": 484.33
+  },
+  "confidence": "high"
+}

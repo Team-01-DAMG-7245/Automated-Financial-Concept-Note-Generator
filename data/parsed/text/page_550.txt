@@ -1,0 +1,78 @@
+Scale Observations
+
+Signals with widely different ranges can skew the learning process, making it hard for the agent to
+successfully learn the important features. In this example, we scale the wealth level to the range
+[0,1]. To do this, we assume that the wealth follows a geometric Brownian motion
+
+W(t) = W(0)exp
+μ −σ2/2 t + σ tZ
+
+where Z is a standard normal random variable. The wealth does not need to follow a Brownian
+motion, but this assumption helps obtain reasonable upper and lover bounds on the wealth evolution.
+
+Assuming that Z realistically takes values between −3 and 3, we have that the smallest realistic value
+of W is
+
+Wmin =
+min
+τ ∈
+0, 1, …, T
+
+W(0)exp
+μmin −σmax
+2
+
+2
+τ −3σmax τ
+
+% Define the minimum possible wealth.
+timeVec = 0:finalTimePeriod;
+mu_min = pret(1);
+sigma_max  = prsk(end);
+WMinVec = initialWealth*exp((mu_min-(sigma_max^2)/2)*timeVec- ...
+    3*sigma_max*sqrt(timeVec));
+WMin = min(WMinVec);
+
+And the largest realistic value of W is
+
+Wmax =
+max
+τ ∈
+0, 1, …, T
+
+W(0)exp
+μmax −σmax
+2
+
+2
+τ + 3σmax τ
+
+% Define the maximum possible wealth.
+mu_max = pret(end);
+WMaxVec = initialWealth*exp((mu_max-(sigma_max^2)/2)*timeVec+ ...
+    3*sigma_max*sqrt(timeVec));
+WMax = max(WMaxVec);
+
+Create Environment Model
+
+You create the environment model using the following steps:
+
+1
+Define a myResetFunction function that describes the initial conditions of the environment at
+the beginning of a training episode.
+
+2
+Define a custom myStepFunction function that describes the dynamics of the environment. This
+includes how the state changes from a current state given the agent action and how the earned
+reward is computed by such an action. For the reward, here you can choose either a sparse
+reward function or a constant return reward function. At each training time step, the state of the
+model is updated using the myStepFunction function. This function also determines when a
+training episode finishes.
+
+For more information see “Create Custom Environment Using Step and Reset Functions”
+(Reinforcement Learning Toolbox).
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-382

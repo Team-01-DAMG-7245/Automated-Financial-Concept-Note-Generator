@@ -1,0 +1,12 @@
+{
+  "page": 338,
+  "original_text": "swgt = estimateMaxSharpeRatio(p);\n[srsk,sret] = estimatePortMoments(p,swgt);",
+  "ocr_text": "swgt=estimateMaxSharpeRatio(p);\n[srsk,sret]=estimatePortMoments(p,swgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 317.55,
+    "y1": 686.69
+  },
+  "confidence": "high"
+}

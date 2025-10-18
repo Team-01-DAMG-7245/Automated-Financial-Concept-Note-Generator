@@ -1,0 +1,60 @@
+be appropriate to interpolate or use the fillmissing function. In this example, you can remove the
+remaining NaN prices.
+
+priceData = rmmissing(priceData);
+
+Then, convert the price data to a return series using the tick2ret function. The final dataset
+consists of nine price series with daily data from 1997 through 2021.
+
+returnData = tick2ret(priceData)
+
+returnData=6167×9 timetable
+       Time           WTI           Brent       NaturalGas     Propane       Kerosene     Heating
+    ___________    __________    ___________    __________    __________    __________    _______
+
+08-Jan-1997      0.011429     0.00080775    -0.0052356             0      0.012931      0.010
+    09-Jan-1997    -0.0094162      0.0020178         -0.05     -0.036969    -0.0085106    -0.0013
+    10-Jan-1997    -0.0057034      -0.024567      0.085873     0.0095969     -0.010014     -0.012
+    13-Jan-1997     -0.036329      -0.033443      0.020408     -0.024715     -0.034682     -0.037
+    15-Jan-1997      0.029762     -0.0042717         0.085     -0.048733      0.023952      0.021
+    16-Jan-1997     -0.019268              0      0.085253     -0.028689     -0.019006     -0.020
+    17-Jan-1997    -0.0019646      -0.018876      -0.16985     -0.016878     -0.020864         -0
+    20-Jan-1997     -0.011811    -0.00043725      -0.16624     -0.027897     -0.022831     -0.021
+    21-Jan-1997     -0.011952      0.0052493     -0.082822     -0.004415     -0.014019     -0.020
+    22-Jan-1997     -0.016129     -0.0021758      0.020067    -0.0044346      0.031596      0.019
+    23-Jan-1997     -0.022541              0     -0.029508    -0.0022272    -0.0061256      -0.01
+    24-Jan-1997             0     -0.0056694      -0.11486     -0.075893      0.010786     0.0060
+    27-Jan-1997             0      -0.010526        0.1374      0.016908      0.012195      0.009
+    28-Jan-1997     0.0020964      0.0026596       0.02349    -0.0047506     0.0090361    -0.0089
+    29-Jan-1997      0.025105       0.017241     -0.045902     -0.042959      0.059701      0.033
+    30-Jan-1997      0.012245       0.018253     -0.017182             0      0.016901      0.023
+      ⋮
+
+Prepare Data for Training LSTM Model
+
+Prepare and partition the dataset in order to train the LSTM model. The model uses a 30-day rolling
+window of trailing feature data and predicts the next day price changes for four of the assets: Brent
+crude oil, natural gas, propane, and kerosene.
+
+% Model is trained using a 30-day rolling window to predict 1 day in the
+% future.
+historySize = 30;
+futureSize = 1;
+
+% Model predicts returns for oil, natural gas, propane, and kerosene.
+outputVarName = ["Brent" "NaturalGas", "Propane" "Kerosene"];
+numOutputs = numel(outputVarName);
+
+% start_idx and end_idx are the index positions in the returnData
+% timetable corresponding to the first and last date for making a prediction.
+start_idx = historySize + 1;
+end_idx   = height(returnData) - futureSize + 1;
+numSamples = end_idx - start_idx + 1;
+
+% The date_vector variable stores the dates for making predictions.
+date_vector = returnData.Time(start_idx-1:end_idx-1);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-304

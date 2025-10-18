@@ -1,0 +1,12 @@
+{
+  "page": 1747,
+  "original_text": "GA = [ true false true false true false ];    % odd-numbered companies\nGB = [ false false false true true true ];    % nonfinancial companies\np = addGroupRatio(p, GA, GB, 0.2);",
+  "ocr_text": "GA=[truefalsetruefalsetruefalse]; odd-numbered_companies\nGB=[falsefalsefalsetruetruetrue]; Snonfinancial_companies\np=addGroupRatio(p,GA,GB,0.2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.43,
+    "x1": 469.28,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 408,
+  "original_text": "function new_weights = allocationFunctionName(current_weights,\npricesTimetable)",
+  "ocr_text": "functionnew_weights=allocationFunctionName(current_weights,\npricesTimetable)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 315.86,
+    "x1": 463.26,
+    "y1": 339.49
+  },
+  "confidence": "high"
+}

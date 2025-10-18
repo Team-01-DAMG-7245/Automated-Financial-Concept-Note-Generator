@@ -1,0 +1,12 @@
+{
+  "page": 945,
+  "original_text": "figure\nplot(Years,DefRate,'bo:','LineWidth',1.2)\nhold on\nstairs(Years-0.5,DefRateTwoValues,'m-','LineWidth',1.5)\nplot(Years,DefRateTTC*ones(nYears,1),'r-.','LineWidth',1.5)\nExample_RecessionBands\nhold off\ngrid on\ntitle('{\\bf Default Rate}')\nylabel('%')\nlegend({'Point-in-time (PIT)','Recession/Expansion Avg',...\n   'Through-the-cycle (TTC)'},'location','NW')",
+  "ocr_text": "figure\n\nplot(Years,DefRate,bo:,LineWidth,1.2)\n\nholdon\n\nstairs(Years-0.5,DefRateTwoValues,m-,LineWidth,1.5)\n\nplot(Years,DefRateTTC*ones(nYears,1),r-.,LineWidth,1.5)\n\nExample_RecessionBands\n\nholdoff\n\ngridon\n\ntitle({bfDefaultRate})\n\nylabel()\n\nLegend({Point-in-time(PIT),Recession/ExpansionAvg,...\nThrough-the-cycle(TTC)},location,NW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 242.21,
+    "x1": 409.69,
+    "y1": 371.47
+  },
+  "confidence": "high"
+}

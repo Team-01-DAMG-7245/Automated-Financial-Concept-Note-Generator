@@ -1,0 +1,63 @@
+Output Arguments
+
+F — Callable function F(t) of a real-valued scalar observation time t
+vector | matrix | table | timetable
+
+Callable function F(t) of a real-valued scalar observation time t, returned as a function.
+
+If the optional input argument Deterministic is true, F is a deterministic function of time, F(t), and
+the only input it accepts is a scalar, real-valued time t. Otherwise, if Deterministic is false (the
+default), F accepts a scalar, real-valued time t followed by an NVars-by-1 state vector X(t).
+
+Note You can invoke F with a second input (such as an NVars-by-1 state vector X), which is a
+placeholder that ts2func ignores. For example, while F(t) and F(t,X) produce identical results, the
+latter directly supports SDE simulation methods.
+
+Algorithms
+
+•
+When you specify Array as a scalar or a vector (row or column), ts2func assumes that it
+represents a univariate time series.
+
+•
+F returns an array with one less dimension than the input time series array Array with which F is
+associated. Thus, when Array is a vector, a 2-dimensional matrix, or a three-dimensional array, F
+returns a scalar, vector, or 2-dimensional matrix, respectively.
+
+•
+When the scalar time t at which ts2func evaluates the function F does not coincide with an
+observation time in Times, F performs a zero-order-hold interpolation. The only exception is if t
+precedes the first element of Times, in which case F(t) = F(Times(1)).
+
+•
+To support Monte Carlo simulation methods, the output function F returns an NVars-by-1 column
+vector or a two-dimensional matrix with NVars rows.
+
+•
+The output function F is always a deterministic function of time, F(t), and may always be called
+with a single input regardless of the Deterministic flag. The distinction is that when
+Deterministic is false, the function F may also be called with a second input, an NVars-by-1
+state vector X(t), which is a placeholder and ignored. While F(t) and F(t,X) produce identical
+results, the former specifically indicates that the function is a deterministic function of time, and
+may offer significant performance benefits in some situations.
+
+Version History
+Introduced in R2008a
+
+References
+
+[1] Aït-Sahalia, Y. “Testing Continuous-Time Models of the Spot Interest Rate.” The Review of
+Financial Studies, Spring 1996, Vol. 9, No. 2, pp. 385–426.
+
+[2] Aït-Sahalia, Y. “Transition Densities for Interest Rate and Other Nonlinear Diffusions.” The Journal
+of Finance, Vol. 54, No. 4, August 1999.
+
+[3] Glasserman, P. Monte Carlo Methods in Financial Engineering. New York, Springer-Verlag, 2004.
+
+[4] Hull, J. C. Options, Futures, and Other Derivatives, 5th ed. Englewood Cliffs, NJ: Prentice Hall,
+2002.
+
+15
+Functions
+
+15-418

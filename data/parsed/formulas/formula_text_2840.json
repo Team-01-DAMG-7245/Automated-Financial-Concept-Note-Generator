@@ -1,0 +1,12 @@
+{
+  "page": 1463,
+  "original_text": "SDE = sde(DriftRate,DiffusionRate) creates a default SDE object.",
+  "ocr_text": "SDE=sde(DriftRate,DiffusionRate)createsadefaultSDEobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 541.13,
+    "x1": 428.83,
+    "y1": 552.76
+  },
+  "confidence": "high"
+}

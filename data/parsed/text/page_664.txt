@@ -1,0 +1,60 @@
+scenarios = p.localScenarioHandle(startrow, endrow);
+
+where 1 ≤ startrow ≤ endrow ≤ numScenarios.
+
+Setting Scenarios Using the setScenarios Function
+
+You can also set scenarios using setScenarios. For example, given the mean and covariance of
+asset returns in the variables m and C, the asset moment properties can be set:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0;
+0.00408 0.0289 0.0204 0.0119;
+0.00192 0.0204 0.0576 0.0336;
+0 0.0119 0.0336 0.1225 ];
+
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+
+disp(p.NumAssets)
+disp(p.NumScenarios)
+
+4
+
+20000
+
+Estimating the Mean and Covariance of Scenarios
+
+This example shows how to use estimateScenarioMoments function to obtain estimates for the
+mean and covariance of scenarios in a PortfolioCVaR object.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0;
+0.00408 0.0289 0.0204 0.0119;
+0.00192 0.0204 0.0576 0.0336;
+0 0.0119 0.0336 0.1225 ];
+
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+[mean, covar] = estimateScenarioMoments(p)
+
+mean = 4×1
+
+0.0042
+    0.0082
+    0.0094
+
+5
+CVaR Portfolio Optimization Tools
+
+5-38

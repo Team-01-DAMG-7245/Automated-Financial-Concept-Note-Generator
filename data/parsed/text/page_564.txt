@@ -1,0 +1,79 @@
+percentage = 0.05;
+AssetName = pricesTT.Properties.VariableNames(...
+    wDenoised_initial>=percentage)';
+Weight = wDenoised_initial(wDenoised_initial>=percentage);
+T1 = table(AssetName,Weight)
+
+T1=5×2 table
+     AssetName      Weight 
+    ___________    ________
+
+{'Asset6' }    0.066016
+    {'Asset47'}     0.10991
+    {'Asset50'}     0.24653
+    {'Asset75'}     0.11752
+    {'Asset94'}     0.31708
+
+Optimize Asset Allocation Using Factor Modeling
+
+For factor modeling, you can use statistical factors extracted from the asset return series. In this
+example, PCA is used to extract these factors [1 on page 4-399]. You can then use this factor model to
+solve the portfolio optimization problem.
+
+With a factor model, n asset returns can be expressed as a linear combination of k factor returns,
+ra = μa + F rf + εa , where k ≪p. In the mean-variance framework, portfolio risk is
+
+Var Rp = Var raTwa = Var μa + F rf + εa
+
+Twa = waT FΣfFT + D wa,
+
+where:
+
+•
+Rp is the portfolio return (a scalar).
+
+•
+ra is the asset returns.
+
+•
+μa  is the mean of asset returns.
+
+•
+F is the factor loading, with dimension n × k.
+
+•
+rf is the factor return.
+
+•
+εa is the idiosyncratic return related to each asset.
+
+•
+wa is the asset weight.
+
+•
+Σf is the covariance of factor returns.
+
+•
+D is the variance of idiosyncratic returns.
+
+The parameters ra, wa, μa and εa are n × 1 column vectors, rfand wf are k × 1 column vectors, and Σk
+and D are a k × k and a n × n matrices, respectively.
+
+Therefore, the mean-variance optimization problem is formulated as
+
+max
+wa
+μaTwa
+
+s . t . waT FΣfFT + D wa ≤τ,
+
+∑
+a ∈A
+wa = 1,
+
+0 ≤wa ≤1 .
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-396

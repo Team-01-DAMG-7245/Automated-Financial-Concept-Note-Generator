@@ -1,0 +1,85 @@
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: Spread =
+bndspread(SpotInfo,Price,Coupon,Settle,Maturity,'Period',4,'Basis',7)
+
+Period — Number of coupon payments per year
+2 (default) | numeric with values 0, 1, 2, 3, 4, 6 or 12
+
+Number of coupon payments per year, specified as the comma-separated pair consisting of 'Period'
+and a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using the values: 0, 1, 2, 3, 4, 6, or 12.
+
+Data Types: double
+
+Basis — Day-count basis of instrument
+0 (default) | numeric values: 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13
+
+Day-count of the instrument, specified as the comma-separated pair consisting of 'Basis' and a
+scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector using a supported value:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+EndMonthRule — End-of-month rule flag
+1 (in effect) (default) | nonnegative integer 0 or 1
+
+End-of-month rule flag, specified as the comma-separated pair consisting of 'EndMonthRule' and a
+scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector. This rule applies only when Maturity is an
+end-of-month date for a month having 30 or fewer days.
+
+•
+0 = Ignore rule, meaning that a bond coupon payment date is always the same numerical day of
+the month.
+
+•
+1 = Set rule on, meaning that a bond coupon payment date is always the last actual day of the
+month.
+
+Data Types: logical
+
+bndspread
+
+15-571

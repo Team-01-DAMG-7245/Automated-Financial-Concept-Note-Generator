@@ -1,0 +1,60 @@
+GARCH(1,1) Conditional Variance Model (t Distribution):
+ 
+                 Value      StandardError    TStatistic      PValue  
+                ________    _____________    __________    __________
+
+Constant    0.013581      0.0062827        2.1617        0.030644
+    GARCH{1}     0.69036       0.083993        8.2193      2.0469e-16
+    ARCH{1}      0.18852       0.089543        2.1053        0.035264
+    DoF           2.5091        0.24115        10.405       2.352e-25
+
+Create and fit an arima (Econometrics Toolbox) time-series model for the second principal
+component.
+
+secondComponent = scores(:, 2);
+secondComponentModel = arima("ARLags", 1, ...
+    "MALags", 1, ...
+    "Distribution", "t", ...
+    "Variance", garch( "ARCHLags", 1, ...
+    "Constant", 0.01, ...
+    "GARCHLags", 1 ) );
+secondComponentModel = estimate( secondComponentModel, secondComponent );
+
+ARIMA(1,0,1) Model (t Distribution):
+ 
+                  Value      StandardError    TStatistic      PValue  
+                _________    _____________    __________    __________
+
+Constant    -0.025173      0.0043829       -5.7433      9.2839e-09
+    AR{1}         0.98224       0.002459        399.45               0
+    MA{1}        0.077561       0.025207        3.0769       0.0020913
+    DoF            2.1625       0.086605         24.97      1.306e-137
+
+GARCH(1,1) Conditional Variance Model (t Distribution):
+ 
+                 Value      StandardError    TStatistic      PValue  
+                ________    _____________    __________    __________
+
+Constant        0.01             0            Inf               0
+    GARCH{1}     0.86678       0.05892         14.711      5.4686e-49
+    ARCH{1}     0.084508       0.04304         1.9635        0.049593
+    DoF           2.1625      0.086605          24.97      1.306e-137
+
+Create Simulated Component Values from Fitted Models
+
+Use simulate (Econometrics Toolbox) to create the simulated component values from the fitted
+models.
+
+numForecastSteps = 60;
+simFirstComponent = simulate( firstComponentModel, numForecastSteps, "Y0", firstComponent );
+simSecondComponent = simulate( secondComponentModel, numForecastSteps, "Y0", secondComponent );
+simComponents = [simFirstComponent, simSecondComponent];
+
+Back-Transform Simulated Component Values
+
+Transform the simulation results in the principal component domain back to the original volatility
+domain, adjusting for the normalization step performed in Compute Principal Components of Inferred
+
+Volatility Modeling for Soft Commodities
+
+14-107
