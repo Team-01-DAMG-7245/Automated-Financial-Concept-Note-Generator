@@ -1,0 +1,36 @@
+# ============================================
+# Lab 2 - MWAA Specific Requirements
+# ============================================
+# Install shared dependencies first:
+# pip install -r ../requirements-shared.txt
+
+# Airflow & AWS
+apache-airflow==2.7.3
+apache-airflow-providers-amazon==8.13.0
+boto3==1.34.20
+
+# Vector Databases
+pinecone-client==3.0.3
+chromadb==0.4.22
+
+# Structured Output
+instructor==0.4.8
+
+# Database
+psycopg2-binary==2.9.9
+
+# PDF (minimal)
+pypdf==3.17.4
+
+# ============================================
+# Shared Dependencies (for MWAA - needs all in one file)
+# ============================================
+python-dotenv==1.0.0
+requests==2.31.0
+pandas==2.1.4
+numpy==1.26.3
+langchain==0.1.0
+langchain-openai==0.0.5
+openai==1.7.2
+pydantic==2.5.3
+wikipedia==1.4.0
