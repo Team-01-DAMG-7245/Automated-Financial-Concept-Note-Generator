@@ -1,0 +1,34 @@
+histogram(treasuryReturns(:,2),100,Normalization='pdf',EdgeColor='none')
+histogram(treasuryReturns(:,3),100,Normalization='pdf',EdgeColor='none')
+hold off
+title('Distribution of Returns for 10, 20, 30 Year Treasuries');
+grid on
+legend({'10 year','20 year','30 year'});
+
+Optimize Asset Allocation Using Portfolio Object
+
+Asset allocation is optimized using a Portfolio object. Ten optimal portfolios (NumPorts) are
+calculated using estimateFrontier and their Sharpe ratios are calculated. The optimal portfolio,
+based on investor preference, is chosen to be the one that is closest to the maximum value of the
+Sharpe ratio.
+
+Create a Portfolio object using Portfolio. You can use setAssetMoments to set moments
+(mean and covariance) of asset returns for the Portfolio object and setDefaultConstraints to
+set up the portfolio constraints with nonnegative weights that sum to 1.
+
+% Create a portfolio object.
+p = Portfolio;
+p = setAssetMoments(p,retsMean,retsCov);
+p = setDefaultConstraints(p)
+
+p = 
+  Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+
+10
+Solving Sample Problems
+
+10-36

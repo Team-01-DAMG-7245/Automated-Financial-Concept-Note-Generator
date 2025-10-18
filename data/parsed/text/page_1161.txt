@@ -1,0 +1,13 @@
+Heteroskedasticity refers to the changing variance of a variable over time. The sample ACF of the
+squared returns shows the degree of persistence in variance.
+
+figure
+autocorr(returns(:,index).^2)
+title('Sample ACF of Squared Returns')
+
+To remove autocorrelation from the equity index return data, you can apply the ARIMA model by
+using arima (Econometrics Toolbox). ARIMA models are widely used to capture the autocorrelation
+
+Using Extreme Value Theory and Copula Fitting to Generate Synthetic Data
+
+10-63

@@ -1,0 +1,12 @@
+{
+  "page": 63,
+  "original_text": "Settle          = '20-Sep-1999'\nMaturity        = '15-Oct-2007'\nPeriod          = 2\nBasis           = 0\nEndMonthRule    = 1\nIssueDate       = NaN\nFirstCouponDate = NaN\nLastCouponDate  = NaN",
+  "ocr_text": "Settle =20-Sep-1999\nMaturity =15-Oct-2007\nPeriod =2\n\nBasis =0\nEndMonthRule =1\n\nIssueDate =NaN\nFirstCouponDate=NaN\nLastCouponDate=NaN",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 137.29,
+    "x1": 257.96,
+    "y1": 223.36
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+Page 481
+================================================================================
+
+% Plot the lifespan patch for each series.
+numSeries = size(priceData,2);
+for i = 1:numSeries
+    % Find start date index.
+    d1 = find(~isnan(priceData{:,i}),1,'first');
+    % Plot patch.
+    x = [d1 d1 d2 d2];
+    y = i + [-0.4 0.4 0.4 -0.4];
+    patch(x,y,[0 0.4470 0.7410])

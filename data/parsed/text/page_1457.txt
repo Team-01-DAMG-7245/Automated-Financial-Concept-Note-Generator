@@ -1,0 +1,50 @@
+n        = 125;    % index of simulated state near middle
+times    = (T(n):(dt/10):T(n + 1));
+nTrials  = 25000;  % # of Trials at each time
+
+Draw Random Gaussian Numbers Within Subintervals
+
+In each subinterval, take 25000 independent draws from a Gaussian distribution, conditioned on the
+simulated states to the left, and right.
+
+average  = zeros(length(times),1);
+variance = zeros(length(times),1);
+for i = 1:length(times)
+    t = times(i);
+    x = interpolate(obj,t(ones(nTrials,1)),...
+        X,'Times',T);
+    average(i)  = mean(x(:,1));
+    variance(i) = var(x(:,1));
+end
+
+Plot State Mean and Variance
+
+Plot the sample mean and variance of each state variable. The following graph plots the sample
+statistics of the first state variable only, but similar results hold for any state variable.
+
+subplot(2,1,1);
+hold on;
+grid on;
+plot([T(n) T(n + 1)],[X(n,1) X(n + 1,1)],'.-b')
+plot(times, average, 'or')
+hold off;
+title('Brownian Bridge without Refinement: Sample Mean') 
+ylabel('Mean')
+limits = axis;
+axis([T(n) T(n + 1) limits(3:4)]);
+
+subplot(2,1,2)
+hold on;
+grid on;
+plot(T(n),0,'.-b',T(n + 1),0,'.-b')
+plot(times, variance, '.-r')
+hold('off');
+title('Brownian Bridge without Refinement: Sample Variance')
+xlabel('Time (Years)')
+ylabel('Variance')
+limits = axis;
+axis([T(n) T(n + 1) limits(3:4)]);
+
+interpolate
+
+15-151

@@ -1,0 +1,8 @@
+Page 1225
+================================================================================
+
+Once again, the class of each object is clearly identified, and parameters display like fields of a
+structure. In particular, the Rate parameter of drift and diffusion objects is identified as a callable
+function of time and state, F t, Xt and G t, Xt , respectively. The additional parameters, A, B, Alpha,
+and Sigma, are arrays of appropriate dimension, indicating static (non-time-varying) parameters. In
+other words, A t, Xt , B t, Xt , Alpha t, Xt , and Sigma t, Xt are constant functions of time and state.

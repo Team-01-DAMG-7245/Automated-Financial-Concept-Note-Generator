@@ -1,0 +1,12 @@
+{
+  "page": 1117,
+  "original_text": "DiscountFactors = zero2disc(ZeroRates, Maturity, Settle)",
+  "ocr_text": "DiscountFactors=zero2disc(ZeroRates,Maturity,Settle)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 393.41,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

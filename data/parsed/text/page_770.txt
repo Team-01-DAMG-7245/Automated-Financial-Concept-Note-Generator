@@ -1,0 +1,61 @@
+p_ECP = setSolverMINLP(p,'ExtendedCP',CutGeneration="midway");
+pwgt_ECP = estimateFrontier(p_ECP);
+rskECP = estimatePortRisk(p,pwgt_ECP);
+retECP = estimatePortReturn(p,pwgt_ECP);
+
+Compare the returns and risks obtained by the portfolios on the efficient frontier from the different
+
+solvers. They are all the same within a numerical accuracy that is an absolute difference ≤10−4.
+
+retTable = table(retOA,ret,retECP,'VariableNames',{'OA','TR','ECP'})
+
+retTable=10×3 table
+        OA            TR           ECP    
+    __________    __________    __________
+
+0.00092881    0.00092876    0.00092876
+     0.0011614     0.0011613     0.0011613
+      0.001394     0.0013939     0.0013939
+     0.0016265     0.0016265     0.0016265
+     0.0018591     0.0018591     0.0018591
+     0.0020917     0.0020917     0.0020917
+     0.0023243     0.0023243     0.0023243
+     0.0025569     0.0025569     0.0025569
+     0.0027894     0.0027894     0.0027894
+      0.003022      0.003022      0.003022
+
+rskTable = table(rskOA,rsk,rskECP,'VariableNames',{'OA','TR','ECP'})
+
+rskTable=10×3 table
+       OA          TR         ECP   
+    ________    ________    ________
+
+0.036808    0.036808    0.036808
+    0.037658    0.037658    0.037658
+    0.039808    0.039808    0.039808
+    0.042256    0.042256    0.042256
+     0.04527    0.045269    0.045269
+    0.048489    0.048488    0.048488
+    0.051963    0.051963    0.051963
+    0.055783    0.055783    0.055783
+    0.059828    0.059828    0.059828
+    0.064705    0.064705    0.064705
+
+% Compare risks from the different OuterApproximation formulations
+norm(rskTable.OA-rskTable.TR,Inf) <= 1e-4
+
+ans = logical
+   1
+
+See Also
+PortfolioCVaR
+
+Related Examples
+
+•
+“Troubleshooting CVaR Portfolio Optimization Results” on page 5-121
+
+5
+CVaR Portfolio Optimization Tools
+
+5-144

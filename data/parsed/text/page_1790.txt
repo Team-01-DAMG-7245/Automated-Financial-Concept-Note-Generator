@@ -1,0 +1,21 @@
+References
+
+[1] Hull, John C. Options, Futures, and Other Derivatives. 5th edition, Prentice Hall, , 2003, pp. 287–
+288.
+
+[2] Black, Fischer. “The Pricing of Commodity Contracts.” Journal of Financial Economics. March 3,
+1976, pp. 167–79.
+
+See Also
+binprice | blsprice
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+15
+Functions
+
+15-484

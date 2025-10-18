@@ -1,0 +1,12 @@
+{
+  "page": 664,
+  "original_text": "p = PortfolioCVaR;\np = setScenarios(p, AssetScenarios);",
+  "ocr_text": "p=PortfolioCVaR;\np=setScenarios(p,AssetScenarios);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 320.44,
+    "x1": 285.05,
+    "y1": 341.71
+  },
+  "confidence": "high"
+}

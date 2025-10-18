@@ -1,0 +1,64 @@
+Seemingly Unrelated Regression Without Missing Data
+
+Form a SUR design using convert2sur:
+
+DesignSUR = convert2sur(Design, Group);
+
+Estimate parameters using mvnrmle:
+
+[Parameters, Covariance] = mvnrmle(Data, DesignSUR);
+
+Estimate standard errors using mvnrstd:
+
+StdParameters = mvnrstd(Data, DesignSUR, Covariance);
+
+Seemingly Unrelated Regression With Missing Data
+
+Form a SUR design using convert2sur:
+
+DesignSUR = convert2sur(Design, Group);
+
+Estimate parameters using ecmmvnrmle:
+
+[Parameters, Covariance] = ecmmvnrmle(Data, DesignSUR);
+
+Estimate standard errors using ecmmvnrstd:
+
+StdParameters = ecmmvnrstd(Data, DesignSUR, Covariance);
+
+Mean and Covariance Parameter Estimation
+
+Without missing data, you can estimate the mean of your Data with the function mean and the
+covariance with the function cov. Nevertheless, the function ecmnmle does this for you if it detects
+an absence of missing values. Otherwise, it uses the ECM algorithm to handle missing values.
+
+Estimate parameters using ecmnmle:
+
+[Mean, Covariance] = ecmnmle(Data);
+
+Estimate standard errors using ecmnstd:
+
+StdMean = ecmnstd(Data, Mean, Covariance);
+
+See Also
+mvnrmle | mvnrstd | mvnrfish | mvnrobj | ecmmvnrmle | ecmmvnrstd | ecmmvnrfish |
+ecmmvnrobj | ecmlsrmle | ecmlsrobj | ecmmvnrstd | ecmmvnrfish | ecmnmle | ecmnstd |
+ecmnfish | ecmnhess | ecmnobj | convert2sur | ecmninit
+
+Related Examples
+
+•
+“Multivariate Normal Regression” on page 9-2
+
+•
+“Maximum Likelihood Estimation with Missing Data” on page 9-7
+
+•
+“Valuation with Missing Data” on page 9-26
+
+•
+“Portfolios with Missing Data” on page 9-21
+
+Multivariate Normal Regression Types
+
+9-17

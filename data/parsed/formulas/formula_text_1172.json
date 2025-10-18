@@ -1,0 +1,12 @@
+{
+  "page": 600,
+  "original_text": "NumSimSteps = length(SimAction_Test_Sell);\nSimInventory_Test_Sell = nan(NumSimSteps,1);\nSimExecutedShares_Test_Sell = SimInventory_Test_Sell;\nSimReward_Test_Sell = nan(NumSimSteps,1);",
+  "ocr_text": "NumSimSteps=length(SimAction_Test_Sell);\nSimInventory_Test_Sell=nan(NumSimSteps,1);\nSimExecutedShares_Test_Sell_=SimInventory_Test_Sell;\nSimReward_Test_Sell=nan(NumSimSteps,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 377.15,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

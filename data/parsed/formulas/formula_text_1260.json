@@ -1,0 +1,12 @@
+{
+  "page": 625,
+  "original_text": "% Remove the DJI stock from the timetable\nassetReturnsTT = returnsTT(:,2:end);\n% Compute the asset returns mean and covariance matrix\nmu = mean(assetReturnsTT.Variables);\nSigma = cov(assetReturnsTT.Variables);",
+  "ocr_text": "RemovetheDJIstockfromthetimetable\nassetReturnsTT=returnsTT(:,2:end);\nComputetheassetreturnsmeanandcovariancematrix\nmu=mean(assetReturnsTT.Variables);\nSigma=cov(assetReturnsTT.Variables);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 320.15,
+    "x1": 382.57,
+    "y1": 373.81
+  },
+  "confidence": "high"
+}

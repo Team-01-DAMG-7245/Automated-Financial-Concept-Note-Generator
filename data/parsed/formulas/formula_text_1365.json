@@ -1,0 +1,12 @@
+{
+  "page": 675,
+  "original_text": "p = PortfolioCVaR(p, 'SellCost', []);",
+  "ocr_text": "p=PortfolioCVaR(p,_SellCost,[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 520.23,
+    "x1": 290.48,
+    "y1": 530.7
+  },
+  "confidence": "high"
+}

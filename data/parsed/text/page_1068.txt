@@ -1,0 +1,72 @@
+Multivariate Normal Regression Functions
+
+In this section...
+
+“Multivariate Normal Regression Without Missing Data” on page 9-11
+
+“Multivariate Normal Regression With Missing Data” on page 9-11
+
+“Least-Squares Regression With Missing Data” on page 9-11
+
+“Multivariate Normal Parameter Estimation With Missing Data” on page 9-12
+
+“Support Functions” on page 9-12
+
+Financial Toolbox software has a number of functions for multivariate normal regression with or
+without missing data. The toolbox functions solve four classes of regression problems with functions
+to estimate parameters, standard errors, log-likelihood functions, and Fisher information matrices.
+The four classes of regression problems are:
+
+•
+“Multivariate Normal Regression Without Missing Data” on page 9-11
+
+•
+“Multivariate Normal Regression With Missing Data” on page 9-11
+
+•
+“Least-Squares Regression With Missing Data” on page 9-11
+
+•
+“Multivariate Normal Parameter Estimation With Missing Data” on page 9-12
+
+Additional support functions are also provided, see “Support Functions” on page 9-12.
+
+In all functions, the MATLAB representation for the number of observations (or samples) is
+NumSamples = m, the number of data series is NumSeries = n, and the number of model
+parameters is NumParams = p. The moment estimation functions have NumSeries = NumParams.
+
+The collection of observations (or samples) is stored in a MATLAB matrix Data such that
+
+Data k,  : = zk
+T
+
+for k = 1, ..., NumSamples, where Data is a NumSamples-by-NumSeries matrix.
+
+For the multivariate normal regression or least-squares functions, an additional required input is the
+collection of design matrices that is stored as either a MATLAB matrix or a vector of cell arrays
+denoted as Design.
+
+If Numseries = 1, Design can be a NumSamples-by-NumParams matrix. This is the “standard” form
+for regression on a single data series.
+
+If Numseries = 1, Design can be either a cell array with a single cell or a cell array with
+NumSamples cells. Each cell in the cell array contains a NumSeries-by-NumParams matrix such that
+
+Design k
+= Hk
+
+for k = 1, ..., NumSamples. If Design has a single cell, it is assumed to be the same Design
+matrix for each sample such that
+
+Design 1
+= H1 = … = Hm .
+
+Otherwise, Design must contain individual design matrices for each sample.
+
+The main distinction among the four classes of regression problems depends upon how missing
+values are handled and where missing values are represented as the MATLAB value NaN. If a sample
+
+9
+Regression with Missing Data
+
+9-10

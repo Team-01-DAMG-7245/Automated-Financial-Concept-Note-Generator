@@ -1,0 +1,12 @@
+{
+  "page": 1092,
+  "original_text": "R(k,i) = a(i) + C(k) + b(i) * (M(k) - C(k)) + V(k,i)",
+  "ocr_text": "R(k,i)=a(i)+C(k)+b(i)*(M(k)-C(k))+V(k,i)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 571.25,
+    "x1": 403.04,
+    "y1": 582.88
+  },
+  "confidence": "high"
+}

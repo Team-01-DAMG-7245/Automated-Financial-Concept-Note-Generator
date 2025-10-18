@@ -1,0 +1,7 @@
+Page 1728
+================================================================================
+
+Note, when using abs2active to compute “active constraints” for use with a Portfolio object,
+don't use the Portfolio object’s default constraints because the relative weights can be positive or
+negative (the setDefaultConstraints function for a Portfolio object specifies weights to be
+nonnegative).

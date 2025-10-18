@@ -1,0 +1,12 @@
+{
+  "page": 2304,
+  "original_text": "psharpe = estimatePortSharpeRatio(obj,pwgt) estimates the Sharpe ratio of given portfolio\nweights for a Portfolio object. For details on the workflow, see “Portfolio Object Workflow” on page\n4-18.",
+  "ocr_text": "psharpe=estimatePortSharpeRatio(obj,pwgt)estimatestheSharperatioofgivenportfolio\nweightsforaPortfolioobject.Fordetailsontheworkflow,seePortfolioObjectWorkflowonpage\n4-18.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 240.57,
+    "x1": 556.86,
+    "y1": 276.2
+  },
+  "confidence": "high"
+}

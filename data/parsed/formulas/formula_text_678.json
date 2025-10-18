@@ -1,0 +1,12 @@
+{
+  "page": 419,
+  "original_text": "pricesTT = table2timetable(T,'RowTimes','Dates');",
+  "ocr_text": "pricesTT=table2timetable(T,Rowlimes,Dates);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 560.76,
+    "x1": 355.5,
+    "y1": 571.23
+  },
+  "confidence": "high"
+}

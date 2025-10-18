@@ -1,0 +1,12 @@
+{
+  "page": 613,
+  "original_text": "% Update IsDone:\n% Episode is complete (IsDone is true) when time step reaches the end of\n% the trading data.\nif (LoggedSignals.HorizonIdx >= LoggedSignals.NumHorizons) && ...\n        (LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon)\n    IsDone = true;\n    disp(\"Last Horizon. Episode is Done!\");\n    disp(\"HorizonIdx:\");\n    LoggedSignals.HorizonIdx    \nelseif (LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon)\n    IsDone = false;    \n    % disp(\"HorizonIdx:\");",
+  "ocr_text": "UpdateIsDone:\nEpisodeiscomplete(IsDoneistrue)whentimestepreachestheendof\nthetradingdata.\nif(LoggedSignals.HorizonIdx==LoggedSignals.NumHorizons)8...\n(LoggedSignals.IntervalIdx==LoggedSignals.NumIntervalsPerHorizon)\n\nIsDone=true;\n\ndisp(LastHorizon.EpisodeisDone);\n\ndisp(HorizonIdx:);\n\nLoggedSignals.HorizonIdx\nelseif(LoggedSignals.IntervalIdx==LoggedSignals.NumIntervalsPerHorizon)\n\nIsDone=false;\n\ndisp(HorizonIdx:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.83,
+    "x1": 496.35,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

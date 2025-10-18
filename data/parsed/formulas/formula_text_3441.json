@@ -1,0 +1,12 @@
+{
+  "page": 1907,
+  "original_text": "Weekend = [1 0 0 0 0 0 0];\nDate = datestr(busdate('3-Jul-2003', 1, [], Weekend))",
+  "ocr_text": "Weekend=[1000000];\nDate=datestr(busdate(3-Jul-2003,1,[],Weekend))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 623.57,
+    "x1": 377.17,
+    "y1": 644.83
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1497,
+  "original_text": "Bates = bates(Return,Speed,Level,Volatility,JumpFreq,JumpMean,JumpVol) create a\nbates object with the default options.",
+  "ocr_text": "Bates=bates(Return,Speed,Level,Volatility,JumpFreq,JumpMean,JumpVoL)createa\nbatesobjectwiththedefaultoptions.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 660.94,
+    "x1": 551.46,
+    "y1": 684.57
+  },
+  "confidence": "high"
+}

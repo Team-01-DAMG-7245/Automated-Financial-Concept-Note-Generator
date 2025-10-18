@@ -1,0 +1,65 @@
+Reconstruct the total 1200 observations for the training set.
+
+reconReturn = factorRetn*factorLoading' + mu;
+unexplainedRetn = stockReturns{training,:} - reconReturn;
+
+There are unexplained asset returns εa because the remaining (p - k) principal components are
+dropped. You can attribute the unexplained asset returns to the asset-specific risks represented as D.
+
+unexplainedCovar = diag(cov(unexplainedRetn));
+D = diag(unexplainedCovar);
+
+You can use a problem-based definition framework from Optimization Toolbox™ to construct the
+
+variables, objective, and constraints for the problem: max μaT wa , s . t . FTwa = wf,
+
+wf
+T Σf wf + waT D wa ≤trisk, eTwa = 1, 0 ≤w ≤1. The problem-based definition framework enables you
+to define variables and express objective and constraints symbolically. You can add other constraints
+or use a different objective based on your specific problem. For more information, see “First Choose
+Problem-Based or Solver-Based Approach”.
+
+targetRisk = 0.007;  % Standard deviation of portfolio return
+tRisk = targetRisk*targetRisk;  % Variance of portfolio return
+meanStockRetn = mean(stockReturns{training,:});
+
+optimProb = optimproblem('Description','Portfolio with factor covariance matrix','ObjectiveSense
+wgtAsset = optimvar('asset_weight', p, 1, 'Type', 'continuous', 'LowerBound', 0, 'UpperBound', 1)
+wgtFactor = optimvar('factor_weight', k, 1, 'Type', 'continuous');
+
+optimProb.Objective = sum(meanStockRetn'.*wgtAsset);
+
+optimProb.Constraints.asset_factor_weight = factorLoading'*wgtAsset - wgtFactor == 0;
+optimProb.Constraints.risk = wgtFactor'*covarFactor*wgtFactor + wgtAsset'*D*wgtAsset <= tRisk;
+optimProb.Constraints.budget = sum(wgtAsset) == 1;
+
+x0.asset_weight = ones(p, 1)/p;
+x0.factor_weight = zeros(k, 1);
+opt = optimoptions("fmincon", "Algorithm","sqp", "Display", "off", ...
+    'ConstraintTolerance', 1.0e-8, 'OptimalityTolerance', 1.0e-8, 'StepTolerance', 1.0e-8);
+x = solve(optimProb,x0, "Options",opt);
+assetWgt1 = x.asset_weight;
+
+In this example, you are maximizing the portfolio return for a target risk. This is a nonlinear
+programming problem with a quadratic constraint and you use fmincon to solve this problem.
+
+Check for asset allocations that are over 5% to determine which assets have large investment
+weights.
+
+percentage = 0.05;
+AssetName = stockReturns.Properties.VariableNames(assetWgt1>=percentage)';
+Weight = assetWgt1(assetWgt1>=percentage);
+T1 = table(AssetName, Weight)
+
+T1=7×2 table
+     AssetName      Weight 
+    ___________    ________
+
+{'Asset9' }    0.080054
+    {'Asset32'}     0.22355
+    {'Asset47'}     0.11369
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-234

@@ -1,0 +1,12 @@
+{
+  "page": 469,
+  "original_text": "% Multiply the weight assigned to each cluster with its portfolio and\n% assign to the corresponding assets.\npwgt = W*wBetween;",
+  "ocr_text": "Multiplytheweightassignedtoeachclusterwithitsportfolioand\nassigntothecorrespondingassets.\npwgt=W*wBetween;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.63,
+    "x1": 463.84,
+    "y1": 362.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,36 @@
+PutEl — Put option elasticity
+numeric
+
+Put option elasticity or leverage factor, returned as a numeric value.
+
+More About
+
+Lambda
+
+A lambda sensitivity measures the percentage change in an option's price for a 1% change in the
+price of the underlying asset.
+
+Lambda is a measure of leverage, indicating how much more sensitive an option is to price
+movements in the underlying asset compared to owning the asset outright. For example, if an option
+has a lambda of 3, it means that if the underlying asset's price moves by 1%, the option's price is
+expected to move by 3%.
+
+Version History
+Introduced in R2006a
+
+References
+
+[1] Daigler, R. Advanced Options Trading. McGraw-Hill, 1993.
+
+See Also
+blsgamma | blsdelta | blsprice | blsrho | blstheta | blsvega
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+blslambda
+
+15-497

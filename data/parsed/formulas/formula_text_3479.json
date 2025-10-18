@@ -1,0 +1,12 @@
+{
+  "page": 1932,
+  "original_text": "ProbData = [daysadd(datenum(Settle),360,1), 0.0247];\nMaturity = datetime(2010,9,20);\nContractSpread = 135;",
+  "ocr_text": "ProbData=[daysadd(datenum(Settle),360,1),0.0247];\nMaturity=datetime(2010,9,20);\nContractSpread=135;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 594.05,
+    "x1": 371.74,
+    "y1": 626.11
+  },
+  "confidence": "high"
+}

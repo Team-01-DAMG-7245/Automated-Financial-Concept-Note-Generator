@@ -1,0 +1,12 @@
+{
+  "page": 480,
+  "original_text": "if any(0 < signal)\n    signal(signal < 0) = 0;\n    new_weights = signal / sum(signal);\nelse\n    new_weights = zeros(size(current_weights));\nend",
+  "ocr_text": "ifany(0signal)\nsignal(signal0)=0;\nnew_weights=signal/sum(signal);\n\nelse\nnew_weights=zeros(size(current_weights));\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 481.83,
+    "x1": 344.65,
+    "y1": 546.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 572,
+  "original_text": "% Select the extended formulation version of 'OuterApproximation' as the\n% solver.\np_EOA = setSolverMINLP(p,'OuterApproximation',...\n    ExtendedFormulation=true);\npwgt_EOA = estimateFrontier(p_EOA);\n[rskEOA,retEOA] = estimatePortMoments(p_EOA,pwgt_EOA);",
+  "ocr_text": "SelecttheextendedformulationversionofOuterApproximationasthe\n\nsolver.\n\np_EOA=setSolverMINLP(p,OuterApproximation,...\nExtendedFormulation=true);\n\npwgt_EOA=estimateFrontier(p_EOA);\n\n[rskEOA,retEOA]_=estimatePortMoments(p_E0A,pwgt_E0A);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 480.09,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

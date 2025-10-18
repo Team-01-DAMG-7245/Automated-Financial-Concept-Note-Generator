@@ -1,0 +1,63 @@
+To solve this problem, model the evolution of the underlying stock by a univariate geometric
+Brownian motion (GBM) model with constant parameters:
+
+Furthermore, assume that the stock price is simulated daily, and that each calendar month comprises
+21 trading days.
+
+strike   = 95;
+rate     = 0.1;
+sigma    = 0.5;
+dt       = 1/252;
+nPeriods = 63;
+T        = nPeriods*dt;
+obj = gbm(rate,sigma,'StartState',100);
+
+The goal is to simulate independent paths of daily stock prices, and calculate the price of European
+options as the risk-neutral sample average of the discounted terminal option payoff at expiration 63
+days from now. This example calculates option prices by two approaches:
+
+•
+A Monte Carlo simulation that explicitly requests the simulated stock paths as an output. The
+output paths are then used to price the options.
+
+•
+An end-of-period processing function, accessible by time and state, that records the terminal stock
+price of each sample path. This processing function is implemented as a nested function with
+access to shared information.
+
+Before simulation, invoke the example file to access the end-of-period processing function.
+
+nTrials = 10000; % Number of independent trials (that is, paths)
+f = Example_BlackScholes(nPeriods,nTrials)
+
+f = struct with fields:
+    BlackScholes: @Example_BlackScholes/saveTerminalStockPrice
+       CallPrice: @Example_BlackScholes/getCallPrice
+        PutPrice: @Example_BlackScholes/getPutPrice
+
+Simulate 10000 independent trials (sample paths). Request the simulated stock price paths as an
+output, and specify an end-of-period processing function.
+
+rng(88161,'twister')
+X = simBySolution(obj,nPeriods,'DeltaTime',dt,... 
+    'nTrials',nTrials,'Processes',f.BlackScholes);
+
+Calculate the option prices directly from the simulated stock price paths. Because these are
+European options, ignore all intermediate stock prices.
+
+call = mean(exp(-rate*T)*max(squeeze(X(end,:,:)) - strike, 0))
+
+call = 
+13.9342
+
+put  = mean(exp(-rate*T)*max(strike - squeeze(X(end,:,:)), 0))
+
+put = 
+6.4166
+
+Price the options indirectly by invoking the nested functions.
+
+14
+Stochastic Differential Equations
+
+14-48

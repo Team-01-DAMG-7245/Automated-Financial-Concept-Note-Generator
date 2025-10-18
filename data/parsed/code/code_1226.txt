@@ -1,0 +1,5 @@
+Page 1250
+================================================================================
+
+The noise function does not return the actual Brownian paths, but rather the Gaussian draws Z t, Xt
+that drive it.

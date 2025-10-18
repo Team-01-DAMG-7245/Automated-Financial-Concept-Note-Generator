@@ -1,0 +1,61 @@
+Σf is the covariance of factor returns.
+
+D is the variance of idiosyncratic returns.
+
+The parameters ra, wa, μa, εa are p-by-1 column vectors, rfand wf are k-by-1 column vectors, Σa is a p-
+by-p matrix, Σk is a k-by-k matrix, and D is a p-by-p diagonal matrix.
+
+Therefore, the mean-variance optimization problem is formulated as
+
+max μaT wa , s . t . FTwa = wf, wf
+T Σf wf + waT D wa ≤trisk,0 ≤w ≤1, eTwa = 1.
+
+In the p dimensional space formed by p asset returns, PCA finds the most important k directions that
+capture the most important variations in the given returns of p assets. Usually, k is less than p.
+Therefore, by using PCA you can decompose the p asset returns into the k factors, which greatly
+reduces the dimension of the problem. The k principal directions are interpreted as factor loadings
+and the scores from the decomposition are interpreted as factor returns. For more information, see
+pca (Statistics and Machine Learning Toolbox™). In this example, use k = 10 as the number of
+principal components. Alternatively, you can also find the k value by defining a threshold for the total
+variance represented as the top k principal components. Usually 95% is an acceptable threshold.
+
+k = 10;
+[factorLoading,factorRetn,latent,tsq,explained,mu] = pca(stockReturns{training,:}, 'NumComponents
+disp(size(factorLoading))
+
+100    10
+
+disp(size(factorRetn))
+
+1200          10
+
+In the output p-by-k factorLoading, each column is a principal component. The asset return vector
+at each timestep is decomposed to these k dimensional spaces, where k << p. The output
+factorRetn is a trainingNum-by-k dimension.
+
+Alternatively, you can also use the covarianceDenoising function to estimate a covariance matrix
+(denoisedCov) using denoising to reduce the noise and enhance the signal of the empirical
+covariance matrix. [1 on page 4-236] The goal of denoising is to separate the eigenvalues associated
+with signal from the ones associated with noise and shrink the eigenvalues associated with noise to
+enhance the signal. Thus, covarianceDenoising is a reasonable tool to identify the number of
+factors.
+
+[denoisedCov,numFactorsDenoising] = covarianceDenoising(stockReturns{training,:});
+
+The number of factors (numFactorsDenoising) is 6.
+
+disp(numFactorsDenoising)
+
+6
+
+Estimate the factor covariance matrix with factor returns (factorRetn) obtained using the pca
+function.
+
+covarFactor = cov(factorRetn);
+
+You can reconstruct the p asset returns for each observation using each k factor returns by following
+ra = μa + F rf + εa.
+
+Portfolio Optimization Using Factor Models
+
+4-233

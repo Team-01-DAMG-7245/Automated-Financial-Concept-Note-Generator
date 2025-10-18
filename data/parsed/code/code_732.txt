@@ -1,0 +1,9 @@
+Page 666
+================================================================================
+
+The default behavior of simulateNormalScenariosByData is to work with asset returns. If,
+instead, you have asset prices as in the variable Y, simulateNormalScenariosByData accepts a
+name-value pair argument name 'DataFormat' with a corresponding value set to 'prices' to
+indicate that the input to the function is in the form of asset prices and not returns (the default value
+for the 'DataFormat' argument is 'returns'). The following code simulates scenarios with the
+asset price data in Y for the PortfolioCVaR object q:

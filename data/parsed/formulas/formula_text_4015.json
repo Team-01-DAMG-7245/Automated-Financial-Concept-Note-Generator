@@ -1,0 +1,12 @@
+{
+  "page": 2277,
+  "original_text": "p = estimateAssetMoments(p,dailyReturn);",
+  "ocr_text": "p=estimateAssetMoments(p,dailyReturn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 378.68,
+    "x1": 306.72,
+    "y1": 389.15
+  },
+  "confidence": "high"
+}

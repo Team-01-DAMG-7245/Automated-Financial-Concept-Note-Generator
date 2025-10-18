@@ -1,0 +1,12 @@
+{
+  "page": 2236,
+  "original_text": "C = C/12;\n \nX = portsim(m', C, 120);\np = Portfolio('mean',m,'covar',C);\nq = Portfolio;\nq = estimateAssetMoments(q, X);\n \n[passetmean, passetcovar] = getAssetMoments(p)",
+  "ocr_text": "C=C/12;\n\nX=portsim(m,C,_120);\np=Portfolio(mean,m,covar,C);\nq=Portfolio;\n\nq=estimateAssetMoments(q,_X);\n[passetmean,passetcovar]=getAssetMoments(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 339.23,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

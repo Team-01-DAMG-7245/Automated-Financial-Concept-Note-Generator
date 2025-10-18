@@ -1,0 +1,63 @@
+TargetDate = 5×1 datetime
+   28-Feb-2001
+   30-Apr-2001
+   30-Jun-2001
+   31-Aug-2001
+   31-Oct-2001
+
+Input Arguments
+
+StartDate — Start date
+datetime array | string array | date character vector
+
+Start date, specified as an N-by-1 or 1-by-N vector using a datetime array, string array, or date
+character vectors.
+
+To support existing code, datemnth also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+NumberMonths — Number of months in future (positive) or past (negative)
+positive or negative integers
+
+Number of months in future (positive) or past (negative), specified as an N-by-1 or 1-by-N vector
+containing positive or negative integers.
+
+Data Types: double
+
+DayFlag — Flag for how actual day number for target date in future or past month is
+determined
+0 (day number should be the day in the future or past month corresponding to the actual day number
+of the start date) (default) | numeric with values 0, 1, or 2
+
+Flag for how the actual day number for the target date in future or past month is determined,
+specified as an N-by-1 or 1-by-N vector using a numeric with values0, 1, or 2.
+
+Possible values are:
+
+•
+0 (default) = day number should be the day in the future or past month corresponding to the
+actual day number of the start date.
+
+•
+1 = day number should be the first day of the future or past month.
+
+•
+2 = day number should be the last day of the future or past month.
+
+This flag has no effect if EndMonthRule is set to 1.
+
+Data Types: double
+
+Basis — Day-count basis of the instrument
+0 (actual/actual) (default) | numeric with value 0 through 13 | vector of numerics with values 0
+through 13
+
+Day-count basis to be used when determining the past or future date, specified as a scalar value with
+an integer with value of 0 through 13, or an N-by-1 or 1-by-N vector of integers with values of 0
+through 13.
+
+datemnth
+
+15-807

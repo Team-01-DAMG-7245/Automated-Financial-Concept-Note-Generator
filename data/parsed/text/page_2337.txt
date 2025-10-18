@@ -1,0 +1,35 @@
+Examples
+
+Create a Fan Plot Using Cell Array Data
+
+Define the data inputs for historical as a 5-by-2 cell array and forecast as a 5-by-21 cell array
+with 20 observations.
+
+historical =  {2006    -0.0110
+               2007     0.0120
+               2008     0.0090
+               2009     0.0120
+               2010     0.0150};
+
+forecast =    {2011  0.0203      -0.0155     0.0311     -0.0026      0.0035    0.0049      0.0026
+                     0.0533       0.0139     0.0037     -0.0727     -0.0291   -0.0058      0.0183
+               2012  0.0430      -0.0094     0.0587      0.0095      0.0185    0.0205      0.0172
+                     0.0141       0.0337     0.0187      0.0132     -0.0292    0.0048      0.0400
+               2013  0.0518      -0.0116     0.0708      0.0112      0.0221    0.0246      0.0205
+                     0.0168       0.0405     0.0224      0.0157     -0.0356    0.0056      0.0482
+               2014  0.0546      -0.0171     0.0762      0.0088      0.0210    0.0239      0.0193
+                     0.0151       0.0419     0.0214      0.0139     -0.0442    0.0024      0.0506
+               2015  0.0565      -0.0207     0.0797      0.0072      0.0203    0.0234      0.0185
+                     0.0139       0.0428     0.0207      0.0126     -0.0499    0.0026      0.0522
+
+Generate the fan plot.
+
+fanplot (historical, forecast);
+
+The dotted points are the historical lines and the filled lines indicate the mean for the forecasts. This
+fanplot represents a matching scenario where the time period perfectly matches for the historical and
+forecast data.
+
+fanplot
+
+15-1031

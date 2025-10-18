@@ -1,0 +1,14 @@
+Add a title and axis labels and draw a box around the plot. Annotate the colors with a bar and label
+the color bar.
+
+title('Call Option Portfolio Sensitivity');
+xlabel('Stock Price ($)');
+ylabel('Time (months)');
+zlabel('Gamma');
+set(gca, 'box', 'on');
+colorbar('horiz');
+
+10
+Solving Sample Problems
+
+10-28

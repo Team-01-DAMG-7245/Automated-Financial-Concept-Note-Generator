@@ -1,0 +1,12 @@
+{
+  "page": 1634,
+  "original_text": "[Paths,Times,Z] = simByEuler( ___ ,Name=Value) specifies options using one or more name-\nvalue arguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "[Paths,Times,Z]=simByEuler( ,Name=Value)specifiesoptionsusingoneormorename-\nvalueargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 313.15,
+    "x1": 554.69,
+    "y1": 336.78
+  },
+  "confidence": "high"
+}

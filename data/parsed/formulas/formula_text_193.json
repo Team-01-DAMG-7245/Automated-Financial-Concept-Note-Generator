@@ -1,0 +1,12 @@
+{
+  "page": 125,
+  "original_text": "The average arrival time of order executions is 0.72 seconds. The setting ΔtS = 1 corresponds to an\ninterval of 0.72 seconds, on average, which is close to the figure from the example. Therefore,\nΔSt = St −St −1.",
+  "ocr_text": "Theaveragearrivaltimeoforderexecutionsis0.72seconds.ThesettingAts=1correspondstoan\nintervalof0.72seconds,onaverage,whichisclosetothefigurefromtheexample.Therefore,\nAS: = Str St- 1:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 468.7,
+    "x1": 545.65,
+    "y1": 508.08
+  },
+  "confidence": "high"
+}

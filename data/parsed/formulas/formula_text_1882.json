@@ -1,0 +1,12 @@
+{
+  "page": 954,
+  "original_text": "fprintf('     %g%% Upper Bound: %4.2f%%\\n',(1-alpha)*100,yPredUB);",
+  "ocr_text": "fprintf( sgUpperBound:4.2fsn,(1-alpha)*100,yPredUB);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 320.0,
+    "x1": 447.61,
+    "y1": 330.46
+  },
+  "confidence": "high"
+}

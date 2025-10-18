@@ -1,0 +1,69 @@
+ecmmvnrstd
+Estimate standard errors of model and covariance parameters.
+
+ecmmvnrfish
+Estimate the Fisher information matrix.
+
+Multivariate Normal Parameter Estimation With Missing Data
+
+You can use the following functions to estimate the mean and covariance of multivariate normal data.
+
+ecmnmle
+Estimate the mean and covariance of the data.
+
+ecmnstd
+Estimate standard errors of the mean and covariance of the data.
+
+ecmnfish
+Estimate the Fisher information matrix.
+
+ecmnhess
+Estimate the Fisher information matrix using the Hessian.
+
+ecmnobj
+Calculate the log-likelihood function.
+
+These functions behave slightly differently from the more general regression functions since they
+solve a specialized problem. Consult the function reference pages for details.
+
+Support Functions
+
+Two support functions are included.
+
+convert2sur
+Convert a multivariate normal regression model into an SUR
+model.
+
+ecmninit
+Obtain initial estimates for the mean and covariance of a Data
+matrix.
+
+The convert2sur function converts a multivariate normal regression model into a seemingly
+unrelated regression, or SUR, model. The second function ecmninit is a specialized function to
+obtain initial ad hoc estimates for the mean and covariance of a Data matrix with missing data. (If
+there are no missing values, the estimates are the maximum likelihood estimates for the mean and
+covariance.)
+
+See Also
+mvnrmle | mvnrstd | mvnrfish | mvnrobj | ecmmvnrmle | ecmmvnrstd | ecmmvnrfish |
+ecmmvnrobj | ecmlsrmle | ecmlsrobj | ecmmvnrstd | ecmmvnrfish | ecmnmle | ecmnstd |
+ecmnfish | ecmnhess | ecmnobj | convert2sur | ecmninit
+
+Related Examples
+
+•
+“Multivariate Normal Regression” on page 9-2
+
+•
+“Multivariate Normal Regression Types” on page 9-13
+
+•
+“Valuation with Missing Data” on page 9-26
+
+•
+“Portfolios with Missing Data” on page 9-21
+
+9
+Regression with Missing Data
+
+9-12

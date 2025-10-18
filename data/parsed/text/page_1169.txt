@@ -1,0 +1,16 @@
+xlabel('Log return')
+    ylabel('Frequency')
+    title (series(i))
+    legend("Original data", "Synthetic data")
+end
+
+See Also
+
+Related Examples
+
+•
+“Using Extreme Value Theory and Copulas to Evaluate Market Risk” (Econometrics Toolbox)
+
+Using Extreme Value Theory and Copula Fitting to Generate Synthetic Data
+
+10-71

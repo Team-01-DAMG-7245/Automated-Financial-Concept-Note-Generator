@@ -1,0 +1,12 @@
+{
+  "page": 869,
+  "original_text": "% Create MAD portfolio with default constraints\np = PortfolioMAD;\np = simulateNormalScenariosByData(p,Data(:,1:12),1000,missingdata=true);\np = setDefaultConstraints(p);",
+  "ocr_text": "CreateMADportfoliowithdefaultconstraints\n\np=PortfolioMAD;\np=simulateNormalScenariosByData(p,Data(:,1:12),1000,missingdata=true);\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 318.75,
+    "x1": 480.09,
+    "y1": 361.61
+  },
+  "confidence": "high"
+}

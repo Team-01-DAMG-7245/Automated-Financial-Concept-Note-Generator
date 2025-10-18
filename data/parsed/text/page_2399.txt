@@ -1,0 +1,40 @@
+Matrix to form linear equality constraints, returned as a matrix for a Portfolio, PortfolioCVaR,
+or PortfolioMAD input object (obj).
+
+bEquality — Vector to form linear equality constraints
+vector
+
+Vector to form linear equality constraints, returned as a vector for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+More About
+
+Equality Constraint
+
+An equality constraint requires certain conditions to be met exactly, rather than allowing for a range
+of values.
+
+Tips
+
+You can also use dot notation to obtain the equality constraint arrays from portfolio objects.
+
+[AEquality, bEquality] = obj.getEquality;
+
+Version History
+Introduced in R2011a
+
+See Also
+setEquality
+
+Topics
+“Working with Linear Equality Constraints Using Portfolio Object” on page 4-75
+“Working with Linear Equality Constraints Using PortfolioCVaR Object” on page 5-68
+“Working with Linear Equality Constraints Using PortfolioMAD Object” on page 6-67
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+Supported Constraints for Portfolio Optimization Using Portfolio Objects on page 4-9
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object on page 5-8
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object on page 6-8
+
+getEquality
+
+15-1093

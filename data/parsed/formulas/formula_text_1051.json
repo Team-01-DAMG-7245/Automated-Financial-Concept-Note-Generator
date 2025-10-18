@@ -1,0 +1,12 @@
+{
+  "page": 545,
+  "original_text": "% Run the simulation.\nWPath = [W0; zeros(T,1)];\nportPath = [portIdx(WNodeIdx,1); zeros(T,1)];\nVPath = [V(WNodeIdx,1); zeros(T,1)];\nfor t = 1:T\n    % Get the return and variance of optimal portfolio at time t.\n    mu = pret(portIdx(WNodeIdx,t));\n    sigma = prsk(portIdx(WNodeIdx,t));",
+  "ocr_text": "SRunthesimulation.\n\nWPath=[WO;zeros(T,1)];\n\nportPath=[portIdx(WNodeIdx,1);_zeros(T,1)];\n\nVPath=[V(WNodeIdx,1);zeros(T,1)];\n\nfort=1:T\nGetthereturnandvarianceofoptimalportfolioattimet.\nmu=pret(portIdx(WNodelIdx,t));\nsigma=prsk(portIdx(WNodelIdx,t));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 442.17,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1178,
+  "original_text": "TMW = fillmissing(TMW,'linear');\nsummaryTMW = summary(TMW);\nsummaryTMW.Close",
+  "ocr_text": "TMW=fillmissing(TMW,linear);\nsummaryTMW=summary(TMW);\nsummaryTMW.Close",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 423.59,
+    "x1": 263.39,
+    "y1": 455.66
+  },
+  "confidence": "high"
+}

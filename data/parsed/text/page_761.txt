@@ -1,0 +1,45 @@
+For both types of portfolios, mean-variance and CVaR, the portfolio with the maximum expected
+return is the one that allocates all the weight to the stock-only strategy. This makes sense because no
+put options are acquired, which translates into larger returns. Also, the portfolio with minimum
+variance is the same for both risk measures. This portfolio is the one that allocates everything to
+'Hedge95' because that strategy limits the possible losses the most. The real differences between
+the two types of portfolios are observed for the return levels between the minimum and maximum.
+There, in contrast to the efficient portfolios obtained using variance as the measure of risk, the
+weights of the CVaR portfolios range among all five possible strategies.
+
+See Also
+PortfolioCVaR | getScenarios | setScenarios | estimateScenarioMoments |
+simulateNormalScenariosByMoments | simulateNormalScenariosByData | setCosts |
+checkFeasibility
+
+Related Examples
+
+•
+“Troubleshooting CVaR Portfolio Optimization Results” on page 5-121
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+Hedging Using CVaR Portfolio Optimization
+
+5-135

@@ -1,0 +1,12 @@
+{
+  "page": 986,
+  "original_text": "sc = autobinning(sc,'ResStatus');\n[bi,cg] = bininfo(sc,'ResStatus')",
+  "ocr_text": "sc_=autobinning(sc,ResStatus);\n[bi,cg]=bininfo(sc,ResStatus)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 367.49,
+    "x1": 268.81,
+    "y1": 388.76
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 965,
+  "original_text": "'HorizontalAlignment','center')\nfor i=2:length(labels)\n   val = thresCCC(i);\n   line([val val],[0 0.4],'LineStyle',':')\n   text(centersX(i),0.2,labels{i},'FontSize',fs(i), ...\n      'HorizontalAlignment','center')\nend\nxlabel('Credit Quality Thresholds')\nylabel('Probability Density Function')\ntitle('{\\bf Visualization of Credit Quality Thresholds}')\nlegend('Std Normal PDF','Location','S')",
+  "ocr_text": "HorizontalAlignment,center)\nfori=2:length(labels)\nval_=thresCCC(i);\nline([valval],[00.4],LineStyle,:)\ntext(centersX(i),0.2,labels{i},FontSize,fs(i),...\nHorizontalAlignment,center)\nend\nxlabel(CreditQualityThresholds)\nylabel(ProbabilityDensityFunction)\ntitle({bfVisualizationofCreditQualityThresholds})\nlegend(StdNormalPDF,Location,S)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 398.85,
+    "y1": 211.49
+  },
+  "confidence": "high"
+}

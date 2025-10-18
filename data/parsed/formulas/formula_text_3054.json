@@ -1,0 +1,12 @@
+{
+  "page": 1600,
+  "original_text": "ivInitialWeights = inverseVarianceFcn([],pricesTT(warmupRange,:));\nivStrategy = backtestStrategy(\"InverseVariance\",@inverseVarianceFcn, ...\n    'RebalanceFrequency',20, ...\n    'TransactionCosts',[0.0025 0.005], ...\n    'InitialWeights',ivInitialWeights)",
+  "ocr_text": "ivInitialWeights=inverseVarianceFcn([],pricesTT(warmupRange,:));\nivStrategy=backtestStrategy(InverseVariance,inverseVarianceFcn,...\nRebalanceFrequency,20,...\nTransactionCosts,[0.00250.005],...\nInitialWeights,ivInitialWeights)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 581.03,
+    "x1": 480.12,
+    "y1": 634.69
+  },
+  "confidence": "high"
+}

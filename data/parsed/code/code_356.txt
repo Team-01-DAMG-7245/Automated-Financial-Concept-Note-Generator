@@ -1,0 +1,7 @@
+Page 351
+================================================================================
+
+An important step in portfolio optimization is to validate that the portfolio problem is feasible and the
+main test is to ensure that the set of portfolios is nonempty and bounded. Use the estimateBounds
+function to determine the bounds for the portfolio set. In this case, since both lb and ub are finite,
+the set is bounded.

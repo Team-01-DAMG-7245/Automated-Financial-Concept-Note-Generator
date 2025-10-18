@@ -1,0 +1,62 @@
+Compute Transition Matrix Containing NR (Not Rated) Rating
+
+Consider a different sample data containing only a single company 'DEF'. The data contains
+transitions of company 'DEF' from 'A' to 'NR' rating and a subsequent transition from 'NR' to
+'BBB'.
+
+dataNR = {'DEF','17-Mar-2011','A';
+    'DEF','24-Mar-2014','NR';
+    'DEF','26-Sep-2016','BBB'};
+dataNR = cell2table(dataNR,'VariableNames',{'ID','Date','Rating'});
+disp(dataNR)
+
+ID            Date          Rating 
+    _______    _______________    _______
+
+{'DEF'}    {'17-Mar-2011'}    {'A'  }
+    {'DEF'}    {'24-Mar-2014'}    {'NR' }
+    {'DEF'}    {'26-Sep-2016'}    {'BBB'}
+
+transprob treats 'NR' as another rating. The transition matrix below shows the estimated
+probability of transitioning into and out of 'NR'.
+
+StartYearNR = 2010;
+EndYearNR = 2018;
+startDateNR = datetime(StartYearNR,12,31,'Locale','en_US');
+endDateNR = datetime(EndYearNR,12,31,'Locale','en_US');
+CompanyID_NR = "DEF";
+
+RatingLabelsNR = ["AAA","AA","A","BBB","BB","B","CCC","D","NR"];
+
+[tmNR,~,itNR] = transprob(dataNR,'startDate',startDateNR,'endDate',endDateNR,'algorithm','cohort
+hDisplayTransitions(tmNR,RatingLabelsNR,"Transition Matrix")
+
+Transition Matrix
+
+AAA    AA       A       BBB    BB      B     CCC     D       NR  
+           ___    ___    ______    ___    ___    ___    ___    ___    ______
+
+AAA    100      0         0      0      0      0      0      0         0
+    AA       0    100         0      0      0      0      0      0         0
+    A        0      0    66.667      0      0      0      0      0    33.333
+    BBB      0      0         0    100      0      0      0      0         0
+    BB       0      0         0      0    100      0      0      0         0
+    B        0      0         0      0      0    100      0      0         0
+    CCC      0      0         0      0      0      0    100      0         0
+    D        0      0         0      0      0      0      0    100         0
+    NR       0      0         0     50      0      0      0      0        50
+
+Display the transition counts and corresponding visualization of the transitions.
+
+hDisplayTransitions(itNR.totalsMat,RatingLabelsNR,strcat("Transition counts, company ID: ",Compan
+
+Transition counts, company ID: DEF
+
+AAA    AA    A    BBB    BB    B    CCC    D    NR
+           ___    __    _    ___    __    _    ___    _    __
+
+AAA     0     0     0     0     0     0     0     0    0
+
+Visualize Transitions Data for transprob
+
+8-117

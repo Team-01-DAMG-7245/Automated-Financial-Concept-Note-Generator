@@ -1,0 +1,9 @@
+Page 820
+================================================================================
+
+into detail about regression with missing data, the simulateNormalScenariosByData function has
+a name-value pair argument name 'MissingData' that indicates with a Boolean value whether to
+use the missing data capabilities of Financial Toolbox™. The default value for 'MissingData' is
+false which removes all samples with NaN values. If, however, 'MissingData' is set to true,
+simulateNormalScenariosByData uses the ECM algorithm to estimate asset moments. The
+following code shows how this works on price data with missing values.

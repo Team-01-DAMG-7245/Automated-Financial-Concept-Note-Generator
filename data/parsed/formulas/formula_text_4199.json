@@ -1,0 +1,12 @@
+{
+  "page": 2362,
+  "original_text": "Decimal = frac2cur(Fraction,Denominator)",
+  "ocr_text": "Decimal=frac2cur(Fraction,Denominator)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.33,
+    "x1": 330.82,
+    "y1": 200.96
+  },
+  "confidence": "high"
+}

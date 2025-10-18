@@ -1,0 +1,12 @@
+{
+  "page": 826,
+  "original_text": "bc = [ 0.00125; 0.00125; 0.00125; 0.00125; 0.00125 ];\nsc = [ 0.00125; 0.007; 0.00125; 0.00125; 0.0024 ];\nx0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];\np = PortfolioMAD('BuyCost', bc, 'SellCost', sc, 'InitPort', x0);\ndisp(p.NumAssets)\ndisp(p.BuyCost)\ndisp(p.SellCost)\ndisp(p.InitPort)",
+  "ocr_text": "bc=[0.00125;0.00125;0.00125;0.00125;0.00125];\nsc=[0.00125;0.007;0.00125;0.00125;0.0024];\nxO=[0.4;0.2;0.2;0.1;0.1];\np=PortfolioMAD(BuyCost,bc,SellCost,sc,InitPort,x0);\ndisp(p.NumAssets)\n\ndisp(p.BuyCost)\n\ndisp(p.SellCost)\n\ndisp(p.InitPort)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 335.92,
+    "x1": 436.78,
+    "y1": 421.98
+  },
+  "confidence": "high"
+}

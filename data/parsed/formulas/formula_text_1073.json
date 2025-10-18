@@ -1,0 +1,12 @@
+{
+  "page": 554,
+  "original_text": "numSimulations = 1e3;\nsimulationOptions = rlSimulationOptions(NumSimulations=numSimulations);",
+  "ocr_text": "numSimulations=1e3;\nsimulationOptions=rlSimulationOptions(NumSimulations=numSimulations);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 572.79,
+    "x1": 474.68,
+    "y1": 594.06
+  },
+  "confidence": "high"
+}

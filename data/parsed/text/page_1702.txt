@@ -1,0 +1,62 @@
+alpha = .1;
+b = .05;
+sigma = .05;
+r0 = .04;
+
+Define the function for bond prices.
+
+gamma = sqrt(alpha^2 + 2*sigma^2);
+A_func = @(t, T) ...
+    2*(exp(gamma*(T-t))-1)/((alpha+gamma)*(exp(gamma*(T-t))-1)+2*gamma);
+C_func = @(t, T) ...
+    (2*alpha*b/sigma^2)*log(2*gamma*exp((alpha+gamma)*(T-t)/2)/((alpha+gamma)*(exp(gamma*(T-t))-1
+P_func = @(t,T,r_t) exp(-A_func(t,T)*r_t+C_func(t,T));
+
+Create a cir object.
+
+obj = cir(alpha,b,sigma,'StartState',r0)
+
+obj = 
+   Class CIR: Cox-Ingersoll-Ross
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 0.04
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.05
+          Speed: 0.1
+
+Define the simulation parameters.
+
+nTrials = 100;
+nPeriods = 5;   % Simulate future short over the next five years
+nSteps = 12;    % Set intermediate steps to improve the accuracy
+
+Simulate the short rates. The returning path is a (NPeriods + 1)-by-NVars-by-NTrials three-
+dimensional time-series array. For this example, the size of the output is 6-by-1-by-100.
+
+rng('default');    % Reproduce the same result
+rPaths = simByTransition(obj,nPeriods,'nTrials',nTrials,'nSteps',nSteps);
+size(rPaths)
+
+ans = 1×3
+
+6     1   100
+
+rPathsExp = mean(rPaths,3);
+
+Determine the term structure over the next 30 years.
+
+maturity = 30;
+T = 1:maturity;
+futuresTimes = 1:nPeriods+1;
+
+15
+Functions
+
+15-396

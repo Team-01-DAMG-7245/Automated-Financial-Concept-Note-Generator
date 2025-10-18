@@ -1,0 +1,46 @@
+This example demonstrates how to derive statistical factors from asset returns using PCA and then
+use these factors to perform a factor-based portfolio optimization. This example also shows how to
+use these statistical factors with the Portfolio class. In practice, you can adapt this example to
+incorporate some measurable market factors, such as industrial factors or ETF returns from various
+sectors, to describe the randomness in the market [1 on page 4-236]. You can define custom
+constraints on the weights of factors or assets with high flexibility using the problem-based definition
+framework from Optimization Toolbox™. Alternatively, you can work directly with the Portfolio
+class to run a portfolio optimization with various built-in constraints.
+
+Reference
+
+1
+Lòpez de Prado, M. Machine Learning for Asset Managers. Cambridge University Press, 2020.
+
+2
+Meucci, A. "Modeling the Market." Risk and Asset Allocation. Berlin:Springer, 2009.
+
+See Also
+Portfolio | setBounds | addGroups | setAssetMoments | estimateAssetMoments |
+estimateBounds | plotFrontier | estimateFrontierLimits | estimateFrontierByRisk |
+estimatePortRisk
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-236

@@ -1,0 +1,12 @@
+{
+  "page": 2136,
+  "original_text": "NumDays = daysact(StartDate)\nNumDays = daysact( ___ ,EndDate)",
+  "ocr_text": "NumDays=daysact(StartDate)\nNumDays=daysact(____,EndDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.69,
+    "x1": 274.61,
+    "y1": 213.32
+  },
+  "confidence": "high"
+}

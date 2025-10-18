@@ -1,0 +1,6 @@
+Page 2475
+================================================================================
+
+Note To compute upper partial moments, reverse the signs of both Data and MAR (do not reverse
+the sign of the output). The lpm function computes sample lower partial moments from data. To
+compute expected lower partial moments for multivariate normal asset returns with a specified mean

@@ -1,0 +1,33 @@
+Compute the weights of 15 portfolios on the efficient frontier using estimateFrontier. These
+portfolios represent the possible actions at each rebalancing period.
+
+numPortfolios = 15;
+pwgt = estimateFrontier(p,numPortfolios);
+
+Plot the efficient frontier using plotFrontier.
+
+figure
+[prsk,pret] = plotFrontier(p,pwgt);
+hold on
+scatter(prsk,pret,"red","o","LineWidth",2)
+hold off
+
+Use rlFiniteSetSpec (Reinforcement Learning Toolbox) to create the discrete action space for the
+reinforcement learning environment.
+
+actionInfo = rlFiniteSetSpec(1:15);
+
+Define Observations
+
+The observations are defined as elements of the environment that describe important aspects of the
+current state. In this example the observations consist of the current time period t and the wealth at
+that time periodWt. Use rlNumericSpec (Reinforcement Learning Toolbox) to create the
+observations space, a 2 × 1  vector containing two signals: the wealth level and the time period.
+
+% Observation space:
+%   [wealth; timePeriod]
+observationInfo = rlNumericSpec([2 1]);
+
+Multiperiod Goal-Based Wealth Management Using Reinforcement Learning
+
+4-381

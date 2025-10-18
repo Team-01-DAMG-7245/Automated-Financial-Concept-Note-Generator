@@ -1,0 +1,7 @@
+Page 1551
+================================================================================
+
+The LookbackWindow property can be set in two ways. For a fixed-sized rolling window of data (for
+example, "50 days of price history"), the LookbackWindow property is set to a single scalar value (N
+= 50). The software then calls the rebalance function with a price timetable containing exactly N rows
+of rolling price data.

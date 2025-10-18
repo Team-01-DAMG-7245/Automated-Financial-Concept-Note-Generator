@@ -1,0 +1,12 @@
+{
+  "page": 2219,
+  "original_text": "EMaxDD = emaxdrawdown(Mu, Sigma, T)",
+  "ocr_text": "EMaxDD=emaxdrawdown(Mu,Sigma,T)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 632.8,
+    "x1": 279.63,
+    "y1": 643.27
+  },
+  "confidence": "high"
+}

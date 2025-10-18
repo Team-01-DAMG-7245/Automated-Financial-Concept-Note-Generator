@@ -1,0 +1,5 @@
+Page 451
+================================================================================
+
+function new_weights = MixHH(~, assetPrices, struct)
+% Min variance + max HH diversification strategy

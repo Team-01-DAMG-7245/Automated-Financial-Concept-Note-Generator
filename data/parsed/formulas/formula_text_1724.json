@@ -1,0 +1,12 @@
+{
+  "page": 871,
+  "original_text": "% Select 'TrustRegionCP' as solver\np_OA = setSolverMINLP(p,'OuterApproximation');\npwgt_OA = estimateFrontier(p_OA);\nrskOA = estimatePortRisk(p,pwgt_OA);\nretOA = estimatePortReturn(p,pwgt_OA);",
+  "ocr_text": "SelectTrustRegionCPassolver\np_0A=setSolverMINLP(p,OuterApproximation);\npwgt_0A=estimateFrontier(p_0A);\nrskOA=estimatePortRisk(p,pwgt_0A);\nretOA=estimatePortReturn(p,pwgt_0A);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 148.77,
+    "x1": 339.25,
+    "y1": 202.43
+  },
+  "confidence": "high"
+}

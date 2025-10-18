@@ -1,0 +1,12 @@
+{
+  "page": 568,
+  "original_text": "% Define the mean and covariance of the returns.\nmu = mean(assetReturns.Variables);\nSigma = factorLoading*covFactor*factorLoading' + D;",
+  "ocr_text": "Definethemeanandcovarianceofthereturns.\nmu=mean(assetReturns.Variables);\nSigma=factorLoading*covFactor*factorLoading+D;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 351.63,
+    "x1": 366.32,
+    "y1": 383.69
+  },
+  "confidence": "high"
+}

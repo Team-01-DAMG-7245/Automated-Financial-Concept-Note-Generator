@@ -1,0 +1,12 @@
+{
+  "page": 444,
+  "original_text": "% Label the ESG data.\nESGlabel = discretize(ESGnumeric,[0 0.5 1], ...\n    \"categorical\",{'low','high'});\n% Create a table with ESG scores and labels.\nESG = table(ESGnumeric,ESGlabel);\n% Remove the ESG constraint.\np = setInequality(p,[],[]);",
+  "ocr_text": "Label_theESGdata.\nESGlabel=discretize(ESGnumeric,[00.51],...\ncategorical,{low,high});\nCreateatablewithESGscoresandlabels.\nESG=table(ESGnumeric,ESGlabel);\nSRemovetheESGconstraint.\np=setInequality(p,[],[1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 288.54,
+    "x1": 344.67,
+    "y1": 363.8
+  },
+  "confidence": "high"
+}

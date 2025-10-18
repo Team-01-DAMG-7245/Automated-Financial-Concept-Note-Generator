@@ -1,0 +1,12 @@
+{
+  "page": 1457,
+  "original_text": "subplot(2,1,1);\nhold on;\ngrid on;\nplot([T(n) T(n + 1)],[X(n,1) X(n + 1,1)],'.-b')\nplot(times, average, 'or')\nhold off;\ntitle('Brownian Bridge without Refinement: Sample Mean') \nylabel('Mean')\nlimits = axis;\naxis([T(n) T(n + 1) limits(3:4)]);",
+  "ocr_text": "subplot(2,1,1);\n\nholdon;\n\ngridon;\n\nplot({[T(n)T(n+1)],[X(n,1)X(n+1,1)],.-b)\nplot(times,average,or)\n\nholdoff;\ntitle(BrownianBridgewithoutRefinement:SampleMean)\nylabel(Mean)\n\nlimits=axis;\n\naxis([T(n)T(n+1)limits(3:4)]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 350.63,
+    "x1": 398.85,
+    "y1": 458.29
+  },
+  "confidence": "high"
+}

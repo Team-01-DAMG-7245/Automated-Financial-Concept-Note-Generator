@@ -1,0 +1,12 @@
+{
+  "page": 1995,
+  "original_text": "QuasiCouponDates = cfdatesq('14-Mar-1997', datetime('30-Nov-1998','Locale','en_US'), 2, 0, 1)",
+  "ocr_text": "QuasiCouponDates=cfdatesq(14-Mar-1997,datetime(30-Nov-1998,Locale,en_US),2,0,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 593.92,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

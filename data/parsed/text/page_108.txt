@@ -1,0 +1,29 @@
+Continuous Time Markov Process
+
+Together, the state of the LOB imbalance index rho (ρ) and the state of the forward price movement
+DS (ΔS) describe a two-dimensional continuous-time Markov chain (CTMC). The chain is modulated
+by the Poisson process of order arrivals, which signals any transition among the states.
+
+To simplify the description, give the two-dimensional CTMC a one-dimensional encoding into states
+phi (φ = ρ, ΔS ).
+
+numStates = 3*numBins; % numStates(DS)*numStates(rho)
+
+phi = NaN(size(t));
+for i = 1:length(t)
+    switch DS(i)
+        case -1
+            phi(i) = rho(i);
+        case 0
+            phi(i) = rho(i) + numBins;
+        case 1
+            phi(i) = rho(i) + 2*numBins;
+    end
+end
+
+Successive states of φ, and the component states ρ and ΔS, proceed as follows.
+
+2
+Performing Common Financial Tasks
+
+2-64

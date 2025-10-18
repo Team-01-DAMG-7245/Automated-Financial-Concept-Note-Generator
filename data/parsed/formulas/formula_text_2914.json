@@ -1,0 +1,12 @@
+{
+  "page": 1522,
+  "original_text": "rvmObj = rvm(Return,Volatility,Alpha,Beta,KernelType=\"gamma\")",
+  "ocr_text": "rvm0bj_=rvm(Return,Volatility,Alpha,Beta,KernelType=gamma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 396.43,
+    "x1": 420.53,
+    "y1": 406.89
+  },
+  "confidence": "high"
+}

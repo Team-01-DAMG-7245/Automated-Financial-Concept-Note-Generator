@@ -1,0 +1,12 @@
+{
+  "page": 356,
+  "original_text": "function displayReturns(pret0, pret, qret)\nfprintf('Annualized Portfolio Returns ...\\n');",
+  "ocr_text": "functiondisplayReturns(pret0,pret,qret)\nfprintf(AnnualizedPortfolioReturns...n);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 339.25,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

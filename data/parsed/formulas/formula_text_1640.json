@@ -1,0 +1,12 @@
+{
+  "page": 821,
+  "original_text": "load CAPMuniverse\ntime = datetime(Dates,'ConvertFrom','datenum');\nstockTT = array2timetable(Data,'RowTimes',time, 'VariableNames', Assets);\nstockTT.Properties",
+  "ocr_text": "load_CAPMuniverse\n\ntime=datetime(Dates,ConvertFrom,datenum);\nstockTT=array2timetable(Data,Rowlimes,time,VariableNames,Assets);\nstockTT.Properties",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 336.22,
+    "x1": 485.55,
+    "y1": 379.09
+  },
+  "confidence": "high"
+}

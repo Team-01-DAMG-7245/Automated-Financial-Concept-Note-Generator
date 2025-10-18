@@ -1,0 +1,12 @@
+{
+  "page": 38,
+  "original_text": "solves for X in A * X = B.",
+  "ocr_text": "solvesforXinA*X=B.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 297.88,
+    "x1": 214.13,
+    "y1": 309.51
+  },
+  "confidence": "high"
+}

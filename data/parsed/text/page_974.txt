@@ -1,0 +1,36 @@
+If you bin the weighted data based on age (45 and under, versus 46 and up) the expectation is that
+each row with age 45 and under must count as 1.5 observations, and therefore the Good and Bad
+“counts” are increased by 50%:
+
+The “counts” are now “weighted frequencies” and are no longer integer values. The Odds do not
+change for the first bin. The particular weights given in this example have the effect of scaling the
+total Good and Bad counts in the first bin by the same scaling factor, therefore their ratio does not
+change. However, the Odds value of the total sample does change; the first bin now carries a higher
+weight, and because the odds in that bin are lower, the total Odds are now lower, too. Other credit
+scorecard statistics not shown here, such as WOE and Information Value are affected in a similar
+way.
+
+In general, the effect of weights is not simply to scale frequencies in a particular bin, because
+members of that bin will have different weights. The goal of this example is to demonstrate the
+concept of switching from counts to the sum of weights.
+
+See Also
+creditscorecard | autobinning | bininfo | fitmodel | validatemodel
+
+Related Examples
+
+•
+“Bias Mitigation in Credit Scoring by Reweighting” (Risk Management Toolbox)
+
+More About
+
+•
+“About Credit Scorecards” on page 8-49
+
+•
+“Credit Scorecard Modeling Workflow” on page 8-52
+
+8
+Credit Risk Analysis
+
+8-56

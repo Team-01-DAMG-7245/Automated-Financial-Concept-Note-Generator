@@ -1,0 +1,12 @@
+{
+  "page": 2194,
+  "original_text": "Hessian = ecmnhess(Data,Covariance)\nHessian = ecmnhess( ___ ,InvCovar,MatrixType)",
+  "ocr_text": "Hessian=ecmnhess(Data,Covariance)\nHessian=ecmnhess( ,InvCovar,MatrixType)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.36,
+    "x1": 352.89,
+    "y1": 211.99
+  },
+  "confidence": "high"
+}

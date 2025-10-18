@@ -1,0 +1,26 @@
+Use Estimated Volatility to Perform Factor Analysis on Commodities
+
+Applying factor analysis is another technique for grouping the commodities into clusters, based on
+the estimated volatility profiles.
+
+Factor analysis assumes the existence of a certain number of hidden or latent factors underlying the
+data. If you hypothesize that the volatility in the soft commodities is driven by a smaller number of
+latent factors (such as external market conditions), then factor analysis provides one approach for
+understanding these hidden factors. For more information on factor analysis, see factoran.
+
+numLatentFactors = 3;
+loadings = factoran( InferredVolatility.Variables, numLatentFactors );
+
+Visualize the factor loadings by using heatmap.
+
+figure
+heatmap( 1:numLatentFactors, commodityNames, loadings, ...
+    "Colormap", turbo, ...
+    "ColorLimits", [-1, 1] )
+xlabel( "Latent Factor" )
+title( "Volatility Factor Analysis" )
+
+14
+Stochastic Differential Equations
+
+14-102

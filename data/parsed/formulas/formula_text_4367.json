@@ -1,0 +1,12 @@
+{
+  "page": 2472,
+  "original_text": "Example: values = llow(TMW_LOW,'NumPeriods',10)",
+  "ocr_text": "Example:values=llow(TMW_LOW,NumPeriods,10)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 311.36,
+    "x1": 364.14,
+    "y1": 322.99
+  },
+  "confidence": "high"
+}

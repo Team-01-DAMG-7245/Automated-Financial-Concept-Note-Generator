@@ -1,0 +1,12 @@
+{
+  "page": 979,
+  "original_text": "tdata = dataMissing(11:14,mdl.PredictorNames); % Keep only the predictors retained in the model\n% Set some missing values\ntdata.CustAge(1) = NaN;\ntdata.ResStatus(2) = missing;\ntdata.EmpStatus(3) = missing;\ntdata.CustIncome(4) = NaN;\ndisp(tdata)",
+  "ocr_text": "tdata=dataMissing(11:14,mdl.PredictorNames);Keeponlythepredictorsretainedinthemodel\nSetsomemissingvalues\n\ntdata.CustAge(1)=NaN;\n\ntdata.ResStatus(2)=missing;\n\ntdata.EmpStatus(3)=missing;\n\ntdata.CustIncome(4)=NaN;\n\ndisp(tdata)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.44,
+    "x1": 604.73,
+    "y1": 201.7
+  },
+  "confidence": "high"
+}

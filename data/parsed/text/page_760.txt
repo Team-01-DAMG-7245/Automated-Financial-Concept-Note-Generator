@@ -1,0 +1,23 @@
+The weights associated with the mean-variance portfolios on the efficient frontier use only two
+strategies, 'Stock' and 'Hedge95'. This behavior is an effect of the correlations among the five
+assets in the portfolio. Because the correlations between the assets are close to 1, the standard
+deviation of the portfolio is almost a linear combination of the standard deviation of the assets.
+Hence, because assets with larger returns are associated with assets with larger variance, a linear
+combination of only the assets with the smallest and largest returns is observed in the efficient
+frontier.
+
+Plot the weights associated with the CVaR portfolio efficient frontier.
+
+% Plot the CVaR portfolio weights
+figure;
+area(pwgt');
+legend(p.AssetList);
+axis([1 10 0 1])
+title('CVaR Portfolio Weights Five Hedging Levels');
+xlabel('Portfolios from Minimum(1) to Maximum(10) Return');
+ylabel('Contribution of each Asset');
+
+5
+CVaR Portfolio Optimization Tools
+
+5-134

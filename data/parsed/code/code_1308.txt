@@ -1,0 +1,6 @@
+Page 1360
+================================================================================
+
+% Compute the minimum variance portfolio.
+new_weights = estimateFrontierLimits(p,'min');
+end

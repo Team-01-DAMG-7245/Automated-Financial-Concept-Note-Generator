@@ -1,0 +1,61 @@
+RVM model, returned as a RVM object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of first observation, applied to all state variables, returned as a scalar
+
+Data Types: double
+
+StartState — Initial values of state variables
+1 (default) | scalar, column vector, or matrix
+
+Initial values of state variables, returned as a scalar, column vector, or matrix.
+
+Data Types: double
+
+Correlation — Correlation between Gaussian random variates drawn to generate
+Brownian motion vector (Wiener processes)
+2-by-2 identity matrix representing independent Gaussian processes (default) | positive semidefinite
+matrix
+
+Correlation between Gaussian random variates drawn to generate the Brownian motion vector
+(Wiener processes), returned as a scalar or positive semidefinite matrix.
+
+Data Types: double
+
+Return — Expected (mean) instantaneous rate of return of GBM price process
+scalar numeric | function_handle
+
+Expected (mean) instantaneous rate of return of GBM price process, returned as a numeric scalar or
+function handle.
+
+Data Types: double | function_handle
+
+Volatility — Instantaneous volatility of BSS stochastic volatility process
+scalar numeric | function_handle
+
+Instantaneous volatility of the BSS stochastic volatility process, returned as a numeric scalar or
+function handle.
+
+Data Types: double | function_handle
+
+Kernel — Type of kernel process
+string with value "gamma" or "power-law" | character vector with value 'gamma' or 'power-law'
+
+Type of kernel process, returned as a string or character vector.
+
+Data Types: string | char
+
+Alpha — Kernel function parameter representing roughness index
+scalar numeric
+
+Kernel function parameter representing roughness index, returned as a numeric scalar.
+
+Data Types: double
+
+rvm
+
+15-215

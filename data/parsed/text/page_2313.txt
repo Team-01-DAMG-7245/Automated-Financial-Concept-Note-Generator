@@ -1,0 +1,14 @@
+Version History
+Introduced in R2011a
+
+See Also
+estimatePortReturn | estimatePortRisk
+
+Topics
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+“Portfolio Optimization Theory” on page 4-4
+
+estimatePortMoments
+
+15-1007

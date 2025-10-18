@@ -1,0 +1,12 @@
+{
+  "page": 1293,
+  "original_text": "nexttile\nplot( Prices.Date, Prices.(chosenCommodity{1}), ...\n    \"LineWidth\", 1.5, \"Color\", corder(1, :) )\nxlabel( \"Date\" )\nylabel( \"Price\" )\nunits = Prices.Properties.VariableUnits(chosenCommodity);\ntitle( \"Prices \" + units )\ngrid on",
+  "ocr_text": "nexttile\n\nplot(Prices.Date,Prices.(chosenCommodity{1}),...\nLineWidth,1.5,Color,corder(1,_:))\n\nxlabel(Date)\n\nylabel(Price)\n\nunits=Prices.Properties.VariableUnits(chosenCommodity);\n\ntitle(Prices+units)\n\ngridon",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 234.75,
+    "x1": 398.83,
+    "y1": 320.81
+  },
+  "confidence": "high"
+}

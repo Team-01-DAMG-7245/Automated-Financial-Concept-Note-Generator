@@ -1,0 +1,12 @@
+{
+  "page": 2190,
+  "original_text": "Fisher = ecmnfish(Data,Covariance) computes an NUMPARAMS-by-NUMPARAMS Fisher\ninformation matrix based on the current maximum likelihood parameter estimates.",
+  "ocr_text": "Fisher=ecmnfish(Data,Covariance)computesanNUMPARAMS-by-NUMPARAMSFisher\ninformationmatrixbasedonthecurrentmaximumlikelihoodparameterestimates.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 252.58,
+    "x1": 515.8,
+    "y1": 276.21
+  },
+  "confidence": "high"
+}

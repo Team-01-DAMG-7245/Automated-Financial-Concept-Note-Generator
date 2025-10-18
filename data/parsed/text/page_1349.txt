@@ -1,0 +1,19 @@
+PortfolioReturn: 0.0598
+            BenchmarkReturn: 0.0540
+               ActiveReturn: 0.0059
+
+Generate Horizontal Bar Chart for Category Weights
+
+Use the brinsonAttribution object with categoryWeightsChart to generate a horizontal bar
+chart of portfolio, benchmark, and active weights by category, averaged over all time periods.
+
+categoryWeightsChart(BrinsonPAobj)
+
+Alternatively, you can use the name-value argument for ActiveOnly to plot only active weights by
+category.
+
+categoryWeightsChart(BrinsonPAobj,ActiveOnly=true)
+
+categoryWeightsChart
+
+15-43

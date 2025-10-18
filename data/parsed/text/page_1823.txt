@@ -1,0 +1,67 @@
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Note Any optional input of size N-by-1 is also acceptable as an array of size 1-by-N, or as a single
+value applicable to all contracts.
+
+Example: [ProbabilityData,HazardData] =
+bondDefaultBootstrap(ZeroData,MarketData,Settle,'RecoveryRate',Recovery,'Zero
+Compounding',-1)
+
+RecoveryRate — Recovery rate
+0.4 (default) | decimal
+
+Recovery rate, specified as the comma-separated pair consisting of 'RecoveryRate' and a N-by-1
+vector of recovery rates, expressed as a decimal from 0 through 1.
+
+Data Types: double
+
+ProbabilityDates — Dates for output of default probability data
+column of dates in MarketData (default) | datetime array | string array | date character vector
+
+Dates for the output of default probability data, specified as the comma-separated pair consisting of
+'ProbabilityDates' and a P-by-1 vector using a datetime array, string array, or date character
+vectors.
+
+To support existing code, bondDefaultBootstrap also accepts serial date numbers as inputs, but
+they are not recommended.
+
+Data Types: char | datetime | string
+
+ZeroCompounding — Compounding frequency of the zero curve
+2 (semiannual) (default) | integer with value of 1,2,3,4,6,12, or –1
+
+Compounding frequency of the zero curve, specified as the comma-separated pair consisting of
+'ZeroCompounding' and a N-by-1 vector. Values are:
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+•
+−1 — Continuous compounding
+
+Data Types: double
+
+bondDefaultBootstrap
+
+15-517

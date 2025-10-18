@@ -1,0 +1,44 @@
+xlabel('France')
+ylabel('Germany')
+title('Gaussian Distribution')
+
+American Option Pricing Using the Longstaff & Schwartz Approach
+
+Now that the copulas have been calibrated, compare the prices of at-the-money American basket
+options derived from various approaches. To simply the analysis, assume that:
+
+•
+All indices begin at 100.
+
+•
+The portfolio holds a single unit, or share, of each index such that the value of the portfolio at any
+time is the sum of the values of the individual indices.
+
+•
+The option expires in 3 months.
+
+•
+The information derived from the daily data is annualized.
+
+•
+Each calendar year is composed of 252 trading days.
+
+•
+Index levels are simulated daily.
+
+•
+The option may be exercised at the end of every trading day and approximates the American
+option as a Bermudan option.
+
+Now compute the parameters common to all simulation methods:
+
+dt       = 1 / 252;                  % Time increment = 1 day = 1/252 years
+yields   = Data(:,end);              % Daily effective yields
+yields   = 360 * log(1 + yields);    % Continuously-compounded, annualized yields
+r        = mean(yields);             % Historical 3M Euribor average
+X        = repmat(100, nIndices, 1); % Initial state vector
+
+14
+Stochastic Differential Equations
+
+14-82

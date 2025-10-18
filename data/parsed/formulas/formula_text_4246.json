@@ -1,0 +1,12 @@
+{
+  "page": 2405,
+  "original_text": "G = [ true true true false false ];\np = PortfolioMAD;\np = setGroups(p, G, [], 0.3);\n[GroupMatrix, LowerGroup, UpperGroup] = getGroups(p)",
+  "ocr_text": "G=[truetruetruefalsefalse];\np=PortfolioMAD;\n\np=setGroups(p,G,[],0.3);\n[GroupMatrix,LowerGroup,UpperGroup]=getGroups(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 439.75,
+    "x1": 371.74,
+    "y1": 482.62
+  },
+  "confidence": "high"
+}

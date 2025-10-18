@@ -1,0 +1,7 @@
+Page 382
+================================================================================
+
+This efficient frontier is much closer to the initial portfolio than the starting efficient frontier without
+turnover constraints. To visualize this difference, use the custom function
+TurnoverConstraintPlot to visualize multiple constrained efficient frontiers at different turnover
+thresholds.

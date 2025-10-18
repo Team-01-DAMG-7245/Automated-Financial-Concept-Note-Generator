@@ -1,0 +1,12 @@
+{
+  "page": 982,
+  "original_text": "load CreditCardData\nsc = creditscorecard(data,'IDVar','CustID','GoodLabel',0);\nmodifybins(sc,'CutPoints',[20 30 50 65])",
+  "ocr_text": "loadCreditCardData\nsc=creditscorecard(data,IDVar,CustID,GoodLabel,0);\nmodifybins(sc,CutPoints,[20305065])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 325.44,
+    "x1": 404.26,
+    "y1": 357.5
+  },
+  "confidence": "high"
+}

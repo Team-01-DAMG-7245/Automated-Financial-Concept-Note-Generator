@@ -1,0 +1,9 @@
+Page 2296
+================================================================================
+
+The estimateMaxSharpeRatio function maximizes the Sharpe ratio among portfolios on the
+efficient frontier. In the case of Portfolio with a risk-free asset, there are multiple efficient portfolios
+that maximize the Sharpe ratio on the capital asset line. Because of the nature of 'direct' and
+'iterative' methods, the portfolio weights (pwgts) output from each of these methods might be
+different, but the Sharpe ratio is the same. This example demonstrates the scenario where the pwgts
+are different and the Sharpe ratio is the same.

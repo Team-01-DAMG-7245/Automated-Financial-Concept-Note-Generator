@@ -1,0 +1,44 @@
+% Find the minimum ESG score.
+solMin = estimateCustomObjectivePortfolio(p,ESGscore);
+minESG = ESGscore(solMin)
+
+minESG = 
+0.0187
+
+% Find the maximum ESG score.
+solMax = estimateCustomObjectivePortfolio(p,ESGscore, ...
+    ObjectiveSense="maximize");
+maxESG = ESGscore(solMax)
+
+maxESG = 
+0.9735
+
+To compute the contours of the efficient surface, you add the average ESG score as a constraint using
+the setInequality function. The coefficients of the linear constraint are the ESG scores associated
+with each asset and the right-hand side is the target ESG score for the desired contour. Notice that
+the convention of the inequalities in the Portfolio object is ≤. Because the goal is to maximize the
+average ESG score, the target ESG value for the contour should be a lower bound. Therefore, you
+need to flip the signs of the coefficients and the right-hand side of the added inequality. The function
+that computes and plots the contours is in the Local Functions on page 4-282 section.
+
+N = 20; % Number of efficient portfolios per ESG value
+
+% Add ESG score as a constraint to the Portfolio object.
+Ain = -ESGnumeric';
+bin = -minESG; % Start with the smallest ESG score
+p = setInequality(p,Ain,bin);
+
+% Esimate the lower value for contour plots.
+pwgt = estimateFrontier(p,N);
+pESG = pwgt'*ESGnumeric;
+minContour = max(pESG); % All ESG scores lower than this have
+                        % overlapped contours.
+
+% Plot the contours.
+nC = 5; % Number of contour plots
+plotESGContours(p,ESGnumeric,minContour,maxESG,nC,N);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-272

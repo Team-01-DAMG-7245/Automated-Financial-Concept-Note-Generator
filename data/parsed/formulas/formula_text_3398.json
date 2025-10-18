@@ -1,0 +1,12 @@
+{
+  "page": 1873,
+  "original_text": "Spread = bndspread(SpotInfo,Price,Coupon,Settle,Maturity) computes the static\nspread (Z-spread) to benchmark in basis points.",
+  "ocr_text": "Spread=bndspread(SpotInfo,Price,Coupon,Settle,Maturity)computesthestatic\nspread(Z-spread)tobenchmarkinbasispoints.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 338.91,
+    "x1": 525.67,
+    "y1": 362.54
+  },
+  "confidence": "high"
+}

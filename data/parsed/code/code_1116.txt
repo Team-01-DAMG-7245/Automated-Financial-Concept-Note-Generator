@@ -1,0 +1,5 @@
+Page 1145
+================================================================================
+
+function [NextObs,Reward,IsDone,LoggedSignals] = stepFcn(Position_next,LoggedSignals,r,vol,dT,X,m
+% Step function to evaluate at each step of the episode.

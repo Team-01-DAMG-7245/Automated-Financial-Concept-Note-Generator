@@ -1,0 +1,35 @@
+'HorizontalAlignment','center')
+for i=2:length(labels)
+   val = thresCCC(i);
+   line([val val],[0 0.4],'LineStyle',':')
+   text(centersX(i),0.2,labels{i},'FontSize',fs(i), ...
+      'HorizontalAlignment','center')
+end
+xlabel('Credit Quality Thresholds')
+ylabel('Probability Density Function')
+title('{\bf Visualization of Credit Quality Thresholds}')
+legend('Std Normal PDF','Location','S')
+
+The second plot uses the cumulative distribution function (normcdf) instead. The thresholds are
+represented by vertical lines. The transition probabilities are given by the distance between
+horizontal lines.
+
+figure
+plot(x,normcdf(x),'m','LineWidth',1.5)
+text(centersX(1),0.2,labels{1},'FontSize',fs(1), ...
+   'HorizontalAlignment','center')
+for i=2:length(labels)
+   val = thresCCC(i);
+   line([val val],[0 normcdf(val)],'LineStyle',':');
+   line([x(1) val],[normcdf(val) normcdf(val)],'LineStyle',':');
+   text(centersX(i),0.2,labels{i},'FontSize',fs(i), ...
+      'HorizontalAlignment','center')
+end
+xlabel('Credit Quality Thresholds')
+ylabel('Cumulative Probability')
+title('{\bf Visualization of Credit Quality Thresholds}')
+legend('Std Normal CDF','Location','W')
+
+Credit Quality Thresholds
+
+8-47

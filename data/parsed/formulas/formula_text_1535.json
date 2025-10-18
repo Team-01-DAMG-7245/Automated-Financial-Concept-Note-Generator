@@ -1,0 +1,12 @@
+{
+  "page": 774,
+  "original_text": "% Interpolate to obtain yields at cash flow times\nCFTimes = yearfrac(settle,allDates);\nCFYields = interp1(yieldsTimes,yieldsT,CFTimes,[],\"extrap\");",
+  "ocr_text": "Interpolatetoobtainyieldsatcashflowtimes\nCFTimes=yearfrac(settle,allDates);\nCFYields=interp1(yieldsTimes,yieldsT,CFTimes,[],extrap);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 218.58,
+    "x1": 415.11,
+    "y1": 250.65
+  },
+  "confidence": "high"
+}

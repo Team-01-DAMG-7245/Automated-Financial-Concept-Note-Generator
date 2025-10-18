@@ -1,0 +1,34 @@
+Cluster the commodities into five groups based on their similarity obtained from this dendrogram.
+
+numClusters = 3;
+Group = cluster( irregularComponentLinkage, "maxclust", numClusters );
+Commodity = string( commodityNames.' );
+clusteredCommodities = table( Commodity, Group );
+commoditiesByCluster = sortrows( clusteredCommodities, "Group" );
+disp( commoditiesByCluster )
+
+Commodity            Group
+    _________________________    _____
+
+"Coconut oil"                  1  
+    "Soybeans"                     1  
+    "Soybean meal"                 1  
+    "Maize"                        1  
+    "Wheat, US HRW"                1  
+    "Beef **"                      1  
+    "Chicken **"                   1  
+    "Logs, Malaysian"              1  
+    "Sawnwood, Malaysian"          1  
+    "Cotton, A Index"              1  
+    "Rubber, RSS3"                 1  
+    "Groundnut oil **"             2  
+    "Palm oil"                     2  
+    "Soybean oil"                  2  
+    "Rice, Thai 5%"                2  
+    "Banana, US"                   2  
+    "Orange"                       2
+
+14
+Stochastic Differential Equations
+
+14-96

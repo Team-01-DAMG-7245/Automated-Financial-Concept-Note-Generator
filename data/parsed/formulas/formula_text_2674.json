@@ -1,0 +1,12 @@
+{
+  "page": 1355,
+  "original_text": "% Generate a random sample\nrng('default')\nrandSample = mvnrnd(mu,C,numObservations);",
+  "ocr_text": "Generatearandomsample\nrng(default)\nrandSample=mvnrnd(mu,C,numObservations);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.43,
+    "x1": 317.56,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

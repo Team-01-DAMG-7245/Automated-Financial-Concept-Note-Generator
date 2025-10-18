@@ -1,0 +1,12 @@
+{
+  "page": 1595,
+  "original_text": "Example: backtester = runBacktest(backtester,assetPrices,'Start',50,'End',100)",
+  "ocr_text": "Example:backtester=runBacktest(backtester,assetPrices,Start,50,End,100)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 210.86,
+    "x1": 550.76,
+    "y1": 222.49
+  },
+  "confidence": "high"
+}

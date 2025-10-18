@@ -1,0 +1,12 @@
+{
+  "page": 2182,
+  "original_text": "Objective = ecmmvnrobj(Data,Design,Parameters,Covariance) computes a log-likelihood\nfunction based on current maximum likelihood parameter estimates with missing data. Objective is\na scalar that contains the least-squares objective function.",
+  "ocr_text": "Objective=ecmmvnrobj(Data,Design,Parameters,Covariance)computesalog-likelihood\nfunctionbasedoncurrentmaximumlikelihoodparameterestimateswithmissingdata.Objectiveis\nascalarthatcontainstheleast-squaresobjectivefunction.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 257.42,
+    "x1": 554.9,
+    "y1": 293.05
+  },
+  "confidence": "high"
+}

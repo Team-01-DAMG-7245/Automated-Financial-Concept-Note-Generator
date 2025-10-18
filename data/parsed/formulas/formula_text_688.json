@@ -1,0 +1,12 @@
+{
+  "page": 426,
+  "original_text": "% The RSI strategy uses its signal differently, buying on a 0->1\n% transition and selling on a 0->-1 transition.  This logic is captured in\n% the rsiRebalanceFcn function defined in the Local Functions section.\nrsiInitWeights = computeInitialWeights(rsiSignal(20,:));\nrsiStrategy = backtestStrategy('RSI',@rsiRebalanceFcn,...\n    'TransactionCosts',tradingCosts,...\n    'LookbackWindow',2,...\n    'InitialWeights',rsiInitWeights);",
+  "ocr_text": "TheRSIstrategyusesitssignaldifferently,buyingona0-51\nStransitionandsellingona0-5-1transition.Thislogiciscapturedin\nSthersiRebalanceFcnfunctiondefinedintheLocalFunctionssection.\nrsiInitWeights=computeInitialWeights(rsiSignal(20,:));\nrsiStrategy=backtestStrategy(RSI,QrsiRebalanceFcn,...\n\nTransactionCosts,tradingCosts,...\n\nLookbackWindow,2,...\n\nInitialWeights,rsiInitWeights);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 352.23,
+    "x1": 490.93,
+    "y1": 438.29
+  },
+  "confidence": "high"
+}

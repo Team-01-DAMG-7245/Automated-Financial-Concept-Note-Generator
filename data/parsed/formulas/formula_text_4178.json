@@ -1,0 +1,12 @@
+{
+  "page": 2346,
+  "original_text": "Date = fbusdate( ___ ,Holiday,Weekend,outputType) returns the serial date number for the\nfirst business date of the given year and month using optional input arguments. The optional\nargument Holiday specifies nontrading days.",
+  "ocr_text": "Date=fbusdate(__,Holiday,Weekend,outputType)returnstheserialdatenumberforthe\nfirstbusinessdateofthegivenyearandmonthusingoptionalinputarguments.Theoptional\nargumentHolidayspecifiesnontradingdays.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 367.27,
+    "x1": 554.14,
+    "y1": 402.9
+  },
+  "confidence": "high"
+}

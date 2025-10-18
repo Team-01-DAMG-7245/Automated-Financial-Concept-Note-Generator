@@ -1,0 +1,65 @@
+{'EmpStatus' }    {'Employed'         }    86.897
+    {'EmpStatus' }    {'<missing>'        }       NaN
+    {'CustIncome'}    {'[-Inf,29000)'     }    29.765
+    {'CustIncome'}    {'[29000,33000)'    }    56.167
+    {'CustIncome'}    {'[33000,35000)'    }    67.926
+    {'CustIncome'}    {'[35000,40000)'    }    70.119
+    {'CustIncome'}    {'[40000,42000)'    }     70.93
+    {'CustIncome'}    {'[42000,47000)'    }    82.337
+    {'CustIncome'}    {'[47000,Inf]'      }    96.733
+    {'CustIncome'}    {'<missing>'        }       NaN
+    {'TmWBank'   }    {'[-Inf,12)'        }    51.023
+    {'TmWBank'   }    {'[12,23)'          }    61.005
+    {'TmWBank'   }    {'[23,45)'          }    61.806
+    {'TmWBank'   }    {'[45,71)'          }     92.95
+    {'TmWBank'   }    {'[71,Inf]'         }    133.22
+    {'TmWBank'   }    {'<missing>'        }       NaN
+    {'OtherCC'   }    {'No'               }    50.796
+    {'OtherCC'   }    {'Yes'              }    75.644
+    {'OtherCC'   }    {'<missing>'        }       NaN
+    {'AMBalance' }    {'[-Inf,558.88)'    }    89.941
+    {'AMBalance' }    {'[558.88,1254.28)' }    63.018
+    {'AMBalance' }    {'[1254.28,1597.44)'}    59.613
+    {'AMBalance' }    {'[1597.44,Inf]'    }    48.972
+    {'AMBalance' }    {'<missing>'        }       NaN
+
+Calculate Scores and Probability of Default for New Customers
+
+Create a data set of 'new customers' and then calculate the scores and probabilities of default.
+
+dataNewCustomers = dataMissing(1:20,1:end-1);
+disp(head(dataNewCustomers));
+
+CustID    CustAge    TmAtAddress     ResStatus     EmpStatus    CustIncome    TmWBank    Othe
+    ______    _______    ___________    ___________    _________    __________    _______    ____
+
+1          53          62         <undefined>    Unknown        50000         55         Ye
+      2          61          22         Home Owner     Employed       52000         25         Ye
+      3          47          30         Tenant         Employed       37000         61         No
+      4         NaN          75         Home Owner     Employed       53000         20         Ye
+      5          68          56         Home Owner     Employed       53000         14         Ye
+      6          65          13         Home Owner     Employed       48000         59         Ye
+      7          34          32         Home Owner     Unknown        32000         26         Ye
+      8          50          57         Other          Employed       51000         33         No
+
+Predict missing data in the scoring data set with the same imputation model as before.
+
+missingCustAgeNewCustomers = isnan(dataNewCustomers.CustAge);
+missingResStatusNewCustomers = ismissing(dataNewCustomers.ResStatus);
+imputedCustAgeNewCustomers = round(predict(rfCustAge, dataNewCustomers(missingCustAgeNewCustomers
+imputedResStatusNewCustomers = predict(rfResStatus, dataNewCustomers(missingResStatusNewCustomers
+dataNewCustomers.CustAge(missingCustAgeNewCustomers) = imputedCustAgeNewCustomers;
+dataNewCustomers.ResStatus(missingResStatusNewCustomers) = imputedResStatusNewCustomers;
+
+Use score to calculate the scores of the new customers.
+
+[scores, points] = score(sc, dataNewCustomers);
+disp(scores);
+
+530.9936
+  553.1144
+
+8
+Credit Risk Analysis
+
+8-130

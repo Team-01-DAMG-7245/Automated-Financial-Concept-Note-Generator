@@ -1,0 +1,12 @@
+{
+  "page": 1525,
+  "original_text": "RoughBergomi = roughbergomi(Return,Alpha,Xi,Eta)\nRoughBergomi = roughbergomi( ___ ,Name=Value)",
+  "ocr_text": "RoughBergomi_=roughbergomi(Return,Alpha,Xi,Eta)\nRoughBergomi=roughbergomi(_,Name=Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 404.87,
+    "x1": 378.98,
+    "y1": 428.5
+  },
+  "confidence": "high"
+}

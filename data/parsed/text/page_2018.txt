@@ -1,0 +1,55 @@
+cfprice
+
+Compute price for cash flow given yield to maturity
+
+Syntax
+
+Price = cfprice(CFlowAmounts,CFlowDates,Yield,Settle)
+Price = cfprice( ___ ,Name,Value)
+
+Description
+
+Price = cfprice(CFlowAmounts,CFlowDates,Yield,Settle) computes a price given yield
+for a cash flow.
+
+Price = cfprice( ___ ,Name,Value) specifies options using one or more name-value pair
+arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Compute the Price for a Cash Flow Given Yield to Maturity
+
+Use cfprice to compute the price for a cash flow given yield to maturity.
+
+Define data for the yield curve.
+
+Settle = datetime(2003,7,1);
+Yield = .05;
+CFAmounts = [30;40;30];
+CFDates = [datetime(2004,7,15) ; datetime(2005,7,15) ; datetime(2006,7,15)];
+
+Compute the Price.
+
+Price = cfprice(CFAmounts, CFDates, Yield, Settle)
+
+Price = 3×1
+
+28.4999
+   36.1689
+   25.8195
+
+Input Arguments
+
+CFlowAmounts — Cash flow amounts
+vector
+
+Cash flow amounts, specified as an NINST-by-MOSTCFS matrix. Each row is a list of cash flow values
+for one instrument. If an instrument has fewer than MOSTCFS cash flows, the end of the row is padded
+with NaNs.
+
+Data Types: double
+
+15
+Functions
+
+15-712

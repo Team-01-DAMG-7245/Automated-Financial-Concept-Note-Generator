@@ -1,0 +1,12 @@
+{
+  "page": 2495,
+  "original_text": "Fisher = mvnrfish( ___ ,MatrixFormat,CovarFormat) computes a Fisher information matrix\nbased on current maximum likelihood or least-squares parameter estimates using optional\narguments.",
+  "ocr_text": "Fisher=mvnrfish( ,MatrixFormat,CovarFormat)computesaFisherinformationmatrix\nbasedoncurrentmaximumlikelihoodorleast-squaresparameterestimatesusingoptional\narguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 433.31,
+    "x1": 552.94,
+    "y1": 468.94
+  },
+  "confidence": "high"
+}

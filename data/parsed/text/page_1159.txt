@@ -1,0 +1,54 @@
+Using Extreme Value Theory and Copula Fitting to Generate
+Synthetic Data
+
+This example shows the workflow for generating synthetic equity index return data using Extreme
+Value Theory (EVT) and a copula model. The objective of this example is to overcome challenges that
+are often encountered in financial return series, such as heteroskedasticity and fat tails. EVT focuses
+on the tails (the far left or right ends) of distribution curves, where extreme values lie. These values
+occur with very low probability but have a significant impact when they do occur. By applying EVT,
+you can effectively model the tail behavior of the equity index returns, which is crucial in capturing
+extreme events. Additionally, you can use copula fitting to address the dependence structure among
+the individual components of the returns that accounts for their correlated behavior. Copula fitting
+involves selecting a copula model that best represents the observed dependence structure in the data
+and estimating its parameters.
+
+This example also shows how to handle autocorrelation, which refers to the correlation between
+successive returns, and heteroskedasticity, which signifies the changing volatility over time.
+Autocorrelation is commonly observed in financial return series data, so you must address it to
+ensure accurate modeling and analysis.
+
+Other examples explain the techniques that this example uses. For details about estimation of
+generalized Pareto distributions (GPD) and copula simulation, see “Modeling Tail Data with the
+Generalized Pareto Distribution” and “Simulating Dependent Random Variables Using Copulas”. For
+another example applying the same approach to evaluate market risk, see the “Using Extreme Value
+Theory and Copulas to Evaluate Market Risk” (Econometrics Toolbox).
+
+Prepare Equity Index Data
+
+Before applying EVT and fitting the data to a copula model, ensure that the observations are
+approximately independent and identically distributed (iid). To overcome the issues of autocorrelation
+(dependence on past values) and heteroskedasticity (changing variance over time) that violate the iid
+assumption, you can use the Autoregressive Integrated Moving Average (ARIMA) and Generalized
+Autoregressive Conditional Heteroskedasticity (GARCH) models.
+
+Load the equity index data from the Data_GlobalIdx1 file. The raw data consists of 2665
+observations of daily closing values of the Canadian TSX Composite and French CAC 40 indexes
+spanning the trading dates 27-April-1993 to 14-July-2003.
+
+load Data_GlobalIdx1   % Import daily index closings
+Data = Data(:,1:2);
+series = string(series(1:2));
+
+Plot these equity indexes to see their relative price movements of these equity indexes.
+
+figure
+dates = datetime(dates,'ConvertFrom','datenum');
+plot(dates, ret2price(price2ret(Data)))
+xlabel('Date')
+ylabel('Index Value')
+title ('Relative Daily Index Closings')
+legend(series, 'Location', 'NorthWest')
+
+Using Extreme Value Theory and Copula Fitting to Generate Synthetic Data
+
+10-61

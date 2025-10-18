@@ -1,0 +1,12 @@
+{
+  "page": 1913,
+  "original_text": "candle(Data)\ncandle(Data,Color)\nh = candle(ax ___ )",
+  "ocr_text": "candle(Data)\ncandle(Data,Color)\nh=candle(ax__)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.76,
+    "x1": 198.37,
+    "y1": 225.39
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,53 @@
+estimatePortReturn
+
+Estimate mean of portfolio returns
+
+Syntax
+
+pret = estimatePortReturn(obj,pwgt)
+
+Description
+
+pret = estimatePortReturn(obj,pwgt) estimates the mean of portfolio returns (as the proxy
+for portfolio return) for Portfolio, PortfolioCVaR, or PortfolioMAD objects. For details on the
+respective workflows when using these different objects, see “Portfolio Object Workflow” on page 4-
+18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object Workflow” on page 6-
+16.
+
+Examples
+
+Estimate the Mean of Portfolio Returns for a Portfolio Object
+
+Given portfolio p, use the estimatePortReturn function to estimate the mean of portfolio returns.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+ 
+p = Portfolio;
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+pwgt = estimateFrontierLimits(p);
+pret = estimatePortReturn(p, pwgt);
+disp(pret)
+
+0.0590
+    0.1800
+
+Estimate the Mean of Portfolio Returns for a Portfolio Object with Integrality Constraints
+
+Create a Portfolio object for three assets.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+               0.00022983 0.00049937 0.00019247;
+               0.00420395 0.00019247 0.00764097 ];  
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);
+p = setDefaultConstraints(p);
+
+15
+Functions
+
+15-1008

@@ -1,0 +1,12 @@
+{
+  "page": 1585,
+  "original_text": "% Convert to timetable\npricesTT = table2timetable(T,'RowTimes','Dates');",
+  "ocr_text": "Converttotimetable\npricesTT=table2timetable(T,Rowlimes,Dates);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.43,
+    "x1": 355.5,
+    "y1": 276.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1012,
+  "original_text": "L = L1 × L2 × . . . × LN",
+  "ocr_text": "L=L,xL)x...xXLy",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 225.89,
+    "x1": 220.02,
+    "y1": 239.63
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 827,
+  "original_text": "p = PortfolioMAD;\np = setCosts(p, bc, sc, x0);\n        \ndisp(p.NumAssets)\ndisp(p.BuyCost)\ndisp(p.SellCost)\ndisp(p.InitPort)",
+  "ocr_text": "p=PortfolioMAD;\np=setCosts(p,bc,sc,xQ);\ndisp(p.NumAssets)\ndisp(p.BuyCost)\ndisp(p.SellCost)\ndisp(p.InitPort)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 515.1,
+    "x1": 241.7,
+    "y1": 590.37
+  },
+  "confidence": "high"
+}

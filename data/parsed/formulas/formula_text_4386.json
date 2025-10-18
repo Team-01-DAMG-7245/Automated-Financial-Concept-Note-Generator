@@ -1,0 +1,12 @@
+{
+  "page": 2487,
+  "original_text": "Return = mirr(CashFlow,FinRate,Reinvest) calculates the modified internal rate of return\nfor a series of periodic cash flows. This function calculates only positive rates of return; for\nnonpositive rates of return, Return = 0.",
+  "ocr_text": "Return=mirr(CashFlow,FinRate,Reinvest)calculatesthemodifiedinternalrateofreturn\nforaseriesofperiodiccashflows.Thisfunctioncalculatesonlypositiveratesofreturn;for\nnonpositiveratesofreturn,Return=0.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 242.6,
+    "x1": 543.53,
+    "y1": 278.23
+  },
+  "confidence": "high"
+}

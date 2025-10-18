@@ -1,0 +1,63 @@
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];
+p = Portfolio('InitPort', x0);
+p = setOneWayTurnover(p, 0.3, 0.2);
+
+disp(p.NumAssets)
+disp(p.BuyTurnover)
+disp(p.SellTurnover)
+disp(p.InitPort)
+
+10
+
+0.3000
+
+0.2000
+
+0.1200
+    0.0900
+    0.0800
+    0.0700
+    0.1000
+    0.1000
+    0.1500
+    0.1100
+    0.0800
+    0.1000
+
+or
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];
+p = Portfolio;
+p = setOneWayTurnover(p, 0.3, 0.2, x0);
+disp(p.NumAssets)
+disp(p.BuyTurnover)
+disp(p.SellTurnover)
+disp(p.InitPort)
+
+10
+
+0.3000
+
+0.2000
+
+0.1200
+    0.0900
+    0.0800
+    0.0700
+    0.1000
+    0.1000
+    0.1500
+    0.1100
+    0.0800
+    0.1000
+
+setOneWayTurnover implements scalar expansion on the argument for the initial portfolio. If the
+NumAssets property is already set in the Portfolio object, a scalar argument for InitPort
+expands to have the same value across all dimensions. In addition, setOneWayTurnover lets you
+specify NumAssets as an optional argument. To remove one-way turnover from your Portfolio
+object, use the Portfolio object or setOneWayTurnover with empty inputs for the properties to be
+cleared.
+
+Working with One-Way Turnover Constraints Using Portfolio Object
+
+4-89

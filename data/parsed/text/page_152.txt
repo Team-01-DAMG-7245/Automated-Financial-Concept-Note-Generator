@@ -1,0 +1,68 @@
+ExpCovariance = [ 0.0569,  0.0092,  0.0039,  0.0070,  0.0022;
+    0.0092,  0.0380,  0.0035,  0.0197,  0.0028;
+    0.0039,  0.0035,  0.0997,  0.0100,  0.0070;
+    0.0070,  0.0197,  0.0100,  0.0461,  0.0050;
+    0.0022,  0.0028,  0.0070,  0.0050,  0.0573 ];
+
+NumPorts = 10;
+
+TargetReturn = [ 0.05; 0.06; 0.07; 0.08; 0.09 ];
+
+[PortRisk, PortReturn, PortWts] = portopt(ExpReturn, ExpCovariance, [], TargetReturn);
+
+disp(' Efficient    Target');
+disp([PortReturn, TargetReturn]);
+
+Efficient    Target
+    0.0500    0.0500
+    0.0600    0.0600
+    0.0700    0.0700
+    0.0800    0.0800
+    0.0900    0.0900
+
+To migrate a portopt syntax for target returns within range of efficient portfolio returns to a
+Portfolio object:
+
+ExpReturn = [ 0.0054; 0.0531; 0.0779; 0.0934; 0.0130 ];
+
+ExpCovariance = [ 0.0569,  0.0092,  0.0039,  0.0070,  0.0022;
+    0.0092,  0.0380,  0.0035,  0.0197,  0.0028;
+    0.0039,  0.0035,  0.0997,  0.0100,  0.0070;
+    0.0070,  0.0197,  0.0100,  0.0461,  0.0050;
+    0.0022,  0.0028,  0.0070,  0.0050,  0.0573 ];
+
+NumPorts = 10;
+
+TargetReturn = [ 0.05; 0.06; 0.07; 0.08; 0.09 ];
+
+p = Portfolio;
+p = setAssetMoments(p, ExpReturn, ExpCovariance);
+p = setDefaultConstraints(p);
+
+PortWts = estimateFrontierByReturn(p, TargetReturn);
+[PortRisk, PortReturn] = estimatePortMoments(p, PortWts);
+
+disp(' Efficient    Target');
+disp([PortReturn, TargetReturn]);
+
+Efficient    Target
+    0.0500    0.0500
+    0.0600    0.0600
+    0.0700    0.0700
+    0.0800    0.0800
+    0.0900    0.0900
+
+Migrate portopt for Target Return Outside Range of Efficient Portfolio
+Returns
+
+This example shows how to migrate portopt target returns outside of range of efficient portfolio
+returns to a Portfolio object.
+
+When the target return is outside of the range of efficient portfolio returns, portopt generates an
+error. The Portfolio object handles this effectively by selecting portfolios at the ends of the efficient
+frontier.
+
+3
+Portfolio Analysis
+
+3-14

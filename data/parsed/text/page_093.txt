@@ -1,0 +1,22 @@
+1
+“Machine Learning for Statistical Arbitrage I: Data Management and Visualization” on page 2-
+50
+
+2
+“Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development” on
+page 2-59
+
+3
+“Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction” on page 2-69
+
+For more information about general workflows for machine learning, see:
+
+•
+“Machine Learning in MATLAB”
+
+•
+“Supervised Learning Workflow and Algorithms”
+
+Machine Learning for Statistical Arbitrage: Introduction
+
+2-49

@@ -1,0 +1,52 @@
+Salvage — Salvage value of the asset
+numeric
+
+Salvage value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+Life — Number of periods over which the asset is depreciated
+numeric
+
+Number of periods over which the asset is depreciated, specified as a scalar numeric.
+
+Data Types: double
+
+Factor — Depreciation factor
+numeric
+
+Depreciation factor, specified as a scalar numeric. When Factor = 2, then the double-declining-
+balance method is used.
+
+Data Types: double
+
+Output Arguments
+
+Depreciation — Depreciation
+vector
+
+Depreciation, returned as the declining-balance depreciation for each period.
+
+More About
+
+General Declining-Balance Depreciation Schedule
+
+A general declining-balance depreciation schedule is a method of calculating depreciation that
+applies a fixed percentage rate to the book value of an asset at the beginning of each period.
+
+This approach results in a decreasing amount of depreciation expense over the asset's useful life,
+reflecting the declining value of the asset as it ages. It is commonly used for assets that lose value
+more quickly in their earlier years.
+
+Version History
+Introduced before R2006a
+
+See Also
+depfixdb | deprdv | depsoyd | depstln
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+depgendb
+
+15-845

@@ -1,0 +1,12 @@
+{
+  "page": 375,
+  "original_text": "optInfoRatio = infoRatio(optWts);\n[optPortRisk,optPortRetn] = estimatePortMoments(pAct,optWts)",
+  "ocr_text": "optInfoRatio=infoRatio(optWwts);\n[optPortRisk,optPortRetn]=estimatePortMoments(pAct,optWts)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 511.25,
+    "x1": 415.08,
+    "y1": 532.52
+  },
+  "confidence": "high"
+}

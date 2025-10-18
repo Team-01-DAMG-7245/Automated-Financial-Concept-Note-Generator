@@ -1,0 +1,14 @@
+Page 108
+================================================================================
+
+phi = NaN(size(t));
+for i = 1:length(t)
+    switch DS(i)
+        case -1
+            phi(i) = rho(i);
+        case 0
+            phi(i) = rho(i) + numBins;
+        case 1
+            phi(i) = rho(i) + 2*numBins;
+    end
+end

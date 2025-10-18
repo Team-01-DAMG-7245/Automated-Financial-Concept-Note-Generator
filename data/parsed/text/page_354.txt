@@ -1,0 +1,60 @@
+Portfolio at 30% return level on efficient frontier ...
+    Return       Risk
+      7.90       9.09
+
+display(qwgt)
+
+qwgt = 4×1
+
+0.6252
+    0.1856
+    0.0695
+    0.1198
+
+The target portfolio that is 30% of the range from minimum to maximum net returns has a return of
+7.9% and a risk of 9.1%.
+
+Step 9. Obtaining a Portfolio at the specified risk levels on the efficient frontier.
+
+Although you could accept this result, suppose that you want to target values for portfolio risk.
+Specifically, suppose that you have a conservative target risk of 10%, a moderate target risk of 15%,
+and an aggressive target risk of 20% and you want to obtain portfolios that satisfy each risk target.
+Use the estimateFrontierByRisk function to obtain targeted risks specified in the variable
+TargetRisk. The resultant three efficient portfolios are obtained in qwgt.
+
+TargetRisk = [ 0.10; 0.15; 0.20 ];
+qwgt = estimateFrontierByRisk(q, TargetRisk);
+display(qwgt)
+
+qwgt = 4×3
+
+0.5407    0.2020    0.1500
+    0.2332    0.4000    0.0318
+    0.0788    0.1280    0.4682
+    0.1474    0.2700    0.3500
+
+Use the estimatePortRisk function to compute the portfolio risks for the three portfolios to
+confirm that the target risks have been attained:
+
+display(estimatePortRisk(q, qwgt))
+
+0.1000
+    0.1500
+    0.2000
+
+Suppose that you want to shift from the current portfolio to the moderate portfolio. You can estimate
+the purchases and sales to get to this portfolio:
+
+[qwgt, qbuy, qsell] = estimateFrontierByRisk(q, 0.15);
+
+If you average the purchases and sales for this portfolio, you can see that the average turnover is
+17%, which is greater than the target of 15%:
+
+disp(sum(qbuy + qsell)/2)
+
+0.1700
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-186

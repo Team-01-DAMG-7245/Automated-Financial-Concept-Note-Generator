@@ -1,0 +1,4 @@
+Page 971
+================================================================================
+
+Use the validatemodel function to validate the quality of the credit scorecard model.

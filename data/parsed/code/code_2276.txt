@@ -1,0 +1,6 @@
+Page 2109
+================================================================================
+
+Superset = datetime(1999,7,1:31); 
+Subset = [datetime(1999,7,10) ; datetime(1999,7,20)]; 
+Indices = datefind(Subset, Superset, 1)

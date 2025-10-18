@@ -1,0 +1,5 @@
+Page 2109
+================================================================================
+
+Indices = datefind(Subset,Superset) returns a vector of indices to the date numbers in
+Superset that are present in Subset. If no date numbers match, Indices = [].

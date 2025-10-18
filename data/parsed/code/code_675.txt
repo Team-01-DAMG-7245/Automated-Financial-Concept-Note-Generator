@@ -1,0 +1,11 @@
+Page 616
+================================================================================
+
+% Execute trade
+CumulativeLOBSizes = cumsum(LOBSizes);
+TradedLevels = sum(CumulativeLOBSizes <= TradingShares);
+if TradedLevels < 1
+    TradedLevels = 1;
+elseif CumulativeLOBSizes(TradedLevels) < TradingShares
+    TradedLevels = TradedLevels + 1;
+end

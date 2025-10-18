@@ -1,0 +1,12 @@
+{
+  "page": 357,
+  "original_text": "function displayReturnLevel(Level, qret, qrsk)\nfprintf('Portfolio at %g%% return level on efficient frontier ...\\n',100*Level);\nfprintf('%10s %10s\\n','Return','Risk');\nfprintf('%10.2f %10.2f\\n',100*qret,100*qrsk);\nend",
+  "ocr_text": "functiondisplayReturnLevel(Level,qret,qrsk)\nfprintf(Portfolioatg**returnlevelonefficientfrontier...n,100*Level);\nfprintf(s10s_10sn,Return,Risk);\nfprintf(s10.2f10.2fn,100*qret,100*qrsk);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 523.47,
+    "y1": 211.49
+  },
+  "confidence": "high"
+}

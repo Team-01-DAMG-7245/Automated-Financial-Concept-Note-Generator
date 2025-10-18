@@ -1,0 +1,12 @@
+{
+  "page": 1903,
+  "original_text": "transdat = boxcox(lambda,data) transform the data using a certain specified λ for the Box-\nCox transformation. This syntax does not find the optimum λ that maximizes the LLF. For more\ninformation, see “Box Cox Transformation” on page 15-599.",
+  "ocr_text": "transdat_=boxcox(lambda,data)transformthedatausingacertainspecifiedAfortheBox-\nCoxtransformation.ThissyntaxdoesnotfindtheoptimumAthatmaximizestheLLF.Formore\ninformation,seeBoxCoxTransformationonpage15-599.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 298.7,
+    "x1": 542.77,
+    "y1": 334.33
+  },
+  "confidence": "high"
+}

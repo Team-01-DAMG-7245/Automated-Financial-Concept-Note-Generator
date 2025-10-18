@@ -1,0 +1,12 @@
+{
+  "page": 538,
+  "original_text": "% Transform to the logarithmic space.\nlWHatMin = log(WHatMin);\nlWHatMax = log(WHatMax);\n% Define the grid in the logarithmic space.\nrho = 3;\nlWGrid = (lWHatMin:sigma_min/rho:lWHatMax)';",
+  "ocr_text": "Transformtothelogarithmicspace.\nWHatMin=log(WHatMin);\nlWHatMax=log(WHatMax);\nDefinethegridinthelogarithmicspace.\nrho=3;\nlWGrid=(lWHatMin:sigma_min/rho:WWHatMax);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 416.81,
+    "x1": 328.39,
+    "y1": 481.28
+  },
+  "confidence": "high"
+}

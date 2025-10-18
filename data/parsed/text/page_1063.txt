@@ -1,0 +1,62 @@
+∇2L z1, …, zm; θ
+
+and the Fisher information matrix is
+
+I θ = −E ∇2L z1, …, zm; θ ,
+
+where the partial derivatives of the ∇2 operator are taken with respect to the combined parameter
+vector Θ that contains the distinct components of b and C with a total of q = p + n (n + 1)/2
+parameters.
+
+Since maximum likelihood estimation is concerned with large-sample estimates, the central limit
+theorem applies to the estimates and the Fisher information matrix plays a key role in the sampling
+distribution of the parameter estimates. Specifically, maximum likelihood parameter estimates are
+asymptotically normally distributed such that
+
+θ t −θ ∼N 0, I−1, θ t
+ as t
+∞,
+
+where Θ is the combined parameter vector and Θ(t) is the estimate for the combined parameter vector
+at iteration t = 0, 1, ... .
+
+The Fisher information matrix provides a lower bound, called a Cramér-Rao lower bound, for the
+standard errors of estimates of the model parameters.
+
+Statistical Tests
+
+Given an estimate for the combined parameter vector Θ, the squared standard errors are the
+diagonal elements of the inverse of the Fisher information matrix
+
+s2 θ i = I−1 θ i
+ii
+
+for i = 1, ..., q.
+
+Since the standard errors are estimates for the standard deviations of the parameter estimates, you
+can construct confidence intervals so that, for example, a 95% interval for each parameter estimate is
+approximately
+
+θ i ± 1.96s θ i
+
+for i = 1, ..., q.
+
+Error ellipses at a level-of-significance α ε [0, 1] for the parameter estimates satisfy the inequality
+
+θ −θ
+
+TI θ
+θ −θ
+≤χ1 −α, q
+2
+
+and follow a χ2 distribution with q degrees-of-freedom. Similar inequalities can be formed for any
+subcollection of the parameters.
+
+In general, given parameter estimates, the computed Fisher information matrix, and the log-
+likelihood function, you can perform numerous statistical tests on the parameters, the model, and the
+regression.
+
+Multivariate Normal Regression
+
+9-5

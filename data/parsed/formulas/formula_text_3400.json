@@ -1,0 +1,12 @@
+{
+  "page": 1874,
+  "original_text": "RefBonds = [RefPrices, RefMaturity, RefCpn];\nSettle   = datetime('26-Nov-2002','Locale','en_US');\n[ZeroRates, CurveDates] = zbtprice(RefBonds(:, 2:end), ...\nRefPrices, Settle)",
+  "ocr_text": "RefBonds=[RefPrices,RefMaturity,RefCpn];\n\nSettle =datetime(26-Nov-2002,Locale,en_US);\n[ZeroRates,CurveDates]=zbtprice(RefBonds(:,2:end),...\nRefPrices,Settle)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 404.27,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

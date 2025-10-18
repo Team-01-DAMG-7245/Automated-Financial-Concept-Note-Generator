@@ -1,0 +1,12 @@
+{
+  "page": 562,
+  "original_text": "% Convert the returns to prices.\npricesT = ret2tick(stockReturns,'StartPrice',100);",
+  "ocr_text": "Convertthereturnstoprices.\npricesT=ret2tick(stockReturns,StartPrice,100);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 415.23,
+    "x1": 360.92,
+    "y1": 436.49
+  },
+  "confidence": "high"
+}

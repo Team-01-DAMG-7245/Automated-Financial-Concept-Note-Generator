@@ -1,0 +1,7 @@
+Page 408
+================================================================================
+
+The backtestStrategy rebalance function uses this information to compute the desired new
+portfolio weights, which are returned to the backtesting engine in the function output new_weights.
+See the Local Functions on page 4-247 sections for the rebalance function for each of the five
+strategies.

@@ -1,0 +1,12 @@
+{
+  "page": 765,
+  "original_text": "function sratio = iterative_local_obj(ret, obj)\n% Set the objective function to the negative of the reward-to-risk ratio.",
+  "ocr_text": "functionsratio=iterative_local_obj(ret,_obj)\nSettheobjectivefunctiontothenegativeofthereward-to-riskratio.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 405.11,
+    "x1": 485.51,
+    "y1": 426.37
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 283
+================================================================================
+
+arguments in the function call. For example, if you intend to use quadprog and want to use the
+'trust-region-reflective' algorithm, call setSolver with this code:

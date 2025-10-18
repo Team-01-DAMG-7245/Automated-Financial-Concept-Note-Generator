@@ -1,0 +1,12 @@
+{
+  "page": 485,
+  "original_text": "strategies = [benchmark,equalCategory,riskBudgeting];\nbt = backtestEngine(strategies);\nbt = runBacktest(bt,pricesTT,'Start',start_date);\nequityCurve(bt)",
+  "ocr_text": "strategies=[benchmark,equalCategory,riskBudgeting];\nbt=backtestEngine(strategies);\nbt=runBacktest(bt,pricesTT,Start,start_date);\nequityCurve(bt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 149.34,
+    "x1": 377.15,
+    "y1": 192.21
+  },
+  "confidence": "high"
+}

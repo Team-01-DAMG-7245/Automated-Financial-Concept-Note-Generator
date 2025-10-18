@@ -1,0 +1,7 @@
+Page 984
+================================================================================
+
+Solution: Bin the data using autobinning or modifybins before plotting or inquiring about the
+bin statistics, to avoid having too many bins or having NaNs and Infs. For example, you can use the
+name-value pair argument for AlgoOptions with the autobinning function to define the number of
+bins.

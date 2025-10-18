@@ -1,0 +1,30 @@
+The simByEuler Euler approximation literally evaluates the stochastic differential equation directly
+from the equation of motion, for some suitable value of the dt time increment. This simple
+approximation suffers from discretization error. This error is attributed to the discrepancy between
+the choice of the dt time increment and what in theory is a continuous-time parameter.
+
+The discrete-time approximation improves as DeltaTime approaches zero. The Euler method is often
+the least accurate and most general method available. All models shipped in the simulation suite have
+this method.
+
+In contrast, the simBySolution method provides a more accurate description of the underlying
+model. This method simulates the price paths by an approximation of the closed-form solution of
+separable models. Specifically, it applies a Euler approach to a transformed process, which in general
+is not the exact solution to this GBM model. This is because the probability distributions of the
+simulated and true state vectors are identical only for piecewise constant parameters.
+
+When all model parameters are piecewise constant over each observation period, the simulated
+process is exact for the observation times at which the state vector is sampled. Since all parameters
+are constants in this example, simBySolution does indeed sample the exact solution.
+
+For an example of how to use simBySolution to optimize the accuracy of solutions, see “Optimizing
+Accuracy: About Solution Precision and Error” on page 14-66.
+
+Induce Dependence and Correlation Between States
+
+This example illustrates two techniques that induce dependence between individual elements of a
+state vector. It also illustrates the interaction between Sigma and Correlation.
+
+Simulating Equity Prices
+
+14-41

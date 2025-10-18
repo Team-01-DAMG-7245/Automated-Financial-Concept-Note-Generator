@@ -1,0 +1,12 @@
+{
+  "page": 1240,
+  "original_text": "f = struct with fields:\n    BlackScholes: @Example_BlackScholes/saveTerminalStockPrice\n       CallPrice: @Example_BlackScholes/getCallPrice\n        PutPrice: @Example_BlackScholes/getPutPrice",
+  "ocr_text": "f=structwithfields:\nBlackScholes:QExample_BlackScholes/saveTerminalStockPrice\nCallPrice:QExample_BlackScholes/getCallPrice\nPutPrice:QExample_BlackScholes/getPutPrice",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 439.02,
+    "x1": 425.92,
+    "y1": 481.89
+  },
+  "confidence": "high"
+}

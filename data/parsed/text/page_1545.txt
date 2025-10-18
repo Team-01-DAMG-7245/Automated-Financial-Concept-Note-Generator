@@ -1,0 +1,58 @@
+Note If the lookback minimum is non-zero, the software does not call the rebalance function
+(rebalanceFcn) until at least the lookback minimum time steps have passed before the current
+rebalancing period. This is regardless of the value of the rebalance frequency
+(RebalanceFrequency).
+
+Data Types: double | object
+
+InitialWeights — Initial portfolio weights
+[] (default) | vector
+
+Initial portfolio weights, specified as the comma-separated pair consisting of 'InitialWeights'
+and a vector. The InitialWeights vector sets the portfolio weights before the backtestEngine
+object begins the backtest. The size of the initial weights vector must match the number of assets
+used in the backtest.
+
+Alternatively, you can set the InitialWeights name-value pair argument to empty ([]) to indicate
+the strategy will begin with no investments and in a 100% cash position. The default for
+InitialWeights is empty ([ ]).
+
+Data Types: double
+
+ManagementFee — Management fee charged as an annualized percent of the total portfolio
+value
+0 (default) | decimal
+
+Management fee charged as an annualized percent of the total portfolio value, specified as the
+comma-separated pair consisting of 'ManagementFee' and a numeric scalar. The management fee is
+the annualized fee rate paid to cover the costs of managing a strategy's portfolio. The management
+fee is charged based on the strategy portfolio balance at the start of each date specified by the
+ManagementFeeSchedule. The default is 0, meaning no management fee is paid.
+
+For more information, see “Management Fees” on page 15-258.
+
+Data Types: double
+
+ManagementFeeSchedule — Management fee schedule
+calyears(1) (default) | integer | vector of datetimes | duration object | calendarDuration
+object
+
+Management fee schedule, specified as the comma-separated pair consisting of
+'ManagementFeeSchedule' and a numeric scalar, a duration or calendarDuration object, or
+alternatively, as a vector of datetimes.
+
+The ManagementFeeSchedule specifies the schedule of dates where the management fee is charged
+(if a ManagementFee is defined). The default is calyears(1), meaning the management fee is
+charged annually.
+
+For more information, see “Defining Schedules for Backtest Strategies” on page 15-258.
+
+Data Types: double | datetime | object
+
+PerformanceFee — Performance fee charged as an absolute percent of the total portfolio
+growth
+0 (default) | decimal
+
+backtestStrategy
+
+15-239

@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "% Sell any existing long position where the signal has turned to -1.\nidx = buySellSignals{end,:} == -1;\nnew_weights(idx) = 0;",
+  "ocr_text": "Sellanyexistinglongpositionwherethesignalhasturnedto-1.\nidx=buySellSignals{end,:}==-1;\nnew_weights(idx)=0;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 459.83,
+    "x1": 458.42,
+    "y1": 491.89
+  },
+  "confidence": "high"
+}

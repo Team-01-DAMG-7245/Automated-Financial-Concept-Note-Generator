@@ -1,0 +1,59 @@
+What if the original covariance (Sigma) is correct, but the mean of the first asset is 0.09 instead of
+0.08?
+
+% Update the returns vector.
+mu1 = mu;
+mu1(1) = 0.09;
+% Compute the mean-variance portfolio.
+p = Portfolio(AssetMean=mu1,AssetCovar=Sigma);
+p = setDefaultConstraints(p);
+wMV_mu1 = estimateFrontierByRisk(p,targetRisk)
+
+wMV_mu1 = 3×1
+
+0.5664
+    0.0000
+    0.4336
+
+% Compute the risk budgeting portfolio.
+wRB_mu1 = riskBudgetingPortfolio(Sigma,budget)
+
+wRB_mu1 = 3×1
+
+0.3912
+    0.1964
+    0.4124
+
+The weights of the risk budgeting portfolio are more stable than those of the mean-variance portfolio.
+When the change is in the expected returns, the risk budgeting portfolio remains the same as in the
+original problem. The risk budgeting portfolio accounts only for changes to the covariance matrix and
+a change in the vector of expected returns does not affect the weights allocation.
+
+% Display a table of weights for the risk budgeting portfolios.
+RBtable = table(wRB,wRB_rho7,wRB_rho9,wRB_mu1)
+
+RBtable=3×4 table
+      wRB      wRB_rho7    wRB_rho9    wRB_mu1
+    _______    ________    ________    _______
+
+0.39123    0.38444     0.38521     0.39123
+    0.19638    0.19857     0.21957     0.19638
+    0.41239    0.41699     0.39522     0.41239
+
+% Display a table of weights for the mean-variance portfolios.
+MVtable = table(wMV,wMV_rho7,wMV_rho9,wMV_mu1)
+
+MVtable=3×4 table
+      wMV      wMV_rho7     wMV_rho9      wMV_mu1  
+    _______    ________    __________    __________
+
+0.38462    0.38411     5.2827e-17       0.56638
+    0.20301    0.26003         0.6612    2.2204e-16
+    0.41237    0.35586         0.3388       0.43362
+
+The results on these tables show that the risk budgeting portfolio is more robust to changes in the
+parameters. The weights in the third and fourth column of the mean-variance portfolio table change
+
+Risk Budgeting Portfolio
+
+4-289

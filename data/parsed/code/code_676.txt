@@ -1,0 +1,7 @@
+Page 616
+================================================================================
+
+ExecutedPrices = LOBPrices(1:TradedLevels);
+ExecutedShares = LOBSizes(1:TradedLevels);
+ExecutedShares(end) = ExecutedShares(end) - (sum(ExecutedShares) - TradingShares);
+end

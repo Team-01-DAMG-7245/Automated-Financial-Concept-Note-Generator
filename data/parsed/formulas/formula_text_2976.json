@@ -1,0 +1,12 @@
+{
+  "page": 1556,
+  "original_text": "% Find column of the asset\nasset = char(user_data.Asset);\nassetIdx = find(strncmpi(asset,prices.Properties.VariableNames,numel(asset)));\nassetPrice = prices{end,assetIdx};",
+  "ocr_text": "Findcolumnoftheasset\n\nasset=char(user_data.Asset);\nassetIdx=find(strncmpi(asset,prices.Properties.VariableNames,numel(asset)));\nassetPrice=prices{end,assetIdx};",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.02,
+    "x1": 512.6,
+    "y1": 621.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2489,
+  "original_text": "ma = movavg(Data,type,weights)\nma = movavg( ___ ,initialPoints)",
+  "ocr_text": "ma=movavg(Data,type,weights)\nma=movavg(__,initialPoints)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 222.36,
+    "x1": 274.61,
+    "y1": 245.99
+  },
+  "confidence": "high"
+}

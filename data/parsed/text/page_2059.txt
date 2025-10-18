@@ -1,0 +1,59 @@
+Determine the NextCouponDate when using character vectors for input arguments and the optional
+argument for EndMonthRule.
+
+NextCouponDate = cpndaten('14-Mar-1997', '30-Nov-2000', 2, 0, 1);
+datestr(NextCouponDate)
+
+ans = 
+'31-May-1997'
+
+Determine the NextCouponDate when using an input vector for Maturity.
+
+Maturity = ['30-Sep-2000'; '31-Oct-2000'; '30-Nov-2000'];
+NextCouponDate = cpndaten('14-Mar-1997', Maturity);
+datestr(NextCouponDate)
+
+ans = 3×11 char array
+    '31-Mar-1997'
+    '30-Apr-1997'
+    '31-May-1997'
+
+Input Arguments
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors. Settle must be earlier than Maturity.
+
+To support existing code, cpndaten also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime array | string array | date character vector
+
+Maturity date, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors.
+
+To support existing code, cpndaten also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Period — Coupons per year of the bond
+2 (semiannual) (default) | vector of positive integers from the set [1,2,3,4,6,12]
+
+Coupons per year of the bond, specified as a vector of positive integers from the set
+[1,2,3,4,6,12].
+
+Data Types: single | double
+
+Basis — Day-count basis of the bond
+0 (actual/actual) (default) | numeric with value 0 through 13 | vector of numerics with values 0
+through 13
+
+cpndaten
+
+15-753

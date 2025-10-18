@@ -1,0 +1,12 @@
+{
+  "page": 1940,
+  "original_text": "Settle = '17-Jul-2009'; % valuation date for the CDS\nZero_Time = [.5 1 2 3 4 5]';\nZero_Rate = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;\nZero_Dates = daysadd(Settle,360*Zero_Time,1);\nZeroData = [Zero_Dates Zero_Rate];\nProbData = [daysadd(datenum(Settle),360,1), 0.0247];\nMaturity = datetime(2010,9,20);",
+  "ocr_text": "Settle=17-Jul-2009;valuationdatefortheCDS\nZeroTime=[.512345];\nZero_Rate=[1.351.431.92.472.9363.311]/100;\nZero_Dates=daysadd(Settle,360*Zero_Time,1);\nZeroData=[ZeroDatesZeroRate];\nProbData=[daysadd(datenum(Settle),360,1),0.0247];\nMaturity=datetime(2010,9,20);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 435.97,
+    "x1": 371.74,
+    "y1": 511.24
+  },
+  "confidence": "high"
+}

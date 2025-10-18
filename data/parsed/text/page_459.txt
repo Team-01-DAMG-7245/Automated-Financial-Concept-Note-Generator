@@ -1,0 +1,51 @@
+Backtest Using Risk-Based Equity Indexation
+
+This example shows how to use backtesting with a risk parity or equal risk contribution strategy
+rebalanced approximately every month as a risk-based indexation. In this example, you use the
+backtesting engine (backtestEngine) to create the risk parity strategy, that all assets in the
+portfolio contribute equally to the risk of the portfolio at each rebalancing period.
+
+To highlight advantages, the example compares the proposed risk-based indexation against a
+capitalization-weighted indexation. In contrast to a risk parity strategy, the assets of capitalization-
+weighted portfolios are weighted with respect to the market portfolio. One disadvantage of
+capitalization-weighted indexation is that it is a trend-following strategy that leads to bubble-risk
+exposure as the best performers represent a larger proportion of the market. Also, capitalization-
+weighted indexation can sometimes lead to weights concentrating in a sector. A risk-based indexation
+is an alternative investment strategy to avoid these issues of capitalization-weighted indexation.
+
+Define Assets
+
+% Read the table of daily adjusted close prices for 2006 DJIA stocks.
+T = readtable('dowPortfolio.xlsx');
+% Convert the table to a timetable.
+pricesTT = table2timetable(T);
+% Define the number of assets (not counting the market index).
+nAssets = size(pricesTT,2)-1;
+
+Define Risk Parity Strategy
+
+To obtain the long-only fully invested risk parity portfolio, use the riskBudgetingPortfolio
+function. When you pass a returns covariance matrix to riskBudgetingPortfolio, the function
+computes the associated risk parity portfolio. To compute the initial weights for the risk parity
+strategy, riskBudgetingPortfolio uses the covariance matrix estimated with information from
+the first two months.
+
+% Set backtesting warm-up period to two 21-day months.
+warmupPeriod = 21*2;
+% Set warm-up partition of timetable.
+% Invest only in assets. First column of pricesTT is the market index.
+warmupTT = pricesTT(1:warmupPeriod,2:end);
+% Estimate the covariance matrix.
+assetReturns = tick2ret(warmupTT);
+assetCov = cov(assetReturns{:,:});
+% Compute the initial risk parity portfolio.
+initialRiskParity = [0; riskBudgetingPortfolio(assetCov)];
+
+Visualize initial risk parity portfolio weights.
+
+% Plot a bar chart.
+bar(initialRiskParity)
+
+Backtest Using Risk-Based Equity Indexation
+
+4-291

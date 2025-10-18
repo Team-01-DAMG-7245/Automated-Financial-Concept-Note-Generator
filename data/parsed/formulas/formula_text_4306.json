@@ -1,0 +1,12 @@
+{
+  "page": 2437,
+  "original_text": "Date = ['15 feb 2001'; '16 feb 2001'; '17 feb 2001'];\nBusday = isbusday(Date)",
+  "ocr_text": "Date=[15feb2001;16feb2001;17feb2001];\nBusday=isbusday(Date)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 496.51,
+    "x1": 377.17,
+    "y1": 517.78
+  },
+  "confidence": "high"
+}

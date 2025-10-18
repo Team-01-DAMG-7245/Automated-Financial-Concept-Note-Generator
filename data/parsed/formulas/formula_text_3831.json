@@ -1,0 +1,12 @@
+{
+  "page": 2172,
+  "original_text": "Fisher] = ecmmvnrfish(Data,Design,Covariance)\nFisher = ecmmvnrfish( ___ ,Method,MatrixFormat,CovarFormat)",
+  "ocr_text": "Fisher]=ecmmvnrfish(Data,Design,Covariance)\nFisher=ecmmvnrfish(___,Method,MatrixFormat,CovarFormat)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.71,
+    "x1": 437.17,
+    "y1": 216.34
+  },
+  "confidence": "high"
+}

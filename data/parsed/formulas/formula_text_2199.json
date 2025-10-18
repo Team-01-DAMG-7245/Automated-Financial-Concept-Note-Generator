@@ -1,0 +1,12 @@
+{
+  "page": 1132,
+  "original_text": "% Convert the dates to numeric serial dates.                 \nx = datenum(hrznYTMMaturities);\nxi = datenum(treasuryMaturities);",
+  "ocr_text": "Convertthedatestonumericserialdates.\nx=datenum(hrznYTMMaturities);\nxi=datenum(treasuryMaturities);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 513.83,
+    "x1": 420.5,
+    "y1": 545.89
+  },
+  "confidence": "high"
+}

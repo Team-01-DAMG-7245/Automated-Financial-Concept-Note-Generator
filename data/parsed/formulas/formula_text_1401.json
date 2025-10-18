@@ -1,0 +1,12 @@
+{
+  "page": 699,
+  "original_text": "You can also set the MinNumAssets and MaxNumAssets properties to define a limit on the number of\nassets invested using setMinMaxNumAssets. For example, by setting\nMinNumAssets=MaxNumAssets=2, only two of the three assets are invested in the portfolio.",
+  "ocr_text": "YoucanalsosettheMinNumAssetsandMaxNumAssetspropertiestodefinealimitonthenumberof\nassetsinvestedusingsetMinMaxNumAssets.Forexample,bysetting\nMinNumAssets=MaxNumAssets=2,onlytwoofthethreeassetsareinvestedintheportfolio.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 364.19,
+    "x1": 557.01,
+    "y1": 399.82
+  },
+  "confidence": "high"
+}

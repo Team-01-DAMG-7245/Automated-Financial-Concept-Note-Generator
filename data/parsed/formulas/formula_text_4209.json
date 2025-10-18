@@ -1,0 +1,12 @@
+{
+  "page": 2370,
+  "original_text": "FutureVal = fvfix(Rate,NumPeriods,Payment) returns the future value of a series of equal\npayments.",
+  "ocr_text": "FutureVal=fvfix(Rate,NumPeriods,Payment)returnsthefuturevalueofaseriesofequal\npayments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.13,
+    "x1": 544.69,
+    "y1": 278.76
+  },
+  "confidence": "high"
+}

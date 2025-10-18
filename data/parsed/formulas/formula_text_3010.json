@@ -1,0 +1,12 @@
+{
+  "page": 1579,
+  "original_text": "backtester = runBacktest(backtester,pricesTT)",
+  "ocr_text": "backtester=runBacktest(backtester,pricesTT)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 308.43,
+    "x1": 333.81,
+    "y1": 318.89
+  },
+  "confidence": "high"
+}

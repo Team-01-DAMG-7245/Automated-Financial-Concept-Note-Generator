@@ -1,0 +1,6 @@
+Page 997
+================================================================================
+
+cp(2) = []; % To merge bins 2 and 3
+sc = modifybins(sc,'AMBalance','CutPoints',cp);
+plotbins(sc,'AMBalance')

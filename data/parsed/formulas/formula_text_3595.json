@@ -1,0 +1,12 @@
+{
+  "page": 2026,
+  "original_text": "Settle = datetime(2003,7,1);\nPrice = 98;\nCFlowAmounts = [30 40 30];\nCFlowDates = [datetime(2004,7,15) ; datetime(2005,7,15) ; datetime(2006,7,15)]';",
+  "ocr_text": "Settle=datetime(2003,7,1);\n\nPrice=98;\n\nCFlowAmounts=[304030];\nCFlowDates=[datetime(2004,7,15);datetime(2005,7,15);datetime(2006,7,15)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 431.47,
+    "x1": 528.86,
+    "y1": 474.34
+  },
+  "confidence": "high"
+}

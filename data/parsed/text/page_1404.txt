@@ -1,0 +1,61 @@
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Output Arguments
+
+DriftRate — Drift rate model component
+DriftRate object
+
+Drift rate model component, returned as a DriftRate object.
+
+Properties
+
+Rate — Composite drift-rate function
+value stored from drift-rate function (default) | function accessible by F(t,Xt)
+
+This property is read-only.
+
+Composite drift-rate function, specified as F(t,Xt). The function stored in Rate fully encapsulates the
+combined effect of A and B, where A and B are:
+
+•
+A: The intercept term, A(t,Xt), of F(t,Xt)
+
+•
+B: The first order term, B(t,Xt), of F(t,Xt)
+
+Data Types: struct | double
+
+Examples
+
+Create a drift Object
+
+Create a drift-rate function F:
+
+F = drift(0, 0.1)   % Drift rate function F(t,X)
+
+F = 
+   Class DRIFT: Drift Rate Specification  
+   -------------------------------------  
+      Rate: drift rate function F(t,X(t)) 
+         A: 0
+         B: 0.1
+
+The drift object displays like a MATLAB® structure and contains supplemental information, namely,
+the object's class and a brief description. However, in contrast to the SDE representation, a summary
+of the dimensionality of the model does not appear, because the drift class creates a model
+component rather than a model. F does not contain enough information to characterize the
+dimensionality of a problem.
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+15
+Functions
+
+15-98

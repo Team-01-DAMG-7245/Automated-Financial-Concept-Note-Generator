@@ -1,0 +1,10 @@
+Page 550
+================================================================================
+
+2
+Define a custom myStepFunction function that describes the dynamics of the environment. This
+includes how the state changes from a current state given the agent action and how the earned
+reward is computed by such an action. For the reward, here you can choose either a sparse
+reward function or a constant return reward function. At each training time step, the state of the
+model is updated using the myStepFunction function. This function also determines when a
+training episode finishes.

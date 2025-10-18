@@ -1,0 +1,12 @@
+{
+  "page": 2204,
+  "original_text": "If a record is empty (every value in a sample is NaN), this routine ignores the record because it\ncontributes no information. If such records exist in the data, the number of nonempty samples used in\nthe estimation is ≤ NumSamples.",
+  "ocr_text": "Ifarecordisempty(everyvalueinasampleisNaN),thisroutineignorestherecordbecauseit\ncontributesnoinformation.Ifsuchrecordsexistinthedata,thenumberofnonemptysamplesusedin\ntheestimationisNumSamples.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 140.79,
+    "x1": 557.6,
+    "y1": 176.42
+  },
+  "confidence": "high"
+}

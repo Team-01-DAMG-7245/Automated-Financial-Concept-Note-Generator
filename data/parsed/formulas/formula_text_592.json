@@ -1,0 +1,12 @@
+{
+  "page": 393,
+  "original_text": "portBL = Portfolio('NumAssets', numAssets, 'lb', 0, 'budget', 1, 'Name', 'Mean Variance with Blac\nportBL = setAssetMoments(portBL, mu_bl, Sigma + cov_mu);  \nwtsBL = estimateMaxSharpeRatio(portBL);",
+  "ocr_text": "portBL=Portfolio(NumAssets,numAssets,lb,0,_budget,1,Name,MeanVariancewithBla\nportBL=setAssetMoments(portBL,mu_bl,Sigma+cov_mu);\nwtsBL=estimateMaxSharpeRatio(portBL);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 476.43,
+    "x1": 615.58,
+    "y1": 508.49
+  },
+  "confidence": "high"
+}

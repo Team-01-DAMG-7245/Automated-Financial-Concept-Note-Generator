@@ -1,0 +1,12 @@
+{
+  "page": 1044,
+  "original_text": "imputedCustAgeNewCustomers = round(predict(knnCustAge, dataNewCustomersCopy(missingCustAgeNewCust\nimputedResStatusNewCustomers = predict(knnResStatus, dataNewCustomersCopy(missingResStatusNewCust\ndataNewCustomers.CustAge(missingCustAgeNewCustomers) = imputedCustAgeNewCustomers;\ndataNewCustomers.ResStatus(missingResStatusNewCustomers) = imputedResStatusNewCustomers;",
+  "ocr_text": "imputedCustAgeNewCustomers=round(predict(knnCustAge,dataNewCustomersCopy(missingCustAgeNewCus:\nimputedResStatusNewCustomers=predict(knnResStatus,dataNewCustomersCopy(missingResStatusNewCus:\ndataNewCustomers.CustAge(missingCustAgeNewCustomers)=imputedCustAgeNewCustomers;\ndataNewCustomers.ResStatus(missingResStatusNewCustomers)=imputedResStatusNewCustomers;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 615.55,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

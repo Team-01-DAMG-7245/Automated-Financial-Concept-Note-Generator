@@ -1,0 +1,12 @@
+{
+  "page": 38,
+  "original_text": "X = A \\ B",
+  "ocr_text": "X=AVYB",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 277.88,
+    "x1": 138.76,
+    "y1": 288.34
+  },
+  "confidence": "high"
+}

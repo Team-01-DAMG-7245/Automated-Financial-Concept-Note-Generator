@@ -1,0 +1,42 @@
+Local Functions
+
+This local function that computes the negative of the reward-to-risk ratio for a target return level.
+
+function sratio = iterative_local_obj(ret, obj)
+% Set the objective function to the negative of the reward-to-risk ratio.
+
+risk = estimatePortRisk(obj,estimateFrontierByReturn(obj,ret));
+
+if ~isempty(obj.RiskFreeRate)
+    sratio = -(ret - obj.RiskFreeRate)/risk;
+else
+    sratio = -ret/risk;
+end
+
+end
+
+See Also
+PortfolioCVaR | getScenarios | setScenarios | estimateScenarioMoments |
+simulateNormalScenariosByMoments | simulateNormalScenariosByData | setCosts |
+checkFeasibility
+
+Related Examples
+
+•
+“Troubleshooting CVaR Portfolio Optimization Results” on page 5-121
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio
+
+5-139

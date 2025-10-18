@@ -1,0 +1,6 @@
+Page 1250
+================================================================================
+
+This example specifies a noise function to stratify the terminal value of a univariate equity price
+series. Simulation methods allow you to specify a noise process directly, as a callable function of time
+and state:

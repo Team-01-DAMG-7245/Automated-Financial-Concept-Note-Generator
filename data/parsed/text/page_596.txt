@@ -1,0 +1,50 @@
+ans = 
+1.2327
+
+TWAP Baseline Analysis on Testing Data
+
+Using the same trained agent as the Compute IS Using Trained Agent and Training Data for Sell
+Trades on page 4-422 section, you can perform the same analysis on the testing data that you kept
+separate from the training data.
+
+First, execute the TWAP trades and compute IS for the testing data.
+
+[IS_TWAP_Horizon_Test_Sell,IS_TWAP_Step_Test_Sell, ...
+    InventoryShares_Step_TWAP_Test_Sell,TradingShares_Step_TWAP_Test_Sell] = ...
+    executeTWAPTrades(TestingLOB,NumLevels,TotalTradingShares_Sell,...
+    NumIntervalsPerHorizon,NumTestingHorizons,BuyTrade);
+
+Plot the implementation shortfall, executed shares, and inventory shares for the TWAP baseline for
+each step using testing data.
+
+figure
+subplot(3,1,1)
+bar(1:NumTestingSteps, IS_TWAP_Step_Test_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTestingSteps), " steps total.)"))
+ylabel("Implementation Shortfall")
+title("Implementation Shortfall (TWAP, Testing, Sell)")
+xlim([0 300])
+ylim([-65 75])
+
+subplot(3,1,2)
+bar(1:NumTestingSteps, TradingShares_Step_TWAP_Test_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTestingSteps), " steps total.)"))
+ylabel("Executed Shares")
+title("Shares Traded at Each Step (TWAP, Testing, Sell)")
+xlim([0 300])
+ylim([0 2000])
+
+subplot(3,1,3)
+bar(1:NumTestingSteps, InventoryShares_Step_TWAP_Test_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTestingSteps), " steps total.)"))
+ylabel("Inventory Shares")
+title("Inventory Shares (TWAP, Testing, Sell)")
+xlim([0 300])
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-428

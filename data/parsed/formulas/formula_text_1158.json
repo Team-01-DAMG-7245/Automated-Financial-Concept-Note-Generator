@@ -1,0 +1,12 @@
+{
+  "page": 589,
+  "original_text": "ans = \n  rlDQNAgentOptions with properties:",
+  "ocr_text": "ans=\nrlDQNAgentOptionswithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 546.63,
+    "x1": 285.05,
+    "y1": 567.89
+  },
+  "confidence": "high"
+}

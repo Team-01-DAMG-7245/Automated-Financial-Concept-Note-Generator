@@ -1,0 +1,54 @@
+T = find(Years==1995); % ind "current" year, start at 1995, updated in loop
+YearsBT = 1996:2005; % Years predicted in BT exercise
+iYearsBT = find(Years==1996):find(Years==2005); % Corresponding indices
+nYearsBT = length(YearsBT); % Number of years in BT exercise
+
+MethodTags = {'Model','PIT','TTC'};
+nMethods = length(MethodTags);
+PredDefRate = zeros(nYearsBT,nMethods);
+ErrorBT = zeros(nYearsBT,nMethods);
+
+alpha = 0.05;
+PredDefLoBnd = zeros(nYearsBT,1);
+PredDefUpBnd = zeros(nYearsBT,1);
+
+for k=1:nYearsBT
+   % In sample years for predictors, from 1984 to "last" year (T-1)
+   inSampleBT = iYear0:T-1;
+   
+   % Method 1: Linear regression model
+   %   Fit regression model with data up to "current" year (T)
+   s = regstats(yBT(inSampleBT+1),XBT(inSampleBT,:));
+   %   Predict default rate for "next" year (T+1)
+   PredDefRate(k,1) = [1 XBT(T,:)]*s.beta;
+   %   Compute prediction intervals
+   tCrit = tinv(1-alpha/2,s.tstat.dfe);
+   PredStd = sqrt([1 XBT(T,:)]*s.covb*[1 XBT(T,:)]'+s.mse);
+   PredDefLoBnd(k) = max(0,PredDefRate(k,1) - tCrit*PredStd);
+   PredDefUpBnd(k) = PredDefRate(k,1) + tCrit*PredStd;
+
+% Method 2: Point-in-time (PIT) default rate
+   PredDefRate(k,2) = DefRate(T);
+
+% Method 3: Through-the-cycle (TTC) default rate
+   tmAll = transprobbytotals(totalsAll(iYear0:T));
+   PredDefRate(k,3) = tmAll(1,2);
+
+% Update error
+   ErrorBT(k,:) = PredDefRate(k,:) - DefRate(T+1);
+   
+   % Move to next year
+   T = T + 1;
+end
+
+Here are the predictions of the three alternative approaches, compared to the actual default rates
+observed. Unsurprisingly, TTC shows a very poor predictive power. However, it is not obvious whether
+PIT or the linear regression model makes better predictions in this 10-year time span.
+
+Example_BacktestPlot(YearsBT,DefRate(iYearsBT),PredDefRate,'Year','%', ...
+   '{\bf Default Rate Estimation Methods: Backtesting}', ...
+   ['Actual' MethodTags],'NW')
+
+Forecasting Corporate Default Rates
+
+8-31

@@ -1,0 +1,12 @@
+{
+  "page": 262,
+  "original_text": "p = Portfolio('AInequality', [1 -1; 1 1 ], 'bInequality', 0);\n[lb, ub, isbounded] = estimateBounds(p)",
+  "ocr_text": "p=Portfolio(AInequality,[1-1;11],bInequality,0);\n[lb,ub,isbounded]=estimateBounds(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 624.38,
+    "x1": 420.52,
+    "y1": 645.64
+  },
+  "confidence": "high"
+}

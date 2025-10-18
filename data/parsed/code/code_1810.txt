@@ -1,0 +1,5 @@
+Page 1509
+================================================================================
+
+Sigma — Instantaneous volatility rates
+array | deterministic function of time | deterministic function of time and state

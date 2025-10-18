@@ -1,0 +1,12 @@
+{
+  "page": 283,
+  "original_text": "p = Portfolio;\np = setSolver(p, 'quadprog', 'Algorithm', 'trust-region-reflective');\ndisplay(p.solverOptions)",
+  "ocr_text": "p=Portfolio;\np=setSolver(p,quadprog,Algorithm,trust-region-reflective);\ndisplay(p.solver0Options)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.9,
+    "x1": 463.88,
+    "y1": 157.97
+  },
+  "confidence": "high"
+}

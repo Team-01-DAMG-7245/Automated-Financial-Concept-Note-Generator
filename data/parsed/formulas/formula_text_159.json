@@ -1,0 +1,12 @@
+{
+  "page": 114,
+  "original_text": "cash = cash - MOAsk(tt); % Buy\n        assets = assets + 1;",
+  "ocr_text": "cash=cash-MOAsk(tt);Buy\nassets=assets+1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 460.23,
+    "x1": 295.9,
+    "y1": 481.49
+  },
+  "confidence": "high"
+}

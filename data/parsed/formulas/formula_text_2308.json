@@ -1,0 +1,12 @@
+{
+  "page": 1200,
+  "original_text": "obj.A(i,j) = 0.3",
+  "ocr_text": "obj.A(i,j)=0.3",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 242.71,
+    "x1": 207.94,
+    "y1": 253.18
+  },
+  "confidence": "high"
+}

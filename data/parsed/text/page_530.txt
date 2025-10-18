@@ -1,0 +1,58 @@
+Single Period Goal-Based Wealth Management
+
+This example shows a method for goal-based wealth management (GBWM). In GBWM, risk is not
+necessarily measured using the standard deviation, the value-at-risk, or any other common risk
+measure. Instead, risk is understood as the likelihood of not attaining an investor's goal. You choose a
+weight allocation that is on the traditional mean-variance efficient frontier and that also maximizes
+the probability of exceeding a wealth goal at the end of the investment horizon. In other words, you
+choose the portfolio on the efficient frontier that minimizes the risk of not attaining the investor's
+goal.
+
+A common issue after computing the mean-variance efficient frontier is how to choose a single
+portfolio to invest in. This portfolio could be the maximum Sharpe ratio portfolio, which selects the
+weights that achieve the highest return given the amount of risk taken. However, choosing this
+portfolio does not take the investor's preferences into account. Another way strategy is to gauge the
+risk preference of the investor and select a portfolio that achieves a risk no larger than the investor's
+preferred risk. However, it is difficult to quantify the risk aversion of an investor. In this example, you
+use the probability of achieving a wealth goal to help choose a portfolio on the efficient frontier.
+
+Load Data
+
+Load the data and then annualize the asset returns and the variance-covariance matrix.
+
+% Load data
+load BlueChipStockMoments.mat
+AssetMean = 12*AssetMean;
+AssetCovar = 12*AssetCovar;
+
+Plot Efficient Frontier
+
+Use Portfolio to create a Portfolio object and estimateMaxSharpeRatio to compute the
+maximum Sharpe ratio. Then, use plotFrontier to plot the efficient frontier for long-only, fully-
+invested portfolios and mark the maximum Sharpe ratio portfolio.
+
+% Create a Portfolio object.
+p = Portfolio(AssetList=AssetList,AssetMean=AssetMean,...
+    AssetCovar=AssetCovar);
+
+% Add long-only, fully-invested constraints
+p = setDefaultConstraints(p);
+
+% Compute the maximum Sharpe ratio portfolio.
+wSR = estimateMaxSharpeRatio(p);
+
+% Plot the efficient frontier.
+numPorts = 20;
+figure;
+[pret,prisk] = plotFrontier(p,20);
+hold on
+plot(estimatePortRisk(p,wSR),estimatePortReturn(p,wSR),'b.',...
+    'MarkerSize',20);
+legend('Efficient frontier','Max Sharpe Ratio',...
+    'Location','southeast')
+hold off
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-362

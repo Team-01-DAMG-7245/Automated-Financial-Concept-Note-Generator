@@ -1,0 +1,22 @@
+A negative Digits rounds the value to the left of the decimal point.
+
+Data Types: double
+
+Output Arguments
+
+BankText — Bank-formatted text
+character vector
+
+Bank-formatted text (BankText) is returned as a character vector with a leading dollar sign ($).
+Negative numbers are displayed in parentheses.
+
+Version History
+Introduced before R2006a
+
+See Also
+frac2cur | cur2frac
+
+15
+Functions
+
+15-792

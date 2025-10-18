@@ -1,0 +1,12 @@
+{
+  "page": 450,
+  "original_text": "% Compute the mean-variance risks and returns for different ESG levels.\ncontourESG = linspace(minESG,maxESG,nCont+1);\nfigure\nhold on\nlabels = strings(nCont+1,1);\nfor i = 1:nCont\n    p.bInequality = -contourESG(i); % Change target ESG score\n    plotFrontier(p,nPort);\n    labels(i) = sprintf(\"%6.2f ESG\",contourESG(i)*100);\nend",
+  "ocr_text": "Computethemean-variancerisksandreturnsfordifferentESGlevels.\n\ncontourESG=linspace(minESG,maxESG,nCont+1);\n\nfigure\n\nholdon\n\nlabels=strings(nCont+1,1);\n\nfori=1:nCont\np.bInequality=-contourESG(i);*ChangetargetESGscore\nplotFrontier(p,nPort);\nlabels(i)=sprintf(s6.2fESG,contourESG(i)*100);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.23,
+    "x1": 474.68,
+    "y1": 297.89
+  },
+  "confidence": "high"
+}

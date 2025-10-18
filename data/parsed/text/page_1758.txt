@@ -1,0 +1,60 @@
+1     1     1     0     0
+     0     0    -1    -1    -1
+
+disp(p.bInequality);
+
+0.5000
+   -0.5000
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+AInequality — Linear inequality constraints formed from matrix
+matrix
+
+Linear inequality constraints, specified as a matrix.
+
+Note An error results if AInequality is empty and bInequality is nonempty.
+
+Data Types: double
+
+bInequality — Linear inequality constraints formed from vector
+vector
+
+Linear inequality constraints, specified as a vector.
+
+Note An error results if bInequality is empty and AInequality is nonempty.
+
+Data Types: double
+
+Output Arguments
+
+obj — Updated portfolio object
+object for portfolio
+
+Updated portfolio object, returned as a Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+15
+Functions
+
+15-452

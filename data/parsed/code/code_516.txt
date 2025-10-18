@@ -1,0 +1,4 @@
+Page 486
+================================================================================
+
+period_dates = [rebalance_schedule(2:end), pricesTT.Dates(end)];

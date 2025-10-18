@@ -1,0 +1,61 @@
+Valuing an Existing CDS Contract
+
+This example shows how to compute the current value, or mark-to-market, of an existing CDS
+contract. The current value is the amount of money the contract holder would receive (if positive) or
+pay (if negative) to unwind the contract.
+
+The upfront of the contract is the current value expressed as a fraction of the notional amount of the
+contract, and it is commonly used to quote market values.
+
+The value of existing CDS contracts is obtained with cdsprice. By default, cdsprice treats
+contracts as long positions. Whether a contract position is long or short is determined from a
+protection standpoint, that is, long means that protection was bought, and short means protection
+was sold. In the following code, an existing CDS contract pays a premium that is lower than current
+market conditions. The price is positive, as expected, since it would be more costly to buy the same
+type of protection today.
+
+Settle = '17-Jul-2009';   % Valuation date for the CDS
+MarketDates = datenum({'20-Sep-10','20-Sep-11','20-Sep-12','20-Sep-14', ...
+'20-Sep-16'});
+MarketSpreads = [140 175 210 265 310]';
+MarketData = [MarketDates MarketSpreads];
+
+ZeroDates = datenum({'17-Jan-10','17-Jul-10','17-Jul-11','17-Jul-12', ...
+'17-Jul-13','17-Jul-14'});
+ZeroRates = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+ZeroData = [ZeroDates ZeroRates];
+
+[ProbData,HazData] = cdsbootstrap(ZeroData,MarketData,Settle);
+
+Maturity2 = '20-Sep-2012';
+Spread2 = 196;
+ 
+[Price,AccPrem,PaymentDates,PaymentTimes,PaymentCF] = cdsprice(ZeroData, ...
+ProbData,Settle,Maturity2,Spread2);
+ 
+fprintf('Dirty Price: %8.2f\n',Price+AccPrem);
+
+Dirty Price: 56872.94
+
+fprintf('Accrued Premium: %8.2f\n',AccPrem);
+
+Accrued Premium: 15244.44
+
+fprintf('Clean Price: %8.2f\n',Price);
+
+Clean Price: 41628.50
+
+fprintf('\nPayment Schedule:\n\n');
+
+Payment Schedule:
+
+fprintf('Date \t\t Time Frac \t Amount\n');
+
+Date          Time Frac      Amount
+
+for k = 1:length(PaymentDates)
+   fprintf('%s \t %5.4f \t %8.2f\n',datestr(PaymentDates(k)), ...
+
+Valuing an Existing CDS Contract
+
+8-107

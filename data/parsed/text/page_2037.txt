@@ -1,0 +1,53 @@
+Input Arguments
+
+Data — Data with high, low, close, and volume information
+matrix | table | timetable
+
+Data with high, low, close, and volume information, specified as a matrix, table, or timetable. For
+matrix input, Data is an M-by-4 matrix of high, low, close prices and volume. Timetables and tables
+with M rows must contain variables named 'High', 'Low', 'Close', and 'Volume' (case
+insensitive).
+
+Data Types: double | table | timetable
+
+Output Arguments
+
+chosc — Chaikin oscillator
+matrix | table | timetable
+
+Chaikin oscillator, returned with the same number of rows (M) and type (matrix, table, or timetable)
+as the input Data.
+
+More About
+
+Chaikin oscillator
+
+The Chaikin oscillator is a technical analysis indicator developed that measures the momentum of the
+Accumulation/Distribution (A/D) line.
+
+The Chaikin oscillator helps traders identify potential buy and sell signals by assessing the
+relationship between price and volume, thus providing insights into market sentiment.
+
+Version History
+Introduced before R2006a
+
+R2023a: fints support removed for Data input argument
+Behavior changed in R2023a
+
+fints object support for the Data input argument is removed.
+
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+References
+
+[1] Achelis, S. B. Technical Analysis from A to Z. Second Edition. McGraw-Hill, 1995, pp. 91–94.
+
+See Also
+adline | timetable | table | chaikvolat
+
+chaikosc
+
+15-731

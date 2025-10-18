@@ -1,0 +1,5 @@
+Page 1271
+================================================================================
+
+Now that the copula parameters have been estimated, simulate jointly-dependent uniform variates
+using the function copularnd.

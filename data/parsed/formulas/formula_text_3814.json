@@ -1,0 +1,12 @@
+{
+  "page": 2158,
+  "original_text": "Settle = datetime(2000,11,3);",
+  "ocr_text": "Settle=datetime(2000,11,3);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 685.29,
+    "x1": 247.12,
+    "y1": 695.75
+  },
+  "confidence": "high"
+}

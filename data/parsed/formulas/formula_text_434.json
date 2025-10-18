@@ -1,0 +1,12 @@
+{
+  "page": 298,
+  "original_text": "m = [ 0.05; 0.1; 0.12; 0.18 ];\nC = [ 0.0064 0.00408 0.00192 0; \n      0.00408 0.0289 0.0204 0.0119;\n      0.00192 0.0204 0.0576 0.0336;\n      0 0.0119 0.0336 0.1225 ];\npwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];\n \n p = Portfolio('InitPort', pwgt0);\n p = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');\n p = setAssetMoments(p, m, C);\n p = setDefaultConstraints(p);\n pwgt = estimateFrontier(p, 5);\n \n pnames = cell(1,5);\n   for i = 1:5\n       pnames{i} = sprintf('Port%d',i);\n   end\n \n Blotter = dataset([{100*pwgt},pnames],'obsnames',p.AssetList);\n display(Blotter)",
+  "ocr_text": "m=[0.05;0.1;0.12;0.18];\nC=[0.00640.004080.001920;\n0.004080.02890.02040.0119;\n0.001920.02040.05760.0336;\n00.01190.03360.1225];\npwgt=[0.3;0.3;0.2;0.1];\np=Portfolio(InitPort,pwgtO);\np=setAssetList(p,Bonds,Large-CapEquities,Small-CapEquities,EmergingEquities);\np=setAssetMoments(p,m,C);\np=setDefaultConstraints(p);\npwgt=estimateFrontier(p,5);\npnames=cell(1,5);\nfori=1:5\npnames{i}=sprintf(Portsd,i);\nend\nBlotter=dataset([{100*pwgt},pnames],obsnames,p.AssetList);\ndisplay(Blotter)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 234.48,
+    "x1": 588.5,
+    "y1": 450.14
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,33 @@
+More About
+
+Vega
+
+A vega sensitivity measures the sensitivity of an option's price to changes in the volatility of the
+underlying asset.
+
+Vega represents the amount by which the price of an option would be expected to change for a 1%
+change in the implied volatility of the underlying asset. Vega is expressed as the amount of money per
+underlying share that the option's value will gain or lose as volatility rises or falls. For example, if an
+option has a vega of 0.10, it means that the option's price is expected to change by $0.10 for every
+1% change in the implied volatility of the underlying asset.
+
+Version History
+Introduced in R2006a
+
+References
+
+[1] Hull, John C. Options, Futures, and Other Derivatives. 5th edition, Prentice Hall, 2003.
+
+See Also
+blslambda | blsgamma | blsdelta | blsprice | blsrho | blstheta
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+15
+Functions
+
+15-510

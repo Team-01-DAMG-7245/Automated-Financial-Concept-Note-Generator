@@ -1,0 +1,34 @@
+In this example, the efficient frontiers obtained using the traditional covariance estimate and the
+shrunk estimate are close to each other. This means that both methods achieve similar risk and
+returns out-of-sample. Where the difference between these methods is more noticeable is for the
+portfolios to the left of the maximum Sharpe ratio portfolio. For those portfolios, the allocation
+computed using shrinkage has better returns out-of-sample.
+
+Backtest to Compare Investment Strategy When Using Covariance Shrinkage
+
+This example compares a minimum variance investment strategy using the traditional covariance
+estimate with a minimum variance strategy using covariance shrinkage.
+
+Load the data.
+
+% Read a table of daily adjusted close prices for 2006 DJIA stocks.
+T = readtable('dowPortfolio.xlsx');
+
+% Convert the table to a timetable.
+pricesTT = table2timetable(T,'RowTimes','Dates');
+numAssets = size(pricesTT.Variables, 2);
+
+Use the first 42 days of the dowPortfolio.xlsx data set to initialize the backtest strategies. The
+backtest is then run over the remaining data.
+
+warmupPeriod = 42;
+
+Compute the initial weights. Use the traditionalStrat and shrunkStrat functions in Local
+Functions on page 15-61 to compute the weights.
+
+% Specify no current weights (100% cash position).
+w0 = zeros(1,numAssets);
+
+covarianceShrinkage
+
+15-59

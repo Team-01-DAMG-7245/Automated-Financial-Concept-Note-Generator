@@ -1,0 +1,62 @@
+This property is read-only.
+
+Transaction costs for the asset purchases of each strategy, a NumTimeSteps-by-NumStrategies
+timetable. BuyCost is empty until you run the backtest using the runBacktest function.
+
+Data Types: timetable
+
+SellCost — Transaction costs for asset sales of each strategy
+[] (default) | timetable
+
+This property is read-only.
+
+Transaction costs for the asset sales of each strategy, a NumTimeSteps-by-NumStrategies
+timetable. SellCost is empty until you run the backtest using the runBacktest function.
+
+Data Types: timetable
+
+Fees — Paid fees for management and performance fees
+[] (default) | struct
+
+This property is read-only.
+
+Paid fees for management and performance fees, a struct containing a timetable for each strategy
+which holds all the fees paid by the strategy. The Fees timetable contains an entry for each date
+where at least one fee was paid. Each column holds the amount paid for a particular type of fee. If no
+fees are paid, then the Fees timetable is empty.
+
+For more information on management and performance fees defined using a backtestStrategy
+object, see “Management Fees” on page 15-258, “Performance Fees” on page 15-260, and
+“Performance Hurdle” on page 15-261.
+
+Data Types: timetable
+
+PayExpensesFromCash — Indicates if transaction expenses paid from cash account or by
+reducing portfolio value
+false (default) | true or false
+
+This property is read-only.
+
+Indicates if backtest expenses (transaction costs or fees) are paid from cash account or by reducing
+the total portfolio value, a logical value.
+
+Data Types: logical
+
+TransactionCosts — Detailed transaction costs
+[] (default) | struct
+
+This property is read-only.
+
+Detailed transaction costs for per-asset transaction costs for strategy, a struct containing a timetable
+of detailed, per-asset transaction costs for each strategy. The TransactionCosts timetables contain
+one row for each rebalance date and one column for each asset.
+
+If the strategy generates aggregate transaction costs, then the TransactionCosts timetable for
+that strategy is empty.
+
+Data Types: timetable
+
+15
+Functions
+
+15-270

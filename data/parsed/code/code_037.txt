@@ -1,0 +1,4 @@
+Page 43
+================================================================================
+
+the function returns a value for A, but not for B or C.

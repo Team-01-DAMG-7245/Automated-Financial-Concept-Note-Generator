@@ -1,0 +1,31 @@
+cp = 3×1
+103 ×
+
+0.5589
+    1.2543
+    1.5974
+
+cp(2) = []; % To merge bins 2 and 3
+sc = modifybins(sc,'AMBalance','CutPoints',cp);
+plotbins(sc,'AMBalance')
+
+Now that the binning fine-tuning is completed, the bins for all predictors have close-to-linear WOE
+trends.
+
+Step 3. Fit a logistic regression model.
+
+The fitmodel function fits a logistic regression model to the WOE data. fitmodel internally bins
+the training data, transforms it into WOE values, maps the response variable so that 'Good' is 1, and
+fits a linear logistic regression model. By default, fitmodel uses a stepwise procedure to determine
+which predictors should be in the model.
+
+sc = fitmodel(sc);
+
+1. Adding CustIncome, Deviance = 1490.8954, Chi2Stat = 32.545914, PValue = 1.1640961e-08
+2. Adding TmWBank, Deviance = 1467.3249, Chi2Stat = 23.570535, PValue = 1.2041739e-06
+3. Adding AMBalance, Deviance = 1455.858, Chi2Stat = 11.466846, PValue = 0.00070848829
+4. Adding EmpStatus, Deviance = 1447.6148, Chi2Stat = 8.2432677, PValue = 0.0040903428
+
+Case Study for Credit Scorecard Analysis
+
+8-79

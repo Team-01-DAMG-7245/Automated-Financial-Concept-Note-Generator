@@ -1,0 +1,58 @@
+NextCouponDate = 2×1 datetime
+   31-May-1997
+   10-Jun-1998
+
+Compute the next quasi coupon dates for these two bonds.
+
+NextQuasiCouponDate = cpndatenq(Settle, Maturity)
+
+NextQuasiCouponDate = 2×1 datetime
+   31-May-1997
+   10-Jun-1998
+
+Because no FirstCouponDate has been specified, the results are identical.
+
+Now supply an explicit FirstCouponDate for each bond.
+
+FirstCouponDate = [datetime(1997,11,30), datetime(1998,12,10)];
+
+Compute the next coupon dates.
+
+NextCouponDate = cpndaten(Settle, Maturity, 2, 0, 1, [],FirstCouponDate)
+
+NextCouponDate = 2×1 datetime
+   30-Nov-1997
+   10-Dec-1998
+
+The next coupon dates are identical to the specified first coupon dates.
+
+Now recompute the next quasi coupon dates.
+
+NextQuasiCouponDate = cpndatenq(Settle, Maturity, 2, 0, 1, [],FirstCouponDate)
+
+NextQuasiCouponDate = 2×1 datetime
+   31-May-1997
+   10-Jun-1998
+
+These results illustrate the distinction between actual coupon payment dates and quasi coupon dates.
+FirstCouponDate (and LastCouponDate, as well), when specified, is associated with an actual
+coupon payment and also serves as the synchronization date for determining all quasi coupon dates.
+Since each bond in this example pays semiannual coupons, and the first coupon date occurs more
+than six months after settlement, each will have an intermediate quasi coupon date before the actual
+first coupon payment occurs.
+
+Input Arguments
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors. Settle must be earlier than Maturity.
+
+To support existing code, cpndatenq also accepts serial date numbers as inputs, but they are not
+recommended.
+
+15
+Functions
+
+15-758

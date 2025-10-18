@@ -1,0 +1,12 @@
+{
+  "page": 613,
+  "original_text": "if EnvConstants.BuyTrade\n    AvgPrice = mean(EnvConstants.SampledBook(StepIdx,[1 5]),2);\n    PriceDivergence = LoggedSignals.ArrivalPrice - AvgPrice;\nelse\n    AvgPrice = mean(EnvConstants.SampledBook(StepIdx,[3 7]),2);\n    PriceDivergence = AvgPrice - LoggedSignals.ArrivalPrice;\nend",
+  "ocr_text": "ifEnvConstants.BuyTrade\nAvgPrice=mean(EnvConstants.SampledBook(StepIdx,[15]),2);\nPriceDivergence=LoggedSignals.ArrivalPrice-AvgPrice;\nelse\nAvgPrice=mean(EnvConstants.SampledBook(StepIdx,[37]),2);\nPriceDivergence=AvgPrice-LoggedSignals.ArrivalPrice;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 431.33,
+    "y1": 254.69
+  },
+  "confidence": "high"
+}

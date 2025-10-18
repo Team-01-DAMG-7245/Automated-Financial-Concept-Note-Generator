@@ -1,0 +1,32 @@
+Note that cash actually has a small risk so that the tangent line does not pass through the cash asset.
+
+Obtain Range of Risks and Returns
+
+To obtain efficient portfolios with target values of either risk or return, it is necessary to obtain the
+range of risks and returns among all portfolios on the efficient frontier. This is accomplished with the
+estimateFrontierLimits function.
+
+[rsk,ret] = estimatePortMoments(p,estimateFrontierLimits(p));
+
+display(rsk)
+
+rsk = 2×1
+
+0.0348
+    0.0903
+
+display(ret)
+
+ret = 2×1
+
+0.0094
+    0.0179
+
+The range of monthly portfolio returns is between 0.9% and 1.8% and the range for portfolio risks is
+between 3.5% and 9.0%. In annualized terms, the range of portfolio returns is 11.2% to 21.5% and
+the range of portfolio risks is 12.1% to 31.3%.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-164

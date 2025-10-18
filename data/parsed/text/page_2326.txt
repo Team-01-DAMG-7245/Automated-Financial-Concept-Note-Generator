@@ -1,0 +1,34 @@
+Output Arguments
+
+pstd — Estimates for standard deviations of portfolio returns for each portfolio in pwgt
+vector
+
+Estimates for standard deviations of portfolio returns for each portfolio in pwgt, returned as a
+NumPorts vector.
+
+Tips
+
+You can also use dot notation to estimate the standard deviation of portfolio returns.
+
+pstd = obj.estimatePortStd(pwgt);
+
+Version History
+Introduced in R2012b
+
+See Also
+estimatePortReturn | estimateFrontierByReturn | estimateFrontierByRisk |
+estimatePortVaR | rng
+
+Topics
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+“Portfolio Optimization Theory” on page 4-4
+
+External Websites
+Getting Started with Portfolio Optimization (4 min 13 sec)
+CVaR Portfolio Optimization (4 min 56 sec)
+
+15
+Functions
+
+15-1020

@@ -1,0 +1,63 @@
+Mixed-Integer CVaR Portfolio Optimization Problem
+
+This example shows how to solve a CVaR portfolio optimization problem with constraints in the
+number of selected assets or conditional (semicontinuous) bounds. To solve this problem, you can use
+a PortfolioCVaR object along with different mixed integer nonlinear programming (MINLP)
+solvers.
+
+CVaR Portfolio
+
+Load the returns data in CAPMuniverse.mat. Then, create a PortfolioCVaR object with default
+constraints and a long-only portfolio whose weights sum to 1. For this example, you can define the
+feasible region of weights X as
+
+X =
+x| ∑
+i = 1
+
+n
+xi = 1, xi ≥0 .
+
+% Load data
+load CAPMuniverse.mat
+
+% Create portfolio with default constraints
+p = PortfolioCVaR(ProbabilityLevel=0.95);
+p = simulateNormalScenariosByData(p,Data(:,1:12),1000,missingdata=true);
+p = setDefaultConstraints(p);
+
+Include binary variables for this scenario by setting conditional (semicontinuous) bounds. Conditional
+bounds are those such that xi = 0 or xi ≥ℓi. In this example, ℓi = 0 . 1 for all assets.
+
+% Set conditional bounds
+condLB = 0.1;
+condUB = 0.5;
+p = setBounds(p,condLB,condUB,BoundType="conditional");
+
+Use estimateFrontier to estimate a set of portfolios on the efficient frontier. The efficient frontier
+is a curve that shows the trade-off between the return and risk achieved by Pareto-optimal portfolios.
+For a given return level, the portfolio on the efficient frontier is the one that minimizes the risk while
+maintaining the desired return. Conversely, for a given risk level, the portfolio on the efficient frontier
+is the one that maximizes return while maintaining the desired risk level.
+
+% Compute efficient frontier
+p = setSolverMINLP(p,'TrustRegionCP',DeltaLowerBound=condLB);
+pwgt = estimateFrontier(p)
+
+pwgt = 12×10
+
+0         0         0         0         0         0         0         0         0       
+         0         0         0         0         0         0         0         0         0       
+         0         0         0         0         0         0         0         0         0       
+    0.1000    0.1090    0.1000    0.1000         0         0         0    0.0000         0       
+         0         0         0    0.1000    0.1662    0.2634    0.3369    0.4051    0.4647    0.5
+    0.1328    0.2387    0.3331    0.3263    0.3622    0.3543    0.3701    0.3854    0.4287    0.5
+    0.1000         0         0         0         0         0         0         0         0       
+    0.4132    0.3887    0.2755    0.2552    0.2288    0.1812    0.1110         0         0       
+         0         0         0         0         0         0         0         0         0       
+    0.2540    0.2636    0.2914    0.2185    0.2427    0.2011    0.1821    0.2095    0.1067       
+         0         0         0         0         0         0         0         0         0
+
+Mixed-Integer CVaR Portfolio Optimization Problem
+
+5-141

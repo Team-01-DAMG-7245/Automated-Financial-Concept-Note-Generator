@@ -1,0 +1,69 @@
+•
+If StorePaths is true (the default value) or is unspecified, simByEuler returns Paths as a
+three-dimensional time-series array.
+
+•
+If StorePaths is false (logical 0), simByEuler returns Paths as an empty matrix.
+
+Data Types: logical
+
+MonteCarloMethod — Monte Carlo method to simulate stochastic processes
+"standard" (default) | string with values "standard", "quasi", or "randomized-quasi" |
+character vector with values 'standard', 'quasi', or 'randomized-quasi'
+
+Monte Carlo method to simulate stochastic processes, specified as the comma-separated pair
+consisting of 'MonteCarloMethod' and a string or character vector with one of the following
+values:
+
+•
+"standard" — Monte Carlo using pseudo random numbers
+
+•
+"quasi" — Quasi-Monte Carlo using low-discrepancy sequences
+
+•
+"randomized-quasi" — Randomized quasi-Monte Carlo
+
+Note If you specify an input noise process (see Z and N), simByEuler ignores the value of
+MonteCarloMethod.
+
+Data Types: string | char
+
+QuasiSequence — Low discrepancy sequence to drive the stochastic processes
+"sobol" (default) | string with value "sobol" | character vector with value 'sobol'
+
+Low discrepancy sequence to drive the stochastic processes, specified as the comma-separated pair
+consisting of 'QuasiSequence' and a string or character vector with the following value:
+
+•
+"sobol" — Quasi-random low-discrepancy sequences that use a base of two to form successively
+finer uniform partitions of the unit interval and then reorder the coordinates in each dimension.
+
+Note If MonteCarloMethod option is not specified or specified as"standard", QuasiSequence is
+ignored.
+
+Data Types: string | char
+
+BrownianMotionMethod — Brownian motion construction method
+"standard" (default) | string with value "brownian-bridge" or "principal-components" |
+character vector with value 'brownian-bridge' or 'principal-components'
+
+Brownian motion construction method, specified as the comma-separated pair consisting of
+'BrownianMotionMethod' and a string or character vector with one of the following values:
+
+•
+"standard" — The Brownian motion path is found by taking the cumulative sum of the Gaussian
+variates.
+
+•
+"brownian-bridge" — The last step of the Brownian motion path is calculated first, followed by
+any order between steps until all steps have been determined.
+
+•
+"principal-components" — The Brownian motion path is calculated by minimizing the
+approximation error.
+
+15
+Functions
+
+15-314

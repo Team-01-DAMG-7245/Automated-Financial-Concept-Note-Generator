@@ -1,0 +1,11 @@
+Page 816
+================================================================================
+
+Although the PortfolioMAD object has functions to simulate multivariate normal scenarios from
+either data or moments (simulateNormalScenariosByData and
+simulateNormalScenariosByMoments), the usual approach is to specify scenarios directly from
+your own simulation functions. These scenarios are entered directly as a matrix with a sample for all
+assets across each row of the matrix and with samples for an asset down each column of the matrix.
+The architecture of the MAD portfolio optimization tools references the scenarios through a function
+handle so scenarios that have been set cannot be accessed directly as a property of the
+PortfolioMAD object.

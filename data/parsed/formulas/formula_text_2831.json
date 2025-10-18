@@ -1,0 +1,12 @@
+{
+  "page": 1456,
+  "original_text": "mu    = [0.3; 0.4];\nsigma = [0.2 -0.1; 0.1 -0.2];\nrho   = [1 0.5; 0.5 1];\nobj   = bm(mu,sigma,'Correlation',rho);",
+  "ocr_text": "mu =[0.3;0.4];\nsigma=[0.2-0.1;0.1-0.2];\nrho=[10.5;0.51];\n\nobj =bm(mu,sigma,Correlation,rho);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 301.32,
+    "y1": 665.09
+  },
+  "confidence": "high"
+}

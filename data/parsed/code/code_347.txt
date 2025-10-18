@@ -1,0 +1,8 @@
+Page 338
+================================================================================
+
+The Sharpe ratio (Sharpe 1966 on page 4-177) is a measure of return-to-risk that plays an important
+role in portfolio analysis. Specifically, a portfolio that maximizes the Sharpe ratio is also the tangency
+portfolio on the efficient frontier from the mutual fund theorem. The maximum Sharpe ratio portfolio
+is located on the efficient frontier with the function estimateMaxSharpeRatio and the dataset
+object is used to list the assets in this portfolio.

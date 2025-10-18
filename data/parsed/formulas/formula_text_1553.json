@@ -1,0 +1,12 @@
+{
+  "page": 778,
+  "original_text": "% Plot pie charts\nfigure\nt = tiledlayout(1,2);\ntitle(t,'Optimal Bonds Selection','Years to Maturity')",
+  "ocr_text": "Plotpiecharts\n\nfigure\n\nt=tiledlayout(1,2);\ntitle(t,OptimalBondsSelection,YearstoMaturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 364.03,
+    "x1": 382.59,
+    "y1": 406.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,18 @@
+CFlowDates = 3×5
+
+730274      730347      730713         NaN         NaN
+      730274      730286      730469      730652      730835
+      730274      730286      730469      730652         NaN
+
+Plot all cash flows on the same axes, and label the first two.
+
+cfplot(CFlowDates, CFlowAmounts, 'ShowAmnt', [1 2])
+
+Group the second and third cash flows.
+
+figure;
+cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1);
+
+cfplot
+
+15-697

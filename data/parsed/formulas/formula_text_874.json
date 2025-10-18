@@ -1,0 +1,12 @@
+{
+  "page": 483,
+  "original_text": "% Remove the index from the dataset.\npricesTT= removevars(pricesTT,'DJI');\nnum_assets = width(pricesTT);",
+  "ocr_text": "SRemovetheindexfromthedataset.\npricesTT=removevars(pricesTT,DJI);\nnum_assets=width(pricesTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 299.56,
+    "x1": 290.49,
+    "y1": 331.63
+  },
+  "confidence": "high"
+}

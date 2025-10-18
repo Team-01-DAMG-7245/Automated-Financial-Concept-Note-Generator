@@ -1,0 +1,24 @@
+Portfolio Analysis
+
+•
+“Analyzing Portfolios” on page 3-2
+
+•
+“Portfolio Optimization Functions” on page 3-3
+
+•
+“Portfolio Construction Examples” on page 3-5
+
+•
+“Portfolio Selection and Risk Aversion” on page 3-7
+
+•
+“portopt Migration to Portfolio Object” on page 3-11
+
+•
+“Constraint Specification Using a Portfolio Object” on page 3-19
+
+•
+“Active Returns and Tracking Error Efficient Frontier” on page 3-27
+
+3

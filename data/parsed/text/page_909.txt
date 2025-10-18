@@ -1,0 +1,61 @@
+Using Risk-Adjusted Return
+
+This example shows how to use the risk-adjusted return to shift the risk of a portfolio to match the
+risk of a market portfolio or fund.
+
+According to the Capital Asset Pricing Model (CAPM), the market portfolio and a riskless asset are
+points on a Security Market Line (SML). The return of the resultant shifted portfolio, levered or
+unlevered, to match the risk of the market portfolio, is the risk-adjusted return. The SML provides
+another measure of risk-adjusted return, since the difference in return between the fund and the
+SML, return at the same level of risk.
+
+Given example data with a fund, a market, and a cash series, you can calculate the risk-adjusted
+return and compare it with the fund and market's mean returns.
+
+load FundMarketCash 
+Returns = tick2ret(TestData);
+Fund = Returns(:,1);
+Market = Returns(:,2);
+Cash = Returns(:,3);
+MeanFund = mean(Fund)
+
+MeanFund = 
+0.0038
+
+MeanMarket = mean(Market)
+
+MeanMarket = 
+0.0030
+
+[MM, aMM] = portalpha(Fund, Market, Cash, 'MM')
+
+MM = 
+0.0022
+
+aMM = 
+0.0052
+
+[GH1, aGH1] = portalpha(Fund, Market, Cash, 'gh1')
+
+GH1 = 
+0.0013
+
+aGH1 = 
+0.0025
+
+[GH2, aGH2] = portalpha(Fund, Market, Cash, 'gh2')
+
+GH2 = 
+0.0022
+
+aGH2 = 
+0.0052
+
+[SML, aSML] = portalpha(Fund, Market, Cash, 'sml')
+
+SML = 
+0.0013
+
+Using Risk-Adjusted Return
+
+7-9

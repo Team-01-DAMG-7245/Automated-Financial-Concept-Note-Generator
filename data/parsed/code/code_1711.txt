@@ -1,0 +1,5 @@
+Page 1489
+================================================================================
+
+•
+Speed — Access function for the input argument Speed, callable as a function of time and state

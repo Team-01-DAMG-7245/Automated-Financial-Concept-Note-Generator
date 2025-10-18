@@ -1,0 +1,34 @@
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although floatmargin supports serial date numbers, datetime values are recommended instead.
+The datetime data type provides flexible date and time formats, storage out to nanosecond
+precision, and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Fabozzi, Frank J., Mann, Steven V. Floating-Rate Securities. John Wiley and Sons, New York, 2000.
+
+[2] Fabozzi, Frank J., Mann, Steven V. Introduction to Fixed Income Analytics: Relative Value Analysis,
+Risk Measures and Valuation. John Wiley and Sons, New York, 2010.
+
+See Also
+floatdiscmargin | floatbyzero | bndspread | datetime
+
+Topics
+“Fixed-Income Terminology” on page 2-15
+
+floatmargin
+
+15-1055

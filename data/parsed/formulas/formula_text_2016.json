@@ -1,0 +1,12 @@
+{
+  "page": 1043,
+  "original_text": "dataNewCustomersCopy = dataNewCustomers;\ndataNewCustomersCopy.HomeOwner = dResStatusNewCustomers(:,1);\ndataNewCustomersCopy.Tenant = dResStatusNewCustomers(:,2);\ndataNewCustomersCopy.Employed = dEmpStatusNewCustomers(:,1);\ndataNewCustomersCopy.HasOtherCC = dOtherCCNewCustomers(:,2);\ndataNewCustomersCopy = removevars(dataNewCustomersCopy, 'ResStatus');\ndataNewCustomersCopy = removevars(dataNewCustomersCopy, 'EmpStatus');\ndataNewCustomersCopy = removevars(dataNewCustomersCopy, 'OtherCC');",
+  "ocr_text": "dataNewCustomersCopy=dataNewCustomers;\ndataNewCustomersCopy.HomeOwner=dResStatusNewCustomers(:,1);\ndataNewCustomersCopy.Tenant=dResStatusNewCustomers(:,2);\ndataNewCustomersCopy.Employed=dEmpStatusNewCustomers(:,1);\ndataNewCustomersCopy.HasOtherCC=dOtherCCNewCustomers(:,2);\ndataNewCustomersCopy=removevars(dataNewCustomersCopy,ResStatus);\ndataNewCustomersCopy=removevars(dataNewCustomersCopy,EmpStatus);\ndataNewCustomersCopy=removevars(dataNewCustomersCopy,_OtherCC);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 581.55,
+    "x1": 463.87,
+    "y1": 667.62
+  },
+  "confidence": "high"
+}

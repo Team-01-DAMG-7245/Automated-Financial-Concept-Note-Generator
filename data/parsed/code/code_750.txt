@@ -1,0 +1,8 @@
+Page 688
+================================================================================
+
+G = [ true true true false false ];
+p = PortfolioCVaR('GroupMatrix', G, 'UpperGroup', 0.3);
+disp(p.NumAssets)
+disp(p.GroupMatrix)
+disp(p.UpperGroup)

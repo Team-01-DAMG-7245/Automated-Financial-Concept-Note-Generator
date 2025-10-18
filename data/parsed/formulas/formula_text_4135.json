@@ -1,0 +1,12 @@
+{
+  "page": 2324,
+  "original_text": "pstd = estimatePortStd(obj,pwgt) estimate standard deviation of portfolio returns for\nPortfolioCVaR or PortfolioMAD objects. For details on the workflows, see “PortfolioCVaR Object\nWorkflow” on page 5-16 and “PortfolioMAD Object Workflow” on page 6-16.",
+  "ocr_text": "pstd=estimatePortStd(obj,pwgt)estimatestandarddeviationofportfolioreturnsfor\nPortfolioCVaRorPortfolioMADobjects.Fordetailsontheworkflows,seePortfolioCVaRObject\nWorkflowonpage5-16andPortfolioMADObjectWorkflowonpage6-16.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 247.72,
+    "x1": 551.54,
+    "y1": 283.35
+  },
+  "confidence": "high"
+}

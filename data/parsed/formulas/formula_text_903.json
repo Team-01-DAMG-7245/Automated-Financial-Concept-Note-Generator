@@ -1,0 +1,12 @@
+{
+  "page": 490,
+  "original_text": "% Benchmark weights\nbenchmark_positions = bt.Positions.(benchmark_name){period_dates(1:end-1),2:end}';\nBenchmarkWeight = benchmark_positions ./ sum(benchmark_positions);",
+  "ocr_text": "SBenchmarkweights\nbenchmark_positions=bt.Positions.(benchmark_name){period_dates(1l:end-1),2:end};\nBenchmarkWeight=benchmark_positions./sum(benchmark_positions);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 287.43,
+    "x1": 534.28,
+    "y1": 319.49
+  },
+  "confidence": "high"
+}

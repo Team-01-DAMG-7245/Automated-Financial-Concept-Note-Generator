@@ -1,0 +1,61 @@
+Validate the MAD Portfolio Problem
+
+In this section...
+
+“Validating a MAD Portfolio Set” on page 6-80
+
+“Validating MAD Portfolios” on page 6-81
+
+Sometimes, you may want to validate either your inputs to, or outputs from, a portfolio optimization
+problem. Although most error checking that occurs during the problem setup phase catches most
+difficulties with a portfolio optimization problem, the processes to validate MAD portfolio sets and
+portfolios are time consuming and are best done offline. So, the portfolio optimization tools have
+specialized functions to validate MAD portfolio sets and portfolios. For information on the workflow
+when using PortfolioMAD objects, see “PortfolioMAD Object Workflow” on page 6-16.
+
+Validating a MAD Portfolio Set
+
+Since it is necessary and sufficient that your MAD portfolio set must be a nonempty, closed, and
+bounded set to have a valid portfolio optimization problem, the estimateBounds function lets you
+examine your portfolio set to determine if it is nonempty and, if nonempty, whether it is bounded.
+Suppose that you have the following MAD portfolio set which is an empty set because the initial
+portfolio at 0 is too far from a portfolio that satisfies the budget and turnover constraint:
+
+p = PortfolioMAD('NumAssets', 3, 'Budget', 1);
+p = setTurnover(p, 0.3, 0);
+
+If a MAD portfolio set is empty, estimateBounds returns NaN bounds and sets the isbounded flag
+to []:
+
+[lb, ub, isbounded] = estimateBounds(p)
+
+lb =
+
+NaN
+   NaN
+   NaN
+
+ub =
+
+NaN
+   NaN
+   NaN
+
+isbounded =
+
+[]
+
+Suppose that you create an unbounded MAD portfolio set as follows:
+
+p = PortfolioMAD('AInequality', [1 -1; 1 1 ], 'bInequality', 0);
+[lb, ub, isbounded] = estimateBounds(p)
+
+lb =
+
+-Inf
+  -Inf
+
+6
+MAD Portfolio Optimization Tools
+
+6-80

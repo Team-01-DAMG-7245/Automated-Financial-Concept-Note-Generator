@@ -1,0 +1,9 @@
+Page 41
+================================================================================
+
+One example of such a function is the irr function, which computes the internal rate of return of a
+cash flow stream. If you input a vector of cash flows from a single cash flow stream, then irr returns
+a scalar rate of return. If you input a matrix of cash flows from multiple cash flow streams, where
+each matrix column represents a different stream, then irr returns a vector of internal rates of
+return, where the columns correspond to the columns of the input matrix. Many other Financial
+Toolbox functions work similarly.

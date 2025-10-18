@@ -1,0 +1,12 @@
+{
+  "page": 1050,
+  "original_text": "sc = creditscorecard(dataMissing,'IDVar','CustID','BinMissingData',true);\nsc = autobinning(sc);",
+  "ocr_text": "sc=creditscorecard(dataMissing,IDVar,CustID,BinMissingData,true);\nsc_=autobinning(sc);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 560.25,
+    "x1": 485.55,
+    "y1": 581.52
+  },
+  "confidence": "high"
+}

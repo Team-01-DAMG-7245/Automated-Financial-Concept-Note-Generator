@@ -1,0 +1,5 @@
+Page 2228
+================================================================================
+
+The objective function is different for different initial portfolios, because the objective function used
+to compute the risk parity portfolios is nonconvex.

@@ -1,0 +1,5 @@
+Page 259
+================================================================================
+
+You can also set properties for portfolio tracking error using the setTrackingError function to
+specify both the upper bound for tracking error and a designated tracking portfolio. Suppose that you

@@ -1,0 +1,63 @@
+t = datetime(d,'InputFormat','dd-MMM-yyyy HH:mm:ss')
+
+t =
+
+23-Aug-2010 16:35:42
+
+Although the date string, d, and the datetime scalar, t, look similar, they are not equal. View the
+size and data type of each variable.
+
+whos d t
+
+Name      Size            Bytes  Class       Attributes
+
+d         1x20               40  char                  
+  t         1x1               121  datetime
+
+Convert a datetime array to a character vector that uses char or cellstr. For example, convert
+the current date and time to a timestamp to append to a file name.
+
+t = datetime('now','Format','yyyy-MM-dd''T''HHmmss')
+
+t =
+
+datetime
+
+2016-12-11T125628
+
+S = char(t);
+filename = ['myTest_',S]
+
+filename =
+
+'myTest_2016-12-11T125628'
+
+Convert Serial Date Numbers to Datetime Arrays
+
+Serial time can represent fractions of days beginning at midnight. For example, 6 p.m. equals 0.75
+serial days, so the character vector '31-Oct-2003, 6:00 PM' in MATLAB is date number
+731885.75.
+
+Convert one or more serial date numbers to a datetime array using the datetime function. Specify
+the type of date number that is being converted:
+
+t = datetime(731885.75,'ConvertFrom','datenum')
+
+t =
+
+datetime
+
+31-Oct-2003 18:00:00
+
+Convert Datetime Arrays to Numeric Values
+
+Some MATLAB functions accept numeric data types but not datetime values as inputs. To apply these
+functions to your date and time data, first, convert datetime values to meaningful numeric values, and
+then call the function. For example, the log function accepts double inputs but not datetime
+inputs. Suppose that you have a datetime array of dates spanning the course of a research study or
+experiment.
+
+2
+Performing Common Financial Tasks
+
+2-4

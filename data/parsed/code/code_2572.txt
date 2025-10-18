@@ -1,0 +1,5 @@
+Page 2498
+================================================================================
+
+mvnrmle(Data, Design) with no output arguments plots the log-likelihood function for each
+iteration of the algorithm.

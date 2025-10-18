@@ -1,0 +1,12 @@
+{
+  "page": 1498,
+  "original_text": "Bates = bates( ___ ,Name,Value) sets “Properties” on page 15-195 using name-value pair\narguments in addition to the input arguments in the preceding syntax. Enclose each property name in\nquotes.",
+  "ocr_text": "Bates=bates( ,Name,Value)setsPropertiesonpage15-195usingname-valuepair\nargumentsinadditiontotheinputargumentsintheprecedingsyntax.Encloseeachpropertynamein\nquotes.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 257.83,
+    "x1": 556.98,
+    "y1": 293.46
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 490,
+  "original_text": "% Strategy weights\nportfolio_positions = bt.Positions.(strategy_name){period_dates(1:end-1),2:end}';\nPortfolioWeight = portfolio_positions ./ sum(portfolio_positions);",
+  "ocr_text": "Strategyweights\nportfolio_positions=bt.Positions.(strategy_name){period_dates(1:end-1),2:end};\nPortfolioWeight=portfolio_positions./sum(portfolio_positions);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.63,
+    "x1": 528.86,
+    "y1": 362.69
+  },
+  "confidence": "high"
+}

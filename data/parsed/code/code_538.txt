@@ -1,0 +1,10 @@
+Page 499
+================================================================================
+
+This example shows three techniques of asset diversification in a portfolio using the
+estimateCustomObjectivePortfolio function with a Portfolio object. The purpose of asset
+diversification is to balance the exposure of the portfolio to any given asset to reduce volatility over a
+period of time. Given the sensitivity of the minimum variance portfolio to the estimation of the
+covariance matrix, some practitioners have added diversification techniques to the portfolio selection
+with the hope of minimizing risk measures other than the variance measures such as turnover,
+maximum drawdown, and so on.

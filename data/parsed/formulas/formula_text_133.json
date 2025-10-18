@@ -1,0 +1,12 @@
+{
+  "page": 105,
+  "original_text": "DTAvg = duration\n   0.040273 sec",
+  "ocr_text": "DTAvg=duration\n0.040273_sec",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 617.71,
+    "x1": 176.69,
+    "y1": 638.98
+  },
+  "confidence": "high"
+}

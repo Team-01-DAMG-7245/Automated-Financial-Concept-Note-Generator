@@ -1,0 +1,12 @@
+{
+  "page": 1857,
+  "original_text": "krdur = bndkrdur(ZeroData,.0525,'12/31/1998',...\n'11/15/2028','KeyRates',[2 5 10 30])",
+  "ocr_text": "krdur=bndkrdur(ZeroData,.0525,12/31/1998,...\n11/15/2028,KeyRates,[251030])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 496.32,
+    "x1": 350.09,
+    "y1": 517.58
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1086,
+  "original_text": "for i = 1:NumAssets\n% Set up separate asset data and design matrices\n  TestData = zeros(NumSamples,1);\n  TestDesign = zeros(NumSamples,2);",
+  "ocr_text": "fori=1:NumAssets\n\nSetupseparateassetdataanddesignmatrices\nTestData=zeros(NumSamples,1);\nTestDesign=zeros(NumSamples,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 350.06,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

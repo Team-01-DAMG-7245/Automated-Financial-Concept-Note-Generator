@@ -1,0 +1,34 @@
+Input Arguments
+
+values — 3-D array of simulated mark-to-market values of portfolio of contracts
+array
+
+3-D array of simulated mark-to-market values of a portfolio of contracts simulated over a series of
+simulation dates and across many scenarios, specified as a NumDates-by-NumContracts-by-
+NumScenarios “cube” of contract values. Each row represents a different simulation date, each
+column a different contract, and each “page” is a different scenario from a Monte-Carlo simulation.
+
+Data Types: double
+
+counterparties — Counterparties corresponding to each contract
+vector | cell array
+
+Counterparties corresponding to each contract in values, specified as a NumContracts-element
+vector of counterparties. Counterparties can be a vector of numeric IDs or a cell array of
+counterparty names. By default, each counterparty is assumed to have one netting set that covers all
+of its contracts. If counterparties are covered by multiple netting sets, then use the NettingID
+parameter. A value of NaN (or '' in a cell array) indicates that a contract is not included in any
+netting set unless otherwise specified by NettingID. counterparties is case insensitive and
+leading or trailing white spaces are removed.
+
+Data Types: double | cell
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+creditexposures
+
+15-655

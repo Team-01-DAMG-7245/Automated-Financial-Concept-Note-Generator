@@ -1,0 +1,12 @@
+{
+  "page": 1995,
+  "original_text": "QuasiCouponDates = cfdatesq(Settle,Maturity)\nQuasiCouponDates = cfdatesq( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate,PeriodsBeforeSettle,PeriodsAfterMaturity)",
+  "ocr_text": "QuasiCouponDates=cfdatesq(Settle,Maturity)\nQuasiCouponDates=cfdatesq(___,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate,PeriodsBeforeSettle,PeriodsAfterMaturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 195.98,
+    "x1": 523.47,
+    "y1": 231.61
+  },
+  "confidence": "high"
+}

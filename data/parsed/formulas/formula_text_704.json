@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "% Build cell array of signal names that correspond to the crossover signals.\nsymbols = pricesTT.Properties.VariableNames;\nsignalNames = cellfun(@(s) sprintf('%s%s',s,signalNameEnding), symbols, 'UniformOutput', false);",
+  "ocr_text": "SBuildcellarrayofsignalnamesthatcorrespondtothecrossoversignals.\nsymbols=pricesTT.Properties.VariableNames;\nsignalNames=cellfun(Q(s)sprintf(*s*s,s,signalNameEnding),symbols,UniformOutput,false);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 351.83,
+    "x1": 610.16,
+    "y1": 383.89
+  },
+  "confidence": "high"
+}

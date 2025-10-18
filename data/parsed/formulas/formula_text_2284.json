@@ -1,0 +1,12 @@
+{
+  "page": 1174,
+  "original_text": "TT.Variables =\nboxcox(TT.Variables)",
+  "ocr_text": "TT.Variables=\nboxcox(TT.Variables)",
+  "bbox": {
+    "x0": 387.09,
+    "y0": 151.86,
+    "x1": 507.49,
+    "y1": 175.49
+  },
+  "confidence": "high"
+}

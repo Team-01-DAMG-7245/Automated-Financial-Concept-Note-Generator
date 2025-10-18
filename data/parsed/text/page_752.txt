@@ -1,0 +1,38 @@
+% Run the simulation
+Paths = StockGBM.simByEuler(NPERIODS, 'NTRIALS', NTRIALS, ...
+    'DeltaTime', dt, 'Antithetic', true);
+
+Plot the simulation of the stock. For efficiency, plot only some scenarios.
+
+plot(squeeze(Paths(:,:,1:500)));
+title('Simulation of a Stock');
+xlabel('Time');
+ylabel('Price');
+
+Calculate the prices of different put options using a Black-Scholes model with the blsprice function.
+
+% Put option with strike at 50% of current underlying price
+Strike50 = 0.50*Price_0;
+[~, Put50] = blsprice(Price_0, Strike50, RiskFreeRate, T, Vol);
+
+% Put option with strike at 75% of current underlying price
+Strike75 = 0.75*Price_0;
+[~, Put75] = blsprice(Price_0, Strike75, RiskFreeRate, T, Vol);
+
+% Put option with strike at 90% of current underlying price
+Strike90 = 0.90*Price_0;
+[~, Put90] = blsprice(Price_0, Strike90, RiskFreeRate, T, Vol);
+
+% Put option with strike at 95% of current underlying price
+Strike95 = 0.95*Price_0; % Same as strike
+[~, Put95] = blsprice(Price_0, Strike95, RiskFreeRate, T, Vol);
+
+The goal is to find the efficient portfolio frontier for the returns at the horizon date. Hence, obtain the
+scenarios from the trials of the Monte Carlo simulation at the end of the simulation period.
+
+Price_T = squeeze(Paths(end, 1, :));
+
+5
+CVaR Portfolio Optimization Tools
+
+5-126

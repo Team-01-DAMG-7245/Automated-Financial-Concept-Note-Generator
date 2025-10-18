@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "opt = optimoptions('quadprog','Display','off');\n[solMrkwtz,~,~] = solve(pMrkwtz,x0,'Options',opt);\nnew_weights = solMrkwtz.x;",
+  "ocr_text": "opt=optimoptions(quadprog,Display,off);\n[solMrkwtz,-,]_=solve(pMrkwtz,x0,Options,opt);\nnew_weights=solMrkwtz.x;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.23,
+    "x1": 360.92,
+    "y1": 600.29
+  },
+  "confidence": "high"
+}

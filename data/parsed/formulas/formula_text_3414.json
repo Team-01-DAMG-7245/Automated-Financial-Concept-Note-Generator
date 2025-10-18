@@ -1,0 +1,12 @@
+{
+  "page": 1890,
+  "original_text": "Yield = bndyield( ___ ,Name,Value) adds optional name-value arguments.",
+  "ocr_text": "Yield=bndyield(___,Name,Value)addsoptionalname-valuearguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.38,
+    "x1": 461.15,
+    "y1": 313.01
+  },
+  "confidence": "high"
+}

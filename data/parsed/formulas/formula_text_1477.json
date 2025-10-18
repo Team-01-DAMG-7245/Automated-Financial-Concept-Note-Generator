@@ -1,0 +1,12 @@
+{
+  "page": 744,
+  "original_text": "rng('default')\np = PortfolioCVaR;\np = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');\np = setInitPort(p, pwgt0);\np = simulateNormalScenariosByMoments(p, m, C, 20000);\np = setDefaultConstraints(p);\np = setProbabilityLevel(p, 0.9);",
+  "ocr_text": "rng(default)\n\np=PortfolioCVaR;\np=setAssetList(p,_Bonds,Large-CapEquities,Small-CapEquities,EmergingEquities);\np=setInitPort(p,_pwgt0);\n\np=simulateNormalScenariosByMoments(p,m,C,_20000);\n\np=setDefaultConstraints(p);\n\np=setProbabilityLevel(p,0.9);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 312.24,
+    "x1": 583.08,
+    "y1": 387.51
+  },
+  "confidence": "high"
+}

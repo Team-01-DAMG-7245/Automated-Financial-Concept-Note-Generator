@@ -1,0 +1,12 @@
+{
+  "page": 1118,
+  "original_text": "SwapFixedRate = Period * PresentValue / sum(DiscountFactors)",
+  "ocr_text": "SwapFixedRate=Period*PresentValue/sum(DiscountFactors)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 450.23,
+    "x1": 415.08,
+    "y1": 460.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,145 @@
+Portfolio
+Problem
+
+Portfolio
+Function
+
+Type of
+Optimization
+Problem
+
+Main Solver
+Helper Solver
+
+Portfolio with
+custom quadratic
+objective with
+tracking error
+constraints
+
+estimateCustom
+ObjectivePortf
+olio
+
+Quadratic
+objective with
+linear and
+nonlinear
+constraints
+
+'fmincon' using
+setSolver
+
+Not applicable
+
+Portfolio with
+custom nonlinear
+objective with
+tracking error
+constraints
+
+estimateCustom
+ObjectivePortf
+olio
+
+Nonlinear
+objective with
+linear and
+nonlinear
+constraints
+
+'fmincon' using
+setSolver
+
+Not applicable
+
+Portfolio with
+active
+'Conditional'
+BoundType,
+MinNumAssets,
+MaxNumAssets, or
+conditional budget
+constraints
+
+estimateCustom
+ObjectivePortf
+olio
+
+The problem is
+formulated by
+introducing
+NumAssets binary
+variables to
+indicate whether
+the corresponding
+asset is invested or
+not. Therefore, it
+requires a mixed
+integer nonlinear
+programming
+solver. Three types
+of MINLP solvers
+are offered, see
+setSolverMINLP.
+
+Mixed integer
+nonlinear
+programming
+solver (MINLP)
+using
+setSolverMINLP
+
+'intlinprog' is
+used when the
+problem reduces to
+a mixed-integer
+linear problem.
+This solver can be
+configured using
+setSolverMINLP
+and its name-value
+argument
+IntMainSolverO
+ptions.
+
+See Also
+Portfolio | estimatePortReturn | estimatePortMoments | plotFrontier |
+setConditionalBudget
+
+Related Examples
+
+•
+“Plotting the Efficient Frontier for a Portfolio Object” on page 4-125
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-120

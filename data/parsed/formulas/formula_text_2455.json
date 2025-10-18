@@ -1,0 +1,12 @@
+{
+  "page": 1270,
+  "original_text": "for i = 1:nIndices\n    U(:,i) = cdf(tails{i}, returns(:,i));    % Transform each margin to uniform\nend",
+  "ocr_text": "fori=1:nIndices\nU(:,i)=cdf(tails{i},returns(:,i)); STransformeachmargintouniform\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 294.77,
+    "x1": 518.04,
+    "y1": 326.84
+  },
+  "confidence": "high"
+}

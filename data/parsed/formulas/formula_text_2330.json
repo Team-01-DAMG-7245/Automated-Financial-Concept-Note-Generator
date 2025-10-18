@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "dX1t = B(t)X1tdt +\nX2tX1tdW1t + Y(t)X1tdNt",
+  "ocr_text": "dXy,=B(t)Xyydt+./Xo-X1,dW4+Y(t)X14dNp",
+  "bbox": {
+    "x0": 298.05,
+    "y0": 368.93,
+    "x1": 502.37,
+    "y1": 382.67
+  },
+  "confidence": "high"
+}

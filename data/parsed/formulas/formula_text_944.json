@@ -1,0 +1,12 @@
+{
+  "page": 508,
+  "original_text": "figure\nt = tiledlayout(1,3);\nnexttile\nbar(wMinVar')",
+  "ocr_text": "figure\nt=tiledlayout(1,3);\nnexttile\nbar(wMinVar)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 203.78,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

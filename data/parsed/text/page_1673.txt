@@ -1,0 +1,60 @@
+•
+Even NTrials (2,4,6,...) are the matching antithetic paths of each pair derived by negating
+the Gaussian draws of the corresponding primary (odd) trial.
+
+Note If you specify an input noise process (see Z), simBySolution ignores the value of
+Antithetic.
+
+Data Types: logical
+
+MonteCarloMethod — Monte Carlo method to simulate stochastic processes
+"standard" (default) | string with values "standard", "quasi", or "randomized-quasi" |
+character vector with values 'standard', 'quasi', or 'randomized-quasi'
+
+Monte Carlo method to simulate stochastic processes, specified as the comma-separated pair
+consisting of 'MonteCarloMethod' and a string or character vector with one of the following
+values:
+
+•
+"standard" — Monte Carlo using pseudo random numbers
+
+•
+"quasi" — Quasi-Monte Carlo using low-discrepancy sequences
+
+•
+"randomized-quasi" — Randomized quasi-Monte Carlo
+
+Note If you specify an input noise process (see Z and N), simBySolution ignores the value of
+MonteCarloMethod.
+
+Data Types: string | char
+
+QuasiSequence — Low discrepancy sequence to drive stochastic processes
+"sobol" (default) | string with value "sobol" | character vector with value 'sobol'
+
+Low discrepancy sequence to drive the stochastic processes, specified as the comma-separated pair
+consisting of 'QuasiSequence' and a string or character vector with the following value:
+
+•
+"sobol" — Quasi-random low-discrepancy sequences that use a base of two to form successively
+finer uniform partitions of the unit interval and then reorder the coordinates in each dimension
+
+Note
+
+•
+If MonteCarloMethod option is not specified or specified as"standard", QuasiSequence is
+ignored.
+
+•
+If you specify an input noise process (see Z), simBySolution ignores the value of
+QuasiSequence.
+
+Data Types: string | char
+
+BrownianMotionMethod — Brownian motion construction method
+"standard" (default) | string with value "brownian-bridge" or "principal-components" |
+character vector with value 'brownian-bridge' or 'principal-components'
+
+simBySolution
+
+15-367

@@ -1,0 +1,8 @@
+Page 1543
+================================================================================
+
+The user-defined computeTransactionCostsFcn function handle takes a single input
+argument, deltaPositions, which is a vector of changes in asset positions for all assets (in
+currency units) as a result of a rebalance. Positive elements in the deltaPositions vector
+indicate purchases while negative entries represent sales. The user-defined function handle
+returns one output argument for detailedCosts for per-asset transaction costs.

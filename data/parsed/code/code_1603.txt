@@ -1,0 +1,5 @@
+Page 1461
+================================================================================
+
+Note Unlike simulation methods, the interpolation function does not support user-specified noise
+processes.

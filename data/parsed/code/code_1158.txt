@@ -1,0 +1,9 @@
+Page 1203
+================================================================================
+
+where D is an NVars-by-NVars diagonal matrix-valued function. Each diagonal element of D is the
+corresponding element of the state vector raised to the corresponding element of an exponent Alpha,
+which is also an NVars-by-1 vector-valued function. V is an NVars-by-NBrowns matrix-valued function
+of instantaneous volatility rates. Each row of V corresponds to a particular state variable, and each
+column corresponds to a particular Brownian source of uncertainty. V associates the exposure of state
+variables with sources of risk.

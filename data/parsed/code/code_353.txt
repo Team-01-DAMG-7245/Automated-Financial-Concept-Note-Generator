@@ -1,0 +1,11 @@
+Page 350
+================================================================================
+
+1
+The specification of the initial portfolio from Blotter gives the number of assets in your
+universe so you do not need to specify the NumAssets property directly. Next, set up default
+constraints (long-only with a budget constraint). In addition, set up the group constraint that
+imposes an upper bound on equities in the portfolio (equities are identified in the group matrix
+with 1's) and the upper bound constraint on emerging equities. Although you could have set the
+upper bound on emerging equities using the setBounds function, notice how the addGroups
+function is used to set up this constraint.

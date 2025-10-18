@@ -1,0 +1,55 @@
+amortize
+
+Amortization schedule
+
+Syntax
+
+[Principal,Interest,Balance,Payment] = amortize(Rate,NumPeriods,PresentValue)
+[Principal,Interest,Balance,Payment] = amortize( ___ ,FutureValue,Due)
+
+Description
+
+[Principal,Interest,Balance,Payment] = amortize(Rate,NumPeriods,PresentValue)
+returns the principal and interest payments of a loan, the remaining balance of the original loan
+amount, and the periodic payment.
+
+[Principal,Interest,Balance,Payment] = amortize( ___ ,FutureValue,Due) specifies
+options using one or more optional arguments in addition to the input arguments in the previous
+syntax.
+
+Examples
+
+Compute an Amortization Schedule for a Conventional 30-Year, Fixed-Rate Mortgage With
+Fixed Monthly Payments
+
+Compute an amortization schedule for a conventional 30-year, fixed-rate mortgage with fixed monthly
+payments and assume a fixed rate of 12% APR and an initial loan amount of $100,000.
+
+Rate         = 0.12/12;   % 12 percent APR = 1 percent per month
+NumPeriods   = 30*12;     % 30 years = 360 months
+PresentValue = 100000;
+
+[Principal, Interest, Balance, Payment] = amortize(Rate, ...
+NumPeriods, PresentValue);
+
+The output argument Payment contains the fixed monthly payment.
+
+format bank
+
+Payment
+
+Payment = 
+       1028.61
+
+Summarize the amortization schedule graphically by plotting the current outstanding loan balance,
+the cumulative principal, and the interest payments over the life of the mortgage. In particular, note
+that total interest paid over the life of the mortgage exceeds $270,000, far in excess of the original
+loan amount.
+
+plot(Balance,'b'), hold('on')
+plot(cumsum(Principal),'--k')
+
+15
+Functions
+
+15-460

@@ -1,0 +1,12 @@
+{
+  "page": 2048,
+  "original_text": "•\nIf NUMSERIES = 1, DesignSUR = Design, which is a NUMSAMPLES-by-NUMPARAMS matrix.",
+  "ocr_text": "*IfNUMSERIES=1,DesignSUR=Design,whichisaNUMSAMPLES-by-NUMPARAMSmatrix.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 202.56,
+    "x1": 528.2,
+    "y1": 214.19
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 76,
+  "original_text": "ps(t) = ps(t −1) + PC ⋅ps(t −1) .",
+  "ocr_text": "Ps(t)=ps(t-1)+PC-p(t-1).",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 658.77,
+    "x1": 256.36,
+    "y1": 672.05
+  },
+  "confidence": "high"
+}

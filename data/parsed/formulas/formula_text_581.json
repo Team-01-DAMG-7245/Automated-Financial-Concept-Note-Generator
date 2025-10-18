@@ -1,0 +1,12 @@
+{
+  "page": 391,
+  "original_text": "The views represent the subjective views of the investment analyst regarding future market changes,\nexpressed as q = P * μ + ε, ε N 0, Ω , Ω = diag ω1, ω2, . . . ωv , where v is total number of views.\nFor more information, see the Appendix section Assumptions and Views on page 4-227. With v views\nand k assets, P is a v-by-k matrix, q is a v-by-1 vector, and Ω is a v-by-v diagonal matrix (representing\nthe independent uncertainty in the views). The views do not necessarily need to be independent\namong themselves and the structure of Ω can be chosen to account for investment analyst\nuncertainties in the views [4 on page 4-229]. The smaller the ωi in Ω, the smaller the variance in the\ndistribution of the ith view, and the stronger or more certain the investor's ith view. This example\nassumes three independent views.",
+  "ocr_text": "Theviewsrepresentthesubjectiveviewsoftheinvestmentanalystregardingfuturemarketchanges,\nexpressedasq=P*1+,_eN(0,Q),Q=diag(w1,w2,...wy),wherevistotalnumberofviews.\nFormoreinformation,seetheAppendixsectionAssumptionsandViewsonpage4-227.Withvviews\nandkassets,Pisav-by-kmatrix,qisav-by-1vector,andQisav-by-vdiagonalmatrix(representing\ntheindependentuncertaintyintheviews).Theviewsdonotnecessarilyneedtobeindependent\namongthemselvesandthestructureofQcanbechosentoaccountforinvestmentanalyst\nuncertaintiesintheviews[4onpage4-229].Thesmallerthew;inQ,thesmallerthevarianceinthe\ndistributionoftheithview,andthestrongerormorecertaintheinvestorsithview.Thisexample\nassumesthreeindependentviews.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 148.26,
+    "x1": 554.02,
+    "y1": 259.17
+  },
+  "confidence": "high"
+}

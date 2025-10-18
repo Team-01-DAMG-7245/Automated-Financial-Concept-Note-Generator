@@ -1,0 +1,54 @@
+annuterm
+
+Number of periods to obtain value
+
+Syntax
+
+NumPeriods = annuterm(Rate,Payment,PresentValue)
+NumPeriods = annuterm( ___ ,FutureValue,Due)
+
+Description
+
+NumPeriods = annuterm(Rate,Payment,PresentValue) calculates the number of periods
+needed to obtain a future value. To calculate the number of periods needed to pay off a loan, enter
+the payment or the present value as a negative value.
+
+NumPeriods = annuterm( ___ ,FutureValue,Due) specifies options using one or more optional
+arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Calculate the Number of Periods Needed to Obtain a Future Value
+
+This example shows a savings account with a starting balance of $1500. $200 is added at the end of
+each month and the account pays 9% interest, compounded monthly. How many months will it take to
+save $5,000?
+
+NumPeriods = annuterm(0.09/12, 200, 1500, 5000, 0)
+
+NumPeriods = 
+15.6752
+
+Input Arguments
+
+Rate — Interest-rate per period
+scalar numeric decimal
+
+Interest-rate per period, specified as a scalar numeric decimal.
+
+Data Types: double
+
+Payment — Payment per period
+scalar numeric
+
+Payment per period, specified as a scalar numeric.
+
+Data Types: double
+
+PresentValue — Present value of the loan
+scalar numeric
+
+15
+Functions
+
+15-466

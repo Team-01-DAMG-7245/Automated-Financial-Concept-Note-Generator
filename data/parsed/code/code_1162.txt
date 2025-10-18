@@ -1,0 +1,6 @@
+Page 1208
+================================================================================
+
+•
+A diffusion-rate function G. This function returns an NVars-by-NBrowns diffusion-rate matrix when
+run with the inputs t and Xt.

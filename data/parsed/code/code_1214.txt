@@ -1,0 +1,6 @@
+Page 1239
+================================================================================
+
+The related example illustrates a simple, common end-of-period processing function to ensure
+nonnegative interest rates. This example illustrates a processing function that allows you to avoid
+simulation outputs altogether.

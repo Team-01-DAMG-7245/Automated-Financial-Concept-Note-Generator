@@ -1,0 +1,12 @@
+{
+  "page": 115,
+  "original_text": "•\nLeaves numBins = n, where n is free to vary",
+  "ocr_text": "*LeavesnumBins=n,wherenisfreetovary",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 457.52,
+    "x1": 310.03,
+    "y1": 469.15
+  },
+  "confidence": "high"
+}

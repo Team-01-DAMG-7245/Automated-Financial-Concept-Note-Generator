@@ -1,0 +1,62 @@
+This routine estimates the mean and covariance from given data. If data values are missing, the
+routine implements the ECM algorithm of Meng and Rubin [2] with enhancements by Sexton and
+Swensen [3].
+
+If a record is empty (every value in a sample is NaN), this routine ignores the record because it
+contributes no information. If such records exist in the data, the number of nonempty samples used in
+the estimation is ≤ NumSamples.
+
+The estimate for the covariance is a biased maximum likelihood estimate (MLE). To convert to an
+unbiased estimate, multiply the covariance by Count/(Count – 1), where Count is the number of
+nonempty samples used in the estimation.
+
+Requirements
+
+This routine requires consistent values for NUMSAMPLES and NUMSERIES with NUMSAMPLES >
+NUMSERIES. It must have enough nonmissing values to converge. Finally, it must have a positive-
+definite covariance matrix. Although the references provide some necessary and sufficient conditions,
+general conditions for existence and uniqueness of solutions in the missing-data case, do not exist.
+The main failure mode is an ill-conditioned covariance matrix estimate. Nonetheless, this routine
+works for most cases that have less than 15% missing data (a typical upper bound for financial data).
+
+Initialization Methods
+
+This routine has three initialization methods that cover most cases, each with its advantages and
+disadvantages. The ECM algorithm always converges to a minimum of the observed negative log-
+likelihood function. If you override the initialization methods, you must ensure that the initial
+estimate for the covariance matrix is positive-definite.
+
+The following is a guide to the supported initialization methods.
+
+•
+nanskip — The nanskip method works well with small problems (fewer than 10 series or with
+monotone missing data patterns). It skips over any records with NaNs and estimates initial values
+from complete-data records only. This initialization method tends to yield fastest convergence of
+the ECM algorithm. This routine switches to the twostage method if it determines that
+significant numbers of records contain NaN.
+
+•
+twostage — The twostage method is the best choice for large problems (more than 10 series). It
+estimates the mean for each series using all available data for each series. It then estimates the
+covariance matrix with missing values treated as equal to the mean rather than as NaNs. This
+initialization method is robust but tends to result in slower convergence of the ECM algorithm.
+
+•
+diagonal —
+
+The diagonal method is a worst-case approach that deals with problematic data, such as disjoint
+series and excessive missing data (more than 33% of data missing). Of the three initialization
+methods, this method causes the slowest convergence of the ECM algorithm. If problems occur
+with this method, use display mode to examine convergence and modify either MaxIterations
+or Tolerance, or try alternative initial estimates with Mean0 and Covar0. If all else fails, try
+
+Mean0 = zeros(NumSeries);
+Covar0 = eye(NumSeries,NumSeries);
+
+Given estimates for mean and covariance from this routine, you can estimate standard errors with
+the companion routine ecmnstd.
+
+15
+Functions
+
+15-898

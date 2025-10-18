@@ -1,0 +1,12 @@
+{
+  "page": 1312,
+  "original_text": "MonthlyReturns = tick2ret(MonthlyPrices.Variables)';\n  [NumAssets,NumPeriods] = size(MonthlyReturns);",
+  "ocr_text": "MonthlyReturns=tick2ret(MonthlyPrices.Variables);\n[NumAssets,NumPeriods]=size(MonthlyReturns);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 507.44,
+    "x1": 371.74,
+    "y1": 528.7
+  },
+  "confidence": "high"
+}

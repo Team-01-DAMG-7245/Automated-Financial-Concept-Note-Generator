@@ -1,0 +1,12 @@
+{
+  "page": 2079,
+  "original_text": "NumDaysNext = cpndaysn(Settle,Maturity) returns the number of days from the settlement\ndate to the next coupon date for a bond or set of bonds. For zero coupon bonds coupon dates are\ncomputed as if the bonds have a semiannual coupon structure. NumDaysNext returns a NUMBONDS-\nby-1 vector containing the number of days to the next coupon date.",
+  "ocr_text": "NumDaysNext=cpndaysn(Settle,Maturity)returnsthenumberofdaysfromthesettlement\ndatetothenextcoupondateforabondorsetofbonds.Forzerocouponbondscoupondatesare\ncomputedasifthebondshaveasemiannualcouponstructure.NumDaysNextreturnsaNUMBONDS-\nby-1vectorcontainingthenumberofdaystothenextcoupondate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 262.67,
+    "x1": 546.14,
+    "y1": 310.3
+  },
+  "confidence": "high"
+}

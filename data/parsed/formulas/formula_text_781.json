@@ -1,0 +1,12 @@
+{
+  "page": 451,
+  "original_text": "function new_weights = tiltedHH(~,assetPrices,struct)\n% Tilted HH approach",
+  "ocr_text": "functionnew_weights=tiltedHH(,assetPrices,struct)\nTiltedHHapproach",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 377.15,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

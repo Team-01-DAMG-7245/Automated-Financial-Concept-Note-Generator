@@ -1,0 +1,12 @@
+{
+  "page": 1635,
+  "original_text": "roughbergomiObj = \n   Class ROUGHBERGOMI: Rough Bergomi\n   ----------------------------------------\n     Dimensions: State = 2, Brownian = 2\n   ----------------------------------------",
+  "ocr_text": "roughbergomi0bj_=\nClassROUGHBERGOMI:RoughBergomi\nDimensions:State=2,Brownian=2",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 322.97,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

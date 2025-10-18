@@ -1,0 +1,6 @@
+Page 1458
+================================================================================
+
+•
+The conditional variance of each state variable is a quadratic function. This function attains its
+maximum midway between the interval endpoints, and is zero at each endpoint.

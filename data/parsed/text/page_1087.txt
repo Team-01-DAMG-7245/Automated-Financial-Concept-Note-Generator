@@ -1,0 +1,62 @@
+TestData(:) = Data(:,i) - Data(:,14);
+  TestDesign(:,1) = 1.0;
+  TestDesign(:,2) = Data(:,13) - Data(:,14);
+
+% Estimate CAPM for each asset separately
+  [Param, Covar] = ecmmvnrmle(TestData, TestDesign);
+
+% Estimate ideal standard errors for covariance parameters
+  [StdParam, StdCovar] = ecmmvnrstd(TestData, TestDesign, ... 
+      Covar, 'fisher');
+
+% Estimate sample standard errors for model parameters
+  StdParam = ecmmvnrstd(TestData, TestDesign, Covar, 'hessian');
+
+% Set up results for output
+  Alpha = Param(1);
+  Beta = Param(2);
+  Sigma = sqrt(Covar);
+
+StdAlpha = StdParam(1);
+  StdBeta = StdParam(2);
+  StdSigma = sqrt(StdCovar);
+
+% Display estimates
+  fprintf('  %4s %9.4f (%8.4f) %9.4f (%8.4f) %9.4f (%8.4f)\n', ...
+     Assets{i},Alpha(1),abs(Alpha(1)/StdAlpha(1)), ...
+     Beta(1),abs(Beta(1)/StdBeta(1)),Sigma(1),StdSigma(1));
+end
+
+AAPL    0.0012 (  1.3882)    1.2294 ( 17.1839)    0.0322 (  0.0062)
+  AMZN    0.0006 (  0.5326)    1.3661 ( 13.6579)    0.0449 (  0.0086)
+  CSCO   -0.0002 (  0.2878)    1.5653 ( 23.6085)    0.0298 (  0.0057)
+  DELL   -0.0000 (  0.0368)    1.2594 ( 22.2164)    0.0255 (  0.0049)
+  EBAY    0.0014 (  1.4326)    1.3441 ( 16.0732)    0.0376 (  0.0072)
+  GOOG    0.0046 (  3.2107)    0.3742 (  1.7328)    0.0252 (  0.0071)
+   HPQ    0.0001 (  0.1747)    1.3745 ( 24.2390)    0.0255 (  0.0049)
+   IBM   -0.0000 (  0.0312)    1.0807 ( 28.7576)    0.0169 (  0.0032)
+  INTC    0.0001 (  0.1608)    1.6002 ( 27.3684)    0.0263 (  0.0050)
+  MSFT   -0.0002 (  0.4871)    1.1765 ( 27.4554)    0.0193 (  0.0037)
+  ORCL    0.0000 (  0.0389)    1.5010 ( 21.1855)    0.0319 (  0.0061)
+  YHOO    0.0001 (  0.1282)    1.6543 ( 19.3838)    0.0384 (  0.0074)
+
+•
+The Alpha column (first column) contains alpha estimates for each stock that are near zero as
+expected. In addition, the t-statistics (which are enclosed in parentheses) generally reject the
+hypothesis that the alphas are nonzero at the 99.5% level of significance.
+
+•
+The Beta column (second column) contains beta estimates for each stock that also have t-
+statistics enclosed in parentheses. For all stocks but GOOG, the hypothesis that the betas are
+nonzero is accepted at the 99.5% level of significance. It seems, however, that GOOG does not
+have enough data to obtain a meaningful estimate for beta since its t-statistic would imply
+rejection of the hypothesis of a nonzero beta.
+
+•
+The Sigma column (third coumn) contains residual standard deviations, that is, estimates for
+nonsystematic risks. Instead of t-statistics, the associated standard errors for the residual
+standard deviations are enclosed in parentheses.
+
+Valuation with Missing Data
+
+9-29

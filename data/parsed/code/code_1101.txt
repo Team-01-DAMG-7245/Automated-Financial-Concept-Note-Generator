@@ -1,0 +1,7 @@
+Page 1125
+================================================================================
+
+Color(36-Time(i)+1:36,:) = Color(36-Time(i)+1:36,:) ...
+        + NumOpt(i) * blsdelta(NewR, ExPrice(i)*Pad, ...
+        Rate(i)*Pad, NewT/36, Sigma(i)*Pad);
+end

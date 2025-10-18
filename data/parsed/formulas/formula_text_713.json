@@ -1,0 +1,12 @@
+{
+  "page": 431,
+  "original_text": "t = backtester.Positions.(strategyName).Time;\npositions = backtester.Positions.(strategyName).Variables;\nh = area(t,positions);\ntitle(sprintf('%s Positions',strrep(strategyName,'_',' ')));\nxlabel('Date');\nylabel('Asset Positions');\nxtickformat('MM/dd');\nxlim([t(1) t(end)])\noldylim = ylim;\nylim([0 oldylim(2)]);\ncm = parula(numel(h));\nfor i = 1:numel(h)\n    set(h(i),'FaceColor',cm(i,:));\nend\nlegend(backtester.Positions.(strategyName).Properties.VariableNames)",
+  "ocr_text": "t=backtester.Positions.(strategyName).Time;\npositions=backtester.Positions.(strategyName).Variables;\nh=area(t,positions);\ntitle(sprintf(ssPositions,strrep(strategyName,,)));\nxlabel(Date);\nylabel(AssetPositions);\nxtickformat(MM/dd);\nxlim([t(1)t(end)])\noldylim=ylim;\nylim([oldylim(2)]);\ncm=parula(numel(h));\nfori=1:numel(h)\n\nset(h(i),FaceColor,cm(i,:));\nend\nLegend(backtester.Positions.(strategyName).Properties.VariableNames)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 166.83,
+    "x1": 458.42,
+    "y1": 328.49
+  },
+  "confidence": "high"
+}

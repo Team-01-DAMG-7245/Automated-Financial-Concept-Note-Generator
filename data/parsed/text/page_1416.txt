@@ -1,0 +1,59 @@
+simBySolution
+
+Simulate approximate solution of diagonal-drift GBM processes
+
+Syntax
+
+[Paths,Times,Z] = simBySolution(MDL,NPeriods)
+[Paths,Times,Z] = simBySolution( ___ ,Name,Value)
+
+Description
+
+[Paths,Times,Z] = simBySolution(MDL,NPeriods) simulates approximate solution of
+diagonal-drift for geometric Brownian motion (GBM) processes.
+
+[Paths,Times,Z] = simBySolution( ___ ,Name,Value) adds optional name-value pair
+arguments.
+
+You can perform quasi-Monte Carlo simulations using the name-value arguments for
+MonteCarloMethod, QuasiSequence and BrownianMotionMethod. For more information, see
+“Quasi-Monte Carlo Simulation” on page 14-63.
+
+Examples
+
+Simulating Equity Markets Using GBM Simulation Functions
+
+Use GBM simulation functions. Separable GBM models have two specific simulation functions:
+
+•
+An overloaded Euler simulation function (simulate), designed for optimal performance.
+
+•
+A simBySolution function that provides an approximate solution of the underlying stochastic
+differential equation, designed for accuracy.
+
+Load the Data_GlobalIdx2 data set and specify the SDE model as in “Represent Market Models
+Using SDE Models” on page 14-31, and the GBM model as in “Represent Market Models Using
+SDELD, CEV, and GBM Objects” on page 14-33.
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+    Dataset.NIK Dataset.FTSE Dataset.SP];
+
+returns =  tick2ret(prices);
+
+nVariables  = size(returns,2);
+expReturn   = mean(returns);
+sigma       = std(returns);
+correlation = corrcoef(returns);
+t           = 0;
+X           = 100;
+X           = X(ones(nVariables,1));
+
+F = @(t,X) diag(expReturn)* X;
+G = @(t,X) diag(X) * diag(sigma);
+
+15
+Functions
+
+15-110

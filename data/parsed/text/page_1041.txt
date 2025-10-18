@@ -1,0 +1,40 @@
+9        50           10         Tenant        Unknown        52000         25         Yes
+      10        49           30         Home Owner    Unknown        53000         23         Yes
+
+disp(knnImputedData(find(missingCustAge,5),:));
+
+CustID    CustAge    TmAtAddress    ResStatus     EmpStatus    CustIncome    TmWBank    Other
+    ______    _______    ___________    __________    _________    __________    _______    _____
+
+4        52           75         Home Owner    Employed       53000         20         Yes
+      19        45           14         Home Owner    Employed       51000         11         Yes
+     138        41           31         Other         Employed       41000          2         Yes
+     165        37           21         Home Owner    Unknown        38000         70         No 
+     207        48           38         Home Owner    Employed       48000         12         No
+
+disp(knnImputedData(find(missingResStatus,5),:));
+
+CustID    CustAge    TmAtAddress    ResStatus     EmpStatus    CustIncome    TmWBank    Other
+    ______    _______    ___________    __________    _________    __________    _______    _____
+
+1        53           62         Tenant        Unknown        50000         55         Yes
+      22        51           13         Tenant        Employed       35000         33         Yes
+      33        46            8         Home Owner    Unknown        32000         26         Yes
+      47        52           56         Tenant        Employed       56000         79         Yes
+     103        64           49         Tenant        Employed       50000         35         Yes
+
+Plot a histogram of the predictor values before and after imputation.
+
+Predictor = 
+;
+f1 = figure;
+ax1 = axes(f1);
+histogram(ax1,knnImputedData.(Predictor),'FaceColor','red','FaceAlpha',1);
+hold on
+histogram(ax1,dataMissing.(Predictor),'FaceColor','blue','FaceAlpha',1);
+legend(strcat("Imputed ", Predictor), strcat("Observed ", Predictor));
+title(strcat("Histogram of ", Predictor));
+
+Impute Missing Data in the Credit Scorecard Workflow Using the k-Nearest Neighbors Algorithm
+
+8-123

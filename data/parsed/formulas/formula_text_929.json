@@ -1,0 +1,12 @@
+{
+  "page": 503,
+  "original_text": "% Maximize the diversification ratio.\nsigma = sqrt(diag(p.AssetCovar));\nMDPObjFun = @(x) (sigma'*x)/sqrt(x'*p.AssetCovar*x);\n% Solution of MDP\nwMDP = estimateCustomObjectivePortfolio(p,MDPObjFun, ...\n    ObjectiveSense=\"maximize\");",
+  "ocr_text": "Maximizethediversificationratio.\nsigma=sqrt(diag(p.AssetCovar));\nMDPObjFun=Q(x)(sigma*x)/sqrt(x*p.AssetCovar*x);\nSolutionofMDP\nwMDP=estimateCustom0bjectivePortfolio(p,MDPObjFun,...\nObjectiveSense=maximize);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 393.44,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

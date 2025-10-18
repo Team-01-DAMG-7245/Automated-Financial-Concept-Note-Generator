@@ -1,0 +1,29 @@
+Role of Convexity in Portfolio Problems
+
+When using a Portfolio object and the estimateCustomObjectivePortfolio function with the
+Financial Toolbox solvers, the solvers return a local minimum, which is not guaranteed to be a global
+minimum. A local minimum of a function is a point where the function value is smaller than the points
+around it, but the value is larger than a distant point. A global minimum is the point where the
+function value is smaller than at all other points. Convex functions play an important role in
+optimization because they guarantee that all local minima are global minima. In other words, any
+solution found by the solver is guaranteed to be a global minimum.
+
+Another important feature of convex functions is that all tangents of the function lie underneath the
+function. This feature is particularly useful in problems with cardinality constraints or conditional
+bounds. For more information on cardinality constraints and conditional bounds, see “Working with
+'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using Portfolio Objects” on
+page 4-81 and setMinMaxNumAssets. The Financial Toolbox internal solvers for portfolio problems
+with binary variables use an iterative method that approximates the nonlinear functions (for example,
+variance) with a collection of linear functions. The linear functions used to approximate the original
+function are the tangents of the function at different points. Because the tangents for convex
+functions always lie underneath the function, the Financial Toolbox solvers guarantee that the
+approximation does not remove any minimum from the problem.
+
+Using Financial Toolbox solvers for portfolio problems with nonconvex functions and cardinality
+constraints or conditional bounds might result in suboptimal solutions. The reason is that the tangent
+lines used to approximate the nonconvex functions might cut off different minima as demonstrated in
+the following figure:
+
+Role of Convexity in Portfolio Problems
+
+4-157

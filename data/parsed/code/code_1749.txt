@@ -1,0 +1,7 @@
+Page 1497
+================================================================================
+
+The first univariate model is a GBM model with a stochastic volatility function and a stochastic jump
+process, and usually corresponds to a price process whose variance rate is governed by the second
+univariate model. The second model is a Cox-Ingersoll-Ross (CIR) square root diffusion model that
+describes the evolution of the variance rate of the coupled GBM price process.

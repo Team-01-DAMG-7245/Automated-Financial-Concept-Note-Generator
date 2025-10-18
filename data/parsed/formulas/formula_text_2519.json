@@ -1,0 +1,12 @@
+{
+  "page": 1287,
+  "original_text": "irregularCorrDistances = pdist( irregularComponent.', \"correlation\" );",
+  "ocr_text": "irregularCorrDistances=pdist(irregularComponent.,correlation);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 418.88,
+    "x1": 469.29,
+    "y1": 429.34
+  },
+  "confidence": "high"
+}

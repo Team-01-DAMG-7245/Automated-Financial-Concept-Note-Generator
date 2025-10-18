@@ -1,0 +1,12 @@
+{
+  "page": 2112,
+  "original_text": "TargetDate = datemnth( ___ ,DayFlag,Basis,EndMonthRule) determines a date in a future\nor past month based on movement either forward or backward in time by a given number of months,\nusing optional input arguments for DayFlag,Basis, and EndMonthRule.",
+  "ocr_text": "TargetDate=datemnth(_,DayFlag,Basis,EndMonthRule)determinesadateinafuture\norpastmonthbasedonmovementeitherforwardorbackwardintimebyagivennumberofmonths,\nusingoptionalinputargumentsforDayFlag,Basis,andEndMonthRule.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 411.4,
+    "x1": 551.28,
+    "y1": 447.03
+  },
+  "confidence": "high"
+}

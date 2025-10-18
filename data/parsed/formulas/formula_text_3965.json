@@ -1,0 +1,12 @@
+{
+  "page": 2249,
+  "original_text": "result = table(p0.AssetList', pwgt)",
+  "ocr_text": "result=table(p0.AssetList,pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 273.42,
+    "x1": 279.63,
+    "y1": 283.89
+  },
+  "confidence": "high"
+}

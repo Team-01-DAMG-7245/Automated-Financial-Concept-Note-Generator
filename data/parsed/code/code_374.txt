@@ -1,0 +1,5 @@
+Page 385
+================================================================================
+
+This example shows how to use the setBudget function for the Portfolio class to define the limits
+on the sum(AssetWeight_i) in risky assets.

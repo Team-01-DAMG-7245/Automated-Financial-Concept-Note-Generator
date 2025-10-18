@@ -1,0 +1,12 @@
+{
+  "page": 1703,
+  "original_text": "cir_obj = \n   Class CIR: Cox-Ingersoll-Ross",
+  "ocr_text": "cir_obj=\nClassCIR:Cox-Ingersoll-Ross",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 263.37,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

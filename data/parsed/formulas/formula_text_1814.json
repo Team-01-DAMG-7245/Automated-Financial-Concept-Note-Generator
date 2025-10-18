@@ -1,0 +1,12 @@
+{
+  "page": 927,
+  "original_text": "fprintf('Transition probability, cohort, if NR rows are removed from data:\\n')",
+  "ocr_text": "fprintf(Transitionprobability,cohort,ifNRrowsareremovedfromdata:n)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 424.19,
+    "x1": 512.63,
+    "y1": 434.66
+  },
+  "confidence": "high"
+}

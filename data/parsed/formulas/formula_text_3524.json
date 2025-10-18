@@ -1,0 +1,12 @@
+{
+  "page": 1965,
+  "original_text": "profilestructs = exposureprofiles(dates,exposures) computes common counterparty\ncredit exposures profiles from an array of exposures.",
+  "ocr_text": "profilestructs=exposureprofiles(dates,exposures)computescommoncounterparty\ncreditexposuresprofilesfromanarrayofexposures.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.02,
+    "x1": 541.83,
+    "y1": 278.65
+  },
+  "confidence": "high"
+}

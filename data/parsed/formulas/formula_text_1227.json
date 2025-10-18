@@ -1,0 +1,12 @@
+{
+  "page": 616,
+  "original_text": "AskPrices = CurrentLOB(AskPriceIdx)';\nAskSizes = CurrentLOB(AskSizeIdx)';\nBidPrices = CurrentLOB(BidPriceIdx)';\nBidSizes = CurrentLOB(BidSizeIdx)';",
+  "ocr_text": "AskPrices=CurrentLOB(AskPriceIdx);\nAskSizes=CurrentLOB(AskSizelIdx);\nBidPrices=CurrentLOB(BidPricelIdx);\nBidSizes=CurrentLOB(BidSizelIdx);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.23,
+    "x1": 290.47,
+    "y1": 287.09
+  },
+  "confidence": "high"
+}

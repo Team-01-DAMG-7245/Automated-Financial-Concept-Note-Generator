@@ -1,0 +1,12 @@
+{
+  "page": 526,
+  "original_text": "Next, introduce the constraint xi ≤0 . 3, which means that no more than 30% of the capital can be\ninvested in each asset.",
+  "ocr_text": "Next,introducetheconstraintx;=0.3,whichmeansthatnomorethan30ofthecapitalcanbe\ninvestedineachasset.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 468.52,
+    "x1": 538.29,
+    "y1": 493.79
+  },
+  "confidence": "high"
+}

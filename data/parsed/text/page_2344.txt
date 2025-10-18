@@ -1,0 +1,61 @@
+Color of historical line, specified as a character vector with a value of 'none', a character vector for
+color, or an RGB triplet. For more information on supported character vectors for color, see Primitive
+Line.
+
+Data Types: double | char
+
+HistoricalLineStyle — Style of historical line
+'--' (default) | character vector
+
+Style of historical line, specified as a character vector. For more information on supported character
+vectors for line styles, see Primitive Line.
+
+Data Types: char
+
+HistoricalLineWidth — Width of historical line
+1 (default) | positive value in point units
+
+Width of historical line, specified as a positive value in point units.
+
+Data Types: double
+
+ForcecastMarker — Marker symbol of forecast line
+'none' (default) | character vector
+
+Marker symbol of forecast line, specified as a character vector. For more information on supported
+character vectors for marker symbols, see Primitive Line.
+
+Data Types: char
+
+ForecastMarkerSize — Marker size of forecast line
+5 (default) | positive value in point units
+
+Marker size of forecast line, specified as a positive value in point units.
+
+Data Types: double
+
+ForecastMarkerFaceColor — Marker fill color of forecast line
+'none' (default) | character vector with a value of 'none', 'auto', color identifier, or RGB triplet
+
+Marker fill color of forecast line, specified as a character vector with a value of 'none', 'auto', a
+character vector for color, or an RGB triplet. For more information on supported character vectors for
+color, see Primitive Line.
+
+Data Types: double | char
+
+ForecastMarkerEdgeColor — Marker outline color of forecast line
+'auto' (default) | character vector with a value of 'none', 'auto', color identifier, or RGB triplet
+
+Marker outline color of forecast line, specified as a character vector with a value of 'none', 'auto',
+character vector for color, or an RGB triplet. For more information on supported character vectors for
+color, see Primitive Line.
+
+Data Types: double | char
+
+ForecastLineColor — Color of forecast line
+axes dependent (default) | character vector with a value of 'none', color identifier, or RGB triplet
+
+15
+Functions
+
+15-1038

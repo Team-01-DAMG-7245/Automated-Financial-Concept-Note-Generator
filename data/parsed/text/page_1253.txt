@@ -1,0 +1,48 @@
+Although the terminal value of the Brownian motion shown in the latter plot is normally distributed,
+and the terminal price in the previous plot is lognormally distributed, the corresponding paths of each
+graph are similar. For another example of variance reduction techniques, see “Simulate Interest
+Rates Through Interpolation” on page 14-50.
+
+See Also
+sde | bm | gbm | merton | bates | drift | diffusion | sdeddo | sdeld | cev | cir | heston | hwv |
+sdemrd | rvm | roughbergomi | roughheston | ts2func | simulate | simByEuler |
+simBySolution | simByQuadExp | simBySolution | interpolate
+
+Related Examples
+
+•
+“Simulating Equity Prices” on page 14-31
+
+•
+“Simulating Interest Rates” on page 14-50
+
+•
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo
+Simulation” on page 14-71
+
+•
+“Improving Performance of Monte Carlo Simulation with Parallel Computing” on page 14-111
+
+•
+“Base SDE Models” on page 14-16
+
+•
+“Drift and Diffusion Models” on page 14-19
+
+•
+“Linear Drift Models” on page 14-22
+
+•
+“Parametric Models” on page 14-24
+
+More About
+
+•
+“SDEs” on page 14-2
+
+•
+“SDE Models” on page 14-7
+
+Stratified Sampling
+
+14-61

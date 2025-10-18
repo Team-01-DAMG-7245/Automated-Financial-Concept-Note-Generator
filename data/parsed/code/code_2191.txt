@@ -1,0 +1,6 @@
+Page 1883
+================================================================================
+
+ReinvestRate = [0.03; 0.035; 0.04; 0.045; 0.05];
+[BondEquiv, EffectiveRate] = bndtotalreturn(Price, CouponRate, ...
+Settle, Maturity, ReinvestRate, 'HorizonDate', HorizonDate)

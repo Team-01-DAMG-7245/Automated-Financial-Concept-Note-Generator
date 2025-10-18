@@ -1,0 +1,34 @@
+sum(abs(pwgt)>toler)
+
+ans = 11
+
+Count the total number of allocated assets to verify that only eight assets at most are allocated.
+
+sum(abs(pwgtWithMaxNum)>toler)
+
+ans = 8
+
+Limit the Minimum and Maximum Number of Assets to Allocate
+
+Suppose that you want to set both the lower and upper bounds for the number of assets to allocate in
+a portfolio, given the universe of assets. Use setBounds to specify the allowed number of assets to
+allocate as from 5 through 10, and the allocated weight as no less than 5%.
+
+p1 = setMinMaxNumAssets(p, 5, 10);
+p1 = setBounds(p1, 0.05, 'BoundType', 'conditional');
+
+If an asset is allocated, it is necessary to clearly define the minimum weight requirement for that
+asset. This is done using setBounds with a 'Conditional' BoundType. Otherwise, the optimizer
+cannot evaluate which assets are allocated and cannot formulate the MinNumAssets constraint. For
+more details, see “Conditional Bounds with LowerBound Defined as Empty or Zero” on page 4-149.
+
+Plot the efficient frontier to compare this portfolio to the baseline portfolio, which has only default
+constraints.
+
+wgt = estimateFrontier(p);
+wgt1 = estimateFrontier(p1);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-196

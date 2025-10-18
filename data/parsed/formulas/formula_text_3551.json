@@ -1,0 +1,12 @@
+{
+  "page": 1988,
+  "original_text": "Convex = cfconv(CashFlow, 0.025)",
+  "ocr_text": "Convex=cfconv(CashFlow,0.025)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 393.64,
+    "x1": 263.38,
+    "y1": 404.1
+  },
+  "confidence": "high"
+}

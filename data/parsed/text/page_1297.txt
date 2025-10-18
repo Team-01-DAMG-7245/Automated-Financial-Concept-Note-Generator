@@ -1,0 +1,30 @@
+[coeffs, scores, eigVals] = pca( normalizedVolatility );
+
+Visualize the eigenvalues of the covariance matrix of the normalized volatilities.
+
+figure
+plot( eigVals, "o-", "LineWidth", 2 )
+xlabel( "Principal Component" )
+ylabel( "Eigenvalue" )
+title( "Principal Component Eigenvalues" )
+grid( "on" )
+
+You can see that most of the variance in the data is captured by the first few principal components.
+
+Visualize the first two principal components.
+
+numComponents = 2;
+
+figure
+tiledlayout( "flow" )
+
+for k = 1:numComponents
+    nexttile
+    plot( InferredVolatility.Date, scores(:, k ) )
+    title( "Component: " + k )
+    grid( "on" )
+end
+
+Volatility Modeling for Soft Commodities
+
+14-105

@@ -1,0 +1,12 @@
+{
+  "page": 48,
+  "original_text": "t = datetime('now','Format','yyyy-MM-dd''T''HHmmss')",
+  "ocr_text": "t=datetime(now,Format,yyyy-MM-ddTHHmmss)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 295.19,
+    "x1": 371.76,
+    "y1": 305.66
+  },
+  "confidence": "high"
+}

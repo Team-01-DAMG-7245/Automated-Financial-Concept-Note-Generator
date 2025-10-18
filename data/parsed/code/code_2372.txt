@@ -1,0 +1,8 @@
+Page 2238
+================================================================================
+
+In addition, the estimateAssetMoments function also extracts asset names or identifiers from a
+timetable object when the name-value argument 'GetAssetList' set to true (its default value is
+false). If the 'GetAssetList' value is true, the timetable column identifiers are used to set the
+AssetList property of the Portfolio object. To show this, the formation of the Portfolio object r is
+repeated with the 'GetAssetList' flag set to true.

@@ -1,0 +1,12 @@
+{
+  "page": 2156,
+  "original_text": "Depreciation = depstln(Cost,Salvage,Life) computes the straight-line depreciation for an\nasset.",
+  "ocr_text": "Depreciation=depstln(Cost,Salvage,Life)computesthestraight-linedepreciationforan\nasset.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 254.16,
+    "x1": 550.32,
+    "y1": 277.79
+  },
+  "confidence": "high"
+}

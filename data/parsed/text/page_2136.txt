@@ -1,0 +1,57 @@
+daysact
+
+Actual number of days between dates
+
+Syntax
+
+NumDays = daysact(StartDate)
+NumDays = daysact( ___ ,EndDate)
+
+Description
+
+NumDays = daysact(StartDate) returns the actual number of days between the MATLAB base
+date and StartDate. In MATLAB, the base date 1 is 1-Jan-0000 A.D.
+
+NumDays = daysact( ___ ,EndDate) returns the actual number of days between StartDate and
+the optional argument EndDate.
+
+If EndDate is earlier than StartDate, NumDays is negative. Under this convention, all months
+contain 30 days.
+
+Either input argument can contain multiple values, but if so, the other must contain the same number
+of values or a single value that applies to all. For example, if StartDate is an n-row datetime, then
+EndDate must be an N-by-1 vector of integers or a single integer. NumDays is then an N-by-1 vector of
+date numbers.
+
+Examples
+
+Determine the Number of Days Between Two Dates Based the Actual Number of Days
+
+Determine the NumDays using date character vectors for StartDate and EndDate.
+
+NumDays = daysact('7-sep-2002',  '25-dec-2002')
+
+NumDays = 
+109
+
+Determine the NumDays using datetimes for StartDate and EndDate.
+
+NumDays = daysact(datetime(2002,9,7) , datetime(2002,12,25))
+
+NumDays = 
+109
+
+Determine the NumDays using a datetime array for EndDate.
+
+MoreDays = [datetime(2002,9,7) ; datetime(2002,10,22) ; datetime(2002,11,5)];
+NumDays = daysact(MoreDays, '12/25/2002')
+
+NumDays = 3×1
+
+109
+    64
+
+15
+Functions
+
+15-830

@@ -1,0 +1,12 @@
+{
+  "page": 646,
+  "original_text": "p(i,j) = PortfolioCVaR(p(i,j), ... );",
+  "ocr_text": "p(i,j)=PortfolioCVaR(p(i,j),...);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.47,
+    "x1": 290.46,
+    "y1": 136.94
+  },
+  "confidence": "high"
+}

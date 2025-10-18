@@ -1,0 +1,50 @@
+interpolate
+
+Brownian interpolation of stochastic differential equations (SDEs) for SDE, BM, GBM, CEV, CIR, HWV,
+Heston, SDEDDO, SDELD, or SDEMRD models
+
+Syntax
+
+[XT,T] = interpolate(MDL,Times,Paths)
+[XT,T] = interpolate( ___ ,Name,Value)
+
+Description
+
+[XT,T] = interpolate(MDL,Times,Paths) performs a Brownian interpolation into a user-
+specified time series array, based on a piecewise-constant Euler sampling approach.
+
+[XT,T] = interpolate( ___ ,Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Stochastic Interpolation Without Refinement
+
+Many applications require knowledge of the state vector at intermediate sample times that are
+initially unavailable. One way to approximate these intermediate states is to perform a deterministic
+interpolation. However, deterministic interpolation techniques fail to capture the correct probability
+distribution at these intermediate times. Brownian (or stochastic) interpolation captures the correct
+joint distribution by sampling from a conditional Gaussian distribution. This sampling technique is
+sometimes referred to as a Brownian Bridge.
+
+The default stochastic interpolation technique is designed to interpolate into an existing time series
+and ignore new interpolated states as additional information becomes available. This technique is the
+usual notion of interpolation, which is called Interpolation without refinement.
+
+Alternatively, the interpolation technique may insert new interpolated states into the existing time
+series upon which subsequent interpolation is based, by that means refining information available at
+subsequent interpolation times. This technique is called interpolation with refinement.
+
+Interpolation without refinement is a more traditional technique, and is most useful when the input
+series is closely spaced in time. In this situation, interpolation without refinement is a good technique
+for inferring data in the presence of missing information, but is inappropriate for extrapolation.
+Interpolation with refinement is more suitable when the input series is widely spaced in time, and is
+useful for extrapolation.
+
+The stochastic interpolation method is available to any model. It is best illustrated, however, by way
+of a constant-parameter Brownian motion process. Consider a correlated, bivariate Brownian motion
+(BM) model of the form:
+
+15
+Functions
+
+15-148

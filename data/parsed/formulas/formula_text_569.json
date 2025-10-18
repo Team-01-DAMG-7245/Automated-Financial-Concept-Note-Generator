@@ -1,0 +1,12 @@
+{
+  "page": 379,
+  "original_text": "AssetHoldingData = readtable('portfolio.xls');\n% Create a normalized current holdings vector that shows the respective\n% investments as a percentage of total capital:\nW = AssetHoldingData.Value/sum(AssetHoldingData.Value);",
+  "ocr_text": "AssetHoldingData=readtable(portfolio.xls);\nSCreateanormalizedcurrentholdingsvectorthatshowstherespective\nSinvestmentsasapercentageoftotalcapital:\nW=AssetHoldingData.Value/sum(AssetHoldingData.Value);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 246.23,
+    "x1": 474.67,
+    "y1": 289.09
+  },
+  "confidence": "high"
+}

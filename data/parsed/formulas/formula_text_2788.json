@@ -1,0 +1,12 @@
+{
+  "page": 1420,
+  "original_text": "returns =  tick2ret(prices);\nnVariables  = size(returns,2);\nexpReturn   = mean(returns);\nsigma       = std(returns);\ncorrelation = corrcoef(returns);\nX           = 100;\nX           = X(ones(nVariables,1));",
+  "ocr_text": "returns=tick2ret(prices);\nnVariables=size(returns,2);\nexpReturn =mean(returns);\n\nsigma =std(returns);\ncorrelation=corrcoef(returns);\n\nX =100;\n\nxX =X(ones(nVariables,1));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 169.44,
+    "x1": 285.05,
+    "y1": 244.71
+  },
+  "confidence": "high"
+}

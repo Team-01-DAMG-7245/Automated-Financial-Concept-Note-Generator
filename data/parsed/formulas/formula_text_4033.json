@@ -1,0 +1,12 @@
+{
+  "page": 2284,
+  "original_text": "Note If no initial portfolio is specified in obj.InitPort, it is assumed to be 0 so that pbuy =\nmax(0,pwgt) and psell = max(0,-pwgt). For more information on setting an initial portfolio, see\nsetInitPort.",
+  "ocr_text": "Note[fnoinitialportfolioisspecifiedinobj.InitPort,itisassumedtobe0sothatpbuy=\nmax(0,pwgt)andpsell=max(0,-pwgt).Formoreinformationonsettinganinitialportfolio,see\nsetInitPort.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.48,
+    "x1": 557.57,
+    "y1": 337.11
+  },
+  "confidence": "high"
+}

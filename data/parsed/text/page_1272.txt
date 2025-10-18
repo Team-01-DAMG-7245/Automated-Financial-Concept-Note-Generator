@@ -1,0 +1,27 @@
+Now simulate and plot centered returns using the Gaussian copula.
+
+reset(s)
+R = zeros(nPoints, nIndices);             % Pre-allocate simulated returns array
+U = copularnd('Gaussian', rhoG, nPoints); % Simulate U(0,1) from Gaussian copula
+
+for j = 1:nIndices
+    R(:,j) = icdf(tails{j}, U(:,j));
+end
+
+h = scatterhist(R(:,2), R(:,3),'Color','r','Marker','.','MarkerSize',1); 
+fig = gcf;
+fig.Color = [1 1 1];
+y1 = ylim(h(1));
+y3 = ylim(h(3));
+xlim(h(1), [-.1 .1])
+ylim(h(1), [-.1 .1])
+xlim(h(2), [-.1 .1])
+ylim(h(3), [(y3(1) + (-0.1 - y1(1)))  (y3(2) + (0.1 - y1(2)))])
+xlabel('France')
+ylabel('Germany')
+title('Gaussian Copula')
+
+14
+Stochastic Differential Equations
+
+14-80

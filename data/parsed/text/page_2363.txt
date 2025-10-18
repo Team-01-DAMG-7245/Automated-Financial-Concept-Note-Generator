@@ -1,0 +1,9 @@
+Version History
+Introduced before R2006a
+
+See Also
+cur2frac | cur2str
+
+frac2cur
+
+15-1057

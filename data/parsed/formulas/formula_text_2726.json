@@ -1,0 +1,12 @@
+{
+  "page": 1370,
+  "original_text": "BM = bm(Mu,Sigma)\nBM = bm( ___ ,Name,Value)",
+  "ocr_text": "BM=bm(Mu,Sigma)\nBM=bm(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 542.24,
+    "x1": 232.48,
+    "y1": 565.87
+  },
+  "confidence": "high"
+}

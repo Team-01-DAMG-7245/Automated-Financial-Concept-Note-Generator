@@ -1,0 +1,12 @@
+{
+  "page": 1455,
+  "original_text": "t = ((T(1) + dt/2):(dt/2):(T(end) - dt/2));\nx = interpolate(obj,t,X,'Times',T);",
+  "ocr_text": "t=((T(1)_+dt/2):(dt/2):(T(end)_-dt/2));\nx=interpolate(obj,t,X,Times,T);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 327.63,
+    "x1": 322.98,
+    "y1": 348.89
+  },
+  "confidence": "high"
+}

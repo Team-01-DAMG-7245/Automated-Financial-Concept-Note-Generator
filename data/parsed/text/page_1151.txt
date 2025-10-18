@@ -1,0 +1,49 @@
+p = PortfolioCVaR('Scenarios',AssetScenarios,'LowerBound',0, ...
+    'Budget',1,'ProbabilityLevel',0.95)
+
+p = 
+  PortfolioCVaR with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+              ProbabilityLevel: 0.9500
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                  NumScenarios: 100000
+                          Name: []
+                     NumAssets: 2
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [2×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: []
+
+% Estimate the efficient frontier to obtain portfolio weights.
+pwgt = estimateFrontier(p);
+
+% Plot the efficient frontier.
+figure;
+plotFrontier(p,pwgt);
+
+Hedge Using Monte Carlo Simulation
+
+10-53

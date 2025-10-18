@@ -1,0 +1,5 @@
+Page 1527
+================================================================================
+
+User-defined simulation function or SDE simulation method, specified as a function or SDE simulation
+method. The default is simByEuler.

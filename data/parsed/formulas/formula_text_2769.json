@@ -1,0 +1,12 @@
+{
+  "page": 1408,
+  "original_text": "GBM = gbm( ___ ,Name,Value) creates a GBM object with additional options specified by one or\nmore Name,Value pair arguments.",
+  "ocr_text": "GBM=gbm(__,Name,Value)createsaGBMobjectwithadditionaloptionsspecifiedbyoneor\nmoreName,VaLluepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 149.46,
+    "x1": 537.82,
+    "y1": 173.09
+  },
+  "confidence": "high"
+}

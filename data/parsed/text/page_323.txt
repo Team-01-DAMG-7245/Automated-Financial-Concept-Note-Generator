@@ -1,0 +1,75 @@
+Total Number of Portfolio Weights with a Value > 0 Are Greater Than MaxNumAssets
+Specified
+
+When using a Portfolio, PortfolioCVaR, or PortfolioMAD object, the optimal allocation w may
+contain some very small values that leads to sum(w>0) larger than MaxNumAssets, even though the
+MaxNumAssets constraint is specified using setMinMaxNumAssets. For example, in the following
+code when setMinMaxNumAssets is used to set MaxNumAssets to 15, the sum(w>0) indicates that
+there are 19 assets. A close examination of the weights shows that the weights are extremely small
+and are actually 0.
+
+T = readtable('dowPortfolio.xlsx');
+symbol = T.Properties.VariableNames(3:end);
+assetReturn = tick2ret(T{:,3:end});
+p = Portfolio('AssetList', symbol, 'budget', 1);
+p = setMinMaxNumAssets(p, 10, 15);
+p = estimateAssetMoments(p,assetReturn);
+p = setBounds(p,0.01,0.5,'BoundType','Conditional','NumAssets',30);
+p = setTrackingError(p,0.05,ones(1, p.NumAssets)/p.NumAssets);
+w = estimateFrontierLimits(p,'min'); % minimum risk portfolio
+
+sum(w>0)   % Number of assets that are allocated in the optimal portfolio
+w(w<eps)   % Check the weights of the very small weighted assets
+
+ans =
+
+19
+
+ans =
+
+1.0e-20 *
+
+-0.0000
+         0
+         0
+    0.0293
+         0
+    0.3626
+    0.2494
+         0
+    0.0926
+   -0.0000
+         0
+    0.0020
+         0
+         0
+         0
+         0
+
+This situation only happens when the OuterApproximation algorithm is used with
+setSolverMINLP to solve a MINLP portfolio optimization problem. The OuterApproximation
+internally fixes the latest solved integer variables and runs an NLP with quadprog or fmincon,
+which introduces numerical issues and leads to weights that are very close to 0.
+
+If you do not want to deal with very small values, you can use setSolverMINLP to select a different
+algorithm. In this example, the 'TrustRegionCP' algorithm is specified.
+
+T = readtable('dowPortfolio.xlsx');
+symbol = T.Properties.VariableNames(3:end);
+assetReturn = tick2ret(T{:,3:end});
+p = Portfolio('AssetList', symbol, 'budget', 1);
+p = setMinMaxNumAssets(p, 10, 15);
+p = estimateAssetMoments(p,assetReturn);
+p = setBounds(p,0.01,0.5,'BoundType','Conditional','NumAssets',30);
+p = setTrackingError(p,0.05,ones(1, p.NumAssets)/p.NumAssets);
+p = setSolverMINLP(p,'TrustRegionCP');
+w = estimateFrontierLimits(p,'min'); % minimum risk portfolio
+
+sum(w>0)   % Number of assets that are allocated in the optimal portfolio
+w(w<eps)   % The weights of the very small weighted assets are strictly zeros
+
+ans =
+
+Troubleshooting Portfolio Optimization Results
+
+4-155

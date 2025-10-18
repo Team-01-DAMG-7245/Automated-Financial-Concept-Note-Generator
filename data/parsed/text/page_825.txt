@@ -1,0 +1,62 @@
+Working with a Riskless Asset
+
+The PortfolioMAD object has a separate RiskFreeRate property that stores the rate of return of a
+riskless asset. Thus, you can separate your universe into a riskless asset and a collection of risky
+assets. For example, assume that your riskless asset has a return in the scalar variable r0, then the
+property for the RiskFreeRate is set using the PortfolioMAD object:
+
+r0 = 0.01/12;
+
+p = PortfolioMAD;
+p = PortfolioMAD('RiskFreeRate', r0);
+disp(p.RiskFreeRate)
+
+8.3333e-04
+
+Note If your portfolio problem has a budget constraint such that your portfolio weights must sum to
+1, then the riskless asset is irrelevant.
+
+See Also
+PortfolioMAD | setCosts | setScenarios | simulateNormalScenariosByMoments |
+simulateNormalScenariosByData
+
+Related Examples
+
+•
+“Working with Transaction Costs” on page 6-46
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Validate the MAD Portfolio Problem” on page 6-80
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+Working with a Riskless Asset
+
+6-45

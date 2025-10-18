@@ -1,0 +1,64 @@
+simByEuler
+Euler simulation of stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simByMilstein
+Simulate diagonal diffusion for BM, GBM, CEV, HWV, SDEDDO, SDELD, or
+SDEMRD sample paths by Milstein approximation
+simByMilstein2
+Simulate BM, GBM, CEV, HWV, SDEDDO, SDELD, SDEMRD process sample paths
+by second order Milstein approximation
+
+Examples
+
+Create a bm Object
+
+Create a univariate Brownian motion (bm) object to represent the model: dXt = 0 . 3dWt.
+
+obj = bm(0, 0.3) % (A = Mu, Sigma)
+
+obj = 
+   Class BM: Brownian Motion
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 0
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+             Mu: 0
+          Sigma: 0.3
+
+bm objects display the parameter A as the more familiar Mu.
+
+The bm class also provides an overloaded Euler simulation method that improves run-time
+performance in certain common situations. This specialized method is invoked automatically only if
+all the following conditions are met:
+
+•
+The expected drift, or trend, rate Mu is a column vector.
+
+•
+The volatility rate, Sigma, is a matrix.
+
+•
+No end-of-period adjustments and/or processes are made.
+
+•
+If specified, the random noise process Z is a three-dimensional array.
+
+•
+If Z is unspecified, the assumed Gaussian correlation structure is a double matrix.
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+bm
+
+15-69

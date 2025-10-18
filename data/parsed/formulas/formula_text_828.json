@@ -1,0 +1,12 @@
+{
+  "page": 469,
+  "original_text": "% Compute the weights of each cluster.\nwBetween = riskBudgetingPortfolio(covCluster);",
+  "ocr_text": "Computetheweightsofeachcluster.\nwBetween=riskBudgetingPortfolio(covCluster);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 298.23,
+    "x1": 339.23,
+    "y1": 319.49
+  },
+  "confidence": "high"
+}

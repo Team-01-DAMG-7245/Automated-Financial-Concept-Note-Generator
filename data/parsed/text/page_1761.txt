@@ -1,0 +1,54 @@
+Input Arguments
+
+Data — Data with high, low, closing prices, and volume traded
+matrix | table | timetable
+
+Data with high, low, closing prices and volume traded, specified as a matrix, table, or timetable. For
+matrix input, Data is M-by-4 with high, low, closing prices, and volume traded. Timetables and tables
+with M rows must contain a variable named 'High', 'Low', 'Close', and 'Volume' (case
+insensitive).
+
+Data Types: double | table | timetable
+
+Output Arguments
+
+ADline — Accumulation/Distribution line
+matrix | table | timetable
+
+Accumulation/Distribution line, returned with the same number of rows (M) and the same type
+(matrix, table, or timetable) as the input Data.
+
+More About
+
+Accumulation/Distribution Line
+
+The Accumulation/Distribution line is a technical analysis indicator used to assess the cumulative flow
+of money into and out of a security.
+
+The Accumulation/Distribution line combines price and volume data to help traders identify trends in
+buying and selling pressure. You can use the Accumulation/Distribution Line to determine whether a
+stock is being accumulated (bought) or distributed (sold) over a specific period.
+
+Version History
+Introduced before R2006a
+
+R2023a: fints support removed for Data input argument
+Behavior changed in R2023a
+
+fints object support for the Data input argument is removed.
+
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+References
+
+[1] Achelis, S. B. Technical Analysis from A to Z. Second Edition. McGraw-Hill, 1995, pp. 52–53.
+
+See Also
+timetable | table | adosc | willad | willpctr
+
+adline
+
+15-455

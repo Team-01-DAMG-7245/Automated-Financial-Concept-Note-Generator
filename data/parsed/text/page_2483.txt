@@ -1,0 +1,57 @@
+— Maximum drawdown of an arithmetic Brownian motion with drift (differences of data from peak
+to trough) using the equation
+
+dX t = μdt + σdW t .
+
+•
+'geometric'
+
+— Maximum drawdown of a geometric Brownian motion with drift (differences of log of data from
+peak to trough) using the equation
+
+dS t = μ0S t dt + σ0S t dW t
+
+Data Types: char
+
+Output Arguments
+
+MaxDD — Maximum drawdown
+vector
+
+Maximum drawdown, returned as a 1-by-N vector with maximum drawdown for each of N time series.
+
+Note
+
+•
+Drawdown is the percentage drop in total returns from the start to the end of a period. If the total
+equity time series is increasing over an entire period, drawdown is 0. Otherwise, it is a positive
+number. Maximum drawdown is an ex-ante proxy for downside risk that computes the largest
+drawdown over all intervals of time that can be formed within a specified interval of time.
+
+•
+Maximum drawdown is sensitive to quantization error.
+
+MaxDDIndex — Start and end indexes for each maximum drawdown period for each total
+equity time series
+vector
+
+Start and end indexes for each maximum drawdown period for each total equity time series, returned
+as a 2-by-N vector of start and end indexes. The first row of the vector contains the start indexes and
+the second row contains the end indexes of each maximum drawdown period.
+
+More About
+
+Maximum Drawdown
+
+Maximum drawdown (MDD) is a key risk metric to measure the largest peak-to-trough decline in the
+value of an investment portfolio, mutual fund, or financial asset over a specified period.
+
+MDD quantifies the potential loss an investor could experience during a downturn, providing insights
+into the risk and volatility associated with an investment.
+
+Version History
+Introduced in R2006b
+
+maxdrawdown
+
+15-1177

@@ -1,0 +1,12 @@
+{
+  "page": 1915,
+  "original_text": "ax — Valid axis object\ncurrent axes (ax = gca) (default) | axes object",
+  "ocr_text": "axValidaxisobject\ncurrentaxes(ax_=gca)(default)axesobject",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.73,
+    "x1": 307.29,
+    "y1": 559.36
+  },
+  "confidence": "high"
+}

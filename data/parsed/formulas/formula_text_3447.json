@@ -1,0 +1,12 @@
+{
+  "page": 1910,
+  "original_text": "bdates = busdays(sdate,edate) generates a vector of business days between the last business\ndate of the period that contains the start date (sdate), and the last business date of period that\ncontains the end date (edate).",
+  "ocr_text": "bdates=busdays(sdate,edate)generatesavectorofbusinessdaysbetweenthelastbusiness\ndateoftheperiodthatcontainsthestartdate(sdate),andthelastbusinessdateofperiodthat\ncontainstheenddate(edate).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 250.92,
+    "x1": 551.08,
+    "y1": 286.55
+  },
+  "confidence": "high"
+}

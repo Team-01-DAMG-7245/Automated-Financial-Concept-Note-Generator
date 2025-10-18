@@ -1,0 +1,12 @@
+{
+  "page": 879,
+  "original_text": "p = PortfolioMAD;\noptions = optimoptions('linprog','Algorithm','interior-point','Display','off');\np = setSolver(p,'TrustRegionCP','MainSolverOptions',options);\ndisplay(p.solverType)\ndisplay(p.solverOptions)\ndisplay(p.solverOptions.MainSolverOptions.Algorithm)\ndisplay(p.solverOptions.MainSolverOptions.Display)",
+  "ocr_text": "p=PortfolioMAD;\noptions=optimoptions(linprog,Algorithm,interior-point,Display,off);\np=setSolver(p,TrustRegionCP,MainSolverOptions,options);\ndisplay(p.solverType)\n\ndisplay(p.solver0ptions)\n\ndisplay(p.solverOptions.MainSolverOptions.Algorithm)\ndisplay(p.solver0ptions.MainSolverOptions.Display)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 580.85,
+    "x1": 394.39,
+    "y1": 634.38
+  },
+  "confidence": "high"
+}

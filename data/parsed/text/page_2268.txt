@@ -1,0 +1,57 @@
+Use estimateFrontierByReturn to estimate optimal portfolios with targeted portfolio returns.
+
+[pwgt, pbuy, psell] = estimateFrontierByReturn(p,[ 0.0072321, 0.0119084 ])
+
+pwgt = 3×2
+
+0    0.5000
+    0.6922         0
+    0.3078    0.5000
+
+pbuy = 3×2
+
+0    0.5000
+    0.6922         0
+    0.3078    0.5000
+
+psell = 3×2
+
+0     0
+     0     0
+     0     0
+
+The estimateFrontierByReturn function uses the MINLP solver to solve this problem. Use the
+setSolverMINLP function to configure the SolverType and options.
+
+p.solverTypeMINLP
+
+ans = 
+'OuterApproximation'
+
+p.solverOptionsMINLP
+
+ans = struct with fields:
+                           MaxIterations: 1000
+                    AbsoluteGapTolerance: 1.0000e-07
+                    RelativeGapTolerance: 1.0000e-05
+                  NonlinearScalingFactor: 1000
+                  ObjectiveScalingFactor: 1000
+                                 Display: 'off'
+                           CutGeneration: 'basic'
+                MaxIterationsInactiveCut: 30
+                      ActiveCutTolerance: 1.0000e-07
+                    IntMainSolverOptions: [1×1 optim.options.Intlinprog]
+    NumIterationsEarlyIntegerConvergence: 30
+                     ExtendedFormulation: 0
+                            NumInnerCuts: 10
+                     NumInitialOuterCuts: 10
+
+Obtain the Portfolio for Targeted Portfolio Returns for a PortfolioCVaR Object
+
+To obtain efficient portfolios that have targeted portfolio returns, the estimateFrontierByReturn
+function accepts one or more target portfolio returns and obtains efficient portfolios with the
+
+15
+Functions
+
+15-962

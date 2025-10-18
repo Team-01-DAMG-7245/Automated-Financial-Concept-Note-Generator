@@ -1,0 +1,12 @@
+{
+  "page": 522,
+  "original_text": "% Define a traditional mean-variance strategy.\nstratMarkowitz = backtestStrategy('Markowitz', @(w,TT) markowitzFcn(w,TT,p), ...\n    RebalanceFrequency=rebalFreq, ...\n    LookbackWindow=lookback, ...\n    TransactionCosts=transactionCost, ...\n    InitialWeights=initialMarkowitz);",
+  "ocr_text": "sDefineatraditionalmean-variancestrategy.\nstratMarkowitz=backtestStrategy(Markowitz,Q(w,TT)markowitzFcn(w,TT,p),...\nRebalanceFrequency=rebalFreq,...\nLookbackWindow=Lookback,...\nTransactionCosts=transactionCost,...\nInitialWeights=initialMarkowitz);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 317.83,
+    "x1": 523.47,
+    "y1": 382.29
+  },
+  "confidence": "high"
+}

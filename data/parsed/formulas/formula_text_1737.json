@@ -1,0 +1,12 @@
+{
+  "page": 876,
+  "original_text": "pwgt = estimateFrontierByRisk(p, [0.12, 0.14, 0.16]);",
+  "ocr_text": "pwgt=estimateFrontierByRisk(p,[0.12,0.14,0.16]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 340.13,
+    "x1": 377.15,
+    "y1": 350.59
+  },
+  "confidence": "high"
+}

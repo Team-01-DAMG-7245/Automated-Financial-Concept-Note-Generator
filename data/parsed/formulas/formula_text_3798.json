@@ -1,0 +1,12 @@
+{
+  "page": 2148,
+  "original_text": "Depreciation = depfixdb( ___ ,Month) adds an optional argument.",
+  "ocr_text": "Depreciation=depfixdb(__,Month)addsanoptionalargument.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 286.32,
+    "x1": 427.26,
+    "y1": 297.95
+  },
+  "confidence": "high"
+}

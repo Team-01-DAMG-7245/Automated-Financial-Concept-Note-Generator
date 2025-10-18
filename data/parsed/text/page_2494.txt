@@ -1,0 +1,28 @@
+R2023a: fints support removed for Data input argument
+Behavior changed in R2023a
+
+fints object support for the Data input argument is removed.
+
+R2018a: Lead and Lag input arguments not supported
+Behavior changed in R2018a
+
+The syntax for movavg has changed. There is no longer support for the input arguments Lead and
+Lag, only a single windowSize is supported, and there is only one output argument (ma). If you want
+to compute the leading and lagging moving averages, you need to run movavg twice and adjust the
+windowSize.
+
+References
+
+[1] Achelis, S. B. Technical Analysis from A to Z. Second Edition. McGraw-Hill, 1995, pp. 184–192.
+
+See Also
+timetable | table | bollinger | candle | dateaxis | highlow | pointfig
+
+Topics
+“Use Timetables in Finance” on page 11-7
+“Convert Financial Time Series Objects (fints) to Timetables” on page 11-2
+
+15
+Functions
+
+15-1188

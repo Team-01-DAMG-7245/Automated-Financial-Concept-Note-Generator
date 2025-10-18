@@ -1,0 +1,106 @@
+MAD Portfolio Optimization Tools
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“Supported Constraints for Portfolio Optimization Using PortfolioMAD Object” on page 6-8
+
+•
+“Default Portfolio Problem” on page 6-15
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Common Operations on the PortfolioMAD Object” on page 6-29
+
+•
+“Setting Up an Initial or Current Portfolio” on page 6-33
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+•
+“Working with a Riskless Asset” on page 6-45
+
+•
+“Working with Transaction Costs” on page 6-46
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Working with 'Simple' Bound Constraints Using PortfolioMAD Object” on page 6-54
+
+•
+“Working with Budget Constraints Using PortfolioMAD Object” on page 6-57
+
+•
+“Working with Conditional Budget Constraints Using PortfolioMAD Object” on page 6-59
+
+•
+“Working with Group Constraints Using PortfolioMAD Object” on page 6-61
+
+•
+“Working with Group Ratio Constraints Using PortfolioMAD Object” on page 6-64
+
+•
+“Working with Linear Equality Constraints Using PortfolioMAD Object” on page 6-67
+
+•
+“Working with Linear Inequality Constraints Using PortfolioMAD Object” on page 6-69
+
+•
+“Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using
+PortfolioMAD Objects” on page 6-71
+
+•
+“Working with Average Turnover Constraints Using PortfolioMAD Object” on page 6-74
+
+•
+“Working with One-Way Turnover Constraints Using PortfolioMAD Object” on page 6-77
+
+•
+“Validate the MAD Portfolio Problem” on page 6-80
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Obtaining Portfolios Along the Entire Efficient Frontier” on page 6-85
+
+•
+“Obtaining Endpoints of the Efficient Frontier” on page 6-87
+
+•
+“Mixed-Integer MAD Portfolio Optimization Problem” on page 6-89
+
+•
+“Obtaining Efficient Portfolios for Target Returns” on page 6-93
+
+•
+“Obtaining Efficient Portfolios for Target Risks” on page 6-96
+
+•
+“Choosing and Controlling the Solver for PortfolioMAD Optimizations” on page 6-99
+
+•
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+
+•
+“Plotting the Efficient Frontier for a PortfolioMAD Object” on page 6-108
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 6-113
+
+•
+“Working with Other Portfolio Objects” on page 6-115
+
+6

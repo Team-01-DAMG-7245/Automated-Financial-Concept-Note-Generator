@@ -1,0 +1,6 @@
+Page 2217
+================================================================================
+
+(Optional) Moment orders, specified as either a scalar or a NUMORDERS vector of nonnegative integer
+moment orders. If no order specified, the default Order = 0, which is the shortfall probability. The
+elpm function does not work for negative or a noninteger Order.

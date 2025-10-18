@@ -1,0 +1,35 @@
+The previous line of code generates three columns of uniformly distributed random weights, but does
+not guarantee they sum to 1. The following code segment normalizes the weights of each portfolio so
+that the total of the three weights represent a valid portfolio.
+
+Total = sum(Weights, 2);     % Add the weights
+Total = Total(:,ones(3,1));  % Make size-compatible matrix
+Weights = Weights./Total;    % Normalize so sum = 1
+
+Given the 1000 random portfolios created, compute the expected return and risk of each portfolio
+associated with the weights.
+
+[PortRisk, PortReturn] = portstats(Returns, Covariances, Weights);
+
+Plot the returns and risks of each portfolio on top of the existing efficient frontier for comparison.
+After plotting, annotate the graph with a title and return the graph to default holding status (any
+subsequent plots will erase the existing data). The efficient frontier appears in blue, while the 1000
+random portfolios appear as a set of red dots on or below the frontier.
+
+hold on
+plot (PortRisk, PortReturn, '.r')
+title('Mean-Variance Efficient Frontier and Random Portfolios')
+hold off
+
+See Also
+bnddury | bndconvy | bndprice | bndkrdur | blsprice | blsdelta | blsgamma | blsvega |
+zbtprice | zero2fwd | zero2disc | corr2cov | portopt
+
+Related Examples
+
+•
+“Plotting Sensitivities of an Option” on page 10-25
+
+Plotting an Efficient Frontier Using portopt
+
+10-23

@@ -1,0 +1,12 @@
+{
+  "page": 73,
+  "original_text": "TBTBond = tbl2bond(TBill)",
+  "ocr_text": "TBTBond=tbl2bond(TBill)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 399.44,
+    "x1": 225.45,
+    "y1": 409.91
+  },
+  "confidence": "high"
+}

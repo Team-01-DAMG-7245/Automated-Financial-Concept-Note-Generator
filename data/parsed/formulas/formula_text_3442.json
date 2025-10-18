@@ -1,0 +1,12 @@
+{
+  "page": 1907,
+  "original_text": "Busday = busdate(datetime('3-Jul-2001','Locale','en_US'), 1)",
+  "ocr_text": "Busday=busdate(datetime(3-Jul-2001,Locale,en_US),1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 415.11,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

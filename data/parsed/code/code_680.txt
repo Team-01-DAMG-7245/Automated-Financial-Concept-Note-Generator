@@ -1,0 +1,19 @@
+Page 617
+================================================================================
+
+function [TGLR, GLR] = ISTGLR(ISDiffValues)
+% ISTGLR function for Total-Gain-to-Loss Ratio for Implementation Shortfalls (IS)
+%   This function computes the Total-Gain-to-Loss Ratio (TGLR) and the
+%   Gain-to-Loss Ratio (GLR) for a vector of values (IS_Baseline - IS_Agent)
+%   where:  
+%     - IS_Baseline: Implementation shortfalls for baseline (e.g. TWAP)
+%     - IS_Agent: Implementation shortfalls for agent
+%
+%   Input:
+%     - ISDiffValues: Vector of IS difference values (IS_Baseline - IS_Agent)
+%
+%   Outputs:
+%     - TGLR: Total-Gain-to-Loss Ratio computed as the ratio of 
+%             Total Positive over Total Negative magnitudes of IS difference
+%     - GLR:  Gain-to-Loss Ratio computed as the ratio of 
+%             Mean Positive over Mean Negative magnitudes of IS difference

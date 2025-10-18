@@ -1,0 +1,12 @@
+{
+  "page": 2116,
+  "original_text": "StartDate = '20-Dec-1994';\nNumberWorkDays = 16;\nNumberHolidays = 2;\n \nEndDate = datewrkdy(StartDate, NumberWorkDays, NumberHolidays)",
+  "ocr_text": "StartDate=20-Dec-1994;\n\nNumberWorkDays=16;\n\nNumberHolidays=2;\nEndDate=datewrkdy(StartDate,NumberWorkDays,NumberHolidays)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 481.79,
+    "x1": 425.92,
+    "y1": 535.45
+  },
+  "confidence": "high"
+}

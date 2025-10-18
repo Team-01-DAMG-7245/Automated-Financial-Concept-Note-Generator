@@ -1,0 +1,30 @@
+For numeric data, a common first step is "fine classing." This means binning the data into several
+bins, defined with a regular grid. To illustrate this point, use the predictor 'CustIncome'.
+
+cp = 20000:5000:60000;
+
+sc = modifybins(sc,'CustIncome','CutPoints',cp);
+
+bininfo(sc,'CustIncome')
+
+ans=11×6 table
+           Bin           Good    Bad     Odds         WOE       InfoValue 
+    _________________    ____    ___    _______    _________    __________
+
+{'[-Inf,20000)' }      3       5        0.6      -1.2152      0.010765
+    {'[20000,25000)'}     23      16     1.4375     -0.34151     0.0039819
+    {'[25000,30000)'}     38      47    0.80851     -0.91698      0.065166
+    {'[30000,35000)'}    131      75     1.7467     -0.14671      0.003782
+    {'[35000,40000)'}    193      98     1.9694    -0.026696    0.00017359
+    {'[40000,45000)'}    173      76     2.2763      0.11814     0.0028361
+    {'[45000,50000)'}    131      47     2.7872      0.32063      0.014348
+    {'[50000,55000)'}     82      24     3.4167      0.52425      0.021842
+    {'[55000,60000)'}     21       8      2.625      0.26066     0.0015642
+    {'[60000,Inf]'  }      8       1          8        1.375      0.010235
+    {'Totals'       }    803     397     2.0227          NaN       0.13469
+
+plotbins(sc,'CustIncome')
+
+Case Study for Credit Scorecard Analysis
+
+8-73

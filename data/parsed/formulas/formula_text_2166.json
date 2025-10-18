@@ -1,0 +1,12 @@
+{
+  "page": 1114,
+  "original_text": "PortfolioDelta =  Deltas * OptionQuantities",
+  "ocr_text": "PortfolioDelta=Deltas*OptionQuantities",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 380.23,
+    "x1": 322.97,
+    "y1": 390.69
+  },
+  "confidence": "high"
+}

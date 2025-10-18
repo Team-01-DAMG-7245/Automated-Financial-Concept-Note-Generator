@@ -1,0 +1,57 @@
+More About
+
+Difference Between yearfrac and date2time
+
+The difference between yearfrac and date2time is that date2time counts full periods as a whole
+integer, even if the number of actual days in the periods are different. yearfrac does not count full
+periods.
+
+For example,
+
+yearfrac('1/1/2000', '1/1/2001', 9)
+
+ans =
+
+1.0167
+
+yearfrac for Basis 9 (ACT/360 ICMA) calculates 366/360 = 1.0167. So, even if the dates have the
+same month and date, with a difference of 1 in the year, the returned value may not be exactly 1. On
+the other hand, date2time calculates one full year period:
+
+date2time('1/1/2000', '1/1/2001', 1, 9)
+
+ans =
+
+1
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although date2time supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+cftimes | disc2rate | rate2disc | time2date | yearfrac | datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+
+15
+Functions
+
+15-796

@@ -1,0 +1,12 @@
+{
+  "page": 2428,
+  "original_text": "H = holidays(datetime(2001,1,1),datetime(2001,6,23))",
+  "ocr_text": "H=holidays(datetime(2001,1,1),datetime(2001,6,23))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 371.74,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

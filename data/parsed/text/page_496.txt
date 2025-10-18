@@ -1,0 +1,37 @@
+Generate Summary for Performance Attribution
+
+Use the brinsonAttribution object and summary to generate a table that summarizes the final
+results (aggregated over all time periods and categories) of the performance attribution using the
+Brinson model.
+
+SummaryTable = summary(BrinsonPAobj)
+
+SummaryTable=11×1 table
+                                     Brinson Attribution Summary
+                                     ___________________________
+
+Total Number of Assets                           30         
+    Number of Assets in Portfolio                    22         
+    Number of Assets in Benchmark                    30         
+    Number of Periods                                12         
+    Number of Categories                              9         
+    Portfolio Return                            0.22345         
+    Benchmark Return                            0.20464         
+    Active Return                              0.018809         
+    Allocation Effect                          0.011449         
+    Selection Effect                           0.016794         
+    Interaction Effect                       -0.0094348
+
+Generate Horizontal Bar Charts for Returns, Weights, and Performance Attribution
+
+Use the brinsonAttribution object and categoryReturnsChart, categoryWeightsChart,
+and attributionsChart to generate horizontal bar charts.
+
+categoryReturnsChart(BrinsonPAobj)
+
+categoryWeightsChart(BrinsonPAobj)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-328

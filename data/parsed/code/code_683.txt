@@ -1,0 +1,9 @@
+Page 620
+================================================================================
+
+strategyNames = {'Equally Weighted', 'Max Sharpe Ratio'};
+assetSymbols = pricesTT.Properties.VariableNames;
+initialWeights = [equalWeight_initial(:), maxSharpeRatio_initial(:)];
+bar(assetSymbols,initialWeights);
+legend(strategyNames);
+title('Initial Asset Allocations');

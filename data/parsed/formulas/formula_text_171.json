@@ -1,0 +1,12 @@
+{
+  "page": 117,
+  "original_text": "n = x.numBins;\nN = x.numTicks;",
+  "ocr_text": "n=X.numBins;\nN=x.numTicks;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 171.27,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

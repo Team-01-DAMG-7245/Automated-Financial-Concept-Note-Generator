@@ -1,0 +1,61 @@
+0.8  1    0.4 -0.2 -0.2 -0.1 -0.2 -0.2;
+        0.6  0.4  1    0.5  0.3  0.2  0.2  0.3;
+       -0.2 -0.2  0.5  1    0.6  0.6  0.5  0.6;
+       -0.1 -0.2  0.3  0.6  1    0.9  0.7  0.7;
+       -0.2 -0.1  0.2  0.6  0.9  1    0.6  0.7;
+       -0.2 -0.2  0.2  0.5  0.7  0.6  1    0.7;
+       -0.2 -0.2  0.3  0.6  0.7  0.7  0.7  1];
+covariance = corr2cov(sigma,rho);
+riskParity = @(x) sum((x.*(covariance*x)/(x'*covariance*x)-1).^2);
+
+% Group the contraints
+p = Portfolio(NumAssets=8);
+p = setDefaultConstraints(p);
+G = [0 0 0 0 1 1 1 1];
+p = setGroups(p,G,0.3,[]);
+
+% Solve the problem
+w = estimateCustomObjectivePortfolio(p,riskParity);
+riskParity(w)
+
+ans = 
+6.1365
+
+% Use the InitialPoint name-value argument
+x0 = [0.7; zeros(3,1); 0.3; zeros(3,1)];
+w2 = estimateCustomObjectivePortfolio(p,riskParity,InitialPoint=x0);
+riskParity(w2)
+
+ans = 
+6.1667
+
+The objective function is different for different initial portfolios, because the objective function used
+to compute the risk parity portfolios is nonconvex.
+
+Using different initial points in mixed-integer problems should not return different values of the
+objective function because the objective function should always be convex. That is, there is only one
+value for the minimum of the objective function.
+
+Add Tracking Error Constraints to a Custom Objective Problem
+
+This example shows how to use estimateCustomObjectivePortfolio to compare the weight
+assignment of the minimum risk portfolio with a constrained equally weighted portfolio. The weights
+can be either zero or greater than 15% and must sum to 1. You define the constraints for portfolio
+problems using functions for the Portfolio object and then you specify the objective function as an
+input to estimateCustomObjectivePortfolio. The objective function must be continuous (and
+preferably smooth).
+
+Create Portfolio Object
+
+Create a Portfolio object and set the bounds and budget using setBounds and setBudget.
+
+% Define initial data
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+
+15
+Functions
+
+15-922

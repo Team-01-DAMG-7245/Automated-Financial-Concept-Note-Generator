@@ -1,0 +1,12 @@
+{
+  "page": 463,
+  "original_text": "function new_weights = mktFcn(~,pricesTT)\n% Market index rebalance function",
+  "ocr_text": "functionnew_weights=mktFcn(-,pricesTT)\nMarketindexrebalancefunction",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 312.14,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

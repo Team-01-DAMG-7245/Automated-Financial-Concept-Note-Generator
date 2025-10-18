@@ -1,0 +1,12 @@
+{
+  "page": 1357,
+  "original_text": "% Compute the initial portfolio weights for each strategy.\ntraditional_initial = traditionalStrat(w0,warmupTT);\nshrunk_initial = denoisedStrat(w0,warmupTT);",
+  "ocr_text": "Computetheinitialportfolioweightsforeachstrategy.\ntraditional_initial=traditionalStrat(w0,warmupTT);\nshrunk_initial_=denoisedStrat(w0,warmupTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 418.31,
+    "x1": 404.24,
+    "y1": 450.37
+  },
+  "confidence": "high"
+}

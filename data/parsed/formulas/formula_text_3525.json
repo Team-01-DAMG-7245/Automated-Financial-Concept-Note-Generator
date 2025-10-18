@@ -1,0 +1,12 @@
+{
+  "page": 1965,
+  "original_text": "profilestructs = exposureprofiles( ___ ,Name,Value) adds optional name-value\narguments.",
+  "ocr_text": "profilestructs=exposureprofiles(__,Name,Value)addsoptionalname-value\narguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 289.03,
+    "x1": 508.69,
+    "y1": 312.66
+  },
+  "confidence": "high"
+}

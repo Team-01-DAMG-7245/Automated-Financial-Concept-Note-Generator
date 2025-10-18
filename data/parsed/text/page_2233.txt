@@ -1,0 +1,53 @@
+bound of the objective function. If ObjectiveBound is not specified, a numerical lower bound is
+computed.
+
+Data Types: double
+
+InitialPoint — Weights allocation to initialize solver
+[] (default) | vector
+
+Weights allocation to initialize solver, specified as InitialPoint and a NumAssets-by-1 vector.
+InitialPoint is useful for continuous portfolio problems that may have many local minima. By
+specifying a starting point, you can make the algorithm search different local minima.
+
+Note If InitialPoint is not specified, it is set to the long-only, fully-invested, equally-weighted
+portfolio.
+
+Data Types: double
+
+Output Arguments
+
+pwgt — Optimal weight allocation of portfolio problem
+vector
+
+Optimal weight allocation of the portfolio problem, returned as a NumAssets-by-1 vector.
+
+pbuy — Purchases relative to initial portfolio to achieve optimal weight allocation of
+portfolio problem
+vector
+
+Purchases relative to initial portfolio to achieve the optimal weight allocation of the portfolio problem,
+returned as a NumAssets-by-1 vector.
+
+psell — Sales relative to initial portfolio to achieve optimal weight allocation of the
+portfolio problem
+vector
+
+Sales relative to initial portfolio to achieve the optimal weight allocation of the portfolio problem,
+returned as a NumAssets vector.
+
+exitflag — Reason solver stopped
+enumeration variable | integer
+
+Reason the solver stopped, returned as an enumeration variable or integer. There are two types of
+exitflag output. If the problem is continuous, the exitflag output is an enumeration variable. If
+the problem is mixed-integer, then the exitflag output is an integer.
+
+Version History
+Introduced in R2022b
+
+R2024a: Support tracking error constraints
+
+estimateCustomObjectivePortfolio
+
+15-927

@@ -1,0 +1,60 @@
+Estimate Efficient Frontiers for Portfolio Object
+
+Whereas “Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+focused on estimation of efficient portfolios, this section focuses on the estimation of efficient
+frontiers. For information on the workflow when using Portfolio objects, see “Portfolio Object
+Workflow” on page 4-18.
+
+Obtaining Portfolio Risks and Returns
+
+This example shows how to calculate the risk and returns for a portfolio. Given any portfolio and, in
+particular, efficient portfolios, the functions estimatePortReturn, estimatePortRisk, and
+estimatePortMoments provide estimates for the return (or return proxy), risk (or the risk proxy),
+and, in the case of mean-variance portfolio optimization, the moments of expected portfolio returns.
+Each function has the same input syntax but with different combinations of outputs. Suppose that you
+have this following portfolio optimization problem that gave you a collection of portfolios along the
+efficient frontier in pwgt:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = Portfolio('AssetMean', m, 'AssetCovar', C, 'InitPort', pwgt0);
+p = setDefaultConstraints(p);
+pwgt = estimateFrontier(p);
+
+Given pwgt0 and pwgt, use the portfolio risk and return estimation functions to obtain risks and
+returns for your initial portfolio and the portfolios on the efficient frontier.
+
+[prsk0, pret0] = estimatePortMoments(p, pwgt0);
+[prsk, pret] = estimatePortMoments(p, pwgt);
+display(prsk0)
+
+prsk0 = 
+0.1103
+
+display(pret0)
+
+pret0 = 
+0.0870
+
+display(prsk)
+
+prsk = 10×1
+
+0.0769
+    0.0831
+    0.0994
+    0.1217
+    0.1474
+    0.1750
+    0.2068
+    0.2487
+    0.2968
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-122

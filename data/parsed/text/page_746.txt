@@ -1,0 +1,60 @@
+0.3462    0.3462
+
+Now it is possible to compare standard deviations of portfolio returns from either type of portfolio
+optimization.
+
+See Also
+PortfolioCVaR | Portfolio
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+“Portfolio Optimization Theory” on page 5-3
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+CVaR Portfolio Optimization (4 min 56 sec)
+
+5
+CVaR Portfolio Optimization Tools
+
+5-120

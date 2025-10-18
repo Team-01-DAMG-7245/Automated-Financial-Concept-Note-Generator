@@ -1,0 +1,12 @@
+{
+  "page": 1413,
+  "original_text": "% Display results\nfprintf('European Call Option Price: %.4f\\n', callPrice);",
+  "ocr_text": "Displayresults\nfprintf(EuropeanCallOptionPrice:*.4fn,callPrice);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 514.23,
+    "x1": 398.84,
+    "y1": 535.49
+  },
+  "confidence": "high"
+}

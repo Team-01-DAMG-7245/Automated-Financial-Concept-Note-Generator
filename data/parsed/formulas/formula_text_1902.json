@@ -1,0 +1,12 @@
+{
+  "page": 963,
+  "original_text": "thresh = transprobtothresholds(trans)",
+  "ocr_text": "thresh=transprobtothresholds(trans)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 667.03,
+    "x1": 290.46,
+    "y1": 677.49
+  },
+  "confidence": "high"
+}

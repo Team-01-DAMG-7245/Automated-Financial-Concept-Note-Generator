@@ -1,0 +1,5 @@
+Page 1459
+================================================================================
+
+Sequence of background processes or state vector adjustments, specified as the comma-separated
+pair consisting of 'Processes' and a function or cell array of functions of the form

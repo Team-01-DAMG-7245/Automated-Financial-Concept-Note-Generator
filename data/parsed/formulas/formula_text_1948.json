@@ -1,0 +1,12 @@
+{
+  "page": 1007,
+  "original_text": "N = bads+goods;\nobsBads = bads;\nexpBads = predPD.*N;\nHLStatistic = sum((obsBads-expBads).^2./(N.*predPD.*(1-predPD)));\n% 8 degrees of freedom = 10 (deciles) - 2\npHL = chi2cdf(HLStatistic,8,'upper')",
+  "ocr_text": "N=bads+goods;\n\nobsBads=bads;\n\nexpBads=predPD.*N;\nHLStatistic=sum((obsBads-expBads).*2./(N.*predPD.*(1-predPD)));\n8degreesoffreedom=10(deciles)-2\npHL=chi2cdf(HLStatistic,8,upper)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 407.05,
+    "x1": 442.17,
+    "y1": 471.52
+  },
+  "confidence": "high"
+}

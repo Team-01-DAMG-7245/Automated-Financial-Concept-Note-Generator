@@ -1,0 +1,12 @@
+{
+  "page": 486,
+  "original_text": "% Compute Brinson attribution\nbrinson = brinsonAttribution(asset_table);\nsummary(brinson)",
+  "ocr_text": "ComputeBrinsonattribution\nbrinson=brinsonAttribution(asset_table);\nsummary(brinson)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 405.75,
+    "x1": 317.56,
+    "y1": 437.81
+  },
+  "confidence": "high"
+}

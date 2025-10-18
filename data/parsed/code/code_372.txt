@@ -1,0 +1,7 @@
+Page 379
+================================================================================
+
+The Portfolio class enables you to use the imported data to create a Portfolio object. The 
+estimateAssetMoments function for the Portfolio object enables you to set up a portfolio given
+only a historical price or returns series. The estimateAssetMoments function estimates mean and
+covariance of asset returns from data even if there is missing data.

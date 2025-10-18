@@ -1,0 +1,12 @@
+{
+  "page": 2112,
+  "original_text": "TargetDate = datemnth(StartDate,NumberMonths) determines a date in a future or past\nmonth based on movement either forward or backward in time by a given number of months.",
+  "ocr_text": "TargetDate=datemnth(StartDate,NumberMonths)determinesadateinafutureorpast\nmonthbasedonmovementeitherforwardorbackwardintimebyagivennumberofmonths.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 259.89,
+    "x1": 531.92,
+    "y1": 283.52
+  },
+  "confidence": "high"
+}

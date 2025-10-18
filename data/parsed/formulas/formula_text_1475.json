@@ -1,0 +1,12 @@
+{
+  "page": 742,
+  "original_text": "Blotter = dataset([{100*[pwgt0, pwgt, pbuy, psell]}, ...\n{'Initial','Weight', 'Purchases','Sales'}],'obsnames',p.AssetList);\ndisplay(Blotter)",
+  "ocr_text": "Blotter=dataset([{100*[pwgt0,pwgt,pbuy,psell]},...\n{Initial,Weight,Purchases,Sales}],obsnames,p.AssetList);\ndisplay(Blotter)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 222.63,
+    "x1": 453.03,
+    "y1": 254.69
+  },
+  "confidence": "high"
+}

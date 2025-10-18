@@ -1,0 +1,21 @@
+This function requires that the input mean must satisfy 1 + mg > 0 and that the input covariance Cg
+must be a symmetric, positive, semidefinite matrix.
+
+The functions geom2arith and arith2geom are complementary so that, given m, C, and t, the
+sequence
+
+[ma,Ca] = geom2arith(m,C,t);
+[mg,Cg] = arith2geom(ma,Ca,1/t);
+
+yields mg = m and Cg = C.
+
+Version History
+Introduced before R2006a
+
+See Also
+arith2geom | nearcorr
+
+15
+Functions
+
+15-1078

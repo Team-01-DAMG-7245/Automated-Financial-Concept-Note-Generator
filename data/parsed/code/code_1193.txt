@@ -1,0 +1,9 @@
+Page 1225
+================================================================================
+
+F = 
+   Class DRIFT: Drift Rate Specification  
+   -------------------------------------  
+      Rate: drift rate function F(t,X(t)) 
+         A: 6x1 double array
+         B: 6x6 diagonal double array

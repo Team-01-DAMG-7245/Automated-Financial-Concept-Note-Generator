@@ -1,0 +1,65 @@
+Quasi-Monte Carlo American Call Basket Price:  20.1935
+Quasi-Monte Carlo American Put  Basket Price:  16.4731
+
+Gaussian Copula American Call Basket Price:  20.9183
+Gaussian Copula American Put  Basket Price:  16.4416
+
+t Copula American Call Basket Price:  21.0133
+       t Copula American Put  Basket Price:  16.7050
+
+Interestingly, the results agree closely. Put option prices obtained from copulas exceed those of
+Brownian motion by less than 1%.
+
+A Note on Volatility and Interest Rate Scaling
+
+The same option prices could also be obtained by working with unannualized (in this case, daily)
+centered returns and riskless rates, where the time increment dt = 1 day rather than 1/252 years. In
+other words, portfolio prices would still be simulated every trading day; the data is simply scaled
+differently.
+
+Although not executed, and by first resetting the random stream to its initial internal state, the
+following code segments work with daily centered returns and riskless rates and produce the same
+option prices.
+
+Gaussian Distribution/Brownian Motion & Daily Data:
+
+reset(s)
+
+f    = Example_LongstaffSchwartz(nPeriods, nTrials);
+GBM1 = gbm(diag(r(ones(1,nIndices))/252), diag(std(returns)), 'StartState', X, ...
+          'Correlation', correlation);
+
+simByEuler(GBM1, nPeriods, 'nTrials'  , nTrials, 'DeltaTime', 1, ...
+                          'Processes', f.LongstaffSchwartz);
+
+BrownianMotionCallPrice = f.CallPrice(strike, r/252)
+BrownianMotionPutPrice  = f.PutPrice (strike, r/252)
+
+reset(s)
+
+f    = Example_LongstaffSchwartz(nPeriods, nTrials);
+GBM1 = gbm(diag(r(ones(1,nIndices))/252), diag(std(returns)), 'StartState', X, ...
+          'Correlation', correlation);
+
+simByEuler(GBM1, nPeriods, 'nTrials'  , nTrials, 'DeltaTime', dt, ...
+                          'Processes', f.LongstaffSchwartz, ...
+                          'MontecarloMethod','quasi');
+
+QuasiMonteCarloCallPrice = f.CallPrice(strike, r/252);
+QuasiMonteCarloPutPrice  = f.PutPrice (strike, r/252);
+
+Gaussian Copula & Daily Data:
+
+reset(s)
+
+z    = Example_CopulaRNG(returns, nPeriods, 'Gaussian');
+f    = Example_LongstaffSchwartz(nPeriods, nTrials);
+GBM2 = gbm(diag(r(ones(1,nIndices))/252),   eye(nIndices), 'StartState', X);
+
+simByEuler(GBM2, nPeriods, 'nTrials'  , nTrials, 'DeltaTime',   1, ...
+                          'Processes', f.LongstaffSchwartz , 'Z', z);
+
+14
+Stochastic Differential Equations
+
+14-86

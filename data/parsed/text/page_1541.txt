@@ -1,0 +1,72 @@
+•
+[new_weights,userData] =
+rebalanceFcn(weights,assetPrices,signalData,userData)
+
+If UserData is specified, then in addition to an output for new_weights, there is also an output
+for userData returned as a struct.
+
+•
+If Both UserData and EngineDataList are Specified
+
+If you use the name-value argument for UserData to specify a strategy-specific userData struct
+and you use the name-value argument EngineDataList to specify a backtest engine state, the
+required syntax for rebalanceFcn must have one of the following signatures:
+
+•
+[new_weights,userData] = rebalanceFcn(engineData,assetPrices,userData)
+
+•
+[new_weights,userData] =
+rebalanceFcn(engineData,assetPrices,signalData,userData)
+
+If UserData is specified, then in addition to an output for new_weights, there is also an output
+for userData returned as a struct.
+
+The rebalanceFcn function is called by the backtestEngine object each time the strategy must be
+rebalanced as specified in the RebalanceFrequency name-value argument. The backtestEngine
+object calls the rebalanceFcn function with the following arguments:
+
+•
+weights — The current portfolio weights before rebalancing, specified as decimal percentages.
+
+•
+assetPrices — A timetable containing a rolling window of adjusted asset prices.
+
+•
+signalData — (Optional) A timetable containing a rolling window of signal data.
+
+If you provide signal data to the backtestEngine object, then the engine object passes it to the
+strategy rebalance function using the three input argument syntax. If do not provide signal data
+the backtestEngine object, then the engine object calls the rebalance function with the two
+input argument syntax.
+
+•
+userData — (Optional) A struct to contain strategy-specific user data.
+
+If the UserData property is set, the userData struct is passed into rebalanceFcn.
+
+•
+engineData — (Optional) A struct containing backtest state data.
+
+If the EngineDataList property is set, the engineData struct is passed into rebalanceFcn.
+
+For more information on developing a rebalanceFcn function handle, see “Backtest Investment
+Strategies Using Financial Toolbox” on page 4-238.
+
+Data Types: function_handle
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: strat =
+backtestStrategy('MyStrategy',@myRebalFcn,'TransactionCost',0.005,'LookbackWi
+ndow',20)
+
+backtestStrategy
+
+15-235

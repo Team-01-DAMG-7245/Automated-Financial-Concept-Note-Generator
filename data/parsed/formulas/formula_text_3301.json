@@ -1,0 +1,12 @@
+{
+  "page": 1777,
+  "original_text": "Note If t = 1, then Y = exp(X).",
+  "ocr_text": "NoteIft=1,thenY=exp(X).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.36,
+    "x1": 233.23,
+    "y1": 105.09
+  },
+  "confidence": "high"
+}

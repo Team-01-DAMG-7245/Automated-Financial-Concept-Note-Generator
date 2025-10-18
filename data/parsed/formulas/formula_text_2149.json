@@ -1,0 +1,12 @@
+{
+  "page": 1108,
+  "original_text": "D  = datevec(Settle);                % Get date components\ndt = datetime(year(Settle):2018, month(Settle), day(Settle)); % Get evaluation dates",
+  "ocr_text": "D=datevec(Settle); Getdatecomponents\ndt=datetime(year(Settle):2018,month(Settle),day(Settle));Getevaluationdates",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 149.43,
+    "x1": 545.14,
+    "y1": 170.69
+  },
+  "confidence": "high"
+}

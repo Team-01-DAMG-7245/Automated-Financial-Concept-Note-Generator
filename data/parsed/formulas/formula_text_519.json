@@ -1,0 +1,12 @@
+{
+  "page": 355,
+  "original_text": "Blotter.Port = qwgt;\nBlotter.Buy = qbuy;\nBlotter.Sell = qsell;",
+  "ocr_text": "Blotter.Port=qwgt;\nBlotter.Buy=qbuy;\nBlotter.Sell=qsell;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 213.32,
+    "x1": 203.77,
+    "y1": 245.39
+  },
+  "confidence": "high"
+}

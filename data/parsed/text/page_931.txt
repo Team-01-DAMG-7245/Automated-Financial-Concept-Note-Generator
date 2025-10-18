@@ -1,0 +1,57 @@
+However, when t-year transition probabilities are required for a whole range of values of t, for
+example, 1-year, 2-year, 3-year, 4-year, and 5-year transition probabilities, it is more efficient to call
+transprob once to get the optional output sampleTotals. You can use the same sampleTotals
+structure can be used to get the t-year transition matrix for any transition interval t. Given a
+sampleTotals structure and a transition interval, you can get the corresponding transition matrix
+by using transprobbytotals.
+
+load Data_TransProb
+
+startDate = datetime(1995,12,31);
+endDate = datetime(2000,12,31);
+
+[~,sampleTotals] = transprob(data,'startDate', ...
+startDate, 'endDate',endDate);
+
+DefProb = zeros(7,5);
+for t = 1:5
+   transMatTemp = transprobbytotals(sampleTotals,'transInterval',t);
+   DefProb(:,t) = transMatTemp(1:7,8);
+end
+DefProb
+
+DefProb = 7×5
+
+0.0043    0.0169    0.0377    0.0666    0.1033
+    0.0754    0.1542    0.2377    0.3265    0.4213
+    0.0832    0.1936    0.3276    0.4819    0.6536
+    0.3992    0.8127    1.2336    1.6566    2.0779
+    1.0980    2.1189    3.0668    3.9468    4.7644
+    3.0860    5.6994    7.9281    9.8418   11.4963
+    5.3484    9.8053   13.5320   16.6599   19.2964
+
+Estimate Bootstrap Confidence Intervals
+
+This example shows how to estimate confidence intervals for the transition probabilities using a
+bootstrapping procedure.
+
+transprob also returns the idTotals structure array which contains, for each ID, or company, the
+total time spent on each rating, and the total transitions out of each rating. For more information on
+the idTotals structure, see transprob. The idTotals structure is similar to the sampleTotals
+structures (see “Estimate Point-in-Time and Through-the-Cycle Probabilities” on page 8-10), but
+idTotals has the information at an ID level. Because most companies only migrate between few
+ratings, the numeric arrays in idTotals are stored as sparse arrays to reduce memory
+requirements.
+
+You can use the idTotals structure array to estimate confidence intervals for the transition
+probabilities using a bootstrapping procedure, as the following example demonstrates. To do this, call
+transprob and keep the third output argument, idTotals. The idTotals fields are displayed for
+the last company in the sample. Within the estimation window, this company spends almost a year as
+'AA' and it is then upgraded to 'AAA'.
+
+load Data_TransProb
+startDate = datetime(1995,12,31);
+
+Estimation of Transition Probabilities
+
+8-13

@@ -1,0 +1,12 @@
+{
+  "page": 1252,
+  "original_text": "nSteps      = 1;\nsampleTimes = cumsum([obj.StartTime ; ...\ndt(ones(nPeriods * nSteps,1))/nSteps]);\nz           = Example_StratifiedRNG(nPaths, sampleTimes);\nrng(10203,'twister')\n[Y, Times]  = obj.simBySolution(nPeriods, 'nTrials', nPaths,...\n'DeltaTime', dt, 'nSteps', nSteps,  'Z', z);\nY = squeeze(Y);   % Reorder to a 2-D array\nplot(Times, Y)\nxlabel('Time (Years)'), ylabel('Index Level')\ntitle('FTSE 100 Terminal Stratification:Geometric Brownian Motion')",
+  "ocr_text": "nSteps =1;\n\nsampleTimes=cumsum([obj.StartTime;...\ndt(ones(nPeriods*nSteps,1))/nSteps]);\n\nz =Example_StratifiedRNG(nPaths,sampleTimes);\nrng(10203,twister)\n[Y,Times]=obj.simBySolution(nPeriods,nTrials,nPaths,...\nDeltaTime,dt,nSteps,nSteps,Z,z);\n\nY=squeeze(Y); SReordertoa2-Darray\n\nplot(Times,Y)\n\nxlabel(Time(Years)),ylabel(IndexLevel)\ntitle(FTSE100TerminalStratification:GeometricBrownianMotion)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 397.18,
+    "x1": 453.03,
+    "y1": 515.65
+  },
+  "confidence": "high"
+}

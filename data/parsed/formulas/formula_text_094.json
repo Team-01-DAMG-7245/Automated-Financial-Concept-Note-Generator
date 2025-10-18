@@ -1,0 +1,12 @@
+{
+  "page": 81,
+  "original_text": "rs = exp(rc) - 1",
+  "ocr_text": "rs=exp(rc)-1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 474.35,
+    "x1": 176.68,
+    "y1": 484.82
+  },
+  "confidence": "high"
+}

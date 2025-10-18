@@ -1,0 +1,12 @@
+{
+  "page": 959,
+  "original_text": "CreditIndex = zeros(nYears,1);\nExitFlag = zeros(nYears,1);\noptions = optimset('LargeScale','Off','Display','Off');\nfor i=1:nYears\n   errorfun = @(z)norm(squeeze(TransMat(:,:,i))-...\n      transprobfromthresholds(...\n      transprobtothresholds(tmTTC)+z),'fro');",
+  "ocr_text": "CreditIndex=zeros(nYears,1);\nExitFlag=zeros(nYears,1);\noptions=optimset(LargeScale,Off,Display,Off);\nfori=1:nYears\nerrorfun=Q(z)norm(squeeze(TransMat(:,:,i))-...\ntransprobfromthresholds(...\ntransprobtothresholds(tmTTC)+z),fro);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 388.02,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

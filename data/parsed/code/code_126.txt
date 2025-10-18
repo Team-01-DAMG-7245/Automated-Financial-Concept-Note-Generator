@@ -1,0 +1,4 @@
+Page 146
+================================================================================
+
+You do this with the function portalloc. First generate the efficient frontier data using portopt.

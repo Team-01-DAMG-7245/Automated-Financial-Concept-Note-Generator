@@ -1,0 +1,12 @@
+{
+  "page": 1317,
+  "original_text": "Period = ones(NumAssets*NumPeriods,1);\n for k = 1:NumPeriods\n     Period(k*NumAssets+1:end,1) = Period(k*NumAssets,1) + 1;\n end",
+  "ocr_text": "Period=ones(NumAssets*NumPeriods,1);\n\nfork=1:NumPeriods\nPeriod(k*NumAssets+1:end,1)=Period(k*NumAssets,1)+1;\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.89,
+    "x1": 420.5,
+    "y1": 643.75
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2253,
+  "original_text": "p = setAssetMoments(p, m, C);\np = setDefaultConstraints(p);\npwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];\np = setInitPort(p, pwgt0);\n[pwgt, pbuy, psell] = estimateFrontier(p);",
+  "ocr_text": "p=setAssetMoments(p,m,C);\np=setDefaultConstraints(p);\npwgt=[0.3;0.3;0.2;0.1];\np=setInitPort(p,_pwgt0);\n[pwgt,pbuy,psell]=estimateFrontier(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 317.56,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

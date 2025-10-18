@@ -1,0 +1,55 @@
+depfixdb
+
+Fixed declining-balance depreciation schedule
+
+Syntax
+
+Depreciation = depfixdb(Cost,Salvage,Life,Period)
+Depreciation = depfixdb( ___ ,Month)
+
+Description
+
+Depreciation = depfixdb(Cost,Salvage,Life,Period) computes the fixed declining-
+balance depreciation for each Period.
+
+Depreciation = depfixdb( ___ ,Month) adds an optional argument.
+
+Examples
+
+Compute the Fixed Declining-Balance Depreciation
+
+This example shows how to calculate the depreciation for the first five years for a car is purchased for
+$11,000, with a salvage value of $1500, and a lifetime of eight years.
+
+Depreciation = depfixdb(11000, 1500, 8, 5)
+
+Depreciation = 1×5
+103 ×
+
+2.4251    1.8904    1.4737    1.1488    0.8955
+
+Input Arguments
+
+Cost — Initial value of the asset
+numeric
+
+initial value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+Salvage — Salvage value of the asset
+numeric
+
+Salvage value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+Life — Life of the asset in years
+numeric
+
+life of the asset in years, specified as scalar numeric.
+
+15
+Functions
+
+15-842

@@ -1,0 +1,5 @@
+Page 1038
+================================================================================
+
+function hPlotTransitions(CompanyID,startDate,endDate,data,RatingLabels)
+% Helper function to visualize transitions between ratings

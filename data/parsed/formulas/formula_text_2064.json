@@ -1,0 +1,12 @@
+{
+  "page": 1068,
+  "original_text": "In all functions, the MATLAB representation for the number of observations (or samples) is\nNumSamples = m, the number of data series is NumSeries = n, and the number of model\nparameters is NumParams = p. The moment estimation functions have NumSeries = NumParams.",
+  "ocr_text": "Inallfunctions,theMATLABrepresentationforthenumberofobservations(orsamples)is\nNumSamples=m,thenumberofdataseriesisNumSeries=n,andthenumberofmodel\nparametersisNumParams=_p.ThemomentestimationfunctionshaveNumSeries=NumParams.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 371.93,
+    "x1": 549.16,
+    "y1": 407.56
+  },
+  "confidence": "high"
+}

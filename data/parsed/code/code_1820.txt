@@ -1,0 +1,8 @@
+Page 1510
+================================================================================
+
+Instantaneous mean of random percentage jump sizes J, where log(1+J) is normally distributed with
+mean (log(1+JumpMean) - 0.5 × JumpVol2) and standard deviation JumpVol, specified as decimal
+using an array, a deterministic function of time, or a deterministic function of time and state. For
+instance, an expected jump effect of 20% on the price of an underlying asset must be input as 0.2
+instead of 20.

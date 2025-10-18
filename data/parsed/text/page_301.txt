@@ -1,0 +1,94 @@
+Case for Solving
+Portfolio Problem
+
+Objective Function
+Constraints
+Integer (Binary)
+Variables
+
+"Always" case with
+Financial Toolbox
+
+•
+Return — Gross
+portfolio returns or
+net portfolio returns
+
+•
+Risk — Variance,
+CVaR, or MAD
+
+•
+Sharpe ratio (only
+for mean-variance
+problems using
+Portfolio object)
+
+•
+Continuous convex
+functions (only using
+the Portfolio
+object)
+
+•
+Return — Gross
+portfolio returns or
+net portfolio returns
+
+•
+Risk — Variance,
+CVaR, or MAD (risk
+constraints are only
+supported when the
+objective is the
+return)
+
+•
+Linear equalities
+
+•
+Linear inequalities
+
+•
+Tracking error (only
+for mean-variance
+problems using
+Portfolio object).
+Tracking error is
+supported with
+custom objectives
+using
+estimateCustomOb
+jectivePortfolio
+. Tracking error is
+only supported when
+the objective is the
+return, variance, or
+Sharpe ratio.
+
+•
+Turnover
+
+•
+Bounds on the
+number of assets
+
+•
+Conditional budget
+constraint (an upper
+bound on the sum of
+all assets that go
+above a specified
+threshold)
+
+•
+Conditional
+(semicontinuous)
+bounds (for example,
+if asset i is selected,
+then xi ≥ lbi,
+otherwise xi = 0)
+
+When to Use Portfolio Objects Over Optimization Toolbox
+
+4-133

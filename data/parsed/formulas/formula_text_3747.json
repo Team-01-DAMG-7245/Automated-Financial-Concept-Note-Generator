@@ -1,0 +1,12 @@
+{
+  "page": 2121,
+  "original_text": "NumDays = days360(datetime(2000,1,15) , datetime(2000,3,15))",
+  "ocr_text": "NumDays=days360(datetime(2000,1,15),datetime(2000,3,15))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 532.83,
+    "x1": 415.08,
+    "y1": 543.29
+  },
+  "confidence": "high"
+}

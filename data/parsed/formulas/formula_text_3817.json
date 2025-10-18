@@ -1,0 +1,12 @@
+{
+  "page": 2163,
+  "original_text": "DiscRate = discrate(Settle,Maturity,Face,Price)\nDiscRate = discrate( ___ ,Basis)",
+  "ocr_text": "DiscRate=discrate(Settle,Maturity,Face,Price)\nDiscRate=discrate(__,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.89,
+    "x1": 372.96,
+    "y1": 215.52
+  },
+  "confidence": "high"
+}

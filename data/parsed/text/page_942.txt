@@ -1,0 +1,63 @@
+totalsByRtg(t).totalsVec = nIssuers(t,:);
+   % Number of transitions between ratings during the year
+   totalsByRtg(t).totalsMat = round(diag(nIssuers(t,:))* ...
+      (0.01*TransMat(:,:,t)));
+   % Algorithm
+   totalsByRtg(t).algorithm = 'cohort';
+end
+
+It is useful to see both the original data and the data stored in these totals structures side to side. The
+original data contains number of issuers and transition probabilities for each year. For example, for
+2005:
+
+fprintf('\nTransition matrix for 2005:\n\n')
+
+Transition matrix for 2005:
+
+Example_DisplayTransitions(squeeze(TransMat(:,:,end)),nIssuers(end,:), ...
+   {'AAA','AA','A','BBB','BB','B','CCC'},...
+   {'AAA','AA','A','BBB','BB','B','CCC','D','NR'})
+
+Init    AAA     AA      A    BBB     BB      B    CCC      D     NR 
+   AAA     98  88.78   9.18   1.02      0      0      0      0      0   1.02 
+    AA    407      0  90.66   4.91   0.49      0      0      0      0   3.93 
+     A   1224   0.08   1.63  88.89   4.41      0      0      0      0   4.98 
+   BBB   1535      0    0.2   5.93  84.04   3.06   0.46      0   0.07   6.25 
+    BB   1015      0      0      0   5.71  76.75    6.9    0.2    0.2  10.25 
+     B   1010      0      0    0.1   0.59   8.51  70.59   3.76   1.58  14.85 
+   CCC    126      0      0      0   0.79   0.79   25.4  46.83   8.73  17.46
+
+The totals structure stores the total number of issuers per rating at the beginning of the year in the
+totalsVec field, and the total number of migrations between ratings (instead of transition
+probabilities) in the totalsMat field. Here is the information for 2005:
+
+fprintf('\nTransition counts (totals struct) for 2005:\n\n')
+
+Transition counts (totals struct) for 2005:
+
+Example_DisplayTransitions(totalsByRtg(end).totalsMat, ...
+   totalsByRtg(end).totalsVec,...
+   {'AAA','AA','A','BBB','BB','B','CCC'},...
+   {'AAA','AA','A','BBB','BB','B','CCC','D','NR'})
+
+Init    AAA     AA      A    BBB     BB      B    CCC      D     NR 
+   AAA     98     87      9      1      0      0      0      0      0      1 
+    AA    407      0    369     20      2      0      0      0      0     16 
+     A   1224      1     20   1088     54      0      0      0      0     61 
+   BBB   1535      0      3     91   1290     47      7      0      1     96 
+    BB   1015      0      0      0     58    779     70      2      2    104 
+     B   1010      0      0      1      6     86    713     38     16    150 
+   CCC    126      0      0      0      1      1     32     59     11     22
+
+The third field in the totals structure, algorithm, indicates that you are working with the cohort
+method (duration is also supported, although the information in totalsVec and totalsMat would
+be different). These structures are obtained as optional outputs from transprob, but this example
+shows how you can define these structures directly.
+
+Use transprobgrouptotals to group the ratings 'AAA' to 'BBB' (ratings 1 to 4) into the IG
+category and ratings 'BB' to 'CCC' (ratings 5 to 7) into the SG category. The edges argument tells
+
+8
+Credit Risk Analysis
+
+8-24

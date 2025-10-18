@@ -1,0 +1,12 @@
+{
+  "page": 943,
+  "original_text": "DefRateIG = zeros(nYears,1);\nDefRateSG = zeros(nYears,1);\nDefRate = zeros(nYears,1);\nfor t=1:nYears\n   % Get transition matrix at IG/SG level and extract IG default rate and\n   % SG default rate for year t\n   tmIGSG = transprobbytotals(totalsIGSG(t));\n   DefRateIG(t) = tmIGSG(1,3);\n   DefRateSG(t) = tmIGSG(2,3);\n   % Get transition matrix at most aggregate level and extract overall\n   % corporate default rate for year t\n   tmAll = transprobbytotals(totalsAll(t));\n   DefRate(t) = tmAll(1,2);\nend",
+  "ocr_text": "DefRateIG=zeros(nYears,1);\n\nDefRateSG=zeros(nYears,1);\n\nDefRate=zeros(nYears,1);\n\nfort=1:nYears\nGettransitionmatrixatIG/SGlevelandextractIGdefaultrateand\nSGdefaultrateforyeart\ntmIGSG=transprobbytotals(totalsIGSG(t));\nDefRateIG(t)=tmIGSG(1,3);\nDefRateSG(t)=tmIGSG(2,3);\nGettransitionmatrixatmostaggregatelevelandextractoverall\ncorporatedefaultrateforyeart\ntmAlLL=transprobbytotals(totalsAll(t));\nDefRate(t)=tmA11(1,2);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 522.43,
+    "x1": 485.51,
+    "y1": 673.29
+  },
+  "confidence": "high"
+}

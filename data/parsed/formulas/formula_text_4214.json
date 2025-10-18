@@ -1,0 +1,12 @@
+{
+  "page": 2372,
+  "original_text": "FutureVal = fvvar( ___ ,CFDates) specifies options using an optional argument in addition to\nthe input arguments in the previous syntax.",
+  "ocr_text": "FutureVal=fvvar( ,CFDates)specifiesoptionsusinganoptionalargumentinadditionto\ntheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 273.82,
+    "x1": 546.2,
+    "y1": 297.45
+  },
+  "confidence": "high"
+}

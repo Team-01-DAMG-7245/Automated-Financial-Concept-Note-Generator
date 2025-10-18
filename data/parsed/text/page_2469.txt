@@ -1,0 +1,55 @@
+Input Arguments
+
+Data — Data for a series of prices
+matrix | table | timetable
+
+Data for a series of prices, specified as a matrix, table, or timetable. Timetables and tables with M
+rows must contain a variable named 'Price' (case insensitive).
+
+Data Types: double | table | timetable
+
+ax — Valid axis object
+current axes (ax = gca) (default) | axes object
+
+(Optional) Valid axis object, specified as an axes object. The linebreak plot is created in the axes
+specified by ax instead of in the current axes (ax = gca). The option ax can precede any of the input
+argument combinations.
+
+Data Types: object
+
+Output Arguments
+
+h — Graphic handle of the figure
+handle object
+
+Graphic handle of the figure, returned as a handle object.
+
+More About
+
+Line Break Chart
+
+A line break chart is a type of financial chart used to represent price movements of an asset over
+time, focusing on price action rather than time intervals.
+
+The line break chart is particularly useful for identifying trends and reversals in price movements
+without the noise of time-based charts, such as candlestick or bar charts. Line break charts help
+traders and analysts make decisions based on significant price changes. A line break chart contains a
+series of vertical lines that represent price movements. Each line is drawn based on a specific price
+threshold rather than a fixed time interval. The chart consists of a series of "lines" that change
+direction based on price movements. A new line is drawn when the price moves a certain amount
+beyond the previous line.
+
+Version History
+Introduced in R2008a
+
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+R2018a: Support for matrix, time, or timetable input for data
+Behavior changed in R2018a
+
+linebreak
+
+15-1163

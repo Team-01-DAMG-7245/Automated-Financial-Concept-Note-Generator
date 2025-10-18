@@ -1,0 +1,39 @@
+Technically, the numbers after these ages are 0, but can also be NaN values because no person is alive
+after these terminating ages. Second, the probabilities qx on the right terminate with fluctuating
+probabilities that go from 0 to 1 in some cases. In this case, however, all probabilities are 1qx
+probabilities (unlike the forced termination probabilities). You can argue that the probabilities after
+the ages of termination can be 1 (anyone alive at this age is expected to die in the next year), 0 (the
+age lies outside the support of the probability distribution), or NaN values.
+
+Truncated Termination
+
+Truncated termination occurs with truncation of life tables at an arbitrary age. For example, from
+1970–1990, United States life tables truncated at age 85. This format is problematic because life
+table probabilities must either terminate with probability 1 (forced termination) or discard data that
+exceeds the terminating age. This sample of the last few years of a life table illustrates truncated
+termination. The raw data for this table is the lx series. The qx series is derived from this series.
+
+This life table format poses problems for termination because, for example, over 27% of the
+population for the fourth lx series is still alive at age 85. To claim that the probability of dying for all
+ages after age 85 is 100% might be true but is uninformative. Notwithstanding the statistical issues,
+however, tables in this form are completed by forced termination.
+
+Version History
+Introduced in R2015a
+
+References
+
+[1] Arias, E. “United States Life Tables.” National Vital Statistics Reports, U.S. Department of Health
+and Human Services. Vol. 62, No. 7, 2009.
+
+See Also
+lifetablefit | lifetablegen
+
+Topics
+“Case Study for Life Tables Analysis” on page 2-46
+“About Life Tables” on page 2-44
+
+15
+Functions
+
+15-1148

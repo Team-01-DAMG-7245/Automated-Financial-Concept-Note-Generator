@@ -1,0 +1,12 @@
+{
+  "page": 765,
+  "original_text": "risk = estimatePortRisk(obj,estimateFrontierByReturn(obj,ret));",
+  "ocr_text": "risk=estimatePortRisk(obj,estimateFrontierByReturn(obj,ret));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 437.51,
+    "x1": 431.33,
+    "y1": 447.97
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1563,
+  "original_text": "% Display prices timetable and rebalancing period.\nfprintf('#################################################################################\\n')\nfprintf('Rebalancing period: %s\\n',string(pricesTT.Dates(end)))\nfprintf('Number of time periods in data: %i\\n',size(pricesTT,1))\nfprintf('#################################################################################\\n')\ndisp(pricesTT)\nfprintf('#################################################################################\\n\\n')",
+  "ocr_text": "Displaypricestimetableandrebalancingperiod.\nFpriintF(eEAEEEEAEAEEHAEEAEEEAEEEEEAAA1)\nfprintf(Rebalancingperiod:*sn,string(pricesTT.Dates(end)))\nfprintf(Numberoftimeperiodsindata:in,size(pricesTT,1))\nFpriintF(eEAEEEEAEAEEHAEEAEEEAEEEEEAAA1)\ndisp(pricesTT)\nFpriintF(sAEEEEEEEHEAEHEAEEEAEEEEEEEA0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 610.17,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

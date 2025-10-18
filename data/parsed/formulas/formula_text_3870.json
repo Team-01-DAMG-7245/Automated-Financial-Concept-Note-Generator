@@ -1,0 +1,12 @@
+{
+  "page": 2207,
+  "original_text": "Objective = ecmnobj(Data,ECMMean,ECMCovar)",
+  "ocr_text": "Objective=ecmnobj(Data,ECMMean,ECMCovar)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 310.17,
+    "x1": 317.55,
+    "y1": 320.64
+  },
+  "confidence": "high"
+}

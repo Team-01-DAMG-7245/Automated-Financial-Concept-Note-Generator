@@ -1,0 +1,16 @@
+The figure shows how the probability of achieving the goal becomes larger as the initial wealth
+grows. Also, this figure demonstrates that as time passes, the current wealth must be higher than in
+the previous periods to get the same probability of achieving the goal.
+
+Use heatmap to plot the optimal portfolio.
+
+% Plot a heatmap of optimal portfolio.
+figure;
+heatmap(0:T-1,flip(WGrid(1:5:end)),flip(portIdx(1:5:end,:)))
+xlabel("Time Period")
+ylabel("Wealth Level")
+title("Portfolio Aggressiveness")
+
+Dynamic Portfolio Allocation in Goal-Based Wealth Management for Multiple Time Periods
+
+4-373

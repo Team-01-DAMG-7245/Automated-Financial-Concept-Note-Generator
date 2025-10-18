@@ -1,0 +1,6 @@
+Page 1458
+================================================================================
+
+•
+The maximum variance, although dependent upon the actual model diffusion-rate function G(t,X),
+is the variance of the sum of NBrowns correlated Gaussian variates scaled by the factor dt/4.

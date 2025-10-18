@@ -1,0 +1,12 @@
+{
+  "page": 1727,
+  "original_text": "p = p.setInequality(ActCons(:,1:end-1), ActCons(:,end));\np.plotFrontier;",
+  "ocr_text": "p=p.setInequality(ActCons(:,1:end-1),ActCons(:,end));\np.plotFrontier;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 604.53,
+    "x1": 393.41,
+    "y1": 625.8
+  },
+  "confidence": "high"
+}

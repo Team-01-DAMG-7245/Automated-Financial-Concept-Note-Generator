@@ -1,0 +1,12 @@
+{
+  "page": 1737,
+  "original_text": "AccruInterest = acrudisc(Settle,Maturity,Face,Discount) returns the accrued interest\nof a discount security paid at maturity.",
+  "ocr_text": "AccruInterest=acrudisc(Settle,Maturity,Face,Discount)returnstheaccruedinterest\nofadiscountsecuritypaidatmaturity.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.86,
+    "x1": 553.1,
+    "y1": 280.49
+  },
+  "confidence": "high"
+}

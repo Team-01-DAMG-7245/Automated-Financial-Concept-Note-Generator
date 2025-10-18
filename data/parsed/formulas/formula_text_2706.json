@@ -1,0 +1,12 @@
+{
+  "page": 1364,
+  "original_text": "% True efficient portfolios\nw = estimateFrontier(p,nPort);",
+  "ocr_text": "sTrueefficientportfolios\nw=estimateFrontier(p,nPort);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 448.43,
+    "x1": 252.54,
+    "y1": 469.69
+  },
+  "confidence": "high"
+}

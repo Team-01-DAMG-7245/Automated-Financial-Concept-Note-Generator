@@ -1,0 +1,82 @@
+SDE Simulation and Interpolation Methods
+
+The sde class provides default simulation and interpolation methods for all derived classes:
+
+•
+simulate: High-level wrapper around the user-specified simulation method stored in the
+Simulation property
+
+•
+simByEuler: Default Euler approximation simulation method
+
+•
+interpolate: Stochastic interpolation method (that is, Brownian bridge)
+
+You can use the simBySolution function to simulate approximate solutions of diagonal-drift
+processes for the following classes:
+
+•
+gbm supports simBySolution
+
+•
+hwv supports simBySolution
+
+•
+merton supports simBySolution
+
+You can use the simBySolution function with the name-value arguments for MonteCarloMethod
+and QuasiSequence to simulates approximate solutions of quasi-Monte Carlo simulations for the
+following classes:
+
+•
+gbm supports simBySolution
+
+•
+hwv supports simBySolution
+
+•
+merton supports simBySolution
+
+In addition, you can also use:
+
+•
+simByTransition with a cir object to approximates a continuous-time Cox-Ingersoll-Ross (CIR)
+model by an approximation of the transition density function.
+
+•
+simByTransition with a bates object to approximates a continuous-time Bates model by an
+approximation of the transition density function.
+
+•
+simByTransition with a heston object to approximates a continuous-time Heston model by an
+approximation of the transition density function.
+
+•
+simByQuadExp with a heston, bates, or cir object to generate sample paths by using a
+Quadratic-Exponential discretization scheme.
+
+•
+simByMilstein with a heston, bates, cir, sde, or merton object to process sample paths by
+Milstein approximation.
+
+•
+simByMilstein2 with a heston, bates, cir, sde, or merton object to process sample paths by
+second order Milstein approximation.
+
+•
+simByHybrid with a rvm or roughbergomi object to process sample paths by hybrid
+approximation.
+
+•
+simByEuler with a rvm, roughheston, or roughbergomi object to process sample paths by
+Euler approximation.
+
+SDE Classes and Associated Simulation Methods
+
+The following table lists the Financial Toolbox SDE classes and their supported simulation methods.
+For more information on models for the supported classes, see “Available SDE Models” on page 14-
+11.
+
+SDE Models
+
+14-13

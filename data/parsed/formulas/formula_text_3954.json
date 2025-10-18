@@ -1,0 +1,12 @@
+{
+  "page": 2244,
+  "original_text": "p = PortfolioCVaR('AInequality', [1 -1; 1 1 ], 'bInequality', 0);\n[lb, ub, isbounded] = estimateBounds(p)",
+  "ocr_text": "p=PortfolioCVaR(AInequality,[1-1;11],bInequality,0);\n[lb,ub,isbounded]=estimateBounds(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 212.14,
+    "x1": 442.2,
+    "y1": 233.4
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 540,
+  "original_text": "% Compute the optimal value function and portfolio at different\n% wealth nodes and time periods.\nportIdx = zeros(nWealthNodes,T);\nfor t = T:-1:1\n    pTilde = zeros(nWealthNodes,nPortfolios);\n    for k = 1:nPortfolios\n        % sum_j ( V(Wj(t+1)) * p(Wj|Wi,mu_k) )\n        pTilde(:,k) = pTransition(:,:,k)*V(:,t+1);\n    end\n    % Choose the portfolios that achieve the best probabilities.\n    [V(:,t),portIdx(:,t)] = max(pTilde,[],2);\nend",
+  "ocr_text": "Computetheoptimalvaluefunctionandportfolioatdifferent\nSwealthnodesandtimeperiods.\nportIdx=zeros(nWealthNodes,T);\nfort=T:-1:1\npTilde=zeros(nWealthNodes,nPortfolios);\nfork=1:nPortfolios\nSsum_j(V(Wj(t+1))*p(Wj{Wi,mu_k))\npTilde(:,k)=pTransition(:,:,k)*V(:,t+1);\nend\nChoosetheportfoliosthatachievethebestprobabilities.\n[V(:,t),portIdx(:,t)]=max(pTilde,[],2);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.59,
+    "x1": 436.75,
+    "y1": 385.86
+  },
+  "confidence": "high"
+}

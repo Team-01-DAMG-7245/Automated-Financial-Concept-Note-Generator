@@ -1,0 +1,55 @@
+Type of moving average to compute, specified as the comma-separated pair consisting of 'Type' and
+a scalar integer with a value of 0 (simple) or 1 (linear).
+
+Data Types: double
+
+NumStd — Number of standard deviations for the upper and lower bounds
+2 (default) | positive integer
+
+Number of standard deviations for the upper and lower bounds, specified as the comma-separated
+pair consisting of 'NumStd' and a scalar positive integer.
+
+Data Types: double
+
+Output Arguments
+
+middle — Moving average series representing the middle band
+matrix | table | timetable
+
+Moving average series representing the middle band, returned with the same number of rows (M) and
+the same type (matrix, table, or timetable) as the input Data.
+
+upper — Moving average series representing the upper band
+matrix | table | timetable
+
+Moving average series representing the upper band, returned with the same number of rows (M) and
+the same type (matrix, table, or timetable) as the input Data.
+
+lower — Moving average series representing the lower band
+matrix | table | timetable
+
+Moving average series representing the lower band, returned with the same number of rows (M) and
+the same type (matrix, table, or timetable) as the input Data.
+
+More About
+
+Bollinger Band
+
+The Bollinger band is a technical analysis indicator used to measure market volatility and identify
+potential overbought or oversold conditions in a time series of price data.
+
+The Bollinger bands consist of a middle band and two outer bands that expand and contract based on
+market volatility. Widening bands indicate increased volatility and potential price swings and
+narrowing bands suggest decreased volatility and potential price consolidation.
+
+Version History
+Introduced before R2006a
+
+R2023a: fints support removed for Data input argument
+Behavior changed in R2023a
+
+fints object support for the Data input argument is removed.
+
+bollinger
+
+15-595

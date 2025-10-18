@@ -1,0 +1,2132 @@
+[
+  {
+    "chunk_id": "text_2_720d2f28",
+    "content": "*Generated from fintbx.pdf (3462 pages)*\n---\n\n\n\nFinancial Toolbox™\n\nUser's Guide\n\nR2025b\n\n\n**Figure:**\n![Figure from page 1](figures/images/page_001_img_01.png)\n---\n\n\n\nHow to Contact MathWorks\n\nLatest news:\nwww.mathworks.com\n\nSales and services:\nwww.mathworks.com/sales_and_services\n\nUser community:\nwww.mathworks.com/matlabcentral\n\nTechnical support:\nwww.mathworks.com/support/contact_us\n\nPhone:\n508-647-7000\n\nThe MathWorks, Inc.\n1 Apple Hill Drive\nNatick, MA 01760-2098\n\nFinancial Toolbox™ User's Guide\n\n© COPYRIGHT 1995–2025 by The MathWorks, Inc.\n\nThe software described in this document is furnished under a license agreement. The software may be used or copied\nonly under the terms of the license agreement. No part of this manual may be photocopied or reproduced in any form\nwithout prior written consent from The MathWorks, Inc.",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 2",
+      "heading_level": 2,
+      "page": 2,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 210
+  },
+  {
+    "chunk_id": "text_2_05c4af14",
+    "content": "FEDERAL ACQUISITION: This provision applies to all acquisitions of the Program and Documentation by, for, or through\nthe federal government of the United States. By accepting delivery of the Program or Documentation, the government\nhereby agrees that this software or documentation qualifies as commercial computer software or commercial computer\nsoftware documentation as such terms are used or defined in FAR 12.212, DFARS Part 227.72, and DFARS 252.227-7014.\nAccordingly, the terms and conditions of this Agreement and only those rights specified in this Agreement, shall pertain\nto and govern the use, modification, reproduction, release, performance, display, and disclosure of the Program and\nDocumentation by the federal government (or other entity acquiring for or through the federal government) and shall\nsupersede any conflicting contractual terms or conditions. If this License fails to meet the government's needs or is",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 2",
+      "heading_level": 2,
+      "page": 2,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 186
+  },
+  {
+    "chunk_id": "text_2_149a8c52",
+    "content": "supersede any conflicting contractual terms or conditions. If this License fails to meet the government's needs or is\ninconsistent in any respect with federal procurement law, the government agrees to return the Program and\nDocumentation, unused, to The MathWorks, Inc.",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 2",
+      "heading_level": 2,
+      "page": 2,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 53
+  },
+  {
+    "chunk_id": "text_2_b5e82c2f",
+    "content": "Trademarks\n\nMATLAB and Simulink are registered trademarks of The MathWorks, Inc. See\nwww.mathworks.com/trademarks for a list of additional trademarks. Other product or brand names may be\ntrademarks or registered trademarks of their respective holders.\n\nPatents\n\nMathWorks products are protected by one or more U.S. patents. Please see www.mathworks.com/patents for\nmore information.\n\n\n**Figure:**\n![Figure from page 2](figures/images/page_002_img_01.png)\n\n**Figure:**\n![Figure from page 2](figures/images/page_002_img_02.png)\n\n**Figure:**\n![Figure from page 2](figures/images/page_002_img_03.png)\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 2",
+      "heading_level": 2,
+      "page": 2,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 148
+  },
+  {
+    "chunk_id": "text_3_e0583393",
+    "content": "Revision History",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 3",
+      "heading_level": 2,
+      "page": 3,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 2
+  },
+  {
+    "chunk_id": "text_3_6d57c45b",
+    "content": "October 1995\nFirst printing\nJanuary 1998\nSecond printing\nRevised for Version 1.1\nJanuary 1999\nThird printing\nRevised for Version 2.0 (Release 11)\nNovember 2000\nFourth printing\nRevised for Version 2.1.2 (Release 12)\nMay 2003\nOnline only\nRevised for Version 2.3 (Release 13)\nJune 2004\nOnline only\nRevised for Version 2.4 (Release 14)\nAugust 2004\nOnline only\nRevised for Version 2.4.1 (Release 14+)\nSeptember 2005\nFifth printing\nRevised for Version 2.5 (Release 14SP3)\nMarch 2006\nOnline only\nRevised for Version 3.0 (Release 2006a)\nSeptember 2006\nSixth printing\nRevised for Version 3.1 (Release 2006b)\nMarch 2007\nOnline only\nRevised for Version 3.2 (Release 2007a)\nSeptember 2007\nOnline only\nRevised for Version 3.3 (Release 2007b)\nMarch 2008\nOnline only\nRevised for Version 3.4 (Release 2008a)\nOctober 2008\nOnline only\nRevised for Version 3.5 (Release 2008b)\nMarch 2009\nOnline only\nRevised for Version 3.6 (Release 2009a)\nSeptember 2009\nOnline only\nRevised for Version 3.7 (Release 2009b)\nMarch 2010",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 3",
+      "heading_level": 2,
+      "page": 3,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 348
+  },
+  {
+    "chunk_id": "text_3_12143c74",
+    "content": "Online only\nRevised for Version 3.5 (Release 2008b)\nMarch 2009\nOnline only\nRevised for Version 3.6 (Release 2009a)\nSeptember 2009\nOnline only\nRevised for Version 3.7 (Release 2009b)\nMarch 2010\nOnline only\nRevised for Version 3.7.1 (Release 2010a)\nSeptember 2010\nOnline only\nRevised for Version 3.8 (Release 2010b)\nApril 2011\nOnline only\nRevised for Version 4.0 (Release 2011a)\nSeptember 2011\nOnline only\nRevised for Version 4.1 (Release 2011b)\nMarch 2012\nOnline only\nRevised for Version 4.2 (Release 2012a)\nSeptember 2012\nOnline only\nRevised for Version 5.0 (Release 2012b)\nMarch 2013\nOnline only\nRevised for Version 5.1 (Release 2013a)\nSeptember 2013\nOnline only\nRevised for Version 5.2 (Release 2013b)\nMarch 2014\nOnline only\nRevised for Version 5.3 (Release 2014a)\nOctober 2014\nOnline only\nRevised for Version 5.4 (Release 2014b)\nMarch 2015\nOnline only\nRevised for Version 5.5 (Release 2015a)\nSeptember 2015\nOnline only\nRevised for Version 5.6 (Release 2015b)\nMarch 2016\nOnline only",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 3",
+      "heading_level": 2,
+      "page": 3,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 349
+  },
+  {
+    "chunk_id": "text_3_97593cf0",
+    "content": "Revised for Version 5.4 (Release 2014b)\nMarch 2015\nOnline only\nRevised for Version 5.5 (Release 2015a)\nSeptember 2015\nOnline only\nRevised for Version 5.6 (Release 2015b)\nMarch 2016\nOnline only\nRevised for Version 5.7 (Release 2016a)\nSeptember 2016\nOnline only\nRevised for Version 5.8 (Release 2016b)\nMarch 2017\nOnline only\nRevised for Version 5.9 (Release 2017a)\nSeptember 2017\nOnline only\nRevised for Version 5.10 (Release 2017b)\nMarch 2018\nOnline only\nRevised for Version 5.11 (Release 2018a)\nSeptember 2018\nOnline only\nRevised for Version 5.12 (Release 2018b)\nMarch 2019\nOnline only\nRevised for Version 5.13 (Release 2019a)\nSeptember 2019\nOnline only\nRevised for Version 5.14 (Release 2019b)\nMarch 2020\nOnline only\nRevised for Version 5.15 (Release 2020a)\nSeptember 2020\nOnline only\nRevised for Version 6.0 (Release 2020b)\nMarch 2021\nOnline only\nRevised for Version 6.1 (Release 2021a)\nSeptember 2021\nOnline only\nRevised for Version 6.2 (Release 2021b)\nMarch 2022\nOnline only",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 3",
+      "heading_level": 2,
+      "page": 3,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 344
+  },
+  {
+    "chunk_id": "text_3_75711622",
+    "content": "Revised for Version 6.0 (Release 2020b)\nMarch 2021\nOnline only\nRevised for Version 6.1 (Release 2021a)\nSeptember 2021\nOnline only\nRevised for Version 6.2 (Release 2021b)\nMarch 2022\nOnline only\nRevised for Version 6.3 (Release 2022a)\nSeptember 2022\nOnline only\nRevised for Version 6.4 (Release 2022b)\nMarch 2023\nOnline only\nRevised for Version 6.5 (Release 2023a)\nSeptember 2023\nOnline only\nRevised for Version 23.2 (R2023b)\nMarch 2024\nOnline only\nRevised for Version 24.1 (R2024a)\nSeptember 2024\nOnline only\nRevised for Version 24.2 (R2024b)\nMarch 2025\nOnline only\nRevised for Version 25.1 (R2025a)\nSeptember 2025\nOnline only\nRereleased for Version 25.2 (R2025b)",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 3",
+      "heading_level": 2,
+      "page": 3,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 241
+  },
+  {
+    "chunk_id": "text_3_9efc314b",
+    "content": "---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 3",
+      "heading_level": 2,
+      "page": 3,
+      "chunk_index": 5,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 1
+  },
+  {
+    "chunk_id": "text_5_cbc13e1b",
+    "content": "Getting Started\n1\n\nFinancial Toolbox Product Description . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-2\n\nExpected Users . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-3\n\nAnalyze Sets of Numbers Using Matrix Functions . . . . . . . . . . . . . . . . . . .\n1-4\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-4\nKey Definitions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-4\nReferencing Matrix Elements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-4\nTransposing Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-5",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 5",
+      "heading_level": 2,
+      "page": 5,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 318
+  },
+  {
+    "chunk_id": "text_5_860119b3",
+    "content": "Matrix Algebra Refresher . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-7\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-7\nAdding and Subtracting Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-7\nMultiplying Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-8\nDividing Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-11\nSolving Simultaneous Linear Equations . . . . . . . . . . . . . . . . . . . . . . . . .\n1-11\nOperating Element by Element . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-13",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 5",
+      "heading_level": 2,
+      "page": 5,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 314
+  },
+  {
+    "chunk_id": "text_5_b5dae236",
+    "content": "Using Input and Output Arguments with Functions . . . . . . . . . . . . . . . . .\n1-15\nInput Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-15\nOutput Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n1-16\n\nPerforming Common Financial Tasks\n2",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 5",
+      "heading_level": 2,
+      "page": 5,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 130
+  },
+  {
+    "chunk_id": "text_5_aeee8979",
+    "content": "Performing Common Financial Tasks\n2\n\nHandle and Convert Dates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-2\nDate Formats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-2\nDate Conversions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-3\nCurrent Date and Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-7\nDetermining Specific Dates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-8\nDetermining Holidays . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-8\nDetermining Cash-Flow Dates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-9",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 5",
+      "heading_level": 2,
+      "page": 5,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 337
+  },
+  {
+    "chunk_id": "text_5_596bea5a",
+    "content": "Analyzing and Computing Cash Flows . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-11\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-11\nInterest Rates/Rates of Return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-11\nPresent or Future Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-12\nDepreciation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-13\nAnnuities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-13\n\nv\n\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 5",
+      "heading_level": 2,
+      "page": 5,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 289
+  },
+  {
+    "chunk_id": "text_6_b3488149",
+    "content": "Pricing and Computing Yields for Fixed-Income Securities . . . . . . . . . .\n2-15\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-15\nFixed-Income Terminology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-15\nFramework . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-18\nDefault Parameter Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-18\nCoupon Date Calculations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-20\nYield Conventions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-21\nPricing Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-21\nYield Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-21",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 6",
+      "heading_level": 2,
+      "page": 6,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 408
+  },
+  {
+    "chunk_id": "text_6_9d6c17cf",
+    "content": "2-21\nYield Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-21\nFixed-Income Sensitivities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-22",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 6",
+      "heading_level": 2,
+      "page": 6,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 99
+  },
+  {
+    "chunk_id": "text_6_2a4cca55",
+    "content": "Treasury Bills Defined . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-25\n\nComputing Treasury Bill Price and Yield . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-26\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-26\nTreasury Bill Repurchase Agreements . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-26\nTreasury Bill Yields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-27\n\nTerm Structure of Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-29",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 6",
+      "heading_level": 2,
+      "page": 6,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 264
+  },
+  {
+    "chunk_id": "text_6_cd7898c7",
+    "content": "Term Structure of Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-29\n\nReturns with Negative Prices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-32\nNegative Price Conversion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-32\nAnalysis of Negative Price Returns . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-33\nVisualization of Complex Returns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-35\nConclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-38",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 6",
+      "heading_level": 2,
+      "page": 6,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 253
+  },
+  {
+    "chunk_id": "text_6_481e4722",
+    "content": "Pricing and Analyzing Equity Derivatives . . . . . . . . . . . . . . . . . . . . . . . . .\n2-39\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-39\nSensitivity Measures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-39\nAnalysis Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-40\n\nAbout Life Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-44\nLife Tables Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-44\n\nCase Study for Life Tables Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-46\n\nMachine Learning for Statistical Arbitrage: Introduction . . . . . . . . . . . .\n2-48",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 6",
+      "heading_level": 2,
+      "page": 6,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 347
+  },
+  {
+    "chunk_id": "text_6_138a3ea1",
+    "content": "Case Study for Life Tables Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-46\n\nMachine Learning for Statistical Arbitrage: Introduction . . . . . . . . . . . .\n2-48\n\nMachine Learning for Statistical Arbitrage I: Data Management and\nVisualization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-50\n\nMachine Learning for Statistical Arbitrage II: Feature Engineering and\nModel Development . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-59\n\nMachine Learning for Statistical Arbitrage III: Training, Tuning, and\nPrediction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-69\n\nBacktest Deep Learning Model for Algorithmic Trading of Limit Order\nBook Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2-78\n\nvi\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 6",
+      "heading_level": 2,
+      "page": 6,
+      "chunk_index": 5,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 328
+  },
+  {
+    "chunk_id": "text_7_9a88e683",
+    "content": "Portfolio Analysis\n3\n\nAnalyzing Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-2\n\nPortfolio Optimization Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-3\n\nPortfolio Construction Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-5\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-5\nEfficient Frontier Example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-5\n\nPortfolio Selection and Risk Aversion . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-7\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-7\nOptimal Risky Portfolio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-8",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 7",
+      "heading_level": 2,
+      "page": 7,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 370
+  },
+  {
+    "chunk_id": "text_7_f52d49e5",
+    "content": "portopt Migration to Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-11\nMigrate portopt Without Output Arguments . . . . . . . . . . . . . . . . . . . . . .\n3-11\nMigrate portopt with Output Arguments . . . . . . . . . . . . . . . . . . . . . . . . .\n3-12\nMigrate portopt for Target Returns Within Range of Efficient Portfolio\nReturns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-13\nMigrate portopt for Target Return Outside Range of Efficient Portfolio\nReturns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-14\nMigrate portopt Using portcons Output for ConSet . . . . . . . . . . . . . . . . .\n3-15\nIntegrate Output from portcons, pcalims, pcglims, and pcgcomp with a\nPortfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-17",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 7",
+      "heading_level": 2,
+      "page": 7,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 338
+  },
+  {
+    "chunk_id": "text_7_93feb86d",
+    "content": "Constraint Specification Using a Portfolio Object . . . . . . . . . . . . . . . . . .\n3-19\nConstraints for Efficient Frontier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-19\nLinear Constraint Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-21\nSpecifying Group Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3-24\n\nActive Returns and Tracking Error Efficient Frontier . . . . . . . . . . . . . . .\n3-27\n\nMean-Variance Portfolio Optimization Tools\n4",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 7",
+      "heading_level": 2,
+      "page": 7,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 183
+  },
+  {
+    "chunk_id": "text_7_bb101ac9",
+    "content": "Active Returns and Tracking Error Efficient Frontier . . . . . . . . . . . . . . .\n3-27\n\nMean-Variance Portfolio Optimization Tools\n4\n\nPortfolio Optimization Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-4\nPortfolio Optimization Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-4\nPortfolio Problem Specification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-4\nReturn Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-5\nRisk Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-6",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 7",
+      "heading_level": 2,
+      "page": 7,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 261
+  },
+  {
+    "chunk_id": "text_7_893ccf32",
+    "content": "Supported Constraints for Portfolio Optimization Using Portfolio Objects\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-9\nLinear Inequality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-9\nLinear Equality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-10\n'Simple' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-10\n'Conditional' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-11\nBudget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-11\nConditional Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-12\nGroup Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-12\n\nvii\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 7",
+      "heading_level": 2,
+      "page": 7,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 374
+  },
+  {
+    "chunk_id": "text_8_d97fc196",
+    "content": "Group Ratio Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-13\nAverage Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-14\nOne-Way Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-14\nTracking Error Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-15\nCardinality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-16\n\nDefault Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-17\n\nPortfolio Object Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-18",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 8",
+      "heading_level": 2,
+      "page": 8,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 302
+  },
+  {
+    "chunk_id": "text_8_e5533cab",
+    "content": "Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-20\nPortfolio Object Properties and Functions . . . . . . . . . . . . . . . . . . . . . . . .\n4-20\nWorking with Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-20\nSetting and Getting Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-20\nDisplaying Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-21\nSaving and Loading Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-21\nEstimating Efficient Portfolios and Frontiers . . . . . . . . . . . . . . . . . . . . . .\n4-21\nArrays of Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-22\nSubclassing Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-23\nConventions for Representation of Data . . . . . . . . . . . . . . . . . . . . . . . . .",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 8",
+      "heading_level": 2,
+      "page": 8,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 393
+  },
+  {
+    "chunk_id": "text_8_c3828efd",
+    "content": "4-22\nSubclassing Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-23\nConventions for Representation of Data . . . . . . . . . . . . . . . . . . . . . . . . .\n4-23",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 8",
+      "heading_level": 2,
+      "page": 8,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 80
+  },
+  {
+    "chunk_id": "text_8_ea1c9a27",
+    "content": "Creating the Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-25\nSyntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-25\nPortfolio Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-25\nPortfolio Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-26\n\nCommon Operations on the Portfolio Object . . . . . . . . . . . . . . . . . . . . . .\n4-33\nNaming a Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-33\nConfiguring the Assets in the Asset Universe . . . . . . . . . . . . . . . . . . . . .\n4-33\nSetting Up a List of Asset Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-33\nTruncating and Padding Asset Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-35",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 8",
+      "heading_level": 2,
+      "page": 8,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 367
+  },
+  {
+    "chunk_id": "text_8_c55f5856",
+    "content": "Setting Up an Initial or Current Portfolio . . . . . . . . . . . . . . . . . . . . . . . . .\n4-37\n\nSetting Up a Tracking Portfolio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-40\n\nAsset Returns and Moments of Asset Returns Using Portfolio Object . .\n4-42\nAssignment Using the Portfolio Function . . . . . . . . . . . . . . . . . . . . . . . .\n4-42\nAssignment Using the setAssetMoments Function . . . . . . . . . . . . . . . . .\n4-43\nScalar Expansion of Arguments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-44\nEstimating Asset Moments from Prices or Returns . . . . . . . . . . . . . . . . .\n4-45\nEstimating Asset Moments with Missing Data . . . . . . . . . . . . . . . . . . . . .\n4-47\nEstimating Asset Moments from Time Series Data . . . . . . . . . . . . . . . . .\n4-49\n\nWorking with a Riskless Asset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-52",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 8",
+      "heading_level": 2,
+      "page": 8,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 328
+  },
+  {
+    "chunk_id": "text_8_8a7f675e",
+    "content": "Working with a Riskless Asset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-52\n\nWorking with Transaction Costs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-54\nSetting Transaction Costs Using the Portfolio Function . . . . . . . . . . . . . .\n4-54\nSetting Transaction Costs Using the setCosts Function . . . . . . . . . . . . . .\n4-54\nSetting Transaction Costs with Scalar Expansion . . . . . . . . . . . . . . . . . .\n4-56\n\nWorking with Portfolio Constraints Using Defaults . . . . . . . . . . . . . . . . .\n4-58\nSetting Default Constraints for Portfolio Weights Using Portfolio Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-58\n\nviii\nContents",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 8",
+      "heading_level": 2,
+      "page": 8,
+      "chunk_index": 5,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 264
+  },
+  {
+    "chunk_id": "text_8_9c4a9629",
+    "content": "viii\nContents\n\n\n**Code Snippet (Page 8):**\n```matlab\nCreating the Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-25\nSyntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-25\nPortfolio Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-25\nPortfolio Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-26\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 8",
+      "heading_level": 2,
+      "page": 8,
+      "chunk_index": 6,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 202
+  },
+  {
+    "chunk_id": "text_9_99d553d2",
+    "content": "Working with 'Simple' Bound Constraints Using Portfolio Object . . . . .\n4-62\nSetting 'Simple' Bounds Using the Portfolio Function . . . . . . . . . . . . . . .\n4-62\nSetting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .\n4-62\nSetting 'Simple' Bounds Using the Portfolio Function or setBounds Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-63\n\nWorking with Budget Constraints Using Portfolio Object . . . . . . . . . . . .\n4-65\nSetting Budget Constraints Using the Portfolio Function . . . . . . . . . . . . .\n4-65\nSetting Budget Constraints Using the setBudget Function . . . . . . . . . . .\n4-65",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 9",
+      "heading_level": 2,
+      "page": 9,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 215
+  },
+  {
+    "chunk_id": "text_9_6c14c11d",
+    "content": "Working with Conditional Budget Constraints Using Portfolio Object . .\n4-67\nSetting Conditional Budget Constraints Using the Portfolio Function . . .\n4-67\nSetting Conditional Budget Constraints Using the setConditionalBudget\nFunction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-67\n\nWorking with Group Constraints Using Portfolio Object . . . . . . . . . . . . .\n4-69\nSetting Group Constraints Using the Portfolio Function . . . . . . . . . . . . .\n4-69\nSetting Group Constraints Using the setGroups and addGroups Functions\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-69",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 9",
+      "heading_level": 2,
+      "page": 9,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 207
+  },
+  {
+    "chunk_id": "text_9_a83cd593",
+    "content": "Working with Group Ratio Constraints Using Portfolio Object . . . . . . . .\n4-72\nSetting Group Ratio Constraints Using the Portfolio Function . . . . . . . . .\n4-72\nSetting Group Ratio Constraints Using the setGroupRatio and\naddGroupRatio Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-73\n\nWorking with Linear Equality Constraints Using Portfolio Object . . . . .\n4-75\nSetting Linear Equality Constraints Using the Portfolio Function . . . . . .\n4-75\nSetting Linear Equality Constraints Using the setEquality and addEquality\nFunctions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-75\n\nWorking with Linear Inequality Constraints Using Portfolio Object . . . .\n4-78\nSetting Linear Inequality Constraints Using the Portfolio Function . . . . .\n4-78\nSetting Linear Inequality Constraints Using the setInequality and\naddInequality Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-78",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 9",
+      "heading_level": 2,
+      "page": 9,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 280
+  },
+  {
+    "chunk_id": "text_9_08830d5e",
+    "content": "Working with 'Conditional' BoundType, MinNumAssets, and\nMaxNumAssets Constraints Using Portfolio Objects . . . . . . . . . . . . . .\n4-81\nSetting 'Conditional' BoundType Constraints Using the setBounds Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-81\nSetting the Limits on the Number of Assets Invested Using the\nsetMinMaxNumAssets Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-82\n\nWorking with Average Turnover Constraints Using Portfolio Object . . .\n4-85\nSetting Average Turnover Constraints Using the Portfolio Function . . . .\n4-85\nSetting Average Turnover Constraints Using the setTurnover Function . .\n4-85\n\nWorking with One-Way Turnover Constraints Using Portfolio Object . . .\n4-88\nSetting One-Way Turnover Constraints Using the Portfolio Function . . . .\n4-88\nSetting Turnover Constraints Using the setOneWayTurnover Function . .\n4-88",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 9",
+      "heading_level": 2,
+      "page": 9,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 264
+  },
+  {
+    "chunk_id": "text_9_1daf0090",
+    "content": "Working with Tracking Error Constraints Using Portfolio Object . . . . . .\n4-91\nSetting Tracking Error Constraints Using the Portfolio Function . . . . . . .\n4-91\nSetting Tracking Error Constraints Using the setTrackingError Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-91\n\nix\n\n\n**Code Snippet (Page 9):**\n```matlab\nWorking with 'Simple' Bound Constraints Using Portfolio Object . . . . .\n4-62\nSetting 'Simple' Bounds Using the Portfolio Function . . . . . . . . . . . . . . .\n4-62\nSetting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .\n4-62\nSetting 'Simple' Bounds Using the Portfolio Function or setBounds Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-63\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 9",
+      "heading_level": 2,
+      "page": 9,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 270
+  },
+  {
+    "chunk_id": "text_10_9fe78f62",
+    "content": "Validate the Portfolio Problem for Portfolio Object . . . . . . . . . . . . . . . . .\n4-94\nValidating a Portfolio Set . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-94\nValidating Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-95\n\nEstimate Efficient Portfolios for Entire Efficient Frontier for Portfolio\nObject . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-98\n\nObtaining Portfolios Along the Entire Efficient Frontier . . . . . . . . . . . . .\n4-99\n\nObtaining Endpoints of the Efficient Frontier . . . . . . . . . . . . . . . . . . . .\n4-102\n\nObtaining Efficient Portfolios for Target Returns . . . . . . . . . . . . . . . . .\n4-105\n\nObtaining Efficient Portfolios for Target Risks . . . . . . . . . . . . . . . . . . . .\n4-108\n\nEfficient Portfolio That Maximizes Sharpe Ratio . . . . . . . . . . . . . . . . . .\n4-111",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 10",
+      "heading_level": 2,
+      "page": 10,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 344
+  },
+  {
+    "chunk_id": "text_10_455188f1",
+    "content": "Obtaining Efficient Portfolios for Target Risks . . . . . . . . . . . . . . . . . . . .\n4-108\n\nEfficient Portfolio That Maximizes Sharpe Ratio . . . . . . . . . . . . . . . . . .\n4-111\n\nChoosing and Controlling the Solver for Mean-Variance Portfolio\nOptimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-114\nUsing 'lcprog' and 'quadprog' . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-114\nUsing the Mixed Integer Nonlinear Programming (MINLP) Solver . . . .\n4-115\nSolver Guidelines for Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . .\n4-115\nSolver Guidelines for Custom Objective Problems Using Portfolio Objects\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-119",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 10",
+      "heading_level": 2,
+      "page": 10,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 293
+  },
+  {
+    "chunk_id": "text_10_52c5810e",
+    "content": "Estimate Efficient Frontiers for Portfolio Object . . . . . . . . . . . . . . . . . .\n4-122\nObtaining Portfolio Risks and Returns . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-122\n\nPlotting the Efficient Frontier for a Portfolio Object . . . . . . . . . . . . . . .\n4-125\n\nPostprocessing Results to Set Up Tradable Portfolios . . . . . . . . . . . . . .\n4-130\n\nWhen to Use Portfolio Objects Over Optimization Toolbox . . . . . . . . . .\n4-132\nAlways Use Portfolio, PortfolioCVaR, or PortfolioMAD Object . . . . . . . .\n4-134\nPreferred Use of Portfolio, PortfolioCVaR, or PortfolioMAD Object . . . .\n4-135\nUse Optimization Toolbox . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-136\n\nComparison of Methods for Covariance Estimation . . . . . . . . . . . . . . . .\n4-138\n\nChoose MINLP Solvers for Portfolio Problems . . . . . . . . . . . . . . . . . . . .\n4-140",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 10",
+      "heading_level": 2,
+      "page": 10,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 295
+  },
+  {
+    "chunk_id": "text_10_a863a6a9",
+    "content": "Troubleshooting Portfolio Optimization Results . . . . . . . . . . . . . . . . . .\n4-145\nPortfolio Object Destroyed When Modifying . . . . . . . . . . . . . . . . . . . . .\n4-145\nOptimization Fails with “Bad Pivot” Message . . . . . . . . . . . . . . . . . . . .\n4-145\nSpeed of Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-145\nMatrix Incompatibility and \"Non-Conformable\" Errors . . . . . . . . . . . . .\n4-145\nMissing Data Estimation Fails . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-145\nmv_optim_transform Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-145\nsolveContinuousCustomObjProb or solveMICustomObjProb Errors . . . .\n4-146\nEfficient Portfolios Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .\n4-146\nEfficient Frontiers Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .\n4-146\nTroubleshooting estimateCustomObjectivePortfolio . . . . . . . . . . . . . . .",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 10",
+      "heading_level": 2,
+      "page": 10,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 367
+  },
+  {
+    "chunk_id": "text_10_6cbe11ab",
+    "content": "4-146\nEfficient Frontiers Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .\n4-146\nTroubleshooting estimateCustomObjectivePortfolio . . . . . . . . . . . . . . .\n4-148\nTroubleshooting for Setting 'Conditional' BoundType, MinNumAssets, and\nMaxNumAssets Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-148",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 10",
+      "heading_level": 2,
+      "page": 10,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 122
+  },
+  {
+    "chunk_id": "text_10_3ebfa358",
+    "content": "x\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 10",
+      "heading_level": 2,
+      "page": 10,
+      "chunk_index": 5,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 5
+  },
+  {
+    "chunk_id": "text_11_268c3136",
+    "content": "Role of Convexity in Portfolio Problems . . . . . . . . . . . . . . . . . . . . . . . . .\n4-157\nExamples of Convex Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-158\nExamples of Concave Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-159\nExamples of Nonconvex Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-159\n\nPortfolio Optimization Examples Using Financial Toolbox . . . . . . . . . .\n4-161\n\nAsset Allocation Case Study . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-180\n\nPortfolio Optimization with Semicontinuous and Cardinality Constraints\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-190\n\nPortfolio Optimization Against a Benchmark . . . . . . . . . . . . . . . . . . . . .\n4-202\n\nPortfolio Analysis with Turnover Constraints . . . . . . . . . . . . . . . . . . . . .\n4-211",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 11",
+      "heading_level": 2,
+      "page": 11,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 350
+  },
+  {
+    "chunk_id": "text_11_a36b1032",
+    "content": "Portfolio Optimization Against a Benchmark . . . . . . . . . . . . . . . . . . . . .\n4-202\n\nPortfolio Analysis with Turnover Constraints . . . . . . . . . . . . . . . . . . . . .\n4-211\n\nLeverage in Portfolio Optimization with a Risk-Free Asset . . . . . . . . . .\n4-217\n\nBlack-Litterman Portfolio Optimization Using Financial Toolbox . . . . .\n4-222\n\nPortfolio Optimization Using Factor Models . . . . . . . . . . . . . . . . . . . . . .\n4-231\n\nBacktest Investment Strategies Using Financial Toolbox . . . . . . . . . . .\n4-238\n\nBacktest Investment Strategies with Trading Signals . . . . . . . . . . . . . .\n4-251\n\nPortfolio Optimization Using Social Performance Measure . . . . . . . . .\n4-264\n\nDiversify ESG Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-271\n\nRisk Budgeting Portfolio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-286",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 11",
+      "heading_level": 2,
+      "page": 11,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 294
+  },
+  {
+    "chunk_id": "text_11_33dfaa0e",
+    "content": "Risk Budgeting Portfolio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-286\n\nBacktest Using Risk-Based Equity Indexation . . . . . . . . . . . . . . . . . . . .\n4-291\n\nCreate Hierarchical Risk Parity Portfolio . . . . . . . . . . . . . . . . . . . . . . . .\n4-296\n\nBacktest Strategies Using Deep Learning . . . . . . . . . . . . . . . . . . . . . . . .\n4-302\n\nBacktest with Brinson Attribution to Evaluate Portfolio Performance\n4-315\n\nAnalyze Performance Attribution Using Brinson Model . . . . . . . . . . . .\n4-323\n\nDiversify Portfolios Using Custom Objective . . . . . . . . . . . . . . . . . . . . . .\n4-331\n\nSolve Tracking Error Portfolio Problems . . . . . . . . . . . . . . . . . . . . . . . . .\n4-343\n\nSolve Problem for Minimum Tracking Error with Net Return Constraint\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-349",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 11",
+      "heading_level": 2,
+      "page": 11,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 325
+  },
+  {
+    "chunk_id": "text_11_8a25d947",
+    "content": "Solve Problem for Minimum Tracking Error with Net Return Constraint\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-349\n\nSolve Robust Portfolio Maximum Return Problem with Ellipsoidal\nUncertainty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-351\n\nRisk Parity or Budgeting with Constraints . . . . . . . . . . . . . . . . . . . . . . .\n4-357\n\nxi\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 11",
+      "heading_level": 2,
+      "page": 11,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 175
+  },
+  {
+    "chunk_id": "text_12_faa7fded",
+    "content": "Single Period Goal-Based Wealth Management . . . . . . . . . . . . . . . . . . .\n4-362\n\nDynamic Portfolio Allocation in Goal-Based Wealth Management for\nMultiple Time Periods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-367\n\nMultiperiod Goal-Based Wealth Management Using Reinforcement\nLearning . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-379\n\nCompare Performance of Covariance Denoising with Factor Modeling\nUsing Backtesting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-394\n\nMixed-Integer Mean-Variance Portfolio Optimization Problem . . . . . .\n4-402\n\nDeep Reinforcement Learning for Optimal Trade Execution . . . . . . . . .\n4-407\n\nBacktest Investment Strategies Using datetime and calendarDuration\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-451",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 12",
+      "heading_level": 2,
+      "page": 12,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 320
+  },
+  {
+    "chunk_id": "text_12_dbded755",
+    "content": "Backtest Investment Strategies Using datetime and calendarDuration\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4-451\n\nAdding Constraints to Satisfy UCITS Directive . . . . . . . . . . . . . . . . . . . .\n4-457\n\nCVaR Portfolio Optimization Tools\n5\n\nPortfolio Optimization Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-3\nPortfolio Optimization Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-3\nPortfolio Problem Specification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-3\nReturn Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-4\nRisk Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-5",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 12",
+      "heading_level": 2,
+      "page": 12,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 338
+  },
+  {
+    "chunk_id": "text_12_ac293703",
+    "content": "Supported Constraints for Portfolio Optimization Using PortfolioCVaR\nObject . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-8\nLinear Inequality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-8\nLinear Equality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-9\n'Simple' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-9\n'Conditional' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-10\nBudget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-10\nConditional Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-11\nGroup Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-11\nGroup Ratio Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 12",
+      "heading_level": 2,
+      "page": 12,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 410
+  },
+  {
+    "chunk_id": "text_12_6f053751",
+    "content": "5-11\nGroup Ratio Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-12\nAverage Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-13\nOne-way Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-13\nCardinality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-14",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 12",
+      "heading_level": 2,
+      "page": 12,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 173
+  },
+  {
+    "chunk_id": "text_12_30eecce1",
+    "content": "Default Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-15\n\nPortfolioCVaR Object Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-16\n\nPortfolioCVaR Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-17\nPortfolioCVaR Object Properties and Functions . . . . . . . . . . . . . . . . . . . .\n5-17\nWorking with PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-17\nSetting and Getting Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-18\nDisplaying PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-18\n\nxii\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 12",
+      "heading_level": 2,
+      "page": 12,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 297
+  },
+  {
+    "chunk_id": "text_13_ea1160a2",
+    "content": "Saving and Loading PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . .\n5-18\nEstimating Efficient Portfolios and Frontiers . . . . . . . . . . . . . . . . . . . . . .\n5-18\nArrays of PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-19\nSubclassing PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-20\nConventions for Representation of Data . . . . . . . . . . . . . . . . . . . . . . . . .\n5-20\n\nCreating the PortfolioCVaR Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-22\nSyntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-22\nPortfolioCVaR Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-22\nPortfolioCVaR Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-23",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 13",
+      "heading_level": 2,
+      "page": 13,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 363
+  },
+  {
+    "chunk_id": "text_13_35578765",
+    "content": "Common Operations on the PortfolioCVaR Object . . . . . . . . . . . . . . . . . .\n5-29\nNaming a PortfolioCVaR Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-29\nConfiguring the Assets in the Asset Universe . . . . . . . . . . . . . . . . . . . . .\n5-29\nSetting Up a List of Asset Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-29\nTruncating and Padding Asset Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-31\n\nSetting Up an Initial or Current Portfolio . . . . . . . . . . . . . . . . . . . . . . . . .\n5-33",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 13",
+      "heading_level": 2,
+      "page": 13,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 220
+  },
+  {
+    "chunk_id": "text_13_b549f113",
+    "content": "Asset Returns and Scenarios Using PortfolioCVaR Object . . . . . . . . . . . .\n5-36\nHow Stochastic Optimization Works . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-36\nWhat Are Scenarios? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-36\nSetting Scenarios Using the PortfolioCVaR Function . . . . . . . . . . . . . . . .\n5-37\nSetting Scenarios Using the setScenarios Function . . . . . . . . . . . . . . . . .\n5-38\nEstimating the Mean and Covariance of Scenarios . . . . . . . . . . . . . . . . .\n5-38\nSimulating Normal Scenarios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-39\nSimulating Normal Scenarios from Returns or Prices . . . . . . . . . . . . . . .\n5-39\nSimulating Normal Scenarios with Missing Data . . . . . . . . . . . . . . . . . . .\n5-40\nSimulating Normal Scenarios from Time Series Data . . . . . . . . . . . . . . .\n5-42\nSimulating Normal Scenarios with Mean and Covariance . . . . . . . . . . . .\n5-44",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 13",
+      "heading_level": 2,
+      "page": 13,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 357
+  },
+  {
+    "chunk_id": "text_13_f85bd95e",
+    "content": "Working with a Riskless Asset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-46\n\nWorking with Transaction Costs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-47\nSetting Transaction Costs Using the PortfolioCVaR Function . . . . . . . . . .\n5-47\nSetting Transaction Costs Using the setCosts Function . . . . . . . . . . . . . .\n5-47\nSetting Transaction Costs with Scalar Expansion . . . . . . . . . . . . . . . . . .\n5-49\n\nWorking with CVaR Portfolio Constraints Using Defaults . . . . . . . . . . . .\n5-51\nSetting Default Constraints for Portfolio Weights Using PortfolioCVaR\nObject . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-51",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 13",
+      "heading_level": 2,
+      "page": 13,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 254
+  },
+  {
+    "chunk_id": "text_13_5d325ae0",
+    "content": "Working with 'Simple' Bound Constraints Using PortfolioCVaR Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-55\nSetting 'Simple' Bounds Using the PortfolioCVaR Function . . . . . . . . . . .\n5-55\nSetting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .\n5-55\nSetting 'Simple' Bounds Using the PortfolioCVaR Function or setBounds\nFunction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-56\n\nWorking with Budget Constraints Using PortfolioCVaR Object . . . . . . . .\n5-58\nSetting Budget Constraints Using the PortfolioCVaR Function . . . . . . . .\n5-58\nSetting Budget Constraints Using the setBudget Function . . . . . . . . . . .\n5-58\n\nxiii",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 13",
+      "heading_level": 2,
+      "page": 13,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 267
+  },
+  {
+    "chunk_id": "text_13_1c0c953a",
+    "content": "xiii\n\n\n**Code Snippet (Page 13):**\n```matlab\nCreating the PortfolioCVaR Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-22\nSyntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-22\nPortfolioCVaR Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-22\nPortfolioCVaR Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-23\n```",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 13",
+      "heading_level": 2,
+      "page": 13,
+      "chunk_index": 5,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 195
+  },
+  {
+    "chunk_id": "text_13_3e29d5f9",
+    "content": "**Code Snippet (Page 13):**\n```matlab\nWorking with 'Simple' Bound Constraints Using PortfolioCVaR Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-55\nSetting 'Simple' Bounds Using the PortfolioCVaR Function . . . . . . . . . . .\n5-55\nSetting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .\n5-55\nSetting 'Simple' Bounds Using the PortfolioCVaR Function or setBounds\nFunction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-56\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 13",
+      "heading_level": 2,
+      "page": 13,
+      "chunk_index": 6,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 215
+  },
+  {
+    "chunk_id": "text_14_905782ac",
+    "content": "Working with Conditional Budget Constraints Using PortfolioCVaR Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-60\nSetting Conditional Budget Constraints Using the PortfolioCVaR Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-60\nSetting Conditional Budget Constraints Using the setConditionalBudget\nFunction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-60\n\nWorking with Group Constraints Using PortfolioCVaR Object . . . . . . . .\n5-62\nSetting Group Constraints Using the PortfolioCVaR Function . . . . . . . . .\n5-62\nSetting Group Constraints Using the setGroups and addGroups Functions\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-62",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 14",
+      "heading_level": 2,
+      "page": 14,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 317
+  },
+  {
+    "chunk_id": "text_14_2c03ab28",
+    "content": "Working with Group Ratio Constraints Using PortfolioCVaR Object . . .\n5-65\nSetting Group Ratio Constraints Using the PortfolioCVaR Function . . . . .\n5-65\nSetting Group Ratio Constraints Using the setGroupRatio and\naddGroupRatio Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-66\n\nWorking with Linear Equality Constraints Using PortfolioCVaR Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-68\nSetting Linear Equality Constraints Using the PortfolioCVaR Function . .\n5-68\nSetting Linear Equality Constraints Using the setEquality and addEquality\nFunctions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-68",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 14",
+      "heading_level": 2,
+      "page": 14,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 242
+  },
+  {
+    "chunk_id": "text_14_1cf04bd9",
+    "content": "Working with Linear Inequality Constraints Using PortfolioCVaR Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-70\nSetting Linear Inequality Constraints Using the PortfolioCVaR Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-70\nSetting Linear Inequality Constraints Using the setInequality and\naddInequality Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-70",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 14",
+      "heading_level": 2,
+      "page": 14,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 198
+  },
+  {
+    "chunk_id": "text_14_8c2d474e",
+    "content": "Working with 'Conditional' BoundType, MinNumAssets, and\nMaxNumAssets Constraints Using PortfolioCVaR Objects . . . . . . . . . .\n5-72\nSetting 'Conditional' BoundType Constraints Using the setBounds Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-72\nSetting the Limits on the Number of Assets Invested Using the\nsetMinMaxNumAssets Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-73\n\nWorking with Average Turnover Constraints Using PortfolioCVaR Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-75\nSetting Average Turnover Constraints Using the PortfolioCVaR Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-75\nSetting Average Turnover Constraints Using the setTurnover Function . .\n5-75",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 14",
+      "heading_level": 2,
+      "page": 14,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 319
+  },
+  {
+    "chunk_id": "text_14_9a85aa14",
+    "content": "Working with One-Way Turnover Constraints Using PortfolioCVaR Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-78\nSetting One-Way Turnover Constraints Using the PortfolioCVaR Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-78\nSetting Turnover Constraints Using the setOneWayTurnover Function . .\n5-78\n\nValidate the CVaR Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-81\nValidating a CVaR Portfolio Set . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-81\nValidating CVaR Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-82\n\nEstimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-85\n\nxiv\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 14",
+      "heading_level": 2,
+      "page": 14,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 377
+  },
+  {
+    "chunk_id": "text_15_1ff50b59",
+    "content": "Obtaining Portfolios Along the Entire Efficient Frontier . . . . . . . . . . . . .\n5-86\n\nObtaining Endpoints of the Efficient Frontier . . . . . . . . . . . . . . . . . . . . .\n5-89\n\nObtaining Efficient Portfolios for Target Returns . . . . . . . . . . . . . . . . . .\n5-92\n\nObtaining Efficient Portfolios for Target Risks . . . . . . . . . . . . . . . . . . . . .\n5-95\n\nChoosing and Controlling the Solver for PortfolioCVaR Optimizations .\n5-98\nUsing 'TrustRegionCP', 'ExtendedCP', and 'cuttingplane' SolverTypes . . .\n5-98\nUsing 'fmincon' SolverType . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-99\nUsing the Mixed Integer Nonlinear Programming (MINLP) Solver . . . .\n5-100\nSolver Guidelines for PortfolioCVaR Objects . . . . . . . . . . . . . . . . . . . . .\n5-100",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 15",
+      "heading_level": 2,
+      "page": 15,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 268
+  },
+  {
+    "chunk_id": "text_15_123b1e8c",
+    "content": "Estimate Efficient Frontiers for PortfolioCVaR Object . . . . . . . . . . . . . .\n5-105\nObtaining CVaR Portfolio Risks and Returns . . . . . . . . . . . . . . . . . . . . .\n5-105\nObtaining Portfolio Standard Deviation and VaR . . . . . . . . . . . . . . . . . .\n5-106\n\nPlotting the Efficient Frontier for a PortfolioCVaR Object . . . . . . . . . .\n5-109\n\nPostprocessing Results to Set Up Tradable Portfolios . . . . . . . . . . . . . .\n5-115\n\nWorking with Other Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-118",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 15",
+      "heading_level": 2,
+      "page": 15,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 185
+  },
+  {
+    "chunk_id": "text_15_b099be05",
+    "content": "Postprocessing Results to Set Up Tradable Portfolios . . . . . . . . . . . . . .\n5-115\n\nWorking with Other Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-118\n\nTroubleshooting CVaR Portfolio Optimization Results . . . . . . . . . . . . . .\n5-121\nPortfolioCVaR Object Destroyed When Modifying . . . . . . . . . . . . . . . . .\n5-121\nMatrix Incompatibility and \"Non-Conformable\" Errors . . . . . . . . . . . . .\n5-121\nCVaR Portfolio Optimization Warns About “Max Iterations” . . . . . . . . . .\n5-121\nCVaR Portfolio Optimization Errors with “Could Not Solve” Message . .\n5-122\nMissing Data Estimation Fails . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-122\ncvar_optim_transform Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n5-122\nEfficient Portfolios Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .\n5-123\n\nHedging Using CVaR Portfolio Optimization . . . . . . . . . . . . . . . . . . . . .\n5-125",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 15",
+      "heading_level": 2,
+      "page": 15,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 350
+  },
+  {
+    "chunk_id": "text_15_0e289820",
+    "content": "Hedging Using CVaR Portfolio Optimization . . . . . . . . . . . . . . . . . . . . .\n5-125\n\nCompute Maximum Reward-to-Risk Ratio for CVaR Portfolio . . . . . . . .\n5-137\n\nMixed-Integer CVaR Portfolio Optimization Problem . . . . . . . . . . . . . .\n5-141\n\nBond Portfolio CVaR Optimization Using Diebold-Li Model . . . . . . . . .\n5-146\n\nMAD Portfolio Optimization Tools\n6\n\nPortfolio Optimization Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-3\nPortfolio Optimization Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-3\nPortfolio Problem Specification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-3\nReturn Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-4\nRisk Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-5\n\nxv\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 15",
+      "heading_level": 2,
+      "page": 15,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 349
+  },
+  {
+    "chunk_id": "text_16_d1c0eda7",
+    "content": "Supported Constraints for Portfolio Optimization Using PortfolioMAD\nObject . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-8\nLinear Inequality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-8\nLinear Equality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-9\n'Simple' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-9\n'Conditional' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-10\nBudget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-10\nConditional Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-11\nGroup Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-11\nGroup Ratio Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 16",
+      "heading_level": 2,
+      "page": 16,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 409
+  },
+  {
+    "chunk_id": "text_16_9e8a745c",
+    "content": "6-11\nGroup Ratio Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-12\nAverage Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-13\nOne-way Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-13\nCardinality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-14",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 16",
+      "heading_level": 2,
+      "page": 16,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 173
+  },
+  {
+    "chunk_id": "text_16_4f8cdc6a",
+    "content": "Default Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-15\n\nPortfolioMAD Object Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-16",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 16",
+      "heading_level": 2,
+      "page": 16,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 87
+  },
+  {
+    "chunk_id": "text_16_c1562564",
+    "content": "PortfolioMAD Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-17\nPortfolioMAD Object Properties and Functions . . . . . . . . . . . . . . . . . . . .\n6-17\nWorking with PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-17\nSetting and Getting Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-18\nDisplaying PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-18\nSaving and Loading PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . .\n6-18\nEstimating Efficient Portfolios and Frontiers . . . . . . . . . . . . . . . . . . . . . .\n6-18\nArrays of PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-19\nSubclassing PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-20\nConventions for Representation of Data . . . . . . . . . . . . . . . . . . . . . . . . .\n6-20",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 16",
+      "heading_level": 2,
+      "page": 16,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 382
+  },
+  {
+    "chunk_id": "text_16_5c75dfc4",
+    "content": "Creating the PortfolioMAD Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-22\nSyntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-22\nPortfolioMAD Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-22\nPortfolioMAD Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-23\n\nCommon Operations on the PortfolioMAD Object . . . . . . . . . . . . . . . . . .\n6-29\nNaming a PortfolioMAD Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-29\nConfiguring the Assets in the Asset Universe . . . . . . . . . . . . . . . . . . . . .\n6-29\nSetting Up a List of Asset Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-29\nTruncating and Padding Asset Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-31\n\nSetting Up an Initial or Current Portfolio . . . . . . . . . . . . . . . . . . . . . . . . .\n6-33",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 16",
+      "heading_level": 2,
+      "page": 16,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 393
+  },
+  {
+    "chunk_id": "text_16_878453e4",
+    "content": "Asset Returns and Scenarios Using PortfolioMAD Object . . . . . . . . . . . .\n6-35\nHow Stochastic Optimization Works . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-35\nWhat Are Scenarios? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-35\nSetting Scenarios Using the PortfolioMAD Function . . . . . . . . . . . . . . . .\n6-36\nSetting Scenarios Using the setScenarios Function . . . . . . . . . . . . . . . . .\n6-37\nEstimating the Mean and Covariance of Scenarios . . . . . . . . . . . . . . . . .\n6-37\nSimulating Normal Scenarios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-38\nSimulating Normal Scenarios from Returns or Prices . . . . . . . . . . . . . . .\n6-38\nSimulating Normal Scenarios with Missing Data . . . . . . . . . . . . . . . . . . .\n6-39\nSimulating Normal Scenarios from Time Series Data . . . . . . . . . . . . . . .\n6-41\nSimulating Normal Scenarios with Mean and Covariance . . . . . . . . . . . .\n6-43",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 16",
+      "heading_level": 2,
+      "page": 16,
+      "chunk_index": 5,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 355
+  },
+  {
+    "chunk_id": "text_16_30e62068",
+    "content": "Working with a Riskless Asset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-45\n\nxvi\nContents\n\n\n**Code Snippet (Page 16):**\n```matlab\nCreating the PortfolioMAD Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-22\nSyntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-22\nPortfolioMAD Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-22\nPortfolioMAD Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-23\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 16",
+      "heading_level": 2,
+      "page": 16,
+      "chunk_index": 6,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 240
+  },
+  {
+    "chunk_id": "text_17_4bd24586",
+    "content": "Working with Transaction Costs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-46\nSetting Transaction Costs Using the PortfolioMAD Function . . . . . . . . . .\n6-46\nSetting Transaction Costs Using the setCosts Function . . . . . . . . . . . . . .\n6-46\nSetting Transaction Costs with Scalar Expansion . . . . . . . . . . . . . . . . . .\n6-48\n\nWorking with MAD Portfolio Constraints Using Defaults . . . . . . . . . . . .\n6-50\nSetting Default Constraints for Portfolio Weights Using PortfolioMAD Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-50",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 17",
+      "heading_level": 2,
+      "page": 17,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 211
+  },
+  {
+    "chunk_id": "text_17_1b4fa76a",
+    "content": "Working with 'Simple' Bound Constraints Using PortfolioMAD Object .\n6-54\nSetting 'Simple' Bounds Using the PortfolioMAD Function . . . . . . . . . . .\n6-54\nSetting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .\n6-54\nSetting 'Simple' Bounds Using the PortfolioMAD Function or setBounds\nFunction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-55\n\nWorking with Budget Constraints Using PortfolioMAD Object . . . . . . . .\n6-57\nSetting Budget Constraints Using the PortfolioMAD Function . . . . . . . . .\n6-57\nSetting Budget Constraints Using the setBudget Function . . . . . . . . . . .\n6-57",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 17",
+      "heading_level": 2,
+      "page": 17,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 203
+  },
+  {
+    "chunk_id": "text_17_22154f2e",
+    "content": "Working with Conditional Budget Constraints Using PortfolioMAD Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-59\nSetting Conditional Budget Constraints Using the PortfolioMAD Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-59\nSetting Conditional Budget Constraints Using the setConditionalBudget\nFunction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-59\n\nWorking with Group Constraints Using PortfolioMAD Object . . . . . . . . .\n6-61\nSetting Group Constraints Using the PortfolioMAD Function . . . . . . . . .\n6-61\nSetting Group Constraints Using the setGroups and addGroups Functions\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-61",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 17",
+      "heading_level": 2,
+      "page": 17,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 314
+  },
+  {
+    "chunk_id": "text_17_0d56f735",
+    "content": "Working with Group Ratio Constraints Using PortfolioMAD Object . . . .\n6-64\nSetting Group Ratio Constraints Using the PortfolioMAD Function . . . . .\n6-64\nSetting Group Ratio Constraints Using the setGroupRatio and\naddGroupRatio Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-65\n\nWorking with Linear Equality Constraints Using PortfolioMAD Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-67\nSetting Linear Equality Constraints Using the PortfolioMAD Function . .\n6-67\nSetting Linear Equality Constraints Using the setEquality and addEquality\nFunctions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-67",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 17",
+      "heading_level": 2,
+      "page": 17,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 239
+  },
+  {
+    "chunk_id": "text_17_832ad3c7",
+    "content": "Working with Linear Inequality Constraints Using PortfolioMAD Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-69\nSetting Linear Inequality Constraints Using the PortfolioMAD Function .\n6-69\nSetting Linear Inequality Constraints Using the setInequality and\naddInequality Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-69\n\nWorking with 'Conditional' BoundType, MinNumAssets, and\nMaxNumAssets Constraints Using PortfolioMAD Objects . . . . . . . . . .\n6-71\nSetting 'Conditional' BoundType Constraints Using the setBounds Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-71\nSetting the Limits on the Number of Assets Invested Using the\nsetMinMaxNumAssets Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-72\n\nxvii",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 17",
+      "heading_level": 2,
+      "page": 17,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 305
+  },
+  {
+    "chunk_id": "text_17_002c2adb",
+    "content": "xvii\n\n\n**Code Snippet (Page 17):**\n```matlab\nWorking with 'Simple' Bound Constraints Using PortfolioMAD Object .\n6-54\nSetting 'Simple' Bounds Using the PortfolioMAD Function . . . . . . . . . . .\n6-54\nSetting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .\n6-54\nSetting 'Simple' Bounds Using the PortfolioMAD Function or setBounds\nFunction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-55\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 17",
+      "heading_level": 2,
+      "page": 17,
+      "chunk_index": 5,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 159
+  },
+  {
+    "chunk_id": "text_18_eea65bc4",
+    "content": "Working with Average Turnover Constraints Using PortfolioMAD Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-74\nSetting Average Turnover Constraints Using the PortfolioMAD Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-74\nSetting Average Turnover Constraints Using the setTurnover Function . .\n6-74\n\nWorking with One-Way Turnover Constraints Using PortfolioMAD Object\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-77\nSetting One-Way Turnover Constraints Using the PortfolioMAD Function\n. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-77\nSetting Turnover Constraints Using the setOneWayTurnover Function . .\n6-77",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 18",
+      "heading_level": 2,
+      "page": 18,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 322
+  },
+  {
+    "chunk_id": "text_18_1d8f8aa6",
+    "content": "Validate the MAD Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-80\nValidating a MAD Portfolio Set . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-80\nValidating MAD Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-81\n\nEstimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD\nObject . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-84\n\nObtaining Portfolios Along the Entire Efficient Frontier . . . . . . . . . . . . .\n6-85\n\nObtaining Endpoints of the Efficient Frontier . . . . . . . . . . . . . . . . . . . . .\n6-87\n\nMixed-Integer MAD Portfolio Optimization Problem . . . . . . . . . . . . . . . .\n6-89\n\nObtaining Efficient Portfolios for Target Returns . . . . . . . . . . . . . . . . . .\n6-93\n\nObtaining Efficient Portfolios for Target Risks . . . . . . . . . . . . . . . . . . . . .\n6-96",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 18",
+      "heading_level": 2,
+      "page": 18,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 349
+  },
+  {
+    "chunk_id": "text_18_a5362cae",
+    "content": "Obtaining Efficient Portfolios for Target Returns . . . . . . . . . . . . . . . . . .\n6-93\n\nObtaining Efficient Portfolios for Target Risks . . . . . . . . . . . . . . . . . . . . .\n6-96\n\nChoosing and Controlling the Solver for PortfolioMAD Optimizations .\n6-99\nUsing 'TrustRegionCP' and 'ExtendedCP' SolverTypes . . . . . . . . . . . . . .\n6-99\nUsing 'fmincon' SolverType . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-100\nUsing the Mixed Integer Nonlinear Programming (MINLP) Solver . . . .\n6-101\nSolver Guidelines for PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . .\n6-101\n\nEstimate Efficient Frontiers for PortfolioMAD Object . . . . . . . . . . . . . .\n6-105\nObtaining MAD Portfolio Risks and Returns . . . . . . . . . . . . . . . . . . . . .\n6-105\nObtaining the PortfolioMAD Standard Deviation . . . . . . . . . . . . . . . . . .\n6-106\n\nPlotting the Efficient Frontier for a PortfolioMAD Object . . . . . . . . . . .\n6-108",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 18",
+      "heading_level": 2,
+      "page": 18,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 330
+  },
+  {
+    "chunk_id": "text_18_12e30d34",
+    "content": "Plotting the Efficient Frontier for a PortfolioMAD Object . . . . . . . . . . .\n6-108\n\nPostprocessing Results to Set Up Tradable Portfolios . . . . . . . . . . . . . .\n6-113\n\nWorking with Other Portfolio Objects . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-115\n\nTroubleshooting MAD Portfolio Optimization Results . . . . . . . . . . . . . .\n6-118\nPortfolioMAD Object Destroyed When Modifying . . . . . . . . . . . . . . . . .\n6-118\nMatrix Incompatibility and \"Non-Conformable\" Errors . . . . . . . . . . . . .\n6-118\nMissing Data Estimation Fails . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-118\nmad_optim_transform Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6-118\nEfficient Portfolios Do Not Make Sense . . . . . . . . . . . . . . . . . . . . . . . . .\n6-119\n\nxviii\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 18",
+      "heading_level": 2,
+      "page": 18,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 300
+  },
+  {
+    "chunk_id": "text_19_e727703b",
+    "content": "Investment Performance Metrics\n7\n\nPerformance Metrics Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-2\nPerformance Metrics Types . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-2\n\nPerformance Metrics Illustration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-3\n\nUsing the Sharpe Ratio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-5\n\nUsing the Information Ratio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-7\n\nUsing Tracking Error . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-8\n\nUsing Risk-Adjusted Return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-9",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 19",
+      "heading_level": 2,
+      "page": 19,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 322
+  },
+  {
+    "chunk_id": "text_19_38a25794",
+    "content": "Using Risk-Adjusted Return . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-9\n\nUsing Sample and Expected Lower Partial Moments . . . . . . . . . . . . . . . .\n7-11\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-11\nSample Lower Partial Moments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-11\nExpected Lower Partial Moments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-12\n\nUsing Maximum and Expected Maximum Drawdown . . . . . . . . . . . . . . . .\n7-14\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-14\nMaximum Drawdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-14\nExpected Maximum Drawdown . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n7-16\n\nCredit Risk Analysis\n8",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 19",
+      "heading_level": 2,
+      "page": 19,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 370
+  },
+  {
+    "chunk_id": "text_19_2347b532",
+    "content": "Estimation of Transition Probabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-2\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-2\nEstimate Transition Probabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-2\nEstimate Transition Probabilities for Different Rating Scales . . . . . . . . . .\n8-4\nWorking with a Transition Matrix Containing NR Rating . . . . . . . . . . . . . .\n8-6\nEstimate Point-in-Time and Through-the-Cycle Probabilities . . . . . . . . . .\n8-10\nEstimate t-Year Default Probabilities . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-12\nEstimate Bootstrap Confidence Intervals . . . . . . . . . . . . . . . . . . . . . . . .\n8-13\nGroup Credit Ratings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-15\nWork with Nonsquare Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-17",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 19",
+      "heading_level": 2,
+      "page": 19,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 369
+  },
+  {
+    "chunk_id": "text_19_17547007",
+    "content": "8-15\nWork with Nonsquare Matrices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-17\nRemove Outliers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-18\nEstimate Probabilities for Different Segments . . . . . . . . . . . . . . . . . . . . .\n8-19\nWork with Large Datasets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-20",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 19",
+      "heading_level": 2,
+      "page": 19,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 174
+  },
+  {
+    "chunk_id": "text_19_7ab8f635",
+    "content": "Forecasting Corporate Default Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-23\n\nCredit Quality Thresholds . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-45\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-45\nCompute Credit Quality Thresholds . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-45\nVisualize Credit Quality Thresholds . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-46\n\nxix\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 19",
+      "heading_level": 2,
+      "page": 19,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 214
+  },
+  {
+    "chunk_id": "text_20_442fa0b1",
+    "content": "About Credit Scorecards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-49\nWhat Is a Credit Scorecard? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-49\nCredit Scorecard Development Process . . . . . . . . . . . . . . . . . . . . . . . . .\n8-50\n\nCredit Scorecard Modeling Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-52\n\nCredit Scorecard Modeling Using Observation Weights . . . . . . . . . . . . .\n8-55\n\nCredit Scorecard Modeling with Missing Values . . . . . . . . . . . . . . . . . . .\n8-57",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 20",
+      "heading_level": 2,
+      "page": 20,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 217
+  },
+  {
+    "chunk_id": "text_20_a237c8b2",
+    "content": "Credit Scorecard Modeling Using Observation Weights . . . . . . . . . . . . .\n8-55\n\nCredit Scorecard Modeling with Missing Values . . . . . . . . . . . . . . . . . . .\n8-57\n\nTroubleshooting Credit Scorecard Results . . . . . . . . . . . . . . . . . . . . . . . .\n8-64\nPredictor Name Is Unspecified and the Parser Returns an Error . . . . . . .\n8-64\nUsing bininfo or plotbins Before Binning . . . . . . . . . . . . . . . . . . . . . . . . .\n8-64\nIf Categorical Data Is Given as Numeric . . . . . . . . . . . . . . . . . . . . . . . . .\n8-66\nNaNs Returned When Scoring a “Test” Dataset . . . . . . . . . . . . . . . . . . .\n8-68\n\nCase Study for Credit Scorecard Analysis . . . . . . . . . . . . . . . . . . . . . . . . .\n8-71\n\nCredit Scorecards with Constrained Logistic Regression Coefficients . .\n8-91\n\nCredit Default Swap (CDS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-100",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 20",
+      "heading_level": 2,
+      "page": 20,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 321
+  },
+  {
+    "chunk_id": "text_20_4e197108",
+    "content": "Credit Scorecards with Constrained Logistic Regression Coefficients . .\n8-91\n\nCredit Default Swap (CDS) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-100\n\nBootstrapping a Default Probability Curve . . . . . . . . . . . . . . . . . . . . . . .\n8-101\n\nFinding Breakeven Spread for New CDS Contract . . . . . . . . . . . . . . . . .\n8-104\n\nValuing an Existing CDS Contract . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-107\n\nConverting from Running to Upfront . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-109\n\nBootstrapping from Inverted Market Curves . . . . . . . . . . . . . . . . . . . . .\n8-111\n\nVisualize Transitions Data for transprob . . . . . . . . . . . . . . . . . . . . . . . . .\n8-114\n\nImpute Missing Data in the Credit Scorecard Workflow Using the k-\nNearest Neighbors Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-121",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 20",
+      "heading_level": 2,
+      "page": 20,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 332
+  },
+  {
+    "chunk_id": "text_20_58be5a08",
+    "content": "Impute Missing Data in the Credit Scorecard Workflow Using the k-\nNearest Neighbors Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-121\n\nImpute Missing Data in the Credit Scorecard Workflow Using the Random\nForest Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-127\n\nTreat Missing Data in a Credit Scorecard Workflow Using MATLAB\nfillmissing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8-132\n\nRegression with Missing Data\n9",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 20",
+      "heading_level": 2,
+      "page": 20,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 189
+  },
+  {
+    "chunk_id": "text_20_07fba78f",
+    "content": "Regression with Missing Data\n9\n\nMultivariate Normal Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-2\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-2\nMultivariate Normal Linear Regression . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-2\nMaximum Likelihood Estimation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-3\nSpecial Case of Multiple Linear Regression Model . . . . . . . . . . . . . . . . . .\n9-4\n\nxx\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 20",
+      "heading_level": 2,
+      "page": 20,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 210
+  },
+  {
+    "chunk_id": "text_21_f132d346",
+    "content": "Least-Squares Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-4\nMean and Covariance Estimation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-4\nConvergence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-4\nFisher Information . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-4\nStatistical Tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-5",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 21",
+      "heading_level": 2,
+      "page": 21,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 237
+  },
+  {
+    "chunk_id": "text_21_c24cbeff",
+    "content": "Maximum Likelihood Estimation with Missing Data . . . . . . . . . . . . . . . . .\n9-7\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-7\nECM Algorithm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-7\nStandard Errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-8\nData Augmentation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-8",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 21",
+      "heading_level": 2,
+      "page": 21,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 231
+  },
+  {
+    "chunk_id": "text_21_c873d2fb",
+    "content": "Multivariate Normal Regression Functions . . . . . . . . . . . . . . . . . . . . . . .\n9-10\nMultivariate Normal Regression Without Missing Data . . . . . . . . . . . . . .\n9-11\nMultivariate Normal Regression With Missing Data . . . . . . . . . . . . . . . .\n9-11\nLeast-Squares Regression With Missing Data . . . . . . . . . . . . . . . . . . . . .\n9-11\nMultivariate Normal Parameter Estimation With Missing Data . . . . . . . .\n9-12\nSupport Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-12",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 21",
+      "heading_level": 2,
+      "page": 21,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 183
+  },
+  {
+    "chunk_id": "text_21_2b75e263",
+    "content": "Multivariate Normal Regression Types . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-13\nRegressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-13\nMultivariate Normal Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-13\nMultivariate Normal Regression Without Missing Data . . . . . . . . . . . . . .\n9-13\nMultivariate Normal Regression With Missing Data . . . . . . . . . . . . . . . .\n9-14\nLeast-Squares Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-14\nLeast-Squares Regression Without Missing Data . . . . . . . . . . . . . . . . . . .\n9-14\nLeast-Squares Regression With Missing Data . . . . . . . . . . . . . . . . . . . . .\n9-14\nCovariance-Weighted Least Squares . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-14\nCovariance-Weighted Least Squares Without Missing Data . . . . . . . . . . .\n9-15",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 21",
+      "heading_level": 2,
+      "page": 21,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 353
+  },
+  {
+    "chunk_id": "text_21_74511acc",
+    "content": "9-14\nCovariance-Weighted Least Squares . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-14\nCovariance-Weighted Least Squares Without Missing Data . . . . . . . . . . .\n9-15\nCovariance-Weighted Least Squares With Missing Data . . . . . . . . . . . . .\n9-15\nFeasible Generalized Least Squares . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-15\nFeasible Generalized Least Squares Without Missing Data . . . . . . . . . . .\n9-15\nFeasible Generalized Least Squares With Missing Data . . . . . . . . . . . . . .\n9-16\nSeemingly Unrelated Regression . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-16\nSeemingly Unrelated Regression Without Missing Data . . . . . . . . . . . . .\n9-17\nSeemingly Unrelated Regression With Missing Data . . . . . . . . . . . . . . . .\n9-17\nMean and Covariance Parameter Estimation . . . . . . . . . . . . . . . . . . . . . .\n9-17",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 21",
+      "heading_level": 2,
+      "page": 21,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 323
+  },
+  {
+    "chunk_id": "text_21_71011100",
+    "content": "Troubleshooting Multivariate Normal Regression . . . . . . . . . . . . . . . . . .\n9-18\nBiased Estimates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-18\nRequirements . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-18\nSlow Convergence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-18\nNonrandom Residuals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-19\nNonconvergence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-19\n\nPortfolios with Missing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-21",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 21",
+      "heading_level": 2,
+      "page": 21,
+      "chunk_index": 5,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 316
+  },
+  {
+    "chunk_id": "text_21_ed15a994",
+    "content": "Portfolios with Missing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-21\n\nValuation with Missing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-26\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-26\nCapital Asset Pricing Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-26\nEstimation of the CAPM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-27\nEstimation with Missing Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-27\nEstimation of Some Technology Stock Betas . . . . . . . . . . . . . . . . . . . . . .\n9-27\nGrouped Estimation of Some Technology Stock Betas . . . . . . . . . . . . . . .\n9-30\nReferences . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9-32\n\nxxi\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 21",
+      "heading_level": 2,
+      "page": 21,
+      "chunk_index": 6,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 390
+  },
+  {
+    "chunk_id": "text_22_df0cea2c",
+    "content": "Capital Asset Pricing Model with Missing Data . . . . . . . . . . . . . . . . . . . .\n9-34\n\nSolving Sample Problems\n10\n\nSensitivity of Bond Prices to Interest Rates . . . . . . . . . . . . . . . . . . . . . . .\n10-2\n\nBond Portfolio for Hedging Duration and Convexity . . . . . . . . . . . . . . . .\n10-6\n\nBond Prices and Yield Curve Parallel Shifts . . . . . . . . . . . . . . . . . . . . . . .\n10-9\n\nBond Prices and Yield Curve Nonparallel Shifts . . . . . . . . . . . . . . . . . . .\n10-12\n\nGreek-Neutral Portfolios of European Stock Options . . . . . . . . . . . . . . .\n10-14\n\nTerm Structure Analysis and Interest-Rate Swaps . . . . . . . . . . . . . . . . .\n10-18\n\nPlotting an Efficient Frontier Using portopt . . . . . . . . . . . . . . . . . . . . . .\n10-22\n\nPlotting Sensitivities of an Option . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n10-25\n\nPlotting Sensitivities of a Portfolio of Options . . . . . . . . . . . . . . . . . . . .\n10-27",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 22",
+      "heading_level": 2,
+      "page": 22,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 337
+  },
+  {
+    "chunk_id": "text_22_e1180600",
+    "content": "Plotting Sensitivities of an Option . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n10-25\n\nPlotting Sensitivities of a Portfolio of Options . . . . . . . . . . . . . . . . . . . .\n10-27\n\nBond Portfolio Optimization Using Portfolio Object . . . . . . . . . . . . . . .\n10-30\n\nHedge Options Using Reinforcement Learning Toolbox . . . . . . . . . . . .\n10-40\n\nHedge Using Monte Carlo Simulation . . . . . . . . . . . . . . . . . . . . . . . . . . .\n10-49\n\nUsing Extreme Value Theory and Copula Fitting to Generate Synthetic\nData . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n10-61\n\nUsing Financial Timetables\n11",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 22",
+      "heading_level": 2,
+      "page": 22,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 239
+  },
+  {
+    "chunk_id": "text_22_eec13507",
+    "content": "Using Financial Timetables\n11\n\nConvert Financial Time Series Objects (fints) to Timetables . . . . . . . . .\n11-2\nCreate Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n11-2\nIndex an Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n11-3\nTransform Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n11-3\nConvert Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n11-4\nMerge Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n11-5\nAnalyze Time Series . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n11-5\nData Extraction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n11-6\n\nUse Timetables in Finance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n11-7\n\nxxii\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 22",
+      "heading_level": 2,
+      "page": 22,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 422
+  },
+  {
+    "chunk_id": "text_23_36c87927",
+    "content": "Trading Date Utilities\n12\n\nTrading Calendars User Interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n12-2\n\nUICalendar User Interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n12-4\nUsing UICalendar in Standalone Mode . . . . . . . . . . . . . . . . . . . . . . . . . .\n12-4\nUsing UICalendar with an Application . . . . . . . . . . . . . . . . . . . . . . . . . .\n12-4\n\nTechnical Analysis\n13\n\nTechnical Indicators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n13-2\n\nStochastic Differential Equations\n14",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 23",
+      "heading_level": 2,
+      "page": 23,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 228
+  },
+  {
+    "chunk_id": "text_23_0fa7dfba",
+    "content": "Technical Analysis\n13\n\nTechnical Indicators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n13-2\n\nStochastic Differential Equations\n14\n\nSDEs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-2\nSDE Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-2\nTrials vs. Paths . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-3\nNTrials, NPeriods, and NSteps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-3\n\nSDE Class Hierarchy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-5",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 23",
+      "heading_level": 2,
+      "page": 23,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 325
+  },
+  {
+    "chunk_id": "text_23_823cc500",
+    "content": "SDE Class Hierarchy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-5\n\nSDE Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-7\nIntroduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-7\nCreating SDE Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-7\nDrift and Diffusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-10\nAvailable SDE Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-11\nSDE Simulation and Interpolation Methods . . . . . . . . . . . . . . . . . . . . . .\n14-13",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 23",
+      "heading_level": 2,
+      "page": 23,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 332
+  },
+  {
+    "chunk_id": "text_23_4a757064",
+    "content": "Base SDE Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-16\nOverview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-16\nSpecify Base Stochastic Differential Equation (SDE) Model . . . . . . . . . .\n14-16\n\nDrift and Diffusion Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-19\nOverview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-19\nSpecify Drift and Diffusion Rate Functions . . . . . . . . . . . . . . . . . . . . . .\n14-19\nSpecify SDEDDO with Drift and Diffusion Functions . . . . . . . . . . . . . . .\n14-20",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 23",
+      "heading_level": 2,
+      "page": 23,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 291
+  },
+  {
+    "chunk_id": "text_23_aac4168b",
+    "content": "Linear Drift Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-22\nOverview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-22\nSpecify SDELD Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-22\n\nParametric Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-24\nCreating Brownian Motion (BM) Models . . . . . . . . . . . . . . . . . . . . . . . .\n14-24\nSpecify Brownian Motion Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-24\nCreating Constant Elasticity of Variance (CEV) Models . . . . . . . . . . . . .\n14-25\n\nxxiii\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 23",
+      "heading_level": 2,
+      "page": 23,
+      "chunk_index": 4,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 306
+  },
+  {
+    "chunk_id": "text_24_24dcaa7b",
+    "content": "Creating Geometric Brownian Motion (GBM) Models . . . . . . . . . . . . . .\n14-25\nCreating Stochastic Differential Equations from Mean-Reverting Drift\n(SDEMRD) Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-26\nCreating Cox-Ingersoll-Ross (CIR) Square Root Diffusion Models . . . . .\n14-27\nCreating Hull-White/Vasicek (HWV) Gaussian Diffusion Models . . . . . . .\n14-28\nCreating Heston Stochastic Volatility Models . . . . . . . . . . . . . . . . . . . .\n14-29\n\nSimulating Equity Prices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-31\nSimulating Multidimensional Market Models . . . . . . . . . . . . . . . . . . . .\n14-31\nInduce Dependence and Correlation Between States . . . . . . . . . . . . . .\n14-41\nDynamic Behavior of Market Parameters . . . . . . . . . . . . . . . . . . . . . . .\n14-43\nPrice European Stock Options Using Monte Carlo Simulation . . . . . . . .\n14-47",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 24",
+      "heading_level": 2,
+      "page": 24,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 329
+  },
+  {
+    "chunk_id": "text_24_b2885ae8",
+    "content": "Simulating Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-50\nSimulate Interest Rates Through Interpolation . . . . . . . . . . . . . . . . . . .\n14-50\nSimulate Positive Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-54\n\nStratified Sampling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-58\n\nQuasi-Monte Carlo Simulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-63\n\nPerformance Considerations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-65\nManaging Memory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-65\nEnhancing Performance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-66\nOptimizing Accuracy: About Solution Precision and Error . . . . . . . . . . .\n14-66",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 24",
+      "heading_level": 2,
+      "page": 24,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 361
+  },
+  {
+    "chunk_id": "text_24_0abc6cb4",
+    "content": "Price American Basket Options Using Standard Monte Carlo and Quasi-\nMonte Carlo Simulation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-71\n\nVolatility Modeling for Soft Commodities . . . . . . . . . . . . . . . . . . . . . . . .\n14-88\n\nImproving Performance of Monte Carlo Simulation with Parallel\nComputing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14-111\n\nFunctions\n15\n\nBibliography\nA",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 24",
+      "heading_level": 2,
+      "page": 24,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 162
+  },
+  {
+    "chunk_id": "text_24_36948fd4",
+    "content": "Functions\n15\n\nBibliography\nA\n\nBibliography . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-2\nBond Pricing and Yields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-2\nTerm Structure of Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-2\nDerivatives Pricing and Yields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-3\nPortfolio Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-3\nInvestment Performance Metrics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-3\nFinancial Statistics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-4\nStandard References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-4\nCredit Risk Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-5\n\nxxiv\nContents\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 24",
+      "heading_level": 2,
+      "page": 24,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 433
+  },
+  {
+    "chunk_id": "text_28_695fdb3e",
+    "content": "Credit Derivatives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-5\nPortfolio Optimization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-5\nStochastic Differential Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-6\nLife Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\nA-6\n\nxxv\n\n---\n\n\n\nGetting Started\n\n•\n“Financial Toolbox Product Description” on page 1-2\n\n•\n“Expected Users” on page 1-3\n\n•\n“Analyze Sets of Numbers Using Matrix Functions” on page 1-4\n\n•\n“Matrix Algebra Refresher” on page 1-7\n\n•\n“Using Input and Output Arguments with Functions” on page 1-15\n\n1\n\n---\n\n\n\nFinancial Toolbox Product Description\nAnalyze financial data and develop financial models",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 28",
+      "heading_level": 2,
+      "page": 28,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 295
+  },
+  {
+    "chunk_id": "text_28_91b1bd0c",
+    "content": "•\n“Using Input and Output Arguments with Functions” on page 1-15\n\n1\n\n---\n\n\n\nFinancial Toolbox Product Description\nAnalyze financial data and develop financial models\n\nFinancial Toolbox provides functions for the mathematical modeling and statistical analysis of\nfinancial data. You can analyze, backtest, and optimize investment portfolios taking into account\nturnover, transaction costs, semi-continuous constraints, and minimum or maximum number of\nassets. The toolbox enables you to estimate risk, model credit scorecards, analyze yield curves, price\nfixed-income instruments and European options, and measure investment performance.\n\nStochastic differential equation (SDE) tools let you model and simulate a variety of stochastic\nprocesses. Time series analysis functions let you perform transformations or regressions with missing\ndata and convert between different trading calendars and day-count conventions.\n\n1\nGetting Started\n\n1-2\n\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 28",
+      "heading_level": 2,
+      "page": 28,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 176
+  },
+  {
+    "chunk_id": "text_30_507793a8",
+    "content": "Expected Users\n\nIn general, this guide assumes experience working with financial derivatives and some familiarity\nwith the underlying models.\n\nIn designing Financial Toolbox documentation, we assume that your title is like one of these:\n\n•\nAnalyst, quantitative analyst\n\n•\nRisk manager\n\n•\nPortfolio manager\n\n•\nAsset allocator\n\n•\nFinancial engineer\n\n•\nTrader\n\n•\nStudent, professor, or other academic\n\nWe also assume that your background, education, training, and responsibilities match some aspects\nof this profile:\n\n•\nFinance, economics, perhaps accounting\n\n•\nEngineering, mathematics, physics, other quantitative sciences\n\n•\nFocus on quantitative approaches to financial problems\n\nExpected Users\n\n1-3\n\n---\n\n\n\nAnalyze Sets of Numbers Using Matrix Functions\n\nIn this section...\n\n“Introduction” on page 1-4\n\n“Key Definitions” on page 1-4\n\n“Referencing Matrix Elements” on page 1-4\n\n“Transposing Matrices” on page 1-5\n\nIntroduction",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 30",
+      "heading_level": 2,
+      "page": 30,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 204
+  },
+  {
+    "chunk_id": "text_30_855a4886",
+    "content": "In this section...\n\n“Introduction” on page 1-4\n\n“Key Definitions” on page 1-4\n\n“Referencing Matrix Elements” on page 1-4\n\n“Transposing Matrices” on page 1-5\n\nIntroduction\n\nMany financial analysis procedures involve sets of numbers; for example, a portfolio of securities at\nvarious prices and yields. Matrices, matrix functions, and matrix algebra are the most efficient ways\nto analyze sets of numbers and their relationships. Spreadsheets focus on individual cells and the\nrelationships between cells. While you can think of a set of spreadsheet cells (a range of rows and\ncolumns) as a matrix, a matrix-oriented tool like MATLAB® software manipulates sets of numbers\nmore quickly, easily, and naturally. For more information, see “Matrix Algebra Refresher” on page 1-\n7.\n\nKey Definitions\n\nMatrix",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 30",
+      "heading_level": 2,
+      "page": 30,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 182
+  },
+  {
+    "chunk_id": "text_30_3511c861",
+    "content": "Key Definitions\n\nMatrix\n\nA rectangular array of numeric or algebraic quantities subject to mathematical operations; the\nregular formation of elements into rows and columns. Described as a “m-by-n” matrix, with m the\nnumber of rows and n the number of columns. The description is always “row-by-column.” For\nexample, here is a 2-by-3 matrix of two bonds (the rows) with different par values, coupon rates, and\ncoupon payment frequencies per year (the columns) entered using MATLAB notation:\n\nBonds = [1000   0.06   2\n          500   0.055  4]\n\nVector\n\nA matrix with only one row or column. Described as a “1-by-n” or “m-by-1” matrix. The description is\nalways “row-by-column.” For example, here is a 1-by-4 vector of cash flows in MATLAB notation:\n\nCash = [1500   4470   5280   -1299]\n\nScalar\n\nA 1-by-1 matrix; that is, a single number.\n\nReferencing Matrix Elements\n\nTo reference specific matrix elements, use (row, column) notation. For example:\n\nBonds(1,2)\n\nans =\n\n0.06\n\n1\nGetting Started\n\n1-4",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 30",
+      "heading_level": 2,
+      "page": 30,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 271
+  },
+  {
+    "chunk_id": "text_30_18b80e1f",
+    "content": "Referencing Matrix Elements\n\nTo reference specific matrix elements, use (row, column) notation. For example:\n\nBonds(1,2)\n\nans =\n\n0.06\n\n1\nGetting Started\n\n1-4\n\n\n**Code Snippet (Page 30):**\n```matlab\nBonds = [1000   0.06   2\n          500   0.055  4]\n```\n\n**Code Snippet (Page 30):**\n```matlab\nCash = [1500   4470   5280   -1299]\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 30",
+      "heading_level": 2,
+      "page": 30,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 122
+  },
+  {
+    "chunk_id": "text_31_6518ecc2",
+    "content": "Cash(3)\n\nans =\n\n5280.00\n\nYou can enlarge matrices using small matrices or vectors as elements. For example,\n\nAddBond = [1000   0.065   2];\nBonds = [Bonds; AddBond]\n\nadds another row to the matrix and creates\n\nBonds =\n\n1000   0.06    2\n        500   0.055   4\n       1000   0.065   2\n\nLikewise,\n\nPrices = [987.50\n          475.00\n          995.00]\n\nBonds = [Prices, Bonds]\n\nadds another column and creates\n\nBonds =\n\n987.50   1000   0.06    2\n    475.00    500   0.055   4\n    995.00   1000   0.065   2\n\nFinally, the colon (:) is important in generating and referencing matrix elements. For example, to\nreference the par value, coupon rate, and coupon frequency of the second bond:\n\nBondItems = Bonds(2, 2:4)\n\nBondItems =\n\n500.00   0.055   4\n\nTransposing Matrices\n\nSometimes matrices are in the wrong configuration for an operation. In MATLAB, the apostrophe or\nprime character (') transposes a matrix: columns become rows, rows become columns. For example,\n\nCash = [1500   4470   5280   -1299]'",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 31",
+      "heading_level": 2,
+      "page": 31,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 314
+  },
+  {
+    "chunk_id": "text_31_6ddf98e5",
+    "content": "Cash = [1500   4470   5280   -1299]'\n\nproduces\n\nCash =\n\n1500\n        4470\n        5280\n       -1299\n\nAnalyze Sets of Numbers Using Matrix Functions\n\n1-5\n\n\n**Code Snippet (Page 31):**\n```matlab\nAddBond = [1000   0.065   2];\nBonds = [Bonds; AddBond]\n```\n\n**Code Snippet (Page 31):**\n```matlab\nPrices = [987.50\n          475.00\n          995.00]\n```\n\n**Code Snippet (Page 31):**\n```matlab\nBonds = [Prices, Bonds]\n```\n\n**Code Snippet (Page 31):**\n```matlab\nCash = [1500   4470   5280   -1299]'\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 31",
+      "heading_level": 2,
+      "page": 31,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 190
+  },
+  {
+    "chunk_id": "text_33_c627dc17",
+    "content": "See Also\n\nMore About\n\n•\n“Matrix Algebra Refresher” on page 1-7\n\n•\n“Using Input and Output Arguments with Functions” on page 1-15\n\n1\nGetting Started\n\n1-6\n\n---\n\n\n\nMatrix Algebra Refresher\n\nIn this section...\n\n“Introduction” on page 1-7\n\n“Adding and Subtracting Matrices” on page 1-7\n\n“Multiplying Matrices” on page 1-8\n\n“Dividing Matrices” on page 1-11\n\n“Solving Simultaneous Linear Equations” on page 1-11\n\n“Operating Element by Element” on page 1-13\n\nIntroduction\n\nThe explanations in the sections that follow should help refresh your skills for using matrix algebra\nand using MATLAB functions.\n\nIn addition, Macro-Investment Analysis by William Sharpe also provides an excellent explanation of\nmatrix algebra operations using MATLAB. It is available on the web at:\n\nhttps://www.stanford.edu/~wfsharpe/mia/mia.htm",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 33",
+      "heading_level": 2,
+      "page": 33,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 212
+  },
+  {
+    "chunk_id": "text_33_225712b1",
+    "content": "https://www.stanford.edu/~wfsharpe/mia/mia.htm\n\nTip When you are setting up a problem, it helps to \"talk through\" the units and dimensions\nassociated with each input and output matrix. In the example under “Multiplying Matrices” on page\n1-8, one input matrix has five days' closing prices for three stocks, the other input matrix has\nshares of three stocks in two portfolios, and the output matrix therefore has five days' closing values\nfor two portfolios. It also helps to name variables using descriptive terms.\n\nAdding and Subtracting Matrices",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 33",
+      "heading_level": 2,
+      "page": 33,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 122
+  },
+  {
+    "chunk_id": "text_33_180f5a22",
+    "content": "Adding and Subtracting Matrices\n\nMatrix addition and subtraction operate element-by-element. The two input matrices must have the\nsame dimensions. The result is a new matrix of the same dimensions where each element is the sum\nor difference of each corresponding input element. For example, consider combining portfolios of\ndifferent quantities of the same stocks (“shares of stocks A, B, and C [the rows] in portfolios P and Q\n[the columns] plus shares of A, B, and C in portfolios R and S”).\n\nPortfolios_PQ = [100   200\n                 500   400\n                 300   150];\n\nPortfolios_RS = [175   125\n                 200   200\n                 100   500];\n\nNewPortfolios = Portfolios_PQ + Portfolios_RS\n\nNewPortfolios =\n\n275           325\n        700           600\n        400           650\n\nMatrix Algebra Refresher\n\n1-7\n\n\n**Code Snippet (Page 33):**\n```matlab\nPortfolios_PQ = [100   200\n                 500   400\n                 300   150];\n```",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 33",
+      "heading_level": 2,
+      "page": 33,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 240
+  },
+  {
+    "chunk_id": "text_33_34e0911d",
+    "content": "Matrix Algebra Refresher\n\n1-7\n\n\n**Code Snippet (Page 33):**\n```matlab\nPortfolios_PQ = [100   200\n                 500   400\n                 300   150];\n```\n\n**Code Snippet (Page 33):**\n```matlab\nPortfolios_RS = [175   125\n                 200   200\n                 100   500];\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 33",
+      "heading_level": 2,
+      "page": 33,
+      "chunk_index": 3,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 91
+  },
+  {
+    "chunk_id": "text_34_3e538931",
+    "content": "Adding or subtracting a scalar and a matrix is allowed and also operates element-by-element.\n\nSmallerPortf = NewPortfolios-10\n\nSmallerPortf =\n        265.00        315.00\n        690.00        590.00\n        390.00        640.00\n\nMultiplying Matrices\n\nMatrix multiplication does not operate element-by-element. It operates according to the rules of\nlinear algebra. In multiplying matrices, it helps to remember this key rule: the inner dimensions must\nbe the same. That is, if the first matrix is m-by-3, the second must be 3-by-n. The resulting matrix is\nm-by-n. It also helps to “talk through” the units of each matrix, as mentioned in “Analyze Sets of\nNumbers Using Matrix Functions” on page 1-4.\n\nMatrix multiplication also is not commutative; that is, it is not independent of order. A*B does not\nequal B*A. The dimension rule illustrates this property. If A is 1-by-3 matrix and B is 3-by-1 matrix,\nA*B yields a scalar (1-by-1) matrix but B*A yields a 3-by-3 matrix.\n\nMultiplying Vectors",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 34",
+      "heading_level": 2,
+      "page": 34,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 261
+  },
+  {
+    "chunk_id": "text_34_2f6ddd0c",
+    "content": "Multiplying Vectors\n\nVector multiplication follows the same rules and helps illustrate the principles. For example, a stock\nportfolio has three different stocks and their closing prices today are:\n\nClosePrices = [42.5   15   78.875]\n\nThe portfolio contains these numbers of shares of each stock.\n\nNumShares = [100\n             500\n             300]\n\nTo find the value of the portfolio, multiply the vectors\n\nPortfValue = ClosePrices * NumShares\n\nwhich yields:\n\nPortfValue =\n\n3.5413e+004\n\nThe vectors are 1-by-3 and 3-by-1; the resulting vector is 1-by-1, a scalar. Multiplying these vectors\nthus means multiplying each closing price by its respective number of shares and summing the result.\n\nTo illustrate order dependence, switch the order of the vectors\n\nValues = NumShares * ClosePrices\n\nValues =\n\n1.0e+004 *\n\n0.4250    0.1500    0.7887\n    2.1250    0.7500    3.9438\n    1.2750    0.4500    2.3663\n\n1\nGetting Started\n\n1-8",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 34",
+      "heading_level": 2,
+      "page": 34,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 256
+  },
+  {
+    "chunk_id": "text_34_43cd3069",
+    "content": "Values = NumShares * ClosePrices\n\nValues =\n\n1.0e+004 *\n\n0.4250    0.1500    0.7887\n    2.1250    0.7500    3.9438\n    1.2750    0.4500    2.3663\n\n1\nGetting Started\n\n1-8\n\n\n**Code Snippet (Page 34):**\n```matlab\nClosePrices = [42.5   15   78.875]\n```\n\n**Code Snippet (Page 34):**\n```matlab\nNumShares = [100\n             500\n             300]\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 34",
+      "heading_level": 2,
+      "page": 34,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 144
+  },
+  {
+    "chunk_id": "text_35_6c5aa963",
+    "content": "which shows the closing values of 100, 500, and 300 shares of each stock, not the portfolio value, and\nthis is meaningless for this example.\n\nComputing Dot Products of Vectors\n\nIn matrix algebra, if X and Y are vectors of the same length\n\nY = y1, y2, …, yn\n\nX = x1, x2, …, xn\n\nthen the dot product\n\nX · Y = x1y1 + x2y2 + … + xnyn\n\nis the scalar product of the two vectors. It is an exception to the commutative rule. To compute the\ndot product in MATLAB, use sum(X .* Y) or sum(Y .* X). Be sure that the two vectors have the\nsame dimensions. To illustrate, use the previous vectors.\n\nValue = sum(NumShares .* ClosePrices')\n\nValue =\n\n3.5413e+004\n\nValue = sum(ClosePrices .* NumShares')\n\nValue =\n\n3.5413e+004\n\nAs expected, the value in these cases matches the PortfValue computed previously.\n\nMultiplying Vectors and Matrices",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 35",
+      "heading_level": 2,
+      "page": 35,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 229
+  },
+  {
+    "chunk_id": "text_35_56be126f",
+    "content": "3.5413e+004\n\nValue = sum(ClosePrices .* NumShares')\n\nValue =\n\n3.5413e+004\n\nAs expected, the value in these cases matches the PortfValue computed previously.\n\nMultiplying Vectors and Matrices\n\nMultiplying vectors and matrices follows the matrix multiplication rules and process. For example, a\nportfolio matrix contains closing prices for a week. A second matrix (vector) contains the stock\nquantities in the portfolio.\n\nWeekClosePr = [42.5     15      78.875\n               42.125   15.5    78.75\n               42.125   15.125  79\n               42.625   15.25   78.875\n               43       15.25   78.625];\nPortQuan = [100\n            500\n            300];\n\nTo see the closing portfolio value for each day, simply multiply\n\nWeekPortValue = WeekClosePr * PortQuan\n\nWeekPortValue =\n\n1.0e+004 *\n\n3.5412\n    3.5587\n\nMatrix Algebra Refresher\n\n1-9",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 35",
+      "heading_level": 2,
+      "page": 35,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 243
+  },
+  {
+    "chunk_id": "text_35_ac795e99",
+    "content": "To see the closing portfolio value for each day, simply multiply\n\nWeekPortValue = WeekClosePr * PortQuan\n\nWeekPortValue =\n\n1.0e+004 *\n\n3.5412\n    3.5587\n\nMatrix Algebra Refresher\n\n1-9\n\n\n**Code Snippet (Page 35):**\n```matlab\nWeekClosePr = [42.5     15      78.875\n               42.125   15.5    78.75\n               42.125   15.125  79\n               42.625   15.25   78.875\n               43       15.25   78.625];\nPortQuan = [100\n            500\n            300];\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 35",
+      "heading_level": 2,
+      "page": 35,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 166
+  },
+  {
+    "chunk_id": "text_36_74144f7b",
+    "content": "3.5475\n    3.5550\n    3.5513\n\nThe prices matrix is 5-by-3, the quantity matrix (vector) is 3-by-1, so the resulting matrix (vector) is 5-\nby-1.\n\nMultiplying Two Matrices\n\nMatrix multiplication also follows the rules of matrix algebra. In matrix algebra notation, if A is an m-\nby-n matrix and B is an n-by-p matrix\n\nA =\n\na11 a12 ⋯a1n\n⋮\n⋮\n⋮\nai1\nai2 ⋯ain\n⋮\n⋮\n⋮\nam1 am2 ⋯amn\n\n,   B =\n\nb11 ⋯b1 j ⋯b1p\nb21 ⋯b2 j ⋯b2p\n⋮\n⋮\n⋮\nbn1 ⋯bn j ⋯bnp\n\nthen C = A*B is an m-by-p matrix; and the element cij in the ith row and jth column of C is\n\nci j = ai1b1 j + ai2b12 + … + ainbn j .\n\nTo illustrate, assume that there are two portfolios of the same three stocks previously mentioned but\nwith different quantities.\n\nPortfolios = [100   200\n              500   400\n              300   150];\n\nMultiplying the 5-by-3 week's closing prices matrix by the 3-by-2 portfolios matrix yields a 5-by-2\nmatrix showing each day's closing value for both portfolios.\n\nPortfolioValues = WeekClosePr * Portfolios\n\nPortfolioValues =",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": ",   B =",
+      "heading_level": 2,
+      "page": 36,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 361
+  },
+  {
+    "chunk_id": "text_36_f19672cb",
+    "content": "PortfolioValues = WeekClosePr * Portfolios\n\nPortfolioValues =\n\n1.0e+004 *\n\n3.5412    2.6331\n    3.5587    2.6437\n    3.5475    2.6325\n    3.5550    2.6456\n    3.5513    2.6494\n\nMonday's values result from multiplying each Monday closing price by its respective number of\nshares and summing the result for the first portfolio, then doing the same for the second portfolio.\nTuesday's values result from multiplying each Tuesday closing price by its respective number of\nshares and summing the result for the first portfolio, then doing the same for the second portfolio.\nAnd so on, through the rest of the week. With one simple command, MATLAB quickly performs many\ncalculations.\n\nMultiplying a Matrix by a Scalar\n\nMultiplying a matrix by a scalar is an exception to the dimension and commutative rules. It just\noperates element-by-element.\n\n1\nGetting Started\n\n1-10\n\n\n**Code Snippet (Page 36):**\n```matlab\nPortfolios = [100   200\n              500   400\n              300   150];\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": ",   B =",
+      "heading_level": 2,
+      "page": 36,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 264
+  },
+  {
+    "chunk_id": "text_37_6bb6d2fe",
+    "content": "Portfolios = [100   200\n              500   400\n              300   150];\n\nDoublePort = Portfolios * 2\n\nDoublePort =\n        200           400\n       1000           800\n        600           300\n\nDividing Matrices\n\nMatrix division is useful primarily for solving equations, and especially for solving simultaneous linear\nequations (see “Solving Simultaneous Linear Equations” on page 1-11). For example, you want to\nsolve for X in A*X = B.\n\nIn ordinary algebra, you would divide both sides of the equation by A, and X would equal B/A.\nHowever, since matrix algebra is not commutative (A*X ≠ X*A), different processes apply. In formal\nmatrix algebra, the solution involves matrix inversion. MATLAB, however, simplifies the process by\nproviding two matrix division symbols, left and right (\\ and /). In general,\n\nX = A\\B solves for X in A*X = B and\n\nX = B/A solves for X in X*A = B.",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 37",
+      "heading_level": 2,
+      "page": 37,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 226
+  },
+  {
+    "chunk_id": "text_37_a725da23",
+    "content": "X = A\\B solves for X in A*X = B and\n\nX = B/A solves for X in X*A = B.\n\nIn general, matrix A must be a nonsingular square matrix; that is, it must be invertible and it must\nhave the same number of rows and columns. (Generally, a matrix is invertible if the matrix times its\ninverse equals the identity matrix. To understand the theory and proofs, consult a textbook on linear\nalgebra such as Elementary Linear Algebra by Hill listed in “Bibliography” on page A-2.) MATLAB\ngives a warning message if the matrix is singular or nearly so.\n\nSolving Simultaneous Linear Equations\n\nMatrix division is especially useful in solving simultaneous linear equations. Consider this problem:\nGiven two portfolios of mortgage-based instruments, each with certain yields depending on the prime\nrate, how do you weight the portfolios to achieve certain annual cash flows? The answer involves\nsolving two linear equations.\n\nA linear equation is any equation of the form\n\na1x + a2y = b,",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 37",
+      "heading_level": 2,
+      "page": 37,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 219
+  },
+  {
+    "chunk_id": "text_37_beaef04b",
+    "content": "A linear equation is any equation of the form\n\na1x + a2y = b,\n\nwhere a1, a2, and b are constants (with a1 and a2 not both 0), and x and y are variables. (It is a linear\nequation because it describes a line in the xy-plane. For example, the equation 2x + y = 8 describes a\nline such that if x = 2, then y = 4.)\n\nA system of linear equations is a set of linear equations that you usually want to solve at the same\ntime; that is, simultaneously. A basic principle for exact answers in solving simultaneous linear\nequations requires that there be as many equations as there are unknowns. To get exact answers for\nx and y, there must be two equations. For example, to solve for x and y in the system of linear\nequations\n\n2x + y = 13\nx −3y = −18,\n\nMatrix Algebra Refresher\n\n1-11\n\n\n**Code Snippet (Page 37):**\n```matlab\nPortfolios = [100   200\n              500   400\n              300   150];\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "Page 37",
+      "heading_level": 2,
+      "page": 37,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 252
+  },
+  {
+    "chunk_id": "text_38_f2057f47",
+    "content": "1 -3];\n\n\n    -18];\n\n\nM2\nthere must be two equations, which there are. Matrix algebra represents this system as an equation\ninvolving three matrices: A for the left-side constants, X for the variables, and B for the right-side\nconstants\n\nA = 2\n1\n1 −3 ,     X = x\ny ,     B =\n13\n−18 ,\n\nwhere A*X = B.\n\nSolving the system simultaneously means solving for X. Using MATLAB,\n\nA = [2  1\n     1 -3];\n\nB = [13\n    -18];\n\nX = A \\ B\n\nsolves for X in A * X = B.\n\nX = [3 7]\n\nSo x = 3 and y = 7 in this example. In general, you can use matrix algebra to solve any system of\nlinear equations such as\n\na11x1 + a12x2 + … + a1nxn = b1\na21x1 + a22x2 + … + a2nxn = b2\n⋮\nam1x1 + am2x2 + … + amnxn = bm\n\nby representing them as matrices\n\nA =\n\na11 a12 ⋯a1n\na21 a22 ⋯a2n\n⋮\n⋮\n⋮\n\nam1 am2 ⋯amn\n\n,      X =\n\nx1\nx2\n⋮\nxn\n\n,      B =\n\nb1\nb2\n⋮\nbm\n\nand solving for X in A*X = B.",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "M1",
+      "heading_level": 2,
+      "page": 38,
+      "chunk_index": 0,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 344
+  },
+  {
+    "chunk_id": "text_38_c04cdb53",
+    "content": "by representing them as matrices\n\nA =\n\na11 a12 ⋯a1n\na21 a22 ⋯a2n\n⋮\n⋮\n⋮\n\nam1 am2 ⋯amn\n\n,      X =\n\nx1\nx2\n⋮\nxn\n\n,      B =\n\nb1\nb2\n⋮\nbm\n\nand solving for X in A*X = B.\n\nTo illustrate, consider this situation. There are two portfolios of mortgage-based instruments, M1 and\nM2. They have current annual cash payments of $100 and $70 per unit, respectively, based on today's\nprime rate. If the prime rate moves down one percentage point, their payments would be $80 and\n$40. An investor holds 10 units of M1 and 20 units of M2. The investor's receipts equal cash\npayments times units, or R = C * U, for each prime-rate scenario. As word equations:\n\nM1\nM2\n\nPrime flat:\n$100 * 10 units\n+ $70 * 20 units = $2400\nreceipts\n\nPrime down:\n$80 * 10 units\n+ $40 * 20 units = $1600\nreceipts\n\nAs MATLAB matrices:\n\n1\nGetting Started\n\n1-12\n\n\n**Code Snippet (Page 38):**\n```matlab\nA = [2  1\n     1 -3];\n```\n\n**Code Snippet (Page 38):**\n```matlab\nB = [13\n    -18];\n```",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "M1",
+      "heading_level": 2,
+      "page": 38,
+      "chunk_index": 1,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 335
+  },
+  {
+    "chunk_id": "text_38_f64e9f21",
+    "content": "As MATLAB matrices:\n\n1\nGetting Started\n\n1-12\n\n\n**Code Snippet (Page 38):**\n```matlab\nA = [2  1\n     1 -3];\n```\n\n**Code Snippet (Page 38):**\n```matlab\nB = [13\n    -18];\n```\n\n**Code Snippet (Page 38):**\n```matlab\nX = [3 7]\n```\n---",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "M1",
+      "heading_level": 2,
+      "page": 38,
+      "chunk_index": 2,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 92
+  },
+  {
+    "chunk_id": "text_39_a311eac3",
+    "content": "\nM2\nCash = [100  70\n         80  40];\n\nUnits = [10\n        20];\n\nReceipts = Cash * Units\n\nReceipts =\n\n2400\n       1600\n\nNow the investor asks this question: Given these two portfolios and their characteristics, how many\nunits of each should they hold to receive $7000 if the prime rate stays flat and $5000 if the prime\ndrops one percentage point? Find the answer by solving two linear equations.\n\nM1\nM2\n\nPrime flat:\n$100 * x units\n+ $70 * y units = $7000\nreceipts\n\nPrime down:\n$80 * x units\n+ $40 * y units = $5000\nreceipts\n\nIn other words, solve for U (units) in the equation R (receipts) = C (cash) * U (units). Using MATLAB\nleft division\n\nCash = [100  70\n         80  40];\n\nReceipts = [7000\n            5000];\n\nUnits = Cash \\ Receipts\n\nUnits =\n\n43.7500\n         37.5000\n\nThe investor should hold 43.75 units of portfolio M1 and 3",
+    "metadata": {
+      "source": "fintbx.pdf",
+      "section_title": "M1",
+      "heading_level": 2,
+      "page": 39,
+      "chunk_index": 141,
+      "strategy": "SectionAware",
+      "total_chunks": 142
+    },
+    "embeddings": null,
+    "token_count": 253
+  }
+]

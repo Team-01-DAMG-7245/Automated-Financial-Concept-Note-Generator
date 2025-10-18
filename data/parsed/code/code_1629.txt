@@ -1,0 +1,7 @@
+Page 1467
+================================================================================
+
+Alpha and Sigma enable you to query the original inputs. (The combined effect of the individual
+Alpha and Sigma parameters is fully encapsulated by the function stored in Rate.) The Rate
+functions are the calculation engines for the drift and diffusion objects, and are the only
+parameters required for simulation.

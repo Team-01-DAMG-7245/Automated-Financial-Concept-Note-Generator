@@ -1,0 +1,12 @@
+{
+  "page": 1143,
+  "original_text": "Costs_RL = computeCosts(policy_RL,nTrials,nSteps,SpotPrice,Strike,Maturity,rfRate,ExpVol,InitPosi\nHedgeComp = table(100*[-mean(Costs_BSM) std(Costs_BSM)]'/OptionPrice, ...\n    100*[-mean(Costs_RL) std(Costs_RL)]'/OptionPrice, ...\n    'RowNames',[\"Average Hedge Cost (% of Option Price)\",\"STD Hedge Cost (% of Option Price)\"], \n    'VariableNames',[\"BSM\",\"RL\"]);\ndisp(HedgeComp)",
+  "ocr_text": "Costs_RL=computeCosts(policy_RL,nTrials,nSteps,SpotPrice,Strike,Maturity,rfRate,ExpVol,InitPos\n\nHedgeComp=table(100*[-mean(Costs_BSM)std(Costs_BSM)]/OptionPrice,...\n100*[-mean(Costs_RL)std(Costs_RL)]/OptionPrice,...\nRowNames,[AverageHedgeCost(*ofOptionPrice),STDHedgeCost(ofOptionPrice)],\nVariableNames,[BSM,RL]);\n\ndisp(HedgeComp)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 615.55,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

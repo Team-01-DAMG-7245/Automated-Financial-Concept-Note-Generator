@@ -1,0 +1,12 @@
+{
+  "page": 528,
+  "original_text": "% Add legend\nlgd = legend({'1','2','3','4'});\nlgd.Layout.Tile = 'east';",
+  "ocr_text": "Add_legend\nlgd=legend({1,2,3,4});\nlgd.Layout.Tile=east;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 263.39,
+    "y1": 211.49
+  },
+  "confidence": "high"
+}

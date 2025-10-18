@@ -1,0 +1,6 @@
+Page 1550
+================================================================================
+
+% Define the Transaction costs as [buyCosts sellCost] and specify the costs
+% as decimal percentages.
+tradingCosts = [0.0025 0.005];

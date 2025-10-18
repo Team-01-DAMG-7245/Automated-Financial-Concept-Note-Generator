@@ -1,0 +1,58 @@
+95.1923
+      ⋮
+
+Calculate the Leading and Lagging Moving Averages for a Data Series
+
+Load the file SimulatedStock.mat and compute the moving average using simulated closing price
+data.
+
+load SimulatedStock.mat 
+type = 'linear';
+mashort_term=movavg(TMW_CLOSE,type,3) % Short-term moving average
+
+mashort_term = 1000×1
+
+100.2500
+  100.3580
+  101.0900
+  100.4300
+   99.3183
+   97.8217
+   97.0833
+   97.1950
+   97.4133
+   96.1133
+   94.5267
+   93.5517
+   94.3917
+   94.2317
+   93.3850
+      ⋮
+
+malong_term=movavg(TMW_CLOSE,type,20) % Long-term moving average
+
+malong_term = 1000×1
+
+100.2500
+  100.3423
+  100.8574
+  100.4943
+  100.0198
+   99.4230
+   98.9728
+   98.7509
+   98.5688
+   98.0554
+   97.4737
+   96.9605
+   96.7584
+   96.3950
+   95.9392
+      ⋮
+
+Plot the long-term and short-term moving averages.
+
+15
+Functions
+
+15-1184

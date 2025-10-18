@@ -1,0 +1,17 @@
+Page 949
+================================================================================
+
+for k=1:nYearsBT
+   % In sample years for predictors, from 1984 to "last" year (T-1)
+   inSampleBT = iYear0:T-1;
+   
+   % Method 1: Linear regression model
+   %   Fit regression model with data up to "current" year (T)
+   s = regstats(yBT(inSampleBT+1),XBT(inSampleBT,:));
+   %   Predict default rate for "next" year (T+1)
+   PredDefRate(k,1) = [1 XBT(T,:)]*s.beta;
+   %   Compute prediction intervals
+   tCrit = tinv(1-alpha/2,s.tstat.dfe);
+   PredStd = sqrt([1 XBT(T,:)]*s.covb*[1 XBT(T,:)]'+s.mse);
+   PredDefLoBnd(k) = max(0,PredDefRate(k,1) - tCrit*PredStd);
+   PredDefUpBnd(k) = PredDefRate(k,1) + tCrit*PredStd;

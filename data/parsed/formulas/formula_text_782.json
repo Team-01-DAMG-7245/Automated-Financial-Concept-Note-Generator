@@ -1,0 +1,12 @@
+{
+  "page": 452,
+  "original_text": "% Retrieve the portfolio information.\np = struct.p;\nret0 = struct.ret0;\nlambda = struct.lambdaHH;",
+  "ocr_text": "Retrievetheportfolioinformation.\np=struct.p;\n\nretO=struct.ret0;\nlambda=struct.lambdaHH;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 290.47,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

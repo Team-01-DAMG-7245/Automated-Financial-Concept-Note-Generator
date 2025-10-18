@@ -1,0 +1,59 @@
+to match those of the conventional (that is, non-parallelized) simulation. Also, generating independent
+Gaussian random variates as inputs also guarantees that all simulated paths are independent.
+
+rng default
+Z = randn(NPeriods,1,NTrials);
+
+Create the return and volatility functions and the GBM model using gbm. Notice that the rate of
+return is a deterministic function of time, and therefore accepts simulation time as its only input
+argument. In contrast, the volatility must account for the moneyness and is a function of both time
+and stock price. Moreover, since the volatility surface is defined as a function of time to maturity
+rather than simulation time, the volatility function subtracts the current simulation time from the last
+time at which the price process is simulated (10 years). This ensures that as the simulation time
+approaches its terminal value, the time to maturity of the volatility surface approaches zero. Although
+far more elaborate return and volatility functions could be used if desired, the following assumes
+simple linear interpolation.
+
+mu = @(t) interp1(times,rates,t);
+sigma = @(t,S) interp2(moneyness,tenor,surface,S/strike,tenor(end)-t);
+mdl = gbm(mu,sigma,'StartState',price);
+
+Simulate the paths of the underlying geometric Brownian motion without parallelization.
+
+tStart = tic;
+paths = simBySolution(mdl,NPeriods,'NTrials',NTrials,'DeltaTime',dt,'Z',Z);
+time1 = toc(tStart);
+
+Simulate the paths in parallel using a parfor loop. For users licensed to access the Parallel
+Computing Toolbox, the following code segment automatically creates a parallel pool using the
+default local profile. If desired, this behavior can be changed by first calling the parpool function. If
+a parallel pool is not already created, the following simulation will likely be slower than the previous
+simulation without parallelization. In this case, rerun the following simulation to assess the true
+benefits of parallelization.
+
+tStart = tic;
+parPaths = zeros(NPeriods+1,1,NTrials);
+parfor i = 1:NTrials
+    parPaths(:,:,i) = simBySolution(mdl,NPeriods,'DeltaTime',dt,'Z',Z(:,:,i));
+end
+time2 = toc(tStart);
+
+If you examine any given path obtained without parallelization to the corresponding path with
+parallelization, you see that they are identical. Moreover, although relative performance varies, the
+results obtained with parallelization will generally incur a significant improvement. To assess the
+performance improvement, examine the runtime of each approach in seconds and the speedup
+gained from simulating the paths in parallel.
+
+time1                 % elapsed time of conventional simulation, in seconds
+time2                 % elapsed time of parallel simulation, in seconds
+speedup = time1/time2 % speedup factor
+
+time1 =
+    6.1329
+time2 =
+    2.5918
+
+14
+Stochastic Differential Equations
+
+14-112

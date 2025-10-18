@@ -1,0 +1,77 @@
+ZeroBasis — Basis of the zero curve
+0 (actual/actual) (default) | integer with value of 0 to 13
+
+Basis of the zero curve, specified as the comma-separated pair consisting of 'ZeroBasis' and the
+same values listed for Basis.
+
+Data Types: double
+
+RecoveryMethod — Recovery method
+'facevalue' (default) | character vector with value of 'presentvalue' or 'facevalue' | string
+object with value of 'presentvalue' or 'facevalue'
+
+Recovery method, specified as the comma-separated pair consisting of 'RecoveryMethod' and a
+character vector or a string with a value of 'presentvalue' or 'facevalue'.
+
+•
+'presentvalue' assumes that upon default, a bond is valued at a given fraction to the
+hypothetical present value of its remaining cash flows, discounted at risk-free rate.
+
+•
+'facevalue' assumes that a bond recovers a given fraction of its face value upon recovery.
+
+Data Types: char | string
+
+Face — Face or par value
+100 (default) | numeric
+
+Face or par value, specified as the comma-separated pair consisting of 'Face' and a NINST-by-1
+vector of bonds.
+
+Data Types: double
+
+Period — Payment frequency
+2 (default) | numeric with values 0, 1, 2, 3, 4, 6 or 12
+
+Payment frequency, specified as the comma-separated pair consisting of 'Period' and a N-by-1
+vector with values of 0, 1, 2, 3, 4, 6, or 12.
+
+Data Types: double
+
+Basis — Day-count basis of the instrument
+0 (actual/actual) (default) | integers of the set [0...13] | vector of integers of the set [0...13]
+
+Day-count basis of the instrument, specified as the comma-separated pair consisting of 'Basis' and
+a positive integer using a NINST-by-1 vector. Values are:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+15
+Functions
+
+15-518

@@ -1,0 +1,12 @@
+{
+  "page": 612,
+  "original_text": "% Update LoggedSignals indices\nif (LoggedSignals.IntervalIdx == 0) && (LoggedSignals.HorizonIdx == 0)\n    LoggedSignals.IntervalIdx = 1;\n    LoggedSignals.HorizonIdx = 1;\nelseif (LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon)\n    LoggedSignals.IntervalIdx = 1;\n    LoggedSignals.HorizonIdx = LoggedSignals.HorizonIdx + 1;\n    LoggedSignals.HorizonExecutedShares = ...\n        zeros(EnvConstants.NumLevels*EnvConstants.NumIntervalsPerHorizon,1);\n    LoggedSignals.HorizonExecutedPrices = LoggedSignals.HorizonExecutedShares;\n    if EnvConstants.BuyTrade\n        LoggedSignals.CurrentInventoryShares = 0;\n    else\n        LoggedSignals.CurrentInventoryShares = EnvConstants.TotalTradingShares;\n    end\nelse\n    LoggedSignals.IntervalIdx = LoggedSignals.IntervalIdx + 1;",
+  "ocr_text": "UpdateLoggedSignalsindices\nif(LoggedSignals.IntervalIdx==0)8(LoggedSignals.HorizonIdx==0)\nLoggedSignals.IntervalIdx=1;\nLoggedSignals.HorizonIdx=1;\nelseif(LoggedSignals.IntervalIdx==LoggedSignals.NumIntervalsPerHorizon)\nLoggedSignals.IntervalIdx=1;\nLoggedSignals.HorizonIdx=LoggedSignals.HorizonIdx+1;\nLoggedSignals.HorizonExecutedShares=...\nzeros(EnvConstants.NumLevels*EnvConstants.NumIntervalsPerHorizon,1);\nLoggedSignals.HorizonExecutedPrices=LoggedSignals.HorizonExecutedShares;\nifEnvConstants.BuyTrade\nLoggedSignals.CurrentInventoryShares=0;\nelse\nLoggedSignals.CurrentInventoryShares=EnvConstants.TotalTradingShares;\nend\nelse\nLoggedSignals.IntervalIdx=LoggedSignals.IntervalIdx+1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.83,
+    "x1": 518.02,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

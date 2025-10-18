@@ -1,0 +1,36 @@
+rebaseDate = datetime(2022, 01, 01);
+inflation{:, 1} = inflation{:, 1} / inflation{rebaseDate, 1};
+
+Determine the common dates between the commodity series and the inflation metric.
+
+[inflationIdx, commodityIdx] = intersect(inflation.DATE, Prices.Date);
+
+Adjust the commodity prices over this time range using the inflation metric.
+
+Prices = Prices(commodityIdx, :);
+inflation = inflation{inflationIdx, :};
+Prices.Variables = Prices.Variables .* inflation;
+
+Visualize Adjusted Commodity Price Data
+
+Plot each price series for soft commodities over time.
+
+commodityNames = string(Prices.Properties.VariableNames);
+
+figure
+
+tiledlayout(8,4, "TileSpacing", "tight")
+
+for commodity = 1:width(Prices)
+    nexttile
+    plot(Prices.Date, Prices{:, commodity})
+    title(commodityNames(commodity))   
+    axis off
+end
+
+sgtitle("Commodity Prices")
+
+14
+Stochastic Differential Equations
+
+14-90

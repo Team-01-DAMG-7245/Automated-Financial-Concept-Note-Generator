@@ -1,0 +1,12 @@
+{
+  "page": 718,
+  "original_text": "p = PortfolioCVaR;\np = setScenarios(p, AssetScenarios);\np = setDefaultConstraints(p);\np = setProbabilityLevel(p, 0.95);",
+  "ocr_text": "p=PortfolioCVaR;\np=setScenarios(p,AssetScenarios);\np=setDefaultConstraints(p);\np=setProbabilityLevel(p,0.95);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 316.97,
+    "x1": 285.05,
+    "y1": 359.83
+  },
+  "confidence": "high"
+}

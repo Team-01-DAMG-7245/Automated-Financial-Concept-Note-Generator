@@ -1,0 +1,62 @@
+Specifying an EngineDataList changes the required syntax of the backtestStrategy function
+handles that you define using rebalanceFcn. For an example of using EngineDataList, see “Use
+EngineDataList Property to Enforce Trading Strategy of Whole Shares” on page 15-251.
+
+Data Types: string
+
+Output Arguments
+
+strategy — Backtest strategy
+backtestStrategy object
+
+Backtest strategy, returned as a backtestStrategy object.
+
+Properties
+
+Name — Strategy name
+string
+
+Strategy name, specified as a string.
+
+Data Types: string
+
+RebalanceFcn — Rebalance function
+function handle
+
+Rebalance function, specified as a function handle.
+
+Data Types: function_handle
+
+RebalanceFrequency — Rebalance frequency during backtest
+1 (default) | numeric | duration object | calendarDuration object | vector of datetimes
+
+Rebalance frequency during the backtest, specified as a scalar numeric, duration or
+calendarDuration object, or vector of datetimes.
+
+Data Types: double | object | datetime
+
+TransactionCosts — Transaction costs
+0 (default) | numeric | vector | function handle
+
+Transaction costs, specified as a scalar numeric, vector, or function handle.
+
+Data Types: double | function_handle
+
+LookbackWindow — Lookback window
+[0 Inf] (default) | numeric | vector
+
+Lookback window, specified as a scalar numeric or vector.
+
+Data Types: double
+
+InitialWeights — Initial weights
+[] (default) | vector
+
+Initial weights, specified as a vector.
+
+Data Types: double
+
+15
+Functions
+
+15-242

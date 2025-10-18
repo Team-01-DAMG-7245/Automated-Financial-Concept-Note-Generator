@@ -1,0 +1,12 @@
+{
+  "page": 1917,
+  "original_text": "AccrInt = cdai( ___ ,Basis) adds an optional argument for Basis.",
+  "ocr_text": "AccrInt=cdai(___,Basis)addsanoptionalargumentforBasis.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.27,
+    "x1": 421.89,
+    "y1": 341.9
+  },
+  "confidence": "high"
+}

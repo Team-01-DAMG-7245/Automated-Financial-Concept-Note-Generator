@@ -1,0 +1,12 @@
+{
+  "page": 109,
+  "original_text": "P = expm(G*dI); % Matrix exponential",
+  "ocr_text": "P=expm(G*dI);Matrixexponential",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 645.51,
+    "x1": 285.06,
+    "y1": 655.98
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1509
+================================================================================
+
+Return — Expected mean instantaneous rates of asset return
+array | deterministic function of time | deterministic function of time and state

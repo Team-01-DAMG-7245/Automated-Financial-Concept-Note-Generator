@@ -1,0 +1,37 @@
+MACD: Moving Average Convergence/Divergence
+
+You can use the MACD metric in a variety of ways. Often, MACD is compared to its own exponential
+moving average, but for this example, MACD serves as a trigger for a buy signal when the MACD
+rises above 0. A position is sold when the MACD falls back below 0.
+
+% Create a timetable of the MACD metric using the MACD function.
+macdTT = macd(pricesTT);
+
+Create the MACD indicator signal timetable.
+
+macdSignalNameEnding = '_MACD';
+
+macdSignal = timetable;
+for i = 1:numel(symbols)
+    symi = symbols(i);
+    % Build a timetable for each symbol, then aggregate the symbols together.
+    macdSignali = timetable(pricesTT.Dates,...
+        double(macdTT.(symi) > 0),...
+        'VariableNames',{sprintf('%s%s',symi,macdSignalNameEnding)});
+    macdSignal = synchronize(macdSignal,macdSignali);
+end
+
+The MACD signal table contains a column for each asset with the name [stock symbol]_MACD. Each
+signal has a value of 1 when the MACD of the stock is above 0. The signal has a value of 0 when the
+MACD of the stock falls below 0.
+
+head(macdSignal)
+
+Time        AA_MACD    CAT_MACD    DIS_MACD    GM_MACD    HPQ_MACD    JNJ_MACD    MCD_MACD
+    ___________    _______    ________    ________    _______    ________    ________    ________
+
+03-Jan-2006       0          0           0           0          0           0           0
+
+Backtest Investment Strategies with Trading Signals
+
+4-255

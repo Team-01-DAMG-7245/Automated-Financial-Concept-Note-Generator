@@ -1,0 +1,59 @@
+4.3007
+
+PerDuration = 3×1
+
+8.6549
+    8.6154
+    8.6014
+
+Input Arguments
+
+Price — Clean price (excludes accrued interest)
+numeric
+
+Clean price (excludes accrued interest), specified as numeric value using a scalar or a NUMBONDS-by-1
+or 1-by-NUMBONDS vector.
+
+Data Types: double
+
+CouponRate — Annual percentage rate used to determine coupons payable on a bond
+decimal
+
+Annual percentage rate used to determine the coupons payable on a bond, specified as decimal value
+using a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector.
+
+Data Types: double
+
+Settle — Settlement date for certificate of deposit
+datetime array | string array | date character vector
+
+Settlement date for the certificate of deposit, specified as a scalar or a NUMBONDS-by-1 or 1-by-
+NUMBONDS vector using a datetime array, string array, or date character vectors. The Settle date
+must be before the Maturity date.
+
+To support existing code, bnddurp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date for certificate of deposit
+datetime array | string array | date character vector
+
+Maturity date for the certificate of deposit, specified as a scalar or a NUMBONDS-by-1 or 1-by-
+NUMBONDS vector using a datetime array, string array, or date character vectors.
+
+To support existing code, bnddurp also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+15
+Functions
+
+15-538

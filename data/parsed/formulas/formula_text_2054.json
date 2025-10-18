@@ -1,0 +1,12 @@
+{
+  "page": 1063,
+  "original_text": "where the partial derivatives of the ∇2 operator are taken with respect to the combined parameter\nvector Θ that contains the distinct components of b and C with a total of q = p + n (n + 1)/2\nparameters.",
+  "ocr_text": "wherethepartialderivativesofthe v? operatoraretakenwithrespecttothecombinedparameter\nvectorthatcontainsthedistinctcomponentsofbandCwithatotalofq=p+n(n+1)/2\nparameters.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 171.61,
+    "x1": 540.83,
+    "y1": 210.36
+  },
+  "confidence": "high"
+}

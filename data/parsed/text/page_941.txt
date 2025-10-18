@@ -1,0 +1,58 @@
+Forecasting Corporate Default Rates
+
+This example shows how to build a forecasting model for corporate default rates.
+
+Risk parameters are dynamic in nature, and understanding how these parameters change in time is a
+fundamental task for risk management.
+
+In the first part of this example, you work with historical credit migrations data to construct some
+time series of interest, and to visualize default rates dynamics. In the second part of this example, you
+use some of the series constructed in the first part, and some additional data, to fit a forecasting
+model for corporate default rates, and to show some backtesting and stress testing concepts. A linear
+regression model for corporate default rates is presented, but the tools and concepts described can
+be used with other forecasting methodologies. The appendix at the end references the handling of
+models for full transition matrices.
+
+If you are interested in forecasting, backtesting, and stress testing can go directly to the second part
+of this example. The first part of this example is more relevant if you who work with credit migration
+data.
+
+Part I: Working with Credit Migrations Data
+
+You can work with historical transition probabilities for corporate issuers (variable TransMat). This
+is yearly data for the period 1981-2005, from [10 on page 8-43]. The data includes, for each year, the
+number of issuers per rating at the beginning of the year (variable nIssuers), and the number of
+new issuers per rating per year (variable nNewIssuers). There is also a corporate profits forecast,
+from [9 on page 8-43], and a corporate spread, from [4 on page 8-43] (variables CPF and SPR). A
+variable indicating recession years (Recession), consistent with recession dates from [7 on page 8-
+43], is used mainly for visualizations.
+
+Example_LoadData
+
+Getting Default Rates for Different Ratings Categories
+
+Start by performing some aggregations to get corporate default rates for Investment Grade (IG) and
+Speculative Grade (SG) issuers, and the overall corporate default rate.
+
+Aggregation and segmentation are relative terms. IG is an aggregate with respect to credit ratings,
+but a segment from the perspective of the overall corporate portfolio. Other segments are of interest
+in practice, for example, economic sectors, industries, or geographic regions. The data in this
+example, however, is aggregated by credit ratings, so further segmentation is not possible.
+Nonetheless, the tools and workflow discussed here can be useful to work with other segment-
+specific models.
+
+Use functionality in Financial Toolbox™, specifically, the functions transprobgrouptotals and
+transprobbytotals, to perform the aggregation. These functions take as inputs structures with
+credit migration information in a particular format.
+
+Set up the inputs and visualize them to understand their information and format.
+
+% Pre-allocate the struct array
+totalsByRtg(nYears,1) = struct('totalsVec',[],'totalsMat',[], ...
+   'algorithm','cohort');
+for t = 1:nYears
+   % Number of issuers per rating at the beginning of the year
+
+Forecasting Corporate Default Rates
+
+8-23

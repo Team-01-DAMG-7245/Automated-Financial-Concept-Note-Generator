@@ -1,0 +1,103 @@
+SDE Models
+
+Model Name
+Specification
+
+Brownian Motion (BM)
+dXt = A(t)dt + V(t)dWt
+
+Geometric Brownian Motion (GBM)
+dXt = B(t)Xtdt + V(t)XtdWt
+
+Constant Elasticity of Variance (CEV)
+dXt = B(t)Xtdt + V(t)Xt
+α(t)dWt
+
+Cox-Ingersoll-Ross (CIR)
+
+dXt = S(t)(L(t) −Xt)dt + V(t)Xt
+
+1
+2dWt
+
+Hull-White/Vasicek (HWV)
+dXt = S(t)(L(t) −Xt)dt + V(t)dWt
+
+Heston
+dX1t = B(t)X1tdt +
+X2tX1tdW1t
+
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+
+Merton
+dXt = B(t, Xt)Xtdt + D(t, Xt)V(t, xt)dWt + Y(t, Xt)XtdNt
+
+Bates
+Bates models are bivariate composite models. Each Bates
+model consists of two coupled univariate models:
+
+•
+A geometric Brownian motion (gbm) model with a
+stochastic volatility function.
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t + Y(t)X1tdNt
+
+•
+A Cox-Ingersoll-Ross (cir) square root diffusion model.
+
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+
+rvm
+The rough volatility model (RVM) model allows you to
+simulate any vector-valued RVM of the form:
+
+dX1t = B(t)X1tdt + X2tX1tdW1t
+
+X2t = ξeYt
+
+Yt =∫−∞
+
+t
+g(t −s)νsdWs
+
+roughbergomi
+The rough Bergomi volatility model allows you to simulate
+any vector-valued RVM of the form:
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t
+
+X2t = ξ0(t)eη 2a + 1Yt
+α −η2
+
+2 t2α + 1
+
+Yt =∫0
+
+t
+(t −s)αdWs
+
+roughheston
+The rough Heston volatility model allows you to simulate
+any vector-valued RVM of the form:
+
+dXt = B(t)Xtdt +
+YtXtdWt
+
+Yt = Y0 +
+1
+Γ(α + 1)∫0
+
+t
+(t −s)ακ(θ −Ys)ds +
+1
+Γ(α + 1)∫0
+
+t
+(t −s)ασ YsdW
+
+14
+Stochastic Differential Equations
+
+14-12

@@ -1,0 +1,12 @@
+{
+  "page": 1038,
+  "original_text": "% Add lines to indicate the snapshot dates\n   % transprob uses 1 as the default for 'snapsPerYear', hardcoded here for simplicity\n   % The call to cfdates generates the exact same snapshot dates that transprob uses\n   snapsPerYear = 1;\n   snapDates = cfdates(startDate-1,endDate,snapsPerYear)';\n   yLimits = ylim;\n   for ii=1:length(snapDates)\n      line([snapDates(ii) snapDates(ii)],yLimits,'Color','m')\n   end\n   title(strcat(\"Company ID: \",CompanyID))\nend",
+  "ocr_text": "Addlinestoindicatethesnapshotdates\nStransprobuses1asthedefaultforsnapsPerYear,hardcodedhereforsimplicity\nThecalltocfdatesgeneratestheexactsamesnapshotdatesthattransprobuses\nsnapsPerYear=1;\nsnapDates=cfdates(startDate-1,endDate,snapsPerYear);\nyLimits=ylim;\nforii=1:length(snapDates)\nLine([snapDates(ii)snapDates(ii)],yLimits,Color,m)\n\nend\ntitle(strcat(CompanyID:_,CompanyID))\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 352.23,
+    "x1": 555.95,
+    "y1": 470.69
+  },
+  "confidence": "high"
+}

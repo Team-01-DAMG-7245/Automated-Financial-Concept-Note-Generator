@@ -1,0 +1,12 @@
+{
+  "page": 527,
+  "original_text": "% Risk parity portfolio with extra constraints\nwRP = estimateCustomObjectivePortfolio(p,objFun);",
+  "ocr_text": "Riskparityportfoliowithextraconstraints\nwRP=estimateCustom0bjectivePortfolio(p,objFun);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 634.75,
+    "x1": 355.49,
+    "y1": 656.02
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 512,
+  "original_text": "% Create the benchmark portfolio.\nbmkPort = estimateMaxSharpeRatio(p);\n% Create the benchmark returns timetable.\nmarketTT = timetable(assetsTT.Time,assetsTT.Variables*bmkPort, ...\n    VariableNames={'Benchmark'});",
+  "ocr_text": "Createthebenchmarkportfolio.\n\nbmkPort_=estimateMaxSharpeRatio(p);\n\nCreatethebenchmarkreturnstimetable.\n\nmarketTT=timetable(assetsTT.Time,assetsTT.Variables*bmkPort,...\nVariableNames={Benchmark});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 393.96,
+    "x1": 447.62,
+    "y1": 447.63
+  },
+  "confidence": "high"
+}

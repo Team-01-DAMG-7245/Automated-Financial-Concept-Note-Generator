@@ -1,0 +1,12 @@
+{
+  "page": 439,
+  "original_text": "% Transform the returns to prices.\nassetPrices = ret2tick(stockReturns);\n% Transform the prices table to a timetable.\nnRows = size(stockReturns,1);\nday = datetime(\"today\");\nTime = (day-nRows):day;\nassetPrices = table2timetable(assetPrices,\"RowTimes\",Time);",
+  "ocr_text": "STransformthereturnstoprices.\nassetPrices=ret2tick(stockReturns);\nTransformthepricestabletoatimetable.\nnRows=size(stockReturns,1);\n\nday=datetime(today);\n\nTime=(day-nRows):day;\nassetPrices=table2timetable(assetPrices,Rowlimes,Time);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 392.43,
+    "x1": 409.68,
+    "y1": 467.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,58 @@
+end
+
+function new_weights = BestBetRebalanceFcn(current_weights,pricesTT,signalTT) %#ok<INUSD> 
+% Best bet strategy, invest in the asset with the most upside.
+
+signal = signalTT.backtestPred_LSTM(end,:);
+new_weights = zeros(size(current_weights));
+new_weights(signal == max(signal)) = 1;
+
+end
+
+function seriesLifespanPlot(priceData)
+% Plot the lifespan of each time series.
+
+% Specify all time series end on same day.
+d2 = numel(priceData.Time);
+
+% Plot the lifespan patch for each series.
+numSeries = size(priceData,2);
+for i = 1:numSeries
+    % Find start date index.
+    d1 = find(~isnan(priceData{:,i}),1,'first');
+    % Plot patch.
+    x = [d1 d1 d2 d2];
+    y = i + [-0.4 0.4 0.4 -0.4];
+    patch(x,y,[0 0.4470 0.7410])
+
+hold on
+end
+hold off
+
+% Set the plot properties.
+xlim([-100 d2]);
+ylim([0.2 numSeries + 0.8]);
+
+yticks(1:numSeries);
+yticklabels(priceData.Properties.VariableNames');
+flipud(gca);
+
+years = 1990:5:2021;
+xtick_idx = zeros(size(years));
+for yidx = 1:numel(years)
+    xtick_idx(yidx) = find(years(yidx) == year(priceData.Time),1,'first');
+end
+xticks(xtick_idx);
+xticklabels(string(years));
+
+title('Time Series Life Span');
+
+end
+
+See Also
+Deep Network Designer | trainNetwork | trainingOptions | backtestStrategy |
+backtestEngine | runBacktest | equityCurve | summary
+
+Backtest Strategies Using Deep Learning
+
+4-313

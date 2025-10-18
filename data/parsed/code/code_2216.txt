@@ -1,0 +1,13 @@
+Page 1975
+================================================================================
+
+Settle = '01-Jun-2010';
+Maturity = ['15-Dec-2011';'15-Jun-2012'];
+CouponRate= [0.06; 0.05];
+Period = [4; 2];
+Basis = [1; 0];
+ 
+[CFlowAmounts, CFlowDates, TFactors, CFlowFlags] = ...
+cfamounts(CouponRate,Settle, Maturity, 'Period',Period, ... 
+'Basis', Basis, 'AdjustCashFlowsBasis', true,...
+'BusinessDayConvention','modifiedfollow')

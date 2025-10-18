@@ -1,0 +1,8 @@
+Page 1200
+================================================================================
+
+•
+Association of dynamic (time-variable) behavior with function evaluation, where time and state
+(t,Xt) are passed to a common, published interface, is pervasive throughout the SDE class system.
+You can use this function evaluation approach to model or construct powerful analytics. For a
+simple example, see “Specify Univariate Geometric Brownian Motion Model” on page 14-26.

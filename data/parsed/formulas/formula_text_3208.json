@@ -1,0 +1,12 @@
+{
+  "page": 1721,
+  "original_text": "obj = \n   Class GBM: Generalized Geometric Brownian Motion\n   ------------------------------------------------\n     Dimensions: State = 1, Brownian = 1\n   ------------------------------------------------\n      StartTime: 0\n     StartState: 100\n    Correlation: 1\n          Drift: drift rate function F(t,X(t))",
+  "ocr_text": "obj=\nClassGBM:GeneralizedGeometricBrownianMotion\nDimensions:State=1,Brownian=1\nStartTime:0\nStartState:100\nCorrelation:1\nDrift:driftratefunctionF(t,X(t))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 366.32,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

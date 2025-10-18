@@ -1,0 +1,12 @@
+{
+  "page": 344,
+  "original_text": "q = setBounds(p, -Leverage, 1 + Leverage);\nq = setBudget(q, 1, 1);\nq = setOneWayTurnover(q, 1 + Leverage, Leverage);",
+  "ocr_text": "q=setBounds(p,-Leverage,1+Leverage);\nq=setBudget(q,1,1);\nq=setOneWayTurnover(q,1+Leverage,Leverage);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 468.23,
+    "x1": 355.49,
+    "y1": 500.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 610
+================================================================================
+
+% Compute Implementation Shortfall for each Step
+        IS_TWAP_Step(IntervalIdx + NumIntervalsPerHorizon.*(HorizonIdx-1)) = ...
+            endingInventoryIS(ArrivalPrice,HorizonExecutedPrices,HorizonExecutedShares,BuyTrade);
+    end

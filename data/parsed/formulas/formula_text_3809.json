@@ -1,0 +1,12 @@
+{
+  "page": 2154,
+  "original_text": "Sum = depsoyd(Cost,Salvage,Life) computes the depreciation for an asset using the sum of\nyears' digits method.",
+  "ocr_text": "Sum=depsoyd(Cost,Salvage,Life)computesthedepreciationforanassetusingthesumof\nyearsdigitsmethod.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 243.98,
+    "x1": 542.51,
+    "y1": 267.61
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,53 @@
+blsrho
+
+Black-Scholes sensitivity to interest-rate change
+
+Syntax
+
+[CallRho,PutRho] = blsrho(Price,Strike,Rate,Time,Volatility)
+[CallRho,PutRho] = blsrho( ___ ,Yield)
+
+Description
+
+[CallRho,PutRho] = blsrho(Price,Strike,Rate,Time,Volatility) returns the call option
+rho CallRho, and the put option rho PutRho. Rho is the rate of change in value of derivative
+securities with respect to interest rates. blsrho uses normcdf, the normal cumulative distribution
+function in the Statistics and Machine Learning Toolbox.
+
+In addition, you can use the Financial Instruments Toolbox object framework with the BlackScholes
+pricer object to obtain price and rho values for a Vanilla, Barrier, Touch, DoubleTouch, or
+Binary instrument using a BlackScholes model.
+
+Note blsrho can also handle an underlying asset such as currencies. When pricing currencies
+(Garman-Kohlhagen model), enter the input argument Yield as:
+
+Yield = ForeignRate
+
+where ForeignRate is the continuously compounded, annualized risk-free interest rate in the
+foreign country.
+
+[CallRho,PutRho] = blsrho( ___ ,Yield) adds an optional argument for Yield.
+
+Examples
+
+Find the Black-Scholes Sensitivity (Rho) to Interest-Rate Change
+
+This example shows how to find the Black-Scholes sensitivity, rho, to interest-rate change.
+
+[CallRho, PutRho] = blsrho(50, 50, 0.12, 0.25, 0.3, 0)
+
+CallRho = 
+6.6686
+
+PutRho = 
+-5.4619
+
+Input Arguments
+
+Price — Current price of underlying asset
+numeric
+
+15
+Functions
+
+15-502

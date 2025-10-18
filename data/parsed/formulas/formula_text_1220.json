@@ -1,0 +1,12 @@
+{
+  "page": 614,
+  "original_text": "IS_Agent_Penalty = RemainingIntervals.*endingInventoryIS(LoggedSignals.ArrivalPrice, ...\n    PenaltyAgentExecutedPrices,PenaltyAgentExecutedShares,EnvConstants.BuyTrade);",
+  "ocr_text": "IS_Agent_Penalty=RemainingIntervals.*endingInventoryIS(LoggedSignals.ArrivalPrice,...\nPenaltyAgentExecutedPrices,PenaltyAgentExecutedShares,EnvConstants.BuyTrade);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 492.63,
+    "x1": 566.82,
+    "y1": 513.89
+  },
+  "confidence": "high"
+}

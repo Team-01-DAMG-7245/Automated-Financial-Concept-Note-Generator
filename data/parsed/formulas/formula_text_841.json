@@ -1,0 +1,12 @@
+{
+  "page": 473,
+  "original_text": "% Specify rows to use in the backtest (31-Dec-2015 to 2-Nov-2021).\nbacktest_start_idx = find(date_vector < datetime(2016,1,1),1,'last');\nbacktest_indices = backtest_start_idx:size(network_responses,1);",
+  "ocr_text": "Specifyrowstouseinthebacktest(31-Dec-2015to2-Nov-2021).\nbacktest_start_idx=find(date_vectordatetime(2016,1,1),1,last);\nbacktest_indices=backtest_start_idx:size(network_responses,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 306.23,
+    "x1": 463.87,
+    "y1": 338.29
+  },
+  "confidence": "high"
+}

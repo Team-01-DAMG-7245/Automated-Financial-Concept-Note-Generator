@@ -1,0 +1,12 @@
+{
+  "page": 457,
+  "original_text": "% Display a table of weights for the risk budgeting portfolios.\nRBtable = table(wRB,wRB_rho7,wRB_rho9,wRB_mu1)",
+  "ocr_text": "Displayatableofweightsfortheriskbudgetingportfolios.\nRBtable=table(wRB,wRB_rho7,wRB_rho9,wRB_mu1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 444.19,
+    "x1": 431.33,
+    "y1": 465.46
+  },
+  "confidence": "high"
+}

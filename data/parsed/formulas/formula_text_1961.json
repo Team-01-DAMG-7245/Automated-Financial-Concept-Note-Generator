@@ -1,0 +1,12 @@
+{
+  "page": 1013,
+  "original_text": "lb = [-Inf;zeros(K,1)];\nub = [Inf;ones(K,1)];\nAIneq = [0 -1 0 0 0 1 0 0 0 0;0 1 0 0 0 -1 0 0 0 0];\nbIneq = [0.05;0.05];\nc0 = zeros(K,1);\nNIter = 100;\nOptions = optimoptions('fmincon','SpecifyObjectiveGradient',true,'Display','off');\nrng('default')",
+  "ocr_text": "lb=[-Inf;zeros(K,1)];\n\nub=[Inf;ones(K,1)];\n\nAIneq=[0-100010000;01000-10000];\n\nbIneq=[0.05;0.05];\n\ncO=zeros(K,1);\n\nNIter=100;\nOptions=optimoptions(fmincon,SpecifyObjectiveGradient,true,Display,off);\nrng(default)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 557.42,
+    "x1": 534.31,
+    "y1": 643.49
+  },
+  "confidence": "high"
+}

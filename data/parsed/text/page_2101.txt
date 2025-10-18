@@ -1,0 +1,84 @@
+Basis — Day-count basis
+0 (actual/actual) (default) | numeric with value 0 through 13 | vector of numerics with values 0
+through 13
+
+Day-count basis, specified as an integer with a value 0 through 13 or a N-by-1 vector of integers with
+values 0 through 13.
+
+•
+0 = actual/actual (default)
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (BMA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: single | double
+
+EndMonthRule — End-of-month rule flag for month having 30 or fewer days
+1 (in effect) (default) | nonnegative integer [0,1]
+
+End-of-month rule flag for month having 30 or fewer days, specified as scalar nonnegative integer [0,
+1] or a using a N-by-1 vector of values. This rule applies only when Maturity is an end-of-month date
+for a month having 30 or fewer days.
+
+•
+0 = Ignore rule, meaning that a payment date is always the same numerical day of the month.
+
+•
+1 = Set rule on, meaning that a payment date is always the last actual day of the month.
+
+Data Types: logical
+
+Output Arguments
+
+TFactors — Time factors
+vector
+
+Time factors, appropriate to compounded rate quotes between Settle and Maturity dates,
+returned as a vector.
+
+F — Compounding frequencies
+scalar
+
+Compounding frequencies, returned as a scalar.
+
+date2time
+
+15-795

@@ -1,0 +1,12 @@
+{
+  "page": 399,
+  "original_text": "splitPoint = ceil(nObservation*0.6);\ntraining = 1:splitPoint;\ntest = splitPoint+1:nObservation;\ntrainingNum = numel(training);",
+  "ocr_text": "splitPoint=ceil(nObservation*0.6);\ntraining=1:splitPoint;\ntest=splitPoint+1:n0bservation;\ntrainingNum=numel(training);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 386.03,
+    "x1": 285.05,
+    "y1": 428.89
+  },
+  "confidence": "high"
+}

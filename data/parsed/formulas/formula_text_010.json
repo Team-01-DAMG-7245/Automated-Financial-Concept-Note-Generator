@@ -1,0 +1,12 @@
+{
+  "page": 35,
+  "original_text": "Value = sum(ClosePrices .* NumShares')",
+  "ocr_text": "Value=sum(ClosePrices.*NumShares)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 363.84,
+    "x1": 295.88,
+    "y1": 374.31
+  },
+  "confidence": "high"
+}

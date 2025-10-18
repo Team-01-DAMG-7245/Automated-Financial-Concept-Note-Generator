@@ -1,0 +1,12 @@
+{
+  "page": 2026,
+  "original_text": "Yield = cfyield( ___ ,Name,Value) specifies options using one or more name-value pair\narguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "Yield=cfyield( ,Name,Value)specifiesoptionsusingoneormorename-valuepair\nargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 289.1,
+    "x1": 522.03,
+    "y1": 312.73
+  },
+  "confidence": "high"
+}

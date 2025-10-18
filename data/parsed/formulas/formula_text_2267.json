@@ -1,0 +1,12 @@
+{
+  "page": 1165,
+  "original_text": "pLowerTail = linspace(minProbability  , tailFraction    , nPoints); % Sample lower tail\npUpperTail = linspace(1 - tailFraction, maxProbability  , nPoints); % Sample upper tail\npInterior  = linspace(tailFraction    , 1 - tailFraction, nPoints); % Sample interior",
+  "ocr_text": "pLowerTail=linspace(minProbability,tailFraction ,nPoints);Samplelowertail\npUpperTail=linspace(1-tailFraction,maxProbability,nPoints);*Sampleuppertail\npInterior=linspace(tailFraction ,1-tailFraction,nPoints);*Sampleinterior",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 541.03,
+    "x1": 561.4,
+    "y1": 573.09
+  },
+  "confidence": "high"
+}

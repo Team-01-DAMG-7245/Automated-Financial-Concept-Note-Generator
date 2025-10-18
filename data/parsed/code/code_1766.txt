@@ -1,0 +1,5 @@
+Page 1499
+================================================================================
+
+If you specify Level as a deterministic function of time and state, it must return a scalar of reversion
+levels when you call it with two inputs:

@@ -1,0 +1,6 @@
+Page 995
+================================================================================
+
+cp([3 4]) = []; % To merge bins 3, 4, and 5
+sc = modifybins(sc,'CustIncome','CutPoints',cp);
+plotbins(sc,'CustIncome')

@@ -1,0 +1,62 @@
+Risk Budgeting Portfolio
+
+This example shows how to use riskBudgetingPortfolio to create a risk budgeting portfolio and
+portfolioRiskContribution to compute the risk contribution of the assets in the portfolio.
+
+Risk budgeting is a portfolio allocation strategy that focuses on the allocation of risk to define the
+weights of a portfolio. The risk budgeting portfolio is constructed by ensuring that the risk
+contribution of each asset to the portfolio overall risk matches a target risk budget.
+
+A common risk budgeting portfolio is the risk parity or equal risk contribution portfolio. For risk
+parity portfolios, the goal is to ensure that all assets contribute equally to the portfolio risk, that is,
+the target risk budget is the same for all assets. Key advantages of the risk budgeting portfolio are
+stability and diversification of weights:
+
+•
+Stability of the allocations: The weights of the risk parity portfolio are more robust to changes
+in the returns covariance than the weights of the mean-variance portfolio.
+
+•
+Diversification of the portfolio weights: The risk parity portfolio keeps the portfolio from
+concentrating in just a few number of assets.
+
+This example follows the example in Section 3.1.1 of Bruder and Roncalli.[1 on page 4-290]
+
+Define the Asset Returns Covariance
+
+Define the covariance matrix of the asset returns (Sigma). Sigma must be a positive semidefinite
+matrix.
+
+% Define the returns covariance matrix.
+sigma = [0.2; 0.21; 0.1];       % Assets risk
+rho = 0.8;                      % Assets correlation
+C = @(rho) [  1  rho  rho;
+            rho    1  rho;
+            rho  rho    1 ];    % Uniform correlation
+Sigma = corr2cov(sigma,C(rho)); % Covariance
+% Check that Sigma is positive semidefinite. All
+% eigenvalues should be nonnegative (>= 0).
+eig(Sigma)
+
+ans = 3×1
+
+0.0026
+    0.0084
+    0.0831
+
+Create Risk Budgeting Portfolio
+
+Use riskBudgetingPortfolio with the covariance matrix (Sigma) and a vector of risk budgets
+(budget) to compute the long-only fully invested risk budgeting portfolio. When you specify the
+target risk budget, the function computes the risk parity portfolio.
+
+% Define a risk budget.
+budget = [0.5; 0.25; 0.25];
+wRB = riskBudgetingPortfolio(Sigma,budget)
+
+wRB = 3×1
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-286

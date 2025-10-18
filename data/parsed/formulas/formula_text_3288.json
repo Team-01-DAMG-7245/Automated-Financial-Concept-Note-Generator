@@ -1,0 +1,12 @@
+{
+  "page": 1770,
+  "original_text": "Rate = annurate( ___ ,FutureValue,Due) specifies options using one or more optional\narguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "Rate=annurate( ,FutureValue,Due)specifiesoptionsusingoneormoreoptional\nargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 89.99,
+    "y0": 285.94,
+    "x1": 515.61,
+    "y1": 309.57
+  },
+  "confidence": "high"
+}

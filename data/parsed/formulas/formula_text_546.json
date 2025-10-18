@@ -1,0 +1,12 @@
+{
+  "page": 367,
+  "original_text": "lb = zeros(q.NumAssets, 1);\nub = zeros(q.NumAssets, 1)*0.5;\nlb(ii) = 0.1;\nub(ii) = 0.3;",
+  "ocr_text": "lb=zeros(q.NumAssets,1);\nub=zeros(q.NumAssets,1)*0.5;\nlb(ii)=0.1;\n\nub(ii)=0.3;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 257.96,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

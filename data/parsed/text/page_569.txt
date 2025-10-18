@@ -1,0 +1,19 @@
+new_weights = estimateFrontierByRisk(p,targetRisk);
+end
+
+See Also
+Portfolio | covarianceShrinkage | covarianceDenoising
+
+Related Examples
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+More About
+
+•
+“Comparison of Methods for Covariance Estimation” on page 4-138
+
+Compare Performance of Covariance Denoising with Factor Modeling Using Backtesting
+
+4-401

@@ -1,0 +1,4 @@
+Page 1676
+================================================================================
+
+This function simulates any vector-valued merton process of the form

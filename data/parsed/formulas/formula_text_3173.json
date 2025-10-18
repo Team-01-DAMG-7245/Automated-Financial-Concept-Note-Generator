@@ -1,0 +1,12 @@
+{
+  "page": 1703,
+  "original_text": "% Preallocate simTermStruc\nsimTermStructure = zeros(nPeriods+1,30);\nfor i = futuresTimes\n    for t = T\n        bondPrice = P_func(i,i+t,rPathsExp(i));\n        simTermStructure(i,t) = -log(bondPrice)/t;\n    end\nend\nplot(simTermStructure')\nlegend('Current','1-year','2-year','3-year','4-year','5-year')\ntitle('Projected Term Structure for Next 5 Years')\nylabel('Long Rate Maturity R(t,T)')\nxlabel('Time')",
+  "ocr_text": "PreallocatesimTermStruc\nsimTermStructure=zeros(nPeriods+1,30);\nfori=futuresTimes\nfort=T\nbondPrice=P_func(i,i+t,rPathsExp(i));\nsimTermStructure(i,t)=-log(bondPrice)/t;\nend\nend\nplot(simTermStructure)\nLlegend(Current,l-year,2-year,3-year,4-year,5-year)\ntitle(ProjectedTermStructureforNext5Years)\nylabel(LongRateMaturityR(t,T))\nxlabel(Time)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 425.94,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

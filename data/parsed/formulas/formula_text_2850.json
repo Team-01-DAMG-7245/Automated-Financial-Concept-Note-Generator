@@ -1,0 +1,12 @@
+{
+  "page": 1471,
+  "original_text": "SDEDDO = sdeddo(DriftRate,DiffusionRate) creates a default SDEDDO object.",
+  "ocr_text": "SDEDDO=sdeddo(DriftRate,DiffusionRate)createsadefaultSDEDDOobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 584.0,
+    "x1": 483.02,
+    "y1": 595.63
+  },
+  "confidence": "high"
+}

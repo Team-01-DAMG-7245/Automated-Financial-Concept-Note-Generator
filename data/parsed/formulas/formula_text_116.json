@@ -1,0 +1,12 @@
+{
+  "page": 96,
+  "original_text": "mapreducer(0)\nDT = tall(DS);",
+  "ocr_text": "Mapreducer(Q0)\nDT=tall(DS);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 165.85,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

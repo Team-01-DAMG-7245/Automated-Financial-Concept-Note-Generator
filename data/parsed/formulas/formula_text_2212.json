@@ -1,0 +1,12 @@
+{
+  "page": 1140,
+  "original_text": "obsInfo = getObservationInfo(env);\nactInfo = getActionInfo(env);",
+  "ocr_text": "obsInfo=getObservationInfo(env);\nactInfo=getActionInfo(env);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 525.51,
+    "x1": 274.21,
+    "y1": 546.78
+  },
+  "confidence": "high"
+}

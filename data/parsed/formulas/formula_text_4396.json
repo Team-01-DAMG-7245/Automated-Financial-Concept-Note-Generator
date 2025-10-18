@@ -1,0 +1,12 @@
+{
+  "page": 2490,
+  "original_text": "malong_term=movavg(TMW_CLOSE,type,20) % Long-term moving average",
+  "ocr_text": "malong_term=movavg(TMW_CLOSE,type,20)Long-termmovingaverage",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 473.33,
+    "x1": 436.77,
+    "y1": 483.79
+  },
+  "confidence": "high"
+}

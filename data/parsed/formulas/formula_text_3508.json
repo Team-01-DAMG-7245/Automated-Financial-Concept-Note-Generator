@@ -1,0 +1,12 @@
+{
+  "page": 1955,
+  "original_text": "cpID = 4;\ncpIdx = swaps.Counterparty == cpID;\ncpValues = values(:,cpIdx,:);\nsimulationDates = datetime(simulationDates,\"ConvertFrom\",\"datenum\");\nplot(simulationDates,squeeze(sum(cpValues,2)));\ngrid on;\ntitle(sprintf('Potential Mark-to-Market Portfolio Values for Counterparty: %d',cpID));\nxtickformat('MMMyy');\nylabel('Portfolio Value ($)')",
+  "ocr_text": "cpID=4;\n\ncpIdx=swaps.Counterparty==cpID;\n\ncpValues=values(:,cpIdx,:);\nsimulationDates=datetime(simulationDates,ConvertFrom,datenum);\nplot(simulationDates,squeeze(sum(cpValues,2)));\n\ngridon;\ntitle(sprintf(PotentialMark-to-MarketPortfolioValuesforCounterparty:d,cpID));\nxtickformat(MMMyy);\n\nylabel(PortfolioValue(S))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 571.53,
+    "x1": 555.99,
+    "y1": 668.4
+  },
+  "confidence": "high"
+}

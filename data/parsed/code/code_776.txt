@@ -1,0 +1,9 @@
+Page 708
+================================================================================
+
+Given a CVaR portfolio set specified in a PortfolioCVaR object, you often want to check if specific
+portfolios are feasible with respect to the portfolio set. This can occur with, for example, initial
+portfolios and with portfolios obtained from other procedures. The checkFeasibility function
+determines whether a collection of portfolios is feasible. Suppose that you perform the following
+portfolio optimization and want to determine if the resultant efficient portfolios are feasible relative
+to a modified problem.

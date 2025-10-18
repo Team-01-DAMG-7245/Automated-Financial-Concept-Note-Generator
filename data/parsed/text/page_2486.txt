@@ -1,0 +1,48 @@
+Input Arguments
+
+Data — Data for high and low prices
+matrix | table | timetable
+
+Data for high and low prices, specified as a matrix, table, or timetable. For matrix input, Data is an M-
+by-2 matrix of high and low prices stored in the corresponding columns. The columns can be in either
+order because the median price is the average of the high and low prices for each period. Timetables
+and tables with M rows must contain a variable named 'High' and 'Low' (case insensitive).
+
+Data Types: double | table | timetable
+
+Output Arguments
+
+MedianPrice — Median price series
+matrix | table | timetable
+
+Median price series, returned with the same number of rows (M) and the same type (matrix, table, or
+timetable) as the input Data.
+
+Version History
+Introduced before R2006a
+
+R2023a: fints support removed for Data input argument
+Behavior changed in R2023a
+
+fints object support for the Data input argument is removed.
+
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+References
+
+[1] Achelis, S. B. Technical Analysis from A to Z. Second Edition. McGraw-Hill, 1995, pp. 177–178.
+
+See Also
+timetable | table | wclose | typprice
+
+Topics
+“Use Timetables in Finance” on page 11-7
+“Convert Financial Time Series Objects (fints) to Timetables” on page 11-2
+
+15
+Functions
+
+15-1180

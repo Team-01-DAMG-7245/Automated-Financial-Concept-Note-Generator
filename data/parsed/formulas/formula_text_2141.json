@@ -1,0 +1,12 @@
+{
+  "page": 1104,
+  "original_text": "Convexities = bndconvy(Yields, CouponRate, Settle,... \nMaturity, 2, 0, [], [], [], [], [], Face);",
+  "ocr_text": "Convexities=bndconvy(Yields,CouponRate,Settle,...\nMaturity,2,0,[],[],f],[],[],Face);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 603.24,
+    "x1": 382.6,
+    "y1": 624.51
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,66 @@
+fanplot
+
+Plot combined historical and forecast data to visualize possible outcomes
+
+Syntax
+
+fanplot(historical,forecast)
+fanplot( ___ ,Name,Value)
+
+fanplot(ax,historical,forecast)
+fanplot( ___ ,Name,Value)
+
+h = fanplot(ax,historical,forecast)
+[h,ax] = fanplot( ___ ,Name,Value)
+
+Description
+
+fanplot(historical,forecast) generates a fan chart. In time series analysis, a fan chart is a
+chart that joins a simple line chart for observed past data with ranges for possible values of future
+data. The historical data and possible future data are joined with a line showing a central estimate or
+most likely value for the future outcomes.
+
+fanplot supports three plotting scenarios:
+
+•
+Matching — This scenario occurs when the time period perfectly matches for historical and
+forecast data.
+
+•
+Backtest — This scenario occurs when there are overlaps between historical and forecast
+data.
+
+•
+Gap — This scenario occurs when there are NaN values in the historical or forecast data.
+
+fanplot( ___ ,Name,Value) generates a fan chart using optional name-value pair arguments.
+
+fanplot(ax,historical,forecast) generates a fan chart using an optional ax argument.
+
+fanplot( ___ ,Name,Value) generates a fan chart using optional name-value pair arguments.
+
+h = fanplot(ax,historical,forecast) generates a fan chart and returns the figure handle h.
+In time series analysis, a fan chart is a chart that joins a simple line chart for observed past data with
+ranges for possible values of future data. The historical data and possible future data are joined with
+a line showing a central estimate or most likely value for the future outcomes.
+
+fanplot supports three plotting scenarios:
+
+•
+Matching — This scenario occurs when the time period perfectly matches for historical and
+forecast data.
+
+•
+Backtest — This scenario occurs when there are overlaps between historical and forecast
+data.
+
+•
+Gap — This scenario occurs when there are NaN values in the historical or forecast data.
+
+[h,ax] = fanplot( ___ ,Name,Value) generates a fan chart and returns the figure handle h and
+axis (ax) using optional name-value pair arguments.
+
+15
+Functions
+
+15-1030

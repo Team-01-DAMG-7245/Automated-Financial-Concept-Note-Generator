@@ -1,0 +1,12 @@
+{
+  "page": 1990,
+  "original_text": "CFlowDates = cfdates('14-Mar-1997', datetime('30-Nov-1998','Locale','en_US'), 2, 0, 1)",
+  "ocr_text": "CFlowDates=cfdates(14-Mar-1997,datetime(30-Nov-1998,Locale,en_US),2,0,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 645.18,
+    "x1": 555.99,
+    "y1": 655.65
+  },
+  "confidence": "high"
+}

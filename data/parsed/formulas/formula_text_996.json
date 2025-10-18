@@ -1,0 +1,12 @@
+{
+  "page": 525,
+  "original_text": "% Assets variance\nvol = [0.1;0.15;0.2;0.3];\n% Assets correlation\nrho = [1.00  0.50  0.50  0.50;\n       0.50  1.00  0.50  0.50;\n       0.50  0.50  1.00  0.75;\n       0.50  0.50  0.75  1.00];\n% Assets covariance matrix\nSigma = corr2cov(vol,rho);\n% Risk budget\nbudget = [0.3;0.3;0.195;0.205];",
+  "ocr_text": "Assetsvariance\nvol=[0.1;0.15;0.2;0.3];\nAssetscorrelation\nrho=[1.000.500.500.50;\n0.501.000.500.50;\n0.500.501.000.75;\n0.500.500.751.00];\nAssetscovariancematrix\nSigma=corr2cov(vol,rho);\nRiskbudget\nbudget=[0.3;0.3;0.195;0.205];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 431.39,
+    "x1": 257.96,
+    "y1": 549.86
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,59 @@
+Generate the scenario matrix using five strategies. The first strategy is a stock-only strategy; the rest
+of the strategies are the stock hedged with put options at different strike price levels. To compute the
+returns from the prices obtained by the Monte Carlo simulation for the stock-only strategy, divide the
+change in the stock price (Price_T - Price_0) by the initial price Price_0. To compute the
+returns of the stock with different put options, first compute the "observed price" at the horizon date,
+that is, the stock price with the acquired put option taken into account. If the stock price at the
+horizon date is less than the strike price, the observed price is the strike price. Otherwise, the
+observed price is the true stock price. This observed price is represented by the formula
+
+Observed price = max PriceT, Strike .
+
+You can then compute the "initial cost" of the stock with the put option, which is given by the initial
+stock price Price_0 plus the price of the put option. Finally, to compute the return of the put option
+strategies, divide the observed price minus the initial cost by the initial cost.
+
+AssetScenarios = zeros(NTRIALS, 5);
+
+% Strategy 1: Stock only
+AssetScenarios(:, 1) = (Price_T - Price_0) ./ Price_0;
+
+% Strategy 2: Put option cover at 50%
+AssetScenarios(:, 2) = (max(Price_T, Strike50) - (Price_0 + Put50)) ./ ...
+    (Price_0 + Put50);
+
+% Strategy 2: Put option cover at 75%
+AssetScenarios(:, 3) = (max(Price_T, Strike75) - (Price_0 + Put75)) ./ ...
+    (Price_0 + Put75);
+
+% Strategy 2: Put option cover at 90%
+AssetScenarios(:, 4) = (max(Price_T, Strike90) - (Price_0 + Put90)) ./ ...
+    (Price_0 + Put90);
+
+% Strategy 2: Put option cover at 95%
+AssetScenarios(:, 5) = (max(Price_T, Strike95) - (Price_0 + Put95)) ./ ...
+    (Price_0 + Put95);
+
+The portfolio weights associated with each of the five assets previously defined represent the
+percentage of the total wealth to invest in each strategy. For example, consider a portfolio with the
+weights [0.5 0 0.5 0]. The weights indicate that the best allocation is to invest 50% in the stock-
+only strategy and the remaining 50% in a put option at 75%.
+
+Plot the distribution of the returns for the stock-only strategy and the put option at the 95% strategy.
+Notice that the returns are not normally distributed. For a mean-variance portfolio, a lack of
+symmetry in the plotted returns usually indicates poor mean-variance portfolio performance since
+variance, as a risk measure, is not sensitive to skewed distributions.
+
+% Create histogram
+figure;
+
+% Stock only
+subplot(2,1,1);
+histogram(AssetScenarios(:,1),'Normalization','probability')
+title('Stock-Only Distribution')
+xlabel('Return')
+ylabel('Relative Probability')
+
+Hedging Using CVaR Portfolio Optimization
+
+5-127

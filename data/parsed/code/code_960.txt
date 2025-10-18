@@ -1,0 +1,7 @@
+Page 955
+================================================================================
+
+Now take a more global view of the scenario analysis. Instead of analyzing one scenario at a time, you
+can visualize the default rate forecasts as a function of CPF and SPR. More precisely, you can plot
+default rate contours over a whole grid of CPF and SPR values. Use the conservative 95% upper
+bound.

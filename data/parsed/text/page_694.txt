@@ -1,0 +1,60 @@
+Working with Linear Equality Constraints Using PortfolioCVaR
+Object
+
+Linear equality constraints are optional linear constraints that impose systems of equalities on
+portfolio weights (see “Linear Equality Constraints” on page 5-9). Linear equality constraints have
+properties AEquality, for the equality constraint matrix, and bEquality, for the equality constraint
+vector.
+
+Setting Linear Equality Constraints Using the PortfolioCVaR Function
+
+The properties for linear equality constraints are set using the PortfolioCVaR object. Suppose that
+you have a portfolio of five assets and want to ensure that the first three assets are 50% of your
+portfolio. To set this constraint:
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioCVaR('AEquality', A, 'bEquality', b);
+disp(p.NumAssets)
+disp(p.AEquality)
+disp(p.bEquality)
+
+5
+
+1     1     1     0     0
+
+0.5000
+
+Setting Linear Equality Constraints Using the setEquality and
+addEquality Functions
+
+You can also set the properties for linear equality constraints using setEquality. Suppose that you
+have a portfolio of five assets and want to ensure that the first three assets are 50% of your portfolio.
+Given a PortfolioCVaR object p, use setEquality to set the linear equality constraints:
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioCVaR;
+p = setEquality(p, A, b);
+disp(p.NumAssets)
+disp(p.AEquality)
+disp(p.bEquality)
+
+5
+
+1     1     1     0     0
+
+0.5000
+
+Suppose that you want to add another linear equality constraint to ensure that the last three assets
+also constitute 50% of your portfolio. You can set up an augmented system of linear equalities or use
+addEquality to build up linear equality constraints. For this example, create another system of
+equalities:
+
+p = PortfolioCVaR;
+A = [ 1 1 1 0 0 ];    % first equality constraint
+
+5
+CVaR Portfolio Optimization Tools
+
+5-68

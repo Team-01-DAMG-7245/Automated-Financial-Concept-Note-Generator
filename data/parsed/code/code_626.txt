@@ -1,0 +1,6 @@
+Page 568
+================================================================================
+
+% Compute the number of factors identified using covariance denoising.
+[~,numFactors] = covarianceDenoising(assetReturns.Variables);
+userData.numFactors = [userData.numFactors; numFactors];

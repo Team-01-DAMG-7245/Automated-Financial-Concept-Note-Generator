@@ -1,0 +1,6 @@
+Page 506
+================================================================================
+
+adds the HH index as a penalty function to the objective has a larger number of assets than the
+minimum variance portfolio but less than the portfolio that maximizes HH diversity. The ERC portfolio
+also selects all the assets because all weights need to be nonzero to have some risk contribution.

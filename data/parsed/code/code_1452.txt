@@ -1,0 +1,5 @@
+Page 1403
+================================================================================
+
+A — A represents the parameter A
+array or deterministic function of time

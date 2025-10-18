@@ -1,0 +1,12 @@
+{
+  "page": 68,
+  "original_text": "For the ZeroData information on the current spot curve for this bond, refer to https://\nwww.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield.",
+  "ocr_text": "FortheZeroDatainformationonthecurrentspotcurveforthisbond,refertohttps://\nwww.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 92.96,
+    "x1": 547.8,
+    "y1": 116.59
+  },
+  "confidence": "high"
+}

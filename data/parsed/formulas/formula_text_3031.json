@@ -1,0 +1,12 @@
+{
+  "page": 1588,
+  "original_text": "% Create the backtest engine.\nbacktester = backtestEngine(ivStrategy);",
+  "ocr_text": "Createthebacktestengine.\nbacktester=backtestEngine(ivStrategy);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 306.72,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

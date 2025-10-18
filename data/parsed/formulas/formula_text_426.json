@@ -1,0 +1,12 @@
+{
+  "page": 282,
+  "original_text": "p = Portfolio;\np = setSolver(p, 'quadprog');\ndisplay(p.solverType)\ndisplay(p.solverOptions)",
+  "ocr_text": "p=Portfolio;\np=setSolver(p,_quadprog);\ndisplay(p.solverType)\ndisplay(p.solver0Options)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 358.66,
+    "x1": 247.14,
+    "y1": 401.53
+  },
+  "confidence": "high"
+}

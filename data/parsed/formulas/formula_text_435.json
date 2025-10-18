@@ -1,0 +1,12 @@
+{
+  "page": 298,
+  "original_text": "Blotter = \n                          Port1     Port2     Port3     Port4     Port5\n    Bonds                 88.906    51.216    13.525         0      0  \n    Large-Cap Equities    3.6875    24.387    45.086    27.479      0  \n    Small-Cap Equities    4.0425    7.7088    11.375    13.759      0  \n    Emerging Equities      3.364    16.689    30.014    58.762    100",
+  "ocr_text": "Blotter=\nPortl Port2 Port3 Port4 Port5\nBonds 88.906 51.216 13.525 0 0\nLarge-CapEquities 3.6875 24.387 45.086 27.479 0\nSmall-CapEquities 4.0425 7.7088 11.375 13.759 0\nEmergingEquities 3.364 16.689 30.014 58.762 100",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 458.63,
+    "x1": 474.67,
+    "y1": 523.09
+  },
+  "confidence": "high"
+}

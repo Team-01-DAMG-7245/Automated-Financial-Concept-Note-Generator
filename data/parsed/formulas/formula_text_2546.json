@@ -1,0 +1,12 @@
+{
+  "page": 1301,
+  "original_text": "% Detect the import options for the file CMO-Historical-Data-Monthly.xlsx.\nopts = detectImportOptions(filename, ...\n    \"Sheet\", \"Monthly Prices\", ...\n    \"VariableNamingRule\", \"preserve\", ...\n    \"TextType\", \"string\");",
+  "ocr_text": "DetecttheimportoptionsforthefileCMO-Historical-Data-Monthly.xlsx.\nopts=detectImportOptions(filename,...\n\nSheet,MonthlyPrices,...\n\nVariableNamingRule,preserve,...\n\nTextType,_string);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 490.93,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

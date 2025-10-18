@@ -1,0 +1,12 @@
+{
+  "page": 2428,
+  "original_text": "H = holidays returns a vector or datetime array corresponding to all holidays and nontrading days.",
+  "ocr_text": "H_=holidaysreturnsavectorordatetimearraycorrespondingtoallholidaysandnontradingdays.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 270.99,
+    "x1": 556.99,
+    "y1": 282.62
+  },
+  "confidence": "high"
+}

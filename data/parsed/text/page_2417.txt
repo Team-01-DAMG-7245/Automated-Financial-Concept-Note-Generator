@@ -1,0 +1,62 @@
+Output Arguments
+
+BuyTurnover — Turnover constraint on purchases
+scalar
+
+Turnover constraint on purchases, returned as a scalar for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+SellTurnover — Turnover constraint on sales
+scalar
+
+Turnover constraint on sales, returned as a scalar for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+More About
+
+One-way Turnover Constraint
+
+One-way turnover constraint is a specific measure of trading activity in a portfolio that captures the
+extent to which assets are bought or sold, but only considers the purchases or sales in one direction
+(either buys or sells).
+
+One-way turnover constraints ensure that estimated optimal portfolios differ from an initial portfolio
+by no more than specified amounts according to whether the differences are purchases or sales.
+
+The constraints take the form
+
+1Tmax 0, x −x0
+≤τB
+
+1Tmax 0, x0 −x
+≤τS
+
+with
+
+•
+x — The portfolio (NumAssets vector)
+
+•
+x0 — Initial portfolio (NumAssets vector)
+
+•
+τB — Upper-bound for turnover constraint on purchases (scalar)
+
+•
+τS — Upper-bound for turnover constraint on sales (scalar)
+
+Specify one-way turnover constraints using the following properties in a supported portfolio object:
+BuyTurnover for τB, SellTurnover for τS, and InitPort for x0.
+
+Note The average turnover constraint (which is set using setTurnover) is not just the combination
+of the one-way turnover constraints with the same value for the constraint.
+
+Tips
+
+You can also use dot notation to get the one-way turnover constraint for portfolio objects.
+
+[BuyTurnover,SellTurnover] = obj.getOneWayTurnover
+
+getOneWayTurnover
+
+15-1111

@@ -1,0 +1,12 @@
+{
+  "page": 1915,
+  "original_text": "RGB = orderedcolors(\"gem\");\nH = rgb2hex(RGB);",
+  "ocr_text": "RGB=orderedcolors(gem);\nH_=rgb2hex(RGB);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 436.3,
+    "x1": 236.29,
+    "y1": 457.57
+  },
+  "confidence": "high"
+}

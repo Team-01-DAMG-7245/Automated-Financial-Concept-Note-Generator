@@ -1,0 +1,7 @@
+Page 1541
+================================================================================
+
+If you provide signal data to the backtestEngine object, then the engine object passes it to the
+strategy rebalance function using the three input argument syntax. If do not provide signal data
+the backtestEngine object, then the engine object calls the rebalance function with the two
+input argument syntax.

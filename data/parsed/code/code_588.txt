@@ -1,0 +1,7 @@
+Page 543
+================================================================================
+
+% Plot the value function path.
+yyaxis right
+plot(0:T,VPath)
+ylabel("Probability of Success");

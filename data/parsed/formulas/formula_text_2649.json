@@ -1,0 +1,12 @@
+{
+  "page": 1347,
+  "original_text": "h = categoryWeightsChart( ___ ,Name=Value) adds optional name-value arguments.",
+  "ocr_text": "h=categoryWeightsChart(__,Name=Value)addsoptionalname-valuearguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 322.88,
+    "x1": 509.32,
+    "y1": 334.51
+  },
+  "confidence": "high"
+}

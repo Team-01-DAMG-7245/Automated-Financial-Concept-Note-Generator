@@ -1,0 +1,12 @@
+{
+  "page": 1225,
+  "original_text": "F = \n   Class DRIFT: Drift Rate Specification  \n   -------------------------------------  \n      Rate: drift rate function F(t,X(t)) \n         A: 6x1 double array\n         B: 6x6 diagonal double array",
+  "ocr_text": "Fe\nClassDRIFT:DriftRateSpecification\nRate:driftratefunctionF(t,X(t))\nA:6x1doublearray\nB:6x6diagonaldoublearray",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 317.56,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

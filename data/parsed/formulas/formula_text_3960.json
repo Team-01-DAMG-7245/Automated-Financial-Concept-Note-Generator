@@ -1,0 +1,12 @@
+{
+  "page": 2247,
+  "original_text": "p = Portfolio('AssetList',Assets(1:12));\np = estimateAssetMoments(p, Data(:,1:12),'missingdata',true);\np = setDefaultConstraints(p);\nplotFrontier(p);",
+  "ocr_text": "p=Portfolio(AssetList,Assets(1:12));\np=estimateAssetMoments(p,Data(:,1:12),missingdata,true);\np=setDefaultConstraints(p);\n\nplotFrontier(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 466.83,
+    "x1": 420.52,
+    "y1": 509.69
+  },
+  "confidence": "high"
+}

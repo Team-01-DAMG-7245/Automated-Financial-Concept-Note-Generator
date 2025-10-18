@@ -1,0 +1,12 @@
+{
+  "page": 1726,
+  "original_text": "ActiveConSet = abs2active(AbsConSet,Index) transforms a constraint matrix to an\nequivalent matrix expressed in active weight format (relative to the index).",
+  "ocr_text": "ActiveConSet=abs2active(AbsConSet,Index)transformsaconstraintmatrixtoan\nequivalentmatrixexpressedinactiveweightformat(relativetotheindex).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 242.96,
+    "x1": 511.61,
+    "y1": 266.59
+  },
+  "confidence": "high"
+}

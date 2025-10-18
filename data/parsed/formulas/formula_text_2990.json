@@ -1,0 +1,12 @@
+{
+  "page": 1561,
+  "original_text": "% Set backtest strategy.\nstrat = backtestStrategy('MaxSharpeRatio',@maxSharpeRatioFcn, ...\n    RebalanceFrequency=rebalFreq,LookbackWindow=lookback);",
+  "ocr_text": "Setbackteststrategy.\nstrat=backtestStrategy(MaxSharpeRatio,QmaxSharpeRatioFcn,...\nRebalanceFrequency=rebalFreq,LookbackWindow=Lookback);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 223.77,
+    "x1": 442.2,
+    "y1": 255.84
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2228,
+  "original_text": "% Group the contraints\np = Portfolio(NumAssets=8);\np = setDefaultConstraints(p);\nG = [0 0 0 0 1 1 1 1];\np = setGroups(p,G,0.3,[]);",
+  "ocr_text": "Groupthecontraints\np=Portfolio(NumAssets=8);\np=setDefaultConstraints(p);\nG=[00001111)];\np=setGroups(p,G,0.3,[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 247.12,
+    "y1": 254.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,6 @@
+Page 1011
+================================================================================
+
+In the constrained model approach, you solve for the values of the coefficients bi of the logistic model,
+subject to constraints. The supported constraints are bound, equality, or inequality. The coefficients
+maximize the likelihood-of-default function defined, for observation i, as:

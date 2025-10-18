@@ -1,0 +1,12 @@
+{
+  "page": 1969,
+  "original_text": "Yield = cdyield(Price,CouponRate,Settle,Maturity,IssueDate)\nYield = cdyield( ___ ,Basis)",
+  "ocr_text": "Yield=cdyield(Price,CouponRate,Settle,Maturity,IssueDate)\nYield=cdyield(___,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.55,
+    "x1": 445.21,
+    "y1": 215.18
+  },
+  "confidence": "high"
+}

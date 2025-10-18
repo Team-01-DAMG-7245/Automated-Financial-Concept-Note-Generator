@@ -1,0 +1,62 @@
+MaxDD50Ret = 
+0.1658
+
+Next, compute the maximum drop in value, using the 'arithmetic' argument.
+
+[MaxDD50Arith, Ind50Arith] = maxdrawdown(Fund50,'arithmetic')
+
+MaxDD50Arith = 
+8.4285
+
+Ind50Arith = 2×1
+
+2
+    18
+
+The value of this investment was $50.84 in month 2, but by month 18 the value was down to $42.41, a
+drop of $8.43. This is the largest loss in dollar value from a previous high in the given time period. In
+this case, the maximum drawdown period, from the 2nd to 18th month, is the same independently of
+whether drawdown is measured as return or as dollar value loss.
+
+[MaxDD50LogRet, Ind50LogRet] = maxdrawdown(Fund50,'geometric')
+
+MaxDD50LogRet = 
+0.1813
+
+Ind50LogRet = 2×1
+
+2
+    18
+
+Note, the last measure is equivalent to finding the arithmetic maximum drawdown for the log of the
+series.
+
+MaxDD50LogRet2 = maxdrawdown(log(Fund50),'arithmetic')
+
+MaxDD50LogRet2 = 
+0.1813
+
+Input Arguments
+
+Data — Total return price series
+matrix
+
+Total return price series, specified as a T-by-N matrix with T samples of N total return price series.
+
+Data Types: double
+
+Format — (Optional) Format of Data
+character vector with value of 'return', 'arithmetic', or 'geometric'
+
+Format of Data, specified as character vector with the following possible values:
+
+•
+'return' (default) — Maximum drawdown in terms of maximum percentage drop from a peak.
+
+•
+'arithmetic'
+
+15
+Functions
+
+15-1176

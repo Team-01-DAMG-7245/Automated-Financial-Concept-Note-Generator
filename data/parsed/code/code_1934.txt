@@ -1,0 +1,7 @@
+Page 1544
+================================================================================
+
+If you use the optional name-value argument for UserData to specify a strategy-specific
+userData struct and the optional name-value argument EngineDataList to specify required
+backtest engine state data and the detailedCosts output is specified, the required syntax for
+the computeTransactionCostsFcn function handle must have the following signature:

@@ -1,0 +1,12 @@
+{
+  "page": 462,
+  "original_text": "% Invest only in assets. First column of pricesTT is the market index.\nassetReturns = tick2ret(pricesTT(:,2:end));\nassetCov = cov(assetReturns{:,:});",
+  "ocr_text": "Investonlyinassets.FirstcolumnofpricesTTisthemarketindex.\nassetReturns=tick2ret(pricesTT(:,2:end));\nassetCov=cov(assetReturns{:,:});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 469.26,
+    "y1": 654.29
+  },
+  "confidence": "high"
+}

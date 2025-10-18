@@ -1,0 +1,54 @@
+getCosts
+
+Obtain buy and sell transaction costs from portfolio object
+
+Syntax
+
+[BuyCost,SellCost] = getCosts(obj)
+
+Description
+
+Use the getCosts function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to obtain
+buy and sell transaction costs from portfolio objects.
+
+For details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+[BuyCost,SellCost] = getCosts(obj) obtains buy and sell transaction costs from portfolio
+objects.
+
+Examples
+
+Obtain Buy and Sell Costs for a Portfolio Object
+
+Given portfolio p with the costs set, obtain the values for BuyCost and SellCost.
+
+p = Portfolio;
+p = setCosts(p, 0.001, 0.001, 5);
+[BuyCost, SellCost] = getCosts(p)
+
+BuyCost = 
+1.0000e-03
+
+SellCost = 
+1.0000e-03
+
+Obtain Buy and Sell Costs for a PortfolioCVaR Object
+
+Given a PortfolioCVaR object p with the costs set, obtain the values for BuyCost and SellCost.
+
+p = PortfolioCVaR;
+p = setCosts(p, 0.001, 0.001, 5);
+[BuyCost, SellCost] = getCosts(p)
+
+BuyCost = 
+1.0000e-03
+
+SellCost = 
+1.0000e-03
+
+15
+Functions
+
+15-1088

@@ -1,0 +1,58 @@
+StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+
+obj displays like a MATLAB® structure, with the following information:
+
+•
+The object's class
+
+•
+A brief description of the object
+
+•
+A summary of the dimensionality of the model
+
+The object's displayed parameters are as follows:
+
+•
+StartTime: The initial observation time (real-valued scalar)
+
+•
+StartState: The initial state vector (NVARS-by-1 column vector)
+
+•
+Correlation: The correlation structure between Brownian process
+
+•
+Drift: The drift-rate function F(t, Xt)
+
+•
+Diffusion: The diffusion-rate function G(t, Xt)
+
+•
+Simulation: The simulation method or function.
+
+Of these displayed parameters, only Drift and Diffusion are required inputs.
+
+The only exception to the (t, Xt) evaluation interface is Correlation. Specifically, when you enter
+Correlation as a function, the SDE engine assumes that it is a deterministic function of time, C(t).
+This restriction on Correlation as a deterministic function of time allows Cholesky factors to be
+computed and stored before the formal simulation. This inconsistency dramatically improves run-time
+performance for dynamic correlation structures. If Correlation is stochastic, you can also include it
+within the simulation architecture as part of a more general random number generation function.
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+15
+Functions
+
+15-162

@@ -1,0 +1,5 @@
+Page 1533
+================================================================================
+
+Mean-reversion speed of the stochastic variance process, specified as an array or deterministic
+function of time.

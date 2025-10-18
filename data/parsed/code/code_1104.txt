@@ -1,0 +1,7 @@
+Page 1132
+================================================================================
+
+for j=1:3
+    treasuryPricesAtSettle(j) = bndprice(treasuryYTMAtSettle(j),0,settleDate, ...
+                                         treasuryMaturities(j),'basis',basis);
+end

@@ -1,0 +1,12 @@
+{
+  "page": 964,
+  "original_text": "centersX = ([5 thresCCC(2:end)]+[thresCCC(2:end) -5])*0.5;\nomag = round(log10(trans(7,:)));\nomag(omag>0)=omag(omag>0).^2;\nfs = 14+2*omag;",
+  "ocr_text": "centersX=([5thresCCC(2:end)]+[thresCCC(2:end)_-5])*0.5;\nomag=round(logl0(trans(7,:)));\nomag(omag=0)=omag(omag=0).*2;\n\nfs=14+2*omag;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.03,
+    "x1": 404.24,
+    "y1": 675.89
+  },
+  "confidence": "high"
+}

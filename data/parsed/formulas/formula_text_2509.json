@@ -1,0 +1,12 @@
+{
+  "page": 1283,
+  "original_text": "Returns = tick2ret(Prices);",
+  "ocr_text": "Returns=tick2ret(Prices);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 512.12,
+    "x1": 236.29,
+    "y1": 522.58
+  },
+  "confidence": "high"
+}

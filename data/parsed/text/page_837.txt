@@ -1,0 +1,58 @@
+Working with Budget Constraints Using PortfolioMAD Object
+
+The budget constraint is an optional linear constraint that maintains upper and lower bounds on the
+sum of portfolio weights (see “Budget Constraints” on page 5-10). Budget constraints have properties
+LowerBudget for the lower budget constraint and UpperBudget for the upper budget constraint. If
+you set up a MAD portfolio optimization problem that requires portfolios to be fully invested in your
+universe of assets, you can set LowerBudget to be equal to UpperBudget. These budget constraints
+can be set with default values equal to 1 using setDefaultConstraints (see “Setting Default
+Constraints for Portfolio Weights Using PortfolioMAD Object” on page 6-50).
+
+Setting Budget Constraints Using the PortfolioMAD Function
+
+The properties for the budget constraint can also be set using the PortfolioMAD object. Suppose
+that you have an asset universe with many risky assets and a riskless asset and you want to ensure
+that your portfolio never holds more than 1% cash, that is, you want to ensure that you are 99–100%
+invested in risky assets. The budget constraint for this portfolio can be set with:
+
+p = PortfolioMAD('LowerBudget', 0.99, 'UpperBudget', 1);
+disp(p.LowerBudget)
+disp(p.UpperBudget)
+
+0.9900
+
+1
+
+Setting Budget Constraints Using the setBudget Function
+
+You can also set the properties for a budget constraint using setBudget. Suppose that you have a
+fund that permits up to 10% leverage which means that your portfolio can be from 100% to 110%
+invested in risky assets. Given a PortfolioMAD object p, use setBudget to set the budget
+constraints:
+
+p = PortfolioMAD;
+p = setBudget(p, 1, 1.1);
+disp(p.LowerBudget)
+disp(p.UpperBudget)
+
+1
+
+1.1000
+
+If you were to continue with this example, then set the RiskFreeRate property to the borrowing
+rate to finance possible leveraged positions. For details on the RiskFreeRate property, see “Working
+with a Riskless Asset” on page 6-45. To clear either bound for the budget constraint from your
+PortfolioMAD object, use either the PortfolioMAD object or setBudget with empty inputs for the
+properties to be cleared. For example, clear the upper-budget constraint from the PortfolioMAD
+object p in the previous example with:
+
+p = PortfolioMAD(p, 'UpperBudget', []);
+
+See Also
+PortfolioMAD | setDefaultConstraints | setBounds | setBudget | setConditionalBudget
+| setGroups | setGroupRatio | setEquality | setInequality | setTurnover |
+setOneWayTurnover
+
+Working with Budget Constraints Using PortfolioMAD Object
+
+6-57

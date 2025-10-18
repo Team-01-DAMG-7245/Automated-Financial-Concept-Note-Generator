@@ -1,0 +1,12 @@
+{
+  "page": 2367,
+  "original_text": "FutureVal = fvdisc( ___ ,Basis) specifies options using an optional argument in addition to the\ninput arguments in the previous syntax.",
+  "ocr_text": "FutureVal=fvdisc( ,Basis)specifiesoptionsusinganoptionalargumentinadditiontothe\ninputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 292.66,
+    "x1": 557.77,
+    "y1": 316.29
+  },
+  "confidence": "high"
+}

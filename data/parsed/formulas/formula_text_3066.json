@@ -1,0 +1,12 @@
+{
+  "page": 1608,
+  "original_text": "function new_weights = inverseVarianceFcn(current_weights, pricesTT) %#ok<INUSL> \n% Inverse-variance portfolio allocation",
+  "ocr_text": "functionnew_weights=inverseVarianceFcn(current_weights,pricesTT)okINUSL=\nInverse-varianceportfolioallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 521.68,
+    "x1": 528.89,
+    "y1": 542.95
+  },
+  "confidence": "high"
+}

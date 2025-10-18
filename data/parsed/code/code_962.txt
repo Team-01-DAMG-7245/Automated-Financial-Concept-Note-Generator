@@ -1,0 +1,8 @@
+Page 956
+================================================================================
+
+Monetary terms, once again, may be more meaningful. Use the Basel II capital requirements formula
+(see [2 on page 8-43]) to translate the default rates into a monetary measure. The Basel II formula is
+convenient because it is analytic (there is no need to simulate to estimate the capital requirements),
+but also because it depends only on the probabilities of default. Define the Basel II capital
+requirements as a function K.

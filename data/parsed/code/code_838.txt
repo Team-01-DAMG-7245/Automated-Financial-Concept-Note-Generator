@@ -1,0 +1,12 @@
+Page 813
+================================================================================
+
+In many applications, creating a new optimal portfolio requires comparing the new portfolio with an
+initial or current portfolio to form lists of purchases and sales. The PortfolioMAD object property
+InitPort lets you identify an initial or current portfolio. The initial portfolio also plays an essential
+role if you have either transaction costs or turnover constraints. The initial portfolio need not be
+feasible within the constraints of the problem. This can happen if the weights in a portfolio have
+shifted such that some constraints become violated. To check if your initial portfolio is feasible, use
+the checkFeasibility function described in “Validating MAD Portfolios” on page 6-81. Suppose
+that you have an initial portfolio in x0, then use the PortfolioMAD object to set up an initial
+portfolio:

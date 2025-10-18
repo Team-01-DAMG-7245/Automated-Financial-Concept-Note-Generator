@@ -1,0 +1,12 @@
+{
+  "page": 2450,
+  "original_text": "plot((0:119),dx(1:end-1,:));\nlegend(series, 'location', 'northwest');\ntitle('\\bfLife Table Yearly Decrements');\nxlabel('Age');\nylabel('Number Dying within a Given Year');",
+  "ocr_text": "plot((0:119),dx(1l:end-1,:));\nlegend(series,location,northwest);\ntitle(bfLifeTableYearlyDecrements);\nxlabel(Age);\nylabel(NumberDyingwithinaGivenYear);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 586.43,
+    "x1": 322.99,
+    "y1": 640.09
+  },
+  "confidence": "high"
+}

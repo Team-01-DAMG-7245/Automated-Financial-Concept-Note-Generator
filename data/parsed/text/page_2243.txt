@@ -1,0 +1,49 @@
+estimateBounds
+
+Estimate global lower and upper bounds for set of portfolios
+
+Syntax
+
+[glb,gub,isbounded] = estimateBounds(obj)
+[glb,gub,isbounded] = estimateBounds(obj,obtainExactBounds)
+
+Description
+
+[glb,gub,isbounded] = estimateBounds(obj) estimates global lower and upper bounds for
+set of portfolios for Portfolio, PortfolioCVaR, or PortfolioMAD objects. For details on the
+respective workflows when using these different objects, see “Portfolio Object Workflow” on page 4-
+18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object Workflow” on page 6-
+16.
+
+Note The estimateBounds function does not consider cardinality or semicontinuous constraints.
+For more information, see “Working with 'Conditional' BoundType, MinNumAssets, and
+MaxNumAssets Constraints Using Portfolio Objects” on page 4-81.
+
+[glb,gub,isbounded] = estimateBounds(obj,obtainExactBounds) estimates global lower
+and upper bounds for set of portfolios with an additional option specified for obtainExactBounds.
+
+Examples
+
+Create an Unbounded Portfolio for a Portfolio Object
+
+Create an unbounded portfolio set.
+
+p = Portfolio('AInequality', [1 -1; 1 1 ], 'bInequality', 0);
+[lb, ub, isbounded] = estimateBounds(p)
+
+lb = 2×1
+
+-Inf
+  -Inf
+
+ub = 2×1
+
+0
+   Inf
+
+isbounded = logical
+   0
+
+estimateBounds
+
+15-937

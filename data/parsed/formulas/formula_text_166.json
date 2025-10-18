@@ -1,0 +1,12 @@
+{
+  "page": 116,
+  "original_text": "QT = makeQ(TData,n,N);\nQV = makeQ(VData,n,N);\nQTVDiff = QT - QV",
+  "ocr_text": "QT=makeQ(TData,n,N);\nQV=makeQ(VData,n,N);\nQTVDiff=QT-QV",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 311.43,
+    "x1": 209.19,
+    "y1": 343.49
+  },
+  "confidence": "high"
+}

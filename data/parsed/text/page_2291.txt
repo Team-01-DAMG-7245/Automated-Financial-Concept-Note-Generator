@@ -1,0 +1,54 @@
+(Optional) Indicator which portfolios to obtain at the extreme ends of the efficient frontier, specified
+as a character vector with values 'Both' or "Both", 'Min' or "Min", or 'Max' or "Max". The
+options for a Choice action are:
+
+•
+[] — Compute both minimum-risk and maximum-return portfolios.
+
+•
+'Both' or "Both" — Compute both minimum-risk and maximum-return portfolios.
+
+•
+'Min' or "Min" — Compute minimum-risk portfolio only.
+
+•
+'Max' or "Max" — Compute maximum-return portfolio only.
+
+Data Types: char | string
+
+Output Arguments
+
+pwgt — Optimal portfolios at endpoints of efficient frontier
+matrix
+
+Optimal portfolios at the endpoints of the efficient frontier TargetReturn, returned as a
+NumAssets-by-NumPorts matrix. pwgt is returned for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+pbuy — Purchases relative to an initial portfolio for optimal portfolios at endpoints of
+efficient frontier
+matrix
+
+Purchases relative to an initial portfolio for optimal portfolios at the endpoints of the efficient frontier,
+returned as NumAssets-by-NumPorts matrix.
+
+Note If no initial portfolio is specified in obj.InitPort, that value is assumed to be 0 such that
+pbuy = max(0, pwgt) and psell = max(0, -pwgt).
+
+pbuy is returned for a Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+psell — Sales relative to an initial portfolio for optimal portfolios at endpoints of efficient
+frontier
+matrix
+
+Sales relative to an initial portfolio for optimal portfolios on the efficient frontier, returned as a
+NumAssets-by-NumPorts matrix.
+
+Note If no initial portfolio is specified in obj.InitPort, that value is assumed to be 0 such that
+pbuy = max(0, pwgt) and psell = max(0, -pwgt).
+
+psell is returned for Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+estimateFrontierLimits
+
+15-985

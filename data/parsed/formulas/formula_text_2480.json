@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf('                    # of Time Periods/Trial: %8d\\n\\n'  , nPeriods)",
+  "ocr_text": "fprintf( 4ofTimePeriods/Trial:*8dnn,_nPeriods)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.76,
+    "x1": 496.38,
+    "y1": 267.23
+  },
+  "confidence": "high"
+}

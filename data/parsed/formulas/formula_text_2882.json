@@ -1,0 +1,12 @@
+{
+  "page": 1497,
+  "original_text": "Bates = bates(Return,Speed,Level,Volatility,JumpFreq,JumpMean,JumpVol)\nBates = bates( ___ ,Name,Value)",
+  "ocr_text": "Bates=bates(Return,Speed,Level,Volatility,JumpFreq,JumpMean,JumpVol)\nBates=bates(____,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 604.1,
+    "x1": 511.43,
+    "y1": 627.73
+  },
+  "confidence": "high"
+}

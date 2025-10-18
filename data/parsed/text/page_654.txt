@@ -1,0 +1,53 @@
+p = setScenarios(p, AssetScenarios);
+p.ProbabilityLevel = 0.95;
+
+p.LowerBudget = 1;
+p.UpperBudget = 1;
+p.LowerBound = zeros(size(m));
+
+plotFrontier(p)
+
+Note Scenarios cannot be assigned directly using dot notation to a PortfolioCVaR object.
+Scenarios must always be set through either the PortfolioCVaR object, the setScenarios
+function, or any of the scenario simulation functions.
+
+See Also
+PortfolioCVaR | estimateBounds
+
+Related Examples
+
+•
+“Common Operations on the PortfolioCVaR Object” on page 5-29
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+“Portfolio Optimization Theory” on page 5-3
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+CVaR Portfolio Optimization (4 min 56 sec)
+
+5
+CVaR Portfolio Optimization Tools
+
+5-28

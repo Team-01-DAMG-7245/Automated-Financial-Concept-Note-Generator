@@ -1,0 +1,12 @@
+{
+  "page": 1708,
+  "original_text": "dXt = S(t)[L(t) −Xt]dt + D(t, Xt",
+  "ocr_text": "dX;=S(t)[L(t)-_Xpldt+D(t, x?",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 104.23,
+    "x1": 252.83,
+    "y1": 120.65
+  },
+  "confidence": "high"
+}

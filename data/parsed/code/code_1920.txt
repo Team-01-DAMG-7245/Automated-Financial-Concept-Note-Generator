@@ -1,0 +1,5 @@
+Page 1541
+================================================================================
+
+For more information on developing a rebalanceFcn function handle, see “Backtest Investment
+Strategies Using Financial Toolbox” on page 4-238.

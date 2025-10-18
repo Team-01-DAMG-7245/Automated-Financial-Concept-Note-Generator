@@ -1,0 +1,12 @@
+{
+  "page": 1446,
+  "original_text": "HWV = hwv( ___ ,Name,Value) creates a HWV object with additional options specified by one or\nmore Name,Value pair arguments.",
+  "ocr_text": "HWV=hwv(___,Name,Value)createsaHWVobjectwithadditionaloptionsspecifiedbyoneor\nmoreName,VaLluepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 149.46,
+    "x1": 537.82,
+    "y1": 173.09
+  },
+  "confidence": "high"
+}

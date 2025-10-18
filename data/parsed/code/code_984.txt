@@ -1,0 +1,6 @@
+Page 993
+================================================================================
+
+•
+Use the bininfo function with two output arguments where the second argument contains
+binning rules.

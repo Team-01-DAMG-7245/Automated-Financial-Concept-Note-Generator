@@ -1,0 +1,12 @@
+{
+  "page": 1075,
+  "original_text": "StdMean = ecmnstd(Data, Mean, Covariance);",
+  "ocr_text": "StdMean=ecmnstd(Data,Mean,Covariance);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 545.12,
+    "x1": 317.55,
+    "y1": 555.59
+  },
+  "confidence": "high"
+}

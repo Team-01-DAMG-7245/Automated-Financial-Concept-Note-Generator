@@ -1,0 +1,39 @@
+Call option theta, returned as a numeric value.
+
+PutTheta — Put option theta
+numeric
+
+Put option theta, returned as a numeric value.
+
+More About
+
+Theta
+
+A theta sensitivity measures the rate at which the price of an option decreases as time passes, all else
+being equal.
+
+Theta is essentially a quantification of time decay, which is a key concept in options pricing. Theta
+provides an estimate of the dollar amount that an option's price would decrease each day, assuming
+no movement in the price of the underlying asset and no change in volatility. For example, if a call
+option has a theta of -0.05, it means that the option's price is expected to decrease by $0.05 per day,
+holding all other factors constant.
+
+Version History
+Introduced in R2006a
+
+References
+
+[1] Hull, John C. Options, Futures, and Other Derivatives. 5th edition, Prentice Hall, 2003.
+
+See Also
+blslambda | blsgamma | blsdelta | blsprice | blsrho | blsvega
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+blstheta
+
+15-507

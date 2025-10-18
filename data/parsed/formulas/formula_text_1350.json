@@ -1,0 +1,12 @@
+{
+  "page": 667,
+  "original_text": "X = portsim(m', C, 120);\nY = ret2tick(X);\nY(1:20,1) = NaN;\nY(1:12,4) = NaN;",
+  "ocr_text": "X=portsim(m,C,_120);\nY=ret2tick(X);\nY(1:20,1)=NaN;\nY(1:12,4)_=NaN;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 203.89,
+    "x1": 220.04,
+    "y1": 246.75
+  },
+  "confidence": "high"
+}

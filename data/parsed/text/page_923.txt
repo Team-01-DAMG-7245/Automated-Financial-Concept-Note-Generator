@@ -1,0 +1,60 @@
+This example shows how to estimate transition probabilities for credit ratings using a different rating
+scale.
+
+The dataset data from Data_TransProb.mat contains sample credit ratings using the default
+rating scale {'AAA', 'AA','A', 'BBB', 'BB', 'B', 'CCC', 'D'}. It also contains the
+dataset dataIGSG with ratings investment grade ('IG'), speculative grade ('SG'), and default ('D').
+To estimate the transition matrix for this dataset, use the labels argument.
+
+load Data_TransProb
+startDate = datetime(1995,12,31);
+endDate = datetime(2000,12,31);
+dataIGSG(1:10,:)
+
+ans=10×3 table
+         ID              Date          Rating
+    ____________    _______________    ______
+
+{'00011253'}    {'04-Apr-1983'}    {'IG'}
+    {'00012751'}    {'17-Feb-1985'}    {'SG'}
+    {'00012751'}    {'19-May-1986'}    {'D' }
+    {'00014690'}    {'17-Jan-1983'}    {'IG'}
+    {'00012144'}    {'21-Nov-1984'}    {'IG'}
+    {'00012144'}    {'25-Mar-1992'}    {'SG'}
+    {'00012144'}    {'07-May-1994'}    {'IG'}
+    {'00012144'}    {'23-Jan-2000'}    {'SG'}
+    {'00012144'}    {'20-Aug-2001'}    {'IG'}
+    {'00012937'}    {'07-Feb-1984'}    {'IG'}
+
+transMatIGSG = transprob(dataIGSG,'labels',{'IG','SG','D'},...
+'startDate',startDate,'endDate',endDate)
+
+transMatIGSG = 3×3
+
+98.1986    1.5179    0.2835
+    8.5396   89.4891    1.9713
+         0         0  100.0000
+
+There is another dataset, dataIGSGnum, with the same information as dataIGSG, except the ratings
+are mapped to a numeric scale where 'IG'=1, 'SG'=2, and 'D'=3. To estimate the transition matrix,
+use the labels optional argument specifying the numeric scale as a cell array.
+
+dataIGSGnum(1:10,:)
+
+ans=10×3 table
+         ID              Date          Rating
+    ____________    _______________    ______
+
+{'00011253'}    {'04-Apr-1983'}      1   
+    {'00012751'}    {'17-Feb-1985'}      2   
+    {'00012751'}    {'19-May-1986'}      3   
+    {'00014690'}    {'17-Jan-1983'}      1   
+    {'00012144'}    {'21-Nov-1984'}      1   
+    {'00012144'}    {'25-Mar-1992'}      2   
+    {'00012144'}    {'07-May-1994'}      1   
+    {'00012144'}    {'23-Jan-2000'}      2   
+    {'00012144'}    {'20-Aug-2001'}      1
+
+Estimation of Transition Probabilities
+
+8-5

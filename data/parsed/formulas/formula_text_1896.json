@@ -1,0 +1,12 @@
+{
+  "page": 959,
+  "original_text": "shiftedThresholds = thresholdMat+0.5;\nExample_DisplayTransitions(transprobfromthresholds(shiftedThresholds), ...\n   [],{'AAA','AA','A','BBB','BB','B','CCC'}, ...\n   {'AAA','AA','A','BBB','BB','B','CCC','D','NR'})",
+  "ocr_text": "shiftedThresholds=thresholdMat+0.5;\n\nExample_DisplayTransitions(transprobfromthresholds(shiftedThresholds),...\n[],{AAA,AA,A,BBB,BB,B,CCC},...\n{AAA,AA,A,BBB,BB,B,CCC,D,NR})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 404.83,
+    "x1": 490.97,
+    "y1": 447.7
+  },
+  "confidence": "high"
+}

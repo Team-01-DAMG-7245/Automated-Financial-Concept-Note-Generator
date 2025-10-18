@@ -1,0 +1,12 @@
+{
+  "page": 415,
+  "original_text": "function new_weights = robustOptimFcn(current_weights, pricesTT) \n% Robust portfolio allocation",
+  "ocr_text": "functionnew_weights=robustOptimFcn(current_weights,pricesTT)\nRobustportfolioallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 481.83,
+    "x1": 442.17,
+    "y1": 503.09
+  },
+  "confidence": "high"
+}

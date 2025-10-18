@@ -1,0 +1,12 @@
+{
+  "page": 368,
+  "original_text": "idx = abs(pwgt)>eps;\nassetnames = q.AssetList';\nAsset = assetnames(idx);\nWeight = pwgt(idx);\nresultAlloc = table(Asset, Weight)",
+  "ocr_text": "idx=abs(pwgt)=eps;\nassetnames=q.AssetList;\nAsset=assetnames(idx);\nWeight=pwgt(idx);\nresultAlloc=table(Asset,Weight)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 591.57,
+    "x1": 274.21,
+    "y1": 645.24
+  },
+  "confidence": "high"
+}

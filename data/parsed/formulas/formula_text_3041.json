@@ -1,0 +1,12 @@
+{
+  "page": 1594,
+  "original_text": "allDates = pricesTT.(pricesTT.Properties.DimensionNames{1});\nrebalanceDates = allDates(startRow:strategy.RebalanceFrequency:end);\n[~,rebalanceIndices] = ismember(rebalanceDates,pricesTT.Dates);",
+  "ocr_text": "allDates=pricesTT.(pricesTT.Properties.DimensionNames{1});\nrebalanceDates=allDates(startRow:strategy.RebalanceFrequency:end);\n[-,rebalanceIndices]=ismember(rebalanceDates,pricesTT.Dates);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 286.28,
+    "x1": 458.42,
+    "y1": 318.34
+  },
+  "confidence": "high"
+}

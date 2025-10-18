@@ -1,0 +1,59 @@
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+pwgt — Collection of portfolios
+matrix
+
+Collection of portfolios, specified as a NumAssets-by-NumPorts matrix, where NumAssets is the
+number of assets in the universe and NumPorts is the number of portfolios in the collection of
+portfolios.
+
+Data Types: double
+
+Output Arguments
+
+pret — Estimates for means of portfolio returns for each portfolio in pwgt
+vector
+
+Estimates for means of portfolio returns for each portfolio in pwgt, returned as a NumPorts vector.
+
+pret is returned for a Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+Note Depending on whether costs have been set, the portfolio return is either gross or net portfolio
+returns. For information on setting costs, see setCosts.
+
+Tips
+
+You can also use dot notation to estimate the mean of portfolio returns (as the proxy for portfolio
+return).
+
+pret = obj.estimatePortReturn(pwgt);
+
+Version History
+Introduced in R2011a
+
+See Also
+estimatePortRisk | estimateFrontierByReturn | estimateFrontierByRisk | rng
+
+Topics
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+estimatePortReturn
+
+15-1011

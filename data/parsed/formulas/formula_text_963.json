@@ -1,0 +1,12 @@
+{
+  "page": 514,
+  "original_text": "When you want to find a portfolio that focuses on two different objectives, you can define one of those\nobjectives as a soft constraint and adding that objective as a penalty to the objective function. In this\nexample, the tracking error becomes a soft constraint and the strength of the constraint is controlled\nwith the penalty parameter λ ≥0. The larger λ is, the stronger the tracking error constraint becomes,\nand conversely, the smaller λ is, the weaker the tracking error constraint becomes.",
+  "ocr_text": "Whenyouwanttofindaportfoliothatfocusesontwodifferentobjectives,youcandefineoneofthose\nobjectivesasasoftconstraintandaddingthatobjectiveasapenaltytotheobjectivefunction.Inthis\nexample,thetrackingerrorbecomesasoftconstraintandthestrengthoftheconstraintiscontrolled\nwiththepenaltyparameterA=0.ThelargerAis,thestrongerthetrackingerrorconstraintbecomes,\nandconversely,thesmallerAis,theweakerthetrackingerrorconstraintbecomes.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 489.82,
+    "x1": 558.02,
+    "y1": 549.48
+  },
+  "confidence": "high"
+}

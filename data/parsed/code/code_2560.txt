@@ -1,0 +1,6 @@
+Page 2451
+================================================================================
+
+The vector of ages x must contain nonnegative integer values. If the input series is the discrete
+survival function lx, then the starting age need only be nonnegative. Otherwise, the starting age
+must be 0.

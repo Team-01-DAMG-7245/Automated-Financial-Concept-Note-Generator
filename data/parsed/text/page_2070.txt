@@ -1,0 +1,58 @@
+PreviousCouponDate = 2×1 datetime
+   30-Nov-1996
+   10-Dec-1997
+
+Note that since the settlement date for the second bond is also a coupon date, cpndatep returns this
+date as the previous coupon date.
+
+Now establish a FirstCouponDate and IssueDate for this pair of bonds.
+
+FirstCouponDate = [datetime(1997,11,30) ; datetime(1998,12,10)]; 
+IssueDate = [datetime(1996,5,30) ; datetime(1996,12,10)];
+
+Recompute the PreviousCouponDate for this pair of bonds.
+
+PreviousCouponDate = cpndatep(Settle, Maturity, 2, 0, 1, IssueDate, FirstCouponDate)
+
+PreviousCouponDate = 2×1 datetime
+   30-May-1996
+   10-Dec-1996
+
+Since both of these bonds settled before the first coupon had been paid, cpndatep returns the
+IssueDate as the PreviousCouponDate.
+
+Using the same data, compute PreviousQuasiCouponDate.
+
+PreviousQuasiCouponDate = cpndatepq(Settle, Maturity, 2, 0, 1,IssueDate, FirstCouponDate)
+
+PreviousQuasiCouponDate = 2×1 datetime
+   30-Nov-1996
+   10-Dec-1997
+
+For the first bond the settlement date is not a normal coupon date. The PreviousQuasiCouponDate
+is the coupon date before or on the settlement date. Since the coupon structure is synchronized to
+FirstCouponDate, the previous quasi coupon date is 30-Nov-1996. PreviousQuasiCouponDate
+disregards IssueDate and FirstCouponDate in this case. For the second bond the settlement date
+(10-Dec-1997) occurs on a date when a coupon would normally be paid in the absence of an explicit
+FirstCouponDate. cpndatepq returns this date as PreviousQuasiCouponDate.
+
+Input Arguments
+
+Settle — Settlement date
+datetime array | string array | date character vector
+
+Settlement date, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors. Settle must be earlier than Maturity.
+
+To support existing code, cpndatepq also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime array | string array | date character vector
+
+15
+Functions
+
+15-764

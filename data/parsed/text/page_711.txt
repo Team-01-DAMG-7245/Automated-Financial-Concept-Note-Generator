@@ -1,0 +1,13 @@
+Estimate Efficient Portfolios for Entire Frontier for
+PortfolioCVaR Object
+
+There are two ways to look at a portfolio optimization problem that depends on what you are trying to
+do. One goal is to estimate efficient portfolios and the other is to estimate efficient frontiers. The
+“Obtaining Portfolios Along the Entire Efficient Frontier” on page 5-86 example focuses on the
+former goal and “Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105 focuses on the
+latter goal. For information on the workflow when using PortfolioCVaR objects, see “PortfolioCVaR
+Object Workflow” on page 5-16.
+
+Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object
+
+5-85

@@ -1,0 +1,12 @@
+{
+  "page": 119,
+  "original_text": "Trading one share per tick, as directed by Q, the optimal strategy using (n,N) = (3,24) returns $0.71\nover the final 20% of the trading day. Modifying the trading volume scales the return.",
+  "ocr_text": "Tradingonesharepertick,asdirectedbyQ,theoptimalstrategyusing(n,N)=(3,24)returns0.71\noverthefinal20ofthetradingday.Modifyingthetradingvolumescalesthereturn.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 564.27,
+    "x1": 546.89,
+    "y1": 587.9
+  },
+  "confidence": "high"
+}

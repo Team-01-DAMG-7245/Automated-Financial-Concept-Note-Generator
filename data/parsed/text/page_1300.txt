@@ -1,0 +1,37 @@
+Volatility on page 14-104. Since you have modeled only the first two principal components, this
+transformation is an approximation to the volatility. Modeling more of the principal components
+would lead to a more accurate volatility approximation at the cost of more modeling, simulation, and
+execution time.
+
+approxVolatility = mu + sigma .* (simComponents * coeffs(:, 1:2).');
+approxVolatility = [InferredVolatility{end, :}; approxVolatility];
+
+Convert the volatility approximations to the timetable format.
+
+simDates = InferredVolatility.Date(end) + calmonths(0:numForecastSteps).';
+approxVolatility = array2timetable( approxVolatility, ...
+    "RowTimes", simDates, "VariableNames", commodityNames );
+approxVolatility.Properties.DimensionNames(1) = "Date";
+
+Visualize Volatility Simulation Results
+
+In the Model-Based Volatility Simulation plot, the blue line indicates historical data and the red
+line indicates the simulated volatility moving into the future.
+
+selectedCommodity = 
+;
+
+figure
+plot( InferredVolatility.Date, InferredVolatility.(selectedCommodity) )
+hold on
+plot( approxVolatility.Date, approxVolatility.(selectedCommodity) )
+xlabel( "Date" )
+ylabel( "Volatility" )
+title( "Model-Based Volatility Simulation" )
+subtitle( "Selected Commodity: " + selectedCommodity )
+grid on
+
+14
+Stochastic Differential Equations
+
+14-108

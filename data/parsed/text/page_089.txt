@@ -1,0 +1,65 @@
+s(x) = Pr[X > x]
+= 1 −F(x)
+
+For a continuous probability distribution, the hazard function is a function of the survival function
+with
+
+h(x) = lim
+Δx
+0
+
+Pr[x ≤X < x + Δx X ≥x]
+Δx
+
+= −
+1
+s(x)
+
+d(s(x))
+dx
+
+and the survival functions is a function of the hazard function with
+
+s(x) = exp −∫
+0
+
+x
+h(ξ)dξ
+
+Life table models generally specify either the hazard function or the survival function. However, life
+tables are discrete and work with discrete versions of the hazard and survival functions. Three series
+are used for life tables and the notation is the convention. The discrete hazard function is denoted as
+
+qx ≈h(x)
+
+= 1 −s(x + 1)
+s(x)
+
+which is the probability a person at age x dies by age x + 1 (where x is in years). The discrete survival
+function is presented in terms of an initial number of survivors at birth called the life table radix
+(which is usually 100,000 individuals) and is denoted as
+
+lx = l0s(x)
+
+with radix l0 = 100000. This number, lx, represents the number of individuals out of 100,000 at birth
+who are still alive at age x.
+
+A third series is related to the probability density function which is the number of "standardized"
+deaths in a given year denoted as
+
+dx = lx −lx + 1
+
+Based on a few additional rules about how to initialize and terminate these series, any one series can
+be derived from any of the other series.
+
+See Also
+lifetableconv | lifetablefit | lifetablegen
+
+Related Examples
+
+•
+“Case Study for Life Tables Analysis” on page 2-46
+
+About Life Tables
+
+2-45

@@ -1,0 +1,59 @@
+p = PortfolioMAD;
+p = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');
+
+p = setInitPort(p, pwgt0);
+p = simulateNormalScenariosByMoments(p, m, C, 20000);
+p = p.setDefaultConstraints;
+
+[pwgt, pbuy, psell] = estimateFrontierByRisk(p, 0.15);
+
+Blotter = dataset([{100*[pwgt0, pwgt, pbuy, psell]}, ...
+{'Initial','Weight', 'Purchases','Sales'}],'obsnames',p.AssetList);
+display(Blotter)
+
+Blotter = 
+                          Initial    Weight    Purchases    Sales 
+    Bonds                 30              0         0           30
+    Large-Cap Equities    30         50.597    20.597            0
+    Small-Cap Equities    20         12.416         0       7.5843
+    Emerging Equities     10         36.987    26.987            0
+
+If you have prices for each asset (in this example, they can be ETFs), add them to your blotter and
+then use the tools of the dataset object to obtain shares and shares to be traded. For an example,
+see “Asset Allocation Case Study” on page 4-180.
+
+See Also
+PortfolioMAD | estimateScenarioMoments | checkFeasibility
+
+Related Examples
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+6
+MAD Portfolio Optimization Tools
+
+6-114

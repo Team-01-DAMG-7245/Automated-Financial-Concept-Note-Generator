@@ -1,0 +1,55 @@
+To support existing code, days252bus also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+HolidayVector — Holidays
+holidays.m (default) | datetime array | string array | date character vector | serial date number
+
+Holidays, specified as a scalar or an N-by-1 or 1-by-N vector using a datetime array, string array, or
+date character vectors.
+
+To support existing code, days252bus also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+NumberDays — Number of days between two dates
+vector
+
+Number of days between two dates, returned as a scalar or an N-by-1 or 1-by-N vector containing the
+number of days.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although days252bus supports serial date numbers, datetime values are recommended instead.
+The datetime data type provides flexible date and time formats, storage out to nanosecond
+precision, and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+days360psa | daysact | daysdif | days365 | datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+
+15
+Functions
+
+15-814

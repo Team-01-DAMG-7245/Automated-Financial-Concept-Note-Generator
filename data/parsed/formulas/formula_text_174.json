@@ -1,0 +1,12 @@
+{
+  "page": 118,
+  "original_text": "rng(0) % For reproducibility\nresults = optimizeTrading(TData,VData);",
+  "ocr_text": "rng()_*Forreproducibility\nresults=optimizeTrading(TData,VData);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.63,
+    "x1": 306.72,
+    "y1": 274.89
+  },
+  "confidence": "high"
+}

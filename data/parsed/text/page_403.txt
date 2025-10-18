@@ -1,0 +1,61 @@
+{'Asset57'}    0.088321
+    {'Asset61'}    0.068845
+    {'Asset75'}    0.063648
+    {'Asset94'}     0.22163
+
+Optimize Asset Allocation Using Portfolio Class with Factor Information
+
+If you already have the factor loading and factor covariance matrix from some other analysis or third-
+party provider, you can use this information to compute the asset covariance matrix and then directly
+run a mean-variance optimization using the Portfolio class. Recall that portfolio risk is
+
+Var Rp = Var μa + F rf + εa
+
+Twa = waT FΣfFT + D wa , so you can obtain the covariance of the asset
+
+returns by Σa = FΣfFT + D.
+
+Use estimateFrontierByRisk in the Portfolio class to solve the optimization problem:
+max μaT wa , s . t . waT Σa wa ≤trisk,0 ≤wa ≤1, eTwa = 1. The Portfolio class supports has a variety of
+built-in constraints that you can use to describe your portfolio problem and estimate the risk and
+returns on the efficient frontier. For more information, see “Supported Constraints for Portfolio
+Optimization Using Portfolio Objects” on page 4-9.
+
+covarAsset = factorLoading*covarFactor*factorLoading'+D;
+port = Portfolio("AssetMean", meanStockRetn, 'AssetCovar', covarAsset, 'LowerBound', 0, 'UpperBou
+    'Budget', 1);
+assetWgt2 = estimateFrontierByRisk(port, targetRisk);
+
+AssetName = stockReturns.Properties.VariableNames(assetWgt2>=percentage)';
+Weight = assetWgt2(assetWgt2>=percentage);
+T2 = table(AssetName, Weight)
+
+T2=7×2 table
+     AssetName      Weight 
+    ___________    ________
+
+{'Asset9' }    0.080061
+    {'Asset32'}     0.22355
+    {'Asset47'}     0.11369
+    {'Asset57'}    0.088314
+    {'Asset61'}    0.068847
+    {'Asset75'}    0.063643
+    {'Asset94'}     0.22163
+
+Portfolio Optimization Results
+
+Tables T1 and T2 show an identical allocation for the asset allocations that are over 5%. Therefore, in
+this example, both approaches to portfolio optimization with a factor model obtain asset weights that
+are identical.
+
+Visualize the performance of the optimized allocation over the testing period.
+
+retn = stockReturns{test, :}*assetWgt1;
+plot(ret2tick(retn, 'method', 'simple')*100); hold off;
+xlabel('Timestep');
+ylabel('Value');
+title('Portfolio Equity Curve');
+
+Portfolio Optimization Using Factor Models
+
+4-235

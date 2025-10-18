@@ -1,0 +1,12 @@
+{
+  "page": 1873,
+  "original_text": "Spread = bndspread( ___ ,Name,Value) adds optional name-value pair arguments.",
+  "ocr_text": "Spread=bndspread(____,Name,Value)addsoptionalname-valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 372.58,
+    "x1": 494.35,
+    "y1": 384.21
+  },
+  "confidence": "high"
+}

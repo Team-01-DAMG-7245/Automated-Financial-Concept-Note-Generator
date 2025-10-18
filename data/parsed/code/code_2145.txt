@@ -1,0 +1,5 @@
+Page 1747
+================================================================================
+
+GB = [ false false false true true true ];    % nonfinancial companies
+p = setGroupRatio(p, GA, GB, [], 0.5);

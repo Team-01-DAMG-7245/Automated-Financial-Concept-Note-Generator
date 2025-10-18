@@ -1,0 +1,12 @@
+{
+  "page": 2083,
+  "original_text": "NumDaysPrevious = cpndaysp('14-Mar-2000','30-Jun-2001', 2, 0, 1)",
+  "ocr_text": "NumDaysPrevious=cpndaysp(14-Mar-2000,30-Jun-2001:,2,0,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 624.85,
+    "x1": 436.78,
+    "y1": 635.31
+  },
+  "confidence": "high"
+}

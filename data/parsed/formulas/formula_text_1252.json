@@ -1,0 +1,12 @@
+{
+  "page": 622,
+  "original_text": "backtester = runBacktest(backtester,pricesTT,'Start',warmupPeriod(end));",
+  "ocr_text": "backtester=runBacktest(backtester,pricesTT,Start,warmupPeriod(end));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 363.03,
+    "x1": 480.12,
+    "y1": 373.49
+  },
+  "confidence": "high"
+}

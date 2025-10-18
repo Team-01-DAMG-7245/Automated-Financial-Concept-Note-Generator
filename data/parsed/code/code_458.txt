@@ -1,0 +1,13 @@
+Page 450
+================================================================================
+
+% Compute the mean-variance risks and returns for different ESG levels.
+contourESG = linspace(minESG,maxESG,nCont+1);
+figure
+hold on
+labels = strings(nCont+1,1);
+for i = 1:nCont
+    p.bInequality = -contourESG(i); % Change target ESG score
+    plotFrontier(p,nPort);
+    labels(i) = sprintf("%6.2f ESG",contourESG(i)*100);
+end

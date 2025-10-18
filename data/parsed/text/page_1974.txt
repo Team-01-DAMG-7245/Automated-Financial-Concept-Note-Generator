@@ -1,0 +1,51 @@
+728234      728278      728368      728460      728552      728643
+      728234      728278      728460      728643      728825         NaN
+
+TFactors = 2×6
+
+0    0.2404    0.7403    1.2404    1.7403    2.2404
+         0    0.2404    1.2404    2.2404    3.2404       NaN
+
+CFlowFlags = 2×6
+
+0     3     3     3     3     4
+     0     3     3     3     4   NaN
+
+Compute the Cash Flow Structure and Time Factors for a Bond Portfolio and Return a
+datetime array for CFlowDates
+
+This example shows how to compute the cash flow structure and time factors for a bond portfolio that
+contains a corporate bond paying interest quarterly and a Treasury bond paying interest
+semiannually and CFlowDates is returned as a datetime array.
+
+Settle = datetime(1993,11,1);
+Maturity = [datetime(1994,12,15) ; datetime(1995,6,15)];
+CouponRate= [0.06; 0.05];
+Period = [4; 2];
+Basis = [1; 0];
+[CFlowAmounts, CFlowDates, TFactors, CFlowFlags] = cfamounts(CouponRate,...
+Settle, Maturity, Period, Basis)
+
+CFlowAmounts = 2×6
+
+-0.7667    1.5000    1.5000    1.5000    1.5000  101.5000
+   -1.8989    2.5000    2.5000    2.5000  102.5000       NaN
+
+CFlowDates = 2×6 datetime
+   01-Nov-1993   15-Dec-1993   15-Mar-1994   15-Jun-1994   15-Sep-1994   15-Dec-1994
+   01-Nov-1993   15-Dec-1993   15-Jun-1994   15-Dec-1994   15-Jun-1995   NaT
+
+TFactors = 2×6
+
+0    0.2404    0.7403    1.2404    1.7403    2.2404
+         0    0.2404    1.2404    2.2404    3.2404       NaN
+
+CFlowFlags = 2×6
+
+0     3     3     3     3     4
+     0     3     3     3     4   NaN
+
+15
+Functions
+
+15-668

@@ -1,0 +1,60 @@
+% Get the problem information.
+nAssets = size(Sigma,1);
+nClusters = max(T);
+
+% Compute the risk parity portfolio within each cluster.
+W = zeros(nAssets,nClusters);
+for i = 1:nClusters
+    % Identify assets in cluster i and the sub-covariance matrix.
+    idx = T == i;
+    tempSigma = Sigma(idx,idx);
+    % Compute the risk parity portfolio of cluster i.
+    W(idx,i) = riskBudgetingPortfolio(tempSigma);
+end
+
+% Compute the covariance between the risk parity portfolios of each
+% cluster.
+covCluster = W'*Sigma*W;
+
+% Compute the weights of each cluster.
+wBetween = riskBudgetingPortfolio(covCluster);
+
+% Multiply the weight assigned to each cluster with its portfolio and
+% assign to the corresponding assets.
+pwgt = W*wBetween;
+
+end
+
+function idxInGroup = getLeafNodesInGroup(nodeId, link)
+% getLeafNodesInGroup finds all leaf nodes for a given node id
+% in a linkage matrix.
+
+nLeaves= size(link, 1)+1;
+if nodeId > nLeaves
+    tempNodeIds = link(nodeId-nLeaves,1:2);
+    idxInGroup = [getLeafNodesInGroup(tempNodeIds(1), link), ...
+        getLeafNodesInGroup(tempNodeIds(2), link)];
+else
+    idxInGroup = nodeId;
+end
+end
+
+See Also
+portfolioRiskContribution | riskBudgetingPortfolio
+
+Related Examples
+
+•
+“Risk Budgeting Portfolio” on page 4-286
+
+•
+“Backtest Using Risk-Based Equity Indexation” on page 4-291
+
+External Websites
+
+•
+Asset Allocation - Hierarchical Risk Parity (2 min 42 sec)
+
+Create Hierarchical Risk Parity Portfolio
+
+4-301

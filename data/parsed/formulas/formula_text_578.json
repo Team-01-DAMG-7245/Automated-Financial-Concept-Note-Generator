@@ -1,0 +1,12 @@
+{
+  "page": 390,
+  "original_text": "T = readtable('dowPortfolio.xlsx');",
+  "ocr_text": "T=readtable(dowPortfolio.xlsx);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 489.72,
+    "x1": 279.65,
+    "y1": 500.19
+  },
+  "confidence": "high"
+}

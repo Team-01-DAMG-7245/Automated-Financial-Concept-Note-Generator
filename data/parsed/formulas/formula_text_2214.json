@@ -1,0 +1,12 @@
+{
+  "page": 1140,
+  "original_text": "agentOptions = rlDDPGAgentOptions(...\n    \"ActorOptimizerOptions\",actorOpts, ...\n    \"CriticOptimizerOptions\",criticOpts, ...\n    \"DiscountFactor\",.9995, ...\n    \"TargetSmoothFactor\",5e-4);\nagent = rlDDPGAgent(obsInfo,actInfo,initOpts,agentOptions);",
+  "ocr_text": "agentOptions=rlDDPGAgentOptions(...\nActorOptimizerOptions,actorOpts,...\nCriticOptimizerOptions,criticOpts,...\nDiscountFactor,.9995,_...\nTargetSmoothFactor,5e-4);\nagent=rlDDPGAgent(obsInfo,actInfo,initOpts,agentOptions);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 409.66,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

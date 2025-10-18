@@ -1,0 +1,58 @@
+Maximum Likelihood Estimation with Missing Data
+
+In this section...
+
+“Introduction” on page 9-7
+
+“ECM Algorithm” on page 9-7
+
+“Standard Errors” on page 9-8
+
+“Data Augmentation” on page 9-8
+
+Introduction
+
+Suppose that a portion of the sample data is missing, where missing values are represented as NaNs.
+If the missing values are missing-at-random and ignorable, where Little and Rubin [7] have precise
+definitions for these terms, it is possible to use a version of the Expectation Maximization, or EM,
+algorithm of Dempster, Laird, and Rubin [3] to estimate the parameters of the multivariate normal
+regression model. The algorithm used in Financial Toolbox software is the ECM (Expectation
+Conditional Maximization) algorithm of Meng and Rubin [8] with enhancements by Sexton and
+Swensen [9].
+
+Each sample zk for k = 1, ..., m, is either complete with no missing values, empty with no observed
+values, or incomplete with both observed and missing values. Empty samples are ignored since they
+contribute no information.
+
+To understand the missing-at-random and ignorable conditions, consider an example of stock price
+data before an IPO. For a counterexample, censored data, in which all values greater than some
+cutoff are replaced with NaNs, does not satisfy these conditions.
+
+In sample k, let xk represent the missing values in zk and yk represent the observed values. Define a
+permutation matrix Pk so that
+
+zk = Pk
+
+xk
+yk
+
+for k = 1, ..., m.
+
+ECM Algorithm
+
+The ECM algorithm has two steps – an E, or expectation step, and a CM, or conditional maximization,
+step. As with maximum likelihood estimation, the parameter estimates evolve according to an
+iterative process, where estimates for the parameters after t iterations are denoted as b(t) and C(t).
+
+The E step forms conditional expectations for the elements of missing data with
+
+E Xk Yk = yk; b t , C t
+
+cov Xk Yk = yk; b t , C t
+
+for each sample k ∈
+1, …, m  that has missing data.
+
+Maximum Likelihood Estimation with Missing Data
+
+9-7

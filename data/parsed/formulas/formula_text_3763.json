@@ -1,0 +1,12 @@
+{
+  "page": 2130,
+  "original_text": "NumDays = days360psa(StartDate,EndDate) returns the number of days between StartDate\nand EndDate based on a 360-day year (that is, all months contain 30 days) and is Public Securities\nAssociation (PSA) compliant. If EndDate is earlier than StartDate, NumDays is negative. Under this\nconvention, all months contain 30 days.",
+  "ocr_text": "NumDays=days360psa(StartDate,EndDate)returnsthenumberofdaysbetweenStartDate\nandEndDatebasedona360-dayyear(thatis,allmonthscontain30days)andisPublicSecurities\nAssociation(PSA)compliant.IfEndDateisearlierthanStartDate,NumDaysisnegative.Underthis\nconvention,allmonthscontain30days.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 246.2,
+    "x1": 554.89,
+    "y1": 293.83
+  },
+  "confidence": "high"
+}

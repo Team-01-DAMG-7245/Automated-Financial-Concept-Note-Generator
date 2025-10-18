@@ -1,0 +1,44 @@
+simulation=11×5 table
+    t        Z        Wealth    OptPort    ProbOfSuccess
+    __    ________    ______    _______    _____________
+
+0     0.53767       100       12         0.87953   
+     1      1.8339    126.69       11         0.92018   
+     2     -2.2588    194.27       11         0.98474   
+     3     0.86217    158.68       11          0.9323   
+     4     0.31877    209.52       11         0.98044   
+     5     -1.3077    254.46       10         0.99184   
+     6    -0.43359    241.04       10         0.98366   
+     7     0.34262    260.14        8         0.99024   
+     8      3.5784    311.62        5         0.99927   
+     9      2.7694    566.28        1               1   
+    10         NaN     894.5      NaN               1
+
+Note that as the probability of attaining the wealth goal (the value function) increases, the
+aggressiveness (number) of the optimal portfolio decreases. Now, you can plot the path of the wealth
+against the probability of achieving the wealth goal at the end of the investment period.
+
+figure;
+
+% Plot the wealth path.
+yyaxis left
+plot(0:T,WPath)
+hold on
+yline(G,'--k');
+ylabel("Wealth Level");
+
+% Plot the value function path.
+yyaxis right
+plot(0:T,VPath)
+ylabel("Probability of Success");
+
+% Specify the title, labels, and legends for the plot.
+title("Optimal Strategy Outcome")
+xlabel("Time Period");
+legend("Wealth path","Wealth goal",Location="nw");
+grid on
+hold off
+
+Dynamic Portfolio Allocation in Goal-Based Wealth Management for Multiple Time Periods
+
+4-375

@@ -1,0 +1,12 @@
+{
+  "page": 406,
+  "original_text": "% Read a table of daily adjusted close prices for 2006 DJIA stocks.\nT = readtable('dowPortfolio.xlsx');",
+  "ocr_text": "Readatableofdailyadjustedclosepricesfor2006DJIAstocks.\nT=readtable(dowPortfolio.xlsx);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 321.8,
+    "x1": 453.01,
+    "y1": 343.07
+  },
+  "confidence": "high"
+}

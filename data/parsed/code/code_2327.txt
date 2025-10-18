@@ -1,0 +1,5 @@
+Page 2206
+================================================================================
+
+Objective = ecmnobj(Data,Mean,Covariance) evaluates the negative log-likelihood function
+for ecmnmle.

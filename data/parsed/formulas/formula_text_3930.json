@@ -1,0 +1,12 @@
+{
+  "page": 2235,
+  "original_text": "obj = estimateAssetMoments(obj,AssetReturns) estimates mean and covariance of asset\nreturns from data for a Portfolio object. For details on the workflow, see “Portfolio Object\nWorkflow” on page 4-18.",
+  "ocr_text": "obj=estimateAssetMoments(obj,AssetReturns)estimatesmeanandcovarianceofasset\nreturnsfromdataforaPortfolioobject.Fordetailsontheworkflow,seePortfolioObject\nWorkflowonpage4-18.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.73,
+    "x1": 539.7,
+    "y1": 289.36
+  },
+  "confidence": "high"
+}

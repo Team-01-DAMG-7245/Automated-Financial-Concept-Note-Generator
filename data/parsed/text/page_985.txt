@@ -1,0 +1,70 @@
+creditscorecard with properties:
+
+GoodLabel: 0
+              ResponseVar: 'status'
+                 VarNames: {1x11 cell}
+        NumericPredictors: {1x7 cell}
+    CategoricalPredictors: {'EmpStatus'  'OtherCC'}
+                    IDVar: 'CustID'
+            PredictorVars: {1x9 cell}
+
+Note that 'ResStatus' appears as part of the NumericPredictors property. If we applied
+automatic binning, the resulting bin information raises flags regarding the predictor type.
+
+sc = autobinning(sc,'ResStatus');
+[bi,cg] = bininfo(sc,'ResStatus')
+
+bi =
+
+Bin        Good    Bad     Odds        WOE       InfoValue 
+    __________    ____    ___    ______    _________    __________
+
+'[-Inf,2)'    365     177    2.0621     0.019329     0.0001682
+    '[2,Inf]'     438     220    1.9909    -0.015827    0.00013772
+    'Totals'      803     397    2.0227          NaN    0.00030592
+
+cg =
+
+2
+
+The numeric ranges in the bin labels show that 'ResStatus' is being treated as a numeric variable.
+This is also confirmed by the fact that the optional output from bininfo is a numeric array of cut
+points, as opposed to a table with category groupings. Moreover, the output from predictorinfo
+confirms that the credit scorecard is treating the data as numeric.
+
+[T,Stats] = predictorinfo(sc,'ResStatus')
+
+T =
+
+PredictorType        LatestBinning     
+                 _____________    ______________________
+
+ResStatus    'Numeric'        'Automatic / Monotone'
+
+Stats =
+
+Value 
+            _______
+
+Min           1
+    Max           3
+    Mean     1.7017
+    Std     0.71863
+
+Solution: For creditscorecard, 'Categorical' means a MATLAB categorical data type. For
+more information, see categorical. To treat'ResStatus' as categorical, change the
+'PredictorType' of the PredictorName 'ResStatus' from 'Numeric' to 'Categorical'
+using modifypredictor.
+
+sc = modifypredictor(sc,'ResStatus','PredictorType','Categorical')
+[T,Stats] = predictorinfo(sc,'ResStatus')
+
+sc =
+
+creditscorecard with properties:
+
+GoodLabel: 0
+
+Troubleshooting Credit Scorecard Results
+
+8-67

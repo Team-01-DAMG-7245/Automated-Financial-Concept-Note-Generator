@@ -1,0 +1,67 @@
+Response Variable yt
+
+The goal of the analysis is to build a model that accurately predicts forward price direction ΔSt + ΔtS
+from historical forward price directions ΔSj and imbalance index values Ij, j ≤t.
+
+Prepare the response data. Cast it as a categorical variable.
+
+classes = ["loss" "const" "gain"];
+y = DS((dtS+1):end);
+y = categorical(y,[-1 0 1],classes);
+n = numel(y);
+numClasses = numel(classes);
+
+The predictor data X and responses y are prepared for many MATLAB® machine learning functions.
+However, for richer model, the LSTM neural network can associate a time series of predictors with
+each response.
+
+Display the distribution of yt.
+
+tabulate(y)
+
+Value    Count   Percent
+   loss     1497      4.61%
+  const    29651     91.29%
+   gain     1333      4.10%
+
+The class distribution is severely imbalanced—a majority of the forward price changes are constant. A
+naive model that always predicts into the constant class, or a mathematical model trained to predict
+into that way, has about 91% accuracy. However, such a model does not predict price changes for
+trading opportunities. Therefore, because the goal is to exploit imbalances to make money, the model
+needs to be trained to learn how to predict losses and gains well, likely at the expense of
+misclassifying the constant class.
+
+Prepare Data for LSTM Neural Network
+
+A long short-term memory neural network is a special case of a recurrent neural network (RNN) that
+associates a time series of features with a response. Its goal is to learn long-term associations
+between the response and features, while "forgetting" less useful associations. Symbolically,
+
+yt = f Xt, Xt −1, . . . , Xt −b; W ,
+
+where:
+
+•
+yt is the response at time t.
+
+•
+Xt is the collection of features at time t, which can include lagged response values.
+
+•
+Xt −1 is the collection of features at time t −1.
+
+•
+b is the outlook hyperparameter.
+
+•
+W is the collection of neural network weights and biases.
+
+•
+f specifies the LSTM architecture.
+
+For more details, see “Long Short-Term Memory Neural Networks” (Deep Learning Toolbox).
+
+2
+Performing Common Financial Tasks
+
+2-82

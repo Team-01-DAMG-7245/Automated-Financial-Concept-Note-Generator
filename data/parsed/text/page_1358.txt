@@ -1,0 +1,42 @@
+LookbackWindow=lookback, ...
+    TransactionCosts=transactionsFixed, ...
+    InitialWeights=shrunk_initial);
+
+% Aggregate the two strategy objects into an array.
+strategies = [strat1, strat2];
+
+Create a backtestEngine object then use runBacktest to run the backtest.
+
+% Create the backtesting engine object.
+backtester = backtestEngine(strategies);
+
+% Run the backtest.
+backtester = runBacktest(backtester,pricesTT,'Start',warmupPeriod);
+
+% Generate summary table of the performance of the strategies.
+summary(backtester)
+
+ans=9×2 table
+                       Traditional    Denoising 
+                       ___________    __________
+
+TotalReturn           0.13431        0.12745
+    SharpeRatio           0.10807        0.10719
+    Volatility          0.0057472      0.0055101
+    AverageTurnover     0.0098378      0.0074213
+    MaxTurnover           0.36237         0.2791
+    AverageReturn       0.0006196     0.00058922
+    MaxDrawdown          0.058469       0.053624
+    AverageBuyCost        0.51636        0.38982
+    AverageSellCost       0.51636        0.38982
+
+Compare Performance of Strategies
+
+Use equityCurve to plot the equity curve to compare the performance of both strategies.
+
+equityCurve(backtester)
+
+15
+Functions
+
+15-52

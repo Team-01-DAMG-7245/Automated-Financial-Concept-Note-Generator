@@ -1,0 +1,83 @@
+To support existing code, bndtotalreturn also accepts serial date numbers as inputs, but they are
+not recommended.
+
+Data Types: char | string | datetime
+
+HorizonPrice — Price at investment horizon date
+calculated based on ReinvestRate (default) | numeric
+
+Price at investment horizon date, specified as the comma-separated pair consisting of
+'HorizonPrice' and a scalar or a NINST-by-1 vector.
+
+If HorizonPrice is unspecified, the price at the HorizonDate is calculated based on the
+ReinvestRate. If the HorizonDate equals the Maturity date, the HorizonPrice is ignored and
+the total return to maturity is calculated based on the Face value.
+
+Data Types: double
+
+Period — Number of coupon payments per year
+2 (default) | numeric with values 0, 1, 2, 3, 4, 6 or 12
+
+Number of coupon payments per year, specified as the comma-separated pair consisting of 'Period'
+and a scalar or a NINST-by-1 vector using the values: 0, 1, 2, 3, 4, 6, or 12.
+
+Data Types: double
+
+Basis — Day-count basis
+0 (actual/actual) (default) | integers of the set [0...13] | vector of integers of the set [0...13]
+
+Day-count basis, specified as the comma-separated pair consisting of 'Basis' and a scalar or a
+NINST-by-1 vector. Values are:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+EndMonthRule — End-of-month rule flag
+1 (in effect) (default) | nonnegative integer 0 or 1
+
+bndtotalreturn
+
+15-579

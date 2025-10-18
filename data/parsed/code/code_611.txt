@@ -1,0 +1,5 @@
+Page 558
+================================================================================
+
+obs = zeros(2,1,finalTimePeriod*numWealthPoints);
+obs(:,1,:) = [wVarAgent';tVar'];

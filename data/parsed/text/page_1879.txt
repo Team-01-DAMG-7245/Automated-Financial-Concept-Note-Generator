@@ -1,0 +1,85 @@
+Data Types: char | string | datetime
+
+Face — Face value of bond
+100 (default) | numeric
+
+Face value of the bond, specified as the comma-separated pair consisting of 'Face' and a scalar or a
+NUMBONDS-by-1 or 1-by-NUMBONDS vector.
+
+Data Types: double
+
+CompoundingFrequency — Compounding frequency for yield calculation
+SIA bases uses2, ICMA bases uses 1 (default) | integer with value of 1, 2, 3, 4, 6, or 12
+
+Compounding frequency for yield calculation, specified as the comma-separated pair consisting of
+'CompoundingFrequency' and a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector.
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+Note By default, SIA bases (0-7) and BUS/252 use a semiannual compounding convention and ICMA
+bases (8-12) use an annual compounding convention.
+
+Data Types: double
+
+DiscountBasis — Basis used to compute the discount factors for computing the yield
+SIA uses 0 (default) | integers of the set [0...13] | vector of integers of the set [0...13]
+
+Basis used to compute the discount factors for computing the yield, specified as the comma-separated
+pair consisting of 'DiscountBasis' and a scalar or a NUMBONDS-by-1 or 1-by-NUMBONDS vector.
+Values are:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+bndspread
+
+15-573

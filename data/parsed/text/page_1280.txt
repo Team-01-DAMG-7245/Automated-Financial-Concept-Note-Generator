@@ -1,0 +1,59 @@
+Volatility Modeling for Soft Commodities
+
+This example demonstrates a diverse set of statistical methods on page 14-92, machine learning
+techniques on page 14-99, and time-series models on page 14-104 that you can apply broadly in the
+field of volatility modeling. Specifically, this example focuses on the analysis, modeling, and
+forecasting of volatility within the context of soft commodities.
+
+Soft commodities refer to agricultural products that are grown rather than mined or extracted. These
+commodities are typically perishable and have a shorter shelf life compared to hard commodities like
+metals or energy resources. Soft commodities are highly influenced by uncertainties arising from
+climate change-induced shifts in weather patterns, both in the short and the long term. With the
+growing magnitude of these uncertainties, volatility modeling is becoming increasingly crucial.
+Practitioners are actively seeking to enhance their ability to forecast market responses to climate
+change impacts, emphasizing the importance of volatility modeling for soft commodities.
+
+The goal of this example is to provide insights into the patterns and dynamics of volatility in the soft
+commodities market and to improve the accuracy of volatility forecasts. With more accurate
+forecasts, market participants can make more informed decisions to effectively manage risk in the
+face of climate-related uncertainties.
+
+Import Commodity Price Data
+
+Import the historical price data for a set of commodities and then organize and process the data into
+a suitable form for subsequent analysis. The data is sourced from the World Bank's monthly
+commodity price data set. The data comprises monthly commodity prices for a diverse collection of
+soft commodities.
+
+Download the data set (CMO-Historical-Data-Monthly.xlsx) for the World Bank's monthly
+commodity price data set [1 on page 14-109] by using the webread function and the local function
+importCommodityData on page 14-109.
+
+dataURL = "https://thedocs.worldbank.org/en/doc/5d903e848db1d1b83e0ec8f744e55570-0350012021/relat
+webOpts = weboptions("ContentReader", @importCommodityData);
+Prices = webread(dataURL, webOpts);
+
+Process Raw Commodity Price Data
+
+Convert the dates to datetime values and then convert the resulting table to a timetable.
+
+Prices.Date = datetime(Prices.Date, ...
+    "InputFormat", "yyyy'M'MM", ...
+    "Format", "MMM yyyy");
+Prices = table2timetable(Prices);
+
+Associate high-level classes with each commodity. This example uses these high-level classes to
+extract the soft commodities from the larger data set.
+
+commodityClasses = categorical([repmat("Energy", 1, 10), ...
+    repmat("Beverages", 1, 7), ...
+    repmat("Oils and Meals", 1, 11), ...
+    repmat("Grains", 1, 9), ...
+    repmat("Other Food", 1, 10), ...
+    repmat("Raw Materials", 1, 9), ...
+    repmat("Fertilizers", 1, 5), ...
+
+14
+Stochastic Differential Equations
+
+14-88

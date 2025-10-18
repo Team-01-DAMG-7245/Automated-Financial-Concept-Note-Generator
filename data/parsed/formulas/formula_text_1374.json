@@ -1,0 +1,12 @@
+{
+  "page": 682,
+  "original_text": "p = PortfolioCVaR(p, 'UpperBound', []);",
+  "ocr_text": "p=PortfolioCVaR(p,_UpperBound,[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 461.17,
+    "x1": 301.32,
+    "y1": 471.64
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,53 @@
+dec2thirtytwo
+
+Decimal to thirty-second quotation
+
+Syntax
+
+[OutNumber,Fractions] = dec2thirtytwo(InNumber,Accuracy)
+
+Description
+
+[OutNumber,Fractions] = dec2thirtytwo(InNumber,Accuracy) changes a decimal price
+quotation for a bond or bond future to a fraction with a denominator of 32.
+
+Examples
+
+Convert Decimal to Thirty-Second Quotation
+
+This example shows two bonds that are quoted with decimal prices of 101.78 and 102.96. These
+prices are converted to fractions with a denominator of 32.
+
+InNumber  = [101.78; 102.96];
+[OutNumber, Fractions] = dec2thirtytwo(InNumber)
+
+OutNumber = 2×1
+
+101
+   102
+
+Fractions = 2×1
+
+25
+    31
+
+Input Arguments
+
+InNumber — Input number
+numeric decimal fraction
+
+Input number, specified as an N-by-1 vector of numeric decimal fractions.
+
+Data Types: double
+
+Accuracy — Rounding
+1 (round down to nearest thirty second) (default) | numeric with values 1, 2, 4 or 10
+
+Rounding, specified as an N-by-1 vector of accuracy desired with numeric values of 1, 2, 4 or 10. The
+values are: 1, round down to nearest thirty second, 2 (nearest half), 4 (nearest quarter), or 10
+(nearest decile).
+
+15
+Functions
+
+15-840

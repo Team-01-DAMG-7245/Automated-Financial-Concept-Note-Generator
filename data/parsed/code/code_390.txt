@@ -1,0 +1,6 @@
+Page 410
+================================================================================
+
+% Customize the transaction costs using a function. See the
+% variableTransactionCosts function below for an example.
+transactionsVariable = @variableTransactionCosts;

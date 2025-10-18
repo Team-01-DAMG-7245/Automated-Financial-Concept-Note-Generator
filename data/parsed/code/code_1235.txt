@@ -1,0 +1,7 @@
+Page 1269
+================================================================================
+
+Using the daily index returns, estimate the parameters of the Gaussian and t copulas using the
+function copulafit. Since a t copula becomes a Gaussian copula as the scalar degrees of freedom
+parameter (DoF) becomes infinitely large, the two copulas are really of the same family, and therefore
+share a linear correlation matrix as a fundamental parameter.

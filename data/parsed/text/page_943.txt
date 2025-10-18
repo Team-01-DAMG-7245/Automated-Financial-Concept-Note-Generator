@@ -1,0 +1,62 @@
+the function which ratings are to be grouped together (1 to 4, and 5 to 7). You can also group all non-
+default ratings into one category. These are preliminary steps to get the IG, SG, and overall default
+rates for each year.
+
+edgesIGSG = [4 7];
+totalsIGSG = transprobgrouptotals(totalsByRtg,edgesIGSG);
+edgesAll = 7; % Could also use edgesAll = 2 with totalsIGSG
+totalsAll = transprobgrouptotals(totalsByRtg,edgesAll);
+
+Here are the 2005 totals grouped at IG/SG level, and the corresponding transition matrix, recovered
+using transprobbytotals.
+
+fprintf('\nTransition counts for 2005 at IG/SG level:\n\n')
+
+Transition counts for 2005 at IG/SG level:
+
+Example_DisplayTransitions(totalsIGSG(end).totalsMat, ...
+   totalsIGSG(end).totalsVec, ...
+   {'IG','SG'}, ...
+   {'IG','SG','D','NR'})
+
+Init     IG     SG      D     NR 
+    IG   3264   3035     54      1    174 
+    SG   2151     66   1780     29    276
+
+fprintf('\nTransition matrix for 2005 at IG/SG level:\n\n')
+
+Transition matrix for 2005 at IG/SG level:
+
+Example_DisplayTransitions(transprobbytotals(totalsIGSG(end)),[], ...
+   {'IG','SG'},...
+   {'IG','SG','D','NR'})
+
+IG     SG      D     NR 
+    IG  92.98   1.65   0.03   5.33 
+    SG   3.07  82.75   1.35  12.83
+
+Now get transition matrices for every year both at IG/SG and non-default/default levels and store the
+default rates only (this example does not use the rest of the transition probabilities).
+
+DefRateIG = zeros(nYears,1);
+DefRateSG = zeros(nYears,1);
+DefRate = zeros(nYears,1);
+for t=1:nYears
+   % Get transition matrix at IG/SG level and extract IG default rate and
+   % SG default rate for year t
+   tmIGSG = transprobbytotals(totalsIGSG(t));
+   DefRateIG(t) = tmIGSG(1,3);
+   DefRateSG(t) = tmIGSG(2,3);
+   % Get transition matrix at most aggregate level and extract overall
+   % corporate default rate for year t
+   tmAll = transprobbytotals(totalsAll(t));
+   DefRate(t) = tmAll(1,2);
+end
+
+Here is a visualization of the dynamics of IG, SG, and overall corporate default rates together. To
+emphasize their patterns, rather than their magnitudes, a log scale is used. The shaded bands
+indicate recession years. The patterns of SG and IG are slightly different. For example, the IG rate is
+
+Forecasting Corporate Default Rates
+
+8-25

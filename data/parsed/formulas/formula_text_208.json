@@ -1,0 +1,12 @@
+{
+  "page": 129,
+  "original_text": "layersLSTM = [\n    sequenceInputLayer(2,Name=\"Sequence\",MinLength=b)\n    batchNormalizationLayer(Name=\"BN\")\n    lstmLayer(numHiddenUnits,Name=\"LSTM\",OutputMode=\"last\")\n    fullyConnectedLayer(numNeuronsOutFC1,Name=\"FC1\")\n    leakyReluLayer(thresholdScaleLR,Name=\"LR\")\n    fullyConnectedLayer(3,Name=\"FC2\")\n    softmaxLayer(Name=\"Softmax\")];",
+  "ocr_text": "layersLSTM=[\nsequenceInputLayer(2,Name=Sequence,MinLength=b)\nbatchNormalizationLayer(Name=BN)\nLUstmLayer(numHiddenUnits,Name=LSTM,OutputMode=Last)\nfullyConnectedLayer(numNeuronsOutFC1,Name=FC1)\nLeakyReluLayer(thresholdScaleLR,Name=LR)\nfullyConnectedLayer(3,Name=FC2)\nsoftmaxLayer(Name=Softmax)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 279.07,
+    "x1": 409.69,
+    "y1": 365.13
+  },
+  "confidence": "high"
+}

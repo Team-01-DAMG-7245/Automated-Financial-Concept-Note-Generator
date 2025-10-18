@@ -1,0 +1,8 @@
+Page 442
+================================================================================
+
+You can extend the traditional minimum variance portfolio problem subject to an expected return to
+include the ESG metric by setting an ESG constraint for the problem. The purpose of the ESG
+constraint is to force the portfolio to achieve an ESG score greater than a certain target. Then, add a
+penalty term to the objective function to guide the problem toward more or less diversified portfolios.
+How diversified a portfolio is depends on your choice of the penalty parameter.

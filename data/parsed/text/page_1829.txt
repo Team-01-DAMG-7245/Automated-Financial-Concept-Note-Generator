@@ -1,0 +1,54 @@
+bndconvp
+
+Bond convexity given price
+
+Syntax
+
+[YearConvexity,PerConvexity] = bndconvp(Price,CouponRate,Settle,Maturity)
+[YearConvexity,PerConvexity] = bndconvp( ___ ,Name,Value)
+
+Description
+
+[YearConvexity,PerConvexity] = bndconvp(Price,CouponRate,Settle,Maturity)
+computes the convexity of NUMBONDS fixed income securities given a clean price for each bond. The
+clean price of a bond excludes any interest that has accrued since issue or the most recent coupon
+payment.
+
+bndconvp determines the convexity for a bond whether the first or last coupon periods in the coupon
+structure are short or long (that is, whether the coupon structure is synchronized to maturity).
+bndconvp also determines the convexity of a zero coupon bond. Convexity is a measure of the rate of
+change in duration; measured in time. The greater the rate of change, the more the duration changes
+as yield changes.
+
+[YearConvexity,PerConvexity] = bndconvp( ___ ,Name,Value) adds optional name-value
+pair arguments.
+
+Examples
+
+Find Bond Convexity Given Price
+
+This example shows how to compute the convexity of three bonds given their prices.
+
+Price = [106; 100; 98]; 
+CouponRate = 0.055; 
+Settle = datetime(1999,8,2); 
+Maturity = datetime(2004,6,15); 
+Period = 2; 
+Basis = 0;
+
+[YearConvexity, PerConvexity] = bndconvp(Price,... 
+CouponRate,Settle, Maturity, Period, Basis)
+
+YearConvexity = 3×1
+
+21.4447
+   21.0363
+   20.8951
+
+PerConvexity = 3×1
+
+85.7788
+
+bndconvp
+
+15-523

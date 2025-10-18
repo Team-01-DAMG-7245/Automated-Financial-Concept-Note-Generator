@@ -1,0 +1,63 @@
+{'CustIncome'}    {'[33000,35000)'    }    67.971
+    {'CustIncome'}    {'[35000,40000)'    }    70.136
+    {'CustIncome'}    {'[40000,42000)'    }    70.936
+    {'CustIncome'}    {'[42000,47000)'    }    82.196
+    {'CustIncome'}    {'[47000,Inf]'      }    96.405
+    {'CustIncome'}    {'<missing>'        }       NaN
+    {'TmWBank'   }    {'[-Inf,12)'        }    50.966
+    {'TmWBank'   }    {'[12,23)'          }    60.975
+    {'TmWBank'   }    {'[23,45)'          }    61.778
+    {'TmWBank'   }    {'[45,71)'          }    93.007
+    {'TmWBank'   }    {'[71,Inf]'         }    133.39
+    {'TmWBank'   }    {'<missing>'        }       NaN
+    {'OtherCC'   }    {'No'               }    50.765
+    {'OtherCC'   }    {'Yes'              }    75.649
+    {'OtherCC'   }    {'<missing>'        }       NaN
+    {'AMBalance' }    {'[-Inf,558.88)'    }    89.765
+    {'AMBalance' }    {'[558.88,1254.28)' }    63.097
+    {'AMBalance' }    {'[1254.28,1597.44)'}    59.725
+    {'AMBalance' }    {'[1597.44,Inf]'    }    49.184
+    {'AMBalance' }    {'<missing>'        }       NaN
+
+Calculate Scores and Probability of Default for New Applicants
+
+Create a data set of 'new customers' and then calculate the scores and probabilities of default.
+
+dataNewCustomers = dataMissing(1:20,1:end-1);
+disp(head(dataNewCustomers));
+
+CustID    CustAge    TmAtAddress     ResStatus     EmpStatus    CustIncome    TmWBank    Othe
+    ______    _______    ___________    ___________    _________    __________    _______    ____
+
+1          53          62         <undefined>    Unknown        50000         55         Ye
+      2          61          22         Home Owner     Employed       52000         25         Ye
+      3          47          30         Tenant         Employed       37000         61         No
+      4         NaN          75         Home Owner     Employed       53000         20         Ye
+      5          68          56         Home Owner     Employed       53000         14         Ye
+      6          65          13         Home Owner     Employed       48000         59         Ye
+      7          34          32         Home Owner     Unknown        32000         26         Ye
+      8          50          57         Other          Employed       51000         33         No
+
+Perform the same preprocessing on the 'new customers' data as on the training data.
+
+dResStatusNewCustomers = dummyvar(dataNewCustomers.ResStatus);
+dEmpStatusNewCustomers = dummyvar(dataNewCustomers.EmpStatus);
+dOtherCCNewCustomers = dummyvar(dataNewCustomers.OtherCC);
+
+dataNewCustomersCopy = dataNewCustomers;
+dataNewCustomersCopy.HomeOwner = dResStatusNewCustomers(:,1);
+dataNewCustomersCopy.Tenant = dResStatusNewCustomers(:,2);
+dataNewCustomersCopy.Employed = dEmpStatusNewCustomers(:,1);
+dataNewCustomersCopy.HasOtherCC = dOtherCCNewCustomers(:,2);
+dataNewCustomersCopy = removevars(dataNewCustomersCopy, 'ResStatus');
+dataNewCustomersCopy = removevars(dataNewCustomersCopy, 'EmpStatus');
+dataNewCustomersCopy = removevars(dataNewCustomersCopy, 'OtherCC');
+
+Predict the missing data in the scoring data set with the same imputation model as before.
+
+missingCustAgeNewCustomers = isnan(dataNewCustomers.CustAge);
+missingResStatusNewCustomers = ismissing(dataNewCustomers.ResStatus);
+
+Impute Missing Data in the Credit Scorecard Workflow Using the k-Nearest Neighbors Algorithm
+
+8-125

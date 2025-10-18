@@ -1,0 +1,12 @@
+{
+  "page": 1719,
+  "original_text": "F = ts2func( ___ ,Name,Value) adds optional name-value pair arguments.",
+  "ocr_text": "F=ts2func(__,Name,Value)addsoptionalname-valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 322.0,
+    "x1": 452.21,
+    "y1": 333.63
+  },
+  "confidence": "high"
+}

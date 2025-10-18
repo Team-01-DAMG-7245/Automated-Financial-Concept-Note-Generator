@@ -1,0 +1,10 @@
+Page 1973
+================================================================================
+
+Settle = '01-Nov-1993';
+Maturity = ['15-Dec-1994';'15-Jun-1995'];
+CouponRate= [0.06; 0.05];
+Period = [4; 2];
+Basis = [1; 0];
+[CFlowAmounts, CFlowDates, TFactors, CFlowFlags] = ...
+cfamounts(CouponRate,Settle, Maturity, Period, Basis)

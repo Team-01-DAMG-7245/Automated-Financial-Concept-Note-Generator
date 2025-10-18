@@ -1,0 +1,12 @@
+{
+  "page": 991,
+  "original_text": "sc = modifybins(sc,'CustIncome','CutPoints',cp);",
+  "ocr_text": "sc=modifybins(sc,CustIncome,CutPoints,cp);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 149.43,
+    "x1": 350.09,
+    "y1": 159.89
+  },
+  "confidence": "high"
+}

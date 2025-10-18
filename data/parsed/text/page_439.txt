@@ -1,0 +1,58 @@
+Diversify ESG Portfolios
+
+This example shows how to include qualitative factors for environmental, social, and corporate
+governance (ESG) in the portfolio selection process. The example extends the traditional mean-
+variance portfolio using a Portfolio object to include the ESG metric. First, the
+estimateFrontier function computes the mean-variance efficient frontier for different ESG levels.
+Then, the example illustrates how to combine the ESG performance measure with portfolio
+diversification techniques. Specifically, it introduces hybrid models that use the Herfindahl-Hirshman
+(HH) index and the most diversified portfolio (MDP) approach using the
+estimateCustomObjectivePortfolio function. Finally, the backtestEngine framework
+compares the returns and behavior of the different ESG strategies.
+
+Define Mean-Variance Portfolio
+
+Load the table with the asset returns and a vector with ESG scores for the assets. Both the asset
+returns and their ESG scores are simulated values and do not represent the performance of any real
+securities. However, you can apply the code and workflow in this example to any data set with prices
+and returns and ESG information.
+
+% Load data
+load('asset_return_100_simulated.mat') % Returns table
+load('ESG_s26.mat')                    % ESG scores
+
+Transform the returns table into a prices timetable.
+
+% Transform the returns to prices.
+assetPrices = ret2tick(stockReturns);
+% Transform the prices table to a timetable.
+nRows = size(stockReturns,1);
+day = datetime("today");
+Time = (day-nRows):day;
+assetPrices = table2timetable(assetPrices,"RowTimes",Time);
+
+Define a Portfolio object with default constraints where the weights must be nonnegative and sum
+to 1.
+
+% Create a mean-variance Portfolio object with default constraints.
+p = Portfolio;
+p = estimateAssetMoments(p,stockReturns);
+p = setDefaultConstraints(p);
+
+Compute the Mean-Variance Efficient Frontier for Different ESG Levels
+
+Obtain contour plots of the ESG-mean-variance efficient surface. You obtain the efficient surface from
+the Pareto optima of the multiobjective problem that includes all the performance metrics: average
+ESG score, average return, and return variance.
+
+First, obtain feasible values of the ESG metric by finding the minimum and maximum ESG levels. To
+do this step, use the estimateCustomObjectivePortfolio function assigning the average ESG
+score as the objective function. The average ESG score of a portfolio is the weighted sum of the
+individual asset ESG scores, where the weights are given by the amount invested in each asset.
+
+% Define the objective function: average ESG score.
+ESGscore = @(x) ESGnumeric'*x;
+
+Diversify ESG Portfolios
+
+4-271

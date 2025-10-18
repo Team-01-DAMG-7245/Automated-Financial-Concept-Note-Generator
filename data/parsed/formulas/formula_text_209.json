@@ -1,0 +1,12 @@
+{
+  "page": 130,
+  "original_text": "options = trainingOptions(\"sgdm\", ...\n    Plots='training-progress', ...\n    InputDataFormats=\"CTB\",...\n    Metric=\"accuracy\",...\n    Verbose=1,VerboseFrequency=100, ...\n    InitialLearnRate=lr,LearnRateSchedule=lrs, ...\n    ValidationData=VData,ValidationFrequency=100,ValidationPatience=5, ...\n    Shuffle=\"every-epoch\");",
+  "ocr_text": "options=trainingOptions(sgdm,...\nPlots=training-progress,...\nInputDataFormats=CTB,...\nMetric=accuracy,...\nVerbose=1,VerboseFrequency=100,...\nInitialLearnRate=lr,LearnRateSchedule=lrs,...\nValidationData=VData,ValidationFrequency=100,ValidationPatience=5,...\nShuffle=every-epoch);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 598.55,
+    "x1": 490.96,
+    "y1": 684.62
+  },
+  "confidence": "high"
+}

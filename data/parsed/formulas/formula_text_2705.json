@@ -1,0 +1,12 @@
+{
+  "page": 1364,
+  "original_text": "% Create a Portfolio object with true mean and shrunk covariance\npShrunk = Portfolio(AssetMean=mean_return,AssetCovar=shrunkSigma);\npShrunk = setDefaultConstraints(pShrunk);",
+  "ocr_text": "CreateaPortfolioobjectwithtruemeanandshrunkcovariance\npShrunk=Portfolio(AssetMean=mean_return,AssetCovar=shrunkSigma);\npShrunk=setDefaultConstraints(pShrunk);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 352.63,
+    "x1": 447.59,
+    "y1": 384.69
+  },
+  "confidence": "high"
+}

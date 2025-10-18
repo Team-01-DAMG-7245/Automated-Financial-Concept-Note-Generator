@@ -1,0 +1,51 @@
+getBounds
+
+Obtain bounds for portfolio weights from portfolio object
+
+Syntax
+
+[LowerBound,UpperBound] = getBounds(obj)
+
+Description
+
+Use the getBounds function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain bounds for portfolio weights from portfolio objects.
+
+For details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+[LowerBound,UpperBound] = getBounds(obj) obtains bounds for portfolio weights from
+portfolio objects.
+
+Examples
+
+Obtain Values for Lower and Upper Bounds for a Portfolio Object
+
+Given portfolio p with the default constraints set, obtain the values for LowerBound and
+UpperBound.
+
+p = Portfolio;
+p = setDefaultConstraints(p, 5);
+[LowerBound, UpperBound] = getBounds(p)
+
+LowerBound = 5×1
+
+0
+     0
+     0
+     0
+     0
+
+UpperBound =
+
+[]
+
+Obtain Values for Lower and Upper Bounds for a PortfolioCVaR Object
+
+Given a PortfolioCVaR object p with the default constraints set, obtain the values for LowerBound
+and UpperBound.
+
+getBounds
+
+15-1081

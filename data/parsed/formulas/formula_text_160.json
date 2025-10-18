@@ -1,0 +1,12 @@
+{
+  "page": 114,
+  "original_text": "cash = cash + assets*MOBid(T); % Sell off",
+  "ocr_text": "cash=cash+assets*MOBid(T);*Selloff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.03,
+    "x1": 333.83,
+    "y1": 589.49
+  },
+  "confidence": "high"
+}

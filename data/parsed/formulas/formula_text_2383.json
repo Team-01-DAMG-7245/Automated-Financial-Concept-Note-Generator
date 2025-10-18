@@ -1,0 +1,12 @@
+{
+  "page": 1225,
+  "original_text": "SDEDDO = sdeddo(F, G, 'Correlation', correlation, ...\n'StartState', 100)",
+  "ocr_text": "SDEDDO=sdeddo(F,G,Correlation,correlation,...\nStartState,100)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 285.42,
+    "x1": 377.17,
+    "y1": 306.68
+  },
+  "confidence": "high"
+}

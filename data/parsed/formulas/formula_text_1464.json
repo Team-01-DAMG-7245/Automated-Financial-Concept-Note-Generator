@@ -1,0 +1,12 @@
+{
+  "page": 738,
+  "original_text": "p = PortfolioCVaR('Name', 'Asset Allocation Portfolio', 'InitPort', pwgt0);",
+  "ocr_text": "p=PortfolioCVaR(Name,AssetAllocationPortfolio,InitPort,pwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 496.38,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

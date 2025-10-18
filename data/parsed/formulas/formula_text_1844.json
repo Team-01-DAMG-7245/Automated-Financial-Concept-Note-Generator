@@ -1,0 +1,12 @@
+{
+  "page": 943,
+  "original_text": "edgesIGSG = [4 7];\ntotalsIGSG = transprobgrouptotals(totalsByRtg,edgesIGSG);\nedgesAll = 7; % Could also use edgesAll = 2 with totalsIGSG\ntotalsAll = transprobgrouptotals(totalsByRtg,edgesAll);",
+  "ocr_text": "edgesIGSG=[47];\ntotalsIGSG=transprobgrouptotals(totalsByRtg,edgesIGSG);\nedgesAll_=7;CouldalsouseedgesAlLl=2withtotalsIGSG\ntotalsALl=transprobgrouptotals(totalsByRtg,edgesALl);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 137.85,
+    "x1": 409.67,
+    "y1": 180.71
+  },
+  "confidence": "high"
+}

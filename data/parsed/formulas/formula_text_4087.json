@@ -1,0 +1,12 @@
+{
+  "page": 2305,
+  "original_text": "pwgt = estimateFrontierByReturn(p, [ 0.0072321, 0.0119084 ]);\npsharpe = estimatePortSharpeRatio(p,pwgt)",
+  "ocr_text": "pwgt=estimateFrontierByReturn(p,[0.0072321,0.0119084]);\npsharpe=estimatePortSharpeRatio(p,pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 539.26,
+    "x1": 420.5,
+    "y1": 560.53
+  },
+  "confidence": "high"
+}

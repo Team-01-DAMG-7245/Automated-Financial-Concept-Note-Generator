@@ -1,0 +1,12 @@
+{
+  "page": 1995,
+  "original_text": "QuasiCouponDates = cfdatesq( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate,PeriodsBeforeSettle,PeriodsAfterMaturity)\nspecifies options using one or more optional arguments in addition to the input arguments in the\nprevious syntax.",
+  "ocr_text": "QuasiCouponDates=cfdatesq(___,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate,PeriodsBeforeSettle,PeriodsAfterMaturity)\nspecifiesoptionsusingoneormoreoptionalargumentsinadditiontotheinputargumentsinthe\nprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 445.17,
+    "x1": 533.11,
+    "y1": 492.8
+  },
+  "confidence": "high"
+}

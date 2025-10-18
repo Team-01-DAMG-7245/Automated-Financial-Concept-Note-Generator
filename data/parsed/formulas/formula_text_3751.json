@@ -1,0 +1,12 @@
+{
+  "page": 2124,
+  "original_text": "NumDays = days360e(StartDate,EndDate) returns the number of days between StartDate\nand EndDate based on a 360-day year (that is, all months contain 30 days). If EndDate is earlier than\nStartDate, NumDays is negative. This day count convention is used primarily in Europe. Under this\nconvention, all months contain 30 days.",
+  "ocr_text": "NumDays=days360e(StartDate,EndDate)returnsthenumberofdaysbetweenStartDate\nandEndDatebasedona360-dayyear(thatis,allmonthscontain30days).IfEndDateisearlierthan\nStartDate,NumDaysisnegative.ThisdaycountconventionisusedprimarilyinEurope.Underthis\nconvention,allmonthscontain30days.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 246.2,
+    "x1": 557.43,
+    "y1": 293.83
+  },
+  "confidence": "high"
+}

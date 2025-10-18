@@ -1,0 +1,7 @@
+Page 1426
+================================================================================
+
+The simBySolution function simulates NTRIALS sample paths of NVARS correlated state variables,
+driven by NBROWNS Brownian motion sources of risk over NPERIODS consecutive observation periods,
+approximating continuous-time GBM short-rate models by an approximation of the closed-form
+solution.

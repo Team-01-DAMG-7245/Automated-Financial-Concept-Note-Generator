@@ -1,0 +1,54 @@
+Algorithms
+
+bndkrdur computes the key rate durations for one or more bonds given a zero curve and a set of key
+rates. By default, the key rates are each of the zero curve rates. For each key rate, the duration is
+computed by shifting the zero curve up and down by a specified amount (ShiftValue) at that
+particular key rate, computing the present value of the bond in each case with the new zero curves,
+and then evaluating the following:
+
+krduri  =  
+(PVdown  − PVup)
+(PV  ×  ShiftValue  ×  2)
+
+Note The shift to the curve is computed by shifting the particular key rate by the ShiftValue and
+then interpolating the values of the curve in the interval between the previous and next key rates. For
+the first key rate, any curve values before the date are equal to the ShiftValue; likewise, for the
+last key rate, any curve values after the date are equal to the ShiftValue.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although bndkrdur supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Golub, B., Tilman, L. Risk Management: Approaches for Fixed Income Markets. Wiley, 2000.
+
+[2] Tuckman, B. Fixed Income Securities: Tools for Today's Markets. Wiley, 2002.
+
+See Also
+bndconvy | bndconvp | bnddury | bnddurp | datetime
+
+Topics
+“Bond Portfolio for Hedging Duration and Convexity” on page 10-6
+“Yield Conventions” on page 2-21
+
+bndkrdur
+
+15-557

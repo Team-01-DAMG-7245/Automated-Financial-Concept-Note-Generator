@@ -1,0 +1,12 @@
+{
+  "page": 1606,
+  "original_text": "nonZeroIdx = sum(backtester.Turnover.Variables,2) > 0;\nto = backtester.Turnover(nonZeroIdx,:);\nplot(to.Time,to.EqualWeighted,'-o',to.Time,to.InverseVariance,'-x',...\n    'LineWidth',2,'MarkerSize',5);\nlegend([strategies.Name]);\ntitle('Portfolio Turnover');\nylabel('Turnover (%)');",
+  "ocr_text": "nonZeroIdx=sum(backtester.Turnover.Variables,2)0;\n\nto=backtester.Turnover(nonZerolIdx,:);\n\nplot(to.Time,to.EqualWeighted,-o,to.Time,to.InverseVariance,-x,...\nLineWidth,2,MarkerSize,5);\n\nlegend([strategies.Name]);\n\ntitle(PortfolioTurnover);\n\nylabel(Turnover());",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 321.2,
+    "x1": 469.29,
+    "y1": 396.46
+  },
+  "confidence": "high"
+}

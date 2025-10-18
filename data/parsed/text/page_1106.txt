@@ -1,0 +1,48 @@
+•
+As required, the duration and convexity of the new portfolio are 10.3181 and 157.6346,
+respectively.
+
+•
+The hedge amounts for bonds 1, 2, and 3 are -57.37, 71.70, and 216.27, respectively.
+
+Notice that the hedge matches the duration, convexity, and value ($100,000) of the original portfolio.
+If you are holding that first portfolio, you can hedge by taking a short position in the new portfolio.
+
+Just as the approximations of the example in “Sensitivity of Bond Prices to Interest Rates” on page
+10-2 are appropriate only for small parallel shifts in the yield curve, the hedge portfolio is appropriate
+only for reducing the impact of small level changes in the term structure.
+
+See Also
+bnddury | bndconvy | bndprice | bndkrdur | blsprice | blsdelta | blsgamma | blsvega |
+zbtprice | zero2fwd | zero2disc
+
+Related Examples
+
+•
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+
+•
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+
+•
+“Sensitivity of Bond Prices to Interest Rates” on page 10-2
+
+•
+“Bond Prices and Yield Curve Parallel Shifts” on page 10-9
+
+•
+“Bond Prices and Yield Curve Nonparallel Shifts” on page 10-12
+
+•
+“Term Structure Analysis and Interest-Rate Swaps” on page 10-18
+
+•
+“Plotting Sensitivities of an Option” on page 10-25
+
+•
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+10
+Solving Sample Problems
+
+10-8

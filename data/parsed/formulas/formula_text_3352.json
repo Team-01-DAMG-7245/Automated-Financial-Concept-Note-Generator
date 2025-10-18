@@ -1,0 +1,12 @@
+{
+  "page": 1820,
+  "original_text": "DefProbHazard = [defaultProb1, hazard1(:,2)];\nDefProbHazardTable = array2table(DefProbHazard, 'VariableNames', {'Date', 'DefaultProbability', \nDefProbHazardTable.Date = datetime(DefProbHazardTable.Date,'Locale','en_US','ConvertFrom','datenu\nDefProbHazardTable.Date.Format = 'MMM-dd-yyyy'",
+  "ocr_text": "DefProbHazard=[defaultProb1,hazard1(:,2)];\nDefProbHazardTable=array2table(DefProbHazard,VariableNames,{Date,DefaultProbability,\nDefProbHazardTable.Date=datetime(DefProbHazardTable.Date,Locale,en_US,ConvertFrom,daten\nDefProbHazardTable.Date.Format=MMM-dd-yyyy",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 405.06,
+    "x1": 615.58,
+    "y1": 447.93
+  },
+  "confidence": "high"
+}

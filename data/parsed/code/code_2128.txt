@@ -1,0 +1,5 @@
+Page 1724
+================================================================================
+
+F — Callable function F(t) of a real-valued scalar observation time t
+vector | matrix | table | timetable

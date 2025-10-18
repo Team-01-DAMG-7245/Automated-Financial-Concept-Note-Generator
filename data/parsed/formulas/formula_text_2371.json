@@ -1,0 +1,12 @@
+{
+  "page": 1221,
+  "original_text": "obj = heston (0.1, 0.2, 0.1, 0.05)",
+  "ocr_text": "obj=heston(0.1,0.2,0.1,0.05)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 558.77,
+    "x1": 274.21,
+    "y1": 569.24
+  },
+  "confidence": "high"
+}

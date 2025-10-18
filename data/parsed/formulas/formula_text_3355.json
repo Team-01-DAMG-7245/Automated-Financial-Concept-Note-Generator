@@ -1,0 +1,12 @@
+{
+  "page": 1821,
+  "original_text": "DF = zero2disc(interp1(RiskFreeRate.Date, RiskFreeRate.Rate, PaymentDates, 'linear', 'extrap'), P",
+  "ocr_text": "DF=zero2disc(interpl(RiskFreeRate.Date,RiskFreeRate.Rate,PaymentDates,linear,extrap),",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 271.62,
+    "x1": 615.59,
+    "y1": 282.08
+  },
+  "confidence": "high"
+}

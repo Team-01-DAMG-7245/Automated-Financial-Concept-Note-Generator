@@ -1,0 +1,29 @@
+For more information on where the resulting management fees are reported, see the
+backtestEngine object read-only property “Fees” on page 15-0
+.
+
+Performance Fees
+
+A performance fee, or incentive fee, is a periodic payment that is paid by fund investors based on the
+fund's performance.
+
+The performance fee can have a variety of structures, but it often is calculated as a percentage of a
+fund's increase in NAV over some tracked high-water mark. This calculation ensures the fee is paid
+only when the investment manager produces positive results. Performance fees in hedge funds are
+sometimes set at 20%, meaning if the fund NAV goes from $1M to $1.2M, a fee of $40k would be
+charged (20% of the $200k growth).
+
+During the backtest, the backtest engine tracks a high-water mark. The high-water mark starts at the
+portfolio initial value. At each performance fee date, if the portfolio value is greater than the previous
+high-water mark, then the high-water mark is updated to the new portfolio value and the
+performance fee is paid on the growth of the portfolio. The portfolio growth is the difference between
+the new high-water mark and the previous one. If, on a performance fee date, the portfolio value is
+less than the previous high-water mark, then no fee is paid and the high-water mark is not updated.
+
+The high-water mark is typically updated at each performance fee date and does not track maximum
+portfolio values between dates, as illustrated:
+
+15
+Functions
+
+15-260

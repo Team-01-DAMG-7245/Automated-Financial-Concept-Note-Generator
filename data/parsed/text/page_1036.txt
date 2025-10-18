@@ -1,0 +1,39 @@
+AA      0     0     0     0     0     0     0     0    0 
+    A       0     0     2     0     0     0     0     0    1 
+    BBB     0     0     0     2     0     0     0     0    0 
+    BB      0     0     0     0     0     0     0     0    0 
+    B       0     0     0     0     0     0     0     0    0 
+    CCC     0     0     0     0     0     0     0     0    0 
+    D       0     0     0     0     0     0     0     0    0 
+    NR      0     0     0     1     0     0     0     0    1
+
+hPlotTransitions(CompanyID_NR,startDateNR,endDateNR,dataNR,RatingLabelsNR)
+
+To remove the 'NR' from the transition matrix, use the 'excludeLabels' name-value input
+argument in transprob. The list of labels to exclude may or may not be specified in the name-value
+pair argument labels. For example, both RatingLabels and RatingLabelsNR generate the same
+output from transprob.
+
+[tmNR,stNR,itNR] = transprob(dataNR,'startDate',startDateNR,'endDate',endDateNR,'algorithm','coho
+hDisplayTransitions(tmNR,RatingLabels,"Transition Matrix")
+
+Transition Matrix
+
+AAA    AA      A     BBB    BB      B     CCC     D 
+           ___    ___    ___    ___    ___    ___    ___    ___
+
+AAA    100      0      0      0      0      0      0      0
+    AA       0    100      0      0      0      0      0      0
+    A        0      0    100      0      0      0      0      0
+    BBB      0      0      0    100      0      0      0      0
+    BB       0      0      0      0    100      0      0      0
+    B        0      0      0      0      0    100      0      0
+    CCC      0      0      0      0      0      0    100      0
+    D        0      0      0      0      0      0      0    100
+
+Display the transition counts and corresponding visualization of the transitions.
+
+8
+Credit Risk Analysis
+
+8-118

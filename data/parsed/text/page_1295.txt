@@ -1,0 +1,13 @@
+Using heatmap again, visualize the strongest association with each latent factor for each factor.
+
+maxIdx = double( loadings == max( loadings, [], 2 ) );
+figure
+heatmap( 1:numLatentFactors, commodityNames, maxIdx, ...
+    "Colormap", turbo, ...
+    "ColorLimits", [-1, 1] )
+xlabel( "Latent Factor" )
+title( "Maximum Factor Loadings" )
+
+Volatility Modeling for Soft Commodities
+
+14-103

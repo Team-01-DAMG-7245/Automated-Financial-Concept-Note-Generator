@@ -1,0 +1,18 @@
+To evaluate the effect of the recovery rate parameter, instead of 40% (default value), use a recovery
+rate of 35%.
+
+Spread1Rec35 = cdsspread(ZeroData,ProbData,Settle,Maturity1, ...
+'RecoveryRate',0.35);
+
+figure
+plot(yearfrac(Settle,Maturity1),Spread1, ...
+yearfrac(Settle,Maturity1),Spread1Rec35,'--')
+grid on
+xlabel('Time (Years)')
+ylabel('Spread (BP)')
+title('CDS Spreads with Different Recovery Rates')
+legend('40%','35%','location','SouthEast')
+
+Finding Breakeven Spread for New CDS Contract
+
+8-105

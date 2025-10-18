@@ -1,0 +1,68 @@
+•
+BuyTurnover for τB
+•
+SellTurnover for τS
+•
+InitPort for x0
+
+The default is to ignore this constraint.
+
+Note The average turnover constraint (see “Average Turnover Constraints” on page 5-13) with τ is
+not a combination of the one-way turnover constraints with τ = τB = τS.
+
+Cardinality Constraints
+
+Cardinality constraint limits the number of assets in the optimal allocation for an PortfolioCVaR
+object. Use setMinMaxNumAssets to specify the 'MinNumAssets' and 'MaxNumAssets'
+constraints. To mathematically formulate this type of constraints, a binary variable vi is needed. vi = 0
+indicates that asset i is not selected and vi = 1 indicates that the asset was selected. Thus
+
+MinNumAssets ≤
+∑
+i = 1
+
+NumAssets
+vi ≤MaxNumAssets
+
+The default is to ignore this constraint.
+
+See Also
+PortfolioCVaR
+
+Related Examples
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+“Default Portfolio Problem” on page 5-15
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+CVaR Portfolio Optimization (4 min 56 sec)
+
+5
+CVaR Portfolio Optimization Tools
+
+5-14

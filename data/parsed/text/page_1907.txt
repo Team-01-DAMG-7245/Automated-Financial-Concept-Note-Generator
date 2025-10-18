@@ -1,0 +1,55 @@
+busdate
+
+Next or previous business day
+
+Syntax
+
+Busday = busdate(Date)
+Busday = busdate( ___ ,DirFlag,Holiday,Weekend)
+
+Description
+
+Busday = busdate(Date) returns the scalar, vector, or matrix of the next or previous business
+days, depending on the definition for Holiday.
+
+Busday = busdate( ___ ,DirFlag,Holiday,Weekend) returns the scalar, vector, or matrix of
+the next or previous business days, depending on the optional input arguments, including Holiday.
+
+If both Date and Holiday are either strings or date character vectors, Busday is returned as a serial
+date number. Use the function datetime to convert serial date numbers to formatted datetime
+arrays.
+
+However, if either Date or Holiday are datetime arrays, Busday is returned as a datetime array.
+
+Examples
+
+Determine Business Days
+
+Determine the next business day when Date is a character vector.
+
+Busday = busdate('3-Jul-2001', 1)
+
+Busday = 
+731037
+
+datestr(Busday)
+
+ans = 
+'05-Jul-2001'
+
+Indicate that Saturday is a business day by appropriately setting the Weekend argument. July 4, 2003
+falls on a Friday. Use busdate to verify that Saturday, July 5, is actually a business day.
+
+Weekend = [1 0 0 0 0 0 0];
+Date = datestr(busdate('3-Jul-2003', 1, [], Weekend))
+
+Date = 
+'05-Jul-2003'
+
+If either Date or Holiday are datetime arrays, Busday is returned as a datetime array.
+
+Busday = busdate(datetime('3-Jul-2001','Locale','en_US'), 1)
+
+busdate
+
+15-601

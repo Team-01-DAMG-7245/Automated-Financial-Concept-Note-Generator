@@ -1,0 +1,12 @@
+{
+  "page": 1212,
+  "original_text": "G = \n   Class DIFFUSION: Diffusion Rate Specification \n   --------------------------------------------- \n       Rate: diffusion rate function G(t,X(t))  \n      Alpha: 1\n      Sigma: 0.3",
+  "ocr_text": "G=\nClassDIFFUSION:DiffusionRateSpecification\nRate:diffusionratefunctionG(t,X(t))\nAlpha:1\nSigma:0.3",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 209.81,
+    "x1": 355.48,
+    "y1": 274.27
+  },
+  "confidence": "high"
+}

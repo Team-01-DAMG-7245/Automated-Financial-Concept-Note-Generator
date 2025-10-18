@@ -1,0 +1,12 @@
+{
+  "page": 1445,
+  "original_text": "dXt = S(t)[L(t) −Xt]dt + V(t)dWt\n (15-2)",
+  "ocr_text": "dX;=S(H)[L(W)-Xpldt+Vitdw;, (15-2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 311.95,
+    "x1": 558.0,
+    "y1": 325.69
+  },
+  "confidence": "high"
+}

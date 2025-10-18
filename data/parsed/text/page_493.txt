@@ -1,0 +1,60 @@
+BenchmarkAssetWeight: [30×12 double]
+    PortfolioCategoryReturn: [9×12 double]
+    BenchmarkCategoryReturn: [9×12 double]
+    PortfolioCategoryWeight: [9×12 double]
+    BenchmarkCategoryWeight: [9×12 double]
+            PortfolioReturn: 0.2234
+            BenchmarkReturn: 0.2046
+               ActiveReturn: 0.0188
+
+Compute Category Weights
+
+Use the brinsonAttribution object and categoryWeights to compute the average and periodic
+category weights for the portfolio and the benchmark, as well as, the corresponding active weights.
+
+[AverageCategoryWeights,PeriodicCategoryWeights] = categoryWeights(BrinsonPAobj)
+
+AverageCategoryWeights=9×4 table
+           Category           AveragePortfolioWeight    AverageBenchmarkWeight    AverageActiveWe
+    ______________________    ______________________    ______________________    _______________
+
+Communication Services            0.0855                        0.1                  -0.0145 
+    Consumer Discretionary            0.1155                        0.1                   0.0155 
+    Consumer Staples                   0.097                    0.13333                -0.036333 
+    Energy                            0.0385                   0.033333                0.0051667 
+    Financials                         0.102                    0.13333                -0.031333 
+    Health Care                        0.122                        0.1                    0.022 
+    Industrials                      0.22375                        0.2                  0.02375 
+    Information Technology           0.19425                    0.13333                 0.060917 
+    Materials                         0.0215                   0.066667                -0.045167
+
+PeriodicCategoryWeights=108×5 table
+    Period           Category           PortfolioWeight    BenchmarkWeight    ActiveWeight
+    ______    ______________________    _______________    _______________    ____________
+
+1       Communication Services         0.091                 0.1            -0.009  
+      1       Consumer Discretionary         0.118                 0.1             0.018  
+      1       Consumer Staples               0.097             0.13333         -0.036333  
+      1       Energy                          0.04            0.033333         0.0066667  
+      1       Financials                     0.102             0.13333         -0.031333  
+      1       Health Care                    0.122                 0.1             0.022  
+      1       Industrials                    0.257                 0.2             0.057  
+      1       Information Technology         0.151             0.13333          0.017667  
+      1       Materials                      0.022            0.066667         -0.044667  
+      2       Communication Services         0.091                 0.1            -0.009  
+      2       Consumer Discretionary         0.118                 0.1             0.018  
+      2       Consumer Staples               0.097             0.13333         -0.036333  
+      2       Energy                          0.04            0.033333         0.0066667  
+      2       Financials                     0.102             0.13333         -0.031333  
+      2       Health Care                    0.122                 0.1             0.022  
+      2       Industrials                    0.257                 0.2             0.057  
+      ⋮
+
+Compute Category Returns
+
+Use the brinsonAttribution object and categoryReturns to compute the aggregate and
+periodic category (sector) returns for the portfolio and the benchmark.
+
+Analyze Performance Attribution Using Brinson Model
+
+4-325

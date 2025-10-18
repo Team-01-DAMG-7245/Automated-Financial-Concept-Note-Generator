@@ -1,0 +1,12 @@
+{
+  "page": 109,
+  "original_text": "G = C./H;\nv = sum(G,2);\nG = G + diag(-v);",
+  "ocr_text": "G=C./H;\nv=sum(G,2);\nG=G+diag(-v);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 580.71,
+    "x1": 182.11,
+    "y1": 612.78
+  },
+  "confidence": "high"
+}

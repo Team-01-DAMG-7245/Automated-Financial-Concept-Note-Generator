@@ -1,0 +1,12 @@
+{
+  "page": 2047,
+  "original_text": "Group = { [1,2 ],[3,4],[5,6]};\nDesignSUR = convert2sur(Design, Group);\n[Param, Covar] = mvnrmle(Asset, DesignSUR);",
+  "ocr_text": "Group={[1,2],[3,4],[5,6]};\nDesignSUR=convert2sur(Design,Group);\n[Param,Covar]=mvnrmle(Asset,DesignSUR);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 229.65,
+    "x1": 322.98,
+    "y1": 261.71
+  },
+  "confidence": "high"
+}

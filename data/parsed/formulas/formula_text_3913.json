@@ -1,0 +1,12 @@
+{
+  "page": 2227,
+  "original_text": "% Minimize tracking error with a lower bound\ns = tic;\nwTE_WithBound = estimateCustomObjectivePortfolio(pInt2,trackingError,ObjectiveBound=0);\ntimeTE_WithBound = toc(s)",
+  "ocr_text": "SMinimizetrackingerrorwithalowerbound\n\ns=tic;\nwTE_WithBound=estimateCustom0bjectivePortfolio(pInt2,trackingError,0ObjectiveBound=0);\ntimeTE_WithBound=toc(s)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 345.85,
+    "x1": 561.36,
+    "y1": 388.71
+  },
+  "confidence": "high"
+}

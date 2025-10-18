@@ -1,0 +1,12 @@
+{
+  "page": 1910,
+  "original_text": "bdates = busdays(datetime('2-Jan-2001','Locale','en_US'),'9-Jan-2001','weekly')",
+  "ocr_text": "bdates=busdays(datetime(2-Jan-2001,Locale,en_US),9-Jan-2001,weekly)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 586.69,
+    "x1": 518.06,
+    "y1": 597.16
+  },
+  "confidence": "high"
+}

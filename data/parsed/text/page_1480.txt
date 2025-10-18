@@ -1,0 +1,82 @@
+The SDELD object has the following displayed “Properties” on page 15-175:
+
+•
+StartTime — Initial observation time
+
+•
+StartState — Initial state at time StartTime
+
+•
+Correlation — Access function for the Correlation input argument, callable as a function of
+time
+
+•
+Drift — Composite drift-rate function, callable as a function of time and state
+
+•
+Diffusion — Composite diffusion-rate function, callable as a function of time and state
+
+•
+A — Access function for the input argument A, callable as a function of time and state
+
+•
+B — Access function for the input argument B, callable as a function of time and state
+
+•
+Alpha — Access function for the input argument Alpha, callable as a function of time and state
+
+•
+Sigma — Access function for the input argument Sigma, callable as a function of time and state
+
+•
+Simulation — A simulation function or method
+
+Input Arguments
+
+A — A represents the parameter A
+array or deterministic function of time or deterministic function of time and state
+
+A represents the parameter A, specified as an array or deterministic function of time.
+
+If you specify A as an array, it must be an NVars-by-1 column vector of intercepts.
+
+As a deterministic function of time, when A is called with a real-valued scalar time t as its only input,
+A must produce an NVars-by-1 column vector. If you specify A as a function of time and state, it must
+generate an NVars-by-1 column vector of intercepts when invoked with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+B — B represents the parameter B
+array or deterministic function of time or deterministic function of time and state
+
+B represents the parameter B, specified as an array or deterministic function of time.
+
+If you specify A as an array, it must be an NVars-by-NVars matrix of state vector coefficients.
+
+As a deterministic function of time, when B is called with a real-valued scalar time t as its only input,
+B must produce an NVars-by-NVars matrix. If you specify B as a function of time and state, it must
+generate an NVars-by-NVars matrix of state vector coefficients when invoked with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Alpha — Alpha represents the parameter D
+array or deterministic function of time or deterministic function of time and state
+
+Alpha represents the parameter D, specified as an array or deterministic function of time.
+
+15
+Functions
+
+15-174

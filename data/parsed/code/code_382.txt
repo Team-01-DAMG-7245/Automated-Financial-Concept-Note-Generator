@@ -1,0 +1,7 @@
+Page 408
+================================================================================
+
+The core logic of each strategy is implemented in a rebalance function. A rebalance function is a user-
+defined MATLAB® function that specifies how a strategy allocates capital in a portfolio. The
+rebalance function is an input argument to backtestStrategy. The rebalance function must
+implement the following fixed signature:

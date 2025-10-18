@@ -1,0 +1,12 @@
+{
+  "page": 1181,
+  "original_text": "weeklyStd = retime(TMW(:,'Close'),'weekly',@std);\nweeklyStd.Properties.VariableNames{'Close'} = 'Volatility';",
+  "ocr_text": "weeklyStd=retime(TMW(:,Close),weekly,Qstd);\nweeklyStd.Properties.VariableNames{Close}=Volatility;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 215.43,
+    "x1": 409.69,
+    "y1": 236.69
+  },
+  "confidence": "high"
+}

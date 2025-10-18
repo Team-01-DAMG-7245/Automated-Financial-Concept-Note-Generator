@@ -1,0 +1,47 @@
+Discount rate of the Treasury bill, specified as a scalar of a NTBILLS-by-1 vector of decimal fraction
+values.
+
+Data Types: double
+
+Output Arguments
+
+Yield — Treasury bill yield
+decimal
+
+Treasury bill yield, returned as a scalar or NTBILLS-by-1 vector.
+
+Note The number of days to maturity is typically quoted as: md - sd - 1. A NaN is returned for all
+cases in which negative prices are implied by the discount rate, Discount, and the number of days
+between Settle and Maturity.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although beytbill supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+prtbill | yldtbill | datetime
+
+Topics
+“Computing Treasury Bill Price and Yield” on page 2-26
+“Treasury Bills Defined” on page 2-25
+
+beytbill
+
+15-473

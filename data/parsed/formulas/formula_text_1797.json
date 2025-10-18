@@ -1,0 +1,12 @@
+{
+  "page": 912,
+  "original_text": "RisklessCash = elpm(Mean(3), 0, MAR, 1)",
+  "ocr_text": "RisklessCash=elpm(Mean(3),0,MAR,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 677.96,
+    "x1": 301.3,
+    "y1": 688.43
+  },
+  "confidence": "high"
+}

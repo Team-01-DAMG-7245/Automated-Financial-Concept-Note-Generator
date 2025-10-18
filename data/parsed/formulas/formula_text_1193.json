@@ -1,0 +1,12 @@
+{
+  "page": 607,
+  "original_text": "simOptions = rlSimulationOptions(MaxSteps=NumTestingSteps);\nexperience_Buy = sim(RL_OptimalExecution_Testing_Environment_Buy,Trained_Agent_Buy,simOptions);",
+  "ocr_text": "simOptions=rlSimulationOptions(MaxSteps=NumTestingSteps);\nexperience_Buy=sim(RL_OptimalExecution_Testing_Environment_Buy,Trained_Agent_Buy,simOptions);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 156.09,
+    "x1": 604.71,
+    "y1": 177.36
+  },
+  "confidence": "high"
+}

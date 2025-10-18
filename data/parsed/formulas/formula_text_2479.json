@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf('                    # of Monte Carlo Trials: %8d\\n'    , nTrials)",
+  "ocr_text": "fprintf( 4ofMonteCarloTrials:8dn ,nTrials)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 217.31,
+    "x1": 490.96,
+    "y1": 227.78
+  },
+  "confidence": "high"
+}

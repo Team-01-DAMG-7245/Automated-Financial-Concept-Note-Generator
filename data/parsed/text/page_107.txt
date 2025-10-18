@@ -1,0 +1,58 @@
+numBins = 3; % Hyperparameter
+binEdges = linspace(-1,1,numBins+1);
+rho = discretize(sI,binEdges);
+
+To model forecast performance, aggregate prices over a leading window. The number of ticks in a
+window dS is a hyperparameter.
+
+dS = 20; % Hyperparameter
+dTS = dS*DTAvg
+
+dTS = duration
+   0.80547 sec
+
+The setting corresponds to an interval of 20 ticks, or about 0.8 seconds on average. Discretize price
+movements into three states DS (ΔS) given by the sign of the forward price change.
+
+DS = NaN(size(S));
+shiftS = S(dS+1:end);
+DS(1:end-dS) = sign(shiftS-S(1:end-dS));
+
+Visualize the discretized data.
+
+figure
+
+subplot(3,1,1)
+hold on
+plot(t,sI,'c','LineWidth',2)
+for i = 2:numBins
+    yline(binEdges(i),'b--');
+end
+hold off
+xlim(timeRange)
+ylim([-1 1])
+yticks(binEdges)
+title("Imbalance Index (Smoothed)")
+grid on
+
+subplot(3,1,2)
+plot(t,rho,'co','MarkerSize',3)
+xlim(timeRange)
+ylim([1 numBins])
+yticks(1:numBins)
+ylabel("\rho")
+title("Imbalance Index (Discretized)")
+grid on
+
+subplot(3,1,3)
+plot(t,DS,'ro','MarkerSize',3)
+xlim(timeRange)
+ylim([-1 1])
+yticks([-1 0 1])
+ylabel("\DeltaS")
+title("Price Movement")
+grid on
+
+Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development
+
+2-63

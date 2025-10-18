@@ -1,0 +1,32 @@
+MPFE: 2.4689e+05
+     EffEE: [37×1 double]
+       EPE: 3.1609e+04
+    EffEPE: 5.6178e+04
+
+Visualize the expected exposures and the new trade's incremental exposure. Use the incremental
+exposure to compute the incremental credit value adjustment (CVA) charge.
+
+figure;
+subplot(2,1,1)
+simulationDates = datetime(simulationDates,"ConvertFrom","datenum");
+plot(simulationDates,profilesBefore.EE,...
+    simulationDates,profilesAfter.EE);
+grid on;
+legend({'EE before','EE with trade'})
+xtickformat('MMMyy');
+title('Expected Exposure Before and After New Trade');
+ylabel('Exposure ($)')
+
+subplot(2,1,2)
+incrementalEE = profilesAfter.EE - profilesBefore.EE;
+plot(simulationDates,incrementalEE);
+grid on;
+legend('Incremental EE')
+xtickformat('MMMyy');
+ylabel('Exposure ($)')
+xlabel('Simulation Dates')
+
+15
+Functions
+
+15-652

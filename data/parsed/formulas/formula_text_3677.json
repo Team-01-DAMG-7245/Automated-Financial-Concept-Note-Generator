@@ -1,0 +1,12 @@
+{
+  "page": 2074,
+  "original_text": "PreviousCouponDate = datetime\n   30-Dec-1996",
+  "ocr_text": "PreviousCouponDate=datetime\n30-Dec-1996",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 664.79,
+    "x1": 247.13,
+    "y1": 686.05
+  },
+  "confidence": "high"
+}

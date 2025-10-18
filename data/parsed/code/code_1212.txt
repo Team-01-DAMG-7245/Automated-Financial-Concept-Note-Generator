@@ -1,0 +1,5 @@
+Page 1237
+================================================================================
+
+Furthermore, the ts2func function performs a zero-order-hold (ZOH) piecewise constant
+interpolation. The notion of piecewise constant parameters is pervasive throughout the SDE

@@ -1,0 +1,61 @@
+Forward starting date of coupon payments after the Settle date, specified as the comma-separated
+pair consisting of 'StartDate' and a scalar or a NBONDS-by-1 vector using a datetime array, string
+array, or date character vectors.
+
+Note To make an instrument forward starting, specify StartDate as a future date.
+
+If you do not specify a StartDate, the effective start date is the Settle date.
+
+To support existing code, cfamounts also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Face — Face value of bond
+100 (default) | numeric
+
+Face value of the bond, specified as the comma-separated pair consisting of 'Face' and a scalar or a
+NBONDS-by-1 vector.
+
+Note CouponRate and Face can change over the life of the bond. Schedules for CouponRate and
+Face can be specified with an NBONDS-by-1 cell array where each element is a NumDates-by-2 matrix
+or cell array, where the first column is dates (serial date numbers or character vectors) and the
+second column is associated rates. The date indicates the last day that the coupon rate or face value
+is valid. This means that the corresponding CouponRate and Face value applies "on or before" the
+specified ending date.
+
+When the corresponding Face value is used to compute the coupon cashflow on the specified ending
+date. Three things happen on the specified ending date:
+
+1
+The last coupon corresponding to the current Face value is paid.
+
+2
+The principal differential (between the current and the next Face value) is paid.
+
+3
+The date marks the beginning of the period with the next Face value, for which the cashflow
+does not occur until later.
+
+Data Types: double | cell | char
+
+AdjustCashFlowsBasis — Adjusts cash flows according to accrual amount based on actual
+period day count
+false (default) | logical with a value of true or false
+
+Adjusts cash flows according to the accrual amount based on the actual period day count, specified as
+the comma-separated pair consisting of 'AdjustCashFlowsBasis' and a scalar or a NBONDS-by-1
+vector.
+
+Data Types: logical
+
+BusinessDayConvention — Business day conventions
+'actual' (default) | character vector with values'actual', 'follow', 'modifiedfollow',
+'previous'or 'modifiedprevious'
+
+Business day conventions, specified as the comma-separated pair consisting of
+'BusinessDayConvention' and a scalar or NBONDS-by-1 cell array of character vectors of business
+
+cfamounts
+
+15-675

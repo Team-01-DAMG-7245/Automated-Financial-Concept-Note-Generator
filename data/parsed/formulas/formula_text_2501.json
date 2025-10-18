@@ -1,0 +1,12 @@
+{
+  "page": 1281,
+  "original_text": "commodityTypes = categorical(repmat(\"Soft\", 1, width(Prices)));\nhardClasses = categorical([\"Energy\", \"Fertilizers\", \"Metals and Minerals\", \"Precious Metals\"]);\nhardIdx = ismember(commodityClasses, hardClasses);\ncommodityTypes(hardIdx) = \"Hard\";",
+  "ocr_text": "commodityTypes=categorical(repmat(Soft,1,width(Prices)));\nhardClasses=categorical([Energy,Fertilizers,MetalsandMinerals,PreciousMetals]);\nhardIdx=ismember(commodityClasses,hardClasses);\n\ncommodityTypes(hardIdx)=Hard;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.24,
+    "x1": 604.75,
+    "y1": 233.11
+  },
+  "confidence": "high"
+}

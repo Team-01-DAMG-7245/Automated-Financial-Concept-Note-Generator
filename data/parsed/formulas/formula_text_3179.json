@@ -1,0 +1,12 @@
+{
+  "page": 1707,
+  "original_text": "For a given trial, each row of Paths is the transpose of the state vector Xt at time t. When the input\nflag StorePaths = False, simByTransition returns Paths as an empty matrix.",
+  "ocr_text": "Foragiventrial,eachrowofPathsisthetransposeofthestatevectorX;attimet.Whentheinput\nflagStorePaths=False,simByTransitionreturnsPathsasanemptymatrix.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 291.12,
+    "x1": 546.39,
+    "y1": 314.75
+  },
+  "confidence": "high"
+}

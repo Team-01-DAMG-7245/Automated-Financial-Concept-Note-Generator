@@ -1,0 +1,12 @@
+{
+  "page": 1471,
+  "original_text": "dXt = F(t, Xt)dt + G(t, Xt)dWt\n (15-3)",
+  "ocr_text": "dX;=F(t,Xpdt+G(t,X)dW; (15-3)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 339.24,
+    "x1": 558.0,
+    "y1": 352.99
+  },
+  "confidence": "high"
+}

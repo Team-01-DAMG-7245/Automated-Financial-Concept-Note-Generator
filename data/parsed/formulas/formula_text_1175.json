@@ -1,0 +1,12 @@
+{
+  "page": 603,
+  "original_text": "Total_Outperformance_Train_Sell = sum(IS_TWAP_Horizon_Train_Sell - IS_Agent_Horizon_Train_Sell);\ntable(Total_Outperformance_Train_Sell)",
+  "ocr_text": "Total_OutperformanceTrain_Sell=sum(IS_TWAP_HorizonTrain_Sell-IS_Agent_HorizonTrain_Sell);\ntable(Total_Outperformance_Train_Sell)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 499.02,
+    "x1": 610.13,
+    "y1": 520.28
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 110,
+  "original_text": "Q = P./PCond;",
+  "ocr_text": "Q=P./PCond;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 263.52,
+    "x1": 160.44,
+    "y1": 273.99
+  },
+  "confidence": "high"
+}

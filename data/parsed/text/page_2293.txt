@@ -1,0 +1,39 @@
+estimateMaxSharpeRatio
+
+Estimate efficient portfolio to maximize Sharpe ratio for Portfolio object
+
+Syntax
+
+[pwgt,pbuy,psell] = estimateMaxSharpeRatio(obj)
+[pwgt,pbuy,psell] = estimateMaxSharpeRatio( ___ ,Name,Value)
+
+Description
+
+[pwgt,pbuy,psell] = estimateMaxSharpeRatio(obj) estimates efficient portfolio to
+maximize Sharpe ratio for Portfolio object. For details on the workflow, see “Portfolio Object
+Workflow” on page 4-18.
+
+[pwgt,pbuy,psell] = estimateMaxSharpeRatio( ___ ,Name,Value) adds optional name-
+value pair arguments.
+
+Examples
+
+Estimate Efficient Portfolio that Maximizes the Sharpe Ratio for a Portfolio Object
+
+Estimate the efficient portfolio that maximizes the Sharpe ratio. The estimateMaxSharpeRatio
+function maximizes the Sharpe ratio among portfolios on the efficient frontier. This example uses the
+default 'direct' method to estimate the maximum Sharpe ratio. For more information on the
+'direct' method, see “Algorithms” on page 15-996.
+
+p = Portfolio('AssetMean',[0.3, 0.1, 0.5], 'AssetCovar',...
+[0.01, -0.010,  0.004; -0.010,  0.040, -0.002;  0.004, -0.002,  0.023]);
+p = setDefaultConstraints(p);
+plotFrontier(p, 20);
+weights = estimateMaxSharpeRatio(p);
+[risk, ret] = estimatePortMoments(p, weights);
+hold on
+plot(risk,ret,'*r');
+
+estimateMaxSharpeRatio
+
+15-987

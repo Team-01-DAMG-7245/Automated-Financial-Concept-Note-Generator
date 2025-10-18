@@ -1,0 +1,45 @@
+Machine Learning for Statistical Arbitrage III: Training, Tuning,
+and Prediction
+
+This example uses Bayesian optimization to tune hyperparameters in the algorithmic trading model,
+supervised by the end-of-day return. It is part of a series of related examples on machine learning for
+statistical arbitrage (see “Machine Learning Applications”).
+
+Load LOBVars.mat, the preprocessed LOB data set of the NASDAQ security INTC, which is included
+with the Financial Toolbox™ documentation.
+
+load LOBVars
+
+The data set contains the following information for each order: the arrival time t (seconds from
+midnight), level 1 asking price MOAsk, level 1 bidding price MOBid, midprice S, and imbalance index
+I.
+
+This example includes several supporting functions. To view them, open the example, and then
+expand the LOBSupportingFiles folder in the Current Folder pane.
+
+Access the files by adding them to the search path.
+
+addpath("LOBSupportingFiles")
+
+Trading Strategy
+
+The trading matrix Q contains probabilities of future price movements, given current and previous
+states rho of the limit order book (LOB) imbalance index I and the latest observed direction in prices
+DS.
+
+View the supporting function tradeOnQ.m, which implements a simple trading strategy based on the
+pattern in Q.
+
+function cash = tradeOnQ(Data,Q,n,N)
+
+% Reference: Machine Learning for Statistical Arbitrage
+%            Part II: Feature Engineering and Model Development
+   
+% Data
+
+t = Data.t;
+MOBid = Data.MOBid;
+
+Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction
+
+2-69

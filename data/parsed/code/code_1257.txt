@@ -1,0 +1,9 @@
+Page 1297
+================================================================================
+
+for k = 1:numComponents
+    nexttile
+    plot( InferredVolatility.Date, scores(:, k ) )
+    title( "Component: " + k )
+    grid( "on" )
+end

@@ -1,0 +1,5 @@
+Page 1117
+================================================================================
+
+Now that you have derived the zero curve, convert it to a sequence of discount factors with the term
+structure function zero2disc.

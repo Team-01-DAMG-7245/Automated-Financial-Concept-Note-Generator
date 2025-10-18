@@ -1,0 +1,26 @@
+assumed to give the customer a total of 238 points (this is a fictitious example on an arbitrary scoring
+scale).
+
+Technically, to determine the credit scorecard points, start out by selecting a set of potential
+predictors (column 1 in the next figure). Then, bin data into groups (for example, ages ‘Up to 25’, ’25
+to 40’ (column 2 in the figure). This grouping helps to distinguish between “good” and “bad”
+customers. The Weight of Evidence (WOE) is a way to measure how well the distribution of “good”
+and “bad” are separated across bins or groups for each individual predictor (column 3 in the figure).
+By fitting a logistic regression model, you can identify which predictors, when put together, do a
+better job distinguishing between “good” and “bad” customers. The model is summarized by its
+coefficients (column 4 in the figure). Finally, the combination of WOE’s and model coefficients
+(commonly scaled, shifted, and rounded) make up the scorecard points (column 5 in the figure).
+
+Credit Scorecard Development Process
+
+1
+Data gathering and preparation phase
+
+This includes data gathering and integration, such as querying, merging, aligning. It also
+includes treatment of missing information and outliers. There is a prescreening step based on
+reports of association measures between the predictors and the response variable. Finally, there
+
+8
+Credit Risk Analysis
+
+8-50

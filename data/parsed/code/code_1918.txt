@@ -1,0 +1,6 @@
+Page 1541
+================================================================================
+
+The rebalanceFcn function is called by the backtestEngine object each time the strategy must be
+rebalanced as specified in the RebalanceFrequency name-value argument. The backtestEngine
+object calls the rebalanceFcn function with the following arguments:

@@ -1,0 +1,12 @@
+{
+  "page": 1337,
+  "original_text": "h = attributionsChart( ___ ,Name=Value) adds optional name-value arguments.",
+  "ocr_text": "h=attributionsChart(,Name=Value)addsoptionalname-valuearguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 349.65,
+    "x1": 491.25,
+    "y1": 361.28
+  },
+  "confidence": "high"
+}

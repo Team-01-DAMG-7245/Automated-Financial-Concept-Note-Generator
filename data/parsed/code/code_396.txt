@@ -1,0 +1,5 @@
+Page 415
+================================================================================
+
+function new_weights = equalWeightFcn(current_weights, pricesTT)
+% Equal-weighted portfolio allocation

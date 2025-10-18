@@ -1,0 +1,12 @@
+{
+  "page": 689,
+  "original_text": "p = PortfolioCVaR;\nG = blkdiag(true(1,5), true(1,7), true(1,6), true(1,4), true(1,5), true(1,3));\np = setGroups(p, G, 0, 0.25);\ndisp(p.NumAssets)\ndisp(p.GroupMatrix)\ndisp(p.LowerGroup)\ndisp(p.UpperGroup)",
+  "ocr_text": "p=PortfolioCvaR;\nG=blkdiag(true(1,5),true(1,7),true(1,6),true(1,4),true(1,5),true(1,3));\np=setGroups(p,G,0,0.25);\n\ndisp(p.NumAssets)\n\ndisp(p.GroupMatrix)\n\ndisp(p.LowerGroup)\n\ndisp(p.UpperGroup)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 543.93,
+    "x1": 390.52,
+    "y1": 597.46
+  },
+  "confidence": "high"
+}

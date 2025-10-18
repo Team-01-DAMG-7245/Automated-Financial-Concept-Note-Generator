@@ -1,0 +1,12 @@
+{
+  "page": 2443,
+  "original_text": "Date = lbusdate(2001, 11,[],[],'datetime')",
+  "ocr_text": "Date=lbusdate(2001,11,[],[],datetime)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 667.36,
+    "x1": 317.58,
+    "y1": 677.82
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 957,
+  "original_text": "tmTTC = transprobbytotals(totalsByRtg);\nExample_DisplayTransitions(tmTTC,[], ...\n   {'AAA','AA','A','BBB','BB','B','CCC'}, ...\n   {'AAA','AA','A','BBB','BB','B','CCC','D','NR'})",
+  "ocr_text": "tmTTC_=transprobbytotals(totalsByRtg);\n\nExample_DisplayTransitions(tmTTC,[],...\n{AAA,AA,A,BBB,BB,B,CCC},...\n{AAA,AA,A,BBB,BB,B,CCC,D,NR})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 360.92,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

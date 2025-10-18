@@ -1,0 +1,62 @@
+Object Functions
+simByEuler
+Simulate Merton jump diffusion sample paths by Euler approximation
+simBySolution
+Simulate approximate solution of diagonal-drift Merton jump diffusion process
+simByMilstein
+Simulate diagonal diffusion Merton sample paths by Milstein approximation
+simByMilstein2
+Simulate diagonal diffusion Merton sample paths by second order Milstein
+approximation
+simulate
+Simulate multivariate stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, SDEMRD, Merton, or Bates models
+
+Examples
+
+Create merton Object
+
+Merton jump diffusion models allow you to simulate sample paths of NVARS state variables driven by
+NBROWNS Brownian motion sources of risk and NJumps compound Poisson processes representing the
+arrivals of important events over NPeriods consecutive observation periods. The simulation
+approximates continuous-time merton stochastic processes.
+
+Create a merton object.
+
+AssetPrice = 80;
+            Return = 0.03;
+            Sigma = 0.16;
+            JumpMean = 0.02;
+            JumpVol = 0.08;
+            JumpFreq = 2;
+            
+            mertonObj = merton(Return,Sigma,JumpFreq,JumpMean,JumpVol,...
+                'startstat',AssetPrice)
+
+mertonObj = 
+   Class MERTON: Merton Jump Diffusion
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 80
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.16
+         Return: 0.03
+       JumpFreq: 2
+       JumpMean: 0.02
+        JumpVol: 0.08
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes, as follows.
+
+15
+Functions
+
+15-208

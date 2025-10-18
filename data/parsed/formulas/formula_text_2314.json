@@ -1,0 +1,12 @@
+{
+  "page": 1202,
+  "original_text": "Xt + Δt = Xt + F(t, Xt)Δt + G(t, Xt) ΔtZ(t, Xt)",
+  "ocr_text": "Xpaat=XptFlt,XpAt+G(t,X)VAtZ(t,X))",
+  "bbox": {
+    "x0": 112.19,
+    "y0": 242.49,
+    "x1": 308.76,
+    "y1": 256.23
+  },
+  "confidence": "high"
+}

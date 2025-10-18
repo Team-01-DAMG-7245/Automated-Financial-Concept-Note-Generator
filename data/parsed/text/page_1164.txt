@@ -1,0 +1,13 @@
+figure
+autocorr(residuals(:,index).^2)
+title('Sample ACF of Squared Standardized Residuals')
+
+Estimate Semiparametric CDFs
+
+Using the standardized iid residuals from the Filter Returns for Equity Index on page 10-62 section,
+estimate the empirical CDF of each index with a Gaussian kernel. Specifically, estimate the empirical
+
+10
+Solving Sample Problems
+
+10-66

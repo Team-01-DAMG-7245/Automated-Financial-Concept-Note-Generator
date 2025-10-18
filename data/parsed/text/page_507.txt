@@ -1,0 +1,34 @@
+% Compare percent contribution to portofolio risk
+boxchart(riskContribution)
+xticklabels(varNames)
+title('Percent Contributions to Portfolio Risk')
+xlabel('Strategies')
+ylabel('PCRs')
+
+This boxchart shows the percent risk contribution of each asset to the total portfolio risk. The
+percent risk contribution is computed as
+
+PRC i = xi Σx i
+xTΣx
+
+As expected, all the ERC portfolio assets have the same risk contribution to the portfolio. As
+discussed after the weights distribution plot, if the problem had other types of constraints, the risk
+contribution of the ERC portfolio would not be the same for all assets, but they would have the lowest
+variance. Also, the behavior shown in this picture is similar to the behavior shown by the weights
+distribution.
+
+% Compute and plot the correlation of each individual asset to its
+% portfolio.
+corrAsset2Port = correlationInfo(p.AssetCovar, ...
+    weightsTable.Variables);
+% Boxchart of assets to portfolio correlations
+figure
+boxchart(corrAsset2Port)
+xticklabels(varNames)
+title('Correlation of Individual Assets to Their Portfolio')
+xlabel('Strategies')
+ylabel('Correlation')
+
+Diversify Portfolios Using Custom Objective
+
+4-339

@@ -1,0 +1,17 @@
+Page 616
+================================================================================
+
+function outIS = endingInventoryIS(ArrivalPrice,ExecutedPrices,TradedVolumes,BuyTrade)
+% EndingInventoryIS function for Implementation Shortfall given ending inventory constraints
+%   This function computes the Implementation Shortfall (IS) under the
+%   assumption of ending inventory constraints (i.e. no opportunity cost).
+%
+%   For a Sell trade, the constraint is to have zero ending inventory
+%   assuming successful liquidation of all shares.
+%
+%   For a Buy trade, the constraint is to have full ending inventory
+%   assuming successful purchase of all shares.
+%
+%   Inputs:
+%
+%      ArrivalPrice - Scalar price immediately before trade execution

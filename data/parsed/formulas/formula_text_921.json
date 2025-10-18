@@ -1,0 +1,12 @@
+{
+  "page": 500,
+  "original_text": "X =\nx\nx ≥0, ∑\ni = 1",
+  "ocr_text": "n\nx={x[xeo, Sx\ni=1",
+  "bbox": {
+    "x0": 112.19,
+    "y0": 694.59,
+    "x1": 200.29,
+    "y1": 720.88
+  },
+  "confidence": "high"
+}

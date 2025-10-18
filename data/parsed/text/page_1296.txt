@@ -1,0 +1,38 @@
+Looking at the Maximum Factor Loadings heatmap, you can see:
+
+•
+Coffee, tea, groundnut oil, palm oil, bananas, and wood have a strong association with latent
+factor 1.
+
+•
+Coconut oil, soybeans, maize, rice, wheat, chicken, cotton, and rubber have a strong association
+with latent factor 2.
+
+•
+Latent factor 3 is associated with cocoa, soybean oil, soybean meal, oranges, beef, shrimps, sugar,
+and tobacco.
+
+•
+The strongest negative association in the loadings matrix is chicken with latent factor 3. Other
+loadings for chicken are relatively low, indicating that chicken volatility is an outlier in this data
+set, as you can also observe by using other methods.
+
+Estimate Model-Based Volatility
+
+One disadvantage of using the exponentially weighted moving average for volatility estimation is that
+it does not provide volatility forecasts. However, you can use a model-based approach to create
+volatility forecasts. This example uses arima (Econometrics Toolbox) and garch (Econometrics
+Toolbox) time-series models.
+
+Compute Principal Components of Inferred Volatility
+
+First, use normalize on the volatility series and store the mean and standard deviation for later use.
+
+[normalizedVolatility, mu, sigma] = normalize( InferredVolatility.Variables, "zscore" );
+
+Next, compute the principal components by using pca.
+
+14
+Stochastic Differential Equations
+
+14-104

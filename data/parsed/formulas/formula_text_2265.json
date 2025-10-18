@@ -1,0 +1,12 @@
+{
+  "page": 1165,
+  "original_text": "tails = cell(nIndices,1);  % Cell array of Pareto tail objects",
+  "ocr_text": "tails=cell(nIndices,1);CellarrayofParetotailobjects",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 286.43,
+    "x1": 425.92,
+    "y1": 296.89
+  },
+  "confidence": "high"
+}

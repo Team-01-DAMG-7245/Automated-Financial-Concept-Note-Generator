@@ -1,0 +1,5 @@
+Page 1472
+================================================================================
+
+DiffusionRate is a user-defined diffusion-rate function and represents the parameter G, specified
+as a matrix or object of class diffusion.

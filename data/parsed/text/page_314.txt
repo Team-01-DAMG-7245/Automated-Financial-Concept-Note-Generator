@@ -1,0 +1,57 @@
+Error in Portfolio/estimateFrontier (line 63)
+    [A, b, f0, f, H, g, lb] = mv_optim_transform(obj);
+
+or
+
+Error using mv_optim_transform (line 238)
+Cannot obtain finite lower bounds for specified portfolio set.
+
+Error in Portfolio/estimateFrontier (line 63)
+    [A, b, f0, f, H, g, lb] = mv_optim_transform(obj);
+
+Since the portfolio optimization tools require a bounded portfolio set, these errors (and similar
+errors) can occur if your portfolio set is either empty and, if nonempty, unbounded. Specifically, the
+portfolio optimization algorithm requires that your portfolio set have at least a finite lower bound.
+The best way to deal with these problems is to use the validation functions in “Validate the Portfolio
+Problem for Portfolio Object” on page 4-94. Specifically, use estimateBounds to examine your
+portfolio set, and use checkFeasibility to ensure that your initial portfolio is either feasible and, if
+infeasible, that you have sufficient turnover to get from your initial portfolio to the portfolio set.
+
+Tip To correct this problem, try solving your problem with larger values for turnover or tracking-
+error and gradually reduce to the value that you want.
+
+solveContinuousCustomObjProb or solveMICustomObjProb Errors
+
+These errors can occur if the portfolio set is empty or unbounded. If the portfolio set is empty, the
+error states that the problem is infeasible. The best way to deal with these problems is to use the
+validation functions in “Validate the Portfolio Problem for Portfolio Object” on page 4-94. Specifically,
+use estimateBounds to examine your portfolio set, and use checkFeasibility to ensure that
+your initial portfolio is either feasible or, if infeasible, that you have sufficient turnover to get from
+your initial portfolio to the portfolio set.
+
+Efficient Portfolios Do Not Make Sense
+
+If you obtain efficient portfolios that do not seem to make sense, this can happen if you forget to set
+specific constraints or you set incorrect constraints. For example, if you allow portfolio weights to fall
+between 0 and 1 and do not set a budget constraint, you can get portfolios that are 100% invested in
+every asset. Although it may be hard to detect, the best thing to do is to review the constraints you
+have set with display of the object. If you get portfolios with 100% invested in each asset, you can
+review the display of your object and quickly see that no budget constraint is set. Also, you can use
+estimateBounds and checkFeasibility to determine if the bounds for your portfolio set make
+sense and to determine if the portfolios you obtained are feasible relative to an independent
+formulation of your portfolio set.
+
+Efficient Frontiers Do Not Make Sense
+
+If you obtain efficient frontiers that do not seem to make sense, this can happen for some cases of
+mean and covariance of asset returns. It is possible for some mean-variance portfolio optimization
+problems to have difficulties at the endpoints of the efficient frontier. It is rare for standard portfolio
+problems, but this can occur. For example, this can occur when using unusual combinations of
+turnover constraints and transaction costs. Usually, the workaround of setting the hidden property
+enforcePareto produces a single portfolio for the entire efficient frontier, where any other
+solutions are not Pareto optimal (which is what efficient portfolios must be).
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-146

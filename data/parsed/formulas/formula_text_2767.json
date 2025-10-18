@@ -1,0 +1,12 @@
+{
+  "page": 1407,
+  "original_text": "GBM = gbm(Return,Sigma)\nGBM = gbm( ___ ,Name,Value)",
+  "ocr_text": "GBM_=gbm(Return,Sigma)\nGBM=gbm(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 510.59,
+    "x1": 244.52,
+    "y1": 534.22
+  },
+  "confidence": "high"
+}

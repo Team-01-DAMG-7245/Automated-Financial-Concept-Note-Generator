@@ -1,0 +1,58 @@
+Tolerance — Convergence tolerance
+1.0e-8 (default) | numeric
+
+(Optional) Convergence tolerance for the ECM algorithm, specified as a numeric. If Tolerance ≤ 0,
+perform maximum iterations specified by MaxIterations and do not evaluate the objective function
+at each step unless in display mode.
+
+Data Types: double
+
+Mean0 — Estimate for the mean
+[] (default) | matrix
+
+(Optional) Estimate for the mean, specified as an NUMSERIES-by-1 column vector. If you leave Mean0
+unspecified ([]), the method specified by InitMethod is used. If you specify Mean0, you must also
+specify Covar0.
+
+Data Types: double
+
+Covar0 — Estimate for the covariance
+[] (default) | matrix
+
+(Optional) Estimate for the covariance, specified as an NUMSERIES-by-NUMSERIES matrix, where the
+input matrix must be positive-definite. If you leave Covar0 unspecified ([]), the method specified by
+InitMethod is used. If you specify Covar0, you must also specify Mean0.
+
+Data Types: double
+
+Output Arguments
+
+Mean — Maximum likelihood parameter estimates for mean of Data
+vector
+
+Maximum likelihood parameter estimates for the mean of the Data using ECM algorithm, returned as
+a NUMSERIES-by-1 column vector.
+
+Covariance — Maximum likelihood parameter estimates for covariance of Data
+matrix
+
+Maximum likelihood parameter estimates for the covariance of the Data using ECM algorithm,
+returned as a NUMSERIES-by-NUMSERIES matrix.
+
+Algorithms
+
+Model
+
+The general model is
+
+Z ∼N Mean, Covariance ,
+
+where each row of Data is an observation of Z.
+
+Each observation of Z is assumed to be iid (independent, identically distributed) multivariate normal,
+and missing values are assumed to be missing at random (MAR). See Little and Rubin [1] for a
+precise definition of MAR.
+
+ecmnmle
+
+15-897

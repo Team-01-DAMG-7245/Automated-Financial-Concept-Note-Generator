@@ -1,0 +1,4 @@
+Page 137
+================================================================================
+
+The rebalance function directs the backtest framework to perform the following trades:

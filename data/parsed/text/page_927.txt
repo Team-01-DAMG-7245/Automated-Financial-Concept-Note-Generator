@@ -1,0 +1,64 @@
+dataNR2 = dataNR;
+dataNR2([2 7],:) = [];
+
+head(dataNR2,12)
+
+ID              Date          Rating 
+    ____________    _______________    _______
+
+{'00010283'}    {'10-Nov-1984'}    {'CCC'}
+    {'00010283'}    {'29-Jun-1988'}    {'CCC'}
+    {'00010283'}    {'12-Dec-1991'}    {'D'  }
+    {'00013326'}    {'09-Feb-1985'}    {'A'  }
+    {'00013326'}    {'24-Feb-1994'}    {'AA' }
+    {'00014413'}    {'23-Dec-1982'}    {'B'  }
+    {'00014413'}    {'20-Apr-1988'}    {'BB' }
+    {'00014413'}    {'16-Jan-1998'}    {'B'  }
+    {'00014413'}    {'25-Nov-1999'}    {'BB' }
+    {'00012126'}    {'17-Feb-1985'}    {'CCC'}
+    {'00012126'}    {'08-Mar-1989'}    {'D'  }
+    {'00011692'}    {'11-May-1984'}    {'BB' }
+
+If the 'NR' rows are removed, the transition matrices will be different. The probability of staying at
+'CCC' goes slightly up, and so does the probability of staying at 'AA'.
+
+The transition matrices will be different. The probability of staying at 'CCC' goes slightly up, and so
+does the probability of staying at 'AA'.
+
+[MatrixCohort2,TotalsCohort2] = transprob(dataNR2, ...
+   'Labels',RatingsLabels,...
+   'Algorithm','cohort');
+
+fprintf('Transition probability, cohort, if NR rows are removed from data:\n')
+
+Transition probability, cohort, if NR rows are removed from data:
+
+disp(array2table(MatrixCohort2,'VariableNames',RatingsLabels, ...
+   'RowNames',RatingsLabels))
+
+AAA         AA          A          BBB         BB          B          CCC          D
+           ________    _______    ________    _______    ________    ________    ________    ____
+
+AAA      93.135     5.9335     0.74557    0.15533    0.031066           0           0        
+    AA       1.7346     92.945       4.541    0.58468     0.15592           0           0    0.03
+    A       0.12683     2.9716      91.991     4.3124      0.4711    0.054358           0    0.07
+    BBB    0.021048    0.37887      5.0726     89.771      4.0413     0.46306    0.042096     0.2
+    BB     0.022099     0.1105     0.68508      6.232      88.376      3.6464     0.28729     0.6
+    B             0          0    0.076161    0.72353       7.997      86.215      2.7037      2
+    CCC           0          0           0    0.30888      1.8533      4.4788      81.004      12
+    D             0          0           0          0           0           0           0
+
+fprintf('Total transitions out of given rating, many more out of CCC and AA:\n')
+
+Total transitions out of given rating, many more out of CCC and AA:
+
+disp(array2table(TotalsCohort2.totalsVec,'VariableNames',RatingsLabels))
+
+AAA      AA      A      BBB      BB      B      CCC      D  
+    ____    ____    ____    ____    ____    ____    ____    ____
+
+3219    5131    5519    4751    4525    2626    1295    4050
+
+Estimation of Transition Probabilities
+
+8-9

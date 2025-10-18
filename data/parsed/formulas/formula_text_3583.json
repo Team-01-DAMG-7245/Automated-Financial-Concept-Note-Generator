@@ -1,0 +1,12 @@
+{
+  "page": 2022,
+  "original_text": "Settle = datetime(2003,7,1) %datenum('01-Jul-2003');",
+  "ocr_text": "Settle=datetime(2003,7,1)sdatenum(01-Jul-2003);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 433.67,
+    "x1": 371.75,
+    "y1": 444.14
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1539,
+  "original_text": "strategy = backtestStrategy(name,rebalanceFcn) creates a backtestStrategy object.",
+  "ocr_text": "strategy=backtestStrategy(name,rebalanceFcn)createsabacktestStrategyobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 552.38,
+    "x1": 544.43,
+    "y1": 564.01
+  },
+  "confidence": "high"
+}

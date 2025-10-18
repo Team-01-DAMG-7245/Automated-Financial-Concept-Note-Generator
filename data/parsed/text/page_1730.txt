@@ -1,0 +1,52 @@
+accrfrac
+
+Fraction of coupon period before settlement
+
+Syntax
+
+Fraction = accrfrac(Settle,Maturity)
+Fraction = accrfrac( ___ ,Period,Basis,EndMonthRule,IssueDate,FirstCouponDate,
+LastCouponDate)
+
+Description
+
+Fraction = accrfrac(Settle,Maturity) returns the fraction of the coupon period before
+settlement.
+
+Use accrfrac for computing accrued interest. accrfrac calculates accrued interest for bonds with
+regular or odd first or last coupon periods.
+
+Required input arguments must be number of bonds, NUMBONDS-by-1 or 1-by-NUMBONDS, conforming
+vectors or scalars.
+
+Fraction = accrfrac( ___ ,Period,Basis,EndMonthRule,IssueDate,FirstCouponDate,
+LastCouponDate) returns the fraction of the coupon period before settlement with optional inputs.
+
+Optional input arguments must be either NUMBONDS-by-1 or 1-by-NUMBONDS conforming vectors,
+scalars, or empty matrices.
+
+Examples
+
+Find Accrued Interest for a Bond
+
+This example shows how to find the accrued interest for given bond data.
+
+Settle = datetime(1997,3,14);
+Maturity = [datetime(2000,11,30) datetime(2000,12,31) datetime(2001,1,31)];
+Period = 2;
+Basis = 0;
+EndMonthRule = 1;
+
+Fraction = accrfrac(Settle, Maturity, Period, Basis,... 
+EndMonthRule)
+
+Fraction = 3×1
+
+0.5714
+    0.4033
+    0.2320
+
+15
+Functions
+
+15-424

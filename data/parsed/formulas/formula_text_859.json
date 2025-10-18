@@ -1,0 +1,12 @@
+{
+  "page": 478,
+  "original_text": "% For comparison, invest in an equal-weighted (buy low and sell high) strategy.\nequalWeightFcn = @(current_weights,prices,signal) ones(size(current_weights)) / numel(current_wei\nEqualWeightStrategy = backtestStrategy('EqualWeight',equalWeightFcn, ...\n    'TransactionCosts',tradingCosts, ...\n    'LookbackWindow',0);",
+  "ocr_text": "SForcomparison,investinanequal-weighted(buylowandsellhigh)strategy.\nequalWeightFcn=Q(current_weights,prices,signal)ones(size(current_weights))/numel(current_we.\nEqualWeightStrategy=backtestStrategy(EqualWeight,equalWeightFcn,...\nTransactionCosts,tradingCosts,...\nLookbackWindow,0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 466.44,
+    "x1": 615.55,
+    "y1": 520.11
+  },
+  "confidence": "high"
+}

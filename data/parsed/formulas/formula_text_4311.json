@@ -1,0 +1,12 @@
+{
+  "page": 2440,
+  "original_text": "h = kagi(ax,Data) adds an optional argument for ax.",
+  "ocr_text": "h=kagi(ax,Data)addsanoptionalargumentforax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 277.48,
+    "x1": 351.67,
+    "y1": 289.11
+  },
+  "confidence": "high"
+}

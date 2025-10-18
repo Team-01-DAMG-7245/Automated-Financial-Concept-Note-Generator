@@ -1,0 +1,58 @@
+•
+The set of feasible portfolios must be a nonempty compact set, where a compact set is closed and
+bounded. You can satisfy this condition using an extensive collection of properties that define
+different types of constraints to form a set of feasible portfolios. Since such sets must be bounded,
+either explicit or implicit constraints can be imposed and several tools, such as the
+estimateBounds function, provide ways to ensure that your problem is properly formulated.
+
+Although the general sufficient conditions for MAD portfolio optimization go beyond these
+conditions, the PortfolioMAD object handles all these additional conditions.
+
+PortfolioMAD Function Examples
+
+If you create a PortfolioMAD object, p, with no input arguments, you can display it using disp:
+
+p = PortfolioMAD;
+disp(p)
+
+PortfolioMAD with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                  NumScenarios: []
+                          Name: []
+                     NumAssets: []
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: []
+                    UpperBound: []
+                   LowerBudget: []
+                   UpperBudget: []
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: []
+
+The approaches listed provide a way to set up a portfolio optimization problem with the
+PortfolioMAD object. The custom set functions offer additional ways to set and modify collections of
+properties in the PortfolioMAD object.
+
+Creating the PortfolioMAD Object
+
+6-23

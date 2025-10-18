@@ -1,0 +1,12 @@
+{
+  "page": 166,
+  "original_text": "p = Portfolio('AssetMean', ExpReturn, 'AssetCovar', ExpCovariance);\np = p.setInequality(ActiveConSet(:,1:end-1), ActiveConSet(:,end));\n[ActiveRisk, ActiveReturn] = p.plotFrontier(21);",
+  "ocr_text": "p=Portfolio(AssetMean,ExpReturn,AssetCovar,ExpCovariance);\np=p.setInequality(ActiveConSet(:,1:end-1),ActiveConSet(:,end));\n[ActiveRisk,ActiveReturn]=p.plotFrontier(21);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 518.38,
+    "x1": 453.03,
+    "y1": 550.45
+  },
+  "confidence": "high"
+}

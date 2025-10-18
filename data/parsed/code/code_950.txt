@@ -1,0 +1,10 @@
+Page 947
+================================================================================
+
+inSample = 4:nYears-1;
+T = length(inSample);
+varNames = {'AGE','CPF','SPR'};
+X = [AGE CPF SPR];
+X = X(inSample,:);
+y = DefRate(inSample+1); % DefaultRate, year t+1
+stats = regstats(y,X);

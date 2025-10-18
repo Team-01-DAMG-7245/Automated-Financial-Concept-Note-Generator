@@ -1,0 +1,12 @@
+{
+  "page": 1278,
+  "original_text": "BrownianMotionCallPrice = f.CallPrice(strike, r/252)\nBrownianMotionPutPrice  = f.PutPrice (strike, r/252)",
+  "ocr_text": "BrownianMotionCallPrice=f.CallPrice(strike,_r/252)\nBrownianMotionPutPrice=f.PutPrice(strike,_r/252)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 452.4,
+    "x1": 371.73,
+    "y1": 473.67
+  },
+  "confidence": "high"
+}

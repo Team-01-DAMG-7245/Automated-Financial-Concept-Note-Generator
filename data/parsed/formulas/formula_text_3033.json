@@ -1,0 +1,12 @@
+{
+  "page": 1590,
+  "original_text": "% Use the rebalance function to set the initial weights. This might\n% or might not be possible for other strategies depending on the details of\n% the strategy logic.\ninitWeights = inverseVarianceFcn([],pricesTT(warmupRange,:));",
+  "ocr_text": "SUsetherebalancefunctiontosettheinitialweights.Thismight\nSormightnotbepossibleforotherstrategiesdependingonthedetailsof\nthestrategylogic.\ninitWeights=inverseVarianceFcn([],pricesTT(warmupRange,:));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 475.03,
+    "x1": 496.35,
+    "y1": 517.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2219,
+  "original_text": "ExpDrawdown = emaxdrawdown(Mu,Sigma,T) computes the expected maximum drawdown for a\nBrownian motion for each time period in T using the following equation:",
+  "ocr_text": "ExpDrawdown=emaxdrawdown(Mu,Sigma,T)computestheexpectedmaximumdrawdownfora\nBrownianmotionforeachtimeperiodinTusingthefollowingequation:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 240.68,
+    "x1": 549.73,
+    "y1": 264.31
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1025
+================================================================================
+
+for k = 1:length(PaymentDates)
+   fprintf('%s \t %5.4f \t %8.2f\n',datestr(PaymentDates(k)), ...

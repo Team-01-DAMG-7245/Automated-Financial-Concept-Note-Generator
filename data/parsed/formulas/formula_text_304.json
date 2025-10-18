@@ -1,0 +1,12 @@
+{
+  "page": 190,
+  "original_text": "p(i,j) = Portfolio(p(i,j), ... );",
+  "ocr_text": "p(i,j)_=Portfolio(p(i,j),...);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 677.19,
+    "x1": 268.79,
+    "y1": 687.65
+  },
+  "confidence": "high"
+}

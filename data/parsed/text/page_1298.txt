@@ -1,0 +1,30 @@
+Model Principal Components
+
+Rather than creating many separate time-series models for each soft commodity, you can take an
+efficient approach by building models for only the first few principal components. You can then back-
+transform forecasts from these models into the original domain.
+
+Create and fit an arima (Econometrics Toolbox) time-series model for the first principal component.
+
+firstComponent = scores(:, 1);
+
+firstComponentModel = arima( "ARLags", 1, ...
+    "MALags", 1, ...
+    "Distribution", "t", ...
+    "Variance", garch( 1, 1 ) );
+firstComponentModel = estimate( firstComponentModel, firstComponent );
+
+ARIMA(1,0,1) Model (t Distribution):
+ 
+                  Value      StandardError    TStatistic      PValue  
+                _________    _____________    __________    __________
+
+Constant    -0.063238       0.006214       -10.177      2.5191e-24
+    AR{1}         0.98215      0.0019302        508.82               0
+    MA{1}         0.15671       0.031714        4.9412      7.7628e-07
+    DoF            2.5091        0.24115        10.405       2.352e-25
+
+14
+Stochastic Differential Equations
+
+14-106

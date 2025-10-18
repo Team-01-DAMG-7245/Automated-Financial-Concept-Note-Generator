@@ -1,0 +1,55 @@
+ecmninit
+
+Initial mean and covariance
+
+Syntax
+
+[Mean,Covariance] = ecmninit(Data,InitMethod)
+[Mean,Covariance] = ecmninit( ___ ,InitMethod)
+
+Description
+
+[Mean,Covariance] = ecmninit(Data,InitMethod) creates initial mean and covariance
+estimates for the function ecmnmle.
+
+[Mean,Covariance] = ecmninit( ___ ,InitMethod) adds an optional argument for
+InitMethod.
+
+Examples
+
+Compute Initial Mean and Covariance
+
+This example shows how to compute the initial mean and covariance for five years of daily total
+return data for 12 computer technology stocks, with six hardware and six software companies
+
+load ecmtechdemo.mat
+
+The time period for this data extends from April 19, 2000 to April 18, 2005. The sixth stock in Assets
+is Google (GOOG), which started trading on August 19, 2004. So, all returns before August 20, 2004
+are missing and represented as NaNs. Also, Amazon (AMZN) had a few days with missing values
+scattered throughout the past five years.
+
+A naïve approach to the estimation of the mean and covariance for these 12 assets is to eliminate all
+days that have missing values for any of the 12 assets. Use the ecminit function with the
+'nanskip' option to do this.
+
+[NaNMean, NaNCovar] = ecmninit(Data,'nanskip')
+
+NaNMean = 12×1
+
+0.0054
+   -0.0006
+   -0.0006
+    0.0002
+   -0.0009
+    0.0042
+    0.0011
+   -0.0005
+    0.0002
+    0.0001
+    0.0009
+    0.0010
+
+ecmninit
+
+15-891

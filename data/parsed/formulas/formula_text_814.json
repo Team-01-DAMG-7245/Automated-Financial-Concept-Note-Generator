@@ -1,0 +1,12 @@
+{
+  "page": 465,
+  "original_text": "% Sort the assets for quasi-diagonalization. \nnLeafNodes = size(link,1) + 1;\nrootNodeId = 2*nLeafNodes - 1;\nsortedIdx = getLeafNodesInGroup(rootNodeId,link);\nheatmap(C(sortedIdx,sortedIdx), XData=sortedIdx, YData=sortedIdx);",
+  "ocr_text": "Sorttheassetsforquasi-diagonalization.\nnLeafNodes=size(link,1)+1;\n\nrootNodeId=2*nLeafNodes-1;\nsortedIdx=getLeafNodesInGroup(rootNodeld,link);\nheatmap(C(sortedIdx,sortedIdx),XData=sortedIdx,YData=sortedIdx);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 658.93,
+    "x1": 447.58,
+    "y1": 712.6
+  },
+  "confidence": "high"
+}

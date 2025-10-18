@@ -1,0 +1,12 @@
+{
+  "page": 1116,
+  "original_text": "Maturity   = datenum(char(BondData{:,1}));\nCouponRate = [BondData{:,2}]';\nPrices     = [BondData{:,3}]';\nPeriod     = 2; % semiannual coupons",
+  "ocr_text": "Maturity =datenum(char(BondData{:,1}));\nCouponRate=[BondData{:,2}];\n\nPrices =[BondData{:,3}];\n\nPeriod =2;*semiannual_coupons",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 623.67,
+    "x1": 317.55,
+    "y1": 666.54
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,59 @@
+0.0038
+   -0.0003
+   -0.0000
+   -0.0003
+   -0.0000
+   -0.0003
+    0.0004
+      ⋮
+
+ECMCovar = 12×12
+
+0.0012    0.0005    0.0006    0.0005    0.0005    0.0003    0.0005    0.0003    0.0006    0.0
+    0.0005    0.0024    0.0007    0.0006    0.0010    0.0004    0.0005    0.0003    0.0006    0.0
+    0.0006    0.0007    0.0013    0.0007    0.0007    0.0003    0.0006    0.0004    0.0008    0.0
+    0.0005    0.0006    0.0007    0.0009    0.0006    0.0002    0.0005    0.0003    0.0007    0.0
+    0.0005    0.0010    0.0007    0.0006    0.0016    0.0006    0.0005    0.0003    0.0006    0.0
+    0.0003    0.0004    0.0003    0.0002    0.0006    0.0022    0.0001    0.0002    0.0002    0.0
+    0.0005    0.0005    0.0006    0.0005    0.0005    0.0001    0.0009    0.0003    0.0005    0.0
+    0.0003    0.0003    0.0004    0.0003    0.0003    0.0002    0.0003    0.0005    0.0004    0.0
+    0.0006    0.0006    0.0008    0.0007    0.0006    0.0002    0.0005    0.0004    0.0011    0.0
+    0.0003    0.0004    0.0005    0.0004    0.0004    0.0001    0.0004    0.0003    0.0005    0.0
+    0.0005    0.0006    0.0008    0.0005    0.0007    0.0003    0.0005    0.0004    0.0007    0.0
+    0.0006    0.0012    0.0008    0.0007    0.0011    0.0016    0.0006    0.0004    0.0007    0.0
+      ⋮
+
+To evaluate the impact of the estimation error and, in particular, the effect of missing data, use
+ecmnstd to calculate standard errors. Although it is possible to estimate the standard errors for both
+the mean and covariance, the standard errors for the mean estimates alone are usually the main
+quantities of interest.
+
+StdMeanF = ecmnstd(Data,ECMMean,ECMCovar,'fisher')
+
+StdMeanF = 12×1
+
+0.0010
+    0.0014
+    0.0010
+    0.0009
+    0.0011
+    0.0013
+    0.0009
+    0.0006
+    0.0009
+    0.0007
+    0.0010
+    0.0012
+      ⋮
+
+Calculate standard errors that use the data-generated Hessian matrix (which accounts for the
+possible loss of information due to missing data) with the option 'hessian'.
+
+StdMeanH = ecmnstd(Data,ECMMean,ECMCovar,'hessian')
+
+StdMeanH = 12×1
+
+15
+Functions
+
+15-904

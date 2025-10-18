@@ -1,0 +1,12 @@
+{
+  "page": 1234,
+  "original_text": "correlation = corrcoef(returns);    \nGBM1        = gbm(expReturn,sigma,'Correlation',...\n                  correlation);",
+  "ocr_text": "correlation=corrcoef(returns);\nGBM1 =gbm(expReturn,sigma,Correlation,...\ncorrelation);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 475.35,
+    "x1": 366.34,
+    "y1": 507.42
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,84 @@
+Settlement date, specified as a scalar datetime, string, or date character vector.
+
+To support existing code, date2time also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime array | string array | date character vector
+
+Maturity date, specified as a scalar or N-by-1 vector using a datetime array, string array, or date
+character vectors.
+
+To support existing code, date2time also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Compounding — Rate at which input zero rates are compounded when annualized
+2 (Semiannual compounding) (default) | scalar with numeric values of 0, 1, 2, 3, 4, 5, 6, 12, 365, –1
+
+Rate at which input zero rates are compounded when annualized, specified as a scalar with numeric
+values of: 0, 1, 2, 3, 4, 5, 6, 12, 365, or –1. Allowed values are defined as:
+
+•
+0 — Simple interest (no compounding)
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding (default)
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+•
+365 — Daily compounding
+
+•
+-1 — Continuous compounding
+
+The optional Compounding argument determines the formula for the discount factors (Disc):
+
+•
+Compounding = 0 for simple interest
+
+•
+Disc = 1/(1 + Z * T), where T is time in years and simple interest assumes annual times
+F = 1.
+
+•
+Compounding = 1, 2, 3, 4, 6, 12
+
+•
+Disc = (1 + Z/F)^(-T), where F is the compounding frequency, Z is the zero rate, and T is
+the time in periodic units, for example, T = F is one year.
+
+•
+Compounding = 365
+
+•
+Disc = (1 + Z/F)^(-T), where F is the number of days in the basis year and T is a number
+of days elapsed computed by basis.
+
+•
+Compounding = -1
+
+•
+Disc = exp(-T*Z), where T is time in years.
+
+15
+Functions
+
+15-794

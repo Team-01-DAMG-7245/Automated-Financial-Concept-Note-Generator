@@ -1,0 +1,34 @@
+More About
+
+Budget Constraint Bounds
+
+Budget constraint bounds are the limitations placed on the total amount of capital that can be
+allocated to different assets within a portfolio.
+
+Budget constraint bounds ensure that the total investment does not exceed the available capital and
+that the portfolio adheres to the investor's financial guidelines.
+
+Tips
+
+You can also use dot notation to obtain the budget constraint bounds from portfolio objects.
+
+[LowerBudget, UpperBudget] = obj.getBudget;
+
+Version History
+Introduced in R2011a
+
+See Also
+setBudget | setConditionalBudget
+
+Topics
+“Working with Budget Constraints Using Portfolio Object” on page 4-65
+“Working with Budget Constraints Using PortfolioCVaR Object” on page 5-58
+“Working with Budget Constraints Using PortfolioMAD Object” on page 6-57
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+Supported Constraints for Portfolio Optimization Using Portfolio Objects on page 4-9
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object on page 5-8
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object on page 6-8
+
+getBudget
+
+15-1087

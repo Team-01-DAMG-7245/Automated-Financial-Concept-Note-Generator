@@ -1,0 +1,82 @@
+Role of Convexity in Portfolio Problems . . . . . . . . . . . . . . . . . . . . . . . . .
+4-157
+Examples of Convex Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-158
+Examples of Concave Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-159
+Examples of Nonconvex Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-159
+
+Portfolio Optimization Examples Using Financial Toolbox . . . . . . . . . .
+4-161
+
+Asset Allocation Case Study . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-180
+
+Portfolio Optimization with Semicontinuous and Cardinality Constraints
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-190
+
+Portfolio Optimization Against a Benchmark . . . . . . . . . . . . . . . . . . . . .
+4-202
+
+Portfolio Analysis with Turnover Constraints . . . . . . . . . . . . . . . . . . . . .
+4-211
+
+Leverage in Portfolio Optimization with a Risk-Free Asset . . . . . . . . . .
+4-217
+
+Black-Litterman Portfolio Optimization Using Financial Toolbox . . . . .
+4-222
+
+Portfolio Optimization Using Factor Models . . . . . . . . . . . . . . . . . . . . . .
+4-231
+
+Backtest Investment Strategies Using Financial Toolbox . . . . . . . . . . .
+4-238
+
+Backtest Investment Strategies with Trading Signals . . . . . . . . . . . . . .
+4-251
+
+Portfolio Optimization Using Social Performance Measure . . . . . . . . .
+4-264
+
+Diversify ESG Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-271
+
+Risk Budgeting Portfolio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-286
+
+Backtest Using Risk-Based Equity Indexation . . . . . . . . . . . . . . . . . . . .
+4-291
+
+Create Hierarchical Risk Parity Portfolio . . . . . . . . . . . . . . . . . . . . . . . .
+4-296
+
+Backtest Strategies Using Deep Learning . . . . . . . . . . . . . . . . . . . . . . . .
+4-302
+
+Backtest with Brinson Attribution to Evaluate Portfolio Performance
+4-315
+
+Analyze Performance Attribution Using Brinson Model . . . . . . . . . . . .
+4-323
+
+Diversify Portfolios Using Custom Objective . . . . . . . . . . . . . . . . . . . . . .
+4-331
+
+Solve Tracking Error Portfolio Problems . . . . . . . . . . . . . . . . . . . . . . . . .
+4-343
+
+Solve Problem for Minimum Tracking Error with Net Return Constraint
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-349
+
+Solve Robust Portfolio Maximum Return Problem with Ellipsoidal
+Uncertainty . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-351
+
+Risk Parity or Budgeting with Constraints . . . . . . . . . . . . . . . . . . . . . . .
+4-357
+
+xi

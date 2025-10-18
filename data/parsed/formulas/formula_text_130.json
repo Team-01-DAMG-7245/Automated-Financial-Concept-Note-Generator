@@ -1,0 +1,12 @@
+{
+  "page": 105,
+  "original_text": "DT = diff(t); % Interarrival Times\nDT.Format = \"s\";",
+  "ocr_text": "DT=diff(t);InterarrivalTimes\nDT.Format=s;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 162.96,
+    "x1": 274.22,
+    "y1": 184.23
+  },
+  "confidence": "high"
+}

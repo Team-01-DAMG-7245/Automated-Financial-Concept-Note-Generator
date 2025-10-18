@@ -1,0 +1,67 @@
+•
+An overloaded Euler simulation method that improves run-time performance in certain common
+situations. This specialized method is invoked automatically only if all the following conditions are
+true:
+
+•
+The expected rate of return (Return) is a diagonal matrix.
+
+•
+The volatility rate (Sigma) is a matrix.
+
+•
+No end-of-period adjustments/processes are made.
+
+•
+If specified, the random noise process Z is a three-dimensional array.
+
+•
+If Z is unspecified, the assumed Gaussian correlation structure is a double matrix.
+
+•
+An approximate analytic solution (simBySolution) obtained by applying a Euler approach to the
+transformed (using Ito's formula) logarithmic process. In general, this is not the exact solution to
+this GBM model, as the probability distributions of the simulated and true state vectors are
+identical only for piecewise constant parameters. If the model parameters are piecewise constant
+over each observation period, the state vector Xt is lognormally distributed and the simulated
+process is exact for the observation times at which Xt is sampled.
+
+Specify Univariate Geometric Brownian Motion Model
+
+Create a univariate gbm object to represent the model using gbm. The gbm model allows the
+simulation of vector-valued GBM processes of the form:
+
+obj = gbm(0.25, 0.3)  % (B = Return, Sigma)
+
+obj = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.25
+          Sigma: 0.3
+
+Creating Stochastic Differential Equations from Mean-Reverting Drift
+(SDEMRD) Models
+
+The sdemrd object derives directly from the sdeddo object. It provides an interface in which the
+drift-rate function is expressed in mean-reverting drift form:
+
+dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+α(t))V(t)dWt
+
+sdemrd objects provide a parametric alternative to the linear drift form by reparameterizing the
+general linear drift such that:
+
+A(t) = S(t)L(t), B(t) = −S(t)
+
+14
+Stochastic Differential Equations
+
+14-26

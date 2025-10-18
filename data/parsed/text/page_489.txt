@@ -1,0 +1,56 @@
+function weights = computeEqualWeights(num_assets)
+% Equal asset weight portfolio allocation
+
+weights = ones(1,num_assets) / num_assets;
+
+end
+
+function [new_weights,user_data] = equalCategoryRebalanceFcn(~, ~, user_data) 
+% Equal category weight rebalance function
+
+if ~isfield(user_data,'FixedAllocation')
+    % If this is the first call to the rebalance function, calculate the
+    % desired fixed allocation and save it.
+    user_data.FixedAllocation = computeEqualCategory(user_data.Categories);
+end
+new_weights = user_data.FixedAllocation;
+
+end
+
+function weights = computeEqualCategory(asset_categories)
+% Equal category weight portfolio allocation
+
+weights = zeros(1,numel(asset_categories));
+unique_categories = unique(asset_categories);
+category_weight = 1 / numel(unique_categories);
+
+for i = 1:numel(unique_categories)
+    category_mask = asset_categories == unique_categories(i);
+    weights(category_mask) = category_weight / sum(category_mask);
+end
+
+end
+
+function new_weights = riskBudgetingRebalanceFcn(~,pricesTT)
+% Risk budgeting rebalance function
+
+new_weights = computeRiskBudgeting(pricesTT);
+
+end
+
+function new_weights = computeRiskBudgeting(pricesTT) 
+% Risk budgeting portfolio allocation
+
+asset_returns = tick2ret(pricesTT);
+asset_cov = cov(asset_returns{:,:});
+new_weights = riskBudgetingPortfolio(asset_cov);
+
+end
+
+function asset_table = backtest2brinson(bt,strategy_name,benchmark_name,pricesTT,asset_categories
+% Build Brinson attribution input asset table based on the results of the
+% completed backtest.
+
+Backtest with Brinson Attribution to Evaluate Portfolio Performance
+
+4-321

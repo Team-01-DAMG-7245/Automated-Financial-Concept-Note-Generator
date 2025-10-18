@@ -1,0 +1,12 @@
+{
+  "page": 2219,
+  "original_text": "then use Ito's lemma with X(t) = log(S(t)) such that",
+  "ocr_text": "thenuseItoslemmawithX(t)=log(S(t))suchthat",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 339.1,
+    "x1": 324.33,
+    "y1": 350.73
+  },
+  "confidence": "high"
+}

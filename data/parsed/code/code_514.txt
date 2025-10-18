@@ -1,0 +1,9 @@
+Page 484
+================================================================================
+
+% Rebalance on the first trading day of each month.
+rebalance_schedule = datetime(2006,1,1):calmonths(1):datetime(2006,12,1);
+for idx = 1:numel(rebalance_schedule)
+    priceIdx = find(rebalance_schedule(idx) <= pricesTT.Dates,1,'first');
+    rebalance_schedule(idx) = pricesTT.Dates(priceIdx);
+end

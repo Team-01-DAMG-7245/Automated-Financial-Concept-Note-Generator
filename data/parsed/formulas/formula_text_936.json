@@ -1,0 +1,12 @@
+{
+  "page": 504,
+  "original_text": "% ERC portfolio\nwERC = riskBudgetingPortfolio(p.AssetCovar);",
+  "ocr_text": "ERCportfolio\nwERC=riskBudgetingPortfolio(p.AssetCovar);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 360.43,
+    "x1": 328.39,
+    "y1": 381.7
+  },
+  "confidence": "high"
+}

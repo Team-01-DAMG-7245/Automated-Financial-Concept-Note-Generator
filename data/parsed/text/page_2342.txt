@@ -1,0 +1,57 @@
+ax — Valid axis object
+object
+
+(Optional) Valid axis object, specified as an ax object that is created using axes. The plot will be
+created in the axes specified by the optional ax argument instead of in the current axes (gca). The
+optional argument ax can precede any of the input argument combinations.
+
+Data Types: object
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example:
+fanplot(historical,forecast,'NumQuantiles',14,'FanLineColor','blue','Historic
+alLineWidth', 1.8,'ForecastLineColor','red')
+
+NumQuantiles — Number of quantiles to display
+20 (default) | positive integer
+
+Number of quantiles to display in fan chart, specified as a positive integer.
+
+Note NumQuantiles is ignored if Quantiles is specified.
+
+Data Types: double
+
+Quantiles — Quantiles to display
+Use values from NumQuantiles (default) | nonnegative decimal
+
+Quantiles to display in fan chart, specified as a nonnegative decimal value between 0 and 1.
+
+Note If Quantiles is specified, then NumQuantiles is ignored.
+
+Data Types: double
+
+FanLineStyle — Style of the lines separating fans
+'none' (default) | character vector
+
+Style of the lines separating fans, specified as a character vector. For more information on supported
+character vectors for line styles, see Primitive Line.
+
+Data Types: char
+
+FanLineColor — Color of lines separating fans
+axes dependent (default) | character vector for color or RGB triplet
+
+Color of lines separating fans, specified as a character vector for color or an RGB triplet. For more
+information on supported color character vectors, see Primitive Line.
+
+15
+Functions
+
+15-1036

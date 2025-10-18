@@ -1,0 +1,12 @@
+{
+  "page": 2223,
+  "original_text": "% Create a Portfolio object\nload('SixStocks.mat')\np = Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);\n% Define the constraints of the portfolio methods\np = setDefaultConstraints(p); % Long-only, fully invested weights",
+  "ocr_text": "CreateaPortfolioobject\n\nload(SixStocks.mat)\np=Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);\nDefinetheconstraintsoftheportfoliomethods\np=setDefaultConstraints(p);*Long-only,fullyinvestedweights",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 442.18,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

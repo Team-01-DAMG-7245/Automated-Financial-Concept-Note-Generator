@@ -1,0 +1,13 @@
+Page 454
+================================================================================
+
+% Define the returns covariance matrix.
+sigma = [0.2; 0.21; 0.1];       % Assets risk
+rho = 0.8;                      % Assets correlation
+C = @(rho) [  1  rho  rho;
+            rho    1  rho;
+            rho  rho    1 ];    % Uniform correlation
+Sigma = corr2cov(sigma,C(rho)); % Covariance
+% Check that Sigma is positive semidefinite. All
+% eigenvalues should be nonnegative (>= 0).
+eig(Sigma)

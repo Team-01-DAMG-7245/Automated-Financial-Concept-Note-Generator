@@ -1,0 +1,12 @@
+{
+  "page": 2024,
+  "original_text": "Example: Spread =\ncfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle,'Basis',4)",
+  "ocr_text": "Example:Spread=\ncfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle,Basis,4)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 337.13,
+    "x1": 481.3,
+    "y1": 360.76
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,54 @@
+bnddurp
+
+Bond duration given price
+
+Syntax
+
+[ModDuration,YearDuration,PerDuration] = bnddurp(Price,CouponRate,Settle,
+Maturity)
+[ModDuration,YearDuration,PerDuration] = bnddurp( ___ ,Name,Value)
+
+Description
+
+[ModDuration,YearDuration,PerDuration] = bnddurp(Price,CouponRate,Settle,
+Maturity) computes the Macaulay and modified duration of NUMBONDS fixed-income securities
+given a clean price for each bond.
+
+bnddurp determines the Macaulay and modified duration for a bond whether the first or last coupon
+periods in the coupon structure are short or long (that is, whether the coupon structure is
+synchronized to maturity). bnddurp also determines the Macaulay and modified duration for a zero
+coupon bond.
+
+[ModDuration,YearDuration,PerDuration] = bnddurp( ___ ,Name,Value) adds optional
+name-value pair arguments.
+
+Examples
+
+Find Bond Duration Given Price
+
+This example shows how to compute the duration of three bonds given their prices.
+
+Price = [106; 100; 98]; 
+CouponRate = 0.055; 
+Settle = datetime(1999,8,2); 
+Maturity = datetime(2004,6,15); 
+Period = 2; 
+Basis = 0;
+
+[ModDuration, YearDuration, PerDuration] = bnddurp(Price,...
+CouponRate, Settle, Maturity, Period, Basis)
+
+ModDuration = 3×1
+
+4.2400
+    4.1925
+    4.1759
+
+YearDuration = 3×1
+
+4.3275
+    4.3077
+
+bnddurp
+
+15-537

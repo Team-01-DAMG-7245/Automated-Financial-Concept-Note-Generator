@@ -1,0 +1,38 @@
+clf;
+portfolioexamples_plot('Efficient Frontier with Maximum Sharpe Ratio Portfolio', ...
+    {'line', prsk, pret}, ...
+    {'scatter', srsk, sret, {'Sharpe'}}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+% Set up a dataset object that contains the portfolio that maximizes the Sharpe ratio.
+
+Blotter = dataset({100*swgt(swgt > 0),'Weight'}, 'obsnames', AssetList(swgt > 0));
+
+displayPortfolio('Portfolio with Maximum Sharpe Ratio', Blotter, false);
+
+Portfolio with Maximum Sharpe Ratio
+            Weight    
+    AA      6.3534e-13
+    AIG     6.1632e-13
+    AXP     3.4228e-13
+    BA      1.8189e-13
+    C       6.4939e-13
+    CAT     9.6475e-13
+    DD      1.0192e-13
+    DIS     1.9315e-13
+    GE      1.8145e-12
+    GM      2.3744e-13
+    HD       5.669e-09
+    HON     1.0744e-13
+    HPQ     6.5591e-13
+    IBM     2.8773e-12
+    INTC        2.6638
+    JNJ         9.0044
+    JPM     1.7502e-13
+    KO      8.0048e-14
+    MCD     2.8352e-13
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-171

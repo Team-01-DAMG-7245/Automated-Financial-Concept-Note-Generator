@@ -1,0 +1,12 @@
+{
+  "page": 1015,
+  "original_text": "ub(3) = 0;\nub(end) = 0;\n[sc,mdl] = fitConstrainedModel(sc,'AInequality',AIneq,'bInequality',bIneq,'LowerBound',lb,'UpperB\nInd = (abs(mdl.Coefficients.Estimate) <= Tol);\nModelCoeff = mdl.Coefficients.Estimate(~Ind);\nModelPreds = mdl.Coefficients.Properties.RowNames(~Ind)';",
+  "ocr_text": "ub(3)=0;\n\nub(end)=0;\n[sc,mdl]=fitConstrainedModel(sc,AInequality,AIneq,bInequality,bIneq,LowerBound,1lb,Upper\nInd=(abs(mdl.Coefficients.Estimate)=Tol);\n\nModelCoeff=mdl.Coefficients.Estimate(Ind);\nModelPreds=mdl.Coefficients.Properties.RowNames(Ind);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 448.13,
+    "x1": 615.59,
+    "y1": 512.6
+  },
+  "confidence": "high"
+}

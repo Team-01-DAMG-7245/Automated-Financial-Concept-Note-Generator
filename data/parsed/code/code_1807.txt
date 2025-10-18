@@ -1,0 +1,5 @@
+Page 1509
+================================================================================
+
+Expected mean instantaneous rates of asset return, denoted as B(t,Xt), specified as an array, a
+deterministic function of time, or a deterministic function of time and state.

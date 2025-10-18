@@ -1,0 +1,12 @@
+{
+  "page": 664,
+  "original_text": "where 1 ≤ startrow ≤ endrow ≤ numScenarios.",
+  "ocr_text": "where1sstartrowsendrowsnumScenarios.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 113.34,
+    "x1": 326.47,
+    "y1": 124.97
+  },
+  "confidence": "high"
+}

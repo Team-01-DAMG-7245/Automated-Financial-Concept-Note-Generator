@@ -1,0 +1,12 @@
+{
+  "page": 2039,
+  "original_text": "volatility = chaikvolat(Data) calculates the Chaikin volatility from a data series of high and\nlow stock prices.",
+  "ocr_text": "volatility=chaikvolat(Data)calculatestheChaikinvolatilityfromadataseriesofhighand\nlowstockprices.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.4,
+    "x1": 551.39,
+    "y1": 279.03
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,54 @@
+addGroupRatio
+
+Add group ratio constraints for portfolio weights to existing group ratio constraints
+
+Syntax
+
+obj = addGroupRatio(obj,GroupA,GroupB,LowerRatio)
+obj = addGroupRatio(obj,GroupA,GroupB,LowerRatio,UpperRatio)
+
+Description
+
+obj = addGroupRatio(obj,GroupA,GroupB,LowerRatio) adds group ratio constraints for
+portfolio weights to existing group ratio constraints for Portfolio, PortfolioCVaR, or
+PortfolioMAD objects. For details on the respective workflows when using these different objects,
+see “Portfolio Object Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and
+“PortfolioMAD Object Workflow” on page 6-16.
+
+Given base and comparison group matrices GroupA and GroupB and, either LowerRatio, or
+UpperRatio bounds, group ratio constraints require any portfolio in Port to satisfy the following:
+
+(GroupB * Port) .* LowerRatio <= GroupA * Port <= (GroupB * Port) .* UpperRatio
+
+Note This collection of constraints usually requires that portfolio weights be nonnegative and that
+the products GroupA * Port and GroupB * Port are always nonnegative. Although negative
+portfolio weights and non-Boolean group ratio matrices are supported, use with caution.
+
+obj = addGroupRatio(obj,GroupA,GroupB,LowerRatio,UpperRatio) adds group ratio
+constraints for portfolio weights to existing group ratio constraints with an additional option for
+UpperRatio.
+
+Given base and comparison group matrices GroupA and GroupB and, either LowerRatio, or
+UpperRatio bounds, group ratio constraints require any portfolio in Port to satisfy the following:
+
+(GroupB * Port) .* LowerRatio <= GroupA * Port <= (GroupB * Port) .* UpperRatio
+
+Note This collection of constraints usually requires that portfolio weights be nonnegative and that
+the products GroupA * Port and GroupB * Port are always nonnegative. Although negative
+portfolio weights and non-Boolean group ratio matrices are supported, use with caution.
+
+Examples
+
+Add Group Ratio Constraints to a Portfolio Object
+
+Set a group ratio constraint to ensure that the weight in financial assets does not exceed 50% of the
+weight in nonfinancial assets. Then add another group ratio constraint to ensure that the weight in
+financial assets constitute at least 20% of the weight in nonfinancial assets of the portfolio.
+
+p = Portfolio;
+GA = [ true true true false false false ];    % financial companies
+
+15
+Functions
+
+15-440

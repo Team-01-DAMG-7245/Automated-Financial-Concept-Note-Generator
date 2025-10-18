@@ -1,0 +1,12 @@
+{
+  "page": 98,
+  "original_text": "Writing tall data to folder C:\\TEMP\\tp5b508469\\finance-ex97702880\\ExchangeData\\INTC\\2012-06-21\nEvaluating tall expression using the Local MATLAB Session:\n- Pass 1 of 1: Completed in 5.8 sec\nEvaluation completed in 6.7 sec",
+  "ocr_text": "WritingtalldatatofolderC:TEMPtp5b508469finance-ex97702880ExchangeData,INTC2012-06-21\nEvaluatingtallexpressionusingtheLocalMATLABSession:\n\n-Pass1of1:Completedin5.8sec\n\nEvaluationcompletedin6.7sec",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 481.09,
+    "x1": 599.29,
+    "y1": 523.96
+  },
+  "confidence": "high"
+}

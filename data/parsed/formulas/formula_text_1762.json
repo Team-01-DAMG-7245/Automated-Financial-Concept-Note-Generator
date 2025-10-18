@@ -1,0 +1,12 @@
+{
+  "page": 891,
+  "original_text": "p = PortfolioMAD('Name', 'Asset Allocation Portfolio', 'InitPort', pwgt0);",
+  "ocr_text": "p=PortfolioMAD(Name,AssetAllocationPortfolio,InitPort,pwgt0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 490.96,
+    "y1": 189.89
+  },
+  "confidence": "high"
+}

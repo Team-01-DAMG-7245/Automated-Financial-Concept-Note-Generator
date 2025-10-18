@@ -1,0 +1,12 @@
+{
+  "page": 896,
+  "original_text": "qwgt = estimateFrontierByReturn(q, pret);\nqret = estimatePortReturn(q, qwgt);\nqstd = estimatePortStd(q, qwgt);",
+  "ocr_text": "qwgt=estimateFrontierByReturn(q,_pret);\nqret=estimatePortReturn(q,_qwgt);\nqstd=estimatePortStd(q,_qwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 347.5,
+    "x1": 312.14,
+    "y1": 379.57
+  },
+  "confidence": "high"
+}

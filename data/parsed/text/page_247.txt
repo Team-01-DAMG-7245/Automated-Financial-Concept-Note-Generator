@@ -1,0 +1,81 @@
+p = Portfolio;
+A = [ 1 1 1 0 0 ];    % first inequality constraint
+b = 0.5;
+p = setInequality(p, A, b);
+
+A = [ 0 0 -1 -1 -1 ];    % second inequality constraint
+b = -0.5;
+p = addInequality(p, A, b);
+
+disp(p.NumAssets)
+disp(p.AInequality)
+disp(p.bInequality)
+
+5
+
+1     1     1     0     0
+0     0    -1    -1    -1
+
+0.5000
+-0.5000
+
+The Portfolio object, setInequality, and addInequality implement scalar expansion on the
+bInequality property based on the dimension of the matrix in the AInequality property.
+
+See Also
+Portfolio | setDefaultConstraints | setBounds | setBudget | setConditionalBudget |
+setGroups | setGroupRatio | setEquality | setInequality | setTurnover |
+setOneWayTurnover | setTrackingPort | setTrackingError
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Constraint Specification Using a Portfolio Object” on page 3-19
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+Working with Linear Inequality Constraints Using Portfolio Object
+
+4-79

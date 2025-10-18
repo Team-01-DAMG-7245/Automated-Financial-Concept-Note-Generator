@@ -1,0 +1,12 @@
+{
+  "page": 1020,
+  "original_text": "HazTimes = yearfrac(Settle,HazData(:,1));\nfigure\nstairs([0; HazTimes(1:end-1,1); HazTimes(end,1)+1], ...\n[HazData(:,2);HazData(end,2)])\ngrid on\naxis([0 HazTimes(end,1)+1 0.9*HazData(1,2) 1.1*HazData(end,2)])\nxlabel('Time (Years)')\nylabel('Hazard Rate')\ntitle('Bootstrapped Hazard Rates')",
+  "ocr_text": "HazTimes=yearfrac(Settle,HazData(:,1));\n\nfigure\n\nstairs([0;HazTimes(1l:end-1,1);HazTimes(end,1)+1],...\n[HazData(:,2);HazData(end,2)])\n\ngridon\naxis([QHazTimes(end,1)+10.9*HazData(1,2)_1.1*HazData(end,2)])\nxlabel(Time(Years))\n\nylabel(HazardRate)\n\ntitle(BootstrappedHazardRates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 429.13,
+    "x1": 431.33,
+    "y1": 526.0
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,55 @@
+lbusdate
+
+Last business date of month
+
+Syntax
+
+Date = lbusdate(Year,Month)
+Date = lbusdate( ___ ,Holiday,Weekend,outputType)
+
+Description
+
+Date = lbusdate(Year,Month) returns the serial date number for the last business date of the
+given year and month.
+
+Year and Month can contain multiple values. If one contains multiple values, the other must contain
+the same number of values or a single value that applies to all. For example, if Year is a 1-by-N vector
+of integers, then Month must be a 1-by-N vector of integers or a single integer. Date is then a 1-by-N
+vector of serial date numbers.
+
+Use the function datetime to convert serial date numbers to formatted datetime arrays.
+
+Date = lbusdate( ___ ,Holiday,Weekend,outputType) returns the serial date number for the
+last business date of the given year and month using optional input arguments. The optional
+argument Holiday specifies nontrading days.
+
+If neither Holiday nor outputType are specified, Date is returned as a serial date number. If
+Holiday is specified, but not outputType, then the type of the holiday variable controls the type of
+date. If Holiday is a string or date character vector, then Date is returned as a serial date number.
+
+Examples
+
+Determine the Last Business Date of a Given Year and Month
+
+Determine the Date using an input argument for Year and Month.
+
+Date = lbusdate(2001, 5)
+
+Date = 
+731002
+
+datestr(Date)
+
+ans = 
+'31-May-2001'
+
+Determine the Date using the optional input argument for outputType.
+
+Date = lbusdate(2001, 11,[],[],'datetime')
+
+Date = datetime
+   30-Nov-2001
+
+lbusdate
+
+15-1137

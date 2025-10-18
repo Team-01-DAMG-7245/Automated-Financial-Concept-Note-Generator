@@ -1,0 +1,5 @@
+Page 956
+================================================================================
+
+Worst-case default rates for a whole grid of CPF - SPR pairs are stored in DefRateUB. By applying the
+function K to DefRateUB, you can visualize the capital requirements over the same grid.

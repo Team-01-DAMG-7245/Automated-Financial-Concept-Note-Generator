@@ -1,0 +1,12 @@
+{
+  "page": 1442,
+  "original_text": "obj = heston (0.1, 0.2, 0.1, 0.05)  % (Return, Speed, Level, Volatility)",
+  "ocr_text": "obj=heston(0.1,0.2,0.1,0.05)(Return,Speed,Level,Volatility)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 270.15,
+    "x1": 480.11,
+    "y1": 280.61
+  },
+  "confidence": "high"
+}

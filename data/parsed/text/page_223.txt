@@ -1,0 +1,62 @@
+bc = [ 0.00125; 0.00125; 0.00125; 0.00125; 0.00125 ];
+sc = [ 0.00125; 0.007; 0.00125; 0.00125; 0.0024 ];
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+
+p = Portfolio('InitPort', x0);
+p = setCosts(p, bc, sc);
+        
+disp(p.NumAssets)
+disp(p.BuyCost)
+disp(p.SellCost)
+disp(p.InitPort)
+
+5
+
+0.0013
+    0.0013
+    0.0013
+    0.0013
+    0.0013
+
+0.0013
+    0.0070
+    0.0013
+    0.0013
+    0.0024
+
+0.4000
+    0.2000
+    0.2000
+    0.1000
+    0.1000
+
+You can also set up the initial portfolio's InitPort value as an optional argument to setCosts so
+that the following is an equivalent way to set up transaction costs:
+
+bc = [ 0.00125; 0.00125; 0.00125; 0.00125; 0.00125 ];
+sc = [ 0.00125; 0.007; 0.00125; 0.00125; 0.0024 ];
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+
+p = Portfolio;
+p = setCosts(p, bc, sc, x0);
+        
+disp(p.NumAssets)
+disp(p.BuyCost)
+disp(p.SellCost)
+disp(p.InitPort)
+
+5
+
+0.0013
+    0.0013
+    0.0013
+    0.0013
+    0.0013
+
+0.0013
+    0.0070
+    0.0013
+
+Working with Transaction Costs
+
+4-55

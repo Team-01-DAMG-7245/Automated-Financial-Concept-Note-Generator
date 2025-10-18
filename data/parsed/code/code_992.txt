@@ -1,0 +1,6 @@
+Page 1005
+================================================================================
+
+In step 7 on page 8-84, the validatemodel function uses the default 'AnalysisLevel' at the
+individual score level. Now consider using the validatemodel function with 'decile' level
+validation statistics.

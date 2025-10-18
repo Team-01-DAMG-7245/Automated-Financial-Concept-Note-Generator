@@ -1,0 +1,12 @@
+{
+  "page": 555,
+  "original_text": "% Compute the testing success probability.\nsuccessProb = cumulativeReward/numSimulations",
+  "ocr_text": "Computethetestingsuccessprobability.\nsuccessProb=cumulativeReward/numSimulations",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 210.43,
+    "x1": 333.81,
+    "y1": 231.69
+  },
+  "confidence": "high"
+}

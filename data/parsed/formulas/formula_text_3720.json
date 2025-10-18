@@ -1,0 +1,12 @@
+{
+  "page": 2109,
+  "original_text": "Indices = datefind(Subset,Superset) returns a vector of indices to the date numbers in\nSuperset that are present in Subset. If no date numbers match, Indices = [].",
+  "ocr_text": "Indices=datefind(Subset,Superset)returnsavectorofindicestothedatenumbersin\nSupersetthatarepresentinSubset.Ifnodatenumbersmatch,Indices=[].",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.79,
+    "x1": 530.83,
+    "y1": 280.42
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2229,
+  "original_text": "% Compute equally weighted portfolio by minimizing the\n% Herfindahl-Hirshman index\nHH = @(w) w'*w;\nwHH = estimateCustomObjectivePortfolio(p1,HH);",
+  "ocr_text": "Computeequallyweightedportfoliobyminimizingthe\nHerfindahl-Hirshman_index\n\nHH=Q(w)w*w;\nwHH=estimateCustom0bjectivePortfolio(p1,HH);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 348.23,
+    "x1": 382.57,
+    "y1": 391.1
+  },
+  "confidence": "high"
+}

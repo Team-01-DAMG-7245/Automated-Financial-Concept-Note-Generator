@@ -1,0 +1,4 @@
+Page 1062
+================================================================================
+
+The Hessian of the total log-likelihood function is

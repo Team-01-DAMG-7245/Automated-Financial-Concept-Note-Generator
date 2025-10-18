@@ -1,0 +1,54 @@
+For more information on where the resulting performance fees are reported, see the
+backtestEngine object read-only property “Fees” on page 15-0
+.
+
+Version History
+Introduced in R2020b
+
+R2023b: Support for per-asset transaction cost
+
+When using a function handle with the TransactionCosts name-value argument, you can define a
+detailedCosts output argument to generate per-asset transaction costs when the backtest runs.
+
+The EngineDataList name-value argument supports a string "TransactionCostHistory" for
+reporting per-asset transaction costs charged for each day in the backtest when you use
+runBacktest.
+
+R2023b: EngineDataList supports information for CashAssets and DebtAssets
+
+The EngineDataList name-value argument supports information for CashAssets and
+DebtAssets. The CashAssets and DebtAssets are defined as name-value arguments when using
+runBacktest.
+
+R2023a: Support for data sharing in user-defined function handles
+
+The backtestStrategy name-value argument for UserData supports strategy-specific user data
+for use in the user-defined function handles for the rebalance function. Also the backtestStrategy
+name-value argument for EngineDataList enables you to specify the set of optional backtest state
+data that a strategy needs in the user-defined function handles.
+
+R2022b: Management and performance fees
+
+The backtestStrategy object supports name-value arguments for ManagementFee,
+ManagementFeeSchedule, PerformanceFee, PerformanceHurdle, and
+PerformanceFeeSchedule.
+
+R2022a: Include NaN values in asset price data
+Behavior changed in R2022a
+
+The backtestStrategy object supports NaNs in the assetPrices timetable and NaNs and
+<missing> in the signalData timetable.
+
+See Also
+runBacktest | summary | backtestEngine | equityCurve | timetable | duration |
+calendarDuration
+
+Topics
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+“Backtest Investment Strategies Using datetime and calendarDuration” on page 4-451
+
+15
+Functions
+
+15-262

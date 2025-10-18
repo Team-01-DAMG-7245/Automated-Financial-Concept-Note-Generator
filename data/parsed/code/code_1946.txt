@@ -1,0 +1,9 @@
+Page 1550
+================================================================================
+
+Define a backtest strategy by using a backtestStrategy object. backtestStrategy objects
+contain properties specific to a trading strategy, such as the rebalance frequency, transaction costs,
+and a rebalance function. The rebalance function implements the core logic of the strategy and is
+used by the backtesting engine during the backtest to allow the strategy to change its asset allocation
+and to make trades. In this example, to illustrate how to create and use backtest strategies in
+MATLAB®, you prepare two simple strategies for backtesting:

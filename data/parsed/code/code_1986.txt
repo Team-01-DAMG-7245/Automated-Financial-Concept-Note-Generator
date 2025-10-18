@@ -1,0 +1,6 @@
+Page 1584
+================================================================================
+
+2
+The runBacktest function determines which strategies to rebalance based on the
+RebalanceFrequency property of the backtestStrategy objects.

@@ -1,0 +1,33 @@
+You might expect the volatility in the commodities to manifest itself in the irregular component,
+rather than the regular component. For this reason, continue with the clusters identified by
+performing hierarchical clustering on the irregular components of the commodity price series.
+However, clustering on the regular components provides a useful grouping of the commodities based
+on their combined long-term and seasonal trends. From the dendrogram, you can see that both
+oranges and bananas have a dissimilar regular profile to the other commodities.
+
+Visualize Clusters in 3D
+
+Embed the commodities in a lower-dimensional space by using classical multi-dimensional scaling
+using cmdscale.
+
+lowerDim = 3;
+Y = cmdscale( irregularCorrDistances, lowerDim );
+
+Visualize the embedding. Add the convex hull of each group using convhull to illustrate the
+different groupings in 3-dimensional space.
+
+figure
+view( 3 )
+clusterColors = hsv( numClusters );
+colormap( clusterColors )
+hold( "on" )
+
+for k = 1:numClusters
+    % Extract coordinate data for the current group.
+    idx = clusteredCommodities.Group == k;
+    clusterx = Y(idx, 1);
+
+14
+Stochastic Differential Equations
+
+14-98

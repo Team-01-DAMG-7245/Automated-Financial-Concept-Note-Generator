@@ -1,0 +1,9 @@
+Using Financial Timetables
+
+•
+“Convert Financial Time Series Objects (fints) to Timetables” on page 11-2
+
+•
+“Use Timetables in Finance” on page 11-7
+
+11

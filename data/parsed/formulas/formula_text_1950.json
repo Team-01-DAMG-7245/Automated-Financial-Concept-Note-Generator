@@ -1,0 +1,12 @@
+{
+  "page": 1011,
+  "original_text": "Li = p Defaulti",
+  "ocr_text": "L,=p(Default;)",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 460.13,
+    "x1": 177.77,
+    "y1": 473.87
+  },
+  "confidence": "high"
+}

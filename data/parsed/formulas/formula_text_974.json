@@ -1,0 +1,12 @@
+{
+  "page": 517,
+  "original_text": "% Long-only, fully invested portfolio\np = setDefaultConstraints(p);\n% Set the buy and sell costs\np = setCosts(p,buyCost,sellCost,initPort);",
+  "ocr_text": "Long-only,fullyinvestedportfolio\np=setDefaultConstraints(p);\nSetthebuyandsellcosts\np=setCosts(p,buyCost,sellCost,initPort);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.03,
+    "x1": 317.56,
+    "y1": 675.89
+  },
+  "confidence": "high"
+}

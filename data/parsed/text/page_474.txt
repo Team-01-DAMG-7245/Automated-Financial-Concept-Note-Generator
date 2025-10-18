@@ -1,0 +1,60 @@
+layerNormalizationLayer
+    lstmLayer(numHiddenUnits_LSTM,'OutputMode','last')
+    layerNormalizationLayer
+    fullyConnectedLayer(numOutputs)];
+
+Specify Training Options for LSTM Model
+
+Next, you specify training options using the trainingOptions (Deep Learning Toolbox) function.
+Many training options are available and their use varies depending on your use case. Use the
+Experiment Manager (Deep Learning Toolbox) to explore different network architectures and sets of
+network hyperparameters.
+
+max_epochs = 500;
+mini_batch_size = 128;
+learning_rate = 1e-4;
+
+options_LSTM = trainingOptions('adam', ...
+    'InputDataFormats',"CTB",...
+    'Plots','training-progress', ...
+    'Verbose',0, ...
+    'MaxEpochs',max_epochs, ...
+    'MiniBatchSize',mini_batch_size, ...
+    'Shuffle','every-epoch', ...
+    'ValidationData',{Xvalidation,Tvalidation}, ...
+    'ValidationFrequency',50, ...
+    'ValidationPatience',10, ...
+    'InitialLearnRate',learning_rate, ...
+    'GradientThreshold',1);
+
+Train LSTM Model
+
+Train the LSTM network. Use the trainNetwork (Deep Learning Toolbox) function to train the
+network until the network meets a stopping criteria. This process can take several minutes depending
+on the computer running the example. For more information on increasing the network training
+performance, see “Scale Up Deep Learning in Parallel, on GPUs, and in the Cloud” (Deep Learning
+Toolbox).
+
+To avoid waiting for the network training, load the pretrained network by setting the doTrain flag to
+false. To train the network using trainNetwork (Deep Learning Toolbox), set the doTrain flag to
+true.
+
+doTrain = false;
+
+if doTrain
+    % Train the LSTM network.
+    net_LSTM = trainnet(Xtraining,Ttraining,layers_LSTM,"mse",options_LSTM);
+else
+    % Load the pretrained network.
+    load lstmBacktestNetwork
+end
+
+Visualize Training Results
+
+Visualize the results of the trained model by comparing the predicted values against the actual values
+from the validation set.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-306

@@ -1,0 +1,7 @@
+Page 1251
+================================================================================
+
+The last value of each sample path (the last row of the output array (X) coincides with the
+corresponding element of the stratified terminal value of the Brownian motion. This occurs because
+the simulated model and the noise generation function both represent the same standard Brownian
+motion.

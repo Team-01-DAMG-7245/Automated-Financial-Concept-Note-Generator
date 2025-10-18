@@ -1,0 +1,12 @@
+{
+  "page": 578,
+  "original_text": "Reward T = ISTWAP 0, T −ISAgent 0, T",
+  "ocr_text": "Reward(T)=IStwap(0,T)-ISagent(0,T)",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 482.75,
+    "x1": 292.2,
+    "y1": 496.49
+  },
+  "confidence": "high"
+}

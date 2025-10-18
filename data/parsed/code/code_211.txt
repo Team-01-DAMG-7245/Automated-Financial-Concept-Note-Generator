@@ -1,0 +1,8 @@
+Page 208
+================================================================================
+
+To clear a tracking portfolio from your Portfolio object, use either the Portfolio object or the
+setTrackingPort function with an empty input for the TrackingPort property. If transaction
+costs or turnover constraints are set, it is not possible to clear the TrackingPort property in this
+way. In this case, to clear TrackingPort, first clear the dependent properties and then clear
+theTrackingPort property.

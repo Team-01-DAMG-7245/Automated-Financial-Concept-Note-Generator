@@ -1,0 +1,12 @@
+{
+  "page": 1404,
+  "original_text": "F = drift(0, 0.1)   % Drift rate function F(t,X)",
+  "ocr_text": "F=drift(0,0.1) sDriftratefunctionF(t,X)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 480.27,
+    "x1": 350.07,
+    "y1": 490.74
+  },
+  "confidence": "high"
+}

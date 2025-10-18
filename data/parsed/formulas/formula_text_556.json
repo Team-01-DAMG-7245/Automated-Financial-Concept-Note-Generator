@@ -1,0 +1,12 @@
+{
+  "page": 373,
+  "original_text": "p = Portfolio('AssetList',assetNames);",
+  "ocr_text": "p=Portfolio(AssetList,assetNames);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 124.73,
+    "x1": 295.9,
+    "y1": 135.2
+  },
+  "confidence": "high"
+}

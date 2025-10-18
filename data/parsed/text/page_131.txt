@@ -1,0 +1,44 @@
+PretrainedLOBLSTMLvl3.mat, which is included with the Financial Toolbox documentation.
+Analyze the trained risky model.
+
+trainLSTM = false;
+if trainLSTM
+    rng(1,"twister")
+    LSTMMdl = trainnet(XT,yT,layersLSTM,"crossentropy",options);
+    RiskyLSTMMdl = trainnet(XT,yT,layersLSTM,lossFcn,options);
+else
+    load PretrainedLOBLSTMLvl3
+end
+analyzeNetwork(RiskyLSTMMdl)
+
+Assess Trained LSTM Model Quality
+
+For each trained LSTM model, compute the model accuracy on the validation data and plot a
+confusion chart by following this procedure:
+
+1
+Predict responses and classification scores for the validation data by passing the feature
+validation data and the trained LSTM model to classify.
+
+2
+Pass the observed and predicted responses to confusionchart. Add column and row
+summaries to the chart.
+
+[predScoresLSTM] = minibatchpredict(LSTMMdl,XV,InputDataFormats="CTB");
+
+Warning: Support for GPU devices with compute capability 7.0 will be removed in a future MATLAB r
+
+predYLSTM = scores2label(predScoresLSTM,classes);
+accV = 100*mean(predYLSTM == yV)
+
+accV = 
+91.0626
+
+figure
+cm = confusionchart(yV,predYLSTM);
+cm.NormalizedValues;
+cm.RowSummary = "row-normalized";
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data
+
+2-87

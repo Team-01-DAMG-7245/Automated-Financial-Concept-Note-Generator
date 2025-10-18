@@ -1,0 +1,58 @@
+% Retrieve the portfolio information.
+p = struct.p;
+ret0 = struct.ret0;
+lambda = struct.lambdaHH;
+
+% Define the returns and covariance matrix.
+assetReturns = tick2ret(assetPrices);
+p = estimateAssetMoments(p,assetReturns{:,:});
+
+% Objective function: Variance + Herfindahl-Hirschman
+% diversification term
+%   min x'*Sigma*x + lambda*x'*x
+objFun = @(x) x'*p.AssetCovar*x + lambda'*(x.^2);
+
+% Solve problem
+% Solution that minimizes variance + HH term
+new_weights = estimateCustomObjectivePortfolio(p,objFun, ...
+    TargetReturn=ret0);
+
+end
+
+function new_weights = tiltedMDP(~,assetPrices,struct)
+% Tilted MDP approach
+
+% Retrieve the portfolio information.
+p = struct.p;
+ret0 = struct.ret0;
+lambda = struct.lambdaMDP;
+
+% Define the returns and covariance matrix.
+assetReturns = tick2ret(assetPrices);
+p = estimateAssetMoments(p,assetReturns{:,:});
+sigma = sqrt(diag(p.AssetCovar));
+
+% Objective function: Variance + MDP
+%   min x'*Sigma*x - lambda*sigma'*x
+objFun = @(x) x'*p.AssetCovar*x - lambda'*(sigma.*x);
+
+% Solve problem
+% Solution that minimizes variance + MDP term
+new_weights = estimateCustomObjectivePortfolio(p,objFun, ...
+    TargetReturn=ret0);
+
+end
+
+% The API of the rebalance functions (MixHH, MixMDP, tiltedHH, and
+% tiltedMDP) require a first input with the current weights. They
+% are redundant for these strategies and can be ignored.
+
+See Also
+Portfolio | setBounds | addGroups | setAssetMoments | estimateAssetMoments |
+estimateBounds | plotFrontier | estimateFrontierLimits | estimateFrontierByRisk |
+estimatePortRisk
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-284

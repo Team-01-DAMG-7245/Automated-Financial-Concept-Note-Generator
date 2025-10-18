@@ -1,0 +1,12 @@
+{
+  "page": 1865,
+  "original_text": "Yield = [0.04; 0.05; 0.06];\nCouponRate = 0.05;\nSettle = datetime('20-Jan-1997','Locale','en_US');\nMaturity = datetime('15-Jun-2002','Locale','en_US');\nPeriod = 2;\nBasis = 0;\n[Price, AccruedInt] = bndprice(Yield, CouponRate, Settle,...\nMaturity, Period, Basis)",
+  "ocr_text": "Yield=[0.04;0.05;0.06];\n\nCouponRate=0.05;\nSettle=datetime(20-Jan-1997,Locale,en_US);\nMaturity=datetime(15-Jun-2002,Locale,en_US);\nPeriod=2;\n\nBasis=0;\n[Price,AccruedInt]=bndprice(Yield,CouponRate,Settle,...\nMaturity,Period,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 148.88,
+    "x1": 415.1,
+    "y1": 234.95
+  },
+  "confidence": "high"
+}

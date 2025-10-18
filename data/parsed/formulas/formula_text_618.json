@@ -1,0 +1,12 @@
+{
+  "page": 403,
+  "original_text": "Var Rp = Var μa + F rf + εa",
+  "ocr_text": "Var(R,)= Var((Ha +Frp+q)",
+  "bbox": {
+    "x0": 90.09,
+    "y0": 219.81,
+    "x1": 222.0,
+    "y1": 233.56
+  },
+  "confidence": "high"
+}

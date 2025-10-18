@@ -1,0 +1,61 @@
+Basis property to set the day count convention. For more information on creating backtesting
+engines, see backtestEngine.
+
+% Risk-free rate is 1% annualized
+annualRiskFreeRate = 0.01;
+
+% Create the backtesting engine object
+backtester = backtestEngine(strategies, 'RiskFreeRate', annualRiskFreeRate)
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×5 backtestStrategy]
+             RiskFreeRate: 0.0100
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: []
+                  Returns: []
+                Positions: []
+                 Turnover: []
+                  BuyCost: []
+                 SellCost: []
+         TransactionCosts: []
+                     Fees: []
+
+Run Backtest
+
+Use runBacktest to run the backtest using the test data partition. Use the runBacktest name-
+value pair argument 'Start'to avoid look-ahead bias (that is, "seeing the future"). Begin the
+backtest at the end of the "warm-up" period. Running the backtest populates the empty fields of the
+backtestEngine object with the day-by-day backtest results. For more information, see
+“runBacktest Processing Steps” on page 15-291.
+
+backtester = runBacktest(backtester, pricesTT, 'Start', warmupPeriod)
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×5 backtestStrategy]
+             RiskFreeRate: 0.0100
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: 15
+                  Returns: [211×5 timetable]
+                Positions: [1×1 struct]
+                 Turnover: [211×5 timetable]
+                  BuyCost: [211×5 timetable]
+                 SellCost: [211×5 timetable]
+         TransactionCosts: [1×1 struct]
+
+Backtest Investment Strategies Using Financial Toolbox
+
+4-243

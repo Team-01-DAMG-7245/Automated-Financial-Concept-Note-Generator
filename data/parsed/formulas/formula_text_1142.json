@@ -1,0 +1,12 @@
+{
+  "page": 579,
+  "original_text": "TradeMessage = readmatrix(MSGFileName);\nStartTradingSec   = 9.5*60*60;  % Starting time 9:30 in seconds after midnight\nEndTradingSec     = 16*60*60;   % Ending time 16:00 in seconds after midnight",
+  "ocr_text": "TradeMessage=readmatrix(MSGFileName);\nStartTradingSec=9.5*60*60;Startingtime9:30insecondsaftermidnight\nEndTradingSec =16*60*60; Endingtime16:00insecondsaftermidnight",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 522.91,
+    "x1": 512.62,
+    "y1": 554.98
+  },
+  "confidence": "high"
+}

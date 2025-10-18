@@ -1,0 +1,12 @@
+{
+  "page": 113,
+  "original_text": "t = Data.t;\nMOBid = Data.MOBid;",
+  "ocr_text": "t=Data.t;\nMOBid=Data.MOBid;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 192.94,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

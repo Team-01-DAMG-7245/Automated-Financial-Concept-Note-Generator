@@ -1,0 +1,8 @@
+Page 237
+================================================================================
+
+G = [ true true true false false ];
+p = Portfolio('GroupMatrix', G, 'UpperGroup', 0.3);
+disp(p.NumAssets)
+disp(p.GroupMatrix)
+disp(p.UpperGroup)

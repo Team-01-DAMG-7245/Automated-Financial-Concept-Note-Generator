@@ -1,0 +1,59 @@
+the series of zero-coupon Treasury rates consistent with the prices of the coupon-bearing bonds such
+that arbitrage opportunities will not exist.
+
+ZeroRates = zbtprice([Maturity CouponRate], Prices, Settle)
+
+ZeroRates = 10×1
+
+0.0614
+    0.0642
+    0.0660
+    0.0684
+    0.0702
+    0.0726
+    0.0754
+    0.0795
+    0.0827
+    0.0868
+
+The zero curve, stored in ZeroRates, is quoted on a semiannual bond basis (the periodic, six-month,
+interest rate is doubled to annualize). The first element of ZeroRates is the annualized rate over the
+next six months, the second element is the annualized rate over the next 12 months, and so on.
+
+Calculate Implied Forward Rates
+
+From the implied zero curve, find the corresponding series of implied forward rates using the term
+structure function zero2fwd.
+
+ForwardRates = zero2fwd(ZeroRates, Maturity, Settle)
+
+ForwardRates = 10×1
+
+0.0614
+    0.0670
+    0.0695
+    0.0758
+    0.0774
+    0.0846
+    0.0925
+    0.1077
+    0.1089
+    0.1239
+
+The forward curve, stored in ForwardRates, is also quoted on a semiannual bond basis. The first
+element of ForwardRates is the annualized rate applied to the interval between settlement and six
+months after settlement, the second element is the annualized rate applied to the interval from six
+months to 12 months after settlement, and so on. This implied forward curve is also consistent with
+the observed market prices such that arbitrage activities will be unprofitable. Since the first forward
+rate is also a zero rate, the first element of ZeroRates and ForwardRates are the same.
+
+Convert Zero Curve to Discount Factors
+
+Now that you have derived the zero curve, convert it to a sequence of discount factors with the term
+structure function zero2disc.
+
+DiscountFactors = zero2disc(ZeroRates, Maturity, Settle)
+
+Term Structure Analysis and Interest-Rate Swaps
+
+10-19

@@ -1,0 +1,55 @@
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+Output Arguments
+
+NumDays — Number of days between dates StartDate and EndDate
+integer
+
+Number of days between the StartDate and EndDate. NumDays is returned as an integer.
+
+Note The first date for StartDate is not included when determining the number of days between
+first and last date.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although daysdif supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Stigum, Marcia L. and Franklin Robinson. Money Market and Bond Calculations. Richard D. Irwin,
+1996, ISBN 1-55623-476-7
+
+See Also
+dec2thirtytwo | datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+
+daysdif
+
+15-839

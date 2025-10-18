@@ -1,0 +1,8 @@
+Page 2401
+================================================================================
+
+GA = [ true true true false false false ];   % financial companies
+GB = [ false false false true true true ];   % nonfinancial companies
+p = PortfolioMAD;
+p = setGroupRatio(p, GA, GB, [], 0.5);
+[GroupA, GroupB, LowerRatio, UpperRatio] = getGroupRatio(p)

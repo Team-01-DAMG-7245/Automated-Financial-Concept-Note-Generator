@@ -1,0 +1,12 @@
+{
+  "page": 1363,
+  "original_text": "SigmaHat = covarianceShrinkage(AssetReturns)",
+  "ocr_text": "SigmaHat=covarianceShrinkage(AssetReturns)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.92,
+    "x1": 354.91,
+    "y1": 200.55
+  },
+  "confidence": "high"
+}

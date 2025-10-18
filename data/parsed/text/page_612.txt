@@ -1,0 +1,63 @@
+% - ArrivalPrice: Arrival price at the beginning of horizon
+% - ExecutedShares: Number of executed shares at each traded level
+% - ExecutedPrices: Prices of executed shares at each traded level
+% - HorizonExecutedShares: Executed shares at each level over the horizon
+%     ((NumLevels * NumIntervalsPerHorizon)-by-1 vector)
+% - HorizonExecutedPrices: Prices of Executed shares at each level over the horizon
+%     ((NumLevels * NumIntervalsPerHorizon)-by-1 vector)
+% - IS_Agent: Implementation shortfall history of agent
+%     (NumIntervals-by-1 vector)
+% - Reward: Reward history of agent
+%     (NumIntervals-by-1 vector)
+% - NumIntervalsPerHorizon: Number of intervals per horizon (fixed value: NumIntervalsPerHorizon)
+% - NumHorizons: Number of horizons (fixed value: NumHorizon)
+% - NumLevels: Number of levels in the limit order book (fixed value: NumLevels)
+%
+% EnvConstants: Structure with the following fields
+% - SampledBook: Limit order book sampled at time intervals
+% - BuyTrade: Scalar logical indicating the trading direction
+%               true: Buy
+%               false: Sell
+% - TotalTradingShares: Number of shares to trade over the horizon (scalar)
+% - NumIntervalsPerHorizon: Number of intervals per horizon (scalar)
+% - NumHorizons: Number of horizons in the data (scalar)
+% - NumSteps: Number of steps in the data (scalar)
+% - NumLevels: Number of levels in the limit order book (scalar)
+% - IS_TWAP: Implementation shortfall for TWAP baseline (NumSteps-by-1 vector)
+%
+% Outputs:
+%
+% Observation:
+% - Remaining shares to be traded by agent
+% - Remaining intervals (steps) in the current trading horizon
+% - Implementation shortfall of agent
+% - Price divergence times 100
+%
+% Reward: Reward for current step
+% 
+% IsDone: Logical indicating whether the current episode is complete
+%
+% LoggedSignals: Updated LoggedSignals
+
+% Update LoggedSignals indices
+if (LoggedSignals.IntervalIdx == 0) && (LoggedSignals.HorizonIdx == 0)
+    LoggedSignals.IntervalIdx = 1;
+    LoggedSignals.HorizonIdx = 1;
+elseif (LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon)
+    LoggedSignals.IntervalIdx = 1;
+    LoggedSignals.HorizonIdx = LoggedSignals.HorizonIdx + 1;
+    LoggedSignals.HorizonExecutedShares = ...
+        zeros(EnvConstants.NumLevels*EnvConstants.NumIntervalsPerHorizon,1);
+    LoggedSignals.HorizonExecutedPrices = LoggedSignals.HorizonExecutedShares;
+    if EnvConstants.BuyTrade
+        LoggedSignals.CurrentInventoryShares = 0;
+    else
+        LoggedSignals.CurrentInventoryShares = EnvConstants.TotalTradingShares;
+    end
+else
+    LoggedSignals.IntervalIdx = LoggedSignals.IntervalIdx + 1;
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-444

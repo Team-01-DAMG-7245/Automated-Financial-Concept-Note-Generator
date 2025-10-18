@@ -1,0 +1,52 @@
+cov2corr
+
+Convert covariance to standard deviation and correlation coefficient
+
+Syntax
+
+[ExpSigma,ExpCorrC] = cov2corr(ExpCovariance)
+
+Description
+
+[ExpSigma,ExpCorrC] = cov2corr(ExpCovariance) converts covariance to standard
+deviations and correlation coefficients.
+
+Examples
+
+Convert Covariance to Standard Deviations and Correlation Coefficients
+
+This example shows how to convert a covariance matrix to standard deviations and correlation
+coefficients.
+
+ExpCovariance = [0.25 -0.5
+                -0.5   4.0];
+
+[ExpSigma, ExpCorrC] = cov2corr(ExpCovariance)
+
+ExpSigma = 1×2
+
+0.5000    2.0000
+
+ExpCorrC = 2×2
+
+1.0000   -0.5000
+   -0.5000    1.0000
+
+Input Arguments
+
+ExpCovariance — Covariance matrix
+matrix
+
+Covariance matrix, specified as an n-by-n covariance matrix, where n is the number of random
+processes. For an example, see cov or ewstats.
+
+Data Types: double
+
+Output Arguments
+
+ExpSigma — Standard deviation of each process
+vector
+
+cov2corr
+
+15-745

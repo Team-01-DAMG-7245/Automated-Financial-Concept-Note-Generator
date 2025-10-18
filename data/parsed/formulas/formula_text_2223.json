@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "% GBM Motion\nS_next = S_prev*((1 + mu*dT) + (randn* vol).*sqrt(dT));\nTTM_next = max(0,TTM_prev - dT);",
+  "ocr_text": "GBMMotion\nS_next=S_prev*((1+mu*dT)+(randn*vol).*sqrt(dT));\nTTM_next=max(0,TTM_prev-dT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.43,
+    "x1": 387.99,
+    "y1": 427.49
+  },
+  "confidence": "high"
+}

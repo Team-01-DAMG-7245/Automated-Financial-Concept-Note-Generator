@@ -1,0 +1,72 @@
+SDE Models
+
+In this section...
+
+“Introduction” on page 14-7
+
+“Creating SDE Objects” on page 14-7
+
+“Drift and Diffusion” on page 14-10
+
+“Available SDE Models” on page 14-11
+
+“SDE Simulation and Interpolation Methods” on page 14-13
+
+Introduction
+
+Most models and utilities available with Monte Carlo Simulation of SDEs are represented as MATLAB
+objects. Therefore, this documentation often uses the terms model and object interchangeably.
+
+However, although all models are represented as objects, not all objects represent models. In
+particular, drift, diffusion objects are used in model specification, but neither of these types of
+objects in and of themselves makes up a complete model. Usually, you do not need to create drift,
+diffusion objects directly, so you do not need to differentiate between objects and models. It is
+important, however, to understand the distinction between these terms.
+
+In many of the following examples, most model parameters are evaluated or invoked like any
+MATLAB function. Although it is helpful to examine and access model parameters as you would data
+structures, think of these parameters as functions that perform actions.
+
+Creating SDE Objects
+
+•
+“Creating Objects” on page 14-7
+
+•
+“Displaying Objects” on page 14-7
+
+•
+“Assigning and Referencing Object Parameters” on page 14-8
+
+•
+“Creating and Evaluating Models” on page 14-8
+
+•
+“Specifying SDE Simulation Parameters” on page 14-8
+
+Creating Objects
+
+For examples and more information on creating SDE objects, see:
+
+•
+“Available SDE Models” on page 14-11
+
+•
+“Simulating Equity Prices” on page 14-31
+
+•
+“Simulating Interest Rates” on page 14-50
+
+Displaying Objects
+
+•
+Objects display like traditional MATLAB data structures.
+
+•
+Displayed object parameters appear as nouns that begin with capital letters. In contrast,
+parameters such as simulate and interpolate appear as verbs that begin with lowercase
+letters, which indicate tasks to perform.
+
+SDE Models
+
+14-7

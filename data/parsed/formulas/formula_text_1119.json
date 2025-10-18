@@ -1,0 +1,12 @@
+{
+  "page": 568,
+  "original_text": "function new_weights = denoising(~, pricesTT) \n% Compute minimum variance portfolio using covariance denoising.",
+  "ocr_text": "functionnew_weights=denoising(,pricesTT)\nSComputeminimumvarianceportfoliousingcovariancedenoising.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 502.83,
+    "x1": 436.75,
+    "y1": 524.09
+  },
+  "confidence": "high"
+}

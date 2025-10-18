@@ -1,0 +1,12 @@
+{
+  "page": 77,
+  "original_text": "Continuous returns add 1 to PC to move the range to (0,∞), the domain of the real logarithm.\nContinuous returns have the time aggregation property",
+  "ocr_text": "Continuousreturnsadd1toPCtomovetherangeto(0,),thedomainofthereallogarithm.\nContinuousreturnshavethetimeaggregationproperty",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 181.91,
+    "x1": 515.75,
+    "y1": 205.54
+  },
+  "confidence": "high"
+}

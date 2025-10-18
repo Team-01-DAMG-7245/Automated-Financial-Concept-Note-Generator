@@ -1,0 +1,5 @@
+Page 2391
+================================================================================
+
+Use the getBudget function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain budget constraint bounds from portfolio objects.

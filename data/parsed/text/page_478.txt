@@ -1,0 +1,69 @@
+risk_free_rate = 0.01;
+
+Create Backtest Strategies
+
+Use backtestStrategy to create four trading strategies based on the signal indicators. The
+following trading strategies are intended as examples to show how to convert the trading signals into
+actionable asset allocation strategies that you can then backtest:
+
+•
+Long Only — Invest all capital across the assets with positive predicted return, proportional to
+their signal strength (predicted return).
+
+•
+Long Short — Invest capital across the assets, both long and short positions, proportional to their
+signal strength.
+
+•
+Best Bet — Invest all capital into the single asset with the highest predicted return.
+
+•
+Equal Weight — Rebalance each day to equal-weighted allocation.
+
+% Specify 10 basis points as the trading cost.
+tradingCosts = 0.001;
+
+% Invest in long positions proportionally to their predicted return.
+LongStrategy = backtestStrategy('LongOnly',@LongOnlyRebalanceFcn, ...
+    'TransactionCosts',tradingCosts, ...
+    'LookbackWindow',1);
+
+% Invest in both long and short positions proportionally to their predicted returns.
+LongShortStrategy = backtestStrategy('LongShort',@LongShortRebalanceFcn, ...
+    'TransactionCosts',tradingCosts, ...
+    'LookbackWindow',1);
+
+% Invest 100% of capital into single asset with highest predicted returns.
+BestBetStrategy = backtestStrategy('BestBet',@BestBetRebalanceFcn, ...
+    'TransactionCosts',tradingCosts, ...
+    'LookbackWindow',1);
+
+% For comparison, invest in an equal-weighted (buy low and sell high) strategy.
+equalWeightFcn = @(current_weights,prices,signal) ones(size(current_weights)) / numel(current_wei
+EqualWeightStrategy = backtestStrategy('EqualWeight',equalWeightFcn, ...
+    'TransactionCosts',tradingCosts, ...
+    'LookbackWindow',0);
+
+Put the strategies into an array and then use backtestEngine to create the backtesting engine.
+
+strategies = [LongStrategy LongShortStrategy BestBetStrategy EqualWeightStrategy];
+
+bt = backtestEngine(strategies,'RiskFreeRate',risk_free_rate);
+
+Run Backtest
+
+Use runBacktest to backtest the strategies over the backtest range.
+
+bt = runBacktest(bt,backtestPriceTT,backtestSignalTT)
+
+bt = 
+  backtestEngine with properties:
+
+Strategies: [1×4 backtestStrategy]
+             RiskFreeRate: 0.0100
+           CashBorrowRate: 0
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-310

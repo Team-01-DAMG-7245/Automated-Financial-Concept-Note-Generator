@@ -1,0 +1,57 @@
+H = 5×1 datetime
+   01-Jan-2001
+   15-Jan-2001
+   19-Feb-2001
+   13-Apr-2001
+   28-May-2001
+
+Input Arguments
+
+StartDate — Start date
+datetime array | string array | date character vector
+
+Start date, specified using a scalar or vector using a datetime array, string array, or date character
+vectors.
+
+To support existing code, holidays also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+EndDate — End date
+datetime array | string array | date character vector
+
+End date, specified scalar or vector using a datetime array, string array, or date character vectors.
+
+To support existing code, holidays also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+AltHolidays — Alternate list of holidays and nontrading days
+datetime array | string array | date character vector
+
+Alternate list of holidays and nontrading days, specified scalar or vector using a datetime array, string
+array, or date character vectors.
+
+To support existing code, holidays also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+H — Dates corresponding to all holidays and nontrading days
+vector | datetime
+
+Dates corresponding to all holidays and nontrading days, returned as a vector or a datetime array of
+dates.
+
+Note If StartDate, EndDate, and AltHolidays are all either strings or date character vectors, H
+is returned as serial date numbers. Use the function datetime to convert serial date numbers to
+formatted datetime arrays. If either StartDate, EndDate, or AltHolidays are datetime arrays, H is
+returned as a datetime array.
+
+holidays
+
+15-1123

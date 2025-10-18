@@ -1,0 +1,12 @@
+{
+  "page": 1784,
+  "original_text": "Volatility = blkimpv(Price,Strike,Rate,Time,Value) computes the implied volatility of a\nfutures price from the market value of European futures options using Black's model. If the Class\nname-value argument is empty or unspecified, the default is a call option",
+  "ocr_text": "Volatility=blkimpv(Price,Strike,Rate,Time,Value)computestheimpliedvolatilityofa\nfuturespricefromthemarketvalueofEuropeanfuturesoptionsusingBlacksmodel.IftheClass\nname-valueargumentisemptyorunspecified,thedefaultisacalloption",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 251.78,
+    "x1": 554.8,
+    "y1": 287.41
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,60 @@
+Input Arguments
+
+ZeroData — Dates and zero rates
+object from IRDataCurve or vector of dates and zero rates
+
+Dates and zero rates, specified by an M-by-2 vector of dates, using a serial date number format, and
+zero rates or the IRDataCurve object for zero rates. For more information on an IRDataCurve
+object, see “Creating an IRDataCurve Object” (Financial Instruments Toolbox).
+
+Data Types: object | double
+
+ProbData — Dates and default probabilities
+vector of dates and default probabilities
+
+Dates and default probabilities, specified by a P-by-2 array, where dates use a serial date number
+format.
+
+Data Types: double
+
+Settle — Settlement date
+datetime scalar | string scalar | date character vector
+
+Settlement date, specified by a scalar datetime, string, or date character vector. This must be earlier
+than or equal to the dates in Maturity.
+
+To support existing code, cdsrpv01 also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — CDS maturity date
+datetime array | string array | date character vector | serial date number
+
+CDS maturity date, specified by an N-by-1 vector using a datetime array, string array, or date
+character vectors. The CDS premium payment dates occur at regular intervals, and the last payment
+occurs on these maturity dates.
+
+To support existing code, cdsrpv01 also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: RPV01 =
+cdsrpv01(ZeroData,ProbData,Settle,Maturity,'Period',1,'StartDate','20-
+Sep-2010','Basis',1,
+'BusinessDayConvention',actual,'CleanRPV01',true,'PayAccruedPremium',true,'Ze
+roCompounding',1,'ZeroBasis',1)
+
+15
+Functions
+
+15-642

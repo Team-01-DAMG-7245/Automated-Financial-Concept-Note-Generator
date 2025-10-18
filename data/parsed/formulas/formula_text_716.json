@@ -1,0 +1,12 @@
+{
+  "page": 433,
+  "original_text": "% Minimum percetage of women on the board\nwgt_minWoB = estimateCustomObjectivePortfolio(p,objFun);\nminWoB = objFun(wgt_minWoB)",
+  "ocr_text": "sMinimumpercetageofwomenontheboard\nwgt_minWoB=estimateCustom0bjectivePortfolio(p,objFun);\nminWoB_=objFun(wgt_minWoB)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 355.83,
+    "x1": 393.41,
+    "y1": 387.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1772,
+  "original_text": "NumPeriods = annuterm(Rate,Payment,PresentValue) calculates the number of periods\nneeded to obtain a future value. To calculate the number of periods needed to pay off a loan, enter\nthe payment or the present value as a negative value.",
+  "ocr_text": "NumPeriods=annuterm(Rate,Payment,PresentVaLlue)calculatesthenumberofperiods\nneededtoobtainafuturevalue.Tocalculatethenumberofperiodsneededtopayoffaloan,enter\nthepaymentorthepresentvalueasanegativevalue.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 258.17,
+    "x1": 540.65,
+    "y1": 293.8
+  },
+  "confidence": "high"
+}

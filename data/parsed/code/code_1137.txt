@@ -1,0 +1,5 @@
+Page 1181
+================================================================================
+
+To perform calculations on entries in a timetable, use the MATLAB rowfun function to apply a
+function to each row of a weekly frequency timetable.

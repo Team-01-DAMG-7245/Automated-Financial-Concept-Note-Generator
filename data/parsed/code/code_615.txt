@@ -1,0 +1,10 @@
+Page 559
+================================================================================
+
+function [nextObservation,reward,isDone,loggedSignals] =...
+    myStepFunction(action,loggedSignals,prsk,pret,finalTimePeriod, ...
+    rewardFunction,WMin,WMax)
+% Step function to compute the wealth obtained from investing in
+% the portfolio specified by the action. The function also
+% computes the reward obtained by the current action and checks if
+% episode is done.

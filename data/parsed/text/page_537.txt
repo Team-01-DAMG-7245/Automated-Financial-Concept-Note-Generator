@@ -1,0 +1,37 @@
+States for Wealth Nodes
+
+The states are defined as the wealth values at time t. To simplify the problem, discretize the wealth
+values to generate a wealth grid, Wi, for i ∈
+1, …, imax .W1 corresponds to the smallest possible
+wealth Wmin and Wimax corresponds to the largest possible wealth Wmax. To determine Wmin and
+
+Wmax, assume that the evolution of wealth follows a geometric Brownian motion
+
+W t = W 0 e μ −σ 2/2 t + σ tZ,
+
+where Z is a standard normal random variable. GBWM does not require that the wealth evolution
+follow a Brownian motion. However, the technique in this example requires the evolution model to be
+Markovian. Therefore, this example assumes that the probability of being at a certain state at time
+t + 1 only depends on the state at time t and the action taken.
+
+This example also assumes that Z realistically takes values between −3 and 3. When Z = −3, Wmin
+corresponds to the smallest value obtained in the trajectory of the Brownian motion setting, μ is the
+smallest possible portfolio return μmin, and σ is the largest possible portfolio risk σmax. Likewise,
+when Z = 3, Wmax corresponds to the largest value in the trajectory, μ is the largest possible portfolio
+return μmax, and σ is the largest possible portfolio risk σmax. For Wmax, use σmax because the term in
+
+the exponential is increasing for all σ ≤3/ t; if σmax > 3/ t, use σ = 3/ t instead.
+
+Define μmin, μmax, σmin, and σmax.
+
+% Define return limits.
+mu_min = pret(1);
+mu_max = pret(end);
+
+% Define volatility limits.
+sigma_min = prsk(1);
+sigma_max = prsk(end);
+
+Dynamic Portfolio Allocation in Goal-Based Wealth Management for Multiple Time Periods
+
+4-369

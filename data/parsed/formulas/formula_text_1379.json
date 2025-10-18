@@ -1,0 +1,12 @@
+{
+  "page": 686,
+  "original_text": "p = PortfolioCVaR;\np = setConditionBudget(p, .40, 1.5);\ndisp(p.threshold)\ndisp(p.upperBudget)",
+  "ocr_text": "p=PortfolioCVaR;\np=setConditionBudget(p,.40,1.5);\ndisp(p.threshold)\ndisp(p.upperBudget)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 543.43,
+    "x1": 285.05,
+    "y1": 586.29
+  },
+  "confidence": "high"
+}

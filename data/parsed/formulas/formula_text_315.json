@@ -1,0 +1,12 @@
+{
+  "page": 199,
+  "original_text": "p = Portfolio;\np.NumAssets = numel(m);\np.AssetMean = m;\np.AssetCovar = C;\np.LowerBudget = 1;\np.UpperBudget = 1;\np.LowerBound = zeros(size(m));",
+  "ocr_text": "p=Portfolio;\np.NumAssets=numel(m);\np.AssetMean=m;\np.AssetCovar=C;\np.LowerBudget=1;\np.UpperBudget=1;\np.LowerBound=zeros(size(m));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 612.83,
+    "x1": 252.54,
+    "y1": 688.09
+  },
+  "confidence": "high"
+}

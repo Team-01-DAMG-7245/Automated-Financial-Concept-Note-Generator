@@ -1,0 +1,12 @@
+{
+  "page": 1599,
+  "original_text": "summaryTable = summary(backtester) generates a table of metrics to summarize the backtest.\nEach row of the table is a calculated metric and each column represents a strategy. You must run the\nsummary function only after running the runBacktest function.",
+  "ocr_text": "summaryTable=summary(backtester)generatesatableofmetricstosummarizethebacktest.\nEachrowofthetableisacalculatedmetricandeachcolumnrepresentsastrategy.Youmustrunthe\nsummaryfunctiononlyafterrunningtherunBacktestfunction.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 247.09,
+    "x1": 552.61,
+    "y1": 282.72
+  },
+  "confidence": "high"
+}

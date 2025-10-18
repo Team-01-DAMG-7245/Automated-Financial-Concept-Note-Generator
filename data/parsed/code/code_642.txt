@@ -1,0 +1,4 @@
+Page 597
+================================================================================
+
+Next, define the reset function for the testing environment.

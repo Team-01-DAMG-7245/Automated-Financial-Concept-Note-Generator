@@ -1,0 +1,12 @@
+{
+  "page": 359,
+  "original_text": "pWithMinWeight = setBounds(p, 0.05, 'BoundType', 'Conditional');",
+  "ocr_text": "pWithMinWeight=setBounds(p,0.05,BoundType,Conditional);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 311.31,
+    "x1": 436.78,
+    "y1": 321.78
+  },
+  "confidence": "high"
+}

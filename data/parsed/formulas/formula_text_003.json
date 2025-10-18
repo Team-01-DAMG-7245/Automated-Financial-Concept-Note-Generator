@@ -1,0 +1,12 @@
+{
+  "page": 34,
+  "original_text": "SmallerPortf = NewPortfolios-10",
+  "ocr_text": "SmallerPortf=NewPortfolios-10",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 113.53,
+    "x1": 257.96,
+    "y1": 124.0
+  },
+  "confidence": "high"
+}

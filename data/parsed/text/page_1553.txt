@@ -1,0 +1,60 @@
+PerformanceFeeSchedule: 1y
+         PerformanceHurdle: 0
+                  UserData: [0×0 struct]
+            EngineDataList: [0×0 string]
+
+Set Up Backtesting Engine
+
+To backtest the two strategies, use the backtestEngine object. The backtesting engine sets
+parameters of the backtest that apply to all strategies, such as the risk-free rate and initial portfolio
+value. For more information, see backtestEngine.
+
+% Create an array of strategies for the backtestEngine.
+strategies = [equalWeightStrategy chaseReturnsStrategy];
+
+% Create backtesting engine to test both strategies.
+backtester = backtestEngine(strategies);
+
+Rebalance Functions
+
+Strategy rebalance functions defined using the “rebalanceFcn” on page 15-0
+ argument for
+backtestStrategy must adhere to a fixed API that the backtest engine expects when interacting
+with each strategy. Rebalance functions must implement one of the following two syntaxes:
+
+function new_weights = exampleRebalanceFcn(current_weights,assetPriceTimeTable)
+
+function new_weights = exampleRebalanceFcn(current_weights,assetPriceTimeTable,signalDataTimeTabl
+
+All rebalance functions take as their first input argument the current allocation weights of the
+portfolio. current_weights represents the asset allocation just before the rebalance occurs. During
+a rebalance, you can use current_weights in a variety of ways. For example, you can use
+current_weights to determine how far the portfolio allocation has drifted from the target
+allocation or to size trades during the rebalance to limit turnover.
+
+The second and third arguments of the rebalance function syntax are the rolling windows of asset
+prices and optional signal data. The two tables contain the trailing N rows of the asset and signal
+timetables that are passed to the runBacktest function, where N is set using the LookbackWindow
+property of each strategy.
+
+If optional signal data is provided to the runBacktest function, then the backtest engine passes the
+rolling window of signal data to each strategy that supports it.
+
+The equalWeight strategy simply invests equally across all assets.
+
+function new_weights = equalWeight(current_weights,assetPrices) %#ok<INUSD>
+
+% Invest equally across all assets.
+num_assets = numel(current_weights);
+new_weights = ones(1,num_assets) / num_assets;
+
+end
+
+The chaseReturns strategy invests only in the top X stocks based on their rolling returns in the
+lookback window. This naive strategy is used simply as an illustrative example.
+
+function new_weights = chaseReturns(current_weights,assetPrices)
+
+backtestStrategy
+
+15-247

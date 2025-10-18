@@ -1,0 +1,63 @@
+Troubleshooting MAD Portfolio Optimization Results
+
+PortfolioMAD Object Destroyed When Modifying
+
+If a PortfolioMAD object is destroyed when modifying, remember to pass an existing object into the
+PortfolioMAD object if you want to modify it, otherwise it creates a new object. See “Creating the
+PortfolioMAD Object” on page 6-22 for details.
+
+Matrix Incompatibility and "Non-Conformable" Errors
+
+If you get matrix incompatibility or "non-conformable" errors, the representation of data in the tools
+follows a specific set of basic rules described in “Conventions for Representation of Data” on page 6-
+20.
+
+Missing Data Estimation Fails
+
+If asset return data has missing or NaN values, the simulateNormalScenariosByData function
+with the 'missingdata' flag set to true may fail with either too many iterations or a singular
+covariance. To correct this problem, consider this:
+
+•
+If you have asset return data with no missing or NaN values, you can compute a covariance matrix
+that may be singular without difficulties. If you have missing or NaN values in your data, the
+supported missing data feature requires that your covariance matrix must be positive-definite,
+that is, nonsingular.
+
+•
+simulateNormalScenariosByData uses default settings for the missing data estimation
+procedure that might not be appropriate for all problems.
+
+In either case, you might want to estimate the moments of asset returns separately with either the
+ECM estimation functions such as ecmnmle or with your own functions.
+
+mad_optim_transform Errors
+
+If you obtain optimization errors such as:
+
+Error using mad_optim_transform (line 276)
+Portfolio set appears to be either empty or unbounded. Check constraints.
+
+Error in PortfolioMAD/estimateFrontier (line 64)
+    [AI, bI, AE, bE, lB, uB, f0, f, x0] = mad_optim_transform(obj);
+
+or
+
+Error using mad_optim_transform (line 281)
+Cannot obtain finite lower bounds for specified portfolio set.
+
+Error in PortfolioMAD/estimateFrontier (line 64)
+    [AI, bI, AE, bE, lB, uB, f0, f, x0] = mad_optim_transform(obj);
+
+Since the portfolio optimization tools require a bounded portfolio set, these errors (and similar
+errors) can occur if your portfolio set is either empty and, if nonempty, unbounded. Specifically, the
+portfolio optimization algorithm requires that your portfolio set have at least a finite lower bound.
+The best way to deal with these problems is to use the validation methods in “Validate the MAD
+Portfolio Problem” on page 6-80. Specifically, use estimateBounds to examine your portfolio set,
+and use checkFeasibility to ensure that your initial portfolio is either feasible and, if infeasible,
+that you have sufficient turnover to get from your initial portfolio to the portfolio set.
+
+6
+MAD Portfolio Optimization Tools
+
+6-118

@@ -1,0 +1,76 @@
+4. Adding EmpStatus, Deviance = 1447.3451, Chi2Stat = 8.2264038, PValue = 0.0041285257
+5. Adding CustAge, Deviance = 1441.994, Chi2Stat = 5.3511754, PValue = 0.020708306
+6. Adding ResStatus, Deviance = 1437.8756, Chi2Stat = 4.118404, PValue = 0.042419078
+7. Adding OtherCC, Deviance = 1433.707, Chi2Stat = 4.1686018, PValue = 0.041179769
+
+Generalized Linear regression model:
+    logit(status) ~ 1 + CustAge + ResStatus + EmpStatus + CustIncome + TmWBank + OtherCC + AMBalance
+    Distribution = Binomial
+
+Estimated Coefficients:
+                   Estimate       SE       tStat       pValue  
+                   ________    ________    ______    __________
+
+(Intercept)    0.70239     0.064001    10.975    5.0538e-28
+    CustAge        0.60833      0.24932      2.44      0.014687
+    ResStatus        1.377      0.65272    2.1097      0.034888
+    EmpStatus      0.88565        0.293    3.0227     0.0025055
+    CustIncome     0.70164      0.21844    3.2121     0.0013179
+    TmWBank         1.1074      0.23271    4.7589    1.9464e-06
+    OtherCC         1.0883      0.52912    2.0569      0.039696
+    AMBalance        1.045      0.32214    3.2439     0.0011792
+
+1200 observations, 1192 error degrees of freedom
+Dispersion: 1
+Chi^2-statistic vs. constant model: 89.7, p-value = 1.4e-16
+
+Suppose that a missing observation (Nan) is added to the data and then newdata is scored using the
+score function. By default, the points and score assigned to the missing value is NaN.
+
+newdata = data(1:10,:);
+newdata.CustAge(1) = NaN;
+[Scores,Points] = score(sc,newdata)
+
+Scores =
+
+NaN
+    1.4646
+    0.7662
+    1.5779
+    1.4535
+    1.8944
+   -0.0872
+    0.9207
+    1.0399
+    0.8252
+
+Points =
+
+CustAge     ResStatus    EmpStatus    CustIncome     TmWBank     OtherCC     AMBalance
+    ________    _________    _________    __________    _________    ________    _________
+
+NaN    -0.031252    -0.076317     0.43693        0.39607     0.15842    -0.017472
+       0.479      0.12696      0.31449     0.43693      -0.033752     0.15842    -0.017472
+     0.21445    -0.031252      0.31449    0.081611        0.39607    -0.19168    -0.017472
+     0.23039      0.12696      0.31449     0.43693      -0.044811     0.15842      0.35551
+       0.479      0.12696      0.31449     0.43693      -0.044811     0.15842    -0.017472
+       0.479      0.12696      0.31449     0.43693        0.39607     0.15842    -0.017472
+    -0.14036      0.12696    -0.076317    -0.10466      -0.033752     0.15842    -0.017472
+     0.23039      0.37641      0.31449     0.43693      -0.033752    -0.19168     -0.21206
+     0.23039    -0.031252    -0.076317     0.43693      -0.033752     0.15842      0.35551
+     0.23039      0.12696    -0.076317     0.43693      -0.033752     0.15842    -0.017472
+
+Also, notice that because the CustAge predictor for the first observation is NaN, the corresponding
+Scores output is NaN also.
+
+Solution: To resolve this issue, use the formatpoints function with the name-value pair argument
+Missing. When using Missing, you can replace a predictor’s NaN value according to three
+alternative criteria ('ZeroWoe', 'MinPoints', or 'MaxPoints').
+
+For example, use Missing to replace the missing value with the 'MinPoints' option. The row with
+the missing data now has a score corresponding to assigning it the minimum possible points for
+CustAge.
+
+Troubleshooting Credit Scorecard Results
+
+8-69

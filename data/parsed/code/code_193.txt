@@ -1,0 +1,9 @@
+Page 188
+================================================================================
+
+The Portfolio object implements mean-variance portfolio optimization. Every property and function
+of the Portfolio object is public, although some properties and functions are hidden. See
+Portfolio for the properties and functions of the Portfolio object. The Portfolio object is a
+value object where every instance of the object is a distinct version of the object. Since the
+Portfolio object is also a MATLAB object, it inherits the default functions associated with MATLAB
+objects.

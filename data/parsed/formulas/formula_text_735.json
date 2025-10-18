@@ -1,0 +1,12 @@
+{
+  "page": 440,
+  "original_text": "% Add ESG score as a constraint to the Portfolio object.\nAin = -ESGnumeric';\nbin = -minESG; % Start with the smallest ESG score\np = setInequality(p,Ain,bin);",
+  "ocr_text": "sAddESGscoreasaconstrainttothePortfolioobject.\nAin=-ESGnumeric;\nbin=-minESG;StartwiththesmallestESGscore\np=setInequality(p,Ain,bin);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 363.43,
+    "x1": 393.4,
+    "y1": 406.29
+  },
+  "confidence": "high"
+}

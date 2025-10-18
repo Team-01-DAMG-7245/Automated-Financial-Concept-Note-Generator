@@ -1,0 +1,59 @@
+Estimate Efficient Frontiers for PortfolioMAD Object
+
+In this section...
+
+“Obtaining MAD Portfolio Risks and Returns” on page 6-105
+
+“Obtaining the PortfolioMAD Standard Deviation” on page 6-106
+
+Whereas “Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-
+84 focused on estimation of efficient portfolios, this section focuses on the estimation of efficient
+frontiers. For information on the workflow when using PortfolioMAD objects, see “PortfolioMAD
+Object Workflow” on page 6-16.
+
+Obtaining MAD Portfolio Risks and Returns
+
+This example shows how to use the functions estimatePortReturn and estimatePortRisk with a
+PortfolioMAD object to provide estimates for the return (or return proxy), risk (or the risk proxy).
+These functions have the same input syntax but have different combinations of outputs.
+
+Suppose that you have this following portfolio optimization problem that gave you a collection of
+portfolios along the efficient frontier in pwgt:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0;
+0.00408 0.0289 0.0204 0.0119;
+0.00192 0.0204 0.0576 0.0336;
+0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioMAD;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+
+p = setInitPort(p, pwgt0);
+pwgt = estimateFrontier(p)
+
+pwgt = 4×10
+
+0.8823    0.7156    0.5497    0.3854    0.2199    0.0530         0         0         0       
+    0.0427    0.1427    0.2404    0.3378    0.4365    0.5342    0.4710    0.3338    0.1681       
+    0.0392    0.0434    0.0490    0.0518    0.0553    0.0628    0.0404    0.0029         0       
+    0.0358    0.0982    0.1608    0.2250    0.2883    0.3500    0.4886    0.6633    0.8319    1.0
+
+Given pwgt0 and pwgt, use the portfolio risk and return estimation functions to obtain risks and
+returns for your initial portfolio and the portfolios on the efficient frontier:
+
+prsk0 = estimatePortRisk(p, pwgt0);
+pret0 = estimatePortReturn(p, pwgt0);
+prsk = estimatePortRisk(p, pwgt);
+pret = estimatePortReturn(p, pwgt);
+
+Estimate Efficient Frontiers for PortfolioMAD Object
+
+6-105

@@ -1,0 +1,68 @@
+Troubleshooting Credit Scorecard Results
+
+In this section...
+
+“Predictor Name Is Unspecified and the Parser Returns an Error” on page 8-64
+
+“Using bininfo or plotbins Before Binning” on page 8-64
+
+“If Categorical Data Is Given as Numeric” on page 8-66
+
+“NaNs Returned When Scoring a “Test” Dataset” on page 8-68
+
+This topic shows some of the results when using credit scorecards that need troubleshooting. These
+examples cover the full range of the credit score card workflow. For details on the overall process of
+creating and developing credit scorecards, see “Credit Scorecard Modeling Workflow” on page 8-52.
+
+Predictor Name Is Unspecified and the Parser Returns an Error
+
+If you attempt to use modifybins, bininfo, or plotbins and omit the predictor's name, the parser
+returns an error.
+
+load CreditCardData
+sc = creditscorecard(data,'IDVar','CustID','GoodLabel',0);
+modifybins(sc,'CutPoints',[20 30 50 65])
+
+Error using creditscorecard/modifybins (line 79)
+Expected a string for the parameter name, instead the input type was 'double'.
+
+Solution: Make sure to include the predictor’s name when using these functions. Use this syntax to
+specify the PredictorName when using modifybins.
+
+load CreditCardData
+sc = creditscorecard(data,'IDVar','CustID','GoodLabel',0);
+modifybins(sc,'CustIncome','CutPoints',[20 30 50 65]);
+
+Using bininfo or plotbins Before Binning
+
+If you use bininfo or plotbins before binning, the results might be unusable.
+
+load CreditCardData
+sc = creditscorecard(data,'IDVar','CustID','GoodLabel',0);
+bininfo(sc,'CustAge')
+plotbins(sc,'CustAge')
+
+ans =
+
+Bin       Good    Bad     Odds         WOE       InfoValue 
+    ________    ____    ___    _______    _________    __________
+
+'21'          2       1          2    -0.011271    3.1821e-07
+    '22'          3       1          3      0.39419    0.00047977
+    '23'          1       2        0.5      -1.3976     0.0053002
+    '24'          3       4       0.75      -0.9921     0.0062895
+    '25'          3       1          3      0.39419    0.00047977
+    '26'          4       2          2    -0.011271    6.3641e-07
+    '27'          6       5        1.2      -0.5221     0.0026744
+    '28'         10       2          5      0.90502     0.0067112
+    '29'          8       6     1.3333     -0.41674     0.0021465
+    '30'          9      10        0.9     -0.80978      0.011321
+    '31'          8       6     1.3333     -0.41674     0.0021465
+    '32'         13      13          1     -0.70442      0.011663
+    '33'          9      11    0.81818     -0.90509      0.014934
+    '34'         14      12     1.1667     -0.55027     0.0070391
+
+8
+Credit Risk Analysis
+
+8-64

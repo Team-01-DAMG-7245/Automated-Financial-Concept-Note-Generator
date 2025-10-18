@@ -1,0 +1,12 @@
+{
+  "page": 626,
+  "original_text": "conditionalBudget = sum(w(w > 0.05))",
+  "ocr_text": "conditionalBudget=sum(w(w0.05))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 595.13,
+    "x1": 285.05,
+    "y1": 605.6
+  },
+  "confidence": "high"
+}

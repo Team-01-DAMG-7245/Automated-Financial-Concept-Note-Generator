@@ -1,0 +1,9 @@
+Page 1282
+================================================================================
+
+for commodity = 1:width(Prices)
+    nexttile
+    plot(Prices.Date, Prices{:, commodity})
+    title(commodityNames(commodity))   
+    axis off
+end

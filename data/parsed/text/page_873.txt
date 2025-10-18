@@ -1,0 +1,55 @@
+Obtaining Efficient Portfolios for Target Returns
+
+This example shows how to obtain efficient portfolios that have targeted portfolio returns using the
+estimateFrontierByReturn function.
+
+The estimateFrontierByReturn function accepts one or more target portfolios returns and
+obtains efficient portfolios with the specified returns. For example, assume that you have a universe
+of four assets where you want to obtain efficient portfolios with target portfolio returns of 7%, 10%,
+and 12%:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioMAD;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+
+pwgt = estimateFrontierByReturn(p, [0.07,  0.10, .12]);
+display(pwgt)
+
+pwgt = 4×3
+
+0.7489    0.3770    0.1264
+    0.1202    0.3235    0.4641
+    0.0466    0.0771    0.0963
+    0.0843    0.2224    0.3132
+
+Sometimes, you can request a return for which no efficient portfolio exists. Based on the previous
+code, suppose that you want a portfolio with a 4% return (which is the return of the first asset). A
+portfolio that is fully invested in the first asset, however, is inefficient. estimateFrontierByReturn
+warns if your target returns are outside the range of efficient portfolio returns and replaces it with
+the endpoint portfolio of the efficient frontier closest to your target return. The best way to avoid this
+situation is to bracket your target portfolio returns with estimateFrontierLimits and
+estimatePortReturn (see “Obtaining Endpoints of the Efficient Frontier” on page 6-87 and
+“Obtaining MAD Portfolio Risks and Returns” on page 6-105).
+
+pret = estimatePortReturn(p, p.estimateFrontierLimits);
+display(pret)
+
+pret = 2×1
+
+0.0594
+    0.1790
+
+This result indicates that efficient portfolios have returns that range from 6.5% to 17.8%. Note, your
+results for this code may be different due to the random generation of scenarios.
+
+Obtaining Efficient Portfolios for Target Returns
+
+6-93

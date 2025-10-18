@@ -1,0 +1,58 @@
+Use simulate to simulate the end-of-year stock prices using the GBM model (gbm) over nTrials
+trials.
+
+% Simulate stock prices at maturity
+[Paths, ~, ~] = simulate(gbmobj,nPeriods,'nTrials',nTrials,'DeltaTime',T);
+
+% Extract the final prices for all trials
+ST = Paths(end, :, 1);
+
+Calculate the payoff for European call and put options based on the simulated prices.
+
+% Calculate payoffs for call and put options
+callPayoff = max(ST - K, 0)
+
+callPayoff = 
+5.7533
+
+putPayoff = max(K - ST, 0)
+
+putPayoff = 
+0
+
+Discount these payoffs back to the present value and then average the payoff values to estimate the
+option prices.
+
+% Discount payoffs back to present value and average
+callPrice = exp(-r * T) * mean(callPayoff)
+
+callPrice = 
+5.4727
+
+putPrice = exp(-r * T) * mean(putPayoff)
+
+putPrice = 
+0
+
+Display the estimated prices for both the call and put options.
+
+% Display results
+fprintf('European Call Option Price: %.4f\n', callPrice);
+
+European Call Option Price: 5.4727
+
+fprintf('European Put Option Price: %.4f\n', putPrice);
+
+European Put Option Price: 0.0000
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+gbm
+
+15-107

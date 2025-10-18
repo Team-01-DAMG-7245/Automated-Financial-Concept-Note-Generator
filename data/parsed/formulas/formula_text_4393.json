@@ -1,0 +1,12 @@
+{
+  "page": 2489,
+  "original_text": "ma = movavg( ___ ,initialPoints) adds an optional argument for initialPoints.",
+  "ocr_text": "ma=movavg( ,initialPoints)addsanoptionalargumentforinitialPoints.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 375.83,
+    "x1": 500.16,
+    "y1": 387.46
+  },
+  "confidence": "high"
+}

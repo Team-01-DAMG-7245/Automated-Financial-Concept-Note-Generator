@@ -1,0 +1,12 @@
+{
+  "page": 911,
+  "original_text": "LPM = lpm(Returns, MAR, [0 1 2])",
+  "ocr_text": "LPM=Lpm(Returns,MAR,[012])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 543.03,
+    "x1": 263.38,
+    "y1": 553.49
+  },
+  "confidence": "high"
+}

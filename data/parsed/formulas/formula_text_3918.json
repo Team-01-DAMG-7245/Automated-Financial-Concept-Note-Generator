@@ -1,0 +1,12 @@
+{
+  "page": 2228,
+  "original_text": "% Use the InitialPoint name-value argument\nx0 = [0.7; zeros(3,1); 0.3; zeros(3,1)];\nw2 = estimateCustomObjectivePortfolio(p,riskParity,InitialPoint=x0);\nriskParity(w2)",
+  "ocr_text": "UsetheInitialPointname-valueargument\nx0=[0.7;zeros(3,1);0.3;zeros(3,1)];\nw2=estimateCustomObjectivePortfolio(p,riskParity,InitialPoint=x0);\nriskParity(w2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 337.23,
+    "x1": 458.42,
+    "y1": 380.09
+  },
+  "confidence": "high"
+}

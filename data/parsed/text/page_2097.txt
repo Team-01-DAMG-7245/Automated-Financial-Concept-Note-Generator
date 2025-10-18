@@ -1,0 +1,54 @@
+cur2str
+
+Bank-formatted text
+
+Syntax
+
+BankText = cur2str(Value,Digits)
+
+Description
+
+BankText = cur2str(Value,Digits) returns the given value in bank format.
+
+The output format for BankText is a numerical format with dollar sign prefix, two decimal places,
+and negative numbers in parentheses; for example, ($123.45) and $6789.01. The standard MATLAB
+bank format uses two decimal places, no dollar sign, and a minus sign for negative numbers; for
+example, −123.45 and 6789.01.
+
+Examples
+
+Return Bank Formatted Text
+
+Return bank formatted text for a negative numeric value.
+
+BankText = cur2str(-826444.4456,3)
+
+BankText = 
+'($826444.446)'
+
+% Negative numbers are displayed in parentheses.
+
+Input Arguments
+
+Value — Value to be formatted
+numeric value
+
+Value to be formatted, specified as a numeric value.
+
+Data Types: double
+
+Digits — Number of significant digits
+2 (default) | integer
+
+Number of significant digits, specified as an integer. For example, when rounding off the value of 1
+significant digit, on the right of the decimal point, .1921212 is rounded of to .2:
+
+cur2str(9990.1921212,1)
+
+ans =
+
+'$9990.2'
+
+cur2str
+
+15-791

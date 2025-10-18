@@ -1,0 +1,6 @@
+Page 559
+================================================================================
+
+% Return initial observation
+initialObservation = [initialWealth; loggedSignals.TimePeriod];
+end

@@ -1,0 +1,5 @@
+Page 2183
+================================================================================
+
+Objective — Least-squares objective function
+scalar

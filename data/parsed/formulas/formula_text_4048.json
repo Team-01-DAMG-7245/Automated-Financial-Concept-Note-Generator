@@ -1,0 +1,12 @@
+{
+  "page": 2290,
+  "original_text": "AssetScenarios = mvnrnd(m, C, 20000);",
+  "ocr_text": "AssetScenarios=mvnrnd(m,C,_20000);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 307.96,
+    "x1": 290.46,
+    "y1": 318.43
+  },
+  "confidence": "high"
+}

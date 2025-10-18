@@ -1,0 +1,60 @@
+You obtain these risks and returns:
+
+display(prsk0)
+
+prsk0 = 
+0.0252
+
+display(pret0)
+
+pret0 = 
+0.0071
+
+display(prsk)
+
+prsk = 10×1
+
+0.0175
+    0.0190
+    0.0228
+    0.0279
+    0.0338
+    0.0401
+    0.0473
+    0.0568
+    0.0678
+    0.0796
+
+display(pret)
+
+pret = 10×1
+
+0.0049
+    0.0060
+    0.0071
+    0.0082
+    0.0093
+    0.0104
+    0.0115
+    0.0125
+    0.0136
+    0.0147
+
+Obtaining the PortfolioMAD Standard Deviation
+
+This example shows how to compute standard deviations of portfolio returns for a PortfolioMAD
+object with the function estimatePortStd. These functions work with any PortfolioMAD portfolios,
+not necessarily efficient portfolios.
+
+For example, the following code obtains five portfolios (pwgt) on the efficient frontier and also has an
+initial portfolio in pwgt0. Various portfolio statistics are computed that include the return, risk, and
+standard deviation. The listed estimates are for the initial portfolio in the first row followed by
+estimates for each of the five efficient portfolios in subsequent rows.
+
+m = [ 0.0042; 0.0083; 0.01; 0.15 ];
+C = [ 0.005333 0.00034 0.00016 0;
+
+6
+MAD Portfolio Optimization Tools
+
+6-106

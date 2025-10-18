@@ -1,0 +1,12 @@
+{
+  "page": 2230,
+  "original_text": "% Compute the min tracking error portfolio with a risk constraint\nx0 = 1/4*ones(4,1);\nTE = @(w) (w-x0)'*p2.AssetCovar*(w-x0);\nwTE = estimateCustomObjectivePortfolio(p2,TE,...\n    TargetVolatility=targetRisk);",
+  "ocr_text": "Computethemintrackingerrorportfoliowithariskconstraint\n\nx0=1/4*ones(4,1);\n\nTE=Q(w)_(w-x0)*p2.AssetCovar*(w-x0);\n\nwTE=estimateCustom0bjectivePortfolio(p2,TE,...\nTargetVolatility=targetRisk);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 601.59,
+    "x1": 442.17,
+    "y1": 655.26
+  },
+  "confidence": "high"
+}

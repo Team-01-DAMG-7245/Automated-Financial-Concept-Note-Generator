@@ -1,0 +1,12 @@
+{
+  "page": 352,
+  "original_text": "q = \n  Portfolio with properties:",
+  "ocr_text": "q =\nPortfoliowithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 460.23,
+    "x1": 241.71,
+    "y1": 481.49
+  },
+  "confidence": "high"
+}

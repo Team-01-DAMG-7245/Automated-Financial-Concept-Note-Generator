@@ -1,0 +1,12 @@
+{
+  "page": 1202,
+  "original_text": "F(t, Xt) = A(t) + B(t)Xt\n (14-2)",
+  "ocr_text": "F(t,X)=A(t)+B(t)X; (14-2)",
+  "bbox": {
+    "x0": 90.16,
+    "y0": 662.92,
+    "x1": 558.0,
+    "y1": 676.2
+  },
+  "confidence": "high"
+}

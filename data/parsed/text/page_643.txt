@@ -1,0 +1,63 @@
+PortfolioCVaR Object
+
+In this section...
+
+“PortfolioCVaR Object Properties and Functions” on page 5-17
+
+“Working with PortfolioCVaR Objects” on page 5-17
+
+“Setting and Getting Properties” on page 5-18
+
+“Displaying PortfolioCVaR Objects” on page 5-18
+
+“Saving and Loading PortfolioCVaR Objects” on page 5-18
+
+“Estimating Efficient Portfolios and Frontiers” on page 5-18
+
+“Arrays of PortfolioCVaR Objects” on page 5-19
+
+“Subclassing PortfolioCVaR Objects” on page 5-20
+
+“Conventions for Representation of Data” on page 5-20
+
+PortfolioCVaR Object Properties and Functions
+
+The PortfolioCVaR object implements conditional value-at-risk (CVaR) portfolio optimization. Every
+property and function of the PortfolioCVaR object is public, although some properties and
+functions are hidden. See PortfolioCVaR for the properties and functions of a PortfolioCVaR
+object. The PortfolioCVaR object is a value object where every instance of the object is a distinct
+version of the object. Since the PortfolioCVaR object is also a MATLAB object, it inherits the
+default functions associated with MATLAB objects.
+
+Working with PortfolioCVaR Objects
+
+The PortfolioCVaR object and its functions are an interface for conditional value-at-risk portfolio
+optimization. So, almost everything you do with the PortfolioCVaR object can be done using the
+functions. The basic workflow is:
+
+1
+Design your portfolio problem.
+
+2
+Use PortfolioCVaR to create the PortfolioCVaR object or use the various set functions to set
+up your portfolio problem.
+
+3
+Use estimate functions to solve your portfolio problem.
+
+In addition, functions are available to help you view intermediate results and to diagnose your
+computations. Since MATLAB features are part of a PortfolioCVaR object, you can save and load
+objects from your workspace and create and manipulate arrays of objects. After settling on a
+problem, which, in the case of CVaR portfolio optimization, means that you have either scenarios,
+data, or moments for asset returns, a probability level, and a collection of constraints on your
+portfolios, use PortfolioCVaR to set the properties for the PortfolioCVaR object.
+
+PortfolioCVaR lets you create an object from scratch or update an existing object. Since the
+PortfolioCVaR object is a value object, it is easy to create a basic object, then use functions to
+build upon the basic object to create new versions of the basic object. This is useful to compare a
+basic problem with alternatives derived from the basic problem. For details, see “Creating the
+PortfolioCVaR Object” on page 5-22.
+
+PortfolioCVaR Object
+
+5-17

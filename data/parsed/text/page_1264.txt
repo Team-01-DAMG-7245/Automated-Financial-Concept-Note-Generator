@@ -1,0 +1,70 @@
+applied to all indices. Dividend yields are ignored to simplify the model and its associated data
+collection.
+
+In contrast, the specification of the exposure matrix, sigma, depends on how the driving source of
+uncertainty is modeled. You can model it directly as a Brownian motion (correlated Gaussian random
+numbers implicitly mapped to Gaussian margins) or model it as a Brownian copula (correlated
+Gaussian or t random numbers explicitly mapped to semi-parametric margins).
+
+Because the CDF and inverse CDF (quantile function) of univariate distributions are both monotonic
+transforms, a copula provides a convenient way to simulate dependent random variables whose
+margins are dissimilar and arbitrarily distributed. Moreover, because a copula defines a given
+dependence structure regardless of its margins, copula parameter calibration is typically easier than
+estimation of the joint distribution function.
+
+Once you have simulated sample paths, options are priced by the least squares regression method of
+Longstaff & Schwartz (see Valuing American Options by Simulation: A Simple Least-Squares
+Approach, The Review of Financial Studies, Spring 2001). This approach uses least squares to
+estimate the expected payoff of an option if it is not immediately exercised. It does so by regressing
+the discounted option cash flows received in the future on the current price of the underlier
+associated with all in-the-money sample paths. The continuation function is estimated by a simple
+third-order polynomial, in which all cash flows and prices in the regression are normalized by the
+option strike price, improving numerical stability.
+
+Import the Supporting Historical Dataset
+
+Load a daily historical dataset of 3-month Euribor, the trading dates spanning the interval 07-
+Feb-2001 to 24-Apr-2006, and the closing index levels of the following representative large-cap equity
+indices:
+
+•
+TSX Composite (Canada)
+
+•
+CAC 40 (France)
+
+•
+DAX (Germany)
+
+•
+Nikkei 225 (Japan)
+
+•
+FTSE 100 (UK)
+
+•
+S&P 500 (US)
+
+clear
+load Data_GlobalIdx2
+dates = datetime(dates,'ConvertFrom','datenum');
+
+The following plots illustrate this data. Specifically, the plots show the relative price movements of
+each index and the Euribor risk-free rate proxy. The initial level of each index has been normalized to
+unity to facilitate the comparison of relative performance over the historical record.
+
+nIndices  = size(Data,2)-1;     % Number of indices
+
+prices = Data(:,1:end-1);
+
+yields = Data(:,end);            % Daily effective yields
+yields = 360 * log(1 + yields);  % Continuously-compounded, annualized yield
+
+plot(dates, ret2tick(tick2ret(prices,'Method','continuous'),'Method','continuous'))
+
+xlabel('Date')
+
+14
+Stochastic Differential Equations
+
+14-72

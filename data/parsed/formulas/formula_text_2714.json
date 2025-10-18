@@ -1,0 +1,12 @@
+{
+  "page": 1366,
+  "original_text": "strat2 = backtestStrategy('Shrinkage', @shrunkStrat, ...\n    RebalanceFrequency=rebalFreq, ...\n    LookbackWindow=lookback, ...\n    TransactionCosts=transactionsFixed, ...\n    InitialWeights=shrunk_initial);",
+  "ocr_text": "strat2=backtestStrategy(Shrinkage,QshrunkStrat,...\nRebalanceFrequency=rebalFreq,...\nLookbackWindow=Lookback,...\nTransactionCosts=transactionsFixed,...\nInitialWeights=shrunk_initial);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 395.88,
+    "x1": 393.43,
+    "y1": 449.55
+  },
+  "confidence": "high"
+}

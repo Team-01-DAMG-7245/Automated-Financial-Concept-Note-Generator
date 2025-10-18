@@ -1,0 +1,12 @@
+{
+  "page": 1208,
+  "original_text": "obj = sde(F, G)    % dX = F(t,X)dt + G(t,X)dW",
+  "ocr_text": "obj=sde(F,G) 8dX=F(t,X)dt+G(t,X)dW",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 678.79,
+    "x1": 333.82,
+    "y1": 689.26
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1012,
+  "original_text": "K  = length(sc.PredictorVars);\nlb = [-Inf;zeros(K,1)];\nub = [Inf;ones(K,1)];\nAIneq = [0 -1 0 0 0 1 0 0 0 0;0 -1 0 0 0 -1 0 0 0 0];\nbIneq = [0.05;0.05];\nOptions = optimoptions('fmincon','SpecifyObjectiveGradient',true,'Display','off');\n[sc3,mdl] = fitConstrainedModel(sc,'AInequality',AIneq,'bInequality',bIneq,...\n    'LowerBound',lb,'UpperBound',ub,'Options',Options);",
+  "ocr_text": "K=length(sc.PredictorVars);\n\nlb=[-Inf;zeros(K,1)];\n\nub=[Inf;ones(K,1)];\n\nAIneq=[0-100010000;0-1000-100600];\n\nbIneq=[0.05;0.05];\n\nOptions=optimoptions(fmincon,SpecifyObjectiveGradient,true,Display,off);\n\n[sc3,mdl]=fitConstrainedModel(sc,AInequality,AIneq,bInequality,bIneq,...\nLowerBound,lb,UpperBound,ub,Options,Options);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 420.24,
+    "x1": 534.31,
+    "y1": 506.31
+  },
+  "confidence": "high"
+}

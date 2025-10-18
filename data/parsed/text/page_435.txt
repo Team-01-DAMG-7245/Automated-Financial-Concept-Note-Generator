@@ -1,0 +1,30 @@
+To visualize the tradeoff between a portfolio's average percentage of WoB and the traditional mean-
+variance efficient frontier, a set of contour plots are computed for some target WoB percentages using
+the plotContours function in Local Functions on page 4-269.
+
+nC = 5; % Number of contour plots
+minContour = max(pWoB{1}); % WoB values lower than this return
+                           % overlapped contours.
+
+% Plot the contours.
+plotContours(p,minContour,maxWoB,nC,N)
+
+Exclusion Examples
+
+Instead of requiring a specific level for the portfolio's average percentage of WoB, the goal is to find
+the traditional mean-variance efficient frontiers while excluding assets that have a percentage of WoB
+lower than a given threshold. You can plot the exclusion using the plotExclusionExample function
+in Local Functions on page 4-269.
+
+% Remove the average percetage of WoB constraint.
+p.AInequality = []; p.bInequality = [];
+
+% Set of thresholds for excluding assets.
+thresholdWoB = 0.25:0.05:0.40;
+
+% Plot the exclusion example.
+plotExclusionExample(p,WoB,thresholdWoB,N)
+
+Portfolio Optimization Using Social Performance Measure
+
+4-267

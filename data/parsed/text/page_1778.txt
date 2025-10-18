@@ -1,0 +1,56 @@
+beytbill
+
+Bond equivalent yield for Treasury bill
+
+Syntax
+
+Yield = beytbill(Settle,Maturity,Discount)
+
+Description
+
+Yield = beytbill(Settle,Maturity,Discount) returns the bond equivalent yield for a
+Treasury bill.
+
+Examples
+
+Find the Bond Equivalent Yield for a Treasury Bill
+
+This example shows how to find the bond equivalent yield for a Treasury bill that has a settlement
+date of February 11, 2000, a maturity date of August 7, 2000, and a discount rate is 5.77.
+
+Yield = beytbill(datetime(2000,2,11),datetime(2000,8,7), 0.0577)
+
+Yield = 
+0.0602
+
+Input Arguments
+
+Settle — Settlement date of Treasury bill
+datetime array | string array | date character vector
+
+Settlement date of the Treasury bill, specified as a scalar or a NTBILLS-by-1 vector using a datetime
+array, string array, or date character vectors. Settle must be earlier than Maturity.
+
+To support existing code, beytbill also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of Treasury bill
+datetime array | string array | date character vector
+
+Maturity date of the Treasury bill, specified as a scalar or a NTBILLS-by-1 vector using a datetime
+array, string array, or date character vectors.
+
+To support existing code, beytbill also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Discount — Discount rate of Treasury bill
+decimal
+
+15
+Functions
+
+15-472

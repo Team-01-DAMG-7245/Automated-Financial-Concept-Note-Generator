@@ -1,0 +1,55 @@
+Obtain Group Constraints for a PortfolioCVaR Object
+
+Suppose you have a portfolio of five assets and you want to ensure that the first three assets
+constitute at most 30% of your portfolio. Given a PortfolioCVaR object p with the group constraints
+set, obtain the values for GroupMatrix, LowerGroup, and UpperGroup.
+
+G = [ true true true false false ];
+p = PortfolioCVaR;
+p = setGroups(p, G, [], 0.3);
+[GroupMatrix, LowerGroup, UpperGroup] = getGroups(p)
+
+GroupMatrix = 1×5
+
+1     1     1     0     0
+
+LowerGroup =
+
+[]
+
+UpperGroup = 
+0.3000
+
+Obtain Group Constraints for a PortfolioMAD Object
+
+Suppose you have a portfolio of five assets and you want to ensure that the first three assets
+constitute at most 30% of your portfolio. Given a PortfolioMAD object p with the group constraints
+set, obtain the values for GroupMatrix, LowerGroup, and UpperGroup.
+
+G = [ true true true false false ];
+p = PortfolioMAD;
+p = setGroups(p, G, [], 0.3);
+[GroupMatrix, LowerGroup, UpperGroup] = getGroups(p)
+
+GroupMatrix = 1×5
+
+1     1     1     0     0
+
+LowerGroup =
+
+[]
+
+UpperGroup = 
+0.3000
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+getGroups
+
+15-1099

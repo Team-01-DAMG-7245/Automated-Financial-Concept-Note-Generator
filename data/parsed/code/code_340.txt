@@ -1,0 +1,5 @@
+Page 328
+================================================================================
+
+Note If the portfolio problem has cardinality constraints or conditional bounds specified using
+setMinMaxNumAssets or setBounds, the objective function cannot be nonconvex.

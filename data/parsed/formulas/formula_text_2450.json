@@ -1,0 +1,12 @@
+{
+  "page": 1268,
+  "original_text": "pLowerTail = linspace(minProbability  , tailFraction    , 200); % Lower tail\npUpperTail = linspace(1 - tailFraction, maxProbability  , 200); % Upper tail\npInterior  = linspace(tailFraction    , 1 - tailFraction, 200); % Interior",
+  "ocr_text": "pLowerTail=linspace(minProbability,tailFraction ,200);*Lowertail\npUpperTail=linspace(1-tailFraction,maxProbability,200);Uppertail\npInterior=linspace(tailFraction ,1-tailFraction,200);*Interior",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.83,
+    "x1": 501.79,
+    "y1": 567.89
+  },
+  "confidence": "high"
+}

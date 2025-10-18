@@ -1,0 +1,12 @@
+{
+  "page": 577,
+  "original_text": "•\nFor a buy trade:\nImplementation Shortfall = Executed Price × Traded Volume −Arrival Price × Traded Volume",
+  "ocr_text": "*Forabuytrade:\nImplementationShortfall=ExecutedPricex_TradedVolume-ArrivalPricex_TradedVolume",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 121.17,
+    "x1": 535.04,
+    "y1": 144.8
+  },
+  "confidence": "high"
+}

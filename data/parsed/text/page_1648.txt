@@ -1,0 +1,65 @@
+The simByHybrid function partitions each time increment dt into NSteps subintervals of length dt/
+NSteps, and refines the simulation by evaluating the simulated state vector at NSteps − 1
+intermediate points. Although simByHybrid does not report the output state vector at these
+intermediate points, the refinement improves accuracy by allowing the simulation to more closely
+approximate the underlying continuous-time process.
+
+Data Types: double
+
+Antithetic — Flag to indicate whether simByHybrid uses antithetic sampling to generate
+Gaussian random variates
+False (no antithetic sampling) (default) | logical with values True or False
+
+Flag that indicates whether simByHybrid uses “Antithetic Sampling” on page 15-345 to generate the
+Gaussian random variates that drive the Brownian motion vector (Wiener processes). This argument
+is specified as a scalar logical flag with a value of True or False.
+
+When you specify True, simByHybrid performs sampling such that all primary and antithetic paths
+are simulated and stored in successive matching pairs:
+
+•
+Odd trials (1,3,5,...) correspond to the primary Gaussian paths.
+
+•
+Even trials (2,4,6,...) are the matching antithetic paths of each pair derived by negating the
+Gaussian draws of the corresponding primary (odd) trial.
+
+Note If you specify an input noise process (see Z), simByHybrid ignores the value of Antithetic.
+
+Data Types: logical
+
+MonteCarloMethod — Monte Carlo method to simulate stochastic processes
+"standard" (default) | string with values "standard", "quasi", or "randomized-quasi" |
+character vector with values 'standard', 'quasi', or 'randomized-quasi'
+
+Monte Carlo method to simulate stochastic processes, specified as a string or character vector with
+one of the following values:
+
+•
+"standard" — Monte Carlo using pseudo random numbers
+
+•
+"quasi" — Quasi-Monte Carlo using low-discrepancy sequences
+
+•
+"randomized-quasi" — Randomized quasi-Monte Carlo
+
+Note If you specify an input noise process (see Z), simByHybrid ignores the value of
+MonteCarloMethod.
+
+Data Types: string | char
+
+QuasiSequence — Low discrepancy sequence to drive stochastic processes
+"sobol" (default) | string with value "sobol" | character vector with value 'sobol'
+
+Low discrepancy sequence to drive the stochastic processes, specified as a string or character vector
+with the following value:
+
+•
+"sobol" — Quasi-random low-discrepancy sequences that use a base of two to form successively
+finer uniform partitions of the unit interval and then reorder the coordinates in each dimension.
+
+15
+Functions
+
+15-342

@@ -1,0 +1,74 @@
+0.3000
+ 0.2000
+ 0.2000
+      0
+
+To create an equally weighted portfolio of four assets, use setTrackingPort:
+
+p = Portfolio;
+p = setTrackingPort(p, 1/4, 4);
+disp(p.TrackingPort)
+
+0.2500
+ 0.2500
+ 0.2500
+ 0.2500
+
+See Also
+Portfolio | setAssetList | setInitPort | setTrackingPort | setTrackingError |
+estimateBounds | checkFeasibility
+
+Related Examples
+
+•
+“Setting Up an Initial or Current Portfolio” on page 4-37
+
+•
+“Common Operations on the Portfolio Object” on page 4-33
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Asset Returns and Moments of Asset Returns Using Portfolio Object” on page 4-42
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+Setting Up a Tracking Portfolio
+
+4-41

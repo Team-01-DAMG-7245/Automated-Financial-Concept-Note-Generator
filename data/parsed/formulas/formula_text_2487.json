@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf('        t Copula American Call Basket Price: %8.4f\\n'  , tCopulaCallPrice)",
+  "ocr_text": "fprintf( tCopulaAmericanCallBasketPrice:8.4f(n,tCopulaCallPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 532.89,
+    "x1": 539.72,
+    "y1": 543.36
+  },
+  "confidence": "high"
+}

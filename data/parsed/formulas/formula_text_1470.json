@@ -1,0 +1,12 @@
+{
+  "page": 741,
+  "original_text": "pnames = cell(1,5);\nfor i = 1:5\npnames{i} = sprintf('Port%d',i);\nend",
+  "ocr_text": "pnames=cell(1,5);\n\nfori=1:5\npnames{i}=sprintf(Portsd,i);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 418.08,
+    "x1": 263.39,
+    "y1": 460.94
+  },
+  "confidence": "high"
+}

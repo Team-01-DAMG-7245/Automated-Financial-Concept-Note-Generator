@@ -1,0 +1,6 @@
+Page 2257
+================================================================================
+
+Note If no value is specified for NumPorts, the default value is obtained from the hidden property
+defaultNumPorts (default value is 10). If NumPorts = 1, this function returns the portfolio
+specified by the hidden property defaultFrontierLimit (current default value is 'min').

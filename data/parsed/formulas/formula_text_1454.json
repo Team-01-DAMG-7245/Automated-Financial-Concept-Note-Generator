@@ -1,0 +1,12 @@
+{
+  "page": 733,
+  "original_text": "pret = estimatePortReturn(p, [pwgt0, pwgt]);\nprsk = estimatePortRisk(p, [pwgt0, pwgt]);\npstd = estimatePortStd(p, [pwgt0, pwgt]);\npvar = estimatePortVaR(p, [pwgt0, pwgt]);",
+  "ocr_text": "pret=estimatePortReturn(p,_[pwgt0,pwgt]);\nprsk=estimatePortRisk(p,_[pwgt0,pwgt]);\npstd=estimatePortStd(p,[pwgt0,pwgt]);\npvar=estimatePortVaR(p,_[pwgt0,pwgt]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.23,
+    "x1": 328.39,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2372,
+  "original_text": "FutureVal = fvvar(CashFlow,Rate)\nFutureVal = fvvar( ___ ,CFDates)",
+  "ocr_text": "FutureVal=fvvar(CashFlow,Rate)\nFutureVal=fvvar(___,CFDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.19,
+    "x1": 282.66,
+    "y1": 211.82
+  },
+  "confidence": "high"
+}

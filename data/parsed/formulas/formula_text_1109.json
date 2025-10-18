@@ -1,0 +1,12 @@
+{
+  "page": 566,
+  "original_text": "strat1 = backtestStrategy('Factor Modeling', @factorModeling, ...\n    UserData=userData, ...\n    RebalanceFrequency=rebalFreq, ...\n    LookbackWindow=lookback, ...\n    TransactionCosts=transactionsFixed, ...\n    InitialWeights=wFactorModel_initial);",
+  "ocr_text": "stratl=backtestStrategy(FactorModeling,QfactorModeling,...\nUserData=userData,...\nRebalanceFrequency=rebalFreq,...\nLookbackWindow=Lookback,...\nTransactionCosts=transactionsFixed,...\nInitialWeights=wFactorModel_initial);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 442.2,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

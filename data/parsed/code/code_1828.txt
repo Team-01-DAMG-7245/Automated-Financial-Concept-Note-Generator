@@ -1,0 +1,5 @@
+Page 1512
+================================================================================
+
+If you specify Correlation as a deterministic function of time, you can specify a dynamic
+correlation structure.

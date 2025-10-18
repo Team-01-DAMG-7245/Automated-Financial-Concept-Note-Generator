@@ -1,0 +1,79 @@
+0.30035              0.3           0.3 
+      0.14668            0.195         0.195 
+      0.10244            0.205         0.205
+
+As desired, the risk contribution of the risk budgeting portfolio matches the budget.
+
+Add Constraints to Risk Parity or Budgeting Portfolio
+
+When you add constraints, other than the long-only, fully invested constraints, to the risk parity
+formulation, you must find the portfolio allocation that satisfies all the constraints and minimizes the
+deviation from the target risk budget.
+
+The percent risk contribution of asset i is defined as
+
+RCi w =
+
+wi Σw i
+
+wTΣw ,
+
+and the goal is to find the portfolio that minimizes the deviation of RCi w  to bi, the target risk budget
+
+of asset i. For risk parity problems, bi = 1
+n, where n is the number of assets.
+
+A common way to measure deviation is to use a norm. In this example, use the 2-norm. The risk parity
+or budgeting problem with constraints results in
+
+min
+w ∑
+i
+
+wi Σw i
+wTΣw
+−bi
+
+2
+
+s . t . w ∈Ω
+
+where Ω represents the feasible set that is defined by the desired constraints. The objective function
+is the sum of squares of the deviation of the risk contributions from the target. Notice that the
+objective function is nonconvex.
+
+Next, introduce the constraint xi ≤0 . 3, which means that no more than 30% of the capital can be
+invested in each asset.
+
+% Define the Portfolio object
+p = Portfolio(AssetCovar=Sigma);
+% Set bound constraints
+p = setBounds(p,0,0.3);
+% Set budget constraint
+p = setBudget(p,1,1);
+
+Create a function handle for the nonconvex objective
+
+∑i
+
+wi Σw i
+
+wTΣw −bi
+
+2
+
+.
+
+% Define objective function
+objFun = @(w) sum(((w.*(Sigma*w))/(w'*Sigma*w) - budget).^2);
+
+Solve the problem using estimateCustomObjectivePortfolio and riskBudgetingPortfolio.
+
+% Risk budgeting portfolio with extra constraints
+w_extra = estimateCustomObjectivePortfolio(p,objFun);
+% Risk contribution
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-358

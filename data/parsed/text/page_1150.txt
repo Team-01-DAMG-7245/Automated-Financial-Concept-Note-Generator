@@ -1,0 +1,13 @@
+% Create scatter plot of the two strategies. Notice that the two strategies are highly
+% correlated.
+figure;
+scatter(AssetScenarios(1:1000,1),AssetScenarios(1:1000,2));
+
+Create PortfolioCVaR Object to Obtain Portfolio Weights
+
+Create a PortfolioCVaR object.
+
+10
+Solving Sample Problems
+
+10-52

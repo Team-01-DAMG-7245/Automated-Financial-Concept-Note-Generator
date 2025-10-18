@@ -1,0 +1,7 @@
+Page 1553
+================================================================================
+
+The second and third arguments of the rebalance function syntax are the rolling windows of asset
+prices and optional signal data. The two tables contain the trailing N rows of the asset and signal
+timetables that are passed to the runBacktest function, where N is set using the LookbackWindow
+property of each strategy.

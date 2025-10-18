@@ -1,0 +1,12 @@
+{
+  "page": 1441,
+  "original_text": "Example: G = diffusion(1, 0.3) % Diffusion rate function G(t,X)",
+  "ocr_text": "Example:G=diffusion(1,0.3)*DiffusionratefunctionG(t,X)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 443.6,
+    "x1": 460.46,
+    "y1": 455.23
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,88 @@
+DateForm
+Format
+Description
+
+7
+1
+day of month
+
+8
+Wed
+day of week, three letters
+
+9
+W
+day of week, single letter
+
+10
+1999
+year, four digits
+
+11
+99
+year, two digits
+
+12
+Mar99
+month year
+
+13
+15:45:17
+hour:minute:second
+
+14
+03:45:17 PM
+hour:minute:second AM or PM
+
+15
+15:45
+hour:minute
+
+16
+03:45 PM
+hour:minute AM or PM
+
+17
+95/03/01
+year month day
+
+Refer to the MATLAB set command for information on modifying the axis tick values and other axis
+parameters.
+
+Data Types: double
+
+StartDate — Assigns the date to the first axis tick value
+lower axis limit converted to the appropriate date number (default) | datetime scalar | string scalar |
+date character vector
+
+(Optional) Assigns the date to the first axis tick value, specified as a scalar datetime, string, or date
+character vector.
+
+The default StartDate is the lower axis limit converted to the appropriate date number. For
+example, a tick value of 1 is converted to the date 01-Jan-0000. Entering StartDate as '06-
+apr-1999' assigns the date April 6, 1999 to the first tick value and the axis tick labels are set
+accordingly.
+
+To support existing code, dateaxis also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although dateaxis supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+dateaxis
+
+15-799

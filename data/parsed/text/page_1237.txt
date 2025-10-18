@@ -1,0 +1,60 @@
+Dimensions: State = 1, Brownian = 1
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 100
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.0278117
+          Sigma: 0.231906
+
+[X1,T] = simulate(obj,nPeriods,'DeltaTime',dt);
+
+In contrast, the second approach specifies the risk-neutral return as the historical time series of
+Euribor yields. It therefore assumes a dynamic, yet deterministic, rate of return; this example does
+not illustrate stochastic interest rates. To illustrate this dynamic effect, use the ts2func utility.
+
+r = ts2func(yields,'Times',(0:nPeriods - 1)');
+
+ts2func packages a specified time series array inside a callable function of time and state, and
+synchronizes it with an optional time vector. For instance:
+
+r(0,100)
+
+ans = 
+0.0470
+
+evaluates the function at (t = 0, Xt = 100) and returns the first observed Euribor yield.
+
+However, you can also evaluate the resulting function at any intermediate time t and state Xt:
+
+r(7.5,200)
+
+ans = 
+0.0472
+
+Furthermore, the following command produces the same result when called with time alone:
+
+r(7.5)
+
+ans = 
+0.0472
+
+The equivalence of these last two commands highlights some important features.
+
+When you specify parameters as functions, they must evaluate properly when passed a scalar, real-
+valued sample time (t), and an NVars-by-1 state vector (Xt). They must also generate an array of
+appropriate dimensions, which in the first case is a scalar constant, and in the second case is a scalar,
+piecewise constant function of time alone. You are not required to use either time (t) or state (Xt). In
+the current example, the function evaluates properly when passed time followed by state, thereby
+satisfying the minimal requirements. The fact that it also evaluates correctly when passed only time
+simply indicates that the function does not require the state vector Xt. The important point to make is
+that it works when you pass it t, Xt .
+
+Furthermore, the ts2func function performs a zero-order-hold (ZOH) piecewise constant
+interpolation. The notion of piecewise constant parameters is pervasive throughout the SDE
+
+Simulating Equity Prices
+
+14-45

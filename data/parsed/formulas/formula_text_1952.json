@@ -1,0 +1,12 @@
+{
+  "page": 1011,
+  "original_text": "•\nxi = xi1 x2 . . . xiK  is the predictor values at observation i",
+  "ocr_text": "*x;=[Xi1X2..-Xix]isthe_predictorvaluesatobservationi",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 551.16,
+    "x1": 367.86,
+    "y1": 565.0
+  },
+  "confidence": "high"
+}

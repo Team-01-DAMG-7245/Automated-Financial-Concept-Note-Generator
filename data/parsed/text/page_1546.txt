@@ -1,0 +1,64 @@
+Performance fee charged as a percent of the total portfolio growth, specified as the comma-separated
+pair consisting of 'PerformanceFee' and a numeric scalar. The performance fee, sometimes called
+an incentive fee, is a fee paid to reward a fund manager based on performance of the fund. The fee is
+paid periodically based on the schedule specified by the PerformanceFeeSchedule. The default is
+0, meaning no performance fee is paid.
+
+For more information, see “Performance Fees” on page 15-260.
+
+Data Types: double
+
+PerformanceHurdle — Annualized hurdle rate or column in assets or signals to act as
+hurdle asset
+0 (default) | decimal | string
+
+Annualized hurdle rate or column in assetPrices or signalData to act as hurdle asset, specified
+as the comma-separated pair consisting of 'PerformanceHurdle' and a numeric scalar or a string.
+The PerformanceHurdle sets a minimum level of performance that a strategy must achieve before
+the performance fee is paid.
+
+•
+If specified as a numeric scalar, the hurdle represents an annualized growth rate, for example 0.05
+indicates a 5% growth rate. In this case, the performance fee is only paid if, on a performance fee
+date, the strategy portfolio value is greater than the high-water mark and the portfolio has
+produced a return greater than 5% annualized since the start of the backtest. The fee is paid only
+on the growth in excess of both the hurdle rate and the previous high-water mark.
+
+•
+If specified as a string, the hurdle must match a column in either the assetPrices or
+signalData timetables of the backtest and it indicates a hurdle asset. In this case, the
+performance fee is paid only if the portfolio value is greater than the high-water mark and the
+portfolio has produced a return greater than the hurdle asset return since the start of the
+backtest. The performance fee is charged only on the portfolio growth in excess of both the hurdle
+asset growth and the previous high-water mark.
+
+For more information, see “Performance Hurdle” on page 15-261.
+
+Data Types: double | string
+
+PerformanceFeeSchedule — Performance fee schedule
+calyears(1) (default) | integer | vector of datetimes | duration object | calendarDuration
+object
+
+Performance fee schedule, specified as the comma-separated pair consisting of
+'PerformanceFeeSchedule' and a numeric scalar, a duration or calendarDuration object, or
+alternatively as a vector of datetimes.
+
+PerformanceFeeSchedule specifies the schedule of dates where the performance fee is charged (if
+PerformanceFee is defined). The default is calyears(1), meaning the performance fee is charged
+annually.
+
+For more information, see “Defining Schedules for Backtest Strategies” on page 15-258.
+
+Data Types: double | datetime | object
+
+UserData — Strategy-specific user data for use in rebalanceFcn
+[] (default) | struct
+
+Strategy-specific user data for use in rebalanceFcn, specified as a struct. When UserData is set to
+a struct, the backtestEngine provides all user-defined rebalanceFcn function handle functions
+
+15
+Functions
+
+15-240

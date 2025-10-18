@@ -1,0 +1,12 @@
+{
+  "page": 1025,
+  "original_text": "Settle = '17-Jul-2009';   % Valuation date for the CDS\nMarketDates = datenum({'20-Sep-10','20-Sep-11','20-Sep-12','20-Sep-14', ...\n'20-Sep-16'});\nMarketSpreads = [140 175 210 265 310]';\nMarketData = [MarketDates MarketSpreads];",
+  "ocr_text": "Settle=17-Jul-2009; SValuationdatefortheCDS\nMarketDates=datenum({20-Sep-10,20-Sep-11,20-Sep-12,20-Sep-14,...\n20-Sep-16});\n\nMarketSpreads=[140175210265310];\nMarketData=[MarketDatesMarketSpreads];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 295.04,
+    "x1": 496.38,
+    "y1": 348.71
+  },
+  "confidence": "high"
+}

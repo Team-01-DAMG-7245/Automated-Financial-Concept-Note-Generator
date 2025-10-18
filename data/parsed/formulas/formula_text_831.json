@@ -1,0 +1,12 @@
+{
+  "page": 469,
+  "original_text": "nLeaves= size(link, 1)+1;\nif nodeId > nLeaves\n    tempNodeIds = link(nodeId-nLeaves,1:2);\n    idxInGroup = [getLeafNodesInGroup(tempNodeIds(1), link), ...\n        getLeafNodesInGroup(tempNodeIds(2), link)];\nelse\n    idxInGroup = nodeId;\nend\nend",
+  "ocr_text": "nLeaves=size(link,1)+1;\n\nifnodeId=nLeaves\ntempNodeIds=link(nodeId-nLeaves,1:2);\nidxInGroup=[getLeafNodesInGroup(tempNodeIds(1),link),...\n\ngetLeafNodesInGroup(tempNodeIds(2),_link)];\n\nelse\nidxInGroup=nodeld;\n\nend\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 438.63,
+    "x1": 436.78,
+    "y1": 535.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,8 @@
+Page 329
+================================================================================
+
+A specialized "helper" function portfolioexamples_plot makes it possible to plot all results to be
+developed here. The first plot shows the distribution of individual assets according to their means and
+standard deviations of returns. In addition, the equal-weight, market, and cash portfolios are plotted
+on the same plot. Note that the portfolioexamples_plot function converts monthly total returns
+into annualized total returns.

@@ -1,0 +1,12 @@
+{
+  "page": 334,
+  "original_text": "q = setCosts(p,BuyCost,SellCost);",
+  "ocr_text": "q=setCosts(p,BuyCost,SellCost);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 268.8,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+Page 9
+================================================================================
+
+Working with 'Simple' Bound Constraints Using Portfolio Object . . . . .
+4-62
+Setting 'Simple' Bounds Using the Portfolio Function . . . . . . . . . . . . . . .
+4-62
+Setting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .
+4-62
+Setting 'Simple' Bounds Using the Portfolio Function or setBounds Function
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-63

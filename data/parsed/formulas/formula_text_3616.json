@@ -1,0 +1,12 @@
+{
+  "page": 2042,
+  "original_text": "status = checkFeasibility(obj,pwgt)",
+  "ocr_text": "status=checkFeasibility(obj,pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.72,
+    "x1": 300.72,
+    "y1": 201.35
+  },
+  "confidence": "high"
+}

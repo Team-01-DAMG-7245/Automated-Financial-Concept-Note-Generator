@@ -1,0 +1,61 @@
+Visualize Transitions Data for transprob
+
+This example shows how to visualize credit rating transitions that are used as an input to the
+transprob function. The example also describes how the transprob function treats rating
+transitions when the company data starts after the start date of the analysis, or when the end date of
+the analysis is after the last transition observed.
+
+Sample Data
+
+Set up fictitious sample data for illustration purposes.
+
+data = {'ABC','17-Feb-2015','AA';
+    'ABC','6-Jul-2017','A';
+    'LMN','12-Aug-2014','B';
+    'LMN','9-Nov-2015','CCC';
+    'LMN','7-Sep-2016','D';
+    'XYZ','14-May-2013','BB';
+    'XYZ','21-Jun-2016','BBB'};
+data = cell2table(data,'VariableNames',{'ID','Date','Rating'});
+disp(data)
+
+ID            Date          Rating 
+    _______    _______________    _______
+
+{'ABC'}    {'17-Feb-2015'}    {'AA' }
+    {'ABC'}    {'6-Jul-2017' }    {'A'  }
+    {'LMN'}    {'12-Aug-2014'}    {'B'  }
+    {'LMN'}    {'9-Nov-2015' }    {'CCC'}
+    {'LMN'}    {'7-Sep-2016' }    {'D'  }
+    {'XYZ'}    {'14-May-2013'}    {'BB' }
+    {'XYZ'}    {'21-Jun-2016'}    {'BBB'}
+
+The transprob function understands that this panel-data format indicates the dates when a new
+rating is assigned to a given company. transprob assumes that such ratings remain unchanged,
+unless a subsequent row explicitly indicates a rating change. For example, for company 'ABC',
+transprob understands that the 'A' rating is unchanged for any date after '6-Jul-2017'
+(indefinitely).
+
+Compute Transition Matrix and Transition Counts
+
+The transprob function returns a transition probability matrix as the primary output. There are also
+optional outputs that contain additional information for how many transitions occurred. For more
+information, see transprob for information on the optional outputs for both the 'cohort' and the
+'duration' methods.
+
+For illustration purposes, this example allows you to pick the StartYear (limited to 2014 or 2015
+for this example) and the EndYear (2016 or 2017). This example also uses the
+hDisplayTransitions helper function (see the Local Functions on page 8-119 section) to format
+the transitions information for ease of reading.
+
+StartYear = 
+;
+
+EndYear = 
+;
+startDate = datetime(StartYear,12,31,'Locale','en_US');
+
+8
+Credit Risk Analysis
+
+8-114

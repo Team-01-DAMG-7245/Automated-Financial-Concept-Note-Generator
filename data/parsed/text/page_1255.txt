@@ -1,0 +1,67 @@
+Quasi-Monte Carlo Simulation
+
+Quasi-Monte Carlo simulation is a Monte Carlo simulation that uses quasi-random sequences instead
+of pseudo random numbers. The quasi-random sequences, also called low-discrepancy sequences, are
+deterministic, uniformly distributed sequences that are specifically designed to place sample points
+as uniformly as possible. In many cases, this distributed sequences improves the performance of
+Monte Carlo simulations with faster computational times and sometimes higher accuracy.
+
+The standard Monte Carlo simulation using pseudo random numbers has a convergence rate of only
+O(N-1/2), while the quasi-Monte Carlo rate of convergence can be much faster with an error of O(N-1)
+in the best cases. For example, for a standard Monte Carlo simulation, it is necessary to increase 100
+times the number of simulations NTrials to reduce the error by a factor of 10, whereas a quasi-Monte
+Carlo simulation requires less, or much less, than 100 times to achieve the same goal.
+
+Quasi-Monte Carlo simulation produces a purely deterministic result. Therefore, when computing the
+variance and constructing a confidence band for the estimates, randomized quasi-Monte Carlo
+simulation is useful because of faster computational times and sometimes higher accuracy. You can
+also use randomized quasi-Monte Carlo to introduce randomization into the low-discrepancy
+sequences.
+
+The starting point for a Monte Carlo simulation is the construction of a Brownian motion sample path
+(or Wiener path). Such paths are built from a set of independent Gaussian variates, using either
+standard discretization, Brownian-bridge construction, or principal components construction.
+
+To perform Quasi-Monte Carlo simulation, the name-value arguments for MonteCarloMethod,
+QuasiSequence, and BrownianMotionMethod by using the supported methods for the following
+SDE objects. For example, [paths,time,z] =
+simByEuler(cir_obj,10,'ntrials',4096,'method','basic','montecarlomethod','qua
+si','quasisequence','sobol','brownianmotionmethod','principal-components')
+performs a Quasi-Monte Carlo simulation using a principal components construction method with a
+cir model.
+
+Class Names
+Methods Supporting Quasi-Monte Carlo
+Simulation and Brownian Bridge
+Construction
+
+sde
+simByEuler, simulate
+
+bm
+simByEuler, simByMilstein,
+simByMilstein2, simulate
+
+gbm
+simByEuler, simBySolution,
+simByMilstein, simByMilstein2, simulate
+
+merton
+simBySolution, simByMilstein,
+simByMilstein2, simulate
+
+bates
+simByTransition, simByQuadExp,
+simByMilstein, simByMilstein2, simulate
+
+hwv
+simBySolution, simByMilstein,
+simByMilstein2, simulate
+
+heston
+simByTransition, simByQuadExp,
+simByMilstein, simByMilstein2, simulate
+
+Quasi-Monte Carlo Simulation
+
+14-63

@@ -1,0 +1,54 @@
+Credit Scorecards with Constrained Logistic Regression
+Coefficients
+
+To compute scores for a creditscorecard object with constraints for equality, inequality, or bounds
+on the coefficients of the logistic regression model, use fitConstrainedModel. Unlike fitmodel,
+fitConstrainedModel solves for both the unconstrained and constrained problem. The current
+solver used to minimize an objective function for fitConstrainedModel is fmincon, from the
+Optimization Toolbox™.
+
+This example has three main sections. First, fitConstrainedModel is used to solve for the
+coefficients in the unconstrained model. Then, fitConstrainedModel demonstrates how to use
+several types of constraints. Finally, fitConstrainedModel uses bootstrapping for the significance
+analysis to determine which predictors to reject from the model.
+
+Create the creditscorecard Object and Bin data
+
+load CreditCardData.mat
+sc = creditscorecard(data,'IDVar','CustID');
+sc = autobinning(sc);
+
+Unconstrained Model Using fitConstrainedModel
+
+Solve for the unconstrained coefficients using fitConstrainedModel with default values for the
+input parameters. fitConstrainedModel uses the internal optimization solver fmincon from the
+Optimization Toolbox™. If you do not set any constraints, fmincon treats the model as an
+unconstrained optimization problem. The default parameters for the LowerBound and UpperBound
+are -Inf and +Inf, respectively. For the equality and inequality constraints, the default is an empty
+numeric array.
+
+[sc1,mdl1] = fitConstrainedModel(sc);
+coeff1 = mdl1.Coefficients.Estimate;
+disp(mdl1.Coefficients);
+
+Estimate 
+                   _________
+
+(Intercept)      0.70246
+    CustAge           0.6057
+    TmAtAddress       1.0381
+    ResStatus         1.3794
+    EmpStatus        0.89648
+    CustIncome       0.70179
+    TmWBank           1.1132
+    OtherCC           1.0598
+    AMBalance         1.0572
+    UtilRate       -0.047597
+
+Unlike fitmodel which gives p-values, when using fitConstrainedModel, you must use
+bootstrapping to find out which predictors are rejected from the model, when subject to constraints.
+This is illustrated in the "Significance Bootstrapping" section.
+
+Credit Scorecards with Constrained Logistic Regression Coefficients
+
+8-91

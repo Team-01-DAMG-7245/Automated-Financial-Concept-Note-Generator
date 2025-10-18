@@ -1,0 +1,12 @@
+{
+  "page": 1359,
+  "original_text": "% Compute the returns from the prices timetable.\nassetReturns = tick2ret(pricesTT);\nmu = mean(assetReturns.Variables);\nSigma = cov(assetReturns.Variables,\"omitrows\");",
+  "ocr_text": "Computethereturnsfromthepricestimetable.\nassetReturns=tick2ret(pricesTT);\nmu=mean(assetReturns.Variables);\nSigma=cov(assetReturns.Variables,omitrows);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 471.03,
+    "x1": 350.06,
+    "y1": 513.89
+  },
+  "confidence": "high"
+}

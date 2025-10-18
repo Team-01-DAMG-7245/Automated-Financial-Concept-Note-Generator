@@ -1,0 +1,12 @@
+{
+  "page": 550,
+  "original_text": "W(t) = W(0)exp\nμ −σ2/2 t + σ tZ",
+  "ocr_text": "Wit)= W(O)exp{(u - o7/2)t + oytz}",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 165.29,
+    "x1": 273.5,
+    "y1": 178.99
+  },
+  "confidence": "high"
+}

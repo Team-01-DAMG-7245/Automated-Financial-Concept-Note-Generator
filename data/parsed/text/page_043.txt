@@ -1,0 +1,36 @@
+X = function(input_arguments...)
+
+the function returns a value for A, but not for B or C.
+
+Some functions that return vectors accept only scalars as arguments. Such functions cannot accept
+vectors as arguments and return matrices, where each column in the output matrix corresponds to an
+entry in the input. Output vectors can be variable length.
+
+For example, most functions that require asset life as an input, and return values corresponding to
+different periods over the asset life, cannot handle vectors or matrices as input arguments. These
+functions include amortize, depfixdb, depgendb, and depsoyd. For example, consider a car for
+which you want to compute the depreciation schedule. Use the depfixdb function to compute a
+stream of declining-balance depreciation values for the asset. Set the initial value of the asset and the
+lifetime of the asset. Note that in the returned vector, the asset lifetime determines the number of
+rows. Now consider a collection of cars with different lifetimes. Because depfixdb cannot output a
+matrix with an unequal number of rows in each column, depfixdb cannot accept a single input
+vector with values for each asset in the collection.
+
+See Also
+
+Related Examples
+
+•
+“Matrices and Arrays”
+
+More About
+
+•
+“Analyze Sets of Numbers Using Matrix Functions” on page 1-4
+
+•
+“Matrix Algebra Refresher” on page 1-7
+
+Using Input and Output Arguments with Functions
+
+1-17

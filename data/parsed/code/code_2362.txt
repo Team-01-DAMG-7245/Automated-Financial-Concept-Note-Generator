@@ -1,0 +1,5 @@
+Page 2232
+================================================================================
+
+setMinMaxNumAssets or setBounds, the objective function must also be convex. For more
+information, see “Role of Convexity in Portfolio Problems” on page 4-157.

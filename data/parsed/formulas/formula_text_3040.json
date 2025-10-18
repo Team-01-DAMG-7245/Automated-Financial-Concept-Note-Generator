@@ -1,0 +1,12 @@
+{
+  "page": 1594,
+  "original_text": "ylim([0 oldylim(2)]);\ncm = parula(numel(h));\nfor i = 1:numel(h)\n    set(h(i),'FaceColor',cm(i,:));\nend\nlegend(backtester.Positions.(strategyName).Properties.VariableNames)",
+  "ocr_text": "ylim([oldylim(2)]);\ncm=parula(numel(h));\nfori=1:numel(h)\nset(h(i),FaceColor,cm(i,:));\nend\nLegend(backtester.Positions.(strategyName).Properties.VariableNames)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 458.42,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

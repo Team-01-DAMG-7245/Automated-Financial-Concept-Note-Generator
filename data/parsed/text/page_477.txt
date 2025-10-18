@@ -1,0 +1,32 @@
+The actual data has fatter tails than the trained model predictions. The model predictions are not
+accurate, but the goal of this example is to show the workflow from loading data, to model
+development, to backtesting. A more sophisticated model with a larger and more varied set of
+training data is likely to have more predictive power.
+
+Prepare Backtest Data
+
+Use the predictions from the LSTM model to build the backtest strategies. You can post-process the
+model output in a number of ways to create trading signals. However, for this example, take the
+model regression output and convert it to a timetable.
+
+Use predict (Deep Learning Toolbox) with the trained network to generate model predictions over
+the backtest period.
+
+backtestPred_LSTM = minibatchpredict(net_LSTM,Xbacktest,InputDataFormats="CTB");
+
+Convert the predictions to a trading signal timetable.
+
+backtestSignalTT = timetable(date_vector(backtest_indices),backtestPred_LSTM);
+
+Construct the prices timetable corresponding to the backtest time span. The backtest trades in and
+out of the four energy commodities. The prices timetable has the closing price for the day on which
+the prediction is made.
+
+backtestPriceTT = priceData(date_vector(backtest_indices),outputVarName);
+
+Set the risk-free rate to be 1% annualized. The backtest engine also supports setting the risk-free rate
+to a timetable containing the historical daily rates.
+
+Backtest Strategies Using Deep Learning
+
+4-309

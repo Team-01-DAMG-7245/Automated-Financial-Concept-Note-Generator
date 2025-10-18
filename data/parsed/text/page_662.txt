@@ -1,0 +1,62 @@
+Asset Returns and Scenarios Using PortfolioCVaR Object
+
+In this section...
+
+“How Stochastic Optimization Works” on page 5-36
+
+“What Are Scenarios?” on page 5-36
+
+“Setting Scenarios Using the PortfolioCVaR Function” on page 5-37
+
+“Setting Scenarios Using the setScenarios Function” on page 5-38
+
+“Estimating the Mean and Covariance of Scenarios” on page 5-38
+
+“Simulating Normal Scenarios” on page 5-39
+
+“Simulating Normal Scenarios from Returns or Prices” on page 5-39
+
+“Simulating Normal Scenarios with Missing Data” on page 5-40
+
+“Simulating Normal Scenarios from Time Series Data” on page 5-42
+
+“Simulating Normal Scenarios with Mean and Covariance” on page 5-44
+
+How Stochastic Optimization Works
+
+The CVaR of a portfolio is a conditional expectation. (For the definition of the CVaR function, see
+“Risk Proxy” on page 5-5.) Therefore, the CVaR portfolio optimization problem is a stochastic
+optimization problem. Given a sample of scenarios, the conditional expectation that defines the
+sample CVaR of the portfolio can be expressed as a finite sum, a weighted average of losses. The
+weights of the losses depend on their relative magnitude; for a confidence level α, only the worst (1 −
+α) x 100% losses get a positive weight. As a function of the portfolio weights, the CVaR of the
+portfolio is a convex function (see [48], [49] Rockafellar & Uryasev at “Portfolio Optimization” on
+page A-5). It is also a nonsmooth function, but its edges are less sharp as the sample size increases.
+
+There are reformulations of the CVaR portfolio optimization problem (see [48], [49] at Rockafellar &
+Uryasev) that result in a linear programming problem, which can be solved either with standard
+linear programming techniques or with stochastic programming solvers. The PortfolioCVaR object,
+however, does not reformulate the problem in such a manner. The PortfolioCVaR object computes
+the CVaR as a nonlinear function. The convexity of the CVaR, as a function of the portfolio weights
+and the dull edges when the number of scenarios is large, make the CVaR portfolio optimization
+problem tractable, in practice, for certain nonlinear programming solvers, such as fmincon from
+Optimization Toolbox. The problem can also be solved using a cutting-plane method (see Kelley [45]
+at “Portfolio Optimization” on page A-5). For more information, see Algorithms section of
+setSolver. To learn more about the workflow when using PortfolioCVaR objects, see
+“PortfolioCVaR Object Workflow” on page 5-16.
+
+What Are Scenarios?
+
+Since conditional value-at-risk portfolio optimization works with scenarios of asset returns to perform
+the optimization, several ways exist to specify and simulate scenarios. In many applications with
+CVaR portfolio optimization, asset returns may have distinctly nonnormal probability distributions
+with either multiple modes, binning of returns, truncation of distributions, and so forth. In other
+applications, asset returns are modeled as the result of various simulation methods that might
+include Monte-Carlo simulation, quasi-random simulation, and so forth. Often, the underlying
+probability distribution for risk factors may be multivariate normal but the resultant transformations
+are sufficiently nonlinear to result in distinctively nonnormal asset returns.
+
+5
+CVaR Portfolio Optimization Tools
+
+5-36

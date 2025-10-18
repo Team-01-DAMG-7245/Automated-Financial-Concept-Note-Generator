@@ -1,0 +1,77 @@
+Load and Prepare Limit Order Book Data
+
+Load the limit order book data and define the number of levels in the limit order book.
+
+LOB = readmatrix(LOBFileName);
+NumLevels = 5;
+
+Since LOBSTER stores prices in units of 10,000 dollars, convert the prices in the limit order book
+data into dollars by dividing by 10000.
+
+LOB(:,1:2:(4*NumLevels)) = LOB(:,1:2:(4*NumLevels))./10000;
+
+Using the message index values obtained previously, sample the limit order book at 5 second
+intervals.
+
+SampledBook = LOB(MessageSampleIdx(2:end),1:NumLevels*4);
+
+Define a one minute (60 seconds) trading horizon and compute the total number of intervals over 6.5
+hours of trading data.
+
+TradingHorizon = 1*60;
+TotalNumIntervals = length(MessageSampleIdx(2:end));
+TotalNumHorizons = 6.5*60*60/TradingHorizon;
+
+The number of intervals per horizon is computed by dividing the total number of intervals by the total
+number of horizons.
+
+NumIntervalsPerHorizon = round(TotalNumIntervals/TotalNumHorizons);
+
+Allocate 75 percent of data for training and 25 percent for testing.
+
+NumTrainingHorizons = round(TotalNumHorizons*0.75);
+NumTestingHorizons = TotalNumHorizons - NumTrainingHorizons;
+NumTrainingSteps = NumTrainingHorizons*NumIntervalsPerHorizon;
+NumTestingSteps = NumTestingHorizons*NumIntervalsPerHorizon;
+TrainingLOB = SampledBook(1:NumTrainingSteps,:);
+TestingLOB = SampledBook(NumTrainingSteps+1:end,:);
+
+Optimal Execution for Sell Trades
+
+These sections compose the workflow for designing a DQN agent for the optimal execution of sell
+trades:
+
+1
+Define Settings for Sell Trades on page 4-413
+
+2
+TWAP Baseline Analysis on Training Data on page 4-413
+
+3
+Set Up RL Training Environment for Sell Trades on page 4-414
+
+4
+Validate Training Environment Reset and Step Functions for Sell Trades on page 4-415
+
+5
+Create and Train Agent for Sell Trades on page 4-417
+
+6
+Compute IS Using Trained Agent and Training Data for Sell Trades on page 4-422
+
+7
+Plot Training Results for Sell Trades on page 4-423
+
+8
+Display Summary of Training Results for Sell Trades on page 4-427
+
+9
+TWAP Baseline Analysis on Testing Data on page 4-428
+
+10
+Set Up RL Testing Environment for Sell Trades on page 4-429
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-412

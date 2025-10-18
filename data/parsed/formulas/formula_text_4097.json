@@ -1,0 +1,12 @@
+{
+  "page": 2310,
+  "original_text": "P = Portfolio('mean',expRet,'covar',expCov);\nP = setDefaultConstraints(P);",
+  "ocr_text": "P=Portfolio(mean,expRet,covar,expCov);\nP=setDefaultConstraints(P);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 260.7,
+    "x1": 328.41,
+    "y1": 281.97
+  },
+  "confidence": "high"
+}

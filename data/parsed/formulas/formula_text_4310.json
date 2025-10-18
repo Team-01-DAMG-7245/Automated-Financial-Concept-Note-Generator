@@ -1,0 +1,12 @@
+{
+  "page": 2440,
+  "original_text": "kagi(Data)\nh = kagi(ax,Data)",
+  "ocr_text": "kagi(Data)\nh=kagi(ax,Data)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.02,
+    "x1": 192.35,
+    "y1": 213.65
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,62 @@
+CouponRate — Coupon rate
+decimal
+
+Coupon rate, specified as a scalar or a NINST-by-1 vector of decimal values.
+
+Data Types: double
+
+Settle — Settlement date of fixed-coupon bond
+datetime array | string array | date character vector
+
+Settlement date of the fixed-coupon bond, specified as scalar or a NINST-by-1 vector using a datetime
+array, string array, or date character vectors. If supplied as a NINST-by-1 vector of dates, settlement
+dates can be different, as long as they are before the Maturity date and HorizonDate.
+
+To support existing code, bndtotalreturn also accepts serial date numbers as inputs, but they are
+not recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of fixed-coupon bond
+datetime array | string array | date character vector
+
+Maturity date of the fixed-coupon bond, specified as scalar or a NINST-by-1 vector using a datetime
+array, string array, or date character vectors.
+
+To support existing code, bndtotalreturn also accepts serial date numbers as inputs, but they are
+not recommended.
+
+Data Types: char | string | datetime
+
+ReinvestRate — Reinvestment rate
+decimal
+
+Reinvestment rate (the rate earned by reinvesting the coupons), specified as scalar or a NINST-by-2
+vector of decimal values.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [BondEquiv,EffectiveRate] =
+bndtotalreturn(Price,CouponRate,Settle,Maturity,ReinvestRate,'HorizonDate','1
+5-Nov-2021')
+
+HorizonDate — Investment horizon date
+Maturity date (default) | datetime array | string array | date character vector
+
+Investment horizon date, specified as the comma-separated pair consisting of 'HorizonDate' and a
+scalar or a NINST-by-1 vector using a datetime array, string array, or date character vectors.
+
+If HorizonDate is unspecified, the total return is calculated to Maturity.
+
+15
+Functions
+
+15-578

@@ -1,0 +1,12 @@
+{
+  "page": 591,
+  "original_text": "for k=1:NumSimSteps\n    [~,SimReward_Train_Sell(k),~,LoggedSignals] = ...\n        step(RL_OptimalExecution_Training_Environment_Sell,SimAction_Train_Sell(k));\n    SimInventory_Train_Sell(k) = LoggedSignals.CurrentInventoryShares;\n    SimExecutedShares_Train_Sell(k) = sum(LoggedSignals.ExecutedShares);\nend",
+  "ocr_text": "fork=1:NumSimSteps\n[-,SimReward_Train_Sell(k),,LoggedSignals]=...\nstep(RL_OptimalExecution_TrainingEnvironment_Sell,SimAction_Train_Sell(k));\nSimInventory_Train_Sell(k)=LoggedSignals.CurrentInventoryShares;\nSimExecutedShares_Train_Sell(k)=sum(LoggedSignals.ExecutedShares);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 435.34,
+    "x1": 545.11,
+    "y1": 499.81
+  },
+  "confidence": "high"
+}

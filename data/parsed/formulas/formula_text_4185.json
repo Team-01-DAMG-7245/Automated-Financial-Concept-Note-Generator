@@ -1,0 +1,12 @@
+{
+  "page": 2350,
+  "original_text": "Margin = floatdiscmargin(Price,SpreadSettle,Maturity,RateInfo,\nLatestFloatingRate)\nMargin = floatdiscmargin( ___ ,Name,Value)",
+  "ocr_text": "Margin=floatdiscmargin(Price,SpreadSettle,Maturity,RateInfo,\nLatestFloatingRate)\nMargin=floatdiscmargin(__,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.76,
+    "x1": 463.27,
+    "y1": 226.39
+  },
+  "confidence": "high"
+}

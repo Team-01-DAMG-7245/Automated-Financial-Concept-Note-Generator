@@ -1,0 +1,12 @@
+{
+  "page": 191,
+  "original_text": "p(i,j,k) = setBounds(p(i,j,k),lb, ub);",
+  "ocr_text": "p(i,j,k)=setBounds(p(i,j,k),lb,_ub);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.19,
+    "x1": 295.88,
+    "y1": 148.66
+  },
+  "confidence": "high"
+}

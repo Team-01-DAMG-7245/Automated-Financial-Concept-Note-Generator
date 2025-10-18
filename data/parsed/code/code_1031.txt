@@ -1,0 +1,5 @@
+Page 1062
+================================================================================
+
+If the iterative process continues until the log-likelihood function increases by no more than a
+specified amount, the resultant estimates are said to be maximum likelihood estimates bML and CML.

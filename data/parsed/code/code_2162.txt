@@ -1,0 +1,5 @@
+Page 1777
+================================================================================
+
+The arith2geom function has no restriction on the input mean ma but requires the input covariance
+Ca to be a symmetric positive-semidefinite matrix.

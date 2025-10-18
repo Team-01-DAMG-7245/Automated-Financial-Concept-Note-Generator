@@ -1,0 +1,12 @@
+{
+  "page": 1925,
+  "original_text": "Settle = datetime(2009,7,17); % valuation date for the CDS\nSpread_Time = [1 2 3 5 7]';\nSpread = [140 175 210 265 310]';\nMarket_Dates = daysadd(datenum(Settle),360*Spread_Time,1);\nMarketData = [Market_Dates Spread];\nZero_Time = [.5 1 2 3 4 5]';\nZero_Rate = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;\nZero_Dates = daysadd(datenum(Settle),360*Zero_Time,1);\nZeroData = [Zero_Dates Zero_Rate];",
+  "ocr_text": "Settle=datetime(2009,7,17);valuationdatefortheCDS\nSpreadTime=[12357];\nSpread=[140175210265310];\nMarket_Dates=daysadd(datenum(Settle),360*Spread_Time,1);\nMarketData=[Market_DatesSpread];\nZeroTime=[.512345];\nZero_Rate=[1.351.431.92.472.9363.311]/100;\nZero_Dates=daysadd(datenum(Settle),360*Zero_Time,1);\nZeroData=[ZeroDatesZeroRate];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 537.51,
+    "x1": 404.26,
+    "y1": 634.37
+  },
+  "confidence": "high"
+}

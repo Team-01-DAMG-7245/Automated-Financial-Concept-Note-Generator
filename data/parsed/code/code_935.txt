@@ -1,0 +1,8 @@
+Page 912
+================================================================================
+
+Based on the moments of each asset, the expected values for lower partial moments imply better than
+expected performance for the fund and market and worse than expected performance for cash. This
+function works with either degenerate or nondegenerate normal random variables. For example, if
+cash were truly riskless, its standard deviation would be 0. You can examine the difference in average
+shortfall.

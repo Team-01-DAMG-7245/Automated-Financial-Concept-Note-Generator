@@ -1,0 +1,12 @@
+{
+  "page": 617,
+  "original_text": "ISDiffValues = ISDiffValues(:);",
+  "ocr_text": "ISDiffValues=ISDiffValues(:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.43,
+    "x1": 257.96,
+    "y1": 513.89
+  },
+  "confidence": "high"
+}

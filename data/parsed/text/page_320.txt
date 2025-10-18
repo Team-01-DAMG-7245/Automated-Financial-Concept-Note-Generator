@@ -1,0 +1,72 @@
+0.4735    0.5000
+    0.0657         0
+    0.4608    0.5000
+
+Infeasible Problem with Conditional (Semi-Continuous) Bounds, Cardinality Constraints, or
+Conditional Budget Constraints
+
+The Portfolio, PortfolioCVaR, or PortfolioMAD object performs validations of all the
+constraints before solving any specific optimization problems. The Portfolio, PortfolioCVaR, or
+PortfolioMAD object first considers all constraints other than conditional bounds, cardinality
+constraints, and conditional budget constraints and issues an error message if they are not
+compatible. Then the Portfolio, PortfolioCVaR, or PortfolioMAD object adds the remaining
+constraints to check if they are compatible with the already checked constraints. This separation is
+natural because conditional bounds, cardinality constraints, and conditional budget constraints
+require additional binary variables in the mathematical formulation that leads to an MINLP, while
+other constraints only need continuous variables. You can follow the error messages to check when
+the infeasible problem occurs and take actions to fix the constraints.
+
+One possible scenario is when the BoundType is 'Conditional' and Groups are defined for the
+Portfolio object. In this case, the Group definitions are themselves in conflict. Consequently, the
+'Conditional' bound constraint cannot be applied when running estimateFrontierLimits.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+    0.00022983 0.00049937 0.00019247;
+    0.00420395 0.00019247 0.00764097 ];
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+p = setBounds(p, 0.1, 0.5, 'BoundType','Conditional');
+p = setGroups(p, [1,1,0], 0.3, 0.5);
+p = addGroups(p, [0,1,0], 0.6, 0.7);
+pwgt = estimateFrontierLimits(p)
+
+Error using Portfolio/buildMixedIntegerProblem (line 31)
+Infeasible problem prior to considering constraints involving integer variables. 
+Verify compatibility of continuous constraints.
+
+Error in Portfolio/estimateFrontierLimits>int_frontierLimits (line 93)
+ProbStruct = buildMixedIntegerProblem(obj);
+
+Error in Portfolio/estimateFrontierLimits (line 73)
+    pwgt = int_frontierLimits(obj, minsolution, maxsolution);
+
+To correct this error, change the LowerGroup in the addGroups function to also be 0.3 to match the
+GroupMatrix input from setGroups.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+    0.00022983 0.00049937 0.00019247;
+    0.00420395 0.00019247 0.00764097 ];
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);
+p = setBounds(p, 0.1, 0.5, 'BoundType','Conditional');
+p = setGroups(p, [1,1,0], 0.3, 0.5);
+p = addGroups(p, [0,1,0], 0.3, 0.7);
+pwgt = estimateFrontierLimits(p)
+
+pwgt =
+
+0    0.2000
+    0.5000    0.3000
+    0.5000    0.5000
+
+A second possible scenario is when the BoundType is 'Conditional' and the setEquality
+function is used with the bEquality parameter set to 0.04. This sets an equality constraint to have
+x1 + x3 = 0.04. At the same time, setBounds also set the semicontinuous constraints to have xi = 0
+or 0.1 <= xi <= 2.5, which lead to x1 + x3 = 0 or 0.1 <= x1 + x3 <= 5. The semicontinuous
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-152

@@ -1,0 +1,12 @@
+{
+  "page": 501,
+  "original_text": "% Maximize the HH diversification (by minimizing the HH index).\nHHObjFun = @(x) x'*x;\n% Solution that minimizes the HH index\nwHH = estimateCustomObjectivePortfolio(p,HHObjFun);",
+  "ocr_text": "SMaximizetheHHdiversification(byminimizingtheHHindex).\nHHObjFun=Q(x)_x*x;\n\nSolutionthatminimizestheHHindex\nwHH=estimateCustom0bjectivePortfolio(p,HHObjFun);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.55,
+    "x1": 431.33,
+    "y1": 344.42
+  },
+  "confidence": "high"
+}

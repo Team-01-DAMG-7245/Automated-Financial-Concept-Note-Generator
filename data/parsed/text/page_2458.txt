@@ -1,0 +1,76 @@
+Data Types: char
+
+objtype — Objective for nonlinear least-squares estimation
+'ratio' (default) | character vector with values 'ratio' 'logratio'
+
+(Optional) Objective for nonlinear least-squares estimation, specified as a character vector with the
+following values:
+
+•
+'ratio' — Given raw data qx and model estimates q x for x = 1, ... , N, the first objective (which
+is the preferred objective) has the form
+
+Φ = ∑
+x = 1
+
+N
+
+1 −q x
+qx
+
+2
+
+•
+'logratio' — Given raw data qx and model estimates q x for x = 1, ... , N, the second objective
+has the form
+
+Φ = ∑
+x = 1
+
+N
+
+log(q x) −log(qx)
+
+2
+
+Data Types: char
+
+interpmethod — Interpolation method to use for abridged life table inputs
+'cubic' (default) | character vector with values 'cubic', 'linear', 'none'
+
+(Optional) Interpolation method to use for abridged life table inputs, specified as a character vector
+with the following values:
+
+•
+'cubic' — Cubic interpolation that uses 'pchip' method in interp1.
+
+•
+'linear' — Linear interpolation.
+
+•
+'none' — No interpolation.
+
+Note If the ages in x are not consecutive years and interpolation is set to 'none', then the estimates
+for the parameters are suitable only for the age vector x.
+
+If you use the parameter estimates to compute life table values for arbitrary years, interpolate using
+the default 'cubic' method.
+
+Interpolation with abridged life tables forms internal interpolated full life tables, which usually
+improves model fits.
+
+Data Types: char
+
+a0 — Initial parameter estimate to be applied to all series
+vector
+
+(Optional) Initial parameter estimate to be applied to all series, specified as a numparam vector. This
+vector must conform to the number of parameters in the model specified using the lifemodel
+argument.
+
+Data Types: double
+
+15
+Functions
+
+15-1152

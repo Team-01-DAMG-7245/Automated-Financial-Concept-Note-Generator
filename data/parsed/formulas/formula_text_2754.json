@@ -1,0 +1,12 @@
+{
+  "page": 1392,
+  "original_text": "obj = \n   Class CIR: Cox-Ingersoll-Ross\n   ----------------------------------------\n     Dimensions: State = 1, Brownian = 1",
+  "ocr_text": "obj=\nClassCIR:Cox-Ingersoll-Ross\nDimensions:State=1,Brownian=1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 322.97,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

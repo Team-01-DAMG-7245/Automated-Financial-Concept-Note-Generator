@@ -1,0 +1,12 @@
+{
+  "page": 620,
+  "original_text": "strategyNames = {'Equally Weighted', 'Max Sharpe Ratio'};\nassetSymbols = pricesTT.Properties.VariableNames;\ninitialWeights = [equalWeight_initial(:), maxSharpeRatio_initial(:)];\nbar(assetSymbols,initialWeights);\nlegend(strategyNames);\ntitle('Initial Asset Allocations');",
+  "ocr_text": "strategyNames={EquallyWeighted,MaxSharpeRatio};\nassetSymbols=pricesTT.Properties.VariableNames;\ninitialWeights=[equalWeight_initial(:),maxSharpeRatio_initial(:)];\nbar(assetSymbols,initialWeights);\n\nLlegend(strategyNames);\n\ntitle(InitialAssetAllocations);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 487.68,
+    "x1": 463.84,
+    "y1": 552.15
+  },
+  "confidence": "high"
+}

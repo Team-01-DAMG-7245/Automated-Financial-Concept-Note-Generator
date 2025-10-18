@@ -1,0 +1,12 @@
+{
+  "page": 537,
+  "original_text": "% Define volatility limits.\nsigma_min = prsk(1);\nsigma_max = prsk(end);",
+  "ocr_text": "sDefinevolatilitylimits.\nsigma_min=prsk(1);\nsigma_max=prsk(end);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 236.29,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

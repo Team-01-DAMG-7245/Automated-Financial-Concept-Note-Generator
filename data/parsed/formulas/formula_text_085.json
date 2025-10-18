@@ -1,0 +1,12 @@
+{
+  "page": 77,
+  "original_text": "If x < 0, log(x) = log(|x|) ± iπ. The log of a negative number has an imaginary part of ±π. The log of 0\nis undefined because the range of the exponential eiθ is positive. Therefore, zero prices (that is, free\nexchanges) are unsupported.",
+  "ocr_text": "Ifx=0,log(x)=log(x)+im.Thelogofanegativenumberhasanimaginarypartof+m.Thelogof0\nisundefinedbecausetherangeoftheexponentialeispositive.Therefore,zeroprices(thatis,free\nexchanges)areunsupported.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 392.32,
+    "x1": 554.24,
+    "y1": 427.95
+  },
+  "confidence": "high"
+}

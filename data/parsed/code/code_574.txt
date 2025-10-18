@@ -1,0 +1,6 @@
+Page 532
+================================================================================
+
+Find the portfolio that maximizes the probability of achieving the investor's goal given the prior
+assumptions. Maximizing P WT ≥G  is equivalent to minimizing P WT ≤G , so the objective function
+is rewritten as

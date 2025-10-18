@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "nAssets = numel(current_weights);\nnew_weights = ones(1,nAssets);",
+  "ocr_text": "nAssets=numel(current_weights);\nnew_weights=ones(1,nAssets);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 268.79,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

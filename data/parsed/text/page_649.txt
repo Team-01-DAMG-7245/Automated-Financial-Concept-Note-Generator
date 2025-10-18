@@ -1,0 +1,60 @@
+•
+The set of feasible portfolios must be a nonempty compact set, where a compact set is closed and
+bounded. You can satisfy this condition using an extensive collection of properties that define
+different types of constraints to form a set of feasible portfolios. Since such sets must be bounded,
+either explicit or implicit constraints can be imposed and several tools, such as the
+estimateBounds function, provide ways to ensure that your problem is properly formulated.
+
+•
+You must specify a probability level to locate the level of tail loss above which the conditional
+value-at-risk is to be minimized. This condition can be satisfied by the setProbabilityLevel
+function.
+
+Although the general sufficient conditions for CVaR portfolio optimization go beyond the first
+three conditions, the PortfolioCVaR object handles all these additional conditions.
+
+PortfolioCVaR Function Examples
+
+If you create a PortfolioCVaR object, p, with no input arguments, you can display it using disp:
+
+p = PortfolioCVaR;
+disp(p)
+
+PortfolioCVaR with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+              ProbabilityLevel: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                  NumScenarios: []
+                          Name: []
+                     NumAssets: []
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: []
+                    UpperBound: []
+                   LowerBudget: []
+                   UpperBudget: []
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: []
+
+Creating the PortfolioCVaR Object
+
+5-23

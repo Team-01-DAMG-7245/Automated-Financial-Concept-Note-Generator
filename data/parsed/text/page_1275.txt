@@ -1,0 +1,59 @@
+strike   = sum(X);                   % Initialize an at-the-money basket
+
+nTrials  = 100;                      % Number of independent trials
+nPeriods = 63;  % Number of simulation periods: 63/252 = 0.25 years = 3 months
+
+Now create two separable multi-dimensional market models in which the riskless return and volatility
+exposure matrices are both diagonal.
+
+While both are diagonal GBM models with identical risk-neutral returns, the first is driven by a
+correlated Brownian motion and explicitly specifies the sample linear correlation matrix of centered
+returns. This correlated Brownian motion process is then weighted by a diagonal matrix of annualized
+index volatilities or standard deviations.
+
+As an alternative, the same model could be driven by an uncorrelated Brownian motion (standard
+Brownian motion) by specifying correlation as an identity matrix, or by simply accepting the
+default value. In this case, the exposure matrix sigma is specified as the lower Cholesky factor of the
+index return covariance matrix. Because the copula-based approaches simulate dependent random
+numbers, the diagonal exposure form is chosen for consistency. For further details, see “Induce
+Dependence and Correlation Between States” on page 14-41.
+
+sigma       = std(returns) * sqrt(252);    % Annualized volatility
+correlation = corrcoef(returns);           % Correlated Gaussian disturbances
+GBM1        = gbm(diag(r(ones(1,nIndices))), diag(sigma), 'StartState', X, ...
+                 'Correlation'             , correlation);
+
+Now create the second model driven by the Brownian copula with an identity matrix sigma.
+
+GBM2 = gbm(diag(r(ones(1,nIndices))), eye(nIndices), 'StartState', X);
+
+The newly created model may seem unusual, but it highlights the flexibility of the SDE architecture.
+
+When working with copulas, it is often convenient to allow the random number generator function
+Z(t,X) to induce dependence (of which the traditional notion of linear correlation is a special case)
+with the copula, and to induce magnitude or scale of variation (similar to volatility or standard
+deviation) with the semi-parametric CDF and inverse CDF transforms. Since the CDF and inverse
+CDF transforms of each index inherit the characteristics of historical returns, this also explains why
+the returns are now centered.
+
+In the following sections, statements like:
+
+z = Example_CopulaRNG(returns * sqrt(252), nPeriods, 'Gaussian');
+
+or
+
+z = Example_CopulaRNG(returns * sqrt(252), nPeriods, 't');
+
+fit the Gaussian and t copula dependence structures, respectively, and the semi-parametric margins
+to the centered returns scaled by the square root of the number of trading days per year (252). This
+scaling does not annualize the daily centered returns. Instead, it scales them such that the volatility
+remains consistent with the diagonal annualized exposure matrix sigma of the traditional Brownian
+motion model (GBM1) created previously.
+
+In this example, you also specify an end-of-period processing function that accepts time followed by
+state (t,X), and records the sample times and value of the portfolio as the single-unit weighted
+average of all indices. This function also shares this information with other functions designed to
+
+Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation
+
+14-83

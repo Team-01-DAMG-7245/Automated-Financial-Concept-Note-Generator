@@ -1,0 +1,12 @@
+{
+  "page": 2053,
+  "original_text": "NumCouponsRemaining = cpncount(datetime(1997,3,14), datetime(2000,11,30), 2, 0, 0)",
+  "ocr_text": "NumCouponsRemaining=cpncount(datetime(1997,3,14),datetime(2000,11,30),2,0,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 521.63,
+    "x1": 534.27,
+    "y1": 532.09
+  },
+  "confidence": "high"
+}

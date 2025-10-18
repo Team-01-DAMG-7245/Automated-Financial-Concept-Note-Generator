@@ -1,0 +1,12 @@
+{
+  "page": 2443,
+  "original_text": "Date = lbusdate( ___ ,Holiday,Weekend,outputType) returns the serial date number for the\nlast business date of the given year and month using optional input arguments. The optional\nargument Holiday specifies nontrading days.",
+  "ocr_text": "Date=lbusdate(_,Holiday,Weekend,outputType)returnstheserialdatenumberforthe\nlastbusinessdateofthegivenyearandmonthusingoptionalinputarguments.Theoptional\nargumentHolidayspecifiesnontradingdays.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 367.71,
+    "x1": 554.14,
+    "y1": 403.34
+  },
+  "confidence": "high"
+}

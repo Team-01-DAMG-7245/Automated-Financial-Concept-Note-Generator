@@ -1,0 +1,55 @@
+In this figure, the upper-right parts of both the orange and purple efficient frontiers extend from the
+CAL (lower-left red line), because of the leverage of a risk-free asset. The same levels of risk-awarded
+returns are obtained. Once the portfolio exhausts the maximum allowed leverage, the efficient
+frontier starts to fall below the CAL again, resulting in portfolios with lower Sharpe ratios.
+
+See Also
+Portfolio | setBounds | addGroups | setAssetMoments | estimateAssetMoments |
+estimateBounds | plotFrontier | estimateFrontierLimits | estimateFrontierByRisk |
+estimatePortRisk
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-220

@@ -1,0 +1,12 @@
+{
+  "page": 1627,
+  "original_text": "mertonObj = merton(Return,Sigma,JumpFreq,JumpMean,JumpVol,...\n                'startstat',AssetPrice)",
+  "ocr_text": "mertonObj=merton(Return,Sigma,JumpFreq,JumpMean,JumpVol,...\nstartstat,AssetPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 485.55,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

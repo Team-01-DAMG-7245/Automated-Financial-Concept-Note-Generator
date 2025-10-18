@@ -1,0 +1,12 @@
+{
+  "page": 496,
+  "original_text": "SummaryTable = summary(BrinsonPAobj)",
+  "ocr_text": "SummaryTable=summary(BrinsonPAobj)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 161.89,
+    "x1": 285.05,
+    "y1": 172.36
+  },
+  "confidence": "high"
+}

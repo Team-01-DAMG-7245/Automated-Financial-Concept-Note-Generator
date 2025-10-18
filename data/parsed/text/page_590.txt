@@ -1,0 +1,29 @@
+TargetSmoothFactor: 1.0000e-03
+                  TargetUpdateFrequency: 1
+            BatchDataRegularizerOptions: []
+    ResetExperienceBufferBeforeTraining: 0
+                             InfoToSave: [1×1 struct]
+
+Also, you can visualize the DQN agent's critic network by using Deep Network Designer (Deep
+Learning Toolbox).
+
+deepNetworkDesigner(layerGraph(getModel(getCritic(DQN_agent_Sell_Trained))))
+
+Compute IS Using Trained Agent and Training Data for Sell Trades
+
+Simulate selling actions using the trained agent and training environment.
+
+rng('default');
+reset(RL_OptimalExecution_Training_Environment_Sell);
+
+Reset!
+
+simOptions = rlSimulationOptions(MaxSteps=NumTrainingSteps)
+
+simOptions = 
+  rlSimulationOptions with properties:
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-422

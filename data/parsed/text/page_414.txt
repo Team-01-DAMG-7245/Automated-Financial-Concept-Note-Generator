@@ -1,0 +1,12 @@
+You can visualize the change in the strategy allocations over time using an area chart of the daily
+asset positions. For information on the assetAreaPlot function, see the Local Functions on page 4-
+249 section.
+
+strategyName = 
+;
+assetAreaPlot(backtester,strategyName)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-246

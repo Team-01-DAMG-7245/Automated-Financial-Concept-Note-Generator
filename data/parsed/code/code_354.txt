@@ -1,0 +1,10 @@
+Page 350
+================================================================================
+
+2
+To have a fully specified mean-variance portfolio optimization problem, you must specify the
+mean and covariance of asset returns. Since starting with these moments in the variables
+AssetMean and AssetCovar, you can use the setAssetMoments function to enter these
+variables into your Portfolio object (remember that you are assuming that your raw data are
+monthly returns which is why you divide your annual input moments by 12 to get monthly
+returns).

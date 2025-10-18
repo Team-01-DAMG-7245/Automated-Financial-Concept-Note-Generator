@@ -1,0 +1,12 @@
+{
+  "page": 758,
+  "original_text": "% Obtain the mean-variance efficient portfolio at target return\npwgtmvTarget = estimateFrontierByReturn(pmv,TargetRet);",
+  "ocr_text": "Obtainthemean-varianceefficientportfolioattargetreturn\npwgtmvTarget=estimateFrontierByReturn(pmv,TargetRet);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 393.13,
+    "x1": 431.34,
+    "y1": 414.4
+  },
+  "confidence": "high"
+}

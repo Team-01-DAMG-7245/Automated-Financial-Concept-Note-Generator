@@ -1,0 +1,12 @@
+{
+  "page": 682,
+  "original_text": "p = PortfolioCVaR('NumAssets', 500, 'LowerBound', 0, 'UpperBound', 0.05,'BoundType', 'Simple');",
+  "ocr_text": "p=PortfolioCVaR(NumAssets,500,LowerBound,0,_UpperBound,0.05,BoundType,Simple);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 294.99,
+    "x1": 501.8,
+    "y1": 303.37
+  },
+  "confidence": "high"
+}

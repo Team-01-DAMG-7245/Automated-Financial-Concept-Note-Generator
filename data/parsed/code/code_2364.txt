@@ -1,0 +1,5 @@
+Page 2232
+================================================================================
+
+User-supplied objective function bound, specified as ObjectiveBound and a numeric value.
+ObjectiveBound is useful to speed up solvers.

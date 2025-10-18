@@ -1,0 +1,12 @@
+{
+  "page": 2309,
+  "original_text": "p = setMinMaxNumAssets(p, 2, 2);",
+  "ocr_text": "p=setMinMaxNumAssets(p,2,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.14,
+    "x1": 274.21,
+    "y1": 263.61
+  },
+  "confidence": "high"
+}

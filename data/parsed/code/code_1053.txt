@@ -1,0 +1,6 @@
+Page 1079
+================================================================================
+
+A naïve approach to the estimation of the mean and covariance for these 12 assets is to eliminate all
+days that have missing values for any of the 12 assets. Use the function ecmninit with the
+'nanskip' option to do this.

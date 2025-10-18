@@ -1,0 +1,12 @@
+{
+  "page": 133,
+  "original_text": "figure\ntiledlayout(1,2,TileSpacing=\"compact\")\nnexttile\nplot(rocLSTM,ShowModelOperatingPoint=false)\ntitle(\"ROC Curve: LSTM\")\nnexttile\nplot(rocRLSTM,ShowModelOperatingPoint=false)\ntitle(\"ROC Curve: Risky LSTM\")",
+  "ocr_text": "figure\ntiledlayout(1,2,TileSpacing=compact)\nnexttile\nplot(rocLSTM,ShowModelOperatingPoint=false)\ntitle(ROCCurve:LSTM)\n\nnexttile\nplot(rocRLSTM,ShowModel0peratingPoint=false)\ntitle(ROCCurve:RiskyLSTM)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 528.53,
+    "x1": 328.39,
+    "y1": 614.6
+  },
+  "confidence": "high"
+}

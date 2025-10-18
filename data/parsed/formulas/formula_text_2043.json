@@ -1,0 +1,12 @@
+{
+  "page": 1056,
+  "original_text": "scTreated = formatpoints(scTreated,'Missing','MinPoints');\n[Scores,Points] = score(scTreated,tdata);\ndisp(Scores)",
+  "ocr_text": "scTreated=formatpoints(scTreated,Missing,MinPoints);\n[Scores,Points]=score(scTreated,tdata);\ndisp(Scores)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 239.98,
+    "x1": 404.27,
+    "y1": 272.05
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2007,
+  "original_text": "Settle = datetime(2010,6,8);\nRateSpec = intenvset('Rates', [.005 .0075 .01 .014 .02 .025 .03]',...\n'StartDates',Settle, 'EndDates',[datetime(2010,12,8),datetime(2011,6,8),datetime(2012,6,8),dateti\nMaturity = datetime(2020,9,15);\nLegRate = [.025 50];\nLegType = [1 0]; % Fixed/Floating\nLatestFloatingRate = .005;\n[Price, SwapRate, AI, RecCF, RecCFDates, PayCF,PayCFDates] = ...\nswapbyzero(RateSpec, LegRate, Settle, Maturity,'LegType',LegType,...\n'LatestFloatingRate',LatestFloatingRate)",
+  "ocr_text": "Settle=datetime(2010,6,8);\nRateSpec=intenvset(Rates,[.005.0075.01.014.02.025.03],...\nStartDates,Settle,EndDates,[datetime(2010,12,8),datetime(2011,6,8),datetime(2012,6,8),datet\nMaturity=datetime(2020,9,15);\n\nLegRate=[.02550];\n\nLegType=[10];Fixed/Floating\n\nLatestFloatingRate=.005;\n\n[Price,SwapRate,AI,RecCF,RecCFDates,PayCF,PayCFDates]=...\nswapbyzero(RateSpec,LegRate,Settle,Maturity,LegType,LegType,...\nLatestFloatingRate,LatestFloatingRate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 434.85,
+    "x1": 615.56,
+    "y1": 542.51
+  },
+  "confidence": "high"
+}

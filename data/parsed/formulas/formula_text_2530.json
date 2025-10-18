@@ -1,0 +1,12 @@
+{
+  "page": 1292,
+  "original_text": "y1 = r1\n2,\nyn = λyn −1 + 1 −λ rn2,\nλ ∈\n0, 1 ,\nn ≥2",
+  "ocr_text": "M=ThYn=AYn-1+(1-Ajra,=AE[0,1,n=2",
+  "bbox": {
+    "x0": 111.94,
+    "y0": 145.6,
+    "x1": 375.67,
+    "y1": 162.01
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1357,
+  "original_text": "% Specify the strategy objects.\nstrat1 = backtestStrategy('Traditional', @traditionalStrat, ...\n    RebalanceFrequency=rebalFreq, ...\n    LookbackWindow=lookback, ...\n    TransactionCosts=transactionsFixed, ...\n    InitialWeights=traditional_initial);",
+  "ocr_text": "Specifythestrategyobjects.\n\nstratl=backtestStrategy(Traditional,QtraditionalStrat,...\nRebalanceFrequency=rebalFreq,...\nLookbackWindow=Lookback,...\nTransactionCosts=transactionsFixed,...\nInitialWeights=traditional_initial);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 431.36,
+    "y1": 686.69
+  },
+  "confidence": "high"
+}

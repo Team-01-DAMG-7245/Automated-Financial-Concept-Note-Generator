@@ -1,0 +1,5 @@
+Page 1472
+================================================================================
+
+•
+B — Access function for the drift-rate property B, callable as a function of time and state

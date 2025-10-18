@@ -1,0 +1,12 @@
+{
+  "page": 128,
+  "original_text": "•\nsequenceInputLayer — Sequence input layer for the two feature variables with b = MinLength\n= 100.",
+  "ocr_text": "*sequenceInputLayerSequenceinputlayerforthetwofeaturevariableswithb=MinLength\n=100.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 442.36,
+    "x1": 557.36,
+    "y1": 465.99
+  },
+  "confidence": "high"
+}

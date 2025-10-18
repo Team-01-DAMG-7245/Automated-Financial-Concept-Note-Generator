@@ -1,0 +1,29 @@
+Once the training is complete, export the trained agent to the workspace. Since training can take a
+long time, you can load a pretrained agent (DQN_agent_Sell_Trained.mat) for sell trades.
+
+load DQN_agent_Sell_Trained.mat
+
+You can view the DQN agent options by examining the AgentOptions property.
+
+DQN_agent_Sell_Trained.AgentOptions
+
+ans = 
+  rlDQNAgentOptions with properties:
+
+SampleTime: 1
+                         DiscountFactor: 1
+               EpsilonGreedyExploration: [1×1 rl.option.EpsilonGreedyExploration]
+                 ExperienceBufferLength: 10000
+                          MiniBatchSize: 128
+                         SequenceLength: 4
+                 CriticOptimizerOptions: [1×1 rl.option.rlOptimizerOptions]
+                    NumStepsToLookAhead: 1
+                      NumWarmStartSteps: 128
+                               NumEpoch: 1
+                   MaxMiniBatchPerEpoch: 100
+                      LearningFrequency: -1
+                           UseDoubleDQN: 1
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-421

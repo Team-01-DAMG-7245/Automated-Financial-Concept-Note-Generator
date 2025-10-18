@@ -1,0 +1,29 @@
+-------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Alpha: 0.5
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+sdemrd objects display the familiar Speed and Level parameters instead of A and B.
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+For more information, see “SDE Models” on page 14-7, “SDE Classes and Associated Simulation
+Methods” on page 14-13, and “SDE Class Hierarchy” on page 14-5.
+
+15
+Functions
+
+15-188

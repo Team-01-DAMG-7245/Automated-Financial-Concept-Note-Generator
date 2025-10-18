@@ -1,0 +1,5 @@
+Page 2143
+================================================================================
+
+MoreDays = [datetime(2001,3,1) ; datetime(2002,3,1) ; datetime(2003,3,1)]; 
+NumDays = daysdif(datetime(1998,3,1), MoreDays)

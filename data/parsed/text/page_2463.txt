@@ -1,0 +1,50 @@
+Calibrate the life table from survival data using the default heligman-pollard parametric model.
+
+a = lifetablefit(x, lx)
+
+a = 8×3
+
+0.0005    0.0006    0.0004
+    0.0592    0.0819    0.0192
+    0.1452    0.1626    0.1048
+    0.0007    0.0011    0.0007
+    6.2853    6.7635    1.1033
+   24.1385   24.2898   53.2008
+    0.0000    0.0000    0.0000
+    1.0971    1.0987    1.1100
+
+Generate a life table series from the calibrated mortality model.
+
+qx = lifetablegen((0:100), a)
+
+qx = 101×3
+
+0.0063    0.0069    0.0057
+    0.0005    0.0006    0.0004
+    0.0002    0.0003    0.0002
+    0.0002    0.0002    0.0002
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0002    0.0002    0.0001
+    0.0002    0.0002    0.0002
+    0.0002    0.0003    0.0002
+      ⋮
+
+Plot the qx series and display the legend. The series qx is the conditional probability that a person at
+age x will die between age x and the next age in the series.
+
+plot((0:100), log(qx));
+legend(series, 'location', 'southeast');
+title('Conditional Probability of Dying within One Year of Current Age');
+xlabel('Age');
+ylabel('Log Probability');
+
+lifetablegen
+
+15-1157

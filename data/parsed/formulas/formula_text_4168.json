@@ -1,0 +1,12 @@
+{
+  "page": 2339,
+  "original_text": "ax = \n  Axes (Financial Forecast Chart) with properties:",
+  "ocr_text": "ax=\nAxes(FinancialForecastChart)withproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 219.73,
+    "x1": 360.9,
+    "y1": 240.99
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,66 @@
+Simulating Equity Prices
+
+In this section...
+
+“Simulating Multidimensional Market Models” on page 14-31
+
+“Induce Dependence and Correlation Between States” on page 14-41
+
+“Dynamic Behavior of Market Parameters” on page 14-43
+
+“Price European Stock Options Using Monte Carlo Simulation” on page 14-47
+
+Simulating Multidimensional Market Models
+
+This example compares alternative implementations of a separable multivariate geometric Brownian
+motion process that is often referred to as a multidimensional market model. It simulates sample
+paths of an equity index portfolio using sde, sdeddo, sdeld, cev, and gbm objects.
+
+The market model to simulate is:
+
+dXt = μXtdt + D(Xt)σdWt
+ (14-7)
+
+where:
+
+•
+μ is a diagonal matrix of expected index returns.
+
+•
+D is a diagonal matrix with Xt along the diagonal.
+
+•
+σ is a diagonal matrix of standard deviations of index returns.
+
+Represent Market Models Using SDE Models
+
+Create an sde object using sde to represent the equity market model.
+
+Load the Data_GlobalIdx2 data set from the matlabroot/examples/finance/data directory.
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+Dataset.NIK Dataset.FTSE Dataset.SP];
+
+Convert daily prices to returns.
+
+returns =  tick2ret(prices);
+
+Compute data statistics to input to simulation methods.
+
+nVariables  = size(returns, 2);
+expReturn   = mean(returns);
+sigma       = std(returns);
+correlation = corrcoef(returns);
+t           = 0;
+X           = 100;
+X           = X(ones(nVariables,1));
+
+Create simple anonymous drift and diffusion functions accessible by t, Xt .
+
+F = @(t,X) diag(expReturn) * X;
+G = @(t,X) diag(X) * diag(sigma);
+
+Simulating Equity Prices
+
+14-31

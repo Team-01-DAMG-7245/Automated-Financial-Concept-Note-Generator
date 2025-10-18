@@ -1,0 +1,12 @@
+{
+  "page": 2018,
+  "original_text": "Price = cfprice( ___ ,Name,Value) specifies options using one or more name-value pair\narguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "Price=cfprice( ,Name,Value)specifiesoptionsusingoneormorename-valuepair\nargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 285.81,
+    "x1": 522.03,
+    "y1": 309.44
+  },
+  "confidence": "high"
+}

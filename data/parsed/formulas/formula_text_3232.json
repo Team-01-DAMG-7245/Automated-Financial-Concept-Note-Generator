@@ -1,0 +1,12 @@
+{
+  "page": 1737,
+  "original_text": "AccruInterest = acrudisc(Settle,Maturity,Face,Discount)\nAccruInterest = acrudisc( ___ ,Period,Basis)",
+  "ocr_text": "AccruInterest=acrudisc(Settle,Maturity,Face,Discount)\nAccruInterest=acrudisc( ,Period,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.88,
+    "x1": 421.12,
+    "y1": 214.51
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1959,
+  "original_text": "cpID = 4;\ncpIdx = swaps.Counterparty == cpID;\ncpValues = values(:,cpIdx,:);",
+  "ocr_text": "cpID=4;\ncpIdx=swaps.Counterparty==cpID;\ncpValues=values(:,cpIdx,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.04,
+    "x1": 279.63,
+    "y1": 220.1
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,63 @@
+LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: []
+
+Set the maximum allocation for any one security to 50%, and set the minimum for any one security to
+5%.
+
+p.LowerBound = repmat(0.05,[10,1]);
+p.UpperBound = repmat(0.5,[10,1]);
+
+Calculate the portfolio weights for the maximum Sharpe ratio using estimateMaxSharpeRatio.
+
+w1 = estimateMaxSharpeRatio(p)
+
+w1 = 10×1
+
+0.0500
+    0.0500
+    0.0500
+    0.0500
+    0.0500
+    0.0500
+    0.0500
+    0.4357
+    0.0500
+    0.1643
+
+Estimate moments of portfolio returns using estimatePortMoments.
+
+[risk1, ret1] = estimatePortMoments(p,w1)
+
+risk1 = 
+0.0090
+
+ret1 = 
+0.0013
+
+Calculate portfolio weights given a target return.
+
+TargetReturn = 0.001
+
+TargetReturn = 
+1.0000e-03
+
+TargetReturn = 1.0000e-03
+
+TargetReturn = 
+1.0000e-03
+
+Use estimateFrontierByReturn to estimate optimal portfolios with targeted portfolio returns.
+
+15
+Functions
+
+15-960

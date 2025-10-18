@@ -1,0 +1,12 @@
+{
+  "page": 1520,
+  "original_text": "•\npower-law — g(x) = xɑ * (1+x)-β - ɑ",
+  "ocr_text": "*power-Lawg(x)=xt*(1+x)8-",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 108.64,
+    "x1": 264.45,
+    "y1": 120.45
+  },
+  "confidence": "high"
+}

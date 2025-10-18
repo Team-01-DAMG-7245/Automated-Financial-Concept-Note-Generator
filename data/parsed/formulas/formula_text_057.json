@@ -1,0 +1,12 @@
+{
+  "page": 62,
+  "original_text": "CFlowDates = cfdates(Settle, Maturity)",
+  "ocr_text": "CFlowDates=cfdates(Settle,Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 295.89,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

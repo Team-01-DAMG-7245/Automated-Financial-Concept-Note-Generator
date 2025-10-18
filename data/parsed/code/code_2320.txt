@@ -1,0 +1,5 @@
+Page 2195
+================================================================================
+
+To evaluate the negative log-likelihood function for ecmnmle, use ecmnhess based on the current
+maximum likelihood parameter estimates for ECMCovar.

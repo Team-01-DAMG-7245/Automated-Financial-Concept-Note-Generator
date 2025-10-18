@@ -1,0 +1,12 @@
+{
+  "page": 964,
+  "original_text": "load Data_TransProb\ntrans = transprob(data);\nthresh = transprobtothresholds(trans);",
+  "ocr_text": "loadData_TransProb\ntrans=transprob(data);\nthresh=transprobtothresholds(trans);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 514.23,
+    "x1": 295.88,
+    "y1": 546.29
+  },
+  "confidence": "high"
+}

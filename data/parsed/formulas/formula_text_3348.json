@@ -1,0 +1,12 @@
+{
+  "page": 1819,
+  "original_text": "MarketDate = datenum({'06/01/2017','06/01/2019','06/01/2020','06/01/2022'}','mm/dd/yyyy');\nCouponRate = [7 8 9 10]'/100;\nMarketPrice = [101.300 109.020 114.42 118.62]';\nMarketData = [MarketDate, MarketPrice, CouponRate];",
+  "ocr_text": "MarketDate=datenum({06/01/2017,06/01/2019,06/01/2020,06/01/2022},mm/dd/yyyy);\nCouponRate=[78910]/100;\n\nMarketPrice=[101.300109.020114.42118.62];\nMarketData=[MarketDate,MarketPrice,CouponRate];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 247.83,
+    "x1": 577.66,
+    "y1": 290.69
+  },
+  "confidence": "high"
+}

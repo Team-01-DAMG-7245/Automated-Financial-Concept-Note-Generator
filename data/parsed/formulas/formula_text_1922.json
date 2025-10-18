@@ -1,0 +1,12 @@
+{
+  "page": 985,
+  "original_text": "sc = modifypredictor(sc,'ResStatus','PredictorType','Categorical')\n[T,Stats] = predictorinfo(sc,'ResStatus')",
+  "ocr_text": "sc_=modifypredictor(sc,ResStatus,PredictorType,Categorical)\n[T,Stats]=predictorinfo(sc,ResStatus)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 650.17,
+    "x1": 447.62,
+    "y1": 671.44
+  },
+  "confidence": "high"
+}

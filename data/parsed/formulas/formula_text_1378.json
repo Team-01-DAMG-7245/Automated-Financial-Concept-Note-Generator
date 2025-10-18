@@ -1,0 +1,12 @@
+{
+  "page": 686,
+  "original_text": "p = PortfolioCVaR('ConditionalBudgetThreshold', 0.99, 'ConditionalUpperBudget', 1);\ndisp(p.ConditionalBudgetThreshold)\ndisp(p.ConditionalUpperBudget)",
+  "ocr_text": "p=PortfolioCVaR(ConditionalBudgetThreshold,0.99,_ConditionalUpperBudget,1);\ndisp(p.ConditionalBudgetThreshold)\ndisp(p.ConditionalUpperBudget)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 347.63,
+    "x1": 539.73,
+    "y1": 379.69
+  },
+  "confidence": "high"
+}

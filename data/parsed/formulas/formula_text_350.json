@@ -1,0 +1,12 @@
+{
+  "page": 218,
+  "original_text": "% Estimate asset moments using a table\nq = estimateAssetMoments(q, assetRetnTable);\n[passetmean, passetcovar] = getAssetMoments(p)",
+  "ocr_text": "SEstimateassetmomentsusingatable\nq=estimateAssetMoments(q,assetRetnTable);\n[passetmean,passetcovar]=getAssetMoments(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 347.43,
+    "x1": 339.23,
+    "y1": 379.49
+  },
+  "confidence": "high"
+}

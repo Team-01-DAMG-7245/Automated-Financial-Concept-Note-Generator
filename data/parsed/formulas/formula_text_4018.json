@@ -1,0 +1,12 @@
+{
+  "page": 2278,
+  "original_text": "p.LowerBound = repmat(0.05,[10,1]);\np.UpperBound = repmat(0.5,[10,1]);",
+  "ocr_text": "p.LowerBound=repmat(0.05,[10,1]);\np.UpperBound=repmat(0.5,[10,1]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 264.7,
+    "x1": 279.63,
+    "y1": 285.97
+  },
+  "confidence": "high"
+}

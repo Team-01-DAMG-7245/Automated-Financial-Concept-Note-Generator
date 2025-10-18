@@ -1,0 +1,7 @@
+Page 2224
+================================================================================
+
+When using the Portfolio object, you can use estimateFrontierByReturn to add a return
+constraint to the portfolio. However, when using the estimateCustomObjectivePortfolio
+function with a Portfolio object, you must add return constraints by using the TargetReturn
+name-value argument with a return target value.

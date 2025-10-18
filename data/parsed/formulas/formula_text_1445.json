@@ -1,0 +1,12 @@
+{
+  "page": 726,
+  "original_text": "p = PortfolioCVaR;\np = setSolver(p, 'fmincon','Algorithm','active-set','Display','off');\ndisplay(p.solverOptions.Algorithm)\ndisplay(p.solverOptions.Display)",
+  "ocr_text": "p=PortfolioCvaR;\np=setSolver(p,_fmincon,Algorithm,active-set,Display,off);\ndisplay(p.solverOptions.Algorithm)\n\ndisplay(p.solverOptions.Display)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 135.59,
+    "x1": 355.87,
+    "y1": 166.07
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2049,
+  "original_text": "ExpCovariance = corr2cov( ___ ,ExpCorrC) specifies options using one or more optional\narguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "ExpCovariance=corr2cov( ,ExpCorrC)specifiesoptionsusingoneormoreoptional\nargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 297.84,
+    "x1": 527.65,
+    "y1": 321.47
+  },
+  "confidence": "high"
+}

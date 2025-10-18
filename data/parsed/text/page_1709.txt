@@ -1,0 +1,60 @@
+simulate
+
+Simulate multivariate stochastic differential equations (SDEs) for SDE, BM, GBM, CEV, CIR, HWV,
+Heston, SDEDDO, SDELD, SDEMRD, Merton, or Bates models
+
+Syntax
+
+[Paths,Times,Z] = simulate(MDL)
+[Paths,Times,Z] = simulate( ___ ,Optional,Scheme)
+
+Description
+
+[Paths,Times,Z] = simulate(MDL) simulates NTrials sample paths of NVars correlated state
+variables, driven by NBrowns Brownian motion sources of risk over NPeriods consecutive
+observation periods, approximating continuous-time stochastic processes.
+
+[Paths,Times,Z] = simulate( ___ ,Optional,Scheme) adds optional inputs for Optional
+and Scheme.
+
+The Optional input argument for simulate accepts any variable-length list of input arguments that
+the simulation method or function referenced by the SDE.Simulation parameter requires or
+accepts. It passes this input list directly to the appropriate SDE simulation method or user-defined
+simulation function.
+
+The optional input Scheme lets you specify an approximation scheme used to simulate the sample
+paths and you can use this optional input with or without an Optional input argument.
+
+Examples
+
+Antithetic Sampling to a Path-Dependent Barrier Option
+
+Consider a European up-and-in call option on a single underlying stock. The evolution of this stock's
+price is governed by a Geometric Brownian Motion (GBM) model with constant parameters:
+
+Assume the following characteristics:
+
+•
+The stock currently trades at 105.
+
+•
+The stock pays no dividends.
+
+•
+The stock volatility is 30% per annum.
+
+•
+The option strike price is 100.
+
+•
+The option expires in three months.
+
+•
+The option barrier is 120.
+
+•
+The risk-free rate is constant at 5% per annum.
+
+simulate
+
+15-403

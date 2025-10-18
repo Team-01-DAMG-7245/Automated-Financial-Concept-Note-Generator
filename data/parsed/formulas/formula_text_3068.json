@@ -1,0 +1,12 @@
+{
+  "page": 1610,
+  "original_text": "equityCurve(backtester)\nh = equityCurve(ax,backtester)",
+  "ocr_text": "equityCurve(backtester)\nh=equityCurve(ax,backtester)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.41,
+    "x1": 270.62,
+    "y1": 214.04
+  },
+  "confidence": "high"
+}

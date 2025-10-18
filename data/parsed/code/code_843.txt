@@ -1,0 +1,12 @@
+Page 815
+================================================================================
+
+There are reformulations of the MAD portfolio optimization problem (see Konno and Yamazaki [50] at
+“Portfolio Optimization” on page A-5) that result in a linear programming problem, which can be
+solved either with standard linear programming techniques or with stochastic programming solvers.
+The PortfolioMAD object, however, does not reformulate the problem in such a manner. The
+PortfolioMAD object computes the MAD as a nonlinear function. The convexity of the MAD, as a
+function of the portfolio weights and the dull edges when the number of scenarios is large, make the
+MAD portfolio optimization problem tractable, in practice, for certain nonlinear programming solvers,
+such as fmincon from Optimization Toolbox. To learn more about the workflow when using
+PortfolioMAD objects, see “PortfolioMAD Object Workflow” on page 6-16.

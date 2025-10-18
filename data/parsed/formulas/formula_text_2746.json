@@ -1,0 +1,12 @@
+{
+  "page": 1387,
+  "original_text": "CIR = cir(Speed,Level,Sigma) creates a default CIR object.",
+  "ocr_text": "CIR=cir(Speed,Level,Sigma)createsadefaultCIRobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 638.04,
+    "x1": 392.71,
+    "y1": 649.67
+  },
+  "confidence": "high"
+}

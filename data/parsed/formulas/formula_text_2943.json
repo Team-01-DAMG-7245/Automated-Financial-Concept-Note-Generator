@@ -1,0 +1,12 @@
+{
+  "page": 1539,
+  "original_text": "strategy = backtestStrategy(name,rebalanceFcn)\nstrategy = backtestStrategy( ___ ,Name,Value)",
+  "ocr_text": "strategy=backtestStrategy(name,rebalanceFcn)\nstrategy=backtestStrategy(_,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 492.89,
+    "x1": 366.94,
+    "y1": 516.52
+  },
+  "confidence": "high"
+}

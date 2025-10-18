@@ -1,0 +1,30 @@
+References
+
+[1] Little, Roderick J. A. and Donald B. Rubin. Statistical Analysis with Missing Data. 2nd Edition. John
+Wiley & Sons, Inc., 2002.
+
+[2] Meng, Xiao-Li and Donald B. Rubin. “Maximum Likelihood Estimation via the ECM Algorithm.”
+Biometrika. Vol. 80, No. 2, 1993, pp. 267–278.
+
+[3] Sexton, Joe and Anders Rygh Swensen. “ECM Algorithms that Converge at the Rate of EM.”
+Biometrika. Vol. 87, No. 3, 2000, pp. 651–662.
+
+[4] Dempster, A. P., N. M. Laird, and Donald B. Rubin. “Maximum Likelihood from Incomplete Data via
+the EM Algorithm.” Journal of the Royal Statistical Society. Series B, Vol. 39, No. 1, 1977, pp.
+1–37.
+
+See Also
+ecmmvnrobj | mvnrmle
+
+Topics
+“Multivariate Normal Regression With Missing Data” on page 9-14
+“Multivariate Normal Regression” on page 9-13
+“Least-Squares Regression” on page 9-14
+“Covariance-Weighted Least Squares” on page 9-14
+“Feasible Generalized Least Squares” on page 9-15
+“Seemingly Unrelated Regression” on page 9-16
+“Multivariate Normal Linear Regression” on page 9-2
+
+ecmmvnrmle
+
+15-875

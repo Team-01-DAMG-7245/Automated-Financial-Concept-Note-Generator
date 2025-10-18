@@ -1,0 +1,12 @@
+{
+  "page": 163,
+  "original_text": "p = Portfolio('AssetMean', ExpReturn, 'AssetCovar', ExpCovariance);\np = setBounds(p, AssetBounds(1), AssetBounds(2));\np = setBudget(p, 1, 1);\np = setGroups(p, Group, GroupMin, GroupMax);\nPortWts = estimateFrontier(p, NumPorts);\n[PortRisk, PortReturn] = estimatePortMoments(p, PortWts);",
+  "ocr_text": "p=Portfolio(AssetMean,ExpReturn,AssetCovar,ExpCovariance);\np=setBounds(p,AssetBounds(1),AssetBounds(2));\np=setBudget(p,1,1);\np=setGroups(p,Group,GroupMin,GroupMax);\nPortWts=estimateFrontier(p,NumPorts);\n[PortRisk,PortReturn]=estimatePortMoments(p,PortWts);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 453.03,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

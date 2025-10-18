@@ -1,0 +1,12 @@
+{
+  "page": 2148,
+  "original_text": "Depreciation = depfixdb(11000, 1500, 8, 5)",
+  "ocr_text": "Depreciation=depfixdb(11000,1500,8,5)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 404.91,
+    "x1": 317.55,
+    "y1": 415.37
+  },
+  "confidence": "high"
+}

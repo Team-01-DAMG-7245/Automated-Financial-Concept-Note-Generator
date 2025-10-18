@@ -1,0 +1,12 @@
+{
+  "page": 392,
+  "original_text": "mu_bl = (P'*(Omega\\P) + inv(C)) \\ ( C\\PI + P'*(Omega\\q));\ncov_mu = inv(P'*(Omega\\P) + inv(C));",
+  "ocr_text": "mu_bl=(P*(OmegaP)+inv(C))(CPI+P*(Omegaq));\ncov_mu=inv(P*(OmegaP)+inv(C));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 639.12,
+    "x1": 398.83,
+    "y1": 660.39
+  },
+  "confidence": "high"
+}

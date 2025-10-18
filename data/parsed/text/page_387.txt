@@ -1,0 +1,50 @@
+SellTurnover: []
+                          Name: []
+                     NumAssets: 4
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [4×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: []
+
+In this Portfolio object, the lower and upper budgets are both 1. Limits must be set on the total
+investment in risky assets. Borrowing a risk-free asset funds the extra investment in risky assets. Use
+setBudget to set the lower and upper bounds to set the limits of the borrowed risk-free assets.
+
+p = setBudget(p, 1, 1);      % allow 0% risk free asset allocation, meaning fully invested in ris
+p3 = setBudget(p, 1, 1.3);   % allow 0% risk free asset allocation, and allow borrowing of risk f
+p4 = setBudget(p, 1.3, 2);   % allow 0% risk free asset allocation, and allow borrowing of risk f
+[risk, retn] = estimatePortMoments(p, estimateMaxSharpeRatio(p));
+
+figure
+plotFrontier(p); hold on; 
+plotFrontier(p1);hold on;
+plotFrontier(p3); hold on;
+plotFrontier(p4); hold on;
+plot(risk, retn, 'g*'); hold off;
+legend('without risk free asset',  ...
+    'with risk free asset in range [0,1]', ...
+    'with risk free asset in range [-0.3, 0]', ...
+    'with risk free asset in range [-1.0, -0.3]',...
+    'Max Sharpe Ratio', 'location','southeast');
+
+Leverage in Portfolio Optimization with a Risk-Free Asset
+
+4-219

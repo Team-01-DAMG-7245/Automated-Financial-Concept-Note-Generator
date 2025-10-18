@@ -1,0 +1,12 @@
+{
+  "page": 1719,
+  "original_text": "F = ts2func(Array)\nF = ts2func( ___ ,Name,Value)",
+  "ocr_text": "F=ts2func(Array)\nF=ts2func(__,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.34,
+    "x1": 256.55,
+    "y1": 212.97
+  },
+  "confidence": "high"
+}

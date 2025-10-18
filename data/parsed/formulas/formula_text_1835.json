@@ -1,0 +1,12 @@
+{
+  "page": 937,
+  "original_text": "startDate = datetime(1995,12,31);\nendDate = datetime(2000,12,31);\n[~,~,idTotals] = transprob(data,'startDate', ...\nstartDate, 'endDate',endDate);",
+  "ocr_text": "startDate=datetime(1995,12,31);\nendDate=datetime(2000,12,31);\n[-,x,idTotals]=transprob(data,startDate,...\nstartDate,endDate,endDate);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 254.44,
+    "x1": 350.08,
+    "y1": 297.31
+  },
+  "confidence": "high"
+}

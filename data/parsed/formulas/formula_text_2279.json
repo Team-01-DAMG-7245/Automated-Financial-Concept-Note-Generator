@@ -1,0 +1,12 @@
+{
+  "page": 1172,
+  "original_text": "TT =\ntable2timetable(T,'RowTimes'\n,timeVarName)",
+  "ocr_text": "TT=\ntable2timetable(T,RowTimes\n,timeVarName)",
+  "bbox": {
+    "x0": 387.09,
+    "y0": 528.76,
+    "x1": 555.65,
+    "y1": 564.39
+  },
+  "confidence": "high"
+}

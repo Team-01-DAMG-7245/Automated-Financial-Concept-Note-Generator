@@ -1,0 +1,12 @@
+{
+  "page": 2350,
+  "original_text": "Margin = floatdiscmargin( ___ ,Name,Value) adds optional name-value pair arguments.",
+  "ocr_text": "Margin=floatdiscmargin(__,Name,Value)addsoptionalname-valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 349.25,
+    "x1": 530.48,
+    "y1": 360.88
+  },
+  "confidence": "high"
+}

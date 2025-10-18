@@ -1,0 +1,12 @@
+{
+  "page": 615,
+  "original_text": "% Update LoggedSignals\nLoggedSignals.ExecutedPrices = ExecutedPrices;\nLoggedSignals.ExecutedShares = ExecutedShares;",
+  "ocr_text": "UpdateLoggedSignals\nLoggedSignals.ExecutedPrices=ExecutedPrices;\nLoggedSignals.ExecutedShares=ExecutedShares;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 339.23,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

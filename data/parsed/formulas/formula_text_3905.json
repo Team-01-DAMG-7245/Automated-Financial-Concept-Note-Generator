@@ -1,0 +1,12 @@
+{
+  "page": 2225,
+  "original_text": "load('SixStocks.mat')\np = Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);\nnAssets = size(AssetMean,1);",
+  "ocr_text": "load(SixStocks.mat)\np=Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);\nnAssets=size(AssetMean,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.26,
+    "x1": 398.83,
+    "y1": 697.33
+  },
+  "confidence": "high"
+}

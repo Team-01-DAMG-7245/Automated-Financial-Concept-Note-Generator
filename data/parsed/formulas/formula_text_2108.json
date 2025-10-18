@@ -1,0 +1,12 @@
+{
+  "page": 1088,
+  "original_text": "fprintf(1,'daily total return data from %s to %s ...\\n', ...\n    datestr(StartDate,1),datestr(EndDate,1));",
+  "ocr_text": "fprintf(1,dailytotalreturndatafromstos_...n,...\ndatestr(StartDate,1),datestr(EndDate,1));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 559.23,
+    "x1": 415.1,
+    "y1": 580.49
+  },
+  "confidence": "high"
+}

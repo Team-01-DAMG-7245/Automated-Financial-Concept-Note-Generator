@@ -1,0 +1,38 @@
+Use setCosts to account for the impact of transaction costs when computing the return of the
+portfolio.
+
+% Transaction costs
+cost = 3e-4; % 3 bps
+w0 = zeros(p.NumAssets,1);
+w0([1 2 3 4 16 18 19 20]) = 0.05;
+w0(110) = 0.1;
+w0(112) = 0.5;
+p = setCosts(p,cost,cost,w0);
+
+Use estimateFrontier to compute the efficient frontier and then use plotFrontier to plot the
+efficient frontier of the portfolio problem.
+
+% Plot efficient frontier
+figure
+pwgt = estimateFrontier(p);
+plotFrontier(p,pwgt)
+
+The plot shows that the minimum risk portfolio achieves a CVaR of 12.91% with an associated return
+of 4.10%, while the maximum return portfolio has a CVaR of 30.93% and a return of 15.94%.
+
+% Table of efficient portfolio non-zero weights
+idxNonZero = sum(pwgt >= 1e-4,2) >= 1;
+nonZeroWeightsTable = array2table(pwgt(idxNonZero,:), ...
+    RowNames=string(bondsMaturity(idxNonZero)), ...
+    VariableNames="Portfolio"+string(1:10))
+
+nonZeroWeightsTable=28×10 table
+                  Portfolio1    Portfolio2    Portfolio3    Portfolio4    Portfolio5     Portfoli
+                  __________    __________    __________    __________    ___________    ________
+
+2001-02-15          0             0             0        0.062484        0.050084           0
+    2001-02-28          0             0             0               0     -1.3553e-20     0.05025
+
+Bond Portfolio CVaR Optimization Using Diebold-Li Model
+
+5-151

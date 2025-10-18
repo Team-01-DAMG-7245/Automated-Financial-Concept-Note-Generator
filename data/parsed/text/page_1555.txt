@@ -1,0 +1,54 @@
+Create Backtest Stop Loss Strategy
+
+The stop loss strategy will either be 100% invested in the stock or 100% in cash. You can use two
+fields in the UserData struct for backtestStrategy to set the stop loss limits:
+
+•
+StopLossPercent — How much you are willing to lose before selling, as a decimal percent
+
+•
+BuyInPercent — How much further a stock must fall after you sell it before we buy back in, as a
+percent
+
+In addition, the UserData struct has the following fields:
+
+•
+Asset — Ticker symbol AIG for the asset you want to trade
+
+•
+StopLossPrice — Threshold to sell the asset. If the price falls below this stop loss price, sell the
+asset and go to cash.
+
+•
+BuyInPrice — Target price to buy the asset. If the asset is at this price or lower, buy the asset.
+
+stopLossStrat = backtestStrategy("StopLoss",@stopLossSingleAsset,RebalanceFrequency=1);
+
+% Setup the initial UserData
+stopLossStrat.UserData = struct(StopLossPercent=0.05,BuyInPercent=0.02,Asset="AIG",StopLossPrice=
+
+The backtest strategy starts 100% in cash. Normally the BuyInPrice is set by the strategy after you
+sell a stock, but in this case, you can initialize the BuyInPrice to be Inf. This triggers a stock buy
+on the first rebalance (since any price is less than Inf). You don't need to set the StopLossPrice at
+this point (it is set to nan) because the strategy sets the stop loss price once a stock purchase is
+made.
+
+The strategy specifies that you are only willing to lose 5% of your capital before the stop loss is
+triggered and you sell. Then you will buy back into the stock if it falls by an additional 2%. You can set
+the rebalance frequency to 1 because this type of strategy has to "rebalance" every day in order to
+check the price to determine if any action is needed.
+
+Run Backtest
+
+Create a backtestEngine object and run the backtest using runBacktest.
+
+backtester = backtestEngine(stopLossStrat);
+backtester = runBacktest(backtester,pricesTT);
+
+Use equityCurve to generate a plot the stop loss trading strategy.
+
+equityCurve(backtester)
+
+backtestStrategy
+
+15-249

@@ -1,0 +1,17 @@
+Page 1702
+================================================================================
+
+obj = 
+   Class CIR: Cox-Ingersoll-Ross
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 0.04
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.05
+          Speed: 0.1

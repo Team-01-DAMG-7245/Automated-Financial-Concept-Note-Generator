@@ -1,0 +1,12 @@
+{
+  "page": 559,
+  "original_text": "% Get risk and return levels for current action\nmu = pret(action,1);\nsigma = prsk(action,1);",
+  "ocr_text": "Getriskandreturnlevelsforcurrentaction\nmu=pret(action,1);\nsigma=prsk(action,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 514.23,
+    "x1": 344.65,
+    "y1": 546.29
+  },
+  "confidence": "high"
+}

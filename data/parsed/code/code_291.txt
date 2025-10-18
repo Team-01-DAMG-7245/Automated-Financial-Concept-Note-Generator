@@ -1,0 +1,9 @@
+Page 282
+================================================================================
+
+To modify either lcprog or to specify quadprog as your solver, use the setSolver function to set
+the hidden properties solverType and solverOptions that specify and control the solver. Because
+the solver properties are hidden, you cannot set these options using the Portfolio object. The
+default solver is lcprog so you do not need to use setSolver to specify this solver. To use
+quadprog, you can set the default interior-point-convex algorithm of quadprog using this
+code:

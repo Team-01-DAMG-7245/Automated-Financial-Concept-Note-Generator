@@ -1,0 +1,65 @@
+Credit Risk Analysis
+
+•
+“Estimation of Transition Probabilities” on page 8-2
+
+•
+“Forecasting Corporate Default Rates” on page 8-23
+
+•
+“Credit Quality Thresholds” on page 8-45
+
+•
+“About Credit Scorecards” on page 8-49
+
+•
+“Credit Scorecard Modeling Workflow” on page 8-52
+
+•
+“Credit Scorecard Modeling Using Observation Weights” on page 8-55
+
+•
+“Credit Scorecard Modeling with Missing Values” on page 8-57
+
+•
+“Troubleshooting Credit Scorecard Results” on page 8-64
+
+•
+“Case Study for Credit Scorecard Analysis” on page 8-71
+
+•
+“Credit Scorecards with Constrained Logistic Regression Coefficients” on page 8-91
+
+•
+“Credit Default Swap (CDS)” on page 8-100
+
+•
+“Bootstrapping a Default Probability Curve” on page 8-101
+
+•
+“Finding Breakeven Spread for New CDS Contract” on page 8-104
+
+•
+“Valuing an Existing CDS Contract” on page 8-107
+
+•
+“Converting from Running to Upfront” on page 8-109
+
+•
+“Bootstrapping from Inverted Market Curves” on page 8-111
+
+•
+“Visualize Transitions Data for transprob” on page 8-114
+
+•
+“Impute Missing Data in the Credit Scorecard Workflow Using the k-Nearest Neighbors
+Algorithm” on page 8-121
+
+•
+“Impute Missing Data in the Credit Scorecard Workflow Using the Random Forest Algorithm”
+on page 8-127
+
+•
+“Treat Missing Data in a Credit Scorecard Workflow Using MATLAB fillmissing” on page 8-132
+
+8

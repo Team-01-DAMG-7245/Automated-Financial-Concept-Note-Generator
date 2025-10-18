@@ -1,0 +1,12 @@
+{
+  "page": 764,
+  "original_text": "% Obtain the portfolio weights associated with the return that achieves\n% the maximum reward-to-risk ratio.\npwgt = estimateFrontierByReturn(p,optret)",
+  "ocr_text": "Obtaintheportfolioweightsassociatedwiththereturnthatachieves\nthemaximumreward-to-riskratio.\npwgt=estimateFrontierByReturn(p,optret)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 291.63,
+    "x1": 474.67,
+    "y1": 323.69
+  },
+  "confidence": "high"
+}

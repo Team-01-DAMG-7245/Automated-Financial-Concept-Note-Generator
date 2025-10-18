@@ -1,0 +1,12 @@
+{
+  "page": 828,
+  "original_text": "p = PortfolioMAD(p, 'SellCost', []);",
+  "ocr_text": "p=PortfolioMAD(p,SellCost,[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 520.23,
+    "x1": 285.06,
+    "y1": 530.7
+  },
+  "confidence": "high"
+}

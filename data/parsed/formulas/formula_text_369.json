@@ -1,0 +1,12 @@
+{
+  "page": 233,
+  "original_text": "p = Portfolio('LowerBudget', 0.99, 'UpperBudget', 1);\ndisp(p.LowerBudget)\ndisp(p.UpperBudget)",
+  "ocr_text": "p=Portfolio(LowerBudget,0.99,UpperBudget,1);\ndisp(p.LowerBudget)\ndisp(p.UpperBudget)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 305.25,
+    "x1": 377.17,
+    "y1": 337.31
+  },
+  "confidence": "high"
+}

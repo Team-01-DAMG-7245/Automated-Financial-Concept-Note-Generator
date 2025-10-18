@@ -1,0 +1,12 @@
+{
+  "page": 329,
+  "original_text": "p = Portfolio('AssetList',AssetList,'RiskFreeRate',CashMean);\np = setAssetMoments(p,AssetMean,AssetCovar);",
+  "ocr_text": "p=Portfolio(AssetList,AssetList,RiskFreeRate,CashMean);\np=setAssetMoments(p,AssetMean,AssetCovar);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 462.89,
+    "x1": 420.52,
+    "y1": 484.16
+  },
+  "confidence": "high"
+}

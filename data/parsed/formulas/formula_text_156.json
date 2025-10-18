@@ -1,0 +1,12 @@
+{
+  "page": 114,
+  "original_text": "T = length(t);",
+  "ocr_text": "T=length(t);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 233.43,
+    "x1": 165.85,
+    "y1": 243.89
+  },
+  "confidence": "high"
+}

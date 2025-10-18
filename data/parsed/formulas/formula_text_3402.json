@@ -1,0 +1,12 @@
+{
+  "page": 1874,
+  "original_text": "SpotInfo = table(CurveDates, ZeroRates);",
+  "ocr_text": "SpotInfo=table(CurveDates,_ZeroRates);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 476.43,
+    "x1": 306.72,
+    "y1": 486.89
+  },
+  "confidence": "high"
+}

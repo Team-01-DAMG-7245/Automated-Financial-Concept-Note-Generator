@@ -1,0 +1,12 @@
+{
+  "page": 871,
+  "original_text": "retTable = table(retOA,ret,retECP,'VariableNames',{'OA','TR','ECP'})",
+  "ocr_text": "retTable=table(ret0OA,ret,retECP,VariableNames,{OA,TR,ECP})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 314.82,
+    "x1": 458.45,
+    "y1": 325.29
+  },
+  "confidence": "high"
+}

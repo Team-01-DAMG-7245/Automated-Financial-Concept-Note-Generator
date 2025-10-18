@@ -1,0 +1,12 @@
+{
+  "page": 560,
+  "original_text": "function reward = constantReturnReward(loggedSignals, ...\n    initialWealth,finalTimePeriod,targetWealth,constantReturn)\n% Function that computes the reward obtained in the current state\n% following the constant return rule:\n%   R(W,t) =  1    if t >= T and W >= targetWealth\n%             0.1  if t < T and  W >= W0 * (1+r)^t\n%             0    o.w.",
+  "ocr_text": "functionreward=constantReturnReward(loggedSignals,...\ninitialWealth,finalTimePeriod,targetWealth,constantReturn)\n\nFunctionthatcomputestherewardobtainedinthecurrentstate\n\nfollowingtheconstantreturnrule:\n\nR(W,t)=_1 ift-=TandW==targetWealth\n\nQ0.1aiftTandW5=WO*(1+r)*t\n\n0 O.w.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 384.63,
+    "x1": 442.17,
+    "y1": 459.89
+  },
+  "confidence": "high"
+}

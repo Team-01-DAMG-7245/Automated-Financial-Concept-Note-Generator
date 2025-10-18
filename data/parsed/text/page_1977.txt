@@ -1,0 +1,57 @@
+CFFlags = 2×11
+
+0     3     3     3     3     3    13     3     4   NaN   NaN
+     0     3     3     3     3     3    13     3    13     3     4
+
+CFPrincipal = 2×11
+
+0     0     0     0     0     0    10     0    90   NaN   NaN
+     0     0     0     0     0     0    10     0    10     0    80
+
+Use cfamounts with User-Defined Holiday Calendar
+
+This example shows how you can optionally specify a different holiday calendar in cfamounts to
+calculate the cash flows for a specific bond.
+
+CouponRate = 0.0325; 
+FutSettle = datetime(2024,4,12); 
+Maturity = datetime(2055,5,25); 
+Period = 1; 
+Basis = 8; % Act/Act ICMA 
+BusinessDayConvention = 'modifiedfollow';
+
+Hols = datetime(2000,1,1) + calyears(0:100);
+
+[CFlowAmounts, CFlowDates] = cfamounts(CouponRate, FutSettle, Maturity, ... 
+    'Period',Period, 'Basis',Basis,'BusinessDayConvention',BusinessDayConvention, ... 
+    'Holidays',Hols); 
+table(CFlowDates',CFlowAmounts')
+
+ans=33×2 table
+       Var1         Var2  
+    ___________    _______
+
+12-Apr-2024    -2.8682
+    27-May-2024       3.25
+    26-May-2025       3.25
+    25-May-2026       3.25
+    25-May-2027       3.25
+    25-May-2028       3.25
+    25-May-2029       3.25
+    27-May-2030       3.25
+    26-May-2031       3.25
+    25-May-2032       3.25
+    25-May-2033       3.25
+    25-May-2034       3.25
+    25-May-2035       3.25
+    26-May-2036       3.25
+    25-May-2037       3.25
+    25-May-2038       3.25
+      ⋮
+
+In this example, you use cfamounts with the name-value argument 'Holidays' to create a simple
+holiday calendar (Hols) that only includes January 1 of each year.
+
+cfamounts
+
+15-671

@@ -1,0 +1,55 @@
+simByHybrid
+
+Simulate RVM or roughbergomi sample paths by hybrid approximation
+
+Syntax
+
+[Paths,Times,Z] = simByHybrid(MDL,NPeriods)
+[Paths,Times,Z] = simByHybrid( ___ ,Name=Value)
+
+Description
+
+[Paths,Times,Z] = simByHybrid(MDL,NPeriods) simulates NTrials sample paths of NVars
+correlated state variables driven by NBrowns Brownian motion sources of risk over NPeriods
+consecutive observation periods. simByHybrid uses the hybrid scheme to approximate continuous-
+time stochastic processes.
+
+[Paths,Times,Z] = simByHybrid( ___ ,Name=Value) specifies options using one or more
+name-value arguments in addition to the input arguments in the previous syntax.
+
+You can perform quasi-Monte Carlo simulations using the name-value arguments for
+MonteCarloMethod, QuasiSequence, and BrownianMotionMethod. For more information, see
+“Quasi-Monte Carlo Simulation” on page 14-63.
+
+Examples
+
+Simulate Rough Volatility Model Sample Paths by Hybrid Scheme
+
+The rough volatility model (RVM) in a rvm object is a bivariate composite model, composed of two
+coupled and dissimilar univariate models, each driven by a single Brownian motion source of risk
+over NPeriods consecutive observation periods, approximating continuous-time rough stochastic
+volatility processes.
+
+Create a rvm object.
+
+Return = 0.03;
+Volatility = 0.2;
+Alpha = 0.03;
+Beta = 0.015;
+
+rvmObj = rvm(Return,Volatility,Alpha,Beta,KernelType="gamma")
+
+rvmObj = 
+   Class RVM: Rough Stochastic Volatility
+   ----------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+         Return: 0.03
+
+15
+Functions
+
+15-338

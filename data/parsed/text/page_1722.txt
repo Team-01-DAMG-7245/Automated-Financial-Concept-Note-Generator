@@ -1,0 +1,35 @@
+Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: function ts2func/vector2Function
+          Sigma: 0.231906
+
+X2  = simulate(obj,nPeriods,'DeltaTime',dt);
+
+Plot the series of risk-free reference rates to compare the two simulation trials.
+
+subplot(2,1,1)
+dates = datetime(dates,"ConvertFrom","datenum");
+plot(dates,100*yields)
+xlabel('Date')
+ylabel('Annualized Yield (%)')
+title('Risk Free Rate(3-Mo Euribor Continuously-Compounded)')
+subplot(2,1,2)
+plot(T,X1,'red',T,X2,'blue')
+xlabel('Time (Years)')
+ylabel('Index Level')
+title('Constant vs. Dynamic Rate of Return: CAC 40')
+legend({'Constant Interest Rates' 'Dynamic Interest Rates'},...
+    'Location', 'Best')
+
+The paths are close but not exact. The blue line in the last plot uses all the historical Euribor data,
+and illustrates a single trial of a historical simulation.
+
+Input Arguments
+
+Array — Time series array to encapsulate within a callable function of time and state
+vector | 2-dimensional matrix | three-dimensional array
+
+15
+Functions
+
+15-416

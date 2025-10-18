@@ -1,0 +1,6 @@
+Page 2167
+================================================================================
+
+(Optional) Convergence tolerance for estimation algorithm based on changes in the objective
+function, specified as a numeric. The default value is eps ∧ 3/4 which is about 1.0e-12 for double
+precision. The convergence test for changes in the objective function is

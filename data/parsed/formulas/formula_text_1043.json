@@ -1,0 +1,12 @@
+{
+  "page": 540,
+  "original_text": "% Initialize the matrix that stores the value function at different\n% wealth nodes and time periods.\nV = zeros(nWealthNodes,T+1);\n% Define the Value function at t = T.\nV(:,end) = (WGrid >= G);",
+  "ocr_text": "Initializethematrixthatstoresthevaluefunctionatdifferent\nSwealthnodesandtimeperiods.\n\nV=zeros(nWealthNodes,T+1);\n\nDefinetheValuefunctionatt=T.\n\nV(:,end)=(WGrid==G);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 132.31,
+    "x1": 453.0,
+    "y1": 185.98
+  },
+  "confidence": "high"
+}

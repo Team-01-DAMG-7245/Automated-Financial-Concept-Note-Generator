@@ -1,0 +1,12 @@
+{
+  "page": 375,
+  "original_text": "infoRatio = @(x) (pAct.AssetMean'*x)/sqrt(x'*pAct.AssetCovar*x);\noptWts = estimateCustomObjectivePortfolio(pAct,infoRatio,...\n    ObjectiveSense=\"maximize\");",
+  "ocr_text": "infoRatio=Q(x)(pAct.AssetMean*x)/sqrt(x*pAct.AssetCovar*x);\noptWts=estimateCustom0bjectivePortfolio(pAct,infoRatio,...\nObjectiveSense=maximize);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 448.86,
+    "x1": 436.76,
+    "y1": 480.93
+  },
+  "confidence": "high"
+}

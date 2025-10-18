@@ -1,0 +1,11 @@
+Page 1013
+================================================================================
+
+lb = [-Inf;zeros(K,1)];
+ub = [Inf;ones(K,1)];
+AIneq = [0 -1 0 0 0 1 0 0 0 0;0 1 0 0 0 -1 0 0 0 0];
+bIneq = [0.05;0.05];
+c0 = zeros(K,1);
+NIter = 100;
+Options = optimoptions('fmincon','SpecifyObjectiveGradient',true,'Display','off');
+rng('default')

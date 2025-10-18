@@ -1,0 +1,12 @@
+{
+  "page": 509,
+  "original_text": "% Select only meaningful weights\nfunSelect = @(x) (x >= cutOff).*x./sum(x(x >= cutOff));\nweightsTable = varfun(funSelect,weightsTable);",
+  "ocr_text": "Selectonlymeaningfulweights\nfunSelect=Q(x)(x-=cutOff).*x./sum(x(x-=cutOff));\nweightsTable=varfun(funSelect,weightsTable);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 298.23,
+    "x1": 387.99,
+    "y1": 330.29
+  },
+  "confidence": "high"
+}

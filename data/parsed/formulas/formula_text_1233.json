@@ -1,0 +1,12 @@
+{
+  "page": 617,
+  "original_text": "outIS = ArrivalPrice.*sum(TradedVolumes) - sum(ExecutedPrices.*TradedVolumes);",
+  "ocr_text": "outIS=ArrivalPrice.*sum(TradedVolumes)-sum(ExecutedPrices.*TradedVolumes);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 222.63,
+    "x1": 512.6,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

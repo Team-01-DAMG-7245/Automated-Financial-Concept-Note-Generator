@@ -1,0 +1,8 @@
+Page 1025
+================================================================================
+
+Settle = '17-Jul-2009';   % Valuation date for the CDS
+MarketDates = datenum({'20-Sep-10','20-Sep-11','20-Sep-12','20-Sep-14', ...
+'20-Sep-16'});
+MarketSpreads = [140 175 210 265 310]';
+MarketData = [MarketDates MarketSpreads];

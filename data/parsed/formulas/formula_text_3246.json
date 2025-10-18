@@ -1,0 +1,12 @@
+{
+  "page": 1743,
+  "original_text": "p = PortfolioCVaR;\nA = [ 1 1 1 0 0 ];    % First equality constraint\nb = 0.5;\np = setEquality(p, A, b);",
+  "ocr_text": "p=PortfolioCVaR;\n\nA=[11100]; Firstequalityconstraint\nb=0.5;\n\np=setEquality(p,A,b);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 211.71,
+    "x1": 355.49,
+    "y1": 254.57
+  },
+  "confidence": "high"
+}

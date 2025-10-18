@@ -1,0 +1,12 @@
+{
+  "page": 2043,
+  "original_text": "pwgt = estimateFrontier(p);",
+  "ocr_text": "pwgt=estimateFrontier(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 556.97,
+    "x1": 236.29,
+    "y1": 567.44
+  },
+  "confidence": "high"
+}

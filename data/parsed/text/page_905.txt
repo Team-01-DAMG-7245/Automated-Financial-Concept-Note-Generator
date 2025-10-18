@@ -1,0 +1,54 @@
+Using the Sharpe Ratio
+
+This example shows how to use the Sharpe ratio to calculate the ratio of an asset's excess return
+divided by the asset's standard deviation of returns.
+
+The Sharpe ratio is the ratio of the excess return of an asset divided by the asset's standard deviation
+of returns. The Sharpe ratio has the form:
+
+(Mean − Riskless) / Sigma
+
+Here Mean is the mean of asset returns, Riskless is the return of a riskless asset, and Sigma is the
+standard deviation of asset returns. A higher Sharpe ratio is better than a lower Sharpe ratio. A
+negative Sharpe ratio indicates "anti-skill" since the performance of the riskless asset is superior. For
+more information, see sharpe.
+
+To compute the Sharpe ratio, the mean return of the cash asset is used as the return for the riskless
+asset. Thus, given asset return data and the riskless asset return, the Sharpe ratio is calculated with
+
+load FundMarketCash 
+Returns = tick2ret(TestData);
+Riskless = mean(Returns(:,3))
+
+Riskless = 
+0.0017
+
+Sharpe = sharpe(Returns, Riskless)
+
+Sharpe = 1×3
+
+0.0886    0.0315         0
+
+The Sharpe ratio of the example fund is significantly higher than the Sharpe ratio of the market. As is
+demonstrated with portalpha, this translates into a strong risk-adjusted return. Since the Cash
+asset is the same as Riskless, it makes sense that its Sharpe ratio is 0. The Sharpe ratio was
+calculated with the mean of cash returns. It can also be calculated with the cash return series as
+input for the riskless asset
+
+Sharpe = sharpe(Returns, Returns(:,3))
+
+Sharpe = 1×3
+
+0.0886    0.0315         0
+
+When using the Portfolio object, you can use the estimateMaxSharpeRatio function to estimate
+an efficient portfolio that maximizes the Sharpe ratio. For more information, see “Efficient Portfolio
+That Maximizes Sharpe Ratio” on page 4-111.
+
+See Also
+sharpe | inforatio | portalpha | lpm | elpm | maxdrawdown | emaxdrawdown | ret2tick |
+tick2ret | Portfolio
+
+Using the Sharpe Ratio
+
+7-5

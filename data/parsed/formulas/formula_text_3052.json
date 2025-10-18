@@ -1,0 +1,12 @@
+{
+  "page": 1600,
+  "original_text": "% Create the strategies\newInitialWeights = equalWeightFcn([],pricesTT(warmupRange,:));\newStrategy = backtestStrategy(\"EqualWeighted\",@equalWeightFcn, ...\n    'RebalanceFrequency',20, ...\n    'TransactionCosts',[0.0025 0.005], ...\n    'LookbackWindow',0, ...\n    'InitialWeights',ewInitialWeights)",
+  "ocr_text": "Createthestrategies\newInitialWeights=equalWeightFcn([],pricesTT(warmupRange,:));\newStrategy=backtestStrategy(EqualWeighted,GequalWeightFcn,...\nRebalanceFrequency,20,...\nTransactionCosts,[0.00250.005],...\nLookbackWindow,0,...\nInitialWeights,ewInitialWeights)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 293.43,
+    "x1": 447.62,
+    "y1": 368.7
+  },
+  "confidence": "high"
+}

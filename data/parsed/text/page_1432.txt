@@ -1,0 +1,64 @@
+random numbers. However, the performance differs between the two when the MonteCarloMethod
+option "quasi" is introduced, with faster convergence for the "brownian-bridge" construction
+option and the fastest convergence for the "principal-components" construction option.
+
+Data Types: string | char
+
+Z — Direct specification of the dependent random noise process used to generate Brownian
+motion vector
+generates correlated Gaussian variates based on the Correlation member of the SDE object
+(default) | function | three-dimensional array of dependent random variates
+
+Direct specification of the dependent random noise process used to generate the Brownian motion
+vector (Wiener process) that drives the simulation, specified as the comma-separated pair consisting
+of 'Z' and a function or as an (NPeriods * NSteps)-by-NBrowns-by-NTrials three-dimensional
+array of dependent random variates.
+
+The input argument Z allows you to directly specify the noise generation process. This process takes
+precedence over the Correlation parameter of the input gbm object and the value of the
+Antithetic input flag.
+
+Note If you specify Z as a function, it must return an NBrowns-by-1 column vector, and you must call
+it with two inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function
+
+StorePaths — Flag that indicates how the output array Paths is stored and returned
+True (default) | logical with values True or False
+
+Flag that indicates how the output array Paths is stored and returned, specified as the comma-
+separated pair consisting of 'StorePaths' and a scalar logical flag with a value of True or False.
+
+•
+If StorePaths is True (the default value) or is unspecified, simBySolution returns Paths as a
+three-dimensional time series array.
+
+•
+If StorePaths is False (logical 0), simBySolution returns the Paths output array as an empty
+matrix.
+
+Data Types: logical
+
+Processes — Sequence of end-of-period processes or state vector adjustments
+simBySolution makes no adjustments and performs no processing (default) | function | cell array of
+functions
+
+Sequence of end-of-period processes or state vector adjustments, specified as the comma-separated
+pair consisting of 'Processes' and a function or cell array of functions of the form
+
+Xt = P(t, Xt)
+
+The simBySolution function runs processing functions at each interpolation time. They must accept
+the current interpolation time t, and the current state vector Xt, and return a state vector that may be
+an adjustment to the input state.
+
+15
+Functions
+
+15-126

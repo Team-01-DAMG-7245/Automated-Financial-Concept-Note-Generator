@@ -1,0 +1,6 @@
+Page 1558
+================================================================================
+
+strats = [ewPartial, ewWhole];
+backtester = backtestEngine(strats,RiskFreeRate=0.02);
+backtester = runBacktest(backtester,pricesTT);

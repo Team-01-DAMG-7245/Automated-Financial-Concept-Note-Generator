@@ -1,0 +1,52 @@
+ans=1×2 table
+    TGLR_Train_Buy    GLR_Train_Buy
+    ______________    _____________
+
+1.4146           1.2587
+
+Display total IS outperformance of the agent over TWAP for the testing data.
+
+Total_Outperformance_Test_Buy = sum(IS_TWAP_Horizon_Test_Buy - IS_Agent_Horizon_Test_Buy);
+table(Total_Outperformance_Test_Buy)
+
+ans=table
+    Total_Outperformance_Test_Buy
+    _____________________________
+
+196.57
+
+Display TGLR and GLR for the testing data.
+
+[TGLR_Test_Buy, GLR_Test_Buy] = ...
+    ISTGLR(IS_TWAP_Horizon_Test_Buy - IS_Agent_Horizon_Test_Buy);
+table(TGLR_Test_Buy, GLR_Test_Buy)
+
+ans=1×2 table
+    TGLR_Test_Buy    GLR_Test_Buy
+    _____________    ____________
+
+2.018           1.4641
+
+References
+
+[1] Bertsimas, Dimitris, and Andrew W. Lo. "Optimal Control of Execution Costs." Journal of Financial
+Markets 1, no. 1 (1998): 1-50.
+
+[2] Almgren, Robert, and Neil Chriss. "Optimal Execution of Portfolio Transactions." Journal of Risk 3,
+no. 2 (2000): 5-40.
+
+[3] Nevmyvaka, Yuriy, Yi Feng, and Michael Kearns. "Reinforcement Learning for Optimized Trade
+Execution." In Proceedings of the 23rd International Conference on Machine Learning, pp. 673-680.
+2006.
+
+[4] Ning B., F. Lin, and S. Jaimungal. "Double Deep Q-Learning for Optimal Execution." Preprint,
+submitted June 8, 2020. Available at https://arxiv.org/abs/1812.06600.
+
+[5] Lin S. and P. A. Beling. "Optimal Liquidation with Deep Reinforcement Learning." 33rd Conference
+on Neural Information Processing Systems (NeurIPS 2019) Deep Reinforcement Learning Workshop.
+Vancouver, Canada, 2019.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-440

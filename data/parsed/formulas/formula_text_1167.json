@@ -1,0 +1,12 @@
+{
+  "page": 597,
+  "original_text": "EnvConstants_Test_Sell.SampledBook = TestingLOB;\nEnvConstants_Test_Sell.BuyTrade = BuyTrade;\nEnvConstants_Test_Sell.TotalTradingShares = TotalTradingShares_Sell;\nEnvConstants_Test_Sell.NumIntervalsPerHorizon = NumIntervalsPerHorizon;\nEnvConstants_Test_Sell.NumHorizons = NumTestingHorizons;\nEnvConstants_Test_Sell.NumSteps = NumTestingSteps;\nEnvConstants_Test_Sell.NumLevels = NumLevels;\nEnvConstants_Test_Sell.IS_TWAP = IS_TWAP_Step_Test_Sell;",
+  "ocr_text": "EnvConstants_Test_Sell.SampledBook=TestingLOB;\nEnvConstants_Test_Sell.BuyTrade=BuyTrade;\nEnvConstants_Test_Sell.TotalTradingShares=TotalTradingShares_Sell;\nEnvConstants_Test_Sell.NumIntervalsPerHorizon=NumIntervalsPerHorizon;\nEnvConstants_Test_Sell.NumHorizons=NumTestingHorizons;\nEnvConstants_Test_Sell.NumSteps=NumTestingSteps;\nEnvConstants_Test_Sell.NumLevels=NumLevels;\nEnvConstants_Test_Sell.IS_TWAP=IS_TWAP_Step_Test_Sell;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 443.79,
+    "x1": 474.68,
+    "y1": 529.85
+  },
+  "confidence": "high"
+}

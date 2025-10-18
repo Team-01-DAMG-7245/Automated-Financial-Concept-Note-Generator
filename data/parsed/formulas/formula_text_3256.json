@@ -1,0 +1,12 @@
+{
+  "page": 1747,
+  "original_text": "GB = [ false false false true true true ];    % nonfinancial companies\np = setGroupRatio(p, GA, GB, [], 0.5);",
+  "ocr_text": "GB=[falsefalsefalsetruetruetrue]; Snonfinancial_companies\np=setGroupRatio(p,GA,GB,[],0.5);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 469.28,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

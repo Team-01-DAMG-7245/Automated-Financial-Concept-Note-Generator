@@ -1,0 +1,12 @@
+{
+  "page": 2251,
+  "original_text": "p = PortfolioMAD('AssetList',Assets(1:12));\np = simulateNormalScenariosByData(p, Data(:,1:12), 20000 ,'missingdata',true);\np = setDefaultConstraints(p);",
+  "ocr_text": "p=PortfolioMAD(AssetList,Assets(1:12));\np=simulateNormalScenariosByData(p,Data(:,1:12),20000,missingdata,true);\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 315.07,
+    "x1": 512.63,
+    "y1": 347.13
+  },
+  "confidence": "high"
+}

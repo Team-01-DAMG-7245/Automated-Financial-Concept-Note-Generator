@@ -1,0 +1,12 @@
+{
+  "page": 472,
+  "original_text": "% start_idx and end_idx are the index positions in the returnData\n% timetable corresponding to the first and last date for making a prediction.\nstart_idx = historySize + 1;\nend_idx   = height(returnData) - futureSize + 1;\nnumSamples = end_idx - start_idx + 1;",
+  "ocr_text": "Sstart_idxandend_idxaretheindexpositionsinthereturnData\ntimetablecorrespondingtothefirstandlastdateformakingaprediction.\nstart_idx=historySize+1;\n\nend_idx=height(returnData)-futureSize+1;\nnumSamples=end_idx-start_idx+1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.63,
+    "x1": 507.18,
+    "y1": 676.29
+  },
+  "confidence": "high"
+}

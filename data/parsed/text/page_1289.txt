@@ -1,0 +1,39 @@
+"Sugar, EU"                    2  
+    "Sugar, US"                    2  
+    "Sugar, world"                 2  
+    "Cocoa"                        3  
+    "Coffee, Arabica"              3  
+    "Coffee, Robusta"              3  
+    "Tea, avg 3 auctions"          3  
+    "Tea, Colombo"                 3  
+    "Tea, Kolkata"                 3  
+    "Tea, Mombasa"                 3  
+    "Tobacco, US import u.v."      3
+
+Cluster Commodities Based on Similarity in Regular Component
+
+The regular component is the sum of the long-term and seasonal trends Lt + St, and is equal to
+Pt −Ct, the commodity price series without its irregular (business cycle) component.
+
+Evaluate the pairwise distances and the corresponding linkage.
+
+regularCorrDistances = pdist( regularComponent.', "correlation" );
+regularComponentLinkage = linkage( regularCorrDistances, "complete" );
+
+Create a dendrogram to visualize the linkage, and then select a threshold to achieve three clusters.
+
+figure
+h = dendrogram( regularComponentLinkage, numCommodities, ...
+    "Labels", commodityNames, ...
+    "ColorThreshold", 0.8 );
+ylabel( "Dissimilarity" )
+title( "Commodity Price Series Clustering" )
+subtitle( "Regular Component Correlation Distance" )
+set( h, "LineWidth", 2 )
+xtickangle( 45 )
+grid( "on" )
+box( "on" )
+
+Volatility Modeling for Soft Commodities
+
+14-97

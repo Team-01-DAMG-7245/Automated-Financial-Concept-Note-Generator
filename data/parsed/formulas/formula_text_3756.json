@@ -1,0 +1,12 @@
+{
+  "page": 2127,
+  "original_text": "NumDays = days360isda(StartDate,EndDate)",
+  "ocr_text": "NumDays=days360isda(StartDate,EndDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.67,
+    "x1": 330.82,
+    "y1": 203.3
+  },
+  "confidence": "high"
+}

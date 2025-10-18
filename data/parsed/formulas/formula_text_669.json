@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "% Define the budget constraint\npMrkwtz.Constraints.budget = sum(xMrkwtz) == 1;",
+  "ocr_text": "Definethebudgetconstraint\npMrkwtz.Constraints.budget=sum(xMrkwtz)==1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 492.63,
+    "x1": 344.65,
+    "y1": 513.89
+  },
+  "confidence": "high"
+}

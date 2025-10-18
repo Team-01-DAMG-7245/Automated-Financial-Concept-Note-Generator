@@ -1,0 +1,61 @@
+1.2327             1.2532
+
+Display the total IS outperformance of the agent over TWAP for the testing data.
+
+Total_Outperformance_Test_Sell = sum(IS_TWAP_Horizon_Test_Sell - IS_Agent_Horizon_Test_Sell);
+table(Total_Outperformance_Test_Sell)
+
+ans=table
+    Total_Outperformance_Test_Sell
+    ______________________________
+
+104.12
+
+Display TGLR and GLR for the testing data.
+
+[TGLR_Test_Sell, GLR_Test_Sell] = ...
+    ISTGLR(IS_TWAP_Horizon_Test_Sell - IS_Agent_Horizon_Test_Sell);
+table(TGLR_Test_Sell, GLR_Test_Sell)
+
+ans=1×2 table
+    TGLR_Test_Sell    GLR_Test_Sell
+    ______________    _____________
+
+1.389            1.1906
+
+Optimal Execution for Buy Trades
+
+You can use a shortened version of the previous procedure (Optimal Execution for Sell Trades on
+page 4-412) to support the workflow for designing a DQN agent for optimal execution of buy trades.
+To repeat the same workflow for buy trades, first set the BuyTrade logical flag to true and define
+the total number of shares to buy over the horizon.
+
+BuyTrade = true;
+TotalTradingShares_Buy = 2551;
+
+Execute TWAP trades and compute the Implementation Shortfall (IS).
+
+[IS_TWAP_Horizon_Train_Buy,IS_TWAP_Step_Train_Buy, ...
+    InventoryShares_Step_TWAP_Train_Buy,TradingShares_Step_TWAP_Train_Buy] = ...
+    executeTWAPTrades(TrainingLOB,NumLevels,TotalTradingShares_Buy, ...
+    NumIntervalsPerHorizon,NumTrainingHorizons,BuyTrade);
+
+Set up the RL training environment for buy trades.
+
+ObservationDimension = [1 4];
+ObservationInfo_Train_Buy = rlNumericSpec(ObservationDimension);
+ObservationInfo_Train_Buy.Name = 'Observation Data';
+ObservationInfo_Train_Buy.Description = ['RemainingSharesToTrade, ...' ...
+    'RemainingIntervals, IS_Agent, PriceDivergence'];
+ObservationInfo_Train_Buy.LowerLimit = -inf;
+ObservationInfo_Train_Buy.UpperLimit = inf;
+
+EnvConstants_Train_Buy.SampledBook = TrainingLOB;
+EnvConstants_Train_Buy.BuyTrade = BuyTrade;
+EnvConstants_Train_Buy.TotalTradingShares = TotalTradingShares_Buy;
+EnvConstants_Train_Buy.NumIntervalsPerHorizon = NumIntervalsPerHorizon;
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-436

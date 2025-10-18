@@ -1,0 +1,57 @@
+Using Sample and Expected Lower Partial Moments
+
+In this section...
+
+“Introduction” on page 7-11
+
+“Sample Lower Partial Moments” on page 7-11
+
+“Expected Lower Partial Moments” on page 7-12
+
+Introduction
+
+Use lower partial moments to examine what is colloquially known as “downside risk.” The main idea
+of the lower partial moment framework is to model moments of asset returns that fall below a
+minimum acceptable level of return. To compute lower partial moments from data, use lpm to
+calculate lower partial moments for multiple asset return series and for multiple moment orders. To
+compute expected values for lower partial moments under several assumptions about the distribution
+of asset returns, use elpm to calculate lower partial moments for multiple assets and for multiple
+orders.
+
+Sample Lower Partial Moments
+
+This example shows how to use lpm to compute the zero-order, first-order, and second-order lower
+partial moments for the three time series, where the mean of the third time series is used to compute
+MAR (minimum acceptable return) with the so-called risk-free rate.
+
+load FundMarketCash 
+Returns = tick2ret(TestData);
+Assets
+
+Assets = 1×3 cell
+    {'Fund'}    {'Market'}    {'Cash'}
+
+MAR = mean(Returns(:,3))
+
+MAR = 
+0.0017
+
+LPM = lpm(Returns, MAR, [0 1 2])
+
+LPM = 3×3
+
+0.4333    0.4167    0.6167
+    0.0075    0.0140    0.0004
+    0.0003    0.0008    0.0000
+
+The first row of LPM contains zero-order lower partial moments of the three series. The fund and
+market index fall below MAR about 40% of the time and cash returns fall below its own mean about
+60% of the time.
+
+The second row contains first-order lower partial moments of the three series. The fund and market
+have large average shortfall returns relative to MAR by 75 and 140 basis points per month. On the
+other hand, cash underperforms MAR by about only four basis points per month on the downside.
+
+Using Sample and Expected Lower Partial Moments
+
+7-11

@@ -1,0 +1,12 @@
+{
+  "page": 537,
+  "original_text": "% Define return limits.\nmu_min = pret(1);\nmu_max = pret(end);",
+  "ocr_text": "Definereturnlimits.\nmu_min=pret(1);\nmu_max=pret(end);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 214.61,
+    "y1": 675.89
+  },
+  "confidence": "high"
+}

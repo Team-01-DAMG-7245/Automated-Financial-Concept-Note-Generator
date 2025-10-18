@@ -1,0 +1,14 @@
+Page 1038
+================================================================================
+
+% Add lines to indicate the snapshot dates
+   % transprob uses 1 as the default for 'snapsPerYear', hardcoded here for simplicity
+   % The call to cfdates generates the exact same snapshot dates that transprob uses
+   snapsPerYear = 1;
+   snapDates = cfdates(startDate-1,endDate,snapsPerYear)';
+   yLimits = ylim;
+   for ii=1:length(snapDates)
+      line([snapDates(ii) snapDates(ii)],yLimits,'Color','m')
+   end
+   title(strcat("Company ID: ",CompanyID))
+end

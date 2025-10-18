@@ -1,0 +1,12 @@
+{
+  "page": 955,
+  "original_text": "gridCPF = 2*min(CPF):0.1:max(CPF);\ngridSPR = min(SPR):0.1:2*max(SPR);\nnGridCPF = length(gridCPF);\nnGridSPR = length(gridSPR);",
+  "ocr_text": "gridCPF=2*min(CPF):0.1:max(CPF);\ngridSPR=min(SPR):0.1:2*max(SPR);\nnGridCPF=length(gridCPF);\nnGridSPR=length(gridSPR);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 487.43,
+    "x1": 274.21,
+    "y1": 530.29
+  },
+  "confidence": "high"
+}

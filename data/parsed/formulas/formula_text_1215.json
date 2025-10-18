@@ -1,0 +1,12 @@
+{
+  "page": 614,
+  "original_text": "% LoggedSignals.HorizonIdx\nelse\n    IsDone = false;\nend",
+  "ocr_text": "_LoggedSignals.HorizonIdx\nelse\n\nIsDone=false;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 252.54,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

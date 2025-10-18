@@ -1,0 +1,55 @@
+Input Arguments
+
+Data — Data with open, high, low, close information
+matrix | table | timetable
+
+Data with open, high, low, close information, specified as a matrix, table, or timetable. For matrix
+input, Data is an M-by-4 matrix of open, high, low, and closing prices. Timetables and tables with M
+rows must contain variables named 'Open', 'High', 'Low', and 'Close' (case insensitive).
+
+Data Types: double | table | timetable
+
+Output Arguments
+
+ado — Accumulation/Distribution oscillator
+matrix | table | timetable
+
+Accumulation/Distribution oscillator, returned with the same number of rows (M) and type (matrix,
+table, or timetable) as the input Data.
+
+More About
+
+Accumulation/Distribution Oscillator
+
+The Accumulation/Distribution oscillator is a technical analysis indicator used to assess the strength
+of a trend by measuring the relationship between price movement and volume.
+
+The Accumulation/Distribution oscillator helps traders determine whether an asset is being
+accumulated (bought) or distributed (sold) over time and can help identify divergences between price
+action and volume, which may indicate potential reversals.
+
+Version History
+Introduced before R2006a
+
+R2023a: fints support removed for Data input argument
+Behavior changed in R2023a
+
+fints object support for the Data input argument is removed.
+
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+References
+
+[1] Kaufman, P. J. The New Commodity Trading Systems and Methods. John Wiley and Sons, New
+York, 1987.
+
+See Also
+adline | willad | timetable | table
+
+15
+Functions
+
+15-458

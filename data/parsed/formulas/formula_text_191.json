@@ -1,0 +1,12 @@
+{
+  "page": 125,
+  "original_text": "dt = diff(t,1,1);\ndt.Format = \"s\";\ndtav = expfit(dt)",
+  "ocr_text": "dt=diff(t,1,1);\ndt.Format=s;\ndtav=expfit(dt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 366.36,
+    "x1": 182.1,
+    "y1": 398.43
+  },
+  "confidence": "high"
+}

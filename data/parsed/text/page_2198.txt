@@ -1,0 +1,63 @@
+⋮
+
+NaNCovar = 12×12
+10-3 ×
+
+0.7271    0.1003    0.0755    0.0585    0.1363    0.1030    0.0084    0.0741    0.0808    0.0
+    0.1003    0.5958    0.1293    0.0919    0.2700    0.0554    0.0668    0.0548    0.1223    0.0
+    0.0755    0.1293    0.2480    0.0841    0.0680    0.0322    0.0721    0.0632    0.1360    0.0
+    0.0585    0.0919    0.0841    0.1414    0.0656   -0.0010    0.0386    0.0460    0.0617    0.0
+    0.1363    0.2700    0.0680    0.0656    0.6223    0.2062    0.0797    0.0515    0.0850    0.0
+    0.1030    0.0554    0.0322   -0.0010    0.2062    0.8376   -0.0103    0.0345    0.0236   -0.0
+    0.0084    0.0668    0.0721    0.0386    0.0797   -0.0103    0.2462    0.0414    0.0881    0.0
+    0.0741    0.0548    0.0632    0.0460    0.0515    0.0345    0.0414    0.1011    0.0561    0.0
+    0.0808    0.1223    0.1360    0.0617    0.0850    0.0236    0.0881    0.0561    0.2642    0.0
+    0.0407    0.0724    0.0562    0.0331    0.0436   -0.0034    0.0268    0.0321    0.0647    0.0
+    0.0889    0.1252    0.0808    0.0499    0.1155    0.0069    0.0406    0.0494    0.1102    0.0
+    0.1219    0.2317    0.1014    0.0528    0.2515    0.2788    0.0621    0.0548    0.1094    0.0
+      ⋮
+
+Input Arguments
+
+Data — Data
+matrix
+
+Data, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a NUMSERIES-
+dimensional random vector. Missing values are indicated by NaNs.
+
+Data Types: double
+
+InitMethod — Initialization methods to compute initial estimates for mean and covariance
+of data
+'nanskip' (default) | character vector
+
+(Optional) Initialization methods to compute the initial estimates for the mean and covariance of data,
+specified as a character vector. The initialization methods are:
+
+•
+'nanskip' — Skip all records with NaNs.
+
+•
+'twostage' — Estimate mean. Fill NaNs with the mean. Then estimate the covariance.
+
+•
+'diagonal' — Form a diagonal covariance.
+
+Data Types: char
+
+Output Arguments
+
+Mean — Initial estimate of mean of Data
+vector
+
+Initial estimate of the mean of the Data, returned as a NUMSERIES-by-1 column vector.
+
+Covariance — Initial estimate of covariance of Data
+matrix
+
+Initial estimate of covariance of the Data, returned as a NUMSERIES-by-NUMSERIES matrix.
+
+15
+Functions
+
+15-892

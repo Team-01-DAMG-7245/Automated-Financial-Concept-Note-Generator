@@ -1,0 +1,7 @@
+Page 1543
+================================================================================
+
+If you specify the optional name-value argument UserData, then the strategy userData struct
+is passed to the computeTransactionCostsFcn cost function as the final input argument.
+The computeTransactionCostsFcn function handle can read or write any information to the
+userData struct. The updated userData struct is returned as the third output argument.

@@ -1,0 +1,50 @@
+In the context of the Black-Litterman model, posterior ∝likelihood * prior is expressed as f μ q ∝
+
+f q μ *f μ , where each Bayesian term is defined as follows [2 on page 4-229]:
+
+•
+The likelihood is how likely it is for the views to happen given μ and is expressed as
+
+f q μ ∝exp −1
+2 Pμ −q ′Ω−1 Pμ −q
+.
+
+•
+The prior assumes the prior knowledge that μ N π, C  and is expressed as f μ
+
+∝exp −1
+2 μ −π ′C−1 μ −π
+.
+
+•
+The posterior is the distribution of μ given views and is expressed as
+
+f μ q
+∝exp −1
+2 Pμ −q ′Ω−1 Pμ −q −1
+2 μ −π ′C−1 μ −π
+.
+
+As previously stated, the posterior distribution of μ is also a normal distribution. By completing the
+squares, you can derive the posterior mean and covariance as
+
+μ−= PTΩ−1P + C−1 −1 PTΩ−1q + C−1π , cov μ = PTΩ−1P + C−1 −1.
+
+Finally, by combining the Bayesian posterior distribution of μ and the model of asset returns
+r
+N μ, Σ , you then have the posterior prediction of asset returns as r
+N μ−, Σ + cov μ .
+
+References
+
+1
+Walters, J. "The Black-Litterman Model in Detail." 2014. Available at SSRN: https://
+papers.ssrn.com/sol3/papers.cfm?abstract_id=1314585.
+
+2
+Kolm, P. N., and Ritter, G. "On the Bayesian Interpretation of Black-Litterman." European Journal
+of Operational Research. Vol. 258, Number 2, 2017, pp. 564-572.
+
+Black-Litterman Portfolio Optimization Using Financial Toolbox
+
+4-229

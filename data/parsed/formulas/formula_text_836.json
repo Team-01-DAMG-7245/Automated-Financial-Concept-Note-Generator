@@ -1,0 +1,12 @@
+{
+  "page": 472,
+  "original_text": "% Model predicts returns for oil, natural gas, propane, and kerosene.\noutputVarName = [\"Brent\" \"NaturalGas\", \"Propane\" \"Kerosene\"];\nnumOutputs = numel(outputVarName);",
+  "ocr_text": "Modelpredictsreturnsforoil,naturalgas,propane,andkerosene.\noutputVarName=[BrentNaturalGas,PropaneKerosene];\nnumOutputs_=numel(outputVarName);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.43,
+    "x1": 463.84,
+    "y1": 611.49
+  },
+  "confidence": "high"
+}

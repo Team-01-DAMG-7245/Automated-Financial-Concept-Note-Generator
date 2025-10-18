@@ -1,0 +1,12 @@
+{
+  "page": 395,
+  "original_text": "Sigma = cov(assetRetn);",
+  "ocr_text": "Sigma=cov(assetRetn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.11,
+    "x1": 214.61,
+    "y1": 254.58
+  },
+  "confidence": "high"
+}

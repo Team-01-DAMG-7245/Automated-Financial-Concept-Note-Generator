@@ -1,0 +1,12 @@
+{
+  "page": 1040,
+  "original_text": "knnCustAge = fitcknn(custAgeToImpute, 'CustAge', 'NumNeighbors', k, 'Standardize',true);\nimputedCustAge = predict(knnCustAge,custAgeToImpute(missingCustAge,:));",
+  "ocr_text": "knnCustAge=fitcknn(custAgeToImpute,CustAge,NumNeighbors,k,Standardize,true);\nimputedCustAge=predict(knnCustAge,custAgeToImpute(missingCustAge,:));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 422.64,
+    "x1": 566.82,
+    "y1": 443.91
+  },
+  "confidence": "high"
+}

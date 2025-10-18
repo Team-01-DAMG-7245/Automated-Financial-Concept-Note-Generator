@@ -1,0 +1,4 @@
+Page 1211
+================================================================================
+
+Create a drift-rate function F and a diffusion-rate function G.

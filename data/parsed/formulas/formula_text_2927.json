@@ -1,0 +1,12 @@
+{
+  "page": 1526,
+  "original_text": "Example: RoughBergomi = roughbergomi(Return,Alpha,Xi,Eta,Correlation=0.02)",
+  "ocr_text": "Example:RoughBergomi=roughbergomi(Return,Alpha,Xi,Eta,Correlation=0.02)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 597.99,
+    "x1": 526.68,
+    "y1": 609.62
+  },
+  "confidence": "high"
+}

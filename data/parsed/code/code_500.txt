@@ -1,0 +1,10 @@
+Page 474
+================================================================================
+
+if doTrain
+    % Train the LSTM network.
+    net_LSTM = trainnet(Xtraining,Ttraining,layers_LSTM,"mse",options_LSTM);
+else
+    % Load the pretrained network.
+    load lstmBacktestNetwork
+end

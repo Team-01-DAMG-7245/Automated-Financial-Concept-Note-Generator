@@ -1,0 +1,42 @@
+As expected, the ESG scores of the penalized strategies are better than the ESG scores of the
+minimum variance portfolio without constraint and penalty terms. However, the tilted strategies
+achieve lower ESG scores than the ones that include the target ESG score as a constraint. This
+comparison shows the flexibility of the tilted strategy. If the ESG target score is not an essential
+requirement, then you can consider a tilting strategy.
+
+Backtest Using Strategies
+
+To show the performance through time for the two strategies (Diversification for Fixed ESG Level on
+page 4-274 and Diversification by "Tilting" on page 4-276), use the backtestEngine framework.
+Use backtestStrategy to compare the strategies with a prespecified target ESG score with the
+strategies that use ESG tilting.
+
+% Store info to pass to ESG constrained strategies
+Ain = -ESGnumeric';
+bin = -ESG0; % Set the target ESG score.
+conStruct.p = setInequality(p,-ESGnumeric',-ESG0);
+conStruct.ret0 = ret0;
+
+conStruct.lambdaHH =
+;
+
+conStruct.lambdaMDP =
+;
+
+% Store info to pass to ESG tilting strategies
+tiltStruct.p = setInequality(p,[],[]);
+tiltStruct.ret0 = ret0;
+% HH tilting penalty parameters
+% Penalty parameter for assets with 'low' ESG score
+
+HHlambdaLow =
+;
+% Penalty parameter for assets with 'high' ESG score
+
+HHlambdaHigh =
+;
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-278

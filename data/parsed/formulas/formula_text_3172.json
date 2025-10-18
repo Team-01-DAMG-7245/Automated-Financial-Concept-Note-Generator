@@ -1,0 +1,12 @@
+{
+  "page": 1702,
+  "original_text": "rPathsExp = mean(rPaths,3);",
+  "ocr_text": "rPathsExp=mean(rPaths,3);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 634.36,
+    "x1": 236.28,
+    "y1": 644.83
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2370,
+  "original_text": "FutureVal = fvfix(Rate,NumPeriods,Payment)\nFutureVal = fvfix( ___ ,PresentVal,Due)",
+  "ocr_text": "FutureVal=fvfix(Rate,NumPeriods,Payment)\nFutureVal=fvfix(_,PresentVal,Due)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.86,
+    "x1": 342.86,
+    "y1": 213.49
+  },
+  "confidence": "high"
+}

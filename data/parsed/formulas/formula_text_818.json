@@ -1,0 +1,12 @@
+{
+  "page": 466,
+  "original_text": "where Wij = wi\nj if asset i is in cluster j, otherwise Wij = 0. In other words W = w1| . . . |wK , for K\nclusters and γ =riskBudgetingPortfolio(Γ).",
+  "ocr_text": "whereWj= wi ifassetiisincluster/j,otherwiseWj;=0.InotherwordsW= (w? Lee [wK), forK\nclustersandy=riskBudgetingPortfolio(I).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 688.49,
+    "x1": 539.82,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

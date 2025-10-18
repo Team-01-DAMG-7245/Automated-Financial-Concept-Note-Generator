@@ -1,0 +1,64 @@
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+
+where:
+
+•
+X is an NVars-by-1 state vector of process variables (for example, short rates or equity prices) to
+simulate.
+
+•
+W is an NBrowns-by-1 Brownian motion vector.
+
+•
+F is an NVars-by-1 vector-valued drift-rate function.
+
+•
+G is an NVars-by-NBrowns matrix-valued diffusion-rate function.
+
+simByEuler simulates NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods, using the
+Euler approach to approximate continuous-time stochastic processes.
+
+•
+This simulation engine provides a discrete-time approximation of the underlying generalized
+continuous-time process. The simulation is derived directly from the stochastic differential
+equation of motion. Thus, the discrete-time process approaches the true continuous-time process
+only as DeltaTime approaches zero.
+
+•
+The input argument Z allows you to directly specify the noise-generation process. This process
+takes precedence over the Correlation parameter of the sde object and the value of the
+Antithetic input flag. If you do not specify a value for Z, simByEuler generates correlated
+Gaussian variates, with or without antithetic sampling as requested.
+
+•
+The end-of-period Processes argument allows you to terminate a given trial early. At the end of
+each time step, simByEuler tests the state vector Xt for an all-NaN condition. Thus, to signal an
+early termination of a given trial, all elements of the state vector Xt must be NaN. This test enables
+a user-defined Processes function to signal early termination of a trial, and offers significant
+performance benefits in some situations (for example, pricing down-and-out barrier options).
+
+Version History
+Introduced in R2008a
+
+R2022a: Perform Quasi-Monte Carlo simulation
+Behavior changed in R2022a
+
+Perform Quasi-Monte Carlo simulation using the name-value arguments MonteCarloMethod and
+QuasiSequence.
+
+R2022b: Perform Brownian bridge and principal components construction
+Behavior changed in R2022b
+
+Perform Brownian bridge and principal components construction using the name-value argument
+BrownianMotionMethod.
+
+References
+
+[1] Deelstra, G. and F. Delbaen. “Convergence of Discretized Stochastic (Interest Rate) Processes
+with Stochastic Drift Term.” Applied Stochastic Models and Data Analysis, 1998, Vol. 14, No.
+1, pp. 77–84.
+
+simByEuler
+
+15-393

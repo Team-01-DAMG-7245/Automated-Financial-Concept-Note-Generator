@@ -1,0 +1,67 @@
+0.0013
+    0.0024
+
+0.4000
+    0.2000
+    0.2000
+    0.1000
+    0.1000
+
+Setting Transaction Costs with Scalar Expansion
+
+Both the PortfolioCVaR object and setCosts function implement scalar expansion on the
+arguments for transaction costs and the initial portfolio. If the NumAssets property is already set in
+the PortfolioCVaR object, scalar arguments for these properties are expanded to have the same
+value across all dimensions. In addition, setCosts lets you specify NumAssets as an optional final
+argument. For example, assume that you have an initial portfolio x0 and you want to set common
+transaction costs on all assets in your universe. You can set these costs in any of these equivalent
+ways:
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = PortfolioCVaR('InitPort', x0, 'BuyCost', 0.002, 'SellCost', 0.002);
+
+or
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = PortfolioCVaR('InitPort', x0);
+p = setCosts(p, 0.002, 0.002);
+
+or
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = PortfolioCVaR;
+p = setCosts(p, 0.002, 0.002, x0);
+
+To clear costs from your PortfolioCVaR object, use either the PortfolioCVaR object or setCosts
+with empty inputs for the properties to be cleared. For example, you can clear sales costs from the
+PortfolioCVaR object p in the previous example:
+
+p = PortfolioCVaR(p, 'SellCost', []);
+
+See Also
+PortfolioCVaR | setCosts | setProbabilityLevel | setScenarios | estimatePortVaR |
+simulateNormalScenariosByMoments | simulateNormalScenariosByData
+
+Related Examples
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Working with a Riskless Asset” on page 5-46
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Validate the CVaR Portfolio Problem” on page 5-81
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+Working with Transaction Costs
+
+5-49

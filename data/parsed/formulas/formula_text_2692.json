@@ -1,0 +1,12 @@
+{
+  "page": 1359,
+  "original_text": "function new_weights = denoisedStrat(~, pricesTT) \n% Function for minimum variance portfolio using covariance denoising.",
+  "ocr_text": "functionnew_weights=denoisedStrat(,pricesTT)\nSFunctionforminimumvarianceportfoliousingcovariancedenoising.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 463.84,
+    "y1": 643.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,56 @@
+ecmnhess
+
+Hessian of negative log-likelihood function
+
+Syntax
+
+Hessian = ecmnhess(Data,Covariance)
+Hessian = ecmnhess( ___ ,InvCovar,MatrixType)
+
+Description
+
+Hessian = ecmnhess(Data,Covariance) computes an NUMPARAMS-by-NUMPARAMS Hessian
+matrix of the observed negative log-likelihood function based on current parameter estimates.
+
+Use ecmnhess after estimating the mean and covariance of Data with ecmnmle.
+
+Hessian = ecmnhess( ___ ,InvCovar,MatrixType) adds optional arguments for InvCovar and
+MatrixType.
+
+Examples
+
+Compute Hessian for Negative Log-Likelihood Function for Data
+
+This example shows how to compute the Hessian for the negative log-likelihood function for five years
+of daily total return data for 12 computer technology stocks, with six hardware and six software
+companies
+
+load ecmtechdemo.mat
+
+The time period for this data extends from April 19, 2000 to April 18, 2005. The sixth stock in Assets
+is Google (GOOG), which started trading on August 19, 2004. So, all returns before August 20, 2004
+are missing and represented as NaNs. Also, Amazon (AMZN) had a few days with missing values
+scattered throughout the past five years.
+
+[ECMMean, ECMCovar] = ecmnmle(Data)
+
+ECMMean = 12×1
+
+0.0008
+    0.0008
+   -0.0005
+    0.0002
+    0.0011
+    0.0038
+   -0.0003
+   -0.0000
+   -0.0003
+   -0.0000
+   -0.0003
+    0.0004
+      ⋮
+
+15
+Functions
+
+15-888

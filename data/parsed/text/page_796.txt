@@ -1,0 +1,60 @@
+PortfolioMAD Object Workflow
+
+The PortfolioMAD object workflow for creating and modeling a MAD portfolio is:
+
+1
+Create a MAD Portfolio.
+
+Create a PortfolioMAD object for mean-absolute deviation (MAD) portfolio optimization. For
+more information, see “Creating the PortfolioMAD Object” on page 6-22.
+
+2
+Define asset returns and scenarios.
+
+Evaluate scenarios for portfolio asset returns, including assets with missing data and financial
+time series data. For more information, see “Asset Returns and Scenarios Using PortfolioMAD
+Object” on page 6-35.
+
+3
+Specify the MAD Portfolio Constraints.
+
+Define the constraints for portfolio assets such as linear equality and inequality, bound,
+conditional budget, budget, group, group ratio, and turnover constraints, 'Conditional'
+BoundType, and MinNumAssets, MaxNumAssets constraints. For more information, see
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50 and “Working with
+'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using PortfolioMAD
+Objects” on page 6-71.
+
+4
+Validate the MAD Portfolio.
+
+Identify errors for the portfolio specification. For more information, see “Validate the MAD
+Portfolio Problem” on page 6-80.
+
+5
+Estimate the efficient portfolios and frontiers.
+
+Analyze the efficient portfolios and efficient frontiers for a portfolio. For more information, see
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+and “Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105.
+
+6
+Postprocess the results.
+
+Use the efficient portfolios and efficient frontiers results to set up trades. For more information,
+see “Postprocessing Results to Set Up Tradable Portfolios” on page 6-113.
+
+See Also
+
+More About
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“Choosing and Controlling the Solver for PortfolioMAD Optimizations” on page 6-99
+
+6
+MAD Portfolio Optimization Tools
+
+6-16

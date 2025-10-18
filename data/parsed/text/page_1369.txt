@@ -1,0 +1,38 @@
+Here, Σ is the standard covariance estimate, τ is the average sample variance, and α ∈0, 1  is the
+intensity parameter computed using
+
+α =
+
+1
+N ∑
+i = 1
+
+N
+trace( zizi
+T −Σ
+
+2)
+
+trace( Σ‐τ 2)
+
+where zi is the i th row of the centered sample matrix Z and N is the sample size.
+
+Version History
+Introduced in R2023a
+
+References
+
+[1] Ledoit, O. and Wollf, M. "A Well-Conditioned Estimator for Large-Dimensional Covariance
+Matrices." Journal of Multivariate Analysis. vol. 88, no. 2, 365–411, 2004.
+
+See Also
+covarianceDenoising | corrcoef | partialcorr | corrcov | robustcov | nearcorr
+
+Topics
+“Compare Performance of Covariance Denoising with Factor Modeling Using Backtesting” on page 4-
+394
+“Comparison of Methods for Covariance Estimation” on page 4-138
+
+covarianceShrinkage
+
+15-63

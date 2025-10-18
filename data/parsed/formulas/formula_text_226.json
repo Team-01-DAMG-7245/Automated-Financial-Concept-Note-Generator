@@ -1,0 +1,12 @@
+{
+  "page": 150,
+  "original_text": "p = Portfolio;\np = setAssetMoments(p, ExpReturn, ExpCovariance);\np = setDefaultConstraints(p);",
+  "ocr_text": "p=Portfolio;\np=setAssetMoments(p,ExpReturn,ExpCovariance);\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 355.48,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

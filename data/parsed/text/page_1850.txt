@@ -1,0 +1,55 @@
+bnddury
+
+Bond duration given yield
+
+Syntax
+
+[ModDuration,YearDuration,PerDuration] = bnddury(Yield,CouponRate,Settle,
+Maturity)
+[ModDuration,YearDuration,PerDuration] = bnddury( ___ ,Name,Value)
+
+Description
+
+[ModDuration,YearDuration,PerDuration] = bnddury(Yield,CouponRate,Settle,
+Maturity) computes the Macaulay and modified duration of NUMBONDS fixed income securities
+given yield to maturity for each bond.
+
+bnddury determines the Macaulay and modified duration for a bond whether the first or last coupon
+periods in the coupon structure are short or long (that is, whether the coupon structure is
+synchronized to maturity). bnddury also determines the Macaulay and modified duration for a zero
+coupon bond.
+
+[ModDuration,YearDuration,PerDuration] = bnddury( ___ ,Name,Value) adds optional
+name-value pair arguments.
+
+Examples
+
+Find Bond Duration Given Yield
+
+This example shows how to compute the duration of a bond at three different yield values.
+
+Yield = [0.04; 0.055; 0.06];  
+CouponRate = 0.055; 
+Settle = datetime(1999,8,2); 
+Maturity = datetime(2004,6,15); 
+Period = 2; 
+Basis = 0;
+
+[ModDuration,YearDuration,PerDuration]=bnddury(Yield,... 
+CouponRate, Settle, Maturity, Period, Basis)
+
+ModDuration = 3×1
+
+4.2444
+    4.1924
+    4.1751
+
+YearDuration = 3×1
+
+4.3292
+    4.3077
+
+15
+Functions
+
+15-544

@@ -1,0 +1,10 @@
+Page 2236
+================================================================================
+
+Notice how either approach yields the same moments. The default behavior of the
+estimateAssetMoments function is to work with asset returns. If, instead, you have asset prices,
+such as in the variable Y, the estimateAssetMoments function accepts a parameter name
+'DataFormat' with a corresponding value set to 'prices' to indicate that the input to the method
+is in the form of asset prices and not returns (the default parameter value for 'DataFormat' is
+'returns'). The following example compares direct assignment of moments in the Portfolio object p
+with estimated moments from asset price data in Y in the Portfolio object q:

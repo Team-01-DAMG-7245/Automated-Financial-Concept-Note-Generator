@@ -1,0 +1,89 @@
+fprintf('                                   %6s    %6s\n','Gross','Net');
+fprintf('Initial Portfolio Return           %6.2f %%  %6.2f %%\n',100*pret0,100*pret0);
+fprintf('Minimum Efficient Portfolio Return %6.2f %%  %6.2f %%\n',100*pret(1),100*qret(1));
+fprintf('Maximum Efficient Portfolio Return %6.2f %%  %6.2f %%\n',100*pret(2),100*qret(2));
+end
+
+function displayReturnLevel(Level, qret, qrsk)
+fprintf('Portfolio at %g%% return level on efficient frontier ...\n',100*Level);
+fprintf('%10s %10s\n','Return','Risk');
+fprintf('%10.2f %10.2f\n',100*qret,100*qrsk);
+end
+
+See Also
+Portfolio | setBounds | addGroups | setAssetMoments | estimateAssetMoments |
+estimateBounds | plotFrontier | estimateFrontierLimits | estimateFrontierByRisk |
+estimatePortRisk
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Analysis with Turnover Constraints” on page 4-211
+
+•
+“Leverage in Portfolio Optimization with a Risk-Free Asset” on page 4-217
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+Asset Allocation Case Study
+
+4-189

@@ -1,0 +1,12 @@
+{
+  "page": 872,
+  "original_text": "ans = logical\n   1",
+  "ocr_text": "ans=logical\n1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 160.43,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

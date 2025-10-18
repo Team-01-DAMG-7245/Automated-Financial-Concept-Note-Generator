@@ -1,0 +1,63 @@
+Grouped Estimation of Some Technology Stock Betas
+
+This example shows how to estimate stock betas for all 12 stocks by setting up a joint regression
+model that groups all 12 stocks within a single design. Since each stock has the same design matrix,
+this model is actually an example of seemingly unrelated regression. The routine to estimate model
+parameters is ecmmvnrmle, and the routine to estimate standard errors is ecmmvnrstd.
+
+Because GOOG has a significant number of missing values, a direct use of the missing data routine
+ecmmvnrmle takes 482 iterations to converge. This can take a long time to compute. For the sake of
+brevity, the parameter and covariance estimates after the first 480 iterations are contained in a MAT-
+file (CAPMgroupparam) and are used as initial estimates to compute stock betas.
+
+load CAPMuniverse
+whos Assets Data Dates
+
+Name           Size             Bytes  Class     Attributes
+
+Assets         1x14              1792  cell                
+  Data        1471x14            164752  double              
+  Dates       1471x1              11768  double
+
+load CAPMgroupparam
+whos Param0 Covar0
+
+Name         Size            Bytes  Class     Attributes
+
+Covar0      12x12             1152  double              
+  Param0      24x1               192  double
+
+Estimate the parameters for the collection of 12 stocks.
+
+StartDate = Dates(1);
+EndDate = Dates(end);
+
+[NumSamples, NumSeries] = size(Data);
+NumAssets = NumSeries - 2;
+
+fprintf(1,'\n');
+fprintf(1,'Grouped regression with ');
+
+Grouped regression with
+
+fprintf(1,'daily total return data from %s to %s ...\n', ...
+    datestr(StartDate,1),datestr(EndDate,1));
+
+daily total return data from 03-Jan-2000 to 07-Nov-2005 ...
+
+fprintf(1,'  %4s %-20s %-20s %-20s\n','','Alpha','Beta','Sigma');
+
+Alpha                Beta                 Sigma
+
+fprintf(1,'  ---- -------------------- ');
+
+---- --------------------
+
+fprintf(1,'-------------------- --------------------\n');
+
+-------------------- --------------------
+
+9
+Regression with Missing Data
+
+9-30

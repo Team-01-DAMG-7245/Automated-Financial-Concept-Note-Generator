@@ -1,0 +1,12 @@
+{
+  "page": 126,
+  "original_text": "yt = f Xt, Xt −1, . . . , Xt −b; W ,",
+  "ocr_text": "Me=F(XpXp-1,---Xp-W),",
+  "bbox": {
+    "x0": 111.94,
+    "y0": 547.84,
+    "x1": 252.27,
+    "y1": 561.6
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 936,
+  "original_text": "startDate = datetime(1995,12,31);\nendDate = datetime(2000,12,31);",
+  "ocr_text": "startDate=datetime(1995,12,31);\nendDate=datetime(2000,12,31);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 448.15,
+    "x1": 268.8,
+    "y1": 469.42
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,53 @@
+fvdisc
+
+Future value of discounted security
+
+Syntax
+
+FutureVal = fvdisc(Settle,Maturity,Price,Discount)
+FutureVal = fvdisc( ___ ,Basis)
+
+Description
+
+FutureVal = fvdisc(Settle,Maturity,Price,Discount) finds the amount received at
+maturity for a fully vested security.
+
+FutureVal = fvdisc( ___ ,Basis) specifies options using an optional argument in addition to the
+input arguments in the previous syntax.
+
+Examples
+
+Find the Amount Received at Maturity for a Fully-Vested Security Using datetime Inputs
+
+This example shows how to use datetime inputs to find the amount received at maturity for a fully-
+vested security, using the following data.
+
+Settle = datetime(2001,2,15);
+Maturity = datetime(2001,5,15);
+Price = 100;
+Discount = 0.0575;
+Basis = 2;
+
+FutureVal = fvdisc(Settle, Maturity, Price, Discount, Basis)
+
+FutureVal = 
+101.4420
+
+Input Arguments
+
+Settle — Settlement date
+datetime scalar | string scalar | date character vector
+
+Settlement date, specified as a scalar datetime, string, or date character vector.
+
+To support existing code, fvdisc also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime scalar | string scalar | date character vector
+
+fvdisc
+
+15-1061

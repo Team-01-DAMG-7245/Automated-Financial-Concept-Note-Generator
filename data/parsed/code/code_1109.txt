@@ -1,0 +1,7 @@
+Page 1139
+================================================================================
+
+% Transacation cost and cost function parameters
+c = 1.5;
+kappa = .01;
+InitPosition = 0;

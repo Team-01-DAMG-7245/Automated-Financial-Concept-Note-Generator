@@ -1,0 +1,12 @@
+{
+  "page": 1437,
+  "original_text": "Heston = heston( ___ ,Name,Value) constructs a heston object with additional options\nspecified by one or more Name,Value pair arguments.",
+  "ocr_text": "Heston=heston( ,Name,Value)constructsahestonobjectwithadditionaloptions\nspecifiedbyoneormoreName,Valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 172.35,
+    "x1": 517.11,
+    "y1": 195.98
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,59 @@
+Obtain Endpoint Portfolios for a Portfolio Object with BoundType, MinNumAsset, and
+MaxNumAsset Constraints
+
+When any one, or any combination of the constraints from 'Conditional' BoundType,
+MinNumAssets, and MaxNumAssets are active, the portfolio problem is formulated as mixed integer
+programming problem and the MINLP solver is used.
+
+Create a Portfolio object for three assets.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+               0.00022983 0.00049937 0.00019247;
+               0.00420395 0.00019247 0.00764097 ];  
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);
+p = setDefaultConstraints(p);
+
+Use setBounds with semicontinuous constraints to set xi = 0 or 0.02 <= xi <= 0.5 for all i =
+1,...NumAssets.
+
+p = setBounds(p, 0.02, 0.7,'BoundType', 'Conditional', 'NumAssets', 3);
+
+When working with a Portfolio object, the setMinMaxNumAssets function enables you to set up
+the limits on the number of assets invested (as known as cardinality) constraints. This sets the total
+number of allocated assets satisfying the Bound constraints that are between MinNumAssets and
+MaxNumAssets. By setting MinNumAssets = MaxNumAssets = 2, only two of the three assets are
+invested in the portfolio.
+
+p = setMinMaxNumAssets(p, 2, 2);
+
+Use estimateFrontierLimits to estimate the optimal portfolios at endpoints of the efficient
+frontier.
+
+[pwgt, pbuy, psell] = estimateFrontierLimits(p,'Both')
+
+pwgt = 3×2
+
+0.3000    0.3000
+    0.7000         0
+         0    0.7000
+
+pbuy = 3×2
+
+0.3000    0.3000
+    0.7000         0
+         0    0.7000
+
+psell = 3×2
+
+0     0
+     0     0
+     0     0
+
+The estimateFrontierLimits function uses the MINLP solver to solve this problem. Use the
+setSolverMINLP function to configure the SolverType and options.
+
+15
+Functions
+
+15-982

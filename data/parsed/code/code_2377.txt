@@ -1,0 +1,6 @@
+Page 2243
+================================================================================
+
+Note The estimateBounds function does not consider cardinality or semicontinuous constraints.
+For more information, see “Working with 'Conditional' BoundType, MinNumAssets, and
+MaxNumAssets Constraints Using Portfolio Objects” on page 4-81.

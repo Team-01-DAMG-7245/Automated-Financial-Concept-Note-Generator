@@ -1,0 +1,59 @@
+Converting from Running to Upfront
+
+This example shows how to convert the market quotes to upfront quotes. A CDS market quote is
+given in terms of a standard spread (usually 100 bp or 500 bp) and an upfront payment, or in terms of
+an equivalent running or breakeven spread, with no upfront payment. The functions cdsbootstrap,
+cdsspread, and cdsprice perform upfront to running or running to upfront conversions.
+
+For example, to convert the market quotes to upfront quotes for a standard spread of 100 bp:
+
+Settle = '17-Jul-2009';  % Valuation date for the CDS
+MarketDates = datenum({'20-Sep-10','20-Sep-11','20-Sep-12','20-Sep-14', ...
+'20-Sep-16'});
+MarketSpreads = [140 175 210 265 310]';
+MarketData = [MarketDates MarketSpreads];
+
+ZeroDates = datenum({'17-Jan-10','17-Jul-10','17-Jul-11','17-Jul-12', ...
+'17-Jul-13','17-Jul-14'});
+ZeroRates = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+ZeroData = [ZeroDates ZeroRates];
+
+[ProbData,HazData] = cdsbootstrap(ZeroData,MarketData,Settle);
+
+Maturity3 = MarketData(:,1);
+Spread3Run = MarketData(:,2);
+Spread3Std = 100*ones(size(Maturity3));
+Price3 = cdsprice(ZeroData,ProbData,Settle,Maturity3,Spread3Std);
+Upfront3 = Price3/10000000; % Standard notional of 10MM
+display(Upfront3);
+
+Upfront3 = 5×1
+
+0.0047
+    0.0158
+    0.0327
+    0.0737
+    0.1182
+
+The conversion can be reversed to convert upfront quotes to market quotes.
+
+ProbData3Upf = cdsbootstrap(ZeroData,[Maturity3 Upfront3 Spread3Std],Settle);
+Spread3RunFromUpf = cdsspread(ZeroData,ProbData3Upf,Settle,Maturity3);
+display([Spread3Run Spread3RunFromUpf]);
+
+140.0000  140.0000
+  175.0000  175.0000
+  210.0000  210.0000
+  265.0000  265.0000
+  310.0000  310.0000
+
+Comparing the results of this conversion to the original market spread demonstrates the reversal.
+
+Under the flat-hazard rate (FHR) quoting convention, a single market quote is used to calibrate a
+probability curve. This convention yields a single point in the probability curve, and a single hazard
+rate value. For example, assume a four-year (standard dates) CDS contract with a current FHR-based
+running spread of 550 bp needs conversion to a CDS contract with a standard spread of 500 bp.
+
+Converting from Running to Upfront
+
+8-109

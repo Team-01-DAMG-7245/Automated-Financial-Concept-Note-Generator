@@ -1,0 +1,61 @@
+Time series array to encapsulate within a callable function of time and state, specified as a vector,
+two-dimensional matrix, or three-dimensional array
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: F = ts2func(yields,'Times',(0:nPeriods - 1)')
+
+Times — Monotonically increasing observation times associated with the time series input
+array Array
+zero-based, unit-increment vector of the same length as that of the dimension of Array (default) |
+vector
+
+Monotonically increasing observation times associated with the time series input array (Array),
+specified as the comma-separated pair consisting of 'Times' and a vector.
+
+Data Types: double
+
+TimeDimension — Specifies which dimension of the input time series array Array is
+associated with time
+1 (indicates that time is associated with the rows of Array) (default) | scalar integer
+
+Specifies which dimension of the input time series array (Array) is associated with time, specified as
+the comma-separated pair consisting of 'TimeDimension' and a scalar integer.
+
+Data Types: double
+
+StateDimension — Specifies which dimension of the input time series array Array is
+associated with the NVars state variables
+first dimension of Array not already associated with time is associated with first available dimension
+of Array not already assigned to TimeDimension (default) | positive scalar integer
+
+Specifies which dimension of the input time series array (Array) is associated with the NVars state
+variables, specified as the comma-separated pair consisting of 'StateDimension' and a positive
+scalar integer.
+
+Data Types: double
+
+Deterministic — Flag to indicate whether the output function is a deterministic function
+of time alone
+false (meaning F is a callable function of time and state, F(t,X)) (default) | scalar logical
+
+Flag to indicate whether the output function is a deterministic function of time alone, specified as the
+comma-separated pair consisting of 'Determininistic' and a scalar integer flag.
+
+If Deterministic is true, the output function F is a deterministic function of time, F(t), and the only
+input it accepts is a scalar, real-valued time t. If Deterministic is false, the output function F
+accepts two inputs, a scalar, real-valued time t followed by an NVars-by-1 state vectorX(t).
+
+Data Types: logical
+
+ts2func
+
+15-417

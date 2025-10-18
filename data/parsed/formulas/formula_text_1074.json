@@ -1,0 +1,12 @@
+{
+  "page": 554,
+  "original_text": "experience = sim(gbwmEnvironment,DQNagent,simulationOptions);",
+  "ocr_text": "experience=sim(gbwmEnvironment,DQNagent,simulationOptions);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 623.91,
+    "x1": 420.5,
+    "y1": 634.38
+  },
+  "confidence": "high"
+}

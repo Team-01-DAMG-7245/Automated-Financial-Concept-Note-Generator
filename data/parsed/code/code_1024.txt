@@ -1,0 +1,7 @@
+Page 1055
+================================================================================
+
+The new scorecard does not know that the data was treated, hence it assigns NaNs to the <missing>
+bins. If you need to score a new data set and it contains missing data, by default, the score function
+sets the points to NaN. To further explore the handling of missing data, take a few rows from the
+original data as test data and introduce some missing data.

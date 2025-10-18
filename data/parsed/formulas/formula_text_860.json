@@ -1,0 +1,12 @@
+{
+  "page": 478,
+  "original_text": "bt = backtestEngine(strategies,'RiskFreeRate',risk_free_rate);",
+  "ocr_text": "bt=backtestEngine(strategies,RiskFreeRate,risk_free_rate);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 572.67,
+    "x1": 425.94,
+    "y1": 583.14
+  },
+  "confidence": "high"
+}

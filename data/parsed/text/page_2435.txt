@@ -1,0 +1,57 @@
+Find Multiple Internal Rates of Return
+
+Find the internal rate of return for multiple rates of return. The project has the following cash flows
+and a market rate of 10%.
+
+CashFlow = [-1000 6000 -10900 5800]
+
+CashFlow = 1×4
+
+-1000        6000      -10900        5800
+
+[Return, AllRates] = irr(CashFlow)
+
+Return = 
+1.0000
+
+AllRates = 3×1
+
+-0.0488
+    1.0000
+    2.0488
+
+The rates of return in AllRates are -4.88%, 100%, and 204.88%. Though some rates are lower and
+some higher than the market rate, based on the work of Hazen, any rate gives a consistent
+recommendation on the project. However, you can use a present value analysis in these kinds of
+situations. To check the present value of the project, use pvvar:
+
+PV = pvvar(CashFlow,0.10)
+
+PV = 
+-196.0932
+
+The second argument is the 10% market rate. The present value is -196.0932, negative, so the project
+is undesirable.
+
+Input Arguments
+
+CashFlow — Stream of periodic cash flows
+vector | matrix
+
+Stream of periodic cash flows, specified as a vector or matrix. The first entry in CashFlow is the
+initial investment. If CashFlow is a matrix, irr handles each column of CashFlow as a separate
+cash-flow stream.
+
+Data Types: double
+
+Output Arguments
+
+Return — Internal rate of return
+vector
+
+Internal rate of return associated to CashFlow, returned as a vector whose entry j is an internal rate
+of return for column j in CashFlow
+
+irr
+
+15-1129

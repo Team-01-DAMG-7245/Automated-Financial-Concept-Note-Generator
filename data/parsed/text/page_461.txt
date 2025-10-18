@@ -1,0 +1,38 @@
+% Compute the initial market portfolio.
+initialMkt = [1;zeros(nAssets,1)];
+
+Define the benchmark strategy using the mktFcn rebalancing function that is defined in Local
+Functions on page 4-294.
+
+% Market index allocation strategy
+stratBmk = backtestStrategy('Market Index', @mktFcn, ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionCost, ...
+    InitialWeights=initialMkt);
+
+Run Backtest
+
+Run the backtest using a backtestEngine object and runBacktest.
+
+% Define strategies for backtest engine.
+strategies = [stratBmk stratRP];
+% Define a backtest engine.
+backtester = backtestEngine(strategies);
+% Run the backtest.
+backtester = runBacktest(backtester,pricesTT,Start=warmupPeriod);
+
+Use equityCurve to plot the equity curve.
+
+% Plot equity curve.
+equityCurve(backtester)
+
+The risk parity strategy outperforms the market index by the end of the investment period. To
+understand why, you can look at which strategy performs better in the event of meaningful losses.
+
+% Get returns timetable.
+returnsTT = backtester.Returns;
+
+Backtest Using Risk-Based Equity Indexation
+
+4-293

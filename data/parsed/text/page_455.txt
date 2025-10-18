@@ -1,0 +1,59 @@
+0.3912
+    0.1964
+    0.4124
+
+Compute Risk Contribution for Each Asset
+
+Use portfolioRiskContribution to check that the risk contribution of the portfolio obtained in
+wRB matches the target risk budget. By default, portfolioRiskContribution computes the
+relative risk contribution of a given portfolio (wRB) with respect to the provided covariance matrix
+(Sigma).
+
+prc = portfolioRiskContribution(wRB,Sigma)
+
+prc = 3×1
+
+0.5000
+    0.2500
+    0.2500
+
+As expected, the risk contribution of each asset matches the target risk budget (budget). You can
+also use portfolioRiskContribution to compute the absolute risk contribution of each asset.
+
+mrc = portfolioRiskContribution(wRB,Sigma,RiskContributionType="absolute")
+
+mrc = 3×1
+
+0.0751
+    0.0376
+    0.0376
+
+Compare Risk Budgeting Portfolios with Mean-Variance
+
+While the allocation strategy of the risk budgeting portfolio focuses only on the risk, the allocation
+strategy of the mean-variance portfolio also makes use of the assets' return information.
+
+% Define the returns mean.
+mu = [0.08; 0.08; 0.05];
+
+Initialize a Portfolio object with default constraints using Sigma and mu.
+
+% Define the mean-variance portfolio.
+p = Portfolio(AssetMean=mu,AssetCovar=Sigma);
+p = setDefaultConstraints(p);
+
+Compute the portfolio on the efficient frontier with a target volatility equal to the risk attained by the
+risk budgeting portfolio previously computed as wRB.
+
+% Define the target volatility.
+targetRisk = sqrt(wRB'*Sigma*wRB);
+wMV = estimateFrontierByRisk(p,targetRisk)
+
+wMV = 3×1
+
+0.3846
+    0.2030
+
+Risk Budgeting Portfolio
+
+4-287

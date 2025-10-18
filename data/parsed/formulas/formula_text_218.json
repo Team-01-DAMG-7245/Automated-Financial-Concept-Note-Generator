@@ -1,0 +1,12 @@
+{
+  "page": 135,
+  "original_text": "•\nUserData=user_data, where user_data is a structure array containing the fields Counter, set\ninitially to 0, and NumTestPoints, set to the backtest sample size.",
+  "ocr_text": "*UserData=user_data,whereuser_dataisastructurearraycontainingthefieldsCounter,set\ninitiallyto0,andNumTestPoints,settothebacktestsamplesize.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 469.1,
+    "x1": 556.11,
+    "y1": 492.73
+  },
+  "confidence": "high"
+}

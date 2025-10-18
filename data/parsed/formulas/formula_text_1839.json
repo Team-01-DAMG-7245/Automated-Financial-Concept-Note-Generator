@@ -1,0 +1,12 @@
+{
+  "page": 939,
+  "original_text": "aggError = max(max(abs(transMatAggr - transMatWhole)))",
+  "ocr_text": "aggError=max(max(abs(transMatAggr-transMatWhole)))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 382.57,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

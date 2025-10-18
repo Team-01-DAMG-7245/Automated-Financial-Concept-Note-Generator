@@ -1,0 +1,8 @@
+Page 459
+================================================================================
+
+To obtain the long-only fully invested risk parity portfolio, use the riskBudgetingPortfolio
+function. When you pass a returns covariance matrix to riskBudgetingPortfolio, the function
+computes the associated risk parity portfolio. To compute the initial weights for the risk parity
+strategy, riskBudgetingPortfolio uses the covariance matrix estimated with information from
+the first two months.

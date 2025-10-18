@@ -1,0 +1,5 @@
+Page 1481
+================================================================================
+
+If you specify it as a function of time and state, Alpha must return an NVars-by-1 column vector of
+exponents when invoked with two inputs:

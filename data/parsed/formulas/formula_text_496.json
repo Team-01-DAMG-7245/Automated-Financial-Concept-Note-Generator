@@ -1,0 +1,12 @@
+{
+  "page": 339,
+  "original_text": "Blotter = dataset({100*swgt(swgt > 0),'Weight'}, 'obsnames', AssetList(swgt > 0));",
+  "ocr_text": "Blotter=dataset({100*swgt(swgt=0),Weight},obsnames,AssetList(swgt=0));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 452.79,
+    "x1": 534.3,
+    "y1": 463.26
+  },
+  "confidence": "high"
+}

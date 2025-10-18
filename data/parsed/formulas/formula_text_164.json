@@ -1,0 +1,12 @@
+{
+  "page": 115,
+  "original_text": "bp = round((0.80)*length(t)); % Use 80% of data for training",
+  "ocr_text": "bp_=round((0.80)*length(t));*Use80ofdatafortraining",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 644.21,
+    "x1": 415.09,
+    "y1": 654.67
+  },
+  "confidence": "high"
+}

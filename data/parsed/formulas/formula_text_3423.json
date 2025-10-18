@@ -1,0 +1,12 @@
+{
+  "page": 1896,
+  "original_text": "Price + Accrued Interest = sum(Cash_Flow*(1+Yield/2)^(-Time))",
+  "ocr_text": "Price+AccruedInterest=sum(Cash_Flow*(1+Yield/2)*(-Time))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 509.69,
+    "x1": 431.33,
+    "y1": 520.16
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1068
+================================================================================
+
+for k = 1, ..., NumSamples. If Design has a single cell, it is assumed to be the same Design
+matrix for each sample such that

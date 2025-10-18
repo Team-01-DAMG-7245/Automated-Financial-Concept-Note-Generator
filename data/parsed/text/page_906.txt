@@ -1,0 +1,24 @@
+Related Examples
+
+•
+“Performance Metrics Overview” on page 7-2
+
+•
+“Using the Information Ratio” on page 7-7
+
+•
+“Using Tracking Error” on page 7-8
+
+•
+“Using Risk-Adjusted Return” on page 7-9
+
+•
+“Using Sample and Expected Lower Partial Moments” on page 7-11
+
+•
+“Using Maximum and Expected Maximum Drawdown” on page 7-14
+
+7
+Investment Performance Metrics
+
+7-6

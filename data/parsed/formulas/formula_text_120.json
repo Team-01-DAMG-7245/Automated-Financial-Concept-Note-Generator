@@ -1,0 +1,12 @@
+{
+  "page": 97,
+  "original_text": "timeBase = DTT.Time;\nMidPrice = (DTT.BidPrice1 + DTT.AskPrice1)/2;",
+  "ocr_text": "timeBase=DTT.Time;\nMidPrice=(DTT.BidPricel+DTT.AskPricel)/2;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 348.89,
+    "x1": 333.81,
+    "y1": 370.16
+  },
+  "confidence": "high"
+}

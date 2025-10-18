@@ -1,0 +1,12 @@
+{
+  "page": 1822,
+  "original_text": "ResultTable = TestCase;\nResultTable.ModelPrice = ModelPrice;\nResultTable.Difference = ModelPrice - TestCase.Price",
+  "ocr_text": "ResultTable=TestCase;\nResultTable.ModelPrice=ModelPrice;\nResultTable.Difference=ModelPrice-TestCase.Price",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 371.74,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

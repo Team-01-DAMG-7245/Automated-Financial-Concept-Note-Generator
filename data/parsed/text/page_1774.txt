@@ -1,0 +1,53 @@
+arith2geom
+
+Arithmetic to geometric moments of asset returns
+
+Syntax
+
+[mg,Cg = arith2geom(ma,Ca)
+[mg,Cg = arith2geom( ___ ,t)
+
+Description
+
+[mg,Cg = arith2geom(ma,Ca) transforms moments associated with a simple Brownian motion
+into equivalent continuously compounded moments associated with a geometric Brownian motion
+with a possible change in periodicity.
+
+[mg,Cg = arith2geom( ___ ,t) adds an optional argument t.
+
+Examples
+
+Obtain Arithmetic to Geometric Moments of Asset Returns
+
+This example shows several variations of using arith2geom.
+
+Given arithmetic mean m and covariance C of monthly total returns, obtain annual geometric mean mg
+and covariance Cg. In this case, the output period (1 year) is 12 times the input period (1 month) so
+that the optional input t = 12.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+[mg, Cg] = arith2geom(m, C, 12)
+
+mg = 4×1
+
+0.8934
+    2.9488
+    4.9632
+   17.0835
+
+Cg = 4×4
+103 ×
+
+0.0003    0.0004    0.0003         0
+    0.0004    0.0065    0.0065    0.0110
+    0.0003    0.0065    0.0354    0.0536
+         0    0.0110    0.0536    1.0952
+
+15
+Functions
+
+15-468

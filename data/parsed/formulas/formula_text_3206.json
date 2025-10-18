@@ -1,0 +1,12 @@
+{
+  "page": 1721,
+  "original_text": "r = ts2func(yields,'Times',(0:nPeriods - 1)');",
+  "ocr_text": "r=ts2func(yields,Times,(0:nPeriods-1));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 339.24,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

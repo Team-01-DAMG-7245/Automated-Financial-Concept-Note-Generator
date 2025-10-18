@@ -1,0 +1,12 @@
+{
+  "page": 1471,
+  "original_text": "SDEDDO = sdeddo( ___ ,Name,Value) creates a SDEDDO object with additional options specified\nby one or more Name,Value pair arguments.",
+  "ocr_text": "SDEDDO=sdeddo(__,Name,VaLue)createsaSDEDDOobjectwithadditionaloptionsspecified\nbyoneormoreName,Valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 606.11,
+    "x1": 546.29,
+    "y1": 629.74
+  },
+  "confidence": "high"
+}

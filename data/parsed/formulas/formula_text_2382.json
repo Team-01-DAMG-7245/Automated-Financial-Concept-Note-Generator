@@ -1,0 +1,12 @@
+{
+  "page": 1225,
+  "original_text": "G = \n   Class DIFFUSION: Diffusion Rate Specification \n   --------------------------------------------- \n       Rate: diffusion rate function G(t,X(t))  \n      Alpha: 6x1 double array\n      Sigma: 6x6 diagonal double array",
+  "ocr_text": "G=\nClassDIFFUSION:DiffusionRateSpecification\nRate:diffusionratefunctionG(t,X(t))\nAlpha:6x1doublearray\nSigma:6x6diagonaldoublearray",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.08,
+    "x1": 355.48,
+    "y1": 252.55
+  },
+  "confidence": "high"
+}

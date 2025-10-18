@@ -1,0 +1,63 @@
+Portfolio, PortfolioCVaR, and PortfolioMAD object properties to specify bound constraints
+are:
+
+•
+LowerBound for lB
+•
+UpperBound for uB
+•
+NumAssets for n
+
+The default is to ignore these constraints.
+
+The default portfolio optimization problem (see “Default Portfolio Problem” on page 4-17) has lB = 0
+with uB set implicitly through a budget constraint.
+
+'Conditional' Bound Constraints
+
+'Conditional' Bound constraints, also called semicontinuous constraints, are mixed-integer linear
+constraints that confine portfolio weights to fall either above or below specific bounds if the asset is
+selected; otherwise, the value of the asset is zero. Use setBounds to specify bound constraints with
+a 'Conditional' BoundType. To mathematically formulate this type of constraints, a binary
+variable vi is needed. vi = 0 indicates that asset i is not selected and vi indicates that the asset was
+selected. Thus
+
+livi ≤xi ≤uivi
+
+where
+
+x is the portfolio (n vector).
+
+l is the conditional lower-bound constraint (n vector).
+
+u is the conditional upper-bound constraint (n vector).
+
+n is the number of assets in the universe.
+
+Portfolio, PortfolioCVaR, and PortfolioMAD object properties to specify the bound constraint
+are:
+
+•
+LowerBound for lB
+•
+UpperBound for uB
+•
+NumAssets for n
+
+The default is to ignore this constraint.
+
+Budget Constraints
+
+Budget constraints are specialized linear constraints that confine the sum of portfolio weights to fall
+either above or below specific bounds. Use setBudget to set budget constraints. The constraints
+take the form
+
+lS ≤1Tx ≤uS
+
+where:
+
+x is the portfolio (n vector).
+
+Supported Constraints for Portfolio Optimization Using Portfolio Objects
+
+4-11

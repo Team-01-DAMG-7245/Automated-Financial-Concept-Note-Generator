@@ -1,0 +1,12 @@
+{
+  "page": 2244,
+  "original_text": "isbounded = logical\n   0",
+  "ocr_text": "isbounded=logical\n0",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 368.81,
+    "x1": 192.94,
+    "y1": 390.08
+  },
+  "confidence": "high"
+}

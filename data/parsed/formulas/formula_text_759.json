@@ -1,0 +1,12 @@
+{
+  "page": 445,
+  "original_text": "% Variance + MDP index\ntilt_MDP = @(x) x'*p.AssetCovar*x - lambdaTiltMDP'*(sigma.*x);\n% Solution that minimizes variance + HH term\nwTiltMDP = estimateCustomObjectivePortfolio(p,tilt_MDP,TargetReturn=ret0);",
+  "ocr_text": "SVariance+MDPindex\ntilt_MDP=Q(x)x*p.AssetCovar*x-LambdaTiltMDP*(sigma.*x);\nSolutionthatminimizesvariance+HHterm\nwTiltMDP=estimateCustomObjectivePortfolio(p,tilt_MDP,TargetReturn=ret0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 307.59,
+    "x1": 490.93,
+    "y1": 350.46
+  },
+  "confidence": "high"
+}

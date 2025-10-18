@@ -1,0 +1,32 @@
+kagi
+
+Kagi chart
+
+Syntax
+
+kagi(Data)
+h = kagi(ax,Data)
+
+Description
+
+kagi(Data) plots a Kagi chart from a series of prices.
+
+h = kagi(ax,Data) adds an optional argument for ax.
+
+Examples
+
+Generate a Kagi Chart for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock. This Kagi chart is for closing prices of the stock TMW for the most recent 21 days. Note that
+the variable name of asset price is be renamed to 'Price' (case insensitive).
+
+load SimulatedStock.mat
+TMW.Properties.VariableNames{'Close'} = 'Price';
+kagi(TMW(end-20:end,:))
+title('Kagi Chart for TMW')
+
+15
+Functions
+
+15-1134

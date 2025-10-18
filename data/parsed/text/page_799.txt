@@ -1,0 +1,67 @@
+•
+At the endpoints of the efficient frontier
+
+•
+That attain targeted values for return proxies
+
+•
+That attain targeted values for risk proxies
+
+•
+Along the entire efficient frontier
+
+These functions also provide purchases and sales needed to shift from an initial or current portfolio to
+each efficient portfolio. At the efficient frontier level, a collection of functions plot the efficient
+frontier and estimate either risk or return proxies for efficient portfolios on the efficient frontier. You
+can use the resultant efficient portfolios or risk and return proxies in subsequent analyses.
+
+Arrays of PortfolioMAD Objects
+
+Although all functions associated with a PortfolioMAD object are designed to work on a scalar
+PortfolioMAD object, the array capabilities of MATLAB enable you to set up and work with arrays of
+PortfolioMAD objects. The easiest way to do this is with the repmat function. For example, to
+create a 3-by-2 array of PortfolioMAD objects:
+
+p = repmat(PortfolioMAD, 3, 2);
+disp(p)
+
+3×2 PortfolioMAD array with properties:
+
+BuyCost
+    SellCost
+    RiskFreeRate
+    Turnover
+    BuyTurnover
+    SellTurnover
+    NumScenarios
+    Name
+    NumAssets
+    AssetList
+    InitPort
+    AInequality
+    bInequality
+    AEquality
+    bEquality
+    LowerBound
+    UpperBound
+    LowerBudget
+    UpperBudget
+    GroupMatrix
+    LowerGroup
+    UpperGroup
+    GroupA
+    GroupB
+    LowerRatio
+    UpperRatio
+    MinNumAssets
+    MaxNumAssets
+    ConditionalBudgetThreshold
+    ConditionalUpperBudget
+    BoundType
+
+After setting up an array of PortfolioMAD objects, you can work on individual PortfolioMAD
+objects in the array by indexing. For example:
+
+PortfolioMAD Object
+
+6-19

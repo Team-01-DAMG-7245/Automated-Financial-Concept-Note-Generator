@@ -1,0 +1,12 @@
+{
+  "page": 1033,
+  "original_text": "endDate = datetime(EndYear,12,31,'Locale','en_US');\nRatingLabels = [\"AAA\",\"AA\",\"A\",\"BBB\",\"BB\",\"B\",\"CCC\",\"D\"];",
+  "ocr_text": "endDate=datetime(EndYear,12,31,Locale,en_US);\nRatingLabels_=[AAA,AA,A,BBB,BB,B,CCC,D]s",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 398.85,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

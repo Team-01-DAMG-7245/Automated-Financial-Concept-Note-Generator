@@ -1,0 +1,12 @@
+{
+  "page": 124,
+  "original_text": "It = Vbt −Vat\nVbt + Vat,",
+  "ocr_text": "= Vot Vat\nVoe+Vat",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 259.18,
+    "x1": 176.63,
+    "y1": 286.23
+  },
+  "confidence": "high"
+}

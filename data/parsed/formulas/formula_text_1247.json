@@ -1,0 +1,12 @@
+{
+  "page": 620,
+  "original_text": "% Compute the initial portfolio weights for each strategy.\nequalWeight_initial     = equalWeightFcn(current_weights,warmupTT);\nmaxSharpeRatio_initial  = maxSharpeRatioFcn(current_weights,warmupTT);",
+  "ocr_text": "Computetheinitialportfolioweightsforeachstrategy.\nequalWeight_initial =equalWeightFcn(current_weights,warmupTT);\nmaxSharpeRatio_initial_=maxSharpeRatioFcn(current_weights,warmupTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 424.28,
+    "x1": 469.26,
+    "y1": 456.35
+  },
+  "confidence": "high"
+}

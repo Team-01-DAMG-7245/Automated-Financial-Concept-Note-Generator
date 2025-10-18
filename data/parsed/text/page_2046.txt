@@ -1,0 +1,58 @@
+convert2sur
+
+Convert multivariate normal regression model to seemingly unrelated regression (SUR) model
+
+Syntax
+
+DesignSUR = convert2sur(Design,Group)
+
+Description
+
+DesignSUR = convert2sur(Design,Group) converts a multivariate normal regression model
+into a seemingly unrelated regression model with a specified grouping of the data series.
+
+Examples
+
+Use convert2sur to Estimate Stock Alpha and Beta Values
+
+This example shows a CAPM demonstration using 6 stocks and 60 months of simulated asset returns,
+where the model for each stock is AssetReturn = Alpha * 1 + CashReturn + Beta *
+(MarketReturn - CashReturn) + Noise and the parameters to estimate are Alpha and Beta.
+
+Using simulated data, where the Alpha estimate(s) are displayed in the first row(s) and the Beta
+estimate(s) are display in the second row(s).
+
+Market = (0.1 - 0.04) + 0.17*randn(60, 1);
+Asset = (0.1 - 0.04) + 0.35*randn(60, 6);
+
+Design = cell(60, 1);
+for i = 1:60
+            Design{i} = repmat([ 1, Market(i) ], 6, 1);
+end
+
+Obtain the aggregate estimates for all stocks.
+
+[Param, Covar] = mvnrmle(Asset, Design);
+
+disp({'All 6 Assets Combined'});
+
+{'All 6 Assets Combined'}
+
+disp(Param);
+
+0.0233
+    0.1050
+
+Estimate parameters for individual stocks using convert2sur
+
+Group = 1:6;
+DesignSUR = convert2sur(Design, Group);
+[Param, Covar] = mvnrmle(Asset, DesignSUR);
+Param = reshape(Param, 2, 6);
+
+disp({ 'A', 'B', 'C', 'D', 'E', 'F' });
+
+15
+Functions
+
+15-740

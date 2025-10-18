@@ -1,0 +1,12 @@
+{
+  "page": 477,
+  "original_text": "backtestSignalTT = timetable(date_vector(backtest_indices),backtestPred_LSTM);",
+  "ocr_text": "backtestSignalTT=timetable(date_vector(backtest_indices),backtestPred_LSTM);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 607.84,
+    "x1": 512.6,
+    "y1": 618.3
+  },
+  "confidence": "high"
+}

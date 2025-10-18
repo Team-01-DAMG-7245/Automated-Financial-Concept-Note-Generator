@@ -1,0 +1,14 @@
+Estimate Efficient Portfolios Along the Entire Frontier for
+PortfolioMAD Object
+
+There are two ways to look at a portfolio optimization problem that depends on what you are trying to
+do. One goal is to estimate efficient portfolios and the other is to estimate efficient frontiers. The
+“Obtaining Portfolios Along the Entire Efficient Frontier” on page 6-85 example focuses on the
+former goal and “Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105 focuses on the
+latter goal. For information on the workflow when using PortfolioMAD objects, see “PortfolioMAD
+Object Workflow” on page 6-16.
+
+6
+MAD Portfolio Optimization Tools
+
+6-84

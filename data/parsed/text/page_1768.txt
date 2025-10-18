@@ -1,0 +1,58 @@
+Present value of the loan, specified as a scalar numeric.
+
+Data Types: double
+
+FutureValue — Future value of the loan
+0 (default) | scalar numeric
+
+(Optional) Future value of the loan, specified as a scalar numeric.
+
+Data Types: double
+
+Due — When payments are due
+0 (end of period) (default) | scalar integer with value of 0 or 1
+
+(Optional) When payments are due, specified as a scalar integer with value of 0 (end of period) or 1
+(beginning of period).
+
+Data Types: double
+
+Output Arguments
+
+Principal — Principal paid in each period
+vector
+
+Principal paid in each period, returned as a 1-by-NumPeriods vector.
+
+Interest — Interest paid in each period
+vector
+
+Interest paid in each period, returned as a 1-by-NumPeriods vector.
+
+Balance — Remaining balance of the loan in each payment period
+vector
+
+Remaining balance of the loan in each payment period, returned as a 1-by-NumPeriods vector.
+
+Payment — Payment per period
+scalar numeric
+
+Payment per period, returned as a scalar numeric.
+
+More About
+
+Amortization Schedule
+
+An amortization schedule is a table that outlines each payment over the life of the loan, detailing the
+amount applied to interest and the amount applied to principal for each period.
+
+The amortization schedule shows how the loan balance decreases over time and how much interest is
+paid throughout the loan term.
+
+Version History
+Introduced before R2006a
+
+15
+Functions
+
+15-462

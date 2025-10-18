@@ -1,0 +1,12 @@
+{
+  "page": 502,
+  "original_text": "This plot shows how the penalized strategy returns weights that are between the minimum variance\nportfolio and the EW portfolio. In fact, choosing λHH = 0 returns the minimum variance solution, and\nas λHH →∞, the solution approaches the EW portfolio.",
+  "ocr_text": "Thisplotshowshowthepenalizedstrategyreturnsweightsthatarebetweentheminimumvariance\nportfolioandtheEWportfolio.Infact,choosingAyy=0returnstheminimumvariancesolution,and\nasAyH-,thesolutionapproachestheEWportfolio.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 360.65,
+    "x1": 552.11,
+    "y1": 400.06
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,60 @@
+%
+%      ExecutedPrices - Vector of executed prices
+%
+%      TradedVolumes - Vector of executed trade volumes
+%
+%      BuyTrade - Scalar logical indicating trading direction:
+%                    true: Buy
+%                    false: Sell
+%
+%    Outputs:
+%      outIS - Implementation shortfall
+
+outIS = ArrivalPrice.*sum(TradedVolumes) - sum(ExecutedPrices.*TradedVolumes);
+
+if BuyTrade
+    outIS = -outIS;
+end
+
+end
+
+function [TGLR, GLR] = ISTGLR(ISDiffValues)
+% ISTGLR function for Total-Gain-to-Loss Ratio for Implementation Shortfalls (IS)
+%   This function computes the Total-Gain-to-Loss Ratio (TGLR) and the
+%   Gain-to-Loss Ratio (GLR) for a vector of values (IS_Baseline - IS_Agent)
+%   where:  
+%     - IS_Baseline: Implementation shortfalls for baseline (e.g. TWAP)
+%     - IS_Agent: Implementation shortfalls for agent
+%
+%   Input:
+%     - ISDiffValues: Vector of IS difference values (IS_Baseline - IS_Agent)
+%
+%   Outputs:
+%     - TGLR: Total-Gain-to-Loss Ratio computed as the ratio of 
+%             Total Positive over Total Negative magnitudes of IS difference
+%     - GLR:  Gain-to-Loss Ratio computed as the ratio of 
+%             Mean Positive over Mean Negative magnitudes of IS difference
+
+ISDiffValues = ISDiffValues(:);
+
+ISGains = ISDiffValues(ISDiffValues>0);
+ISLosses = ISDiffValues(ISDiffValues<0);
+
+MeanGains = abs(mean(ISGains));
+MeanLosses = abs(mean(ISLosses));
+
+TGLR = sum(ISGains)./abs(sum(ISLosses));
+GLR = MeanGains./MeanLosses;
+
+end
+
+See Also
+
+Related Examples
+
+•
+“Hedge Options Using Reinforcement Learning Toolbox” on page 10-40
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-449

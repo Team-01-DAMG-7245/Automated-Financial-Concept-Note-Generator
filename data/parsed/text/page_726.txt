@@ -1,0 +1,47 @@
+If you want to specify additional options associated with the fmincon solver, setSolver accepts
+these options as name-value pair arguments. For example, if you want to use fmincon with the
+'active-set' algorithm and with no displayed output, use setSolver with:
+
+p = PortfolioCVaR;
+p = setSolver(p, 'fmincon','Algorithm','active-set','Display','off');
+display(p.solverOptions.Algorithm)
+display(p.solverOptions.Display)
+
+active-set
+off
+
+Alternatively, setSolver accepts an optimoptions object from Optimization Toolbox as the second
+argument. For example, you can change the algorithm to 'trust-region-reflective' with no
+displayed output as follows:
+
+p = PortfolioCVaR;
+options = optimoptions('fmincon','Algorithm','trust-region-reflective', 'Display', 'off');
+p = setSolver(p, 'fmincon', options);
+display(p.solverOptions.Algorithm)
+display(p.solverOptions.Display)
+
+trust-region-reflective
+off
+
+Using the Mixed Integer Nonlinear Programming (MINLP) Solver
+
+The mixed integer nonlinear programming (MINLP) solver, configured using setSolverMINLP,
+enables you to specify associated solver options for portfolio optimization for a PortfolioCVaR
+object. The MINLP solver is used when any one, or any combination of 'Conditional' BoundType,
+MinNumAssets, or MaxNumAssets constraints are active. In this case, the portfolio problem is
+formulated by adding NumAssets binary variables, where 0 indicates not invested, and 1 is invested.
+For more information on using 'Conditional' BoundType, see setBounds. For more information
+on specifying MinNumAssets and MaxNumAssets, see setMinMaxNumAssets.
+
+When using the estimate functions with a PortfolioCVaR object where 'Conditional'
+BoundType, MinNumAssets, or MaxNumAssets constraints are active, the mixed integer nonlinear
+programming (MINLP) solver is automatically used.
+
+Solver Guidelines for PortfolioCVaR Objects
+
+The following table provides guidelines for using setSolver and setSolverMINLP.
+
+5
+CVaR Portfolio Optimization Tools
+
+5-100

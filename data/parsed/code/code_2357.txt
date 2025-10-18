@@ -1,0 +1,9 @@
+Page 2230
+================================================================================
+
+This example shows how to use estimateCustomObjectivePortfolio to define a risk-constrained
+long-only, fully-invested portfolio and then compare the maximum return portfolio against a minimum
+tracking error portfolio, where the tracking portfolio is the equally-weighted portfolio. You define the
+constraints for portfolio problems using functions for the Portfolio object and then you specify the
+objective function as an input to estimateCustomObjectivePortfolio. The objective function
+must be continuous (and preferably smooth).

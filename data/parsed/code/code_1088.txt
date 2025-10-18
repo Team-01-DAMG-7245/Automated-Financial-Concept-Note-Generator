@@ -1,0 +1,7 @@
+Page 1116
+================================================================================
+
+Maturity   = datenum(char(BondData{:,1}));
+CouponRate = [BondData{:,2}]';
+Prices     = [BondData{:,3}]';
+Period     = 2; % semiannual coupons

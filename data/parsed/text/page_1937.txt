@@ -1,0 +1,72 @@
+More About
+
+Credit Default Swap
+
+A Credit Default Swap (CDS) is a financial derivative contract that allows an investor to "swap" or
+transfer the credit risk of a borrower (usually a corporation or government) to another party.
+
+The parties involved are:
+
+•
+Protection Buyer — The party that purchases the CDS to protect against the risk of default. They
+pay periodic premiums (known as the CDS spread) to the protection seller.
+
+•
+Protection Seller — The party that provides the credit protection and receives the premiums
+from the protection buyer. In the event of a default, the protection seller is obligated to
+compensate the protection buyer.
+
+CDS Price
+
+The price or mark-to-market (MtM) value of an existing CDS contract.
+
+The CDS price is computed using the following formula:
+
+CDS price = Notional * (Current Spread - Contract Spread) * RPV01
+
+Current Spread is the current breakeven spread for a similar contract, according to current
+market conditions. RPV01 is the 'risky present value of a basis point,' the present value of the
+premium payments, considering the default probability. This formula assumes a long position, and the
+right side is multiplied by -1 for short positions.
+
+Algorithms
+
+The premium leg is computed as the product of a spread S and the risky present value of a basis point
+(RPV01). The RPV01 is given by:
+
+RPV01 = ∑
+j = 1
+
+N
+Z(t j)Δ(t j −1, t j, B)Q(t j)
+
+when no accrued premiums are paid upon default, and it can be approximated by
+
+RPV01 ≈1
+2 ∑
+j = 1
+
+N
+Z(t j)Δ(t j −1, t j, B)(Q(t j −1) + Q(t j))
+
+when accrued premiums are paid upon default. Here, t0 = 0 is the valuation date, and t1,...,tn = T are
+the premium payment dates over the life of the contract,T is the maturity of the contract, Z(t) is the
+discount factor for a payment received at time t, and Δ(tj-1, tj, B) is a day count between dates tj-1 and
+tj corresponding to a basis B.
+
+The protection leg of a CDS contract is given by the following formula:
+
+ProtectionLeg =∫0
+
+T
+Z(τ)(1 −R)dPD(τ)
+
+≈(1 −R) ∑
+i = 1
+
+M
+Z(τi)(PD(τi) −PD(τi −1))
+
+cdsprice
+
+15-631

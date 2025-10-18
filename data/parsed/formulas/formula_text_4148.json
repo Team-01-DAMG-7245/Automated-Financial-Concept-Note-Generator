@@ -1,0 +1,12 @@
+{
+  "page": 2327,
+  "original_text": "pvar = estimatePortVaR(obj,pwgt) estimates value-at-risk for a PortfolioCVaR object where\nthe probability level used is from the PortfolioCVaR property ProbabilityLevel. For details on\nthe workflow, see “PortfolioCVaR Object Workflow” on page 5-16.",
+  "ocr_text": "pvar=estimatePortVaR(obj,pwgt)estimatesvalue-at-riskforaPortfolioCVaRobjectwhere\ntheprobabilitylevelusedisfromthePortfolioCVaRpropertyProbabilityLevel.Fordetailson\ntheworkflow,seePortfolioCVaRObjectWorkflowonpage5-16.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 254.16,
+    "x1": 556.3,
+    "y1": 289.79
+  },
+  "confidence": "high"
+}

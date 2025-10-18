@@ -1,0 +1,12 @@
+{
+  "page": 538,
+  "original_text": "% Compute the shift for wealth grid.\nlW0 = log(W0);\ndifference = lWGrid-lW0;\nminDownShift = min(difference(difference>=0));\n% Define the wealth nodes.\nWGrid = exp(lWGrid - minDownShift);\nnWealthNodes = size(WGrid,1); % Number of wealth nodes",
+  "ocr_text": "Computetheshiftforwealthgrid.\n\nlWO=log(WO);\n\ndifference=lwGrid-1wo;\nminDownShift=min(difference(difference==0));\nDefinethewealthnodes.\nWGrid=exp(1lWGrid-minDownShift);\nnWealthNodes=size(WGrid,1);*Numberofwealthnodes",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 537.13,
+    "x1": 382.59,
+    "y1": 612.39
+  },
+  "confidence": "high"
+}

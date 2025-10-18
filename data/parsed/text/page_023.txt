@@ -1,0 +1,80 @@
+Trading Date Utilities
+12
+
+Trading Calendars User Interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12-2
+
+UICalendar User Interface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12-4
+Using UICalendar in Standalone Mode . . . . . . . . . . . . . . . . . . . . . . . . . .
+12-4
+Using UICalendar with an Application . . . . . . . . . . . . . . . . . . . . . . . . . .
+12-4
+
+Technical Analysis
+13
+
+Technical Indicators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13-2
+
+Stochastic Differential Equations
+14
+
+SDEs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-2
+SDE Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-2
+Trials vs. Paths . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-3
+NTrials, NPeriods, and NSteps . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-3
+
+SDE Class Hierarchy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-5
+
+SDE Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-7
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-7
+Creating SDE Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-7
+Drift and Diffusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-10
+Available SDE Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-11
+SDE Simulation and Interpolation Methods . . . . . . . . . . . . . . . . . . . . . .
+14-13
+
+Base SDE Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-16
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-16
+Specify Base Stochastic Differential Equation (SDE) Model . . . . . . . . . .
+14-16
+
+Drift and Diffusion Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-19
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-19
+Specify Drift and Diffusion Rate Functions . . . . . . . . . . . . . . . . . . . . . .
+14-19
+Specify SDEDDO with Drift and Diffusion Functions . . . . . . . . . . . . . . .
+14-20
+
+Linear Drift Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-22
+Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-22
+Specify SDELD Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-22
+
+Parametric Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-24
+Creating Brownian Motion (BM) Models . . . . . . . . . . . . . . . . . . . . . . . .
+14-24
+Specify Brownian Motion Model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14-24
+Creating Constant Elasticity of Variance (CEV) Models . . . . . . . . . . . . .
+14-25
+
+xxiii

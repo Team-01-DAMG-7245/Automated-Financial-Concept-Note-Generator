@@ -1,0 +1,12 @@
+{
+  "page": 480,
+  "original_text": "if 0 < abssum\n    new_weights = signal / abssum;\nelse\n    new_weights = zeros(size(current_weights));\nend",
+  "ocr_text": "if0abssum\nnew_weights=signal/abssum;\nelse\nnew_weights=zeros(size(current_weights));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 344.65,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

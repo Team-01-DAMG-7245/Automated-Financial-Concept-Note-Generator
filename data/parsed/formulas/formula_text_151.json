@@ -1,0 +1,12 @@
+{
+  "page": 110,
+  "original_text": "binNames = string(1:numBins);\nstateNames = [\"(\"+binNames+\",-1)\",\"(\"+binNames+\",0)\",\"(\"+binNames+\",1)\"];\nQTable = array2table(Q,'RowNames',stateNames,'VariableNames',stateNames)",
+  "ocr_text": "binNames=string(1:numBins);\nstateNames=[(+binNames+,-1),(+binNames+,0),(+binNames+,1)];\nQTable=array2table(Q,RowNames,stateNames,VariableNames,stateNames)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 309.12,
+    "x1": 485.55,
+    "y1": 341.19
+  },
+  "confidence": "high"
+}

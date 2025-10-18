@@ -1,0 +1,5 @@
+Page 41
+================================================================================
+
+For the single cash flow stream CashFlows, the function returns a scalar rate of return of 0.1201, or
+12.01%.

@@ -1,0 +1,31 @@
+% Compare the actual returns to model predicted returns.
+actual    = Tvalidation;
+predicted = minibatchpredict(net_LSTM,Xvalidation,InputDataFormats="CTB");
+
+% Overlay histogram of actual vs. predicted returns for the validation set.
+
+output_idx = 
+;
+figure;
+
+[~,edges] = histcounts(actual(:,output_idx),100);
+histogram(actual(:,output_idx),edges);
+hold on
+histogram(predicted(:,output_idx),edges)
+hold off
+xlabel('Percentage Change in Closing Price')
+legend('Actual','Predicted')
+title(sprintf('%s: Distribution of Returns, Actual vs. Predicted', outputVarName(output_idx)))
+
+% Display the predicted vs. actual daily returns for the validation set.
+figure
+plot(actual(:,output_idx))
+hold on
+plot(predicted(:,output_idx))
+yline(0)
+legend({'Actual','Predicted'})
+title(sprintf('%s: Daily Returns, Actual vs. Predicted', outputVarName(output_idx)))
+
+Backtest Strategies Using Deep Learning
+
+4-307

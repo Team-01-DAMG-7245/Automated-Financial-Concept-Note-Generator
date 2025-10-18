@@ -1,0 +1,12 @@
+{
+  "page": 118,
+  "original_text": "cash = tradeOnQ(VData,Q,n,N);",
+  "ocr_text": "cash=tradeOnQ(VData,Q,n,N);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 247.12,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

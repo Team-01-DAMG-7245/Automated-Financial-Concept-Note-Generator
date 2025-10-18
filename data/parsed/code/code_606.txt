@@ -1,0 +1,7 @@
+Page 553
+================================================================================
+
+Train the agent. The Reinforcement Learning Episode Manager is opened. When the sparseReward
+function (see Local Functions on page 4-391) is selected as the reward from the environment, the
+training time is approximately five minutes. If you set do_train to false, a network pretrained using
+the sparserReward function is loaded.

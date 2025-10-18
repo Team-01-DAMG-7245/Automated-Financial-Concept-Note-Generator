@@ -1,0 +1,12 @@
+{
+  "page": 1214,
+  "original_text": "obj = sdeld(0, 0.1, 1, 0.3) % (A, B, Alpha, Sigma)",
+  "ocr_text": "obj=sdeld(0,0.1,1,0.3)(A,B,Alpha,Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 412.33,
+    "x1": 360.91,
+    "y1": 422.8
+  },
+  "confidence": "high"
+}

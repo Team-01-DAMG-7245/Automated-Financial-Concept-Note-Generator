@@ -1,0 +1,6 @@
+Page 1519
+================================================================================
+
+Kernel function parameter representing the roughness index, specified as numeric scalar. The value
+of Alpha should be in (-0.5, 0.5). The BSS process behaves locally like a fractional Brownian
+motion (fBm) with the Hurst index H = Alpha + 0.5.

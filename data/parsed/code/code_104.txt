@@ -1,0 +1,12 @@
+Page 117
+================================================================================
+
+In addition to the challenges of working with big data, the process of evaluating complex, sometimes
+black-box, objective functions is also challenging. Objective functions supervise hyperparameter
+evaluation. The trading strategy evaluates hyperparameter tunings by first computing Q on a training
+subsample, and then trading during an evaluation (real-time) subsample. The objective is to maximize
+profit, or minimize negative cash returned, over a space of suitably constrained configurations (n,N).
+This objective is a prototypical "expensive" objective function. Bayesian optimization is a type of
+machine learning suited to such objective functions. One of its principal advantages is the absence of
+costly derivative evaluations. To implement Bayesian optimization, use the Statistics and Machine
+Learning Toolbox™ function bayesopt.

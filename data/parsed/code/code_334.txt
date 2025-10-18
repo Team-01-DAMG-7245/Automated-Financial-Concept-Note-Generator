@@ -1,0 +1,10 @@
+Page 325
+================================================================================
+
+When using a Portfolio object and the estimateCustomObjectivePortfolio function with the
+Financial Toolbox solvers, the solvers return a local minimum, which is not guaranteed to be a global
+minimum. A local minimum of a function is a point where the function value is smaller than the points
+around it, but the value is larger than a distant point. A global minimum is the point where the
+function value is smaller than at all other points. Convex functions play an important role in
+optimization because they guarantee that all local minima are global minima. In other words, any
+solution found by the solver is guaranteed to be a global minimum.

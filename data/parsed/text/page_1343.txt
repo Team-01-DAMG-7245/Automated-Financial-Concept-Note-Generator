@@ -1,0 +1,57 @@
+categoryReturnsChart
+
+Create horizontal bar chart of category returns
+
+Syntax
+
+categoryReturnsChart(BrinsonPAObj)
+h = categoryReturnsChart(ax,BrinsonPAObj)
+
+Description
+
+categoryReturnsChart(BrinsonPAObj) creates a horizontal bar chart of portfolio and
+benchmark category returns, aggregated over all time periods using a brinsonAttribution object.
+
+h = categoryReturnsChart(ax,BrinsonPAObj) additionally returns the figure handle h.
+
+Examples
+
+Create Horizontal Bar Chart of Category Returns
+
+This example shows how to create a brinsonAttribution object that you can then use with the
+categoryReturnsChart function to generate a bar chart of category returns.
+
+Prepare Data
+
+Create a table for the monthly prices for four assets.
+
+GM =[17.82;22.68;19.37;20.28];
+ HD = [39.79;39.12;40.67;40.96];
+ KO = [38.98;39.44;40.00;40.20];
+ PG = [56.38;57.08;57.76;55.54];
+ MonthlyPrices  = table(GM,HD,KO,PG);
+
+Use tick2ret to define the monthly returns.
+
+MonthlyReturns = tick2ret(MonthlyPrices.Variables)';
+  [NumAssets,NumPeriods] = size(MonthlyReturns);
+
+Define the periods.
+
+Period = ones(NumAssets*NumPeriods,1);
+  for k = 1:NumPeriods
+      Period(k*NumAssets+1:end,1) = Period(k*NumAssets,1) + 1;
+  end
+
+Define the categories (sectors) for the four assets.
+
+Name = repmat(string(MonthlyPrices.Properties.VariableNames(:)),NumPeriods,1);
+  Categories = repmat(categorical([ ...
+      "Consumer Discretionary"; ...
+      "Consumer Discretionary"; ...
+      "Consumer Staples"; ...
+      "Consumer Staples"]),NumPeriods,1);
+
+categoryReturnsChart
+
+15-37

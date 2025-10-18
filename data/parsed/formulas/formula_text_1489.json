@@ -1,0 +1,12 @@
+{
+  "page": 751,
+  "original_text": "% Instantiate the gbm object\nStockGBM = gbm(Drift, Vol, 'StartState', Price_0);",
+  "ocr_text": "Instantiatethegbmobject\nStockGBM=gbm(Drift,Vol,StartState,Price_0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 360.92,
+    "y1": 708.29
+  },
+  "confidence": "high"
+}

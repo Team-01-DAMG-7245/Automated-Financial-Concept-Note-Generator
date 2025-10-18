@@ -1,0 +1,55 @@
+exposureprofiles
+
+Compute exposure profiles from credit exposures
+
+Syntax
+
+profilestructs = exposureprofiles(dates,exposures)
+profilestructs = exposureprofiles( ___ ,Name,Value)
+
+Description
+
+profilestructs = exposureprofiles(dates,exposures) computes common counterparty
+credit exposures profiles from an array of exposures.
+
+profilestructs = exposureprofiles( ___ ,Name,Value) adds optional name-value
+arguments.
+
+Examples
+
+View Exposure Profiles of a Particular Counterparty
+
+After computing the mark-to-market contract values for a portfolio of swaps over many scenarios,
+view the exposure profiles of a particular counterparty.
+
+Load the data (ccr.mat) that contains the mark-to-market contract values for a portfolio of swaps
+over many scenarios.
+
+load ccr.mat
+
+Compute the exposure by counterparty.
+
+[exposures, expcpty] = creditexposures(values,swaps.Counterparty,...
+'NettingID',swaps.NettingID);
+
+Compute the credit exposure profiles for all counterparties.
+
+cpProfiles = exposureprofiles(simulationDates,exposures)
+
+cpProfiles=5×1 struct array with fields:
+    Dates
+    EE
+    PFE
+    MPFE
+    EffEE
+    EPE
+    EffEPE
+
+Visualize the exposure profiles for a particular counterparty.
+
+cpIdx = find(expcpty == 4);
+numDates = numel(simulationDates);
+
+exposureprofiles
+
+15-659

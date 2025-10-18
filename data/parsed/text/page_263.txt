@@ -1,0 +1,59 @@
+ub =
+
+1.0e-08 *
+
+-0.3712
+       Inf
+
+isbounded =
+
+logical
+
+0
+
+In this case, estimateBounds returns (possibly infinite) bounds and sets the isbounded flag to
+false. The result shows which assets are unbounded so that you can apply bound constraints as
+necessary.
+
+Finally, suppose that you created a portfolio set that is both nonempty and bounded.
+estimateBounds not only validates the set, but also obtains tighter bounds which are useful if you
+are concerned with the actual range of portfolio choices for individual assets in your portfolio set:
+
+p = Portfolio;
+p = setBudget(p, 1,1);
+p = setBounds(p, [ -0.1; 0.2; 0.3; 0.2 ], [ 0.5; 0.3; 0.9; 0.8 ]);
+        
+[lb, ub, isbounded] = estimateBounds(p)
+
+lb =
+
+-0.1000
+    0.2000
+    0.3000
+    0.2000
+
+ub =
+
+0.3000
+    0.3000
+    0.7000
+    0.6000
+
+isbounded =
+
+logical
+
+1
+
+In this example, all but the second asset has tighter upper bounds than the input upper bound
+implies.
+
+Validating Portfolios
+
+Given a portfolio set specified in a Portfolio object, you often want to check if specific portfolios
+are feasible with respect to the portfolio set. This can occur with, for example, initial portfolios and
+with portfolios obtained from other procedures. The checkFeasibility function determines
+
+Validate the Portfolio Problem for Portfolio Object
+
+4-95

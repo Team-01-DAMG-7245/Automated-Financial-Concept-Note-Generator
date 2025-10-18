@@ -1,0 +1,12 @@
+{
+  "page": 1177,
+  "original_text": "ans = \n  TimetableProperties with properties:",
+  "ocr_text": "ans=\nTimetablePropertieswithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.83,
+    "x1": 295.88,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

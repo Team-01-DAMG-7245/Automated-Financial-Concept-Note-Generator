@@ -1,0 +1,12 @@
+{
+  "page": 1280,
+  "original_text": "commodityClasses = categorical([repmat(\"Energy\", 1, 10), ...\n    repmat(\"Beverages\", 1, 7), ...\n    repmat(\"Oils and Meals\", 1, 11), ...\n    repmat(\"Grains\", 1, 9), ...\n    repmat(\"Other Food\", 1, 10), ...\n    repmat(\"Raw Materials\", 1, 9), ...\n    repmat(\"Fertilizers\", 1, 5), ...",
+  "ocr_text": "commodityClasses=categorical([repmat(Energy,1,10),...\nrepmat(Beverages,1,7),...\nrepmat(OilsandMeals,1,11),...\nrepmat(Grains,1,9),...\nrepmat(OtherFood,1,10),...\nrepmat(RawMaterials,1,9),...\nrepmat(Fertilizers,1,5),...",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 415.1,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

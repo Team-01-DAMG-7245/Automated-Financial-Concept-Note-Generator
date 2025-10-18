@@ -1,0 +1,12 @@
+{
+  "page": 558,
+  "original_text": "% Create heatmap\nfigure\nT = table(wVar,tVar,actions, ...\n    VariableNames={'WealthLevel','TimePeriod','Action'});\nheatmap(T,'TimePeriod','WealthLevel',ColorVariable='Action', ...\n    ColorMethod='none')",
+  "ocr_text": "Createheatmap\n\nfigure\n\nT=table(wVar,tVar,actions,...\nVariableNames={WealthLevel,TimePeriod,Action});\n\nheatmap(T,TimePeriod,WealthLevel,ColorVariable=Action,...\nColorMethod=none)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 210.09,
+    "x1": 436.78,
+    "y1": 274.56
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1040,
+  "original_text": "resStatusToImpute = dataToImpute;\nresStatusToImpute.Employed = dEmpStatus(:,1);\nresStatusToImpute.HasOtherCC = dOtherCC(:,2);\nresStatusToImpute = removevars(resStatusToImpute, 'EmpStatus');\nresStatusToImpute = removevars(resStatusToImpute, 'OtherCC');",
+  "ocr_text": "resStatusToImpute=dataToImpute;\nresStatusToImpute.Employed=dEmpStatus(:,1);\nresStatusToImpute.HasOtherCC=dOtherCC(:,2);\nresStatusToImpute=removevars(resStatusToImpute,_EmpStatus);\nresStatusToImpute=removevars(resStatusToImpute,OtherCC);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 455.04,
+    "x1": 431.36,
+    "y1": 508.71
+  },
+  "confidence": "high"
+}

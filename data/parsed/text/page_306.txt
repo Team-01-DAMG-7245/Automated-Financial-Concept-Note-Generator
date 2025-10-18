@@ -1,0 +1,77 @@
+Comparison of Methods for Covariance Estimation
+
+Mean-variance portfolio optimization is a common technique in portfolio allocation. It usually requires
+an estimate of the covariance matrix to compute the portfolio weights. Many methods can be used for
+covariance estimation. The traditional covariance estimate is computed using cov. However, in
+practice the standard covariance estimate is noisy. Since the optimal solution of the portfolio weights
+is very sensitive to the mean and covariance estimates, noise in the covariance matrix increases the
+portfolio weights estimation error leading to large turnover and transaction costs. Here are some
+methods that mitigate the estimation error:
+
+•
+robustcov computes a covariance estimate from a data sample. This function reduces the noise
+in the estimator by identifying the outliers in the sample and removing them from the final
+covariance estimate.
+
+•
+covarianceShrinkage computes a covariance estimate from a data sample. This function
+reduces the noise in the estimator generated from using a finite sample. Shrinkage estimators are
+used to reduce the mean squared error (MSE) of an estimate. MSE consists of two parts, the bias
+and the noise. Shrinkage methods reduce the noise in the estimator by pulling the standard
+covariance estimate towards a target matrix. Thus, the shrinkage estimator results in a biased
+estimate, but with a lower variance than that of the standard covariance estimate. The method
+implemented in covarianceShrinkage considers a multiple of the identity as the target matrix.
+
+In covariance shrinkage, the intensity parameter determines how much the standard covariance
+estimate is pulled towards the target matrix. Because computing the optimal intensity parameter
+depends on the sample size, covarianceDenoising runs slower when the sample size
+significantly increases.
+
+•
+covarianceDenoising computes a covariance estimate from a data sample or from an initial
+covariance estimate (usually the standard covariance estimate from cov). The
+covarianceDenoising function reduces the noise in the estimator generated from using a finite
+sample. Unlike covarianceShrinkage, the covarianceDenoising function differentiates
+between the noise and the signal in the data to pull only the eigenvalues associated with noise
+towards a target value. This technique results in an estimate that decreases noise while increasing
+the signal.
+
+The computation of the covarianceDenoising estimate depends on the number of assets
+(variables). If the number of assets is too small, there is not enough information to identify
+between the noisy and meaningful factors. On the other hand, if the number of assets is too large,
+the underlying optimization problem used to identify the noisy eigenvalues grows, and it takes
+longer to compute the estimate.
+
+The following table summarizes the information needed to compute the different covariance
+estimates.
+
+Function
+Number of Assets
+Sample Size
+Sample
+
+cov ( MATLAB)
+Any
+Any
+Required
+
+robustcov ( Statistics
+and Machine Learning
+Toolbox™)
+
+Any
+≥ 2 × numAssets
+Required
+
+covarianceShrinkag
+e ( Financial Toolbox)
+
+Any (≥ 3 recommended) Any (≤ 25,000
+recommended)
+
+Required
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-138

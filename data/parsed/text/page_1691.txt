@@ -1,0 +1,63 @@
+where D is a diagonal matrix whose elements are the square root of the corresponding element of the
+state vector.
+
+Create a cir object to represent the model: dXt = 0 . 2(0 . 1 −Xt)dt + 0 . 05Xt
+
+1
+2dW.
+
+CIR = cir(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)
+
+CIR = 
+   Class CIR: Cox-Ingersoll-Ross
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+Simulate a single path over a year using simByEuler.
+
+nPeriods = 249;      % # of simulated observations
+dt       =   1;      % time increment = 1 day
+rng(142857,'twister')
+[Paths,Times] = simByEuler(CIR,nPeriods,'Method','higham-mao','DeltaTime', dt)
+
+Paths = 250×1
+
+1.0000
+    0.8613
+    0.7245
+    0.6349
+    0.4741
+    0.3853
+    0.3374
+    0.2549
+    0.1859
+    0.1814
+    0.1829
+    0.1561
+    0.1204
+    0.0876
+    0.1142
+      ⋮
+
+Times = 250×1
+
+0
+     1
+     2
+     3
+     4
+     5
+
+simByEuler
+
+15-385

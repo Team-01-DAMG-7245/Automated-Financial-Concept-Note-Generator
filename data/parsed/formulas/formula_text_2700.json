@@ -1,0 +1,12 @@
+{
+  "page": 1363,
+  "original_text": "% Load portfolio data with 225 assets\nload port5.mat\ncovariance = corr2cov(stdDev_return,Correlation);\n% Generate a sample with 200 observations\nrng('default')\nnScen = 200;\nretSeries = portsim(mean_return',covariance,nScen);",
+  "ocr_text": "Loadportfoliodatawith225assets\nloadport5.mat\ncovariance=corr2cov(stdDev_return,Correlation);\nGenerateasamplewith200observations\nrng(default)\n\nnScen=200;\nretSeries=portsim(mean_return,covariance,nScen);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 545.96,
+    "x1": 366.32,
+    "y1": 621.23
+  },
+  "confidence": "high"
+}

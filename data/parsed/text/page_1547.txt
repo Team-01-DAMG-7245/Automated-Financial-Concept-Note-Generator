@@ -1,0 +1,70 @@
+with the userData struct as an additional input argument. The rebalanceFcn function handle
+functions can read and write to the userData struct. The rebalanceFcn function handle functions
+return the updated userData struct as an additional output argument.
+
+For an example of using UserData, see “Use UserData Property to Create Stop Loss Trading
+Strategy” on page 15-248 and “Backtest with Brinson Attribution to Evaluate Portfolio Performance”
+on page 4-315.
+
+Data Types: struct
+
+EngineDataList — Specify set of optional backtest state data a strategy needs in
+rebalanceFcn
+[] (default) | string | string array
+
+Specify a set of optional backtest state data that a strategy needs in the rebalanceFcn function
+handle, specified as a scalar string or string array. By default, the EngineDataList property is
+empty, indicating that no additional engine data is required.
+
+If a strategy requires engine data, you can specify EngineDataList as a vector of strings containing
+the names of the required engineData. The backtestEngine creates an engineData struct with a
+field corresponding to each element in the EngineDataList. Valid engineData values are:
+
+•
+Weights — The current portfolio weights before rebalancing,specified as decimal percentages.
+This is the default first argument to the rebalance function (RebalanceFcn).
+
+•
+WeightsHistory — A timetable of Weights vectors for each past date in the backtest. This
+timetable holds the end-of-day asset weights for each asset for each day. Future dates in the
+timetable contain NaN values.
+
+•
+PortfolioValue — The current portfolio value at the time the rebalance function
+(RebalanceFcn) is called, specified as a numeric scalar. This PortfolioValue is potentially
+different from the "end of day" portfolio value reported by the backtestEngine at the end of the
+backtest. Transaction costs and other fees are paid after the rebalance function is called, so the
+PortfolioValue passed into the rebalance function by the engineData struct may be different
+from the final portfolio value reported for that day after the backtest completes.
+
+•
+PortfolioValueHistory — A timetable of portfolio values for the backtest. The timetable
+contains two columns. The BeforeExpenses column holds the portfolio value for each day before
+any expenses (transaction costs or fees). The EndOfDay column holds the portfolio value for each
+day, inclusive of all transaction costs and other fees. The values in the second column (EndOfDay)
+match the final end-of-day portfolio values reported at the end of the backtest. Future dates in the
+timetable contain NaN values.
+
+•
+FeesHistory — A timetable of fees charged for each day in the backtest. The FeesHistory
+timetable has two columns: Management and Performance for the management and
+performance fees, respectively. The management and performance fees are defined using the
+ManagementFee and PerformanceFee name-value arguments. Future dates in the timetable
+contain NaN values.
+
+•
+TransactionCostHistory — A timetable of per-asset transaction costs charged for each day in
+the backtest. Future dates in the timetable contain NaN values. The TransactionCostHistory
+cannot be set if the TransactionCosts function generate aggregate costs. The
+TransactionCosts computeTransactionCostsFcn function handle must specify an output
+for detailedCosts to set TransactionCostHistory.
+
+•
+CashAsset — A string array for items in the pricesTT timetable specified as cash assets.
+
+•
+DebtAsset — A string array for items in the pricesTT timetable specified as debt assets.
+
+backtestStrategy
+
+15-241

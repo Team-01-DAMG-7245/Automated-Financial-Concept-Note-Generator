@@ -1,0 +1,5 @@
+Page 320
+================================================================================
+
+To correct this error, change the LowerGroup in the addGroups function to also be 0.3 to match the
+GroupMatrix input from setGroups.

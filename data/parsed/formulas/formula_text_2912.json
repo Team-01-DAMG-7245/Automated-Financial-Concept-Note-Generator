@@ -1,0 +1,12 @@
+{
+  "page": 1520,
+  "original_text": "•\ngamma — g(x) = xɑ * exp(-β * x)",
+  "ocr_text": "*gammag(x)=x**exp(-B*x)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 92.78,
+    "x1": 246.69,
+    "y1": 104.59
+  },
+  "confidence": "high"
+}

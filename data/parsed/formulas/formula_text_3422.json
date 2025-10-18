@@ -1,0 +1,12 @@
+{
+  "page": 1892,
+  "original_text": "Example: Yield =\nbndyield(Price,CouponRate,Settle,Maturity,'Period',4,'Basis',9)",
+  "ocr_text": "Example:Yield=\nbndyield(Price,CouponRate,Settle,Maturity,Period,4,Basis,9)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 575.95,
+    "x1": 469.26,
+    "y1": 599.58
+  },
+  "confidence": "high"
+}

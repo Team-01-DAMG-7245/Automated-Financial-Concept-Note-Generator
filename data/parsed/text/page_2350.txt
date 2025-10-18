@@ -1,0 +1,56 @@
+floatdiscmargin
+
+Discount margin for floating-rate bond
+
+Syntax
+
+Margin = floatdiscmargin(Price,SpreadSettle,Maturity,RateInfo,
+LatestFloatingRate)
+Margin = floatdiscmargin( ___ ,Name,Value)
+
+Description
+
+Margin = floatdiscmargin(Price,SpreadSettle,Maturity,RateInfo,
+LatestFloatingRate) calculates the discount margin or zero discount margin for a floating-rate
+bond.
+
+The input RateInfo determines whether the discount margin or the zero discount margin is
+calculated. Principal schedules are supported using Principal.
+
+Margin = floatdiscmargin( ___ ,Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Compute the Zero Discount Margin Using a Yield Curve
+
+Use floatdiscmargin to compute the discount margin and zero discount margin for a floating-rate
+note.
+
+Define data for the floating-rate note.
+
+Price = 99.99;
+Spread = 50;
+Settle = datetime(2011,1,20);
+Maturity = datetime(2012,1,15);
+LatestFloatingRate = 0.05;
+StubRate = 0.049;
+SpotRate = 0.05;
+Reset = 4;
+Basis = 2;
+
+Compute the discount margin.
+
+dMargin = floatdiscmargin(Price, Spread, Settle, Maturity, ...
+[StubRate, SpotRate], LatestFloatingRate,'Reset', Reset, 'Basis', Basis, ...
+'AdjustCashFlowsBasis', true)
+
+dMargin = 
+48.4810
+
+Usually you want to set AdjustCashFlowsBasis to true, so cash flows are calculated with
+adjustments on accrual amounts.
+
+15
+Functions
+
+15-1044

@@ -1,0 +1,12 @@
+{
+  "page": 1957,
+  "original_text": "simulationDates = convertTo(simulationDates,\"datenum\");\nprofilesBefore = exposureprofiles(simulationDates,exposures)",
+  "ocr_text": "simulationDates=convertTo(simulationDates,datenum);\nprofilesBefore=exposureprofiles(simulationDates,exposures)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 380.6,
+    "x1": 415.08,
+    "y1": 401.87
+  },
+  "confidence": "high"
+}

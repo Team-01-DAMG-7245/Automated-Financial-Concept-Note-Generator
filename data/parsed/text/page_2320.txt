@@ -1,0 +1,58 @@
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);
+p = setDefaultConstraints(p);
+
+Use setBounds with semi-continuous constraints to set xi=0 or 0.02<=xi<=0.5 for all
+i=1,...NumAssets.
+
+p = setBounds(p, 0.02, 0.5,'BoundType', 'Conditional', 'NumAssets', 3);
+
+When working with a Portfolio object, the setMinMaxNumAssets function enables you to set up
+cardinality constraints for a long-only portfolio. This sets the cardinality constraints for the
+Portfolio object, where the total number of allocated assets satisfying the nonzero semi-continuous
+constraints are between MinNumAssets and MaxNumAssets. By setting
+MinNumAssets=MaxNumAssets=2, only two of the three assets are invested in the portfolio.
+
+p = setMinMaxNumAssets(p, 2, 2);
+
+Use estimatePortRisk to estimate the portfolio risk according to a risk proxy associated with a
+Portfolio object.
+
+pwgt = estimateFrontierLimits(p);
+prsk = estimatePortRisk(p, pwgt)
+
+prsk = 2×1
+
+0.0324
+    0.0695
+
+The estimatePortRisk function uses the MINLP solver to solve this problem. Use the
+setSolverMINLP function to configure the SolverType and options.
+
+p.solverOptionsMINLP
+
+ans = struct with fields:
+                           MaxIterations: 1000
+                    AbsoluteGapTolerance: 1.0000e-07
+                    RelativeGapTolerance: 1.0000e-05
+                  NonlinearScalingFactor: 1000
+                  ObjectiveScalingFactor: 1000
+                                 Display: 'off'
+                           CutGeneration: 'basic'
+                MaxIterationsInactiveCut: 30
+                      ActiveCutTolerance: 1.0000e-07
+                    IntMainSolverOptions: [1×1 optim.options.Intlinprog]
+    NumIterationsEarlyIntegerConvergence: 30
+                     ExtendedFormulation: 0
+                            NumInnerCuts: 10
+                     NumInitialOuterCuts: 10
+
+Conditional Value-at-Risk of Portfolio Returns as the Proxy for Portfolio Risk for a
+PortfolioCVaR Object
+
+Given a portfolio pwgt, use the estimatePortRisk function to show the conditional value-at-risk
+(CVaR) of portfolio returns for each portfolio.
+
+15
+Functions
+
+15-1014

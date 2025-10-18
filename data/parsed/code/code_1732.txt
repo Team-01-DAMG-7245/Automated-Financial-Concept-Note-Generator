@@ -1,0 +1,5 @@
+Page 1491
+================================================================================
+
+Simulation — User-defined simulation function or SDE simulation method
+simulation by Euler approximation (simByEuler) (default) | function | SDE simulation method

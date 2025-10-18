@@ -1,0 +1,71 @@
+_____________    _______________
+
+TotalReturn            0.17567           0.17155   
+    SharpeRatio           0.097946           0.10213   
+    Volatility           0.0074876         0.0069961   
+    AverageTurnover      0.0007014         0.0024246   
+    MaxTurnover           0.021107          0.097472   
+    AverageReturn       0.00073178        0.00071296   
+    MaxDrawdown           0.097647          0.096299   
+    AverageBuyCost        0.018532          0.061913   
+    AverageSellCost       0.037064           0.12383
+
+Each row of the table output is a measurement of the performance of a strategy. Each strategy
+occupies a column. The summary function reports on the following metrics:
+
+•
+TotalReturn — The nonannulaized total return of the strategy, inclusive of fees, over the full
+backtest period.
+
+•
+SharpeRatio — The nonannualized Sharpe ratio of each strategy over the backtest. For more
+information, see sharpe.
+
+•
+Volatility — The nonannualized standard deviation of per-time-step strategy returns.
+
+•
+AverageTurnover — The average per-time-step portfolio turnover, expressed as a decimal
+percentage.
+
+•
+MaxTurnover — The maximum portfolio turnover in a single rebalance, expressed as a decimal
+percentage.
+
+•
+AverageReturn —The arithmetic mean of the per-time step portfolio returns.
+
+•
+MaxDrawdown — The maximum drawdown of the portfolio, expressed as a decimal percentage.
+For more information, see maxdrawdown.
+
+•
+AverageBuyCost — The average per-time-step transaction costs the portfolio incurred for asset
+purchases.
+
+•
+AverageSellCost — The average per-time-step transaction costs the portfolio incurred for
+asset sales.
+
+Sometimes it is useful to transpose the summary table when plotting the metrics of different
+strategies.
+
+s2 = rows2vars(s1);
+s2.Properties.VariableNames{1} = 'StrategyName'
+
+s2=2×10 table
+       StrategyName        TotalReturn    SharpeRatio    Volatility    AverageTurnover    MaxTurn
+    ___________________    ___________    ___________    __________    _______________    _______
+
+{'EqualWeighted'  }      0.17567       0.097946      0.0074876        0.0007014        0.0211
+    {'InverseVariance'}      0.17155        0.10213      0.0069961        0.0024246        0.0974
+
+bar(s2.AverageTurnover)
+title('Average Turnover')
+ylabel('Average Turnover (%)')
+set(gca,'xticklabel',s2.StrategyName)
+
+15
+Functions
+
+15-296

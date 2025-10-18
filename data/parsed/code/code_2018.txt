@@ -1,0 +1,8 @@
+Page 1610
+================================================================================
+
+The MATLAB® backtesting engine runs backtests of portfolio investment strategies over time series
+of asset price data. After creating a set of backtest strategies using backtestStrategy and the
+backtesting engine using backtestEngine, the runBacktest function executes the backtest. After
+using the runBacktest function to test investment strategies, you can run the equityCurve
+function to plot the equity curves of strategies.

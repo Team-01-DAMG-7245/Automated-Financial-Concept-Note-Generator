@@ -1,0 +1,12 @@
+{
+  "page": 433,
+  "original_text": "% Group constraints\nG = [0 1 0 0 1 0 0 0 0 0 0;\n     1 0 0 1 0 0 1 0 0 0 0];\nLowG = [0.15; 0.25];\nUpG = [Inf; 0.5];\np = setGroups(p, G, LowG, UpG);",
+  "ocr_text": "SGroupconstraints\nG=[010010000080;\n100100100600];\nLowG=[0.15;0.25];\nUpG=[Inf;0.5];\np=setGroups(p,G,LowG,UpG);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 163.83,
+    "x1": 257.96,
+    "y1": 228.29
+  },
+  "confidence": "high"
+}

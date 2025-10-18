@@ -1,0 +1,53 @@
+simByQuadExp
+
+Simulate Bates, Heston, and CIR sample paths by quadratic-exponential discretization scheme
+
+Syntax
+
+[Paths,Times,Z] = simByQuadExp(MDL,NPeriods)
+[Paths,Times,Z] = simByQuadExp( ___ ,Name,Value)
+
+[Paths,Times,Z,N] = simByQuadExp(MDL,NPeriods)
+[Paths,Times,Z,N] = simByQuadExp( ___ ,Name,Value)
+
+Description
+
+[Paths,Times,Z] = simByQuadExp(MDL,NPeriods) simulates NTrials sample paths of a
+Heston model driven by two Brownian motion sources of risk, or a CIR model driven by one Brownian
+motion source of risk. Both Heston and Bates models approximate continuous-time stochastic
+processes by a quadratic-exponential discretization scheme. The simByQuadExp simulation derives
+directly from the stochastic differential equation of motion; the discrete-time process approaches the
+true continuous-time process only in the limit as DeltaTime approaches zero.
+
+[Paths,Times,Z] = simByQuadExp( ___ ,Name,Value) specifies options using one or more
+name-value pair arguments in addition to the input arguments in the previous syntax.
+
+[Paths,Times,Z,N] = simByQuadExp(MDL,NPeriods) simulates NTrials sample paths of a
+Bates model driven by two Brownian motion sources of risk, approximating continuous-time
+stochastic processes by a quadratic-exponential discretization scheme. The simByQuadExp
+simulation derives directly from the stochastic differential equation of motion; the discrete-time
+process approaches the true continuous-time process only in the limit as DeltaTime approaches
+zero.
+
+[Paths,Times,Z,N] = simByQuadExp( ___ ,Name,Value) specifies options using one or more
+name-value pair arguments in addition to the input arguments in the previous syntax.
+
+You can perform quasi-Monte Carlo simulations using the name-value arguments for
+MonteCarloMethod, QuasiSequence, and BrownianMotionMethod. For more information, see
+“Quasi-Monte Carlo Simulation” on page 14-63.
+
+Examples
+
+Simulate Bates Sample Paths by Quadratic-Exponential Discretization Scheme
+
+Create a bates object.
+
+AssetPrice = 80;
+            Return = 0.03;
+            JumpMean = 0.02;
+            JumpVol = 0.08;
+            JumpFreq = 0.1;
+
+simByQuadExp
+
+15-373

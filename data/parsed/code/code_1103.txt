@@ -1,0 +1,6 @@
+Page 1132
+================================================================================
+
+% Define the maturity dates for new issue treasuries purchased on the
+% settle date.
+treasuryMaturities = [datetime(2020,9,1) , datetime(2030,9,1) , datetime(2040,9,1)];

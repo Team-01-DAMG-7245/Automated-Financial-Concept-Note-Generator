@@ -1,0 +1,12 @@
+{
+  "page": 999,
+  "original_text": "sc = modifybins(sc,'AMBalance','BinLabels',...\n{'Up to 558.87' '558.88 to 1597.43' '1597.44 and up'});",
+  "ocr_text": "sc_=modifybins(sc,AMBalance,BinLabels,...\n{Upto558.87558.88to1597.431597.44andup});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 353.38,
+    "x1": 388.02,
+    "y1": 374.65
+  },
+  "confidence": "high"
+}

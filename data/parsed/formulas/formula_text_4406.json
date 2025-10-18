@@ -1,0 +1,12 @@
+{
+  "page": 2499,
+  "original_text": "•\nIf Design is a 1-by-1 cell array, which has a single Design matrix for each sample, no NaN values\nare permitted in the array. A model with this structure must have NUMSERIES ≥ NUMPARAMS with\nrank(Design{1}) = NUMPARAMS.",
+  "ocr_text": "*IfDesignisa1-by-1cellarray,whichhasasingleDesignmatrixforeachsample,noNaNvalues\narepermittedinthearray.AmodelwiththisstructuremusthaveNUMSERIES=NUMPARAMSwith\nrank(Design{1})=NUMPARAMS.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 142.03,
+    "x1": 552.95,
+    "y1": 177.66
+  },
+  "confidence": "high"
+}

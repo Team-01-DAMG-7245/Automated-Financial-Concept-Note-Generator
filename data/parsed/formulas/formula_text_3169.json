@@ -1,0 +1,12 @@
+{
+  "page": 1702,
+  "original_text": "obj = cir(alpha,b,sigma,'StartState',r0)",
+  "ocr_text": "obj=cir(alpha,b,sigma,StartState,r0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 263.15,
+    "x1": 306.73,
+    "y1": 273.62
+  },
+  "confidence": "high"
+}

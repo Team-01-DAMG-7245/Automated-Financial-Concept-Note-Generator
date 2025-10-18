@@ -1,0 +1,4 @@
+Page 908
+================================================================================
+
+The function inforatio computes the tracking error and returns it as a second argument.

@@ -1,0 +1,12 @@
+{
+  "page": 78,
+  "original_text": "rc = tick2ret(p,Method=\"continuous\")",
+  "ocr_text": "re_=tick2ret(p,Method=continuous)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 613.55,
+    "x1": 285.06,
+    "y1": 624.02
+  },
+  "confidence": "high"
+}

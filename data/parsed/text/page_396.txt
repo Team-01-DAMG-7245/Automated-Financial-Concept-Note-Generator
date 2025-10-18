@@ -1,0 +1,44 @@
+combining the investment analyst views (or "observations of the future") and some prior knowledge
+about μ.
+
+In addition, assume the prior knowledge that μ is a normally distributed random variable μ N π, C
+[1, 2 on page 4-229]. In the absence of any views (observations), the prior mean π is likely to be the
+equilibrium returns, implied from the equilibrium portfolio holding. In practice, the applicable
+equilibrium portfolio holding is not necessarily the equilibrium portfolio, but rather a target optimal
+portfolio that the investment analyst would use in the absence of additional views on the market, such
+as the portfolio benchmark, an index, or even the current portfolio. C represents the uncertainty in
+the prior and the Black-Litterman model makes the assumption that the structure of C is τΣ. τ is a
+small constant, and many authors use different values. A detailed discussion about τ can be found in
+[3 on page 4-229].
+
+Observations are necessary to perform a statistical inference on μ. In the Black-Litterman model, the
+observations are views about future asset returns expressed at the portfolio level. A view is the
+expected return of a portfolio composed of the universe of k assets. Usually, the portfolio return has
+uncertainty, so an error term is added to catch the departure. Assume that there is a total of v views.
+For a view i, pi is a row vector with dimension 1 x k, and qi is a scalar [2 on page 4-229].
+
+qi = Ε pi * r
+μ + εi , i = 1, 2, . . . , v
+
+You can stack the v views vertically, and Ω is the covariance of the uncertainties from all views.
+Assume that the uncertainties are independent.
+
+q = Ε P * r
+μ + ε, ε N 0, Ω , Ω = diag ω1, ω2, . . . ωv .
+
+Note that Ω does not necessarily need to be a diagonal matrix. The investment analyst can choose the
+structure of Ω to account for their uncertainties in the views [4 on page 4-229].
+
+Under the previous assumption r
+N μ, Σ , it follows that
+
+q = P * μ + ε, ε N 0, Ω , Ω = diag ω1, ω2, . . . ωv .
+
+The Bayesian Definition of the Black-Litterman Model
+
+Based on Bayesian statistics, it is known that: posterior ∝likelihood * prior.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-228

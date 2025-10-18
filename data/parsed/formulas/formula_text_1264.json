@@ -1,0 +1,12 @@
+{
+  "page": 625,
+  "original_text": "% Sum of weights must be equal to one\np = setBudget(p,1,1);",
+  "ocr_text": "Sumofweightsmustbeequaltoone\np=setBudget(p,1,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 570.71,
+    "x1": 290.47,
+    "y1": 591.97
+  },
+  "confidence": "high"
+}

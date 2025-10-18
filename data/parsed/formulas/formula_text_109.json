@@ -1,0 +1,12 @@
+{
+  "page": 90,
+  "original_text": "qx = lifetablegen((0:100), a);\ndisplay(qx(1:40,:))",
+  "ocr_text": "qx=lifetablegen((0:100),a);\ndisplay(qx(1:40,:))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 257.3,
+    "x1": 252.54,
+    "y1": 278.57
+  },
+  "confidence": "high"
+}

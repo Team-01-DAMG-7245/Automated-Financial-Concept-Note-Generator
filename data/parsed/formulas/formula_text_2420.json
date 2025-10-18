@@ -1,0 +1,12 @@
+{
+  "page": 1240,
+  "original_text": "put  = mean(exp(-rate*T)*max(strike - squeeze(X(end,:,:)), 0))",
+  "ocr_text": "put=mean(exp(-rate*T)*max(strike-squeeze(X(end,:,:)),0))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 657.49,
+    "x1": 425.91,
+    "y1": 667.96
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,55 @@
+0.0042
+    0.0083
+    0.0100
+    0.0150
+
+passetcovar = 4×4
+
+0.0005    0.0003    0.0002         0
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+         0    0.0010    0.0028    0.0102
+
+[qassetmean, qassetcovar] = getAssetMoments(q)
+
+qassetmean = 4×1
+
+0.0042
+    0.0083
+    0.0100
+    0.0150
+
+qassetcovar = 4×4
+
+0.0005    0.0003    0.0002   -0.0000
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+   -0.0000    0.0010    0.0028    0.0102
+
+Estimating Asset Moments with Missing Data
+
+This example shows how to work with missing data indicated by NaN values in your return or price
+data. Although “Multivariate Normal Regression” on page 9-2 goes into detail about regression
+with missing data, the estimateAssetMoments function has a name-value pair argument name
+'MissingData' that indicates with a Boolean value whether to use the missing data capabilities of
+Financial Toolbox™ software. The default value for 'MissingData' is false which removes all
+samples with NaN values. If, however, 'MissingData' is set to true, estimateAssetMoments uses
+the ECM algorithm to estimate asset moments. The following code illustrates how this works on price
+data with missing values:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+ 
+X = portsim(m', C, 120);
+Y = ret2tick(X);
+Y(1:20,1) = NaN;
+Y(1:12,4) = NaN;
+
+Asset Returns and Moments of Asset Returns Using Portfolio Object
+
+4-47

@@ -1,0 +1,12 @@
+{
+  "page": 2230,
+  "original_text": "% Compute the max return risk constrained portfolio\nwMax = estimateFrontierByRisk(p2,targetRisk);",
+  "ocr_text": "SComputethemaxreturnriskconstrainedportfolio\nwMax=estimateFrontierByRisk(p2,targetRisk);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 524.56,
+    "x1": 366.32,
+    "y1": 545.83
+  },
+  "confidence": "high"
+}

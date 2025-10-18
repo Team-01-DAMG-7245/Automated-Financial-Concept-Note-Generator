@@ -1,0 +1,12 @@
+{
+  "page": 2122,
+  "original_text": "t = datetime(738427.656845093,\"ConvertFrom\",\"datenum\");\ny = year(t)",
+  "ocr_text": "t=datetime(738427.656845093,ConvertFrom,datenum);\ny=year(t)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 631.92,
+    "x1": 388.02,
+    "y1": 653.19
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,59 @@
+In addition, scalar expansion works with the Portfolio object if NumAssets is known, or is deduced
+from the inputs.
+
+Estimating Asset Moments from Prices or Returns
+
+This example shows how to set the moments of asset returns by using the estimateAssetMoments
+function which accepts either prices or returns and estimates the mean and covariance of asset
+returns. Either prices or returns are stored as matrices with samples going down the rows and assets
+going across the columns. In addition, prices or returns can be stored in a table or timetable (see
+“Estimating Asset Moments from Time Series Data” on page 4-49).
+
+To illustrate using estimateAssetMoments, generate random samples of 120 observations of asset
+returns for four assets from the mean and covariance of asset returns in the variables m and C with
+portsim. The default behavior of portsim creates simulated data with estimated mean and
+covariance identical to the input moments m and C. In addition to a return series created by portsim
+in the variable X, a price series is created in the variable Y.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+X = portsim(m', C, 120);
+Y = ret2tick(X);
+
+Note that Portfolio optimization requires that you use total returns and not just price returns. So,
+"returns" should be total returns and "prices" should be total return prices.
+
+Given asset returns and prices in variables X and Y, the following sequence of code demonstrates
+equivalent ways to estimate asset moments for the Portfolio object. A Portfolio object is created
+in p with the moments of asset returns set directly in the Portfolio object, and a second
+Portfolio object is created in q to obtain the mean and covariance of asset returns from asset
+return data in X using estimateAssetMoments.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+ 
+X = portsim(m', C, 120);
+p = Portfolio('mean', m, 'covar', C);
+q = Portfolio;
+q = estimateAssetMoments(q, X);
+ 
+[passetmean, passetcovar] = getAssetMoments(p)
+
+passetmean = 4×1
+
+0.0042
+    0.0083
+
+Asset Returns and Moments of Asset Returns Using Portfolio Object
+
+4-45

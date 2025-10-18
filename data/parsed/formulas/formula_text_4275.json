@@ -1,0 +1,12 @@
+{
+  "page": 2419,
+  "original_text": "load SimulatedStock.mat\nvalues = hhigh(TMW);\nplot(values.Time,values.HighestHigh)\ntitle('Highest High for TMW')",
+  "ocr_text": "loadSimulatedStock.mat\nvalues=hhigh(TMW);\nplot(values.Time,values.HighestHigh)\ntitle(HighestHighforTMW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 410.08,
+    "x1": 285.05,
+    "y1": 452.94
+  },
+  "confidence": "high"
+}

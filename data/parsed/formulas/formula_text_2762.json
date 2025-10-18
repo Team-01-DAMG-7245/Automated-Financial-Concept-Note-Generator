@@ -1,0 +1,12 @@
+{
+  "page": 1402,
+  "original_text": "dXt = F(t, Xt)dt + G(t, Xt)dWt",
+  "ocr_text": "",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 414.68,
+    "x1": 243.59,
+    "y1": 428.43
+  },
+  "confidence": "low"
+}

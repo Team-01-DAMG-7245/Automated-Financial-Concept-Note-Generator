@@ -1,0 +1,40 @@
+portopt Migration to Portfolio Object
+
+In this section...
+
+“Migrate portopt Without Output Arguments” on page 3-11
+
+“Migrate portopt with Output Arguments” on page 3-12
+
+“Migrate portopt for Target Returns Within Range of Efficient Portfolio Returns” on page 3-13
+
+“Migrate portopt for Target Return Outside Range of Efficient Portfolio Returns” on page 3-14
+
+“Migrate portopt Using portcons Output for ConSet” on page 3-15
+
+“Integrate Output from portcons, pcalims, pcglims, and pcgcomp with a Portfolio Object” on page 3-
+17
+
+Migrate portopt Without Output Arguments
+
+This example shows how to migrate portopt without output arguments to a Portfolio object.
+
+The basic portopt functionality is represented as:
+
+ExpReturn = [ 0.0054; 0.0531; 0.0779; 0.0934; 0.0130 ];
+
+ExpCovariance = [ 0.0569,  0.0092,  0.0039,  0.0070,  0.0022;
+    0.0092,  0.0380,  0.0035,  0.0197,  0.0028;
+    0.0039,  0.0035,  0.0997,  0.0100,  0.0070;
+    0.0070,  0.0197,  0.0100,  0.0461,  0.0050;
+    0.0022,  0.0028,  0.0070,  0.0050,  0.0573 ];
+
+NumPorts = 10;
+
+portopt(ExpReturn, ExpCovariance, NumPorts);
+
+To migrate a portopt syntax without output arguments to a Portfolio object:
+
+portopt Migration to Portfolio Object
+
+3-11

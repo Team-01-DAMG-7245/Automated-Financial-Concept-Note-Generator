@@ -1,0 +1,12 @@
+{
+  "page": 1770,
+  "original_text": "Rate = annurate(NumPeriods,Payment,PresentValue)\nRate = annurate( ___ ,FutureValue,Due)",
+  "ocr_text": "Rate=annurate(NumPeriods,Payment,PresentValue)\nRate=annurate(___,FutureValue,Due)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.25,
+    "x1": 378.99,
+    "y1": 211.88
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,6 @@
+Page 1001
+================================================================================
+
+The score function computes the scores for the training data. An optional data input can also be
+passed to score, for example, validation data. The points per predictor for each customer are
+provided as an optional output.

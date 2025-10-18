@@ -1,0 +1,61 @@
+As a deterministic function of time, Correlation allows you to specify a dynamic correlation
+structure.
+
+Data Types: double
+
+Simulation — User-defined simulation function or SDE simulation method
+simulation by Euler approximation (simByEuler) (default) | function | SDE simulation method
+
+User-defined simulation function or SDE simulation method, specified as a function or SDE simulation
+method. The default is an Euler approximation (simByEuler).
+
+Data Types: function_handle
+
+Output Arguments
+
+RoughHeston — Rough Heston model
+RoughHeston object
+
+Rough Heston model, returned as a RoughHeston object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of the first observation, applied to all state variables, returned as a scalar.
+
+Data Types: double
+
+StartState — Initial values of state variables
+1 (default) | scalar, column vector, or matrix
+
+Initial values of the state variables, returned as a scalar, column vector, or matrix.
+
+Data Types: double
+
+Correlation — Correlation between Gaussian random variates drawn to generate
+Brownian motion vector (Wiener processes)
+2-by-2 identity matrix representing independent Gaussian processes (default) | positive semidefinite
+matrix
+
+Correlation between Gaussian random variates drawn to generate the Brownian motion vector
+(Wiener processes), returned as a scalar or positive semidefinite matrix.
+
+Data Types: double
+
+Return — Expected (mean) instantaneous rate of return of GBM price process
+array, deterministic function of time, deterministic function of time and state
+
+Expected (mean) instantaneous rate of return of the GBM price process, returned as an array, a
+numeric scalar, or a deterministic function of time as a function handle, or as a function of time and
+state.
+
+Data Types: double | function_handle
+
+Speed — Mean-reversion speed of stochastic variance process
+array or deterministic function of time
+
+roughheston
+
+15-229

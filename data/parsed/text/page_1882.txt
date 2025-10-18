@@ -1,0 +1,58 @@
+bndtotalreturn
+
+Total return of fixed-coupon bond
+
+Syntax
+
+[BondEquiv,EffectiveRate] = bndtotalreturn(Price,CouponRate,Settle,Maturity,
+ReinvestRate)
+[BondEquiv,EffectiveRate] = bndtotalreturn( ___ ,Name,Value)
+
+Description
+
+[BondEquiv,EffectiveRate] = bndtotalreturn(Price,CouponRate,Settle,Maturity,
+ReinvestRate) calculates the total return for fixed-coupon bonds to maturity or to a specific
+investment horizon.
+
+[BondEquiv,EffectiveRate] = bndtotalreturn( ___ ,Name,Value) adds optional name-
+value pair arguments.
+
+Examples
+
+Compute the Total Return of a Fixed-Coupon Bond
+
+Use bndtotalreturn to compute the total return for a fixed-coupon bond, given an investment
+horizon date.
+
+Define fixed-coupon bond.
+
+Price = 101;
+CouponRate = 0.05;
+Settle = '15-Nov-2011';
+Maturity = '15-Nov-2031';
+ReinvestRate = 0.04;
+
+Calculate the total return to maturity.
+
+[BondEquiv, EffectiveRate] = bndtotalreturn(Price, CouponRate, ...
+Settle, Maturity, ReinvestRate)
+
+BondEquiv = 
+0.0460
+
+EffectiveRate = 
+0.0466
+
+Specify an investment horizon.
+
+HorizonDate = '15-Nov-2021';
+[BondEquiv, EffectiveRate] = bndtotalreturn(Price, CouponRate, ...
+Settle, Maturity, ReinvestRate, 'HorizonDate', HorizonDate)
+
+BondEquiv = 
+0.0521
+
+15
+Functions
+
+15-576

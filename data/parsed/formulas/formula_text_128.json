@@ -1,0 +1,12 @@
+{
+  "page": 99,
+  "original_text": "sampleLOB = sampleLOB(round(numTimes/2),:);\nsampleTime = sampleLOB.Time;",
+  "ocr_text": "sampleLOB=sampleLOB(round(numTimes/2),:);\nsampleTime=sampleLOB.Time;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 463.79,
+    "x1": 322.97,
+    "y1": 485.06
+  },
+  "confidence": "high"
+}

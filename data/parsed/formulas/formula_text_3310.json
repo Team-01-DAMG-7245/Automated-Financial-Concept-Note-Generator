@@ -1,0 +1,12 @@
+{
+  "page": 1784,
+  "original_text": "Volatility = blkimpv(20, 20, 0.09, 4/12, 1.1166, 'Limit',0.5);\nVolatility = blkimpv(20, 20, 0.09, 4/12, 1.1166, 'Limit',0.5,'Class',{'Call'});\nVolatility = blkimpv(20, 20, 0.09, 4/12, 1.1166, 'Limit',0.5,'Class',true);\nVolatility = blkimpv(20, 20, 0.09, 4/12, 1.1166, 'Limit',0.5,'Class',true,'Method','jackel2016')",
+  "ocr_text": "Volatility=blkimpv(20,20,0.09,4/12,1.1166,Limit,0.5);\nVolatility=blkimpv(20,20,0.09,4/12,1.1166,Limit,0.5,Class,{Call});\nVolatility=blkimpv(20,20,0.09,4/12,1.1166,Limit,0.5,Class,true);\nVolatility=blkimpv(20,20,0.09,4/12,1.1166,Limit,0.5,Class,true,Method,jackel2016)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 552.09,
+    "x1": 610.17,
+    "y1": 594.96
+  },
+  "confidence": "high"
+}

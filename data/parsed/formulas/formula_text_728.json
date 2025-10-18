@@ -1,0 +1,12 @@
+{
+  "page": 437,
+  "original_text": "% Compute and plot efficient frontier excluding assets that are below\n% the WoB threshold.\nnT = length(thresholdWoB);\nfigure;",
+  "ocr_text": "Computeandplotefficientfrontierexcludingassetsthatarebelow\ntheWoBthreshold.\n\nnT=length(thresholdwoB);\n\nfigure;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 463.85,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

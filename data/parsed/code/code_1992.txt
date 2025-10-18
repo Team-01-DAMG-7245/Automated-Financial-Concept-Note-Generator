@@ -1,0 +1,12 @@
+Page 1587
+================================================================================
+
+When running a backtest in MATLAB®, you need to understand what the initial conditions are when
+the backtest begins. The initial weights for each strategy, the size of the strategy lookback window,
+and any potential split of the dataset into training and testing partitions affects the results of the
+backtest. This example shows how to use the runBacktest function with the 'Start' and 'End'
+name-value pair arguments that interact with the “LookbackWindow” on page 15-0
+ and
+“RebalanceFrequency” on page 15-0
+ properties of the backtestStrategy object to "warm start"
+a backtest.

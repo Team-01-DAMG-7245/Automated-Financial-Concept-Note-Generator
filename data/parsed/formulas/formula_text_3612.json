@@ -1,0 +1,12 @@
+{
+  "page": 2039,
+  "original_text": "volatility = chaikvolat( ___ ,Name,Value) adds optional name-value pair arguments.",
+  "ocr_text": "volatility=chaikvolat(__,Name,Value)addsoptionalname-valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 289.48,
+    "x1": 524.46,
+    "y1": 301.11
+  },
+  "confidence": "high"
+}

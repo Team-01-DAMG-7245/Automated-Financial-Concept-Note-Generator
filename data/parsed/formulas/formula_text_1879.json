@@ -1,0 +1,12 @@
+{
+  "page": 954,
+  "original_text": "yPred = [1 XLast]*stats.beta;\nPredStd = sqrt([1 XLast]*stats.covb*[1 XLast]'+stats.mse);\nyPredUB = yPred + tCrit*PredStd;",
+  "ocr_text": "yPred=[1XLast]*stats.beta;\nPredStd=sqrt([1XLast]*stats.covb*[1XLast]+stats.mse);\nyPredUB=yPred+tCrit*PredStd;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 195.06,
+    "x1": 404.24,
+    "y1": 227.13
+  },
+  "confidence": "high"
+}

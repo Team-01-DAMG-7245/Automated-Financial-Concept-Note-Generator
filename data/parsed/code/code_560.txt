@@ -1,0 +1,5 @@
+Page 524
+================================================================================
+
+function new_weights = markowitzFcn(~,pricesTT,portObj) 
+% Traditional mean-variance portfolio maximum return allocation

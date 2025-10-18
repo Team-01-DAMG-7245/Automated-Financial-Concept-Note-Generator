@@ -1,0 +1,12 @@
+{
+  "page": 1155,
+  "original_text": "% Estimate the efficient frontier to obtain portfolio weights.\npwgtmv = pmv.estimateFrontier;",
+  "ocr_text": "SEstimatetheefficientfrontiertoobtainportfolioweights.\npwgtmv_=pmv.estimateFrontier;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 200.83,
+    "x1": 425.92,
+    "y1": 222.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,10 @@
+Page 942
+================================================================================
+
+totalsByRtg(t).totalsVec = nIssuers(t,:);
+   % Number of transitions between ratings during the year
+   totalsByRtg(t).totalsMat = round(diag(nIssuers(t,:))* ...
+      (0.01*TransMat(:,:,t)));
+   % Algorithm
+   totalsByRtg(t).algorithm = 'cohort';
+end

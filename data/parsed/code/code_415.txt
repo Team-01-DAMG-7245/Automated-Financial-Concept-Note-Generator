@@ -1,0 +1,5 @@
+Page 425
+================================================================================
+
+rsiSignal = synchronize(rsiSignal,rsiSignali);
+end

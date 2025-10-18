@@ -1,0 +1,6 @@
+Page 1280
+================================================================================
+
+Download the data set (CMO-Historical-Data-Monthly.xlsx) for the World Bank's monthly
+commodity price data set [1 on page 14-109] by using the webread function and the local function
+importCommodityData on page 14-109.

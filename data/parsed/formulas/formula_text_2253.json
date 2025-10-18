@@ -1,0 +1,12 @@
+{
+  "page": 1155,
+  "original_text": "% Create the Portfolio object.\npmv = Portfolio('Name','Mean-Variance Portfolio Five Hedging Levels', ...\n   'AssetList',{'Stock','Hedge50','Hedge75','Hedge90','Hedge95'});\npmv = pmv.estimateAssetMoments(p.getScenarios);\npmv = pmv.setDefaultConstraints;",
+  "ocr_text": "CreatethePortfolioobject.\npmv=Portfolio(Name,Mean-VariancePortfolioFiveHedgingLevels,...\n\nAssetList,{Stock,Hedge50,Hedge75,Hedge90,Hedge95});\npmv=pmv.estimateAssetMoments(p.getScenarios);\npmv=pmv.setDefaultConstraints;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 136.03,
+    "x1": 485.54,
+    "y1": 189.69
+  },
+  "confidence": "high"
+}

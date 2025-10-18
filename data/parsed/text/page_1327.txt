@@ -1,0 +1,63 @@
+ActiveReturn: 0.0059
+
+Compute Category Weights
+
+Use categoryWeights to compute the average and periodic category weights for the portfolio and
+the benchmark, as well as, the corresponding active weights.
+
+[AverageCategoryWeights,PeriodicCategoryWeights] = categoryWeights(BrinsonPAobj)
+
+AverageCategoryWeights=2×4 table
+           Category           AveragePortfolioWeight    AverageBenchmarkWeight    AverageActiveWe
+    ______________________    ______________________    ______________________    _______________
+
+Consumer Discretionary           0.33333                     0.5                   -0.16667  
+    Consumer Staples                 0.66667                     0.5                    0.16667
+
+PeriodicCategoryWeights=6×5 table
+    Period           Category           PortfolioWeight    BenchmarkWeight    ActiveWeight
+    ______    ______________________    _______________    _______________    ____________
+
+1       Consumer Discretionary        0.33333              0.5            -0.16667  
+      1       Consumer Staples              0.66667              0.5             0.16667  
+      2       Consumer Discretionary        0.33333              0.5            -0.16667  
+      2       Consumer Staples              0.66667              0.5             0.16667  
+      3       Consumer Discretionary        0.33333              0.5            -0.16667  
+      3       Consumer Staples              0.66667              0.5             0.16667
+
+Input Arguments
+
+brinsonAttributionObj — Brinson attribution model
+object
+
+Brinson attribution model, specified as a brinsonAttribution object.
+
+Data Types: object
+
+Output Arguments
+
+AverageCategoryWeights — Category weights averaged over all periods
+table
+
+Category weights averaged over all periods, returned as a table with the following columns:
+
+•
+Category — Asset category
+
+•
+AveragePortfolioWeight — Average portfolio weights
+
+•
+AverageBenchmarkWeight — Average benchmark weights
+
+•
+AverageActiveWeight — Average active weights
+
+PeriodicCategoryWeights — Category weights for each period
+table
+
+Category weights for each period, returned as a table with the following columns:
+
+categoryWeights
+
+15-21

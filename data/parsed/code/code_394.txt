@@ -1,0 +1,10 @@
+Page 413
+================================================================================
+
+% Compare the strategy turnover.
+names = [backtester.Strategies.Name];
+nameLabels = strrep(names,'_',' ');
+bar(summaryByMetrics.AverageTurnover)
+title('Average Turnover')
+ylabel('Daily Turnover (%)')
+set(gca,'xticklabel',nameLabels)

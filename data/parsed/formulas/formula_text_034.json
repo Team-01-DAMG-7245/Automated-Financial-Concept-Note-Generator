@@ -1,0 +1,12 @@
+{
+  "page": 43,
+  "original_text": "X = function(input_arguments...)",
+  "ocr_text": "X=function(input_arguments...)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 263.39,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

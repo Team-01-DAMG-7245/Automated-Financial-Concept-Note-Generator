@@ -1,0 +1,61 @@
+For more information on solvers for mixed-integer portfolio problems, see “Choose MINLP Solvers for
+Portfolio Problems” on page 4-140.
+
+To change the MINLP solvers, use setSolverMINLP.
+
+% Select 'TrustRegionCP' as solver
+p_OA = setSolverMINLP(p,'OuterApproximation');
+pwgt_OA = estimateFrontier(p_OA);
+rskOA = estimatePortRisk(p,pwgt_OA);
+retOA = estimatePortReturn(p,pwgt_OA);
+
+% Select 'ExtendedCP' as solver using 'midway' cuts as 'CutGeneration'
+p_ECP = setSolverMINLP(p,'ExtendedCP',CutGeneration="midway");
+pwgt_ECP = estimateFrontier(p_ECP);
+rskECP = estimatePortRisk(p,pwgt_ECP);
+retECP = estimatePortReturn(p,pwgt_ECP);
+
+Compare the returns and risks obtained by the portfolios on the efficient frontier from the different
+
+solvers. They are all the same within a numerical accuracy where the absolute difference ≤10−4.
+
+retTable = table(retOA,ret,retECP,'VariableNames',{'OA','TR','ECP'})
+
+retTable=10×3 table
+        OA            TR           ECP   
+    __________    __________    _________
+
+0.00097434    0.00097297    0.0009746
+     0.0012019     0.0012006    0.0012021
+     0.0014294     0.0014283    0.0014296
+     0.0016569      0.001656    0.0016571
+     0.0018844     0.0018837    0.0018846
+     0.0021119     0.0021113    0.0021121
+     0.0023395      0.002339    0.0023395
+      0.002567     0.0025667     0.002567
+     0.0027945     0.0027944    0.0027945
+      0.003022      0.003022     0.003022
+
+rskTable = table(rskOA,rsk,rskECP,'VariableNames',{'OA','TR','ECP'})
+
+rskTable=10×3 table
+       OA          TR         ECP   
+    ________    ________    ________
+
+0.015368    0.015368    0.015368
+     0.01556    0.015558     0.01556
+    0.016123     0.01612    0.016124
+    0.016849    0.016846     0.01685
+    0.017864     0.01786    0.017864
+    0.019127    0.019123    0.019127
+    0.020516    0.020513    0.020517
+    0.022074    0.022072    0.022074
+    0.023968    0.023965    0.023968
+    0.025807    0.025807    0.025807
+
+% Compare risks from the different OuterApproximation formulations
+norm(rskTable.OA-rskTable.TR,Inf) <= 1e-4
+
+Mixed-Integer MAD Portfolio Optimization Problem
+
+6-91

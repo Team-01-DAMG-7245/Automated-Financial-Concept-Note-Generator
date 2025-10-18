@@ -1,0 +1,23 @@
+Plot Target Portfolio on Mean Variance Frontier
+
+Determine the achievable levels of return.
+
+% Achievable levels of return
+pretlimits = pmv.estimatePortReturn(pmv.estimateFrontierLimits);
+TargetRet = mean(pretlimits); % Target half way up the frontier
+
+% Obtain risk level at target return
+pwgtmvTarget = pmv.estimateFrontierByReturn(TargetRet);
+priskTarget = pmv.estimatePortRisk(pwgtmvTarget);
+
+% Plot point onto mean variance frontier
+figure;
+pmv.plotFrontier(pwgtmv);
+hold on
+scatter(priskTarget,TargetRet);
+hold off
+
+10
+Solving Sample Problems
+
+10-58

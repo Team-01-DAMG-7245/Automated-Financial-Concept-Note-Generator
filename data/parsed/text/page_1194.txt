@@ -1,0 +1,85 @@
+SDEs
+
+In this section...
+
+“SDE Modeling” on page 14-2
+
+“Trials vs. Paths” on page 14-3
+
+“NTrials, NPeriods, and NSteps” on page 14-3
+
+SDE Modeling
+
+Financial Toolbox enables you to model dependent financial and economic variables, such as interest
+rates and equity prices, by performing standard Monte Carlo or Quasi-Monte Carlo simulation of
+stochastic differential equations (SDEs). The flexible architecture of the SDE engine provides efficient
+simulation methods that allow you to create new simulation and derivative pricing methods.
+
+The following table lists tasks you can perform using the SDE functionality.
+
+To perform this task ...
+Use these types of models ...
+
+“Simulating Equity Prices” on page 14-31
+•
+Geometric Brownian Motion (GBM) on page
+14-25
+
+•
+Constant Elasticity of Variance (CEV) on page
+14-25
+
+•
+Stochastic Differential Equation (SDE) on
+page 14-16
+
+•
+Stochastic Differential Equations from Drift
+and Diffusion Objects (SDEDDO) on page 14-
+19
+
+•
+Stochastic Differential Equations from Linear
+Drift (SDELD) on page 14-22
+
+•
+Heston Stochastic Volatility (Heston) on page
+14-29
+
+“Simulating Interest Rates” on page 14-50
+•
+Hull-White-Vasicek (HWV) on page 14-28
+
+•
+Cox-Ingersoll-Ross (CIR) on page 14-27
+
+•
+Stochastic Differential Equation (SDE) on
+page 14-16
+
+•
+Stochastic Differential Equations from Drift
+and Diffusion Objects (SDEDDO) on page 14-
+19
+
+•
+Stochastic Differential Equations from Mean-
+Reverting Drift (SDEMRD) Models on page
+14-26
+
+“Price European Stock Options Using Monte
+Carlo Simulation” on page 14-47
+
+Geometric Brownian Motion (GBM) on page 14-
+25
+
+“Stratified Sampling” on page 14-58
+All supported models on page 14-11
+
+“Quasi-Monte Carlo Simulation” on page 14-63
+All supported models on page 14-11
+
+14
+Stochastic Differential Equations
+
+14-2

@@ -1,0 +1,12 @@
+{
+  "page": 568,
+  "original_text": "% Compute returns from prices timetable.\nassetReturns = tick2ret(pricesTT);",
+  "ocr_text": "SComputereturnsfrompricestimetable.\nassetReturns=tick2ret(pricesTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.23,
+    "x1": 306.72,
+    "y1": 178.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 486,
+  "original_text": "asset_table = backtest2brinson(bt,strategy_name,benchmark_name,pricesTT,asset_categories,period_d\nhead(asset_table)",
+  "ocr_text": "asset_table=backtest2brinson(bt,strategy_name,benchmark_name,pricesTT,asset_categories,period\nhead(asset_table)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 247.35,
+    "x1": 615.55,
+    "y1": 268.61
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,57 @@
+Note If an input noise process is specified using the Z input argument, BrownianMotionMethod is
+ignored.
+
+The starting point for a Monte Carlo simulation is the construction of a Brownian motion sample path
+(or Wiener path). Such paths are built from a set of independent Gaussian variates, using either
+standard discretization, Brownian-bridge construction, or principal components construction.
+
+Both standard discretization and Brownian-bridge construction share the same variance and,
+therefore, the same resulting convergence when used with the MonteCarloMethod using pseudo
+random numbers. However, the performance differs between the two when the MonteCarloMethod
+option "quasi" is introduced, with faster convergence for the "brownian-bridge" construction
+option and the fastest convergence for the "principal-components" construction option.
+
+Data Types: string | char
+
+Processes — Sequence of end-of-period processes or state vector adjustments
+simByEuler makes no adjustments and performs no processing (default) | function | cell array of
+functions
+
+Sequence of end-of-period processes or state vector adjustments, specified as the comma-separated
+pair consisting of 'Processes' and a function or cell array of functions of the form
+
+Xt = P(t, Xt)
+
+The simByEuler function runs processing functions at each interpolation time. The functions must
+accept the current interpolation time t, and the current state vector Xt and return a state vector that
+can be an adjustment to the input state.
+
+If you specify more than one processing function, simByEuler invokes the functions in the order in
+which they appear in the cell array. You can use this argument to specify boundary conditions,
+prevent negative prices, accumulate statistics, and plot graphs.
+
+The end-of-period Processes argument allows you to terminate a given trial early. At the end of each
+time step, simByEuler tests the state vector Xt for an all-NaN condition. Thus, to signal an early
+termination of a given trial, all elements of the state vector Xt must be NaN. This test enables you to
+define a Processes function to signal early termination of a trial, and offers significant performance
+benefits in some situations (for example, pricing down-and-out barrier options).
+
+Data Types: cell | function
+
+Output Arguments
+
+Paths — Simulated paths of correlated state variables
+array
+
+Simulated paths of correlated state variables, returned as an (NPeriods + 1)-by-NVars-by-
+NTrials three-dimensional time series array.
+
+For a given trial, each row of Paths is the transpose of the state vector Xt at time t. When
+StorePaths is set to false, simByEuler returns Paths as an empty matrix.
+
+Times — Observation times associated with simulated paths
+column vector
+
+simByEuler
+
+15-315

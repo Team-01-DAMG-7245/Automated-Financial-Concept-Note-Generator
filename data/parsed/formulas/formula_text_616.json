@@ -1,0 +1,12 @@
+{
+  "page": 402,
+  "original_text": "x0.asset_weight = ones(p, 1)/p;\nx0.factor_weight = zeros(k, 1);\nopt = optimoptions(\"fmincon\", \"Algorithm\",\"sqp\", \"Display\", \"off\", ...\n    'ConstraintTolerance', 1.0e-8, 'OptimalityTolerance', 1.0e-8, 'StepTolerance', 1.0e-8);\nx = solve(optimProb,x0, \"Options\",opt);\nassetWgt1 = x.asset_weight;",
+  "ocr_text": "x0.asset_weight=ones(p,_1)/p;\n\nx0.factor_weight=zeros(k,1);\n\nopt=optimoptions(fmincon,Algorithm,sgp,Display,off,...\nConstraintTolerance,1.0e-8,OptimalityTolerance,1.0e-8,_StepTolerance,1.0e-8);\n\nx=solve(optimProb,x0,Options,opt);\n\nassetWgtl=x.asset_weight;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 451.78,
+    "x1": 583.07,
+    "y1": 516.25
+  },
+  "confidence": "high"
+}

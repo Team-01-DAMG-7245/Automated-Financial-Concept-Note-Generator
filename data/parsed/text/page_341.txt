@@ -1,0 +1,23 @@
+Illustrate that Sharpe is the Tangent Portfolio
+
+The next plot demonstrates that the portfolio that maximizes the Sharpe ratio is also a tangency
+portfolio (in this case, the budget constraint is opened up to permit between 0% and 100% in cash).
+
+q = setBudget(p, 0, 1);
+
+qwgt = estimateFrontier(q,20);
+[qrsk,qret] = estimatePortMoments(q,qwgt);
+
+% Plot showing that the Sharpe ratio portfolio is the tangency portfolio.
+
+clf;
+portfolioexamples_plot('Efficient Frontier with Maximum Sharpe Ratio Portfolio', ...
+    {'line', prsk, pret}, ...
+    {'line', qrsk, qret, [], [], 1}, ...
+    {'scatter', srsk, sret, {'Sharpe'}}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-173

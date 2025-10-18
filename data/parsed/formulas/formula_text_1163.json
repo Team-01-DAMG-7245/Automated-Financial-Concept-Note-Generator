@@ -1,0 +1,12 @@
+{
+  "page": 591,
+  "original_text": "NumSimSteps = length(SimAction_Train_Sell);\nSimInventory_Train_Sell = nan(NumSimSteps,1);\nSimExecutedShares_Train_Sell = SimInventory_Train_Sell;\nSimReward_Train_Sell = nan(NumSimSteps,1);",
+  "ocr_text": "NumSimSteps=length(SimActionTrain_Sell);\nSimInventory_Train_Sell=nan(NumSimSteps,1);\nSimExecutedShares_Train_Sell=SimInventory_Train_Sell;\nSimReward_Train_Sell=nan(NumSimSteps,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 342.21,
+    "x1": 387.99,
+    "y1": 385.07
+  },
+  "confidence": "high"
+}

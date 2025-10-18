@@ -1,0 +1,69 @@
+To create an equally weighted portfolio of four assets, use setInitPort:
+
+p = PortfolioCVaR;
+p = setInitPort(p, 1/4, 4);
+disp(p.InitPort)
+
+0.2500
+ 0.2500
+ 0.2500
+ 0.2500
+
+PortfolioCVaR object functions that work with either transaction costs or turnover constraints also
+depend on the InitPort property. So, the set functions for transaction costs or turnover constraints
+permit the assignment of a value for the InitPort property as part of their implementation. For
+details, see “Working with Average Turnover Constraints Using PortfolioCVaR Object” on page 5-75,
+“Working with One-Way Turnover Constraints Using PortfolioCVaR Object” on page 5-78, and
+“Working with Transaction Costs” on page 5-47. If either transaction costs or turnover constraints
+are used, then the InitPort property must have a nonempty value. Absent a specific value assigned
+through the PortfolioCVaR object or various set functions, the PortfolioCVaR object sets
+InitPort to 0 and warns if BuyCost, SellCost, or Turnover properties are set. This example
+shows what happens if you specify an average turnover constraint with an initial portfolio:
+
+p = PortfolioCVaR('Turnover', 0.3, 'InitPort', [ 0.3; 0.2; 0.2; 0.0 ]);
+disp(p.InitPort)
+
+0.3000
+ 0.2000
+ 0.2000
+      0
+
+In contrast, this example shows what happens if an average turnover constraint is specified without
+an initial portfolio:
+
+p = PortfolioCVaR('Turnover', 0.3);
+disp(p.InitPort)
+
+Warning: InitPort and NumAssets are empty and either transaction costs or turnover constraints specified.
+Will set NumAssets = 1 and InitPort = 0. 
+> In PortfolioCVaR.checkarguments at 322
+  In PortfolioCVaR.PortfolioCVaR>PortfolioCVaR.PortfolioCVaR at 195 
+     0
+
+See Also
+PortfolioCVaR | setAssetList | setInitPort | estimateBounds | checkFeasibility
+
+Related Examples
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Common Operations on the PortfolioCVaR Object” on page 5-29
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+5
+CVaR Portfolio Optimization Tools
+
+5-34

@@ -1,0 +1,6 @@
+Page 1993
+================================================================================
+
+If all of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, or LastCouponDate are
+either strings or date character vectors, then CFlowDates is returned as a serial date number. Use
+the function datetime to convert serial date numbers to formatted datetime arrays.

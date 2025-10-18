@@ -1,0 +1,12 @@
+{
+  "page": 2346,
+  "original_text": "Date = fbusdate(Year,Month) returns the serial date number for the first business date of the\ngiven year and month.",
+  "ocr_text": "Date=fbusdate(Year,Month)returnstheserialdatenumberforthefirstbusinessdateofthe\ngivenyearandmonth.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.86,
+    "x1": 545.46,
+    "y1": 277.49
+  },
+  "confidence": "high"
+}

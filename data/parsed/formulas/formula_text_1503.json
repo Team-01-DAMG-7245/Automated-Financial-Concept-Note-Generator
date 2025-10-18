@@ -1,0 +1,12 @@
+{
+  "page": 756,
+  "original_text": "% Achievable levels of return\npretlimits = estimatePortReturn(p, estimateFrontierLimits(p));\nTargetRet = mean(pretlimits); % Target half way up the frontier",
+  "ocr_text": "Achievablelevelsofreturn\npretlimits=estimatePortReturn(p,estimateFrontierLimits(p));\nTargetRet=mean(pretlimits);*Targethalfwayupthefrontier",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 393.13,
+    "x1": 431.35,
+    "y1": 425.2
+  },
+  "confidence": "high"
+}

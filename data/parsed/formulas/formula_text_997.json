@@ -1,0 +1,12 @@
+{
+  "page": 525,
+  "original_text": "% Long-only fully invested risk budgeting portfolio\nw_simple = riskBudgetingPortfolio(Sigma,budget);\n% Compute the risk contribution of the weight allocation\nRC_simple = portfolioRiskContribution(w_simple,Sigma);\n% Table with weights and risk contributions\nT_simple = table(w_simple,RC_simple,budget, ...\n    VariableNames={'RB Portfolio','RB Contribution','Budget'})",
+  "ocr_text": "Long-onlyfullyinvestedriskbudgetingportfolio\nw_simple=riskBudgetingPortfolio(Sigma,budget);\nComputetheriskcontributionoftheweightallocation\nRC_simple=portfolioRiskContribution(w_simple,Sigma);\nTablewithweightsandriskcontributions\nT_simple=table(w_simple,RC_simple,budget,...\nVariableNames={RBPortfolio,RBContribution,Budget})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 580.94,
+    "x1": 425.94,
+    "y1": 656.21
+  },
+  "confidence": "high"
+}

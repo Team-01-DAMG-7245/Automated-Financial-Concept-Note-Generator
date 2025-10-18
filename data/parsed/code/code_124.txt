@@ -1,0 +1,8 @@
+Page 140
+================================================================================
+
+A portfolio may also have to meet additional requirements to be considered. Different investors have
+different levels of risk tolerance. Selecting the adequate portfolio for a particular investor is a difficult
+process. The portfolio manager can hedge the risk related to a particular portfolio along the efficient
+frontier with partial investment in risk-free assets. The definition of the capital allocation line, and
+finding where the final portfolio falls on this line, if at all, is a function of:

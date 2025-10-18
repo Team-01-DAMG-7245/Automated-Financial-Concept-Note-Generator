@@ -1,0 +1,12 @@
+{
+  "page": 936,
+  "original_text": "% Group into IG/SG and get IG/SG transition matrix\ntotalsIGSG = transprobgrouptotals(totals,[4 7]);\ntransMatIGSG = transprobbytotals(totalsIGSG)",
+  "ocr_text": "GroupintoIG/SGandgetIG/SGtransitionmatrix\ntotalsIGSG=transprobgrouptotals(totals,[47]);\ntransMatIGSG=transprobbytotals(totalsIGSG)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 166.7,
+    "x1": 360.9,
+    "y1": 198.77
+  },
+  "confidence": "high"
+}

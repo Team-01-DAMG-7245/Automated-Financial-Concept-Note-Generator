@@ -1,0 +1,12 @@
+{
+  "page": 1584,
+  "original_text": "backtester = runBacktest(backtester,pricesTT,signalTT) run the backtest using the\nadjusted asset price data and signal data. When you specify the signal data timetable (signalTT),\nthen the runBacktest function runs the backtest and additionally passes a rolling window of signal\ndata to the rebalance function of each strategy during the rebalance step.",
+  "ocr_text": "backtester=runBacktest(backtester,pricesTT,SsignalTT)runthebacktestusingthe\nadjustedassetpricedataandsignaldata.Whenyouspecifythesignaldatatimetable(signalTT),\nthentherunBacktestfunctionrunsthebacktestandadditionallypassesarollingwindowofsignal\ndatatotherebalancefunctionofeachstrategyduringtherebalancestep.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 523.12,
+    "x1": 550.63,
+    "y1": 570.75
+  },
+  "confidence": "high"
+}

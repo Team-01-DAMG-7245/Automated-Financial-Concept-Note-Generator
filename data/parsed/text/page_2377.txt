@@ -1,0 +1,72 @@
+Maturity dates, specified as a NUMBONDS-by-1 vector using a datetime array, string array, or date
+character vectors, that correspond to the ForwardRates.
+
+To support existing code, fwd2zero also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: datetime | string | char
+
+Settle — Common settlement date for ForwardRates
+datetime scalar | string scalar | date character vector
+
+Common settlement date for ForwardRates, specified as scalar datetime, string, or date character
+vector.
+
+To support existing code, fwd2zero also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: datetime | string | char
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [ZeroRates,CurveDates] =
+fwd2zero(ForwardRates,CurveDates,Settle,'InputCompounding',3,'InputBasis',5,'
+OutputCompounding',4,'OutputBasis',5)
+
+InputCompounding — Compounding frequency of input forward rates
+2 (default) | numeric values: 0,1, 2, 3, 4, 6, 12, 365, -1
+
+Compounding frequency of input forward rates, specified with allowed values:
+
+•
+0 — Simple interest (no compounding)
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding (default)
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+•
+365 — Daily compounding
+
+•
+-1 — Continuous compounding
+
+Note If InputCompounding is not specified, then InputCompounding is assigned the value
+specified for OutputCompounding. If either InputCompounding or OutputCompounding are not
+specified, the default is 2
+
+Data Types: double
+
+fwd2zero
+
+15-1071

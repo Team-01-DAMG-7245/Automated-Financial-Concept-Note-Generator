@@ -1,0 +1,12 @@
+{
+  "page": 2036,
+  "original_text": "load SimulatedStock.mat\noscillator = chaikosc(TMW);\nplot(oscillator.Time, oscillator.ChaikinOscillator)\ntitle('Chaikin Oscillator for TMW')",
+  "ocr_text": "loadSimulatedStock.mat\noscillator=chaikosc(TMwW);\nplot(oscillator.Time,oscillator.ChaikinOscillator)\ntitle(ChaikinOscillatorforTMW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 382.83,
+    "x1": 366.32,
+    "y1": 425.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1510
+================================================================================
+
+If you specify JumpFreq as a deterministic function of time and state, it must return an NVars-by-
+NBrowns matrix when you call it with two inputs:

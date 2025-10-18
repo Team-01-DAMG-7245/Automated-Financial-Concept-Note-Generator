@@ -1,0 +1,38 @@
+Turnover
+
+The Turnover timetable holds the per-time-step portfolio turnover.
+
+head(backtester.Turnover)
+
+Time        EqualWeighted    InverseVariance
+    ___________    _____________    _______________
+
+02-Feb-2006          0                 0       
+    03-Feb-2006          0                 0       
+    06-Feb-2006          0                 0       
+    07-Feb-2006          0                 0       
+    08-Feb-2006          0                 0       
+    09-Feb-2006          0                 0       
+    10-Feb-2006          0                 0       
+    13-Feb-2006          0                 0
+
+Depending on your rebalance frequency, the Turnover table can contain mostly zeros. Removing
+these zeros when you visualize the portfolio turnover is useful.
+
+nonZeroIdx = sum(backtester.Turnover.Variables,2) > 0;
+to = backtester.Turnover(nonZeroIdx,:);
+plot(to.Time,to.EqualWeighted,'-o',to.Time,to.InverseVariance,'-x',...
+    'LineWidth',2,'MarkerSize',5);
+legend([strategies.Name]);
+title('Portfolio Turnover');
+ylabel('Turnover (%)');
+
+BuyCost and SellCost
+
+The BuyCost and SellCost timetables hold the per-time-step transaction fees for each type of
+transaction, purchases, and sales.
+
+15
+Functions
+
+15-300

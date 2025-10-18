@@ -1,0 +1,32 @@
+For more information on where the resulting performance fees are reported, see the
+backtestEngine object read-only property “Fees” on page 15-0
+.
+
+Performance Hurdle
+
+A hurdle is an optional feature of a performance fee.
+
+A hurdle sets a minimum performance threshold that a fund must beat before the performance fee is
+charged. Hurdles can be fixed rates of return, a hurdle rate, such as 5%. For example, if the fund NAV
+goes from $1M to $1.2M, the performance fee is charged only on the performance beyond 5%. A 5%
+hurdle rate on $1M sets the target hurdle value at $1.05M. The $1.2M portfolio is $150k over the
+hurdle value. The performance fee is charged only on that $150k, so 20% of $150k is a $30k
+performance fee.
+
+The following figure illustrates a 5% hurdle rate.
+
+You can also specify a performance hurdle as a benchmark asset or index. In this case, the
+performance fee is paid only on the fund performance in excess of the hurdle instrument. For
+example, assume that the fund NAV goes from $1M to $1.2M and you have specified the S&P500 as
+your hurdle. If the S&P500 index returns 25% over the same period, then no performance fee is paid
+because the fund did not produce returns in excess of the hurdle instrument. If the fund value is
+greater than the hurdle, but still less than the previous high-water mark, again, no performance fee is
+paid.
+
+At each performance fee date, the fund charges the performance fee on the difference between the
+current fund value and the maximum of the high-water mark and the hurdle value. The high-water
+mark is updated only if a performance fee is paid.
+
+backtestStrategy
+
+15-261

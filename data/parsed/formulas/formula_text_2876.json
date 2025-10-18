@@ -1,0 +1,12 @@
+{
+  "page": 1493,
+  "original_text": "rate function is expressed in mean-reverting drift form: dXt = S(t)[L(t) −Xt]dt + D(t, Xt\nα(t))V(t)dWt.",
+  "ocr_text": "NIIESIAIIISLINAIDDAIEODSIANIIIDDDIAIIIEOIILOIDDIIDIIIEIIIIAIIODDDDIIIIIEEIDIIDIEIDDDIAIAIIIIDIIIILAIEIIIIENAIIIAIES\nratefunctionisexpressedinmean-revertingdriftform:dX;=S(t)[L(t)-X;]dt+D(t, xtOyv(tydw;.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 544.05,
+    "x1": 540.79,
+    "y1": 561.19
+  },
+  "confidence": "high"
+}

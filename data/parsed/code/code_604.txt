@@ -1,0 +1,6 @@
+Page 552
+================================================================================
+
+% Define step function handle
+stepFcn = @(action,loggedSignals) myStepFunction(action, ...
+    loggedSignals,prsk,pret,finalTimePeriod,rewardFcnHandle,WMin,WMax);

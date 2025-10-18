@@ -1,0 +1,12 @@
+{
+  "page": 180,
+  "original_text": "The default portfolio optimization problem (see “Default Portfolio Problem” on page 4-17) has lS = uS\n= 1, which means that the portfolio weights sum to 1. If the portfolio optimization problem includes\npossible movements in and out of cash, the budget constraint specifies how far portfolios can go into\ncash. For example, if lS = 0 and uS = 1, then the portfolio can have 0–100% invested in cash. If cash is\nto be a portfolio choice, set RiskFreeRate (r0) to a suitable value (see “Return Proxy” on page 4-5\nand “Working with a Riskless Asset” on page 4-52).",
+  "ocr_text": "Thedefaultportfoliooptimizationproblem(seeDefaultPortfolioProblemonpage4-17)hasI;=us\n=1,whichmeansthattheportfolioweightssumto1.Iftheportfoliooptimizationproblemincludes\npossiblemovementsinandoutofcash,thebudgetconstraintspecifieshowfarportfolioscangointo\ncash.Forexample,if/;=andus=1,thentheportfoliocanhave0-100investedincash.Ifcashis\ntobeaportfoliochoice,setRiskFreeRate(rp)toasuitablevalue(seeReturnProxyonpage4-5\nandWorkingwithaRisklessAssetonpage4-52).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 287.6,
+    "x1": 556.85,
+    "y1": 359.23
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1554,
+  "original_text": "% Initialize new weights to all zeros.\nnew_weights = zeros(size(current_weights));",
+  "ocr_text": "Initializenewweightstoallzeros.\nnew_weights=zeros(size(current_weights));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 322.97,
+    "y1": 222.29
+  },
+  "confidence": "high"
+}

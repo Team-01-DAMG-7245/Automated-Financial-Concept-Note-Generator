@@ -1,0 +1,61 @@
+Current price of the underlying asset, specified as a scalar numeric.
+
+Data Types: double
+
+Strike — Exercise price of the option
+scalar numeric
+
+Exercise price of the option, specified as a scalar numeric.
+
+Data Types: double
+
+Rate — Annualized continuously compounded risk-free rate of return over life of the option
+scalar positive decimal
+
+Annualized continuously compounded risk-free rate of return over the life of the option, specified as a
+scalar positive decimal.
+
+Data Types: double
+
+Time — Time to expiration of option
+scalar numeric
+
+Time to expiration of the option, specified as the number of years using a scalar numeric.
+
+Data Types: double
+
+Value — Price of a European option from which implied volatility of underlying asset is
+derived
+scalar numeric
+
+Price of a European option from which the implied volatility of the underlying asset is derived,
+specified as a scalar numeric.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: Volatility =
+blsimpv(Yield,CouponRate,Settle,Maturity,'Method','jackel2016')
+
+Limit — Upper bound of implied volatility search interval
+10 (1000% per annum) (default) | positive scalar numeric
+
+Upper bound of the implied volatility search interval, specified as the comma-separated pair
+consisting of 'Limit' and a positive scalar numeric. If Limit is empty or unspecified, the default is
+10, or 1000% per annum.
+
+Note If you are using Method with a value of 'jackel2016', the Limit argument is ignored.
+
+Data Types: double
+
+15
+Functions
+
+15-492

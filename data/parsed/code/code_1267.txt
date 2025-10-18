@@ -1,0 +1,12 @@
+Page 1304
+================================================================================
+
+Create the return and volatility functions and the GBM model using gbm. Notice that the rate of
+return is a deterministic function of time, and therefore accepts simulation time as its only input
+argument. In contrast, the volatility must account for the moneyness and is a function of both time
+and stock price. Moreover, since the volatility surface is defined as a function of time to maturity
+rather than simulation time, the volatility function subtracts the current simulation time from the last
+time at which the price process is simulated (10 years). This ensures that as the simulation time
+approaches its terminal value, the time to maturity of the volatility surface approaches zero. Although
+far more elaborate return and volatility functions could be used if desired, the following assumes
+simple linear interpolation.

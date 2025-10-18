@@ -1,0 +1,69 @@
+The diffusion class allows you to create diffusion-rate objects using diffusion:
+
+G(t, Xt) = D(t, Xt
+α(t))V(t)
+
+where:
+
+•
+D is an NVars-by-NVars diagonal matrix-valued function.
+
+•
+Each diagonal element of D is the corresponding element of the state vector raised to the
+corresponding element of an exponent Alpha, which is an NVars-by-1 vector-valued function.
+
+•
+V is an NVars-by-NBrowns matrix-valued volatility rate function Sigma.
+
+•
+Alpha and Sigma are also accessible using the (t, Xt) interface.
+
+The displayed parameters for a diffusion object are:
+
+•
+Rate: The diffusion-rate function, G(t,Xt).
+
+•
+Alpha: The state vector exponent, which determines the format of D(t,Xt) of G(t,Xt).
+
+•
+Sigma: The volatility rate, V(t,Xt), of G(t,Xt).
+
+Alpha and Sigma enable you to query the original inputs. (The combined effect of the individual
+Alpha and Sigma parameters is fully encapsulated by the function stored in Rate.) The Rate
+functions are the calculation engines for the drift and diffusion objects, and are the only
+parameters required for simulation.
+
+Note You can express drift and diffusion classes in the most general form to emphasize the
+functional (t, Xt) interface. However, you can specify the components A and B as functions that adhere
+to the common (t, Xt) interface, or as MATLAB arrays of appropriate dimension.
+
+Example: G = diffusion(1, 0.3) % Diffusion rate function G(t,X)
+
+Data Types: struct | double
+
+Object Functions
+interpolate
+Brownian interpolation of stochastic differential equations (SDEs) for SDE, BM,
+GBM, CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simulate
+Simulate multivariate stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, SDEMRD, Merton, or Bates models
+simByEuler
+Euler simulation of stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simByQuadExp
+Simulate Bates, Heston, and CIR sample paths by quadratic-exponential
+discretization scheme
+simByTransition
+Simulate Heston sample paths with transition density
+simByMilstein
+Simulate Heston process sample paths by Milstein approximation
+simByMilstein2
+Simulate Heston process sample paths by second order Milstein approximation
+
+Examples
+
+heston
+
+15-135

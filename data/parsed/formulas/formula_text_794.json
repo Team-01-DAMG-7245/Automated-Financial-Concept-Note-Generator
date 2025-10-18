@@ -1,0 +1,12 @@
+{
+  "page": 455,
+  "original_text": "% Define the target volatility.\ntargetRisk = sqrt(wRB'*Sigma*wRB);\nwMV = estimateFrontierByRisk(p,targetRisk)",
+  "ocr_text": "sDefinethetargetvolatility.\ntargetRisk=sqrt(wRB*Sigma*wRB);\nwMV=estimateFrontierByRisk(p,targetRisk)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 634.39,
+    "x1": 317.56,
+    "y1": 666.46
+  },
+  "confidence": "high"
+}

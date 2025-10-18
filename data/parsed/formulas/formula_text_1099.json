@@ -1,0 +1,12 @@
+{
+  "page": 563,
+  "original_text": "% Warm-up partition of prices timetable\nwarmupTT = pricesTT(1:warmupPeriod,:);",
+  "ocr_text": "SWarm-uppartitionofpricestimetable\nwarmupTT=pricesTT(1:warmupPeriod,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 609.52,
+    "x1": 301.31,
+    "y1": 630.79
+  },
+  "confidence": "high"
+}

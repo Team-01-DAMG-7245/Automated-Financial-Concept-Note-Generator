@@ -1,0 +1,12 @@
+{
+  "page": 2109,
+  "original_text": "Superset = datetime(1999,7,1:31); \nSubset = [datetime(1999,7,10) ; datetime(1999,7,20)]; \nIndices = datefind(Subset, Superset, 1)",
+  "ocr_text": "Superset=datetime(1999,7,1:31);\nSubset=[datetime(1999,7,10);datetime(1999,7,20)];\nIndices=datefind(Subset,Superset,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 424.76,
+    "x1": 382.57,
+    "y1": 456.83
+  },
+  "confidence": "high"
+}

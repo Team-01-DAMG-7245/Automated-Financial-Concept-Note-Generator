@@ -1,0 +1,12 @@
+{
+  "page": 1352,
+  "original_text": "SigmaHat = covarianceDenoising(Sigma,SampleSize) returns a covariance estimate from an\ninitial covariance matrix estimate (Sigma) and the sample size used to estimate the initial covariance\n(sampleSize).",
+  "ocr_text": "SigmaHat=covarianceDenoising(Sigma,SampleSize)returnsacovarianceestimatefroman\ninitialcovariancematrixestimate(Sigma)andthesamplesizeusedtoestimatetheinitialcovariance\n(sampleSize).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 365.9,
+    "x1": 556.82,
+    "y1": 401.53
+  },
+  "confidence": "high"
+}

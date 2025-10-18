@@ -1,0 +1,14 @@
+References
+
+[1] Addendum to Securities Industry Association, Standard Securities Calculation Methods: Fixed
+Income Securities Formulas for Analytic Measures. Vol. 2, Spring 1995.
+
+See Also
+days360 | daysact | daysdif | wrkdydif | yearfrac | datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+
+days365
+
+15-829

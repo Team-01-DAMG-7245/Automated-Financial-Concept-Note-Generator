@@ -1,0 +1,12 @@
+{
+  "page": 123,
+  "original_text": "[ticker,rem] = strtok(MSGFileName,\"_\");\ndate = strtok(rem,\"_\");",
+  "ocr_text": "[ticker,rem]=strtok(MSGFileName,_);\ndate=strtok(rem,_);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 204.82,
+    "x1": 301.32,
+    "y1": 226.09
+  },
+  "confidence": "high"
+}

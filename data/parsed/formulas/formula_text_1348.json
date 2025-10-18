@@ -1,0 +1,12 @@
+{
+  "page": 665,
+  "original_text": "p = PortfolioCVaR;\np = simulateNormalScenariosByData(p, X, 20000);",
+  "ocr_text": "p=PortfolioCVaR;\np=simulateNormalScenariosByData(p,X,_20000);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 344.64,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,4 @@
+Page 1519
+================================================================================
+
+Kernel function parameter to control asymptotic memory properties, specified as numeric scalar.

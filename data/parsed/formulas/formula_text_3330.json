@@ -1,0 +1,12 @@
+{
+  "page": 1799,
+  "original_text": "To specify call options, set Class = true or Class = {'call'}. To specify put options, set Class =\nfalse or Class = {'put'} or Class = [\"put\"]. If Class is empty or unspecified, the default is a\ncall option.",
+  "ocr_text": "Tospecifycalloptions,setCLlass=trueorClass={call}.Tospecifyputoptions,setClass=\nfalseorClass={put}orClass=[put].IfClassisemptyorunspecified,thedefaultisa\ncalloption.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 617.91,
+    "x1": 555.58,
+    "y1": 653.54
+  },
+  "confidence": "high"
+}

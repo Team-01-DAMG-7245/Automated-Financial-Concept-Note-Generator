@@ -1,0 +1,8 @@
+Page 1819
+================================================================================
+
+[ZeroRates, CurveDates] = pyld2zero(TreasuryParYield, TreasuryDates, Settle);
+ZeroData = [datenum(CurveDates), ZeroRates];
+RiskFreeRate = array2table(ZeroData, 'VariableNames', {'Date', 'Rate'});
+RiskFreeRate.Date = datetime(RiskFreeRate.Date,'Locale','en_US','ConvertFrom','datenum');
+RiskFreeRate.Date.Format = 'MMM-dd-yyyy'

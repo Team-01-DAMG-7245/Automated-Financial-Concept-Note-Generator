@@ -1,0 +1,8 @@
+Page 86
+================================================================================
+
+This example prices an American call option using a binomial model. The asset price is $100.00, the
+exercise price is $95.00, the risk-free interest rate is 10%, and the time to maturity is 0.25 years. The
+function binprice computes the tree in increments of 0.05 years, so there are 0.25/0.05 = 5 periods
+in the example. The volatility is 0.50, this is a call (flag = 1), the dividend rate is 0, and it pays a
+dividend of $5.00 after three periods (an ex-dividend date).

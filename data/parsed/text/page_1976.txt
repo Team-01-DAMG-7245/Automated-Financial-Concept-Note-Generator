@@ -1,0 +1,52 @@
+cfamounts(CouponSchedule,'01-Mar-2011','15-Mar-2015' )
+
+ans = 1×10
+
+-1.8453    2.0000    2.0000    2.0000    2.5000    2.5000    3.0000    3.0000    3.0000  103.0
+
+Use cfamounts With a Face Schedule
+
+This example shows how to use cfamounts with a Face schedule. For CouponRate and Face that
+change over the life of the bond, schedules for CouponRate and Face can be specified with an
+NINST-by-1 cell array, where each element is a NumDates-by-2 matrix where the first column is dates
+and the second column is associated rates.
+
+FaceSchedule = {[datenum('15-Mar-2012') 100;datenum('15- Mar -2013') 90;...
+datenum('15- Mar -2015') 80]}
+
+FaceSchedule = 1×1 cell array
+    {3×2 double}
+
+cfamounts(.05,'01-Mar-2011','15-Mar-2015', 'Face', FaceSchedule)
+
+ans = 1×10
+
+-2.3066    2.5000    2.5000   12.5000    2.2500   12.2500    2.0000    2.0000    2.0000   82.0
+
+Use cfamounts to Generate the Cash Flows for a Sinking Bond
+
+This example shows how to use cfamounts to generate the cash flows for a sinking bond.
+
+[CFlowAmounts,CFDates,TFactors,CFFlags,CFPrincipal] = cfamounts(.05,'04-Nov-2010',...
+{'15-Jul-2014';'15-Jul-2015'},'Face',{[datenum('15-Jul-2013') 100;datenum('15-Jul-2014')...
+90;datenum('15-Jul-2015') 80]})
+
+CFlowAmounts = 2×11
+
+-1.5217    2.5000    2.5000    2.5000    2.5000    2.5000   12.5000    2.2500   92.2500       
+   -1.5217    2.5000    2.5000    2.5000    2.5000    2.5000   12.5000    2.2500   12.2500    2.0
+
+CFDates = 2×11
+
+734446      734518      734699      734883      735065      735249      735430      735614 
+      734446      734518      734699      734883      735065      735249      735430      735614
+
+TFactors = 2×11
+
+0    0.3913    1.3913    2.3913    3.3913    4.3913    5.3913    6.3913    7.3913       
+         0    0.3913    1.3913    2.3913    3.3913    4.3913    5.3913    6.3913    7.3913    8.3
+
+15
+Functions
+
+15-670

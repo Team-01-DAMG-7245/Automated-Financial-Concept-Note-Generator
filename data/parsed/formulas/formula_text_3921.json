@@ -1,0 +1,12 @@
+{
+  "page": 2229,
+  "original_text": "% Compute max return portfolio\nwMin = estimateFrontierLimits(p1,'min');",
+  "ocr_text": "SComputemaxreturnportfolio\nwMin=estimateFrontierLimits(p1,min);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 315.83,
+    "x1": 306.73,
+    "y1": 337.1
+  },
+  "confidence": "high"
+}

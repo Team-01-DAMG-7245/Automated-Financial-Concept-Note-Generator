@@ -1,0 +1,14 @@
+Page 965
+================================================================================
+
+'HorizontalAlignment','center')
+for i=2:length(labels)
+   val = thresCCC(i);
+   line([val val],[0 0.4],'LineStyle',':')
+   text(centersX(i),0.2,labels{i},'FontSize',fs(i), ...
+      'HorizontalAlignment','center')
+end
+xlabel('Credit Quality Thresholds')
+ylabel('Probability Density Function')
+title('{\bf Visualization of Credit Quality Thresholds}')
+legend('Std Normal PDF','Location','S')

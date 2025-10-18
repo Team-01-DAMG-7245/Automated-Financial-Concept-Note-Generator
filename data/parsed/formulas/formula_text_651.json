@@ -1,0 +1,12 @@
+{
+  "page": 415,
+  "original_text": "function new_weights = maxSharpeRatioFcn(current_weights, pricesTT)\n% Mean-variance portfolio allocation",
+  "ocr_text": "functionnew_weights=maxSharpeRatioFcn(current_weights,pricesTT)\nMean-varianceportfolioallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 228.26,
+    "x1": 453.01,
+    "y1": 249.53
+  },
+  "confidence": "high"
+}

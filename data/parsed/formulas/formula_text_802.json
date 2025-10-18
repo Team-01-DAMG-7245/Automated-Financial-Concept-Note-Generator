@@ -1,0 +1,12 @@
+{
+  "page": 460,
+  "original_text": "% Risk parity allocation strategy\nstratRP = backtestStrategy('Risk Parity', @riskParityFcn, ...\n    RebalanceFrequency=rebalFreq, ...\n    LookbackWindow=lookback, ...\n    TransactionCosts=transactionCost, ...\n    InitialWeights=initialRiskParity);",
+  "ocr_text": "Riskparityallocationstrategy\n\nstratRP=backtestStrategy(RiskParity,riskParityFcn,...\nRebalanceFrequency=rebalFreq,...\nLookbackWindow=Lookback,...\nTransactionCosts=transactionCost,...\nInitialWeights=initialRiskParity);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 577.49,
+    "x1": 420.52,
+    "y1": 641.96
+  },
+  "confidence": "high"
+}

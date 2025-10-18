@@ -1,0 +1,50 @@
+Version History
+Introduced in R2020a
+
+R2022a: Perform Quasi-Monte Carlo simulation
+Behavior changed in R2022a
+
+Perform Quasi-Monte Carlo simulation using the name-value arguments MonteCarloMethod and
+QuasiSequence.
+
+R2022b: Perform Brownian bridge and principal components construction
+Behavior changed in R2022b
+
+Perform Brownian bridge and principal components construction using the name-value argument
+BrownianMotionMethod.
+
+References
+
+[1] Andersen, Leif. “Simple and Efficient Simulation of the Heston Stochastic Volatility Model.” The
+Journal of Computational Finance 11, no. 3 (March 2008): 1–42.
+
+[2] Broadie, M., and O. Kaya. “Exact Simulation of Option Greeks under Stochastic Volatility and Jump
+Diffusion Models.” In Proceedings of the 2004 Winter Simulation Conference, 2004., 2:535–
+43. Washington, D.C.: IEEE, 2004.
+
+[3] Broadie, Mark, and Özgür Kaya. “Exact Simulation of Stochastic Volatility and Other Affine Jump
+Diffusion Processes.” Operations Research 54, no. 2 (April 2006): 217–31.
+
+See Also
+bates | heston | cir | simByEuler | simByTransition
+
+Topics
+“Simulating Equity Prices” on page 14-31
+“Simulating Interest Rates” on page 14-50
+“Stratified Sampling” on page 14-58
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation” on
+page 14-71
+“Base SDE Models” on page 14-16
+“Drift and Diffusion Models” on page 14-19
+“Linear Drift Models” on page 14-22
+“Parametric Models” on page 14-24
+“SDEs” on page 14-2
+“SDE Models” on page 14-7
+“SDE Class Hierarchy” on page 14-5
+“Quasi-Monte Carlo Simulation” on page 14-63
+“Performance Considerations” on page 14-65
+
+15
+Functions
+
+15-382

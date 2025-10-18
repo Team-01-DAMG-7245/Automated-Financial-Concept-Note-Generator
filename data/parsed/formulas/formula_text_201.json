@@ -1,0 +1,12 @@
+{
+  "page": 127,
+  "original_text": "XCell = XCell(1:(end-1));\ny = y(b:(end-1));\nmidprices = midprices(b-1:end-2);\nn = numel(y);\nhead(table(XCell,y))",
+  "ocr_text": "XCell_=XCell(1:(end-1));\ny=y(b:(end-1));\nmidprices=midprices(b-1:end-2);\nn=numel(y);\nhead(table(XCell,y))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 333.87,
+    "x1": 268.8,
+    "y1": 387.54
+  },
+  "confidence": "high"
+}

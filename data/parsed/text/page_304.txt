@@ -1,0 +1,88 @@
+Portfolio Objects on page 4-9, Supported Constraints for Portfolio Optimization Using PortfolioCVaR
+Object on page 5-8, and Supported Constraints for Portfolio Optimization Using PortfolioMAD
+Object on page 6-8. For all other risk measures and constraints and if tracking error is in the
+objective, use the Optimization Toolbox.
+
+The advantage of the Portfolio, PortfolioCVaR, and PortfolioMAD object framework over the
+problem-based framework for the type of problems in the "preferred" case is that common portfolio
+optimization workflows are leveraged. For example, the Portfolio, PortfolioCVaR, and
+PortfolioMAD object framework supports the following workflows:
+
+•
+Estimating and plotting the efficient frontier
+
+•
+Exchanging the return and risk proxies from the objective function to a constraint
+
+•
+Solving the maximum Sharpe ratio problem
+
+•
+Adding bounds on the number of assets selected
+
+•
+Adding semicontinuous bounds
+
+•
+Simplifying the use of turnover constraints and sell or buy costs
+
+Use Optimization Toolbox
+
+The two general cases to use Optimization Toolbox is:
+
+•
+Problems that have nonlinear constraints other than the constraints for risk or tracking error
+
+See Also
+Portfolio | PortfolioCVaR | PortfolioMAD
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Choose MINLP Solvers for Portfolio Problems” on page 4-140
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-136

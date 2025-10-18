@@ -1,0 +1,6 @@
+Page 1140
+================================================================================
+
+ObservationInfo             = rlNumericSpec([3 1],'LowerLimit',0,'UpperLimit',[10 Maturity 1]');
+ObservationInfo.Name        = 'Hedging State';
+ObservationInfo.Description = ['Moneyness', 'TimeToMaturity','Position'];

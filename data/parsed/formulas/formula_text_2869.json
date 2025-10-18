@@ -1,0 +1,12 @@
+{
+  "page": 1488,
+  "original_text": "SDEMRD = sdemrd(Speed,Level,Alpha,Sigma)\nSDEMRD = sdemrd( ___ ,Name,Value)",
+  "ocr_text": "SDEMRD=sdemrd(Speed,Level,Alpha,Sigma)\nSDEMRD=sdemrd(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 552.13,
+    "x1": 330.82,
+    "y1": 575.76
+  },
+  "confidence": "high"
+}

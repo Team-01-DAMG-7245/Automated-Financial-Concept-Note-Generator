@@ -1,0 +1,53 @@
+rvm
+
+Rough volatility model (RVM)
+
+Description
+
+Creates and displays an rvm object.
+
+RVM (rough volatility model) objects are bivariate composite models, composed of two coupled and
+dissimilar univariate models that approximate continuous-time, rough stochastic volatility processes.
+The first univariate model is a geometric Brownian motion (GBM) model with a stochastic volatility
+function. This model usually corresponds to a price process whose variance rate is governed by the
+second univariate model. The second univariate model includes a Brownian semistationary process
+(BSS) without drift that describes the evolution of the variance rate that models the log volatility of
+the coupled GBM price process.
+
+Creation
+
+Syntax
+
+RVM = rvm(Return,Volatility,Alpha,Beta)
+RVM = rvm( ___ ,Name=Value)
+
+Description
+
+RVM = rvm(Return,Volatility,Alpha,Beta) creates a default RVM object with “Properties” on
+page 15-215 for these required arguments.
+
+Specify the required input parameters as one of the following types:
+
+•
+A MATLAB array. Specifying an array indicates a static (non-time-varying) parametric
+specification. This array fully captures all implementation details, which are clearly associated
+with a parametric form.
+
+•
+A MATLAB function. Specifying a function provides indirect support for virtually any static,
+dynamic, linear, or nonlinear model. This parameter is supported via an interface because all
+implementation details are hidden and fully encapsulated by the function.
+
+Note You can specify combinations of array and function input parameters as needed.
+
+Moreover, a parameter is identified as a deterministic function of time if the function accepts a scalar
+time t as its only input argument. Otherwise, a parameter is assumed to be a function of time t and
+state X(t) and is invoked with both input arguments.
+
+RVM = rvm( ___ ,Name=Value) creates an RVM object with additional options specified by one or
+more name-value arguments to set the “Properties” on page 15-215.
+
+15
+Functions
+
+15-212

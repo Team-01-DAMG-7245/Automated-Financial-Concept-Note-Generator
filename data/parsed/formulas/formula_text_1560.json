@@ -1,0 +1,12 @@
+{
+  "page": 786,
+  "original_text": "VaRα x = min γ:Pr f(x, Y) ≤γ ≥α .",
+  "ocr_text": "VaRQ(x)=min{y:Pr[f(x,Y)sp]=a}.",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 181.28,
+    "x1": 287.48,
+    "y1": 195.03
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1252,
+  "original_text": "load Data_GlobalIdx2\nreturns = tick2ret(Dataset.FTSE);\nsigma   = std(returns) * sqrt(252);\nrate    = Dataset.EB3M;\nrate    = mean(360 * log(1 + rate));",
+  "ocr_text": "loadData_GlobalIdx2\nreturns=tick2ret(Dataset.FTSE);\nsigma =std(returns)*sqrt(252);\nrate =Dataset.EB3M;\n\nrate =mean(360*log(1+rate));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 210.38,
+    "x1": 285.05,
+    "y1": 264.05
+  },
+  "confidence": "high"
+}

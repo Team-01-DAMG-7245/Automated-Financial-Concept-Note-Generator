@@ -1,0 +1,55 @@
+simByEuler
+
+Simulate Bates sample paths by Euler approximation
+
+Syntax
+
+[Paths,Times,Z,N] = simByEuler(MDL,NPeriods)
+[Paths,Times,Z,N] = simByEuler( ___ ,Name,Value)
+
+Description
+
+[Paths,Times,Z,N] = simByEuler(MDL,NPeriods) simulates NTrials sample paths of Bates
+bivariate models driven by NBrowns Brownian motion sources of risk and NJumps compound Poisson
+processes representing the arrivals of important events over NPeriods consecutive observation
+periods. The simulation approximates continuous-time stochastic processes by the Euler approach.
+
+[Paths,Times,Z,N] = simByEuler( ___ ,Name,Value) specifies options using one or more
+name-value pair arguments in addition to the input arguments in the previous syntax.
+
+You can perform quasi-Monte Carlo simulations using the name-value arguments for
+MonteCarloMethod, QuasiSequence, and BrownianMotionMethod. For more information, see
+“Quasi-Monte Carlo Simulation” on page 14-63.
+
+Examples
+
+Simulate Bates Sample Paths by Euler Approximation
+
+Create a bates object.
+
+AssetPrice = 80;
+            Return = 0.03;
+            JumpMean = 0.02;
+            JumpVol = 0.08;
+            JumpFreq = 0.1;
+            
+            V0 = 0.04;
+            Level = 0.05;
+            Speed = 1.0;
+            Volatility = 0.2;
+            Rho = -0.7;
+            StartState = [AssetPrice;V0]; 
+            Correlation = [1 Rho;Rho 1];
+
+batesObj = bates(Return, Speed, Level, Volatility,...
+                JumpFreq, JumpMean, JumpVol,'startstate',StartState,...
+                'correlation',Correlation)
+
+batesObj = 
+   Class BATES: Bates Bivariate Stochastic Volatility
+   --------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+
+simByEuler
+
+15-309

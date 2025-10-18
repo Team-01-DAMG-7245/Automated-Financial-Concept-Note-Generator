@@ -1,0 +1,53 @@
+739833         0.233002708031915
+
+HazardData = 5×2
+
+737226        0.0157077745460244
+                    737433        0.0217939816590403
+                    738188         0.025184912824721
+                    738233        0.0962608718640789
+                    739833        0.0361632398787917
+
+In bondDefaultBootstrap, the first column of the ProbabilityData output and the first column
+of the HazardData output contain the respective ending dates for the corresponding default
+probabilities and hazard rates. However, the starting dates used for the computation of the time
+ranges for default probabilities can be different from those of hazard rates. For default probabilities,
+the time ranges are all computed from the Settle date to the respective end dates shown in the first
+column of ProbabilityData. In contrast, the time ranges for the hazard rates are computed using
+the Settle date and the first column of HazardData, so that the first hazard rate applies from the
+Settle date to the first market date, the second hazard rate from the first to the second market date,
+and so on, and the last hazard rate applies from the second-to-last market date onwards.
+
+datestr(Settle)
+
+ans = 
+'08-Jul-2016'
+
+datestr(ProbabilityData(:,1))
+
+ans = 5×11 char array
+    '15-Jun-2018'
+    '08-Jan-2019'
+    '01-Feb-2021'
+    '18-Mar-2021'
+    '04-Aug-2025'
+
+datestr(HazardData(:,1))
+
+ans = 5×11 char array
+    '15-Jun-2018'
+    '08-Jan-2019'
+    '01-Feb-2021'
+    '18-Mar-2021'
+    '04-Aug-2025'
+
+The time ranges for the default probabilities all start on '08-Jul-2016' and they end on '15-
+Jun-2018', '08-Jan-2019', '01-Feb-2021', '18-Mar-2021', and '04-Aug-2025',
+respectively. As for the hazard rates, the first hazard rate starts on '08-Jul-2016' and ends on
+'15-Jun-2018', the second hazard rate starts on '15-Jun-2018' and ends on '08-Jan-2019',
+the third hazard rate starts on '08-Jan-2019' and ends on '01-Feb-2021', and so forth.
+
+15
+Functions
+
+15-512

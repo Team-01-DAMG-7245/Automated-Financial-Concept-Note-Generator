@@ -1,0 +1,12 @@
+{
+  "page": 1588,
+  "original_text": "% Create the strategy\nminLookback = 30;\nmaxLookback = 60;\nivStrategy = backtestStrategy(\"InverseVariance\",@inverseVarianceFcn, ...\n    'RebalanceFrequency',25, ...\n    'LookbackWindow',[minLookback maxLookback], ...\n    'TransactionCosts',[0.0025 0.005])",
+  "ocr_text": "Createthestrategy\n\nminLookback=30;\n\nmaxLookback=60;\n\nivStrategy=backtestStrategy(InverseVariance,inverseVarianceFcn,...\nRebalanceFrequency,25,...\nLookbackWindow,[minLookbackmaxLookback],...\nTransactionCosts,[0.00250.005])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 369.79,
+    "x1": 480.13,
+    "y1": 445.06
+  },
+  "confidence": "high"
+}

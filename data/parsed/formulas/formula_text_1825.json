@@ -1,0 +1,12 @@
+{
+  "page": 932,
+  "original_text": "bootstat = bootstrp(100,@(totals)transprobbytotals(totals),idTotals);\nci = prctile(bootstat,[2.5 97.5]); % 95% confidence\nCIlower = reshape(ci(1,:),8,8);\nCIupper = reshape(ci(2,:),8,8);\nPD_LB = CIlower(1:7,8);\nPD_UB = CIupper(1:7,8);",
+  "ocr_text": "bootstat=bootstrp(100,(totals)transprobbytotals(totals),idTotals);\nci=prctile(bootstat,[2.597.5]);95*confidence\nCIlower=reshape(ci(1,:),8,8);\n\nCIupper=reshape(ci(2,:),8,8);\n\nPD_LB=CIlower(1:7,8);\n\nPD_UB=CIupper(1:7,8);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.03,
+    "x1": 463.84,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

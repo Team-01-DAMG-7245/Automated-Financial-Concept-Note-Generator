@@ -1,0 +1,21 @@
+Page 1617
+================================================================================
+
+batesObj = 
+   Class BATES: Bates Bivariate Stochastic Volatility
+   --------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   --------------------------------------------------
+      StartTime: 0
+     StartState: 2x1 double array 
+    Correlation: 2x2 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.03
+          Speed: 1
+          Level: 0.05
+     Volatility: 0.2
+       JumpFreq: 0.1
+       JumpMean: 0.02
+        JumpVol: 0.08

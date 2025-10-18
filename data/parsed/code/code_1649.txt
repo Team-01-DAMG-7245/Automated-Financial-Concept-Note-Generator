@@ -1,0 +1,5 @@
+Page 1472
+================================================================================
+
+DiffusionRate is a function that returns an NVars-by-NBrowns diffusion-rate matrix when called
+with two inputs:

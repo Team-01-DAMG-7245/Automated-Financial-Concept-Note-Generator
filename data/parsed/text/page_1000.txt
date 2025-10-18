@@ -1,0 +1,58 @@
+{'OtherCC'   }    {'Yes'              }      0.15868
+    {'OtherCC'   }    {'<missing>'        }          NaN
+    {'AMBalance' }    {'Up to 558.87'     }       0.3552
+    {'AMBalance' }    {'558.88 to 1597.43'}    -0.026797
+    {'AMBalance' }    {'1597.44 and up'   }     -0.21168
+    {'AMBalance' }    {'<missing>'        }          NaN
+
+Points are usually scaled and also often rounded. To do this, use the formatpoints function. For
+example, you can set a target level of points corresponding to a target odds level and also set the
+required points-to-double-the-odds (PDO).
+
+TargetPoints = 500;
+TargetOdds = 2;
+PDO = 50; % Points to double the odds
+
+sc = formatpoints(sc,'PointsOddsAndPDO',[TargetPoints TargetOdds PDO]);
+p2 = displaypoints(sc);
+disp(p2)
+
+Predictors               Bin             Points
+    ______________    _____________________    ______
+
+{'CustAge'   }    {'Up to 36'         }    53.239
+    {'CustAge'   }    {'37 to 39'         }    59.796
+    {'CustAge'   }    {'40 to 45'         }    67.587
+    {'CustAge'   }    {'46 to 57'         }    80.796
+    {'CustAge'   }    {'58 and up'        }    99.166
+    {'CustAge'   }    {'<missing>'        }       NaN
+    {'ResStatus' }    {'Tenant'           }    62.028
+    {'ResStatus' }    {'Home Owner'       }    73.445
+    {'ResStatus' }    {'Other'            }    91.446
+    {'ResStatus' }    {'<missing>'        }       NaN
+    {'EmpStatus' }    {'Unknown'          }    58.777
+    {'EmpStatus' }    {'Employed'         }    86.976
+    {'EmpStatus' }    {'<missing>'        }       NaN
+    {'CustIncome'}    {'Up to 28999'      }    31.497
+    {'CustIncome'}    {'29000 to 32999'   }    56.805
+    {'CustIncome'}    {'33000 to 41999'   }    69.896
+    {'CustIncome'}    {'42000 to 46999'   }    81.891
+    {'CustIncome'}    {'47000 and up'     }     95.69
+    {'CustIncome'}    {'<missing>'        }       NaN
+    {'TmWBank'   }    {'Up to 11'         }    51.142
+    {'TmWBank'   }    {'12 to 44'         }    61.524
+    {'TmWBank'   }    {'45 to 70'         }    92.829
+    {'TmWBank'   }    {'71 and up'        }    132.87
+    {'TmWBank'   }    {'<missing>'        }       NaN
+    {'OtherCC'   }    {'No'               }    50.364
+    {'OtherCC'   }    {'Yes'              }    75.732
+    {'OtherCC'   }    {'<missing>'        }       NaN
+    {'AMBalance' }    {'Up to 558.87'     }    89.908
+    {'AMBalance' }    {'558.88 to 1597.43'}    62.353
+    {'AMBalance' }    {'1597.44 and up'   }    49.016
+    {'AMBalance' }    {'<missing>'        }       NaN
+
+8
+Credit Risk Analysis
+
+8-82

@@ -1,0 +1,64 @@
+{'A'}    {'B'}    {'C'}    {'D'}    {'E'}    {'F'}
+
+disp(Param);
+
+0.0144    0.0270    0.0046    0.0419    0.0376    0.0291
+    0.3264   -0.1716    0.3248   -0.0630   -0.0001    0.0637
+
+Estimate parameters for pairs of stocks by forming groups.
+
+disp({'A & B', 'C & D','E & F'});
+
+{'A & B'}    {'C & D'}    {'E & F'}
+
+Group = { [1,2 ],[3,4],[5,6]};
+DesignSUR = convert2sur(Design, Group);
+[Param, Covar] = mvnrmle(Asset, DesignSUR);
+
+Param = reshape(Param, 2, 3);
+
+disp(Param);
+
+0.0186    0.0190    0.0334
+    0.0988    0.1757    0.0293
+
+Input Arguments
+
+Design — Data series
+matrix | cell array
+
+Data series, specified as a matrix or a cell array that depends on the number of data series
+NUMSERIES.
+
+•
+If NUMSERIES = 1, convert2sur returns the Design matrix.
+
+•
+If NUMSERIES > 1, Design is a cell array with NUMSAMPLES cells, where each cell contains a
+NUMSERIES-by-NUMPARAMS matrix of known values.
+
+Data Types: double | cell
+
+Group — Grouping for data series
+vector | cell array
+
+Grouping for data series, specified using separate parameters for each group. Specify groups either
+by series or by groups:
+
+•
+To identify groups by series, construct an index vector that has NUMSERIES elements. Element i
+= 1, ..., NUMSERIES in the vector, and has the index j = 1, ..., NUMGROUPS of the group
+in which series i is a member.
+
+•
+To identify groups by groups, construct a cell array with NUMGROUPS elements. Each cell contains
+a vector with the indexes of the series that populate a given group.
+
+In either case, the number of series is NUMSERIES and the number of groups is NUMGROUPS, with
+1 ≤ NUMGROUPS ≤ NUMSERIES.
+
+Data Types: double | cell
+
+convert2sur
+
+15-741

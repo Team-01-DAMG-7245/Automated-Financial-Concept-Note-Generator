@@ -1,0 +1,36 @@
+p.LowerBudget = 1;
+p.UpperBudget = 1;
+p.LowerBound = zeros(size(m));
+
+plotFrontier(p);
+
+Note Scenarios cannot be assigned directly using dot notation to a PortfolioMAD object. Scenarios
+must always be set through either the PortfolioMAD object, the setScenarios function, or any of
+the scenario simulation functions.
+
+See Also
+PortfolioMAD | estimateBounds
+
+Related Examples
+
+•
+“Common Operations on the PortfolioMAD Object” on page 6-29
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+6
+MAD Portfolio Optimization Tools
+
+6-28

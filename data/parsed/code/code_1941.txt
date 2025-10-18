@@ -1,0 +1,6 @@
+Page 1548
+================================================================================
+
+Specifying an EngineDataList changes the required syntax of the backtestStrategy function
+handles that you define using rebalanceFcn. For an example of using EngineDataList, see “Use
+EngineDataList Property to Enforce Trading Strategy of Whole Shares” on page 15-251.

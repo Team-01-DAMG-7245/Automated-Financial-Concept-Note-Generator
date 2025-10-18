@@ -1,0 +1,6 @@
+Page 524
+================================================================================
+
+function new_weights = robustFcn(~,pricesTT,portObj, ...
+    kappa) 
+% Robust portfolio maximum return allocation

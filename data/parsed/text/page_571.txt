@@ -1,0 +1,40 @@
+⋮
+
+% Compute risk and returns of the portfolios on the efficient frontier.
+[rsk,ret] = estimatePortMoments(p,pwgt)
+
+rsk = 10×1
+
+0.0076
+    0.0080
+    0.0085
+    0.0094
+    0.0105
+    0.0117
+    0.0132
+    0.0147
+    0.0168
+    0.0193
+
+ret = 10×1
+
+0.0008
+    0.0012
+    0.0017
+    0.0021
+    0.0026
+    0.0030
+    0.0034
+    0.0039
+    0.0043
+    0.0048
+
+Plot the weights from the frontier estimation using plotFrontier. The resulting curve is piece-wise
+concave with vertical jumps (discontinuities) between the concave intervals.
+
+% Plot the efficient frontier.
+plotFrontier(p,pwgt)
+
+Mixed-Integer Mean-Variance Portfolio Optimization Problem
+
+4-403

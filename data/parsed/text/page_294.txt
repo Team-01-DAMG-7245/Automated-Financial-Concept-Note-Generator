@@ -1,0 +1,39 @@
+number of portfolios that you want. Suppose that you have the Portfolio object from the previous
+code and you want to plot 20 portfolios along the efficient frontier and to obtain 20 risk and return
+values for each portfolio.
+
+[prsk, pret] = plotFrontier(p, 20);
+
+display([pret, prsk])
+
+0.0590    0.0769
+    0.0654    0.0784
+    0.0718    0.0825
+    0.0781    0.0890
+    0.0845    0.0973
+    0.0909    0.1071
+    0.0972    0.1179
+    0.1036    0.1296
+    0.1100    0.1418
+    0.1163    0.1545
+    0.1227    0.1676
+    0.1291    0.1810
+    0.1354    0.1955
+    0.1418    0.2128
+    0.1482    0.2323
+    0.1545    0.2535
+    0.1609    0.2760
+    0.1673    0.2995
+    0.1736    0.3239
+    0.1800    0.3500
+
+Plotting Existing Efficient Portfolios
+
+If you already have efficient portfolios from any of the "estimateFrontier" functions (see “Estimate
+Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98), pass them into
+plotFrontier directly to plot the efficient frontier.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-126

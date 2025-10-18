@@ -1,0 +1,5 @@
+Page 1746
+================================================================================
+
+p = Portfolio;
+GA = [ true true true false false false ];    % financial companies

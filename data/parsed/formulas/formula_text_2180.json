@@ -1,0 +1,12 @@
+{
+  "page": 1123,
+  "original_text": "JSpan = ones(length(j),1);\nNewRange = Range(JSpan,:);\nPad = ones(size(Newj));",
+  "ocr_text": "JSpan=ones(length(j),1);\nNewRange=Range(JSpan,:);\nPad=ones(size(Newj));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 323.43,
+    "x1": 230.87,
+    "y1": 355.49
+  },
+  "confidence": "high"
+}

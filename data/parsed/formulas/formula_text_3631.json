@@ -1,0 +1,12 @@
+{
+  "page": 2046,
+  "original_text": "Design = cell(60, 1);\nfor i = 1:60\n            Design{i} = repmat([ 1, Market(i) ], 6, 1);\nend",
+  "ocr_text": "Design=cell(60,_1);\n\nfori=1:60\nDesign{i}=repmat([1,Market(i)],6,1);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 449.38,
+    "x1": 387.99,
+    "y1": 492.25
+  },
+  "confidence": "high"
+}

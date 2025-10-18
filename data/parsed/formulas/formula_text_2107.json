@@ -1,0 +1,12 @@
+{
+  "page": 1088,
+  "original_text": "fprintf(1,'\\n');\nfprintf(1,'Grouped regression with ');",
+  "ocr_text": "fprintf(1,n);\nfprintf(1,Groupedregressionwith);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 508.83,
+    "x1": 295.9,
+    "y1": 530.09
+  },
+  "confidence": "high"
+}

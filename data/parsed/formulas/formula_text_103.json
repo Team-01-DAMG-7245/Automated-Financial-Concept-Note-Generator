@@ -1,0 +1,12 @@
+{
+  "page": 89,
+  "original_text": "Pr[x ≤X < x + Δx X ≥x]\nΔx",
+  "ocr_text": "Pri[xsXx+Ax[X=x]\n1) Ax",
+  "bbox": {
+    "x0": 168.32,
+    "y0": 162.96,
+    "x1": 284.4,
+    "y1": 186.26
+  },
+  "confidence": "high"
+}

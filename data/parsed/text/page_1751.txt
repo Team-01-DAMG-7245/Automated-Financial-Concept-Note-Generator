@@ -1,0 +1,55 @@
+addGroups
+
+Add group constraints for portfolio weights to existing group constraints
+
+Syntax
+
+obj = addGroups(obj,GroupMatrix,LowerGroup)
+obj = addGroups(obj,GroupMatrix,LowerGroup,UpperGroup)
+
+Description
+
+obj = addGroups(obj,GroupMatrix,LowerGroup) adds group constraints for portfolio weights
+to existing group constraints for Portfolio, PortfolioCVaR, or PortfolioMAD objects. For
+details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+Given GroupMatrix and either LowerGroup or UpperGroup, a portfolio Port must satisfy the
+following:
+
+LowerGroup <= GroupMatrix * Port <= UpperGroup
+
+obj = addGroups(obj,GroupMatrix,LowerGroup,UpperGroup) adds group constraints for
+portfolio weights to existing group constraints with an additional option for UpperGroup.
+
+Given GroupMatrix and either LowerGroup or UpperGroup, a portfolio Port must satisfy the
+following:
+
+LowerGroup <= GroupMatrix * Port <= UpperGroup
+
+Examples
+
+Add Group Constraints to a Portfolio Object
+
+Set a group constraint to ensure that the first three assets constitute at most 30% of a portfolio. Then
+add another group constraint to ensure that the odd-numbered assets constitute at least 20% of a
+portfolio.
+
+p = Portfolio;
+G = [ true true true false false ];    % group matrix for first group constraint
+p = setGroups(p, G, [], 0.3);
+G = [ true false true false true ];    % group matrix for second group constraint
+p = addGroups(p, G, 0.2);
+disp(p.NumAssets);
+
+5
+
+disp(p.GroupMatrix);
+
+1     1     1     0     0
+     1     0     1     0     1
+
+addGroups
+
+15-445

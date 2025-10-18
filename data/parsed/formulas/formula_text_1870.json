@@ -1,0 +1,12 @@
+{
+  "page": 950,
+  "original_text": "CumSqError = cumsum(ErrorBT.^2);\nExample_BacktestPlot(YearsBT,[],CumSqError,'Year','Cum Sq Error', ...\n   '{\\bf Cumulative Square Error in Backtesting Exercise}', ...\n   MethodTags,'NW')",
+  "ocr_text": "CumSgError=cumsum(ErrorBT.*2);\n\nExample_BacktestPlot(YearsBT,[],CumSqError,Year,CumSqError,...\n{bfCumulativeSquareErrorinBacktestingExercise},...\nMethodTags,Nw)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 429.13,
+    "x1": 463.87,
+    "y1": 472.0
+  },
+  "confidence": "high"
+}

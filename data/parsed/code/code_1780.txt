@@ -1,0 +1,5 @@
+Page 1500
+================================================================================
+
+Instantaneous standard deviation of log(1+J), specified as an array, a deterministic function of time,
+or a deterministic function of time and state.

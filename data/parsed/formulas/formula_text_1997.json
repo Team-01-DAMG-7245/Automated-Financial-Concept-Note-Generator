@@ -1,0 +1,12 @@
+{
+  "page": 1035,
+  "original_text": "dataNR = {'DEF','17-Mar-2011','A';\n    'DEF','24-Mar-2014','NR';\n    'DEF','26-Sep-2016','BBB'};\ndataNR = cell2table(dataNR,'VariableNames',{'ID','Date','Rating'});\ndisp(dataNR)",
+  "ocr_text": "dataNR={DEF,17-Mar-2011,A;\n\nDEF,24-Mar-2014,NR;\n\nDEF,26-Sep-2016,BBB};\ndataNR=cell2table(dataNR,VariableNames,{ID,Date,Rating});\ndisp(dataNR)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 161.11,
+    "x1": 453.03,
+    "y1": 214.78
+  },
+  "confidence": "high"
+}

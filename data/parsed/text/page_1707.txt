@@ -1,0 +1,65 @@
+simByTransition applies processing functions at the end of each observation period. The
+processing functions accept the current observation time t and the current state vector Xt, and return
+a state vector that may adjust the input state.
+
+If you specify more than one processing function, simByTransition invokes the functions in the
+order in which they appear in the cell array.
+
+Data Types: cell | function
+
+Output Arguments
+
+Paths — Simulated paths of correlated state variables
+array
+
+Simulated paths of correlated state variables, returned as an (NPeriods + 1)-by-NVars-by-
+NTrials three-dimensional time series array.
+
+For a given trial, each row of Paths is the transpose of the state vector Xt at time t. When the input
+flag StorePaths = False, simByTransition returns Paths as an empty matrix.
+
+Times — Observation times associated with simulated paths
+column vector
+
+Observation times associated with the simulated paths, returned as an (NPeriods + 1)-by-1
+column vector. Each element of Times is associated with the corresponding row of Paths.
+
+More About
+
+Transition Density
+
+Transition density describes the probability distribution of a state variable transitioning from one
+state to another over a given time interval.
+
+Transition Density Simulation
+
+The SDE has no solution such that r(t) = f(r(0),⋯).
+
+In other words, the equation is not explicitly solvable. However, the transition density for the process
+is known.
+
+The exact simulation for the distribution of r(t_1 ),⋯,r(t_n) is that of the process at times t_1,⋯,t_n for
+the same value of r(0). The transition density for this process is known and is expressed as
+
+r(t) = σ2(1 −e−α(t −u)
+
+4α
+xd
+2
+4αe−α(t −u)
+
+σ2(1 −e−α(t −u))
+r(u) , t > u
+
+where
+
+d ≡4bα
+σ2
+
+Algorithms
+
+Use the simByTransition function to simulate any vector-valued CIR process of the form
+
+simByTransition
+
+15-401

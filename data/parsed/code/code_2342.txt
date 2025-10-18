@@ -1,0 +1,6 @@
+Page 2223
+================================================================================
+
+The estimateCustomObjectivePortfolio function automatically assumes that the objective
+sense is to minimize. You can change that default behavior by using the
+estimateCustomObjectivePortfolio name-value argument ObjectiveSense='maximize'.

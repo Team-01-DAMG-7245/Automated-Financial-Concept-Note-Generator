@@ -1,0 +1,12 @@
+{
+  "page": 1523,
+  "original_text": "from zero, slowly varying function at zero: g(x) = xαL0(x), where ɑ = H -1/2 and H is a Hurst\nexponent.",
+  "ocr_text": "fromzero,slowlyvaryingfunctionatzero:g(x)=x*Lo(x),wherea=H-1/2andHisaHurst\nexponent.",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 691.65,
+    "x1": 526.93,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

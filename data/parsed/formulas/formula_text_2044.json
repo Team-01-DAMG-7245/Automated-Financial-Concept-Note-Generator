@@ -1,0 +1,12 @@
+{
+  "page": 1056,
+  "original_text": "tdataTreated = tdata;\ntdataTreated.CustAge = fillmissing(tdataTreated.CustAge,'constant',modeCustAge);\ntdataTreated.ResStatus = fillmissing(tdataTreated.ResStatus,'constant',string(modeResStatus));\ndisp(tdataTreated)",
+  "ocr_text": "tdataTreated=tdata;\ntdataTreated.CustAge=fillmissing(tdataTreated.CustAge,constant,modeCustAge);\ntdataTreated.ResStatus=fillmissing(tdataTreated.ResStatus,constant,string(modeResStatus));\ndisp(tdataTreated)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 559.31,
+    "x1": 599.33,
+    "y1": 602.18
+  },
+  "confidence": "high"
+}

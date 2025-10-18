@@ -1,0 +1,12 @@
+{
+  "page": 341,
+  "original_text": "qwgt = estimateFrontier(q,20);\n[qrsk,qret] = estimatePortMoments(q,qwgt);",
+  "ocr_text": "qwgt_=estimateFrontier(q,20);\n[arsk,qret]=estimatePortMoments(q,qwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 435.73,
+    "x1": 317.55,
+    "y1": 457.0
+  },
+  "confidence": "high"
+}

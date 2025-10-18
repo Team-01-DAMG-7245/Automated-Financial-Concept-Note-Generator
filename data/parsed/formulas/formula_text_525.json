@@ -1,0 +1,12 @@
+{
+  "page": 357,
+  "original_text": "fprintf('                                   %6s    %6s\\n','Gross','Net');\nfprintf('Initial Portfolio Return           %6.2f %%  %6.2f %%\\n',100*pret0,100*pret0);\nfprintf('Minimum Efficient Portfolio Return %6.2f %%  %6.2f %%\\n',100*pret(1),100*qret(1));\nfprintf('Maximum Efficient Portfolio Return %6.2f %%  %6.2f %%\\n',100*pret(2),100*qret(2));\nend",
+  "ocr_text": "fprintf( *6S s6sn,Gross,Net);\nfprintf(InitialPortfolioReturn 6.2F_6.2f(n,100*pretO,100*pretd);\nfprintf(MinimumEfficientPortfolioReturn6.2f6.2f*n,100*pret(1),100*qret(1));\nfprintf(MaximumEfficientPortfolioReturn6.2f6.2f*n,100*pret(2),100*qret(2));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 583.07,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 429,
+  "original_text": "function new_weights = crossoverRebalanceFcn(current_weights, pricesTT, signalTT, signalNameEndin\n% Signal crossover rebalance function.",
+  "ocr_text": "functionnew_weights=crossoverRebalanceFcn(current_weights,pricesTT,signalTT,signalNameEndil\nSignalcrossoverrebalancefunction.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.62,
+    "x1": 615.55,
+    "y1": 621.89
+  },
+  "confidence": "high"
+}

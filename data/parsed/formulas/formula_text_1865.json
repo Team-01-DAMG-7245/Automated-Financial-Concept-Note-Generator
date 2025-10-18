@@ -1,0 +1,12 @@
+{
+  "page": 949,
+  "original_text": "for k=1:nYearsBT\n   % In sample years for predictors, from 1984 to \"last\" year (T-1)\n   inSampleBT = iYear0:T-1;\n   \n   % Method 1: Linear regression model\n   %   Fit regression model with data up to \"current\" year (T)\n   s = regstats(yBT(inSampleBT+1),XBT(inSampleBT,:));\n   %   Predict default rate for \"next\" year (T+1)\n   PredDefRate(k,1) = [1 XBT(T,:)]*s.beta;\n   %   Compute prediction intervals\n   tCrit = tinv(1-alpha/2,s.tstat.dfe);\n   PredStd = sqrt([1 XBT(T,:)]*s.covb*[1 XBT(T,:)]'+s.mse);\n   PredDefLoBnd(k) = max(0,PredDefRate(k,1) - tCrit*PredStd);\n   PredDefUpBnd(k) = PredDefRate(k,1) + tCrit*PredStd;",
+  "ocr_text": "fork=1:nYearsBT\nInsampleyearsforpredictors,from1984tolastyear(T-1)\ninSampleBT=iYear0:T-1;\nMethod1:Linearregressionmodel\nFitregressionmodelwithdatauptocurrentyear(T)\ns=regstats(yBT(inSampleBT+1),XBT(inSampleBT,:));\nPredictdefaultratefornextyear(T+1)\nPredDefRate(k,1)=[1XBT(T,:)]*s.beta;\nComputepredictionintervals\ntCrit=tinv(l-alpha/2,s.tstat.dfe);\nPredStd=sqrt([1XBT(T,:)]*s.covb*[1XBT(T,:)]+s.mse);\nPredDefLoBnd(k)=max(0,PredDefRate(k,1)-tCrit*PredStd);\nPredDefUpBnd(k)=PredDefRate(k,1)+tCrit*PredStd;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.23,
+    "x1": 453.01,
+    "y1": 395.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,61 @@
+Choosing and Controlling the Solver for PortfolioMAD
+Optimizations
+
+When solving portfolio optimizations for a PortfolioMAD object, you are solving nonlinear
+optimization problems with either nonlinear objective or nonlinear constraints. You can use
+'TrustRegionCP' (default) or 'ExtendedCP' solvers that implement Kelley’s cutting plane method
+(see Kelley [45] at “Portfolio Optimization” on page A-5). Alternatively, you can use fmincon and
+all variations of fmincon from Optimization Toolbox are supported. When using fmincon as the
+solverType, 'sqp' is the default algorithm for fmincon.
+
+Using 'TrustRegionCP' and 'ExtendedCP' SolverTypes
+
+The 'TrustRegionCP' and 'ExtendedCP' solvers have options to control the number iterations
+and stopping tolerances. Moreover, these solvers use linprog as the primary solver, and all
+linprog options are supported using optimoptions structures. All these options are set using
+setSolver.
+
+For example, you can use setSolver to increase the number of iterations for 'TrustRegionCP':
+
+p = PortfolioMAD;
+p = setSolver(p, 'TrustRegionCP', 'MaxIterations', 2000);
+display(p.solverType)
+display(p.solverOptions)
+
+trustregioncp
+                MaxIterations: 2000
+         AbsoluteGapTolerance: 1.0000e-07
+         RelativeGapTolerance: 1.0000e-05
+       NonlinearScalingFactor: 1000
+       ObjectiveScalingFactor: 1000
+          MainSolverOptions: [1×1 optim.options.Linprog]
+                      Display: 'off'
+                CutGeneration: 'basic'
+     MaxIterationsInactiveCut: 30
+           ActiveCutTolerance: 1.0000e-07
+                  ShrinkRatio: 0.7500
+    TrustRegionStartIteration: 2
+                   DeltaLimit: 1
+
+To change the primary solver algorithm to 'interior-point', with no display, use setSolver to
+modify 'MainSolverOptions':
+
+p = PortfolioMAD;
+options = optimoptions('linprog','Algorithm','interior-point','Display','off');
+p = setSolver(p,'TrustRegionCP','MainSolverOptions',options);
+display(p.solverType)
+display(p.solverOptions)
+display(p.solverOptions.MainSolverOptions.Algorithm)
+display(p.solverOptions.MainSolverOptions.Display)
+
+trustregioncp
+                MaxIterations: 1000
+         AbsoluteGapTolerance: 1.0000e-07
+         RelativeGapTolerance: 1.0000e-05
+       NonlinearScalingFactor: 1000
+       ObjectiveScalingFactor: 1000
+          MainSolverOptions: [1×1 optim.options.Linprog]
+
+Choosing and Controlling the Solver for PortfolioMAD Optimizations
+
+6-99

@@ -1,0 +1,12 @@
+{
+  "page": 329,
+  "original_text": "mret = MarketMean;\nmrsk = sqrt(MarketVar);\ncret = CashMean;\ncrsk = sqrt(CashVar);",
+  "ocr_text": "mret=MarketMean;\nmrsk=sqrt(MarketVar);\ncret=CashMean;\ncrsk=sqrt(CashVar);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 354.09,
+    "x1": 214.61,
+    "y1": 396.96
+  },
+  "confidence": "high"
+}

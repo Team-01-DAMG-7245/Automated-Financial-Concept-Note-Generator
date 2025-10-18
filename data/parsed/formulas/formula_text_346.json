@@ -1,0 +1,12 @@
+{
+  "page": 216,
+  "original_text": "p = Portfolio('mean',m,'covar',C);\n        \nq = Portfolio;\nq = estimateAssetMoments(q, Y, 'dataformat', 'prices');\n \nr = Portfolio;\nr = estimateAssetMoments(r, Y, 'dataformat', 'prices', 'missingdata', true);",
+  "ocr_text": "p=Portfolio(mean,m,covar,C);\n\nq=Portfolio;\n\nq=estimateAssetMoments(q,Y,dataformat,prices);\n\nr=Portfolio;\nr=estimateAssetMoments(r,Y,dataformat,prices,missingdata,true);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 501.79,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

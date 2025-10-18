@@ -1,0 +1,12 @@
+{
+  "page": 1555,
+  "original_text": "backtester = backtestEngine(stopLossStrat);\nbacktester = runBacktest(backtester,pricesTT);",
+  "ocr_text": "backtester=backtestEngine(stopLossStrat);\nbacktester=runBacktest(backtester,pricesTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 507.23,
+    "x1": 339.22,
+    "y1": 528.49
+  },
+  "confidence": "high"
+}

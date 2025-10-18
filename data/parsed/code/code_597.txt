@@ -1,0 +1,6 @@
+Page 551
+================================================================================
+
+Since the goal of the problem is to achieve the wealth target by the end of the investment period, you
+can use a reward function awards a value of 1 if the goal is achieved at the end of the investment
+period and 0 otherwise. See Local Functions on page 4-391 for the sparseReward function.

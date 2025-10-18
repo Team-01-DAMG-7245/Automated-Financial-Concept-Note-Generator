@@ -1,0 +1,7 @@
+Page 821
+================================================================================
+
+This example shows how the simulateNormalScenariosByData function accepts asset returns or
+prices stored in a table or timetable. The simulateNormalScenariosByData function implicitly
+works with matrices of data or data in a table or timetable object using the same rules for
+whether the data are returns or prices.

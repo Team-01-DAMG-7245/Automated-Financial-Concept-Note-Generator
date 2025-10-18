@@ -1,0 +1,12 @@
+{
+  "page": 474,
+  "original_text": "doTrain = false;",
+  "ocr_text": "doTrain=false;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 554.63,
+    "x1": 176.68,
+    "y1": 565.09
+  },
+  "confidence": "high"
+}

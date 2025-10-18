@@ -1,0 +1,12 @@
+{
+  "page": 2347,
+  "original_text": "Weekend = [1 0 0 0 0 0 0];\nDate = datestr(fbusdate(2003, 3, [], Weekend))",
+  "ocr_text": "Weekend=[1000000];\nDate=datestr(fbusdate(2003,3,[],Weekend))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 317.55,
+    "x1": 339.23,
+    "y1": 338.82
+  },
+  "confidence": "high"
+}

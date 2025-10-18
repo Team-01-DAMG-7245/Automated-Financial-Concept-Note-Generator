@@ -1,0 +1,36 @@
+table(assetNames', wts, wtsBL, 'VariableNames', ["AssetName", "Mean_Variance", ...
+     "Mean_Variance_with_Black_Litterman"])
+
+ans=7×3 table
+    AssetName    Mean_Variance    Mean_Variance_with_Black_Litterman
+    _________    _____________    __________________________________
+
+"AA"         5.9935e-12                     0.1115             
+     "AIG"        5.2227e-13                    0.23314             
+     "WMT"        1.6889e-13                   0.098048             
+     "MSFT"         0.059393                    0.15824             
+     "BA"            0.32068                    0.10748             
+     "GE"         6.8239e-11                     0.1772             
+     "IBM"           0.61993                    0.11439
+
+When you use the values for the blended asset return and the covariance from the Black-Litterman
+model in a mean-variance optimization, the optimal allocations reflect the views of the investment
+analyst directly. The allocation from the Black-Litterman model is more diversified, as the pie chart
+shows. Also, the weights among the assets in the Black-Litterman model agree with the investment
+analyst views. For example, when you compare the Black-Litterman result with the plain mean-
+variance optimization result, you can see that the Black-Litterman result is more heavily invested in
+MSFT than in IBM. This is because the investment analyst has a strong view that MSFT will
+outperform IBM.
+
+Local Functions
+
+function [wtsMarket, PI] = findMarketPortfolioAndImpliedReturn(assetRetn, benchRetn)
+% Find the market portfolio that tracks the benchmark and its corresponding implied expected retu
+
+The implied return is calculated by reverse optimization. The risk-free rate is assumed to be zero. The
+general formulation of a portfolio optimization is given by the Markowitz optimization problem:
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-226

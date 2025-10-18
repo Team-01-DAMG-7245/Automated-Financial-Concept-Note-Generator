@@ -1,0 +1,12 @@
+{
+  "page": 1756,
+  "original_text": "obj = addInequality(obj,AInequality,bInequality) adds linear inequality constraints for\nportfolio weights to existing constraints for Portfolio, PortfolioCVaR, or PortfolioMAD objects.\nFor details on the respective workflows when using these different objects, see “Portfolio Object\nWorkflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object\nWorkflow” on page 6-16.",
+  "ocr_text": "obj=addInequality(obj,AInequality,bInequality)addslinearinequalityconstraintsfor\nportfolioweightstoexistingconstraintsforPortfolio,PortfolioCVaR,orPortfolioMADobjects.\nFordetailsontherespectiveworkflowswhenusingthesedifferentobjects,seePortfolioObject\nWorkflowonpage4-18,PortfolioCVaRObjectWorkflowonpage5-16,andPortfolioMADObject\nWorkflowonpage6-16.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 242.41,
+    "x1": 557.82,
+    "y1": 302.04
+  },
+  "confidence": "high"
+}

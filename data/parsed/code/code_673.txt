@@ -1,0 +1,26 @@
+Page 615
+================================================================================
+
+function [ExecutedShares,ExecutedPrices,InitialPrice,TradedLevels] = ...
+    tradeLOB(CurrentLOB,TradingShares,BuyTrade)
+% tradeLOB function executes market order trade based on current limit order book.
+%   This function computes the results of executing a market order trade
+%   for a specified number of shares and trade direction (buy/sell) based on
+%   the information available in the current snapshot of the limit order book.
+%
+%   Inputs:
+%
+%      CurrentLOB - 1-by-(NumLevels*4) vector of current limit order book information
+%
+%         e.g. For NumLevels==5, 1-by-20 vector with the following values:
+%    [AskPrice1 AskSize1 BidPrice1 BidSize1 ... AskPrice5 AskSize5 BidPrice5 BidSize5]
+%
+%         e.g. For NumLevels==10, 1-by-40 vector with the following values:
+%    [AskPrice1 AskSize1 BidPrice1 BidSize1 ... AskPrice10 AskSize10 BidPrice10 BidSize10]
+%
+%      TradingShares - Scalar number of shares to be traded
+%
+%      BuyTrade - Scalar logical indicating trading direction:
+%                    true: Buy
+%                    false: Sell
+%

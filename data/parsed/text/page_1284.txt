@@ -1,0 +1,39 @@
+Decompose Prices and Cluster Commodities
+
+Decompose each commodity price series into a long-term trend, a seasonal component, and an
+irregular (or business cycle) component. This operation is an additive decomposition:
+
+Pt = Lt + St + Ct,
+t = 1, 2, 3, …,
+
+where:
+
+•
+Pt is the commodity price series.
+
+•
+Lt is the long-term trend.
+
+•
+St is the seasonal component (which may be the sum of multiple seasonal trends).
+
+•
+Ct is the irregular component.
+
+Based on the relative similarity of the irregular components of the commodity price series, you can
+cluster the commodities into groups using unsupervised machine learning techniques.
+
+Decompose Commodity Prices
+
+Preallocate variables for the soft commodity series components.
+
+numObservations = height( Prices );
+numCommodities = width( Prices );
+
+longTermComponent = NaN( numObservations, numCommodities );
+seasonalComponent = NaN( numObservations, numCommodities );
+
+14
+Stochastic Differential Equations
+
+14-92

@@ -1,0 +1,37 @@
+Create Backtest Strategies
+
+This example runs a backtest on two equal-weighted strategies and then compares the results. The
+first backtest strategy uses an exact equal-weight rebalance function that allows fractional shares.
+The second backtest strategy uses a EngineDataList property for PortfolioValue to enforce a
+whole shares constraint.
+
+Use backtestStrategy to create the first strategy for partial shares.
+
+% Partial shares and equal weight for assets
+partialRebal = @(~,prices) ones(1,width(prices)) / width(prices);
+ewPartial = backtestStrategy("PartialShares",partialRebal,RebalanceFrequency=1);
+
+Use backtestStrategy to create the second strategy for whole shares.
+
+% Whole shares and equal weight for assets
+ewWhole = backtestStrategy("WholeShares",@equalWeightShares,RebalanceFrequency=1,EngineDataList="
+
+Run Backtest
+
+Aggregate the two strategy objects, create a backtestEngine object, and then run the backtest
+using runBacktest.
+
+strats = [ewPartial, ewWhole];
+backtester = backtestEngine(strats,RiskFreeRate=0.02);
+backtester = runBacktest(backtester,pricesTT);
+
+Use equityCurve to generate a plot for both of the trading strategies.
+
+equityCurve(backtester);
+
+You can verify that the second strategy traded in whole shares.
+
+15
+Functions
+
+15-252

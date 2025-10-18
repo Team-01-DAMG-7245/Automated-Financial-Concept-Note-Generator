@@ -1,0 +1,12 @@
+{
+  "page": 954,
+  "original_text": "fprintf('Scenario         LB    Pred    UB\\n');",
+  "ocr_text": "fprintf(Scenario LB Pred UBn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 688.19,
+    "x1": 344.67,
+    "y1": 698.66
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,64 @@
+•
+The order book data describes the intraday evolution of the limit order book of the security, which
+includes market and limit orders, resulting buys and sells, and corresponding times of all events.
+
+•
+The message file describes each event.
+
+•
+Many order events can occur during a trading day, therefore such data sets are typically large and
+difficult or impossible to fit in memory. This example uses a tabularTextDatastore and tall
+timetables to store and operate on the sets.
+
+Extract the trading date from the message file name.
+
+[ticker,rem] = strtok(MSGFileName,"_");
+date = strtok(rem,"_");
+
+Create separate datastores for the message and data files by using tabularTextDatastore. Ignore
+the generic column headers by setting ReadVariableNames=false. To allow similarly formatted
+files to be appended to existing datastores at the end of each trading day ReadSize="file". Set
+descriptive variables names to each datastore.
+
+DSMSG = tabularTextDatastore(MSGFileName,ReadVariableNames=false,ReadSize="file");
+DSMSG.VariableNames = ["Time","Type","OrderID","Size","Price","Direction"];
+
+DSLOB = tabularTextDatastore(LOBFileName,ReadVariableNames=false,ReadSize="file");
+DSLOB.VariableNames = ["AskPrice1" "AskSize1" "BidPrice1" "BidSize1" ...
+                       "AskPrice2" "AskSize2" "BidPrice2" "BidSize2" ...
+                       "AskPrice3" "AskSize3" "BidPrice3" "BidSize3" ...
+                       "AskPrice4" "AskSize4" "BidPrice4" "BidSize4" ...
+                       "AskPrice5" "AskSize5" "BidPrice5" "BidSize5"];
+
+Create a combined datastore by selecting the time variable of the message data and all levels in the
+limit order data.
+
+DSMSG.SelectedVariableNames = ["Time" "Type"];
+DSLOB.SelectedVariableNames = DSLOB.VariableNames;
+
+CombinedDS = combine(DSMSG,DSLOB);
+
+Engineer Features and Prepare Response Variable
+
+AI techniques can accommodate data in a variety of forms, from high-dimensional raw data, in which
+it's difficult for humans to find patterns and structure, through a lower dimensional space where the
+variables in the raw data are transformed to more practical, interpretable measurements. For
+example, Kolm, et al. 2021 [1] train a convolutional neural network (CNN) and LSTM on raw LOB
+data to forecast for trading opportunities. Regardless of form, with careful tuning, the layers of a
+deep network can find structure in the data that might inform predictions.
+
+As in [4] and “Machine Learning for Statistical Arbitrage II: Feature Engineering and Model
+Development” on page 2-59, this example uses the current imbalance index It and the sign of the
+forward price movements ΔSt to build a predictive model for future price movements. The following
+summarizes these measurements; for more details, see “Machine Learning for Statistical Arbitrage II:
+Feature Engineering and Model Development” on page 2-59.
+
+Initialize MapReduce for the tall array calculations.
+
+mapreducer(0)
+
+Convert the tall table into a tall timetable.
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data
+
+2-79

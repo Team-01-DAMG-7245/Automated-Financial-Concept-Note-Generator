@@ -1,0 +1,64 @@
+rfCustAge = fitrensemble(dataToImpute,'CustAge','Method','Bag',...
+    'NumLearningCycles',200,'Learners',tmp,'CategoricalPredictors',...
+    {'ResStatus','EmpStatus','OtherCC'});
+rfImputedData.CustAge(missingCustAge) = predict(rfCustAge,...
+    dataToImpute(missingCustAge,:));
+
+missingResStatus = ismissing(dataToImpute.ResStatus);
+% Fit ensemble of classification learners
+rfResStatus = fitcensemble(dataToImpute,'ResStatus','Method','Bag',...
+    'NumLearningCycles',200,'Learners',tmp,'CategoricalPredictors',...
+    {'EmpStatus','OtherCC'});
+rfImputedData.ResStatus(missingResStatus) = predict(rfResStatus,...
+    dataToImpute(missingResStatus,:));
+
+% Optionally, round the age to the nearest integer
+rfImputedData.CustAge = round(rfImputedData.CustAge);
+
+Compare Imputed Data to Original Data
+
+disp(rfImputedData(5:10,:));
+
+CustID    CustAge    TmAtAddress    ResStatus     EmpStatus    CustIncome    TmWBank    Other
+    ______    _______    ___________    __________    _________    __________    _______    _____
+
+5        68           56         Home Owner    Employed       53000         14         Yes
+       6        65           13         Home Owner    Employed       48000         59         Yes
+       7        34           32         Home Owner    Unknown        32000         26         Yes
+       8        50           57         Other         Employed       51000         33         No 
+       9        50           10         Tenant        Unknown        52000         25         Yes
+      10        49           30         Home Owner    Unknown        53000         23         Yes
+
+disp(rfImputedData(find(missingCustAge,5),:));
+
+CustID    CustAge    TmAtAddress    ResStatus     EmpStatus    CustIncome    TmWBank    Other
+    ______    _______    ___________    __________    _________    __________    _______    _____
+
+4        55           75         Home Owner    Employed       53000         20         Yes
+      19        54           14         Home Owner    Employed       51000         11         Yes
+     138        52           31         Other         Employed       41000          2         Yes
+     165        46           21         Home Owner    Unknown        38000         70         No 
+     207        52           38         Home Owner    Employed       48000         12         No
+
+disp(rfImputedData(find(missingResStatus,5),:));
+
+CustID    CustAge    TmAtAddress    ResStatus     EmpStatus    CustIncome    TmWBank    Other
+    ______    _______    ___________    __________    _________    __________    _______    _____
+
+1        53           62         Tenant        Unknown        50000         55         Yes
+      22        51           13         Home Owner    Employed       35000         33         Yes
+      33        46            8         Home Owner    Unknown        32000         26         Yes
+      47        52           56         Tenant        Employed       56000         79         Yes
+     103        64           49         Home Owner    Employed       50000         35         Yes
+
+Plot a histogram of the predictor values before and after imputation.
+
+Predictor = 
+;
+f1 = figure;
+ax1 = axes(f1);
+
+8
+Credit Risk Analysis
+
+8-128

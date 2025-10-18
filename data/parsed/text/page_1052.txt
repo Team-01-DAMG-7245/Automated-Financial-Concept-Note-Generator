@@ -1,0 +1,30 @@
+The missing bin can be left as is, although a common alternative is to treat the missing values. Note
+that treating the missing values must be done with care because it changes the data and can
+introduce bias.
+
+To treat missing values, you can apply different criteria. This example follows a straightforward
+approach to replace missing observations with the most common or typical value in the data
+distribution, which is the value of mode for the data. For this example, the mode happens to have a
+similar WOE value as the original <missing> bin. The similarity in values is favorable because
+similar WOE values means similar points in a scorecard.
+
+For CustAge, bin 4 is the bin with the most observations and the mode value of the original data is
+43.
+
+modeCustAge = mode(dataMissing.CustAge);
+disp(modeCustAge)
+
+43
+
+The WOE value of the <missing> bin is similar to the WOE value of bin 4. Therefore, replacing the
+missing values in CustAge with the value of mode is reasonable.
+
+To treat the data, create a copy of the data and fill the missing values.
+
+dataTreated = dataMissing;
+dataTreated.CustAge = fillmissing(dataTreated.CustAge,'constant',modeCustAge);
+
+8
+Credit Risk Analysis
+
+8-134

@@ -1,0 +1,12 @@
+{
+  "page": 2018,
+  "original_text": "Price = cfprice(CFlowAmounts,CFlowDates,Yield,Settle) computes a price given yield\nfor a cash flow.",
+  "ocr_text": "Price=cfprice(CFlowAmounts,CFlowDates,Yield,Settle)computesapricegivenyield\nforacashflow.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 252.28,
+    "x1": 542.9,
+    "y1": 275.91
+  },
+  "confidence": "high"
+}

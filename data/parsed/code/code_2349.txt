@@ -1,0 +1,6 @@
+Page 2226
+================================================================================
+
+% Define the objective function
+EWP = 1/nAssets*ones(nAssets,1);
+trackingError = @(x) (x-EWP)'*p.AssetCovar*(x-EWP);

@@ -1,0 +1,12 @@
+{
+  "page": 2107,
+  "original_text": "datedisp(NumMat)\ndatedisp( ___ ,DateForm)\nCharMat = datedisp(NumMat,DateForm)",
+  "ocr_text": "datedisp(NumMat)\ndatedisp(__,DateForm)\nCharMat=datedisp(NumMat,DateForm)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 193.0,
+    "x1": 300.72,
+    "y1": 228.63
+  },
+  "confidence": "high"
+}

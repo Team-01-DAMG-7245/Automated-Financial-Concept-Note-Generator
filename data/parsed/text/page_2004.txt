@@ -1,0 +1,12 @@
+Format the date axis and place ticks on actual cash flow dates.
+
+figure;
+cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1, ...
+'DateFormat', 6, 'DateSpacing', 100);
+
+Stack the cash flow arrows occurring on the same dates.
+
+15
+Functions
+
+15-698

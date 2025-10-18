@@ -1,0 +1,12 @@
+{
+  "page": 1413,
+  "original_text": "putPayoff = max(K - ST, 0)",
+  "ocr_text": "putPayoff=max(K-ST,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 281.43,
+    "x1": 230.87,
+    "y1": 291.89
+  },
+  "confidence": "high"
+}

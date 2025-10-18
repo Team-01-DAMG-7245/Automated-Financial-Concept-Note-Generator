@@ -1,0 +1,12 @@
+{
+  "page": 2150,
+  "original_text": "Depreciation = depgendb(Cost,Salvage,Life,Factor)",
+  "ocr_text": "Depreciation=depgendb(Cost,Salvage,Life,Factor)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.12,
+    "x1": 385.01,
+    "y1": 201.75
+  },
+  "confidence": "high"
+}

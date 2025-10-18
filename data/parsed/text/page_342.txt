@@ -1,0 +1,37 @@
+Dollar-Neutral Hedge-Fund Structure
+
+To illustrate how to use the portfolio optimization tools in hedge fund management, two popular
+strategies with dollar-neutral and 130-30 portfolios are examined. The dollar-neutral strategy invests
+equally in long and short positions such that the net portfolio position is 0. Such a portfolio is said to
+be "dollar-neutral."
+
+To set up a dollar-neutral portfolio, start with the "standard" portfolio problem and set the maximum
+exposure in long and short positions in the variable Exposure. The bounds for individual asset
+weights are plus or minus Exposure. Since the net position must be dollar-neutral, the budget
+constraint is 0 and the initial portfolio must be 0. Finally, the one-way turnover constraints provide
+the necessary long and short restrictions to prevent "double-counting" of long and short positions.
+The blotter shows the portfolio weights for the dollar-neutral portfolio that maximizes the Sharpe
+ratio. The long and short positions are obtained from the buy and sell trades relative to the initial
+portfolio.
+
+Exposure = 1;
+
+q = setBounds(p, -Exposure, Exposure);
+q = setBudget(q, 0, 0);
+q = setOneWayTurnover(q, Exposure, Exposure, 0);
+
+[qwgt,qlong,qshort] = estimateFrontier(q,20);
+[qrsk,qret] = estimatePortMoments(q,qwgt);
+
+[qswgt,qslong,qsshort] = estimateMaxSharpeRatio(q);
+[qsrsk,qsret] = estimatePortMoments(q,qswgt);
+
+% Plot the efficient frontier for a dollar-neutral fund structure with tangency portfolio.
+
+clf;
+portfolioexamples_plot('Efficient Frontier with Dollar-Neutral Portfolio', ...
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-174

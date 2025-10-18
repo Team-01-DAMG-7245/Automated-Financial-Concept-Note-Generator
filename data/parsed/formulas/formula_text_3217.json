@@ -1,0 +1,12 @@
+{
+  "page": 1727,
+  "original_text": "ActCons = abs2active(AbsCons, w0)",
+  "ocr_text": "ActCons=abs2active(AbsCons,w0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 422.93,
+    "x1": 268.79,
+    "y1": 433.4
+  },
+  "confidence": "high"
+}

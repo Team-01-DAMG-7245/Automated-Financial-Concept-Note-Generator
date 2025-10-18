@@ -1,0 +1,12 @@
+{
+  "page": 227,
+  "original_text": "p = Portfolio('NumAssets', 20);\np = setDefaultConstraints(p);\ndisp(p)",
+  "ocr_text": "p=Portfolio(NumAssets,20);\np=setDefaultConstraints(p);\ndisp(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 321.81,
+    "x1": 257.97,
+    "y1": 353.88
+  },
+  "confidence": "high"
+}

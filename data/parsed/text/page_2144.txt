@@ -1,0 +1,77 @@
+NumDays = 3×1
+
+1096
+        1461
+        1826
+
+Input Arguments
+
+StartDate — Start date
+datetime array | string array | date character vector
+
+Start date, specified as a scalar or an N-by-1 or 1-by-N vector using a datetime array, string array, or
+date character vectors.
+
+To support existing code, daysdif also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+EndDate — End date
+datetime array | string array | date character vector
+
+End date, specified as a scalar or an N-by-1 or 1-by-N vector using a datetime array, string array, or
+date character vectors.
+
+To support existing code, daysdif also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Basis — Day-count basis of the instrument
+0 (actual/actual) (default) | numeric with value 0 through 13 | vector of numerics with values 0
+through 13
+
+Day-count basis of the instrument, specified as an integer with a value of 0 through 13 or a N-by-1
+vector of integers with values of 0 through 13.
+
+•
+0 = actual/actual (default)
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (BMA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+15
+Functions
+
+15-838

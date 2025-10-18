@@ -1,0 +1,5 @@
+Page 1343
+================================================================================
+
+This example shows how to create a brinsonAttribution object that you can then use with the
+categoryReturnsChart function to generate a bar chart of category returns.

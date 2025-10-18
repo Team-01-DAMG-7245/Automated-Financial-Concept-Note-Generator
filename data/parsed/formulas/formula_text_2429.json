@@ -1,0 +1,12 @@
+{
+  "page": 1245,
+  "original_text": "nTrials = 5;\nrng(63349,'twister')\nY = obj.interpolate(t, X(:,:,ones(nTrials,1)), ...\n'Times',[obj.StartTime  T], 'Refine', true);",
+  "ocr_text": "nTrials=5;\n\nrng(63349,twister)\nY=obj.interpolate(t,X(:,:,ones(nTrials,1)),...\nTimes,[obj.StartTimeT],Refine,true);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 614.75,
+    "x1": 360.92,
+    "y1": 657.61
+  },
+  "confidence": "high"
+}

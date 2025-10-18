@@ -1,0 +1,5 @@
+Page 1466
+================================================================================
+
+•
+V is an NVars-by-NBROWNS matrix-valued volatility rate function Sigma.

@@ -1,0 +1,12 @@
+{
+  "page": 41,
+  "original_text": "Rate = irr([CashFlows CashFlows CashFlows])",
+  "ocr_text": "Rate=irr([CashFlowsCashFlowsCashFlows])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 322.97,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

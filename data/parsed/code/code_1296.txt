@@ -1,0 +1,5 @@
+Page 1347
+================================================================================
+
+This example shows how to create a brinsonAttribution object that you can then use with the
+categoryWeightsChart function to generate a bar chart of category weights.

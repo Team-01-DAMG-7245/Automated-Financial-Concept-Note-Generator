@@ -1,0 +1,60 @@
+NumAssets: 7
+                  Returns: [250×1 timetable]
+                Positions: [1×1 struct]
+                 Turnover: [250×1 timetable]
+                  BuyCost: [250×1 timetable]
+                 SellCost: [250×1 timetable]
+         TransactionCosts: [1×1 struct]
+                     Fees: [1×1 struct]
+
+Backtest Summary
+
+Use the summary function to generate a summary table of backtest results.
+
+% Examing results. The summary table shows several performance metrics.
+summary(backtester)
+
+ans=9×1 table
+                       EqualWeighted
+                       _____________
+
+TotalReturn            0.22943  
+    SharpeRatio            0.11415  
+    Volatility           0.0075013  
+    AverageTurnover     0.00054232  
+    MaxTurnover           0.038694  
+    AverageReturn       0.00085456  
+    MaxDrawdown           0.098905  
+    AverageBuyCost        0.030193  
+    AverageSellCost       0.030193
+
+Warm Starting Backtests
+
+When running a backtest in MATLAB®, you need to understand what the initial conditions are when
+the backtest begins. The initial weights for each strategy, the size of the strategy lookback window,
+and any potential split of the dataset into training and testing partitions affects the results of the
+backtest. This example shows how to use the runBacktest function with the 'Start' and 'End'
+name-value pair arguments that interact with the “LookbackWindow” on page 15-0
+ and
+“RebalanceFrequency” on page 15-0
+ properties of the backtestStrategy object to "warm start"
+a backtest.
+
+Load Data
+
+Load one year of stock price data. For readability, this example uses only a subset of the DJIA stocks.
+
+% Read table of daily adjusted close prices for 2006 DJIA stocks.
+T = readtable('dowPortfolio.xlsx');
+
+% Prune the table to include only the dates and selected stocks.
+timeColumn = "Dates";
+assetSymbols = ["BA", "CAT", "DIS", "GE", "IBM", "MCD", "MSFT"];
+T = T(:,[timeColumn assetSymbols]);
+
+% Convert to timetable.
+pricesTT = table2timetable(T,'RowTimes','Dates');
+
+runBacktest
+
+15-281

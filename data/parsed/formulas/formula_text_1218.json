@@ -1,0 +1,12 @@
+{
+  "page": 614,
+  "original_text": "IS_Agent = endingInventoryIS(LoggedSignals.ArrivalPrice,LoggedSignals.HorizonExecutedPrices, ...\n    LoggedSignals.HorizonExecutedShares,EnvConstants.BuyTrade);",
+  "ocr_text": "IS_Agent=endingInventoryIS(LoggedSignals.ArrivalPrice,LoggedSignals.HorizonExecutedPrices,...\nLoggedSignals.HorizonExecutedShares,EnvConstants.BuyTrade);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 341.43,
+    "x1": 610.17,
+    "y1": 362.69
+  },
+  "confidence": "high"
+}

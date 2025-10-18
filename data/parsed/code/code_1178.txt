@@ -1,0 +1,5 @@
+Page 1213
+================================================================================
+
+F = drift(0, 0.1);      % Drift rate function F(t,X)
+G = diffusion(1, 0.3);  % Diffusion rate function G(t,X)

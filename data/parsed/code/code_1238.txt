@@ -1,0 +1,6 @@
+Page 1270
+================================================================================
+
+for i = 1:nIndices
+    U(:,i) = cdf(tails{i}, returns(:,i));    % Transform each margin to uniform
+end

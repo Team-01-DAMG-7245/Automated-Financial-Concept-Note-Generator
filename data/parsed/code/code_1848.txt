@@ -1,0 +1,5 @@
+Page 1519
+================================================================================
+
+Expected (mean) instantaneous of GBM price process, specified as an array, a numeric scalar, or a
+deterministic function of time as a function handle accepting time t or both time t and state X(t).

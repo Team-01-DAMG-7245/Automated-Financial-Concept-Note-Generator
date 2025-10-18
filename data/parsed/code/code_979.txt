@@ -1,0 +1,7 @@
+Page 980
+================================================================================
+
+The creditscorecard object supports a fillmissing function. When you call the function on a
+predictor or group of predictors, the fillmissing function fills the missing data with the user-
+specified statistic. fillmissing supports the fill values 'mean', 'median', 'mode', and
+'constant', as well as the option to switch back to the original data.

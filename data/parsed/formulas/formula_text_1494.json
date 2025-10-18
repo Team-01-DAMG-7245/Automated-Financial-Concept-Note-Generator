@@ -1,0 +1,12 @@
+{
+  "page": 753,
+  "original_text": "% Strategy 1: Stock only\nAssetScenarios(:, 1) = (Price_T - Price_0) ./ Price_0;",
+  "ocr_text": "Strategy1:Stockonly\nAssetScenarios(:,1)=(Price_T-Price_0)./Price_0;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 290.65,
+    "x1": 382.57,
+    "y1": 311.91
+  },
+  "confidence": "high"
+}

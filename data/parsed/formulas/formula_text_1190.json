@@ -1,0 +1,12 @@
+{
+  "page": 606,
+  "original_text": "IS_Agent_Step_Train_Buy = LoggedSignals.IS_Agent;\nIS_Agent_Horizon_Train_Buy = IS_Agent_Step_Train_Buy( ....\n    NumIntervalsPerHorizon:NumIntervalsPerHorizon:NumTrainingSteps);",
+  "ocr_text": "IS_Agent_Step_Train_Buy=LoggedSignals.IS_Agent;\nIS_Agent_Horizon_Train_Buy=IS_Agent_Step_Train_Buy(....\nNumIntervalsPerHorizon:NumIntervalsPerHorizon:NumTrainingSteps);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 350.07,
+    "x1": 458.42,
+    "y1": 382.13
+  },
+  "confidence": "high"
+}

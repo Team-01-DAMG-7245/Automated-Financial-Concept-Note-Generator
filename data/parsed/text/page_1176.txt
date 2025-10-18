@@ -1,0 +1,72 @@
+Assume that all variables are numeric within a timetable, or the operations can be applied on TT2:
+
+S = vartype('numeric');
+
+TT2 = TT(:,S)
+
+Descriptive Statistics and Arithmetic and Math Operations
+
+Task
+Removed Functionality
+Use This Functionality
+
+Extract out numerical data
+srs2 = myfts.series2
+TT.Variables
+
+Apply some options
+(statistics)
+
+For example: min, max,
+mean, median, cov, std,
+and var
+
+Use cov (or max, mean, median, min,
+std, or var):
+
+cov(TT.Variables)
+
+Apply some options
+(operations)
+
+For example: sum and
+cumsum
+
+Use sum or cumsum:
+
+TT.Variables =
+cumsum(TT.Variables)
+
+Data Extraction
+
+Refer to timetable documentation for data extraction methods and examples.
+
+See Also
+timetable | retime | synchronize | timerange | withtol | vartype | issorted | sortrows |
+unique | diff | isregular | rmmissing | fillmissing | convert2daily | convert2weekly |
+convert2monthly | convert2quarterly | convert2semiannual | convert2annual
+
+Related Examples
+
+•
+“Use Timetables in Finance” on page 11-7
+
+•
+“Select Times in Timetable”
+
+•
+“Resample and Aggregate Data in Timetable”
+
+•
+“Combine Timetables and Synchronize Their Data”
+
+•
+“Retime and Synchronize Timetable Variables Using Different Methods”
+
+•
+“Clean Timetable with Missing, Duplicate, or Nonuniform Times”
+
+11
+Using Financial Timetables
+
+11-6

@@ -1,0 +1,9 @@
+Page 330
+================================================================================
+
+Set up a "standard" or default mean-variance portfolio optimization problem with the
+setDefaultConstraints function that requires fully-invested long-only portfolios (non-negative
+weights that must sum to 1). Given this initial problem, estimate the efficient frontier with the
+functions estimateFrontier and estimatePortMoments, where estimateFrontier estimates
+efficient portfolios and estimatePortMoments estimates risks and returns for portfolios. The next
+figure overlays the efficient frontier on the previous plot.

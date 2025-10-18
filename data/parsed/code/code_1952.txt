@@ -1,0 +1,5 @@
+Page 1551
+================================================================================
+
+The software does not call the rebalance function if the data is insufficient to create a valid rolling
+window, regardless of the value of the RebalanceFrequency property.

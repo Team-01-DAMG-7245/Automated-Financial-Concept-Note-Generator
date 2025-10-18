@@ -1,0 +1,14 @@
+As mentioned previously, these strategies are not typically used as standalone trading signals. In fact,
+these three strategies perform worse than the simple benchmark strategy for the 2006 timeframe.
+You can visualize how the strategy allocations change over time using an area chart of the daily asset
+positions. To do so, use the assetAreaPlot helper function, defined in the Local Functions on page
+4-261 section.
+
+strategyName = 
+;
+assetAreaPlot(bt,strategyName)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-260

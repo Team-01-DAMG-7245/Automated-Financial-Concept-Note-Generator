@@ -1,0 +1,12 @@
+{
+  "page": 376,
+  "original_text": "assetIndx = optWts > .001;\nresults = table(assetNames(assetIndx)', optWts(assetIndx)*100, 'VariableNames',{'Asset', 'Weight\ndisp('Maximum Information Ratio Portfolio:')",
+  "ocr_text": "assetIndx=optWts.001;\nresults=table(assetNames(assetIndx),optWts(assetIndx)*100,_VariableNames,{Asset,Weight\ndisp(MaximumInformationRatioPortfolio:)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.33,
+    "x1": 610.17,
+    "y1": 697.4
+  },
+  "confidence": "high"
+}

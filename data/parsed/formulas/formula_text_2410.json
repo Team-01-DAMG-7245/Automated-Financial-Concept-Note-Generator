@@ -1,0 +1,12 @@
+{
+  "page": 1236,
+  "original_text": "obj = \n   Class GBM: Generalized Geometric Brownian Motion\n   ------------------------------------------------",
+  "ocr_text": "obj=\nClassGBM:GeneralizedGeometricBrownianMotion",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 687.03,
+    "x1": 366.31,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

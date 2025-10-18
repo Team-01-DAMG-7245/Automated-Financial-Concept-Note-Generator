@@ -1,0 +1,132 @@
+Portfolio
+Problem
+
+Portfolio
+Function
+
+Type of
+Optimization
+Problem
+
+Main Solver
+Helper Solver
+
+Portfolio without
+tracking error
+constraints
+
+estimateFronti
+erByRisk
+
+Optimizing a
+portfolio for a
+certain risk level
+introduces a
+nonlinear
+constraint.
+Therefore, this
+problem has a
+linear objective
+with linear and
+nonlinear
+constraints.
+
+'fmincon' using
+setSolver
+
+For 'min':
+quadratic
+objective,
+'quadprog' or
+'lcprog' using
+setSolver
+
+For 'max': linear
+objective,
+'linprog' or
+'lcprog' using
+setSolver
+
+Portfolio without
+tracking error
+constraints
+
+estimateFronti
+erByReturn
+
+Quadratic
+objective with
+linear constraints
+
+'quadprog' or
+'lcprog' using
+setSolver
+
+For ‘min’:
+quadratic
+objective,
+'quadprog' or
+'lcprog' using
+setSolver
+
+For ‘max’: linear
+objective,
+'linprog' or
+'lcprog' using
+setSolver
+
+Portfolio without
+tracking error
+constraints
+
+estimateFronti
+erLimits
+
+Quadratic or linear
+objective with
+linear constraints
+
+For ‘min’:
+quadratic
+objective,
+'quadprog' or
+'lcprog' using
+setSolver
+
+For ‘max’: linear
+objective,
+'linprog' or
+'lcprog' using
+setSolver
+
+Not applicable
+
+Portfolio without
+tracking error
+constraints
+
+estimateMaxSha
+rpeRatio
+
+Quadratic
+objective with
+linear constraints
+
+'quadprog' using
+setSolver
+
+Because
+estimateMaxSha
+rpeRatio
+internally calls
+estimateFronti
+erLimits, all
+solvers needed by
+estimateFronti
+erLimits are the
+helper solvers
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-116

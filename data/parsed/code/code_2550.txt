@@ -1,0 +1,7 @@
+Page 2430
+================================================================================
+
+Since the New York Stock Exchange was open on Saturdays before September 29, 1952, exact
+closures from 1885 to 2070 include Saturday trading days. To capture these dates, use the function
+nyseclosures. The results from holidays and nyseclosures are identical if the
+WorkWeekFormat in nyseclosures is 'Modern'.

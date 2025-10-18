@@ -1,0 +1,5 @@
+Page 451
+================================================================================
+
+function new_weights = MixMDP(~, assetPrices, struct)
+% Min variance + MDP diversification strategy

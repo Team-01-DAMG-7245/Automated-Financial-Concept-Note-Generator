@@ -1,0 +1,5 @@
+Page 1686
+================================================================================
+
+define a Processes function to signal early termination of a trial, and offers significant performance
+benefits in some situations (for example, pricing down-and-out barrier options).

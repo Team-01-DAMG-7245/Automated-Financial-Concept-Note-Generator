@@ -1,0 +1,8 @@
+Page 1097
+================================================================================
+
+function displaySummary(regressionType, StartDate, EndDate, NumAssets, Assets, Alpha, StdAlpha, B
+fprintf(1,'%s regression with daily total return data from %s to %s ...\n', ...
+    regressionType, string(StartDate),string(EndDate));
+fprintf(1,'  %4s %-20s %-20s %-20s\n',' ','Alpha','Beta','Sigma');
+fprintf(1,'  ---- -------------------- -------------------- --------------------\n');

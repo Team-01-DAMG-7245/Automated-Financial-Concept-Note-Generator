@@ -1,0 +1,12 @@
+{
+  "page": 557,
+  "original_text": "% Logarithmic wealth levels\nnumWealthPoints = 25;\nwealthLevel = logspace(log10(WMin),log10(WMax),numWealthPoints);",
+  "ocr_text": "Logarithmicwealthlevels\nnumWealthPoints=25;\nwealthLevel=logspace(log10(WMin),log10(WMax),numWealthPoints);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 585.43,
+    "x1": 436.75,
+    "y1": 617.5
+  },
+  "confidence": "high"
+}

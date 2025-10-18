@@ -1,0 +1,12 @@
+{
+  "page": 1287,
+  "original_text": "irregularComponentLinkage = linkage( irregularCorrDistances, \"complete\" );",
+  "ocr_text": "irregularComponentLinkage=linkage(irregularCorrDistances,complete);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 472.68,
+    "x1": 490.96,
+    "y1": 483.14
+  },
+  "confidence": "high"
+}

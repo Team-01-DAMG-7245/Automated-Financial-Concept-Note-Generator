@@ -1,0 +1,64 @@
+If Design has a single cell, it is assumed to have the same Design matrix for each sample. If
+Design has more than one cell, each cell contains a Design matrix for each sample.
+
+Data Types: double | cell
+
+Covariance — Estimates for the covariance of the residuals of the regression
+matrix
+
+Estimates for the covariance of the residuals of the regression, specified as an NUMSERIES-by-
+NUMSERIES matrix.
+
+Data Types: double
+
+MatrixFormat — Parameters to be included in Fisher information matrix
+'full' (default) | character vector with value 'full' or 'paramonly'
+
+(Optional) Parameters to be included in the Fisher information matrix, specified as a character vector.
+The choices are:
+
+•
+'full' — This is the default method that computes the full Fisher information matrix for both
+model and covariance parameter estimates.
+
+•
+'paramonly' — This computes only components of the Fisher information matrix associated with
+the model parameter estimates.
+
+Data Types: char
+
+CovarFormat — Format for covariance matrix
+'full' (default) | character vector with value 'full' or 'diagonal'
+
+(Optional) Format for the covariance matrix, specified as a character vector. The choices are:
+
+•
+'full' — This is the default method that computes the full covariance matrix.
+
+•
+'diagonal' — This forces the covariance matrix to be a diagonal matrix.
+
+Data Types: char
+
+Output Arguments
+
+Fisher — Fisher information matrix
+matrix
+
+Fisher information matrix, returned as an TOTALPARAMS-by-TOTALPARAMS matrix.
+
+More About
+
+Fisher Information Matrix
+
+The Fisher information matrix is a key concept in statistics and information theory that measures the
+amount of information that an observable random variable carries about an unknown parameter upon
+which the probability of the random variable depends.
+
+The Fisher information matrix is used to evaluate the efficiency of estimators and to derive
+confidence intervals.
+
+15
+Functions
+
+15-1190

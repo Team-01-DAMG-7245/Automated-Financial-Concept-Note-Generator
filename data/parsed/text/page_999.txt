@@ -1,0 +1,62 @@
+{'TmWBank'   }    {'[12,45)'         }    -0.038279
+    {'TmWBank'   }    {'[45,71)'         }      0.39569
+    {'TmWBank'   }    {'[71,Inf]'        }      0.95074
+    {'TmWBank'   }    {'<missing>'       }          NaN
+    {'OtherCC'   }    {'No'              }       -0.193
+    {'OtherCC'   }    {'Yes'             }      0.15868
+    {'OtherCC'   }    {'<missing>'       }          NaN
+    {'AMBalance' }    {'[-Inf,558.88)'   }       0.3552
+    {'AMBalance' }    {'[558.88,1597.44)'}    -0.026797
+    {'AMBalance' }    {'[1597.44,Inf]'   }     -0.21168
+    {'AMBalance' }    {'<missing>'       }          NaN
+
+This is a good time to modify the bin labels, if this is something of interest for cosmetic reasons. To do
+so, use modifybins to change the bin labels.
+
+sc = modifybins(sc,'CustAge','BinLabels',...
+{'Up to 36' '37 to 39' '40 to 45' '46 to 57' '58 and up'});
+
+sc = modifybins(sc,'CustIncome','BinLabels',...
+{'Up to 28999' '29000 to 32999' '33000 to 41999' '42000 to 46999' '47000 and up'});
+
+sc = modifybins(sc,'TmWBank','BinLabels',...
+{'Up to 11' '12 to 44' '45 to 70' '71 and up'});
+
+sc = modifybins(sc,'AMBalance','BinLabels',...
+{'Up to 558.87' '558.88 to 1597.43' '1597.44 and up'});
+
+p1 = displaypoints(sc);
+disp(p1)
+
+Predictors               Bin              Points  
+    ______________    _____________________    _________
+
+{'CustAge'   }    {'Up to 36'         }     -0.15314
+    {'CustAge'   }    {'37 to 39'         }    -0.062247
+    {'CustAge'   }    {'40 to 45'         }     0.045763
+    {'CustAge'   }    {'46 to 57'         }      0.22888
+    {'CustAge'   }    {'58 and up'        }      0.48354
+    {'CustAge'   }    {'<missing>'        }          NaN
+    {'ResStatus' }    {'Tenant'           }    -0.031302
+    {'ResStatus' }    {'Home Owner'       }      0.12697
+    {'ResStatus' }    {'Other'            }      0.37652
+    {'ResStatus' }    {'<missing>'        }          NaN
+    {'EmpStatus' }    {'Unknown'          }    -0.076369
+    {'EmpStatus' }    {'Employed'         }      0.31456
+    {'EmpStatus' }    {'<missing>'        }          NaN
+    {'CustIncome'}    {'Up to 28999'      }     -0.45455
+    {'CustIncome'}    {'29000 to 32999'   }      -0.1037
+    {'CustIncome'}    {'33000 to 41999'   }     0.077768
+    {'CustIncome'}    {'42000 to 46999'   }      0.24406
+    {'CustIncome'}    {'47000 and up'     }      0.43536
+    {'CustIncome'}    {'<missing>'        }          NaN
+    {'TmWBank'   }    {'Up to 11'         }     -0.18221
+    {'TmWBank'   }    {'12 to 44'         }    -0.038279
+    {'TmWBank'   }    {'45 to 70'         }      0.39569
+    {'TmWBank'   }    {'71 and up'        }      0.95074
+    {'TmWBank'   }    {'<missing>'        }          NaN
+    {'OtherCC'   }    {'No'               }       -0.193
+
+Case Study for Credit Scorecard Analysis
+
+8-81

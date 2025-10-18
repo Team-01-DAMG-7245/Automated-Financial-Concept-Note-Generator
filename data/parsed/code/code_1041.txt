@@ -1,0 +1,4 @@
+Page 1068
+================================================================================
+
+for k = 1, ..., NumSamples, where Data is a NumSamples-by-NumSeries matrix.

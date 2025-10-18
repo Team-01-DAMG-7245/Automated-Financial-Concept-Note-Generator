@@ -1,0 +1,12 @@
+{
+  "page": 450,
+  "original_text": "% Plot the original mean-variance frontier.\np.AInequality = []; p.bInequality = [];\nplotFrontier(p,nPort);\nlabels(i+1) = \"No ESG restriction\";\ntitle('Efficient Frontiers')\nlegend(labels,'Location','southeast')\nhold off",
+  "ocr_text": "Plottheoriginalmean-variancefrontier.\np.AInequality=[];p.bInequality=[];\nplotFrontier(p,nPort);\nlabels(i+1)=NoESGrestriction;\ntitle(EfficientFrontiers)\nlegend(labels,Location,southeast)\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 309.03,
+    "x1": 322.97,
+    "y1": 384.29
+  },
+  "confidence": "high"
+}

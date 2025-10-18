@@ -1,0 +1,5 @@
+Page 1250
+================================================================================
+
+Simulate the standard Brownian paths by explicitly passing the stratified sampling function to the
+simulation (simulate) method.

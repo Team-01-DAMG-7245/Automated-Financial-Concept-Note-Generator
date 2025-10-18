@@ -1,0 +1,12 @@
+{
+  "page": 568,
+  "original_text": "% Compute the covariance using the factors model\n%   SigmaFactorModel = F*Sigma_f*F' + D\n%   r_a = mu_a + F*r_f + epsilon_a\n[factorLoading,factorRetn,~,~,~,factorMean] = ...\n    pca(assetReturns.Variables,'NumComponents',numFactors);\ncovFactor = cov(factorRetn);\nretnHat = factorRetn*factorLoading' + factorMean;\nunexplainedRetn = assetReturns.Variables - retnHat;\nunexplainedCovar = diag(cov(unexplainedRetn));\nD = diag(unexplainedCovar);",
+  "ocr_text": "Computethecovarianceusingthefactorsmodel\nSigmaFactorModel=F*Sigma_f*F+D\nSra=mu_a+F*r_f+epsilona\n[factorLoading,factorRetn,-,,,factorMean]=...\n\npca(assetReturns.Variables,NumComponents,numFactors);\ncovFactor=cov(factorRetn);\nretnHat_=factorRetn*factorLoading+factorMean;\nunexplainedRetn=assetReturns.Variables-retnHat;\nunexplainedCovar=diag(cov(unexplainedRetn));\nD=diag(unexplainedCovar);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 232.83,
+    "x1": 409.68,
+    "y1": 340.49
+  },
+  "confidence": "high"
+}

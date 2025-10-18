@@ -1,0 +1,12 @@
+{
+  "page": 2139,
+  "original_text": "NewDate = datetime\n   03-Mar-2004",
+  "ocr_text": "NewDate=datetime\n03-Mar-2004",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 664.41,
+    "x1": 187.53,
+    "y1": 685.67
+  },
+  "confidence": "high"
+}

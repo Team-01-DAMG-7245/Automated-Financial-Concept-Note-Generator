@@ -1,0 +1,12 @@
+{
+  "page": 559,
+  "original_text": "% Compute next wealth\nZ = randn;\nW = W*exp(mu-(sigma^2/2)+sigma*Z);",
+  "ocr_text": "Computenextwealth\nZ=randn;\nW=W*exp(mu-(sigma*2/2)+sigma*Z);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 557.42,
+    "x1": 274.21,
+    "y1": 589.49
+  },
+  "confidence": "high"
+}

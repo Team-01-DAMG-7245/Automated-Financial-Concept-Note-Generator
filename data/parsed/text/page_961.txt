@@ -1,0 +1,46 @@
+[2] Basel Committee on Banking Supervision, "International Convergence of Capital Measurement
+and Capital Standards: A Revised Framework," Bank for International Settlements (BIS),
+comprehensive version, June 2006. Available at: https://www.bis.org/publ/bcbsca.htm.
+
+[3] Basel Committee on Banking Supervision, "Principles for Sound Stress Testing Practices and
+Supervision - Final Paper," Bank for International Settlements (BIS), May 2009. Available at: https://
+www.bis.org/publ/bcbs155.htm.
+
+[4] FRED, St. Louis Federal Reserve, Federal Reserve Economic Database, https://fred.stlouisfed.org/.
+
+[5] Helwege, J., and P. Kleiman, "Understanding Aggregate Default Rates of High Yield Bonds,"
+Federal Reserve Bank of New York, Current Issues in Economics and Finance, Volume 2, Number 6,
+May 1996.
+
+[6] Loeffler, G., and P. N. Posch, Credit Risk Modeling Using Excel and VBA, West Sussex, England:
+Wiley Finance, 2007.
+
+[7] NBER, National Bureau of Economic Research, Business Cycle Expansions and Contractions,
+https://www.nber.org/research/business-cycle-dating.
+
+[8] Otani, A., S. Shiratsuka, R. Tsurui, and T. Yamada, "Macro Stress-Testing on the Loan Portfolio of
+Japanese Banks," Bank of Japan Working Paper Series No.09-E-1, March 2009.
+
+[9] Survey of Professional Forecasters, Federal Reserve Bank of Philadelphia, https://
+www.philadelphiafed.org/.
+
+[10] Vazza, D., D. Aurora, and R. Schneck, "Annual 2005 Global Corporate Default Study And Rating
+Transitions," Standard & Poor's, Global Fixed Income Research, New York, January 2006.
+
+[11] Wilson, T. C., "Portfolio Credit Risk," FRBNY Economic Policy Review, October 1998.
+
+See Also
+transprob | transprobprep | transprobbytotals | bootstrp | transprobgrouptotals |
+transprobtothresholds | transprobfromthresholds
+
+Related Examples
+
+•
+“Credit Quality Thresholds” on page 8-45
+
+•
+“Credit Rating by Bagging Decision Trees”
+
+Forecasting Corporate Default Rates
+
+8-43

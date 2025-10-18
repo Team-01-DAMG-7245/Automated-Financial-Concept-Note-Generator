@@ -1,0 +1,6 @@
+Page 798
+================================================================================
+
+The PortfolioMAD object uses the default display function provided by MATLAB, where display
+and disp display a PortfolioMAD object and its properties with or without the object variable
+name.

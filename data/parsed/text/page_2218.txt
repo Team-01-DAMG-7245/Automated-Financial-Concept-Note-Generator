@@ -1,0 +1,13 @@
+[4] Sortino, F.A. and Robert van der Meer. "Downside Risk." Journal of Portfolio Management. Vol. 17,
+No. 5, Spring 1991, pp. 27–31.
+
+See Also
+lpm
+
+Topics
+“Performance Metrics Overview” on page 7-2
+
+15
+Functions
+
+15-912

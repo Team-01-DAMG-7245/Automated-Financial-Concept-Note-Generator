@@ -1,0 +1,35 @@
+MaxDrawdown          0.058469       0.058133
+    AverageBuyCost        0.51636        0.40533
+    AverageSellCost       0.51636        0.40533
+
+Use equityCurve to plot the equity curve to compare the performance of both strategies.
+
+equityCurve(backtester)
+
+The maximum and average turnover are decreased using covariance shrinkage. Also, the covariance
+shrinkage strategy results in a decrease of buy and sell costs. In this example, not only is the turnover
+decreased, but also the volatility and the maximum drawdown are decreased. Therefore, in this
+example the shrunk covariance produces more robust weights.
+
+Local Functions
+
+function new_weights = traditionalStrat(~, pricesTT) 
+% Function for minimum variance portfolio using traditional covariance estimate.
+
+% Compute the returns from the prices timetable.
+assetReturns = tick2ret(pricesTT);
+mu = mean(assetReturns.Variables);
+Sigma = cov(assetReturns.Variables,"omitrows");
+
+% Create the portfolio problem.
+p = Portfolio(AssetMean=mu,AssetCovar=Sigma);
+% Specify long-only fully invested contraints.
+p = setDefaultConstraints(p);
+
+% Compute the minimum variance portfolio.
+new_weights = estimateFrontierLimits(p,'min');
+end
+
+covarianceShrinkage
+
+15-61

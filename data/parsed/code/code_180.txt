@@ -1,0 +1,7 @@
+Page 163
+================================================================================
+
+In this case, the constraints allow only one optimum portfolio. Since eight portfolios were requested,
+all eight portfolios are the same. Note that the solution to this portfolio problem using the
+setGroups function is the same as using the setInequality function in the example “Linear
+Constraint Equations” on page 3-21.

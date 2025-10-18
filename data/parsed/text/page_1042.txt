@@ -1,0 +1,38 @@
+Create Credit Scorecard Model Using New Imputed Data
+
+Use the imputed data to create the creditscorecard object, and then use autobinning,
+fitmodel, and formatpoints to create a credit scorecard model.
+
+sc = creditscorecard(knnImputedData,'IDVar','CustID');
+sc = autobinning(sc);
+[sc,mdl] = fitmodel(sc,'display','off');
+sc = formatpoints(sc,'PointsOddsAndPDO',[500 2 50]);
+PointsInfo = displaypoints(sc);
+disp(PointsInfo);
+
+Predictors               Bin             Points
+    ______________    _____________________    ______
+
+{'CustAge'   }    {'[-Inf,33)'        }    53.675
+    {'CustAge'   }    {'[33,37)'          }    56.983
+    {'CustAge'   }    {'[37,40)'          }    57.721
+    {'CustAge'   }    {'[40,45)'          }    67.063
+    {'CustAge'   }    {'[45,48)'          }    78.319
+    {'CustAge'   }    {'[48,51)'          }    79.494
+    {'CustAge'   }    {'[51,58)'          }    81.157
+    {'CustAge'   }    {'[58,Inf]'         }    97.315
+    {'CustAge'   }    {'<missing>'        }       NaN
+    {'ResStatus' }    {'Tenant'           }    63.012
+    {'ResStatus' }    {'Home Owner'       }     72.35
+    {'ResStatus' }    {'Other'            }    92.434
+    {'ResStatus' }    {'<missing>'        }       NaN
+    {'EmpStatus' }    {'Unknown'          }    58.892
+    {'EmpStatus' }    {'Employed'         }     86.83
+    {'EmpStatus' }    {'<missing>'        }       NaN
+    {'CustIncome'}    {'[-Inf,29000)'     }    30.304
+    {'CustIncome'}    {'[29000,33000)'    }    56.365
+
+8
+Credit Risk Analysis
+
+8-124

@@ -1,0 +1,7 @@
+Page 554
+================================================================================
+
+% Retrieve simulation information
+cumulativeReward = 0;
+wealthSimulation = zeros(finalTimePeriod+1,numSimulations);
+for i = 1:numSimulations

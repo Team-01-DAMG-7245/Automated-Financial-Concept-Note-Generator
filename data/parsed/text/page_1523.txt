@@ -1,0 +1,34 @@
+For more information, see “SDE Models” on page 14-7, “SDE Classes and Associated Simulation
+Methods” on page 14-13, and “SDE Class Hierarchy” on page 14-5.
+
+Algorithms
+
+The rough volatility model (RVM) model allows you to simulate any vector-valued RVM of the form:
+
+dX1t = B(t)X1tdt + X2tX1tdW1t
+
+X2t = ξeYt
+
+Yt =∫−∞
+
+t
+g(t −s)νsdWs
+
+The first equation is a geometric Brownian motion model with a stochastic volatility function.
+
+The second equation is the process describing the evolution of the volatility rate of the coupled GBM
+process, where Yt is a Brownian semistationary process.
+
+g(t) is called a kernel function, which has the following properties:
+
+•
+For some α ∈( −1
+2, 1
+2)\ 0 , x ∈(0, 1) and L0, there is a continuously differentiable, bounded away
+
+from zero, slowly varying function at zero: g(x) = xαL0(x), where ɑ = H -1/2 and H is a Hurst
+exponent.
+
+rvm
+
+15-217

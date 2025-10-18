@@ -1,0 +1,34 @@
+aSML = 
+0.0025
+
+Since the fund's risk is much less than the market's risk, the risk-adjusted return of the fund is much
+higher than both the nominal fund and market returns.
+
+See Also
+sharpe | inforatio | portalpha | lpm | elpm | maxdrawdown | emaxdrawdown | ret2tick |
+tick2ret
+
+Related Examples
+
+•
+“Performance Metrics Overview” on page 7-2
+
+•
+“Using the Sharpe Ratio” on page 7-5
+
+•
+“Using the Information Ratio” on page 7-7
+
+•
+“Using Tracking Error” on page 7-8
+
+•
+“Using Sample and Expected Lower Partial Moments” on page 7-11
+
+•
+“Using Maximum and Expected Maximum Drawdown” on page 7-14
+
+7
+Investment Performance Metrics
+
+7-10

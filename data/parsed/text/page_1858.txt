@@ -1,0 +1,58 @@
+ZeroData = table(datetime(ZeroDates,'ConvertFrom','datenum','Locale','en_US'), ZeroRates);
+
+krdur = bndkrdur(ZeroData,.0525,datetime('12/31/1998','Locale','en_US'),...
+datetime('11/15/2028','Locale','en_US'),'KeyRates',[2 5 10 30])
+
+krdur = 1×4
+
+0.2986    0.8791    4.1353    9.5814
+
+Input Arguments
+
+ZeroData — Zero curve
+matrix | table
+
+Zero Curve, specified as a numRates-by-2 matrix or a numRates-by-2 table.
+
+If ZeroData is represented as a numRates-by-2 matrix, the first column is a MATLAB serial date
+number and the second column is the accompanying zero rates.
+
+If ZeroData is a table, the first column can be a datetime array, string array, or date character
+vectors. The second column must be numeric data corresponding to the zero rates.
+
+Data Types: double | datetime | char | string | table
+
+CouponRate — Annual percentage rate used to determine coupons payable on a bond
+decimal
+
+Annual percentage rate used to determine the coupons payable on a bond, specified as decimal value
+using a scalar or a NUMBONDS-by-1 vector.
+
+Data Types: double
+
+Settle — Settlement date for all bonds and zero curve
+datetime scalar | string scalar | date character vector
+
+Settlement date for all bonds and zero curve, specified as a scalar datetime, string, or date character
+vector. Settle must be the same settlement date for all the bonds and the zero curve.
+
+To support existing code, bndkrdur also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date for bonds
+datetime array | string array | date character vector
+
+Maturity date for bonds, specified as a scalar or a NUMBONDS-by-1 vector using a datetime array,
+string array, or date character vectors.
+
+To support existing code, bndkrdur also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+15
+Functions
+
+15-552

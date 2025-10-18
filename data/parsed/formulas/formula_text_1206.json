@@ -1,0 +1,12 @@
+{
+  "page": 610,
+  "original_text": "% Compute Implementation Shortfall for each Horizon\n    IS_TWAP_Horizon(HorizonIdx) = endingInventoryIS(ArrivalPrice, ...\n        HorizonExecutedPrices,HorizonExecutedShares,BuyTrade);\nend",
+  "ocr_text": "ComputeImplementationShortfallforeachHorizon\nIS_TWAP_Horizon(HorizonIdx)=endingInventoryIS(ArrivalPrice,...\nHorizonExecutedPrices,HorizonExecutedShares,BuyTrade);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 463.87,
+    "y1": 319.49
+  },
+  "confidence": "high"
+}

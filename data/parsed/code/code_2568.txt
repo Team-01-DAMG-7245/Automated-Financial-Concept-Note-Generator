@@ -1,0 +1,7 @@
+Page 2475
+================================================================================
+
+(Optional) Moment orders, specified as either a scalar or a NUMORDERS vector of nonnegative integer
+moment orders. If no order specified, the default Order = 0, which is the shortfall probability.
+Although the lpm function works for noninteger orders and, in some cases, for negative orders, this
+falls outside customary usage.

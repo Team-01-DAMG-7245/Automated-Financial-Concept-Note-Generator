@@ -1,0 +1,10 @@
+Page 694
+================================================================================
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioCVaR;
+p = setEquality(p, A, b);
+disp(p.NumAssets)
+disp(p.AEquality)
+disp(p.bEquality)

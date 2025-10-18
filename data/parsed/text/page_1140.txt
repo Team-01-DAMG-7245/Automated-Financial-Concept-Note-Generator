@@ -1,0 +1,64 @@
+ObservationInfo             = rlNumericSpec([3 1],'LowerLimit',0,'UpperLimit',[10 Maturity 1]');
+ObservationInfo.Name        = 'Hedging State';
+ObservationInfo.Description = ['Moneyness', 'TimeToMaturity','Position'];
+
+ActionInfo = rlNumericSpec([1 1],'LowerLimit',0,'UpperLimit',1);
+ActionInfo.Name = 'Hedge';
+
+Define Reward
+
+From Cao [2 on page 10-46], the accounting P&L formulation and rewards (negative costs) are
+
+Ri + 1 = Vi + 1 −Vi + Hi + 1(Si + 1 - Si) - κ Si + 1 Hi + 1 −Hi
+
+where
+
+Ri:Reward
+
+Vi:Value of option
+
+Si:Spot price of underlying asset
+
+Hi:Holding
+
+κ:Transaction costs
+
+A final reward at the last time step liquidates the hedge that is κ Sn Hn
+.
+
+In this implementation, the reward (Ri) is penalized by the square of the reward multiplied by a
+constant to punish large swings in the value of the hedged position:
+
+Ri + 1 = Ri + 1 −c Ri + 1
+
+2
+
+The reward is defined in stepFcn which is called at each step of the simulation.
+
+env = rlFunctionEnv(ObservationInfo,ActionInfo, ...
+    @(Hedge, LoggedSignals) stepFcn(Hedge,LoggedSignals,rfRate,ExpVol,dT,Strike,ExpReturn,c,kappa
+    @() resetFcn(SpotPrice/Strike,Maturity,InitPosition));
+
+obsInfo = getObservationInfo(env);
+actInfo = getActionInfo(env);
+
+Create Environment Interface for RL Agent
+
+Create the DDPG agent using rlDDPGAgent (Reinforcement Learning Toolbox). While it is possible to
+create custom actor and critic networks, this example uses the default networks.
+
+initOpts = rlAgentInitializationOptions('NumHiddenUnit',64);
+criticOpts = rlOptimizerOptions("LearnRate",1e-4);
+actorOpts = rlOptimizerOptions("LearnRate",1e-4);
+
+agentOptions = rlDDPGAgentOptions(...
+    "ActorOptimizerOptions",actorOpts, ...
+    "CriticOptimizerOptions",criticOpts, ...
+    "DiscountFactor",.9995, ...
+    "TargetSmoothFactor",5e-4);
+agent = rlDDPGAgent(obsInfo,actInfo,initOpts,agentOptions);
+
+10
+Solving Sample Problems
+
+10-42

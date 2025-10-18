@@ -1,0 +1,6 @@
+Page 1114
+================================================================================
+
+A = [Deltas; Gammas; Vegas; Prices];
+b = [0; 0; 0; 17000];
+OptionQuantities = A\b % Quantity (number) of each option.

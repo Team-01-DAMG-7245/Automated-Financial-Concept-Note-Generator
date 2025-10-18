@@ -1,0 +1,12 @@
+{
+  "page": 1019,
+  "original_text": "ProbTimes = yearfrac(Settle,ProbData(:,1));\nfigure\nplot([0; ProbTimes],[0; ProbData(:,2)])\ngrid on\naxis([0 ProbTimes(end,1) 0 ProbData(end,2)])\nxlabel('Time (Years)')\nylabel('Cumulative Default Probability')\ntitle('Bootstrapped Default Probability Curve')",
+  "ocr_text": "ProbTimes=yearfrac(Settle,ProbData(:,1));\nfigure\n\nplot([;ProbTimes],[0;ProbData(:,2)])\n\ngridon\naxis([0ProbTimes(end,1)0ProbData(end,2)])\nxlabel(Time(Years))\nylabel(CumulativeDefaultProbability)\ntitle(BootstrappedDefaultProbabilityCurve)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 457.03,
+    "x1": 344.67,
+    "y1": 543.09
+  },
+  "confidence": "high"
+}

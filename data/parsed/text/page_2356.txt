@@ -1,0 +1,60 @@
+floatmargin
+
+Margin measures for floating-rate bond
+
+Syntax
+
+[Margin,AdjPrice] = floatmargin(Price,SpreadSettle,Maturity)
+[Margin,AdjPrice] = floatmargin( ___ ,Name,Value)
+
+Description
+
+[Margin,AdjPrice] = floatmargin(Price,SpreadSettle,Maturity) calculates margin
+measures for a floating-rate bond.
+
+Use floatmargin to calculate the following types of margin measures for a floating-rate bond:
+
+•
+Spread for life
+
+•
+Adjusted simple margin
+
+•
+Adjusted total margin
+
+To calculate the discount margin or zero discount margin, see floatdiscmargin.
+
+[Margin,AdjPrice] = floatmargin( ___ ,Name,Value) adds optional name-value pair
+arguments.
+
+Examples
+
+Compute Margin Measures for a Floating-Rate Bond
+
+Use floatmargin to compute margin measures for spreadforlife, adjustedsimple, and
+adjustedtotal for a floating-rate note.
+
+Define data for the floating-rate note.
+
+Price = 99.99;
+Spread = 50;
+Settle = datetime(2011,1,20); 
+Maturity = datetime(2012,1,15);
+LatestFloatingRate = 0.05;
+StubRate = 0.049;
+SpotRate = 0.05;
+Reset = 4;
+Basis = 2;
+
+Calculate spreadforlife.
+
+Margin = floatmargin(Price, Spread, Settle, Maturity, 'Reset', Reset, 'Basis', Basis)
+
+Margin = 
+51.0051
+
+15
+Functions
+
+15-1050

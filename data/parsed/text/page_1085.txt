@@ -1,0 +1,56 @@
+Estimation of the CAPM
+
+The standard CAPM model is a linear model with additional parameters for each asset to characterize
+residual errors. For each of n assets with m samples of observed asset returns Rk,i, market returns
+Mk, and riskless asset returns Ck, the estimation model has the form
+
+Rk, i = αi + Ck + βi(Mk −Ck) + Vk, i
+
+for samples k = 1, ..., m and assets i = 1, ..., n, where αi is a parameter that specifies the
+nonsystematic return of an asset, βi is the asset beta, and Vk,i is the residual error for each asset with
+associated random variable Vi.
+
+The collection of parameters α1, ..., αn are called asset alphas. The strict form of the CAPM specifies
+that alphas must be zero and that deviations from zero are the result of temporary disequilibria. In
+practice, however, assets may have nonzero alphas, where much of active investment management is
+devoted to the search for assets with exploitable nonzero alphas.
+
+To allow for the possibility of nonzero alphas, the estimation model generally seeks to estimate alphas
+and to perform tests to determine if the alphas are statistically equal to zero.
+
+The residual errors Vi are assumed to have moments
+
+E Vi = 0
+
+and
+
+E ViV j = Si j
+
+for assets i,j = 1, ..., n, where the parameters S11, ..., Snn are called residual or nonsystematic
+variances/covariances.
+
+The square root of the residual variance of each asset, for example, sqrt(Sii) for i = 1, ..., n, is said to
+be the residual or nonsystematic risk of the asset since it characterizes the residual variation in asset
+prices that are not explained by variations in market prices.
+
+Estimation with Missing Data
+
+Although betas can be estimated for companies with sufficiently long histories of asset returns, it is
+difficult to estimate betas for recent IPOs. However, if a collection of sufficiently observable
+companies exists that can be expected to have some degree of correlation with the new company's
+stock price movements, that is, companies within the same industry as the new company, it is possible
+to obtain imputed estimates for new company betas with the missing-data regression routines.
+
+Estimation of Some Technology Stock Betas
+
+This example shows how to use the missing-data regression routines, estimate betas for 12
+technology stocks, where a single stock (GOOG) is an IPO.
+
+Load dates, total returns, and ticker symbols for the 12 stocks from the MAT-file CAPMuniverse.
+
+load CAPMuniverse
+whos Assets Data Dates
+
+Valuation with Missing Data
+
+9-27

@@ -1,0 +1,6 @@
+Page 1437
+================================================================================
+
+As a deterministic function of time, when Return is called with a real-valued scalar time t as its only
+input, Return must produce an NVars-by-NVars matrix. If you specify Return as a function of time
+and state, it must return an NVars-by-NVars matrix when invoked with two inputs:

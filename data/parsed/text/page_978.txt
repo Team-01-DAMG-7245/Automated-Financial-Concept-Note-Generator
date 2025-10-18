@@ -1,0 +1,60 @@
+{'[42000,47000)'}    164      66     2.4848      0.20579     0.0078175
+    {'[47000,Inf]'  }    183      56     3.2679      0.47972      0.041657
+    {'Totals'       }    803     397     2.0227          NaN       0.12285
+
+Use fitmodel to fit a logistic regression model using WOE values. fitmodel internally transforms
+all the predictor variables into WOE values, using the bins found during the automatic binning
+process. By default, fitmodel then fits a logistic regression model using a stepwise method. For
+predictors that have missing data, there is an explicit <missing> bin with a corresponding WOE
+value computed from the data. When you use fitmodel, the corresponding WOE value for the
+<missing> bin is applied when the function performs the WOE transformation.
+
+[sc,mdl] = fitmodel(sc,'display','off');
+
+Scale the scorecard points by the points-to-double-the-odds (PDO) method using the
+'PointsOddsAndPDO' argument of formatpoints. Suppose that you want a score of 500 points to
+have odds of 2 (twice as likely to be good than to be bad) and that the odds double every 50 points (so
+that 550 points would have odds of 4).
+
+Display the scorecard showing the scaled points for predictors retained in the fitting model.
+
+sc = formatpoints(sc,'PointsOddsAndPDO',[500 2 50]);
+PointsInfo = displaypoints(sc)
+
+PointsInfo=38×3 table
+     Predictors           Bin          Points
+    _____________    ______________    ______
+
+{'CustAge'  }    {'[-Inf,33)' }    54.062
+    {'CustAge'  }    {'[33,37)'   }    56.282
+    {'CustAge'  }    {'[37,40)'   }    60.012
+    {'CustAge'  }    {'[40,46)'   }    69.636
+    {'CustAge'  }    {'[46,48)'   }    77.912
+    {'CustAge'  }    {'[48,51)'   }     78.86
+    {'CustAge'  }    {'[51,58)'   }     80.83
+    {'CustAge'  }    {'[58,Inf]'  }     96.76
+    {'CustAge'  }    {'<missing>' }    64.984
+    {'ResStatus'}    {'Tenant'    }    62.138
+    {'ResStatus'}    {'Home Owner'}    73.248
+    {'ResStatus'}    {'Other'     }    90.828
+    {'ResStatus'}    {'<missing>' }    74.125
+    {'EmpStatus'}    {'Unknown'   }    58.807
+    {'EmpStatus'}    {'Employed'  }    86.937
+    {'EmpStatus'}    {'<missing>' }       NaN
+      ⋮
+
+Notice that points for the <missing> bins for CustAge and ResStatus are explicitly shown (as
+64.9836 and 74.1250, respectively). These points are computed from the WOE value for the
+<missing> bin and the logistic model coefficients.
+
+Points for predictors that have no missing data in the training set, by default, are set to NaN and they
+lead to a score of NaN when you run score. This can be changed by updating the name-value pair
+argument 'Missing' in formatpoints to indicate how to treat missing data for scoring purposes.
+
+The scorecard is ready for scoring new data sets. You can also use the scorecard to compute
+probabilities of default or perform model validation. For details, see score, probdefault, and
+
+8
+Credit Risk Analysis
+
+8-60

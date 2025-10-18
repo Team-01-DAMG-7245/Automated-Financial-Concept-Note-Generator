@@ -1,0 +1,64 @@
+Load the Data_GlobalIdx2 data set from the matlabroot/examples/finance/data directory.
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+    Dataset.NIK Dataset.FTSE Dataset.SP];
+
+Convert daily prices to returns.
+
+returns =  tick2ret(prices);
+
+Compute data statistics to input to simulation methods.
+
+nVariables  = size(returns, 2);
+expReturn   = mean(returns);
+sigma       = std(returns);
+correlation = corrcoef(returns);
+t           = 0;
+X           = 100;
+X           = X(ones(nVariables,1));
+
+Create an sdeld object using sdeld.
+
+SDELD = sdeld(zeros(nVariables,1), diag(expReturn), ...
+    ones(nVariables,1), diag(sigma),'Correlation', ... 
+    correlation, 'StartState', X)
+
+SDELD = 
+   Class SDELD: SDE with Linear Drift
+   ----------------------------------------
+     Dimensions: State = 6, Brownian = 6
+   ----------------------------------------
+      StartTime: 0
+     StartState: 100 (6x1 double array) 
+    Correlation: 6x6 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+              A: 6x1 double array
+              B: 6x6 diagonal double array
+          Alpha: 6x1 double array
+          Sigma: 6x6 diagonal double array
+
+Create a cev object using cev.
+
+CEV = cev(diag(expReturn), ones(nVariables,1), ... 
+    diag(sigma), 'Correlation', correlation, ...
+    'StartState', X)
+
+CEV = 
+   Class CEV: Constant Elasticity of Variance
+   ------------------------------------------
+     Dimensions: State = 6, Brownian = 6
+   ------------------------------------------
+      StartTime: 0
+     StartState: 100 (6x1 double array) 
+    Correlation: 6x6 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+
+14
+Stochastic Differential Equations
+
+14-34

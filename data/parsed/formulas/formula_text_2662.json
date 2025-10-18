@@ -1,0 +1,12 @@
+{
+  "page": 1352,
+  "original_text": "SigmaHat = covarianceDenoising(AssetReturns) returns a covariance estimate that uses\nrandom matrix theory to denoise the empirical covariance matrix. For more information, see\n“Covariance Denoising” on page 15-54 and “Denoising Algorithm” on page 15-55.",
+  "ocr_text": "SigmaHat=covarianceDenoising(AssetReturns)returnsacovarianceestimatethatuses\nrandommatrixtheorytodenoisetheempiricalcovariancematrix.Formoreinformation,see\nCovarianceDenoisingonpage15-54andDenoisingAlgorithmonpage15-55.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 272.07,
+    "x1": 538.72,
+    "y1": 307.7
+  },
+  "confidence": "high"
+}

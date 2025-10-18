@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "% Create the optimization problem\npMrkwtz = optimproblem('Description','Markowitz Mean Variance Portfolio ');",
+  "ocr_text": "Createtheoptimizationproblem\npMrkwtz=optimproblem(Description,MarkowitzMeanVariancePortfolio);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 417.03,
+    "x1": 496.39,
+    "y1": 438.29
+  },
+  "confidence": "high"
+}

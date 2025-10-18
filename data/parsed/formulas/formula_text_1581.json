@@ -1,0 +1,12 @@
+{
+  "page": 799,
+  "original_text": "p = repmat(PortfolioMAD, 3, 2);\ndisp(p)",
+  "ocr_text": "p=repmat(PortfolioMAD,3,2);\ndisp(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.69,
+    "x1": 257.96,
+    "y1": 322.96
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 123,
+  "original_text": "Create separate datastores for the message and data files by using tabularTextDatastore. Ignore\nthe generic column headers by setting ReadVariableNames=false. To allow similarly formatted\nfiles to be appended to existing datastores at the end of each trading day ReadSize=\"file\". Set\ndescriptive variables names to each datastore.",
+  "ocr_text": "CreateseparatedatastoresforthemessageanddatafilesbyusingtabularTextDatastore.Ignore\nthegenericcolumnheadersbysettingReadVariableNames=false.Toallowsimilarlyformatted\nfilestobeappendedtoexistingdatastoresattheendofeachtradingdayReadSize=file.Set\ndescriptivevariablesnamestoeachdatastore.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 236.63,
+    "x1": 554.93,
+    "y1": 284.26
+  },
+  "confidence": "high"
+}

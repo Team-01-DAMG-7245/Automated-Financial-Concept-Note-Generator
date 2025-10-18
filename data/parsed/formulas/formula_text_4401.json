@@ -1,0 +1,12 @@
+{
+  "page": 2495,
+  "original_text": "TOTALPARAMS = NUMPARAMS + NUMSERIES * (NUMSERIES + 1)/2",
+  "ocr_text": "TOTALPARAMS_=NUMPARAMS+NUMSERIES*(NUMSERIES+1)/2",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 326.61,
+    "x1": 387.99,
+    "y1": 337.08
+  },
+  "confidence": "high"
+}

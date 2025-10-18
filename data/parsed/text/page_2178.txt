@@ -1,0 +1,59 @@
+Covar = 
+3.7138e-04
+
+Param = 2×1
+
+0.0000
+    1.5010
+
+Covar = 
+0.0010
+
+Param = 2×1
+
+0.0001
+    1.6543
+
+Covar = 
+0.0015
+
+Input Arguments
+
+Data — Data
+matrix
+
+Data, specified as an NUMSAMPLES-by-NUMSERIES matrix with NUMSAMPLES samples of a NUMSERIES-
+dimensional random vector. Missing values are indicated by NaNs. Only samples that are entirely
+NaNs are ignored. (To ignore samples with at least one NaN, use mvnrmle.)
+
+Data Types: double
+
+Design — Design model
+matrix | cell array
+
+Design model, specified as a matrix or a cell array that handles two model structures:
+
+•
+If NUMSERIES = 1, Design is a NUMSAMPLES-by-NUMPARAMS matrix with known values. This
+structure is the standard form for regression on a single series.
+
+•
+If NUMSERIES ≥ 1, Design is a cell array. The cell array contains either one or NUMSAMPLES cells.
+Each cell contains a NUMSERIES-by-NUMPARAMS matrix of known values.
+
+If Design has a single cell, it is assumed to have the same Design matrix for each sample. If
+Design has more than one cell, each cell contains a Design matrix for each sample.
+
+Data Types: double | cell
+
+MaxIterations — Maximum number of iterations for the estimation algorithm
+100 (default) | numeric
+
+(Optional) Maximum number of iterations for the estimation algorithm, specified as a numeric.
+
+Data Types: double
+
+15
+Functions
+
+15-872

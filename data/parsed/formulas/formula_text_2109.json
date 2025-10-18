@@ -1,0 +1,12 @@
+{
+  "page": 1088,
+  "original_text": "fprintf(1,'  %4s %-20s %-20s %-20s\\n','','Alpha','Beta','Sigma');",
+  "ocr_text": "fprintf(1,4s-20s-20s-20sn,,Alpha,Beta,Sigma);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 609.63,
+    "x1": 442.2,
+    "y1": 620.09
+  },
+  "confidence": "high"
+}

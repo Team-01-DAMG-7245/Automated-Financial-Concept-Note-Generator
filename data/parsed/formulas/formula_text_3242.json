@@ -1,0 +1,12 @@
+{
+  "page": 1742,
+  "original_text": "obj = addEquality(obj,AEquality,bEquality) adds linear equality constraints for portfolio\nweights to existing constraints for Portfolio, PortfolioCVaR, or PortfolioMAD objects. For\ndetails on the respective workflows when using these different objects, see “Portfolio Object\nWorkflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object\nWorkflow” on page 6-16.",
+  "ocr_text": "obj=addEquality(obj,AEquality,bEquality)addslinearequalityconstraintsforportfolio\nweightstoexistingconstraintsforPortfolio,PortfolioCVaR,orPortfolioMADobjects.For\ndetailsontherespectiveworkflowswhenusingthesedifferentobjects,seePortfolioObject\nWorkflowonpage4-18,PortfolioCVaRObjectWorkflowonpage5-16,andPortfolioMADObject\nWorkflowonpage6-16.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 246.53,
+    "x1": 547.85,
+    "y1": 306.16
+  },
+  "confidence": "high"
+}

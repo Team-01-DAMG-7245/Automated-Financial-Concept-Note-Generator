@@ -1,0 +1,62 @@
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Note If a SIA day-count basis is defined in the Basis input argument and there is no value assigned
+for DiscountBasis, the default behavior is for SIA bases to use the actual/actual day count to
+compute discount factors.
+
+If an ICMA day-count basis or BUS/252 is defined in the Basis input argument and there is no value
+assigned for DiscountBasis, the specified bases from the Basis input argument are used.
+
+Data Types: double
+
+LastCouponInterest — Compounding convention for computing yield of a bond in last
+coupon period
+compound (default) | values are simple or compound
+
+Compounding convention for computing the yield of a bond in the last coupon period, specified as the
+comma-separated pair consisting of 'LastCouponInterest' and a scalar or a NUMBONDS-by-1 or 1-
+by-NUMBONDS vector. LastCouponInterest is based on only the last coupon and the face value to
+be repaid. Acceptable values are:
+
+•
+simple
+
+•
+compound
+
+Data Types: char | cell
+
+Output Arguments
+
+ModDuration — Modified duration in years
+numeric
+
+Modified duration in years reported on a semiannual bond basis (in accordance with SIA convention),
+returned as a NUMBONDS-by-1 vector.
+
+YearDuration — Macaulay duration in years
+numeric
+
+Macaulay duration in years, returned as a NUMBONDS-by-1 vector.
+
+PerDuration — Periodic Macaulay duration
+numeric
+
+Periodic Macaulay duration reported on a semiannual bond basis (in accordance with SIA
+convention), returned as a NUMBONDS-by-1 vector.
+
+More About
+
+Bond Duration
+
+Bond duration is a measure of the sensitivity of a bond's price to changes in interest rates.
+
+bnddury
+
+15-549

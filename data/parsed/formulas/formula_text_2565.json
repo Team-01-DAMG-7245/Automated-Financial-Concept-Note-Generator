@@ -1,0 +1,12 @@
+{
+  "page": 1313,
+  "original_text": "BrinsonPAobj = \n  brinsonAttribution with properties:",
+  "ocr_text": "BrinsonPAobj_=\nbrinsonAttributionwithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 459.26,
+    "x1": 290.47,
+    "y1": 480.52
+  },
+  "confidence": "high"
+}

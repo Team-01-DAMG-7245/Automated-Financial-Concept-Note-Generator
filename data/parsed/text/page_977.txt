@@ -1,0 +1,32 @@
+The training data for the 'CustAge' and 'ResStatus' predictors has missing data (NaNs and
+<undefined>). The binning process estimates WOE values of -0.15787 and 0.026469,
+respectively, for the missing data in these predictors.
+
+The training data for EmpStatus and CustIncome has no explicit bin for <missing> values because
+there are no missing values for these predictors.
+
+bi = bininfo(sc,'EmpStatus');
+disp(bi)
+
+Bin         Good    Bad     Odds       WOE       InfoValue
+    ____________    ____    ___    ______    ________    _________
+
+{'Unknown' }    396     239    1.6569    -0.19947    0.021715 
+    {'Employed'}    407     158    2.5759      0.2418    0.026323 
+    {'Totals'  }    803     397    2.0227         NaN    0.048038
+
+bi = bininfo(sc,'CustIncome');
+disp(bi)
+
+Bin           Good    Bad     Odds         WOE       InfoValue 
+    _________________    ____    ___    _______    _________    __________
+
+{'[-Inf,29000)' }     53      58    0.91379     -0.79457       0.06364
+    {'[29000,33000)'}     74      49     1.5102     -0.29217     0.0091366
+    {'[33000,35000)'}     68      36     1.8889     -0.06843    0.00041042
+    {'[35000,40000)'}    193      98     1.9694    -0.026696    0.00017359
+    {'[40000,42000)'}     68      34          2    -0.011271    1.0819e-05
+
+Credit Scorecard Modeling with Missing Values
+
+8-59

@@ -1,0 +1,12 @@
+{
+  "page": 2152,
+  "original_text": "Depreciation = deprdv(Cost,Salvage,Accum)",
+  "ocr_text": "Depreciation=deprdv(Cost,Salvage,Accum)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.09,
+    "x1": 336.84,
+    "y1": 202.72
+  },
+  "confidence": "high"
+}

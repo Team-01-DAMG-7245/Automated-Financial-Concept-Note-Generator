@@ -1,0 +1,12 @@
+{
+  "page": 2314,
+  "original_text": "pret = estimatePortReturn(obj,pwgt)",
+  "ocr_text": "pret=estimatePortReturn(obj,pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.52,
+    "x1": 300.72,
+    "y1": 204.15
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 489,
+  "original_text": "asset_returns = tick2ret(pricesTT);\nasset_cov = cov(asset_returns{:,:});\nnew_weights = riskBudgetingPortfolio(asset_cov);",
+  "ocr_text": "asset_returns=tick2ret(pricesTT);\nasset_cov=cov(asset_returns{:,:});\nnew_weights=riskBudgetingPortfolio(asset_cov);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.43,
+    "x1": 350.06,
+    "y1": 643.49
+  },
+  "confidence": "high"
+}

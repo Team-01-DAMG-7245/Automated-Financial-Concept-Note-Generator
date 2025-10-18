@@ -1,0 +1,12 @@
+{
+  "page": 1611,
+  "original_text": "% Create the backtesting engine. The backtesting engine properties that hold the\n% results are initialized to empty.\nbacktester = backtestEngine(ewStrategy)",
+  "ocr_text": "Createthebacktestingengine.Thebacktestingenginepropertiesthatholdthe\nresultsareinitializedtoempty.\nbacktester=backtestEngine(ewStrategy)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 645.34,
+    "x1": 523.44,
+    "y1": 677.41
+  },
+  "confidence": "high"
+}

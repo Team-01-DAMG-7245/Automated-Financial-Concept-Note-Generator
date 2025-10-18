@@ -1,0 +1,12 @@
+{
+  "page": 491,
+  "original_text": "Category = categorical([\"Materials\";\"Financials\";\"Financials\"; ...\n    \"Industrials\";\"Financials\";\"Industrials\";\"Materials\"; ...\n    \"Communication Services\";\"Industrials\";\"Consumer Discretionary\"; ...\n    \"Consumer Discretionary\";\"Industrials\";\"Information Technology\"; ...\n    \"Information Technology\";\"Information Technology\";\"Health Care\"; ...\n    \"Financials\";\"Consumer Staples\";\"Consumer Discretionary\"; ...\n    \"Industrials\";\"Consumer Staples\";\"Health Care\"; ...\n    \"Information Technology\";\"Health Care\";\"Consumer Staples\"; ...\n    \"Communication Services\";\"Industrials\";\"Communication Services\"; ...\n    \"Consumer Staples\";\"Energy\"]);\nCategory = repmat(Category,1,NumPeriods);",
+  "ocr_text": "Category=categorical([Materials;Financials;Financials;...\nIndustrials;Financials;Industrials;Materials;...\nCommunicationServices;Industrials;ConsumerDiscretionary;...\nConsumerDiscretionary;Industrials;InformationTechnology;...\nInformationTechnology;InformationTechnology;HealthCare;...\nFinancials;ConsumerStaples;ConsumerDiscretionary;...\nIndustrials;ConsumerStaples;HealthCare;...\nInformationTechnology;HealthCare;ConsumerStaples;...\nCommunicationServices;Industrials;CommunicationServices;...\nConsumerStaples;Energy]);\n\nCategory=repmat(Category,1,NumPeriods);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 364.33,
+    "x1": 480.13,
+    "y1": 482.79
+  },
+  "confidence": "high"
+}

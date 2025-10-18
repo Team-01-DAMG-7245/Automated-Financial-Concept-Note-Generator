@@ -1,0 +1,12 @@
+{
+  "page": 770,
+  "original_text": "p_ECP = setSolverMINLP(p,'ExtendedCP',CutGeneration=\"midway\");\npwgt_ECP = estimateFrontier(p_ECP);\nrskECP = estimatePortRisk(p,pwgt_ECP);\nretECP = estimatePortReturn(p,pwgt_ECP);",
+  "ocr_text": "p_ECP=setSolverMINLP(p,ExtendedCP,CutGeneration=midway);\npwgt_ECP=estimateFrontier(p_ECP);\nrskECP=estimatePortRisk(p,pwgt_ECP);\nretECP=estimatePortReturn(p,pwgt_ECP);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 425.94,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

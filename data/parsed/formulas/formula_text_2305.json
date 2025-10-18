@@ -1,0 +1,12 @@
+{
+  "page": 1187,
+  "original_text": "dateEditBoxHandle = uicontrol(f, 'Style', 'Edit', ...  \n'Position', [140 200 100 20], ...  \n'BackgroundColor', 'w');\n4\nCreate a push button that starts up the UICalendar.",
+  "ocr_text": "dateEditBoxHandle=uicontrol(f,Style,Edit,...\n\nPosition,[14020010020],...\n\nBackgroundColor,w);\n4_CreateapushbuttonthatstartsuptheUICalendar.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 199.83,
+    "x1": 408.02,
+    "y1": 243.79
+  },
+  "confidence": "high"
+}

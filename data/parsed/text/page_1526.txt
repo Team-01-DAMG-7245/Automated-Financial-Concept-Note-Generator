@@ -1,0 +1,62 @@
+Input Arguments
+
+Return — Expected (mean) instantaneous rate of return of GBM price process
+scalar numeric | function_handle
+
+Expected (mean) instantaneous rate of return of the GBM price process, specified as an array, a
+numeric scalar, or a deterministic function of time as a function handle accepting time t or both time t
+and state X(t).
+
+Data Types: double | function_handle
+
+Alpha — Kernel function parameter representing roughness index
+scalar numeric
+
+Kernel function parameter representing the roughness index, specified as numeric scalar. The value
+of Alpha should be in (-0.5, 0.5). The BSS process behaves locally like a fractional Brownian
+motion (fBm) with the Hurst index H = Alpha + 0.5.
+
+Data Types: double
+
+Xi — Forward variance curve
+scalar numeric
+
+Forward variance curve specified as an array, a numeric scalar, or a deterministic function of time, Xi
+must return a scalar when called with a real-valued scalar time t as its only input. Although this
+function enforces no restrictions, Xi is usually non-negative.
+
+Data Types: double
+
+Eta — Volterra fBm parameter
+scalar numeric > 0
+
+Volterra fBm parameter, specified as numeric scalar > 0.
+
+Unlike the standard Brownian motion used in traditional models, the fractional Brownian motion
+(fBm) allows for long memory and roughness in the volatility dynamics. This roughness captures the
+empirical observation that volatility tends to exhibit slow decay and high-frequency irregularities.
+
+Data Types: double
+
+Name-Value Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Example: RoughBergomi = roughbergomi(Return,Alpha,Xi,Eta,Correlation=0.02)
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of the first observation, applied to all state variables, specified as a scalar.
+
+Data Types: double
+
+StartState — Initial values of state variables on all trials
+1 (default) | scalar, column vector, or matrix
+
+15
+Functions
+
+15-220

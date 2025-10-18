@@ -1,0 +1,85 @@
+Pricing and Computing Yields for Fixed-Income Securities . . . . . . . . . .
+2-15
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-15
+Fixed-Income Terminology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-15
+Framework . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-18
+Default Parameter Values . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-18
+Coupon Date Calculations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-20
+Yield Conventions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-21
+Pricing Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-21
+Yield Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-21
+Fixed-Income Sensitivities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-22
+
+Treasury Bills Defined . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-25
+
+Computing Treasury Bill Price and Yield . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-26
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-26
+Treasury Bill Repurchase Agreements . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-26
+Treasury Bill Yields . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-27
+
+Term Structure of Interest Rates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-29
+
+Returns with Negative Prices . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-32
+Negative Price Conversion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-32
+Analysis of Negative Price Returns . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-33
+Visualization of Complex Returns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-35
+Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-38
+
+Pricing and Analyzing Equity Derivatives . . . . . . . . . . . . . . . . . . . . . . . . .
+2-39
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-39
+Sensitivity Measures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-39
+Analysis Models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-40
+
+About Life Tables . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-44
+Life Tables Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-44
+
+Case Study for Life Tables Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-46
+
+Machine Learning for Statistical Arbitrage: Introduction . . . . . . . . . . . .
+2-48
+
+Machine Learning for Statistical Arbitrage I: Data Management and
+Visualization . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-50
+
+Machine Learning for Statistical Arbitrage II: Feature Engineering and
+Model Development . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-59
+
+Machine Learning for Statistical Arbitrage III: Training, Tuning, and
+Prediction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-69
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order
+Book Data . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2-78
+
+vi
+Contents

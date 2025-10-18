@@ -1,0 +1,12 @@
+{
+  "page": 2026,
+  "original_text": "Yield = cfyield(CFlowAmounts, CFlowDates, Price, Settle)",
+  "ocr_text": "Yield=cfyield(CFlowAmounts,CFlowDates,Price,Settle)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 505.71,
+    "x1": 398.83,
+    "y1": 516.17
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2324,
+  "original_text": "pstd = estimatePortStd(obj,pwgt)",
+  "ocr_text": "pstd=estimatePortStd(obj,pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.57,
+    "x1": 282.66,
+    "y1": 204.2
+  },
+  "confidence": "high"
+}

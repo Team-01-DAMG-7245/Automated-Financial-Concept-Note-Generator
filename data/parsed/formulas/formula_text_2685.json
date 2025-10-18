@@ -1,0 +1,12 @@
+{
+  "page": 1358,
+  "original_text": "LookbackWindow=lookback, ...\n    TransactionCosts=transactionsFixed, ...\n    InitialWeights=shrunk_initial);",
+  "ocr_text": "LookbackWindow=Lookback,...\nTransactionCosts=transactionsFixed,...\nInitialWeights=shrunk_initial);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 322.99,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

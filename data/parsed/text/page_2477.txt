@@ -1,0 +1,30 @@
+macd
+
+Moving Average Convergence/Divergence (MACD)
+
+Syntax
+
+[MACDLine,SignalLine] = macd(Data)
+
+Description
+
+[MACDLine,SignalLine] = macd(Data) calculates the Moving Average Convergence/Divergence
+(MACD) line from the series of data and the nine-period exponential moving average from the
+MACDLine.
+
+Examples
+
+Calculate the Moving Average Convergence/Divergence for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+[MACDLine, signalLine]= macd(TMW);
+plot(MACDLine.Time,MACDLine.Close,signalLine.Time,signalLine.Close);
+legend('MACDLine','NinePerMA')
+title('MACD for TMW')
+
+macd
+
+15-1171

@@ -1,0 +1,60 @@
+Hedge Using Monte Carlo Simulation
+
+This example shows how to use Monte Carlo simulation to model the probability of different outcomes
+in a process that cannot easily be predicted due to the intervention of random variables.
+
+Define Stock Profile
+
+Assume the following specification for a stock.
+
+% Price at time 0
+Price_0 = 200;
+
+% Drift (annualized)
+Drift = 0.08;
+
+% Volatility (annualized)
+Vol = 0.4;
+
+% Valuation date
+Valuation = '01-Jan-2012';
+
+% Investment horizon date
+Horizon = '01-Jan-2013';
+
+% Risk free rate
+RiskFreeRate = 0.03;
+
+Use Monte Carlo Simulation
+
+Simulate this stock's price movements from the valuation date to the Horizon date.
+
+% Number of trials for the Monte Carlo simulation
+NTRIALS = 100000;
+
+% Length (in years) of the simulation
+T = date2time(Valuation,Horizon,1,1);
+
+% Number of periods per trial. Approximately 100 periods per year.
+NPERIODS = round(100*T);
+
+% Length (in years) of each time step per period
+dt = T/NPERIODS;
+
+% Instantiate the GBM object
+StockGBM = gbm(Drift,Vol,'StartState',Price_0);
+
+% Run the simulation
+Paths = StockGBM.simByEuler(NPERIODS,'NTRIALS',NTRIALS, ...
+    'DeltaTime',dt,'Antithetic',true);
+
+Plot Stock Simulation
+
+For efficiency, only plot some scenarios.
+
+plot(squeeze(Paths(:,:,1:500)));
+title('Simulation of a Stock');
+
+Hedge Using Monte Carlo Simulation
+
+10-49

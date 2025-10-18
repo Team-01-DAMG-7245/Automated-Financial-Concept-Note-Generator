@@ -1,0 +1,7 @@
+Page 979
+================================================================================
+
+Score the new data and see how points for missing data are differently assigned for CustAge and
+ResStatus and for EmpStatus and CustIncome. CustAge and ResStatus have an explicit
+<missing> bin for missing data. However, for EmpStatus and CustIncome, the score function sets
+the points to NaN.

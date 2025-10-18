@@ -1,0 +1,12 @@
+{
+  "page": 1088,
+  "original_text": "[NumSamples, NumSeries] = size(Data);\nNumAssets = NumSeries - 2;",
+  "ocr_text": "[NumSamples,NumSeries]=size(Data);\nNumAssets=NumSeries-2;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 476.43,
+    "x1": 290.46,
+    "y1": 497.69
+  },
+  "confidence": "high"
+}

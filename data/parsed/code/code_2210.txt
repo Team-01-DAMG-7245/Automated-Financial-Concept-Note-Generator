@@ -1,0 +1,7 @@
+Page 1957
+================================================================================
+
+% Append a new trade to your existing portfolio.
+cpValues = [cpValues newTradeValues];
+netting = [netting; cpID];
+exposures = creditexposures(cpValues,cpID,'NettingID',netting);

@@ -1,0 +1,12 @@
+{
+  "page": 748,
+  "original_text": "Error in PortfolioCVaR/estimateFrontier (line 80)\n    pwgt = cvar_optim_by_return(obj, r(2:end-1), obj.NumAssets, ...",
+  "ocr_text": "ErrorinPortfolioCVaR/estimateFrontier(line80)\npwgt=cvar_optim_by_return(obj,r(2:end-1),obj.NumAssets,...",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 183.27,
+    "x1": 348.14,
+    "y1": 198.39
+  },
+  "confidence": "high"
+}

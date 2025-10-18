@@ -1,0 +1,9 @@
+Page 1283
+================================================================================
+
+for commodity = 1:width(Returns)
+    nexttile
+    plot(Returns.Date, Returns{:, commodity})
+    title(commodityNames(commodity))
+    axis off
+end

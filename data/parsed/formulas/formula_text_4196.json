@@ -1,0 +1,12 @@
+{
+  "page": 2356,
+  "original_text": "Margin = floatmargin(Price, Spread, Settle, Maturity, 'Reset', Reset, 'Basis', Basis)",
+  "ocr_text": "Margin=floatmargin(Price,Spread,Settle,Maturity,Reset,Reset,Basis,Basis)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 677.48,
+    "x1": 550.57,
+    "y1": 687.95
+  },
+  "confidence": "high"
+}

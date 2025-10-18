@@ -1,0 +1,63 @@
+benchRetn = retnsT(:, "DJI");
+numAssets = size(assetRetns, 2);
+
+Specify Views of the Market
+
+The views represent the subjective views of the investment analyst regarding future market changes,
+expressed as q = P * μ + ε, ε N 0, Ω , Ω = diag ω1, ω2, . . . ωv , where v is total number of views.
+For more information, see the Appendix section Assumptions and Views on page 4-227. With v views
+and k assets, P is a v-by-k matrix, q is a v-by-1 vector, and Ω is a v-by-v diagonal matrix (representing
+the independent uncertainty in the views). The views do not necessarily need to be independent
+among themselves and the structure of Ω can be chosen to account for investment analyst
+uncertainties in the views [4 on page 4-229]. The smaller the ωi in Ω, the smaller the variance in the
+distribution of the ith view, and the stronger or more certain the investor's ith view. This example
+assumes three independent views.
+
+1
+AIG is going to have 5% annual return with uncertainty 1e-3. This is a weak absolute view due to
+its high uncertainty.
+
+2
+WMT is going to have 3% annual return with uncertainty 1e-3. This is a weak absolute view due
+to its high uncertainty.
+
+3
+MSFT is going to outperform IBM by 5% annual return with uncertainty 1e-5. This is a strong
+relative view due to its low uncertainty.
+
+v = 3;  % total 3 views
+P = zeros(v, numAssets);
+q = zeros(v, 1);
+Omega = zeros(v);
+
+% View 1
+P(1, assetNames=="AIG") = 1; 
+q(1) = 0.05;
+Omega(1, 1) = 1e-3;
+
+% View 2
+P(2, assetNames=="WMT") = 1; 
+q(2) = 0.03;
+Omega(2, 2) = 1e-3;
+
+% View 3
+P(3, assetNames=="MSFT") = 1; 
+P(3, assetNames=="IBM") = -1; 
+q(3) = 0.05;
+Omega(3, 3) = 1e-5;
+
+Visualize the three views in table form.
+
+viewTable = array2table([P q diag(Omega)], 'VariableNames', [assetNames "View_Return" "View_Uncer
+
+viewTable=3×9 table
+    AA    AIG    WMT    MSFT    BA    GE    IBM    View_Return    View_Uncertainty
+    __    ___    ___    ____    __    __    ___    ___________    ________________
+
+0      1      0      0      0     0      0        0.05             0.001      
+    0      0      1      0      0     0      0        0.03             0.001      
+    0      0      0      1      0     0     -1        0.05             1e-05
+
+Black-Litterman Portfolio Optimization Using Financial Toolbox
+
+4-223

@@ -1,0 +1,12 @@
+{
+  "page": 2152,
+  "original_text": "Depreciation = deprdv(Cost,Salvage,Accum) computes the remaining depreciable value for\nan asset.",
+  "ocr_text": "Depreciation=deprdv(Cost,Salvage,Accum)computestheremainingdepreciablevaluefor\nanasset.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 245.22,
+    "x1": 550.63,
+    "y1": 268.85
+  },
+  "confidence": "high"
+}

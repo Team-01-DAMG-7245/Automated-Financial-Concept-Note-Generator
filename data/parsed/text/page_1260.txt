@@ -1,0 +1,63 @@
+closely approximate the underlying continuous-time process. If NSteps is unspecified, the default
+is 1 (to indicate no intermediate evaluation).
+
+•
+The output Times is an NPeriods + 1-length column vector of observation times associated with
+the simulated paths. Each element of Times is associated with a corresponding row of Paths.
+
+The following example illustrates this intermediate sampling by comparing the difference between a
+closed-form solution and a sequence of Euler approximations derived from various values of NSteps.
+
+Improve Solution Accuracy
+
+Consider a univariate geometric Brownian motion (GBM) model using gbm with constant parameters:
+
+Assume that the expected rate of return and volatility parameters are annualized, and that a calendar
+year comprises 250 trading days.
+
+Use simBySolution to simulate approximately four years of univariate prices for both the exact
+solution and the Euler approximation (using simByEuler) for various values of NSteps.
+
+nPeriods = 1000;    
+dt       = 1/250;
+obj      = gbm(0.1,0.4,'StartState',100);
+rng(575,'twister')
+[X1,T1]    = simBySolution(obj,nPeriods,'DeltaTime',dt);
+rng(575,'twister')
+[Y1,T1]    = simByEuler(obj,nPeriods,'DeltaTime',dt);
+rng(575,'twister')
+[X2,T2]    = simBySolution(obj,nPeriods,'DeltaTime', ... 
+    dt,'nSteps',2);
+rng(575,'twister')
+[Y2,T2]    = simByEuler(obj,nPeriods,'DeltaTime', ...
+    dt,'nSteps',2);
+rng(575,'twister')
+[X3,T3]    = simBySolution(obj,nPeriods, 'DeltaTime', ... 
+    dt,'nSteps',10);
+rng(575,'twister')
+[Y3,T3]    = simByEuler(obj,nPeriods,'DeltaTime', ... 
+    dt,'nSteps',10);
+rng(575,'twister')
+[X4,T4]    = simBySolution(obj,nPeriods,'DeltaTime', ... 
+    dt,'nSteps',100);
+rng(575,'twister')
+[Y4,T4]    = simByEuler(obj,nPeriods,'DeltaTime', ... 
+    dt,'nSteps',100);
+
+Compare the error (the difference between the exact solution and the Euler approximation)
+graphically.
+
+clf; 
+plot(T1,X1 - Y1,'red')
+hold on;
+plot(T2,X2 - Y2,'blue')
+plot(T3,X3 - Y3,'green')
+plot(T4,X4 - Y4,'black')
+hold off
+xlabel('Time (Years)')
+ylabel('Price Difference')
+
+14
+Stochastic Differential Equations
+
+14-68

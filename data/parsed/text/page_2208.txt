@@ -1,0 +1,21 @@
+Output Arguments
+
+Objective — Value of the observed negative log-likelihood function over Data
+numeric
+
+Value of the observed negative log-likelihood function over the Data, returned as a numeric value.
+
+Version History
+Introduced before R2006a
+
+See Also
+chol | ecmnmle
+
+Topics
+“Multivariate Normal Regression Without Missing Data” on page 9-13
+“Multivariate Normal Regression With Missing Data” on page 9-14
+
+15
+Functions
+
+15-902

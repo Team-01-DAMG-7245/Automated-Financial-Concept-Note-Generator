@@ -1,0 +1,12 @@
+{
+  "page": 1556,
+  "original_text": "% Determine if currently invested or in cash\ninCash = sum(current_weights) < 1e-5;",
+  "ocr_text": "Determineifcurrentlyinvestedorincash\ninCash=sum(current_weights)le-5;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 633.03,
+    "x1": 328.39,
+    "y1": 654.29
+  },
+  "confidence": "high"
+}

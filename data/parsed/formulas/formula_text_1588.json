@@ -1,0 +1,12 @@
+{
+  "page": 803,
+  "original_text": "p = PortfolioMAD;\ndisp(p)",
+  "ocr_text": "p=PortfolioMAD;\ndisp(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 249.23,
+    "x1": 182.11,
+    "y1": 270.49
+  },
+  "confidence": "high"
+}

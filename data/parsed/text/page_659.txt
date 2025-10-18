@@ -1,0 +1,60 @@
+Setting Up an Initial or Current Portfolio
+
+In many applications, creating a new optimal portfolio requires comparing the new portfolio with an
+initial or current portfolio to form lists of purchases and sales. The PortfolioCVaR object property
+InitPort lets you identify an initial or current portfolio. The initial portfolio also plays an essential
+role if you have either transaction costs or turnover constraints. The initial portfolio need not be
+feasible within the constraints of the problem. This can happen if the weights in a portfolio have
+shifted such that some constraints become violated. To check if your initial portfolio is feasible, use
+the checkFeasibility function described in “Validating CVaR Portfolios” on page 5-82. Suppose
+that you have an initial portfolio in x0, then use the PortfolioCVaR object to set up an initial
+portfolio:
+
+x0 = [ 0.3; 0.2; 0.2; 0.0 ];
+p = PortfolioCVaR('InitPort', x0);
+disp(p.InitPort)
+
+0.3000
+  0.2000
+  0.2000
+       0
+
+As with all array properties, you can set InitPort with scalar expansion. This is helpful to set up an
+equally weighted initial portfolio of, for example, 10 assets:
+
+p = PortfolioCVaR('NumAssets', 10, 'InitPort', 1/10);
+disp(p.InitPort)
+
+0.1000
+ 0.1000
+ 0.1000
+ 0.1000
+ 0.1000
+ 0.1000
+ 0.1000
+ 0.1000
+ 0.1000
+ 0.1000
+
+To clear an initial portfolio from your PortfolioCVaR object, use either the PortfolioCVaR object
+or the setInitPort function with an empty input for the InitPort property. If transaction costs or
+turnover constraints are set, it is not possible to clear the InitPort property in this way. In this
+case, to clear InitPort, first clear the dependent properties and then clear theInitPort property.
+
+The InitPort property can also be set with setInitPort which lets you specify the number of
+assets if you want to use scalar expansion. For example, given an initial portfolio in x0, use
+setInitPort to set the InitPort property:
+
+p = PortfolioCVaR;
+x0 = [ 0.3; 0.2; 0.2; 0.0 ];
+p = setInitPort(p, x0);
+disp(p.InitPort)
+
+0.3000
+ 0.2000
+ 0.2000
+      0
+
+Setting Up an Initial or Current Portfolio
+
+5-33

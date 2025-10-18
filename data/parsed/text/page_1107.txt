@@ -1,0 +1,59 @@
+Bond Prices and Yield Curve Parallel Shifts
+
+This example uses Financial Toolbox™ bond pricing functions to evaluate the impact of time-to-
+maturity and yield variation on the price of a bond portfolio. Also, this example shows how to
+visualize the price behavior of a portfolio of bonds over a wide range of yield curve scenarios, and as
+time progresses toward maturity.
+
+Specify values for the settlement date, maturity date, face value, coupon rate, and coupon payment
+periodicity of a four-bond portfolio. For simplicity, accept default values for the end-of-month payment
+rule (rule in effect) and day-count basis (actual/actual). Also, synchronize the coupon payment
+structure to the maturity date (no odd first or last coupon dates). Any inputs for which defaults are
+accepted are set to empty matrices ([]) as placeholders where appropriate. Also, specify the points
+on the yield curve for each bond.
+
+Settle     = datetime(1995,1,15);
+Maturity   = datetime( [2020, 4, 3;...
+                        2025, 5,14;...
+                        2019, 6, 9;...
+                        2019, 2,25])
+
+Maturity = 4×1 datetime
+   03-Apr-2020
+   14-May-2025
+   09-Jun-2019
+   25-Feb-2019
+
+Face       = [1000; 1000; 1000; 1000];
+CouponRate = [0; 0.05; 0; 0.055];
+Periods    = [0; 2; 0; 2];
+
+Yields = [0.078; 0.09; 0.075; 0.085];
+
+Use Financial Toolbox functions to calculate the true bond prices as the sum of the quoted price plus
+accrued interest.
+
+[CleanPrice, AccruedInterest] = bndprice(Yields,... 
+CouponRate,Settle, Maturity, Periods,...
+[], [], [], [], [], [], Face);
+
+Prices  =  CleanPrice + AccruedInterest
+
+Prices = 4×1
+
+145.2452
+  594.7757
+  165.8949
+  715.7584
+
+Assume that the value of each bond is $25,000, and determine the quantity of each bond such that
+the portfolio value is $100,000.
+
+BondAmounts = 25000 ./ Prices;
+
+Compute the portfolio price for a rolling series of settlement dates over a range of yields. The
+evaluation dates occur annually on January 15, beginning on 15-Jan-1995 (settlement) and extending
+
+Bond Prices and Yield Curve Parallel Shifts
+
+10-9

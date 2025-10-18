@@ -1,0 +1,5 @@
+Page 539
+================================================================================
+
+Φ is the cumulative distribution function of the standard normal random variable, and μπ and σπ are
+the return and risk of portfolio π. If j = 1,

@@ -1,0 +1,12 @@
+{
+  "page": 1455,
+  "original_text": "plot(T,X(:,1),'.-r',T,X(:,2),'.-b')\ngrid on;\nhold on;\nplot(t,x(:,1),'or',t,x(:,2),'ob')\nhold off;\nxlabel('Time (Years)')\nylabel('State')\ntitle('Bi-Variate Brownian Motion: \\rho = 0.5')\naxis([0.4999 0.6001 0.25 0.4])",
+  "ocr_text": "plot(T,X(:,1),.-r,T,X(:,2),.-b)\n\ngridon;\n\nholdon;\n\nplot(t,x(:,1),or,t,x(:,2),ob)\n\nholdoff;\n\nxlabel(Time(Years))\n\nylabel(State)\ntitle(Bi-VariateBrownianMotion:rho=0.5)\naxis([0.49990.60010.250.4])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 401.23,
+    "x1": 344.66,
+    "y1": 498.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1037
+================================================================================
+
+function hDisplayTransitions(TransitionsData,RatingLabels,Title)
+% Helper function to format transition information outputs

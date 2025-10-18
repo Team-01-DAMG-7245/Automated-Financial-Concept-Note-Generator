@@ -1,0 +1,12 @@
+{
+  "page": 1244,
+  "original_text": "for k = 1:log2(T)\n    i = delta / 2;\n    for j = 1:jMax\n        t(iCount) = times(i);\n        i         = i + delta;\n        iCount    = iCount + 1;\n    end\n    jMax  = 2 * jMax;\n    delta = delta / 2;\nend",
+  "ocr_text": "fork=1:log2(T)\ni=delta/2;\nforj=1:jMax\nt(iCount)=times(i);\ni =i+delta;\niCount =iCount+1;\nend\njMax=2*jMax;\ndelta=delta/2;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 257.96,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

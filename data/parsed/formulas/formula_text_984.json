@@ -1,0 +1,12 @@
+{
+  "page": 521,
+  "original_text": "% Set backtesting warmup period to two 21-day months.\nwarmupPeriod = 21*2;\n% Set a warmup partition of the timetable.\nwarmupTT = pricesTT(1:warmupPeriod,:);",
+  "ocr_text": "Setbacktestingwarmupperiodtotwo21-daymonths.\nwarmupPeriod=21*2;\nSSetawarmuppartitionofthetimetable.\nwarmupTT=pricesTT(1:warmupPeriod,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.03,
+    "x1": 377.15,
+    "y1": 168.89
+  },
+  "confidence": "high"
+}

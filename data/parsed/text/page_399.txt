@@ -1,0 +1,41 @@
+Portfolio Optimization Using Factor Models
+
+This example shows two approaches for using a factor model to optimize asset allocation under a
+mean-variance framework. Multifactor models are often used in risk modeling, portfolio management,
+and portfolio performance attribution. A multifactor model reduces the dimension of the investment
+universe and is responsible for describing most of the randomness of the market [1 on page 4-236].
+The factors can be statistical, macroeconomic, and fundamental. In the first approach in this example,
+you build statistical factors from asset returns and optimize the allocation directly against the factors.
+In the second approach you use the given factor information to compute the covariance matrix of the
+asset returns and then use the Portfolio class to optimize the asset allocation.
+
+Load Data
+
+Load a simulated data set, which includes asset returns total p = 100 assets and 2000 daily
+observations.
+
+load('asset_return_100_simulated.mat');
+[nObservation, p] = size(stockReturns)
+
+nObservation = 
+2000
+
+p = 
+100
+
+splitPoint = ceil(nObservation*0.6);
+training = 1:splitPoint;
+test = splitPoint+1:nObservation;
+trainingNum = numel(training);
+
+Visualize the equity curve for each stock. For this example, plot the first five stocks.
+
+plot(ret2tick(stockReturns{training,1:5}, 'method', 'simple')*100); hold off;
+xlabel('Timestep');
+ylabel('Value');
+title('Equity Curve');
+legend(stockReturns.Properties.VariableNames(1:5), 'Location',"bestoutside",'Interpreter', 'none
+
+Portfolio Optimization Using Factor Models
+
+4-231

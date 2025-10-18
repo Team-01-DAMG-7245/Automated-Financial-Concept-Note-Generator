@@ -1,0 +1,12 @@
+{
+  "page": 57,
+  "original_text": "Principal = pvfix(0.11/12, 4*12, 300, 0, 0)",
+  "ocr_text": "Principal=pvfix(0.11/12,4*12,_300,0,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.3,
+    "x1": 322.98,
+    "y1": 664.77
+  },
+  "confidence": "high"
+}

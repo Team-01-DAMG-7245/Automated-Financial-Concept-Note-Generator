@@ -1,0 +1,60 @@
+p = PortfolioCVaR;
+p = setDefaultConstraints(p, 5);
+[LowerBound, UpperBound] = getBounds(p)
+
+LowerBound = 5×1
+
+0
+     0
+     0
+     0
+     0
+
+UpperBound =
+
+[]
+
+Obtain Values for Lower and Upper Bounds for a PortfolioMAD Object
+
+Given a PortfolioMAD object p with the default constraints set, obtain the values for LowerBound and
+UpperBound.
+
+p = PortfolioMAD;
+p = setDefaultConstraints(p, 5);
+[LowerBound, UpperBound] = getBounds(p)
+
+LowerBound = 5×1
+
+0
+     0
+     0
+     0
+     0
+
+UpperBound =
+
+[]
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+15
+Functions
+
+15-1082

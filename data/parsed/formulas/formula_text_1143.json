@@ -1,0 +1,12 @@
+{
+  "page": 579,
+  "original_text": "TradingIntervalSec = 5; % Trading interval length in seconds\nIntervalBoundSec = (StartTradingSec:TradingIntervalSec:EndTradingSec)';\nMessageSampleIdx = zeros(size(IntervalBoundSec));\nk1 = 1;\nfor k2 = 1:size(TradeMessage,1)\n    if TradeMessage(k2,1) >= IntervalBoundSec(k1)\n        MessageSampleIdx(k1) = k2;\n        k1 = k1+1;\n    end\nend\nMessageSampleIdx(end) = length(TradeMessage);",
+  "ocr_text": "TradingIntervalSec=5;*Tradinginterval_lengthinseconds\nIntervalBoundSec=(StartTradingSec:TradingIntervalSec:EndTradingSec);\nMessageSampleIdx=zeros(size(IntervalBoundSec));\nkl=1;\nfork2=1:size(TradeMessage,1)\nifTradeMessage(k2,1)-=IntervalBoundSec(k1)\nMessageSampleIdx(k1)=k2;\nk1l=k1+1;\nend\nend\nMessageSampleIdx(end)=lLength(TradeMessage);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.62,
+    "x1": 474.68,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

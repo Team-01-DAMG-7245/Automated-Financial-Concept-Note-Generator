@@ -1,0 +1,55 @@
+0.0003    0.0024    0.0017    0.0010
+    0.0001    0.0017    0.0048    0.0028
+   -0.0001    0.0010    0.0028    0.0102
+
+The function rng(seed) resets the random number generator to produce the documented results. It is
+not necessary to reset the random number generator to simulate scenarios.
+
+Estimate Mean and Covariance of Asset Return Scenarios for a PortfolioMAD Object
+
+Given PortfolioMAD object p, use the estimatePortRisk function to estimate mean and covariance
+of asset return scenarios.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+rng(11);
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioMAD;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+
+[ScenarioMean, ScenarioCovar] = estimateScenarioMoments(p)
+
+ScenarioMean = 4×1
+
+0.0039
+    0.0082
+    0.0102
+    0.0154
+
+ScenarioCovar = 4×4
+
+0.0005    0.0003    0.0001   -0.0001
+    0.0003    0.0024    0.0017    0.0010
+    0.0001    0.0017    0.0048    0.0028
+   -0.0001    0.0010    0.0028    0.0102
+
+The function rng(seed) resets the random number generator to produce the documented results. It is
+not necessary to reset the random number generator to simulate scenarios.
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+estimateScenarioMoments
+
+15-1025

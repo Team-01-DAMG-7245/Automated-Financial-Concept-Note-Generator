@@ -1,0 +1,12 @@
+{
+  "page": 108,
+  "original_text": "phi = NaN(size(t));\nfor i = 1:length(t)\n    switch DS(i)\n        case -1\n            phi(i) = rho(i);\n        case 0\n            phi(i) = rho(i) + numBins;\n        case 1\n            phi(i) = rho(i) + 2*numBins;\n    end\nend",
+  "ocr_text": "phi=NaN(size(t));\nfori=1:length(t)\nswitchDS(i)\ncase-1\nphi(i)=rho(i);\ncase0\nphi(i)=rho(i)+numBins;\ncasel\nphi(i)=rho(i)+2*numBins;\nend\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 481.73,
+    "x1": 306.72,
+    "y1": 600.2
+  },
+  "confidence": "high"
+}

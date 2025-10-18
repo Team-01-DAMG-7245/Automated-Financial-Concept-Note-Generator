@@ -1,0 +1,56 @@
+cpndaten
+
+Next coupon date for fixed-income security
+
+Syntax
+
+NextCouponDate = cpndaten(Settle,Maturity)
+NextCouponDate = cpndaten( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate)
+
+Description
+
+NextCouponDate = cpndaten(Settle,Maturity) returns the next coupon date after the
+Settle date. This function finds the next coupon date whether or not the coupon structure is
+synchronized with the Maturity date.
+
+Required input arguments must be number of bonds, NUMBONDS-by-1 or 1-by-NUMBONDS, conforming
+vectors or scalars.
+
+NextCouponDate = cpndaten( ___ ,Period,Basis,EndMonthRule,IssueDate,
+FirstCouponDate,LastCouponDate) returns the next coupon date after the Settle date using
+optional input arguments.
+
+Optional input arguments must be either NUMBONDS-by-1 or 1-by-NUMBONDS conforming vectors,
+scalars, or empty matrices.
+
+If all the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate are
+either strings or date character vectors, then NextCouponDate is returned as a serial date number.
+Use the function datetime to convert serial date numbers to formatted datetime arrays.
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate
+are datetime arrays, then NextCouponDate is returned as a datetime array.
+
+Examples
+
+Calculate the Next Coupon Date After the Settlement Date
+
+Determine the NextCouponDate when using character vectors for input arguments.
+
+NextCouponDate = cpndaten('14-Mar-1997', '30-Nov-2000', 2, 0, 0);
+datestr(NextCouponDate)
+
+ans = 
+'30-May-1997'
+
+Determine the NextCouponDate when using a datetime array for input arguments.
+
+NextCouponDate = cpndaten(datetime(1997,3,14),datetime(2000,11,30), 2, 0, 0)
+
+NextCouponDate = datetime
+   30-May-1997
+
+15
+Functions
+
+15-752

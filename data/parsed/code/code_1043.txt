@@ -1,0 +1,6 @@
+Page 1069
+================================================================================
+
+In general, Data may or may not have missing values and Design should have no missing values. In
+some cases, however, if an observation in Data is to be ignored, the corresponding elements in
+Design are also ignored. Consult the function reference pages for details.

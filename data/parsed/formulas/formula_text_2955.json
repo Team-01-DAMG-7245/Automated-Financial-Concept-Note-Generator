@@ -1,0 +1,12 @@
+{
+  "page": 1552,
+  "original_text": "% Create the equal weighted strategy. The rebalance function @equalWeights\n% is defined in the Rebalance Functions section at the end of this example.\nequalWeightStrategy = backtestStrategy(\"EqualWeight\",@equalWeight, ...\n    'RebalanceFrequency',rebalFreq, ...\n    'TransactionCosts',tradingCosts, ...\n    'LookbackWindow',ewLookback, ...\n    'InitialWeights',initialWeights)",
+  "ocr_text": "Createtheequalweightedstrategy.TherebalancefunctionGequalWeights\nisdefinedintheRebalanceFunctionssectionattheendofthisexample.\nequalWeightStrategy=backtestStrategy(EqualWeight,GequalWeight,...\nRebalanceFrequency,rebalFreq,...\nTransactionCosts,tradingCosts,...\nLookbackWindow,ewLookback,...\nInitialWeights,initialWeights)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 227.58,
+    "x1": 496.35,
+    "y1": 302.85
+  },
+  "confidence": "high"
+}

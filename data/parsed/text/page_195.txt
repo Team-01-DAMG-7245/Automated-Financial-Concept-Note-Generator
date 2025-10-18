@@ -1,0 +1,61 @@
+ConditionalUpperBudget: []
+                     BoundType: []
+
+The approaches listed provide a way to set up a portfolio optimization problem with the Portfolio
+object. The set functions offer additional ways to set and modify collections of properties in the
+Portfolio object.
+
+Using the Portfolio Function for a Single-Step Setup
+
+You can use the Portfolio object to directly set up a “standard” portfolio optimization problem,
+given a mean and covariance of asset returns in the variables m and C:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+p = Portfolio('assetmean', m, 'assetcovar', C, ...
+'lowerbudget', 1, 'upperbudget', 1, 'lowerbound', 0)
+
+p =
+
+Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                     AssetMean: [4×1 double]
+                    AssetCovar: [4×4 double]
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: []
+                     NumAssets: 4
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [4×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+
+Creating the Portfolio Object
+
+4-27

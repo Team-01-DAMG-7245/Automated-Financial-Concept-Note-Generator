@@ -1,0 +1,17 @@
+Page 958
+================================================================================
+
+figure
+plot(x,normcdf(x),'m','LineWidth',1.5)
+for i=2:length(labels)
+   val = thresCCC(i);
+   line([val val],[0 normcdf(val)],'LineStyle',':');
+   line([x(1) val],[normcdf(val) normcdf(val)],'LineStyle',':');
+   if (centersY(i-1)-centersY(i))>0.05
+      text(-4.5,centersY(i),labels{i});
+   end
+end
+xlabel('Credit Quality Thresholds')
+ylabel('Cumulative Probability')
+title('{\bf Visualization of Credit Quality Thresholds}')
+legend('Std Normal CDF','Location','E')

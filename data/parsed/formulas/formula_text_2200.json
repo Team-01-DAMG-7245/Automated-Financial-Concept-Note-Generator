@@ -1,0 +1,12 @@
+{
+  "page": 1132,
+  "original_text": "% For numerical accuracy, shift the x values to start at zero.\nminDate = min(x);\nx = x - minDate;\nxi = xi - minDate;",
+  "ocr_text": "SFornumericalaccuracy,shiftthexvaluestostartatzero.\nminDate=min(x);\n\nxX=x_-minDate;\n\nxi=xi-minDate;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 557.03,
+    "x1": 425.92,
+    "y1": 599.89
+  },
+  "confidence": "high"
+}

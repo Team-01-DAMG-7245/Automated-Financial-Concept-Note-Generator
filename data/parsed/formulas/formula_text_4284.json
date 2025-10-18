@@ -1,0 +1,12 @@
+{
+  "page": 2424,
+  "original_text": "(Optional) Valid axis object, specified as an axes object. The highlow plot is created in the axes\nspecified by ax instead of in the current axes (ax = gca). The option ax can precede any of the input\nargument combinations.",
+  "ocr_text": "(Optional)Validaxisobject,specifiedasanaxesobject.Thehighlowplotiscreatedintheaxes\nspecifiedbyaxinsteadofinthecurrentaxes(ax_=gca).Theoptionaxcanprecedeanyoftheinput\nargumentcombinations.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 571.69,
+    "x1": 557.7,
+    "y1": 607.32
+  },
+  "confidence": "high"
+}

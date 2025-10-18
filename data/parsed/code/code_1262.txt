@@ -1,0 +1,8 @@
+Page 1303
+================================================================================
+
+for stock price S(t), rate of return r(t), volatility V(t,S(t)), and Brownian motion W(t). In this example,
+the rate of return is a deterministic function of time and the volatility is a function of both time and
+current stock price. Both the return and volatility are defined on a discrete grid such that
+intermediate values are obtained by linear interpolation. For example, such a simulation can be used
+to support the pricing of thinly traded options.

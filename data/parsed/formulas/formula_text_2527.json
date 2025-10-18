@@ -1,0 +1,12 @@
+{
+  "page": 1290,
+  "original_text": "for k = 1:numClusters\n    % Extract coordinate data for the current group.\n    idx = clusteredCommodities.Group == k;\n    clusterx = Y(idx, 1);",
+  "ocr_text": "fork=1:numClusters\nExtractcoordinatedataforthecurrentgroup.\nidx=clusteredCommodities.Group==k;\nclusterx=Y(idx,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 371.74,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

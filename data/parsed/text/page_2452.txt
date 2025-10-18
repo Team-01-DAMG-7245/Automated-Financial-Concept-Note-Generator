@@ -1,0 +1,65 @@
+(Optional) Type of mortality series for input y0, specified as a character vector with one of the
+following values:
+
+•
+'qx' — Input is a table of discrete hazards (qx).
+
+•
+'lx' — Input is a table of discrete survival counts (lx).
+
+•
+'dx' — Input is a table of discrete decrements (dx).
+
+Whereas the output series have forced termination, the input series (y0) can have one of several
+types of termination:
+
+•
+Natural termination runs out to the last person so that lx goes to 0, qx goes to 1, and dx goes to
+0. For more information, see “Natural Termination” on page 15-1147.
+
+•
+Truncated termination stops at a terminal age so that lx is positive, qx is less than 1, and dx is
+positive. Any ages after the terminal age are NaN values. For more information, see “Truncated
+Termination” on page 15-1148.
+
+Data Types: char
+
+Output Arguments
+
+qx — Discrete hazard function
+matrix
+
+Discrete hazard function, returned as an N0-by-num matrix with forced termination. For more
+information, see “Forced Termination” on page 15-1147.
+
+The series qx is the conditional probability that a person at age x will die between age x and the next
+age in the series.
+
+lx — Discrete survival function
+matrix
+
+Discrete survival function, returned as an N0-by-num matrix with forced termination. For more
+information, see “Forced Termination” on page 15-1147.
+
+The series lx is the number of people alive at age x, given 100,000 alive at birth.
+
+dx — Discrete decrements function
+matrix
+
+Discrete decrements function, returned as an N0-by-num matrix with forced termination. For more
+information, see “Forced Termination” on page 15-1147.
+
+The series dx is the number of people who die out of 100,000 alive at birth, between age x and the
+next age in the series.
+
+More About
+
+Life Table
+
+A life table is a statistical table used in demography and actuarial science to summarize the mortality
+experience of a population.
+
+15
+Functions
+
+15-1146

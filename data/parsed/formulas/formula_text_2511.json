@@ -1,0 +1,12 @@
+{
+  "page": 1284,
+  "original_text": "numObservations = height( Prices );\nnumCommodities = width( Prices );",
+  "ocr_text": "numObservations=height(Prices);\nnumCommodities=width(Prices);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 279.63,
+    "y1": 686.69
+  },
+  "confidence": "high"
+}

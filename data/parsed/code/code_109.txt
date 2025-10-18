@@ -1,0 +1,7 @@
+Page 119
+================================================================================
+
+Another optimizer designed for expensive objectives is surrogateopt (Global Optimization Toolbox).
+It uses a different search strategy and can locate optima more quickly, depending on the objective.
+The supporting function optimizeTrading2.m uses surrogateopt instead of bayesopt to
+optimize the trading strategy in tradeOnQ.

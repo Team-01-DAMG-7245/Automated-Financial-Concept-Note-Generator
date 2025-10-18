@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "LoggedSignals.State = [S_next/X;TTM_next;Position_next];\nNextObs = LoggedSignals.State;",
+  "ocr_text": "LoggedSignals.State=[S_next/X;TTM_next;Position_next];\nNextObs=LoggedSignals.State;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 557.42,
+    "x1": 393.41,
+    "y1": 578.69
+  },
+  "confidence": "high"
+}

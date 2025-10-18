@@ -1,0 +1,12 @@
+{
+  "page": 416,
+  "original_text": "% Define the budget constraint\npRobust.Constraints.budget = sum(xRobust) == 1;",
+  "ocr_text": "Definethebudgetconstraint\npRobust.Constraints.budget=sum(xRobust)==1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.43,
+    "x1": 344.65,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

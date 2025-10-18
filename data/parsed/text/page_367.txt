@@ -1,0 +1,31 @@
+Use 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints with Other
+Constraints
+
+You can define other constraints for a Portfolio object using the set functions. These other
+constraints for a Portfolio object, such as group, linear inequality, turnover, and tracking error can
+be used together with the 'Conditional' BoundType, 'MinNumAssets', and 'MaxNumAssets'
+constraints. For example, specify a tracking error constraint using setTrackingError.
+
+ii = [15, 16, 20, 21, 23, 25, 27, 29, 30];    % indexes of assets to include in tracking portfoli
+trackingPort(ii) = 1/numel(ii);
+q = setTrackingError(p, 0.5, trackingPort);
+
+Then use setMinMaxNumAssets to add a constraint to limit maximum number of assets to invest.
+
+q = setMinMaxNumAssets(q, [], 8);
+
+On top of these previously specified constraints, use setBounds to add a constraint to limit the
+weight for the allocated assets. You can use constraints with mixed BoundType values, where
+'Simple' means lb ≤xi ≤ub and 'Conditional' means xi = 0 or lb ≤xi ≤ub.
+
+Allow the assets in trackingPort to have the BoundType value 'Conditional' in the optimum
+allocation.
+
+lb = zeros(q.NumAssets, 1);
+ub = zeros(q.NumAssets, 1)*0.5;
+lb(ii) = 0.1;
+ub(ii) = 0.3;
+
+Portfolio Optimization with Semicontinuous and Cardinality Constraints
+
+4-199

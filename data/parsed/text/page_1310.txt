@@ -1,0 +1,62 @@
+Properties
+
+NumAssets — Total number of assets
+numeric
+
+Total number of assets, specified by AssetTable.
+
+Data Types: double
+
+NumPortfolioAssets — Number of assets in portfolio
+numeric
+
+Number of assets in the portfolio, specified by AssetTable.
+
+Data Types: double
+
+NumBenchmarkAssets — Number of assets in the benchmark
+numeric
+
+Number of assets in the benchmark, specified by AssetTable.
+
+Data Types: double
+
+NumPeriods — Number of time periods
+numeric
+
+Number of time periods, specified by AssetTable.
+
+Data Types: double
+
+NumCategories — Number of asset categories
+numeric
+
+Number of asset categories, specified by the AssetTable.
+
+Data Types: double
+
+AssetName — Individual asset names
+vector
+
+Individual asset names, returned as a NumAssets-by-1 vector.
+
+Data Types: string
+
+AssetReturn — Asset returns
+matrix
+
+Asset returns, returned as a NumAssets-by-NumPeriods matrix in decimals.
+
+Data Types: double
+
+AssetCategory — Asset categories
+matrix
+
+Asset categories (sectors), returned as a NumAssets-by-NumPeriods matrix.
+
+Data Types: string
+
+15
+Functions
+
+15-4

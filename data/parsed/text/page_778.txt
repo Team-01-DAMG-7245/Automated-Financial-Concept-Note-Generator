@@ -1,0 +1,45 @@
+2001-03-31          0             0             0               0            0.05           0
+    2001-04-30          0             0             0               0            0.05           0
+    2001-05-15          0             0             0               0     -1.3553e-20           0
+    2001-05-31          0             0             0               0               0           0
+    2001-06-30          0             0             0               0               0           0
+    2002-01-31          0             0             0               0               0        0.05
+    2002-02-28          0             0             0               0               0        0.05
+    2002-03-31          0             0             0               0               0        0.05
+    2002-04-30          0             0             0               0      1.4745e-17        0.05
+    2007-11-15          0             0             0            0.05               0           0
+    2008-02-15          0             0          0.05               0               0           0
+    2008-05-15          0             0          0.05            0.05               0           0
+    2008-11-15          0          0.05          0.05            0.05            0.05           0
+    2009-05-15       0.05          0.05          0.05            0.05            0.05        0.05
+      ⋮
+
+The table shows how the least risky portfolios invest more on bonds with a maturity of approximately
+9 years and, as the return levels increase, the investment concetrates on bonds with longer
+maturities.
+
+% Compare weights of min risk and max return portfolios
+labels = yearfrac(settle,bondsMaturity);
+labels = round(labels,2);
+
+% Plot pie charts
+figure
+t = tiledlayout(1,2);
+title(t,'Optimal Bonds Selection','Years to Maturity')
+
+% Min CVaR portfolio
+nexttile
+idxMinCVaR = pwgt(:,1) >= 1e-4;
+piechart(pwgt(idxMinCVaR,1),labels(idxMinCVaR))
+title('Min CVaR Portfolio')
+
+% Max return portfolio
+nexttile
+idxMaxRet = pwgt(:,end) >= 1e-4;
+piechart(pwgt(idxMaxRet,end),labels(idxMaxRet))
+title('Max Return Portfolio')
+
+5
+CVaR Portfolio Optimization Tools
+
+5-152

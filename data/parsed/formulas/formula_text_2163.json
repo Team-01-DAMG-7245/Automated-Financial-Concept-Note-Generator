@@ -1,0 +1,12 @@
+{
+  "page": 1113,
+  "original_text": "Vegas  = blsvega(StockPrice, StrikePrice, RiskFreeRate, ...\n                 ExpiryTime, Volatility , DividendRate)'",
+  "ocr_text": "Vegas=blsvega(StockPrice,StrikePrice,RiskFreeRate,...\nExpiryTime,Volatility,DividendRate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 382.48,
+    "x1": 409.69,
+    "y1": 403.74
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 302
+================================================================================
+
+Objective Function
+Constraints
+Integer (Binary)
+Variables

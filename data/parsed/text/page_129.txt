@@ -1,0 +1,41 @@
+where nT is the number of training observations and cj is the number of responses in class j. This
+weighting scheme forces the classifier to pay more attention to the classes with lower frequency.
+
+Compute the class weights.
+
+nTP = tspTV.TrainSize;
+classFreqT = countcats(yT);
+classWtsT = nTP./(numClasses*classFreqT);
+
+For each LSTM neural network, create an array specifying the architecture. Note that the LSTM
+architecture itself is a hyperparameter, as are most options taken at their default.
+
+% Hyperparameters
+numHiddenUnits = 64;
+numNeuronsOutFC1 = 10;
+thresholdScaleLR = 0.1;
+
+layersLSTM = [
+    sequenceInputLayer(2,Name="Sequence",MinLength=b)
+    batchNormalizationLayer(Name="BN")
+    lstmLayer(numHiddenUnits,Name="LSTM",OutputMode="last")
+    fullyConnectedLayer(numNeuronsOutFC1,Name="FC1")
+    leakyReluLayer(thresholdScaleLR,Name="LR")
+    fullyConnectedLayer(3,Name="FC2")
+    softmaxLayer(Name="Softmax")];
+
+lossFcn = @(Y,T) crossentropy(Y,T, ...
+    classWtsT, ...
+    Reduction = "sum",...
+    WeightsFormat="C",...
+    ClassificationMode="single-label",...
+    NormalizationFactor="none")*numClasses;
+
+Create the LSTM architectures and visualize one of them.
+
+figure
+plot(dlnetwork(layersLSTM))
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data
+
+2-85

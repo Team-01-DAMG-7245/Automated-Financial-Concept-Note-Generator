@@ -1,0 +1,12 @@
+{
+  "page": 429,
+  "original_text": "function initial_weights = computeInitialWeights(signals)\n% Compute initial weights based on most recent signal.",
+  "ocr_text": "functioninitial_weights=computeInitialWeights(signals)\nComputeinitial_weightsbasedonmostrecentsignal.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 483.16,
+    "x1": 398.83,
+    "y1": 504.42
+  },
+  "confidence": "high"
+}

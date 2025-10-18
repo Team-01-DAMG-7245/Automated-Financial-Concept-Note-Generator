@@ -1,0 +1,70 @@
+Portfolio Optimization Functions
+
+The portfolio optimization functions assist portfolio managers in constructing portfolios that optimize
+risk and return.
+
+Capital Allocation
+Description
+
+portalloc
+Computes the optimal risky portfolio on the efficient frontier, based on the
+risk-free rate, the borrowing rate, and the investor's degree of risk aversion.
+Also generates the capital allocation line, which provides the optimal
+allocation of funds between the risky portfolio and the risk-free asset.
+
+Efficient Frontier
+Computation
+
+Description
+
+frontier
+Computes portfolios along the efficient frontier for a given group of assets.
+Generates a surface of efficient frontiers showing how asset allocation
+influences risk and return over time.
+
+portopt
+Computes portfolios along the efficient frontier for a given group of assets.
+The computation is based on a set of user-specified linear constraints.
+Typically, these constraints are generated using the constraint specification
+functions described below.
+
+Warning portopt has been partially removed and will no longer accept
+ConSet or varargin arguments. portopt will only solve the portfolio
+problem for long-only fully invested portfolios. Use Portfolio instead. For
+more information on migrating portopt code to Portfolio, see “portopt
+Migration to Portfolio Object” on page 3-11.
+
+Constraint
+Specification
+
+Description
+
+portcons
+Generates the portfolio constraints matrix for a portfolio of asset investments
+using linear inequalities. The inequalities are of the type A*Wts' <= b,
+where Wts is a row vector of weights.
+
+portvrisk
+Portfolio value at risk (VaR) returns the maximum potential loss in the value
+of a portfolio over one period of time, given the loss probability level
+RiskThreshold.
+
+pcalims
+Asset minimum and maximum allocation. Generates a constraint set to fix the
+minimum and maximum weight for each individual asset.
+
+pcgcomp
+Group-to-group ratio constraint. Generates a constraint set specifying the
+maximum and minimum ratios between pairs of groups.
+
+pcglims
+Asset group minimum and maximum allocation. Generates a constraint set to
+fix the minimum and maximum total weight for each defined group of assets.
+
+pcpval
+Total portfolio value. Generates a constraint set to fix the total value of the
+portfolio.
+
+Portfolio Optimization Functions
+
+3-3

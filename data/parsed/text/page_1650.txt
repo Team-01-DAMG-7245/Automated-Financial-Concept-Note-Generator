@@ -1,0 +1,58 @@
+•
+If StorePaths is True (the default value) or is unspecified, simByHybrid returns Paths as a
+three-dimensional time series array.
+
+•
+If StorePaths is False (logical 0), simByHybrid returns the Paths output array as an empty
+matrix.
+
+Data Types: logical
+
+Processes — Sequence of end-of-period processes or state vector adjustments
+[] (default) | function | cell array of functions
+
+Sequence of end-of-period processes or state vector adjustments, specified as a function or cell array
+of functions of the form
+
+Xt = P(t, Xt)
+
+The simByHybrid function runs processing functions at each observation period. They must accept
+the current observation time t, and the current state vector Xt, and return a state vector that may be
+an adjustment to the input state.
+
+If you specify more than one processing function, simByHybrid invokes the functions in the order in
+which they appear in the cell array. You can use this argument to specify boundary conditions,
+prevent negative prices, accumulate statistics, and plot graphs.
+
+Data Types: cell | function
+
+Output Arguments
+
+Paths — Simulated paths of correlated state variables
+array
+
+Simulated paths of correlated state variables, returned as an (NPeriods + 1)-by-NVars-by-
+NTrials three-dimensional time series array.
+
+For a given trial, each row of Paths is the transpose of the state vector Xt at time t for a given trial.
+When the input flag StorePaths is False, simByHybrid returns Paths as an empty matrix.
+
+Note The second state variable in the rough volatility model is volatility (not variance).
+
+Times — Observation times associated with simulated paths
+column vector
+
+Observation times associated with the simulated paths, returned as an (NPeriods + 1)-by-1
+column vector. Each element of Times is associated with the corresponding row of Paths.
+
+Z — Dependent random variates used to generate Brownian motion vector
+array
+
+Dependent random variates used to generate the Brownian motion vector (Wiener processes) that
+drive the simulation, returned as a (NPeriods ⨉ NSteps)-by-NBrowns-by-NTrials three-
+dimensional time series array.
+
+15
+Functions
+
+15-344

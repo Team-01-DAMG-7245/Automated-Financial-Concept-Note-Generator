@@ -1,0 +1,12 @@
+{
+  "page": 2489,
+  "original_text": "ma = movavg(Data,type,weights) computes the moving average (MA) of a financial time series\nusing a 'custom' type and weights.",
+  "ocr_text": "ma=movavg(Data,type,weights)computesthemovingaverage(MA)ofafinancialtimeseries\nusingacustomtypeandweights.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 342.15,
+    "x1": 551.3,
+    "y1": 365.78
+  },
+  "confidence": "high"
+}

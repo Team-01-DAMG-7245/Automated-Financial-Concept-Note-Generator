@@ -1,0 +1,12 @@
+{
+  "page": 48,
+  "original_text": "S = char(t);\nfilename = ['myTest_',S]",
+  "ocr_text": "S=char(t);\nfilename=[myTest_,S]",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 378.3,
+    "x1": 220.04,
+    "y1": 399.57
+  },
+  "confidence": "high"
+}

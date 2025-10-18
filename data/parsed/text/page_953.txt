@@ -1,0 +1,36 @@
+The last backtesting tool is the use of prediction intervals. Linear regression models provide standard
+formulas to compute confidence intervals for the values of new observations. These intervals are
+shown in the next figure for the 10 years spanned in the backtesting exercise.
+
+figure
+plot(YearsBT,DefRate(iYearsBT),'ko','LineWidth',1.5,'MarkerSize',10, ...
+   'MarkerFaceColor','g')
+hold on
+plot(YearsBT,PredDefRate(:,1),'b-s','LineWidth',1.2,'MarkerSize',10)
+plot(YearsBT,[PredDefLoBnd PredDefUpBnd],'b:','LineWidth',1.2)
+hold off
+strConf = num2str((1-alpha)*100);
+title(['{\bf Backtesting Results with ' strConf '% Prediction Intervals}'])
+xlabel('Year');
+ylabel('%');
+legend({'Actual','Predicted','Conf Bounds'},'location','NW');
+
+The observed default rates fall outside the prediction intervals for two years, 1996 and 1997, where
+very low default rates are observed. For a 95% confidence level, two out of 10 seems high. Yet, the
+observed values in these cases fall barely outside the prediction interval, which is a positive sign for
+the model. It is also positive that the prediction intervals contain the observed values around the
+2001 recession.
+
+Stress Testing
+
+Stress testing is a broad area that reaches far beyond computational tools; see, for example, [3 on
+page 8-43]. This example shows some tools that you can incorporate into a comprehensive stress
+testing framework. This example builds on the linear regression model presented above, but the
+concepts and tools are compatible with other forecasting methodologies.
+
+The first tool is the use of prediction intervals to define a worst-case scenario forecasts. This is to
+account for uncertainty in the model only, not in the value of the predictors.
+
+Forecasting Corporate Default Rates
+
+8-35

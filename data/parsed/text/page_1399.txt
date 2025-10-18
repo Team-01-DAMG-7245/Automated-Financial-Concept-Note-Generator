@@ -1,0 +1,30 @@
+Create a diffusion Object
+
+Create a diffusion-rate function G:
+
+G = diffusion(1, 0.3)  % Diffusion rate function G(t,X)
+
+G = 
+   Class DIFFUSION: Diffusion Rate Specification 
+   --------------------------------------------- 
+       Rate: diffusion rate function G(t,X(t))  
+      Alpha: 1
+      Sigma: 0.3
+
+The diffusion object displays like a MATLAB® structure and contains supplemental information,
+namely, the object's class and a brief description. However, in contrast to the SDE representation, a
+summary of the dimensionality of the model does not appear, because the diffusion class creates a
+model component rather than a model. G does not contain enough information to characterize the
+dimensionality of a problem.
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+diffusion
+
+15-93

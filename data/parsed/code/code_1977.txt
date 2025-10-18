@@ -1,0 +1,14 @@
+Page 1562
+================================================================================
+
+Start=1 in runBacktest sets the starting time period to "03-Jan-2006", the first date available
+in pricesTT. Given that RebalanceFrequency is set to 2, you might expect the next rebablancing
+period to be "05-Jan-2006". However, the fist time the strategy rebalances is on "09-Jan-2006".
+This happens because the minimum value of the lookback window is set to 4 and on "05-Jan-2006"
+there are only three time periods available, so the backtest engine does not call the rebalancing
+function on this time period. On the next rebalancing period, "11-Jan-2006", the data includes
+seven observations which correspond to all the rows up to "11-Jan-2006". On the last rebalancing
+period, "13-Jan-2006", the first input of pricesTT is not included in the data. This happens
+because the maximum value of the lookback window is set to 8, which means that only the last eight
+time periods are passed to the rebalancing function. Also, note that the rolling window increases in
+size from rebalancing period to rebalancing period until it reaches the maximum size.

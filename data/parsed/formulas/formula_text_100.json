@@ -1,0 +1,12 @@
+{
+  "page": 88,
+  "original_text": "Pr[X ≤x] = F(x)",
+  "ocr_text": "Pr[X=x]=F(x)",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 672.67,
+    "x1": 186.25,
+    "y1": 684.3
+  },
+  "confidence": "high"
+}

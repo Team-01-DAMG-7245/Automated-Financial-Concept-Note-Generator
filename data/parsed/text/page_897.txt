@@ -1,0 +1,40 @@
+Now it is possible to compare standard deviations of portfolio returns from either type of portfolio
+optimization.
+
+See Also
+PortfolioMAD | Portfolio
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+Working with Other Portfolio Objects
+
+6-117

@@ -1,0 +1,54 @@
+cumulativeReward = cumulativeReward+...
+        experience(i).Reward.Data(end);
+    wealthSimulation(:,i) =...
+        squeeze(experience(i).Observation.obs1.Data(1,1,:));
+end
+
+% Transform wealth levels from the simulation to the original space.
+wealthSimulation = wealthSimulation*(WMax-WMin) + WMin;
+
+Calculate an empirical approximation of the success rate of the agent's policy.
+
+% Compute the testing success probability.
+successProb = cumulativeReward/numSimulations
+
+successProb = 
+0.7910
+
+For this problem, the approximated GBWM optimal probability is 79.1%. This problem can be solved
+using a dynamic optimization approach as in “Dynamic Portfolio Allocation in Goal-Based Wealth
+Management for Multiple Time Periods” on page 4-367, where the optimal probability is 79.28%.
+Since both examples use a Brownian motion to simulate the wealth evolution, the solution from the
+dynamic programming approach is the closest to the theoretical optimum. Given that the probability
+obtained by the RL agent is 79.1%, it means that the policy obtained by the RL agent is close to the
+theoretical optimum as well.
+
+% Plot the asset allocation for one simulation
+
+simNumber = 
+;
+figure
+tiledlayout(2,1)
+
+% Tile 1: Wealth progress
+nexttile
+plot(0:finalTimePeriod,wealthSimulation(:,simNumber))
+hold on
+yline(targetWealth,'--k',LineWidth=2)
+title('Wealth Evolution')
+xlabel('Time Period')
+ylabel('Wealth Level')
+hold off
+
+% Tile 2: Optimal action
+nexttile
+bar(0:finalTimePeriod-1, ...
+    pwgt(:,experience(simNumber).Action.act1.Data)','stacked')
+title('Portfolio Evolution')
+xlabel('Time Period')
+ylabel('Portfolio Weights')
+legend('Low risk asset','Medium risk asset','High risk asset')
+
+Multiperiod Goal-Based Wealth Management Using Reinforcement Learning
+
+4-387

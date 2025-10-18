@@ -1,0 +1,5 @@
+Page 1382
+================================================================================
+
+Diffusion rate component of continuous-time stochastic differential equations (SDEs), specified as an
+object or function accessible by (t, Xt.

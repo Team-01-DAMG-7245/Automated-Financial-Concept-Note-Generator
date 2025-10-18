@@ -1,0 +1,15 @@
+Page 1187
+================================================================================
+
+function pushbutton_cb(hcbo, eventStruct)  
+% Create a UICALENDAR with the following properties:  
+% 1) Highlight weekend dates.  
+% 2) Only allow a single date to be selected at a time.  
+% 3) Send the selected date to the edit box uicontrol.  
+uicalendar('Weekend', [1 0 0 0 0 0 1], ...  
+'SelectionType', 1, ...  
+'DestinationUI', dateEditBoxHandle);
+end  
+end
+6
+Run the function uicalendarGUIExample to display the application interface:

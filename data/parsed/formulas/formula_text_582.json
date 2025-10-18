@@ -1,0 +1,12 @@
+{
+  "page": 391,
+  "original_text": "v = 3;  % total 3 views\nP = zeros(v, numAssets);\nq = zeros(v, 1);\nOmega = zeros(v);",
+  "ocr_text": "v=3;total3views\nP=zeros(v,_numAssets);\nq=zeros(v,1);\nOmega=zeros(v);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 361.2,
+    "x1": 220.03,
+    "y1": 404.06
+  },
+  "confidence": "high"
+}

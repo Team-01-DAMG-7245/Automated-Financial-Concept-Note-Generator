@@ -1,0 +1,12 @@
+{
+  "page": 408,
+  "original_text": "% No current weights (100% cash position).\ncurrent_weights = zeros(1,numAssets);",
+  "ocr_text": "Nocurrentweights(100cashposition).\ncurrent_weights=zeros(1,numAssets);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 317.56,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

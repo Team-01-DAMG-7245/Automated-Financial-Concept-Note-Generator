@@ -1,0 +1,12 @@
+{
+  "page": 2388,
+  "original_text": "p = PortfolioMAD;\np = setDefaultConstraints(p, 5);\n[LowerBound, UpperBound] = getBounds(p)",
+  "ocr_text": "p=PortfolioMAD;\np=setDefaultConstraints(p,5);\n[LowerBound,UpperBound]=getBounds(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 361.85,
+    "x1": 301.31,
+    "y1": 393.92
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,50 @@
+strat1 = backtestStrategy('Factor Modeling', @factorModeling, ...
+    UserData=userData, ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionsFixed, ...
+    InitialWeights=wFactorModel_initial);
+
+strat2 = backtestStrategy('Denoising', @denoising, ...
+    RebalanceFrequency=rebalFreq, ...
+    LookbackWindow=lookback, ...
+    TransactionCosts=transactionsFixed, ...
+    InitialWeights=wDenoised_initial);
+
+% Aggregate the strategy objects into an array.
+strategies = [strat1, strat2];
+
+Create a backtestEngine object for the strategies, run the backtest using runBacktest, and
+generate a report using summary.
+
+% Create the backtesting engine object.
+backtester = backtestEngine(strategies);
+
+% Run the backtest.
+backtester = runBacktest(backtester,pricesTT,'Start',warmupPeriod);
+
+% Generate a summary table of strategies performance.
+summary(backtester)
+
+ans=9×2 table
+                       Factor_Modeling    Denoising 
+                       _______________    __________
+
+TotalReturn             0.28079          0.31501
+    SharpeRatio            0.018583         0.020462
+    Volatility            0.0089592        0.0086696
+    AverageTurnover        0.014646         0.013843
+    MaxTurnover             0.56184          0.58224
+    AverageReturn        0.00016644       0.00017736
+    MaxDrawdown             0.23384          0.24536
+    AverageBuyCost          0.84447          0.79536
+    AverageSellCost         0.84447          0.79536
+
+Use equityCurve to plot the equity curve to compare the performance of both strategies.
+
+equityCurve(backtester)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-398

@@ -1,0 +1,8 @@
+Page 816
+================================================================================
+
+Although not recommended for the casual user, an alternative way exists to recover scenarios by
+working with the function handle that points to scenarios in the PortfolioMAD object. To access
+some or all the scenarios from a PortfolioMAD object, the hidden property localScenarioHandle
+is a function handle that points to a function to obtain scenarios that have already been set. To get
+scenarios directly from a PortfolioMAD object p, use

@@ -1,0 +1,12 @@
+{
+  "page": 469,
+  "original_text": "% Compute the risk parity portfolio within each cluster.\nW = zeros(nAssets,nClusters);\nfor i = 1:nClusters\n    % Identify assets in cluster i and the sub-covariance matrix.\n    idx = T == i;\n    tempSigma = Sigma(idx,idx);\n    % Compute the risk parity portfolio of cluster i.\n    W(idx,i) = riskBudgetingPortfolio(tempSigma);\nend",
+  "ocr_text": "Computetheriskparityportfoliowithineachcluster.\n\nW=zeros(nAssets,nClusters);\n\nfori=1:nClusters\nIdentifyassetsinclusteriandthesub-covariancematrix.\nidx=T==i;\ntempSigma=Sigma(idx,idx);\nComputetheriskparityportfolioofclusteri.\nW(idx,i)=riskBudgetingPortfolio(tempSigma);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 442.17,
+    "y1": 243.89
+  },
+  "confidence": "high"
+}

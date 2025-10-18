@@ -1,0 +1,12 @@
+{
+  "page": 953,
+  "original_text": "figure\nplot(YearsBT,DefRate(iYearsBT),'ko','LineWidth',1.5,'MarkerSize',10, ...\n   'MarkerFaceColor','g')\nhold on\nplot(YearsBT,PredDefRate(:,1),'b-s','LineWidth',1.2,'MarkerSize',10)\nplot(YearsBT,[PredDefLoBnd PredDefUpBnd],'b:','LineWidth',1.2)\nhold off\nstrConf = num2str((1-alpha)*100);\ntitle(['{\\bf Backtesting Results with ' strConf '% Prediction Intervals}'])\nxlabel('Year');\nylabel('%');\nlegend({'Actual','Predicted','Conf Bounds'},'location','NW');",
+  "ocr_text": "figure\n\nplot(YearsBT,DefRate(iYearsBT),ko,LineWidth,1.5,MarkerSize,10,...\nMarkerFaceColor,g)\n\nhold_on\n\nplot(YearsBT,PredDefRate(:,1),b-s,LineWidth,1.2,MarkerSize,10)\n\nplot(YearsBT,[PredDefLoBndPredDefUpBnd],b:,LineWidth,1.2)\n\nholdoff\n\nstrConf=num2str((1-alpha)*100);\n\ntitle([{bfBacktestingResultswithstrConfsPredictionIntervals}])\n\nxlabel(Year);\n\nylabel();\n\nlegend({Actual,Predicted,ConfBounds},location,NW);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.52,
+    "x1": 496.39,
+    "y1": 267.79
+  },
+  "confidence": "high"
+}

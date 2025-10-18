@@ -1,0 +1,6 @@
+Page 460
+================================================================================
+
+Define the risk parity allocation strategy using the riskParityFcn rebalancing function that is
+defined in Local Functions on page 4-294. Notice that the riskBudgetingPortfolio function is at
+the core of riskParityFcn.

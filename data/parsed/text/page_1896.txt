@@ -1,0 +1,62 @@
+LastCouponInterest — Compounding convention for computing yield of a bond in last
+coupon period
+compound (default) | values are simple or compound
+
+Compounding convention for computing the yield of a bond in the last coupon period, specified as the
+comma-separated pair consisting of 'LastCouponInterest' and a scalar or a NUMBONDS-by-1 or 1-
+by-NUMBONDS vector. This is based on only the last coupon and the face value to be repaid. Acceptable
+values are:
+
+•
+simple
+
+•
+compound
+
+Data Types: char | cell
+
+Output Arguments
+
+Yield — Yield to maturity
+numeric
+
+Yield to maturity, returned as a NUMBONDS-by-1 vector.
+
+Note By default, when you specify Basis, the SIA bases (0-7) and BUS/252 (base 13) use a
+semiannual compounding convention and the ISMA bases (8-12) use an annual compounding
+convention.
+
+More About
+
+Price and Yield Conventions
+
+The Price and Yield are related to different formulae for SIA and ICMA conventions.
+
+For SIA conventions, Price and Yield are related by the formula:
+
+Price + Accrued Interest = sum(Cash_Flow*(1+Yield/2)^(-Time))
+
+where the sum is over the bond's cash flows and corresponding times in units of semiannual coupon
+periods.
+
+For ICMA conventions, the Price and Yield are related by the formula:
+
+Price + Accrued Interest = sum(Cash_Flow*(1+Yield)^(-Time))
+
+Algorithms
+
+For SIA conventions, the following formula defines bond price and yield:
+
+PV =
+CF
+
+(1 + z
+f )
+TF,
+
+where:
+
+15
+Functions
+
+15-590

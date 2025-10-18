@@ -1,0 +1,9 @@
+Page 1468
+================================================================================
+
+The only exception to the (t, Xt) evaluation interface is Correlation. Specifically, when you enter
+Correlation as a function, the SDE engine assumes that it is a deterministic function of time, C(t).
+This restriction on Correlation as a deterministic function of time allows Cholesky factors to be
+computed and stored before the formal simulation. This inconsistency dramatically improves run-time
+performance for dynamic correlation structures. If Correlation is stochastic, you can also include it
+within the simulation architecture as part of a more general random number generation function.

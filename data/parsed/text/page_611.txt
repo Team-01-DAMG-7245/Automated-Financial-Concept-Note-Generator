@@ -1,0 +1,62 @@
+% - ExecutedShares: Number of executed shares at each traded level (initial value: 0)
+% - ExecutedPrices: Prices of executed shares at each traded level (initial value: 0)
+% - HorizonExecutedShares: Executed shares at each level over the horizon
+%     (Initial value: (NumLevels * NumIntervalsPerHorizon)-by-1 vector of zeros)
+% - HorizonExecutedPrices: Prices of Executed shares at each level over the horizon
+%     (Initial value: (NumLevels * NumIntervalsPerHorizon)-by-1 vector of zeros)
+% - IS_Agent: Implementation shortfall history of agent
+%     (Initial value: NumIntervals-by-1 vector of zeros)
+% - Reward: Reward history of agent
+%     (Initial value: NumIntervals-by-1 vector of zeros)
+% - NumIntervalsPerHorizon: Number of intervals per horizon (fixed value: NumIntervalsPerHorizon)
+% - NumHorizons: Number of horizons (fixed value: NumHorizon)
+% - NumLevels: Number of levels in the limit order book (fixed value: NumLevels)
+
+IntervalIdx = 0;
+HorizonIdx = 0;
+
+LoggedSignals.IntervalIdx = IntervalIdx;
+LoggedSignals.HorizonIdx = HorizonIdx;
+
+InitialObservation = ...
+    [EnvConstants.TotalTradingShares EnvConstants.NumIntervalsPerHorizon 0 0];
+
+if EnvConstants.BuyTrade
+    LoggedSignals.CurrentInventoryShares = 0;
+else
+    LoggedSignals.CurrentInventoryShares = EnvConstants.TotalTradingShares;
+end
+
+LoggedSignals.ArrivalPrice = 0;
+LoggedSignals.ExecutedShares = 0;
+LoggedSignals.ExecutedPrices = 0;
+LoggedSignals.HorizonExecutedShares = ...
+    zeros(EnvConstants.NumLevels*EnvConstants.NumIntervalsPerHorizon,1);
+LoggedSignals.HorizonExecutedPrices = LoggedSignals.HorizonExecutedShares;
+LoggedSignals.IS_Agent = zeros(EnvConstants.NumSteps,1);
+LoggedSignals.Reward = LoggedSignals.IS_Agent;
+LoggedSignals.NumIntervalsPerHorizon = EnvConstants.NumIntervalsPerHorizon;
+LoggedSignals.NumHorizons = EnvConstants.NumHorizons;
+LoggedSignals.NumLevels = EnvConstants.NumLevels;
+
+disp("Reset!")
+end
+
+function [Observation,Reward,IsDone,LoggedSignals] = ...
+    RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvConstants)
+% RL_OptimalExecution_LOB_StepFcn function is Step Function for RL Environment
+%   Given current Action and LoggedSignals, update Observation, Reward, and
+%   LoggedSignals, and indicate whether the episode is complete.
+%
+% Inputs:
+%
+% Action: Number of shares to be traded at the current step (scalar)
+%
+% LoggedSignals: Structure with following fields
+% - IntervalIdx: Current time interval index
+% - HorizonIdx: Current time horizon index
+% - CurrentInventoryShares: Current number of shares in inventory
+
+Deep Reinforcement Learning for Optimal Trade Execution
+
+4-443

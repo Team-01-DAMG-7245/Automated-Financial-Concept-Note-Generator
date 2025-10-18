@@ -1,0 +1,80 @@
+0    0.2008    0.4015    0.5000    0.5000    0.5000    0.5000    0.5000    0.5000    0.5000
+         0    0.0169    0.0338    0.0491    0.0629    0.0766    0.1574    0.2716    0.3858    0.5000
+
+To correct this warning, use setBounds to specify an UpperBound value that is > than the
+ConditionalBudgetThreshold that you specify using setConditionalBudget.
+
+assetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+assetCovar = [ 0.00324625 0.00022983 0.00420395;
+    0.00022983 0.00049937 0.00019247;
+    0.00420395 0.00019247 0.00764097 ];
+p = Portfolio(AssetMean=assetMean,AssetCovar=assetCovar);
+p = setBounds(p,0,0.55);
+p = setConditionalBudget(p,0.5,0.75);   
+estimateFrontier(p)
+
+ans =
+
+0.0000    0.0477    0.0953    0.1799    0.3226    0.4653    0.5000    0.5000    0.5000    0.5000
+    0.0001    0.2107    0.4212    0.5500    0.5500    0.5500    0.5500    0.5500    0.5500    0.5000
+    0.0000    0.0177    0.0355    0.0519    0.0663    0.0808    0.1749    0.2947    0.4144    0.5500
+
+Unbounded Portfolio Problem
+
+This error occurs when you are using a Portfolio, PortfolioCVaR, or PortfolioMAD object and
+there is no UpperBound defined in setBounds and you are using setMinMaxNumAssets. In this
+case, this is formulated as a mixed integer programming problem and an UpperBound is required to
+enforce MinNumAssets and MaxNumAssets constraints.
+
+The optimizer first attempts to estimate the upper bound of each asset, based on all the specified
+constraints. If the UpperBound cannot be found, an error message occurs which instructs you to set
+an explicit UpperBound. In most cases, as long as you set some upper bounds to the problem using
+any set function, the optimizer can successfully find a good estimation.
+
+AssetMean = [ 0.05; 0.1; 0.12; 0.18 ];
+AssetCovar = [ 0.0064   0.00408  0.00192      0;
+               0.00408  0.0289   0.0204   0.0119;
+               0.00192  0.0204   0.0576   0.0336;
+               0        0.0119   0.0336   0.1225 ];
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);
+p = setBounds(p, 0.1, 'BoundType','Conditional');
+p = setGroups(p, [1,1,1,0], 0.3, 0.5);
+p = setMinMaxNumAssets(p, 3, 3);
+pwgt = estimateFrontierLimits(p)
+
+Error using Portfolio/buildMixedIntegerProblem (line 42)
+Unbounded portfolio problem. Upper bounds cannot be inferred from the existing
+constraints. Set finite upper bounds using 'setBounds'.
+
+Error in Portfolio/estimateFrontierLimits>int_frontierLimits (line 93)
+ProbStruct = buildMixedIntegerProblem(obj);
+
+Error in Portfolio/estimateFrontierLimits (line 73)
+    pwgt = int_frontierLimits(obj, minsolution, maxsolution);
+
+To correct this error, specify an UpperBound value for setBounds.
+
+AssetMean = [ 0.05; 0.1; 0.12; 0.18 ];
+AssetCovar = [ 0.0064   0.00408  0.00192      0;
+               0.00408  0.0289   0.0204   0.0119;
+               0.00192  0.0204   0.0576   0.0336;
+               0        0.0119   0.0336   0.1225 ];
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);
+p = setBounds(p, 0.1, .9, 'BoundType','Conditional');
+p = setGroups(p, [1,1,1,0], 0.3, 0.5);
+p = setMinMaxNumAssets(p, 3, 3);
+pwgt = estimateFrontierLimits(p)
+
+pwgt =
+
+0.1000         0
+    0.1000    0.1000
+    0.1000    0.4000
+         0    0.9000
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-154

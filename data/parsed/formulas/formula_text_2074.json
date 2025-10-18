@@ -1,0 +1,12 @@
+{
+  "page": 1073,
+  "original_text": "In most cases, C0 is a diagonal matrix. The inverse matrix W = C0\n−1 has diagonal elements that can be\nconsidered relative “weights” for each series. Thus, CWLS is a form of weighted least squares with\nthe weights applied across series.",
+  "ocr_text": "Inmostcases,Cyisadiagonalmatrix.TheinversematrixW=Co Thas diagonalelementsthatcanbe\nconsideredrelativeweightsforeachseries.Thus,CWLSisaformofweightedleastsquareswith\ntheweightsappliedacrossseries.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 159.99,
+    "x1": 556.34,
+    "y1": 200.45
+  },
+  "confidence": "high"
+}

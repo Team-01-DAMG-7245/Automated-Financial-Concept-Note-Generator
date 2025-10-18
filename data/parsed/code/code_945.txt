@@ -1,0 +1,8 @@
+Page 941
+================================================================================
+
+% Pre-allocate the struct array
+totalsByRtg(nYears,1) = struct('totalsVec',[],'totalsMat',[], ...
+   'algorithm','cohort');
+for t = 1:nYears
+   % Number of issuers per rating at the beginning of the year

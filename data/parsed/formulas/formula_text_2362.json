@@ -1,0 +1,12 @@
+{
+  "page": 1219,
+  "original_text": "obj = \n   Class SDEMRD: SDE with Mean-Reverting Drift\n   -------------------------------------------\n     Dimensions: State = 1, Brownian = 1\n   -------------------------------------------\n      StartTime: 0\n     StartState: 1\n    Correlation: 1\n          Drift: drift rate function F(t,X(t)) \n      Diffusion: diffusion rate function G(t,X(t)) \n     Simulation: simulation method/function simByEuler\n          Alpha: 0.5\n          Sigma: 0.05\n          Level: 0.1\n          Speed: 0.2",
+  "ocr_text": "obj=\nClassSDEMRD:SDEwithMean-RevertingDrift\nDimensions:State=1,Brownian=1\nStartTime:0\nStartState:1\nCorrelation:1\nDrift:driftratefunctionF(t,X(t))\nDiffusion:diffusionratefunctionG(t,X(t))\nSimulation:simulationmethod/functionsimByEuler\nAlpha:0.5\nSigma:0.05\nLevel:0.1\nSpeed:0.2",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 209.03,
+    "x1": 382.57,
+    "y1": 370.69
+  },
+  "confidence": "high"
+}

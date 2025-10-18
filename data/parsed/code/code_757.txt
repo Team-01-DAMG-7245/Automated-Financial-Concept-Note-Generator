@@ -1,0 +1,8 @@
+Page 692
+================================================================================
+
+Suppose that you want to add another group ratio constraint to ensure that the weights in odd-
+numbered assets constitute at least 20% of the weights in nonfinancial assets your portfolio. You can
+set up augmented group ratio matrices and introduce infinite bounds for unconstrained group ratio
+bounds, or you can use the addGroupRatio function to build up group ratio constraints. For this
+example, create another group matrix for the second group constraint:

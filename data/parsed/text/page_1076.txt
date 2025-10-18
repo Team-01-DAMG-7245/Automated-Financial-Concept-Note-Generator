@@ -1,0 +1,55 @@
+Troubleshooting Multivariate Normal Regression
+
+This section provides a few pointers to handle various technical and operational difficulties that might
+occur.
+
+Biased Estimates
+
+If samples are ignored, the number of samples used in the estimation is less than NumSamples.
+Clearly the actual number of samples used must be sufficient to obtain estimates. In addition,
+although the model parameters Parameters (or mean estimates Mean) are unbiased maximum
+likelihood estimates, the residual covariance estimate Covariance is biased. To convert to an
+unbiased covariance estimate, multiply Covariance by
+
+Count/ Count−1 ,
+
+where Count is the actual number of samples used in the estimation with Count ≤ NumSamples.
+None of the regression functions perform this adjustment.
+
+Requirements
+
+The regression functions, particularly the estimation functions, have several requirements. First, they
+must have consistent values for NumSamples, NumSeries, and NumParams. As a rule, the
+multivariate normal regression functions require
+
+Count × NumSeries ≤max NumParams,  NumSeries × NumSeries+1 /2
+
+and the least-squares regression functions require
+
+Count × NumSeries ≤NumParams,
+
+where Count is the actual number of samples used in the estimation with
+
+Count≤NumSamples.
+
+Second, they must have enough nonmissing values to converge. Third, they must have a
+nondegenerate covariance matrix.
+
+Although some necessary and sufficient conditions can be found in the references, general conditions
+for existence and uniqueness of solutions in the missing-data case, do not exist. Nonconvergence is
+usually due to an ill-conditioned covariance matrix estimate, which is discussed in greater detail in
+“Nonconvergence” on page 9-19.
+
+Slow Convergence
+
+Since worst-case convergence of the ECM algorithm is linear, it is possible to execute hundreds and
+even thousands of iterations before termination of the algorithm. If you are estimating with the ECM
+algorithm regularly with regular updates, you can use prior estimates as initial guesses for the next
+period's estimation. This approach often speeds up things since the default initialization in the
+regression functions sets the initial parameters b to zero and the initial covariance C to be the
+identity matrix.
+
+9
+Regression with Missing Data
+
+9-18

@@ -1,0 +1,12 @@
+{
+  "page": 942,
+  "original_text": "totalsByRtg(t).totalsVec = nIssuers(t,:);\n   % Number of transitions between ratings during the year\n   totalsByRtg(t).totalsMat = round(diag(nIssuers(t,:))* ...\n      (0.01*TransMat(:,:,t)));\n   % Algorithm\n   totalsByRtg(t).algorithm = 'cohort';\nend",
+  "ocr_text": "totalsByRtg(t).totalsVec=nIssuers(t,:);\nsNumberoftransitionsbetweenratingsduringtheyear\ntotalsByRtg(t).totalsMat=round(diag(nIssuers(t,:))*...\n(0.01*TransMat(:,:,t)));\nAlgorithm\ntotalsByRtg(t).algorithm=cohort;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 415.11,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

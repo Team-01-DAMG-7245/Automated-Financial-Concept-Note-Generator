@@ -1,0 +1,47 @@
+Compare Performance of Covariance Denoising with Factor
+Modeling Using Backtesting
+
+This example uses backtesting to compare the performance of two investment strategies that use
+factor information to compute the portfolio weights. The first investment strategy uses
+covarianceDenoising to estimate both the covariance matrix and the number of factors to use in
+the second investment strategy. The second investment strategy uses a principal component analysis
+(PCA) factor model to estimate the covariance matrix with the number of factors obtained with
+covarianceDenoising. The PCA factor model follows the process in “Portfolio Optimization Using
+Factor Models” on page 4-231.
+
+Load Data
+
+Load a simulated data set that includes asset returns for a total n = 100 assets and 2000 daily
+observations.
+
+load('asset_return_100_simulated.mat');
+[numObservations,numAssets] = size(stockReturns)
+
+numObservations = 
+2000
+
+numAssets = 
+100
+
+Create a timetable of asset prices from the asset returns.
+
+% Convert the returns to prices.
+pricesT = ret2tick(stockReturns,'StartPrice',100);
+
+% Create a timetable.
+rowTimes = datetime("today"):datetime("today")+numObservations;
+pricesTT = table2timetable(pricesT,'RowTimes',rowTimes);
+
+Visualize the equity curve for each stock. For this example, plot the first five stocks.
+
+figure;
+plot(0:2000,pricesTT{:,1:5})
+xlabel('Timestep');
+ylabel('Value');
+title('Equity Curve');
+legend(pricesTT.Properties.VariableNames(1:5));
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-394

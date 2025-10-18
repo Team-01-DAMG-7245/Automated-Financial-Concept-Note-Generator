@@ -1,0 +1,27 @@
+adosc
+
+Accumulation/Distribution oscillator
+
+Syntax
+
+ado = adosc(Data)
+
+Description
+
+ado = adosc(Data) calculates the Accumulation/Distribution (A/D) oscillator.
+
+Examples
+
+Calculate the Accumulation/Distribution Oscillator for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+ADOsc = adosc(TMW);
+plot(ADOsc.dates, ADOsc.ADOscillator)
+title('A/D Oscillator for TMW')
+
+adosc
+
+15-457

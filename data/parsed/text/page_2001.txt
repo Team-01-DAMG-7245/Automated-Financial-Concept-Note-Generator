@@ -1,0 +1,35 @@
+Output Arguments
+
+Duration — Duration
+vector
+
+Duration returned as a scalar or vector.
+
+ModDuration — Modified duration
+vector
+
+Modified duration, returned as a scalar or vector.
+
+More About
+
+Cash Flow Duration
+
+Cash flow duration is a measure used in finance to assess the sensitivity of the present value of an
+investment's cash flows to changes in interest rates.
+
+A higher cash flow duration indicates that the cash flows are received further in the future, making
+the investment more sensitive to changes in interest rates. Conversely, a lower cash flow duration
+suggests that cash flows are received sooner, resulting in less sensitivity to interest-rate changes.
+
+Version History
+Introduced before R2006a
+
+See Also
+bndconvp | bndconvy | bnddurp | bnddury | cfconv
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+cfdur
+
+15-695

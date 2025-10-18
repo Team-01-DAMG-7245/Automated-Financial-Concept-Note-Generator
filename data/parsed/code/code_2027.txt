@@ -1,0 +1,6 @@
+Page 1619
+================================================================================
+
+Dependent random counting process for generating the number of jumps, specified as the comma-
+separated pair consisting of 'N' and a function or an (NPeriods ⨉ NSteps) -by-NJumps-by-NTrials
+three-dimensional array of dependent random variates.

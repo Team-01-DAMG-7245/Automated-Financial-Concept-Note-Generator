@@ -1,0 +1,5 @@
+Page 1466
+================================================================================
+
+A and B enable you to query the original inputs. The function stored in Rate fully encapsulates the
+combined effect of A and B.

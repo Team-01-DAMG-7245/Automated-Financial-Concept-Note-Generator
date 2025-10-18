@@ -1,0 +1,5 @@
+Page 113
+================================================================================
+
+View the supporting function tradeOnQ.m, which implements a simple trading strategy based on the
+pattern in Q.

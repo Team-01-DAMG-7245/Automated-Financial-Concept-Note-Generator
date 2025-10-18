@@ -1,0 +1,12 @@
+{
+  "page": 2058,
+  "original_text": "NextCouponDate = cpndaten('14-Mar-1997', '30-Nov-2000', 2, 0, 0);\ndatestr(NextCouponDate)",
+  "ocr_text": "NextCouponDate=cpndaten(14-Mar-1997,_30-Nov-2000,2,0,0);\ndatestr(NextCouponDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 585.87,
+    "x1": 442.19,
+    "y1": 607.13
+  },
+  "confidence": "high"
+}

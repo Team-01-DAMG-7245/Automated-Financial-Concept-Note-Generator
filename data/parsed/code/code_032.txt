@@ -1,0 +1,4 @@
+Page 41
+================================================================================
+
+Now, use the irr function to compute internal rates of return for multiple cash flow streams.

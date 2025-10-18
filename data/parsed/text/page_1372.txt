@@ -1,0 +1,62 @@
+As a deterministic function of time, when Sigma is called with a real-valued scalar time t as its only
+input, Sigma must produce an NVars-by-NBrowns matrix. If you specify Sigma as a function of time
+and state, it must return an NVars-by-NBrowns matrix of volatility rates when invoked with two
+inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Although the gbm constructor enforces no restrictions on the sign of Sigma volatilities, they are
+specified as positive values.
+
+Data Types: double | function_handle
+
+Output Arguments
+
+BM — Brownian motion model
+BM object
+
+Brownian motion model, returned as a BM object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of first observation, applied to all state variables, specified as a numeric.
+
+Data Types: double
+
+StartState — Initial values of state variables
+1 (default) | scalar, column vector, or matrix
+
+Initial values of state variables, specified as a scalar, column vector, or matrix.
+
+If StartState is a scalar, bm applies the same initial value to all state variables on all trials.
+
+If StartState is a column vector, bm applies a unique initial value to each state variable on all trials.
+
+If StartState is a matrix, bm applies a unique initial value to each state variable on each trial.
+
+Data Types: double
+
+Correlation — Correlation between Gaussian random variates drawn to generate the
+Brownian motion vector (Wiener processes)
+NBrowns-by-NBrowns identity matrix representing independent Gaussian processes (default) |
+positive semidefinite matrix | deterministic function
+
+Correlation between Gaussian random variates drawn to generate the Brownian motion vector
+(Wiener processes), specified as an NBrowns-by-NBrowns positive semidefinite matrix, or as a
+deterministic function C(t) that accepts the current time t and returns an NBrowns-by-NBrowns
+positive semidefinite correlation matrix. If Correlation is not a symmetric positive semidefinite
+matrix, use nearcorr to create a positive semidefinite matrix for a correlation matrix.
+
+A Correlation matrix represents a static condition.
+
+15
+Functions
+
+15-66

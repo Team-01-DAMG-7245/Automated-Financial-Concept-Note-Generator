@@ -1,0 +1,61 @@
+The following code simulates 1000 independent random trials of dependent standardized index
+residuals. These trials are simulated over a period of the same length as the original index data.
+
+s = RandStream.getGlobalStream();
+reset(s)
+
+nTrials = 1000;                                  % Number of independent random trials
+horizon = size(Data,1);                          % Simulation horizon
+
+Z = zeros(horizon, nTrials, nIndices);            % Standardized residuals array
+U = copularnd('t', R, DoF, horizon * nTrials);    % t copula simulation
+
+for j = 1:nIndices
+    Z(:,:,j) = reshape(icdf(tails{j}, U(:,j)), horizon, nTrials);
+end
+
+Using the simulated standardized residuals as the iid input noise process, you can reintroduce the
+autocorrelation and heteroskedasticity observed in the original index returns using filter
+(Econometrics Toolbox).
+
+The filter function accepts user-specified standardized disturbances derived from the copula and
+simulates multiple paths for a single index model at a time. All sample paths are simulated and stored
+for each index in succession.
+
+To make the most of the current information, specify the necessary presample model residuals,
+variances, and returns so that each simulated path evolves from a common initial state.
+
+Y0 = returns(1,:);                    % Presample returns
+Z0 = residuals(1,:);                  % Presample standardized residuals
+V0 = variances(1,:);                  % Presample variances
+
+simulatedReturns = zeros(horizon, nTrials, nIndices);
+
+for i = 1:nIndices
+    simulatedReturns(:,:,i) = filter(fit{i}, Z(:,:,i), ...
+                                    'Y0', Y0(i), 'Z0', Z0(i), 'V0', V0(i));
+end
+
+Summarize Results
+
+Once the returns of each index are simulated, you can plot the histograms of returns to visually
+observe the presence of the fat tail phenomenon. By adjusting the bin width or number of bins
+(nBins) in the histogram, you can control the level of detail and granularity in the representation of
+the distribution.
+
+tiledlayout(2,1)
+
+for i = 1:nIndices   
+    nexttile
+    nBins = 40;
+
+[data1,edge] = histcounts(returns(:,i),nBins,'Normalization','pdf');
+    [I1,edge] = histcounts(simulatedReturns(:,:,i),edge,'Normalization','pdf');
+    bar(edge(1:end-1),[data1;I1])    
+        
+    hold('on')
+
+10
+Solving Sample Problems
+
+10-70

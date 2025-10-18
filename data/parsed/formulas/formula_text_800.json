@@ -1,0 +1,12 @@
+{
+  "page": 459,
+  "original_text": "% Read the table of daily adjusted close prices for 2006 DJIA stocks.\nT = readtable('dowPortfolio.xlsx');\n% Convert the table to a timetable.\npricesTT = table2timetable(T);\n% Define the number of assets (not counting the market index).\nnAssets = size(pricesTT,2)-1;",
+  "ocr_text": "Readthetableofdailyadjustedclosepricesfor2006DJIAstocks.\nT=readtable(dowPortfolio.xlsx);\nConvertthetabletoatimetable.\n\npricesTT=table2timetable(T);\nDefinethenumberofassets(notcountingthemarketindex).\nnAssets=size(pricesTT,2)-1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 306.23,
+    "x1": 463.84,
+    "y1": 370.69
+  },
+  "confidence": "high"
+}

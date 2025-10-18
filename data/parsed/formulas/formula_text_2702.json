@@ -1,0 +1,12 @@
+{
+  "page": 1364,
+  "original_text": "conditionNum = [cond(Sigma); cond(shrunkSigma)];\ncondNumT = table(conditionNum,'RowNames',{'Sigma','SigmaHat'})",
+  "ocr_text": "conditionNum=[cond(Sigma);_cond(shrunkSigma)];\ncondNumT=table(conditionNum,RowNames,{Sigma,SigmaHat})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 425.94,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

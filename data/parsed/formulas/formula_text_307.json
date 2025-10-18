@@ -1,0 +1,12 @@
+{
+  "page": 193,
+  "original_text": "p = Portfolio('property1', value1, 'property2', value2, ... );",
+  "ocr_text": "p=Portfolio(propertyl,valuel,property2,value2,...);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 414.35,
+    "x1": 447.59,
+    "y1": 424.82
+  },
+  "confidence": "high"
+}

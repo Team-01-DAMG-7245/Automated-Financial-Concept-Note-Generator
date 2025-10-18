@@ -1,0 +1,73 @@
+The value function V Wi t  represents the probability of exceeding the wealth goal G at time T, given
+
+that at time t, the wealth level is Wi. Simultaneously, p W j t + 1 |Wi t , π  represents the probability
+of moving to wealth node j at time t + 1, given that at time t, you are at wealth node i and you chose
+portfolio π as the rebalancing action.
+
+Compute Transition Probabilities
+
+Since this example assumes that the wealth goal follows a geometric Brownian motion, the transition
+probabilities of being in wealth node W j at time t + 1, given that you are at wealth node Wi at time t,
+are time-homogeneous. Thus, the transition probability for a given portfolio choice π is defined as
+
+p W j t + 1 |Wi t , π = ℙW j ≤W t + 1 < W j + 1|W t = Wi, π = p∼W j + 1|Wi, π −p∼W j|Wi, π , ∀t
+∈
+0, …, T
+
+,
+
+where
+
+p∼Wk|Wi, π = Φ
+1
+σπ ln
+
+Wk
+Wi −μπ −
+
+σπ2
+
+2
+,
+
+Φ is the cumulative distribution function of the standard normal random variable, and μπ and σπ are
+the return and risk of portfolio π. If j = 1,
+
+p W1 t + 1 |Wi t , π = p∼W2|Wi, π , ∀t ∈
+0, …, T ,
+
+and if j = imax,
+
+p Wimax t + 1 |Wi t , π = 1 −p∼Wimax|Wi, π , ∀t ∈
+0, …, T .
+
+Note that this example computes transition probabilities differently from the transition probabilities
+as described by Das [1 on page 4-378], to keep a consistent mapping between W t  and a unique
+wealth node index.
+
+% Compute the transition probabilities for different portfolios:
+% pTransition(i,j,k) = p(Wj|Wi,mu_k)
+pTransition = zeros(nWealthNodes,nWealthNodes,nPortfolios);
+for k = 1:nPortfolios
+    % Get the return and variance of portfolio k.
+    mu = pret(k);
+    sigma = prsk(k);
+
+% Compute p tilde before the cdf.
+    pTilde = 1/sigma*(log(WGrid'./WGrid) - (mu-(sigma^2)/2));
+    % Auxiliary matrices for edge cases (j = 1 and j = i_max)
+    pTildeAuxUB = [pTilde(:,2:end) inf(nWealthNodes,1)];
+    pTildeAuxLB = [-inf(nWealthNodes,1) pTilde(:,2:end)];
+
+% Compute the transition probabilities for portfolio k.
+    pTransition(:,:,k) = normcdf(pTildeAuxUB)-normcdf(pTildeAuxLB);
+end
+
+Maximize Probability of Achieving Investor's Goal
+
+Since the value function is the probability of achieving the wealth investment goal G at the final time
+step, you know that the value function at t = T is given by
+
+Dynamic Portfolio Allocation in Goal-Based Wealth Management for Multiple Time Periods
+
+4-371

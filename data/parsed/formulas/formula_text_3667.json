@@ -1,0 +1,12 @@
+{
+  "page": 2069,
+  "original_text": "PreviousQuasiCouponDate = cpndatepq(Settle,Maturity) determines the previous quasi-\ncoupon date for a set of NUMBONDS fixed income securities. Prior quasi-coupon dates determine the\nlength of the standard coupon period for the fixed income security of interest, and do not necessarily\ncoincide with actual coupon payment dates. This function finds the previous quasi-coupon date for\nbonds with a coupon structure whose first or last period is either normal, short, or long.",
+  "ocr_text": "PreviousQuasiCouponDate=cpndatepq(Settle,Maturity)determinesthepreviousquasi-\ncoupondateforasetofNUMBONDSfixedincomesecurities.Priorquasi-coupondatesdeterminethe\nlengthofthestandardcouponperiodforthefixedincomesecurityofinterest,anddonotnecessarily\ncoincidewithactualcouponpaymentdates.Thisfunctionfindsthepreviousquasi-coupondatefor\nbondswithacouponstructurewhosefirstorlastperiodiseithernormal,short,orlong.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 271.92,
+    "x1": 552.33,
+    "y1": 331.55
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,22 @@
+Use estimateFrontierByReturn to find the allocation that minimizes the risk on the frontier for
+the given target return.
+
+pwgtWithMaxNum = estimateFrontierByReturn(pWithMaxNumAssets, targetRetn);
+
+Warning: Risk minimization problem failed to converge. Number of iterations exceeded 'MaxIteratio
+
+Plot the composition of the two Portfolio objects for the universe of 30 assets.
+
+idx = (pwgt>toler) | (pwgtWithMaxNum>toler);
+
+barh([pwgt(idx), pwgtWithMaxNum(idx)]);
+grid on
+xlabel('Proportion of Investment')
+yticks(1:sum(idx));
+yticklabels(p.AssetList(idx));
+title('Asset Allocation');
+legend('Baseline portfolio', 'With MaxNumAssets constraint', 'location', 'best');
+
+Portfolio Optimization with Semicontinuous and Cardinality Constraints
+
+4-195

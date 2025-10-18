@@ -1,0 +1,5 @@
+Page 1379
+================================================================================
+
+•
+Diffusion — Composite diffusion-rate function, callable as a function of time and state

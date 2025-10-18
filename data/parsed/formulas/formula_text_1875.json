@@ -1,0 +1,12 @@
+{
+  "page": 952,
+  "original_text": "EAD = 100*ones(nYearsBT,1); % in billions\nLGD = 0.45*ones(nYearsBT,1); % Loss given default, 45%\n% Reserves excess or shortfall for each year, in billions\nReservesExcessShortfall = bsxfun(@times,EAD.*LGD,ErrorBT/100);\n% Cumulative reserve balance for each year, in billions\nReservesBalanceEOY = cumsum(ReservesExcessShortfall);",
+  "ocr_text": "EAD=100*ones(nYearsBT,1);*inbillions\nLGD=0.45*ones(nYearsBT,1);*Lossgivendefault,45\nSReservesexcessorshortfallforeachyear,inbillions\nReservesExcessShortfall_=bsxfun(Qtimes,EAD.*LGD,ErrorBT/100);\nSCumulativereservebalanceforeachyear,inbillions\nReservesBalanceEOY=cumsum(ReservesExcessShortfall);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 127.83,
+    "x1": 425.92,
+    "y1": 192.29
+  },
+  "confidence": "high"
+}

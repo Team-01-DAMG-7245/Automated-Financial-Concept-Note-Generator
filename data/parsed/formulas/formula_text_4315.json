@@ -1,0 +1,12 @@
+{
+  "page": 2443,
+  "original_text": "Date = lbusdate(Year,Month) returns the serial date number for the last business date of the\ngiven year and month.",
+  "ocr_text": "Date=Lbusdate(Year,Month)returnstheserialdatenumberforthelastbusinessdateofthe\ngivenyearandmonth.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 254.15,
+    "x1": 543.41,
+    "y1": 277.78
+  },
+  "confidence": "high"
+}

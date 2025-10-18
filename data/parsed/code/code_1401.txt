@@ -1,0 +1,7 @@
+Page 1389
+================================================================================
+
+As a deterministic function of time, when Level is called with a real-valued scalar time t as its only
+input, Level must produce an NVars-by-1 column vector. If you specify Level as a function of time
+and state, it must generate an NVars-by-1 column vector of reversion levels when called with two
+inputs:

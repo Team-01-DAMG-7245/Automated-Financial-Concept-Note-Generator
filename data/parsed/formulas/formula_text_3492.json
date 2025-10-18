@@ -1,0 +1,12 @@
+{
+  "page": 1940,
+  "original_text": "Spread = cdsspread(ZeroData,ProbData,Settle,Maturity)",
+  "ocr_text": "Spread=cdsspread(ZeroData,ProbData,Settle,Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 522.37,
+    "x1": 377.15,
+    "y1": 532.84
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,61 @@
+r = ts2func(yields,'Times',(0:nPeriods - 1)');
+
+ts2func packages a specified time series array inside a callable function of time and state, and
+synchronizes it with an optional time vector. For instance:
+
+r(0,100)
+
+ans = 
+0.0470
+
+evaluates the function at (t = 0, Xt = 100) and returns the first observed Euribor yield.
+
+However, you can also evaluate the resulting function at any intermediate time t and state Xt:
+
+r(7.5,200)
+
+ans = 
+0.0472
+
+Furthermore, the following command produces the same result when called with time alone:
+
+r(7.5)
+
+ans = 
+0.0472
+
+The equivalence of these last two commands highlights some important features.
+
+When you specify parameters as functions, they must evaluate properly when passed a scalar, real-
+valued sample time (t), and an NVars-by-1 state vector (Xt). They must also generate an array of
+appropriate dimensions, which in the first case is a scalar constant, and in the second case is a scalar,
+piecewise constant function of time alone. You are not required to use either time (t) or state (Xt). In
+the current example, the function evaluates properly when passed time followed by state, thereby
+satisfying the minimal requirements. The fact that it also evaluates correctly when passed only time
+simply indicates that the function does not require the state vector Xt. The important point to make is
+that it works when you pass it t, Xt .
+
+Furthermore, the ts2func function performs a zero-order-hold (ZOH) piecewise constant
+interpolation. The notion of piecewise constant parameters is pervasive throughout the SDE
+architecture, and is discussed in more detail in “Optimizing Accuracy: About Solution Precision and
+Error” on page 14-66.
+
+Complete the comparison by performing the second simulation using the same initial random number
+state. Simulate paths using a dynamic, deterministic rate of return.
+
+rng(5713,'twister')
+obj = gbm(r, diag(sigma),'StartState',100)
+
+obj = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 100
+    Correlation: 1
+          Drift: drift rate function F(t,X(t))
+
+ts2func
+
+15-415

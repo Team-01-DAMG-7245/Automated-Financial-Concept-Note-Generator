@@ -1,0 +1,12 @@
+{
+  "page": 2182,
+  "original_text": "Objective = ecmmvnrobj(Data,Design,Parameters,Covariance)\nObjective = ecmmvnrobj( ___ ,CovarFormat)",
+  "ocr_text": "Objective=ecmmvnrobj(Data,Design,Parameters,Covariance)\nObjective=ecmmvnrobj( ,CovarFormat)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.21,
+    "x1": 433.17,
+    "y1": 214.84
+  },
+  "confidence": "high"
+}

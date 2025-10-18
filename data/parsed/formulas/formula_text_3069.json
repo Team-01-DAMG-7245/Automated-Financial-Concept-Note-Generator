@@ -1,0 +1,12 @@
+{
+  "page": 1610,
+  "original_text": "h = equityCurve(ax,backtester) additionally returns the figure handle h for the equity curve\nplot.",
+  "ocr_text": "h=equityCurve(ax,backtester)additionallyreturnsthefigurehandlehfortheequitycurve\nplot.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 314.26,
+    "x1": 547.19,
+    "y1": 337.89
+  },
+  "confidence": "high"
+}

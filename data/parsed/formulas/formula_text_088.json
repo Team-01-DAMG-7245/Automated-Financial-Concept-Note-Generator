@@ -1,0 +1,12 @@
+{
+  "page": 78,
+  "original_text": "ps = ret2tick(rs,StartPrice=3)",
+  "ocr_text": "ps=ret2tick(rs,StartPrice=3)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 333.59,
+    "x1": 252.54,
+    "y1": 344.06
+  },
+  "confidence": "high"
+}

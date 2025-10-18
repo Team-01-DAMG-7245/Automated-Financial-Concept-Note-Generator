@@ -1,0 +1,13 @@
+At this scale, the imbalance index gives no indication of future changes in the midprice.
+
+To see more detail, limit the time scale to one minute.
+
+timeRange = seconds([36000 36060]); % One minute after 10 AM, when prices were climbing
+xlim(timeRange)
+legend('Location','SE')
+title("Exchange Data: One Minute")
+
+2
+Performing Common Financial Tasks
+
+2-60

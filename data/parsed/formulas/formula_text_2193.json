@@ -1,0 +1,12 @@
+{
+  "page": 1131,
+  "original_text": "% Transform to horizon invariants and calculate the statistics.\nhrznInvSims = pcaFactorSims*pcaFactorCoeff + repmat(hrznInvMu,numSim,1);\nhrznInvSimsMu = mean(hrznInvSims);\nhrznInvSimsCov = cov(hrznInvSims);\n[hrznInvSimsStd,hrznInvSimsCor] = cov2corr(hrznInvSimsCov);",
+  "ocr_text": "STransformtohorizoninvariantsandcalculatethestatistics.\nhrznInvSims=pcaFactorSims*pcaFactorCoeff+repmat(hrznInvMu,numSim,1);\nhrznInvSimsMu=mean(hrznInvSims);\n\nhrznInvSimsCov=cov(hrznInvSims);\n[hrznInvSimsStd,hrznInvSimsCor]=cov2corr(hrznInvSimsCov);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.23,
+    "x1": 480.1,
+    "y1": 243.89
+  },
+  "confidence": "high"
+}

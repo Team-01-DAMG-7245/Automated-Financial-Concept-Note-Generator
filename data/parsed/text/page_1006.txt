@@ -1,0 +1,18 @@
+Similarly, you can consider the actual and predicted odds of default.
+
+obsOdds = (1-obsPD)./obsPD;
+predOdds = (1-predPD)./predPD;
+bar(T.Scores,obsOdds)
+hold on
+scatter(T.Scores,predOdds,'*')
+xlabel('Score')
+ylabel('Odds of Default')
+title('Odds of Default vs. Score')
+grid
+legend('Actual Odds of Default', 'Predicted Odds of Default')
+hold off
+
+8
+Credit Risk Analysis
+
+8-88

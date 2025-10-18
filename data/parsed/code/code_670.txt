@@ -1,0 +1,10 @@
+Page 615
+================================================================================
+
+if EnvConstants.BuyTrade
+    LoggedSignals.CurrentInventoryShares = ...
+        LoggedSignals.CurrentInventoryShares + sum(ExecutedShares);
+else
+    LoggedSignals.CurrentInventoryShares = ...
+        max(LoggedSignals.CurrentInventoryShares - sum(ExecutedShares), 0);
+end

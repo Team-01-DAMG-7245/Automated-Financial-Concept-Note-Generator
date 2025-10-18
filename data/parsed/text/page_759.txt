@@ -1,0 +1,22 @@
+Since mean-variance and CVaR are two different risk measures, this example illustrates that the
+efficient portfolio for one type of risk measure is not efficient for the other.
+
+CVaR and Mean-Variance Portfolio Weights Comparison
+
+Examine the portfolio weights of the portfolios that make up each efficient frontier to obtain a more
+detailed comparison between the mean-variance and CVaR efficient frontiers.
+
+Plot the weights associated with the mean-variance portfolio efficient frontier.
+
+% Plot the mean-variance portfolio weights
+figure;
+area(pwgtmv');
+legend(pmv.AssetList);
+axis([1 10 0 1])
+title('Mean-Variance Portfolio Weights Five Hedging Levels');
+xlabel('Portfolios from Minimum(1) to Maximum(10) Return');
+ylabel('Contribution of each Asset');
+
+Hedging Using CVaR Portfolio Optimization
+
+5-133

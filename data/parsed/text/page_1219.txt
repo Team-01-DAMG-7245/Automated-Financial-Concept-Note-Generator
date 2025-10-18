@@ -1,0 +1,56 @@
+Specify SDE from a Mean-Reverting Drift Model
+
+Create an sdemrd object using sdemrd with a square root exponent to represent the model:
+
+obj = sdemrd(0.2, 0.1, 0.5, 0.05)  % (Speed, Level, Alpha, Sigma)
+
+obj = 
+   Class SDEMRD: SDE with Mean-Reverting Drift
+   -------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   -------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Alpha: 0.5
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+sdemrd objects display the familiar Speed and Level parameters instead of A and B.
+
+Creating Cox-Ingersoll-Ross (CIR) Square Root Diffusion Models
+
+The Cox-Ingersoll-Ross (CIR) short-rate object, cir, derives directly from the SDE with mean-
+reverting drift (sdemrd) class:
+
+dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+
+1
+2)V(t)dWt
+
+where D is a diagonal matrix whose elements are the square root of the corresponding element of the
+state vector.
+
+Specify Cox-Ingersoll-Ross Square Root Diffusion Model
+
+Create a cir object using cir to represent the same model as in “Specify SDE from a Mean-
+Reverting Drift Model” on page 14-27.
+
+obj = cir(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)
+
+obj = 
+   Class CIR: Cox-Ingersoll-Ross
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+
+Parametric Models
+
+14-27

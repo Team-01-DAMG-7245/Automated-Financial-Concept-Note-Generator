@@ -1,0 +1,63 @@
+Input Arguments
+
+MDL — Stochastic differential equation model
+object
+
+Stochastic differential equation model, specified as an sde, bates, bm, gbm, cev, cir, hwv,
+heston,merton sdeddo, sdeld, or sdemrd object.
+
+Data Types: object
+
+Optional — Any variable-length list of input arguments that the simulation method or
+function referenced by the SDE.Simulation parameter requires or accepts
+input arguments
+
+(Optional) Any variable-length list of input arguments that the simulation method or function
+referenced by the SDE.Simulation parameter requires or accepts, specified as a variable-length list
+of input arguments. This input list is passed directly to the appropriate SDE simulation method or
+user-defined simulation function.
+
+Data Types: double
+
+Scheme — Approximation scheme used to simulate the sample paths
+character vector with values 'euler', 'solution','quadratic-exponential', 'transition',
+'milstein', or 'milstein2' | string with values "euler", "solution","quadratic-
+exponential", "transition", "milstein", or "milstein2"
+
+(Optional) Approximation scheme used to simulate the sample paths, specified as a character vector
+or string. When you specify Scheme, the MDL simulation method using the corresponding scheme is
+used instead of the one defined in the MDL.Simulation property which is the simByEuler method
+by default.
+
+Note The supported Scheme depends on which SDE object you use with the simulate method as
+follows:
+
+simulate Scheme Value
+Supported Objects
+
+"euler"
+sde, sdeddo, sdeld, sdemrd, bm, cev, gbm,
+merton, hwv, cir, heston, or bates
+
+"solution"
+gbm, merton, or hwv
+
+"transition"
+cir, heston, or bates
+
+"quadratic-exponential"
+cir, heston, or bates
+
+"milstein"
+sdeddo, sdeld, sdemrd, bm, cev, gbm, merton,
+hwv, cir, heston, or bates
+
+"milstein2"
+sdeddo, sdeld, sdemrd, bm, cev, gbm, merton,
+hwv, cir, heston, or bates
+
+Data Types: char | string
+
+simulate
+
+15-409

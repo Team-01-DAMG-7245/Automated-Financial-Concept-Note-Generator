@@ -1,0 +1,12 @@
+{
+  "page": 1420,
+  "original_text": "% Simulate stock prices at maturity\nFuturePrices = simBySolution(gbmobj,nPeriods,'nTrials',nTrials,'DeltaTime',T);",
+  "ocr_text": "Simulatestockpricesatmaturity\nFuturePrices=simBySolution(gbmobj,nPeriods,nTrials,nTrials,DeltaTime,T);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 644.77,
+    "x1": 512.64,
+    "y1": 666.04
+  },
+  "confidence": "high"
+}

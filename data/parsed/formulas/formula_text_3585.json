@@ -1,0 +1,12 @@
+{
+  "page": 2022,
+  "original_text": "CurveDates = daysadd(Settle,360*[.25 .5 1 2 3 5 7 10 20],1);\nZeroRates = [.0089 .0096 .0107 .0130 .0166 .0248 .0306 .0356 .0454]';",
+  "ocr_text": "CurveDates=daysadd(Settle,360*[.25.5123571020],1);\nZeroRates=[.0089.0096.0107.0130.0166.0248.0306.0356.0454];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 495.24,
+    "x1": 463.84,
+    "y1": 516.51
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf(' Brownian Motion American Call Basket Price: %8.4f\\n'  , BrownianMotionCallPrice)",
+  "ocr_text": "fprintf(BrownianMotionAmericanCallBasketPrice:8.4fn,BrownianMotionCallPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 296.21,
+    "x1": 577.65,
+    "y1": 306.67
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1140,
+  "original_text": "ObservationInfo             = rlNumericSpec([3 1],'LowerLimit',0,'UpperLimit',[10 Maturity 1]');\nObservationInfo.Name        = 'Hedging State';\nObservationInfo.Description = ['Moneyness', 'TimeToMaturity','Position'];",
+  "ocr_text": "ObservationInfo =rlNumericSpec([31],LowerLimit,0,UpperLimit,[10Maturity1]);\nObservationInfo.Name =_HedgingState;\nObservationInfo.Description=[Moneyness,TimeToMaturity,Position];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 610.16,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

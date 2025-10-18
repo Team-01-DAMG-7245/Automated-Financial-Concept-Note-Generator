@@ -1,0 +1,12 @@
+{
+  "page": 2140,
+  "original_text": "MoreDays = [datetime(2002,9,7) ; datetime(2002,10,22) ; datetime(2002,11,5)];\nNewDate = daysadd(MoreDays, 31 ,2)",
+  "ocr_text": "MoreDays=[datetime(2002,9,7);datetime(2002,10,22)_;datetime(2002,11,5)];\nNewDate=daysadd(MoreDays,31,2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 507.19,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1132,
+  "original_text": "% Select the observed yields for the securities of interest on the\n% settle date.\ntreasuryYTMAtSettle = tsYTMRates(end,7:9);",
+  "ocr_text": "Selecttheobservedyieldsforthesecuritiesofinterestonthe\nsettledate.\ntreasuryYTMAtSettle=tsYTMRates(end,7:9);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 447.59,
+    "y1": 211.49
+  },
+  "confidence": "high"
+}

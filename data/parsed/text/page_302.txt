@@ -1,0 +1,109 @@
+Case for Solving
+Portfolio Problem
+
+Objective Function
+Constraints
+Integer (Binary)
+Variables
+
+"Preferred" case with
+Financial Toolbox
+
+•
+Return — Gross
+portfolio returns or
+net portfolio returns
+
+•
+Risk — Variance,
+CVaR, or MAD
+
+•
+Sharpe ratio (only
+for mean-variance
+problems using
+Portfolio object)
+
+•
+Continuous functions
+(only using the
+Portfolio object)
+
+•
+Return — Gross
+portfolio returns or
+net portfolio returns
+
+•
+Risk — Variance,
+CVaR, or MAD (risk
+constraints are only
+supported when the
+objective is the
+return)
+
+•
+Linear equalities
+
+•
+Linear inequalities
+
+•
+Tracking error (only
+for mean-variance
+problems using
+Portfolio object).
+Tracking error is
+supported with
+custom objectives
+using
+estimateCustomOb
+jectivePortfolio
+. Tracking error is
+only supported when
+the objective is the
+return, variance, or
+Sharpe ratio.
+
+None
+
+Optimization Toolbox
+Any other nonlinear
+function not mentioned
+in “Always Use Portfolio,
+PortfolioCVaR, or
+PortfolioMAD Object”
+on page 4-134 and
+“Preferred Use of
+Portfolio, PortfolioCVaR,
+or PortfolioMAD Object”
+on page 4-135
+
+Any other nonlinear
+function not mentioned
+in “Always Use Portfolio,
+PortfolioCVaR, or
+PortfolioMAD Object”
+on page 4-134 and
+“Preferred Use of
+Portfolio, PortfolioCVaR,
+or PortfolioMAD Object”
+on page 4-135
+
+None
+
+Always Use Portfolio, PortfolioCVaR, or PortfolioMAD Object
+
+The two general cases for always using the Portfolio, PortfolioCVaR, or PortfolioMAD object
+are:
+
+•
+Problems with both supported nonlinear constraints and conditional bounds or bounds in the
+number of assets.
+
+These problems include:
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-134

@@ -1,0 +1,12 @@
+Page 1038
+================================================================================
+
+% Indicate rating extrapolated into the future (arbitrarily select 91
+   % days after endDate as the last date on the plot)
+   endDateExtrap = endDate+91;
+   if endDateExtrap>DatesOriginal(end)
+      DatesExtrap = [DatesOriginal(end); endDateExtrap];
+      RatingsExtrap = [RatingsOriginal(end); RatingsOriginal(end)];
+      stairs(DatesExtrap,RatingsExtrap,'LineWidth',2,'LineStyle',':')
+   end
+   hold off;

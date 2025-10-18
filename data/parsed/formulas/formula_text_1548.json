@@ -1,0 +1,12 @@
+{
+  "page": 776,
+  "original_text": "% Duration constraint\ntargetDuration = 10;\ndurationTol = 1;\nbondsDuration = bnddurp(bondsPrices,couponRate,settle,bondsMaturity);\np = setInequality(p,[bondsDuration';-bondsDuration'], ...\n    [targetDuration+durationTol;durationTol-targetDuration]);",
+  "ocr_text": "Durationconstraint\n\ntargetDuration=10;\n\ndurationTol=1;\n\nbondsDuration=bnddurp(bondsPrices,couponRate,settle,bondsMaturity);\n\np=setInequality(p,[bondsDuration;-bondsDuration],...\n[targetDuration+durationTol;durationTol-targetDuration]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 463.84,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,55 @@
+daysdif
+
+Days between dates for any day-count basis
+
+Syntax
+
+NumDays = daysdif(StartDate,EndDate)
+NumDays = daysdif( ___ ,Basis)
+
+Description
+
+NumDays = daysdif(StartDate,EndDate) returns the number of days between dates
+StartDate and EndDate. The first date for StartDate is not included when determining the
+number of days between first and last date.
+
+Any input argument can contain multiple values, but if so, the other inputs must contain the same
+number of values or a single value that applies to all. For example, if StartDate is an n-row cell
+array of character vectors , then EndDate must be an n-row cell array of character vectors or a single
+date character vector. NumDays is then an N-by-1 vector of numbers.
+
+NumDays = daysdif( ___ ,Basis) returns the number of days between dates StartDate and
+EndDate using the optional argument Basis for day-count. The first date for StartDate is not
+included when determining the number of days between first and last date.
+
+Any input argument can contain multiple values, but if so, the other inputs must contain the same
+number of values or a single value that applies to all. For example, if StartDate is an n-row datetime
+array, then EndDate must be an n-row datetime array or a single datetime. NumDays is then an N-
+by-1 vector of numbers.
+
+Examples
+
+Determine the Number of Days Between StartDate and EndDate
+
+Determine the NumDays using date character vectors for StartDate and EndDate.
+
+NumDays = daysdif('3/1/99', '3/1/00', 1)
+
+NumDays = 
+360
+
+Determine the NumDays using datetimes for StartDate and EndDate.
+
+NumDays = daysdif(datetime(1999,3,1) ,datetime(2000,3,1), 1)
+
+NumDays = 
+360
+
+Determine the NumDays using a datetime array for EndDate.
+
+MoreDays = [datetime(2001,3,1) ; datetime(2002,3,1) ; datetime(2003,3,1)]; 
+NumDays = daysdif(datetime(1998,3,1), MoreDays)
+
+daysdif
+
+15-837

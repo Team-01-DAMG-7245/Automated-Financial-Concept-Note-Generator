@@ -1,0 +1,12 @@
+{
+  "page": 109,
+  "original_text": "H = diag(C);",
+  "ocr_text": "H=diag(C);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 537.51,
+    "x1": 155.02,
+    "y1": 547.98
+  },
+  "confidence": "high"
+}

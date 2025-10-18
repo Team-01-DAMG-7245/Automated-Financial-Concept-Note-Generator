@@ -1,0 +1,60 @@
+Data Types: object
+
+Times — Interpolation times
+vector
+
+Interpolation times, specified as a NTimes element vector. The length of this vector determines the
+number of rows in the interpolated output time series XT.
+
+Data Types: double
+
+Paths — Sample paths of correlated state variables
+time series array
+
+Sample paths of correlated state variables, specified as a NPeriods-by-NVars-by-NTrials time
+series array.
+
+For a given trial, each row of this array is the transpose of the state vector Xt at time t. Paths is the
+initial time series array into which the interpolate function performs the Brownian interpolation.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [XT,T] = interpolate(MDL,T,Paths,'Times',t)
+
+Times — Observation times associated with the time series input Paths
+zero-based, unit-increment column vector of length NPeriods (default) | column vector
+
+Observation times associated with the time series input Paths, specified as the comma-separated
+pair consisting of 'Times' and a column vector.
+
+Data Types: double
+
+Refine — Flag that indicates whether interpolate uses the interpolation times you
+request
+False (interpolate bases the interpolation only on the state information specified in Paths)
+(default) | logical with values True or False
+
+Flag that indicates whether interpolate uses the interpolation times you request (see T) to refine
+the interpolation as new information becomes available, specified as the comma-separated pair
+consisting of 'Refine' and a logical with a value of True or False.
+
+Data Types: logical
+
+Processes — Sequence of background processes or state vector adjustments
+interpolate makes no adjustments and performs no processing (default) | function | cell array of
+functions
+
+Sequence of background processes or state vector adjustments, specified as the comma-separated
+pair consisting of 'Processes' and a function or cell array of functions of the form
+
+interpolate
+
+15-153

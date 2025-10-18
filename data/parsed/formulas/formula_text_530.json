@@ -1,0 +1,12 @@
+{
+  "page": 359,
+  "original_text": "Create a fully invested portfolio with only long positions: xi ≥0 and sum xi = 1. These are configured\nwith setDefaultConstraints.",
+  "ocr_text": "Createafullyinvestedportfoliowithonlylongpositions:x;=0andsum(x;)=1.Theseareconfigured\nwithsetDefaultConstraints.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 198.36,
+    "x1": 555.17,
+    "y1": 223.63
+  },
+  "confidence": "high"
+}

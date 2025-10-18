@@ -1,0 +1,12 @@
+{
+  "page": 228,
+  "original_text": "p = Portfolio;\np = setDefaultConstraints(p, 20);\ndisp(p)",
+  "ocr_text": "p=Portfolio;\np=setDefaultConstraints(p,20);\ndisp(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 170.49,
+    "x1": 268.79,
+    "y1": 202.55
+  },
+  "confidence": "high"
+}

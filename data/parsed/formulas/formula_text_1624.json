@@ -1,0 +1,12 @@
+{
+  "page": 816,
+  "original_text": "p = PortfolioMAD('Scenarios', AssetScenarios);",
+  "ocr_text": "p=PortfolioMAD(Scenarios,AssetScenarios);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 467.67,
+    "x1": 339.24,
+    "y1": 478.14
+  },
+  "confidence": "high"
+}

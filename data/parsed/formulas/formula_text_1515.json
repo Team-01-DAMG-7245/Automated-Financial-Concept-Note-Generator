@@ -1,0 +1,12 @@
+{
+  "page": 767,
+  "original_text": "X =\nx| ∑\ni = 1",
+  "ocr_text": "n\nx={n Sx\ni=1",
+  "bbox": {
+    "x0": 112.19,
+    "y0": 263.32,
+    "x1": 165.92,
+    "y1": 288.87
+  },
+  "confidence": "high"
+}

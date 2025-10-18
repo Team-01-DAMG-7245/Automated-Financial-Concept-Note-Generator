@@ -1,0 +1,12 @@
+{
+  "page": 1040,
+  "original_text": "custAgeToImpute = dataToImpute;\ncustAgeToImpute.HomeOwner = dResStatus(:,1);\ncustAgeToImpute.Tenant = dResStatus(:,2);\ncustAgeToImpute.Employed = dEmpStatus(:,1);\ncustAgeToImpute.HasOtherCC = dOtherCC(:,2);\ncustAgeToImpute = removevars(custAgeToImpute, 'ResStatus');\ncustAgeToImpute = removevars(custAgeToImpute, 'EmpStatus');\ncustAgeToImpute = removevars(custAgeToImpute, 'OtherCC');",
+  "ocr_text": "custAgeToImpute=dataToImpute;\ncustAgeToImpute.HomeOwner=dResStatus(:,1);\ncustAgeToImpute.Tenant=dResStatus(:,2);\ncustAgeToImpute.Employed=dEmpStatus(:,1);\ncustAgeToImpute.HasOtherCC=dOtherCC(:,2);\ncustAgeToImpute=removevars(custAgeToImpute,_ResStatus);\ncustAgeToImpute=removevars(custAgeToImpute,EmpStatus);\ncustAgeToImpute=removevars(custAgeToImpute,_OtherCC);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 325.44,
+    "x1": 409.69,
+    "y1": 411.51
+  },
+  "confidence": "high"
+}

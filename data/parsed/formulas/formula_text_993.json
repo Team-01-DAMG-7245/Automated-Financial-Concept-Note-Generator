@@ -1,0 +1,12 @@
+{
+  "page": 524,
+  "original_text": "% Estimate the portfolio's mean and variance.\np = estimateAssetMoments(portObj,pricesTT,DataFormat='Prices', ...\n    MissingData=true);",
+  "ocr_text": "Estimatetheportfoliosmeanandvariance.\np=estimateAssetMoments(portObj,pricesTT,DataFormat=Prices,...\nMissingData=true);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 287.83,
+    "x1": 447.61,
+    "y1": 319.89
+  },
+  "confidence": "high"
+}

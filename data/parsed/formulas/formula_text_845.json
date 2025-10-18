@@ -1,0 +1,12 @@
+{
+  "page": 473,
+  "original_text": "% Training set\nXtraining = network_features(~cv_partition.test,:);\nTtraining = network_responses(~cv_partition.test,:);",
+  "ocr_text": "Trainingset\nXtraining=network_features(cv_partition.test,:);\nTtraining=network_responses(cv_partition.test,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 479.03,
+    "x1": 371.74,
+    "y1": 511.09
+  },
+  "confidence": "high"
+}

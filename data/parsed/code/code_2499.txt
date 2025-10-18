@@ -1,0 +1,8 @@
+Page 2335
+================================================================================
+
+Note The ewstats function may give slightly different results from the RiskMetrics® approach for
+determining expected return and covariance from a time series. This is because ewstats calculates
+NumEffObs by directly summing the unnormalized weights, while RiskMetrics® uses an
+approximation. Additionally, RiskMetrics® assumes a mean of 0 in the return series when calculating
+the covariance, while ewstats uses the calculated ExpReturn output.

@@ -1,0 +1,78 @@
+ModDuration = 
+1.6107
+
+YearDuration = 
+1.6470
+
+PerDuration = 
+3.2940
+
+The durations are:
+
+•
+ModDuration = 1.6107 (years)
+
+•
+YearDuration = 1.6470 (years)
+
+•
+PerDuration = 3.2940 (semiannual periods)
+
+Note that the semiannual periodic Macaulay duration (PerDuration) is twice the annualized
+Macaulay duration (YearDuration).
+
+Calculating Key Rate Durations for Bonds
+
+This example shows how to compute the key rate duration of the US Treasury Bond.
+
+Key rate duration enables you to evaluate the sensitivity and price of a bond to nonparallel changes in
+the spot or zero curve by decomposing the interest rate risk along the spot or zero curve. Key rate
+duration refers to the process of choosing a set of key rates and computing a duration for each rate.
+Specifically, for each key rate, while the other rates are held constant, the key rate is shifted up and
+down (and intermediate cash flow dates are interpolated), and then the present value of the security
+given the shifted curves is computed.
+
+The calculation of bndkrdur supports
+
+Where PV is the current value of the instrument, PV_up and PV_down are the new values after the
+discount curve has been shocked, and ShiftValue is the change in interest rate. For example, if key
+rates of 3 months, 1, 2, 3, 5, 7, 10, 15, 20, 25, 30 years were chosen, then a 30-year bond might have
+corresponding key rate durations of:
+
+3M
+1Y
+2Y
+3Y
+5Y
+7Y
+10Y
+15Y
+20Y
+25Y
+30Y
+
+.01
+.04
+.09
+.21
+.4
+.65
+1.27
+1.71
+1.68
+1.83
+7.03
+
+The key rate durations add up to approximately equal the duration of the bond.
+
+Compute the key rate duration of the US Treasury Bond with maturity date of August 15, 2028 and
+coupon rate of 5.5%.
+
+Settle = datenum('18-Nov-2008'); 
+CouponRate = 5.500/100;
+Maturity = datenum('15-Aug-2028'); 
+Price = 114.83;
+
+Pricing and Computing Yields for Fixed-Income Securities
+
+2-23

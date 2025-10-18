@@ -1,0 +1,13 @@
+Page 1074
+================================================================================
+
+To make the transformation, use the function convert2sur, which converts a standard-form design
+array into an equivalent design array to do SUR with a specified mapping of the series into
+NUMGROUPS groups. The regression functions are used in the usual manner, but with the SUR design
+array instead of the original design array. Instead of having NUMPARAMS elements, the SUR output
+parameter vector has NUMGROUPS of stacked parameter estimates, where the first NUMPARAMS
+elements of Parameters contain parameter estimates associated with the first group of series, the
+next NUMPARAMS elements of Parameters contain parameter estimates associated with the second
+group of series, and so on. If the model has only one series, for example, NUMSERIES = 1, then the
+SUR design array is the same as the original design array since SUR requires two or more series to
+generate distinct parameter estimates.

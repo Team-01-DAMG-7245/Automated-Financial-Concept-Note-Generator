@@ -1,0 +1,6 @@
+Page 1542
+================================================================================
+
+Transaction costs for trades, specified as the comma-separated pair consisting of
+'TransactionCosts' and a scalar numeric, vector, or function handle. You can specify transaction
+costs in three ways:

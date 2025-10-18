@@ -1,0 +1,12 @@
+{
+  "page": 1479,
+  "original_text": "SDELD = sdeld( ___ ,Name,Value) creates a SDELD object with additional options specified by\none or more Name,Value pair arguments.",
+  "ocr_text": "SDELD=sdeld(___,Name,Value)createsaSDELDobjectwithadditionaloptionsspecifiedby\noneormoreName,Valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 649.27,
+    "x1": 541.97,
+    "y1": 672.9
+  },
+  "confidence": "high"
+}

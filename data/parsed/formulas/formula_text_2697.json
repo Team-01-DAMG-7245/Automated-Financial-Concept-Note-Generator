@@ -1,0 +1,12 @@
+{
+  "page": 1361,
+  "original_text": "6\nCompute the denoised version of the correlation matrix C = VΛ\n−VT and rescale C  so that the\nmain diagonal only has ones. C  is a correlation matrix.",
+  "ocr_text": "6 Computethedenoisedversionofthecorrelationmatrix C=VAVandrescaleCsothatthe\nmaindiagonalonlyhasones.C_isacorrelationmatrix.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 496.68,
+    "x1": 533.67,
+    "y1": 528.09
+  },
+  "confidence": "high"
+}

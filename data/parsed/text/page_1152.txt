@@ -1,0 +1,11 @@
+% Plot the portfolio weights.
+figure;
+area(pwgt');
+axis([1 10 0 1])
+legend('Stock only','Put cover');
+title('Mean-CVaR Portfolio Weights');
+
+10
+Solving Sample Problems
+
+10-54

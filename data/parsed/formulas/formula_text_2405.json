@@ -1,0 +1,12 @@
+{
+  "page": 1234,
+  "original_text": "expReturn   = diag(mean(returns));  % expected return vector\nsigma       = diag(std(returns));   % volatility of returns",
+  "ocr_text": "expReturn =diag(mean(returns));expectedreturnvector\nsigma =diag(std(returns)); Svolatilityof_returns",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 412.27,
+    "x1": 415.1,
+    "y1": 433.53
+  },
+  "confidence": "high"
+}

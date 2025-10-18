@@ -1,0 +1,12 @@
+{
+  "page": 818,
+  "original_text": "X = portsim(m', C, 120);\nY = ret2tick(X);",
+  "ocr_text": "X=portsim(m,C,_120);\nY=ret2tick(X);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 575.12,
+    "x1": 220.04,
+    "y1": 596.38
+  },
+  "confidence": "high"
+}

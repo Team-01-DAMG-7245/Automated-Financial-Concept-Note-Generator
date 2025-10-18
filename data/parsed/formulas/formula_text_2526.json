@@ -1,0 +1,12 @@
+{
+  "page": 1290,
+  "original_text": "figure\nview( 3 )\nclusterColors = hsv( numClusters );\ncolormap( clusterColors )\nhold( \"on\" )",
+  "ocr_text": "figure\n\nview(3)\nclusterColors=hsv(numClusters);\ncolormap(clusterColors)\nhold(on)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 611.42,
+    "x1": 279.63,
+    "y1": 665.09
+  },
+  "confidence": "high"
+}

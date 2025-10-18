@@ -1,0 +1,5 @@
+Page 1012
+================================================================================
+
+Therefore, for the weighted data, the likelihood-of-default function for observation i in the first
+equation becomes

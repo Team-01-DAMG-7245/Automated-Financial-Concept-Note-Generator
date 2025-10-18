@@ -1,0 +1,9 @@
+Page 246
+================================================================================
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = Portfolio('AInequality', A, 'bInequality', b);
+disp(p.NumAssets)
+disp(p.AInequality)
+disp(p.bInequality)

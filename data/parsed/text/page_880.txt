@@ -1,0 +1,64 @@
+Display: 'off'
+                CutGeneration: 'basic'
+     MaxIterationsInactiveCut: 30
+           ActiveCutTolerance: 1.0000e-07
+                  ShrinkRatio: 0.7500
+    TrustRegionStartIteration: 2
+                   DeltaLimit: 1
+
+interior-point
+off
+
+Using 'fmincon' SolverType
+
+Unlike Optimization Toolbox which uses the 'interior-point' algorithm as the default algorithm
+for fmincon, the portfolio optimization for a PortfolioMAD object uses the 'sqp' algorithm as the
+default. For details about fmincon and constrained nonlinear optimization algorithms and options,
+see “Constrained Nonlinear Optimization Algorithms”.
+
+To modify fmincon options for MAD portfolio optimizations, use setSolver to set the hidden
+properties solverType and solverOptions to specify and control the solver. Since these solver
+properties are hidden, you cannot set them using the PortfolioMAD object. The default for the
+fmincon solver is the 'sqb' algorithm and no displayed output, so you do not need to use
+setSolver to specify the 'sqp' algorithm for fmincon.
+
+p = PortfolioMAD;
+p = setSolver(p, 'fmincon');
+display(p.solverOptions.Algorithm)
+display(p.solverOptions.Display)
+
+sqp
+off
+
+If you want to specify additional options associated with the fmincon solver, setSolver accepts
+these options as name-value pair arguments. For example, if you want to use fmincon with the
+'active-set' algorithm and with displayed output, use setSolver with:
+
+p = PortfolioMAD;
+p = setSolver(p, 'fmincon', 'Algorithm', 'active-set', 'Display', 'final');
+display(p.solverOptions)
+
+fmincon options:
+
+Options used by current Algorithm ('active-set'):
+   (Other available algorithms: 'interior-point', 'sqp', 'sqp-legacy', 'trust-region-reflective')
+
+Set properties:
+                    Algorithm: 'active-set'
+                      Display: 'final'
+
+Default properties:
+          ConstraintTolerance: 1.0000e-06
+     FiniteDifferenceStepSize: 'sqrt(eps)'
+         FiniteDifferenceType: 'forward'
+            FunctionTolerance: 1.0000e-06
+       MaxFunctionEvaluations: '100*numberOfVariables'
+                MaxIterations: 400
+          OptimalityTolerance: 1.0000e-06
+                    OutputFcn: []
+                      PlotFcn: []
+
+6
+MAD Portfolio Optimization Tools
+
+6-100

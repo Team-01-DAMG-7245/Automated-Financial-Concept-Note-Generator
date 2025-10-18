@@ -1,0 +1,58 @@
+N = 2×1
+
+0
+     0
+
+The output Paths is returned as a (NPeriods + 1)-by-NVars-by-NTrials three-dimensional time-
+series array.
+
+Quasi-Monte Carlo Simulation Using Bates Model
+
+This example shows how to use simByQuadExp with a Bates model to perform a quasi-Monte Carlo
+simulation. Quasi-Monte Carlo simulation is a Monte Carlo simulation that uses quasi-random
+sequences instead pseudo random numbers.
+
+Define the parameters for the bates object.
+
+AssetPrice = 80;
+Return = 0.03;
+JumpMean = 0.02;
+JumpVol = 0.08;
+JumpFreq = 0.1;
+            
+V0 = 0.04;
+Level = 0.05;
+Speed = 1.0;
+Volatility = 0.2;
+Rho = -0.7;
+StartState = [AssetPrice;V0]; 
+Correlation = [1 Rho;Rho 1];
+
+Create a bates object.
+
+Bates = bates(Return, Speed, Level, Volatility, ...
+                JumpFreq, JumpMean, JumpVol,'startstate',StartState, ...
+                'correlation',Correlation)
+
+Bates = 
+   Class BATES: Bates Bivariate Stochastic Volatility
+   --------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   --------------------------------------------------
+      StartTime: 0
+     StartState: 2x1 double array 
+    Correlation: 2x2 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.03
+          Speed: 1
+          Level: 0.05
+     Volatility: 0.2
+       JumpFreq: 0.1
+       JumpMean: 0.02
+        JumpVol: 0.08
+
+simByQuadExp
+
+15-375

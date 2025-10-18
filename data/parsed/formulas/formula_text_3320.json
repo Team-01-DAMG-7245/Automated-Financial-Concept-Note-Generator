@@ -1,0 +1,12 @@
+{
+  "page": 1794,
+  "original_text": "Gamma = blsgamma( ___ ,Yield) adds an optional argument for Yield.",
+  "ocr_text": "Gamma=blsgamma(___,Yield)addsanoptionalargumentforYield.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 488.8,
+    "x1": 433.93,
+    "y1": 500.43
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,65 @@
+Bond Portfolio Optimization Using Portfolio Object
+
+This example shows how to use a Portfolio object to construct an optimal portfolio of 10, 20, and
+30 year treasuries that will be held for a period of one month. The workflow for the overall asset
+allocation process is:
+
+1
+Load market data — Historic daily treasury yields downloaded from FRED® are loaded.
+
+2
+Calculate market invariants — Daily changes in yield to maturity are chosen as invariants and
+assumed to be multivariate normal. Due to missing data for the 30 year bonds, an expectation
+maximization algorithm is used to estimate the mean and covariance of the invariants. The
+invariant's statistics are projected to the investment horizon.
+
+3
+Simulate invariants at horizon — Due to the high correlation and inherent structure in the
+yield curves, a principal component analysis is applied to the invariant statistics. Multivariate
+normal random draws are done in the PCA space. The simulations are transformed back into the
+invariant space using the PCA loadings.
+
+4
+Calculate distribution of returns at horizon — The simulated monthly changes in the yield
+curve are used to calculate the yield for the portfolio securities at the horizon. This requires
+interpolating values off of the simulated yield curves since the portfolio securities will have
+maturities that are one month less than 10, 20 and 30 years. Profit and loss for each scenario/
+security is calculated by pricing the treasuries using the simulated and interpolated yields.
+Simulated linear returns and their statistics are calculated from the prices.
+
+5
+Optimize asset allocation — Using a Portfolio object, mean-variance optimization is
+performed on the treasury returns statistics to calculate optimal portfolio weights for ten points
+along the efficient frontier. The investor preference is to choose the portfolio that is closest to the
+mean value of possible Sharpe ratios.
+
+Load Market Data
+
+Load the historic yield-to-maturity data for the series: DGS6MO, DGS1, DGS2, DGS3, DGS5, DGS7,
+DGS10, DGS20, DGS30 for the dates: Sep 1, 2000 to Sep 1, 2010 obtained from: https://
+fred.stlouisfed.org/categories/115.
+
+Note: Data is downloaded using Datafeed Toolbox™ using commands like: >> conn = fred; >>
+data = fetch(conn,'DGS10','9/1/2000','9/1/2010'); results have been aggregated and
+stored in a binary HistoricalYTMData.mat file for convenience.
+
+histData = load('HistoricalYTMData.mat');
+% Time to maturity for each series
+tsYTMMats = histData.tsYTMMats;
+% Dates that rates were observed
+tsYTMObsDates = histData.tsYTMObsDates;
+% Observed rates
+tsYTMRates = histData.tsYTMRates;
+
+% Visualize the yield surface.
+[X,Y] = meshgrid(tsYTMMats,tsYTMObsDates);
+surf(X,Y,tsYTMRates,EdgeColor='none')
+xlabel('Time to Maturity')
+ylabel('Observation Dates')
+zlabel('Yield to Maturity')
+title('Historic Yield Surface')
+
+10
+Solving Sample Problems
+
+10-30

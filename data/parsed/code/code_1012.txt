@@ -1,0 +1,8 @@
+Page 1032
+================================================================================
+
+The transprob function understands that this panel-data format indicates the dates when a new
+rating is assigned to a given company. transprob assumes that such ratings remain unchanged,
+unless a subsequent row explicitly indicates a rating change. For example, for company 'ABC',
+transprob understands that the 'A' rating is unchanged for any date after '6-Jul-2017'
+(indefinitely).

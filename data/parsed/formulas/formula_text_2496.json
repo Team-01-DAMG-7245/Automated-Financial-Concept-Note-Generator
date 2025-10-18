@@ -1,0 +1,12 @@
+{
+  "page": 1279,
+  "original_text": "tCopulaCallPrice = f.CallPrice(strike, r/252)\ntCopulaPutPrice  = f.PutPrice (strike, r/252)",
+  "ocr_text": "tCopulaCallPrice=f.CallPrice(strike,_r/252)\ntCopulaPutPrice=f.PutPrice(strike,r/252)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 226.63,
+    "x1": 333.81,
+    "y1": 247.89
+  },
+  "confidence": "high"
+}

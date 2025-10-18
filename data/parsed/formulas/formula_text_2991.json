@@ -1,0 +1,12 @@
+{
+  "page": 1561,
+  "original_text": "% Define a backtest engine.\nbacktester = backtestEngine(strat);\n% Run the backtest.\nrunBacktest(backtester,pricesTT,Start=1);",
+  "ocr_text": "Defineabacktestengine.\nbacktester=backtestEngine(strat);\nSRunthebacktest.\nrunBacktest(backtester,pricesTT,Start=1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 266.97,
+    "x1": 312.14,
+    "y1": 309.84
+  },
+  "confidence": "high"
+}

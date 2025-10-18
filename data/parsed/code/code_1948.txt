@@ -1,0 +1,6 @@
+Page 1551
+================================================================================
+
+You can also set the TransactionCosts property to a function handle if you need to implement
+arbitrarily complex transaction cost structures. For more information on creating transaction cost
+functions, see backtestStrategy.

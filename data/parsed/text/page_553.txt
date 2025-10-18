@@ -1,0 +1,38 @@
+DQNagent.AgentOptions.DiscountFactor = 1;
+DQNagent.AgentOptions.EpsilonGreedyExploration.EpsilonDecay = 1e-4;
+DQNagent.AgentOptions.MaxMiniBatchPerEpoch = 10;
+
+Train Agent
+
+Once you define the agent and the environment, you can use the train (Reinforcement Learning
+Toolbox) function to train the DQN agent. To configure the options for training, use
+rlTrainingOptions (Reinforcement Learning Toolbox).
+
+trainingOptions = rlTrainingOptions;
+
+Set the maximum number of episodes to train to 4000. If you use a constant return function, training
+takes less time, so reduce the number of episodes.
+
+trainingOptions.MaxEpisodes = 4000;
+
+Set the window length for averaging the rewards to 1,000. ScoreAveragingWindowLength is the
+number of episodes included in the average.
+
+trainingOptions.ScoreAveragingWindowLength = 1e3;
+
+Train the agent. The Reinforcement Learning Episode Manager is opened. When the sparseReward
+function (see Local Functions on page 4-391) is selected as the reward from the environment, the
+training time is approximately five minutes. If you set do_train to false, a network pretrained using
+the sparserReward function is loaded.
+
+do_train = false;
+if do_train
+    % Train the agent
+    trainingStats = train(DQNagent,gbwmEnvironment,trainingOptions);
+else
+    load('trainedAgent');
+end
+
+Multiperiod Goal-Based Wealth Management Using Reinforcement Learning
+
+4-385

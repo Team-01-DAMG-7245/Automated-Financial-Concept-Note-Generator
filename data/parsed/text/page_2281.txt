@@ -1,0 +1,58 @@
+target portfolio risks of 12%, 14%, and 16%. This example uses the default'direct' method to
+estimate the optimal portfolios with targeted portfolio risks. The 'direct' method uses fmincon to
+solve the optimization problem that maximizes portfolio return, subject to the target risk as the
+quadratic nonlinear constraint. setSolver specifies the solverType and SolverOptions for
+fmincon.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+       
+ p = Portfolio;
+ p = setAssetMoments(p, m, C);
+ p = setDefaultConstraints(p);
+ 
+ p = setSolver(p, 'fmincon', 'Display', 'off', 'Algorithm', 'sqp', ...
+        'SpecifyObjectiveGradient', true, 'SpecifyConstraintGradient', true, ...
+        'ConstraintTolerance', 1.0e-8, 'OptimalityTolerance', 1.0e-8, 'StepTolerance', 1.0e-8);
+
+pwgt = estimateFrontierByRisk(p, [0.12, 0.14, 0.16]);
+
+display(pwgt);
+
+pwgt = 4×3
+
+0.3984    0.2659    0.1416
+    0.3064    0.3791    0.4474
+    0.0882    0.1010    0.1131
+    0.2071    0.2540    0.2979
+
+Obtain Portfolios with Targeted Portfolio Risks for a PortfolioCVaR Object
+
+To obtain efficient portfolios that have targeted portfolio risks, the estimateFrontierByRisk
+function accepts one or more target portfolio risks and obtains efficient portfolios with the specified
+risks. Assume you have a universe of four assets where you want to obtain efficient portfolios with
+target portfolio risks of 12%, 20%, and 30%.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+rng(11);
+
+p = PortfolioCVaR;
+p = simulateNormalScenariosByMoments(p, m, C, 2000);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+pwgt = estimateFrontierByRisk(p, [0.12, 0.20, 0.30]);
+
+display(pwgt);
+
+estimateFrontierByRisk
+
+15-975

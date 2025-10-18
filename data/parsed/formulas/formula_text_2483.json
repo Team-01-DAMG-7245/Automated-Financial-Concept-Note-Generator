@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf(' Quasi-Monte Carlo American Call Basket Price: %8.4f\\n'  , QuasiMonteCarloCallPrice)",
+  "ocr_text": "fprintf(Quasi-MonteCarloAmericanCallBasketPrice:8.4f(n,QuasiMonteCarloCallPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 375.1,
+    "x1": 593.9,
+    "y1": 385.57
+  },
+  "confidence": "high"
+}

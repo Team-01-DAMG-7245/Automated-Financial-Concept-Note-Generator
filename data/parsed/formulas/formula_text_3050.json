@@ -1,0 +1,12 @@
+{
+  "page": 1599,
+  "original_text": "% Prune the table to include only the dates and selected stocks\ntimeColumn = \"Dates\";\nassetSymbols = [\"BA\", \"CAT\", \"DIS\", \"GE\", \"IBM\", \"MCD\", \"MSFT\"];\nT = T(:,[timeColumn assetSymbols]);",
+  "ocr_text": "SPrunethetabletoincludeonlythedatesandselectedstocks\ntimeColumn=Dates;\nassetSymbols=[BA,CAT,DIS,GE,IBM,MCD,MSFT];\nT=T(:,[timeColumnassetSymbols]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 482.96,
+    "x1": 436.78,
+    "y1": 525.83
+  },
+  "confidence": "high"
+}

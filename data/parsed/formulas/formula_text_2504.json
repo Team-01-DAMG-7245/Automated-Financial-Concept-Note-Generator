@@ -1,0 +1,12 @@
+{
+  "page": 1281,
+  "original_text": "[startDate, endDate] = bounds(Prices.Date);\ninflation = readtimetable(\"CUUR0000SA0R.csv\");\ninflation = inflation(timerange(startDate, endDate), :);",
+  "ocr_text": "[startDate,endDate]=bounds(Prices.Date);\ninflation=readtimetable(CUURQQQOQSAOR.csv);\ninflation=inflation(timerange(startDate,endDate),:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 652.91,
+    "x1": 393.41,
+    "y1": 684.98
+  },
+  "confidence": "high"
+}

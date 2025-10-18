@@ -1,0 +1,12 @@
+{
+  "page": 478,
+  "original_text": "% Invest 100% of capital into single asset with highest predicted returns.\nBestBetStrategy = backtestStrategy('BestBet',@BestBetRebalanceFcn, ...\n    'TransactionCosts',tradingCosts, ...\n    'LookbackWindow',1);",
+  "ocr_text": "Invest100*ofcapitalintosingleassetwithhighestpredictedreturns.\nBestBetStrategy=backtestStrategy(BestBet,fBestBetRebalanceFcn,...\nTransactionCosts,tradingCosts,...\nLookbackWindow,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 412.44,
+    "x1": 490.94,
+    "y1": 455.31
+  },
+  "confidence": "high"
+}

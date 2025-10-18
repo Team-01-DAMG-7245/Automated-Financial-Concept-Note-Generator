@@ -1,0 +1,63 @@
+Performance Considerations
+
+In this section...
+
+“Managing Memory” on page 14-65
+
+“Enhancing Performance” on page 14-66
+
+“Optimizing Accuracy: About Solution Precision and Error” on page 14-66
+
+Managing Memory
+
+There are two general approaches for managing memory when solving most problems supported by
+the SDE engine:
+
+•
+“Managing Memory with Outputs” on page 14-65
+
+•
+“Managing Memory Using End-of-Period Processing Functions” on page 14-66
+
+Managing Memory with Outputs
+
+Perform a traditional simulation to simulate the underlying variables of interest, specifically
+requesting and then manipulating the output arrays.
+
+This approach is straightforward and the best choice for small or medium-sized problems. Since its
+outputs are arrays, it is convenient to manipulate simulated results in the MATLAB matrix-based
+language. However, as the scale of the problem increases, the benefit of this approach decreases,
+because the output arrays must store large quantities of possibly extraneous information.
+
+For example, consider pricing a European option in which the terminal price of the underlying asset
+is the only value of interest. To ease the memory burden of the traditional approach, reduce the
+number of simulated periods specified by the required input NPeriods and specify the optional input
+NSteps. This enables you to manage memory without sacrificing accuracy (see “Optimizing
+Accuracy: About Solution Precision and Error” on page 14-66).
+
+In addition, simulation methods can determine the number of output arguments and allocate memory
+accordingly. Specifically, all simulation methods support the same output argument list:
+
+[Paths,Times,Z]
+
+where Paths and Z can be large, three-dimensional time series arrays. However, the underlying noise
+array is typically unnecessary, and is only stored if requested as an output. In other words, Z is stored
+only at your request; do not request it if you do not need it.
+
+If you need the output noise array Z, but do not need the Paths time series array, then you can avoid
+storing Paths two ways:
+
+•
+It is best practice to use the ~ output argument placeholder. For example, use the following output
+argument list to store Z and Times, but not Paths:
+
+[~,Times,Z]
+
+•
+Use the optional input flag StorePaths, which all simulation methods support. By default, Paths
+is stored (StorePaths = true). However, setting StorePaths to false returns Paths as an
+empty matrix.
+
+Performance Considerations
+
+14-65

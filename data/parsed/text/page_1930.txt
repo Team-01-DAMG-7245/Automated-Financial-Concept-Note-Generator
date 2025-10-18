@@ -1,0 +1,58 @@
+The parties involved are:
+
+•
+Protection Buyer — The party that purchases the CDS to protect against the risk of default. They
+pay periodic premiums (known as the CDS spread) to the protection seller.
+
+•
+Protection Seller — The party that provides the credit protection and receives the premiums
+from the protection buyer. In the event of a default, the protection seller is obligated to
+compensate the protection buyer.
+
+Algorithms
+
+If the time to default is denoted by τ, the default probability curve, or function, PD(t), and its
+complement, the survival function Q(t), are given by:
+
+PD(t) = P[τ ≤t] = 1 −P[τ > t] = 1 −Q(t)
+
+In the standard model, the survival probability is defined in terms of a piecewise constant hazard rate
+h(t). For example, if h(t) =
+
+λ1, for 0 ≤t ≤ t1
+
+λ2, for t1 < t ≤ t2
+
+λ3, for t2 <t
+
+then the survival function is given by Q(t) =
+
+e−λ1t, for 0 ≤ t ≤ t1
+
+e−λ1t −λ2(t −t1), for t1 < t ≤ t2
+
+e−λ1t1 −λ2(t2 −t1) −λ3(t −t2), for t2 < t
+
+Given n market dates t1,...,tn and corresponding market CDS spreads S1,...,Sn, cdsbootstrap
+calibrates the parameters λ1,...,λn and evaluates PD(t) on the market dates, or an optional user-
+defined set of dates.
+
+Version History
+Introduced in R2010b
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cdsbootstrap supports serial date numbers, datetime values are recommended instead.
+The datetime data type provides flexible date and time formats, storage out to nanosecond
+precision, and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+15
+Functions
+
+15-624

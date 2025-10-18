@@ -1,0 +1,38 @@
+histogram(ax1,rfImputedData.(Predictor),'FaceColor','red','FaceAlpha',1);
+hold on
+histogram(ax1,dataMissing.(Predictor),'FaceColor','blue','FaceAlpha',1);
+legend(strcat("Imputed ", Predictor), strcat("Observed ", Predictor));
+title(strcat("Histogram of ", Predictor));
+
+Create Credit Scorecard Model Using New Imputed Data
+
+Use the imputed data to create the creditscorecard object, and then use autobinning,
+fitmodel, and formatpoints to create a credit scorecard model.
+
+sc = creditscorecard(rfImputedData,'IDVar','CustID');
+sc = autobinning(sc);
+[sc,mdl] = fitmodel(sc,'display','off');
+sc = formatpoints(sc,'PointsOddsAndPDO',[500 2 50]);
+PointsInfo = displaypoints(sc);
+disp(PointsInfo);
+
+Predictors               Bin             Points
+    ______________    _____________________    ______
+
+{'CustAge'   }    {'[-Inf,33)'        }    54.313
+    {'CustAge'   }    {'[33,37)'          }    57.145
+    {'CustAge'   }    {'[37,40)'          }     59.04
+    {'CustAge'   }    {'[40,46)'          }    68.806
+    {'CustAge'   }    {'[46,51)'          }    78.204
+    {'CustAge'   }    {'[51,58)'          }    81.041
+    {'CustAge'   }    {'[58,Inf]'         }    96.395
+    {'CustAge'   }    {'<missing>'        }       NaN
+    {'ResStatus' }    {'Tenant'           }    62.768
+    {'ResStatus' }    {'Home Owner'       }    72.621
+    {'ResStatus' }    {'Other'            }    92.228
+    {'ResStatus' }    {'<missing>'        }       NaN
+    {'EmpStatus' }    {'Unknown'          }    58.839
+
+Impute Missing Data in the Credit Scorecard Workflow Using the Random Forest Algorithm
+
+8-129

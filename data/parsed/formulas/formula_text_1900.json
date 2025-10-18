@@ -1,0 +1,12 @@
+{
+  "page": 963,
+  "original_text": "TRANS(i,j) = P[z < THRESH(i,j)] - P[z < THRESH(i,j+1)], for 1<=j<N",
+  "ocr_text": "TRANS(i,j)=P[zTHRESH(i,j)]_-P[zTHRESH(i,j+1)],for1=jN",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 337.0,
+    "x1": 376.07,
+    "y1": 345.38
+  },
+  "confidence": "high"
+}

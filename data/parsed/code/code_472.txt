@@ -1,0 +1,6 @@
+Page 454
+================================================================================
+
+% Define a risk budget.
+budget = [0.5; 0.25; 0.25];
+wRB = riskBudgetingPortfolio(Sigma,budget)

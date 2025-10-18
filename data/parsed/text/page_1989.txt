@@ -1,0 +1,26 @@
+More About
+
+Cash Flow Convexity
+
+Cash flow convexity is a financial metric that measures the sensitivity of the cash flows from an
+investment to changes in interest rates, specifically focusing on how the present value of those cash
+flows changes as interest rates fluctuate.
+
+Understanding cash flow convexity helps investors assess the risk associated with interest-rate
+movements. Higher convexity indicates that the cash flows will be less sensitive to interest-rate
+changes, which can be beneficial in volatile interest-rate environments. Cash flow convexity provides
+a more comprehensive measure of interest-rate risk than duration alone, as duration only captures
+the linear relationship between price and yield.
+
+Version History
+Introduced before R2006a
+
+See Also
+bndconvp | bndconvy | bnddurp | bnddury | cfdur
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+cfconv
+
+15-683

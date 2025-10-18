@@ -1,0 +1,12 @@
+{
+  "page": 437,
+  "original_text": "% Set of WoB levels for contour plot.\ncontourWoB = linspace(minWoB,maxWoB,nContour+1);",
+  "ocr_text": "SetofWoBlevelsforcontourplot.\ncontourWoB=lLinspace(minWoB,maxWoB,nContour+1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 406.23,
+    "x1": 350.07,
+    "y1": 427.49
+  },
+  "confidence": "high"
+}

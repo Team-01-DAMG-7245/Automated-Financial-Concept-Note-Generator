@@ -1,0 +1,12 @@
+{
+  "page": 156,
+  "original_text": "p = Portfolio;\np = setAssetMoments(p, ExpReturn, ExpCovariance);\np = setDefaultConstraints(p);                % implement default constraints first\np = addInequality(p, Aa, ba);                % implement bound constraints here\np = addInequality(p, Ag, bg);                % implement group constraints here",
+  "ocr_text": "p=Portfolio;\n\np=setAssetMoments(p,ExpReturn,ExpCovariance);\n\np=setDefaultConstraints(p); implementdefaultconstraintsfirst\np=addInequality(p,Aa,_ba); implement_boundconstraintshere\np=addInequality(p,Ag,_bg); implementgroupconstraintshere",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 333.75,
+    "x1": 405.95,
+    "y1": 371.91
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,52 @@
+blsimpv
+
+Black-Scholes implied volatility
+
+Syntax
+
+Volatility = blsimpv(Price,Strike,Rate,Time,Value)
+Volatility = blsimpv( ___ ,Name,Value)
+
+Description
+
+Volatility = blsimpv(Price,Strike,Rate,Time,Value) using a Black-Scholes model
+computes the implied volatility of an underlying asset from the market value of European options. If
+the Class name-value argument is empty or unspecified, the default is a call option
+
+Note The input arguments Price, Strike, Rate, Time, Value, Yield, and Class can be scalars,
+vectors, or matrices. If scalars, then that value is used to compute the implied volatility from all
+options. If more than one of these inputs is a vector or matrix, then the dimensions of all non-scalar
+inputs must be the same.
+
+Also, ensure that Rate, Time, and Yield are expressed in consistent units of time.
+
+Volatility = blsimpv( ___ ,Name,Value) specifies options using one or more name-value pair
+arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Compute the Implied Volatility of an Underlying Asset Using a Black-Scholes Model
+
+This example shows how to compute the implied volatility for a European call option trading at $10
+with an exercise price of $95 and three months until expiration. Assume that the underlying stock
+pays no dividend and trades at $100. The risk-free rate is 7.5% per annum. Furthermore, assume that
+you are interested in implied volatilities no greater than 0.5 (50% per annum). Under these
+conditions, the following statements all compute an implied volatility of 0.3130, or 31.30% per
+annum.
+
+Volatility = blsimpv(100, 95, 0.075, 0.25, 10, 'Limit', 0.5);
+Volatility = blsimpv(100, 95, 0.075, 0.25, 10, 'Limit',0.5,'Yield',0,'Class', {'Call'});
+Volatility = blsimpv(100, 95, 0.075, 0.25, 10, 'Limit',0.5,'Yield',0, 'Class', true);
+Volatility = blsimpv(100, 95, 0.075, 0.25, 10, 'Limit',0.5,'Yield',0, 'Class', true,'Method','jac
+
+Volatility = 
+0.3130
+
+Input Arguments
+
+Price — Current price of underlying asset
+scalar numeric
+
+blsimpv
+
+15-491

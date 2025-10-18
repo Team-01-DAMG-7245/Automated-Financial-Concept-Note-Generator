@@ -1,0 +1,12 @@
+{
+  "page": 2194,
+  "original_text": "Hessian = ecmnhess(Data,Covariance) computes an NUMPARAMS-by-NUMPARAMS Hessian\nmatrix of the observed negative log-likelihood function based on current parameter estimates.",
+  "ocr_text": "Hessian=ecmnhess(Data,Covariance)computesanNUMPARAMS-by-NUMPARAMSHessian\nmatrixoftheobservednegativelog-likelihoodfunctionbasedoncurrentparameterestimates.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 252.58,
+    "x1": 529.1,
+    "y1": 276.21
+  },
+  "confidence": "high"
+}

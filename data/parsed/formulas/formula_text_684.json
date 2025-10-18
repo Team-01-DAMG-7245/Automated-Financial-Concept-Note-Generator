@@ -1,0 +1,12 @@
+{
+  "page": 424,
+  "original_text": "rsiSignal = timetable;\nfor i = 1:numel(symbols)\n    symi = symbols(i);\n    rsiValues = rsindex(pricesTT.(symi));\n    rsiBuySell = zeros(size(rsiValues));\n    rsiBuySell(rsiValues < 30) = 1;\n    rsiBuySell(rsiValues > 70) = -1;\n    % Build a timetable for each symbol, then aggregate the symbols together.\n    rsiSignali = timetable(pricesTT.Dates,...\n        rsiBuySell,...\n        'VariableNames',{sprintf('%s%s',symi,rsiSignalNameEnding)});",
+  "ocr_text": "rsiSignal=timetable;\nfori=1:numel(symbols)\nsymi=symbols(i);\nrsiValues=rsindex(pricesTT.(symi));\nrsiBuySell=zeros(size(rsiValues));\nrsiBuySell(rsiValues30)=1;\nrsiBuySell(rsiValues=70)=-1;\nBuildatimetableforeachsymbol,thenaggregatethesymbolstogether.\nrsiSignali=timetable(pricesTT.Dates,...\nrsiBuySell,...\nVariableNames,{sprintf(ssss,symi,rsiSignalNameEnding)});",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.62,
+    "x1": 507.19,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

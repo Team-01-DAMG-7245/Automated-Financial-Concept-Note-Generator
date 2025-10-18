@@ -1,0 +1,6 @@
+Page 1547
+================================================================================
+
+with the userData struct as an additional input argument. The rebalanceFcn function handle
+functions can read and write to the userData struct. The rebalanceFcn function handle functions
+return the updated userData struct as an additional output argument.

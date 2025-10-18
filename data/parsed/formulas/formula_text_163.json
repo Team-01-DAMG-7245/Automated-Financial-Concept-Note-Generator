@@ -1,0 +1,12 @@
+{
+  "page": 115,
+  "original_text": "•\nEqualizes the window lengths dI = dS = N, where N is free to vary",
+  "ocr_text": "*EqualizesthewindowlengthsdI=dS=N,whereNisfreetovary",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 473.79,
+    "x1": 409.77,
+    "y1": 485.42
+  },
+  "confidence": "high"
+}

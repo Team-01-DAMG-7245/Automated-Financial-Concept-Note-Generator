@@ -1,0 +1,71 @@
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+
+p = PortfolioCVaR;
+p = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');
+
+p = setInitPort(p, pwgt0);
+p = simulateNormalScenariosByMoments(p, m, C, 20000);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.9);
+
+[pwgt, pbuy, psell] = estimateFrontierByRisk(p, 0.15);
+
+Blotter = dataset([{100*[pwgt0, pwgt, pbuy, psell]}, ...
+{'Initial','Weight', 'Purchases','Sales'}],'obsnames',p.AssetList);
+display(Blotter)
+
+Blotter = 
+                          Initial    Weight    Purchases    Sales 
+    Bonds                 30         21.084         0       8.9159
+    Large-Cap Equities    30         41.374    11.374            0
+    Small-Cap Equities    20         9.2259         0       10.774
+    Emerging Equities     10         28.316    18.316            0
+
+If you have prices for each asset (in this example, they can be ETFs), add them to your blotter and
+then use the tools of the dataset object to obtain shares and shares to be traded. For an example,
+see “Asset Allocation Case Study” on page 4-180.
+
+See Also
+PortfolioCVaR | estimateScenarioMoments | checkFeasibility
+
+Related Examples
+
+•
+“Troubleshooting CVaR Portfolio Optimization Results” on page 5-121
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+“Portfolio Optimization Theory” on page 5-3
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+5
+CVaR Portfolio Optimization Tools
+
+5-116

@@ -1,0 +1,12 @@
+{
+  "page": 375,
+  "original_text": "% Rescale.\noptPortRiskAnnual = sqrt(scale) * optPortRisk;\noptPortReturnAnnual = scale * optPortRetn;",
+  "ocr_text": "Rescale.\noptPortRiskAnnual=sqrt(scale)*optPortRisk;\noptPortReturnAnnual=scale*optPortRetn;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 339.22,
+    "y1": 675.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,11 @@
+Page 129
+================================================================================
+
+layersLSTM = [
+    sequenceInputLayer(2,Name="Sequence",MinLength=b)
+    batchNormalizationLayer(Name="BN")
+    lstmLayer(numHiddenUnits,Name="LSTM",OutputMode="last")
+    fullyConnectedLayer(numNeuronsOutFC1,Name="FC1")
+    leakyReluLayer(thresholdScaleLR,Name="LR")
+    fullyConnectedLayer(3,Name="FC2")
+    softmaxLayer(Name="Softmax")];

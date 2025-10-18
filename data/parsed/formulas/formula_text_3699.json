@@ -1,0 +1,12 @@
+{
+  "page": 2088,
+  "original_text": "NumDaysPeriod = cpnpersz(Settle,Maturity) returns the number of days in the coupon\nperiod containing the settlement date. For zero coupon bonds, coupon dates are computed as if the\nbonds have a semiannual coupon structure. NumDaysPeriod returns a NUMBONDS-by-1 vector\ncontaining the number of days in the coupon period containing the settlement date.",
+  "ocr_text": "NumDaysPeriod=cpnpersz(Settle,Maturity)returnsthenumberofdaysinthecoupon\nperiodcontainingthesettlementdate.Forzerocouponbonds,coupondatesarecomputedasifthe\nbondshaveasemiannualcouponstructure.NumDaysPeriodreturnsaNUMBONDS-by-1vector\ncontainingthenumberofdaysinthecouponperiodcontainingthesettlementdate.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 265.17,
+    "x1": 544.61,
+    "y1": 312.8
+  },
+  "confidence": "high"
+}

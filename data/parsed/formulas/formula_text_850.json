@@ -1,0 +1,12 @@
+{
+  "page": 474,
+  "original_text": "if doTrain\n    % Train the LSTM network.\n    net_LSTM = trainnet(Xtraining,Ttraining,layers_LSTM,\"mse\",options_LSTM);\nelse\n    % Load the pretrained network.\n    load lstmBacktestNetwork\nend",
+  "ocr_text": "ifdoTrain\nTraintheLSTMnetwork.\nnet_LSTM=trainnet(Xtraining,Ttraining,layers_LSTM,mse,options_LSTM);\nelse\nLoadthepretrainednetwork.\nload_lstmBacktestNetwork\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 576.23,
+    "x1": 501.8,
+    "y1": 651.49
+  },
+  "confidence": "high"
+}

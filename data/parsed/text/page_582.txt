@@ -1,0 +1,34 @@
+The TWAP executed shares in the middle panel have a flat profile, since the same number of shares
+are traded at each step. Also, the inventory shares in the bottom panel have a nearly perfect
+triangular sawtooth pattern, with the number of inventory shares declining linearly at each horizon as
+the shares are sold. The IS in the top panel sometimes declines to negative values (implying better
+executions than arrival price) for some horizons, while it increases to positive values (implying worse
+executions than arrival price) for other horizons.
+
+Set Up RL Training Environment for Sell Trades
+
+The RL environment requires observation and action information, reset function, and a step function.
+
+Define the observation information for the four observation variables.
+
+ObservationDimension = [1 4];
+ObservationInfo_Train_Sell = rlNumericSpec(ObservationDimension);
+ObservationInfo_Train_Sell.Name = 'Observation Data';
+ObservationInfo_Train_Sell.Description = 'RemainingSharesToTrade, RemainingIntervals, IS_Agent, P
+ObservationInfo_Train_Sell.LowerLimit = -inf;
+ObservationInfo_Train_Sell.UpperLimit = inf;
+
+Define the environment constants for the training data and the reset function. The function definition
+for RL_OptimalExecution_LOB_ResetFcn is in the Local Functions on page 4-441 section.
+
+EnvConstants_Train_Sell.SampledBook = TrainingLOB;
+EnvConstants_Train_Sell.BuyTrade = BuyTrade;
+EnvConstants_Train_Sell.TotalTradingShares = TotalTradingShares_Sell;
+EnvConstants_Train_Sell.NumIntervalsPerHorizon = NumIntervalsPerHorizon;
+EnvConstants_Train_Sell.NumHorizons = NumTrainingHorizons;
+EnvConstants_Train_Sell.NumSteps = NumTrainingSteps;
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-414

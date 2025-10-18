@@ -1,0 +1,12 @@
+{
+  "page": 2052,
+  "original_text": "ExpSigma(i) = sqrt( ExpCovariance(i,i) );\nExpCorrC(i,j) = ExpCovariance(i,j)/( ExpSigma(i)*ExpSigma(j) );",
+  "ocr_text": "ExpSigma(i)=sqrt(ExpCovariance(i,i));\nExpCorrC(i,j)=ExpCovariance(i,j)/(ExpSigma(i)*ExpSigma(j));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 145.59,
+    "x1": 332.73,
+    "y1": 160.71
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,59 @@
+Capital Asset Pricing Model with Missing Data
+
+This example illustrates implementation of the Capital Asset Pricing Model (CAPM) in the presence of
+missing data.
+
+The Capital Asset Pricing Model
+
+The Capital Asset Pricing Model (CAPM) is a venerable but often-maligned tool to characterize
+comovements between asset and market prices. Although many issues arise in its implementation and
+interpretation, one problem that practitioners face is to estimate the coefficients of the CAPM with
+incomplete stock price data.
+
+Given a host of assumptions that can be found in the references (see Sharpe [3 on page 9-39],
+Lintner [2 on page 9-39], Jarrow [1 on page 9-39], and Sharpe, et. al. [4 on page 9-39]), the CAPM
+concludes that asset returns have a linear relationship with market returns. Specifically, given the
+return of all stocks that constitute a market denoted as M and the return of a riskless asset denoted as
+C, the CAPM states that the return of each asset R(i) in the market has the expectational form
+
+E[R(i)] = C + b(i) * (E[M] - C)
+
+for assets i = 1, ... , n, where b(i) is a parameter that specifies the degree of comovement
+between a given asset and the underlying market. In other words, the expected return of each asset
+is equal to the return on a riskless asset plus a risk-adjusted expected market return net of riskless
+asset returns. The collection of parameters b(1), ... , b(n) are called asset betas.
+
+Note that the beta of an asset has the form
+
+b(i) = cov(R(i),M)/var(M)
+
+which is the ratio of the covariance between asset and market returns divided by the variance of
+market returns. If an asset has a beta equal to 1, the asset is said to move with the market; if an asset
+has a beta greater than 1, the asset is said to be more volatile than the market; and if an asset has a
+beta less than 1, the asset is said to be less volatile than the market.
+
+Estimation of the CAPM
+
+The standard form of the CAPM model for estimation is a linear model with additional parameters for
+each asset to characterize residual errors. For each of n assets with m samples of observed asset
+returns R(k, i), market returns M(k), and riskless asset returns C(k), the estimation model has
+the form
+
+R(k,i) = a(i) + C(k) + b(i) * (M(k) - C(k)) + V(k,i)
+
+for samples k = 1, ... , m and assets i = 1, ... , n, where a(i) is a parameter that
+specifies the non-systematic return of an asset, b(i) is the asset beta, and V(k,i) is the residual
+error for each asset with associated random variable V(i).
+
+The collection of parameters a(1), ... , a(n) are called asset alphas. The strict form of the
+CAPM specifies that alphas must be zero and that deviations from zero are the result of temporary
+disequilibria. In practice, however, assets may have non-zero alphas, where much of active
+investment management is devoted to the search for assets with exploitable non-zero alphas.
+
+To allow for the possibility of non-zero alphas, the estimation model generally seeks to estimate
+alphas and to perform tests to determine if the alphas are statistically equal to zero.
+
+9
+Regression with Missing Data
+
+9-34

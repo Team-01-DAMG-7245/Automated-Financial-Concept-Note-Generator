@@ -1,0 +1,58 @@
+[Call,Put] = blsprice(910,980,.02,.25,.25,.025)
+
+Call = 
+19.6863
+
+Put = 
+90.4683
+
+Price a European Call Option with the Garman-Kohlhagen Model
+
+Price an FX option on buying GBP with USD.
+
+S = 1.6;  % spot exchange rate 
+X = 1.6;  % strike 
+T = .3333; 
+r_d = .08;  % USD interest rate 
+r_f = .11;  % GBP interest rate 
+sigma = .2;
+
+Price = blsprice(S,X,r_d,T,sigma,r_f)
+
+Price = 
+0.0639
+
+Input Arguments
+
+Price — Current price of underlying asset
+numeric
+
+Current price of the underlying asset, specified as a numeric value.
+
+Data Types: double
+
+Strike — Exercise price of the option
+numeric
+
+Exercise price of the option, specified as a numeric value.
+
+Data Types: double
+
+Rate — Annualized continuously compounded risk-free rate of return over life of the option
+positive decimal
+
+Annualized continuously compounded risk-free rate of return over the life of the option, specified as a
+positive decimal number.
+
+Data Types: double
+
+Time — Time to expiration of option
+numeric
+
+Time to expiration of the option, specified as the number of years.
+
+Data Types: double
+
+blsprice
+
+15-499

@@ -1,0 +1,12 @@
+{
+  "page": 1011,
+  "original_text": "•\nb = b1 b2 . . . bK  is an unknown model coefficient",
+  "ocr_text": "*b=[b,b2...bx]isanunknownmodelcoefficient",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 534.46,
+    "x1": 334.74,
+    "y1": 548.3
+  },
+  "confidence": "high"
+}

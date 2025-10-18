@@ -1,0 +1,12 @@
+{
+  "page": 124,
+  "original_text": "strt = datetime(201,6,21,0,0,0,34200000);\nt = datetime(strt,Format=\"dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSSSS\") + DTT.Time;",
+  "ocr_text": "strt=datetime(201,6,21,0,0,0,34200000);\nt=datetime(strt,Format=dd-MMM-yyyyHH:mm:ss.SSSSSSSSSSSSSS)_+DTT.Time;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 168.83,
+    "x1": 496.38,
+    "y1": 190.1
+  },
+  "confidence": "high"
+}

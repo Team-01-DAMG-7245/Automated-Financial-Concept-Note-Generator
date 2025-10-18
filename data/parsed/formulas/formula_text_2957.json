@@ -1,0 +1,12 @@
+{
+  "page": 1552,
+  "original_text": "% Create the \"chase returns\" strategy.  The rebalance function\n% @chaseReturns is defined in the Rebalance Functions section at the end of this example.\nchaseReturnsStrategy = backtestStrategy(\"ChaseReturns\",@chaseReturns, ...\n    'RebalanceFrequency',rebalFreq, ...\n    'TransactionCosts',tradingCosts, ...\n    'LookbackWindow',chaseLookback, ...\n    'InitialWeights',initialWeights)",
+  "ocr_text": "Createthechasereturnsstrategy._Therebalancefunction\nSQchaseReturnsisdefinedintheRebalanceFunctionssectionattheendofthisexample.\nchaseReturnsStrategy=backtestStrategy(ChaseReturns,chaseReturns,...\n\nRebalanceFrequency,rebalFreq,...\n\nTransactionCosts,tradingCosts,...\n\nLookbackWindow,chaseLookback,...\n\nInitialWeights,initialWeights)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 505.08,
+    "x1": 572.2,
+    "y1": 580.34
+  },
+  "confidence": "high"
+}

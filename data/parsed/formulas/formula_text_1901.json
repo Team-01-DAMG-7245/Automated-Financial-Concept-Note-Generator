@@ -1,0 +1,12 @@
+{
+  "page": 963,
+  "original_text": "load Data_TransProb\ntrans = transprob(data)",
+  "ocr_text": "loadData_TransProb\ntrans=transprob(data)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 486.01,
+    "x1": 214.62,
+    "y1": 507.28
+  },
+  "confidence": "high"
+}

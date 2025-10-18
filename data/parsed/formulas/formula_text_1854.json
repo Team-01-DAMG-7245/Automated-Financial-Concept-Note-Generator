@@ -1,0 +1,12 @@
+{
+  "page": 946,
+  "original_text": "% Total number of issuers at the end of the year\nnEOY = zeros(nYears,1);\n% nIssuers is number of issuers per ratings at the beginning of the year\n% nEOY ( 1981 ) = sum nIssuers ( 1982 ), etc until 2004\nnEOY(1:end-1) = sum(nIssuers(2:end,:),2);\n% nEOY ( 2005 ) = issuers in non-default state at end of 2005 plus\n% new issuers in 2005\nnEOY(end) = totalsAll(end).totalsMat(1,1) + sum(nNewIssuers(end,:));\n% Age proxy\nAGE = 100*[nan(3,1); sum(nNewIssuers(1:end-3,:),2)./nEOY(4:end)];",
+  "ocr_text": "Totalnumberofissuersattheendoftheyear\n\nnEOY=zeros(nYears,1)\nSnIssuersisnumberofissuersperratingsatthebeginningoftheyear\nSnEOY(1981)=sumnIssuers(1982),etcuntil2004\nnEOY(1:end-1)=sum(nIssuers(2:end,:),2);\nSnEOY(2005)=issuersinnon-defaultstateatendof2005plus\nSnewissuersin2005\nnEOY(end)=totalsAll(end).totalsMat(1,1)+sum(nNewIssuers(end,:));\nsAgeproxy\nAGE=100*[nan(3,1);_sum(nNewIssuers(1:end-3,:),2)./nEOY(4:end)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.37,
+    "x1": 480.1,
+    "y1": 438.04
+  },
+  "confidence": "high"
+}

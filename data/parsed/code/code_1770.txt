@@ -1,0 +1,5 @@
+Page 1499
+================================================================================
+
+If you specify Volatility as a deterministic function time and state, Volatility must return a
+scalar when you call it with two inputs:

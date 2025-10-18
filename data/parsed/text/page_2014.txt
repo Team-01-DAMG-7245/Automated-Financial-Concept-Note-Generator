@@ -1,0 +1,36 @@
+Call the function cfport to map the cash flow amounts to the cash flow dates. Each row in the
+resultant CFBondDate matrix represents a bond. Each column represents a date on which one or
+more of the bonds has a cash flow. A 0 means the bond did not have a cash flow on that date. The
+dates associated with the columns are listed in AllDates. For example, the first bond had a cash
+flow of 2.000 on 730347. The second bond had no cash flow on this date For each bond, IndByBond
+indicates the columns of CFBondDate, or dates in AllDates, for which a bond has a cash flow.
+
+[CFBondDate, AllDates, AllTF, IndByBond] = ...
+cfport(CFlowAmounts, CFlowDates, TFactors)
+
+CFBondDate = 2×7
+
+-1.8000    2.0000    2.0000    2.0000         0  102.0000         0
+   -0.6694         0    2.5000         0    2.5000         0  102.5000
+
+AllDates = 7×1
+
+730335
+      730347
+      730469
+      730591
+      730652
+      730713
+      730835
+
+AllTF = 7×1
+
+0
+    0.0663
+    0.7322
+    1.3989
+
+15
+Functions
+
+15-708

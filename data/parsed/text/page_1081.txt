@@ -1,0 +1,36 @@
+0.0006    0.0006    0.0008    0.0007    0.0006    0.0002    0.0005    0.0004    0.0011    0.0
+    0.0003    0.0004    0.0005    0.0004    0.0004    0.0001    0.0004    0.0003    0.0005    0.0
+    0.0005    0.0006    0.0008    0.0005    0.0007    0.0003    0.0005    0.0004    0.0007    0.0
+    0.0006    0.0012    0.0008    0.0007    0.0011    0.0016    0.0006    0.0004    0.0007    0.0
+      ⋮
+
+Given estimates for the mean and covariance of asset returns derived from the naïve and ECM
+approaches, estimate portfolios, and associated expected returns and risks on the efficient frontier
+for both approaches.
+
+[ECMRisk, ECMReturn, ECMWts] = portopt(ECMMean',ECMCovar,10);
+[NaNRisk, NaNReturn, NaNWts] = portopt(NaNMean',NaNCovar,10);
+
+Plot the results on the same graph to illustrate the differences.
+
+figure(gcf)
+plot(ECMRisk,ECMReturn,'-bo','MarkerFaceColor','b','MarkerSize', 3);
+hold on
+plot(NaNRisk,NaNReturn,'-ro','MarkerFaceColor','r','MarkerSize', 3);
+title('\bfEfficient Frontiers Under Various Assumptions');
+legend('ECM','NaN','Location','SouthEast');
+xlabel('\bfStd. Deviation of Returns');
+ylabel('\bfMean of Returns');
+hold off
+
+Clearly, the naïve approach is optimistic about the risk-return trade-offs for this universe of 12
+technology stocks. The proof, however, lies in the portfolio weights. To view the weights:
+
+Assets
+
+Assets = 1×12 cell
+    {'AAPL'}    {'AMZN'}    {'CSCO'}    {'DELL'}    {'EBAY'}    {'GOOG'}    {'HPQ'}    {'IBM'}
+
+Portfolios with Missing Data
+
+9-23

@@ -1,0 +1,12 @@
+{
+  "page": 374,
+  "original_text": "pwgtAct = estimateFrontier(pAct, 20); % Estimate the weights.\n[portRiskAct, portRetnAct] = estimatePortMoments(pAct, pwgtAct); % Get the risk and return.",
+  "ocr_text": "pwgtAct=estimateFrontier(pAct,20);Estimatetheweights.\n[portRiskAct,portRetnAct]=estimatePortMoments(pAct,pwgtAct);Gettheriskandreturn.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 583.07,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

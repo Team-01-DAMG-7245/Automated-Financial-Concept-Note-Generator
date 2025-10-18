@@ -1,0 +1,59 @@
+Working with Group Constraints Using Portfolio Object
+
+Group constraints are optional linear constraints that group assets together and enforce bounds on
+the group weights (see “Group Constraints” on page 4-12). Although the constraints are implemented
+as general constraints, the usual convention is to form a group matrix that identifies membership of
+each asset within a specific group with Boolean indicators (either true or false or with 1 or 0) for
+each element in the group matrix. Group constraints have properties GroupMatrix for the group
+membership matrix, LowerGroup for the lower-bound constraint on groups, and UpperGroup for
+the upper-bound constraint on groups.
+
+Setting Group Constraints Using the Portfolio Function
+
+The properties for group constraints are set through the Portfolio object. Suppose that you have a
+portfolio of five assets and want to ensure that the first three assets constitute no more than 30% of
+your portfolio, then you can set group constraints:
+
+G = [ 1 1 1 0 0 ];
+p = Portfolio('GroupMatrix', G, 'UpperGroup', 0.3);
+disp(p.NumAssets)
+disp(p.GroupMatrix)
+disp(p.UpperGroup)
+
+5
+
+1     1     1     0     0
+
+0.3000
+
+The group matrix G can also be a logical matrix so that the following code achieves the same result.
+
+G = [ true true true false false ];
+p = Portfolio('GroupMatrix', G, 'UpperGroup', 0.3);
+disp(p.NumAssets)
+disp(p.GroupMatrix)
+disp(p.UpperGroup)
+
+5
+
+1     1     1     0     0
+
+0.3000
+
+Setting Group Constraints Using the setGroups and addGroups
+Functions
+
+You can also set the properties for group constraints using setGroups. Suppose that you have a
+portfolio of five assets and want to ensure that the first three assets constitute no more than 30% of
+your portfolio. Given a Portfolio object p, use setGroups to set the group constraints:
+
+G = [ true true true false false ];
+p = Portfolio;
+p = setGroups(p, G, [], 0.3);
+disp(p.NumAssets)
+disp(p.GroupMatrix)
+disp(p.UpperGroup)
+
+Working with Group Constraints Using Portfolio Object
+
+4-69

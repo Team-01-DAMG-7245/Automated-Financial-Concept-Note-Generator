@@ -1,0 +1,27 @@
+kagi accepts Data input as a matrix, timetable, or table.
+
+The syntax for kagi has changed. Previously, when using table input, the first column of dates could
+be serial date numbers, date character vectors, or datetime arrays, and you were required to have
+specific number of columns.
+
+When using table input, the new syntax for kagi supports:
+
+•
+No need for time information. If you want to pass in date information, use timetable input.
+
+•
+No requirement of specific number of columns. However, you must provide valid column names.
+kagi must contain a column named ‘price’ (case insensitive).
+
+See Also
+timetable | table | movavg | pointfig | highlow | linebreak | priceandvol | renko |
+volarea | candle
+
+Topics
+“Use Timetables in Finance” on page 11-7
+“Convert Financial Time Series Objects (fints) to Timetables” on page 11-2
+
+15
+Functions
+
+15-1136

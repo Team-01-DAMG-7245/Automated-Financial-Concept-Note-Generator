@@ -1,0 +1,12 @@
+{
+  "page": 1969,
+  "original_text": "Yield = cdyield( ___ ,Basis) adds an optional argument for Basis.",
+  "ocr_text": "Yield=cdyield(___,Basis)addsanoptionalargumentforBasis.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 339.08,
+    "x1": 427.91,
+    "y1": 350.71
+  },
+  "confidence": "high"
+}

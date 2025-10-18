@@ -1,0 +1,12 @@
+{
+  "page": 1907,
+  "original_text": "Busday = busdate(Date) returns the scalar, vector, or matrix of the next or previous business\ndays, depending on the definition for Holiday.",
+  "ocr_text": "Busday=busdate(Date)returnsthescalar,vector,ormatrixofthenextorpreviousbusiness\ndays,dependingonthedefinitionforHoliday.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 258.68,
+    "x1": 536.11,
+    "y1": 282.31
+  },
+  "confidence": "high"
+}

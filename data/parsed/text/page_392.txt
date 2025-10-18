@@ -1,0 +1,60 @@
+Because the returns from dowPortfolio.xlsx data set are daily returns and the views are on the
+annual returns, you must convert views to be on daily returns.
+
+bizyear2bizday = 1/252;
+q = q*bizyear2bizday; 
+Omega = Omega*bizyear2bizday;
+
+Estimate the Covariance from the Historical Asset Returns
+
+Σ is the covariance of the historical asset returns.
+
+Sigma = cov(assetRetns.Variables);
+
+Define the Uncertainty C
+
+The Black-Litterman model makes the assumption that the structure of C is proportional to the
+covariance Σ. Therefore, C = τΣ, where τ is a small constant. A smaller τ indicates a higher
+confidence in the prior belief of μ. The work of He and Litterman uses a value of 0.025. Other authors
+suggest using 1/n where n is the number of data points used to generate the covariance matrix [3 on
+page 4-229]. This example uses 1/n.
+
+tau = 1/size(assetRetns.Variables, 1);
+C = tau*Sigma;
+
+Market Implied Equilibrium Return
+
+In the absence of any views, the equilibrium returns are likely equal to the implied returns from the
+equilibrium portfolio holding. In practice, the applicable equilibrium portfolio holding can be any
+optimal portfolio that the investment analyst would use in the absence of additional views on the
+market, such as the portfolio benchmark, an index, or even the current portfolio [2 on page 4-229]. In
+this example, you use linear regression to find a market portfolio that tracks the returns of the DJI
+benchmark. Then, you use the market portfolio as the equilibrium portfolio and the equilibrium
+returns are implied from the market portfolio. The findMarketPortfolioAndImpliedReturn
+function, defined in Local Functions on page 4-226, implements the equilibrium returns. This function
+takes historical asset returns and benchmark returns as inputs and outputs the market portfolio and
+the corresponding implied returns.
+
+[wtsMarket, PI] = findMarketPortfolioAndImpliedReturn(assetRetns.Variables, benchRetn.Variables);
+
+Compute the Estimated Mean Return and Covariance
+
+Use the P, q , Ω , π , and C inputs to compute the blended asset return and variance using the Black-
+Litterman model.
+
+You can compute μ− and cov μ  directly by using this matrix operation:
+
+μ−= PTΩ−1P + C−1 −1 PTΩ−1q + C−1π , cov μ = PTΩ−1P + C−1 −1
+
+mu_bl = (P'*(Omega\P) + inv(C)) \ ( C\PI + P'*(Omega\q));
+cov_mu = inv(P'*(Omega\P) + inv(C));
+
+Comparing the blended expected return from Black-Litterman model to the prior belief of expected
+return π, you find that the expected return from Black-Litterman model is indeed a mixture of both
+prior belief and investor views. For example, as shown in the table below, the prior belief assumes
+similar returns for MSFT and IBM, but in the blended expected return, MSFT has a higher return
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-224

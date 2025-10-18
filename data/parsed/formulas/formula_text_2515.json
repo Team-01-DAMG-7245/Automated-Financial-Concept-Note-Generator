@@ -1,0 +1,12 @@
+{
+  "page": 1285,
+  "original_text": "figure\ntlIrregular = tiledlayout(8,4, \"TileSpacing\", \"tight\");\ntitle( tlIrregular, \"Irregular Components\")",
+  "ocr_text": "figure\ntlIrregular=tiledlayout(8,4,_TileSpacing,tight);\ntitle(tlIrregular,IrregularComponents)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 202.47,
+    "x1": 388.01,
+    "y1": 234.53
+  },
+  "confidence": "high"
+}

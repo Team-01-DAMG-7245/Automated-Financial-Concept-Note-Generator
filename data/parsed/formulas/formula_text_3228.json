@@ -1,0 +1,12 @@
+{
+  "page": 1734,
+  "original_text": "AccruInterest = acrubond(IssueDate,Settle,FirstCouponDate,Face,CouponRate)\nreturns the accrued interest for a security with periodic interest payments. acrubond computes the\naccrued interest for securities with standard, short, and long first coupon periods.",
+  "ocr_text": "AccruInterest=acrubond(IssueDate,Settle,FirstCouponDate,Face,CouponRate)\nreturnstheaccruedinterestforasecuritywithperiodicinterestpayments.acrubondcomputesthe\naccruedinterestforsecuritieswithstandard,short,andlongfirstcouponperiods.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 257.54,
+    "x1": 549.45,
+    "y1": 293.17
+  },
+  "confidence": "high"
+}

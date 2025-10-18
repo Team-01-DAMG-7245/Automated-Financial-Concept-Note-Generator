@@ -1,0 +1,12 @@
+{
+  "page": 1291,
+  "original_text": "xticks( [] )\nyticks( [] )\nzticks( [] )\ntitle( \"Commodity Clusters in 3D Space\" )\nlg = legend( \"Location\", \"eastoutside\" );\ntitle( lg, \"Commodity Cluster\" )",
+  "ocr_text": "xticks([])\n\nyticks([])\n\nzticks([])\ntitle(CommodityClustersin3DSpace)\nlg=legend(Location,eastoutside);\ntitle(lg,CommodityCluster)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 287.43,
+    "x1": 312.16,
+    "y1": 351.89
+  },
+  "confidence": "high"
+}

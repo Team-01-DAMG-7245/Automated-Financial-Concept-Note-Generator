@@ -1,0 +1,12 @@
+{
+  "page": 2083,
+  "original_text": "Maturity = [datetime(2001,4,30) ; datetime(2001,5,31) ; datetime(2001,6,30)];\nNumDaysPrevious = cpndaysp(datetime(2000,3,14), Maturity)",
+  "ocr_text": "Maturity=[datetime(2001,4,30);datetime(2001,5,31)_;datetime(2001,6,30)];\nNumDaysPrevious=cpndaysp(datetime(2000,3,14),Maturity)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 507.19,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

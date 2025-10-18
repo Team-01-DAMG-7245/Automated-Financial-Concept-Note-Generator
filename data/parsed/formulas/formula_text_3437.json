@@ -1,0 +1,12 @@
+{
+  "page": 1907,
+  "original_text": "Busday = busdate(Date)\nBusday = busdate( ___ ,DirFlag,Holiday,Weekend)",
+  "ocr_text": "Busday=busdate(Date)\nBusday=busdate(__,DirFlag,Holiday,Weekend)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.95,
+    "x1": 364.93,
+    "y1": 215.58
+  },
+  "confidence": "high"
+}

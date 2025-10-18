@@ -1,0 +1,7 @@
+Page 1722
+================================================================================
+
+Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: function ts2func/vector2Function
+          Sigma: 0.231906

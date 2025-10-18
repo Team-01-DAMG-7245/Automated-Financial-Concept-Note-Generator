@@ -1,0 +1,12 @@
+Page 439
+================================================================================
+
+This example shows how to include qualitative factors for environmental, social, and corporate
+governance (ESG) in the portfolio selection process. The example extends the traditional mean-
+variance portfolio using a Portfolio object to include the ESG metric. First, the
+estimateFrontier function computes the mean-variance efficient frontier for different ESG levels.
+Then, the example illustrates how to combine the ESG performance measure with portfolio
+diversification techniques. Specifically, it introduces hybrid models that use the Herfindahl-Hirshman
+(HH) index and the most diversified portfolio (MDP) approach using the
+estimateCustomObjectivePortfolio function. Finally, the backtestEngine framework
+compares the returns and behavior of the different ESG strategies.

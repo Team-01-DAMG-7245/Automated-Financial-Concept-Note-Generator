@@ -1,0 +1,6 @@
+Page 2063
+================================================================================
+
+If all the inputs for Settle, Maturity, IssueDate, FirstCouponDate, and LastCouponDate are
+either strings or date character vectors, then NextQuasiCouponDate is returned as a serial date
+number. Use the function datetime to convert serial date numbers to formatted datetime arrays.

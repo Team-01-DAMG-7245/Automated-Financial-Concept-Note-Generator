@@ -1,0 +1,12 @@
+{
+  "page": 844,
+  "original_text": "GA = [ true true true false false false ];    % financial companies\nGB = [ false false false true true true ];    % nonfinancial companies\np = PortfolioMAD('GroupA', GA, 'GroupB', GB, 'UpperRatio', 0.5);\ndisp(p.NumAssets)\ndisp(p.GroupA)\ndisp(p.GroupB)\ndisp(p.UpperRatio)",
+  "ocr_text": "GA=[truetruetruefalsefalsefalse]; Sfinancial_companies\nGB=[falsefalsefalsetruetruetrue]; nonfinancial_companies\np=PortfolioMAD(GroupA,GA,GroupB,GB,UpperRatio,0.5);\ndisp(p.NumAssets)\n\ndisp(p.GroupA)\n\ndisp(p.GroupB)\n\ndisp(p.UpperRatio)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 574.72,
+    "x1": 393.42,
+    "y1": 634.93
+  },
+  "confidence": "high"
+}

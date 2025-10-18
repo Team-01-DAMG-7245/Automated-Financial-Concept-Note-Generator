@@ -1,0 +1,67 @@
+A Correlation matrix represents a static condition.
+
+As a deterministic function of time, Correlation allows you to specify a dynamic correlation
+structure.
+
+Data Types: double
+
+Simulation — User-defined simulation function or SDE simulation method
+simulation by Euler approximation (simByEuler) (default) | function | SDE simulation method
+
+User-defined simulation function or SDE simulation method, specified as a function or SDE simulation
+method.
+
+Data Types: function_handle
+
+Drift — Drift rate component of continuous-time stochastic differential equations (SDEs)
+value stored from drift-rate function (default) | drift object or function accessible by (t, Xt)
+
+This property is read-only.
+
+Drift rate component of continuous-time stochastic differential equations (SDEs), specified as a drift
+object or function accessible by (t, Xt.
+
+The drift rate specification supports the simulation of sample paths of NVars state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods,
+approximating continuous-time stochastic processes.
+
+The drift class allows you to create drift-rate objects (using drift) of the form:
+
+F(t, Xt) = A(t) + B(t)Xt
+
+where:
+
+•
+A is an NVars-by-1 vector-valued function accessible using the (t, Xt) interface.
+
+•
+B is an NVars-by-NVars matrix-valued function accessible using the (t, Xt) interface.
+
+The displayed parameters for a drift object are:
+
+•
+Rate: The drift-rate function, F(t,Xt)
+
+•
+A: The intercept term, A(t,Xt), of F(t,Xt)
+
+•
+B: The first order term, B(t,Xt), of F(t,Xt)
+
+A and B enable you to query the original inputs. The function stored in Rate fully encapsulates the
+combined effect of A and B.
+
+When specified as MATLAB double arrays, the inputs A and B are clearly associated with a linear drift
+rate parametric form. However, specifying either A or B as a function allows you to customize
+virtually any drift rate specification.
+
+Note You can express drift and diffusion classes in the most general form to emphasize the
+functional (t, Xt) interface. However, you can specify the components A and B as functions that adhere
+to the common (t, Xt) interface, or as MATLAB arrays of appropriate dimension.
+
+Example: F = drift(0, 0.1) % Drift rate function F(t,X)
+
+15
+Functions
+
+15-104

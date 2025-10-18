@@ -1,0 +1,57 @@
+Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+Although the sdemrd and cir objects are of different classes, they represent the same mathematical
+model. They differ in that you create the cir object by specifying only three input arguments. This
+distinction is reinforced by the fact that the Alpha parameter does not display – it is defined to be
+1/2.
+
+Creating Hull-White/Vasicek (HWV) Gaussian Diffusion Models
+
+The Hull-White/Vasicek (HWV) short-rate object, hwv, derives directly from SDE with mean-reverting
+drift (sdemrd) class:
+
+dXt = S(t)[L(t) −Xt]dt + V(t)dWt
+
+Specify Hull-White/Vasicek Gaussian Diffusion Model
+
+Using the same parameters as in “Specify Cox-Ingersoll-Ross Square Root Diffusion Model” on page
+14-27, create an hwv object using hwv to represent the model:
+
+obj = hwv(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)
+
+obj = 
+   Class HWV: Hull-White/Vasicek
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.05
+          Level: 0.1
+          Speed: 0.2
+
+cir and hwv share the same interface and display methods. The only distinction is that cir and hwv
+model objects constrain Alpha exponents to 1/2 and 0, respectively. Furthermore, the hwv object
+also provides an additional method that simulates approximate analytic solutions (simBySolution)
+of separable models.
+
+The simBySolution method simulates the state vector Xtusing an approximation of the closed-form
+solution of diagonal drift HWV models. Each element of the state vector Xtis expressed as the sum of
+NBrowns correlated Gaussian random draws added to a deterministic time-variable drift.
+
+When evaluating expressions, all model parameters are assumed piecewise constant over each
+simulation period. In general, this is not the exact solution to this hwv model, because the probability
+
+14
+Stochastic Differential Equations
+
+14-28

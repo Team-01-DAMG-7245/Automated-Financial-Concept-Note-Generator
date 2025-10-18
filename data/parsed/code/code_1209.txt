@@ -1,0 +1,4 @@
+Page 1237
+================================================================================
+
+evaluates the function at (t = 0, Xt = 100) and returns the first observed Euribor yield.

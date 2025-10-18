@@ -1,0 +1,70 @@
+Local Functions
+
+function new_weights = markowitzFcn(~,pricesTT,portObj) 
+% Traditional mean-variance portfolio maximum return allocation
+
+% Estimate the portfolio's mean and variance.
+p = estimateAssetMoments(portObj,pricesTT,DataFormat='Prices', ...
+    MissingData=true);
+
+% Compute the max return portfolio.
+new_weights = estimateFrontierLimits(p,'max');
+
+end
+
+function new_weights = robustFcn(~,pricesTT,portObj, ...
+    kappa) 
+% Robust portfolio maximum return allocation
+
+% Estimate the portfolio's mean and variance.
+p = estimateAssetMoments(portObj,pricesTT,DataFormat='Prices', ...
+    MissingData=true);
+
+% Cumpute covariance matrix of estimation errors in the expected returns.
+SigmaR = diag(diag(p.AssetCovar));
+
+% Define the objective function handle.
+robustObjective = @(x) p.AssetMean'*x - kappa*sqrt(x'*SigmaR*x);
+
+% Compute the maximum return portfolio.
+new_weights = estimateCustomObjectivePortfolio(p,robustObjective, ...
+    ObjectiveSense="maximize");
+
+end
+
+See Also
+estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk | estimateCustomObjectivePortfolio
+
+Related Examples
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Solve Tracking Error Portfolio Problems” on page 4-343
+
+•
+“Solve Problem for Minimum Tracking Error with Net Return Constraint” on page 4-349
+
+•
+“Risk Parity or Budgeting with Constraints” on page 4-357
+
+More About
+
+•
+“Solver Guidelines for Custom Objective Problems Using Portfolio Objects” on page 4-119
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-356

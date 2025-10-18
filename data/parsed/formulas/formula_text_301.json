@@ -1,0 +1,12 @@
+{
+  "page": 184,
+  "original_text": "NumAssets\nvi ≤MaxNumAssets",
+  "ocr_text": "NumAssets\n-S)y,sMaxNumAssets\nim)",
+  "bbox": {
+    "x0": 196.31,
+    "y0": 244.39,
+    "x1": 332.19,
+    "y1": 267.27
+  },
+  "confidence": "high"
+}

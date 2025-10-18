@@ -1,0 +1,10 @@
+Page 1947
+================================================================================
+
+Settle = '17-Jul-2009'; % valuation date for the CDS
+Zero_Time = [.5 1 2 3 4 5]';
+Zero_Rate = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+Zero_Dates = daysadd(Settle,360*Zero_Time,1);
+ZeroData = [Zero_Dates Zero_Rate];
+ProbData = [daysadd(datenum(Settle),360,1), 0.0247];
+Maturity = datetime(2010,9,20);

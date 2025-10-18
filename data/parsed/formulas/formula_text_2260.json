@@ -1,0 +1,12 @@
+{
+  "page": 1159,
+  "original_text": "figure\ndates = datetime(dates,'ConvertFrom','datenum');\nplot(dates, ret2price(price2ret(Data)))\nxlabel('Date')\nylabel('Index Value')\ntitle ('Relative Daily Index Closings')\nlegend(series, 'Location', 'NorthWest')",
+  "ocr_text": "figure\ndates=datetime(dates,ConvertFrom,datenum);\nplot(dates,ret2price(price2ret(Data)))\nxlabel(Date)\n\nylabel(IndexValue)\ntitle(RelativeDailyIndexClosings)\nlegend(series,Location,NorthWest)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 627.43,
+    "x1": 350.08,
+    "y1": 702.69
+  },
+  "confidence": "high"
+}

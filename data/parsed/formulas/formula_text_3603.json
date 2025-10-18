@@ -1,0 +1,12 @@
+{
+  "page": 2030,
+  "original_text": "Settle = datetime(1997,3,15);\nMaturity = datetime(1999,9,1);\nPeriod = 2;\nTFactors = cftimes(Settle, Maturity, Period)",
+  "ocr_text": "Settle=datetime(1997,3,15);\nMaturity=datetime(1999,9,1);\n\nPeriod=2;\nTFactors=cftimes(Settle,Maturity,Period)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 461.02,
+    "x1": 328.39,
+    "y1": 503.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 395,
+  "original_text": "PI = delta*Sigma*wtsMarket;\nend",
+  "ocr_text": "PI=delta*Sigma*wtsMarket;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 597.38,
+    "x1": 236.29,
+    "y1": 618.65
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 949,
+  "original_text": "Example_BacktestPlot(YearsBT,DefRate(iYearsBT),PredDefRate,'Year','%', ...\n   '{\\bf Default Rate Estimation Methods: Backtesting}', ...\n   ['Actual' MethodTags],'NW')",
+  "ocr_text": "Example_BacktestPlot(YearsBT,DefRate(iYearsBT),PredDefRate,Year,s,...\n{bfDefaultRateEstimationMethods:Backtesting},...\n[ActualMethodTags],NW)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 601.63,
+    "x1": 490.97,
+    "y1": 633.69
+  },
+  "confidence": "high"
+}

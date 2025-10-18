@@ -1,0 +1,12 @@
+{
+  "page": 481,
+  "original_text": "function new_weights = BestBetRebalanceFcn(current_weights,pricesTT,signalTT) %#ok<INUSD> \n% Best bet strategy, invest in the asset with the most upside.",
+  "ocr_text": "functionnew_weights=BestBetRebalanceFcn(current_weights,pricesTT,signalTT)ok=INUSD=\nBestbetstrategy,investintheassetwiththemostupside.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.43,
+    "x1": 577.66,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

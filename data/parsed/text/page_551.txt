@@ -1,0 +1,62 @@
+Define Reset Function
+
+The myResetFunction function (see Local Functions on page 4-391) sets the wealth level to its
+initial state, initialWealth, and the time period to 0.
+
+resetFcn = @() myResetFunction(initialWealth,WMin,WMax);
+
+State Change Model
+
+The custom myStepFunction (see Local Functions on page 4-391) simulates the wealth evolution
+from the current time period to the next given the portfolio weights associated to the action selected
+by the agent. For simplicity, this example uses a geometric Brownian motion to simulate the wealth
+evolution. So, given a wealth level at time step t, the wealth level at time t+1 is:
+
+Wt + 1 = Wt exp
+μi −σi
+2
+2 + σiZ ,
+
+where Z is a standard normal random variable and μi and σi are the mean and standard deviation of
+the portfolio associated with the ith action.
+
+Sparse Reward Function
+
+Since the goal of the problem is to achieve the wealth target by the end of the investment period, you
+can use a reward function awards a value of 1 if the goal is achieved at the end of the investment
+period and 0 otherwise. See Local Functions on page 4-391 for the sparseReward function.
+
+R W, t =
+0 if t < T or W < G
+1 if t = T and W ≥G
+
+% Sparse reward function handle
+sparseRewardFcnHandle = @(loggedSignals) sparseReward(loggedSignals, ...
+    finalTimePeriod,targetWealth,WMin,WMax);
+
+Agents defined with a sparse reward are challenging to train because a large amount of states do not
+return any signal. This issue becomes more apparent as the episodes become long.
+
+Constant Return Reward Function
+
+To reduce the training time, you can also use a reward function that tries to lead the agent to achieve
+a minimum wealth level at each investment period. The constantReturnReward function (see Local
+Functions on page 4-391) assumes that the returns are the same throughout the entire investment
+horizon and that the return value satisfies the following inequality:
+
+W0 1 + r T ≥G.
+
+% Compute r, the constant return needed to satisfy the goal by the
+% end of the investment horizon.
+constantReturn = ...
+    nthroot(targetWealth/initialWealth,finalTimePeriod) - 1;
+
+When the wealth level Wt is greater than W0 1 + r t, you give the agent a small reward (in this
+example, select a reward of 0.1). Finally, you still give a reward of 1 if the agent reaches the goal at
+the end of the investment period and 0 otherwise.
+
+Define the constant return reward function handle.
+
+Multiperiod Goal-Based Wealth Management Using Reinforcement Learning
+
+4-383

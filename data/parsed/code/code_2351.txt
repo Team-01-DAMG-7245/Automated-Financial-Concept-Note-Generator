@@ -1,0 +1,8 @@
+Page 2228
+================================================================================
+
+% Group the contraints
+p = Portfolio(NumAssets=8);
+p = setDefaultConstraints(p);
+G = [0 0 0 0 1 1 1 1];
+p = setGroups(p,G,0.3,[]);

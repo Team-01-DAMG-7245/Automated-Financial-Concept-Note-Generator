@@ -1,0 +1,5 @@
+Page 2438
+================================================================================
+
+All dates in Holiday must be the same format: either datetimes, strings, date character vectors, or
+serial date numbers. The holidays function supplies the default vector.

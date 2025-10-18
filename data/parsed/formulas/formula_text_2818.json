@@ -1,0 +1,12 @@
+{
+  "page": 1445,
+  "original_text": "HWV = hwv(Speed,Level,Sigma)\nHWV = hwv( ___ ,Name,Value)",
+  "ocr_text": "HwWV=hwv(Speed,Level,Sigma)\nHWV=hwv(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 512.96,
+    "x1": 258.57,
+    "y1": 536.59
+  },
+  "confidence": "high"
+}

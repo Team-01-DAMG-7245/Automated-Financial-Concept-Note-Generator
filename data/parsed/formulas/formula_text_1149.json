@@ -1,0 +1,12 @@
+{
+  "page": 581,
+  "original_text": "BuyTrade = false;",
+  "ocr_text": "BuyTrade=false;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 212.83,
+    "x1": 182.11,
+    "y1": 223.29
+  },
+  "confidence": "high"
+}

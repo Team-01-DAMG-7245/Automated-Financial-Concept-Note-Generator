@@ -1,0 +1,62 @@
+SellTurnover: []
+                          Name: []
+                     NumAssets: 3
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [3×1 double]
+                    UpperBound: [3×1 double]
+                   LowerBudget: []
+                   UpperBudget: []
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [3×1 categorical]
+
+Setting the Limits on the Number of Assets Invested Using the
+setMinMaxNumAssets Function
+
+You can also set the MinNumAssets and MaxNumAssets properties to define a limit on the number of
+assets invested using setMinMaxNumAssets. For example, by setting
+MinNumAssets=MaxNumAssets=2, only two of the three assets are invested in the portfolio.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+               0.00022983 0.00049937 0.00019247;
+               0.00420395 0.00019247 0.00764097 ];
+
+p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar);
+p = setMinMaxNumAssets(p, 2, 2)
+
+p =
+
+Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                     AssetMean: [3×1 double]
+                    AssetCovar: [3×3 double]
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: []
+                     NumAssets: 3
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-82

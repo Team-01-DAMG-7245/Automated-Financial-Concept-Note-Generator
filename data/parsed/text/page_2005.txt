@@ -1,0 +1,16 @@
+figure;
+cfplot(CFlowDates, CFlowAmounts, 'Groups', {[2 3]}, 'ShowAmnt', 1, ...
+'DateFormat', 6, 'DateSpacing', 100, 'Stacked', 1);
+
+Form subplots of multiple groups and add titles using axes handles.
+
+figure;
+[h, axes_handle] = cfplot(CFlowDates, CFlowAmounts, ...
+'Groups', {[1] [2 3]}, 'ShowAmnt', 1, 'Stacked', 2, ...
+'DateSpacing', [1 60 2 100], 'DateFormat', [1 12 2 6]);
+title(axes_handle(1), 'Group 1', 'FontWeight', 'bold');
+title(axes_handle(2), 'Group 2', 'FontWeight', 'bold');
+
+cfplot
+
+15-699

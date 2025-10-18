@@ -1,0 +1,12 @@
+{
+  "page": 39,
+  "original_text": "Receipts = Cash * Units",
+  "ocr_text": "Receipts=Cash*Units",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 214.61,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

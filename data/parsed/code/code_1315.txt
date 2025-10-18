@@ -1,0 +1,5 @@
+Page 1368
+================================================================================
+
+function new_weights = shrunkStrat(~, pricesTT) 
+% Function for minimum variance portfolio using covariance shrinkage.

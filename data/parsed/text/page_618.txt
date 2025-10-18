@@ -1,0 +1,11 @@
+•
+“Use Deep Learning to Approximate Barrier Option Prices with Heston Model” (Financial
+Instruments Toolbox)
+
+•
+“Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data” on page 2-78
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-450

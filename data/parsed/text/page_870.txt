@@ -1,0 +1,42 @@
+⋮
+
+% Compute risk and returns of the portfolios on the efficient frontier
+rsk = estimatePortRisk(p,pwgt);
+ret = estimatePortReturn(p,pwgt);
+
+Plot the weights from the frontier estimation with plotFrontier. The resulting curve is piece-wise
+concave with possible vertical jumps (discontinuities) between the concave intervals.
+
+% Plot efficient frontier
+plotFrontier(p,pwgt)
+
+Changing MINLP Solvers
+
+In the previous section, you use the default solver for estimateFrontier. However, you can solve
+mixed-integer portfolio problems using any of these three three algorithms supported by
+setSolverMINLP: OuterApproximation, ExtendedCP, and TrustRegionCP. Furthermore, the
+OuterApproximation algorithm accepts an additional name-value argument
+(ExtendedFormulation) for Portfolio problems, which reformulates problems with quadratic
+functions to work in an extended space that usually decreases the computation time. All algorithms,
+including the extended formulation variation of the OuterApproximation algorithm, return the
+same values within numerical accuracy. The available solvers are:
+
+•
+OuterApproximation — The default algorithm, which is robust and usually faster than
+ExtenedCP
+
+•
+OuterApproximation with ExtendedFormulation set to true — A robust algorithm that is
+usually faster than other algorithms, but supported only for Portfolio object problems
+
+•
+ExtendedCP — The most robust solver, but usually the slowest
+
+•
+TrustRegionCP — The fastest algorithm, but one that is less robust and may provide suboptimal
+solutions
+
+6
+MAD Portfolio Optimization Tools
+
+6-90

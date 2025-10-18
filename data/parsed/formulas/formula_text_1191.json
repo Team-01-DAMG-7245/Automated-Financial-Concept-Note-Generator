@@ -1,0 +1,12 @@
+{
+  "page": 606,
+  "original_text": "EnvConstants_Test_Buy.SampledBook = TestingLOB;\nEnvConstants_Test_Buy.BuyTrade = BuyTrade;\nEnvConstants_Test_Buy.TotalTradingShares = TotalTradingShares_Buy;\nEnvConstants_Test_Buy.NumIntervalsPerHorizon = NumIntervalsPerHorizon;\nEnvConstants_Test_Buy.NumHorizons = NumTestingHorizons;\nEnvConstants_Test_Buy.NumSteps = NumTestingSteps;\nEnvConstants_Test_Buy.NumLevels = NumLevels;\nEnvConstants_Test_Buy.IS_TWAP = IS_TWAP_Step_Test_Buy;\nResetFunction_Test_Buy = @() RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Test_Buy);\nStepFunction_Test_Buy = @(Action,LoggedSignals) ...\n    RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvConstants_Test_Buy);\nRL_OptimalExecution_Testing_Environment_Buy = ...\n    rlFunctionEnv(ObservationInfo_Train_Buy,ActionInfo_Buy, ...\n    StepFunction_Test_Buy,ResetFunction_Test_Buy)",
+  "ocr_text": "EnvConstants_Test_Buy.SampledBook=TestingLOB;\nEnvConstants_Test_Buy.BuyTrade=BuyTrade;\nEnvConstants_Test_Buy.TotalTradingShares=TotalTradingShares_Buy;\nEnvConstants_Test_Buy.NumIntervalsPerHorizon=NumIntervalsPerHorizon;\nEnvConstants_Test_Buy.NumHorizons=NumTestingHorizons;\nEnvConstants_Test_Buy.NumSteps=NumTestingSteps;\nEnvConstants_Test_Buy.NumLevels=NumLevels;\nEnvConstants_Test_Buy.IS_TWAP=IS_TWAP_StepTest_Buy;\nResetFunction_Test_Buy=Q()RL_OptimalExecution_LOBResetFcn(EnvConstants_Test_Buy);\nStepFunction_Test_Buy=Q(Action,LoggedSignals)...\nRL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvConstants_Test_Buy);\nRL_OptimalExecution_Testing_Environment_Buy=...\nrlFunctionEnv(ObservationInfo_Train_Buy,ActionInfo_Buy,...\nStepFunction_Test_Buy,ResetFunction_Test_Buy)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 486.15,
+    "x1": 550.53,
+    "y1": 637.01
+  },
+  "confidence": "high"
+}

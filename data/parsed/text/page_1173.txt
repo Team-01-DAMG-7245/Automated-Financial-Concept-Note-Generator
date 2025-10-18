@@ -1,0 +1,64 @@
+Index an Object
+
+Indexing an Object
+
+Task
+Removed Functionality
+Use This Functionality
+
+Indexing with a date
+myfts('05/11/99')
+TT({'1999-05-11'},:)
+
+Indexing with a date range myfts
+('05/11/99::05/15/99')
+
+Use timerange:
+
+S =
+timerange('1999-05-11','1999
+-05-15');
+
+TT2 = TT(S,:)
+
+Indexing with integers for
+rows
+
+myfts.series2(1)
+
+myfts.series2([1, 3, 5])
+
+myfts.series2(16:20)
+
+TT(1,{'series2'})
+
+TT([1, 3, 5],{'series2'})
+
+TT(16:20,{'series2'})
+
+Contents of a specific time
+field
+
+myfts.times
+Use timeofday:
+
+timeofday(TT.Properties.RowT
+imes)
+
+Contents for a specific field
+in a matrix
+
+fts2mat(myfts.series2)
+TT.series2
+
+Transform Time Series
+
+Assume that all variables are numeric within a timetable, or the operations can be applied on TT2:
+
+S = vartype('numeric');
+
+TT2 = TT(:,S)
+
+Convert Financial Time Series Objects (fints) to Timetables
+
+11-3

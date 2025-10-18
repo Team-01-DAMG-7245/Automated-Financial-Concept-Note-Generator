@@ -1,0 +1,7 @@
+Page 1250
+================================================================================
+
+This example specifies a noise function to stratify the terminal value of a univariate equity price
+series. Starting from known initial conditions, the function first stratifies the terminal value of a
+standard Brownian motion, and then samples the process from beginning to end by drawing
+conditional Gaussian samples using a Brownian bridge.

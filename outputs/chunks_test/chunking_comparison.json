@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "total_strategies": 3,
+    "strategies_tested": [
+      "recursive",
+      "markdown",
+      "section"
+    ]
+  },
+  "comparison": {
+    "recursive": {
+      "total_chunks": 41,
+      "avg_chunk_size": 755.1951219512196,
+      "avg_tokens": 273.6585365853659,
+      "size_distribution": {
+        "500-1000": 35,
+        "0-500": 6
+      },
+      "type_distribution": {
+        "text": 41
+      },
+      "strategy": "RecursiveCharacter"
+    },
+    "markdown": {
+      "total_chunks": 10,
+      "avg_chunk_size": 2910.1,
+      "avg_tokens": 1055.7,
+      "size_distribution": {
+        "0-500": 2,
+        "2000-2500": 1,
+        "3000-3500": 2,
+        "3500-4000": 3,
+        "4500-5000": 1,
+        "4000-4500": 1
+      },
+      "type_distribution": {
+        "text": 10
+      },
+      "strategy": "MarkdownHeader"
+    },
+    "section": {
+      "total_chunks": 44,
+      "avg_chunk_size": 695.5909090909091,
+      "avg_tokens": 252.0909090909091,
+      "size_distribution": {
+        "500-1000": 35,
+        "0-500": 9
+      },
+      "type_distribution": {
+        "text": 44
+      },
+      "strategy": "SectionAware"
+    }
+  },
+  "recommendations": []
+}

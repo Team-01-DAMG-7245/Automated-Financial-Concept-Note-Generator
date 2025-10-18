@@ -1,0 +1,59 @@
+Observation times associated with the simulated paths, returned as an (NPeriods + 1)-by-1
+column vector. Each element of Times is associated with the corresponding row of Paths.
+
+Z — Dependent random variates for generating Brownian motion vector
+array
+
+Dependent random variates for generating the Brownian motion vector (Wiener processes) that drive
+the simulation, returned as an (NPeriods ⨉ NSteps)-by-NBrowns-by-NTrials three-dimensional
+time-series array.
+
+N — Dependent random variates for generating jump counting process vector
+array
+
+Dependent random variates used to generate the jump counting process vector, returned as an
+(NPeriods ⨉ NSteps)-by-NJumps-by-NTrials three-dimensional time series array.
+
+More About
+
+Euler Simulation
+
+Euler simulation approximates the solution of an SDE by discretizing the continuous-time process
+into discrete time steps.
+
+The basic idea is to use the current state of the process to predict its future state, incorporating the
+stochastic component.
+
+Antithetic Sampling
+
+Simulation methods allow you to specify a popular variance reduction technique called antithetic
+sampling.
+
+This technique attempts to replace one sequence of random observations with another that has the
+same expected value but a smaller variance. In a typical Monte Carlo simulation, each sample path is
+independent and represents an independent trial. However, antithetic sampling generates sample
+paths in pairs. The first path of the pair is referred to as the primary path, and the second as the
+antithetic path. Any given pair is independent other pairs, but the two paths within each pair are
+highly correlated. Antithetic sampling literature often recommends averaging the discounted payoffs
+of each pair, effectively halving the number of Monte Carlo trials.
+
+This technique attempts to reduce variance by inducing negative dependence between paired input
+samples, ideally resulting in negative dependence between paired output samples. The greater the
+extent of negative dependence, the more effective antithetic sampling is.
+
+Algorithms
+
+Bates models are bivariate composite models. Each Bates model consists of two coupled univariate
+models.
+
+•
+One model is a geometric Brownian motion (gbm) model with a stochastic volatility function and
+jumps.
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t + Y(t)X1tdNt
+
+15
+Functions
+
+15-316

@@ -1,0 +1,5 @@
+Page 2170
+================================================================================
+
+Objective = ecmlsrobj( ___ ,Covariance) computes a least-squares objective function based
+on current parameter estimates with missing data using an optional argument.

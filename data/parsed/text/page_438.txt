@@ -1,0 +1,83 @@
+hold on
+labels = strings(nT+1,1);
+for i=1:nT
+    ub = zeros(p.NumAssets,1);
+    % Only select the assets above WoB threshold.
+    ub(WoB >= thresholdWoB(i)) = 1;
+    p.UpperBound = ub;
+    plotFrontier(p,nPort);
+    labels(i) = sprintf("%6.2f%% WoB",thresholdWoB(i)*100);
+end
+% Plot the "original" mean-variance frontier, i.e., the frontier
+% without the WoB threshold.
+p.UpperBound = [];
+plotFrontier(p,nPort);
+labels(i+1) = "No WoB restriction";
+legend(labels,'Location','northwest')
+hold off
+
+end
+
+See Also
+Portfolio | setBounds | addGroups | setAssetMoments | estimateAssetMoments |
+estimateBounds | plotFrontier | estimateFrontierLimits | estimateFrontierByRisk |
+estimatePortRisk
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 4-130
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-270

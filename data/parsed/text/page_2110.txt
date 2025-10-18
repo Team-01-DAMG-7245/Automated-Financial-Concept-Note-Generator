@@ -1,0 +1,55 @@
+Note The elements of Subset must be contained in Superset, without repetition. datefind works
+with non-repeating sequences of dates.
+
+Example: Subset = [datetime(1997,7,10); datetime(1997,7,20)];
+
+To support existing code, datefind also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Superset — Superset of dates
+datetime array | string array | date character vector
+
+Superset of dates, specified as a matrix of using a datetime array, string array, or date character
+vectors, whose elements are sought.
+
+Subset and Superset can be either a datetime array, string array, or date character vectors. These
+types do not have to match. datefind determines the underlying date to match dates of different
+data types.
+
+Note The elements of Subset must be contained in Superset, without repetition. datefind works
+with non-repeating sequences of dates.
+
+Example: Superset = datetime(1997,7,1:31);
+
+To support existing code, datefind also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Tolerance — Tolerance for matching dates in Superset
+0 (default) | positive integer or duration object
+
+Tolerance for matching dates (+/-) in Superset, specified as a positive integer or duration object.
+
+Data Types: single | double
+
+Output Arguments
+
+Indices — Indices of dates in Superset that are present in Subset
+vector
+
+Indices of dates in Superset that are present in Subset (plus or minus the tolerance if defined using
+the optional argument Tolerance), returned as a vector of indices.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+15
+Functions
+
+15-804

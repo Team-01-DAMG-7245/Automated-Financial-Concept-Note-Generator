@@ -1,0 +1,12 @@
+{
+  "page": 943,
+  "original_text": "fprintf('\\nTransition counts for 2005 at IG/SG level:\\n\\n')",
+  "ocr_text": "fprintf(nTransitioncountsfor2005atIG/SGlevel:nn)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 223.67,
+    "x1": 409.68,
+    "y1": 234.13
+  },
+  "confidence": "high"
+}

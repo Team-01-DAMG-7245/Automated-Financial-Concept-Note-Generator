@@ -1,0 +1,12 @@
+{
+  "page": 53,
+  "original_text": "LHHDates = holidays('1-Jul-2012','31-Dec-2012');\nLHHDays = datestr(LHHDates)",
+  "ocr_text": "LHHDates=holidays(1-Jul-2012,31-Dec-2012);\nLHHDays=datestr(LHHDates)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 146.38,
+    "x1": 350.08,
+    "y1": 167.65
+  },
+  "confidence": "high"
+}

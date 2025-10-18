@@ -1,0 +1,6 @@
+Page 50
+================================================================================
+
+bndprice is an example of a function designed to detect the presence of date character vectors and
+make the conversion automatically. For functions like bndprice, date character vectors can be
+passed directly.

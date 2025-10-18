@@ -1,0 +1,6 @@
+Page 584
+================================================================================
+
+Validate the step function by monitoring the logged signals and rewards while calling the step
+functions multiple times. Here, you can see the time interval index increasing at each step and the
+current inventory shares changing as the trades are executed at each step.

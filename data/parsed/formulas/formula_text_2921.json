@@ -1,0 +1,12 @@
+{
+  "page": 1524,
+  "original_text": "•\nThe kernel function is for some λ ≥ 0 and γ, such that γ > 1/2 when λ=0: g(x) = e−λxx−γL1(x).",
+  "ocr_text": "*ThekernelfunctionisforsomeA=0andy,suchthatp=1/2whenA=0:g(x)= e7AXy- YT1(x).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 133.64,
+    "x1": 534.99,
+    "y1": 149.39
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,60 @@
+Obtain Purchases and Sales for Portfolios on the Efficient Frontier for a PortfolioMAD
+Object
+
+Starting from the initial portfolio, the estimateFrontier function returns purchases and sales to
+get from your initial portfolio to each efficient portfolio on the efficient frontier. Given an initial
+portfolio in pwgt0, you can obtain purchases and sales.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+rng(11);
+
+AssetScenarios = mvnrnd(m, C, 20000);
+p = PortfolioMAD;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = setInitPort(p, pwgt0);
+[pwgt, pbuy, psell] = estimateFrontier(p);
+
+display(pwgt);
+
+pwgt = 4×10
+
+0.8817    0.7150    0.5488    0.3811    0.2173    0.0503         0         0         0       
+    0.0435    0.1290    0.2130    0.2987    0.3821    0.4668    0.3614    0.1751         0       
+    0.0385    0.0600    0.0826    0.1061    0.1242    0.1477    0.1780    0.2101    0.2267       
+    0.0363    0.0960    0.1556    0.2141    0.2764    0.3352    0.4605    0.6148    0.7733    1.0
+
+display(pbuy);
+
+pbuy = 4×10
+
+0.5817    0.4150    0.2488    0.0811         0         0         0         0         0       
+         0         0         0         0    0.0821    0.1668    0.0614         0         0       
+         0         0         0         0         0         0         0    0.0101    0.0267       
+         0         0    0.0556    0.1141    0.1764    0.2352    0.3605    0.5148    0.6733    0.9
+
+display(psell);
+
+psell = 4×10
+
+0         0         0         0    0.0827    0.2497    0.3000    0.3000    0.3000    0.3
+    0.2565    0.1710    0.0870    0.0013         0         0         0    0.1249    0.3000    0.3
+    0.1615    0.1400    0.1174    0.0939    0.0758    0.0523    0.0220         0         0    0.2
+    0.0637    0.0040         0         0         0         0         0         0         0
+
+The function rng(seed) resets the random number generator to produce the documented results. It is
+not necessary to reset the random number generator to simulate scenarios.
+
+15
+Functions
+
+15-950

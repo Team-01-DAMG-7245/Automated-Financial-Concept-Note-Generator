@@ -1,0 +1,35 @@
+For more information, see “SDE Models” on page 14-7, “SDE Classes and Associated Simulation
+Methods” on page 14-13, and “SDE Class Hierarchy” on page 14-5.
+
+Algorithms
+
+The rough Bergomi model is a type of stochastic volatility model, which means it assumes that the
+volatility of the underlying asset is not constant but varies over time and is not necessarily correlated
+with the asset price.
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t
+
+X2t = ξ0(t)eη 2a + 1Yt
+α −η2
+
+2 t2α + 1
+
+Yt =∫0
+
+t
+(t −s)αdWs
+
+The first and second equations represent a geometric Brownian motion (GBM) model with a
+stochastic volatility function.
+
+The third equation represents the process describing the evolution of the variance rate of the coupled
+GBM process, where Yt is a Volterra process. In a Volterra process, the increments are not only
+dependent on the current state of the process but also on the entire history of the process. This
+means that the current state of the process is determined by integrating a function over the entire
+past trajectory of the process, as opposed to just the most recent state.
+
+15
+Functions
+
+15-224

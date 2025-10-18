@@ -1,0 +1,63 @@
+TolParam — Convergence tolerance for estimation algorithm based on changes in model
+parameter estimates
+1.0e-8 (default) | numeric
+
+(Optional) Convergence tolerance for estimation algorithm based on changes in model parameter
+estimates, specified as a numeric. The convergence test for changes in model parameters is
+
+Paramk −Paramk −1 < TolParam × 1 + Paramk
+
+where Param represents the output Parameters, and iteration k = 2, 3, ... . Convergence is assumed
+when both the TolParam and TolObj conditions are satisfied. If both TolParam ≤ 0 and TolObj ≤
+0, do the maximum number of iterations (MaxIterations), whatever the results of the convergence
+tests.
+
+Data Types: double
+
+TolObj — Convergence tolerance for estimation algorithm based on changes in objective
+function
+1.0e-12 (default) | numeric
+
+(Optional) Convergence tolerance for estimation algorithm based on changes in the objective
+function, specified as a numeric. The convergence test for changes in the objective function is
+
+Ob jk −Ob jk −1 < TolOb j × 1 + Ob jk
+
+for iteration k = 2, 3, ... . Convergence is assumed when both the TolParam and TolObj conditions
+are satisfied. If both TolParam ≤ 0 and TolObj ≤ 0, do the maximum number of iterations
+(MaxIterations), whatever the results of the convergence tests.
+
+Data Types: double
+
+Param0 — Estimate for the parameters of regression model
+[] (default) | vector
+
+(Optional) Estimate for the parameters of the regression model, specified as an NUMPARAMS-by-1
+column vector.
+
+Data Types: double
+
+Covar0 — Estimate for the covariance matrix of regression residuals
+[] (default) | matrix
+
+(Optional) Estimate for the covariance matrix of the regression residuals, specified as NUMSERIES-by-
+NUMSERIES matrix.
+
+Data Types: double
+
+CovarFormat — Format for the covariance matrix
+'full' (default) | character vector
+
+(Optional) Format for the covariance matrix, specified as a character vector. The choices are:
+
+•
+'full' — Compute the full covariance matrix.
+
+•
+'diagonal' — Force the covariance matrix to be a diagonal matrix.
+
+Data Types: char
+
+ecmmvnrmle
+
+15-873

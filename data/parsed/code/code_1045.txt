@@ -1,0 +1,8 @@
+Page 1070
+================================================================================
+
+The convert2sur function converts a multivariate normal regression model into a seemingly
+unrelated regression, or SUR, model. The second function ecmninit is a specialized function to
+obtain initial ad hoc estimates for the mean and covariance of a Data matrix with missing data. (If
+there are no missing values, the estimates are the maximum likelihood estimates for the mean and
+covariance.)

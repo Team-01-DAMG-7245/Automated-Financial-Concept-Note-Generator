@@ -1,0 +1,12 @@
+{
+  "page": 540,
+  "original_text": "To compute the value of V Wi t  for t < T, you need to go backwards in time. You start at t = T −1 to\ndetermine the portfolio that achieves the maximum in the Bellman equation and V Wi T −1 . Then\ncontinue with t = T −2, then t = T −3, until you reach t = 0. The value of V W 0  is the optimal\nprobability of attaining the wealth goal G from the initial wealth W 0 .",
+  "ocr_text": "TocomputethevalueofV(W,(t))fortT,youneedtogobackwardsintime.Youstartatt=T-1to\ndeterminetheportfoliothatachievesthemaximumintheBellmanequationandV(W;(T-1)).Then\ncontinuewitht=T-2,thent=T-3,untilyoureacht=0.ThevalueofV(W(0))istheoptimal\nprobabilityofattainingthewealthgoalGfromtheinitialwealthW(0).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 196.24,
+    "x1": 554.86,
+    "y1": 247.16
+  },
+  "confidence": "high"
+}

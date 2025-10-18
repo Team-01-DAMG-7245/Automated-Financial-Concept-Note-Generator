@@ -1,0 +1,12 @@
+{
+  "page": 484,
+  "original_text": "% Define the risk budgeting strategy.\nriskBudgeting = backtestStrategy('RiskBudgeting',@riskBudgetingRebalanceFcn, ...\n    'RebalanceFrequency',rebalance_schedule, ...\n    'InitialWeights',computeRiskBudgeting(initial_prices));",
+  "ocr_text": "Definetheriskbudgetingstrategy.\n\nriskBudgeting=backtestStrategy(RiskBudgeting,QriskBudgetingRebalanceFcn,...\nRebalanceFrequency,rebalance_schedule,...\nInitialWeights,computeRiskBudgeting(initial_prices));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 523.48,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

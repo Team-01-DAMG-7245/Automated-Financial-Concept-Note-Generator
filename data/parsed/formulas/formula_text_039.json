@@ -1,0 +1,12 @@
+{
+  "page": 48,
+  "original_text": "t = datetime(731885.75,'ConvertFrom','datenum')",
+  "ocr_text": "t=datetime(731885.75,ConvertFrom,datenum)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 553.13,
+    "x1": 344.67,
+    "y1": 563.59
+  },
+  "confidence": "high"
+}

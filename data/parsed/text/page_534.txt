@@ -1,0 +1,37 @@
+_______    _______    ______
+
+P(W_T >= G)    0.94592    0.95347    0.8252
+
+References
+
+[1] Das, Sanriv R., Daniel Ostrov, Anand Radhakrishnan, and Deep Srivastav. “A New Approach to
+Goals-Based Wealth Management.” Journal of Investment Management. 16, no. 3 (2018): 1–27.
+
+See Also
+Portfolio | estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk | estimateCustomObjectivePortfolio
+
+Related Examples
+
+•
+“Dynamic Portfolio Allocation in Goal-Based Wealth Management for Multiple Time Periods” on
+page 4-367
+
+•
+“Multiperiod Goal-Based Wealth Management Using Reinforcement Learning” on page 4-379
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+•
+“Portfolio Optimization Against a Benchmark” on page 4-202
+
+More About
+
+•
+“Solver Guidelines for Custom Objective Problems Using Portfolio Objects” on page 4-119
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-366

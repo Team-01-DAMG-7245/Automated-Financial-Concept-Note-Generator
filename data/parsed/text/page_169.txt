@@ -1,0 +1,101 @@
+Mean-Variance Portfolio Optimization
+Tools
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Supported Constraints for Portfolio Optimization Using Portfolio Objects” on page 4-9
+
+•
+“Default Portfolio Problem” on page 4-17
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Common Operations on the Portfolio Object” on page 4-33
+
+•
+“Setting Up an Initial or Current Portfolio” on page 4-37
+
+•
+“Setting Up a Tracking Portfolio” on page 4-40
+
+•
+“Asset Returns and Moments of Asset Returns Using Portfolio Object” on page 4-42
+
+•
+“Working with a Riskless Asset” on page 4-52
+
+•
+“Working with Transaction Costs” on page 4-54
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Working with 'Simple' Bound Constraints Using Portfolio Object” on page 4-62
+
+•
+“Working with Budget Constraints Using Portfolio Object” on page 4-65
+
+•
+“Working with Conditional Budget Constraints Using Portfolio Object” on page 4-67
+
+•
+“Working with Group Constraints Using Portfolio Object” on page 4-69
+
+•
+“Working with Group Ratio Constraints Using Portfolio Object” on page 4-72
+
+•
+“Working with Linear Equality Constraints Using Portfolio Object” on page 4-75
+
+•
+“Working with Linear Inequality Constraints Using Portfolio Object” on page 4-78
+
+•
+“Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using
+Portfolio Objects” on page 4-81
+
+•
+“Working with Average Turnover Constraints Using Portfolio Object” on page 4-85
+
+•
+“Working with One-Way Turnover Constraints Using Portfolio Object” on page 4-88
+
+•
+“Working with Tracking Error Constraints Using Portfolio Object” on page 4-91
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Obtaining Portfolios Along the Entire Efficient Frontier” on page 4-99
+
+•
+“Obtaining Endpoints of the Efficient Frontier” on page 4-102
+
+•
+“Obtaining Efficient Portfolios for Target Returns” on page 4-105
+
+•
+“Obtaining Efficient Portfolios for Target Risks” on page 4-108
+
+•
+“Efficient Portfolio That Maximizes Sharpe Ratio” on page 4-111
+
+•
+“Choosing and Controlling the Solver for Mean-Variance Portfolio Optimization” on page 4-114
+
+4

@@ -1,0 +1,12 @@
+{
+  "page": 626,
+  "original_text": "% Penalized variance portfolio\np = setSolverMINLP(p,\"OuterApproximation\",ExtendedFormulation=true, ...\n    ObjectiveScalingFactor=1e4);\nw = estimateCustomObjectivePortfolio(p,penalizedVariance);",
+  "ocr_text": "SPenalizedvarianceportfolio\n\np=setSolverMINLP(p,OuterApproximation,ExtendedFormulation=true,...\nObjectiveScalingFactor=1e4);\n\nw=estimateCustom0bjectivePortfolio(p,penalizedVariance);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 474.71,
+    "y1": 189.89
+  },
+  "confidence": "high"
+}

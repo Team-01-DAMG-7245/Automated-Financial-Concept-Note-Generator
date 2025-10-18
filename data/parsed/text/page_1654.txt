@@ -1,0 +1,63 @@
+Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.16
+         Return: 0.03
+       JumpFreq: 2
+       JumpMean: 0.02
+        JumpVol: 0.08
+
+Use simBySolution to simulate NTrials sample paths of NVARS correlated state variables driven
+by NBrowns Brownian motion sources of risk and NJumps compound Poisson processes representing
+the arrivals of important events over NPeriods consecutive observation periods. The function
+approximates continuous-time Merton jump diffusion process by an approximation of the closed-form
+solution.
+
+nPeriods = 100;
+[Paths,Times,Z,N] = simBySolution(mertonObj, nPeriods,'nTrials', 3)
+
+Paths = 
+Paths(:,:,1) =
+
+1.0e+03 *
+
+0.0800
+    0.0600
+    0.0504
+    0.0799
+    0.1333
+    0.1461
+    0.2302
+    0.2505
+    0.3881
+    0.4933
+    0.4547
+    0.4433
+    0.5294
+    0.6443
+    0.7665
+    0.6489
+    0.7220
+    0.7110
+    0.5815
+    0.5026
+    0.6523
+    0.7005
+    0.7053
+    0.4902
+    0.5401
+    0.4730
+    0.4242
+    0.5334
+    0.5821
+    0.6498
+    0.5982
+    0.5504
+    0.5290
+    0.5371
+    0.4789
+    0.4914
+
+15
+Functions
+
+15-348

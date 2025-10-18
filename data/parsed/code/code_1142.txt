@@ -1,0 +1,7 @@
+Page 1187
+================================================================================
+
+function uicalendarGUIExample
+f = figure('Name', 'uicalendarGUIExample');
+2
+Add a text control field.

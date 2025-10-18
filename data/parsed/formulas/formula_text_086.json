@@ -1,0 +1,12 @@
+{
+  "page": 77,
+  "original_text": "rs = tick2ret(p)",
+  "ocr_text": "rs_=tick2ret(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 604.98,
+    "x1": 176.69,
+    "y1": 615.45
+  },
+  "confidence": "high"
+}

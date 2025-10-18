@@ -1,0 +1,12 @@
+{
+  "page": 481,
+  "original_text": "years = 1990:5:2021;\nxtick_idx = zeros(size(years));\nfor yidx = 1:numel(years)\n    xtick_idx(yidx) = find(years(yidx) == year(priceData.Time),1,'first');\nend\nxticks(xtick_idx);\nxticklabels(string(years));",
+  "ocr_text": "years=1990:5:2021;\n\nxtick_idx=zeros(size(years));\n\nforyidx=1:numel(years)\nxtick_idx(yidx)=find(years(yidx)==year(priceData.Time),1,first);\n\nend\n\nxticks(xtick_idx);\n\nxticklabels(string(years));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 535.83,
+    "x1": 490.97,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

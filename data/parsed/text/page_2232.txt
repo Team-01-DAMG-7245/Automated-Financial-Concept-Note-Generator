@@ -1,0 +1,61 @@
+setMinMaxNumAssets or setBounds, the objective function must also be convex. For more
+information, see “Role of Convexity in Portfolio Problems” on page 4-157.
+
+Data Types: function_handle
+
+Name-Value Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Example: pwgt =
+estimateCustomObjectivePortfolio(p,fun,ObjectiveSense="maximize",TargetReturn
+=0.05)
+
+ObjectiveSense — Sense of optimization
+"minimize" (default) | string with value "mimimize" or "maximize" | character vector with value
+'mimimize' or 'maximize'
+
+Sense of the optimization, specified as ObjectiveSense and a string or character vector with one of
+the following values:
+
+•
+"minimize" — The solution minimizes the objective function.
+
+•
+"maximize" — The solution maximizes the objective function.
+
+Data Types: string | char
+
+TargetReturn — Target value for portfolio return
+[] (default) | scalar
+
+Target value for portfolio return, specified as TargetReturn and a scalar numeric value. For an
+example, see “Add Gross or Net Return Constraints for Problems with Custom Objectives” on page
+15-917.
+
+Data Types: double
+
+TargetVolatility — Target value for portfolio standard deviation
+[] (default) | nonnegative scalar
+
+Target value for portfolio standard deviation, specified as TargetVolatility and a nonnegative
+scalar numeric value. For an example, see “Add Risk Constraint to a Custom Objective Problem” on
+page 15-924.
+
+Data Types: double
+
+ObjectiveBound — User-supplied objective function bound
+[] (default) | numeric
+
+User-supplied objective function bound, specified as ObjectiveBound and a numeric value.
+ObjectiveBound is useful to speed up solvers.
+
+Note If ObjectiveSense is 'minimize', then ObjectiveBound should be a lower bound of the
+objective function. If ObjectiveSense is 'maximize', then ObjectiveBound should be an upper
+
+15
+Functions
+
+15-926

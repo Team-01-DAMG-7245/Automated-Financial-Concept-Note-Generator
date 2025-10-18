@@ -1,0 +1,62 @@
+Date handling behavior for rebalance dates that are missing from asset prices timetable, specified as
+a string.
+
+Data Types: char | string
+
+Basis — Day-count basis of annualized rates for RiskFreeRate and CashBorrowRate
+0 (default) | numeric values: 0,1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13
+
+Day-count of annualized rates for RiskFreeRate and CashBorrowRate, specified a scalar integer.
+
+Data Types: double
+
+NumAssets — Number of assets in portfolio universe
+[] (default) | numeric
+
+This property is read-only.
+
+Number of assets in the portfolio universe, a numeric. NumAssets is derived from the timetable of
+adjusted prices passed to runBacktest. NumAssets is empty until you run the backtest using the
+runBacktest function.
+
+Data Types: double
+
+Returns — Strategy returns
+[] (default) | timetable
+
+This property is read-only.
+
+Strategy returns, a NumTimeSteps-by-NumStrategies timetable of strategy returns. Returns are
+per time step. For example, if you use daily prices with runBacktest, then Returns is the daily
+strategy returns. Returns is empty until you run the backtest using the runBacktest function.
+
+Data Types: timetable
+
+Positions — Asset positions for each strategy
+[] (default) | structure
+
+This property is read-only.
+
+Asset positions for each strategy, a structure containing a NumTimeSteps-by-NumAssets timetable of
+asset positions for each strategy. For example, if you use daily prices in the runBacktest, then the
+Positions structure holds timetables containing the daily asset positions. Positions is empty until
+you run the backtest using the runBacktest function.
+
+Data Types: struct
+
+Turnover — Strategy turnover
+[] (default) | timetable
+
+This property is read-only.
+
+Strategy turnover, a NumTimeSteps-by-NumStrategies timetable. Turnover is empty until you run
+the backtest using the runBacktest function.
+
+Data Types: timetable
+
+BuyCost — Transaction costs for asset purchases of each strategy
+[] (default) | timetable
+
+backtestEngine
+
+15-269

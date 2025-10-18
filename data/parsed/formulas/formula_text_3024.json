@@ -1,0 +1,12 @@
+{
+  "page": 1586,
+  "original_text": "% Run the backtest. The empty properties are now populated with\n% timetables of detailed backtest results.\nbacktester = runBacktest(backtester,pricesTT)",
+  "ocr_text": "SRunthebacktest.Theemptypropertiesarenowpopulatedwith\ntimetablesofdetailedbacktestresults.\nbacktester=runBacktest(backtester,pricesTT)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 560.04,
+    "x1": 431.33,
+    "y1": 592.1
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2226,
+  "original_text": "% Fully invested portfolio\np = setBudget(p,1,1);\n% Cardinality constraint\np = setMinMaxNumAssets(p,3,3);\n% Conditional bounds\np = setBounds(p,0.1,[],BoundType=\"conditional\");",
+  "ocr_text": "Fullyinvestedportfolio\n\np=setBudget(p,1,1);\n\nCardinalityconstraint\np=setMinMaxNumAssets(p,3,3);\nConditional_bounds\np=setBounds(p,0.1,[],BoundType=conditional);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 350.08,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,35 @@
+Estimate Efficient Portfolio that Maximizes the Sharpe Ratio for a Portfolio Object With a
+Risk-Free Asset Using the Direct and Iterative Method
+
+The estimateMaxSharpeRatio function maximizes the Sharpe ratio among portfolios on the
+efficient frontier. In the case of Portfolio with a risk-free asset, there are multiple efficient portfolios
+that maximize the Sharpe ratio on the capital asset line. Because of the nature of 'direct' and
+'iterative' methods, the portfolio weights (pwgts) output from each of these methods might be
+different, but the Sharpe ratio is the same. This example demonstrates the scenario where the pwgts
+are different and the Sharpe ratio is the same.
+
+load BlueChipStockMoments
+
+mret = MarketMean;
+mrsk = sqrt(MarketVar);
+cret = CashMean;
+crsk = sqrt(CashVar);
+
+p = Portfolio('AssetList', AssetList, 'RiskFreeRate', CashMean);
+p = setAssetMoments(p, AssetMean, AssetCovar);
+
+p = setInitPort(p, 1/p.NumAssets);
+[ersk, eret] = estimatePortMoments(p, p.InitPort);
+
+p = setDefaultConstraints(p);
+pwgt = estimateFrontier(p, 20);
+[prsk, pret] = estimatePortMoments(p, pwgt);
+pwgtshpr_fully = estimateMaxSharpeRatio(p,'Method','direct');
+[riskshpr_fully, retshpr_fully] = estimatePortMoments(p,pwgtshpr_fully);
+
+q = setBudget(p, 0, 1);
+
+15
+Functions
+
+15-990

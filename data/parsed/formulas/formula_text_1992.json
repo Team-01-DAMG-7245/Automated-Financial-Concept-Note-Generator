@@ -1,0 +1,12 @@
+{
+  "page": 1030,
+  "original_text": "HazTimes = yearfrac(Settle, MarketDates);\nfigure\nstairs([0; HazTimes(1:end-1,1); HazTimes(end,1)+1],...\n   [HazDataInv1(:,2);HazDataInv1(end,2)])\nhold on\nstairs([0; HazTimes(1:end-1,1); HazTimes(end,1)+1],...\n   [HazDataInv2(:,2);HazDataInv2(end,2)],'--')\nhold off\ngrid on\nxlabel('Time (years)')\nylabel('Hazard Rate')\ntitle('Hazard Rates for Inverted Spread Curves')\nlegend('1st instance','2nd instance','location','NorthEast')",
+  "ocr_text": "HazTimes=yearfrac(Settle,MarketDates);\n\nfigure\n\nstairs([0;HazTimes(1:end-1,1);HazTimes(end,1)+1],...\n[HazDataInv1(:,2);HazDataInv1(end,2)])\n\nhold_on\n\nstairs([0;HazTimes(1:end-1,1);HazTimes(end,1)+1],...\n[HazDataInv2(:,2);HazDataInv2(end,2)],--)\n\nholdoff\n\ngridon\n\nxlabel(Time(years))\n\nylabel(HazardRate)\n\ntitle(HazardRatesforInvertedSpreadCurves)\n\nlegend(1lst_instance,2ndinstance,location,NorthEast)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 548.47,
+    "x1": 415.11,
+    "y1": 688.54
+  },
+  "confidence": "high"
+}

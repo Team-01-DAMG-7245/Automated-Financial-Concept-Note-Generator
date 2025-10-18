@@ -1,0 +1,5 @@
+Page 2107
+================================================================================
+
+CharMat = datedisp(NumMat,DateForm) returns CharMat, character array representing
+NumMat. If no output variable is assigned, the function prints the array to the display.

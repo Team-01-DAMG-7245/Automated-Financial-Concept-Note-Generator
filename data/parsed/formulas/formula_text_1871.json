@@ -1,0 +1,12 @@
+{
+  "page": 951,
+  "original_text": "ELt = EADt × LGDt × PredictedDefaultRatet",
+  "ocr_text": "EL,;=EAD;xLGD;xPredictedDefaultRate;",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 499.76,
+    "x1": 315.16,
+    "y1": 513.5
+  },
+  "confidence": "high"
+}

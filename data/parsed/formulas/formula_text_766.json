@@ -1,0 +1,12 @@
+{
+  "page": 448,
+  "original_text": "% Plot the daily stocks and ESG strategy behavior.\nfigure\nt = tiledlayout(2,1,'Padding','none');",
+  "ocr_text": "PlotthedailystocksandESGstrategybehavior.\nfigure\nt=tiledlayout(2,1,Padding,none);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 339.43,
+    "x1": 360.9,
+    "y1": 371.49
+  },
+  "confidence": "high"
+}

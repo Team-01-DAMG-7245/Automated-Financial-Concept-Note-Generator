@@ -1,0 +1,12 @@
+{
+  "page": 2321,
+  "original_text": "pwgt = estimateFrontierLimits(p);\nprsk = estimatePortRisk(p, pwgt);\ndisp(prsk)",
+  "ocr_text": "pwgt=estimateFrontierLimits(p);\nprsk=estimatePortRisk(p,_pwgt);\ndisp(prsk)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 268.79,
+    "y1": 308.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 912,
+  "original_text": "Mean = mean(Returns)",
+  "ocr_text": "Mean=mean(Returns)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 308.6,
+    "x1": 198.36,
+    "y1": 319.07
+  },
+  "confidence": "high"
+}

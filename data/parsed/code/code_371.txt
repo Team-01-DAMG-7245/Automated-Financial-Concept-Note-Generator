@@ -1,0 +1,11 @@
+Page 376
+================================================================================
+
+scatter(assetActRiskAnnual, assetActRetnAnnual, 6, 'm', 'Filled');
+hold on
+for k = 1:length(assetNames)
+    text(assetActRiskAnnual(k) + 0.005,assetActRetnAnnual(k),assetNames{k},'FontSize',8);
+end
+plot(portRiskAnnual,portRetnAnnual,'bo-','MarkerSize',4,'MarkerFaceColor','b');
+plot(optPortRiskAnnual,optPortReturnAnnual,'ro-','MarkerFaceColor','r');
+hold off;

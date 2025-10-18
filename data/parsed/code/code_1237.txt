@@ -1,0 +1,11 @@
+Page 1270
+================================================================================
+
+•
+The second technique is derived by differentiating the log-likelihood function with respect to the
+linear correlation matrix, assuming the degrees of freedom is a fixed constant. The resulting
+expression is a non-linear equation that can be solved iteratively for the correlation matrix. This
+technique approximates the profile log-likelihood for the degrees of freedom parameter for large
+sample sizes. This technique is usually significantly faster than the true maximum likelihood
+technique outlined above; however, you should not use it with small or moderate sample sizes as
+the estimates and confidence limits may not be accurate.

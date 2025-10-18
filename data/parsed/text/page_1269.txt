@@ -1,0 +1,32 @@
+xlabel('Centered Return')
+ylabel('Probability')
+title (['Semi-Parametric/Piecewise CDF: ' series{index}])
+legend({'Pareto Lower Tail' 'Kernel Smoothed Interior' ...
+        'Pareto Upper Tail' 'Gaussian with Same \sigma'}, 'Location', 'NorthWest')
+
+The lower and upper tail regions, displayed in red and blue, respectively, are suitable for
+extrapolation, while the kernel-smoothed interior, in black, is suitable for interpolation.
+
+Copula Calibration
+
+The Statistics and Machine Learning Toolbox software includes functionality that calibrates and
+simulates Gaussian and t copulas.
+
+Using the daily index returns, estimate the parameters of the Gaussian and t copulas using the
+function copulafit. Since a t copula becomes a Gaussian copula as the scalar degrees of freedom
+parameter (DoF) becomes infinitely large, the two copulas are really of the same family, and therefore
+share a linear correlation matrix as a fundamental parameter.
+
+Although calibration of the linear correlation matrix of a Gaussian copula is straightforward, the
+calibration of a t copula is not. For this reason, the Statistics and Machine Learning Toolbox software
+offers two techniques to calibrate a t copula:
+
+•
+The first technique performs maximum likelihood estimation (MLE) in a two-step process. The
+inner step maximizes the log-likelihood with respect to the linear correlation matrix, given a fixed
+value for the degrees of freedom. This conditional maximization is placed within a 1-D
+maximization with respect to the degrees of freedom, thus maximizing the log-likelihood over all
+
+Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation
+
+14-77

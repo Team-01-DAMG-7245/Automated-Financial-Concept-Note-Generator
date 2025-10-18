@@ -1,0 +1,50 @@
+signalTT = timetable(yBT,predYRLSTMBT,RowTimes=tBT);
+
+Store the backtest midprices in a timetable.
+
+mpTT = timetable(mpBT,RowTimes=tBT);
+
+Run the backtest by passing the backtest engine, midprice data, and signal data to runBacktest.
+
+bte = runBacktest(bte,mpTT,signalTT);
+
+Backtesting MaxProfit. Total progress: 5000 of 16190.
+Backtesting MaxProfit. Total progress: 10000 of 16190.
+Backtesting MaxProfit. Total progress: 15000 of 16190.
+Backtesting RiskyLSTM. Total progress: 5000 of 16190.
+Backtesting RiskyLSTM. Total progress: 10000 of 16190.
+Backtesting RiskyLSTM. Total progress: 15000 of 16190.
+
+bte is a backtestEngine object containing the results of the backtest.
+
+Display a summary of the results by passing the completed backtest engine object to summary.
+
+summary(bte)
+
+ans=9×2 table
+                       MaxProfit     RiskyLSTM 
+                       __________    __________
+
+TotalReturn          0.076328      0.067524
+    SharpeRatio           0.15212       0.13715
+    Volatility         2.9873e-05    2.9433e-05
+    AverageTurnover      0.010624     0.0090802
+    MaxTurnover               0.5           0.5
+    AverageReturn       4.544e-06    4.0366e-06
+    MaxDrawdown        0.00018751    0.00055683
+    AverageBuyCost              0             0
+    AverageSellCost             0             0
+
+The total nonannualized returns of the maximum profit and risky LSTM model are 7.6% and 6.8%,
+respectively. Therefore, the LSTM neural network performs well over the historical data.
+
+Plot equity curves of the strategies by passing the completed backtest engine object to
+equityCurve.
+
+figure
+equityCurve(bte)
+
+2
+Performing Common Financial Tasks
+
+2-92

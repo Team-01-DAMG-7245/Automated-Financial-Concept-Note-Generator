@@ -1,0 +1,6 @@
+Page 1460
+================================================================================
+
+Given a user-specified time series array associated with this equation, this function performs a
+Brownian (stochastic) interpolation by sampling from a conditional Gaussian distribution. This
+sampling technique is sometimes called a Brownian bridge.

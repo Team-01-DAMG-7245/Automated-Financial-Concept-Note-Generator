@@ -1,0 +1,12 @@
+{
+  "page": 1745,
+  "original_text": "obj = obj.setEquality([ ], [ ])",
+  "ocr_text": "obj_=obj.setEquality([],[])",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 261.63,
+    "x1": 272.95,
+    "y1": 272.09
+  },
+  "confidence": "high"
+}

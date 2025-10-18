@@ -1,0 +1,7 @@
+Page 435
+================================================================================
+
+Instead of requiring a specific level for the portfolio's average percentage of WoB, the goal is to find
+the traditional mean-variance efficient frontiers while excluding assets that have a percentage of WoB
+lower than a given threshold. You can plot the exclusion using the plotExclusionExample function
+in Local Functions on page 4-269.

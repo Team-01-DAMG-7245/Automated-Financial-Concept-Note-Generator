@@ -1,0 +1,12 @@
+{
+  "page": 1315,
+  "original_text": "βt = A + C(rp, t −rB, t)",
+  "ocr_text": "Bp=A+tC(rpt-1p,t)",
+  "bbox": {
+    "x0": 111.91,
+    "y0": 253.89,
+    "x1": 209.49,
+    "y1": 267.63
+  },
+  "confidence": "high"
+}

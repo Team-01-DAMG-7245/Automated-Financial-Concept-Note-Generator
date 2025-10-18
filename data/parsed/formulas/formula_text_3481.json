@@ -1,0 +1,12 @@
+{
+  "page": 1937,
+  "original_text": "CDS price = Notional * (Current Spread - Contract Spread) * RPV01",
+  "ocr_text": "CDSprice=Notional*(CurrentSpread-ContractSpread)*RPV0O1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 331.85,
+    "x1": 481.3,
+    "y1": 343.48
+  },
+  "confidence": "high"
+}

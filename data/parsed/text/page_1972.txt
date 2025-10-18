@@ -1,0 +1,17 @@
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+bndprice | cdai | cdprice | stepcpnprice | tbillprice | datetime
+
+Topics
+“Coupon Date Calculations” on page 2-20
+“Yield Conventions” on page 2-21
+
+15
+Functions
+
+15-666

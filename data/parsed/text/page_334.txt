@@ -1,0 +1,62 @@
+Portfolio with 20% Target Return
+            Weight 
+    CAT      1.1445
+    INTC    0.17452
+    MO       9.6521
+    MSFT    0.85862
+    UTX      56.918
+    WMT      31.253
+
+bBlotter = dataset({100*bwgt(bwgt > 0),'Weight'}, 'obsnames', p.AssetList(bwgt > 0));
+
+displayPortfolio(sprintf('Portfolio with %g%% Target Risk', 100*TargetRisk), bBlotter, false);
+
+Portfolio with 15% Target Risk
+            Weight    
+    AA      1.4503e-21
+    AIG     1.4891e-21
+    AXP     2.2204e-14
+    BA      2.2204e-14
+    C       2.2204e-14
+    CAT     2.2861e-21
+    DD      2.2204e-14
+    DIS     2.2204e-14
+    GE      1.7122e-21
+    GM      2.1146e-22
+    HD      2.2204e-14
+    HON     2.4868e-21
+    HPQ     3.3135e-21
+    IBM     5.4874e-21
+    INTC        2.2585
+    JNJ         9.2162
+    JPM     2.2204e-14
+    KO      2.2204e-14
+    MCD     2.2204e-14
+    MMM         16.603
+    MO          15.388
+    MRK     2.2204e-14
+    MSFT        4.4467
+    PFE     2.2204e-14
+    PG           4.086
+    SBC     2.4069e-22
+    UTX         10.281
+    VZ      2.2204e-14
+    WMT         25.031
+    XOM          12.69
+
+Transactions Costs
+
+The Portfolio object makes it possible to account for transaction costs as part of the optimization
+problem. Although individual costs can be set for each asset, use the scalar expansion features of the
+Portfolio object's functions to set up uniform transaction costs across all assets and compare
+efficient frontiers with gross versus net portfolio returns.
+
+BuyCost = 0.0020;
+SellCost = 0.0020;
+
+q = setCosts(p,BuyCost,SellCost);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-166

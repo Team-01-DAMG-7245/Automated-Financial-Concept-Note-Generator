@@ -1,0 +1,5 @@
+Page 1510
+================================================================================
+
+JumpMean — Instantaneous mean of random percentage jump sizes
+array | deterministic function of time | deterministic function of time and state

@@ -1,0 +1,12 @@
+{
+  "page": 1278,
+  "original_text": "z    = Example_CopulaRNG(returns, nPeriods, 'Gaussian');\nf    = Example_LongstaffSchwartz(nPeriods, nTrials);\nGBM2 = gbm(diag(r(ones(1,nIndices))/252),   eye(nIndices), 'StartState', X);",
+  "ocr_text": "z =Example_CopulaRNG(returns,nPeriods,Gaussian);\nf =Example_LongstaffSchwartz(nPeriods,_nTrials);\nGBM2_=gbm(diag(r(ones(1,nIndices))/252), eye(nIndices),StartState,X);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 656.9,
+    "x1": 501.8,
+    "y1": 688.97
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1967,
+  "original_text": "Example: profilestructs =\nexposureprofiles(dates,exposures,'ProfileSpec','PFE','PFEProbabilityLevel',.9\n)",
+  "ocr_text": "Example:profilestructs=\nexposureprofiles(dates,exposures,ProfileSpec,PFE,PFEProbabilityLevel,.9\n)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 241.75,
+    "x1": 553.54,
+    "y1": 277.38
+  },
+  "confidence": "high"
+}

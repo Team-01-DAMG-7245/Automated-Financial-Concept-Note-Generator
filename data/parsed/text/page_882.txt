@@ -1,0 +1,117 @@
+PortfolioMAD
+Problem
+
+PortfolioMAD
+Function
+
+Type of
+Optimization
+Problem
+
+Main Solver
+Helper Solver
+
+PortfolioMAD
+without active
+'Conditional'
+BoundType,
+MinNumAssets,
+MaxNumAssets, or
+conditional budget
+constraints
+
+estimateFronti
+erByReturn
+
+Nonlinear
+objective with
+linear constraints
+
+'TrustRegionCP
+', 'ExtendedCP',
+or 'fmincon'
+using setSolver
+
+'linprog' using
+setSolver
+
+PortfolioMAD
+without active
+'Conditional'
+BoundType,
+MinNumAssets,
+MaxNumAssets, or
+conditional budget
+constraints
+
+estimateFronti
+erLimits
+
+Nonlinear or linear
+objective with
+linear constraints
+
+For ‘min’:
+nonlinear
+objective,
+'TrustRegionCP
+', 'ExtendedCP',
+or 'fmincon'
+using setSolver
+
+For ‘max’: linear
+objective,
+'linprog' using
+setSolver
+
+Not applicable
+
+PortfolioMAD with
+active
+'Conditional'
+BoundType,
+MinNumAssets,
+MaxNumAssets, or
+conditional budget
+constraints
+
+estimateFronti
+erByRisk
+
+The problem is
+formulated by
+introducing
+NumAssets binary
+variables to
+indicate whether
+the corresponding
+asset is invested or
+not. Therefore, it
+requires a mixed
+integer nonlinear
+programming
+solver. Three types
+of MINLP solvers
+are offered, see
+setSolverMINLP.
+
+Mixed integer
+nonlinear
+programming
+solver (MINLP)
+using
+setSolverMINLP
+
+'fmincon' is used
+when the
+estimate
+functions reduce
+the problem into
+NLP. This solver is
+configured through
+setSolver.
+
+6
+MAD Portfolio Optimization Tools
+
+6-102

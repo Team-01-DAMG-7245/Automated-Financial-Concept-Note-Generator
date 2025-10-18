@@ -1,0 +1,62 @@
+UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: []
+
+Setting Default Constraints Using the setDefaultConstraints Function
+
+An alternative approach is to use the setDefaultConstraints function. If the number of assets is
+already known in a PortfolioMAD object, use setDefaultConstraints with no arguments to set
+up the necessary bound and budget constraints. Suppose that you have 20 assets to set up the
+portfolio set for a default problem:
+
+p = PortfolioMAD('NumAssets', 20);
+p = setDefaultConstraints(p);
+disp(p)
+
+PortfolioMAD with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                  NumScenarios: []
+                          Name: []
+                     NumAssets: 20
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [20×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [20×1 categorical]
+
+If the number of assets is unknown, setDefaultConstraints accepts NumAssets as an optional
+argument to form a portfolio set for a default problem. Suppose that you have 20 assets:
+
+Working with MAD Portfolio Constraints Using Defaults
+
+6-51

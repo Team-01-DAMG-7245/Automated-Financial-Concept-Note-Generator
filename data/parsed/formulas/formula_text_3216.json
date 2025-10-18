@@ -1,0 +1,12 @@
+{
+  "page": 1726,
+  "original_text": "p = Portfolio('AssetMean', m, 'AssetCovar', C);\np = p.setInequality(AbsCons(:,1:end-1), AbsCons(:,end));\np.plotFrontier;",
+  "ocr_text": "p=Portfolio(AssetMean,m,_AssetCovar,C);\np=p.setInequality(AbsCons(:,1:end-1),AbsCons(:,end));\np.plotFrontier;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 540.43,
+    "x1": 393.41,
+    "y1": 572.49
+  },
+  "confidence": "high"
+}

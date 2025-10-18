@@ -1,0 +1,57 @@
+-0.0003    0.0022    0.0064    0.0027
+    0.0002    0.0010    0.0027    0.0119
+
+The first PortfolioMAD object, p, contains scenarios obtained from price data in Y where NaN values
+are discarded and the second PortfolioCVaR object, q, contains scenarios obtained from price data
+in Y that accommodate missing values. Each time you run this example, you get different estimates
+for the moments in p and q.
+
+Simulating Normal Scenarios from Time Series Data
+
+This example shows how the simulateNormalScenariosByData function accepts asset returns or
+prices stored in a table or timetable. The simulateNormalScenariosByData function implicitly
+works with matrices of data or data in a table or timetable object using the same rules for
+whether the data are returns or prices.
+
+To illustrate, use array2timetable to create a timetable for 14 assets from CAPMuniverse and the
+use the timetable to simulate scenarios for PortfolioMAD.
+
+load CAPMuniverse
+time = datetime(Dates,'ConvertFrom','datenum');
+stockTT = array2timetable(Data,'RowTimes',time, 'VariableNames', Assets);
+stockTT.Properties
+
+ans = 
+  TimetableProperties with properties:
+
+Description: ''
+                UserData: []
+          DimensionNames: {'Time'  'Variables'}
+           VariableNames: {'AAPL'  'AMZN'  'CSCO'  'DELL'  'EBAY'  'GOOG'  'HPQ'  'IBM'  'INTC'  
+           VariableTypes: ["double"    "double"    "double"    "double"    "double"    "double"  
+    VariableDescriptions: {}
+           VariableUnits: {}
+      VariableContinuity: []
+                RowTimes: [1471×1 datetime]
+               StartTime: 03-Jan-2000
+              SampleRate: NaN
+                TimeStep: NaN
+                  Events: []
+        CustomProperties: No custom properties are set.
+      Use addprop and rmprop to modify CustomProperties.
+
+% Notice that GOOG has missing data, because it was not listed before Aug 2004
+head(stockTT, 5)
+
+Time          AAPL         AMZN         CSCO         DELL         EBAY       GOOG       HP
+    ___________    _________    _________    _________    _________    _________    ____    _____
+
+03-Jan-2000     0.088805       0.1742     0.008775    -0.002353      0.12829    NaN       0.0
+    04-Jan-2000    -0.084331     -0.08324     -0.05608     -0.08353    -0.093805    NaN     -0.07
+    05-Jan-2000     0.014634     -0.14877    -0.003039     0.070984     0.066875    NaN     -0.00
+    06-Jan-2000    -0.086538    -0.060072    -0.016619    -0.038847    -0.012302    NaN     -0.06
+    07-Jan-2000     0.047368     0.061013       0.0587    -0.037708    -0.000964    NaN      0.02
+
+Asset Returns and Scenarios Using PortfolioMAD Object
+
+6-41

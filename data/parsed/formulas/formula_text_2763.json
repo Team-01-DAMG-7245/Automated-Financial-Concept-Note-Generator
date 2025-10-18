@@ -1,0 +1,12 @@
+{
+  "page": 1402,
+  "original_text": "DriftRate = drift(A,B)",
+  "ocr_text": "DriftRate=drift(A,B)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 637.78,
+    "x1": 222.45,
+    "y1": 649.41
+  },
+  "confidence": "high"
+}

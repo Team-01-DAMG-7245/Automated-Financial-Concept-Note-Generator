@@ -1,0 +1,34 @@
+Extreme Value Theory & Piecewise Probability Distributions
+
+To prepare for copula modeling, characterize individually the distribution of returns of each index.
+Although the distribution of each return series may be characterized parametrically, it is useful to fit
+a semi-parametric model using a piecewise distribution with generalized Pareto tails. This uses
+Extreme Value Theory to better characterize the behavior in each tail.
+
+The Statistics and Machine Learning Toolbox™ software currently supports two univariate probability
+distributions related to EVT, a statistical tool for modeling the fat-tailed behavior of financial data
+such as asset returns and insurance losses:
+
+•
+Generalized Extreme Value (GEV) distribution, which uses a modeling technique known as the
+block maxima or minima method. This approach divides a historical dataset into a set of sub-
+intervals, or blocks, and the largest or smallest observation in each block is recorded and fitted to
+a GEV distribution.
+
+•
+Generalized Pareto (GP) distribution, uses a modeling technique known as the distribution of
+exceedances or peaks over threshold method. This approach sorts a historical dataset and fits the
+amount by which those observations that exceed a specified threshold to a GP distribution.
+
+The following analysis highlights the Pareto distribution, which is more widely used in risk
+management applications.
+
+Suppose we want to create a complete statistical description of the probability distribution of daily
+asset returns of any one of the equity indices. Assume that this description is provided by a piecewise
+semi-parametric distribution, where the asymptotic behavior in each tail is characterized by a
+generalized Pareto distribution.
+
+14
+Stochastic Differential Equations
+
+14-74

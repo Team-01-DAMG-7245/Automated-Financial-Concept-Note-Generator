@@ -1,0 +1,36 @@
+than the other results timetables because the Positions timetables include initial positions of the
+strategy as their first row. You can consider the initial positions as the Time = 0 portfolio positions. In
+this example, the Positions timetables start with February 1, while the others start on February 2.
+
+head(backtester.Positions.InverseVariance)
+
+Time           Cash          BA       CAT       DIS        GE       IBM       MCD       MS
+    ___________    ___________    ______    ______    ______    ______    ______    ______    ___
+
+01-Feb-2006              0    1401.2    682.17    795.14    2186.8    1900.1    1874.9    115
+    02-Feb-2006              0    1402.8    673.74    789.74    2170.8    1883.5    1863.6      1
+    03-Feb-2006     1.0987e-12    1386.5     671.2     787.2    2167.3    1854.3    1890.5      1
+    06-Feb-2006     1.0971e-12    1391.9    676.78    785.62    2161.1    1843.6    1899.1    112
+    07-Feb-2006              0      1400    661.66    840.23    2131.9    1851.6    1902.3    111
+    08-Feb-2006    -2.2198e-12    1409.8     677.9    846.58    2160.4    1878.2      1911    111
+    09-Feb-2006              0    1414.8    674.35    840.87    2172.2      1869    1908.3    110
+    10-Feb-2006              0    1425.1    677.29     839.6    2195.8    1890.6    1909.3    110
+
+% Plot the change of asset allocation over time
+t = backtester.Positions.InverseVariance.Time;
+positions = backtester.Positions.InverseVariance.Variables;
+h = area(t,positions);
+title('Inverse Variance Positions');
+xlabel('Date');
+ylabel('Asset Positions');
+xtickformat('MM/dd');
+ylim([0 12000])
+xlim([t(1) t(end)])
+cm = parula(numel(h));
+for i = 1:numel(h)
+    set(h(i),'FaceColor',cm(i,:));
+end
+
+summary
+
+15-299

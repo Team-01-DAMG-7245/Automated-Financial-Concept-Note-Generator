@@ -1,0 +1,12 @@
+{
+  "page": 1146,
+  "original_text": "perCosts = sum(rew);",
+  "ocr_text": "perCosts=sum(rew);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 198.36,
+    "y1": 287.09
+  },
+  "confidence": "high"
+}

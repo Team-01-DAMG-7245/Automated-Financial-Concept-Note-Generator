@@ -1,0 +1,12 @@
+{
+  "page": 1703,
+  "original_text": "(SDEMRD): dXt = S(t)[L(t) −Xt]dt + D(t, Xt",
+  "ocr_text": "(SDEMRD):dX;=S(t)[L(t)-Xp]dt+D(t, x?",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 582.52,
+    "x1": 280.26,
+    "y1": 598.94
+  },
+  "confidence": "high"
+}

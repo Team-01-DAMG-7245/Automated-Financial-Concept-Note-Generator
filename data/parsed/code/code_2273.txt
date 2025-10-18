@@ -1,0 +1,5 @@
+Page 2108
+================================================================================
+
+Character array representing NumMat, returned as an array of date character vectors. If no output
+variable is assigned, the function prints the array to the display.

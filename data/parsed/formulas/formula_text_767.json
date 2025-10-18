@@ -1,0 +1,12 @@
+{
+  "page": 448,
+  "original_text": "% Table and plot of the average ESG score for the mixed and tilted\n% strategies throughout the investment period.\nnexttile(t)\nTAvgESG = averageESGTimetable(backtester,ESGnumeric,ESG0);",
+  "ocr_text": "TableandplotoftheaverageESGscoreforthemixedandtilted\nstrategiesthroughouttheinvestmentperiod.\n\nnexttile(t)\nTAvgESG=averageESGTimetable(backtester,ESGnumeric,ESGQ);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 425.83,
+    "x1": 447.59,
+    "y1": 468.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1910,
+  "original_text": "bdates = busdays( ___ ,bdmode,Holiday) generates a vector of business days between the last\nbusiness date of the period that contains the start date (sdate), and the last business date of period\nthat contains the end date (edate) using optional input arguments. If Holiday is not supplied, the\ndates are generated based on United States holidays. If you do not supply bdmode, bdates generates\na daily vector.",
+  "ocr_text": "bdates=busdays(___,bdmode,Holiday)generatesavectorofbusinessdaysbetweenthelast\nbusinessdateoftheperiodthatcontainsthestartdate(sdate),andthelastbusinessdateofperiod\nthatcontainstheenddate(edate)usingoptionalinputarguments.IfHolidayisnotsupplied,the\ndatesaregeneratedbasedonUnitedStatesholidays.Ifyoudonotsupplybdmode,bdatesgenerates\nadailyvector.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 296.2,
+    "x1": 556.9,
+    "y1": 355.83
+  },
+  "confidence": "high"
+}

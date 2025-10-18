@@ -1,0 +1,61 @@
+Using ObjectiveBound
+
+Use the ObjectiveBound name-value argument to provide an initial bound for the objective
+function. Providing an initial bound saves computation time because the solver does not have to solve
+an initial NLP relaxation to obtain the initial bound. Set up the MINLP solver, then test its
+performance when you do not provide an initial bound.
+
+% Minimize tracking error without a lower bound
+wTE = 1/p.NumAssets*ones(p.NumAssets,1);
+trackingError = @(w) (w-wTE)'*p.AssetCovar*(w-wTE);
+pInt2 = setSolverMINLP(pInt,'OuterApproximation',...
+    ExtendedFormulation=true);
+s = tic;
+wTE_NoBound = estimateCustomObjectivePortfolio(pInt2,trackingError);
+timeTE_NoBound = toc(s)
+
+timeTE_NoBound = 
+8.6102
+
+Since the lowest value that can be achieved by the tracking error is 0, you can use that as the lower
+bound with the ObjectiveBound name-value argument. Test the solver's performance when you do
+provide this lower bound. The solver is much faster when you provide one.
+
+% Minimize tracking error with a lower bound
+s = tic;
+wTE_WithBound = estimateCustomObjectivePortfolio(pInt2,trackingError,ObjectiveBound=0);
+timeTE_WithBound = toc(s)
+
+timeTE_WithBound = 
+2.0617
+
+Because you are minimizing the objective function, the bound that you provide to
+estimateCustomObjectivePortfolio must be a lower bound.
+
+If you want to maximize the objective, then when you set ObjectiveSense to 'maximize', the
+ObjectiveBound is the upper bound of the objective function. Maximize the Sharpe ratio using
+ObjectiveBound.
+
+% Maximize Sharpe ratio with upper bound
+sharpeRatio = @(x) (p.AssetMean'*x)/sqrt(x'*p.AssetCovar*x);
+wSR = estimateCustomObjectivePortfolio(pInt,sharpeRatio,...
+    ObjectiveSense='maximize',ObjectiveBound=1);
+
+Note that the ObjectiveBound name-value argument is ignored in continuous problems.
+
+Using InitialPoint
+
+Use the InitialPoint name-value argument to provide an initial point to the Portfolio solvers at
+the beginning of the iterations. You can use this name-value argument in continuous problems with
+nonconvex objectives to search the feasible region to find different local minima.
+
+Set up a risk parity portfolio with constraints, group the constraints, then estimate the portfolio
+without and with specifying an initial point. Compare the risk parities of these portfolios.
+
+% Risk parity portfolio with constraints
+sigma = [5;5;7;10;15;15;15;18]/100;
+rho = [ 1    0.8  0.6 -0.2 -0.1 -0.2 -0.2 -0.2;
+
+estimateCustomObjectivePortfolio
+
+15-921

@@ -1,0 +1,10 @@
+Page 616
+================================================================================
+
+if BuyTrade
+    LOBPrices = AskPrices;
+    LOBSizes = AskSizes;
+else
+    LOBPrices = BidPrices;
+    LOBSizes = BidSizes;
+end

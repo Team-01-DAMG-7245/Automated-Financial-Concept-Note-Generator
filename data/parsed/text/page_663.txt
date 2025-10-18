@@ -1,0 +1,59 @@
+For example, this occurs with bonds and derivatives. In the case of bonds with a nonzero probability
+of default, such scenarios would likely include asset returns that are −100% to indicate default and
+some values slightly greater than −100% to indicate recovery rates.
+
+Although the PortfolioCVaR object has functions to simulate multivariate normal scenarios from
+either data or moments (simulateNormalScenariosByData and
+simulateNormalScenariosByMoments), the usual approach is to specify scenarios directly from
+your own simulation functions. These scenarios are entered directly as a matrix with a sample for all
+assets across each row of the matrix and with samples for an asset down each column of the matrix.
+The architecture of the CVaR portfolio optimization tools references the scenarios through a function
+handle so scenarios that have been set cannot be accessed directly as a property of the
+PortfolioCVaR object.
+
+Setting Scenarios Using the PortfolioCVaR Function
+
+Suppose that you have a matrix of scenarios in the AssetScenarios variable. The scenarios are set
+through the PortfolioCVaR object with:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0;
+0.00408 0.0289 0.0204 0.0119;
+0.00192 0.0204 0.0576 0.0336;
+0 0.0119 0.0336 0.1225 ];
+
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR('Scenarios', AssetScenarios);
+
+disp(p.NumAssets)
+disp(p.NumScenarios)
+
+4
+
+20000
+
+Notice that the PortfolioCVaR object determines and fixes the number of assets in NumAssets and
+the number of scenarios in NumScenarios based on the scenario’s matrix. You can change the
+number of scenarios by calling the PortfolioCVaR object with a different scenario matrix. However,
+once the NumAssets property has been set in the object, you cannot enter a scenario matrix with a
+different number of assets. The getScenarios function lets you recover scenarios from a
+PortfolioCVaR object. You can also obtain the mean and covariance of your scenarios using
+estimateScenarioMoments.
+
+Although not recommended for the casual user, an alternative way exists to recover scenarios by
+working with the function handle that points to scenarios in the PortfolioCVaR object. To access
+some or all the scenarios from a PortfolioCVaR object, the hidden property
+localScenarioHandle is a function handle that points to a function to obtain scenarios that have
+already been set. To get scenarios directly from a PortfolioCVaR object p, use
+
+scenarios = p.localScenarioHandle([], []);
+
+and to obtain a subset of scenarios from rows startrow to endrow, use
+
+Asset Returns and Scenarios Using PortfolioCVaR Object
+
+5-37

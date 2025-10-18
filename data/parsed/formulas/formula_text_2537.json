@@ -1,0 +1,12 @@
+{
+  "page": 1294,
+  "original_text": "numLatentFactors = 3;\nloadings = factoran( InferredVolatility.Variables, numLatentFactors );",
+  "ocr_text": "numLatentFactors=3;\nloadings=factoran(InferredVolatility.Variables,numLatentFactors);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 517.88,
+    "x1": 469.26,
+    "y1": 539.15
+  },
+  "confidence": "high"
+}

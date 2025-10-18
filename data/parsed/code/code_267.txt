@@ -1,0 +1,8 @@
+Page 259
+================================================================================
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ]; 
+p = Portfolio('TrackingError', 0.08, 'TrackingPort', x0);
+disp(p.NumAssets)
+disp(p.TrackingError)
+disp(p.TrackingPort)

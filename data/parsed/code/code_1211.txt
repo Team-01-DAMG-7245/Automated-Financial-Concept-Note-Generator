@@ -1,0 +1,11 @@
+Page 1237
+================================================================================
+
+When you specify parameters as functions, they must evaluate properly when passed a scalar, real-
+valued sample time (t), and an NVars-by-1 state vector (Xt). They must also generate an array of
+appropriate dimensions, which in the first case is a scalar constant, and in the second case is a scalar,
+piecewise constant function of time alone. You are not required to use either time (t) or state (Xt). In
+the current example, the function evaluates properly when passed time followed by state, thereby
+satisfying the minimal requirements. The fact that it also evaluates correctly when passed only time
+simply indicates that the function does not require the state vector Xt. The important point to make is
+that it works when you pass it t, Xt .

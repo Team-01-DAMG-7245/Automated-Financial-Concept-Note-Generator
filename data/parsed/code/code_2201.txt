@@ -1,0 +1,6 @@
+Page 1921
+================================================================================
+
+cdprice assumes that the certificates of deposit pay interest at maturity. Because of the simple
+interest treatment of these securities, this function is best used for short-term maturities (less than 1
+year). The default simple interest calculation uses the Basis for the actual/360 convention (2).

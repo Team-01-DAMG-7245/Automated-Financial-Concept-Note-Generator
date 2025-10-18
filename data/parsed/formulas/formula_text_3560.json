@@ -1,0 +1,12 @@
+{
+  "page": 1995,
+  "original_text": "QuasiCouponDates = cfdatesq(Settle,Maturity) returns a matrix of quasi-coupon dates\nexpressed in datetime format (if any inputs are in datetime format).",
+  "ocr_text": "QuasiCouponDates=cfdatesq(Settle,Maturity)returnsamatrixofquasi-coupondates\nexpressedindatetimeformat(ifanyinputsareindatetimeformat).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 277.52,
+    "x1": 535.01,
+    "y1": 301.15
+  },
+  "confidence": "high"
+}

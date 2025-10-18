@@ -1,0 +1,8 @@
+Page 2398
+================================================================================
+
+A = [ 1 1 1 0 0 ];
+b = 0.5;
+p = PortfolioMAD;
+p = setEquality(p, A, b);
+[AEquality, bEquality] = getEquality(p)

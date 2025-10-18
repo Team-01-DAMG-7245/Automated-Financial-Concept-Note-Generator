@@ -1,0 +1,12 @@
+{
+  "page": 568,
+  "original_text": "% Create the portfolio problem.\np = Portfolio(AssetMean=mu,AssetCovar=Sigma);\n% Long-only fully invested contraints\np = setDefaultConstraints(p);",
+  "ocr_text": "Createtheportfolioproblem.\np=Portfolio(AssetMean=mu,AssetCovar=Sigma);\nLong-onlyfullyinvestedcontraints\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.23,
+    "x1": 333.81,
+    "y1": 632.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,87 @@
+Working with Transaction Costs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-46
+Setting Transaction Costs Using the PortfolioMAD Function . . . . . . . . . .
+6-46
+Setting Transaction Costs Using the setCosts Function . . . . . . . . . . . . . .
+6-46
+Setting Transaction Costs with Scalar Expansion . . . . . . . . . . . . . . . . . .
+6-48
+
+Working with MAD Portfolio Constraints Using Defaults . . . . . . . . . . . .
+6-50
+Setting Default Constraints for Portfolio Weights Using PortfolioMAD Object
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-50
+
+Working with 'Simple' Bound Constraints Using PortfolioMAD Object .
+6-54
+Setting 'Simple' Bounds Using the PortfolioMAD Function . . . . . . . . . . .
+6-54
+Setting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .
+6-54
+Setting 'Simple' Bounds Using the PortfolioMAD Function or setBounds
+Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-55
+
+Working with Budget Constraints Using PortfolioMAD Object . . . . . . . .
+6-57
+Setting Budget Constraints Using the PortfolioMAD Function . . . . . . . . .
+6-57
+Setting Budget Constraints Using the setBudget Function . . . . . . . . . . .
+6-57
+
+Working with Conditional Budget Constraints Using PortfolioMAD Object
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-59
+Setting Conditional Budget Constraints Using the PortfolioMAD Function
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-59
+Setting Conditional Budget Constraints Using the setConditionalBudget
+Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-59
+
+Working with Group Constraints Using PortfolioMAD Object . . . . . . . . .
+6-61
+Setting Group Constraints Using the PortfolioMAD Function . . . . . . . . .
+6-61
+Setting Group Constraints Using the setGroups and addGroups Functions
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-61
+
+Working with Group Ratio Constraints Using PortfolioMAD Object . . . .
+6-64
+Setting Group Ratio Constraints Using the PortfolioMAD Function . . . . .
+6-64
+Setting Group Ratio Constraints Using the setGroupRatio and
+addGroupRatio Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-65
+
+Working with Linear Equality Constraints Using PortfolioMAD Object
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-67
+Setting Linear Equality Constraints Using the PortfolioMAD Function . .
+6-67
+Setting Linear Equality Constraints Using the setEquality and addEquality
+Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-67
+
+Working with Linear Inequality Constraints Using PortfolioMAD Object
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-69
+Setting Linear Inequality Constraints Using the PortfolioMAD Function .
+6-69
+Setting Linear Inequality Constraints Using the setInequality and
+addInequality Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-69
+
+Working with 'Conditional' BoundType, MinNumAssets, and
+MaxNumAssets Constraints Using PortfolioMAD Objects . . . . . . . . . .
+6-71
+Setting 'Conditional' BoundType Constraints Using the setBounds Function
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-71
+Setting the Limits on the Number of Assets Invested Using the
+setMinMaxNumAssets Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-72
+
+xvii

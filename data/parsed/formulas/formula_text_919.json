@@ -1,0 +1,12 @@
+{
+  "page": 500,
+  "original_text": "x ≥0",
+  "ocr_text": "x20",
+  "bbox": {
+    "x0": 131.6,
+    "y0": 463.12,
+    "x1": 155.46,
+    "y1": 474.75
+  },
+  "confidence": "high"
+}

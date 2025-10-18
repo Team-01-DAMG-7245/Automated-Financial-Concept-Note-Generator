@@ -1,0 +1,27 @@
+Transposing the summary table to make plots of certain metrics can be useful.
+
+% Transpose the summary table to plot the metrics.
+summaryByMetrics = rows2vars(summaryByStrategies);
+summaryByMetrics.Properties.VariableNames{1} = 'Strategy'
+
+summaryByMetrics=5×10 table
+             Strategy             TotalReturn    SharpeRatio    Volatility    AverageTurnover    
+    __________________________    ___________    ___________    __________    _______________
+
+{'Equal_Weighted'        }      0.18745        0.12559      0.0063474       0.00087623       
+    {'Max_Sharpe_Ratio'      }      0.14991       0.092456      0.0070186        0.0065762       
+    {'Inverse_Variance'      }      0.15906        0.12179      0.0055626        0.0028666       
+    {'Markowitz_Optimization'}      0.17404        0.10339      0.0072466        0.0058268       
+    {'Robust_Optimization'   }      0.15655        0.11442      0.0058447        0.0025172
+
+% Compare the strategy turnover.
+names = [backtester.Strategies.Name];
+nameLabels = strrep(names,'_',' ');
+bar(summaryByMetrics.AverageTurnover)
+title('Average Turnover')
+ylabel('Daily Turnover (%)')
+set(gca,'xticklabel',nameLabels)
+
+Backtest Investment Strategies Using Financial Toolbox
+
+4-245

@@ -1,0 +1,12 @@
+{
+  "page": 202,
+  "original_text": "p = Portfolio('numassets',5);\np = setAssetList(p);\ndisp(p.AssetList)",
+  "ocr_text": "p=Portfolio(numassets,5);\np=setAssetList(p);\ndisp(p.AssetList)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 556.67,
+    "x1": 247.13,
+    "y1": 588.73
+  },
+  "confidence": "high"
+}

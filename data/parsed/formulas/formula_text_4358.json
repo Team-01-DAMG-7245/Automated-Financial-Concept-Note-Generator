@@ -1,0 +1,12 @@
+{
+  "page": 2468,
+  "original_text": "linebreak(Data)\nh = linebreak(ax,Data)",
+  "ocr_text": "linebreak(Data)\nh=Linebreak(ax,Data)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.02,
+    "x1": 222.45,
+    "y1": 213.65
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1114,
+  "original_text": "A = [Deltas; Gammas; Vegas; Prices];\nb = [0; 0; 0; 17000];\nOptionQuantities = A\\b % Quantity (number) of each option.",
+  "ocr_text": "A=[Deltas;Gammas;Vegas;Prices];\nb=[0;0;0;17000];\nOptionQuantities=Ab*Quantity(number)ofeachoption.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.03,
+    "x1": 404.26,
+    "y1": 158.09
+  },
+  "confidence": "high"
+}

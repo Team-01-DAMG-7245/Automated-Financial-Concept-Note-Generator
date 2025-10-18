@@ -1,0 +1,12 @@
+{
+  "page": 462,
+  "original_text": "function new_weights = riskParityFcn(~,pricesTT)\n% Risk parity rebalance function",
+  "ocr_text": "functionnew_weights=riskParityFcn(,pricesTT)\nRiskparityrebalancefunction",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.83,
+    "x1": 350.07,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

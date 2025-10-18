@@ -1,0 +1,12 @@
+{
+  "page": 2350,
+  "original_text": "Price = 99.99;\nSpread = 50;\nSettle = datetime(2011,1,20);\nMaturity = datetime(2012,1,15);\nLatestFloatingRate = 0.05;\nStubRate = 0.049;\nSpotRate = 0.05;\nReset = 4;\nBasis = 2;",
+  "ocr_text": "Price=99.99;\n\nSpread=50;\nSettle=datetime(2011,1,20);\nMaturity=datetime(2012,1,15);\nLatestFloatingRate=0.05;\nStubRate=0.049;\nSpotRate=0.05;\n\nReset=4;\n\nBasis=2;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 493.08,
+    "x1": 257.96,
+    "y1": 589.95
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,10 @@
+% Plot the number of shares of each asset
+plot(backtester.Positions.PartialShares{:,2:end} ./ pricesTT{:,:});
+title('Number of Shares per Asset (Partial Shares)')
+
+plot(backtester.Positions.WholeShares{:,2:end} ./ pricesTT{:,:})
+title('Number of Shares per Asset (Whole Shares)')
+
+backtestStrategy
+
+15-253

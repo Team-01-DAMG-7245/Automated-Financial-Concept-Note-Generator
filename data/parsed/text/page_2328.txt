@@ -1,0 +1,57 @@
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using a PortfolioCVaR object.
+
+For more information on creating a PortfolioCVaR object, see
+
+•
+PortfolioCVaR
+
+Data Types: object
+
+pwgt — Collection of portfolios
+matrix
+
+Collection of portfolios, specified as a NumAssets-by-NumPorts matrix, where NumAssets is the
+number of assets in the universe and NumPorts is the number of portfolios in the collection of
+portfolios.
+
+Data Types: double
+
+Output Arguments
+
+pvar — Estimates for value-at-risk of portfolio returns for each portfolio in pwgt
+vector
+
+Estimates for value-at-risk of portfolio returns for each portfolio in pwgt, returned as a NumPorts
+vector.
+
+More About
+
+Value-at-Risk
+
+Value-at-Risk (VaR) estimates the maximum potential loss that a portfolio could face over a specified
+time period, given normal market conditions and a specified confidence level.
+
+Tips
+
+You can also use dot notation to estimate the value-at-risk of PortfolioCVaR object.
+
+pvar = obj.estimatePortVaR(pwgt);
+
+Version History
+Introduced in R2012b
+
+See Also
+estimatePortStd | setProbabilityLevel | rng
+
+Topics
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+15
+Functions
+
+15-1022

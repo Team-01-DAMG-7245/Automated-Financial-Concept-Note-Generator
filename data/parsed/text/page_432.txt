@@ -1,0 +1,55 @@
+Portfolio Optimization Using Social Performance Measure
+
+Use a Portfolio object to minimize the variance, maximize return, and maximize the average
+percentage of women on a company's board. The same workflow can be applied with other
+Environmental, Social and Governance (ESG) criteria, such as an ESG score, a climate, or a
+temperature score.
+
+The goal of this example is to find portfolios that are efficient in the sense that they minimize the
+variance, maximize return, and maximize the average percentage of women on the board of directors.
+To find the average percentage of women on a company's board (WoB) for a given portfolio, this
+example uses a weighted sum of the percentages of WoB for each individual asset, where the weights
+are given by the amount invested in each asset for the portfolio. By defining the average percentage
+of WoB this way, the WoB function is linear with respect to the weights.
+
+Load Portfolio Data
+
+load CAPMuniverse
+% Assume that the percentage of women on the board of directors per
+% company are as follows:
+WoB = [0.2857; 0.5; 0.3; 0.2857; 0.3077; 0.2727; ...
+    0.4167; 0.2143; 0.3; 0.4167; 0.3077];
+table(WoB,'VariableNames',{'WoB'},'RowNames',Assets(1:11))
+
+ans=11×1 table
+             WoB  
+            ______
+
+AAPL    0.2857
+    AMZN       0.5
+    CSCO       0.3
+    DELL    0.2857
+    EBAY    0.3077
+    GOOG    0.2727
+    HPQ     0.4167
+    IBM     0.2143
+    INTC       0.3
+    MSFT    0.4167
+    ORCL    0.3077
+
+Create Portfolio Object
+
+Create a standard Portfolio object and incorporate the list of assets and estimate the moments of
+the assets' returns from the data. Use setDefaultConstraints to set the default mean-variance
+portfolio constraints. These constraints require fully invested, long-only portfolios where the
+nonnegative weights must sum to 1.
+
+% Create portfolio with default constraints.
+p = Portfolio('AssetList',Assets(1:11));
+p = estimateAssetMoments(p, Data(:,1:11));
+p = setDefaultConstraints(p);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-264

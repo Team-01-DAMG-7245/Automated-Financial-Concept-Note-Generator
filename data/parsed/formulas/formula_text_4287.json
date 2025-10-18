@@ -1,0 +1,12 @@
+{
+  "page": 2426,
+  "original_text": "Weights = holdings2weights( ___ ,Budget) converts portfolio holdings into portfolio weights\nusing an optional argument for Budget.",
+  "ocr_text": "Weights=holdings2weights(__,Budget)convertsportfolioholdingsintoportfolioweights\nusinganoptionalargumentforBudget.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 306.19,
+    "x1": 549.45,
+    "y1": 329.82
+  },
+  "confidence": "high"
+}

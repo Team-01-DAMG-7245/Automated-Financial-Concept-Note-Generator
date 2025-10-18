@@ -1,0 +1,36 @@
+Input Arguments
+
+Data — Data for opening, high, low, and closing prices
+matrix | table | timetable
+
+Data for opening, high, low, and closing prices, specified as a matrix, table, or timetable. For matrix
+input, Data is an M-by-4 matrix of opening, high, low, and closing prices stored in the corresponding
+columns. Timetables and tables with M rows must contain variables named 'Open', 'High', 'Low',
+and 'Close' (case insensitive).
+
+Data Types: double | table | timetable
+
+Color — Three element color vector
+background color of figure window (default) | color vector [R G B] | string
+
+(Optional) Three element color vector, specified as a [R G B] color vector or a string specifying the
+color name. The default color differs depending on the background color of the figure window.
+
+RGB triplets and hexadecimal color codes are useful for specifying custom colors.
+
+•
+An RGB triplet is a three-element row vector whose elements specify the intensities of the red,
+green, and blue components of the color. The intensities must be in the range [0,1]; for example,
+[0.4 0.6 0.7].
+
+•
+A hexadecimal color code is a character vector or a string scalar that starts with a hash symbol (#)
+followed by three or six hexadecimal digits, which can range from 0 to F. The values are not case
+sensitive. Thus, the color codes "#FF8800", "#ff8800", "#F80", and "#f80" are equivalent.
+
+Alternatively, you can specify some common colors by name. This table lists the named color options,
+the equivalent RGB triplets, and hexadecimal color codes.
+
+highlow
+
+15-1117

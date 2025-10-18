@@ -1,0 +1,38 @@
+{'line', prsk, pret, {'Standard'}, 'b:'}, ...
+    {'line', qrsk, qret, {'Dollar-Neutral'}, 'b'}, ...
+    {'scatter', qsrsk, qsret, {'Sharpe'}}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+% Set up a dataset object that contains the portfolio that maximizes the Sharpe ratio.
+
+Blotter = dataset({100*qswgt(abs(qswgt) > 1.0e-4), 'Weight'}, ...
+    {100*qslong(abs(qswgt) > 1.0e-4), 'Long'}, ...
+    {100*qsshort(abs(qswgt) > 1.0e-4), 'Short'}, ...
+    'obsnames', AssetList(abs(qswgt) > 1.0e-4));
+
+displayPortfolio('Dollar-Neutral Portfolio with Maximum Sharpe Ratio', Blotter, true, 'Dollar-Neu
+
+Dollar-Neutral Portfolio with Maximum Sharpe Ratio
+            Weight     Long       Short 
+    AA       0.5088     0.5088         0
+    AIG      3.0394     3.0394         0
+    AXP     0.92797    0.92797         0
+    BA      -3.4952          0    3.4952
+    C        14.003     14.003         0
+    CAT      3.7261     3.7261         0
+    DD      -18.063          0    18.063
+    DIS     -4.8236          0    4.8236
+    GE      -3.6178          0    3.6178
+    GM      -3.7211          0    3.7211
+    HD        1.101      1.101         0
+    HON     -1.4349          0    1.4349
+    HPQ     0.09909    0.09909         0
+    IBM     -8.0585          0    8.0585
+    INTC     1.7693     1.7693         0
+    JNJ      1.3696     1.3696         0
+    JPM     -2.5271          0    2.5271
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-175

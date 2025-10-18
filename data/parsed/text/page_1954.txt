@@ -1,0 +1,56 @@
+creditexposures
+
+Compute credit exposures from contract values
+
+Syntax
+
+[exposures,exposurecpty] = creditexposures(values,counterparties)
+[exposures,exposurecpty] = creditexposures( ___ ,Name,Value)
+
+[exposures,exposurecpty,collateral] = creditexposures( ___ ,Name,Value)
+
+Description
+
+[exposures,exposurecpty] = creditexposures(values,counterparties) computes the
+counterparty credit exposures from an array of mark-to-market OTC contract values. These exposures
+are used when calculating the CVA (credit value adjustment) for a portfolio.
+
+[exposures,exposurecpty] = creditexposures( ___ ,Name,Value) adds optional name-
+value arguments.
+
+[exposures,exposurecpty,collateral] = creditexposures( ___ ,Name,Value) computes
+the counterparty credit exposures from an array of mark-to-market OTC contract values using
+optional name-value pair arguments for CollateralTable and Dates, the collateral output is
+returned for the simulated collateral amounts available to counterparties at each simulation date and
+over each scenario.
+
+Examples
+
+View Contract Values and Exposures Over Time for a Particular Counterparty
+
+After computing the mark-to-market contract values for a portfolio of swaps over many scenarios,
+compute the credit exposure for a particular counterparty. View the contract values and credit
+exposure over time.
+
+First, load data (ccr.mat) containing the mark-to-market contract values for a portfolio of swaps
+over many scenarios.
+
+load ccr.mat
+% Look at one counterparty.
+cpID = 4;
+cpValues = squeeze(sum(values(:,swaps.Counterparty == cpID,:),2));
+subplot(2,1,1)
+simulationDates = datetime(simulationDates,"ConvertFrom","datenum");
+plot(simulationDates,cpValues);
+title(sprintf('Mark-to-Market Contract Values for Counterparty: %d',cpID));
+xtickformat('MMMyy');
+ylabel('Portfolio Value ($)')
+% Compute the exposure by counterparty.
+[exposures, expcpty] = creditexposures(values,swaps.Counterparty, ...
+'NettingID',swaps.NettingID);
+% View the credit exposure over time for the counterparty.
+
+15
+Functions
+
+15-648

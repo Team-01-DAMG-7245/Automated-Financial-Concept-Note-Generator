@@ -1,0 +1,12 @@
+{
+  "page": 2299,
+  "original_text": "p = setBounds(p, 0.02, 0.5,'BoundType', 'Conditional', 'NumAssets', 3);",
+  "ocr_text": "p=setBounds(p,0.02,0.5,BoundType,Conditional,NumAssets,3);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 256.73,
+    "x1": 583.07,
+    "y1": 267.19
+  },
+  "confidence": "high"
+}

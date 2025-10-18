@@ -1,0 +1,5 @@
+Page 1536
+================================================================================
+
+Reversion level or long-run average of the stochastic variance process, returned as an array or
+deterministic function of time.

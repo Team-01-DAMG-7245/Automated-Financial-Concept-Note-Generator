@@ -1,0 +1,57 @@
+CDF such that the upper and lower thresholds have 10% of the residuals reserved for the tail. Then
+you can fit the amount that those extreme residuals in the tail fall beyond the associated threshold to
+a parametric GPD by maximum likelihood.
+
+The following code creates an object of type paretotails. The paretotails object encapsulates
+the estimates of the parametric generalized Pareto (GP) lower tail, the nonparametric kernel-
+smoothed interior, and the parametric GP upper tail to construct a composite semiparametric CDF for
+each index. This combination forms a composite semiparametric cumulative distribution function
+(CDF) for the index.
+
+The paretotails object offers methods to evaluate the CDF and inverse CDF (quantile function). It
+also provides the ability to query cumulative probabilities and quantiles of the boundaries between
+each segment of the piecewise distribution.
+
+nPoints      = 200;      % Number of sampled points in each region of the CDF
+tailFraction = 0.1;      % Decimal fraction of residuals allocated to each tail
+
+tails = cell(nIndices,1);  % Cell array of Pareto tail objects
+
+for i = 1:nIndices
+    tails{i} = paretotails(residuals(:,i), tailFraction, 1 - tailFraction, 'kernel');
+end
+
+Having estimated the three distinct regions of the composite semiparametric empirical CDF, you can
+graphically concatenate and display the result. The lower and upper tail regions, displayed in red and
+blue, respectively, are suitable for extrapolation, while the kernel-smoothed interior, in black, is
+suitable for interpolation.
+
+The following code calls the CDF and inverse CDF methods of the paretotails object with different
+data. Specifically, the referenced methods have access to the fitted state and are now invoked to
+select and analyze specific regions of the probability curve, acting as a powerful data filtering
+mechanism.
+
+figure
+hold on
+grid on
+
+minProbability = cdf(tails{index}, (min(residuals(:,index))));
+maxProbability = cdf(tails{index}, (max(residuals(:,index))));
+
+pLowerTail = linspace(minProbability  , tailFraction    , nPoints); % Sample lower tail
+pUpperTail = linspace(1 - tailFraction, maxProbability  , nPoints); % Sample upper tail
+pInterior  = linspace(tailFraction    , 1 - tailFraction, nPoints); % Sample interior
+
+plot(icdf(tails{index}, pLowerTail), pLowerTail, 'red'  , 'LineWidth', 2)
+plot(icdf(tails{index}, pInterior) , pInterior , 'black', 'LineWidth', 2)
+plot(icdf(tails{index}, pUpperTail), pUpperTail, 'blue' , 'LineWidth', 2)
+
+xlabel('Standardized Residual')
+ylabel('Probability')
+title('Empirical CDF')
+legend({'Pareto lower tail' 'Kernel smoothed interior' ...
+        'Pareto upper tail'}, 'Location', 'NorthWest')
+
+Using Extreme Value Theory and Copula Fitting to Generate Synthetic Data
+
+10-67

@@ -1,0 +1,83 @@
+Data Types: double
+
+Period — Premium payment frequency
+4 (default) | numeric with values 1, 2, 3, 4, 6 or 12
+
+Premium payment frequency, specified as the comma-separated pair consisting of 'Period' and a N-
+by-1 vector with values of 1, 2, 3, 4, 6, or 12.
+
+Data Types: double
+
+Basis — Day-count basis of contract
+2 (actual/360) (default) | positive integers of the set [1...13] | vector of positive integers of the set
+[1...13]
+
+Day-count basis of the contract, specified as the comma-separated pair consisting of 'Basis' and a
+positive integer using a NINST-by-1 vector.
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+BusinessDayConvention — Business day conventions
+actual (default) | character vector
+
+Business day conventions, specified as the comma-separated pair consisting of
+'BusinessDayConvention' and a character vector. The selection for business day convention
+determines how non-business days are treated. Non-business days are defined as weekends plus any
+other date that businesses are not open (for example, statutory holidays). Values are:
+
+•
+actual — Non-business days are effectively ignored. Cash flows that fall on non-business days
+are assumed to be distributed on the actual date.
+
+•
+follow — Cash flows that fall on a non-business day are assumed to be distributed on the
+following business day.
+
+15
+Functions
+
+15-636

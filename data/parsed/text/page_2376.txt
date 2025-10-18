@@ -1,0 +1,58 @@
+datetime(2001,4,30) 
+              datetime(2001,6,25) 
+              datetime(2001,9,4) 
+              datetime(2001,11,12)];
+
+Settle = datetime(2000,11,3);
+
+InputCompounding = 1;
+InputBasis = 2;
+OutputCompounding = 1;
+OutputBasis = 2; 
+[ZeroRates, CurveDates] = fwd2zero(ForwardRates, CurveDates,...
+Settle,'InputCompounding',1,'InputBasis',2,'OutputCompounding',1,'OutputBasis',2)
+
+ZeroRates = 10×1
+
+0.0469
+    0.0515
+    0.0531
+    0.0532
+    0.0538
+    0.0532
+    0.0536
+    0.0539
+    0.0556
+    0.0543
+
+CurveDates = 10×1 datetime
+   06-Nov-2000
+   11-Dec-2000
+   15-Jan-2001
+   05-Feb-2001
+   04-Mar-2001
+   02-Apr-2001
+   30-Apr-2001
+   25-Jun-2001
+   04-Sep-2001
+   12-Nov-2001
+
+Input Arguments
+
+ForwardRates — Annualized implied forward rates
+decimal fraction
+
+Annualized implied forward rates, specified as a (NUMBONDS)-by-1 vector using decimal fractions. In
+aggregate, the rates in ForwardRates constitute an implied forward curve for the investment
+horizon represented by CurveDates. The first element pertains to forward rates from the settlement
+date to the first curve date.
+
+Data Types: double
+
+CurveDates — Maturity dates
+datetime array | string array | date character vector
+
+15
+Functions
+
+15-1070

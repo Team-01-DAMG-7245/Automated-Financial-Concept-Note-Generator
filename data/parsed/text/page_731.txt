@@ -1,0 +1,60 @@
+Estimate Efficient Frontiers for PortfolioCVaR Object
+
+In this section...
+
+“Obtaining CVaR Portfolio Risks and Returns” on page 5-105
+
+“Obtaining Portfolio Standard Deviation and VaR” on page 5-106
+
+Whereas “Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+focused on estimation of efficient portfolios, this topic focuses on the estimation of efficient frontiers.
+For information on the workflow when using PortfolioCVaR objects, see “PortfolioCVaR Object
+Workflow” on page 5-16.
+
+Obtaining CVaR Portfolio Risks and Returns
+
+This example shows how to use the functions estimatePortReturn and estimatePortRisk with a
+PortfolioCVaR object to provide estimates for the return (or return proxy), risk (or the risk proxy).
+These functions have the same input syntax but have different combinations of outputs.
+
+Suppose that you have this following portfolio optimization problem that gave you a collection of
+portfolios along the efficient frontier in pwgt:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0;
+0.00408 0.0289 0.0204 0.0119;
+0.00192 0.0204 0.0576 0.0336;
+0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+
+p = setInitPort(p, pwgt0);
+pwgt = estimateFrontier(p);
+
+Given pwgt0 and pwgt, use the portfolio risk and return estimation functions to obtain risks and
+returns for your initial portfolio and the portfolios on the efficient frontier:
+
+prsk0 = estimatePortRisk(p, pwgt0);
+pret0 = estimatePortReturn(p, pwgt0);
+prsk = estimatePortRisk(p, pwgt);
+pret = estimatePortReturn(p, pwgt);
+
+You obtain these risks and returns:
+
+display(prsk0)
+
+prsk0 = 
+0.0577
+
+Estimate Efficient Frontiers for PortfolioCVaR Object
+
+5-105

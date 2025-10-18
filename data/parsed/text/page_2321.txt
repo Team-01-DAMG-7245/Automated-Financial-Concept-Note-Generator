@@ -1,0 +1,58 @@
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+rng(11);
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+pwgt = estimateFrontierLimits(p);
+prsk = estimatePortRisk(p, pwgt);
+disp(prsk)
+
+0.0407
+    0.1911
+
+The function rng(seed) resets the random number generator to produce the documented results. It is
+not necessary to reset the random number generator to simulate scenarios.
+
+Mean-Absolute Deviation Returns as the Proxy for Portfolio Risk for a PortfolioMAD Object
+
+Given a portfolio pwgt, use the estimatePortRisk function to show the mean-absolute deviation of
+portfolio returns for each portfolio.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+rng(11);
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioMAD;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+
+pwgt = estimateFrontierLimits(p);
+prsk = estimatePortRisk(p, pwgt);
+disp(prsk)
+
+0.0177
+    0.0809
+
+estimatePortRisk
+
+15-1015

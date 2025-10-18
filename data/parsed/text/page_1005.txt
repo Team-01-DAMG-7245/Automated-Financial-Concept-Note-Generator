@@ -1,0 +1,54 @@
+Step 8. Validate at Decile Level
+
+In step 7 on page 8-84, the validatemodel function uses the default 'AnalysisLevel' at the
+individual score level. Now consider using the validatemodel function with 'decile' level
+validation statistics.
+
+[Stats,T] = validatemodel(sc,'AnalysisLevel','deciles');
+disp(Stats)
+
+Measure              Value 
+    ________________________    _______
+
+{'Accuracy Ratio'      }    0.31659
+    {'Area under ROC curve'}     0.6583
+    {'KS statistic'        }    0.21543
+    {'KS score'            }     482.52
+
+disp(T)
+
+Scores    ProbDefault    TrueBads    FalseBads    TrueGoods    FalseGoods    Sensitivity    F
+    ______    ___________    ________    _________    _________    __________    ___________    _
+
+447.51      0.57922         68           52          751          329          0.17128       
+    469.34       0.4678        125          115          688          272          0.31486       
+    482.52      0.41453        176          183          620          221          0.44332       
+     496.7      0.37202        214          265          538          183          0.53904       
+    504.49      0.33294        254          345          458          143           0.6398       
+    515.51      0.29986        294          426          377          103          0.74055       
+    528.08       0.2691        330          510          293           67          0.83123       
+    541.38      0.23827        361          599          204           36          0.90932       
+    563.16      0.19765        384          696          107           13          0.96725       
+    635.41      0.13789        397          803            0            0                1
+
+You can use the validation statistics to display the actual and predicted probabilities of default at the
+decile level.
+
+% The TrueBads and FalseBads columns contain cumulative data
+bads = diff([0;T.TrueBads]);
+goods = diff([0;T.FalseBads]);
+obsPD = bads./(bads+goods);
+predPD = T.ProbDefault;
+bar(T.Scores,obsPD)
+hold on
+scatter(T.Scores,predPD,'*')
+xlabel('Score')
+ylabel('Probability of Default')
+title('Probability of Default vs. Score')
+grid
+legend('Actual Probability of Default', 'Predicted Probability of Default')
+hold off
+
+Case Study for Credit Scorecard Analysis
+
+8-87

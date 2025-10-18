@@ -1,0 +1,62 @@
+PortfolioAssetWeight — Asset portfolio weights
+numeric
+
+Asset portfolio weights, returned as a NumAssets-by-NumPeriods matrix in decimals.
+
+Data Types: double
+
+BenchmarkAssetWeight — Asset benchmark weights
+numeric
+
+Asset benchmark weights, returned as a NumAssets-by-NumPeriods matrix in decimals.
+
+Data Types: double
+
+PortflioCategoryReturn — Portfolio category returns
+numeric
+
+Portfolio category returns, returned as a NumCategories-by-NumPeriods matrix in decimals.
+
+Data Types: double
+
+BenchmarkCategoryReturn — Benchmark category returns
+numeric
+
+Benchmark category returns, returned as a NumCategories-by-NumPeriods matrix in decimals.
+
+Data Types: double
+
+PortfolioCategoryWeight — Portfolio category weights
+numeric
+
+Portfolio category weights, returned as a NumCategories-by-NumPeriods matrix in decimals.
+
+Data Types: double
+
+BenchmarkCategoryWeight — Benchmark category weights
+numeric
+
+Benchmark category weights, returned as a NumCategories-by-NumPeriods matrix in decimals.
+
+Data Types: double
+
+PortfolioReturn — Total portfolio return
+numeric
+
+Total portfolio return, returned as a scalar decimal.
+
+Data Types: double
+
+BenchmarkReturn — Total benchmark return
+numeric
+
+Total benchmark return, returned as a scalar decimal.
+
+Data Types: double
+
+ActiveReturn — Total active return
+numeric
+
+brinsonAttribution
+
+15-5

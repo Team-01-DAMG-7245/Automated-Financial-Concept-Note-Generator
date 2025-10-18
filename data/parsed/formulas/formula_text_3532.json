@@ -1,0 +1,12 @@
+{
+  "page": 1969,
+  "original_text": "Yield = cdyield(Price,CouponRate,Settle,Maturity,IssueDate) computes the yield to\nmaturity of a certificate of deposit given its clean price.",
+  "ocr_text": "Yield=cdyield(Price,CouponRate,Settle,Maturity,IssueDate)computestheyieldto\nmaturityofacertificateofdepositgivenitscleanprice.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 258.0,
+    "x1": 546.41,
+    "y1": 281.63
+  },
+  "confidence": "high"
+}

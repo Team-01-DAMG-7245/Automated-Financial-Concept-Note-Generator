@@ -1,0 +1,6 @@
+Page 552
+================================================================================
+
+% Reward Function Handle
+constantReturnRewardFcnHandle = @(loggedSignals) constantReturnReward(loggedSignals, ...
+    initialWealth,finalTimePeriod,targetWealth,constantReturn,WMin,WMax);

@@ -1,0 +1,12 @@
+{
+  "page": 1025,
+  "original_text": "fprintf('\\nPayment Schedule:\\n\\n');",
+  "ocr_text": "fprintf(nPaymentSchedule:nn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 618.79,
+    "x1": 279.64,
+    "y1": 629.26
+  },
+  "confidence": "high"
+}

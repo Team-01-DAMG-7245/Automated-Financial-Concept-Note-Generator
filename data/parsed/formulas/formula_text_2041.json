@@ -1,0 +1,12 @@
+{
+  "page": 1054,
+  "original_text": "[scTreated, mdl] = fitmodel(scTreated,'Display','off');\nscTreated = formatpoints(scTreated,'PointsOddsAndPDO',[500 2 50]);\nScPoints = displaypoints(scTreated);\ndisp(ScPoints)",
+  "ocr_text": "[scTreated,mdl]=fitmodel(scTreated,Display,off);\nscTreated=formatpoints(scTreated,PointsOddsAndPDO,[5002_50]);\nScPoints=displaypoints(scTreated);\n\ndisp(ScPoints)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 472.63,
+    "x1": 447.61,
+    "y1": 515.5
+  },
+  "confidence": "high"
+}

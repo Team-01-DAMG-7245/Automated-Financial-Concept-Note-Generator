@@ -1,0 +1,61 @@
+Upper bound for group constraints, specified as a vector.
+
+Note  If input is scalar, UpperGroup undergoes scalar expansion to be conformable with
+GroupMatrix.
+
+Data Types: double
+
+Output Arguments
+
+obj — Updated portfolio object
+object for portfolio
+
+Updated portfolio object, returned as a Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+More About
+
+Group Constraints
+
+Group constraints specify that the total weight or allocation of assets within a particular group must
+satisfy certain conditions relative to the total portfolio.
+
+Group constraints help maintain diversification by preventing excessive concentration in specific
+asset groups. They also align the portfolio with the investor's risk tolerance and investment strategy.
+
+Tips
+
+•
+You can also use dot notation to add group constraints for portfolio weights.
+
+obj = obj.addGroups(GroupMatrix, LowerGroup, UpperGroup)
+
+•
+To remove group constraints from any of the portfolio objects using dot notation, enter empty
+arrays for the corresponding arrays.
+
+Version History
+Introduced in R2011a
+
+See Also
+setGroups
+
+Topics
+“Working with Group Constraints Using Portfolio Object” on page 4-69
+“Working with Group Constraints Using PortfolioCVaR Object” on page 5-62
+“Working with Group Constraints Using PortfolioMAD Object” on page 6-61
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+15
+Functions
+
+15-448

@@ -1,0 +1,62 @@
+UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: []
+
+Setting Default Constraints Using the setDefaultConstraints Function
+
+An alternative approach is to use the setDefaultConstraints function. If the number of assets is
+already known in a Portfolio object, use setDefaultConstraints with no arguments to set up
+the necessary bound and budget constraints. Suppose that you have 20 assets to set up the portfolio
+set for a default problem:
+
+p = Portfolio('NumAssets', 20);
+p = setDefaultConstraints(p);
+disp(p)
+
+Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                     AssetMean: []
+                    AssetCovar: []
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: []
+                     NumAssets: 20
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [20×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+
+Working with Portfolio Constraints Using Defaults
+
+4-59

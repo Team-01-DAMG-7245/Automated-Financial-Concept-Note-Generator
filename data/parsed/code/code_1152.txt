@@ -1,0 +1,6 @@
+Page 1202
+================================================================================
+
+•
+During simulation, the simulation method calls each function the same number of times:
+NPeriods * NSteps.

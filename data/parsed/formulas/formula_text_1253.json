@@ -1,0 +1,12 @@
+{
+  "page": 622,
+  "original_text": "summaryByStrategies = summary(backtester)",
+  "ocr_text": "summaryByStrategies=summary(backtester)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 425.83,
+    "x1": 312.14,
+    "y1": 436.29
+  },
+  "confidence": "high"
+}

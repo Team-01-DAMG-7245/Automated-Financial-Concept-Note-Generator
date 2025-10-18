@@ -1,0 +1,12 @@
+{
+  "page": 2235,
+  "original_text": "obj = estimateAssetMoments(obj,AssetReturns)\nobj = estimateAssetMoments( ___ ,Name,Value)",
+  "ocr_text": "obj_=estimateAssetMoments(obj,AssetReturns)\nobj_=estimateAssetMoments(_,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.03,
+    "x1": 354.9,
+    "y1": 212.66
+  },
+  "confidence": "high"
+}

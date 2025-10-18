@@ -1,0 +1,61 @@
+and state, it must generate an NVars-by-1 column vector of reversion levels when called with two
+inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Sigma — Sigma represents the parameter V
+array or deterministic function of time or deterministic function of time and state
+
+Sigma represents the parameter V, specified as an array or a deterministic function of time.
+
+If you specify Sigma as an array, it must be an NVars-by-NBrowns matrix of instantaneous volatility
+rates or as a deterministic function of time. In this case, each row of Sigma corresponds to a
+particular state variable. Each column corresponds to a particular Brownian source of uncertainty,
+and associates the magnitude of the exposure of state variables with sources of uncertainty.
+
+As a deterministic function of time, when Sigma is called with a real-valued scalar time t as its only
+input, Sigma must produce an NVars-by-NBrowns matrix. If you specify Sigma as a function of time
+and state, it must return an NVars-by-NBrowns matrix of volatility rates when invoked with two
+inputs:
+
+•
+A real-valued scalar observation time t.
+
+•
+An NVars-by-1 state vector Xt.
+
+Data Types: double | function_handle
+
+Note Although the hwv object does not enforce restrictions on the signs of any of these input
+arguments, each argument is specified as a positive value.
+
+Output Arguments
+
+HWV — HWV model
+HWV object
+
+HWV model, returned as a HWV object.
+
+Properties
+
+StartTime — Starting time of first observation, applied to all state variables
+0 (default) | scalar
+
+Starting time of first observation, applied to all state variables, specified as a scalar
+
+Data Types: double
+
+StartState — Initial values of state variables
+1 (default) | scalar, column vector, or matrix
+
+Initial values of state variables, specified as a scalar, column vector, or matrix.
+
+hwv
+
+15-141

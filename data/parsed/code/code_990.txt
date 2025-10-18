@@ -1,0 +1,6 @@
+Page 998
+================================================================================
+
+After fitting the logistic model, by default the points are unscaled and come directly from the
+combination of WOE values and model coefficients. The displaypoints function summarizes the
+scorecard points.

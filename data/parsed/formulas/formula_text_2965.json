@@ -1,0 +1,12 @@
+{
+  "page": 1554,
+  "original_text": "% Compute rolling returns from lookback window.\nrollingReturns = assetPrices{end,:} ./ assetPrices{1,:};",
+  "ocr_text": "Computerollingreturnsfromlookbackwindow.\nrollingReturns=assetPrices{end,:}./assetPrices{1,:};",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 125.43,
+    "x1": 393.41,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

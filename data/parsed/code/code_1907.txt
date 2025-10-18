@@ -1,0 +1,5 @@
+Page 1536
+================================================================================
+
+Level — Reversion level or long-run average of stochastic variance process
+array or deterministic function of time

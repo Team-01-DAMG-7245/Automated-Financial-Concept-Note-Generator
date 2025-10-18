@@ -1,0 +1,12 @@
+{
+  "page": 546,
+  "original_text": "% Store the optimum strategy and value function.\n    if t<T\n        portPath(t+1) = portIdx(WNodeIdx,t+1);\n    else\n        portPath(t+1) = nan;\n    end\n    VPath(t+1) = V(WNodeIdx,t+1);\nend\nend",
+  "ocr_text": "Storetheoptimumstrategyandvaluefunction.\niftsT\nportPath(t+1)=portIdx(WNodeIdx,t+1);\nelse\nportPath(t+1)=nan;\nend\nVPath(t+1)=V(WNodeIdx,t+1);\nend\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 168.63,
+    "x1": 371.74,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

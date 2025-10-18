@@ -1,0 +1,12 @@
+{
+  "page": 1897,
+  "original_text": "TF =\nTime factor for a given cash flow. Time is measured in semiannual periods from\nthe settlement date to the cash flow date. In computing time factors, use SIA\nactual/actual day count conventions for all time factor calculations.",
+  "ocr_text": "TF= Timefactorforagivencashflow.Timeismeasuredinsemiannualperiodsfrom\nthesettlementdatetothecashflowdate.Incomputingtimefactors,useSIA\nactual/actualdaycountconventionsforalltimefactorcalculations.",
+  "bbox": {
+    "x0": 92.25,
+    "y0": 173.21,
+    "x1": 544.83,
+    "y1": 208.84
+  },
+  "confidence": "high"
+}

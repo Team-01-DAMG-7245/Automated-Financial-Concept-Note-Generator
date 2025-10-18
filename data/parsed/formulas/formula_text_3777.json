@@ -1,0 +1,12 @@
+{
+  "page": 2136,
+  "original_text": "NumDays = daysact('7-sep-2002',  '25-dec-2002')",
+  "ocr_text": "NumDays=daysact(7-sep-2002,_25-dec-2002)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 500.96,
+    "x1": 344.67,
+    "y1": 511.43
+  },
+  "confidence": "high"
+}

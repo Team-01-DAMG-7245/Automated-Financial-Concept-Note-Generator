@@ -1,0 +1,12 @@
+{
+  "page": 583,
+  "original_text": "EnvConstants_Train_Sell.NumLevels = NumLevels;\nEnvConstants_Train_Sell.IS_TWAP = IS_TWAP_Step_Train_Sell;",
+  "ocr_text": "EnvConstants_Train_Sell.NumLevels=NumLevels;\nEnvConstants_Train_Sell.IS_TWAP=IS_TWAP_StepTrain_Sell;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 404.24,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

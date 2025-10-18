@@ -1,0 +1,12 @@
+{
+  "page": 1723,
+  "original_text": "Example: F = ts2func(yields,'Times',(0:nPeriods - 1)')",
+  "ocr_text": "Example:F=ts2func(yields,Times,(0:nPeriods-1))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 238.34,
+    "x1": 406.27,
+    "y1": 249.97
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,4 @@
+Page 425
+================================================================================
+
+% Use the crossoverRebalanceFunction for both the SMA

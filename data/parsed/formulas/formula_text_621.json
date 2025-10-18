@@ -1,0 +1,12 @@
+{
+  "page": 403,
+  "original_text": "Use estimateFrontierByRisk in the Portfolio class to solve the optimization problem:\nmax μaT wa , s . t . waT Σa wa ≤trisk,0 ≤wa ≤1, eTwa = 1. The Portfolio class supports has a variety of\nbuilt-in constraints that you can use to describe your portfolio problem and estimate the risk and\nreturns on the efficient frontier. For more information, see “Supported Constraints for Portfolio\nOptimization Using Portfolio Objects” on page 4-9.",
+  "ocr_text": "UseestimateFrontierByRiskinthePortfolioclasstosolvetheoptimizationproblem:\nmaxpwa,8.t.wi3qWoStrigkO-SWq1,e7w,=1.ThePortfolioclasssupportshasavarietyof\nbuilt-inconstraintsthatyoucanusetodescribeyourportfolioproblemandestimatetheriskand\nreturnsontheefficientfrontier.Formoreinformation,seeSupportedConstraintsforPortfolio\nOptimizationUsingPortfolioObjectsonpage4-9.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 263.98,
+    "x1": 557.66,
+    "y1": 327.71
+  },
+  "confidence": "high"
+}

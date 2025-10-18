@@ -1,0 +1,5 @@
+Page 2331
+================================================================================
+
+Given PortfolioMAD object p, use the estimatePortRisk function to estimate mean and covariance
+of asset return scenarios.

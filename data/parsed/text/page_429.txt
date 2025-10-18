@@ -1,0 +1,37 @@
+Conclusion
+
+The broad equity market had a very bullish 6 months in the second half of 2006 and all three of these
+strategies failed to fully capture that growth by leaving too much capital in cash. While none of these
+strategies performed well on their own, this example demonstrates how you can build signal-based
+trading strategies and backtest them to assess their performance.
+
+Local Functions
+
+The initial weight calculation function as well as the strategy rebalancing functions follow.
+
+function initial_weights = computeInitialWeights(signals)
+% Compute initial weights based on most recent signal.
+
+nAssets = size(signals,2);
+final_signal = signals{end,:};
+buys = final_signal == 1;
+initial_weights = zeros(1,nAssets);
+initial_weights(buys) = 1 / nAssets;
+
+end
+
+function new_weights = crossoverRebalanceFcn(current_weights, pricesTT, signalTT, signalNameEndin
+% Signal crossover rebalance function.
+
+% Build cell array of signal names that correspond to the crossover signals.
+symbols = pricesTT.Properties.VariableNames;
+signalNames = cellfun(@(s) sprintf('%s%s',s,signalNameEnding), symbols, 'UniformOutput', false);
+
+% Pull out the relevant signal data for the strategy.
+crossoverSignals = signalTT(:,signalNames);
+
+% Start with our current weights.
+
+Backtest Investment Strategies with Trading Signals
+
+4-261

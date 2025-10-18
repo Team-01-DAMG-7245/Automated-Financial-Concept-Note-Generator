@@ -1,0 +1,12 @@
+{
+  "page": 664,
+  "original_text": "p = PortfolioCVaR;\np = setScenarios(p, AssetScenarios);\n[mean, covar] = estimateScenarioMoments(p)",
+  "ocr_text": "p=PortfolioCVaR;\np=setScenarios(p,AssetScenarios);\n[mean,covar]=estimateScenarioMoments(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 623.45,
+    "x1": 317.55,
+    "y1": 655.52
+  },
+  "confidence": "high"
+}

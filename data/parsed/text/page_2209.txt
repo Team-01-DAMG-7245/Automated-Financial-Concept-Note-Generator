@@ -1,0 +1,55 @@
+ecmnstd
+
+Standard errors for mean and covariance of incomplete data
+
+Syntax
+
+[StdMean,StdCovar] = ecmnstd(Data,Mean,Covariance)
+[StdMean,StdCovar] = ecmnstd( ___ ,Method)
+
+Description
+
+[StdMean,StdCovar] = ecmnstd(Data,Mean,Covariance) computes standard errors for mean
+and covariance of incomplete data.
+
+Use ecmnstd after estimating the mean and covariance of Data with ecmnmle. If the mean and
+distinct covariance elements are treated as the parameter θ in a complete-data maximum-likelihood
+estimation, then as the number of samples increases, θ attains asymptotic normality such that
+
+θ −E θ ∼N 0, I−1 θ ,
+
+where E[θ] is the mean and I(θ) is the Fisher information matrix.
+
+With missing data, the Hessian H(θ) is a good approximation for the Fisher information (which can
+only be approximated when data is missing).
+
+[StdMean,StdCovar] = ecmnstd( ___ ,Method) adds an optional argument for Method.
+
+Examples
+
+Compute Standard Errors for Mean and Covariance of Incomplete Data
+
+This example shows how to compute the standard errors for mean and covariance of incomplete data
+for five years of daily total return data for 12 computer technology stocks, with six hardware and six
+software companies
+
+load ecmtechdemo.mat
+
+The time period for this data extends from April 19, 2000 to April 18, 2005. The sixth stock in Assets
+is Google (GOOG), which started trading on August 19, 2004. So, all returns before August 20, 2004
+are missing and represented as NaNs. Also, Amazon (AMZN) had a few days with missing values
+scattered throughout the past five years.
+
+[ECMMean, ECMCovar] = ecmnmle(Data)
+
+ECMMean = 12×1
+
+0.0008
+    0.0008
+   -0.0005
+    0.0002
+    0.0011
+
+ecmnstd
+
+15-903

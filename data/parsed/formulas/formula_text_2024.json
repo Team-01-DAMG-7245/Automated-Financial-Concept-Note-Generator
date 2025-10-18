@@ -1,0 +1,12 @@
+{
+  "page": 1046,
+  "original_text": "missingResStatus = ismissing(dataToImpute.ResStatus);\n% Fit ensemble of classification learners\nrfResStatus = fitcensemble(dataToImpute,'ResStatus','Method','Bag',...\n    'NumLearningCycles',200,'Learners',tmp,'CategoricalPredictors',...\n    {'EmpStatus','OtherCC'});\nrfImputedData.ResStatus(missingResStatus) = predict(rfResStatus,...\n    dataToImpute(missingResStatus,:));",
+  "ocr_text": "missingResStatus=ismissing(dataToImpute.ResStatus);\nFitensembleofclassificationlearners\nrfResStatus=fitcensemble(dataToImpute,ResStatus,Method,Bag,...\nNumLearningCycles,200,Learners,tmp,CategoricalPredictors,...\n{EmpStatus,OtherCC});\nrfImputedData.ResStatus(missingResStatus)=predict(rfResStatus,...\ndataToImpute(missingResStatus,:));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 469.29,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

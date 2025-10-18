@@ -1,0 +1,79 @@
+A trading strategy requires a way to predict outcomes and what financial decisions to make based on
+the outcomes. This example uses the following trading decision logic:
+
+•
+If the forward price direction is predicted to be a gain, invest all available money.
+
+•
+If the forward price direction is predicted to be a loss, cash out.
+
+•
+Otherwise, do nothing.
+
+The rebalance function, located in this example in Local Functions on page 2-93, defines these
+predictive models:
+
+•
+Maximum Profit Model MaxProfit: A baseline model that perfectly predicts the next forward
+price direction, and therefore it always makes the right trading decisions.
+
+•
+Risky LSTM Neural Network RiskyLSTM: A model that predicts the next forward price direction
+by using the trained risky LSTM neural network RiskyLSTMMdl, with trading decisions based on
+its predictions.
+
+The inputs of rebalance are:
+
+•
+Required asset weights w, which are the proportion of capital to invest across assets
+
+•
+Required asset prices p, which are not used in this example
+
+•
+Signal data s, optional data used to inform trading decisions
+
+•
+Optional user data structure to print backtest iteration information
+
+•
+Optional column of signal data to operate on for the strategy
+
+•
+Optional strategy name
+
+Define the backtest strategies by passing the a function handle to rebalance to “Create
+backtestStrategy” on page 15-233. Set the following properties:
+
+•
+LookbackWindow=1, which indicates that the previous data point is available to the rebalance
+function during backtesting.
+
+•
+UserData=user_data, where user_data is a structure array containing the fields Counter, set
+initially to 0, and NumTestPoints, set to the backtest sample size.
+
+Store the strategies in a vector.
+
+user_data = struct("Counter",0,"NumTestPoints",nBT);
+maxMoneyStrat = backtestStrategy("MaxProfit",@(w,p,s,u)rebalance(w,p,s,u,1,"MaxProfit"), ...
+    LookbackWindow=1,UserData=user_data);
+RiskyLSTMStrat = backtestStrategy("RiskyLSTM",@(w,p,s,u)rebalance(w,p,s,u,2,"RiskyLSTM"), ...
+    LookbackWindow=1,UserData=user_data);
+strategies = [maxMoneyStrat RiskyLSTMStrat];
+
+strategies is a vector of backtestStrategy objects storing the backtest strategies.
+
+Prepare the backtest engine by supplying the vector of backtestStrategy objects to
+backtestEngine.
+
+bte = backtestEngine(strategies);
+
+bte is a backtestEngine object specifying parameters for the backtest, including the risk-free rate
+RiskFreeRate, which is 0% by default.
+
+Store the backtest forward price direction data and risky LSTM predictions in a timetable.
+
+Backtest Deep Learning Model for Algorithmic Trading of Limit Order Book Data
+
+2-91

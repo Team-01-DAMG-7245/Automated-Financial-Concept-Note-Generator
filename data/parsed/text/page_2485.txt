@@ -1,0 +1,28 @@
+medprice
+
+Median price from the series of high and low prices
+
+Syntax
+
+MedianPrice = medprice(Data)
+
+Description
+
+MedianPrice = medprice(Data) calculates the median prices from the series of high and low
+prices. The median price is the average of the high and low prices for each period.
+
+Examples
+
+Calculate the Median Prices for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+MedianPrice = medprice(TMW);
+plot(MedianPrice.Time,MedianPrice.MedianPrice) 
+title('Median Price for TMW')
+
+medprice
+
+15-1179

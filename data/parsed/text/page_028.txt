@@ -1,0 +1,17 @@
+Financial Toolbox Product Description
+Analyze financial data and develop financial models
+
+Financial Toolbox provides functions for the mathematical modeling and statistical analysis of
+financial data. You can analyze, backtest, and optimize investment portfolios taking into account
+turnover, transaction costs, semi-continuous constraints, and minimum or maximum number of
+assets. The toolbox enables you to estimate risk, model credit scorecards, analyze yield curves, price
+fixed-income instruments and European options, and measure investment performance.
+
+Stochastic differential equation (SDE) tools let you model and simulate a variety of stochastic
+processes. Time series analysis functions let you perform transformations or regressions with missing
+data and convert between different trading calendars and day-count conventions.
+
+1
+Getting Started
+
+1-2

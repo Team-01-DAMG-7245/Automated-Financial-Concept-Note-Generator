@@ -1,0 +1,12 @@
+{
+  "page": 2053,
+  "original_text": "NumCouponsRemaining = cpncount( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate) returns the whole number of coupon payments between the\nSettle and Maturity dates for a coupon bond or set of bonds using optional input arguments.",
+  "ocr_text": "NumCouponsRemaining=cpncount(___,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)returnsthewholenumberofcouponpaymentsbetweenthe\nSettleandMaturitydatesforacouponbondorsetofbondsusingoptionalinputarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 356.83,
+    "x1": 553.09,
+    "y1": 392.46
+  },
+  "confidence": "high"
+}

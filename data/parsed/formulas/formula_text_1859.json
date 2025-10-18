@@ -1,0 +1,12 @@
+{
+  "page": 947,
+  "original_text": "bHat = stats.beta;\nyHat = [ones(T,1),X]*bHat;",
+  "ocr_text": "bHat=stats.beta;\nyHat=[ones(T,1),X]*bHat;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 466.43,
+    "x1": 230.87,
+    "y1": 487.69
+  },
+  "confidence": "high"
+}

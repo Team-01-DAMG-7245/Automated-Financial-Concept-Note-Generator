@@ -1,0 +1,8 @@
+Page 2315
+================================================================================
+
+When working with a Portfolio object, the setMinMaxNumAssets function enables you to set up
+cardinality constraints for a long-only portfolio. This sets the cardinality constraints for the
+Portfolio object, where the total number of allocated assets satisfying the nonzero semi-continuous
+constraints are between MinNumAssets and MaxNumAssets. By setting
+MinNumAssets=MaxNumAssets=2, only two of the three assets are invested in the portfolio.

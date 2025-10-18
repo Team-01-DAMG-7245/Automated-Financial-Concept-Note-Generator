@@ -1,0 +1,12 @@
+{
+  "page": 2139,
+  "original_text": "NewDate = daysadd( ___ ,Basis) returns a date NewDate number of days away from\nStartDate, using the optional argument Basis for day-count.",
+  "ocr_text": "NewDate=daysadd(___,Basis)returnsadateNewDatenumberofdaysawayfrom\nStartDate,usingtheoptionalargumentBasisforday-count.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 338.29,
+    "x1": 499.75,
+    "y1": 361.92
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,16 @@
+Plot Cash Flows Using datetime Input for CFlowDates
+
+Define CFlowDates using datetime input and plot the cash flow.
+
+CouponRate = [0.06; 0.05; 0.03];
+Settle = '03-Jun-1999';
+Maturity = ['15-Aug-2000';'15-Dec-2000';'15-Jun-2000'];
+Period = [1; 2; 2];  Basis = [1; 0; 0];
+[CFlowAmounts, CFlowDates] = cfamounts(...
+CouponRate, Settle, Maturity, Period, Basis);
+cfplot(datetime(CFlowDates,'ConvertFrom','datenum','Locale','en_US'), CFlowAmounts, 'ShowAmnt',
+
+15
+Functions
+
+15-700

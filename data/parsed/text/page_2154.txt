@@ -1,0 +1,54 @@
+depsoyd
+
+Sum of years' digits depreciation
+
+Syntax
+
+Sum = depsoyd(Cost,Salvage,Life)
+
+Description
+
+Sum = depsoyd(Cost,Salvage,Life) computes the depreciation for an asset using the sum of
+years' digits method.
+
+Examples
+
+Compute the Depreciation for an Asset Using the Sum of Years' Digits Method
+
+This example shows how to calculate the depreciation for an asset using the sum of years' digits
+method where the asset is $13,000 with a life of 10 years. The salvage value of the asset is $1000.
+
+Sum = depsoyd(13000, 1000, 10)'
+
+Sum = 10×1
+103 ×
+
+2.1818
+    1.9636
+    1.7455
+    1.5273
+    1.3091
+    1.0909
+    0.8727
+    0.6545
+    0.4364
+    0.2182
+
+Input Arguments
+
+Cost — Initial value of the asset
+numeric
+
+initial value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+Salvage — Salvage value of the asset
+numeric
+
+Salvage value of the asset, specified as a scalar numeric.
+
+15
+Functions
+
+15-848

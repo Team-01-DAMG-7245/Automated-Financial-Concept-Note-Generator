@@ -1,0 +1,5 @@
+Page 1398
+================================================================================
+
+Sigma — Sigma represents the parameter V
+array or deterministic function of time

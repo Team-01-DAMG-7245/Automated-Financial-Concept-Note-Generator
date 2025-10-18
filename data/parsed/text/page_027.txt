@@ -1,0 +1,18 @@
+Getting Started
+
+•
+“Financial Toolbox Product Description” on page 1-2
+
+•
+“Expected Users” on page 1-3
+
+•
+“Analyze Sets of Numbers Using Matrix Functions” on page 1-4
+
+•
+“Matrix Algebra Refresher” on page 1-7
+
+•
+“Using Input and Output Arguments with Functions” on page 1-15
+
+1

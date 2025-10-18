@@ -1,0 +1,38 @@
+Machine Learning for Statistical Arbitrage: Introduction
+
+Machine learning techniques for processing large amounts of data are broadly applicable in
+computational finance. The series of examples introduced in this topic provides a general workflow,
+illustrating how capabilities in MATLAB apply to a specific problem in financial engineering. The
+workflow is problem-oriented, exploratory, and guided by the data and the resulting analysis. The
+overall approach, however, is useful for constructing applications in many areas.
+
+The workflow consists of these actions:
+
+•
+Formulate a simple approach to algorithmic trading, through an analysis of market
+microstructure, with the goal of identifying real-time arbitrage opportunities.
+
+•
+Use a large sample of exchange data to track order dynamics of a single security on a single day,
+selectively processing the data to develop relevant statistical measures.
+
+•
+Create a model of intraday dynamics conditioned on a selection of hyperparameters introduced
+during feature engineering and development.
+
+•
+Evaluate hyperparameter tunings using a supervising objective that computes cash returned on a
+model-based trading strategy.
+
+•
+Optimize the trading strategy using different machine learning algorithms.
+
+•
+Suggest modifications for further development.
+
+The workflow is separated into three examples:
+
+2
+Performing Common Financial Tasks
+
+2-48

@@ -1,0 +1,12 @@
+{
+  "page": 2196,
+  "original_text": "Hessian matrix, returned as an NUMPARAMSNUMPARAMS matrix of the observed log-likelihood function\nbased on current parameter estimates, where NUMPARAMS = NUMSERIES * (NUMSERIES + 3)/2\nif the MatrixFormat = 'full'. If the MatrixFormat = 'meanonly', then the NUMPARAMS =\nNUMSERIES.",
+  "ocr_text": "Hessianmatrix,returnedasanNUMPARAMSNUMPARAMSmatrixoftheobservedlog-likelihoodfunction\nbasedoncurrentparameterestimates,whereNUMPARAMS=NUMSERIES*(NUMSERIES+3)/2\niftheMatrixFormat=full.IftheMatrixFormat=meanonly,thentheNUMPARAMS=\nNUMSERIES.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 405.44,
+    "x1": 554.46,
+    "y1": 453.07
+  },
+  "confidence": "high"
+}

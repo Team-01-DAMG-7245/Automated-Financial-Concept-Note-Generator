@@ -1,0 +1,12 @@
+{
+  "page": 1240,
+  "original_text": "rng(88161,'twister')\nX = simBySolution(obj,nPeriods,'DeltaTime',dt,... \n    'nTrials',nTrials,'Processes',f.BlackScholes);",
+  "ocr_text": "rng(88161,twister)\nX=simBySolution(obj,nPeriods,DeltaTime,dt,...\nnTrials,nTrials,Processes,f.BlackScholes);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 534.55,
+    "x1": 360.92,
+    "y1": 566.62
+  },
+  "confidence": "high"
+}

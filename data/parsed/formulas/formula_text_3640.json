@@ -1,0 +1,12 @@
+{
+  "page": 2049,
+  "original_text": "ExpCovariance = corr2cov(ExpSigma, ExpCorrC)",
+  "ocr_text": "ExpCovariance=corr2cov(ExpSigma,_ExpCorrC)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 477.76,
+    "x1": 328.39,
+    "y1": 488.22
+  },
+  "confidence": "high"
+}

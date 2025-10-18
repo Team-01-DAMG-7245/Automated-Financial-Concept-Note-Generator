@@ -1,0 +1,12 @@
+{
+  "page": 1751,
+  "original_text": "obj = addGroups(obj,GroupMatrix,LowerGroup,UpperGroup) adds group constraints for\nportfolio weights to existing group constraints with an additional option for UpperGroup.",
+  "ocr_text": "obj_=addGroups(obj,GroupMatrix,LowerGroup,UpperGroup)addsgroupconstraintsfor\nportfolioweightstoexistinggroupconstraintswithanadditionaloptionforUpperGroup.",
+  "bbox": {
+    "x0": 90.01,
+    "y0": 382.5,
+    "x1": 539.16,
+    "y1": 406.13
+  },
+  "confidence": "high"
+}

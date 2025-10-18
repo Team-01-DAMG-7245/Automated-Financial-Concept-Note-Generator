@@ -1,0 +1,7 @@
+Page 1925
+================================================================================
+
+Note Alternatively, you can use the Financial Instruments Toolbox defprobstrip function to
+bootstrap a defprobcurve object from market CDS instruments. For more information, see “Get
+Started with Workflows Using Object-Based Framework for Pricing Financial Instruments” (Financial
+Instruments Toolbox).

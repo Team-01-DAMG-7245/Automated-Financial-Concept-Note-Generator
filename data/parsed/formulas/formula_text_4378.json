@@ -1,0 +1,12 @@
+{
+  "page": 2480,
+  "original_text": "load FundMarketCash\nMaxDD = maxdrawdown(TestData)",
+  "ocr_text": "load_FundMarketCash\nMaxDD_=maxdrawdown(TestData)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 449.33,
+    "x1": 247.13,
+    "y1": 470.6
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1476,
+  "original_text": "obj = sdeddo(F, G)      % dX = F(t,X)dt + G(t,X)dW",
+  "ocr_text": "obj=sdeddo(F,G) dX=F(t,X)dt+G(t,X)dW",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 166.63,
+    "x1": 360.91,
+    "y1": 177.09
+  },
+  "confidence": "high"
+}

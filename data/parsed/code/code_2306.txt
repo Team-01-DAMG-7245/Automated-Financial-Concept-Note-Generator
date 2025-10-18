@@ -1,0 +1,7 @@
+Page 2176
+================================================================================
+
+% Estimate the multivariate normal regression for each asset separately.
+    [Param, Covar] = ecmmvnrmle(TestData, TestDesign)
+    
+end

@@ -1,0 +1,53 @@
+bndconvy
+
+Bond convexity given yield
+
+Syntax
+
+[YearConvexity,PerConvexity] = bndconvy(Yield,CouponRate,Settle,Maturity)
+[YearConvexity,PerConvexity] = bndconvy( ___ ,Name,Value)
+
+Description
+
+[YearConvexity,PerConvexity] = bndconvy(Yield,CouponRate,Settle,Maturity)
+computes the convexity of NUMBONDS fixed income securities given a clean price for each bond.
+
+bndconvy determines the convexity for a bond whether the first or last coupon periods in the coupon
+structure are short or long (that is, whether the coupon structure is synchronized to maturity).
+bndconvy also determines the convexity of a zero coupon bond.
+
+[YearConvexity,PerConvexity] = bndconvy( ___ ,Name,Value) adds optional name-value
+pair arguments.
+
+Examples
+
+Find Bond Convexity Given Yield
+
+This example shows how to compute the convexity of a bond at three different yield values.
+
+Yield = [0.04; 0.055; 0.06];  
+CouponRate = 0.055; 
+Settle = datetime(1999,8,2); 
+Maturity = datetime(2004,6,15); 
+Period = 2; 
+Basis = 0;
+
+[YearConvexity, PerConvexity]=bndconvy(Yield, CouponRate,... 
+Settle, Maturity, Period, Basis)
+
+YearConvexity = 3×1
+
+21.4825
+   21.0358
+   20.8885
+
+PerConvexity = 3×1
+
+85.9298
+   84.1434
+   83.5541
+
+15
+Functions
+
+15-530

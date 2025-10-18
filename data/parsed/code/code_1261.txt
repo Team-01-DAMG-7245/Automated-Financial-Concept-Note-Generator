@@ -1,0 +1,6 @@
+Page 1302
+================================================================================
+
+% Ensure that all variables apart from the first are numeric.
+numVars = length(opts.VariableTypes);
+opts.VariableTypes = ["string", repmat("double", 1, numVars - 1)];

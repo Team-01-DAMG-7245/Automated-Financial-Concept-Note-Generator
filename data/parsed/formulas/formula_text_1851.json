@@ -1,0 +1,12 @@
+{
+  "page": 945,
+  "original_text": "tmAllTTC = transprobbytotals(totalsAll);\nDefRateTTC = tmAllTTC(1,2);",
+  "ocr_text": "tmALLTTC=transprobbytotals(totalsAll);\nDefRateTTC=tmALLTTC(1,2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 306.72,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

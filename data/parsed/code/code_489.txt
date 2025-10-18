@@ -1,0 +1,11 @@
+Page 467
+================================================================================
+
+% Plot the pie charts.
+tiledlayout(1,2);
+% Min variance portfolio
+nexttile
+pie(wMV(wMV>=1e-8),labels(wMV>=1e-8))
+title('Min Variance Portfolio',Position=[0,1.5]);
+% HRP portfolio
+nexttile

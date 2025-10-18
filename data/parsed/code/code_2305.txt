@@ -1,0 +1,13 @@
+Page 2176
+================================================================================
+
+Alpha = NaN(1, length(NumAssets));
+Beta = NaN(1, length(NumAssets));
+Sigma = NaN(1, length(NumAssets));
+StdAlpha = NaN(1, length(NumAssets));
+StdBeta = NaN(1, length(NumAssets));
+StdSigma = NaN(1, length(NumAssets));
+for i = 1:NumAssets
+    % Set up separate asset data and design matrices
+    TestData = zeros(NumSamples,1);
+    TestDesign = zeros(NumSamples,2);

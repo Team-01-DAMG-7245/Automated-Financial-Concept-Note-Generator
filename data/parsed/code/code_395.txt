@@ -1,0 +1,4 @@
+Page 415
+================================================================================
+
+The strategy rebalancing functions as well as the variable transaction cost function follow.

@@ -1,0 +1,12 @@
+{
+  "page": 422,
+  "original_text": "smaSignal = timetable;\nfor i = 1:numel(symbols)\n    symi = symbols(i);\n    % Build a timetable for each symbol, then aggregate them together.\n    smaSignali = timetable(pricesTT.Dates,...\n        double(sma5.(symi) > sma20.(symi)),...\n        'VariableNames',{sprintf('%s%s',symi,smaSignalNameEnding)});\n    % Use the synchronize function to merge the timetables together.\n    smaSignal = synchronize(smaSignal,smaSignali);\nend",
+  "ocr_text": "smaSignal=timetable;\nfori=1:numel(symbols)\nsymi=symbols(i);\nBuildatimetableforeachsymbol,thenaggregatethemtogether.\nsmaSignali=timetable(pricesTT.Dates,...\ndouble(sma5.(symi)=sma2Q.(symi)),...\nVariableNames,{sprintf(ssss,symi,smaSignalNameEnding)});\nSUsethesynchronizefunctiontomergethetimetablestogether.\nsmaSignal=synchronize(smaSignal,smaSignali);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 245.03,
+    "x1": 469.26,
+    "y1": 352.69
+  },
+  "confidence": "high"
+}

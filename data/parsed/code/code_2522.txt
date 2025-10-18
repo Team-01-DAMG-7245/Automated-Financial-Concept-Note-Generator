@@ -1,0 +1,5 @@
+Page 2394
+================================================================================
+
+Use the getCosts function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to obtain
+buy and sell transaction costs from portfolio objects.

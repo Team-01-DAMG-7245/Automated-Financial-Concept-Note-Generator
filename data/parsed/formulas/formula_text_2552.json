@@ -1,0 +1,12 @@
+{
+  "page": 1304,
+  "original_text": "mu = @(t) interp1(times,rates,t);\nsigma = @(t,S) interp2(moneyness,tenor,surface,S/strike,tenor(end)-t);\nmdl = gbm(mu,sigma,'StartState',price);",
+  "ocr_text": "mu=Q(t)interpl(times,rates,t);\nsigma=Q(t,S)interp2(moneyness,tenor,surface,S/strike,tenor(end)-t);\nmdl=gbm(mu,sigma,StartState,price);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 280.23,
+    "x1": 469.26,
+    "y1": 312.29
+  },
+  "confidence": "high"
+}

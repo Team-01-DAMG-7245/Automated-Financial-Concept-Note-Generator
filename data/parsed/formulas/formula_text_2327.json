@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "Heston\ndX1t = B(t)X1tdt +\nX2tX1tdW1t",
+  "ocr_text": "Heston AXy=B(t)Xydt+/XoeX1dWit",
+  "bbox": {
+    "x0": 44.25,
+    "y0": 238.84,
+    "x1": 442.06,
+    "y1": 253.97
+  },
+  "confidence": "high"
+}

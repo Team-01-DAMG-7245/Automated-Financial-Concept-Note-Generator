@@ -1,0 +1,12 @@
+{
+  "page": 1493,
+  "original_text": "sdemrd objects provide a parametric alternative to the linear drift form by reparameterizing the\ngeneral linear drift such that: A(t) = S(t)L(t), B(t) = −S(t).",
+  "ocr_text": "sdemrdobjectsprovideaparametricalternativetothelineardriftformbyreparameterizingthe\ngenerallineardriftsuchthat:A(t)=S(t)L(t),B(t)=-S(t).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 571.88,
+    "x1": 532.58,
+    "y1": 595.51
+  },
+  "confidence": "high"
+}

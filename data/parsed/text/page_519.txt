@@ -1,0 +1,72 @@
+Solve Robust Portfolio Maximum Return Problem with
+Ellipsoidal Uncertainty
+
+This example shows a robust formulation of portfolio optimization with uncertainty in the assets
+returns. It uses estimateCustomObjectivePortfolio to solve a robust Portfolio problem for a
+maximum return problem with an ellipsoidal uncertainty. Robust portfolio optimization, in contrast to
+the deterministic Markowitz mean-variance formulation, considers the uncertainty in the parameters
+of the problem: the assets' expected returns and their covariance matrix. In the traditional mean-
+variance model, the mean and covariance are assumed to take the point-values of the historical mean
+and covariance. However, in robust optimization, the mean and covariance are in a set that contains
+the most likely realizations, and the problem is optimized with respect to the worst possible outcome
+in that set.
+
+Define Problem
+
+If the vector of expected returns r has no uncertainty, the portfolio optimization problem that
+maximizes the returns is
+
+Rport = max
+x ∈X
+rTx,
+
+where
+
+•
+x ∈ℝn is the vector of portfolio weights.
+
+•
+X is the set of feasible allocations represented by a set of constraints.
+
+Robust optimization assumes that the estimates of the expected returns are unreliable, but live in a
+set that contains the most likely realizations. The set of possible realizations of the expected returns
+is the uncertainty set and is given by
+
+r |r ∈S r0
+,
+
+where
+
+•
+S r0  is a region around the vector r0.
+
+A common robust formulation of the portfolio problem is the one that tries to maximize the expected
+return of the portfolio in the worst case scenario of the uncertainty set. This is represented with the
+following "max-min" problem
+
+Rport = max
+x ∈X
+min
+r ∈S r0
+
+rTx .
+
+In this example, assume that the uncertainty set follows the common ellipsoidal uncertainty given by
+
+S r0 =
+r | r −r0
+
+TΣr
+−1 r −r0 ≤κ2 ,
+
+where
+
+•
+κ is the uncertainty aversion parameter that defines the width of the uncertainty.
+
+•
+Σr is the covariance matrix of estimation errors in the expected returns r.
+
+Solve Robust Portfolio Maximum Return Problem with Ellipsoidal Uncertainty
+
+4-351

@@ -1,0 +1,76 @@
+Note If the portfolio problem has cardinality constraints or conditional bounds specified using
+setMinMaxNumAssets or setBounds, the objective function must also be convex.
+
+Examples of Concave Functions
+
+Here are some examples of common concave functions used in finance. You can use concave
+functions in maximization problems when using a Portfolio object with the
+estimateCustomObjectivePortfolio function.
+
+•
+Risk penalized return:
+
+μTx −λxTΣx,  λ ≥0
+
+•
+Any linear function
+
+•
+Any positive combination of concave functions
+
+Examples of Nonconvex Functions
+
+Here are some examples of common nonconvex functions used in finance. You can use nonconvex
+functions in minimization or maximization problems when using a Portfolio object without
+cardinality constraints or conditional bounds with the estimateCustomObjectivePortfolio
+function.
+
+•
+Sharpe ratio:
+
+μTx −rf
+
+xTΣx
+
+•
+Information ratio:
+
+μT(x −x0)
+
+(x −x0)TΣ(x −x0)
+
+•
+Diversification ratio:
+
+σTx
+
+xTΣx
+
+•
+Risk budgeting deviation:
+
+∑
+i
+
+xi(Σx)i
+xTΣx
+−bi
+
+2
+
+•
+The following function is a special case:
+
+xTΣx −λ∑
+i
+lnxi
+
+This function is commonly used to construct risk parity portfolios. Although this function is
+convex, problems with cardinality constraints or conditional bounds make this function ill-defined.
+This happens because lnxi is not defined when xi = 0. Since adding cardinality constraints or
+conditional bounds imply that some assets have a weight of 0, the function becomes ill-defined at
+the points of interest.
+
+Role of Convexity in Portfolio Problems
+
+4-159

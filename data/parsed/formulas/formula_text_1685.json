@@ -1,0 +1,12 @@
+{
+  "page": 850,
+  "original_text": "A = [ 0 0 -1 -1 -1 ];    % second inequality constraint\nb = -0.5;\np = addInequality(p, A, b);",
+  "ocr_text": "A=[00-1-1-1]; secondinequalityconstraint\nb=-0.5;\np=addInequality(p,A,b);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 388.0,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

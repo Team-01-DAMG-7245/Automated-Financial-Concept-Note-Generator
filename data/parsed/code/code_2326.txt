@@ -1,0 +1,10 @@
+Page 2205
+================================================================================
+
+The ECM algorithm does not work for all patterns of missing values. Although it works in most cases,
+it can fail to converge if the covariance becomes singular. If this occurs, plots of the log-likelihood
+function tend to have a constant upward slope over many iterations as the log of the negative
+determinant of the covariance goes to zero. In some cases, the objective fails to converge due to
+machine precision errors. No general theory of missing data patterns exists to determine these cases.
+An example of a known failure occurs when two time series are proportional wherever both series
+contain nonmissing values.

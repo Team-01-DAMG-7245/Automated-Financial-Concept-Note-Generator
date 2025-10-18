@@ -1,0 +1,87 @@
+generate plots for the results, using categoryReturnsChart, categoryWeightsChart, and
+attributionsChart.
+
+More About
+
+Brinson Model
+
+Performance attribution supports methods for single periods over relatively short time spans
+(monthly) and multiple periods compounded over longer time spans (quarterly or a yearly).
+
+The Brinson single-period sector-based (category-based) performance attribution is represented as:
+
+rP, t = ∑
+j = 1
+
+N
+wP j, trP j, t
+
+rB, t = ∑
+j = 1
+
+N
+wB j, trB j, t
+
+rυ, t = rP, t −rB, t = ∑
+j = 1
+
+N
+wP j, trP j, t −∑
+j = 1
+
+N
+wB j, trB j, t
+
+= ∑
+j = 1
+
+N
+(wP j, t −wB j, t)(rB j, t −rB, t) + ∑
+j = 1
+
+N
+(wP j, t −wB j, t)(rP j, t −rB j, t) + ∑
+j = 1
+
+N
+wB j, t(rP j, t −rB j, t)
+
+= ∑
+j = 1
+
+N
+(Sj, t + Uj, t + Ij, t)
+
+where
+
+rP,t — Portfolio return for period t
+
+rb,t — Benchmark return for period t
+
+rυ,t — Value-added return for period t
+
+N — Number of sectors
+
+wPj,t — Portfolio weight for sector j and period t
+
+rPj,t — Portfolio return for sector j and period t
+
+wBj,t — Benchmark weight for sector j and period t
+
+rBj,t — Benchmark return for sector j and period t
+
+Sj,t — Sector allocation effect for sector j and period t
+
+Uj,t — Allocation and sector interaction effect for sector j and period t
+
+Ij,t — Issue sector effect for sector j and period t
+
+Multiperiod performance attribution, uses two main styles of performance attribution: arithmetic and
+geometric. In the arithmetic performance attribution, which is the method that the Brinson model
+uses, the relative performance between the portfolio and benchmark is measured by subtracting the
+benchmark return from the portfolio return. In the geometric performance attribution, the relative
+
+15
+Functions
+
+15-8

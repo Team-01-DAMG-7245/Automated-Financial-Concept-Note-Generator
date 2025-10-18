@@ -1,0 +1,12 @@
+{
+  "page": 1142,
+  "original_text": "Costs_BSM = computeCosts(policy_BSM,nTrials,nSteps,SpotPrice,Strike,Maturity,rfRate,ExpVol,InitPo",
+  "ocr_text": "Costs_BSM=computeCosts(policy_BSM,nTrials,nSteps,SpotPrice,Strike,Maturity,rfRate,ExpVol,InitP",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 615.54,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

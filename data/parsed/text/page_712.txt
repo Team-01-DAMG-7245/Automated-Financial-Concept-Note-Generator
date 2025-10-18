@@ -1,0 +1,61 @@
+Obtaining Portfolios Along the Entire Efficient Frontier
+
+The most basic way to obtain optimal portfolios is to obtain points over the entire range of the
+efficient frontier.
+
+Given a portfolio optimization problem in a PortfolioCVaR object, the estimateFrontier
+function computes efficient portfolios spaced evenly according to the return proxy from the minimum
+to maximum return efficient portfolios. The number of portfolios estimated is controlled by the hidden
+property defaultNumPorts which is set to 10. A different value for the number of portfolios
+estimated is specified as an input argument to estimateFrontier. This example shows the default
+number of efficient portfolios over the entire range of the efficient frontier.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioCVaR;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+pwgt = estimateFrontier(p);
+disp(pwgt)
+
+0.8651    0.6963    0.5325    0.3655    0.1949    0.0220         0         0         0       
+    0.0600    0.1580    0.2539    0.3560    0.4660    0.5742    0.4571    0.3116    0.1599       
+    0.0318    0.0451    0.0509    0.0554    0.0577    0.0666    0.0505    0.0253    0.0077       
+    0.0430    0.1006    0.1627    0.2230    0.2814    0.3372    0.4924    0.6631    0.8324    1.0
+
+If you want only four portfolios, you can use estimateFrontier with NumPorts specified as 4.
+
+pwgt = estimateFrontier(p, 4);
+disp(pwgt)
+
+0.8651    0.3655         0         0
+    0.0600    0.3560    0.4571         0
+    0.0318    0.0554    0.0505         0
+    0.0430    0.2230    0.4924    1.0000
+
+Starting from the initial portfolio, estimateFrontier also returns purchases and sales to get from
+your initial portfolio to each efficient portfolio on the efficient frontier. For example, given an initial
+portfolio in pwgt0, you can obtain purchases and sales:
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = setInitPort(p, pwgt0);
+[pwgt, pbuy, psell] = estimateFrontier(p);
+
+display(pwgt)
+
+pwgt = 4×10
+
+5
+CVaR Portfolio Optimization Tools
+
+5-86

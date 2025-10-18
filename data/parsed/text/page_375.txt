@@ -1,0 +1,37 @@
+Perform Information Ratio Maximization
+
+Find the portfolio along the frontier with the maximum information ratio. The information ratio is the
+ratio of relative return to relative risk (also known as the "tracking error"). Whereas the Sharpe ratio
+looks at returns relative to a riskless asset, the information ratio is based on returns relative to a
+risky benchmark, in this case the DJI benchmark. You can compute the information ratio using
+estimateCustomObjectivePortfolio.
+
+infoRatio = @(x) (pAct.AssetMean'*x)/sqrt(x'*pAct.AssetCovar*x);
+optWts = estimateCustomObjectivePortfolio(pAct,infoRatio,...
+    ObjectiveSense="maximize");
+
+Get the information ratio, risk, and return for the optimal portfolio.
+
+optInfoRatio = infoRatio(optWts);
+[optPortRisk,optPortRetn] = estimatePortMoments(pAct,optWts)
+
+optPortRisk = 
+0.0040
+
+optPortRetn = 
+4.8166e-04
+
+Plot the Optimal Portfolio
+
+Verify that the portfolio found is indeed the maximum information-ratio portfolio.
+
+% Rescale.
+optPortRiskAnnual = sqrt(scale) * optPortRisk;
+optPortReturnAnnual = scale * optPortRetn;
+
+figure;
+subplot(2,1,1);
+
+Portfolio Optimization Against a Benchmark
+
+4-207

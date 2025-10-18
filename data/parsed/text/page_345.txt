@@ -1,0 +1,38 @@
+% Set up a dataset object that contains the portfolio that maximizes the Sharpe ratio.
+
+Blotter = dataset({100*qswgt(abs(qswgt) > 1.0e-4), 'Weight'}, ...
+    {100*qslong(abs(qswgt) > 1.0e-4), 'Long'}, ...
+    {100*qsshort(abs(qswgt) > 1.0e-4), 'Short'}, ...
+    'obsnames', AssetList(abs(qswgt) > 1.0e-4));
+
+displayPortfolio(sprintf('%g-%g Portfolio with Maximum Sharpe Ratio', 100*(1 + Leverage), 100*Lev
+
+130-30 Portfolio with Maximum Sharpe Ratio
+            Weight      Long      Short  
+    DD       -9.5565         0     9.5565
+    HON      -6.0244         0     6.0244
+    INTC      4.0335    4.0335          0
+    JNJ       7.1234    7.1234          0
+    JPM     -0.44583         0    0.44583
+    KO       -13.646         0     13.646
+    MMM       20.908    20.908          0
+    MO        14.433    14.433          0
+    MSFT      4.5592    4.5592          0
+    PG        17.243    17.243          0
+    SBC     -0.32712         0    0.32712
+    UTX       5.3584    5.3584          0
+    WMT       21.018    21.018          0
+    XOM       35.323    35.323          0
+
+Confirm 130-30 Portfolio
+  (Net, Long, Short)
+100.0000 130.0000 30.0000
+
+References
+
+1
+R. C. Grinold and R. N. Kahn. Active Portfolio Management. 2nd ed.,2000.
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-177

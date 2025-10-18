@@ -1,0 +1,7 @@
+Page 1371
+================================================================================
+
+As a deterministic function of time, when Mu is called with a real-valued scalar time t as its only
+input, Mu must produce an NVars-by-NVars matrix. If you specify Mu as a function of time and state,
+it calculates the expected instantaneous rate of drift. This function must generate an NVars-by-1
+column vector when invoked with two inputs:

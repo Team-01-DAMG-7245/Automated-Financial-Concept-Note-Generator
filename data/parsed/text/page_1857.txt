@@ -1,0 +1,52 @@
+bndkrdur
+
+Bond key rate duration given zero curve
+
+Syntax
+
+KeyRateDuration = bndkrdur(ZeroData,CouponRate,Settle,Maturity)
+KeyRateDuration = bndkrdur( ___ ,Name,Value)
+
+Description
+
+KeyRateDuration = bndkrdur(ZeroData,CouponRate,Settle,Maturity) computes the key
+rate durations for one or more bonds given a zero curve and a set of key rates.
+
+KeyRateDuration = bndkrdur( ___ ,Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Find the Bond Key Rate Duration Given the Zero Curve
+
+This example shows how to compute the key rate duration of a bond for key rate times of 2, 5, 10, and
+30 years.
+
+ZeroRates = [0.0476 .0466 .0465 .0468 .0473 .0478 ...
+.0493 .0539 .0572 .0553 .0530]';
+
+ZeroDates = daysadd('31-Dec-1998',[30 360 360*2 360*3 360*5 ...
+360*7 360*10 360*15 360*20 360*25 360*30],1);
+
+ZeroData = [ZeroDates ZeroRates];
+
+krdur = bndkrdur(ZeroData,.0525,'12/31/1998',...
+'11/15/2028','KeyRates',[2 5 10 30])
+
+krdur = 1×4
+
+0.2986    0.8791    4.1353    9.5814
+
+Find the Bond Key Rate Duration Given the Zero Curve Using datetime Inputs
+
+This example shows how to use datetime inputs for Settle and Maturity and also use a table for
+ZeroData to compute the key rate duration of a bond for key rate times of 2, 5, 10, and 30 years.
+
+ZeroRates = [0.0476 .0466 .0465 .0468 .0473 .0478 ...
+.0493 .0539 .0572 .0553 .0530]';
+
+ZeroDates = daysadd('31-Dec-1998',[30 360 360*2 360*3 360*5 ...
+360*7 360*10 360*15 360*20 360*25 360*30],1);
+
+bndkrdur
+
+15-551

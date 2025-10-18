@@ -1,0 +1,56 @@
+Input Arguments
+
+Data — Data with high, low, open, close information
+matrix | table | timetable
+
+Data with high, low, open, close information, specified as a matrix, table, or timetable. For matrix
+input, Data is an M-by-4 matrix of high, low, opening, and closing prices. Timetables and tables with M
+rows must contain variables named 'High', 'Low', 'Open', and 'Close' (case insensitive).
+
+Data Types: double | table | timetable
+
+Output Arguments
+
+MACDLine — MACD series
+matrix | table | timetable
+
+MACD series, returned with the same number of rows (M) and type (matrix, table, or timetable) as the
+input Data. The MACDLine is calculated by subtracting the 26-period (7.5%) exponential.
+
+SignalLine — Nine-period exponential series
+matrix | table | timetable
+
+Nine-period exponential series, returned with the same number of rows (M) and type (matrix, table, or
+timetable) as the input Data. The nine-period (20%) exponential moving average of the MACDLine is
+used as the SignalLine.
+
+More About
+
+MACD
+
+The MACD is calculated by subtracting the 26-period (7.5%) exponential moving average from the 12-
+period (15%) moving average.
+
+The nine-period (20%) exponential moving average of the MACD line is used as the "signal" line.
+When the two lines are plotted, they can give you indications on when to buy or sell a stock, when
+overbought or oversold is occurring, and when the end of trend may occur. For example, when the
+MACD and the 20-day moving average line have crossed and the MACD line becomes below the other
+line, it is time to sell.
+
+Version History
+Introduced before R2006a
+
+R2023a: fints support removed for Data input argument
+Behavior changed in R2023a
+
+fints object support for the Data input argument is removed.
+
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+15
+Functions
+
+15-1172

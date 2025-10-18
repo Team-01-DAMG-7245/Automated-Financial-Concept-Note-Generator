@@ -1,0 +1,17 @@
+References
+
+[1] Fabozzi, Frank J., Mann, Steven V. Introduction to Fixed Income Analytics: Relative Value Analysis,
+Risk Measures and Valuation. John Wiley and Sons, New York, 2010.
+
+See Also
+adjustedClosingPrices | bndyield | bndprice | cfamounts | datetime
+
+Topics
+“Bond Portfolio for Hedging Duration and Convexity” on page 10-6
+“Pricing Functions” on page 2-21
+“Sensitivity of Bond Prices to Interest Rates” on page 10-2
+“Yield Conventions” on page 2-21
+
+bndtotalreturn
+
+15-583

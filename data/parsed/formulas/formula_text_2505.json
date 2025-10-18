@@ -1,0 +1,12 @@
+{
+  "page": 1282,
+  "original_text": "rebaseDate = datetime(2022, 01, 01);\ninflation{:, 1} = inflation{:, 1} / inflation{rebaseDate, 1};",
+  "ocr_text": "rebaseDate=datetime(2022,01,01);\ninflation{:,1}=inflation{:,1}/inflation{rebaseDate,1};",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 420.5,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

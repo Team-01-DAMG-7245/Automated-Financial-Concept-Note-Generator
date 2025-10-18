@@ -1,0 +1,77 @@
+ExpReturn = [ 0.0054; 0.0531; 0.0779; 0.0934; 0.0130 ];
+
+ExpCovariance = [ 0.0569,  0.0092,  0.0039,  0.0070,  0.0022;
+    0.0092,  0.0380,  0.0035,  0.0197,  0.0028;
+    0.0039,  0.0035,  0.0997,  0.0100,  0.0070;
+    0.0070,  0.0197,  0.0100,  0.0461,  0.0050;
+    0.0022,  0.0028,  0.0070,  0.0050,  0.0573 ];
+
+NumPorts = 10;
+
+TargetReturn = [ 0.05; 0.06; 0.07; 0.08; 0.09; 0.10 ];
+
+[PortRisk, PortReturn, PortWts] = portopt(ExpReturn, ExpCovariance, [], TargetReturn);
+
+disp(' Efficient    Target');
+disp([PortReturn, TargetReturn]);
+
+> In portopt at 85 
+Error using portopt (line 297)
+One or more requested returns are greater than the maximum achievable return of 0.093400.
+
+To migrate a portopt syntax for target returns outside of the range of efficient portfolio returns to a
+Portfolio object:
+
+ExpReturn = [ 0.0054; 0.0531; 0.0779; 0.0934; 0.0130 ];
+
+ExpCovariance = [ 0.0569,  0.0092,  0.0039,  0.0070,  0.0022;
+    0.0092,  0.0380,  0.0035,  0.0197,  0.0028;
+    0.0039,  0.0035,  0.0997,  0.0100,  0.0070;
+    0.0070,  0.0197,  0.0100,  0.0461,  0.0050;
+    0.0022,  0.0028,  0.0070,  0.0050,  0.0573 ];
+
+NumPorts = 10;
+
+TargetReturn = [ 0.05; 0.06; 0.07; 0.08; 0.09; 0.10 ];
+
+p = Portfolio;
+p = setAssetMoments(p, ExpReturn, ExpCovariance);
+p = setDefaultConstraints(p);
+
+PortWts = estimateFrontierByReturn(p, TargetReturn);
+[PortRisk, PortReturn] = estimatePortMoments(p, PortWts);
+
+disp(' Efficient    Target');
+disp([PortReturn, TargetReturn]);
+
+Warning: One or more target return values are outside the feasible range [
+0.0427391, 0.0934 ].
+    Will return portfolios associated with endpoints of the range for these
+    values. 
+> In Portfolio/estimateFrontierByReturn (line 106) 
+ Efficient    Target
+    0.0500    0.0500
+    0.0600    0.0600
+    0.0700    0.0700
+    0.0800    0.0800
+    0.0900    0.0900
+    0.0934    0.1000
+
+Migrate portopt Using portcons Output for ConSet
+
+This example shows how to migrate portopt when the ConSet output from portcons is used with
+portopt.
+
+portopt accepts as input the outputs from portcons, pcalims, pcglims, and pcgcomp. This
+example focuses on portcons. portcons sets up linear constraints for portopt in the form A*Port
+<= b. In a matrix ConSet = [ A, b ] and break into separate A and b arrays with A =
+ConSet(:,1:end-1); and b = ConSet(:,end);. In addition, to illustrate default problem with
+additional group constraints, consider three groups. Assets 2, 3, and 4 can constitute up to 80% of
+portfolio, Assets 1 and 2 can constitute up to 70% of portfolio, and Assets 3, 4, and 5 can constitute
+up to 90% of portfolio.
+
+ExpReturn = [ 0.0054; 0.0531; 0.0779; 0.0934; 0.0130 ];
+
+portopt Migration to Portfolio Object
+
+3-15

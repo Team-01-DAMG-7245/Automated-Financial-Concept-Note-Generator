@@ -1,0 +1,53 @@
+date2time
+
+Time and frequency from dates
+
+Syntax
+
+[TFactors,F] = date2time(Settle,Maturity)
+[TFactors,F] = date2time( ___ ,Compounding,Basis,EndMonthRule)
+
+Description
+
+[TFactors,F] = date2time(Settle,Maturity) computes time factors appropriate to
+compounded rate quotes between the Settle and Maturity dates. date2time is the inverse of
+time2date.
+
+[TFactors,F] = date2time( ___ ,Compounding,Basis,EndMonthRule) computes time
+factors appropriate to compounded rate quotes between the Settle and Maturity dates using
+optional input arguments for Compounding, Basis, and EndMonthRule. date2time is the inverse
+of time2date.
+
+Examples
+
+Compute date2time Using an actual/actual Basis
+
+To get the date2time period between '31-Jul-2015' and '30-Sep-2015' using an actual/actual basis:
+
+date2time(datetime(2015,7,31),datetime(2015,9,30), 2, 0, 1)
+
+ans = 
+0.3333
+
+When using date2time quasi coupon, two quasi coupon dates are computed for a bond with a
+maturity corresponding to the Dates input. In this case, that would be "30-Sep-2015". Assuming that
+the compounding frequency is 2, the other quasi coupon date is six months prior to this date.
+Assuming the end of month rule is in place, then the other quasi coupon date is "31-Mar-2015". You
+can use these two dates to compute the total number of actual days in a period (which is 183). Given
+this, the fraction of time between the start and end date for the actual/actual basis is computed as
+follows.
+
+(Actual Days between Start Date and End Date)/(Actual Number of Days between
+Quasi Coupon Dates)
+
+There are 61 days between 31-Jul-2015 and 30-Sep-2015 and 183 days between the quasi coupon
+dates ("31-Mar-2015" and "30-Sep-2015") which leads to a final result of 61/183 or exactly 1/3.
+
+Input Arguments
+
+Settle — Settlement date
+datetime scalar | string scalar | date character vector
+
+date2time
+
+15-793

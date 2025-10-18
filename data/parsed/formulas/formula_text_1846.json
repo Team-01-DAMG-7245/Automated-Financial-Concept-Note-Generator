@@ -1,0 +1,12 @@
+{
+  "page": 943,
+  "original_text": "fprintf('\\nTransition matrix for 2005 at IG/SG level:\\n\\n')",
+  "ocr_text": "fprintf(nTransitionmatrixfor2005atIG/SGlevel:nn)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 366.95,
+    "x1": 409.68,
+    "y1": 377.41
+  },
+  "confidence": "high"
+}

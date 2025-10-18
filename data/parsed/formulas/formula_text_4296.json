@@ -1,0 +1,12 @@
+{
+  "page": 2432,
+  "original_text": "load FundMarketCash \nReturns = tick2ret(TestData);\nBenchmark = Returns(:,2);\n[InfoRatio, TrackingError] = inforatio(Returns, Benchmark)",
+  "ocr_text": "load_FundMarketCash\n\nReturns=tick2ret(TestData);\n\nBenchmark=Returns(:,2);\n[InfoRatio,TrackingError]=inforatio(Returns,Benchmark)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 404.24,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

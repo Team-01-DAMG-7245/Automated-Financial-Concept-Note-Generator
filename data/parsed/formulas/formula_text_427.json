@@ -1,0 +1,12 @@
+{
+  "page": 282,
+  "original_text": "p = setSolver(p, 'lcprog');\ndisplay(p.solverType);\ndisplay(p.solverOptions)",
+  "ocr_text": "p=setSolver(p,lcprog);\ndisplay(p.solverType);\ndisplay(p.solver0Options)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 602.24,
+    "x1": 236.3,
+    "y1": 634.31
+  },
+  "confidence": "high"
+}

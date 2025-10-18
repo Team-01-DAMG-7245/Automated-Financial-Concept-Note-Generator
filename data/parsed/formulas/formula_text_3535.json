@@ -1,0 +1,12 @@
+{
+  "page": 1969,
+  "original_text": "Price      = 101.125;\nCouponRate = 0.05;\nSettle     = datetime('02-Jan-02','Locale','en_US');\nMaturity   = datetime('31-Mar-02','Locale','en_US');\nIssueDate = datetime('1-Oct-01','Locale','en_US');",
+  "ocr_text": "Price =101.125;\n\nCouponRate=0.05;\n\nSettle =datetime(02-Jan-02,Locale,en_US);\nMaturity =datetime(31-Mar-02,Locale,en_US);\nIssueDate=datetime(1-Oct-01,Locale,en_US);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 371.76,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

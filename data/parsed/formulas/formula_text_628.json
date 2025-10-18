@@ -1,0 +1,12 @@
+{
+  "page": 406,
+  "original_text": "% View the size of the asset price data set.\nnumSample = size(pricesTT.Variables, 1);\nnumAssets = size(pricesTT.Variables, 2);\ntable(numSample, numAssets)",
+  "ocr_text": "Viewthesizeoftheassetpricedataset.\nnumSample=size(pricesTT.Variables,1);\nnumAssets=size(pricesTT.Variables,2);\ntable(numSample,_numAssets)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.88,
+    "x1": 328.4,
+    "y1": 665.75
+  },
+  "confidence": "high"
+}

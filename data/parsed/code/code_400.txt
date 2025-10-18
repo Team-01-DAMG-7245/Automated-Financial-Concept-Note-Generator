@@ -1,0 +1,5 @@
+Page 415
+================================================================================
+
+function new_weights = inverseVarianceFcn(current_weights, pricesTT) 
+% Inverse-variance portfolio allocation

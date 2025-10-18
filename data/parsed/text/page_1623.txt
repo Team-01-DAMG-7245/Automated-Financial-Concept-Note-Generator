@@ -1,0 +1,57 @@
+This model usually corresponds to a price process whose volatility (variance rate) is governed by
+the second univariate model.
+
+•
+The other model is a Cox-Ingersoll-Ross (cir) square root diffusion model.
+
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+
+This model describes the evolution of the variance rate of the coupled Bates price process.
+
+This simulation engine provides a discrete-time approximation of the underlying generalized
+continuous-time process. The simulation is derived directly from the stochastic differential equation
+of motion. Thus, the discrete-time process approaches the true continuous-time process only as
+DeltaTime approaches zero.
+
+Version History
+Introduced in R2020a
+
+R2022a: Perform Quasi-Monte Carlo simulation
+Behavior changed in R2022a
+
+Perform Quasi-Monte Carlo simulation using the name-value arguments MonteCarloMethod and
+QuasiSequence.
+
+R2022b: Perform Brownian bridge and principal components construction
+Behavior changed in R2022b
+
+Perform Brownian bridge and principal components construction using the name-value argument
+BrownianMotionMethod.
+
+References
+
+[1] Deelstra, Griselda, and Freddy Delbaen. “Convergence of Discretized Stochastic (Interest Rate)
+Processes with Stochastic Drift Term.” Applied Stochastic Models and Data Analysis, Vol. 14,
+No. 1, 1998, pp. 77–84.
+
+[2] Higham, Desmond, and Xuerong Mao. “Convergence of Monte Carlo Simulations Involving the
+Mean-Reverting Square Root Process.” The Journal of Computational Finance, Vol. 8, No. 3,
+(2005): 35–61.
+
+[3] Lord, Roger, Remmert Koekkoek, and Dick Van Dijk. “A Comparison of Biased Simulation Schemes
+for Stochastic Volatility Models.” Quantitative Finance, Vol. 10, No. 2 (February 2010): 177–
+94.
+
+See Also
+bates | merton
+
+Topics
+Implementing Multidimensional Equity Market Models, Implementation 5: Using the simByEuler
+Method on page 14-36
+“Simulating Equity Prices” on page 14-31
+“Simulating Interest Rates” on page 14-50
+“Stratified Sampling” on page 14-58
+
+simByEuler
+
+15-317

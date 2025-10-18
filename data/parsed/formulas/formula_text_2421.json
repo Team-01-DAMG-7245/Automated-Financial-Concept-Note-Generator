@@ -1,0 +1,12 @@
+{
+  "page": 1242,
+  "original_text": "load Data_GlobalIdx2\ndates = datetime(dates,\"ConvertFrom\",\"datenum\");\nplot(dates, 100 * Dataset.EB3M)\nxlabel('Date')\nylabel('Daily Yield (%)')\ntitle('3-Month Euribor as a Daily Effective Yield')",
+  "ocr_text": "loadData_GlobalIdx2\ndates=datetime(dates,ConvertFrom,datenum);\nplot(dates,100*Dataset.EB3M)\n\nxlabel(Date)\n\nylabel(DailyYield())\ntitle(3-MonthEuriborasaDailyEffectiveYield)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 527.43,
+    "x1": 366.34,
+    "y1": 591.89
+  },
+  "confidence": "high"
+}

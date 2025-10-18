@@ -1,0 +1,63 @@
+1 is the vector of ones (n vector).
+
+lS is the lower-bound budget constraint (scalar).
+
+uS is the upper-bound budget constraint (scalar).
+
+n is the number of assets in the universe.
+
+Portfolio, PortfolioCVaR, and PortfolioMAD object properties to specify budget constraints
+are:
+
+•
+LowerBudget for lS
+•
+UpperBudget for uS
+•
+NumAssets for n
+
+The default is to ignore this constraint.
+
+The default portfolio optimization problem (see “Default Portfolio Problem” on page 4-17) has lS = uS
+= 1, which means that the portfolio weights sum to 1. If the portfolio optimization problem includes
+possible movements in and out of cash, the budget constraint specifies how far portfolios can go into
+cash. For example, if lS = 0 and uS = 1, then the portfolio can have 0–100% invested in cash. If cash is
+to be a portfolio choice, set RiskFreeRate (r0) to a suitable value (see “Return Proxy” on page 4-5
+and “Working with a Riskless Asset” on page 4-52).
+
+Conditional Budget Constraints
+
+Conditional budget constraints is a logical constraint that bounds the maximum amount of the
+portfolio that can be invested in assets exceeding a given threshold. This constraint supports the
+“Undertakings for Collective Investment in Transferable Securities” on page 15-1452 (UCITS)
+directive. Use setConditionalBudget to set conditional budget constraints. To mathematically
+formulate this type of constraints, a binary variable wi is needed. If wi = 0 the asset is below the
+specified threshold, otherwise the asset is above that threshold which is represented as
+
+wi = 0
+xi ≤αi
+∑
+i
+xiwi ≤γ
+
+where:
+
+x is an n vector representing the portfolio.
+
+ɑ is a scalar or n representing the threshold above which assets are accounted for in the conditional
+budget (scalar or n vector).
+
+γ is a scalar representing the maximum amount of the portfolio that can be invested in assets
+exceeding ɑ.
+
+Group Constraints
+
+Group constraints are specialized linear constraints that enforce “membership” among groups of
+assets. Use setGroups to set group constraints. The constraints take the form
+
+lG ≤Gx ≤uG
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-12

@@ -1,0 +1,5 @@
+Page 481
+================================================================================
+
+function seriesLifespanPlot(priceData)
+% Plot the lifespan of each time series.

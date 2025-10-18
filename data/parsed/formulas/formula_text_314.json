@@ -1,0 +1,12 @@
+{
+  "page": 199,
+  "original_text": "p = Portfolio('mean', m, 'covar', C, 'budget', 1, 'lb', 0);\nplotFrontier(p)",
+  "ocr_text": "p=Portfolio(mean,m,covar,C,budget,1,lb,0);\nplotFrontier(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 455.63,
+    "x1": 409.69,
+    "y1": 476.89
+  },
+  "confidence": "high"
+}

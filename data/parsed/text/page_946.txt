@@ -1,0 +1,61 @@
+Building Predictors Using Credit Ratings Data
+
+Using the credit data, you can build new time series of interest. Start with an age proxy that is used
+as predictor in the forecasting model in the second part of this example.
+
+Age is known to be an important factor in predicting default rates; see, for example, [1 on page 8-
+42] and [5 on page 8-43]. Age here means the number of years since a bond was issued. By
+extension, the age of a portfolio is the average age of its bonds. Certain patterns have been observed
+historically. Many low-quality borrowers default just a few years after issuing a bond. When troubled
+companies issue bonds, the amount borrowed helps them make payments for a year or two. Beyond
+that point, their only source of money is their cash flows, and if they are insufficient, default occurs.
+
+You cannot calculate the exact age of the portfolio, because there is no information at issuer level in
+the dataset. This example follows [6 on page 8-43], however, and uses the number of new issuers in
+year t-3 divided by the total number of issuers at the end of year t as an age proxy. Because of the lag,
+the age proxy starts in 1984. For the numerator, you have explicit information on the number of new
+issuers. For the denominator, the number of issuers at the end of a year equals the number of issuers
+at the beginning of next year. This is known for all years but the last one, which is set to the total
+transitions into a non-default rating plus the number of new issuers on that year.
+
+% Total number of issuers at the end of the year
+nEOY = zeros(nYears,1);
+% nIssuers is number of issuers per ratings at the beginning of the year
+% nEOY ( 1981 ) = sum nIssuers ( 1982 ), etc until 2004
+nEOY(1:end-1) = sum(nIssuers(2:end,:),2);
+% nEOY ( 2005 ) = issuers in non-default state at end of 2005 plus
+% new issuers in 2005
+nEOY(end) = totalsAll(end).totalsMat(1,1) + sum(nNewIssuers(end,:));
+% Age proxy
+AGE = 100*[nan(3,1); sum(nNewIssuers(1:end-3,:),2)./nEOY(4:end)];
+
+Examples of other time series of interest are the proportion of SG issuers at the end of each year, or
+an age proxy for SG.
+
+% nSGEOY: Number of SG issuers at the end of the year
+% nSGEOY is similar to nEOY, but for SG only, from 5 ('BB') to 7 ('CCC')
+indSG = 5:7;
+nSGEOY = zeros(nYears,1);
+nSGEOY(1:end-1) = sum(nIssuers(2:end,indSG),2);
+nSGEOY(end) = sum(totalsIGSG(end).totalsMat(:,2)) + ...
+   sum(nNewIssuers(end,indSG));
+% Proportion of SG issuers
+SG = 100*nSGEOY./nEOY;
+% SG age proxy: new SG issuers in t-3 / total issuers at the end of year t
+AGESG = 100*[nan(3,1); sum(nNewIssuers(1:end-3,indSG),2)./nEOY(4:end)];
+
+Part II: A Forecasting Model for Default Rates
+
+This example works with the following linear regression model for corporate default rates
+
+Def Rate = β0 + βageAGE + βcpfCPF + βsprSPR
+
+where
+
+•
+AGE: Age proxy defined above
+
+8
+Credit Risk Analysis
+
+8-28

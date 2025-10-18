@@ -1,0 +1,64 @@
+Backtest Investment Strategies with Trading Signals
+
+This example shows how to perform backtesting of portfolio strategies that incorporate investment
+signals in their trading strategy. The term signals includes any information that a strategy author
+needs to make with respect to trading decisions outside of the price history of the assets. Such
+information can include technical indicators, the outputs of machine learning models, sentiment data,
+macroeconomic data, and so on. This example uses three simple investment strategies based on
+derivative signal data:
+
+•
+Moving average crossovers
+
+•
+Moving average convergence/divergence
+
+•
+Relative strength index
+
+In this example you can run a backtest using these strategies over one year of stock data. You then
+analyze the results to compare the performance of each strategy.
+
+Even though technical indicators are not typically used as standalone trading strategies, this example
+uses these strategies to demonstrate how to build investment strategies based on signal data when
+you use the backtestEngine object in MATLAB®.
+
+Load Data
+
+Load the adjusted price data for 15 stocks for the year 2006. This example uses a small set of
+investable assets for readability.
+
+Read a table of daily adjusted close prices for 2006 DJIA stocks.
+
+T = readtable('dowPortfolio.xlsx');
+
+For readability, use only 15 of the 30 DJI component stocks.
+
+symbols = ["AA","CAT","DIS","GM","HPQ","JNJ","MCD","MMM","MO","MRK","MSFT","PFE","PG","T","XOM"];
+
+Prune the table to hold only the dates and selected stocks.
+
+timeColumn = "Dates";
+T = T(:,[timeColumn symbols]);
+
+Convert the data to a timetable.
+
+pricesTT = table2timetable(T,'RowTimes','Dates');
+
+View the structure of the prices timetable.
+
+head(pricesTT)
+
+Dates        AA       CAT      DIS      GM       HPQ      JNJ      MCD      MMM      MO   
+    ___________    _____    _____    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    28.72    55.86    24.18    17.82    28.35    59.08    32.72    75.93    52.27 
+    04-Jan-2006    28.89    57.29    23.77     18.3    29.18    59.99    33.01    75.54    52.65 
+    05-Jan-2006    29.12    57.29    24.19    19.34    28.97    59.74    33.05    74.85    52.52 
+    06-Jan-2006    29.02    58.43    24.52    19.61     29.8    60.01    33.25    75.47    52.95 
+    09-Jan-2006    29.37    59.49    24.78    21.12    30.17    60.38    33.88    75.84    53.11 
+    10-Jan-2006    28.44    59.25    25.09    20.79    30.33    60.49    33.91    75.37    53.04
+
+Backtest Investment Strategies with Trading Signals
+
+4-251

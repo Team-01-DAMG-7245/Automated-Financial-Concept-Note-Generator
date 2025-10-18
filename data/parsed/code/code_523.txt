@@ -1,0 +1,7 @@
+Page 489
+================================================================================
+
+for i = 1:numel(unique_categories)
+    category_mask = asset_categories == unique_categories(i);
+    weights(category_mask) = category_weight / sum(category_mask);
+end

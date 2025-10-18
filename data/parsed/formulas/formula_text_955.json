@@ -1,0 +1,12 @@
+{
+  "page": 512,
+  "original_text": "excessRetSigma = cov(excessReturn);",
+  "ocr_text": "excessRetSigma=cov(excessReturn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 659.72,
+    "x1": 279.63,
+    "y1": 670.18
+  },
+  "confidence": "high"
+}

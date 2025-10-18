@@ -1,0 +1,50 @@
+About Life Tables
+
+Life tables are used for life insurance and work with the probability distribution of human mortality.
+This distribution, which is age-dependent, has several characteristic features that are consequences
+of biological, cultural, and behavioral factors. Usually, the practitioners of life studies use life tables
+that contain age-dependent series for specific demographics. The tables are in a standard format with
+standard notation that is specific to the life studies field. An example of a life table is shown in Table 1
+from CDC life tables for the United States.
+
+Often, these life tables can have numerous variations such as abridged tables (which pose challenges
+due to the granularity of the data) and different termination criteria (that can make it difficult to
+compare tables or to compute life expectancies).
+
+Most raw life tables have one or more of the first three series in this table (qx, lx, and dx) and the
+notation for these three series is standard in the field.
+
+•
+The qx series is basically the discrete hazard function for human mortality.
+
+•
+The lx series is the survival function multiplied by a radix of 100,000.
+
+•
+The dx series is the discrete probability density for the distribution as a function of age.
+
+Financial Toolbox can handle arbitrary life table data supporting several standard models of mortality
+and provides various interpolation methods to calibrate and analyze the life table data.
+
+Although primarily designed for life insurance applications, the life tables functions
+(lifetableconv, lifetablefit, and lifetablegen can also be used by social scientists,
+behavioral psychologists, public health officials, and medical researchers.
+
+Life Tables Theory
+
+Life tables are based on hazard functions and survival functions which are, in turn, derived from
+probability distributions. Specifically, given a continuous probability distribution, its cumulative
+distribution function is F(x) and its probability density function is f(x) = d F(x)/dx.
+
+For the analysis of mortality, the random variable of interest X is the distribution of ages at which
+individuals die within a population. So, the probability that someone dies by age x is
+
+Pr[X ≤x] = F(x)
+
+The survival function, (s(x)), which characterizes the probability that an individual lives beyond a
+specified age x > 0, is
+
+2
+Performing Common Financial Tasks
+
+2-44

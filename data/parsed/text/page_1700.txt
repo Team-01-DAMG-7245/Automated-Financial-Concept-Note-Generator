@@ -1,0 +1,34 @@
+[2] Higham, Desmond, and Xuerong Mao. “Convergence of Monte Carlo Simulations Involving the
+Mean-Reverting Square Root Process.” The Journal of Computational Finance, Vol. 8, No. 3,
+2005, pp. 35–61.
+
+[3] Lord, Roger, et al. “A Comparison of Biased Simulation Schemes for Stochastic Volatility Models.”
+Quantitative Finance, Vol. 10, No. 2, Feb. 2010, pp. 177–94
+
+See Also
+simByMilstein | simByMilstein2 | simByTransition | simBySolution | simBySolution |
+simByHybrid | simByQuadExp | simulate | sde | bm | gbm | sdeddo | sdeld | cev | cir | heston |
+hwv | sdemrd
+
+Topics
+Implementing Multidimensional Equity Market Models, Implementation 5: Using the simByEuler
+Method on page 14-36
+“Simulating Equity Prices” on page 14-31
+“Simulating Interest Rates” on page 14-50
+“Stratified Sampling” on page 14-58
+“Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation” on
+page 14-71
+“Base SDE Models” on page 14-16
+“Drift and Diffusion Models” on page 14-19
+“Linear Drift Models” on page 14-22
+“Parametric Models” on page 14-24
+“SDEs” on page 14-2
+“SDE Models” on page 14-7
+“SDE Class Hierarchy” on page 14-5
+“Quasi-Monte Carlo Simulation” on page 14-63
+“Performance Considerations” on page 14-65
+
+15
+Functions
+
+15-394

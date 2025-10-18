@@ -1,0 +1,16 @@
+Page 1703
+================================================================================
+
+% Preallocate simTermStruc
+simTermStructure = zeros(nPeriods+1,30);
+for i = futuresTimes
+    for t = T
+        bondPrice = P_func(i,i+t,rPathsExp(i));
+        simTermStructure(i,t) = -log(bondPrice)/t;
+    end
+end
+plot(simTermStructure')
+legend('Current','1-year','2-year','3-year','4-year','5-year')
+title('Projected Term Structure for Next 5 Years')
+ylabel('Long Rate Maturity R(t,T)')
+xlabel('Time')

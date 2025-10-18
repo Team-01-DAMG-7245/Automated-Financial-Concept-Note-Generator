@@ -1,0 +1,12 @@
+{
+  "page": 1203,
+  "original_text": "F(t, Xt) = S(t)[L(t) −Xt]\n (14-3)",
+  "ocr_text": "F(t,X)=S(H[L()-X] (14-3)",
+  "bbox": {
+    "x0": 90.16,
+    "y0": 92.96,
+    "x1": 557.99,
+    "y1": 106.23
+  },
+  "confidence": "high"
+}

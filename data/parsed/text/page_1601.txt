@@ -1,0 +1,61 @@
+LookbackWindow: [0 Inf]
+            InitialWeights: [0.1401 0.0682 0.0795 0.2187 0.1900 0.1875 0.1160]
+             ManagementFee: 0
+     ManagementFeeSchedule: 1y
+            PerformanceFee: 0
+    PerformanceFeeSchedule: 1y
+         PerformanceHurdle: 0
+                  UserData: [0×0 struct]
+            EngineDataList: [0×0 string]
+
+% Aggregate the strategies into an array
+strategies = [ewStrategy ivStrategy];
+
+Run Backtest
+
+Create a backtesting engine and run a backtest over a year of stock data. For more information on
+creating backtesting engines, see backtestEngine. The software initializes several properties of the
+backtestEngine object to empty. These read-only properties are populated by the engine after you
+run the backtest.
+
+% Create the backtesting engine using the default settings
+backtester = backtestEngine(strategies)
+
+backtester = 
+  backtestEngine with properties:
+
+Strategies: [1×2 backtestStrategy]
+             RiskFreeRate: 0
+           CashBorrowRate: 0
+          RatesConvention: "Annualized"
+                    Basis: 0
+    InitialPortfolioValue: 10000
+           DateAdjustment: "Previous"
+      PayExpensesFromCash: 0
+                NumAssets: []
+                  Returns: []
+                Positions: []
+                 Turnover: []
+                  BuyCost: []
+                 SellCost: []
+         TransactionCosts: []
+                     Fees: []
+
+Run the backtest using runBacktest.
+
+% Run the backtest
+backtester = runBacktest(backtester,pricesTT(testRange,:));
+
+Examine Summary Results
+
+The summary function uses the results of the backtest and returns a table of high-level results from
+the backtest.
+
+s1 = summary(backtester)
+
+s1=9×2 table
+                       EqualWeighted    InverseVariance
+
+summary
+
+15-295

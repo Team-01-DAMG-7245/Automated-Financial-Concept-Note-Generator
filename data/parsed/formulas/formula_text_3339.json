@@ -1,0 +1,12 @@
+{
+  "page": 1814,
+  "original_text": "Vega = blsvega(Price,Strike,Rate,Time,Volatility)\nVega = blsvega( ___ ,Yield)",
+  "ocr_text": "Vega=blsvega(Price,Strike,Rate,Time,Volatility)\nVega=blsvega(____,Yield)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 187.57,
+    "x1": 385.01,
+    "y1": 211.2
+  },
+  "confidence": "high"
+}

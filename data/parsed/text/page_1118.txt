@@ -1,0 +1,77 @@
+DiscountFactors = 10×1
+
+0.9704
+    0.9387
+    0.9073
+    0.8739
+    0.8416
+    0.8072
+    0.7718
+    0.7320
+    0.6945
+    0.6537
+
+Compute Present Value of Cash Flows
+
+From the discount factors, compute the present value of the variable cash flows derived from the
+implied forward rates. For plain interest rate swaps, the notional principal remains constant for each
+payment date and cancels out of each side of the present value equation. The next line assumes unit
+notional principal.
+
+PresentValue = sum((ForwardRates/Period) .* DiscountFactors)
+
+PresentValue = 
+0.3460
+
+Compute Swap Price
+
+Compute the swap's price (the fixed rate) by equating the present value of the fixed cash flows with
+the present value of the cash flows derived from the implied forward rates. Again, since the notional
+principal cancels out of each side of the equation, it is assumed to be 1.
+
+SwapFixedRate = Period * PresentValue / sum(DiscountFactors)
+
+SwapFixedRate = 
+0.0845
+
+The output for these computations is:
+
+Zero Rates
+Forward Rates
+Swap Price (Fixed Rate)
+
+0.0614
+0.0614
+0.0845
+
+0.0642
+0.0670
+
+0.0660
+0.0695
+
+0.0684
+0.0758
+
+0.0702
+0.0774
+
+0.0726
+0.0846
+
+0.0754
+0.0925
+
+0.0795
+0.1077
+
+0.0827
+0.1089
+
+0.0868
+0.1239
+
+10
+Solving Sample Problems
+
+10-20

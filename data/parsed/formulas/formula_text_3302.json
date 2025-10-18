@@ -1,0 +1,12 @@
+{
+  "page": 1777,
+  "original_text": "yields ma = m and Ca = C.",
+  "ocr_text": "yieldsma=mandCa=C.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 224.56,
+    "x1": 207.5,
+    "y1": 236.19
+  },
+  "confidence": "high"
+}

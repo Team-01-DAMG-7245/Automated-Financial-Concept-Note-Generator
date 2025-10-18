@@ -1,0 +1,68 @@
+Truncating and Padding Asset Lists
+
+If the NumAssets property is already set and you pass in too many or too few identifiers, the
+PortfolioMAD object, and the setAssetList function truncate or pad the list with numbered
+default asset names that use the name specified in the hidden public property
+defaultforAssetList. If the list is truncated or padded, a warning message indicates the
+discrepancy. For example, assume that you have a PortfolioMAD object with five ETFs and you only
+know the first three CUSIPs '921937835', '922908769', and '922042775'. Use this syntax to
+create an asset list that pads the remaining asset identifiers with numbered 'UnknownCUSIP'
+placeholders:
+
+p = PortfolioMAD('numassets',5);
+p.defaultforAssetList = 'UnknownCUSIP';
+p = setAssetList(p, '921937835', '922908769', '922042775');
+disp(p.AssetList)
+
+Warning: Input list of assets has 2 too few identifiers. Padding with numbered
+assets. 
+> In PortfolioMAD.setAssetList at 121 
+  Columns 1 through 4
+
+'921937835'    '922908769'    '922042775'    'UnknownCUSIP4'
+
+Column 5
+
+'UnknownCUSIP5'
+
+Alternatively, suppose that you have too many identifiers and need only the first four assets. This
+example illustrates truncation of the asset list using the PortfolioMAD object:
+
+p = PortfolioMAD('numassets',4);
+p = PortfolioMAD(p, 'assetlist', { 'AGG', 'EEM', 'MDY', 'SPY', 'VEU' });
+disp(p.AssetList)
+
+Warning: AssetList has 1 too many identifiers. Using first 4 assets. 
+> In PortfolioMAD.checkarguments at 410
+  In PortfolioMAD.PortfolioMAD>PortfolioMAD.PortfolioMAD at 187 
+    'AGG'    'EEM'    'MDY'    'SPY'
+
+The hidden public property uppercaseAssetList is a Boolean flag to specify whether to convert
+asset names to uppercase letters. The default value for uppercaseAssetList is false. This
+example shows how to use the uppercaseAssetList flag to force identifiers to be uppercase
+letters:
+
+p = PortfolioMAD;
+p.uppercaseAssetList = true;
+p = setAssetList(p, { 'aa', 'ba', 'cat', 'dd', 'etr' });
+disp(p.AssetList)
+
+'AA'    'BA'    'CAT'    'DD'    'ETR'
+
+See Also
+PortfolioMAD | setAssetList | setInitPort | estimateBounds | checkFeasibility
+
+Related Examples
+
+•
+“Setting Up an Initial or Current Portfolio” on page 6-33
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+Common Operations on the PortfolioMAD Object
+
+6-31

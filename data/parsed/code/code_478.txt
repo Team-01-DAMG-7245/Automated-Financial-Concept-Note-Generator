@@ -1,0 +1,5 @@
+Page 461
+================================================================================
+
+% Compute the initial market portfolio.
+initialMkt = [1;zeros(nAssets,1)];

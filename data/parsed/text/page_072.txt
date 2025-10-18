@@ -1,0 +1,38 @@
+[BEYield, MMYield] = ...
+tbilldisc2yield([InitialDiscount; BreakevenDiscount], ... 
+[PurchaseDate; SaleDate], Maturity)
+
+BEYield = 2×1
+
+0.0164
+    0.0170
+
+MMYield = 2×1
+
+0.0162
+    0.0168
+
+For the short Treasury bill (fewer than 182 days to maturity), the money-market yield is 360/365 of
+the bond-equivalent yield, as this example shows.
+
+See Also
+tbilldisc2yield | tbillprice | tbillrepo | tbillyield | tbillyield2disc | tbillval01 |
+tbl2bond | tr2bonds | zbtprice | zbtyield
+
+Related Examples
+
+•
+“Handle and Convert Dates” on page 2-2
+
+•
+“Term Structure of Interest Rates” on page 2-29
+
+More About
+
+•
+“Treasury Bills Defined” on page 2-25
+
+2
+Performing Common Financial Tasks
+
+2-28

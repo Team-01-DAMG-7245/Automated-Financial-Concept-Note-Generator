@@ -1,0 +1,61 @@
+simByEuler
+Euler simulation of stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simBySolution
+Simulate approximate solution of diagonal-drift GBM processes
+simByMilstein
+Simulate diagonal diffusion for BM, GBM, CEV, HWV, SDEDDO, SDELD, or
+SDEMRD sample paths by Milstein approximation
+simByMilstein2
+Simulate BM, GBM, CEV, HWV, SDEDDO, SDELD, SDEMRD process sample paths
+by second order Milstein approximation
+
+Examples
+
+Create a gbm Object
+
+Create a univariate gbm object to represent the model: dXt = 0 . 25Xtdt + 0 . 3XtdWt.
+
+obj = gbm(0.25, 0.3)  % (B = Return, Sigma)
+
+obj = 
+   Class GBM: Generalized Geometric Brownian Motion
+   ------------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ------------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.25
+          Sigma: 0.3
+
+gbm objects display the parameter B as the more familiar Return
+
+Compute Price of European Option Using Monte Carlo Simulation with GBM Object
+
+This example shows the workflow to compute the price of a European option using Monte Carlo
+simulation with a gbm object.
+
+Set up the parameters for the Geometric Brownian Motion (GBM) model and the European option.
+
+% Parameters for the GBM model and option
+S0 = 100; % Initial stock price
+K = 110; % Strike price
+T = 1; % Time to maturity in years
+r = 0.05; % Risk-free interest rate
+sigma = 0.20; % Volatility
+nTrials = 10000; % Number of Monte Carlo trials
+nPeriods = 1; % Number of periods (for one year, this can be set to 1)
+
+Create a gbm object.
+
+% Create GBM object
+gbmobj = gbm(r,sigma,'StartState',S0);
+
+15
+Functions
+
+15-106

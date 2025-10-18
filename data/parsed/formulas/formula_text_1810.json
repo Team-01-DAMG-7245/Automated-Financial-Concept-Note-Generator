@@ -1,0 +1,12 @@
+{
+  "page": 925,
+  "original_text": "fprintf('Transition probability, cohort, including NR:\\n')",
+  "ocr_text": "fprintf(Transitionprobability,cohort,includingNR:n)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 414.53,
+    "x1": 404.27,
+    "y1": 425.0
+  },
+  "confidence": "high"
+}

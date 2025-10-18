@@ -1,0 +1,59 @@
+Portfolios = [100   200
+              500   400
+              300   150];
+
+DoublePort = Portfolios * 2
+
+DoublePort =
+        200           400
+       1000           800
+        600           300
+
+Dividing Matrices
+
+Matrix division is useful primarily for solving equations, and especially for solving simultaneous linear
+equations (see “Solving Simultaneous Linear Equations” on page 1-11). For example, you want to
+solve for X in A*X = B.
+
+In ordinary algebra, you would divide both sides of the equation by A, and X would equal B/A.
+However, since matrix algebra is not commutative (A*X ≠ X*A), different processes apply. In formal
+matrix algebra, the solution involves matrix inversion. MATLAB, however, simplifies the process by
+providing two matrix division symbols, left and right (\ and /). In general,
+
+X = A\B solves for X in A*X = B and
+
+X = B/A solves for X in X*A = B.
+
+In general, matrix A must be a nonsingular square matrix; that is, it must be invertible and it must
+have the same number of rows and columns. (Generally, a matrix is invertible if the matrix times its
+inverse equals the identity matrix. To understand the theory and proofs, consult a textbook on linear
+algebra such as Elementary Linear Algebra by Hill listed in “Bibliography” on page A-2.) MATLAB
+gives a warning message if the matrix is singular or nearly so.
+
+Solving Simultaneous Linear Equations
+
+Matrix division is especially useful in solving simultaneous linear equations. Consider this problem:
+Given two portfolios of mortgage-based instruments, each with certain yields depending on the prime
+rate, how do you weight the portfolios to achieve certain annual cash flows? The answer involves
+solving two linear equations.
+
+A linear equation is any equation of the form
+
+a1x + a2y = b,
+
+where a1, a2, and b are constants (with a1 and a2 not both 0), and x and y are variables. (It is a linear
+equation because it describes a line in the xy-plane. For example, the equation 2x + y = 8 describes a
+line such that if x = 2, then y = 4.)
+
+A system of linear equations is a set of linear equations that you usually want to solve at the same
+time; that is, simultaneously. A basic principle for exact answers in solving simultaneous linear
+equations requires that there be as many equations as there are unknowns. To get exact answers for
+x and y, there must be two equations. For example, to solve for x and y in the system of linear
+equations
+
+2x + y = 13
+x −3y = −18,
+
+Matrix Algebra Refresher
+
+1-11

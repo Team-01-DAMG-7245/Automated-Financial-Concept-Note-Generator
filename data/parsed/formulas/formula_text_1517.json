@@ -1,0 +1,12 @@
+{
+  "page": 767,
+  "original_text": "% Create portfolio with default constraints\np = PortfolioCVaR(ProbabilityLevel=0.95);\np = simulateNormalScenariosByData(p,Data(:,1:12),1000,missingdata=true);\np = setDefaultConstraints(p);",
+  "ocr_text": "Createportfoliowithdefaultconstraints\np=PortfolioCVaR(ProbabilityLevel=0.95);\np=simulateNormalScenariosByData(p,Data(:,1:12),1000,missingdata=true);\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 330.17,
+    "x1": 480.09,
+    "y1": 373.03
+  },
+  "confidence": "high"
+}

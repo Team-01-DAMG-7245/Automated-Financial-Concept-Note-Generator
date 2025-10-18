@@ -1,0 +1,76 @@
+p = Portfolio;
+p = setInitPort(p, 1/4, 4);
+disp(p.InitPort)
+
+0.2500
+ 0.2500
+ 0.2500
+ 0.2500
+
+Portfolio object functions that work with either transaction costs or turnover constraints also depend
+on the InitPort property. So, the set functions for transaction costs or turnover constraints permit
+the assignment of a value for the InitPort property as part of their implementation. For details, see
+“Working with Average Turnover Constraints Using Portfolio Object” on page 4-85, “Working with
+One-Way Turnover Constraints Using Portfolio Object” on page 4-88, and “Working with Transaction
+Costs” on page 4-54 for details. If either transaction costs or turnover constraints are used, then the
+InitPort property must have a nonempty value. Absent a specific value assigned through the
+Portfolio object or various set functions, the Portfolio object sets InitPort to 0 and warns if
+BuyCost, SellCost, or Turnover properties are set. The following example illustrates what
+happens if an average turnover constraint is specified with an initial portfolio:
+
+p = Portfolio('Turnover', 0.3, 'InitPort', [ 0.3; 0.2; 0.2; 0.0 ]);
+disp(p.InitPort)
+
+0.3000
+ 0.2000
+ 0.2000
+      0
+
+In contrast, this example shows what happens if an average turnover constraint is specified without
+an initial portfolio:
+
+p = Portfolio('Turnover', 0.3);
+disp(p.InitPort)
+
+Warning: InitPort and NumAssets are empty and either transaction costs or turnover constraints specified.
+Will set NumAssets = 1 and InitPort = 0. 
+> In Portfolio.checkarguments at 367
+  In Portfolio.Portfolio>Portfolio.Portfolio at 171 
+     0
+
+See Also
+Portfolio | setAssetList | setInitPort | estimateBounds | checkFeasibility
+
+Related Examples
+
+•
+“Setting Up a Tracking Portfolio” on page 4-40
+
+•
+“Common Operations on the Portfolio Object” on page 4-33
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Asset Returns and Moments of Asset Returns Using Portfolio Object” on page 4-42
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-38

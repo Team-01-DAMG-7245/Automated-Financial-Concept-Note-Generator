@@ -1,0 +1,12 @@
+{
+  "page": 1333,
+  "original_text": "SummaryTable = summary(brinsonAttributionObj) generates a table that summarizes the\nfinal results (aggregated over all time periods and categories) of the performance attribution by the\nBrinson model.",
+  "ocr_text": "SummaryTable=summary(brinsonAttributionObj)generatesatablethatsummarizesthe\nfinalresults(aggregatedoveralltimeperiodsandcategories)oftheperformanceattributionbythe\nBrinsonmodel.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 243.16,
+    "x1": 547.26,
+    "y1": 278.79
+  },
+  "confidence": "high"
+}

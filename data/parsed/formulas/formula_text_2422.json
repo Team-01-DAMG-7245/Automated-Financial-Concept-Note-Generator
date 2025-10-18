@@ -1,0 +1,12 @@
+{
+  "page": 1243,
+  "original_text": "yields     = Dataset.EB3M;\nregressors = [ones(length(yields) - 1, 1) yields(1:end-1)];",
+  "ocr_text": "yields =Dataset.EB3M;\nregressors=[ones(length(yields)-1,1)yields(1l:end-1)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 409.66,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

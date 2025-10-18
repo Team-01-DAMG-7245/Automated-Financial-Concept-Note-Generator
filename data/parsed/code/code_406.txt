@@ -1,0 +1,11 @@
+Page 416
+================================================================================
+
+function [buy, sell] = variableTransactionCosts(deltaPositions)
+% Variable transaction cost function
+%
+% This function is an example of how to compute variable transaction costs.
+%
+% Compute scaled transaction costs based on the change in market value of
+% each asset after a rebalance.  Costs are computed at the following rates:
+%

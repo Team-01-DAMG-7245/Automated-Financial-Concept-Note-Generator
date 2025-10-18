@@ -1,0 +1,6 @@
+Page 1438
+================================================================================
+
+As a deterministic function of time, when Volatility is called with a real-valued scalar time t as its
+only input, Volatility must produce a scalar. If you specify it as a function time and state,
+Volatility generates a scalar when invoked with two inputs:

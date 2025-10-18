@@ -1,0 +1,37 @@
+Indicator to select style of attribution bar graphs, specified as Style and one of the following values:
+
+•
+"grouped" — Plot the bar graphs for the allocation, selection, and interaction effects side-by-
+side.
+
+•
+"stacked" — Stack the bar graphs for the allocation, selection, and interaction effects.
+
+•
+"active" — Plot the bar graphs for the active returns as the sum of allocation, selection, and
+interaction effects.
+
+Data Types: char | string
+
+Output Arguments
+
+h — Figure handle
+handle object
+
+Figure handle for the performance attributions chart, returned as handle object. You can use the
+figure handle to access and change the properties of the chart.
+
+Version History
+Introduced in R2023a
+
+See Also
+categoryReturnsChart | categoryWeightsChart | brinsonAttribution
+
+Topics
+“Analyze Performance Attribution Using Brinson Model” on page 4-323
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+15
+Functions
+
+15-36

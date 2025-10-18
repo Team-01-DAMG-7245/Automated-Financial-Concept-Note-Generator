@@ -1,0 +1,12 @@
+{
+  "page": 1724,
+  "original_text": "•\nWhen the scalar time t at which ts2func evaluates the function F does not coincide with an\nobservation time in Times, F performs a zero-order-hold interpolation. The only exception is if t\nprecedes the first element of Times, in which case F(t) = F(Times(1)).",
+  "ocr_text": "*Whenthescalartimetatwhichts2funcevaluatesthefunctionFdoesnotcoincidewithan\nobservationtimeinTimes,Fperformsazero-order-holdinterpolation.Theonlyexceptionisift\nprecedesthefirstelementofTimes,inwhichcaseF(t)=F(Times(1)).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 376.68,
+    "x1": 543.95,
+    "y1": 412.31
+  },
+  "confidence": "high"
+}

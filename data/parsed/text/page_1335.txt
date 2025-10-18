@@ -1,0 +1,72 @@
+Generate Summary Table
+
+Use the brinsonAttribution object with summary to generate a table that summarizes the final results
+of the performance attribution by the Brinson model, aggregated over all time periods and
+categories.
+
+SummaryTable = summary(BrinsonPAobj)
+
+SummaryTable=11×1 table
+                                     Brinson Attribution Summary
+                                     ___________________________
+
+Total Number of Assets                            4         
+    Number of Assets in Portfolio                     3         
+    Number of Assets in Benchmark                     4         
+    Number of Periods                                 3         
+    Number of Categories                              2         
+    Portfolio Return                           0.059847         
+    Benchmark Return                            0.05399         
+    Active Return                             0.0058578         
+    Allocation Effect                         -0.014353         
+    Selection Effect                           0.030316         
+    Interaction Effect                        -0.010105
+
+Input Arguments
+
+brinsonAttributionObj — Brinson attribution model
+object
+
+Brinson attribution model, specified as a brinsonAttribution object.
+
+Data Types: object
+
+Output Arguments
+
+SummaryTable — Metrics summarizing performance attribution by Brinson model
+table
+
+Metrics summarizing the performance attribution by the Brinson model, returned as a table where
+each row of the table is a calculated metric as follows:
+
+•
+Total Number of Assets — Total for assets in the AssetTable
+
+•
+Number of Assets in Portfolio — Total assets in the portfolio, as defined in AssetTable
+
+•
+Number of Assets in Benchmark — The total assets in the benchmark, as defined in
+AssetTable
+
+•
+Number of Periods — Total number of Periods, as defined in AssetTable
+
+•
+Portfolio Return — Portfolio return, as defined in AssetTable
+
+•
+Benchmark Return — Benchmark return, as defined in AssetTable
+
+•
+Active Return — Calculated active return for the portfolio, as defined in AssetTable
+
+•
+Allocation Effect — Allocation effect for the portfolio, as defined in AssetTable
+
+•
+Selection Effect — Selection effect for the portfolio, as defined in AssetTable
+
+summary
+
+15-29

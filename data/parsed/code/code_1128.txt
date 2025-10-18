@@ -1,0 +1,6 @@
+Page 1168
+================================================================================
+
+The filter function accepts user-specified standardized disturbances derived from the copula and
+simulates multiple paths for a single index model at a time. All sample paths are simulated and stored
+for each index in succession.

@@ -1,0 +1,12 @@
+{
+  "page": 1168,
+  "original_text": "s = RandStream.getGlobalStream();\nreset(s)",
+  "ocr_text": "s=RandStream.getGlobalStream();\nreset(s)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.43,
+    "x1": 268.79,
+    "y1": 147.69
+  },
+  "confidence": "high"
+}

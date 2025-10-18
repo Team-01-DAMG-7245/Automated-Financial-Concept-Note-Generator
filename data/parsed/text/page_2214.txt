@@ -1,0 +1,24 @@
+More About
+
+Effective Rate of Return
+
+The effective rate of return (ERR) is a measure of the actual return on an investment, taking into
+account the effects of compounding over a specific period.
+
+The ERR provides a more accurate representation of the profitability of an investment compared to
+nominal interest rates, which do not consider compounding effects. The effective rate of return is
+particularly useful for comparing different investment options with varying compounding periods.
+
+Version History
+Introduced before R2006a
+
+See Also
+nomrr
+
+Topics
+“Analyzing and Computing Cash Flows” on page 2-11
+
+15
+Functions
+
+15-908

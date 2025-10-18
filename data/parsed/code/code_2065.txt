@@ -1,0 +1,8 @@
+Page 1675
+================================================================================
+
+Dependent random counting process for generating the number of jumps, specified as the comma-
+separated pair consisting of 'N' and a function or an (NPeriods ⨉ NSteps) -by-NJumps-by-
+NNTrials three-dimensional array of dependent random variates. If you specify a function, N must
+return an NJumps-by-1 column vector, and you must call it with two inputs: a real-valued scalar
+observation time t followed by an NVars-by-1 state vector Xt.

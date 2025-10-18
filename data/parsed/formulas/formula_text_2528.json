@@ -1,0 +1,12 @@
+{
+  "page": 1291,
+  "original_text": "clustery = Y(idx, 2);\n    clusterz = Y(idx, 3);\n    color = clusterColors(k, :);\n    % Evaluate the convex hull.\n    ch = convhull( clusterx, clustery, clusterz );\n    % Visualize the convex hull, its vertices (the commodities), and create\n    % text labels.\n    trisurf( ch, clusterx, clustery, clusterz, ...\n        \"FaceColor\", clusterColors(k, :), ...\n        \"FaceAlpha\", 0.25, ...\n        \"EdgeColor\", \"none\", ...\n        \"HandleVisibility\", \"off\" )\n    scatter3( clusterx, clustery, clusterz, ...\n        [], clusterColors(k, :), \"filled\", \"DisplayName\", \"Cluster \" + k )\n    text( clusterx, clustery, clusterz, ...\n        clusteredCommodities.Commodity(idx), \"Rotation\", 10 )\nend",
+  "ocr_text": "clustery=Y(idx,2);\nclusterz=Y(idx,3);\ncolor=clusterColors(k,:);\nEvaluatetheconvexhull.\nch=convhull(clusterx,clustery,clusterz);\nSVisualizetheconvexhull,itsvertices(thecommodities),andcreate\nStextlabels.\ntrisurf(ch,clusterx,clustery,clusterz,...\nFaceColor,clusterColors(k,:),...\nFaceAlpha,0.25,...\nEdgeColor,none,...\nHandleVisibility,off)\nscatter3(clusterx,clustery,clusterz,...\n[],clusterColors(k,:),filled,DisplayName,Cluster+k)\ntext(clusterx,clustery,clusterz,...\nclusteredCommodities.Commodity(idx),Rotation,10)\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 496.35,
+    "y1": 276.29
+  },
+  "confidence": "high"
+}

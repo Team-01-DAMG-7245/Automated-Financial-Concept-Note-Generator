@@ -1,0 +1,62 @@
+Name           Size             Bytes  Class     Attributes
+
+Assets         1x14              1792  cell                
+  Data        1471x14            164752  double              
+  Dates       1471x1              11768  double
+
+The assets have the following symbols, where the last two series are proxies for the market and the
+riskless asset.
+
+Assets(1:7)
+
+ans = 1×7 cell
+    {'AAPL'}    {'AMZN'}    {'CSCO'}    {'DELL'}    {'EBAY'}    {'GOOG'}    {'HPQ'}
+
+Assets(8:14)
+
+ans = 1×7 cell
+    {'IBM'}    {'INTC'}    {'MSFT'}    {'ORCL'}    {'YHOO'}    {'MARKET'}    {'CASH'}
+
+The data covers the period from January 1, 2000 to November 7, 2005 with daily total returns. Two
+stocks in this universe have missing values that are represented by NaNs. One of the two stocks had
+an IPO during this period and, so, has significantly less data than the other stocks.
+
+Compute separate regressions for each stock, where the stocks with missing data have estimates that
+reflect their reduced observability.
+
+[NumSamples, NumSeries] = size(Data);
+NumAssets = NumSeries - 2;
+
+StartDate = Dates(1);
+EndDate = Dates(end);
+
+fprintf(1,'Separate regressions with ');
+
+Separate regressions with
+
+fprintf(1,'daily total return data from %s to %s ...\n', ...
+    datestr(StartDate,1),datestr(EndDate,1));
+
+daily total return data from 03-Jan-2000 to 07-Nov-2005 ...
+
+fprintf(1,'  %4s %-20s %-20s %-20s\n','','Alpha','Beta','Sigma');
+
+Alpha                Beta                 Sigma
+
+fprintf(1,'  ---- -------------------- ');
+
+---- --------------------
+
+fprintf(1,'-------------------- --------------------\n');
+
+-------------------- --------------------
+
+for i = 1:NumAssets
+% Set up separate asset data and design matrices
+  TestData = zeros(NumSamples,1);
+  TestDesign = zeros(NumSamples,2);
+
+9
+Regression with Missing Data
+
+9-28

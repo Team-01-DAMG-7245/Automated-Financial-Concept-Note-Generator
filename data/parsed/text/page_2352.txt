@@ -1,0 +1,60 @@
+Settlement date of the floating-rate bonds, specified as a scalar or a NINST-by-1 vector using a
+datetime array, string array, or date character vectors. If supplied as a NINST-by-1 vector of dates, all
+settlement dates must be the same (only a single settlement date is supported)
+
+To support existing code, floatdiscmargin also accepts serial date numbers as inputs, but they are
+not recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of the floating-rate bond
+datetime array | string array | date character vector
+
+Maturity date of the floating-rate bond, specified as a NINST-by-1 vector using a datetime array,
+string array, or date character vectors.
+
+To support existing code, floatdiscmargin also accepts serial date numbers as inputs, but they are
+not recommended.
+
+Data Types: char | string | datetime
+
+RateInfo — Interest-rate information
+numeric
+
+interest-rate information, specified as NINST-by-2 vector where the:
+
+•
+First column is the stub rate between the settlement date and the first coupon rate.
+
+•
+Second column is the reference rate for the term of the floating coupons (for example, the 3-
+month LIBOR from settlement date for a bond with a Reset of 4).
+
+Note If the RateInfo argument is an annualized zero-rate term structure created by intenvset,
+the zero discount margin is calculated.
+
+Data Types: double
+
+LatestFloatingRate — Rate for next floating payment set at last reset date
+numeric
+
+Rate for the next floating payment set at the last reset date, specified as NINST-by-1 vector.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: Margin =
+floatdiscmargin(Price,Spread,Settle,Maturity,RateInfo,LatestFloatingRate,'Res
+et',2,'Basis',5)
+
+15
+Functions
+
+15-1046

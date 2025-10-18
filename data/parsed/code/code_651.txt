@@ -1,0 +1,9 @@
+Page 609
+================================================================================
+
+function [IS_TWAP_Horizon,IS_TWAP_Step,InventorySharesStepTWAP,TradingSharesStepTWAP] = ...
+    executeTWAPTrades(InputLOB,NumLevels,TotalTradingShares,NumIntervalsPerHorizon,NumHorizons,Bu
+% executeTWAPTrades Function for Executing Trades for TWAP Baseline
+% This function executes buy or sell trades for the TWAP baseline and
+% computes the corresponding implementation shortfalls, inventory shares
+% and trading shares at each step.

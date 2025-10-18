@@ -1,0 +1,12 @@
+{
+  "page": 346,
+  "original_text": "function displaySumOfTransactions(Turnover, qbuy, qsell)\nfprintf('Sum of Purchases by Portfolio along Efficient Frontier (Max. Turnover %g%%)\\n', ...\n    100*Turnover);\nfprintf('%.4f ', 100*sum(qbuy)), sprintf('\\n\\n');\nfprintf('\\n')\nfprintf('Sum of Sales by Portfolio along Efficient Frontier (Max. Turnover %g%%)\\n', ...\n    100*Turnover);\nfprintf('%.4f ', 100*sum(qsell));\nend",
+  "ocr_text": "functiondisplaySumOfTransactions(Turnover,qbuy,qsell)\n\nfprintf(SumofPurchasesbyPortfolioalongEfficientFrontier(Max.Turnoverg)n,...\n100*Turnover);\n\nfprintf(s.4f,100*sum(qbuy)),sprintf(nn);\n\nfprintf(n)\n\nfprintf(SumofSalesbyPortfolioalongEfficientFrontier(Max.Turnoverg*)n,...\n100*Turnover);\n\nfprintf(s.4f,100*sum(qsell));\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 279.46,
+    "x1": 588.5,
+    "y1": 376.33
+  },
+  "confidence": "high"
+}

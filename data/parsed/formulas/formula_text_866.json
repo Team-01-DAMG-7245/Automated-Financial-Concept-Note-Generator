@@ -1,0 +1,12 @@
+{
+  "page": 480,
+  "original_text": "function new_weights = LongShortRebalanceFcn(current_weights,pricesTT,signalTT) %#ok<INUSD> \n% Long/Short strategy, in proportion to the signal",
+  "ocr_text": "functionnew_weights=LongShortRebalanceFcn(current_weights,pricesTT,signalTT)okINUSD=\nLong/Shortstrategy,inproportiontothesignal",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.82,
+    "x1": 588.49,
+    "y1": 611.09
+  },
+  "confidence": "high"
+}

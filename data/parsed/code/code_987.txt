@@ -1,0 +1,6 @@
+Page 996
+================================================================================
+
+cp(2) = []; % To merge bins 2 and 3
+sc = modifybins(sc,'TmWBank','CutPoints',cp);
+plotbins(sc,'TmWBank')

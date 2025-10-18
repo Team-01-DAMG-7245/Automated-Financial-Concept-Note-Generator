@@ -1,0 +1,12 @@
+{
+  "page": 2227,
+  "original_text": "% Maximize Sharpe ratio with upper bound\nsharpeRatio = @(x) (p.AssetMean'*x)/sqrt(x'*p.AssetCovar*x);\nwSR = estimateCustomObjectivePortfolio(pInt,sharpeRatio,...\n    ObjectiveSense='maximize',ObjectiveBound=1);",
+  "ocr_text": "SMaximizeSharperatiowithupperbound\n\nsharpeRatio=(x)(p.AssetMean*x)/sqrt(x*p.AssetCovar*x);\n\nwSR=estimateCustom0bjectivePortfolio(pInt,sharpeRatio,...\nObjectiveSense=maximize,ObjectiveBound=1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 510.12,
+    "x1": 415.08,
+    "y1": 552.99
+  },
+  "confidence": "high"
+}

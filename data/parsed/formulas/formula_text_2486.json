@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf(' Gaussian Copula American Put  Basket Price: %8.4f\\n\\n', GaussianCopulaPutPrice)",
+  "ocr_text": "fprintf(GaussianCopulaAmericanPutBasketPrice:8.4fnn,GaussianCopulaPutPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 493.44,
+    "x1": 572.23,
+    "y1": 503.91
+  },
+  "confidence": "high"
+}

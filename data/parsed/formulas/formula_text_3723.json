@@ -1,0 +1,12 @@
+{
+  "page": 2110,
+  "original_text": "Example: Superset = datetime(1997,7,1:31);",
+  "ocr_text": "Example:Superset=datetime(1997,7,1:31);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 385.18,
+    "x1": 334.04,
+    "y1": 396.81
+  },
+  "confidence": "high"
+}

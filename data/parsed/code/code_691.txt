@@ -1,0 +1,5 @@
+Page 624
+================================================================================
+
+function assetAreaPlot(backtester,strategyName)
+% Plot the asset allocation as an area plot.

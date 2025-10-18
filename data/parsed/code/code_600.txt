@@ -1,0 +1,4 @@
+Page 551
+================================================================================
+
+Define the constant return reward function handle.

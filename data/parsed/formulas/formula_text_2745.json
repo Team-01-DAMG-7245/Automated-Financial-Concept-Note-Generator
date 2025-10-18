@@ -1,0 +1,12 @@
+{
+  "page": 1387,
+  "original_text": "CIR = cir(Speed,Level,Sigma)\nCIR = cir( ___ ,Name,Value)",
+  "ocr_text": "CIR=cir(Speed,Level,Sigma)\nCIR=cir(____,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 578.94,
+    "x1": 258.57,
+    "y1": 602.57
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 163
+================================================================================
+
+Use the Portfolio object with the setInequality function to obtain the vectors and arrays
+representing the risk, return, and weights for the portfolios computed along the efficient frontier.

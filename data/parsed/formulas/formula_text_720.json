@@ -1,0 +1,12 @@
+{
+  "page": 433,
+  "original_text": "Use setInequality to set the percentage of WoB as a constraint. The coefficients of the linear\nconstraint should be the WoB percentages associated to each asset, and the right-hand side should be\nthe target portfolio WoB. The convention of the inequality is ≤. Since the goal is to maximize portfolio\nWoB, then the target WoB should be a lower bound for the portfolio WoB. Therefore, the signs of the\ncoefficients and the right-hand side of the added inequality should be flipped.",
+  "ocr_text": "UsesetInequalitytosetthepercentageofWoBasaconstraint.Thecoefficientsofthelinear\nconstraintshouldbetheWoBpercentagesassociatedtoeachasset,andtheright-handsideshouldbe\nthetargetportfolioWoB.Theconventionoftheinequalityis=.Sincethegoalistomaximizeportfolio\nWoB,thenthetargetWoBshouldbe_alowerboundfortheportfolioWoB.Therefore,thesignsofthe\ncoefficientsandtheright-handsideoftheaddedinequalityshouldbeflipped.",
+  "bbox": {
+    "x0": 89.99,
+    "y0": 657.36,
+    "x1": 554.2,
+    "y1": 716.99
+  },
+  "confidence": "high"
+}

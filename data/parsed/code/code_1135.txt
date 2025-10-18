@@ -1,0 +1,9 @@
+Page 1179
+================================================================================
+
+To visualize the timetable data, use financial charting functions such as highlow or movavg. For this
+example, the moving average information is plotted on the same chart for highlow to provide a
+complete visualization. To obtain the stock performance in 2014, use the MATLAB timerange
+function to select rows of the timetable. To visualize a technical indicator such as the Moving
+Average Convergence Divergence (MACD), pass the timetable object into the macd function for
+analysis.

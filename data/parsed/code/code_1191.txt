@@ -1,0 +1,7 @@
+Page 1224
+================================================================================
+
+The sde object requires additional information to determine the dimensionality of the model, because
+the functions passed to the sde object are known only by their t, Xt  interface. In other words, the
+sde object requires only two inputs: a drift-rate function and a diffusion-rate function, both accessible
+by passing the sample time and the corresponding state vector t, Xt .

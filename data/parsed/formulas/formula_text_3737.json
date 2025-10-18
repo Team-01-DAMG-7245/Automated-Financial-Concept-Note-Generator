@@ -1,0 +1,12 @@
+{
+  "page": 2117,
+  "original_text": "NumberWorkDays = [16; 20; 44];\nEndDate = datewrkdy(datetime(2000,12,12), NumberWorkDays, 2)",
+  "ocr_text": "NumberWorkDays=[16;20;_44];\nEndDate=datewrkdy(datetime(2000,12,12),NumberWorkDays,2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 415.08,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

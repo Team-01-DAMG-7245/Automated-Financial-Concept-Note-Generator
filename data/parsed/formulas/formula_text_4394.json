@@ -1,0 +1,12 @@
+{
+  "page": 2489,
+  "original_text": "load SimulatedStock.mat\ntype = 'linear';\nwindowSize = 14;\nma = movavg(TMW_CLOSE,type,windowSize)",
+  "ocr_text": "loadSimulatedStock.mat\ntype=linear;\n\nwindowSize=14;\nmMa=movavg(TMW_CLOSE,type,windowSize)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 494.72,
+    "x1": 295.88,
+    "y1": 537.59
+  },
+  "confidence": "high"
+}

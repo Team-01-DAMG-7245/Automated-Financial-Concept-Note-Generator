@@ -1,0 +1,12 @@
+{
+  "page": 1794,
+  "original_text": "Gamma = blsgamma(Price,Strike,Rate,Time,Volatility)\nGamma = blsgamma( ___ ,Yield)",
+  "ocr_text": "Gamma=blsgamma(Price,Strike,Rate,Time,Volatility)\nGamma=blsgamma(____,Yield)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 187.57,
+    "x1": 397.04,
+    "y1": 211.2
+  },
+  "confidence": "high"
+}

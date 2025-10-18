@@ -1,0 +1,64 @@
+10
+
+0.3000
+
+0.1200
+0.0900
+0.0800
+0.0700
+0.1000
+0.1000
+0.1500
+0.1100
+0.0800
+0.1000
+
+or
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ];
+p = Portfolio;
+p = setTurnover(p, 0.3, x0);
+disp(p.NumAssets)
+disp(p.Turnover)
+disp(p.InitPort)
+
+10
+
+0.3000
+
+0.1200
+0.0900
+0.0800
+0.0700
+0.1000
+0.1000
+0.1500
+0.1100
+0.0800
+0.1000
+
+For an example of setting turnover, see “Portfolio Analysis with Turnover Constraints” on page 4-211.
+
+setTurnover implements scalar expansion on the argument for the initial portfolio. If the
+NumAssets property is already set in the Portfolio object, a scalar argument for InitPort
+expands to have the same value across all dimensions. In addition, setTurnover lets you specify
+NumAssets as an optional argument. To clear turnover from your Portfolio object, use the
+Portfolio object or setTurnover with empty inputs for the properties to be cleared.
+
+See Also
+Portfolio | setDefaultConstraints | setBounds | setBudget | setConditionalBudget |
+setGroups | setGroupRatio | setEquality | setInequality | setTurnover |
+setOneWayTurnover | setTrackingPort | setTrackingError
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-86

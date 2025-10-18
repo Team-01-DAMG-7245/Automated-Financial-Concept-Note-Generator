@@ -1,0 +1,12 @@
+{
+  "page": 1965,
+  "original_text": "profilestructs = exposureprofiles(dates,exposures)\nprofilestructs = exposureprofiles( ___ ,Name,Value)",
+  "ocr_text": "profilestructs=exposureprofiles(dates,exposures)\nprofilestructs=exposureprofiles(_,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.8,
+    "x1": 391.03,
+    "y1": 213.43
+  },
+  "confidence": "high"
+}

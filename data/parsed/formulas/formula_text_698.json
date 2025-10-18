@@ -1,0 +1,12 @@
+{
+  "page": 429,
+  "original_text": "% Pull out the relevant signal data for the strategy.\ncrossoverSignals = signalTT(:,signalNames);",
+  "ocr_text": "SPullouttherelevantsignaldataforthestrategy.\ncrossoverSignals=signalTT(:,signalNames);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 377.16,
+    "y1": 697.49
+  },
+  "confidence": "high"
+}

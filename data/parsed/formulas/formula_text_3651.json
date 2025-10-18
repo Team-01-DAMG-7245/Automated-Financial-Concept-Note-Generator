@@ -1,0 +1,12 @@
+{
+  "page": 2058,
+  "original_text": "NextCouponDate = cpndaten( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate) returns the next coupon date after the Settle date using\noptional input arguments.",
+  "ocr_text": "NextCouponDate=cpndaten(___,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)returnsthenextcoupondateaftertheSettledateusing\noptionalinputarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 343.18,
+    "x1": 544.44,
+    "y1": 378.81
+  },
+  "confidence": "high"
+}

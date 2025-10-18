@@ -1,0 +1,16 @@
+{
+  "page": 471,
+  "image_index": 1,
+  "filename": "page_471_table_01.png",
+  "filepath": "parsed\\tables\\images\\page_471_table_01.png",
+  "bbox": {
+    "x0": 42.0,
+    "y0": 340.72,
+    "x1": 537.75,
+    "y1": 639.22
+  },
+  "width": 661,
+  "height": 398,
+  "type": "table_image",
+  "caption": ""
+}

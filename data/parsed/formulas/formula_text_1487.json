@@ -1,0 +1,12 @@
+{
+  "page": 751,
+  "original_text": "% Number of periods per trial (approximately 100 periods per year)\nNPERIODS = round(100*T);",
+  "ocr_text": "sNumberofperiodspertrial(approximately100periodsperyear)\nNPERIODS=_round(100*T);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 447.59,
+    "y1": 643.49
+  },
+  "confidence": "high"
+}

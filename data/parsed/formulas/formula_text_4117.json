@@ -1,0 +1,12 @@
+{
+  "page": 2319,
+  "original_text": "prsk = estimatePortRisk(obj,pwgt) estimates portfolio risk according to the risk proxy\nassociated with the corresponding object (obj) for Portfolio, PortfolioCVaR, or PortfolioMAD\nobjects. For details on the respective workflows when using these different objects, see “Portfolio\nObject Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD\nObject Workflow” on page 6-16.",
+  "ocr_text": "prsk=estimatePortRisk(obj,pwgt)estimatesportfolioriskaccordingtotheriskproxy\nassociatedwiththecorrespondingobject(obj)forPortfolio,PortfolioCVaR,orPortfolioMAD\nobjects.Fordetailsontherespectiveworkflowswhenusingthesedifferentobjects,seePortfolio\nObjectWorkflowonpage4-18,PortfolioCVaRObjectWorkflowonpage5-16,andPortfolioMAD\nObjectWorkflowonpage6-16.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 246.72,
+    "x1": 553.59,
+    "y1": 306.35
+  },
+  "confidence": "high"
+}

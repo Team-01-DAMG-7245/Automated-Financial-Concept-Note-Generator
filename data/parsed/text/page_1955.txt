@@ -1,0 +1,30 @@
+subplot(2,1,2)
+cpIdx = find(expcpty == cpID);
+plot(simulationDates,squeeze(exposures(:,cpIdx,:)));
+title(sprintf('Exposure for Counterparty: %d',cpIdx));
+xtickformat('MMMyy');
+ylabel('Exposure ($)')
+xlabel('Simulation Dates')
+
+Compute the Credit Exposure and Determine the Incremental Exposure for a New Trade
+
+Load the data (ccr.mat) containing the mark-to-market contract values for a portfolio of swaps over
+many scenarios.
+
+load ccr.mat
+
+Look at one counterparty.
+
+cpID = 4;
+cpIdx = swaps.Counterparty == cpID;
+cpValues = values(:,cpIdx,:);
+simulationDates = datetime(simulationDates,"ConvertFrom","datenum");
+plot(simulationDates,squeeze(sum(cpValues,2)));
+grid on;
+title(sprintf('Potential Mark-to-Market Portfolio Values for Counterparty: %d',cpID));
+xtickformat('MMMyy');
+ylabel('Portfolio Value ($)')
+
+creditexposures
+
+15-649

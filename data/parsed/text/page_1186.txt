@@ -1,0 +1,44 @@
+UICalendar User Interface
+
+In this section...
+
+“Using UICalendar in Standalone Mode” on page 12-4
+
+“Using UICalendar with an Application” on page 12-4
+
+Using UICalendar in Standalone Mode
+
+You can use the UICalendar user interface in standalone mode to look up any date. To use the
+standalone mode:
+
+1
+Type the following command to open the UICalendar GUI:
+
+uicalendar
+
+The UICalendar interface is displayed:
+
+2
+Click the date and year controls to locate any date.
+
+Using UICalendar with an Application
+
+You can use the UICalendar user interface with an application to look up any date. To use the
+UICalendar graphical interface with an application, use the following command:
+
+uicalendar('PARAM1', VALUE1, 'PARAM2', VALUE2', ...)
+
+For more information, see uicalendar.
+
+Example of Using UICalendar with an Application
+
+The UICalendar example creates a function that displays a user interface that lets you select a date
+from the UICalendar user interface and fill in a text field with that date.
+
+1
+Create a figure.
+
+12
+Trading Date Utilities
+
+12-4

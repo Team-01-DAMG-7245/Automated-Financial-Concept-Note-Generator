@@ -1,0 +1,12 @@
+{
+  "page": 624,
+  "original_text": "function new_weights = equalWeightFcn(~,pricesTT)\n% Equal-weighted portfolio allocation",
+  "ocr_text": "functionnew_weights=equalWeightFcn(,pricesTT)\nEqual-weightedportfolioallocation",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 114.03,
+    "x1": 355.49,
+    "y1": 135.29
+  },
+  "confidence": "high"
+}

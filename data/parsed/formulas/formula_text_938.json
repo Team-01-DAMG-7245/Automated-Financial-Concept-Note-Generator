@@ -1,0 +1,12 @@
+{
+  "page": 504,
+  "original_text": "% ERC penalty parameter\nlambdaERC = 3e-6; % lambdaERC is so small because the log of a number\n                  % close to zero (the portfolio weights) is large\n% Variance + Equal Risk Contribution (ERC)\nERCMixObjFun = @(x) x'*p.AssetCovar*x - lambdaERC*sum(log(x));\n% Solution that accounts for risk and ERC diversification\nwERCMix = estimateCustomObjectivePortfolio(p,ERCMixObjFun);",
+  "ocr_text": "SERCpenaltyparameter\nLambdaERC=3e-6;*LambdaERCissosmallbecausethelogofanumber\nclosetozero(theportfolioweights)islarge\nVariance+EqualRiskContribution(ERC)\nERCMixObjFun=Q(x)x*p.AssetCovar*x-lLambdaERC*sum(log(x));\nSolutionthataccountsforriskandERCdiversification\nwERCMix=estimateCustom0bjectivePortfolio(p,ERCMix0bjFun);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 480.2,
+    "x1": 463.85,
+    "y1": 555.47
+  },
+  "confidence": "high"
+}

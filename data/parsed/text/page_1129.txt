@@ -1,0 +1,30 @@
+Calculate Market Invariants
+
+For market invariants, use the standard: daily changes in yield to maturity for each series. You can
+estimate their statistical distribution to be multivariate normal. IID analysis on each invariant series
+produces decent results - more so in the "independent" factor than "identical". A more thorough
+modeling using more complex distributions and/or time series models is beyond the scope of this
+example. What will need to be accounted for is the estimation of distribution parameters in the
+presence of missing data. The 30 year bonds were discontinued for a period between Feb 2002 and
+Feb 2006, so there are no yields for this time period.
+
+% Invariants are assumed to be daily changes in YTM rates.
+tsYTMRateDeltas = diff(tsYTMRates);
+
+About 1/3 of the 30 year rates (column 9) are missing from the original data set. Rather than throw
+out all these observations, an expectation maximization routine ecmnmle is used to estimate the
+mean and covariance of the invariants. The default option (NaN skip for initial estimates) is used.
+
+[tsInvMu,tsInvCov] = ecmnmle(tsYTMRateDeltas);
+
+Calculate standard deviations and correlations using cov2corr.
+
+[tsInvStd,tsInvCorr] = cov2corr(tsInvCov);
+
+The investment horizon is 1 month (21 business days between 9/1/2010 and 10/1/2010). Since the
+invariants are summable and the means and variances of normal distributions are normal, you can
+project the invariants to the investment horizon as follows:
+
+Bond Portfolio Optimization Using Portfolio Object
+
+10-31

@@ -1,0 +1,12 @@
+Page 735
+================================================================================
+
+This example shows how to use the plotFrontier function creates a plot of the efficient frontier for
+a given portfolio optimization problem. This function accepts several types of inputs and generates a
+plot with an optional possibility to output the estimates for portfolio risks and returns along the
+efficient frontier. plotFrontier has four different ways that it can be used. In addition to a plot of
+the efficient frontier, if you have an initial portfolio in the InitPort property, plotFrontier also
+displays the return versus risk of the initial portfolio on the same plot. If you have a well-posed
+portfolio optimization problem set up in a PortfolioCVaR object and you use plotFrontier, you
+get a plot of the efficient frontier with the default number of portfolios on the frontier (the default
+number is currently 10 and is maintained in the hidden property defaultNumPorts).

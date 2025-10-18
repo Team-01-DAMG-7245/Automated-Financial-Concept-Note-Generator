@@ -1,0 +1,12 @@
+{
+  "page": 956,
+  "original_text": "CapReq = 100*K(DefRateUB/100);\nExample_StressTestPlot(gridCPF,gridSPR,CapReq,CPF,SPR,...\n   'Corporate Profits Forecast (%)','Corporate Spread (%)',...\n   {'{\\bf Capital Requirement Regions (% of value)}';...\n   ['{\\bf using ' strConf '% UB Default Rate}']})",
+  "ocr_text": "CapReq=100*K(DefRateUB/100);\n\nExample_StressTestPlot(gridCPF,gridSPR,CapReq,CPF,SPR,...\nCorporateProfitsForecast(),CorporateSpread(),...\n{{lbfCapitalRequirementRegions(ofvalue)};...\n[{bfusingstrConf*UBDefaultRate}]})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 638.13,
+    "x1": 425.95,
+    "y1": 691.8
+  },
+  "confidence": "high"
+}

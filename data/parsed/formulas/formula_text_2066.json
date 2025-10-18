@@ -1,0 +1,12 @@
+{
+  "page": 1071,
+  "original_text": "StdParameters = mvnrstd(Data, Design, Covariance);",
+  "ocr_text": "StdParameters=mvnrstd(Data,Design,Covariance);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 360.9,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

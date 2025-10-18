@@ -1,0 +1,4 @@
+Page 1707
+================================================================================
+
+Use the simByTransition function to simulate any vector-valued CIR process of the form

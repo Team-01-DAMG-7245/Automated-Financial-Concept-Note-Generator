@@ -1,0 +1,51 @@
+ts2func
+
+Convert time series arrays to functions of time and state
+
+Syntax
+
+F = ts2func(Array)
+F = ts2func( ___ ,Name,Value)
+
+Description
+
+F = ts2func(Array) encapsulates a time series array associated with a vector of real-valued
+observation times within a MATLAB function suitable for Monte Carlo simulation of an NVars-by-1
+state vector Xt.
+
+n periods.
+
+F = ts2func( ___ ,Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Dynamic Behavior of Market Parameters
+
+As discussed in “Creating SDE Objects” on page 14-7, object parameters may be evaluated as if they
+are MATLAB® functions accessible by a common interface. This accessibility provides the impression
+of dynamic behavior regardless of whether the underlying parameters are truly time-varying.
+Furthermore, because parameters are accessible by a common interface, seemingly simple linear
+constructs may in fact represent complex, nonlinear designs.
+
+For example, consider a univariate geometric Brownian motion (GBM) model of the form:
+
+In this model, the return, μ(t), and volatility,σ(t), are dynamic parameters of time alone. However,
+when creating a gbm object to represent the underlying model, such dynamic behavior must be
+accessible by the common t, Xt interface. This reflects the fact that GBM models are restricted
+parameterizations that derive from the general SDE class.
+
+As a convenience, you can specify parameters of restricted models, such as GBM models, as
+traditional MATLAB® arrays of appropriate dimension. In this case, such arrays represent a static
+special case of the more general dynamic situation accessible by the t, Xt  interface.
+
+Moreover, when you enter parameters as functions, object constructors can verify that they return
+arrays of correct size by evaluating them at the initial time and state. Otherwise, object constructors
+have no knowledge of any particular functional form.
+
+The following example illustrates a technique that includes dynamic behavior by mapping a
+traditional MATLAB® time series array to a callable function with a t, Xt  interface. It also compares
+the function with an otherwise identical model with constant parameters.
+
+ts2func
+
+15-413

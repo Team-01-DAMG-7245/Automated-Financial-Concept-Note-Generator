@@ -1,0 +1,4 @@
+Page 971
+================================================================================
+
+The score function computes the scores for the training data.

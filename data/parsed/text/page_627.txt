@@ -1,0 +1,106 @@
+CVaR Portfolio Optimization Tools
+
+•
+“Portfolio Optimization Theory” on page 5-3
+
+•
+“Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object” on page 5-8
+
+•
+“Default Portfolio Problem” on page 5-15
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Common Operations on the PortfolioCVaR Object” on page 5-29
+
+•
+“Setting Up an Initial or Current Portfolio” on page 5-33
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Working with a Riskless Asset” on page 5-46
+
+•
+“Working with Transaction Costs” on page 5-47
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Working with 'Simple' Bound Constraints Using PortfolioCVaR Object” on page 5-55
+
+•
+“Working with Budget Constraints Using PortfolioCVaR Object” on page 5-58
+
+•
+“Working with Conditional Budget Constraints Using PortfolioCVaR Object” on page 5-60
+
+•
+“Working with Group Constraints Using PortfolioCVaR Object” on page 5-62
+
+•
+“Working with Group Ratio Constraints Using PortfolioCVaR Object” on page 5-65
+
+•
+“Working with Linear Equality Constraints Using PortfolioCVaR Object” on page 5-68
+
+•
+“Working with Linear Inequality Constraints Using PortfolioCVaR Object” on page 5-70
+
+•
+“Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using
+PortfolioCVaR Objects” on page 5-72
+
+•
+“Working with Average Turnover Constraints Using PortfolioCVaR Object” on page 5-75
+
+•
+“Working with One-Way Turnover Constraints Using PortfolioCVaR Object” on page 5-78
+
+•
+“Validate the CVaR Portfolio Problem” on page 5-81
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Obtaining Portfolios Along the Entire Efficient Frontier” on page 5-86
+
+•
+“Obtaining Endpoints of the Efficient Frontier” on page 5-89
+
+•
+“Obtaining Efficient Portfolios for Target Returns” on page 5-92
+
+•
+“Obtaining Efficient Portfolios for Target Risks” on page 5-95
+
+•
+“Choosing and Controlling the Solver for PortfolioCVaR Optimizations” on page 5-98
+
+•
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+•
+“Plotting the Efficient Frontier for a PortfolioCVaR Object” on page 5-109
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 5-115
+
+•
+“Working with Other Portfolio Objects” on page 5-118
+
+•
+“Troubleshooting CVaR Portfolio Optimization Results” on page 5-121
+
+5

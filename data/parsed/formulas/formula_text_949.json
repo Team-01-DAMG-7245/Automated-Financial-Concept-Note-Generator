@@ -1,0 +1,12 @@
+{
+  "page": 510,
+  "original_text": "nX = size(portWeights,1); % Number of assets\nnP = size(portWeights,2); % Number of portfolios",
+  "ocr_text": "nX=size(portWeights,1);Numberofassets\nnP=size(portWeights,2);Numberofportfolios",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 350.07,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

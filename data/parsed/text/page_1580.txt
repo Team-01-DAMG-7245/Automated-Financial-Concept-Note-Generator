@@ -1,0 +1,8 @@
+Use equityCurve to plot the equity curve for the simple equal-weighted investment strategy.
+
+equityCurve(backtester)
+
+15
+Functions
+
+15-274

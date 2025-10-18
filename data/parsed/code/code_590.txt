@@ -1,0 +1,11 @@
+Page 545
+================================================================================
+
+% Run the simulation.
+WPath = [W0; zeros(T,1)];
+portPath = [portIdx(WNodeIdx,1); zeros(T,1)];
+VPath = [V(WNodeIdx,1); zeros(T,1)];
+for t = 1:T
+    % Get the return and variance of optimal portfolio at time t.
+    mu = pret(portIdx(WNodeIdx,t));
+    sigma = prsk(portIdx(WNodeIdx,t));

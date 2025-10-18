@@ -1,0 +1,5 @@
+Page 2330
+================================================================================
+
+Given PortfolioCVaR object p, use the estimatePortRisk function to estimate mean and covariance
+of asset return scenarios.

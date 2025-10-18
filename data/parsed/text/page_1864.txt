@@ -1,0 +1,52 @@
+bndprice
+
+Price fixed-income security from yield to maturity
+
+Syntax
+
+[Price,AccruedInt] = bndprice(Yield,CouponRate,Settle,Maturity)
+[Price,AccruedInt] = bndprice( ___ ,Name,Value)
+
+Description
+
+[Price,AccruedInt] = bndprice(Yield,CouponRate,Settle,Maturity) given bonds with
+SIA date parameters and yields to maturity, returns the clean prices and accrued interest due.
+
+In addition, you can use the Financial Instruments Toolbox object framework with a FixedBond
+instrument to price a fixed bond.
+
+[Price,AccruedInt] = bndprice( ___ ,Name,Value) adds optional name-value pair
+arguments.
+
+Examples
+
+Price a Treasury Bond from Yield to Maturity
+
+This example shows how to price a treasury bond at three different yield values.
+
+Yield = [0.04; 0.05; 0.06]; 
+CouponRate = 0.05; 
+Settle = '20-Jan-1997'; 
+Maturity = '15-Jun-2002'; 
+Period = 2; 
+Basis = 0;
+
+[Price, AccruedInt] = bndprice(Yield, CouponRate, Settle,...
+Maturity, Period, Basis)
+
+Price = 3×1
+
+104.8106
+   99.9951
+   95.4384
+
+AccruedInt = 3×1
+
+0.4945
+    0.4945
+    0.4945
+
+15
+Functions
+
+15-558

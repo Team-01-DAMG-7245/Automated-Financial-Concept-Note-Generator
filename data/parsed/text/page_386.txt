@@ -1,0 +1,37 @@
+In the efficient frontiers in the above figure, the lower-left part of the red efficient frontier line for the
+portfolio with a risk-free asset is in range [0,1] and is actually the capital allocation line (CAL). The
+slope of this line is the maximum Sharpe ratio of the portfolio, which demonstrates how return is best
+awarded by taking extra risk. The upper right of the red efficient frontier line is the same as a fully
+invested portfolio (blue line). Once the portfolio crosses the Sharpe ratio point, the portfolio is fully
+invested and there is no more cash available to allow high risk-awarded returns following the straight
+CAL. However, if borrowing of a risk-free asset is allowed, you can effectively use the funds from the
+borrowing of a risk-free asset to invest in more risky assets, as demonstrated in the "Portfolio with
+Leverage" section.
+
+Portfolio with Leverage
+
+To fund investments in risky assets, consider using leverage by borrowing a risk-free asset. The
+Portfolio class enables you to use leverage in asset allocation when a risk-free asset is available in
+the portfolio.
+
+First, check if the RiskFreeRate property for the Portfolio object is nonzero.
+
+p
+
+p = 
+  Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: 0.0300
+                     AssetMean: [4×1 double]
+                    AssetCovar: [4×4 double]
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-218

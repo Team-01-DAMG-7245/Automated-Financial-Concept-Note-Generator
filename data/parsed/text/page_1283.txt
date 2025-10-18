@@ -1,0 +1,32 @@
+Compute Commodity Price Returns
+
+To further analyze the data in this example, you must work with the commodity price returns rather
+than the adjusted commodity prices. Use tick2ret to convert the adjusted commodity prices Pt to
+the return series Rt as follows:
+
+Rt = Pt + 1
+Pt
+−1,
+t = 1, 2, 3, …
+
+Returns = tick2ret(Prices);
+
+Visualize Commodity Price Returns
+
+Plot each return series for soft commodities over time.
+
+figure
+tiledlayout(8,4, "TileSpacing", "tight")
+
+for commodity = 1:width(Returns)
+    nexttile
+    plot(Returns.Date, Returns{:, commodity})
+    title(commodityNames(commodity))
+    axis off
+end
+
+sgtitle("Commodity Returns")
+
+Volatility Modeling for Soft Commodities
+
+14-91

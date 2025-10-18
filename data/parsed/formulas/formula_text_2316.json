@@ -1,0 +1,12 @@
+{
+  "page": 1202,
+  "original_text": "for t = t0, t0 + Δt, t0 + 2Δt, ..., T – Δt.",
+  "ocr_text": "fort=to,to+At,ty+2At,...,T-At.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 468.77,
+    "x1": 258.0,
+    "y1": 481.6
+  },
+  "confidence": "high"
+}

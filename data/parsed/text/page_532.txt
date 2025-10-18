@@ -1,0 +1,79 @@
+The approach in this example also assumes that the returns follow a stationary distribution. In other
+words, the approach assumes that the returns have the same expectation and covariance throughout
+the investment period. The term “single-period” refers to the fact that the optimal allocation is
+computed only once at the beginning of the investment horizon assuming that the allocations will
+remain constant. This is a “set-it-and-forget-it” strategy. Although you can recompute the allocation
+weights at each reinvestment period by updating the time horizon and initial wealth, a single-period
+problem does not consider possible allocation changes in the middle of the investment horizon. In
+contrast, the optimal solution for a "multi-period" approach takes into account possible changes to
+the weights at intermediate investment periods. Thus, instead of just selecting the initial portfolio
+weights, multi-period problems compute the optimal strategy that should be followed given the
+changes in wealth at each of the reinvestment periods. The “Dynamic Portfolio Allocation in Goal-
+Based Wealth Management for Multiple Time Periods” on page 4-367 example shows a multi-period
+version of the problem in this example.
+
+Define Objective Function and Solve Problem
+
+Find the portfolio that maximizes the probability of achieving the investor's goal given the prior
+assumptions. Maximizing P WT ≥G  is equivalent to minimizing P WT ≤G , so the objective function
+is rewritten as
+
+max
+w, μ, σ
+P WT ≥G = min
+w, μ, σ P WT ≤G = min
+w, μ, σ Φ
+1
+σ T ln
+G
+W0 −μ −σ2
+
+2 T .
+
+Since the relationship of μ and σ to the weights w is represented by equality constraints in the
+problem, you can substitute these values in the objective function and remove the equality
+constraints that show the relationship between these three variables.
+
+max
+w, μ, σP WT ≥G = min
+w Φ
+1
+
+T wTΣ0w
+
+ln
+G
+W0 −μ0
+Tw −wTΣ0w
+2
+T
+
+Define the objective function handle using the definition above and then use
+estimateCustomObjectivePortfolio to solve the problem.
+
+% Define objective function
+probability = @(w) normcdf(1/sqrt(T*(w'*p.AssetCovar*w)) * ...
+    (log(G/W0) - (p.AssetMean'*w - (w'*p.AssetCovar*w)/2)*T));
+
+% Solve problem
+wGBWM = estimateCustomObjectivePortfolio(p,probability);
+
+Plot Efficient Frontier
+
+Use plotFrontier to plot the efficient frontier, the maximum Sharpe ratio portfolio, and the
+portfolio that maximizes the probability of achieving the goal (called the GBWM portfolio).
+
+% Plot the efficient frontier.
+figure;
+plotFrontier(p,pret,prisk);
+hold on
+plot(estimatePortRisk(p,wSR),estimatePortReturn(p,wSR),'b.', ...
+    'MarkerSize',20);
+plot(estimatePortRisk(p,wGBWM),estimatePortReturn(p,wGBWM),'r.', ...
+    'MarkerSize',20);
+legend('Efficient frontier','Maximum Sharpe ratio', ...
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-364

@@ -1,0 +1,12 @@
+{
+  "page": 924,
+  "original_text": "dataNR = data;\ndataNR.Rating{2} = 'NR';",
+  "ocr_text": "dataNR=data;\ndataNR.Rating{2}=NR;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 220.05,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 611,
+  "original_text": "LoggedSignals.ArrivalPrice = 0;\nLoggedSignals.ExecutedShares = 0;\nLoggedSignals.ExecutedPrices = 0;\nLoggedSignals.HorizonExecutedShares = ...\n    zeros(EnvConstants.NumLevels*EnvConstants.NumIntervalsPerHorizon,1);\nLoggedSignals.HorizonExecutedPrices = LoggedSignals.HorizonExecutedShares;\nLoggedSignals.IS_Agent = zeros(EnvConstants.NumSteps,1);\nLoggedSignals.Reward = LoggedSignals.IS_Agent;\nLoggedSignals.NumIntervalsPerHorizon = EnvConstants.NumIntervalsPerHorizon;\nLoggedSignals.NumHorizons = EnvConstants.NumHorizons;\nLoggedSignals.NumLevels = EnvConstants.NumLevels;",
+  "ocr_text": "LoggedSignals.ArrivalPrice=0;\nLoggedSignals.ExecutedShares=0;\nLoggedSignals.ExecutedPrices=0;\nLoggedSignals.HorizonExecutedShares=...\nzeros(EnvConstants.NumLevels*EnvConstants.NumIntervalsPerHorizon,1);\nLoggedSignals.HorizonExecutedPrices=LoggedSignals.HorizonExecutedShares;\nLoggedSignals.IS_Agent=zeros(EnvConstants.NumSteps,1);\nLoggedSignals.Reward=LoggedSignals.IS_Agent;\nLoggedSignals.NumIntervalsPerHorizon=EnvConstants.NumIntervalsPerHorizon;\nLoggedSignals.NumHorizons=EnvConstants.NumHorizons;\nLoggedSignals.NumLevels=EnvConstants.NumLevels;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 406.23,
+    "x1": 496.35,
+    "y1": 524.69
+  },
+  "confidence": "high"
+}

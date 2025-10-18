@@ -1,0 +1,12 @@
+{
+  "page": 775,
+  "original_text": "% Compute prices from cash flow yields\nsimDF = exp(-simCFYields.*simCFTimes');\nsimBondsPrices = (allCF*simDF')';",
+  "ocr_text": "SComputepricesfromcashflowyields\nsimDF=exp(-simCFYields.*simCFTimes);\nsimBondsPrices=(allCF*simDF);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 147.03,
+    "x1": 301.3,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

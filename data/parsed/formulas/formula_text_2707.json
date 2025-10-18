@@ -1,0 +1,12 @@
+{
+  "page": 1364,
+  "original_text": "% Traditional covariance efficient portfolios\nwTraditional = estimateFrontier(pTraditional,nPort);",
+  "ocr_text": "Traditionalcovarianceefficientportfolios\nwIraditional=estimateFrontier(pTraditional,nPort);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 480.83,
+    "x1": 371.73,
+    "y1": 502.09
+  },
+  "confidence": "high"
+}

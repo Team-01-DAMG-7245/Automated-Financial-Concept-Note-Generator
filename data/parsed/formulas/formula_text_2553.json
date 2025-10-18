@@ -1,0 +1,12 @@
+{
+  "page": 1304,
+  "original_text": "tStart = tic;\npaths = simBySolution(mdl,NPeriods,'NTrials',NTrials,'DeltaTime',dt,'Z',Z);\ntime1 = toc(tStart);",
+  "ocr_text": "tStart=tic;\npaths=simBySolution(mdl,NPeriods,NTrials,NTrials,DeltaTime,dt,Z,Z);\ntimel=toc(tStart);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 347.43,
+    "x1": 496.38,
+    "y1": 379.49
+  },
+  "confidence": "high"
+}

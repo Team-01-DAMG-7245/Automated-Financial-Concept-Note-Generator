@@ -1,0 +1,56 @@
+7.347010000000000   0.000000575839968
+   7.350670000000000   0.000001021397017
+   7.357970000000000   0.000002064539982
+   7.365280000000000   0.000003234110940
+
+HazData = 5×2
+105 ×
+
+7.343360000000000   0.000000232959886
+   7.347010000000000   0.000000352000512
+   7.350670000000000   0.000000476383354
+   7.357970000000000   0.000000609055766
+   7.365280000000000   0.000000785241515
+
+Input Arguments
+
+ZeroData — Zero rate data
+vector | IRDataCurve object
+
+Zero rate data, specified as a M-by-2 vector of dates, using a serial date number format, and zero
+rates or an IRDataCurve object of zero rates.
+
+When ZeroData is an IRDataCurve object, ZeroCompounding and ZeroBasis are implicit in
+ZeroData and are redundant inside this function. In this case, specify these optional parameters
+when constructing the IRDataCurve object before using the cdsbootstrap function.
+
+For more information on an IRDataCurve object, see “Creating an IRDataCurve Object” (Financial
+Instruments Toolbox).
+
+Data Types: double | object
+
+MarketData — Bond market data
+matrix
+
+Bond market data, specified as a N-by-2 matrix of dates and corresponding market spreads or N-by-3
+matrix of dates, upfronts, and standard spreads of CDS contracts. The dates must be entered as serial
+date numbers, upfronts must be numeric values between 0 and 1, and spreads must be in basis
+points.
+
+Data Types: double
+
+Settle — Settlement date
+datetime scalar | string scalar | date character vector
+
+Settlement date, specified as a scalar datetime, string, or date character vector. The Settle date
+must be earlier than or equal to the dates in MarketData
+
+To support existing code, cdsbootstrap also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+15
+Functions
+
+15-620

@@ -1,0 +1,12 @@
+{
+  "page": 2136,
+  "original_text": "NumDays = daysact(StartDate) returns the actual number of days between the MATLAB base\ndate and StartDate. In MATLAB, the base date 1 is 1-Jan-0000 A.D.",
+  "ocr_text": "NumDays=daysact(StartDate)returnstheactualnumberofdaysbetweentheMATLABbase\ndateandStartDate.InMATLAB,thebasedate1is1-Jan-0000A.D.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 254.85,
+    "x1": 543.62,
+    "y1": 278.48
+  },
+  "confidence": "high"
+}

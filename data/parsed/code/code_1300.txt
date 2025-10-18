@@ -1,0 +1,5 @@
+Page 1353
+================================================================================
+
+conditionNum = [cond(Sigma); cond(denoisedSigma)];
+condNumT = table(conditionNum,'RowNames',{'Sigma','SigmaHat'})

@@ -1,0 +1,12 @@
+{
+  "page": 349,
+  "original_text": "X = portsim(AssetMean'/12, AssetCovar/12, 60); % Monthly total returns for 5 years (60 months)\n[Y, T] = ret2tick(X, [], 1/12);                % form total return prices.\nplot(T, log(Y));\ntitle('\\bfSimulated Asset Class Total Return Prices');\nxlabel('Year');\nylabel('Log Total Return Price');\nlegend(Asset,'Location','best');",
+  "ocr_text": "X=portsim(AssetMean/12,AssetCovar/12,60);Monthlytotalreturnsfor5years(60months)\n[Y,T]=ret2tick(X,[],1/12); formtotalreturnprices.\n\nplot(T,log(Y));\n\ntitle(bfSimulatedAssetClassTotalReturnPrices);\n\nxlabel(Year);\n\nylabel(LogTotalReturnPrice);\n\nlegend(Asset,Location,best);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 240.06,
+    "x1": 599.31,
+    "y1": 315.33
+  },
+  "confidence": "high"
+}

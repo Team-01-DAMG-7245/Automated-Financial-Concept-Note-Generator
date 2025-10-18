@@ -1,0 +1,12 @@
+{
+  "page": 552,
+  "original_text": "gbwmEnvironment = rlFunctionEnv(observationInfo,actionInfo,stepFcn, ...\n    resetFcn);",
+  "ocr_text": "gbwmEnvironment=rlFunctionEnv(observationInfo,actionInfo,stepFcn,...\nresetFcn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 373.76,
+    "x1": 474.71,
+    "y1": 395.03
+  },
+  "confidence": "high"
+}

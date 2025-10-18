@@ -1,0 +1,12 @@
+{
+  "page": 85,
+  "original_text": "VegaVal = blsvega(100, 95, 0.10, 0.25, 0.50, 0)",
+  "ocr_text": "VegaVal=blsvega(100,95,0.10,0.25,0.50,0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 437.52,
+    "x1": 344.65,
+    "y1": 447.98
+  },
+  "confidence": "high"
+}

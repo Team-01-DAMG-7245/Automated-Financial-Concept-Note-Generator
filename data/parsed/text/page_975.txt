@@ -1,0 +1,60 @@
+Credit Scorecard Modeling with Missing Values
+
+This example shows how to handle missing values when you work with creditscorecard objects.
+First, the example shows how to use the creditscorecard functionality to create an explicit bin for
+missing data with corresponding points. Then, this example describes four different ways to "treat"
+the missing data on page 8-62 to get a final credit scorecard with no explicit bins for missing values.
+
+Develop a Credit Scorecard with Explicit Bins for Missing Values
+
+When you create a creditscorecard object, the data can contain missing values. When using
+creditscorecard to create a creditscorecard object, you can set the name-value pair argument
+for 'BinMissingData' set to true. In this case, the missing data for numeric predictors (NaN
+values) and for categorical predictors (<undefined> values) is binned in a separate bin labeled
+<missing> that appears at the end of the bins. Predictors with no missing values in the training data
+have no <missing> bin. If you do not specify the 'BinMissingData' argument or if you set
+'BinMissingData' to false, the creditscorecard function discards missing observations when
+computing frequencies of Good and Bad, and neither the bininfo nor plotbins functions reports
+such observations.
+
+The <missing> bin remains in place throughout the scorecard modeling process. The final scorecard
+explicitly indicates the points to be assigned to missing values for predictors that have a <missing>
+bin. These points are determined from the weight-of-evidence (WOE) value of the <missing> bin and
+the predictor's coefficient in the logistic model. For predictors without an explicit <missing> bin,
+you can assign points to missing values using the name-value pair argument 'Missing' in
+formatpoints, as described in this example, or by using one of the four different ways to "treat" the
+missing data on page 8-62.
+
+The dataMissing table in the CreditCardData.mat file has two predictors with missing values —
+CustAge and ResStatus.
+
+load CreditCardData.mat
+head(dataMissing,5)
+
+CustID    CustAge    TmAtAddress     ResStatus     EmpStatus    CustIncome    TmWBank    Othe
+    ______    _______    ___________    ___________    _________    __________    _______    ____
+
+1          53          62         <undefined>    Unknown        50000         55         Ye
+      2          61          22         Home Owner     Employed       52000         25         Ye
+      3          47          30         Tenant         Employed       37000         61         No
+      4         NaN          75         Home Owner     Employed       53000         20         Ye
+      5          68          56         Home Owner     Employed       53000         14         Ye
+
+Create a creditscorecard object using the CreditCardData.mat file to load the dataMissing
+table with missing values. Set the 'BinMissingData' argument to true. Apply automatic binning.
+
+sc = creditscorecard(dataMissing,'IDVar','CustID','BinMissingData',true);
+sc = autobinning(sc);
+
+The bin information and bin plots for the predictors that have missing data both show a <missing>
+bin at the end.
+
+bi = bininfo(sc,'CustAge');
+disp(bi)
+
+Bin         Good    Bad     Odds       WOE       InfoValue 
+    _____________    ____    ___    ______    ________    __________
+
+Credit Scorecard Modeling with Missing Values
+
+8-57

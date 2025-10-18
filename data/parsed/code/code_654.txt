@@ -1,0 +1,18 @@
+Page 609
+================================================================================
+
+% Execute trade
+        if IntervalIdx==NumIntervalsPerHorizon
+            if BuyTrade
+                % Enforce target ending inventory constraint for buy trade (buy missing shares)
+                CurrentTradingShares = max(TotalTradingShares - ...
+                    InventorySharesStepTWAP(IntervalIdx + NumIntervalsPerHorizon.*(HorizonIdx-1))
+            else
+                % Enforce zero ending inventory constraint for sell trade (sell remaining shares)
+                CurrentTradingShares = max(InventorySharesStepTWAP(IntervalIdx + ...
+                    NumIntervalsPerHorizon.*(HorizonIdx-1)), 0);
+            end
+        else
+            CurrentTradingShares = TradingSharesStepTWAP(IntervalIdx + ...
+                NumIntervalsPerHorizon.*(HorizonIdx-1));
+        end

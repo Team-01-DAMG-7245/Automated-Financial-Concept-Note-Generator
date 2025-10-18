@@ -1,0 +1,12 @@
+{
+  "page": 2408,
+  "original_text": "Y = getScenarios(obj) obtains scenarios for PortfolioCVaR or PortfolioMAD objects.",
+  "ocr_text": "Y=getScenarios(obj)obtainsscenariosforPortfolioCVaRorPortfolioMADobjects.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 310.72,
+    "x1": 521.88,
+    "y1": 322.35
+  },
+  "confidence": "high"
+}

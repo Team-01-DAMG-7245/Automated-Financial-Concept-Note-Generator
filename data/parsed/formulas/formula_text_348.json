@@ -1,0 +1,12 @@
+{
+  "page": 217,
+  "original_text": "% Create two Portfolio objects:\n% p with predefined mean and covar and q with asset return scenarios to estimate mean and covar.\np = Portfolio('mean', m, 'covar', C);\nq = Portfolio;",
+  "ocr_text": "CreatetwoPortfolioobjects:\nSpwithpredefinedmeanandcovarandqwithassetreturnscenariostoestimatemeanandcovar.\np=Portfolio(mean,m,_covar,C);\n\nq=Portfolio;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 518.98,
+    "x1": 610.13,
+    "y1": 561.84
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,29 @@
+A: 0
+              B: 0.1
+          Alpha: 1
+          Sigma: 0.3
+
+sdeld objects provide a parametric alternative to the mean-reverting drift form and also provide an
+alternative interface to the sdeddo parent class, because you can create an object without first
+having to create its drift and diffusion-rate components.
+
+More About
+
+Instance Hierarchy
+
+There are inheritance relationships among the SDE classes.
+
+The following figure illustrates the inheritance relationships.
+
+For more information, see “SDE Models” on page 14-7, “SDE Classes and Associated Simulation
+Methods” on page 14-13, and “SDE Class Hierarchy” on page 14-5.
+
+Algorithms
+
+When you specify the required input parameters as arrays, they are associated with a specific
+parametric form. By contrast, when you specify either required input parameter as a function, you
+can customize virtually any specification.
+
+sdeld
+
+15-179

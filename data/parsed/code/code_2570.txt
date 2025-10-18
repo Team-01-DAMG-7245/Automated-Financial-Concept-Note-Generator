@@ -1,0 +1,6 @@
+Page 2487
+================================================================================
+
+Return = mirr(CashFlow,FinRate,Reinvest) calculates the modified internal rate of return
+for a series of periodic cash flows. This function calculates only positive rates of return; for
+nonpositive rates of return, Return = 0.

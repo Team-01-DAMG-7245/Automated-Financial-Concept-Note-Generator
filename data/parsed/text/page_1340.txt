@@ -1,0 +1,9 @@
+Also, you can use the name-value argument for Style to generate a horizontal bar chart of active
+returns by category.
+
+attributionsChart(BrinsonPAobj,Style="active")
+
+15
+Functions
+
+15-34

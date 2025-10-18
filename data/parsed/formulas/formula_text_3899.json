@@ -1,0 +1,12 @@
+{
+  "page": 2224,
+  "original_text": "% Set a return target\nret0 = 0.03;\n% Solve portfolio problem with a gross return constraint\nwGross = estimateCustomObjectivePortfolio(p,objFun, ...\n    TargetReturn=ret0)",
+  "ocr_text": "sSetareturntarget\n\nretO=0.03;\n\nSolveportfolioproblemwithagrossreturnconstraint\n\nwGross=estimateCustom0bjectivePortfolio(p,objFun,...\nTargetReturn=ret0)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 467.06,
+    "x1": 393.41,
+    "y1": 520.72
+  },
+  "confidence": "high"
+}

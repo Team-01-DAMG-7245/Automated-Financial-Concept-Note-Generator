@@ -1,0 +1,12 @@
+{
+  "page": 2216,
+  "original_text": "ELPM = elpm(Mean, Sigma, MAR, [0 1 2])",
+  "ocr_text": "ELPM=elpm(Mean,Sigma,MAR,[012])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 184.36,
+    "x1": 295.88,
+    "y1": 194.83
+  },
+  "confidence": "high"
+}

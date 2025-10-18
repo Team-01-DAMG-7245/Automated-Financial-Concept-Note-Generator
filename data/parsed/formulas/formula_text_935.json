@@ -1,0 +1,12 @@
+{
+  "page": 504,
+  "original_text": "and by defining x, the ERC portfolio with default constraints, as x =\ny\n∑iyi, where c > 0 can be any",
+  "ocr_text": "andbydefiningx,theERCportfoliowithdefaultconstraints,asx= Sy wherec=0canbeany",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 283.92,
+    "x1": 532.28,
+    "y1": 305.0
+  },
+  "confidence": "high"
+}

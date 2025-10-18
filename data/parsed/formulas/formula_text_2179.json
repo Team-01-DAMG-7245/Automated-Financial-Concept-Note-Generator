@@ -1,0 +1,12 @@
+{
+  "page": 1123,
+  "original_text": "Range = 10:70;\nSpan = length(Range);\nj = 1:0.5:12;\nNewj = j(ones(Span,1),:)'/12;",
+  "ocr_text": "Range=10:70;\nSpan=Length(Range);\nj=1:0.5:12;\nNewj_=j(ones(Span,1),:)/12;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 249.23,
+    "x1": 247.12,
+    "y1": 292.09
+  },
+  "confidence": "high"
+}

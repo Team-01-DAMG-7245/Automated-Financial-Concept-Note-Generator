@@ -1,0 +1,12 @@
+{
+  "page": 377,
+  "original_text": "fprintf('Active return for Max. Info Ratio portfolio is %0.2f%%\\n', optPortRetn*25200);",
+  "ocr_text": "fprintf(ActivereturnforMax.InfoRatioportfoliois*0.2fn,optPortRetn*25200);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 265.01,
+    "x1": 561.39,
+    "y1": 275.48
+  },
+  "confidence": "high"
+}

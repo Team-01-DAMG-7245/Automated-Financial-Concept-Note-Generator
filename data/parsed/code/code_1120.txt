@@ -1,0 +1,5 @@
+Page 1145
+================================================================================
+
+function perCosts = computeCosts(policy,nTrials,nSteps,SpotPrice,Strike,T,r,ExpVol,InitPos,dT,mu,
+% Helper function to compute costs for any hedging approach.

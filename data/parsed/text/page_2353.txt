@@ -1,0 +1,86 @@
+Reset — Frequency of payments per year
+1 (default) | numeric
+
+Frequency of payments per year, specified as NINST-by-1 vector.
+
+Data Types: double
+
+Basis — Day-count basis used for time factor calculations
+0 (actual/actual) (default) | integers of the set [0...13] | vector of integers of the set [0...13]
+
+Day-count basis used for time factor calculations, specified as a NINST-by-1 vector. Values are:
+
+•
+0 = actual/actual
+
+•
+1 = 30/360 (SIA)
+
+•
+2 = actual/360
+
+•
+3 = actual/365
+
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+Principal — Notional principal amounts
+100 (default) | numeric
+
+Notional principal amounts, specified as a NINST-by-1 vector or a NINST-by-1 cell array where each
+element is a NUMDATES-by-2 cell array where the first column is dates and the second column is the
+associated principal amount. The date indicates the last day that the principal value is valid.
+
+Data Types: double | cell
+
+EndMonthRule — End-of-month rule flag
+1 (in effect) (default) | nonnegative integer 0 or 1
+
+End-of-month rule flag, specified as a NINST-by-1 vector. This rule applies only when Maturity is an
+end-of-month date for a month having 30 or fewer days.
+
+•
+0 = Ignore rule, meaning that a bond coupon payment date is always the same numerical day of
+the month.
+
+•
+1 = Set rule on, meaning that a bond coupon payment date is always the last actual day of the
+month.
+
+Data Types: logical
+
+floatdiscmargin
+
+15-1047

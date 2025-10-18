@@ -1,0 +1,12 @@
+{
+  "page": 1101,
+  "original_text": "PortfolioDuration  = PortfolioWeights' * Durations;\nPortfolioConvexity = PortfolioWeights' * Convexities;\nPercentApprox1 = -PortfolioDuration * dY * 100",
+  "ocr_text": "PortfolioDuration=PortfolioWeights*Durations;\nPortfolioConvexity=PortfolioWeights*Convexities;\nPercentApproxl=-PortfolioDuration*dY*100",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 494.92,
+    "x1": 377.15,
+    "y1": 526.98
+  },
+  "confidence": "high"
+}

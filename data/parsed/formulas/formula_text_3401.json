@@ -1,0 +1,12 @@
+{
+  "page": 1874,
+  "original_text": "% FNMA 4 3/8 maturing 10/06 at 4.30 pm Tuesday\nPrice    = 105.484;\nCoupon   = 0.04375;\nMaturity = datetime('15-Oct-2006','Locale','en_US');",
+  "ocr_text": "FNMA43/8maturing10/06at4.30pmTuesday\nPrice =105.484;\n\nCoupon =0.04375;\nMaturity=datetime(15-Oct-2006,Locale,en_US);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 368.43,
+    "x1": 371.76,
+    "y1": 411.29
+  },
+  "confidence": "high"
+}

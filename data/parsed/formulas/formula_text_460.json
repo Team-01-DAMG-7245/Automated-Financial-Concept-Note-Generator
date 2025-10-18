@@ -1,0 +1,12 @@
+{
+  "page": 321,
+  "original_text": "This redundant conditional budget constraint warning occurs when you are using\nsetConditionalBudget with a Portfolio, PortfolioCVaR, or PortfolioMAD object and the\nconditional threshold of all assets is greater than or equal to their respective upper bounds. This\nhappens when the UpperBound ≤ ConditionalBudgetThreshold. In this case, assets are not\nallowed to invest more than the conditional threshold, which makes the conditional budget constraint\nunnecessary. The following example shows the case where this happens:",
+  "ocr_text": "Thisredundantconditionalbudgetconstraintwarningoccurswhenyouareusing\nsetConditionalBudgetwithaPortfolio,PortfolioCVaR,orPortfolioMADobjectandthe\nconditionalthresholdofallassetsisgreaterthanorequaltotheirrespectiveupperbounds.This\nhappenswhentheUpperBound=ConditionalBudgetThreshold.Inthiscase,assetsarenot\nallowedtoinvestmorethantheconditionalthreshold,whichmakestheconditionalbudgetconstraint\nunnecessary.Thefollowingexampleshowsthecasewherethishappens:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 519.32,
+    "x1": 555.42,
+    "y1": 590.95
+  },
+  "confidence": "high"
+}

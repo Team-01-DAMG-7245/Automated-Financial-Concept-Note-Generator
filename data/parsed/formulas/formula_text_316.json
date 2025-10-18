@@ -1,0 +1,12 @@
+{
+  "page": 201,
+  "original_text": "p = Portfolio('Name','Asset Allocation Fund');\ndisp(p.Name)",
+  "ocr_text": "p=Portfolio(Name,AssetAllocationFund);\ndisp(p.Name)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.44,
+    "x1": 339.25,
+    "y1": 322.71
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,37 @@
+Assume that there is a market index that follows the maximum Sharpe ratio portfolio. Use
+estimateMaxSharpeRatio to create the benchmark portfolio.
+
+% Create the benchmark portfolio.
+bmkPort = estimateMaxSharpeRatio(p);
+% Create the benchmark returns timetable.
+marketTT = timetable(assetsTT.Time,assetsTT.Variables*bmkPort, ...
+    VariableNames={'Benchmark'});
+
+Minimize Tracking Error
+
+You can use two methods to obtain the tracking error. The first method uses the variance of the
+excess return of the portfolio with respect to the benchmark. This method assumes that the
+benchmark prices or returns are given, but does not require knowledge of the weights of the assets
+associated to the benchmark. The second method requires you to decompose the benchmark into the
+different weights for each asset.
+
+Tracking Error Using Benchmark Returns
+
+To compute the tracking error, you first need to compute the excess return of each asset with respect
+to the benchmark.
+
+% Compute the excess return.
+excessReturn = assetsTT.Variables-marketTT.Variables;
+
+Then, you can compute the excess returns covariance matrix ΣR.
+
+excessRetSigma = cov(excessReturn);
+
+Compute the tracking error as the variance of the excess return of the portfolio
+
+xTΣRx .
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-344

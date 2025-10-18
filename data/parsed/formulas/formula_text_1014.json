@@ -1,0 +1,12 @@
+{
+  "page": 532,
+  "original_text": "Find the portfolio that maximizes the probability of achieving the investor's goal given the prior\nassumptions. Maximizing P WT ≥G  is equivalent to minimizing P WT ≤G , so the objective function\nis rewritten as",
+  "ocr_text": "Findtheportfoliothatmaximizestheprobabilityofachievingtheinvestorsgoalgiventheprior\nassumptions.MaximizingP(Wy=G)isequivalenttominimizingP(WysG),sotheobjectivefunction\nisrewrittenas",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 280.46,
+    "x1": 552.52,
+    "y1": 317.73
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 1500
+================================================================================
+
+If you specify JumpMean as a deterministic function of time, you call JumpMean with a real-valued
+scalar time t as its only input, it must return a scalar.

@@ -1,0 +1,6 @@
+Page 532
+================================================================================
+
+% Define objective function
+probability = @(w) normcdf(1/sqrt(T*(w'*p.AssetCovar*w)) * ...
+    (log(G/W0) - (p.AssetMean'*w - (w'*p.AssetCovar*w)/2)*T));

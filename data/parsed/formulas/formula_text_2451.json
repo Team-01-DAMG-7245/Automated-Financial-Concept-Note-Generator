@@ -1,0 +1,12 @@
+{
+  "page": 1268,
+  "original_text": "limits = axis;\nx = linspace(limits(1), limits(2));\nplot(x, normcdf(x, 0, std(returns(:,index))), 'green', 'LineWidth', 2)",
+  "ocr_text": "limits=axis;\nx=Llinspace(limits(1),limits(2));\nplot(x,normcdf(x,0,std(returns(:,index))),green,LineWidth,2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 469.29,
+    "y1": 675.89
+  },
+  "confidence": "high"
+}

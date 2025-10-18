@@ -1,0 +1,6 @@
+Page 241
+================================================================================
+
+GA = [ true false true false true false ];   % odd-numbered companies
+GB = [ false false false true true true ];   % nonfinancial companies
+p = addGroupRatio(p, GA, GB, 0.2);

@@ -1,0 +1,12 @@
+{
+  "page": 591,
+  "original_text": "SimAction_Train_Sell = squeeze(experience_Sell.Action.TradingAction_NumberOfShares_.Data);",
+  "ocr_text": "SimAction_Train_Sell=squeeze(experienceSell.Action.TradingAction_NumberOfShares_.Data);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 300.9,
+    "x1": 577.62,
+    "y1": 311.36
+  },
+  "confidence": "high"
+}

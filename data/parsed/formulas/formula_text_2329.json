@@ -1,0 +1,12 @@
+{
+  "page": 1204,
+  "original_text": "Merton\ndXt = B(t, Xt)Xtdt + D(t, Xt)V(t, xt)dWt + Y(t, Xt)XtdNt",
+  "ocr_text": "",
+  "bbox": {
+    "x0": 44.25,
+    "y0": 283.4,
+    "x1": 540.21,
+    "y1": 297.14
+  },
+  "confidence": "low"
+}

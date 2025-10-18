@@ -1,0 +1,20 @@
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Addendum to Securities Industry Association, Standard Securities Calculation Methods: Fixed
+Income Securities Formulas for Analytic Measures. Vol. 2, Spring 1995.
+
+See Also
+days360 | days360e | datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+
+days360isda
+
+15-823

@@ -1,0 +1,12 @@
+{
+  "page": 524,
+  "original_text": "% Cumpute covariance matrix of estimation errors in the expected returns.\nSigmaR = diag(diag(p.AssetCovar));",
+  "ocr_text": "SCumputecovariancematrixofestimationerrorsintheexpectedreturns.\nSigmaR=diag(diag(p.AssetCovar));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 331.03,
+    "x1": 485.51,
+    "y1": 352.29
+  },
+  "confidence": "high"
+}

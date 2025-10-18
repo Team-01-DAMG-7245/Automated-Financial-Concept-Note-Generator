@@ -1,0 +1,56 @@
+•
+'direct' — Construct one optimization problem to maximize the portfolio return with target risk
+as the nonlinear constraint, and solve it directly using fmincon, instead of iteratively exploring
+the efficient frontier. For an example of using the 'direct' option, see “Obtain Portfolios with
+Targeted Portfolio Risks for a Portfolio Object Using the Direct Method and Solver Options” on
+page 15-974 and “Obtain Portfolios with Targeted Portfolio Risks for a PortfolioMAD Object Using
+the Direct Method and Solver Options” on page 15-976.
+
+•
+'iterative' — One-dimensional optimization using fminbnd to find the portfolio return
+between min and max return on the frontier that minimizes the difference between the actual risk
+and target risk. Then the portfolio weights are obtained by solving a frontier by return problem.
+Consequently, the 'iterative' method is slower than the 'direct'.
+
+Data Types: char
+
+Output Arguments
+
+pwgt — Optimal portfolios on efficient frontier with specified target risks
+matrix
+
+Optimal portfolios on the efficient frontier with specified target returns from TargetRisk, returned
+as a NumAssets-by-NumPorts matrix. pwgt is returned for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+pbuy — Purchases relative to initial portfolio for optimal portfolios on efficient frontier
+matrix
+
+Purchases relative to an initial portfolio for optimal portfolios on the efficient frontier, returned as
+NumAssets-by-NumPorts matrix.
+
+Note If no initial portfolio is specified in obj.InitPort, that value is assumed to be 0 such that
+pbuy = max(0,pwgt) and psell = max(0,-pwgt).
+
+pbuy is returned for a Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+psell — Sales relative to initial portfolio for optimal portfolios on efficient frontier
+matrix
+
+Sales relative to an initial portfolio for optimal portfolios on the efficient frontier, returned as a
+NumAssets-by-NumPorts matrix.
+
+Note If no initial portfolio is specified in obj.InitPort, that value is assumed to be 0 such that
+pbuy = max(0,pwgt) and psell = max(0,-pwgt).
+
+psell is returned for Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+Tips
+
+You can also use dot notation to estimate optimal portfolios with targeted portfolio risks.
+
+[pwgt,pbuy,psell] = obj.estimateFrontierByRisk(TargetRisk);
+
+estimateFrontierByRisk
+
+15-979

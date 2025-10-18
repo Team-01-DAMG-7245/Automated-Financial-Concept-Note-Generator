@@ -1,0 +1,12 @@
+{
+  "page": 126,
+  "original_text": "The goal of the analysis is to build a model that accurately predicts forward price direction ΔSt + ΔtS\nfrom historical forward price directions ΔSj and imbalance index values Ij, j ≤t.",
+  "ocr_text": "ThegoaloftheanalysisistobuildamodelthataccuratelypredictsforwardpricedirectionAS;+atg\nfromhistoricalforwardpricedirectionsAS ij andimbalanceindexvaluesI pit.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 118.2,
+    "x1": 547.09,
+    "y1": 147.23
+  },
+  "confidence": "high"
+}

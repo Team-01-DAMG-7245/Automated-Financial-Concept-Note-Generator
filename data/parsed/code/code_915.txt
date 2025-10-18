@@ -1,0 +1,6 @@
+Page 886
+================================================================================
+
+This example shows how to compute standard deviations of portfolio returns for a PortfolioMAD
+object with the function estimatePortStd. These functions work with any PortfolioMAD portfolios,
+not necessarily efficient portfolios.

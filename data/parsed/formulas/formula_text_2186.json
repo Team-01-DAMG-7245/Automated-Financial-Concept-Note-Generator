@@ -1,0 +1,12 @@
+{
+  "page": 1125,
+  "original_text": "Draw the surface as a mesh, set the viewpoint, and reverse the x-axis because of the viewpoint. The\naxes range from 20 to 90, 0 to 36, and -∞ to ∞.",
+  "ocr_text": "Drawthesurfaceasamesh,settheviewpoint,andreversethex-axisbecauseoftheviewpoint.The\naxesrangefrom20to90,0to36,and-to.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 642.41,
+    "x1": 546.75,
+    "y1": 666.04
+  },
+  "confidence": "high"
+}

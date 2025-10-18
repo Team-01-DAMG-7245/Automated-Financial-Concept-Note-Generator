@@ -1,0 +1,12 @@
+{
+  "page": 379,
+  "original_text": "P = Portfolio('Name', 'Sample Turnover Constraint Portfolio');\nP = estimateAssetMoments(P,data,'DataFormat','Prices');",
+  "ocr_text": "P=Portfolio(Name,SampleTurnoverConstraintPortfolio);\nP=estimateAssetMoments(P,data,DataFormat,Prices);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 452.23,
+    "x1": 425.94,
+    "y1": 473.49
+  },
+  "confidence": "high"
+}

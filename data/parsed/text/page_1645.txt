@@ -1,0 +1,56 @@
+Volatility: 0.2
+         Kernel: gamma
+          Alpha: 0.03
+           Beta: 0.015
+
+Use simByHybrid to simulate NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods. The
+function simByHybrid approximates a continuous-time stochastic process by the Hybrid scheme.
+
+NPeriods = 2;
+[Paths,Times,Z] = simByHybrid(rvmObj,NPeriods,DeltaTime=0.03,NSteps=10)
+
+Paths = 3×2
+
+1.0000    1.0000
+    1.2757    1.0429
+    1.2948    1.0086
+
+Times = 3×1
+
+0
+    0.0300
+    0.0600
+
+Z = 20×3
+
+0.0294    0.1005    0.0790
+    0.0472    0.0175    0.0125
+   -0.0237    0.0188    0.0200
+    0.1517   -0.0740   -0.0564
+    0.0397   -0.0035   -0.0019
+   -0.0112   -0.0068   -0.0036
+    0.0772    0.0777    0.0642
+   -0.0661    0.0393    0.0342
+    0.0268    0.0567    0.0472
+   -0.0166    0.0161    0.0121
+    0.0487   -0.0629   -0.0527
+   -0.0443   -0.1613   -0.1297
+    0.0178   -0.0414   -0.0320
+   -0.0937   -0.0056   -0.0049
+    0.0175    0.0171    0.0129
+      ⋮
+
+Paths is a 3-by-2 matrix of the simulated paths of state variables and the output Z is a matrix of
+random variates used to generate the Brownian motion vector.
+
+Simulate Rough Bergomi Model Sample Paths by Hybrid Scheme
+
+The rough Bergomi model is a roughbergomi object that is a bivariate composite model, composed
+of two coupled and dissimilar univariate models, each driven by a single Brownian motion source of
+risk over NPeriods consecutive observation periods, approximating continuous-time rough
+stochastic volatility processes.
+
+simByHybrid
+
+15-339

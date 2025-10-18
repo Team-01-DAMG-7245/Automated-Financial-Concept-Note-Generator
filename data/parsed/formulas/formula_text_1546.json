@@ -1,0 +1,12 @@
+{
+  "page": 776,
+  "original_text": "% Cardinality constraint\np = setMinMaxNumAssets(p,10,30);",
+  "ocr_text": "Cardinalityconstraint\np=setMinMaxNumAssets(p,10,30);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 558.02,
+    "x1": 263.38,
+    "y1": 579.29
+  },
+  "confidence": "high"
+}

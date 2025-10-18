@@ -1,0 +1,10 @@
+Page 528
+================================================================================
+
+nexttile
+pie(wMinVar)
+title('Minimum Variance Portfolio',Position=[0,1.5]);
+% Risk parity portfolio
+nexttile
+pie(wRP)
+title('Risk Parity Portfolio',Position=[0,1.5]);

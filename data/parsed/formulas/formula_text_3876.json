@@ -1,0 +1,12 @@
+{
+  "page": 2215,
+  "original_text": "elpm(Mean,Sigma)\nelpm(Mean,Sigma,MAR)\nelpm(Mean,Sigma,MAR,Order)\nMoment = elpm(MeanSigmaMAROrder)",
+  "ocr_text": "elpm(Mean,Sigma)\nelpm(Mean,Sigma,MAR)\nelpm(Mean,Sigma,MAR,Order)\nMoment=elpm(MeanSigmaMAROrder)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 191.44,
+    "x1": 282.66,
+    "y1": 239.07
+  },
+  "confidence": "high"
+}

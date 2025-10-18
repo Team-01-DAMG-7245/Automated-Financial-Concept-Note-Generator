@@ -1,0 +1,48 @@
+getGroups
+
+Obtain group constraint arrays from portfolio object
+
+Syntax
+
+[GroupMatrix,LowerGroup,UpperGroup] = getGroups(obj)
+
+Description
+
+Use the getGroups function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain group constraint arrays from portfolio objects.
+
+For details on the respective workflows when using these different objects, see “Portfolio Object
+Workflow” on page 4-18, “PortfolioCVaR Object Workflow” on page 5-16, and “PortfolioMAD Object
+Workflow” on page 6-16.
+
+[GroupMatrix,LowerGroup,UpperGroup] = getGroups(obj) obtains group constraint arrays
+from portfolio objects.
+
+Examples
+
+Obtain Group Constraints for a Portfolio Object
+
+Suppose you have a portfolio of five assets and you want to ensure that the first three assets
+constitute no more than 30% of your portfolio. Given a Portfolio object p with the group constraints
+set, obtain the values for GroupMatrix, LowerGroup, and UpperGroup.
+
+G = [ true true true false false ];
+p = Portfolio;
+p = setGroups(p, G, [], 0.3);
+[GroupMatrix, LowerGroup, UpperGroup] = getGroups(p)
+
+GroupMatrix = 1×5
+
+1     1     1     0     0
+
+LowerGroup =
+
+[]
+
+UpperGroup = 
+0.3000
+
+15
+Functions
+
+15-1098

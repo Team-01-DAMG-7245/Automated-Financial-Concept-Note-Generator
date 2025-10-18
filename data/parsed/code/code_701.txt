@@ -1,0 +1,4 @@
+Page 633
+================================================================================
+
+f(x,y) is the loss function for a portfolio x and asset return y.

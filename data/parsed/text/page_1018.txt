@@ -1,0 +1,64 @@
+Credit Default Swap (CDS)
+
+A credit default swap (CDS) is a contract that protects against losses resulting from credit defaults.
+The transaction involves two parties, the protection buyer and the protection seller, and also a
+reference entity, usually a bond. The protection buyer pays a stream of premiums to the protection
+seller, who in exchange offers to compensate the buyer for the loss in the bond’s value if a credit
+event occurs. The stream of premiums is called the premium leg, and the compensation when a credit
+event occurs is called the protection leg. Credit events usually include situations in which the bond
+issuer goes bankrupt, misses coupon payments, or enters a restructuring process. Financial
+Instruments Toolbox software supports the following objects and functions:
+
+CDS Objects
+
+Object
+Purpose
+
+CDS
+CDS instrument object.
+
+CDSOption
+CDSOption instrument object.
+
+CDS Functions
+
+Function
+Purpose
+
+cdsbootstrap
+Compute default probability parameters from CDS market quotes.
+
+cdsspread
+Compute breakeven spreads for the CDS contracts.
+
+cdsprice
+Compute the price for the CDS contracts.
+
+See Also
+cdsbootstrap | cdsprice | cdsspread | cdsrpv01
+
+Related Examples
+
+•
+“First-to-Default Swaps” (Financial Instruments Toolbox)
+
+•
+“Credit Default Swap Option” (Financial Instruments Toolbox)
+
+•
+“Counterparty Credit Risk and CVA” (Financial Instruments Toolbox)
+
+•
+“Bootstrapping a Default Probability Curve from Credit Default Swaps” (Financial Instruments
+Toolbox)
+
+More About
+
+•
+“Get Started with Workflows Using Object-Based Framework for Pricing Financial Instruments”
+(Financial Instruments Toolbox)
+
+8
+Credit Risk Analysis
+
+8-100

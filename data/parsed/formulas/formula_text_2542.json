@@ -1,0 +1,12 @@
+{
+  "page": 1299,
+  "original_text": "numForecastSteps = 60;\nsimFirstComponent = simulate( firstComponentModel, numForecastSteps, \"Y0\", firstComponent );\nsimSecondComponent = simulate( secondComponentModel, numForecastSteps, \"Y0\", secondComponent );\nsimComponents = [simFirstComponent, simSecondComponent];",
+  "ocr_text": "numForecastSteps=60;\nsimFirstComponent=simulate(firstComponentModel,numForecastSteps,YO,firstComponent);\nsimSecondComponent=simulate(secondComponentModel,numForecastSteps,_YQ,secondComponent_);\nsimComponents=[simFirstComponent,simSecondComponent];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 623.24,
+    "x1": 604.74,
+    "y1": 666.11
+  },
+  "confidence": "high"
+}

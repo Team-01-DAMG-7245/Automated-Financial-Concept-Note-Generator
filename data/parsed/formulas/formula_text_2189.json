@@ -1,0 +1,12 @@
+{
+  "page": 1129,
+  "original_text": "% Invariants are assumed to be daily changes in YTM rates.\ntsYTMRateDeltas = diff(tsYTMRates);",
+  "ocr_text": "InvariantsareassumedtobedailychangesinYTMrates.\ntsYTMRateDeltas=diff(tsYTMRates);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 524.68,
+    "x1": 404.24,
+    "y1": 545.95
+  },
+  "confidence": "high"
+}

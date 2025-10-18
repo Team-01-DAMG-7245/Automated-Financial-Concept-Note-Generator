@@ -1,0 +1,72 @@
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+BusinessDayConvention — Business day conventions
+actual (default) | character vector
+
+Business day conventions, specified as the comma-separated pair consisting of
+'BusinessDayConvention' and a character vector. The selection for business day convention
+determines how non-business days are treated. Non-business days are defined as weekends plus any
+other date that businesses are not open (for example, statutory holidays). Values are:
+
+•
+actual — Non-business days are effectively ignored. Cash flows that fall on non-business days
+are assumed to be distributed on the actual date.
+
+•
+follow — Cash flows that fall on a non-business day are assumed to be distributed on the
+following business day.
+
+•
+modifiedfollow — Cash flows that fall on a non-business day are assumed to be distributed on
+the following business day. However if the following business day is in a different month, the
+previous business day is adopted instead.
+
+•
+previous — Cash flows that fall on a non-business day are assumed to be distributed on the
+previous business day.
+
+•
+modifiedprevious — Cash flows that fall on a non-business day are assumed to be distributed
+on the previous business day. However if the previous business day is in a different month, the
+following business day is adopted instead.
+
+Data Types: char
+
+PayAccruedPremium — Flag for accrued premiums paid upon default
+true (default) | integer with value 1 or 0
+
+Flag for accrued premiums paid upon default, specified as the comma-separated pair consisting of
+'PayAccruedPremium' and a N-by-1 vector of Boolean flags that is true (default) if accrued
+premiums are paid upon default, false otherwise.
+
+Data Types: logical
+
+Notional — Contract notional values
+10MM (default) | positive or negative integer
+
+Contract notional values, specified as the comma-separated pair consisting of 'Notional' and a N-
+by-1vector of integers. Use positive integer values for long positions and negative integer values for
+short positions.
+
+Data Types: double
+
+TimeStep — Number of days as time step for numerical integration
+10 (days) (default) | nonnegative integer
+
+Number of days to take as time step for the numerical integration, specified as the comma-separated
+pair consisting of 'TimeStep' and a nonnegative integer.
+
+cdsprice
+
+15-629

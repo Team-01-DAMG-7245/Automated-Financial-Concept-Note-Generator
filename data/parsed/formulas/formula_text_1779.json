@@ -1,0 +1,12 @@
+{
+  "page": 895,
+  "original_text": "pret = estimatePortReturn(p, pwgt);\npstd = estimatePortStd(p, pwgt);\nqret = estimatePortReturn(q, qwgt);\nqstd = estimatePortStd(q, qwgt);",
+  "ocr_text": "pret=estimatePortReturn(p,_pwgt);\npstd=estimatePortStd(p,_pwgt);\nqret=estimatePortReturn(q,_qwgt);\nqstd=estimatePortStd(q,_qwgt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 549.08,
+    "x1": 279.63,
+    "y1": 591.95
+  },
+  "confidence": "high"
+}

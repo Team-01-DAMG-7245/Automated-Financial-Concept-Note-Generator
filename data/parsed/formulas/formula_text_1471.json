@@ -1,0 +1,12 @@
+{
+  "page": 741,
+  "original_text": "Blotter = dataset([{100*pwgt},pnames],'obsnames',p.AssetList);\ndisplay(Blotter)",
+  "ocr_text": "Blotter=dataset([{100*pwgt},pnames],obsnames,p.AssetList);\ndisplay(Blotter)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 472.08,
+    "x1": 425.94,
+    "y1": 493.34
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,53 @@
+blkprice
+
+Black model for pricing futures options
+
+Syntax
+
+[Call,Put] = blkprice(Price,Strike,Rate,Time,Volatility)
+
+Description
+
+[Call,Put] = blkprice(Price,Strike,Rate,Time,Volatility) computes European put
+and call futures option prices using Black's model.
+
+Note Any input argument can be a scalar, vector, or matrix. If a scalar, then that value is used to
+price all options. If more than one input is a vector or matrix, then the dimensions of those non-scalar
+inputs must be the same.
+
+Ensure that Rate, Time, and Volatility are expressed in consistent units of time.
+
+Examples
+
+Compute European Put and Call Futures Option Prices Using Black's Model
+
+This example shows how to price European futures options with exercise prices of $20 that expire in
+four months. Assume that the current underlying futures price is also $20 with a volatility of 25% per
+annum. The risk-free rate is 9% per annum.
+
+[Call, Put] = blkprice(20, 20, 0.09, 4/12, 0.25)
+
+Call = 
+1.1166
+
+Put = 
+1.1166
+
+Input Arguments
+
+Price — Current price of underlying asset
+numeric
+
+Current price of the underlying asset (that is, a futures contract), specified as a numeric value.
+
+Data Types: double
+
+Strike — Exercise price of the futures option
+numeric
+
+Exercise price of the futures option, specified as a numeric value.
+
+15
+Functions
+
+15-482

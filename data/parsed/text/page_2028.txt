@@ -1,0 +1,81 @@
+•
+4 = 30/360 (PSA)
+
+•
+5 = 30/360 (ISDA)
+
+•
+6 = 30/360 (European)
+
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+CompoundingFrequency — Compounding frequency
+SIA bases (0 – 7) and BUS/252 use 2, ICMA bases (8 – 12) use 1 (default) | integer with value of 1, 2,
+3, 4, 6, or 12
+
+Compounding frequency for yield calculation, specified as the comma-separated pair consisting of
+'CompundingFrequency' and a scalar or a NINST-by-1 or 1-by-NINST vector.
+
+•
+1 — Annual compounding
+
+•
+2 — Semiannual compounding
+
+•
+3 — Compounding three times per year
+
+•
+4 — Quarterly compounding
+
+•
+6 — Bimonthly compounding
+
+•
+12 — Monthly compounding
+
+Note By default, SIA bases (0 – 7) and BUS/252 use a semiannual compounding convention and
+ICMA bases (8 – 12) use an annual compounding convention.
+
+Data Types: double
+
+Output Arguments
+
+Yield — Yield for cash flows
+vector
+
+Yield for cash flows, returned as an NINST-by-1 vector.
+
+Version History
+Introduced in R2012a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+15
+Functions
+
+15-722

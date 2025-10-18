@@ -1,0 +1,9 @@
+Related Examples
+
+•
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-330

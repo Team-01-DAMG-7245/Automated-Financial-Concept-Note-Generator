@@ -1,0 +1,6 @@
+Page 1723
+================================================================================
+
+Deterministic — Flag to indicate whether the output function is a deterministic function
+of time alone
+false (meaning F is a callable function of time and state, F(t,X)) (default) | scalar logical

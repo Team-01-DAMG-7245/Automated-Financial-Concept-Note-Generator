@@ -1,0 +1,12 @@
+{
+  "page": 1216,
+  "original_text": "obj = \n   Class BM: Brownian Motion\n   ----------------------------------------\n     Dimensions: State = 1, Brownian = 1\n   ----------------------------------------\n      StartTime: 0\n     StartState: 0\n    Correlation: 1\n          Drift: drift rate function F(t,X(t)) \n      Diffusion: diffusion rate function G(t,X(t)) \n     Simulation: simulation method/function simByEuler\n             Mu: 0\n          Sigma: 0.3",
+  "ocr_text": "obj=\nClassBM:BrownianMotion\nDimensions:State=1,Brownian=1\nStartTime:0\nStartState:0\nCorrelation:1\nDrift:driftratefunctionF(t,X(t))\nDiffusion:diffusionratefunctionG(t,X(t))\nSimulation:simulationmethod/functionsimByEuler\nMu:0\nSigma:0.3",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 455.99,
+    "x1": 382.58,
+    "y1": 596.06
+  },
+  "confidence": "high"
+}

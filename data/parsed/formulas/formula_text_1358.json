@@ -1,0 +1,12 @@
+{
+  "page": 672,
+  "original_text": "p = PortfolioCVaR;\np = PortfolioCVaR('RiskFreeRate', r0);\ndisp(p.RiskFreeRate)",
+  "ocr_text": "p=PortfolioCVaR;\np=PortfolioCVaR(RiskFreeRate,rQ);\ndisp(p.RiskFreeRate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 204.63,
+    "x1": 295.9,
+    "y1": 236.69
+  },
+  "confidence": "high"
+}

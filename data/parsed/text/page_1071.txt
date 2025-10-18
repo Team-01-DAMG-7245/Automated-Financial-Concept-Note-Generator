@@ -1,0 +1,66 @@
+Multivariate Normal Regression Types
+
+In this section...
+
+“Regressions” on page 9-13
+
+“Multivariate Normal Regression” on page 9-13
+
+“Multivariate Normal Regression Without Missing Data” on page 9-13
+
+“Multivariate Normal Regression With Missing Data” on page 9-14
+
+“Least-Squares Regression” on page 9-14
+
+“Least-Squares Regression Without Missing Data” on page 9-14
+
+“Least-Squares Regression With Missing Data” on page 9-14
+
+“Covariance-Weighted Least Squares” on page 9-14
+
+“Covariance-Weighted Least Squares Without Missing Data” on page 9-15
+
+“Covariance-Weighted Least Squares With Missing Data” on page 9-15
+
+“Feasible Generalized Least Squares” on page 9-15
+
+“Feasible Generalized Least Squares Without Missing Data” on page 9-15
+
+“Feasible Generalized Least Squares With Missing Data” on page 9-16
+
+“Seemingly Unrelated Regression” on page 9-16
+
+“Seemingly Unrelated Regression Without Missing Data” on page 9-17
+
+“Seemingly Unrelated Regression With Missing Data” on page 9-17
+
+“Mean and Covariance Parameter Estimation” on page 9-17
+
+Regressions
+
+Each regression function has a specific operation. This section shows how to use these functions to
+perform specific types of regressions. To illustrate use of the functions for various regressions,
+“typical” usage is shown with optional arguments kept to a minimum. For a typical regression, you
+estimate model parameters and residual covariance matrices with the mle functions and estimate the
+standard errors of model parameters with the std functions. The regressions “without missing data”
+essentially ignore samples with any missing values, and the regressions “with missing data” ignore
+samples with every value missing.
+
+Multivariate Normal Regression
+
+Multivariate normal regression, or MVNR, is the “standard” implementation of the regression
+functions in Financial Toolbox software.
+
+Multivariate Normal Regression Without Missing Data
+
+Estimate parameters using mvnrmle:
+
+[Parameters, Covariance] = mvnrmle(Data, Design);
+
+Estimate standard errors using mvnrstd:
+
+StdParameters = mvnrstd(Data, Design, Covariance);
+
+Multivariate Normal Regression Types
+
+9-13

@@ -1,0 +1,12 @@
+{
+  "page": 1274,
+  "original_text": "dt       = 1 / 252;                  % Time increment = 1 day = 1/252 years\nyields   = Data(:,end);              % Daily effective yields\nyields   = 360 * log(1 + yields);    % Continuously-compounded, annualized yields\nr        = mean(yields);             % Historical 3M Euribor average\nX        = repmat(100, nIndices, 1); % Initial state vector",
+  "ocr_text": "dt =1/252; Timeincrement=1day=1/252years\nyields=Data(:,end); Dailyeffectiveyields\nyields=360*log(1+yields); Continuously-compounded,annualizedyields\nr =mean(yields); SHistorical_3MEuriboraverage\n\nxX =repmat(100,nIndices,1);Initialstatevector",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 528.87,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

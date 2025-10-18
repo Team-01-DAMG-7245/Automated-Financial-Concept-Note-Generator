@@ -1,0 +1,12 @@
+{
+  "page": 37,
+  "original_text": "Matrix division is useful primarily for solving equations, and especially for solving simultaneous linear\nequations (see “Solving Simultaneous Linear Equations” on page 1-11). For example, you want to\nsolve for X in A*X = B.",
+  "ocr_text": "Matrixdivisionisusefulprimarilyforsolvingequations,andespeciallyforsolvingsimultaneouslinear\nequations(seeSolvingSimultaneousLinearEquationsonpage1-11).Forexample,youwantto\nsolveforXinA*X=B.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 236.84,
+    "x1": 557.71,
+    "y1": 272.47
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2238,
+  "original_text": "r = Portfolio;\nr = estimateAssetMoments(r,AssetsTimeTable,'dataformat','returns','missingdata',true);",
+  "ocr_text": "r=Portfolio;\nr=estimateAssetMoments(r,AssetsTimeTable,dataformat,returns,missingdata,true);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 248.39,
+    "x1": 555.98,
+    "y1": 269.65
+  },
+  "confidence": "high"
+}

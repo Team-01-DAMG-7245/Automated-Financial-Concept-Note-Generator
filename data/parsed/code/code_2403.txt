@@ -1,0 +1,7 @@
+Page 2260
+================================================================================
+
+To obtain efficient portfolios that have targeted portfolio returns, the estimateFrontierByReturn
+function accepts one or more target portfolio returns and obtains efficient portfolios with the
+specified returns. Assume you have a universe of four assets where you want to obtain efficient
+portfolios with target portfolio returns of 6%, 9%, and 12%.

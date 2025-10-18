@@ -1,0 +1,12 @@
+{
+  "page": 978,
+  "original_text": "sc = formatpoints(sc,'PointsOddsAndPDO',[500 2 50]);\nPointsInfo = displaypoints(sc)",
+  "ocr_text": "sc=formatpoints(sc,PointsOddsAndPDO,[500250]);\nPointsInfo=displaypoints(sc)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 321.19,
+    "x1": 371.76,
+    "y1": 342.46
+  },
+  "confidence": "high"
+}

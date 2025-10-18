@@ -1,0 +1,68 @@
+Example: p = estimateAssetMoments(p,Y,'dataformat','prices')
+
+DataFormat — Flag to convert input data as prices into returns
+'Returns' (default) | character vector with values 'Returns' or 'Prices'
+
+Flag to convert input data as prices into returns, specified as the comma-separated pair consisting of
+'DataFormat' and a character vector with the values:
+
+•
+'Returns' — Data in AssetReturns contains asset total returns.
+
+•
+'Prices' — Data in AssetReturns contains asset total return prices.
+
+Data Types: char
+
+MissingData — Flag indicating whether to use ECM algorithm or exclude samples with NaN
+values
+false (default) | logical with value true or false
+
+Flag indicating whether to use ECM algorithm or excludes samples with NaN values, specified as the
+comma-separated pair consisting of 'MissingData' and a logical with a value of true or false.
+
+To handle time series with missing data (indicated with NaN values), the MissingData flag either
+uses the ECM algorithm to obtain maximum likelihood estimates in the presences of NaN values or
+excludes samples with NaN values. Since the default is false, it is necessary to specify
+MissingData as true to use the ECM algorithm.
+
+Acceptable values for MissingData are:
+
+•
+false — Do not use ECM algorithm to handle NaN values (exclude NaN values).
+
+•
+true — Use ECM algorithm to handle NaN values.
+
+For more information on the ECM algorithm, see ecmnmle and “Multivariate Normal Regression” on
+page 9-2.
+
+Data Types: logical
+
+GetAssetList — Flag indicating which asset names to use for asset list
+false (default) | logical with value true or false
+
+Flag indicating which asset names to use for the asset list, specified as the comma-separated pair
+consisting of 'GetAssetList' and a logical with a value of true or false. Acceptable values for
+GetAssetList are:
+
+•
+false — Do not extract or create asset names.
+
+•
+true — Extract or create asset names from a table or timetable object.
+
+If a table or timetable is passed into this function using the AssetReturns argument and the
+GetAssetList flag is true, the column names from the table or timetable object are used as asset
+names in obj.AssetList.
+
+If a matrix is passed and the GetAssetList flag is true, default asset names are created based on
+the AbstractPortfolio property defaultforAssetList, which is 'Asset'.
+
+If the GetAssetList flag is false, no action occurs, which is the default behavior.
+
+Data Types: logical
+
+estimateAssetMoments
+
+15-935

@@ -1,0 +1,7 @@
+Page 955
+================================================================================
+
+cpf = CPF(end)-4;
+spr = SPR(end);
+yPredRange = [yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];
+fprintf('CPF drops 4%%    %4.2f%%  %4.2f%%  %4.2f%%\n',yPredRange);

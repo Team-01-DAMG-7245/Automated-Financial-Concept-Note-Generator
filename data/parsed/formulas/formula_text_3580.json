@@ -1,0 +1,12 @@
+{
+  "page": 2022,
+  "original_text": "Spread = cfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle)\nSpread = cfspread( ___ ,Name,Value)",
+  "ocr_text": "Spread=cfspread(RateSpec,Price,CFlowAmounts,CFlowDates,Settle)\nSpread=cfspread(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.45,
+    "x1": 475.31,
+    "y1": 214.08
+  },
+  "confidence": "high"
+}

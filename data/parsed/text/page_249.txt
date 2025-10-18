@@ -1,0 +1,60 @@
+Working with 'Conditional' BoundType, MinNumAssets, and
+MaxNumAssets Constraints Using Portfolio Objects
+
+When any one, or any combination of 'Conditional' BoundType, MinNumAssets, or
+MaxNumAssets constraints are active, the portfolio problem is formulated by adding NumAssets
+binary variables, where 0 indicates not invested, and 1 is invested. For example, to explain the
+'Conditional' BoundType and MinNumAssets and MaxNumAssets constraints, assume that your
+portfolio has a universe of 100 assets that you want to invest:
+
+•
+'Conditional' BoundType (also known as semicontinuous constraints), set by setBounds, is
+often used in situations where you do not want to invest small values. A standard example is a
+portfolio optimization problem where many small allocations are not attractive because of
+transaction costs. Instead, you prefer fewer instruments in the portfolio with larger allocations.
+This situation can be handled using'Conditional' BoundType constraints for a Portfolio,
+PortfolioCVaR, or PortfolioMAD object.
+
+For example, the weight you invest in each asset is either 0 or between [0.01, 0.5]. Generally,
+a semicontinuous variable x is a continuous variable between bounds [lb, ub] that also can
+assume the value 0, where lb > 0, lb ≤ ub. Applying this to portfolio optimization requires that
+very small or large positions should be avoided, that is values that fall in (0, lb) or are more than
+ub.
+
+•
+MinNumAssets and MaxNumAssets (also known as cardinality constraints), set by
+setMinMaxNumAssets, limit the number of assets in a Portfolio, PortfolioCVaR, or
+PortfolioMAD object. For example, if you have 100 assets in your portfolio and you want the
+number of assets allocated in the portfolio to be from 40 through 60. Using MinNumAssets and
+MaxNumAssets you can limit the number of assets in the optimized portfolio, which allows you to
+limit transaction and operational costs or to create an index tracking portfolio.
+
+Setting 'Conditional' BoundType Constraints Using the setBounds
+Function
+
+Use setBounds with a 'conditional' BoundType to set xi = 0 or 0.02 <= xi <= 0.5 for all
+i=1,...NumAssets:
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+               0.00022983 0.00049937 0.00019247;
+               0.00420395 0.00019247 0.00764097 ]; p = Portfolio('AssetMean', AssetMean, 'AssetCo
+p = setBounds(p, 0.02, 0.5,'BoundType', 'Conditional', 'NumAssets', 3)
+
+p =
+
+Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                     AssetMean: [3×1 double]
+                    AssetCovar: [3×3 double]
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+
+Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using Portfolio Objects
+
+4-81

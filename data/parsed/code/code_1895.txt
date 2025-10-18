@@ -1,0 +1,5 @@
+Page 1533
+================================================================================
+
+Instantaneous volatility of the stochastic variance process (often called the volatility of volatility or
+volatility of variance), specified as a scalar, or deterministic function of time.

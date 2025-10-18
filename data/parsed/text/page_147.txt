@@ -1,0 +1,37 @@
+Calling portalloc while specifying the output arguments returns the variance (RiskyRisk), the
+expected return (RiskyReturn), and the weights (RiskyWts) allocated to the optimal risky portfolio.
+It also returns the fraction (RiskyFraction) of the complete portfolio allocated to the risky
+portfolio, and the variance (OverallRisk) and expected return (OverallReturn) of the optimal
+overall portfolio. The overall portfolio combines investments in the risk-free asset and in the risky
+portfolio. The actual proportion assigned to each of these two investments is determined by the
+degree of risk aversion characterizing the investor.
+
+[RiskyRisk, RiskyReturn, RiskyWts,RiskyFraction, OverallRisk, ... 
+OverallReturn] = portalloc (PortRisk, PortReturn, PortWts, ... 
+RisklessRate, BorrowRate, RiskAversion)
+
+RiskyRisk = 
+0.1288
+
+RiskyReturn = 
+0.1791
+
+RiskyWts = 1×3
+
+0.0057    0.5879    0.4064
+
+RiskyFraction = 
+1.1869
+
+OverallRisk = 
+0.1529
+
+OverallReturn = 
+0.1902
+
+The value of RiskyFraction exceeds 1 (100%), implying that the risk tolerance specified allows
+borrowing money to invest in the risky portfolio, and that no money is invested in the risk-free asset.
+
+Portfolio Selection and Risk Aversion
+
+3-9

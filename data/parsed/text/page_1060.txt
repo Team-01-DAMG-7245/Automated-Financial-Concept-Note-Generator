@@ -1,0 +1,82 @@
+Multivariate Normal Regression
+
+In this section...
+
+“Introduction” on page 9-2
+
+“Multivariate Normal Linear Regression” on page 9-2
+
+“Maximum Likelihood Estimation” on page 9-3
+
+“Special Case of Multiple Linear Regression Model” on page 9-4
+
+“Least-Squares Regression” on page 9-4
+
+“Mean and Covariance Estimation” on page 9-4
+
+“Convergence” on page 9-4
+
+“Fisher Information” on page 9-4
+
+“Statistical Tests” on page 9-5
+
+Introduction
+
+This section focuses on using likelihood-based methods for multivariate normal regression. The
+parameters of the regression model are estimated via maximum likelihood estimation. For multiple
+series, this requires iteration until convergence. The complication due to the possibility of missing
+data is incorporated into the analysis with a variant of the EM algorithm known as the ECM
+algorithm.
+
+The underlying theory of maximum likelihood estimation and the definition and significance of the
+Fisher information matrix can be found in Caines [1] and Cramér [2]. The underlying theory of the
+ECM algorithm can be found in Meng and Rubin [8] and Sexton and Swensen [9].
+
+In addition, these two examples of maximum likelihood estimation are presented:
+
+•
+“Portfolios with Missing Data” on page 9-21
+
+•
+“Estimation of Some Technology Stock Betas” on page 9-27
+
+Multivariate Normal Linear Regression
+
+Suppose that you have a multivariate normal linear regression model in the form
+
+Z1
+⋮
+Zm
+
+N
+
+H1b
+
+⋮
+Hmb
+
+,
+
+C
+0
+
+⋱
+0
+C
+
+,
+
+where the model has m observations of n-dimensional random variables Z1, ..., Zm with a linear
+regression model that has a p-dimensional model parameter vector b. In addition, the model has a
+sequence of m design matrices H1, ..., Hm, where each design matrix is a known n-by-p matrix.
+
+Given a parameter vector b and a collection of design matrices, the collection of m independent
+variables Zk is assumed to have independent identically distributed multivariate normal residual
+errors Zk – Hk b with n-vector mean 0 and n-by-n covariance matrix C for each k = 1, ..., m.
+
+A concise way to write this model is
+
+9
+Regression with Missing Data
+
+9-2

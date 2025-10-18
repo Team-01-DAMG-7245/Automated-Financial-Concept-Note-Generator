@@ -1,0 +1,12 @@
+{
+  "page": 2419,
+  "original_text": "values = hhigh(Data) generates a vector of highest high values from the series of high prices for\nthe past n periods.",
+  "ocr_text": "values=hhigh(Data)generatesavectorofhighesthighvaluesfromtheseriesofhighpricesfor\nthepastnperiods.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.4,
+    "x1": 555.1,
+    "y1": 279.03
+  },
+  "confidence": "high"
+}

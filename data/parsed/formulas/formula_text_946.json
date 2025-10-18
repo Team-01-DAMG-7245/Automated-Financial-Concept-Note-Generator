@@ -1,0 +1,12 @@
+{
+  "page": 509,
+  "original_text": "% Number of assets with positive weights\nfunSum = @(x) sum(x > 0);\nTnonZero = varfun(funSum,weightsTable);\nTnonZero.Properties.VariableNames = varNames;\nTnonZero.Properties.RowNames = {'Nonzero weights'};",
+  "ocr_text": "sNumberofassetswithpositiveweights\nfunSum=Q(x)_sum(xQ);\nTnonZero=varfun(funSum,weightsTable);\nTnonZero.Properties.VariableNames=varNames;\nTnonZero.Properties.RowNames={Nonzeroweights};",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 341.43,
+    "x1": 366.34,
+    "y1": 395.09
+  },
+  "confidence": "high"
+}

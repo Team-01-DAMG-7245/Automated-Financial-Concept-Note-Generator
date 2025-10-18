@@ -1,0 +1,39 @@
+Output Arguments
+
+obj — Updated portfolio object
+object for portfolio
+
+Updated portfolio object, returned as a Portfolio object. For more information on creating a
+portfolio object, see
+
+•
+Portfolio
+
+Tips
+
+You can also use dot notation to estimate the mean and covariance of asset returns from data.
+
+obj = obj.estimateAssetMoments(AssetReturns);
+
+Version History
+Introduced in R2011a
+
+R2018a: Support for timetable input for AssetReturns
+Behavior changed in R2018a
+
+Using a fints object for the AssetReturns argument of estimateAssetMoments is not
+recommended. Use timetable instead for financial time series. For more information, see “Convert
+Financial Time Series Objects (fints) to Timetables” on page 11-2.
+
+See Also
+Portfolio | estimateBounds | portsim
+
+Topics
+“Asset Returns and Moments of Asset Returns Using Portfolio Object” on page 4-42
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+“Portfolio Optimization Theory” on page 4-4
+
+15
+Functions
+
+15-936

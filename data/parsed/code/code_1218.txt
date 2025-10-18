@@ -1,0 +1,13 @@
+Page 1244
+================================================================================
+
+for k = 1:log2(T)
+    i = delta / 2;
+    for j = 1:jMax
+        t(iCount) = times(i);
+        i         = i + delta;
+        iCount    = iCount + 1;
+    end
+    jMax  = 2 * jMax;
+    delta = delta / 2;
+end

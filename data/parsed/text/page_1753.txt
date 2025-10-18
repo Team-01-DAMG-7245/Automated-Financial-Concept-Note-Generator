@@ -1,0 +1,61 @@
+disp(p.GroupMatrix);
+
+1     1     1     0     0
+     1     0     1     0     1
+
+disp(p.LowerGroup);
+
+-Inf
+    0.2000
+
+disp(p.UpperGroup);
+
+0.3000
+       Inf
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+GroupMatrix — Group constraint matrix
+matrix
+
+Group constraint matrix, specified as a matrix.
+
+Note The group matrix GroupMatrix often indicates membership in groups, which means that its
+elements are usually either 0 or 1. Because of this interpretation,GroupMatrix can be a logical or
+numerical matrix.
+
+Data Types: double
+
+LowerGroup — Lower bound for group constraints
+vector
+
+Lower bound for group constraints, specified as a vector.
+
+Note  If input is scalar, LowerGroup undergoes scalar expansion to be conformable with
+GroupMatrix.
+
+Data Types: double
+
+UpperGroup — Upper bound for group constraints
+vector
+
+addGroups
+
+15-447

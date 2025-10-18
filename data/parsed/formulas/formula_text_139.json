@@ -1,0 +1,12 @@
+{
+  "page": 107,
+  "original_text": "dTS = duration\n   0.80547 sec",
+  "ocr_text": "dTS=duration\n0.80547_sec",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 199.03,
+    "x1": 165.86,
+    "y1": 220.29
+  },
+  "confidence": "high"
+}

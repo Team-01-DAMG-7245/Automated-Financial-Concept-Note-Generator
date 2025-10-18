@@ -1,0 +1,12 @@
+{
+  "page": 120,
+  "original_text": "bestQ = makeQ(Data,3,24)",
+  "ocr_text": "bestQ=makeQ(Data,3,24)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 468.18,
+    "x1": 220.03,
+    "y1": 478.65
+  },
+  "confidence": "high"
+}

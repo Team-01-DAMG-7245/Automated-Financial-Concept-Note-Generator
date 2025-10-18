@@ -1,0 +1,12 @@
+{
+  "page": 1220,
+  "original_text": "obj = hwv(0.2, 0.1, 0.05)  % (Speed, Level, Sigma)",
+  "ocr_text": "obj=hwv(0.2,0.1,0.05)_(Speed,Level,Sigma)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 410.93,
+    "x1": 360.91,
+    "y1": 421.4
+  },
+  "confidence": "high"
+}

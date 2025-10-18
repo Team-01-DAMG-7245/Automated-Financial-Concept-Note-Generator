@@ -1,0 +1,58 @@
+-----------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   -----------------------------------------------------
+      StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+         Return: 0.1
+          Speed: 0.2
+          Level: 0.1
+     Volatility: 0.05
+          Alpha: -0.03
+
+Use simByEuler to simulate NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods. The
+function simByEuler approximates a continuous-time stochastic process by the Euler approach.
+
+NPeriods = 2;
+[Paths,Times,Z] = simByEuler(roughhestonObj,NPeriods)
+
+Paths = 3×2
+
+1.0000    1.0000
+    1.1476    0.8234
+    0.1082    0.5568
+
+Times = 3×1
+
+0
+     1
+     2
+
+Z = 2×2
+
+0.5377    1.8339
+   -2.2588    0.8622
+
+Paths is a 3-by-2 matrix and the output Z is a matrix used to generate the Brownian motion vector.
+
+Input Arguments
+
+MDL — Stochastic differential equation model for RVM, roughbergomi, or roughheston
+object
+
+Stochastic differential equation model, specified as an rvm, roughbergomi, or roughheston object.
+
+Data Types: object
+
+NPeriods — Number of simulation periods
+positive scalar integer
+
+Number of simulation periods, specified as a positive scalar integer. The value of NPeriods
+determines the number of rows of the simulated output series.
+
+Data Types: double
+
+simByEuler
+
+15-331

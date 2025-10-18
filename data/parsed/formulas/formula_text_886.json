@@ -1,0 +1,12 @@
+{
+  "page": 488,
+  "original_text": "if ~isfield(user_data,'FixedAllocation')\n    % If this is the first call to the rebalance function, calculate the\n    % desired fixed allocation and save it.\n    user_data.FixedAllocation = computeEqualWeights(width(pricesTT));\nend    \nnew_weights = user_data.FixedAllocation;",
+  "ocr_text": "ifisfield(user_data,FixedAllocation)\nSIfthisisthefirstcall_totherebalancefunction,calculatethe\ndesiredfixedallocationandsaveit.\nuser_data.FixedAllocation=computeEqualWeights(width(pricesTT));\n\nend\n\nnew_weights=user_data.FixedAllocation;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 480.1,
+    "y1": 686.69
+  },
+  "confidence": "high"
+}

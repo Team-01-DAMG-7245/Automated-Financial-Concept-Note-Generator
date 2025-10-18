@@ -1,0 +1,37 @@
+q = setTurnover(q,Turnover,InitPort);
+
+qwgt = estimateFrontier(q,20);
+[qrsk,qret] = estimatePortMoments(q,qwgt);
+
+[trsk,tret] = estimatePortMoments(q,TrackingPort);
+[ersk,eret] = estimatePortMoments(q,InitPort);
+
+% Plot the efficient frontier with combined turnover and tracking-error constraint.
+
+clf;
+portfolioexamples_plot('Efficient Frontier with Turnover and Tracking-Error Constraint', ...
+    {'line', prsk, pret, {'Unconstrained'}, ':b'}, ...
+    {'line', qrsk, qret, {'Turnover & Tracking'}}, ...
+    {'scatter', [mrsk, crsk], [mret, cret], {'Market', 'Cash'}}, ...
+    {'scatter', trsk, tret, {'Tracking'}, 'r'}, ...
+    {'scatter', ersk, eret, {'Initial'}, 'b'});
+
+Maximize the Sharpe Ratio
+
+The Sharpe ratio (Sharpe 1966 on page 4-177) is a measure of return-to-risk that plays an important
+role in portfolio analysis. Specifically, a portfolio that maximizes the Sharpe ratio is also the tangency
+portfolio on the efficient frontier from the mutual fund theorem. The maximum Sharpe ratio portfolio
+is located on the efficient frontier with the function estimateMaxSharpeRatio and the dataset
+object is used to list the assets in this portfolio.
+
+p = setInitPort(p, 0);
+
+swgt = estimateMaxSharpeRatio(p);
+[srsk,sret] = estimatePortMoments(p,swgt);
+
+% Plot the efficient frontier with portfolio that attains maximum Sharpe ratio.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-170

@@ -1,0 +1,12 @@
+{
+  "page": 604,
+  "original_text": "ObservationDimension = [1 4];\nObservationInfo_Train_Buy = rlNumericSpec(ObservationDimension);\nObservationInfo_Train_Buy.Name = 'Observation Data';\nObservationInfo_Train_Buy.Description = ['RemainingSharesToTrade, ...' ...\n    'RemainingIntervals, IS_Agent, PriceDivergence'];\nObservationInfo_Train_Buy.LowerLimit = -inf;\nObservationInfo_Train_Buy.UpperLimit = inf;",
+  "ocr_text": "ObservationDimension=[14];\nObservationInfo_Train_Buy=rlNumericSpec(ObservationDimension);\nObservationInfo_Train_Buy.Name=ObservationData;\nObservationInfo_Train_Buy.Description=[RemainingSharesToTrade,......\nRemainingIntervals,IS_Agent,PriceDivergence];\nObservationInfo_Train_Buy.LowerLimit=-inf;\nObservationInfo_Train_Buy.UpperLimit=inf;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.82,
+    "x1": 490.96,
+    "y1": 665.09
+  },
+  "confidence": "high"
+}

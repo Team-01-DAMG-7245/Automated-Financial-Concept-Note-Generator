@@ -1,0 +1,52 @@
+datefind
+
+Indices of dates in matrix
+
+Syntax
+
+Indices = datefind(Subset,Superset)
+Indices = datefind( ___ ,Tolerance)
+
+Description
+
+Indices = datefind(Subset,Superset) returns a vector of indices to the date numbers in
+Superset that are present in Subset. If no date numbers match, Indices = [].
+
+Indices = datefind( ___ ,Tolerance) returns a vector of indices to the date numbers in
+Superset that are present in Subset, plus the optional argument for Tolerance. If no date
+numbers match, Indices = [].
+
+Examples
+
+Return a Vector of Indices to Date Numbers
+
+This example shows how to return a vector of indices to date numbers.
+
+Superset = datetime(1999,7,1:31); 
+Subset = [datetime(1999,7,10) ; datetime(1999,7,20)]; 
+Indices = datefind(Subset, Superset, 1)
+
+Indices = 6×1
+
+9
+    10
+    11
+    19
+    20
+    21
+
+Input Arguments
+
+Subset — Subset of dates to find matching dates
+datetime array | string array | date character vector
+
+Subset of dates to find matching dates in Superset, specified as a matrix using a datetime array,
+string array, or date character vectors.
+
+Subset and Superset can be either be a datetime array, string array, or date character vectors.
+These types do not have to match. datefind determines the underlying date to match dates of
+different data types.
+
+datefind
+
+15-803

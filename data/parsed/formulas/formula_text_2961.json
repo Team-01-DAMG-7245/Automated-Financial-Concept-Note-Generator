@@ -1,0 +1,12 @@
+{
+  "page": 1553,
+  "original_text": "function new_weights = exampleRebalanceFcn(current_weights,assetPriceTimeTable,signalDataTimeTabl",
+  "ocr_text": "functionnew_weights=exampleRebalanceFcn(current_weights,assetPriceTimeTable,signalDataTimeTab",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 374.96,
+    "x1": 615.55,
+    "y1": 385.42
+  },
+  "confidence": "high"
+}

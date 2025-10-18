@@ -1,0 +1,11 @@
+Page 1264
+================================================================================
+
+Once you have simulated sample paths, options are priced by the least squares regression method of
+Longstaff & Schwartz (see Valuing American Options by Simulation: A Simple Least-Squares
+Approach, The Review of Financial Studies, Spring 2001). This approach uses least squares to
+estimate the expected payoff of an option if it is not immediately exercised. It does so by regressing
+the discounted option cash flows received in the future on the current price of the underlier
+associated with all in-the-money sample paths. The continuation function is estimated by a simple
+third-order polynomial, in which all cash flows and prices in the regression are normalized by the
+option strike price, improving numerical stability.

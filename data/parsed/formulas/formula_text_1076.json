@@ -1,0 +1,12 @@
+{
+  "page": 555,
+  "original_text": "cumulativeReward = cumulativeReward+...\n        experience(i).Reward.Data(end);\n    wealthSimulation(:,i) =...\n        squeeze(experience(i).Observation.obs1.Data(1,1,:));\nend",
+  "ocr_text": "cumulativeReward=cumulativeReward+...\nexperience(i).Reward.Data(end);\nwealthSimulation(:,i)=...\nsqueeze(experience(i).Observation.obs1.Data(1,1,:));\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 415.08,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

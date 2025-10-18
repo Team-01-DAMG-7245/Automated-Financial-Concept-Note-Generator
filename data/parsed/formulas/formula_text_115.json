@@ -1,0 +1,12 @@
+{
+  "page": 95,
+  "original_text": "DSPreview = preview(DS);\nLOBPreview = DSPreview(:,1:5)",
+  "ocr_text": "DSPreview=preview(DS);\nLOBPreview=DSPreview(:,1:5)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 386.04,
+    "x1": 247.12,
+    "y1": 407.31
+  },
+  "confidence": "high"
+}

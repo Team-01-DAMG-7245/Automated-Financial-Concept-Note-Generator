@@ -1,0 +1,5 @@
+Page 1521
+================================================================================
+
+Instantaneous volatility of the BSS stochastic volatility process, returned as a numeric scalar or
+function handle.

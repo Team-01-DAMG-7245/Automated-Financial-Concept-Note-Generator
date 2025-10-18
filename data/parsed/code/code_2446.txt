@@ -1,0 +1,5 @@
+Page 2299
+================================================================================
+
+The estimateMaxSharpeRatio function uses the MINLP solver to solve this problem. Use the
+setSolverMINLP function to configure the SolverType and options.

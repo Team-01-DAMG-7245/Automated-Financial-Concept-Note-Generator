@@ -1,0 +1,34 @@
+Plotting the Efficient Frontier for a Portfolio Object
+
+This example shows how to use the plotFrontier function to create a plot of the efficient frontier
+for a given portfolio optimization problem. The plotFrontier function accepts several types of
+inputs and generates a plot with an optional possibility to output the estimates for portfolio risks and
+returns along the efficient frontier.
+
+plotFrontier has four different ways that it can be used. In addition to a plot of the efficient
+frontier, if you have an initial portfolio in the InitPort property, plotFrontier also displays the
+return versus risk of the initial portfolio on the same plot. If you have a well-posed portfolio
+optimization problem set up in a Portfolio object and you use plotFrontier, you get a plot of the
+efficient frontier with the default number of portfolios on the frontier (the default number is 10 and is
+maintained in the hidden property defaultNumPorts). The following code illustrates a typical use of
+plotFrontier to create a new plot.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+ 
+p = Portfolio('Name', 'Asset Allocation Portfolio', 'InitPort', pwgt0);
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+plotFrontier(p)
+
+The Name property appears as the title of the efficient frontier plot if you set it in the Portfolio
+object. Without an explicit name, the title on the plot would be "Efficient Frontier." If you want to
+obtain a specific number of portfolios along the efficient frontier, use plotFrontier with the
+
+Plotting the Efficient Frontier for a Portfolio Object
+
+4-125

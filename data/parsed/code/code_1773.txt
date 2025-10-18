@@ -1,0 +1,5 @@
+Page 1500
+================================================================================
+
+If you specify JumpFreq as a deterministic function of time, you call JumpFreq with a real-valued
+scalar time t as its only input, it must return a scalar.

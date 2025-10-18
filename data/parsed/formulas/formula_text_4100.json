@@ -1,0 +1,12 @@
+{
+  "page": 2314,
+  "original_text": "m = [ 0.05; 0.1; 0.12; 0.18 ];\nC = [ 0.0064 0.00408 0.00192 0; \n      0.00408 0.0289 0.0204 0.0119;\n      0.00192 0.0204 0.0576 0.0336;\n      0 0.0119 0.0336 0.1225 ];\n \np = Portfolio;\np = setAssetMoments(p, m, C);\np = setDefaultConstraints(p);\npwgt = estimateFrontierLimits(p);\npret = estimatePortReturn(p, pwgt);\ndisp(pret)",
+  "ocr_text": "m=[0.05;0.1;0.12;0.18];\nC=[0.00640.004080.001920;\n\n0.004080.02890.02040.0119;\n\n0.001920.02040.05760.0336;\n\n00.01190.03360.1225];\np=Portfolio;\np=setAssetMoments(p,m,C);\np=setDefaultConstraints(p);\npwgt=estimateFrontierLimits(p);\npret=estimatePortReturn(p,_pwgt);\ndisp(pret)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 407.41,
+    "x1": 279.63,
+    "y1": 536.68
+  },
+  "confidence": "high"
+}

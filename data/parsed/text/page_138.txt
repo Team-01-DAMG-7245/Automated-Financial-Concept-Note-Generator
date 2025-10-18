@@ -1,0 +1,46 @@
+end    
+end
+
+References
+
+[1] Kolm, Petter, N., Jeremy Turiel, and Nicholas Westray. "Deep Order Flow Imbalance: Extracting
+Alpha at Multiple Horizons from the Limit Order Book." SSRN (August 2021): https://
+papers.ssrn.com/sol3/papers.cfm?abstract_id=3900141.
+
+[2] LOBSTER Limit Order Book Data. Berlin: frischedaten UG (haftungsbeschränkt).
+
+[3] NASDAQ Historical TotalView-ITCH Data. New York: The Nasdaq, Inc.
+
+[4] Rubisov, Anton D. "Statistical Arbitrage Using Limit Order Book Imbalance." Master's thesis,
+University of Toronto, 2015.
+
+See Also
+
+More About
+
+•
+“Machine Learning for Statistical Arbitrage: Introduction” on page 2-48
+
+•
+“Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development” on
+page 2-59
+
+•
+“Machine Learning for Statistical Arbitrage III: Training, Tuning, and Prediction” on page 2-69
+
+•
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+
+•
+“Backtest Strategies Using Deep Learning” on page 4-302
+
+•
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+
+•
+“Deep Reinforcement Learning for Optimal Trade Execution” on page 4-407
+
+2
+Performing Common Financial Tasks
+
+2-94

@@ -1,0 +1,5 @@
+Page 115
+================================================================================
+
+to larger trading volumes. Using the conditional probabilities obtained from Q, the tradeOnQ
+function takes one of these actions:

@@ -1,0 +1,6 @@
+Page 971
+================================================================================
+
+Fit a logistic regression model to the WOE data from the creditscorecard object. The
+fitmodel function internally bins the training data, transforms it into WOE values, maps the
+response variable so that 'Good' is 1, and fits a linear logistic regression model.

@@ -1,0 +1,5 @@
+Page 406
+================================================================================
+
+% For readability, use only 15 of the 30 DJI component stocks.
+assetSymbols = ["AA","CAT","DIS","GM","HPQ","JNJ","MCD","MMM","MO","MRK","MSFT","PFE","PG","T","X

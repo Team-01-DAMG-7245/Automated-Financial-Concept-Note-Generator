@@ -1,0 +1,5 @@
+Page 71
+================================================================================
+
+You can examine the money-market and bond-equivalent yields of a Treasury bill at the time of
+purchase and sale. The function tbilldisc2yield can perform both computations at one time.

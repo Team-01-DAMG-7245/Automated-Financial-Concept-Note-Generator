@@ -1,0 +1,85 @@
+SpecifyConstraintGradient: 0
+     SpecifyObjectiveGradient: 0
+                StepTolerance: 1.0000e-06
+                     TypicalX: 'ones(numberOfVariables,1)'
+                  UseParallel: 0
+
+Alternatively, the setSolver function accepts an optimoptions object as the second argument. For
+example, you can change the algorithm to 'active-set' with no displayed output as follows:
+
+p = PortfolioMAD;
+options = optimoptions('fmincon', 'Algorithm', 'active-set', 'Display', 'off');
+p = setSolver(p, 'fmincon', options);
+display(p.solverOptions.Algorithm)
+display(p.solverOptions.Display)
+
+active-set
+off
+
+Using the Mixed Integer Nonlinear Programming (MINLP) Solver
+
+The mixed integer nonlinear programming (MINLP) solver, configured using setSolverMINLP,
+enables you to specify associated solver options for portfolio optimization for a PortfolioMAD
+object. The MINLP solver is used when any one, or any combination of 'Conditional' BoundType,
+MinNumAssets, or MaxNumAssets constraints are active, the portfolio problem is formulated by
+adding NumAssets binary variables, where 0 indicates not invested, and 1 is invested. For more
+information on using 'Conditional' BoundType, see setBounds. For more information on
+specifying MinNumAssets and MaxNumAssets, see setMinMaxNumAssets.
+
+When using the estimate functions with a PortfolioMAD object where 'Conditional'
+BoundType, MinNumAssets, or MaxNumAssets constraints are active, the mixed integer nonlinear
+programming (MINLP) solver is automatically used.
+
+Solver Guidelines for PortfolioMAD Objects
+
+The following table provides guidelines for using setSolver and setSolverMINLP.
+
+PortfolioMAD
+Problem
+
+PortfolioMAD
+Function
+
+Type of
+Optimization
+Problem
+
+Main Solver
+Helper Solver
+
+PortfolioMAD
+without active
+'Conditional'
+BoundType,
+MinNumAssets,
+MaxNumAssets, or
+conditional budget
+constraints
+
+estimateFronti
+erByRisk
+
+Optimizing a
+portfolio for a
+certain risk level
+introduces a
+nonlinear
+constraint.
+Therefore, this
+problem has a
+linear objective
+with linear and
+nonlinear
+constraints.
+
+'TrustRegionCP
+', 'ExtendedCP',
+or 'fmincon'
+using setSolver
+
+'linprog' using
+setSolver
+
+Choosing and Controlling the Solver for PortfolioMAD Optimizations
+
+6-101

@@ -1,0 +1,12 @@
+{
+  "page": 2093,
+  "original_text": "createholidays('FinancialCalendar\\My_datafile.csv',...\n'FinancialCalendar\\My_codesfile.csv',...\n'FinancialCalendar\\My_infofile.csv','c:\\work',1,1,1)",
+  "ocr_text": "createholidays(FinancialCalendarMy_datafile.csv,...\nFinancialCalendarMy_codesfile.csv,...\nFinancialCalendarMy_infofile.csv,c:work,1,1,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 443.47,
+    "x1": 324.08,
+    "y1": 469.12
+  },
+  "confidence": "high"
+}

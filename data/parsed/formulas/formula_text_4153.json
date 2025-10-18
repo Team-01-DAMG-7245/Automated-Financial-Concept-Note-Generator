@@ -1,0 +1,12 @@
+{
+  "page": 2327,
+  "original_text": "pvar = estimatePortVaR(p, pwgt);\ndisp(pvar)",
+  "ocr_text": "pvar=estimatePortVaR(p,_pwgt);\ndisp(pvar)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 600.03,
+    "x1": 263.37,
+    "y1": 621.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 698,
+  "original_text": "For example, the weight you invest in each asset is either 0 or between [0.01, 0.5]. Generally,\na semicontinuous variable x is a continuous variable between bounds [lb, ub] that also can\nassume the value 0, where lb > 0, lb ≤ ub. Applying this to portfolio optimization requires that\nvery small or large positions should be avoided, that is values that fall in (0, lb) or are more than\nub.",
+  "ocr_text": "Forexample,theweightyouinvestineachassetiseither0orbetween[0.01,_0.5].Generally,\nasemicontinuousvariablexisacontinuousvariablebetweenbounds[1b,ub]thatalsocan\nassumethevalue0,wherelb=0,lb=ub.Applyingthistoportfoliooptimizationrequiresthat\nverysmallorlargepositionsshouldbeavoided,thatisvaluesthatfallin(0,_Lb)oraremorethan\nub.",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 291.59,
+    "x1": 551.51,
+    "y1": 351.22
+  },
+  "confidence": "high"
+}

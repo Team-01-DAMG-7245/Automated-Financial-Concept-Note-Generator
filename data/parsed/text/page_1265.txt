@@ -1,0 +1,12 @@
+ylabel('Index Value')
+title ('Normalized Daily Index Closings')
+legend(series{1:end-1}, 'Location', 'NorthWest')
+
+plot(dates, 100 * yields)
+xlabel('Date')
+ylabel('Annualized Yield (%)')
+title('Risk Free Rate (3-Month Euribor Continuously-Compounded)')
+
+Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation
+
+14-73

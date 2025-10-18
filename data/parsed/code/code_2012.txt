@@ -1,0 +1,5 @@
+Page 1602
+================================================================================
+
+Each row of the table output is a measurement of the performance of a strategy. Each strategy
+occupies a column. The summary function reports on the following metrics:

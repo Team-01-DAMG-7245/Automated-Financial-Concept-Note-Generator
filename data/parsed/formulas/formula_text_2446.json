@@ -1,0 +1,12 @@
+{
+  "page": 1264,
+  "original_text": "yields = Data(:,end);            % Daily effective yields\nyields = 360 * log(1 + yields);  % Continuously-compounded, annualized yield",
+  "ocr_text": "yields=Data(:,end); Dailyeffectiveyields\nyields=360*log(1+yields);Continuously-compounded,annualizedyield",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 501.78,
+    "y1": 675.89
+  },
+  "confidence": "high"
+}

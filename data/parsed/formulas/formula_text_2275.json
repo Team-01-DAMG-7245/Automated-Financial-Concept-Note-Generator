@@ -1,0 +1,12 @@
+{
+  "page": 1168,
+  "original_text": "for j = 1:nIndices\n    Z(:,:,j) = reshape(icdf(tails{j}, U(:,j)), horizon, nTrials);\nend",
+  "ocr_text": "forj=1:nIndices\nZ(:,:,j)=reshape(icdf(tails{j},U(:,j)),horizon,nTrials);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 223.63,
+    "x1": 442.17,
+    "y1": 255.69
+  },
+  "confidence": "high"
+}

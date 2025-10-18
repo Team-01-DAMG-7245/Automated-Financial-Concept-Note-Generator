@@ -1,0 +1,12 @@
+{
+  "page": 2152,
+  "original_text": "Accum = depstln(13000, 1000, 10) * 6",
+  "ocr_text": "Accum=depsttn(13000,1000,10)*6",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 379.18,
+    "x1": 285.04,
+    "y1": 389.65
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 2083
+================================================================================
+
+Maturity = [datetime(2001,4,30) ; datetime(2001,5,31) ; datetime(2001,6,30)];
+NumDaysPrevious = cpndaysp(datetime(2000,3,14), Maturity)

@@ -1,0 +1,12 @@
+{
+  "page": 1536,
+  "original_text": "roughHestonObj = \n   Class ROUGHHESTON: Rough Heston Stochastic Volatility\n   -----------------------------------------------------\n     Dimensions: State = 2, Brownian = 2\n   -----------------------------------------------------",
+  "ocr_text": "roughHestonObj_=\nClassROUGHHESTON:RoughHestonStochasticVolatility\nDimensions:State=2,Brownian=2",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 665.43,
+    "x1": 393.41,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

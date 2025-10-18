@@ -1,0 +1,12 @@
+{
+  "page": 1612,
+  "original_text": "backtester = \n  backtestEngine with properties:",
+  "ocr_text": "backtester=\nbacktestEnginewithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 327.03,
+    "x1": 268.79,
+    "y1": 348.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 947,
+  "original_text": "figure\nplot(Years(inSample+1),DefRate(inSample+1),'ko','LineWidth',1.5, ...\n   'MarkerSize',10,'MarkerFaceColor','g')\nhold on\nplot(Years(inSample+1),yHat,'b-s','LineWidth',1.2,'MarkerSize',10)\nhold off\ngrid on\nlegend({'Actual','Model'},'location','NW')\ntitle('{\\bf Corporate Default Rate Models: In-Sample Fit}')\nxlabel('Year')\nylabel('Percent')",
+  "ocr_text": "figure\n\nplot(Years(inSample+1),DefRate(inSample+1),ko,LineWidth,1.5,...\nMarkerSize,10,MarkerFaceColor,g)\n\nholdon\n\nplot(Years(inSample+1),yHat,b-s,LineWidth,1.2,MarkerSize,10)\n\nholdoff\n\ngridon\n\nLlegend({Actual,Model},location,NW)\n\ntitle({bfCorporateDefaultRateModels:In-SampleFit})\n\nxlabel(Year)\n\nylabel(Percent)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 498.83,
+    "x1": 458.46,
+    "y1": 617.29
+  },
+  "confidence": "high"
+}

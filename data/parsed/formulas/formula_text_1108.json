@@ -1,0 +1,12 @@
+{
+  "page": 565,
+  "original_text": "percentage = 0.05;\nAssetName = pricesTT.Properties.VariableNames( ...\n    wFactorModel_initial>=percentage)';\nWeight = wFactorModel_initial(wFactorModel_initial>=percentage);\nT2 = table(AssetName,Weight)",
+  "ocr_text": "percentage=0.05;\nAssetName=pricesTT.Properties.VariableNames(...\n\nwFactorModel_initial==percentage);\nWeight=wFactorModel_initial(wFactorModel_initial=percentage);\nT2=table(AssetName,Weight)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 296.01,
+    "x1": 436.75,
+    "y1": 349.67
+  },
+  "confidence": "high"
+}

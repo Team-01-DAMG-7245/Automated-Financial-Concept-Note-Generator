@@ -1,0 +1,9 @@
+Page 1594
+================================================================================
+
+ylim([0 oldylim(2)]);
+cm = parula(numel(h));
+for i = 1:numel(h)
+    set(h(i),'FaceColor',cm(i,:));
+end
+legend(backtester.Positions.(strategyName).Properties.VariableNames)

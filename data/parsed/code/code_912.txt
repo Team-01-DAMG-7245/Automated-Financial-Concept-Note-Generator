@@ -1,0 +1,5 @@
+Page 881
+================================================================================
+
+Alternatively, the setSolver function accepts an optimoptions object as the second argument. For
+example, you can change the algorithm to 'active-set' with no displayed output as follows:

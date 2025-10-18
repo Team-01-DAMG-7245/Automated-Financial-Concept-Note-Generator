@@ -1,0 +1,12 @@
+{
+  "page": 2228,
+  "original_text": "% Solve the problem\nw = estimateCustomObjectivePortfolio(p,riskParity);\nriskParity(w)",
+  "ocr_text": "Solvetheproblem\nw=estimateCustom0bjectivePortfolio(p,riskParity);\nriskParity(w)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 265.83,
+    "x1": 366.32,
+    "y1": 297.89
+  },
+  "confidence": "high"
+}

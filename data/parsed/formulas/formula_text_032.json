@@ -1,0 +1,12 @@
+{
+  "page": 41,
+  "original_text": "Rate = irr(CashFlows)",
+  "ocr_text": "Rate=irr(CashFlows)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.08,
+    "x1": 203.78,
+    "y1": 599.55
+  },
+  "confidence": "high"
+}

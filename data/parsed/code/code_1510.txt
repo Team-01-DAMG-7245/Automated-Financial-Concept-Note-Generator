@@ -1,0 +1,6 @@
+Page 1428
+================================================================================
+
+The simBySolution function simulates the state vector Xt using an approximation of the closed-form
+solution of diagonal drift HWV models. Each element of the state vector Xt is expressed as the sum of
+NBrowns correlated Gaussian random draws added to a deterministic time-variable drift.

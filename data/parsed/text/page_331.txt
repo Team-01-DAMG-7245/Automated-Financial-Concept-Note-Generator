@@ -1,0 +1,34 @@
+Illustrate the Tangent Line to the Efficient Frontier
+
+Tobin's mutual fund theorem (Tobin 1958 on page 4-177) says that the portfolio allocation problem is
+viewed as a decision to allocate between a riskless asset and a risky portfolio. In the mean-variance
+framework, cash serves as a proxy for a riskless asset and an efficient portfolio on the efficient
+frontier serves as the risky portfolio such that any allocation between cash and this portfolio
+dominates all other portfolios on the efficient frontier. This portfolio is called a tangency portfolio
+because it is located at the point on the efficient frontier where a tangent line that originates at the
+riskless asset touches the efficient frontier.
+
+Given that the Portfolio object already has the risk-free rate, obtain the tangent line by creating a
+copy of the Portfolio object with a budget constraint that permits allocation between 0% and 100%
+in cash. Since the Portfolio object is a value object, it is easy to create a copy by assigning the
+output of either Portfolio or the "set" functions to a new instance of the Portfolio object. The
+plot shows the efficient frontier with Tobin's allocations that form the tangent line to the efficient
+frontier.
+
+q = setBudget(p, 0, 1);
+
+qwgt = estimateFrontier(q,20);
+[qrsk,qret] = estimatePortMoments(q,qwgt);
+
+% Plot efficient frontier with tangent line (0 to 1 cash).
+
+clf;
+portfolioexamples_plot('Efficient Frontier with Tangent Line', ...
+    {'line', prsk, pret}, ...
+    {'line', qrsk, qret, [], [], 1}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-163

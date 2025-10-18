@@ -1,0 +1,90 @@
+Filter Time Series
+
+Task
+Removed Functionality
+Use This Functionality
+
+Boxcox transformation
+newfts = boxcox(oldfts)
+Use boxcox:
+
+TT.Variables =
+boxcox(TT.Variables)
+
+Differencing
+diff(myfts)
+TT{2:end,:} =
+diff(TT.Variables)
+
+TT(1,:) = []
+
+Indexing with integers for
+rows
+
+fillts(oldfts,fill_method) Use fillmissing:
+
+fillmissing(TT,method)
+
+(Assumes no missing dates)
+
+Linear filtering
+filter(B,A, myfts)
+Use filter:
+
+TT.Variables =
+filter(b,a,TT.Variables)
+
+Lag or lead time series
+object
+
+lagts(myfts,lagperiod)
+
+leadts(myfts,leadperiod)
+
+Use lag:
+
+lag(TT,lagperiod)
+
+lag(TT,-leadperiod)
+
+(Assumes a regularly spaced
+timetable)
+
+Periodic average
+peravg(myfts)
+Use retime:
+
+retime(TT,newTimes,'mean')
+
+Downsample data
+resamplets(oldfts,samplest
+ep)
+
+Use retime:
+
+retime(TT,newTimeStep,method
+)
+
+Smooth data
+smoothts(input)
+Use smoothdata:
+
+smoothdata(TT)
+
+Moving average
+tsmovavg(tsobj,method,lag) Use movavg:
+
+movavg(TT,type,windowSize)
+
+Convert Time Series
+
+Assume that all variables are numeric within a timetable, or the operations can be applied on TT2:
+
+S = vartype('numeric');
+
+TT2 = TT(:,S)
+
+11
+Using Financial Timetables
+
+11-4

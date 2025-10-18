@@ -1,0 +1,53 @@
+cdsprice
+
+Determine price for credit default swap
+
+Syntax
+
+[Price,AccPrem,PaymentDates,PaymentTimes,PaymentCF] = cdsprice(ZeroData,
+ProbData,Settle,Maturity,ContractSpread)
+[Price,AccPrem,PaymentDates,PaymentTimes,PaymentCF] = cdsprice( ___ ,
+Name,Value)
+
+Description
+
+[Price,AccPrem,PaymentDates,PaymentTimes,PaymentCF] = cdsprice(ZeroData,
+ProbData,Settle,Maturity,ContractSpread) computes the price, or the mark-to-market value
+for CDS instruments.
+
+Note Alternatively, you can use the Financial Instruments Toolbox CDS object to price credit default
+swaps. For more information, see “Get Started with Workflows Using Object-Based Framework for
+Pricing Financial Instruments” (Financial Instruments Toolbox).
+
+[Price,AccPrem,PaymentDates,PaymentTimes,PaymentCF] = cdsprice( ___ ,
+Name,Value) adds optional name-value pair arguments.
+
+Examples
+
+Determine the Price for a Credit Default Swap
+
+This example shows how to use cdsprice to compute the clean price for a CDS contract using the
+following data.
+
+Settle = '17-Jul-2009'; % valuation date for the CDS
+Zero_Time = [.5 1 2 3 4 5]';
+Zero_Rate = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+Zero_Dates = daysadd(Settle,360*Zero_Time,1);
+ZeroData = [Zero_Dates Zero_Rate];
+
+ProbData = [daysadd(datenum(Settle),360,1), 0.0247];
+Maturity = datetime(2010,9,20);
+ContractSpread = 135;
+
+[Price,AccPrem] = cdsprice(ZeroData,ProbData,Settle,Maturity,ContractSpread)
+
+Price = 
+1.5461e+04
+
+AccPrem = 
+10500
+
+15
+Functions
+
+15-626

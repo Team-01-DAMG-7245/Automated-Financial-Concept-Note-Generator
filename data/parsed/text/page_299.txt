@@ -1,0 +1,82 @@
+p = setDefaultConstraints(p);
+[pwgt, pbuy, psell] = estimateFrontierByRisk(p, 0.15);
+ 
+Blotter = dataset([{100*[pwgt0, pwgt, pbuy, psell]}, ...
+     {'Initial','Weight', 'Purchases','Sales'}],'obsnames',p.AssetList);
+ 
+display(Blotter)
+
+Blotter = 
+                          Initial    Weight    Purchases    Sales 
+    Bonds                 30         20.299         0       9.7007
+    Large-Cap Equities    30         41.366    11.366            0
+    Small-Cap Equities    20         10.716         0       9.2838
+    Emerging Equities     10         27.619    17.619            0
+
+If you have prices for each asset (in this example, they can be ETFs), add them to your blotter and
+then use the tools of the dataset object to obtain shares and shares to be traded. For an example,
+see “Asset Allocation Case Study” on page 4-180.
+
+See Also
+Portfolio | estimateAssetMoments | checkFeasibility
+
+Related Examples
+
+•
+“Troubleshooting Portfolio Optimization Results” on page 4-145
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+Postprocessing Results to Set Up Tradable Portfolios
+
+4-131

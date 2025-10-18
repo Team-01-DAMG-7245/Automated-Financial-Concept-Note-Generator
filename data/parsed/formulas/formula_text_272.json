@@ -1,0 +1,12 @@
+{
+  "page": 166,
+  "original_text": "AbsConSet = portcons('PortValue', 1, NumAssets, ... \n'AssetLims', zeros(NumAssets,1), ones(NumAssets,1));",
+  "ocr_text": "AbsConSet=portcons(PortValue,1,NumAssets,...\nAssetLims,zeros(NumAssets,1),ones(NumAssets,1));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.03,
+    "x1": 371.76,
+    "y1": 147.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 605,
+  "original_text": "simOptions = rlSimulationOptions(MaxSteps=NumTrainingSteps);\nTrained_Agent_Buy = DQN_agent_Buy_Trained;\nexperience_Buy = sim(RL_OptimalExecution_Training_Environment_Buy,Trained_Agent_Buy,simOptions);",
+  "ocr_text": "simOptions=rlSimulationOptions(MaxSteps=NumTrainingSteps);\nTrained_Agent_Buy=DQN_agent_Buy_Trained;\nexperience_Buy=sim(RL_OptimalExecution_Training_Environment_Buy,Trained_Agent_Buy,simOptions);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 643.83,
+    "x1": 610.13,
+    "y1": 675.89
+  },
+  "confidence": "high"
+}

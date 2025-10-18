@@ -1,0 +1,12 @@
+{
+  "page": 1269,
+  "original_text": "xlabel('Centered Return')\nylabel('Probability')\ntitle (['Semi-Parametric/Piecewise CDF: ' series{index}])\nlegend({'Pareto Lower Tail' 'Kernel Smoothed Interior' ...\n        'Pareto Upper Tail' 'Gaussian with Same \\sigma'}, 'Location', 'NorthWest')",
+  "ocr_text": "xlabel(CenteredReturn)\n\nylabel(Probability)\n\ntitle([Semi-Parametric/PiecewiseCDF:series{index}])\n\nlegend({ParetoLowerTailKernelSmoothedInterior...\nParetoUpperTailGaussianwithSamesigma},_Location,NorthWest)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 534.31,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

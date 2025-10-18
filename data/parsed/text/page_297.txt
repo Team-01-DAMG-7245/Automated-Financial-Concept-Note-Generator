@@ -1,0 +1,11 @@
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+Plotting the Efficient Frontier for a Portfolio Object
+
+4-129

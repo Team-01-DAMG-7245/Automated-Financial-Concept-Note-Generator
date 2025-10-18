@@ -1,0 +1,6 @@
+Page 1132
+================================================================================
+
+for i=1:numSim
+    treasuryYTMAtHorizonSim(i,:) = interp1(x,hrznYTMRatesSims(i,:),xi,'spline');
+end

@@ -1,0 +1,63 @@
+The remainder of this example uses only the unevaluated tall timetable DTT. Clear other variables
+from the workspace.
+
+clearvars -except DTT 
+whos
+
+Name            Size            Bytes  Class    Attributes
+
+DTT       581,030x12             5056  tall
+
+Data Visualization
+
+To visualize large amounts of data, you must summarize, bin, or sample the data in some way to
+reduce the number of points plotted on the screen.
+
+LOB Snapshot
+
+One method of visualization is to evaluate only a selected subsample of the data. Create a snapshot of
+the LOB at a specific time of day (11 AM).
+
+sampleTimeTarget = seconds(11*60*60);               % Seconds after midnight
+sampleTimes = withtol(sampleTimeTarget,seconds(1)); % 1 second tolerance
+sampleLOB = DTT(sampleTimes,:);
+
+numTimes = gather(size(sampleLOB,1))
+
+Evaluating tall expression using the Local MATLAB Session:
+- Pass 1 of 1: Completed in 4.1 sec
+Evaluation completed in 4.4 sec
+
+numTimes = 
+23
+
+There are 23 ticks within one second of 11 AM. For the snapshot, use the tick closest to the midtime.
+
+sampleLOB = sampleLOB(round(numTimes/2),:);
+sampleTime = sampleLOB.Time;
+
+sampleBidPrices = [sampleLOB.BidPrice1,sampleLOB.BidPrice2,sampleLOB.BidPrice3];
+sampleBidSizes  = [sampleLOB.BidSize1,sampleLOB.BidSize2,sampleLOB.BidSize3];
+sampleAskPrices = [sampleLOB.AskPrice1,sampleLOB.AskPrice2,sampleLOB.AskPrice3];
+sampleAskSizes  = [sampleLOB.AskSize1,sampleLOB.AskSize2,sampleLOB.AskSize3];
+
+[sampleTime,sampleBidPrices,sampleBidSizes,sampleAskPrices,sampleAskSizes] = ...
+    gather(sampleTime,sampleBidPrices,sampleBidSizes,sampleAskPrices,sampleAskSizes);
+
+Evaluating tall expression using the Local MATLAB Session:
+- Pass 1 of 2: Completed in 3.7 sec
+- Pass 2 of 2: Completed in 4 sec
+Evaluation completed in 8.6 sec
+
+Visualize the limited data sample returned by gather by using bar.
+
+figure
+hold on
+
+bar((sampleBidPrices/10000),sampleBidSizes,'r')
+bar((sampleAskPrices/10000),sampleAskSizes,'g')
+hold off
+
+Machine Learning for Statistical Arbitrage I: Data Management and Visualization
+
+2-55

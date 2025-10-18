@@ -1,0 +1,56 @@
+Input Arguments
+
+Return — Expected (mean) instantaneous rate of return of GBM price process
+array, deterministic function of time, deterministic function of time and state
+
+Expected (mean) instantaneous rate of return of the GBM price process, specified as an array, a
+numeric scalar, or a deterministic function of time as a function handle accepting scalar time t or as a
+function of time and state as scalar time t followed by a 2-by-1 bivariate state vector X(t).
+
+Data Types: double | function_handle
+
+Speed — Mean-reversion speed of stochastic variance process
+array or deterministic function of time
+
+Mean-reversion speed of the stochastic variance process, specified as an array or deterministic
+function of time.
+
+If you specify Speed as an array, it must be a scalar value.
+
+As a deterministic function of time, when Speed is called with a real-valued scalar time t as its only
+input, Speed must produce a scalar value.
+
+Note Although roughheston enforces no restrictions, the mean-reversion speed is usually
+nonnegative such that the underlying process reverts to some stable level.
+
+Data Types: double | function_handle
+
+Level — Reversion level or long-run average of stochastic variance process
+array or deterministic function of time
+
+Reversion level or long-run average of the stochastic variance process, specified as an array or
+deterministic function of time.
+
+If you specify Level as an array, it must be a scalar value
+
+As a deterministic function of time, when Level is called with a real-valued scalar time t as its only
+input, Speed must produce a scalar value.
+
+Note Although roughheston enforces no restrictions, the mean-reversion level is usually positive.
+
+Data Types: double | function_handle
+
+Volatility — Instantaneous volatility of stochastic variance process
+scalar or deterministic function of time or deterministic function of time and state
+
+Instantaneous volatility of the stochastic variance process (often called the volatility of volatility or
+volatility of variance), specified as a scalar, or deterministic function of time.
+
+If you specify Volatility as an array, it must be a scalar value.
+
+As a deterministic function of time, when Volatility is called with a real-valued scalar time t as its
+only input, Volatility must produce a scalar.
+
+roughheston
+
+15-227

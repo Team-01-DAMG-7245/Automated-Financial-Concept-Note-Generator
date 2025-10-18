@@ -1,0 +1,12 @@
+{
+  "page": 1877,
+  "original_text": "Example: Spread =\nbndspread(SpotInfo,Price,Coupon,Settle,Maturity,'Period',4,'Basis',7)",
+  "ocr_text": "Example:Spread=\nbndspread(SpotInfo,Price,Coupon,Settle,Maturity,Period,4,Basis,7)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 110.96,
+    "x1": 505.38,
+    "y1": 134.59
+  },
+  "confidence": "high"
+}

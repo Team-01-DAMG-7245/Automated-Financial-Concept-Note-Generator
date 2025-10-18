@@ -1,0 +1,12 @@
+{
+  "page": 391,
+  "original_text": "% View 3\nP(3, assetNames==\"MSFT\") = 1; \nP(3, assetNames==\"IBM\") = -1; \nq(3) = 0.05;\nOmega(3, 3) = 1e-5;",
+  "ocr_text": "View3\nP(3,assetNames==MSFT)=1;\nP(3,assetNames==IBM)=-1;\nq(3)=0.05;\nOmega(3,3)=le-5;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 523.2,
+    "x1": 252.55,
+    "y1": 576.86
+  },
+  "confidence": "high"
+}

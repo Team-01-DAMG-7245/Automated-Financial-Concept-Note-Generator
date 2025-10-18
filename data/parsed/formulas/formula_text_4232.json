@@ -1,0 +1,12 @@
+{
+  "page": 2391,
+  "original_text": "p = Portfolio;\np = setDefaultConstraints(p, 5);\n[LowerBudget, UpperBudget] = getBudget(p)",
+  "ocr_text": "p=Portfolio;\np=setDefaultConstraints(p,5);\n[LowerBudget,UpperBudget]=getBudget(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 463.31,
+    "x1": 312.13,
+    "y1": 495.37
+  },
+  "confidence": "high"
+}

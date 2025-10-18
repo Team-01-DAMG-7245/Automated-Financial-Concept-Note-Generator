@@ -1,0 +1,12 @@
+{
+  "page": 2079,
+  "original_text": "NumDaysNext = cpndaysn( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate) returns the number of days from the settlement date to the\nnext coupon date for a bond or set of bonds using optional input arguments.",
+  "ocr_text": "NumDaysNext=cpndaysn(____,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)returnsthenumberofdaysfromthesettlementdatetothe\nnextcoupondateforabondorsetofbondsusingoptionalinputarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 353.13,
+    "x1": 550.36,
+    "y1": 388.76
+  },
+  "confidence": "high"
+}

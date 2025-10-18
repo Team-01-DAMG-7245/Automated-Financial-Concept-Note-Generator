@@ -1,0 +1,12 @@
+{
+  "page": 2119,
+  "original_text": "NumberDays = days252bus(StartDate,EndDate) computes the number of business days (that\nis, non-holiday or non-weekend) between the two input dates.",
+  "ocr_text": "NumberDays=days252bus(StartDate,EndDate)computesthenumberofbusinessdays(that\nis,non-holidayornon-weekend)betweenthetwoinputdates.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 259.99,
+    "x1": 548.05,
+    "y1": 283.62
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,61 @@
+Define Objective Function
+
+Define a function handle for the objective function xTx.
+
+% Define the objective function
+objFun = @(x) x'*x;
+
+Solve Portfolio Problem
+
+Use estimateCustomObjectivePortfolio to compute the solution to the problem.
+
+% Solve portfolio problem
+wMin = estimateCustomObjectivePortfolio(p,objFun)
+
+wMin = 6×1
+
+0.1667
+    0.1667
+    0.1667
+    0.1667
+    0.1667
+    0.1667
+
+The estimateCustomObjectivePortfolio function automatically assumes that the objective
+sense is to minimize. You can change that default behavior by using the
+estimateCustomObjectivePortfolio name-value argument ObjectiveSense='maximize'.
+
+Add Gross or Net Return Constraints for Problems with Custom Objectives
+
+This example shows how to use estimateCustomObjectivePortfolio to solve a portfolio
+problem with a custom objective and a return constraint. You define the constraints for portfolio
+problems, other than the return constraint, using functions for the Portfolio object and then you
+specify the objective function as an input to estimateCustomObjectivePortfolio. The objective
+function must be continuous (and preferably smooth). To specify a return constraint, you use the
+TargetReturn name-value argument.
+
+Create Portfolio Object
+
+Find the portfolio that solves the problem:
+
+min
+x
+xTx
+
+s . t . ∑
+i
+xi = 1
+
+x ≥0
+
+Create a Portfolio object and set the default constraints using setDefaultConstraints.
+
+% Create a Portfolio object
+load('SixStocks.mat')
+p = Portfolio(AssetMean=AssetMean,AssetCovar=AssetCovar);
+% Define the constraints of the portfolio methods
+p = setDefaultConstraints(p); % Long-only, fully invested weights
+
+estimateCustomObjectivePortfolio
+
+15-917

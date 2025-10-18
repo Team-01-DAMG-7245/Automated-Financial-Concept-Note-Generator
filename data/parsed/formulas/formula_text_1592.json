@@ -1,0 +1,12 @@
+{
+  "page": 805,
+  "original_text": "m = m/12;\nC = C/12;",
+  "ocr_text": "m=m/12;\nC=C/12;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 472.91,
+    "x1": 138.76,
+    "y1": 494.18
+  },
+  "confidence": "high"
+}

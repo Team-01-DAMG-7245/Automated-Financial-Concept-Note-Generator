@@ -1,0 +1,12 @@
+{
+  "page": 559,
+  "original_text": "% Get current wealth and time period\nW = loggedSignals.Wealth;\nt = loggedSignals.TimePeriod;",
+  "ocr_text": "Getcurrentwealthandtimeperiod\nW=loggedSignals.Wealth;\nt_=loggedSignals.TimePeriod;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 438.63,
+    "x1": 285.05,
+    "y1": 470.69
+  },
+  "confidence": "high"
+}

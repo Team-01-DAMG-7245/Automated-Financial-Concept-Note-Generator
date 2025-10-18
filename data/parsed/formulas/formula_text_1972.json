@@ -1,0 +1,12 @@
+{
+  "page": 1025,
+  "original_text": "fprintf('Clean Price: %8.2f\\n',Price);",
+  "ocr_text": "fprintf(CleanPrice:8.2fn,Price);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 579.28,
+    "x1": 295.9,
+    "y1": 589.74
+  },
+  "confidence": "high"
+}

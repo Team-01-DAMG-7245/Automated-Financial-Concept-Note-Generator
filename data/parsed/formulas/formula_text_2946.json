@@ -1,0 +1,12 @@
+{
+  "page": 1540,
+  "original_text": "•\nnew_weights = rebalanceFcn(weights,assetPrices)",
+  "ocr_text": "*new_weights=rebalanceFcn(weights,assetPrices)",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 344.43,
+    "x1": 402.94,
+    "y1": 356.06
+  },
+  "confidence": "high"
+}

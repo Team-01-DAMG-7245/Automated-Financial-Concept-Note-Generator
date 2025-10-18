@@ -1,0 +1,5 @@
+Page 42
+================================================================================
+
+MATLAB performs the same computation on all the assets at once. For the three cash flow streams,
+the irr function returns a vector of three internal rates of return.

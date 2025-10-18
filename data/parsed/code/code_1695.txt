@@ -1,0 +1,5 @@
+Page 1482
+================================================================================
+
+Drift — Drift rate component of continuous-time stochastic differential equations (SDEs)
+value stored from drift-rate function (default) | drift object or function accessible by (t, Xt)

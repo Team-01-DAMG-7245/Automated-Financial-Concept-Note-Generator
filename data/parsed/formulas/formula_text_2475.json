@@ -1,0 +1,12 @@
+{
+  "page": 1276,
+  "original_text": "z = Example_CopulaRNG(returns * sqrt(252), nPeriods, 'Gaussian');\nf = Example_LongstaffSchwartz(nPeriods, nTrials);",
+  "ocr_text": "z=Example_CopulaRNG(returns*sqrt(252),nPeriods,_Gaussian);\nf=Example_LongstaffSchwartz(nPeriods,nTrials);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 525.11,
+    "x1": 442.2,
+    "y1": 546.38
+  },
+  "confidence": "high"
+}

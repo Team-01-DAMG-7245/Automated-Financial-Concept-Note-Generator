@@ -1,0 +1,12 @@
+{
+  "page": 1300,
+  "original_text": "approxVolatility = mu + sigma .* (simComponents * coeffs(:, 1:2).');\napproxVolatility = [InferredVolatility{end, :}; approxVolatility];",
+  "ocr_text": "approxVolatility=mu+sigma.*(simComponents*coeffs(:,1:2).);\napproxVolatility=[InferredVolatility{end,:};approxVolatility];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 150.03,
+    "x1": 458.43,
+    "y1": 171.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,62 @@
+For weighted data, if there is default at a given observation i whose weight is wi, it is as if there was a
+wi count of that one observation, and all of them either all default, or all non-default. wi may or may
+not be an integer.
+
+Therefore, for the weighted data, the likelihood-of-default function for observation i in the first
+equation becomes
+
+Li = p Defaulti
+
+wi * yi × 1 −p Defaulti
+
+wi * 1 −yi
+
+By assumption, all defaults are independent events, so the objective function is
+
+L = L1 × L2 × . . . × LN
+
+or, in more convenient logarithmic terms:
+
+log L = ∑i = 1
+N
+wi * yilog p Defaulti
++ 1 −yi log 1 −p Defaulti
+
+Apply Constraints on the Coefficients
+
+After calibrating the unconstrained model as described in the "Unconstrained Model Using
+fitConstrainedModel" section, you can solve for the model coefficients subject to constraints. You can
+choose lower and upper bounds such that 0 ≤bi ≤1, ∀i = 1 . . . K, except for the intercept. Also, since
+the customer age and customer income are somewhat correlated, you can also use additional
+constraints on their coefficients, for example, |bCusAge −bCustIncome| < 0 . 1. The coefficients
+corresponding to the predictors 'CustAge' and 'CustIncome' in this example are b2 and b6,
+respectively.
+
+K  = length(sc.PredictorVars);
+lb = [-Inf;zeros(K,1)];
+ub = [Inf;ones(K,1)];
+AIneq = [0 -1 0 0 0 1 0 0 0 0;0 -1 0 0 0 -1 0 0 0 0];
+bIneq = [0.05;0.05];
+Options = optimoptions('fmincon','SpecifyObjectiveGradient',true,'Display','off');
+[sc3,mdl] = fitConstrainedModel(sc,'AInequality',AIneq,'bInequality',bIneq,...
+    'LowerBound',lb,'UpperBound',ub,'Options',Options);
+
+figure
+plot(coeff1,'*','MarkerSize',8)
+hold on
+plot(mdl.Coefficients.Estimate,'.','MarkerSize',12)
+line(xlim,[0 0],'color','k','linestyle',':')
+line(xlim,[1 1],'color','k','linestyle',':')
+text(1.1,0.1,'Lower bound')
+text(1.1,1.1,'Upper bound')
+grid on
+
+xticklabels(mdl.Coefficients.Properties.RowNames)
+ylabel('Model Coefficients')
+title('Comparison Between Unconstrained and Constrained Solutions')
+legend({'Unconstrained','Constrained'},'Location','best')
+
+8
+Credit Risk Analysis
+
+8-94

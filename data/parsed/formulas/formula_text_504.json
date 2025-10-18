@@ -1,0 +1,12 @@
+{
+  "page": 345,
+  "original_text": "Blotter = dataset({100*qswgt(abs(qswgt) > 1.0e-4), 'Weight'}, ...\n    {100*qslong(abs(qswgt) > 1.0e-4), 'Long'}, ...\n    {100*qsshort(abs(qswgt) > 1.0e-4), 'Short'}, ...\n    'obsnames', AssetList(abs(qswgt) > 1.0e-4));",
+  "ocr_text": "Blotter=dataset({100*qswgt(abs(qswgt)=1.0e-4),_Weight},...\n{100*qslong(abs(qswgt)=1.0e-4),Long},...\n{100*qsshort(abs(qswgt)=1.0e-4),Short},...\nobsnames,AssetList(abs(qswgt)=1.0e-4));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 381.73,
+    "x1": 442.2,
+    "y1": 424.6
+  },
+  "confidence": "high"
+}

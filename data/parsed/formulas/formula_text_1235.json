@@ -1,0 +1,12 @@
+{
+  "page": 617,
+  "original_text": "ISGains = ISDiffValues(ISDiffValues>0);\nISLosses = ISDiffValues(ISDiffValues<0);",
+  "ocr_text": "ISGains=ISDiffValues(ISDiffValues=0);\nISLosses=ISDiffValues(ISDiffValuesQ);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 525.03,
+    "x1": 306.72,
+    "y1": 546.29
+  },
+  "confidence": "high"
+}

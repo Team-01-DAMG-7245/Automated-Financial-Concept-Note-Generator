@@ -1,0 +1,12 @@
+{
+  "page": 193,
+  "original_text": "p = Portfolio;",
+  "ocr_text": "p=Portfolio;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 325.66,
+    "x1": 165.85,
+    "y1": 336.12
+  },
+  "confidence": "high"
+}

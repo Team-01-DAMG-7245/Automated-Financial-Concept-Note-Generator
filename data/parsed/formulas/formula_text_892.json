@@ -1,0 +1,12 @@
+{
+  "page": 489,
+  "original_text": "for i = 1:numel(unique_categories)\n    category_mask = asset_categories == unique_categories(i);\n    weights(category_mask) = category_weight / sum(category_mask);\nend",
+  "ocr_text": "fori=1:numel(unique_categories)\ncategory_mask=asset_categories==unique_categories(i);\nweights(category_mask)=category_weight/sum(category_mask);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 406.23,
+    "x1": 447.59,
+    "y1": 449.09
+  },
+  "confidence": "high"
+}

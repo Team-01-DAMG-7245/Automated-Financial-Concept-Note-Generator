@@ -1,0 +1,12 @@
+{
+  "page": 800,
+  "original_text": "p(i,j) = PortfolioMAD(p(i,j), ... );",
+  "ocr_text": "p(i,j)=PortfolioMAD(p(i,j),...)3",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 285.05,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1028,
+  "original_text": "fprintf('   a standard spread of %5.2f with an upfront of %8.7f\\n', ...\n   Spread4Std,Upfront4);",
+  "ocr_text": "fprintf( a_standardspreadof*5.2fwithanupfrontof8.7f(n,...\nSpread4Std,Upfront4);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.03,
+    "x1": 474.71,
+    "y1": 222.29
+  },
+  "confidence": "high"
+}

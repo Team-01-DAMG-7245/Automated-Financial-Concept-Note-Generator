@@ -1,0 +1,12 @@
+{
+  "page": 1592,
+  "original_text": "% Rerun the backtest starting on the last day of the warmup range.\nstartRow = warmupRange(end);\nbacktester = runBacktest(backtester,pricesTT,'Start',startRow);",
+  "ocr_text": "SRerunthebackteststartingonthelastdayofthewarmuprange.\nstartRow=warmupRange(end);\nbacktester=runBacktest(backtester,pricesTT,Start,startRow);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 335.2,
+    "x1": 447.59,
+    "y1": 367.26
+  },
+  "confidence": "high"
+}

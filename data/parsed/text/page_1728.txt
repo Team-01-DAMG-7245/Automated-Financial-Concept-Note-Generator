@@ -1,0 +1,32 @@
+Note, when using abs2active to compute “active constraints” for use with a Portfolio object,
+don't use the Portfolio object’s default constraints because the relative weights can be positive or
+negative (the setDefaultConstraints function for a Portfolio object specifies weights to be
+nonnegative).
+
+Input Arguments
+
+AbsConSet — Portfolio linear inequality constraint matrix expressed in absolute weight
+format
+matrix
+
+Portfolio linear inequality constraint matrix expressed in absolute weight format, specified as [A b]
+such that A*w <= b, where A is a number of constraints (NCONSTRAINTS) by number of assets
+(NASSETS) weight coefficient matrix, and b and w are column vectors of length NASSETS. The value w
+represents a vector of absolute asset weights whose elements sum to the total portfolio value. See the
+output ConSet from portcons for additional details about constraint matrices.
+
+Data Types: double
+
+Index — Index portfolio weights
+vector
+
+Index portfolio weights, specified as a NASSETS-by-1 vector. The sum of the index weights must equal
+the total portfolio value (for example, a standard portfolio optimization imposes a sum-to-1 budget
+constraint).
+
+Data Types: double
+
+15
+Functions
+
+15-422

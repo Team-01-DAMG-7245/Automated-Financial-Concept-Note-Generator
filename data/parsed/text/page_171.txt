@@ -1,0 +1,9 @@
+•
+“Backtest Investment Strategies Using datetime and calendarDuration” on page 4-451
+
+•
+“Adding Constraints to Satisfy UCITS Directive” on page 4-457
+
+Active Returns and Tracking Error Efficient Frontier
+
+4-3

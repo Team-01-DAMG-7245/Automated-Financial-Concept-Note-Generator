@@ -1,0 +1,12 @@
+{
+  "page": 958,
+  "original_text": "xliml = -5;\nxlimr = 5;\nstep = 0.1;\nx = xliml:step:xlimr;\nthresCCC = thresholdMat(7,:);\ncentersY = (normcdf([thresCCC(2:end) xliml])+...\n   normcdf([xlimr thresCCC(2:end)]))/2;\nlabels = {'AAA','AA','A','BBB','BB','B','CCC','D','NR'};",
+  "ocr_text": "xliml=-5;\n\nxlimr=5;\n\nstep=0.1;\n\nx=xliml:step:xlimr;\n\nthresCCC=thresholdMat(7,:);\n\ncentersY=(normcdf([thresCCC(2:end)xliml])+...\nnormcdf([xlimrthresCCC(2:end)]))/2;\n\nlabels={AAA,AA,A,BBB,BB,B,CCC,D,NR};",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 440.03,
+    "x1": 393.43,
+    "y1": 526.09
+  },
+  "confidence": "high"
+}

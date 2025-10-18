@@ -1,0 +1,52 @@
+Algorithms
+
+Model
+
+The general model is
+
+Z ∼N Mean, Covariance ,
+
+where each row of Data is an observation of Z.
+
+Each observation of Z is assumed to be iid (independent, identically distributed) multivariate normal,
+and missing values are assumed to be missing at random (MAR).
+
+Initialization Methods
+
+This routine has three initialization methods that cover most cases, each with its advantages and
+disadvantages.
+
+nanskip
+
+The nanskip method works well with small problems (fewer than 10 series or with monotone
+missing data patterns). It skips over any records with NaNs and estimates initial values from
+complete-data records only. This initialization method tends to yield fastest convergence of the ECM
+algorithm. This routine switches to the twostage method if it determines that significant numbers of
+records contain NaN.
+
+twostage
+
+The twostage method is the best choice for large problems (more than 10 series). It estimates the
+mean for each series using all available data for each series. It then estimates the covariance matrix
+with missing values treated as equal to the mean rather than as NaNs. This initialization method is
+robust but tends to result in slower convergence of the ECM algorithm.
+
+diagonal
+
+The diagonal method is a worst-case approach that deals with problematic data, such as disjoint
+series and excessive missing data (more than 33% missing data). Of the three initialization methods,
+this method causes the slowest convergence of the ECM algorithm.
+
+Version History
+Introduced before R2006a
+
+See Also
+ecmnmle
+
+Topics
+“Portfolios with Missing Data” on page 9-21
+“Mean and Covariance Estimation” on page 9-4
+
+ecmninit
+
+15-893

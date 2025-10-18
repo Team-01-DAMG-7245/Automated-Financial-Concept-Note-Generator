@@ -1,0 +1,12 @@
+{
+  "page": 481,
+  "original_text": "% Plot the lifespan patch for each series.\nnumSeries = size(priceData,2);\nfor i = 1:numSeries\n    % Find start date index.\n    d1 = find(~isnan(priceData{:,i}),1,'first');\n    % Plot patch.\n    x = [d1 d1 d2 d2];\n    y = i + [-0.4 0.4 0.4 -0.4];\n    patch(x,y,[0 0.4470 0.7410])",
+  "ocr_text": "Plotthelifespanpatchforeachseries.\nnumSeries=size(priceData,2);\nfori=1:numSeries\nFindstartdateindex.\nd1=find(isnan(priceData{:,i}),1,first);\nPlotpatch.\nx=[d1dld2d2];\ny=i+[-0.40.40.4-0.4];\npatch(x,y,[00.44700.7410])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 298.23,
+    "x1": 350.08,
+    "y1": 395.09
+  },
+  "confidence": "high"
+}

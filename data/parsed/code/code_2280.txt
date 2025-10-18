@@ -1,0 +1,5 @@
+Page 2116
+================================================================================
+
+If StartDate is a string or date character vector, EndDate is returned as a serial date number. Use
+the function datetime to convert serial date numbers to formatted datetime arrays.

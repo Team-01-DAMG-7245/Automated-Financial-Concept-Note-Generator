@@ -1,0 +1,12 @@
+{
+  "page": 1095,
+  "original_text": "% Set up the grouped asset data and design matrices.\nTestData = zeros(NumSamples, NumAssets);\nTestDesign = cell(NumSamples, 1);\nDesign = zeros(NumAssets, NumParams);",
+  "ocr_text": "Setupthegroupedassetdataanddesignmatrices.\nTestData=zeros(NumSamples,NumAssets);\nTestDesign=cell(NumSamples,1);\nDesign=zeros(NumAssets,NumParams);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.82,
+    "x1": 371.73,
+    "y1": 632.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,6 @@
+Page 1077
+================================================================================
+
+Other improvised approaches are possible although most approaches are problem-dependent. In
+particular, for mean and covariance estimation, the estimation function ecmnmle uses a function
+ecmninit to obtain an initial estimate.

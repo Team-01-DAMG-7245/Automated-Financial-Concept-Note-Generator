@@ -1,0 +1,77 @@
+-------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   -------------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+
+The sde object displays like a MATLAB® structure, with the following information:
+
+•
+The object's class
+
+•
+A brief description of the object
+
+•
+A brief description of the object
+
+The object's displayed parameters are as follows:
+
+•
+StartTime: The initial observation time (real-valued scalar).
+
+•
+StartState: The initial state vector (NVars-by-1 column vector).
+
+•
+Correlation: The correlation structure between Brownian process.
+
+•
+Drift: The drift-rate function F t, Xt .
+
+•
+Diffusion: The diffusion-rate function G t, Xt .
+
+•
+Simulation: The simulation method or function.
+
+Of these displayed parameters, only Drift and Diffusion are required inputs.
+
+The only exception to the (t, Xt) evaluation interface is Correlation. Specifically, when you enter
+Correlation as a function, the SDE engine assumes that it is a deterministic function of time, C t .
+This restriction on Correlation as a deterministic function of time allows Cholesky factors to be
+computed and stored before the formal simulation. This inconsistency dramatically improves run-time
+performance for dynamic correlation structures. If Correlation is stochastic, you can also include it
+within the simulation architecture as part of a more general random number generation function.
+
+See Also
+sde | bm | gbm | merton | bates | drift | diffusion | sdeddo | sdeld | cev | cir | heston | hwv |
+sdemrd | rvm | roughbergomi | roughheston | ts2func | simulate | simByEuler |
+simBySolution | simByQuadExp | simBySolution | interpolate
+
+Related Examples
+
+•
+“Drift and Diffusion Models” on page 14-19
+
+•
+“Linear Drift Models” on page 14-22
+
+•
+“Parametric Models” on page 14-24
+
+More About
+
+•
+“SDEs” on page 14-2
+
+•
+“SDE Models” on page 14-7
+
+Base SDE Models
+
+14-17

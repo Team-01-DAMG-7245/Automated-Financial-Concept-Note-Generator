@@ -1,0 +1,12 @@
+{
+  "page": 808,
+  "original_text": "p.LowerBudget = 1;\np.UpperBudget = 1;\np.LowerBound = zeros(size(m));",
+  "ocr_text": "p.LowerBudget=1;\np.UpperBudget=1;\np.LowerBound=zeros(size(m));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 252.54,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

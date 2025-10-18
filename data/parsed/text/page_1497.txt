@@ -1,0 +1,56 @@
+bates
+
+Bates stochastic volatility model
+
+Description
+
+The bates function creates a bates object, which represents a Bates model.
+
+The Bates model is a bivariate composite model that derives from the heston object. The Bates
+model is composed of two coupled and dissimilar univariate models, each driven by a single Brownian
+motion source of risk and a single compound Poisson process representing the arrivals of important
+events over NPeriods consecutive observation periods. The Bates model approximates continuous-
+time Bates stochastic volatility processes.
+
+The first univariate model is a GBM model with a stochastic volatility function and a stochastic jump
+process, and usually corresponds to a price process whose variance rate is governed by the second
+univariate model. The second model is a Cox-Ingersoll-Ross (CIR) square root diffusion model that
+describes the evolution of the variance rate of the coupled GBM price process.
+
+Bates models are bivariate composite models. Each Bates model consists of two coupled univariate
+models:
+
+•
+A geometric Brownian motion (gbm) model with a stochastic volatility function and jumps.
+
+dX1t = B(t)X1tdt +
+X2tX1tdW1t + Y(t)X1tdNt
+
+This model usually corresponds to a price process whose volatility (variance rate) is governed by
+the second univariate model.
+
+•
+A Cox-Ingersoll-Ross (cir) square root diffusion model.
+
+dX2t = S(t)[L(t) −X2t]dt + V(t) X2tdW2t
+
+This model describes the evolution of the variance rate of the coupled Bates price process.
+
+Creation
+
+Syntax
+
+Bates = bates(Return,Speed,Level,Volatility,JumpFreq,JumpMean,JumpVol)
+Bates = bates( ___ ,Name,Value)
+
+Description
+
+Bates = bates(Return,Speed,Level,Volatility,JumpFreq,JumpMean,JumpVol) create a
+bates object with the default options.
+
+Since Bates models are bivariate models composed of coupled univariate models, all required inputs
+correspond to scalar parameters. Specify the required inputs as one of two types:
+
+bates
+
+15-191

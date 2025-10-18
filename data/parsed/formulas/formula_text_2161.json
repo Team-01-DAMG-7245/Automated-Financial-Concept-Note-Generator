@@ -1,0 +1,12 @@
+{
+  "page": 1113,
+  "original_text": "Volatility   = DataMatrix(:,4);\nDividendRate = DataMatrix(:,5);",
+  "ocr_text": "Volatility =DataMatrix(:,4);\nDividendRate=DataMatrix(:,5);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 257.96,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

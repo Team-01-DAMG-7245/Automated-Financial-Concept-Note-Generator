@@ -1,0 +1,12 @@
+{
+  "page": 1075,
+  "original_text": "StdParameters = ecmmvnrstd(Data, DesignSUR, Covariance);",
+  "ocr_text": "StdParameters=ecmmvnrstd(Data,DesignSUR,Covariance);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 382.86,
+    "x1": 393.41,
+    "y1": 393.33
+  },
+  "confidence": "high"
+}

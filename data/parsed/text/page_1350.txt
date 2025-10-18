@@ -1,0 +1,35 @@
+Input Arguments
+
+BrinsonPAObj — brinsonAttribution object to analyze performance attribution
+brinsonAttribution object
+
+brinsonAttribution object to analyze performance attribution. Use brinsonAttribution to
+create the brinsonAttribution object.
+
+Data Types: object
+
+ax — Valid axis object
+ax object
+
+(Optional) Valid axis object, specified as an ax object that you create using axes.
+categoryWeightsChart creates the plot on the axes specified by the optional ax argument instead
+of on the current axes (gca). The optional argument ax can precede any of the input argument
+combinations. If you do not specify an axes, categoryWeightsChart plots into the current axes.
+
+Data Types: object
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Example: categoryWeightsChart(BrinsonPAObj,ActiveOnly=true)
+
+ActiveOnly — Indicator to plot only active weights by category
+false (default) | logical with value true or false
+
+15
+Functions
+
+15-44

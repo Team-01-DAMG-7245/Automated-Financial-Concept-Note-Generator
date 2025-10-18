@@ -1,0 +1,12 @@
+{
+  "page": 1720,
+  "original_text": "nPeriods = length(yields);  % Simulated observations\nrng(5713,'twister')\nobj    = gbm(mean(yields),diag(sigma),'StartState',100)",
+  "ocr_text": "nPeriods=length(yields);Simulatedobservations\nrng(5713,twister)\nobj =gbm(mean(yields),diag(sigma),StartState,100)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 470.66,
+    "x1": 388.01,
+    "y1": 502.73
+  },
+  "confidence": "high"
+}

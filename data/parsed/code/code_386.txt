@@ -1,0 +1,10 @@
+Page 408
+================================================================================
+
+The initial weights are calculated by calling the backtestStrategy rebalance function in the same
+way that the backtesting engine will call it. To do so, pass in a vector of current weights (all zeros,
+that is 100% cash) as well as a window of price data that the strategies will use to set the desired
+weights (the warm-up data partition). Using the rebalance functions to compute the initial weights in
+this way is not required. The initial weights are a vector of the initial portfolio weights and can be set
+to any appropriate value. The rebalance functions in this example approximate the state the
+strategies would be in had they been already running at the start of the backtest.

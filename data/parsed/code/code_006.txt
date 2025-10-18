@@ -1,0 +1,12 @@
+Page 17
+================================================================================
+
+Working with 'Simple' Bound Constraints Using PortfolioMAD Object .
+6-54
+Setting 'Simple' Bounds Using the PortfolioMAD Function . . . . . . . . . . .
+6-54
+Setting 'Simple' Bounds Using the setBounds Function . . . . . . . . . . . . . .
+6-54
+Setting 'Simple' Bounds Using the PortfolioMAD Function or setBounds
+Function . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-55

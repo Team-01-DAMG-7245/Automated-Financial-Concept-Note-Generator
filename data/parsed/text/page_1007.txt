@@ -1,0 +1,41 @@
+Finally, compute the Hosmer-Lemeshow statistic. Recall that the null hypothesis of the Hosmer-
+Lemeshow test is that the actual (observed) and predicted (expected) probability of default is the
+same. Thus, a small p-value that rejects the null hypothesis is an indicator of a poor model fit.
+
+N = bads+goods;
+obsBads = bads;
+expBads = predPD.*N;
+HLStatistic = sum((obsBads-expBads).^2./(N.*predPD.*(1-predPD)));
+% 8 degrees of freedom = 10 (deciles) - 2
+pHL = chi2cdf(HLStatistic,8,'upper')
+
+pHL = 
+0.8503
+
+See Also
+creditscorecard | autobinning | bininfo | predictorinfo | modifypredictor |
+modifybins | bindata | plotbins | fitmodel | displaypoints | formatpoints | score |
+setmodel | probdefault | validatemodel | compact
+
+Related Examples
+
+•
+“Troubleshooting Credit Scorecard Results” on page 8-64
+
+•
+“Credit Rating by Bagging Decision Trees”
+
+More About
+
+•
+“About Credit Scorecards” on page 8-49
+
+•
+“Credit Scorecard Modeling Workflow” on page 8-52
+
+•
+“Credit Scorecard Modeling Using Observation Weights” on page 8-55
+
+Case Study for Credit Scorecard Analysis
+
+8-89

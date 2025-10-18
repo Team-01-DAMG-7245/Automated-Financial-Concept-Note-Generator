@@ -1,0 +1,12 @@
+{
+  "page": 752,
+  "original_text": "Price_T = squeeze(Paths(end, 1, :));",
+  "ocr_text": "PriceT=squeeze(Paths(end,1,:));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 708.63,
+    "x1": 285.05,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

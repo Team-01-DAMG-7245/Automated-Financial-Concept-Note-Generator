@@ -1,0 +1,12 @@
+{
+  "page": 212,
+  "original_text": "p = Portfolio;\np = setAssetMoments(p, [ 0.05; 0.06; 0.04; 0.03 ], 0.03);\n[assetmean, assetcovar] = getAssetMoments(p)",
+  "ocr_text": "p=Portfolio;\np=setAssetMoments(p,[0.05;0.06;0.04;0.03],0.03);\n[assetmean,assetcovar]=getAssetMoments(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 531.23,
+    "x1": 398.83,
+    "y1": 563.29
+  },
+  "confidence": "high"
+}

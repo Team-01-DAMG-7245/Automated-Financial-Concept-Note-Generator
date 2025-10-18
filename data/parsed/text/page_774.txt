@@ -1,0 +1,64 @@
+Generate bonds cash flow amounts and time mapping.
+
+[CFAmounts,CFDates] = cfamounts(couponRate,settle,bondsMaturity);
+[allCF,allDates] = cfport(CFAmounts,CFDates);
+
+Interpolate existing yields to obtain yields at cash flow times.
+
+% Compute yields times
+yieldsDates = settle + calmonths(yieldsMaturity);
+yieldsTimes = yearfrac(settle,yieldsDates);
+yieldsT = yields(end,:)/100;
+
+% Interpolate to obtain yields at cash flow times
+CFTimes = yearfrac(settle,allDates);
+CFYields = interp1(yieldsTimes,yieldsT,CFTimes,[],"extrap");
+
+Compute prices assuming continuous compounding.
+
+% Compute prices from cash flow yields
+DF = exp(-CFYields.*CFTimes);
+bondsPrices = (allCF*DF)';
+
+To simulate the yield curve at time period t + 1, first obtain the period t state mean and covariance
+matrix by using smooth (Econometrics Toolbox) with the deflated yields yt∼. The final element of the
+output structure corresponds to the mean and covariance of the smoothed estimate at time period t.
+
+% Deflate the yields
+intercept = (EstMdlSSM.C*mu')';
+deflatedYields = yields - intercept;
+
+% Obtain period t state mean and covariance
+[~,~,output] = smooth(EstMdlSSM,deflatedYields);
+MeanT = output(end).SmoothedStates;
+CovT = output(end).SmoothedStatesCov;
+CovT = (CovT + CovT')/2; % Ensures covariance is symmetric
+
+Then, set the states initial mean and covariance of EstMdlSSM to the state mean and covariance at
+time period t.
+
+% Set the initial state mean and covariance to the estimates at T
+EstMdlSSM.Mean0 = MeanT;
+EstMdlSSM.Cov0 = CovT;
+
+Simulate 100,000 one-month-ahead deflated yields from the state-space model and then inflate the
+yields.
+
+% Simulate 100,000 yields
+rng('default')
+simDeflatedYields = simulate(EstMdlSSM,1,NumPaths=1e5);
+simDeflatedYields = squeeze(simDeflatedYields(:,:,:));
+simDeflatedYields = simDeflatedYields';
+
+% Inflate yields
+simYields = (simDeflatedYields + intercept)/100;
+
+Use simulated yields to compute simulation of prices at time t + 1.
+
+% Set new settle date
+simSettle = settle + calmonths(1);
+
+5
+CVaR Portfolio Optimization Tools
+
+5-148

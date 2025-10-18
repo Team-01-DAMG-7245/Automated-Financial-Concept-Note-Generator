@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "% Bet sizing, split available capital across all remaining assets, and then\n% invest only in the new positive crossover assets.  This leaves some\n% proportional amount of capital uninvested for future investments into the\n% zero-weight assets.\navailableCapital = 1 - sum(new_weights);\nuninvestedAssets = sum(new_weights == 0);\nnew_weights(idx) = availableCapital / uninvestedAssets;",
+  "ocr_text": "Betsizing,splitavailablecapitalacrossallremainingassets,andthen\nSinvestonlyinthenewpositivecrossoverassets.Thisleavessome\nSproportionalamountofcapitaluninvestedforfutureinvestmentsintothe\nzero-weightassets.\n\navailableCapital=1-sum(new_weights);\nuninvestedAssets=sum(new_weights==0);\nnew_weights(idx)=availableCapital/uninvestedAssets;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.23,
+    "x1": 496.35,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

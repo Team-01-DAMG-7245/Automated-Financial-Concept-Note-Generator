@@ -1,0 +1,73 @@
+•
+7 = actual/365 (Japanese)
+
+•
+8 = actual/actual (ICMA)
+
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+EndMonthRule — End-of-month rule flag
+1 (in effect) (default) | nonnegative integer 0 or 1
+
+End-of-month rule flag, specified as the comma-separated pair consisting of 'EndMonthRule' and a
+scalar or a NUMBONDS-by-1 vector. This rule applies only when Maturity is an end-of-month date for
+a month having 30 or fewer days.
+
+•
+0 = Ignore rule, meaning that a bond coupon payment date is always the same numerical day of
+the month.
+
+•
+1 = Set rule on, meaning that a bond coupon payment date is always the last actual day of the
+month.
+
+Data Types: logical
+
+IssueDate — Bond issue date
+datetime array | string array | date character vector
+
+Bond Issue date, specified as the comma-separated pair consisting of 'IssueDate' and a scalar or a
+NUMBONDS-by-1 vector using a datetime array, string array, or date character vectors.
+
+If you do not specify an IssueDate, the cash flow payment dates are determined from other inputs.
+
+To support existing code, bndkrdur also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+FirstCouponDate — Irregular or normal first coupon date
+datetime array | string array | date character vector
+
+Irregular or normal first coupon date, specified as the comma-separated pair consisting of
+'FirstCouponDate' and a scalar or a NUMBONDS-by-1 vector using a datetime array, string array, or
+date character vectors.
+
+If you do not specify a FirstCouponDate, the cash flow payment dates are determined from other
+inputs.
+
+To support existing code, bndkrdur also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+bndkrdur
+
+15-555

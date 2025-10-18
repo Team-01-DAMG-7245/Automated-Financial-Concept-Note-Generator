@@ -1,0 +1,64 @@
+p = PortfolioCVaR('assetlist', { 'AA', 'BA', 'CAT', 'DD', 'ETR' });
+disp(p.AssetList)
+
+'AA'    'BA'    'CAT'    'DD'    'ETR'
+
+Notice that the property AssetList is maintained as a cell array that contains character vectors,
+and that it is necessary to pass a cell array into the PortfolioCVaR object to set AssetList. In
+addition, notice that the property NumAssets is set to 5 based on the number of symbols used to
+create the asset list:
+
+disp(p.NumAssets)
+
+5
+
+Setting Up Asset Lists Using the setAssetList Function
+
+You can also specify a list of assets using the setAssetList function. Given the list of asset symbols
+'AA', 'BA', 'CAT', 'DD', and'ETR', you can use setAssetList with:
+
+p = PortfolioCVaR;
+p = setAssetList(p, { 'AA', 'BA', 'CAT', 'DD', 'ETR' });
+disp(p.AssetList)
+
+'AA'    'BA'    'CAT'    'DD'    'ETR'
+
+setAssetList also enables you to enter symbols directly as a comma-separated list without creating
+a cell array of character vectors. For example, given the list of assets symbols 'AA', 'BA', 'CAT',
+'DD', and 'ETR', use setAssetList:
+
+p = PortfolioCVaR;
+p = setAssetList(p, 'AA', 'BA', 'CAT', 'DD', 'ETR');
+disp(p.AssetList)
+
+'AA'    'BA'    'CAT'    'DD'    'ETR'
+
+setAssetList has many additional features to create lists of asset identifiers. If you use
+setAssetList with just a PortfolioCVaR object, it creates a default asset list according to the
+name specified in the hidden public property defaultforAssetList (which is 'Asset' by default).
+The number of asset names created depends on the number of assets in the property NumAssets. If
+NumAssets is not set, then NumAssets is assumed to be 1.
+
+For example, if a PortfolioCVaR object p is created with NumAssets = 5, then this code fragment
+shows the default naming behavior:
+
+p = PortfolioCVaR('numassets',5);
+p = setAssetList(p);
+disp(p.AssetList)
+
+'Asset1'    'Asset2'    'Asset3'    'Asset4'    'Asset5'
+
+Suppose that your assets are, for example, ETFs and you change the hidden property
+defaultforAssetList to 'ETF', you can then create a default list for ETFs:
+
+p = PortfolioCVaR('numassets',5);
+p.defaultforAssetList = 'ETF'; 
+p = setAssetList(p);
+disp(p.AssetList)
+
+'ETF1'    'ETF2'    'ETF3'    'ETF4'    'ETF5'
+
+5
+CVaR Portfolio Optimization Tools
+
+5-30

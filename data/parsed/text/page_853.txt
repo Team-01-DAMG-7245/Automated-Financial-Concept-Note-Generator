@@ -1,0 +1,56 @@
+GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: 2
+                  MaxNumAssets: 2
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [3×1 categorical]
+
+See Also
+PortfolioMAD | setBounds | setMinMaxNumAssets | setDefaultConstraints | setBounds |
+setBudget | setConditionalBudget | setGroups | setGroupRatio | setEquality |
+setInequality | setTurnover | setOneWayTurnover
+
+Related Examples
+
+•
+“Setting Default Constraints for Portfolio Weights Using PortfolioMAD Object” on page 6-50
+
+•
+“Working with 'Simple' Bound Constraints Using PortfolioMAD Object” on page 6-54
+
+•
+“Troubleshooting for Setting 'Conditional' BoundType, MinNumAssets, and MaxNumAssets
+Constraints” on page 4-148
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Validate the MAD Portfolio Problem” on page 6-80
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using PortfolioMAD Objects
+
+6-73

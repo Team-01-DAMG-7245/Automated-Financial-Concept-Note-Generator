@@ -1,0 +1,12 @@
+{
+  "page": 1285,
+  "original_text": "% Decompose the price series and store the results. This process might identify \n    % more than one seasonal component, so sum the resulting matrix of seasonal \n    % components to obtain the overall seasonal trend.\n    [L, S, C] = trenddecomp( Prices{:, k} );\n    longTermComponent(:, k) = L;\n    seasonalComponent(:, k) = sum( S, 2 );\n    irregularComponent(:, k) = C;\n    regularComponent(:, k) = longTermComponent(:, k) + seasonalComponent(:, k);",
+  "ocr_text": "Decomposethepriceseriesandstoretheresults.Thisprocessmightidentify\nSmorethanoneseasonalcomponent,sosumtheresultingmatrixofseasonal\ncomponentstoobtaintheoverallseasonaltrend.\n[L,S,C]=trenddecomp(Prices{:,k});\n\nLongTermComponent(:,k)=L;\n\nseasonalComponent(:,k)=sum(S,2);\n\nirregularComponent(:,k)=C;\nregularComponent(:,k)=longTermComponent(:,k)+seasonalComponent(:,_k);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 287.47,
+    "x1": 545.11,
+    "y1": 373.53
+  },
+  "confidence": "high"
+}

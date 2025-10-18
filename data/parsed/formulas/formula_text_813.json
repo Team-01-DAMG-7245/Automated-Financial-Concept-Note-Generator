@@ -1,0 +1,12 @@
+{
+  "page": 465,
+  "original_text": "% Compute the linkage.\nlink = linkage(distCorr);\nfigure;\nh = dendrogram(link, ColorThreshold='default');\nset(h, LineWidth=2);\ntitle('Default Leaf Order');",
+  "ocr_text": "Computethelinkage.\nlink=Linkage(distCorr);\n\nfigure;\nh_=dendrogram(link,ColorThreshold=default);\nset(h,LineWidth=2);\ntitle(DefaultLeafOrder);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 268.23,
+    "x1": 344.67,
+    "y1": 332.69
+  },
+  "confidence": "high"
+}

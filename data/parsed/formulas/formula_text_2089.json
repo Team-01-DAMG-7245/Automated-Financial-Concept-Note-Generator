@@ -1,0 +1,12 @@
+{
+  "page": 1081,
+  "original_text": "figure(gcf)\nplot(ECMRisk,ECMReturn,'-bo','MarkerFaceColor','b','MarkerSize', 3);\nhold on\nplot(NaNRisk,NaNReturn,'-ro','MarkerFaceColor','r','MarkerSize', 3);\ntitle('\\bfEfficient Frontiers Under Various Assumptions');\nlegend('ECM','NaN','Location','SouthEast');\nxlabel('\\bfStd. Deviation of Returns');\nylabel('\\bfMean of Returns');\nhold off",
+  "ocr_text": "figure(gcf)\nplot(ECMRisk,ECMReturn,-bo,MarkerFaceColor,b,MarkerSize,3);\nholdon\nplot(NaNRisk,NaNReturn,-ro,MarkerFaceColor,r,MarkerSize,3);\ntitle(bfEfficientFrontiersUnderVariousAssumptions);\nlegend(ECM,NaN,Location,SouthEast);\nxlabel(bfStd.DeviationofReturns);\nylabel(bfMeanofReturns);\n\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 263.01,
+    "x1": 458.46,
+    "y1": 359.88
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,63 @@
+frontier and estimate either risk or return proxies for efficient portfolios on the efficient frontier. You
+can use the resultant efficient portfolios or risk and return proxies in subsequent analyses.
+
+Arrays of Portfolio Objects
+
+Although all functions associated with a Portfolio object are designed to work on a scalar
+Portfolio object, the array capabilities of MATLAB enable you to set up and work with arrays of
+Portfolio objects. The easiest way to do this is with the repmat function. For example, to create a
+3-by-2 array of Portfolio objects:
+
+p = repmat(Portfolio, 3, 2);
+disp(p)
+
+disp(p)
+  3×2 Portfolio array with properties:
+
+BuyCost
+    SellCost
+    RiskFreeRate
+    AssetMean
+    AssetCovar
+    TrackingError
+    TrackingPort
+    Turnover
+    BuyTurnover
+    SellTurnover
+    Name
+    NumAssets
+    AssetList
+    InitPort
+    AInequality
+    bInequality
+    AEquality
+    bEquality
+    LowerBound
+    UpperBound
+    LowerBudget
+    UpperBudget
+    GroupMatrix
+    LowerGroup
+    UpperGroup
+    GroupA
+    GroupB
+    LowerRatio
+    UpperRatio
+    MinNumAssets
+    MaxNumAssets
+    ConditionalBudgetThreshold
+    ConditionalUpperBudget
+    BoundType
+
+After setting up an array of Portfolio objects, you can work on individual Portfolio objects in the
+array by indexing. For example:
+
+p(i,j) = Portfolio(p(i,j), ... );
+
+This example calls Portfolio for the (i,j) element of a matrix of Portfolio objects in the variable
+p.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-22

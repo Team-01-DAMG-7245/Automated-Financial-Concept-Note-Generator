@@ -1,0 +1,8 @@
+Page 666
+================================================================================
+
+This example shows how to simulate normal scenarios when you have missing data indicated by NaN
+values in your return or price data. Although “Multivariate Normal Regression” on page 9-2 goes
+into detail about regression with missing data, the simulateNormalScenariosByData function has
+a name-value pair argument name 'MissingData' that indicates with a Boolean value whether to
+use the missing data capabilities of Financial Toolbox™. The default value for 'MissingData' is

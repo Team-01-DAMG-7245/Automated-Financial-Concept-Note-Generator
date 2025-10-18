@@ -1,0 +1,12 @@
+Page 346
+================================================================================
+
+function displaySumOfTransactions(Turnover, qbuy, qsell)
+fprintf('Sum of Purchases by Portfolio along Efficient Frontier (Max. Turnover %g%%)\n', ...
+    100*Turnover);
+fprintf('%.4f ', 100*sum(qbuy)), sprintf('\n\n');
+fprintf('\n')
+fprintf('Sum of Sales by Portfolio along Efficient Frontier (Max. Turnover %g%%)\n', ...
+    100*Turnover);
+fprintf('%.4f ', 100*sum(qsell));
+end

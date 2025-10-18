@@ -1,0 +1,42 @@
+Specify BM Model
+
+Create a bm object to represent the bivariate model.
+
+mu    = [0.3; 0.4];
+sigma = [0.2 -0.1; 0.1 -0.2];
+rho   = [1 0.5; 0.5 1];
+obj   = bm(mu,sigma,'Correlation',rho);
+
+Simulate Single Path from BM
+
+Assuming that the drift (Mu) and diffusion (Sigma) parameters are annualized, simulate a single
+Monte Carlo trial of daily observations for one calendar year (250 trading days).
+
+rng default  % Make output reproducible
+dt    = 1/250;  % 1 trading day = 1/250 years
+[X,T] = simulate(obj,250,'DeltaTime',dt);
+
+Interpolate Into Simulated Time Series
+
+Interpolate into the simulated time series with a Brownian bridge.
+
+t = ((T(1) + dt/2):(dt/2):(T(end) - dt/2));
+x = interpolate(obj,t,X,'Times',T);
+
+Plot Simulated and Interpolated Values
+
+Plot both the simulated and interpolated values.
+
+plot(T,X(:,1),'.-r',T,X(:,2),'.-b')
+grid on;
+hold on;
+plot(t,x(:,1),'or',t,x(:,2),'ob')
+hold off;
+xlabel('Time (Years)')
+ylabel('State')
+title('Bi-Variate Brownian Motion: \rho = 0.5')
+axis([0.4999 0.6001 0.25 0.4])
+
+interpolate
+
+15-149

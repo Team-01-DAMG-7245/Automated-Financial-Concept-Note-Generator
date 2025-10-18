@@ -1,0 +1,12 @@
+{
+  "page": 616,
+  "original_text": "% Separate Bid and Ask data\nAskPriceIdx = (1:4:LOBLength);\nAskSizeIdx = AskPriceIdx + 1;\nBidPriceIdx = AskSizeIdx + 1;\nBidSizeIdx = BidPriceIdx + 1;",
+  "ocr_text": "SeparateBidandAskdata\nAskPriceIdx=(1:4:LOBLength);\nAskSizeIdx=AskPriceIdx+1;\nBidPriceIdx=AskSizeIdx+1;\nBidSizeIdx=BidPriceIdx+1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 252.54,
+    "y1": 233.09
+  },
+  "confidence": "high"
+}

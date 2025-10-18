@@ -1,0 +1,52 @@
+depstln
+
+Straight-line depreciation schedule
+
+Syntax
+
+Depreciation = depstln(Cost,Salvage,Life)
+
+Description
+
+Depreciation = depstln(Cost,Salvage,Life) computes the straight-line depreciation for an
+asset.
+
+Examples
+
+Compute the Straight-Line Depreciation for an Asset
+
+This example shows how to calculate the straight-line depreciation for an asset that costs $13,000
+with a life of 10 years. The salvage value of the asset is $1000.
+
+Depreciation = depstln(13000, 1000, 10)
+
+Depreciation = 
+1200
+
+Input Arguments
+
+Cost — Initial value of the asset
+numeric
+
+Initial value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+Salvage — Salvage value of the asset
+numeric
+
+Salvage value of the asset, specified as a scalar numeric.
+
+Data Types: double
+
+Life — Depreciable life of the asset in years
+numeric
+
+Depreciable life of the asset in years, specified as a scalar numeric.
+
+Data Types: double
+
+15
+Functions
+
+15-850

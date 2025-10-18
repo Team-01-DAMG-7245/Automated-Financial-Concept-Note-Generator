@@ -1,0 +1,12 @@
+{
+  "page": 505,
+  "original_text": "% Build a weights table.\nvarNames = {'MinVariance','MixedHH','HH','MixedMDP','MDP', ...\n    'MixedERC','ERC'};\nweightsTable = table(wMinVar,wHHMix,wHH,wMDPMix,wMDP, ...\n    wERCMix,wERC,'VariableNames',varNames);\n% Number of assets with nonzero weights\ncutOff = 1e-3; % Weights below cut-off point are considered zero.\n[reweightedTable,TnonZero] = tableWithNonZeroWeights(weightsTable, ...\n    cutOff,varNames);\ndisplay(TnonZero)",
+  "ocr_text": "Buildaweightstable.\nvarNames={MinVariance,MixedHH,HH,MixedMDP,MDP,...\nMixedERC,ERC};\nweightsTable=table(wMinVar,wHHMix,wHH,wMDPMix,wMDP,...\nwERCMix,wERC,VariableNames,varNames);\nsNumberofassetswithnonzeroweights\ncutOff=le-3;Weightsbelowcut-offpointareconsideredzero.\n[reweightedTable,TnonZero]=tableWithNonZeroWeights(weightsTable,...\ncutOff,varNames);\ndisplay(TnonZero)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 479.94,
+    "x1": 469.29,
+    "y1": 587.61
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,10 @@
+Page 663
+================================================================================
+
+Notice that the PortfolioCVaR object determines and fixes the number of assets in NumAssets and
+the number of scenarios in NumScenarios based on the scenario’s matrix. You can change the
+number of scenarios by calling the PortfolioCVaR object with a different scenario matrix. However,
+once the NumAssets property has been set in the object, you cannot enter a scenario matrix with a
+different number of assets. The getScenarios function lets you recover scenarios from a
+PortfolioCVaR object. You can also obtain the mean and covariance of your scenarios using
+estimateScenarioMoments.

@@ -1,0 +1,12 @@
+{
+  "page": 1508,
+  "original_text": "Merton = merton(Return,Sigma,JumpFreq,JumpMean,JumpVol)\nMerton = merton( ___ ,Name,Value)",
+  "ocr_text": "Merton=merton(Return,Sigma,JumpFreq,JumpMean,JumpVol)\nMerton=merton(__,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 553.57,
+    "x1": 421.13,
+    "y1": 577.2
+  },
+  "confidence": "high"
+}

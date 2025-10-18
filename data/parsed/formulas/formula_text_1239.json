@@ -1,0 +1,12 @@
+{
+  "page": 619,
+  "original_text": "% Prune the table to hold only the dates and selected stocks.\ntimeColumn = \"Dates\";\nT = T(:,[timeColumn assetSymbols]);",
+  "ocr_text": "SPrunethetabletoholdonlythedatesandselectedstocks.\ntimeColumn=Dates;\nT=T(:,[timeColumnassetSymbols]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 379.16,
+    "x1": 420.5,
+    "y1": 411.23
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 945,
+  "original_text": "DefRateTwoValues = DefRateExp*ones(nYears,1);\nDefRateTwoValues(Recession) = DefRateRec;",
+  "ocr_text": "DefRateTwoValues=DefRateExp*ones(nYears,1);\nDefRateTwoValues(Recession)=DefRateRec;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 209.81,
+    "x1": 333.81,
+    "y1": 231.07
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1958,
+  "original_text": "figure;\nsubplot(2,1,1)\nsimulationDates = datetime(simulationDates,\"ConvertFrom\",\"datenum\");\nplot(simulationDates,profilesBefore.EE,...\n    simulationDates,profilesAfter.EE);\ngrid on;\nlegend({'EE before','EE with trade'})\nxtickformat('MMMyy');\ntitle('Expected Exposure Before and After New Trade');\nylabel('Exposure ($)')",
+  "ocr_text": "figure;\n\nsubplot(2,1,1)\n\nsimulationDates=datetime(simulationDates,ConvertFrom,datenum);\n\nplot(simulationDates,profilesBefore.EE,...\nsimulationDates,profilesAfter.EE);\n\ngridon;\n\nlegend({EEbefore,EEwithtrade})\n\nxtickformat(MMMyy);\n\ntitle(ExpectedExposureBeforeandAfterNewTrade);\n\nylabel(Exposure(S))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.03,
+    "x1": 458.45,
+    "y1": 297.69
+  },
+  "confidence": "high"
+}

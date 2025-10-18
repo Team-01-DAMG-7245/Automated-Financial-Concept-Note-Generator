@@ -1,0 +1,6 @@
+Page 1500
+================================================================================
+
+Instantaneous jump frequencies representing the intensities (the mean number of jumps per unit
+time) of Poisson processes (Nt) that drive the jump simulation, specified as an array, a deterministic
+function of time, or a deterministic function of time and state.

@@ -1,0 +1,12 @@
+{
+  "page": 1244,
+  "original_text": "obj = hwv(speed, level, sigma, 'StartState', yields(end))",
+  "ocr_text": "obj=hwv(speed,level,sigma,StartState,yields(end))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 185.46,
+    "x1": 398.84,
+    "y1": 195.92
+  },
+  "confidence": "high"
+}

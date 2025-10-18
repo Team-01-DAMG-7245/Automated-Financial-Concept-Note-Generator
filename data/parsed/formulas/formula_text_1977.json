@@ -1,0 +1,12 @@
+{
+  "page": 1026,
+  "original_text": "fprintf('    Long \\t $ %9.2f \\t $ %9.2f \\t $ %9.2f \\t\\n', ...\n   Price2(1)+AccPrem2(1), AccPrem2(1), Price2(1));",
+  "ocr_text": "fprintf( Longt*9.2f(t9.2f(t9.2f(t(n,...\nPrice2(1)+AccPrem2(1),AccPrem2(1),Price2(1));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 401.83,
+    "x1": 420.52,
+    "y1": 423.09
+  },
+  "confidence": "high"
+}

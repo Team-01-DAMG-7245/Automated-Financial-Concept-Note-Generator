@@ -1,0 +1,12 @@
+{
+  "page": 2474,
+  "original_text": "load FundMarketCash \nReturns = tick2ret(TestData);\nAssets",
+  "ocr_text": "load_FundMarketCash\nReturns=tick2ret(TestData);\nAssets",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 495.44,
+    "x1": 247.12,
+    "y1": 527.51
+  },
+  "confidence": "high"
+}

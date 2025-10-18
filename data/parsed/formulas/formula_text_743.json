@@ -1,0 +1,12 @@
+{
+  "page": 442,
+  "original_text": "% Add the ESG constraint.\nAin = -ESGnumeric';\nbin = -ESG0; % Set the target ESG score.\np = setInequality(p,Ain,bin);",
+  "ocr_text": "AddtheESGconstraint.\nAin=-ESGnumeric;\nbin=-ESGO;*SetthetargetESGscore.\np=setInequality(p,Ain,bin);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 389.17,
+    "x1": 306.72,
+    "y1": 432.04
+  },
+  "confidence": "high"
+}

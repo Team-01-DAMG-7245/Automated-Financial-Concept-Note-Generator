@@ -1,0 +1,6 @@
+Page 356
+================================================================================
+
+The final plot uses the plotFrontier function to display the efficient frontier and the initial portfolio
+for the fully specified portfolio optimization problem. It also adds the location of the moderate-risk or
+final portfolio on the efficient frontier.

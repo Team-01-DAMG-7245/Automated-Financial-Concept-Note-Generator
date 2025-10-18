@@ -1,0 +1,6 @@
+Page 367
+================================================================================
+
+ii = [15, 16, 20, 21, 23, 25, 27, 29, 30];    % indexes of assets to include in tracking portfoli
+trackingPort(ii) = 1/numel(ii);
+q = setTrackingError(p, 0.5, trackingPort);

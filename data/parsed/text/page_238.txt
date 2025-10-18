@@ -1,0 +1,72 @@
+5
+
+1     1     1     0     0
+
+0.3000
+
+In this example, you would set the LowerGroup property to be empty ([]).
+
+Suppose that you want to add another group constraint to make odd-numbered assets constitute at
+least 20% of your portfolio. Set up an augmented group matrix and introduce infinite bounds for
+unconstrained group bounds or use the addGroups function to build up group constraints. For this
+example, create another group matrix for the second group constraint:
+
+p = Portfolio;
+G = [ true true true false false ];    % group matrix for first group constraint
+p = setGroups(p, G, [], 0.3);
+G = [ true false true false true ];    % group matrix for second group constraint
+p = addGroups(p, G, 0.2);
+disp(p.NumAssets)
+disp(p.GroupMatrix)
+disp(p.LowerGroup)
+disp(p.UpperGroup)
+
+5
+
+1     1     1     0     0
+1     0     1     0     1
+
+-Inf
+0.2000
+
+0.3000
+  Inf
+
+addGroups determines which bounds are unbounded so you only need to focus on the constraints
+that you want to set.
+
+The Portfolio object and setGroups and addGroups implement scalar expansion on either the
+LowerGroup or UpperGroup properties based on the dimension of the group matrix in the property
+GroupMatrix. Suppose that you have a universe of 30 assets with six asset classes such that assets
+1–5, assets 6–12, assets 13–18, assets 19–22, assets 23–27, and assets 28–30 constitute each of your
+six asset classes and you want each asset class to fall from 0% to 25% of your portfolio. Let the
+following group matrix define your groups and scalar expansion define the common bounds on each
+group:
+
+p = Portfolio;
+G = blkdiag(true(1,5), true(1,7), true(1,6), true(1,4), true(1,5), true(1,3));
+p = setGroups(p, G, 0, 0.25);
+disp(p.NumAssets)
+disp(p.GroupMatrix)
+disp(p.LowerGroup)
+disp(p.UpperGroup)
+
+30
+
+Columns 1 through 16
+
+1     1     1     1     1     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     1     1     1     1     1     1     1     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0     1     1     1     1
+     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0
+
+Columns 17 through 30
+
+0     0     0     0     0     0     0     0     0     0     0     0     0     0
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-70

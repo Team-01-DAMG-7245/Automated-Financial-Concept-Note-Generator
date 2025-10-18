@@ -1,0 +1,12 @@
+{
+  "page": 1075,
+  "original_text": "DesignSUR = convert2sur(Design, Group);",
+  "ocr_text": "DesignSUR=convert2sur(Design,Group);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 298.36,
+    "x1": 301.3,
+    "y1": 308.82
+  },
+  "confidence": "high"
+}

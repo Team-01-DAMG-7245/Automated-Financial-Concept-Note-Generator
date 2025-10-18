@@ -1,0 +1,55 @@
+frontier
+
+Rolling efficient frontier
+
+Syntax
+
+[PortWts,AllMean,AllCovariance] = frontier(Universe,Window,Offset,NumPorts)
+[PortWts,AllMean,AllCovariance] = frontier( ___ ,ActiveMap,Conset,NumNonNan)
+
+Description
+
+[PortWts,AllMean,AllCovariance] = frontier(Universe,Window,Offset,NumPorts)
+generates a surface of efficient frontiers showing how asset allocation influences risk and return over
+time.
+
+Note An alternative for portfolio optimization is to use the Portfolio object for mean-variance
+portfolio optimization. This object supports gross or net portfolio returns as the return proxy, the
+variance of portfolio returns as the risk proxy, and a portfolio set that is any combination of the
+specified constraints to form a portfolio set. For information on the workflow when using Portfolio
+objects, see “Portfolio Object Workflow” on page 4-18.
+
+[PortWts,AllMean,AllCovariance] = frontier( ___ ,ActiveMap,Conset,NumNonNan)
+specifies options using one or more optional arguments in addition to the input arguments in the
+previous syntax.
+
+Input Arguments
+
+Universe — Total return data for a group of securities
+array
+
+Total return data for a group of securities, specified as a number of observations (NUMOBS) by number
+of assets plus one (NASSETS + 1) time series array. Each row represents an observation. Column 1
+contains MATLAB serial date numbers. The remaining columns contain the total return data for each
+security.
+
+Data Types: double
+
+Window — Number of data periods used to calculate each frontier
+positive integer
+
+Number of data periods used to calculate each frontier, specified as a positive integer value.
+
+Data Types: double
+
+Offset — Increment in number of periods between each frontier
+numeric
+
+Increment in number of periods between each frontier, specified as a numeric value.
+
+Data Types: double
+
+15
+Functions
+
+15-1058

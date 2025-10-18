@@ -1,0 +1,60 @@
+Yield = cdyield(Price, CouponRate, Settle, Maturity, IssueDate)
+
+Yield = 
+0.0039
+
+Input Arguments
+
+Price — Clean price of certificate of deposit per $100 face
+numeric
+
+Clean price of the certificate of deposit per $100 face, specified as a numeric value using a scalar or a
+NCDS-by-1 or 1-by-NCDS vector.
+
+Data Types: double
+
+CouponRate — Coupon annual interest rate
+decimal
+
+Coupon annual interest rate, specified as decimal using a scalar or a NCDS-by-1 or 1-by-NCDS vector.
+
+Data Types: double
+
+Settle — Settlement date of certificate of deposit
+datetime array | string array | date character vector
+
+Settlement date of the certificate of deposit, specified as a scalar or a NCDS-by-1 or 1-by-NCDS vector
+using a datetime array, string array, or date character vectors. The Settle date must be before the
+Maturity date.
+
+To support existing code, cdyield also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of certificate of deposit
+datetime array | string array | date character vector
+
+Maturity date of the certificate of deposit, specified as a scalar or a NCDS-by-1 or 1-by-NCDS vector
+using a datetime array, string array, or date character vectors.
+
+To support existing code, cdyield also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+IssueDate — Issue date for certificate of deposit
+datetime array | string array | date character vector
+
+Issue date for the certificate of deposit, specified as a scalar or a NCDS-by-1 or 1-by-NCDS vector using
+a datetime array, string array, or date character vectors.
+
+To support existing code, cdyield also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: string | char | datetime
+
+15
+Functions
+
+15-664

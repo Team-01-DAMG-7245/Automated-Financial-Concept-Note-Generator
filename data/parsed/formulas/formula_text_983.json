@@ -1,0 +1,12 @@
+{
+  "page": 520,
+  "original_text": "wRobustMaxRet = estimateCustomObjectivePortfolio(p,robustObjective,ObjectiveSense=\"maximize\");",
+  "ocr_text": "wRobustMaxRet=estimateCustom0bjectivePortfolio(p,robustObjective,ObjectiveSense=maximize);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.61,
+    "x1": 599.33,
+    "y1": 665.08
+  },
+  "confidence": "high"
+}

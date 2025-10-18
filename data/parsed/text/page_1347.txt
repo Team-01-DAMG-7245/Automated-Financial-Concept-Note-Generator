@@ -1,0 +1,56 @@
+categoryWeightsChart
+
+Create a horizontal bar chart for category weights
+
+Syntax
+
+categoryWeightsChart(BrinsonPAObj)
+h = categoryWeightsChart(ax,BrinsonPAObj)
+h = categoryWeightsChart( ___ ,Name=Value)
+
+Description
+
+categoryWeightsChart(BrinsonPAObj) creates a horizontal bar chart of portfolio, benchmark,
+and active weights by category, averaged over all time periods using a brinsonAttribution object.
+
+h = categoryWeightsChart(ax,BrinsonPAObj) additionally returns the figure handle h.
+
+h = categoryWeightsChart( ___ ,Name=Value) adds optional name-value arguments.
+
+Examples
+
+Create Horizontal Bar Chart of Category Weights
+
+This example shows how to create a brinsonAttribution object that you can then use with the
+categoryWeightsChart function to generate a bar chart of category weights.
+
+Prepare Data
+
+Create a table for the monthly prices for four assets.
+
+GM =[17.82;22.68;19.37;20.28];
+HD = [39.79;39.12;40.67;40.96];
+KO = [38.98;39.44;40.00;40.20];
+PG = [56.38;57.08;57.76;55.54];
+MonthlyPrices  = table(GM,HD,KO,PG);
+
+Use tick2ret to define the monthly returns.
+
+MonthlyReturns = tick2ret(MonthlyPrices.Variables)';
+  [NumAssets,NumPeriods] = size(MonthlyReturns);
+
+Define the periods.
+
+Period = ones(NumAssets*NumPeriods,1);
+  for k = 1:NumPeriods
+      Period(k*NumAssets+1:end,1) = Period(k*NumAssets,1) + 1;
+  end
+
+Define the categories (sectors) for the four assets.
+
+Name = repmat(string(MonthlyPrices.Properties.VariableNames(:)),NumPeriods,1);
+  Categories = repmat(categorical([ ...
+
+categoryWeightsChart
+
+15-41

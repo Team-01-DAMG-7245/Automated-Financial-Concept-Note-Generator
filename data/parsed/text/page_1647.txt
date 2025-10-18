@@ -1,0 +1,58 @@
+0.0175    0.0171    0.0192
+      ⋮
+
+Paths is a 3-by-2 matrix of the simulated paths of state variables and the output Z is a matrix of
+random variates used to generate the Brownian motion vector.
+
+Input Arguments
+
+MDL — Stochastic differential equation model for RVM or roughbergomi
+rvm object | roughbergomi object
+
+Stochastic differential equation model, specified as an rvm object or roughbergomi object.
+
+Data Types: object
+
+NPeriods — Number of simulation periods
+positive scalar integer
+
+Number of simulation periods, specified as a positive scalar integer. The value of NPeriods
+determines the number of rows of the simulated output series.
+
+Data Types: double
+
+Name-Value Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Example: [Paths,Times,Z] = simByHybrid(rvm,NPeriods,DeltaTime=dt)
+
+NTrials — Simulated trials (sample paths) of NPeriods observations each
+1 (single path of correlated state variables) (default) | positive scalar integer
+
+Simulated trials (sample paths) of NPeriods observations each, specified as a positive scalar integer.
+
+Data Types: double
+
+DeltaTime — Positive time increments between observations
+1 (default) | positive scalar numeric
+
+Positive time increments between observations, specified as a positive scalar numeric.
+
+DeltaTime represents the dt found in stochastic differential equations and determines the times at
+which the simulated paths of the output state variables are reported.
+
+Data Types: double
+
+NSteps — Number of intermediate time steps within each time increment dt (specified as
+DeltaTime)
+1 (indicating no intermediate evaluation) (default) | positive scalar integer
+
+Number of intermediate time steps within each time increment dt (specified as DeltaTime),
+specified as a positive scalar integer.
+
+simByHybrid
+
+15-341

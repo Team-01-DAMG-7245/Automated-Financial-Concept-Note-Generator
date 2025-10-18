@@ -1,0 +1,12 @@
+{
+  "page": 2485,
+  "original_text": "MedianPrice = medprice(Data)",
+  "ocr_text": "MedianPrice=medprice(Data)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 196.36,
+    "x1": 258.57,
+    "y1": 207.99
+  },
+  "confidence": "high"
+}

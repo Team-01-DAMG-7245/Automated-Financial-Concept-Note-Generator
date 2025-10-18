@@ -1,0 +1,12 @@
+{
+  "page": 1719,
+  "original_text": "F = ts2func(Array) encapsulates a time series array associated with a vector of real-valued\nobservation times within a MATLAB function suitable for Monte Carlo simulation of an NVars-by-1\nstate vector Xt.",
+  "ocr_text": "F=ts2func(Array)encapsulatesatimeseriesarrayassociatedwithavectorofreal-valued\nobservationtimeswithinaMATLABfunctionsuitableforMonteCarlosimulationofanNVars-by-1\nstatevectorX;.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 254.25,
+    "x1": 541.73,
+    "y1": 291.08
+  },
+  "confidence": "high"
+}

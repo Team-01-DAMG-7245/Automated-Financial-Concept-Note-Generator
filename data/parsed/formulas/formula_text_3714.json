@@ -1,0 +1,12 @@
+{
+  "page": 2100,
+  "original_text": "•\nDisc = exp(-T*Z), where T is time in years.",
+  "ocr_text": "*Disc=exp(-T*Z),whereTistimeinyears.",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 707.36,
+    "x1": 334.84,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2031,
+  "original_text": "Example: TFactors = cftimes(Settle,Maturity,'Period',4)",
+  "ocr_text": "Example:TFactors=cftimes(Settle,Maturity,Period,4)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 309.53,
+    "x1": 412.3,
+    "y1": 321.16
+  },
+  "confidence": "high"
+}

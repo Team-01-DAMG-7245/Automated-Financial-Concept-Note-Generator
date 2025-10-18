@@ -1,0 +1,12 @@
+{
+  "page": 438,
+  "original_text": "hold on\nlabels = strings(nT+1,1);\nfor i=1:nT\n    ub = zeros(p.NumAssets,1);\n    % Only select the assets above WoB threshold.\n    ub(WoB >= thresholdWoB(i)) = 1;\n    p.UpperBound = ub;\n    plotFrontier(p,nPort);\n    labels(i) = sprintf(\"%6.2f%% WoB\",thresholdWoB(i)*100);\nend\n% Plot the \"original\" mean-variance frontier, i.e., the frontier\n% without the WoB threshold.\np.UpperBound = [];\nplotFrontier(p,nPort);\nlabels(i+1) = \"No WoB restriction\";\nlegend(labels,'Location','northwest')\nhold off",
+  "ocr_text": "holdon\nlabels=strings(nT+1,1);\nfori=1:nT\nub=zeros(p.NumAssets,1);\nOnlyselecttheassetsaboveWoBthreshold.\nub(WoB==thresholdWoB(i))=1;\np.UpperBound=ub;\nplotFrontier(p,nPort);\nlabels(i)=sprintf(6.2fWoB,thresholdWoB(i)*100);\nend\nSPlottheoriginalmean-variancefrontier,i.e.,thefrontier\nSwithouttheWoBthreshold.\np.UpperBound=[];\nplotFrontier(p,nPort);\nlabels(i+1)=NoWoBrestriction;\nlegend(labels,Location,northwest)\nholdoff",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 436.75,
+    "y1": 276.29
+  },
+  "confidence": "high"
+}

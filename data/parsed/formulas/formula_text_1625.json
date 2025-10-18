@@ -1,0 +1,12 @@
+{
+  "page": 817,
+  "original_text": "scenarios = p.localScenarioHandle([], []);",
+  "ocr_text": "scenarios=p.localScenarioHandle([],[]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 317.56,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

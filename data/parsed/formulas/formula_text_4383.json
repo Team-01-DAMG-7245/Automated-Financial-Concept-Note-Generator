@@ -1,0 +1,12 @@
+{
+  "page": 2485,
+  "original_text": "MedianPrice = medprice(Data) calculates the median prices from the series of high and low\nprices. The median price is the average of the high and low prices for each period.",
+  "ocr_text": "MedianPrice=medprice(Data)calculatesthemedianpricesfromtheseriesofhighandlow\nprices.Themedianpriceistheaverageofthehighandlowpricesforeachperiod.",
+  "bbox": {
+    "x0": 89.99,
+    "y0": 254.16,
+    "x1": 537.48,
+    "y1": 277.79
+  },
+  "confidence": "high"
+}

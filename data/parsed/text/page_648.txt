@@ -1,0 +1,61 @@
+Creating the PortfolioCVaR Object
+
+In this section...
+
+“Syntax” on page 5-22
+
+“PortfolioCVaR Problem Sufficiency” on page 5-22
+
+“PortfolioCVaR Function Examples” on page 5-23
+
+To create a fully specified CVaR portfolio optimization problem, instantiate the PortfolioCVaR
+object using PortfolioCVaR. For information on the workflow when using PortfolioCVaR objects,
+see “PortfolioCVaR Object Workflow” on page 5-16.
+
+Syntax
+
+Use PortfolioCVaR to create an instance of an object of the PortfolioCVaR class. You can use
+PortfolioCVaR object in several ways. To set up a portfolio optimization problem in a
+PortfolioCVaR object, the simplest syntax is:
+
+p = PortfolioCVaR;
+
+This syntax creates a PortfolioCVaR object, p, such that all object properties are empty.
+
+The PortfolioCVaR object also accepts collections of argument name-value pair arguments for
+properties and their values. The PortfolioCVaR object accepts inputs for public properties with the
+general syntax:
+
+p = PortfolioCVaR('property1', value1, 'property2', value2, ... );
+
+If a PortfolioCVaR object already exists, the syntax permits the first (and only the first argument)
+of PortfolioCVaR to be an existing object with subsequent argument name-value pair arguments
+for properties to be added or modified. For example, given an existing PortfolioCVaR object in p,
+the general syntax is:
+
+p = PortfolioCVaR(p, 'property1', value1, 'property2', value2, ... );
+
+Input argument names are not case-sensitive, but must be completely specified. In addition, several
+properties can be specified with alternative argument names (see “Shortcuts for Property Names” on
+page 5-26). The PortfolioCVaR object tries to detect problem dimensions from the inputs and,
+once set, subsequent inputs can undergo various scalar or matrix expansion operations that simplify
+the overall process to formulate a problem. In addition, a PortfolioCVaR object is a value object so
+that, given portfolio p, the following code creates two objects, p and q, that are distinct:
+
+q = PortfolioCVaR(p, ...)
+
+PortfolioCVaR Problem Sufficiency
+
+A CVaR portfolio optimization problem is completely specified with the PortfolioCVaR object if the
+following three conditions are met:
+
+•
+You must specify a collection of asset returns or prices known as scenarios such that all scenarios
+are finite asset returns or prices. These scenarios are meant to be samples from the underlying
+probability distribution of asset returns. This condition can be satisfied by the setScenarios
+function or with several canned scenario simulation functions.
+
+5
+CVaR Portfolio Optimization Tools
+
+5-22

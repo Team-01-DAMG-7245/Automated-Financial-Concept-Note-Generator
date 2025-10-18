@@ -1,0 +1,59 @@
+For more information on an IRDataCurve object, see “Creating an IRDataCurve Object” (Financial
+Instruments Toolbox).
+
+Data Types: double | object
+
+ProbData — Default probability values
+matrix
+
+Default probability values, specified as a P-by-2 matrix with dates, using a serial date number format,
+and corresponding cumulative default probability values.
+
+Data Types: double
+
+Settle — Settlement date
+datetime scalar | string scalar | date character vector
+
+Settlement date, specified as a scalar datetime, string, or date character vector. The Settle date
+must be earlier than or equal to the dates in Maturity.
+
+To support existing code, cdsspread also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date
+datetime array | string array | date character vector
+
+Maturity date, specified as a N-by-1 vector using a datetime array, string array, or date character
+vectors.
+
+To support existing code, cdsspread also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Note Any optional input of size N-by-1 is also acceptable as an array of size 1-by-N, or as a single
+value applicable to all contracts. Single values are internally expanded to an array of size N-by-1.
+
+Example: Spread =
+cdsspread(ZeroData,ProbData,Settle,Maturity,'Basis',7,'BusinessDayConvention'
+,'previous')
+
+RecoveryRate — Recovery rate
+0.4 (default) | decimal
+
+Recovery rate, specified as the comma-separated pair consisting of 'RecoveryRate' and a N-by-1
+vector of recovery rates, specified as a decimal from 0 to 1.
+
+cdsspread
+
+15-635

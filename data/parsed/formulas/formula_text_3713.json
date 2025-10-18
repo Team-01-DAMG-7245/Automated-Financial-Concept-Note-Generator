@@ -1,0 +1,12 @@
+{
+  "page": 2100,
+  "original_text": "•\nDisc = (1 + Z/F)^(-T), where F is the compounding frequency, Z is the zero rate, and T is\nthe time in periodic units, for example, T = F is one year.",
+  "ocr_text": "*Disc=(1+Z/F)*(-T),whereFisthecompoundingfrequency,Zisthezerorate,andTis\nthetimeinperiodicunits,forexample,T=Fisoneyear.",
+  "bbox": {
+    "x0": 105.0,
+    "y0": 607.5,
+    "x1": 555.07,
+    "y1": 631.13
+  },
+  "confidence": "high"
+}

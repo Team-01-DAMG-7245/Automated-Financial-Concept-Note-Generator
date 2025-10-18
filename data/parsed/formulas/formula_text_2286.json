@@ -1,0 +1,12 @@
+{
+  "page": 1174,
+  "original_text": "TT.Variables =\nfilter(b,a,TT.Variables)",
+  "ocr_text": "TT.Variables=\nfilter(b,a,TT.Variables)",
+  "bbox": {
+    "x0": 387.09,
+    "y0": 313.36,
+    "x1": 531.57,
+    "y1": 336.99
+  },
+  "confidence": "high"
+}

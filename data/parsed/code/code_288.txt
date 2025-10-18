@@ -1,0 +1,8 @@
+Page 279
+================================================================================
+
+To obtain efficient portfolios that maximizes the Sharpe ratio, the estimateMaxSharpeRatio
+function accepts a Portfolio object and obtains efficient portfolios that maximize the Sharpe Ratio.
+Suppose that you have a universe with four risky assets and a riskless asset and you want to obtain a
+portfolio that maximizes the Sharpe ratio, where, in this example, r0 is the return for the riskless
+asset.

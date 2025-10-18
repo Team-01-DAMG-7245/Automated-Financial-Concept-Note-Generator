@@ -1,0 +1,68 @@
+•
+Rate: The diffusion-rate function, G(t,Xt).
+
+•
+Alpha: The state vector exponent, which determines the format of D(t,Xt) of G(t,Xt).
+
+•
+Sigma: The volatility rate, V(t,Xt), of G(t,Xt).
+
+Alpha and Sigma enable you to query the original inputs. (The combined effect of the individual
+Alpha and Sigma parameters is fully encapsulated by the function stored in Rate.) The Rate
+functions are the calculation engines for the drift and diffusion objects, and are the only
+parameters required for simulation.
+
+Note You can express drift and diffusion classes in the most general form to emphasize the
+functional (t, Xt) interface. However, you can specify the components A and B as functions that adhere
+to the common (t, Xt) interface, or as MATLAB arrays of appropriate dimension.
+
+Example: G = diffusion(1, 0.3) % Diffusion rate function G(t,X)
+
+Data Types: struct | double
+
+Object Functions
+interpolate
+Brownian interpolation of stochastic differential equations (SDEs) for SDE, BM,
+GBM, CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simulate
+Simulate multivariate stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, SDEMRD, Merton, or Bates models
+simByEuler
+Euler simulation of stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simByMilstein
+Simulate diagonal diffusion for BM, GBM, CEV, HWV, SDEDDO, SDELD, or
+SDEMRD sample paths by Milstein approximation
+simByMilstein2
+Simulate BM, GBM, CEV, HWV, SDEDDO, SDELD, SDEMRD process sample paths
+by second order Milstein approximation
+
+Examples
+
+Create a sdemrd Object
+
+The sdemrd class derives directly from the sdeddo class. It provides an interface in which the drift-
+
+rate function is expressed in mean-reverting drift form: dXt = S(t)[L(t) −Xt]dt + D(t, Xt
+α(t))V(t)dWt.
+
+sdemrd objects provide a parametric alternative to the linear drift form by reparameterizing the
+general linear drift such that: A(t) = S(t)L(t), B(t) = −S(t).
+
+Create an sdemrd object obj with a square root exponent to represent the model:
+
+dXt = 0 . 2(0 . 1 −Xt)dt + 0 . 05Xt
+
+1
+2dWt.
+
+obj = sdemrd(0.2, 0.1, 0.5, 0.05)   % (Speed, Level, Alpha, Sigma)
+
+obj = 
+   Class SDEMRD: SDE with Mean-Reverting Drift
+   -------------------------------------------
+     Dimensions: State = 1, Brownian = 1
+
+sdemrd
+
+15-187

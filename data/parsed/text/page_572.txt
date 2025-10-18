@@ -1,0 +1,42 @@
+Changing MINLP Solvers
+
+In the previous section, you use the default solver for estimateFrontier. However, you can solve
+mixed-integer portfolio problems using any of the three algorithms supported by setSolverMINLP:
+OuterApproximation, ExtendedCP, and TrustRegionCP. Furthermore, the
+OuterApproximation algorithm accepts an additional name-value argument
+(ExtendedFormulation) for Portfolo problems, which reformulates problems with quadratic
+functions to work in an extended space that usually decreases the computation time. All algorithms,
+including the extended formulation variation of the OuterApproximation algorithm, return the
+same values within numerical accuracy. The available solvers are:
+
+•
+OuterApproximation — The default algorithm, which is robust and usually faster than
+ExtenedCP
+
+•
+OuterApproximation with ExtendedFormulation set to true — A robust algorithm that is
+usually faster than other algorithms, but only supported for Portfolio object problems
+
+•
+ExtendedCP — The most robust solver, but usually the slowest
+
+•
+TrustRegionCP — The fastest algorithm, but one that is less robust and may provide suboptimal
+solutions
+
+For more information on solvers for mixed-integer portfolio problems, see “Choose MINLP Solvers for
+Portfolio Problems” on page 4-140.
+
+To change the MINLP solvers, use setSolverMINLP.
+
+% Select the extended formulation version of 'OuterApproximation' as the
+% solver.
+p_EOA = setSolverMINLP(p,'OuterApproximation',...
+    ExtendedFormulation=true);
+pwgt_EOA = estimateFrontier(p_EOA);
+[rskEOA,retEOA] = estimatePortMoments(p_EOA,pwgt_EOA);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-404

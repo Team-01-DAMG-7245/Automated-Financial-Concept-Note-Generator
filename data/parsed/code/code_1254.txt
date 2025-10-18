@@ -1,0 +1,5 @@
+Page 1292
+================================================================================
+
+where a = [a0, a1, a2, an −ℓ] and b = [b0, b1, …, bk] are the filter coefficients. For more information, see
+filter.

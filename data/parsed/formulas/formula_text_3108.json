@@ -1,0 +1,12 @@
+{
+  "page": 1644,
+  "original_text": "[Paths,Times,Z] = simByHybrid(MDL,NPeriods)\n[Paths,Times,Z] = simByHybrid( ___ ,Name=Value)",
+  "ocr_text": "[Paths,Times,Z]=simByHybrid(MDL,NPeriods)\n[Paths,Times,Z]=simByHybrid(___,Name=Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.86,
+    "x1": 364.92,
+    "y1": 213.49
+  },
+  "confidence": "high"
+}

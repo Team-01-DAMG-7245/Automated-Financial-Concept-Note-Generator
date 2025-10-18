@@ -1,0 +1,14 @@
+Page 662
+================================================================================
+
+There are reformulations of the CVaR portfolio optimization problem (see [48], [49] at Rockafellar &
+Uryasev) that result in a linear programming problem, which can be solved either with standard
+linear programming techniques or with stochastic programming solvers. The PortfolioCVaR object,
+however, does not reformulate the problem in such a manner. The PortfolioCVaR object computes
+the CVaR as a nonlinear function. The convexity of the CVaR, as a function of the portfolio weights
+and the dull edges when the number of scenarios is large, make the CVaR portfolio optimization
+problem tractable, in practice, for certain nonlinear programming solvers, such as fmincon from
+Optimization Toolbox. The problem can also be solved using a cutting-plane method (see Kelley [45]
+at “Portfolio Optimization” on page A-5). For more information, see Algorithms section of
+setSolver. To learn more about the workflow when using PortfolioCVaR objects, see
+“PortfolioCVaR Object Workflow” on page 5-16.

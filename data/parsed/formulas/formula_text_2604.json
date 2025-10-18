@@ -1,0 +1,12 @@
+{
+  "page": 1326,
+  "original_text": "BrinsonPAobj = brinsonAttribution(AssetTable)",
+  "ocr_text": "BrinsonPAobj=brinsonAttribution(AssetTable)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 494.62,
+    "x1": 344.64,
+    "y1": 505.08
+  },
+  "confidence": "high"
+}

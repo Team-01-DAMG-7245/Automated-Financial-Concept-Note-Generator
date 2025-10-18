@@ -1,0 +1,58 @@
+0.7436    0.3151         0
+    0.1357    0.3829    0.4425
+    0.0326    0.0936    0.1319
+    0.0880    0.2083    0.4255
+
+The function rng(seed) is used to reset the random number generator to produce the documented
+results. It is not necessary to reset the random number generator to simulate scenarios.
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+TargetReturn — Target values for portfolio return
+vector
+
+Target values for portfolio return, specified as a NumPorts vector.
+
+Note TargetReturn specifies target returns for portfolios on the efficient frontier. If any
+TargetReturn values are outside the range of returns for efficient portfolios, the TargetReturn is
+replaced with the minimum or maximum efficient portfolio return, depending upon whether the
+target return is below or above the range of efficient portfolio returns.
+
+Data Types: double
+
+Output Arguments
+
+pwgt — Optimal portfolios on efficient frontier with specified target returns
+matrix
+
+Optimal portfolios on the efficient frontier with specified target returns from TargetReturn,
+returned as a NumAssets-by-NumPorts matrix. pwgt is returned for a Portfolio, PortfolioCVaR,
+or PortfolioMAD input object (obj).
+
+pbuy — Purchases relative to initial portfolio for optimal portfolios on efficient frontier
+matrix
+
+Purchases relative to an initial portfolio for optimal portfolios on the efficient frontier, returned as
+NumAssets-by-NumPorts matrix.
+
+15
+Functions
+
+15-964

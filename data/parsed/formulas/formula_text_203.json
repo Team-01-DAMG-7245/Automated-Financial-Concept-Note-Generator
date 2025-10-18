@@ -1,0 +1,12 @@
+{
+  "page": 128,
+  "original_text": "idxBT = test(tspFull);      % Backtesting indices\nXTV = XCell(idxTV);\nyTV = y(idxTV);\nXBT = XCell(idxBT);\nyBT = y(idxBT);\ntBT = t(idxBT);\nmpBT = midprices(idxBT);\nnBT = sum(idxBT);",
+  "ocr_text": "idxBT=test(tspFull); Backtestingindices\nXTV_=XCell(idxTV);\n\nyTV=y(idxTV);\n\nXBT_=XCell(idxBT);\n\nyBT=y(idxBT);\n\ntBT=t(idxBT);\n\nmpBT=midprices(idxBT);\n\nnBT=sum(idxBT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 355.49,
+    "y1": 179.09
+  },
+  "confidence": "high"
+}

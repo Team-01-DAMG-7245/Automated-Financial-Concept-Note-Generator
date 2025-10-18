@@ -1,0 +1,12 @@
+{
+  "page": 1784,
+  "original_text": "Volatility = blkimpv(Price,Strike,Rate,Time,Value)\nVolatility = blkimpv( ___ ,Name,Value)",
+  "ocr_text": "Volatility=blkimpv(Price,Strike,Rate,Time,Value)\nVolatility=blkimpv(__,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 187.89,
+    "x1": 391.02,
+    "y1": 211.52
+  },
+  "confidence": "high"
+}

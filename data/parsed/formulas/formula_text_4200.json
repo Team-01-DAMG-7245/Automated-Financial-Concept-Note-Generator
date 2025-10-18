@@ -1,0 +1,12 @@
+{
+  "page": 2362,
+  "original_text": "Decimal = frac2cur(Fraction,Denominator) converts a fractional currency value to a decimal\nvalue. Fraction is the fractional currency value input as a character vector, and Denominator is\nthe denominator of the fraction.",
+  "ocr_text": "Decimal=frac2cur(Fraction,Denominator)convertsafractionalcurrencyvaluetoadecimal\nvalue.Fractionisthefractionalcurrencyvalueinputasacharactervector,andDenominatoris\nthedenominatorofthefraction.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 242.23,
+    "x1": 557.49,
+    "y1": 277.86
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 2350,
+  "original_text": "Margin = floatdiscmargin(Price,SpreadSettle,Maturity,RateInfo,\nLatestFloatingRate) calculates the discount margin or zero discount margin for a floating-rate\nbond.",
+  "ocr_text": "Margin=floatdiscmargin(Price,SpreadSettle,Maturity,RateInfo,\nLatestFloatingRate)calculatesthediscountmarginorzerodiscountmarginforafloating-rate\nbond.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 268.65,
+    "x1": 543.81,
+    "y1": 304.28
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,54 @@
+cfdates
+
+Cash flow dates for fixed-income security
+
+Syntax
+
+CFlowDates = cfdates(Settle,Maturity)
+CFlowDates = cfdates( ___ ,Period,Basis,EndMonthRule,IssueDate,FirstCouponDate,
+LastCouponDate)
+
+Description
+
+CFlowDates = cfdates(Settle,Maturity) generates a matrix of actual cash flow payment
+dates for NUMBONDS fixed income securities. All cash flow dates are determined regardless of whether
+the first and last coupon periods are normal, long or short.
+
+CFlowDates = cfdates( ___ ,Period,Basis,EndMonthRule,IssueDate,FirstCouponDate,
+LastCouponDate) specifies options using one or more optional arguments in addition to the input
+arguments in the previous syntax.
+
+Examples
+
+Obtain Cash Flow Dates for Fixed-Income Security
+
+Compute the cash flow dates given the Settle and Maturity dates.
+
+CFlowDates = cfdates('14 Mar 1997', '30 Nov 1998', 2, 0, 1)
+
+CFlowDates = 1×4
+
+729541      729724      729906      730089
+
+datestr(CFlowDates)
+
+ans = 4×11 char array
+    '31-May-1997'
+    '30-Nov-1997'
+    '31-May-1998'
+    '30-Nov-1998'
+
+If any of the inputs for Settle, Maturity, IssueDate, FirstCouponDate, or LastCouponDate
+are datetime arrays, then CFlowDates is returned as a datetime array. For example:
+
+CFlowDates = cfdates('14-Mar-1997', datetime('30-Nov-1998','Locale','en_US'), 2, 0, 1)
+
+CFlowDates = 1×4 datetime
+   31-May-1997   30-Nov-1997   31-May-1998   30-Nov-1998
+
+Given three securities with different maturity dates and the same default arguments:
+
+15
+Functions
+
+15-684

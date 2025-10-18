@@ -1,0 +1,55 @@
+Compute the Cash Flow Structure and Time Factors for a Bond Portfolio Using Optional
+Name-Value Pairs
+
+This example shows how to compute the cash flow structure and time factors for a bond portfolio that
+contains a corporate bond paying interest quarterly and a Treasury bond paying interest
+semiannually. This example uses the following Name-Value pairs for Period, Basis,
+BusinessDayConvention, and AdjustCashFlowsBasis.
+
+Settle = '01-Jun-2010';
+Maturity = ['15-Dec-2011';'15-Jun-2012'];
+CouponRate= [0.06; 0.05];
+Period = [4; 2];
+Basis = [1; 0];
+ 
+[CFlowAmounts, CFlowDates, TFactors, CFlowFlags] = ...
+cfamounts(CouponRate,Settle, Maturity, 'Period',Period, ... 
+'Basis', Basis, 'AdjustCashFlowsBasis', true,...
+'BusinessDayConvention','modifiedfollow')
+
+CFlowAmounts = 2×8
+
+-1.2667    1.5000    1.5000    1.5000    1.5000    1.5000    1.5000  101.5000
+   -2.3077    2.4932    2.5068    2.4932    2.5000  102.5000       NaN       NaN
+
+CFlowDates = 2×8
+
+734290      734304      734396      734487      734577      734669      734761      734852
+      734290      734304      734487      734669      734852      735035         NaN         NaN
+
+TFactors = 2×8
+
+0    0.0778    0.5778    1.0778    1.5778    2.0778    2.5778    3.0778
+         0    0.0769    1.0769    2.0769    3.0769    4.0769       NaN       NaN
+
+CFlowFlags = 2×8
+
+0     3     3     3     3     3     3     4
+     0     3     3     3     3     4   NaN   NaN
+
+Use cfamounts With a CouponRate Schedule
+
+This example shows how to use cfamounts with a CouponRate schedule. For CouponRate and
+Face that change over the life of the bond, schedules for CouponRate and Face can be specified
+with an NINST-by-1 cell array, where each element is a NumDates-by-2 matrix where the first column
+is dates and the second column is associated rates.
+
+CouponSchedule = {[datenum('15-Mar-2012') .04;datenum('15- Mar -2013') .05;...
+datenum('15- Mar -2015') .06]}
+
+CouponSchedule = 1×1 cell array
+    {3×2 double}
+
+cfamounts
+
+15-669

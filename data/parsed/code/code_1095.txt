@@ -1,0 +1,7 @@
+Page 1120
+================================================================================
+
+Evaluate and plot the efficient frontier at 20 points along the frontier, using the function portopt
+and the expected returns and corresponding covariance matrix. Although rather elaborate constraints
+can be placed on the assets in a portfolio, for simplicity accept the default constraints and scale the
+total value of the portfolio to 1 and constrain the weights to be positive (no short-selling).

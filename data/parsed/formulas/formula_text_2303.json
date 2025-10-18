@@ -1,0 +1,12 @@
+{
+  "page": 1187,
+  "original_text": "function uicalendarGUIExample\nf = figure('Name', 'uicalendarGUIExample');\n2\nAdd a text control field.",
+  "ocr_text": "functionuicalendarGUIExample\nf=figure(Name,uicalendarGUIExample);\n2_Addatextcontrolfield.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 342.99,
+    "y1": 126.19
+  },
+  "confidence": "high"
+}

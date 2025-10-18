@@ -1,0 +1,5 @@
+Page 2414
+================================================================================
+
+Use the getOneWayTirnover function with a Portfolio, PortfolioCVaR, or PortfolioMAD
+object to obtain one-way turnover constraints from portfolio objects.

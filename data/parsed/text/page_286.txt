@@ -1,0 +1,111 @@
+Portfolio
+Problem
+
+Portfolio
+Function
+
+Type of
+Optimization
+Problem
+
+Main Solver
+Helper Solver
+
+Portfolio with
+active
+'Conditional'
+BoundType,
+MinNumAssets,
+MaxNumAssets, or
+conditional budget
+constraints
+
+estimateFronti
+erByReturn
+
+The problem is
+formulated by
+introducing
+NumAssets binary
+variables to
+indicate whether
+the corresponding
+asset is invested or
+not. Therefore, it
+requires a mixed
+integer nonlinear
+programming
+solver. Three types
+of MINLP solvers
+are offered, see
+setSolverMINLP.
+
+Mixed integer
+nonlinear
+programming
+solver (MINLP)
+using
+setSolverMINLP
+
+'quadprog' or
+'fmincon' are
+used when the
+estimate
+functions reduce
+the problem into
+NLP. These two
+solvers can be
+configured through
+setSolver.
+
+Portfolio with
+active
+'Conditional'
+BoundType,
+MinNumAssets,
+MaxNumAssets, or
+conditional budget
+constraints
+
+estimateFronti
+erLimits
+
+The problem is
+formulated by
+introducing
+NumAssets binary
+variables to
+indicate whether
+the corresponding
+asset is invested or
+not. Therefore, it
+requires a mixed
+integer nonlinear
+programming
+solver. Three types
+of MINLP solvers
+are offered, see
+setSolverMINLP.
+
+Mixed integer
+nonlinear
+programming
+solver (MINLP)
+using
+setSolverMINLP
+
+'quadprog' or
+'fmincon' are
+used when the
+estimate
+functions reduce
+the problem into
+NLP. These two
+solvers can be
+configured through
+setSolver.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-118

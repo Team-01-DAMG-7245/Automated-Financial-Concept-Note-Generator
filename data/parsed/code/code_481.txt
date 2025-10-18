@@ -1,0 +1,5 @@
+Page 462
+================================================================================
+
+function new_weights = riskParityFcn(~,pricesTT)
+% Risk parity rebalance function

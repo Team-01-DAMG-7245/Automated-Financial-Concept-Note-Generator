@@ -1,0 +1,70 @@
+Computing Treasury Bill Price and Yield
+
+In this section...
+
+“Introduction” on page 2-26
+
+“Treasury Bill Repurchase Agreements” on page 2-26
+
+“Treasury Bill Yields” on page 2-27
+
+Introduction
+
+Financial Toolbox software provides the following suite of functions for computing price and yield on
+Treasury bills.
+
+Treasury Bill Functions
+
+Function
+Purpose
+
+tbilldisc2yield
+Convert discount rate to yield.
+
+tbillprice
+Price Treasury bill given its yield or discount rate.
+
+tbillrepo
+Break-even discount of repurchase agreement.
+
+tbillyield
+Yield and discount of Treasury bill given its price.
+
+tbillyield2disc
+Convert yield to discount rate.
+
+tbillval01
+The value of 1 basis point (one hundredth of one percentage point,
+or 0.0001) given the characteristics of the Treasury bill, as
+represented by its settlement and maturity dates. You can relate
+the basis point to discount, money-market, or bond-equivalent
+yield.
+
+For all functions with yield in the computation, you can specify yield as money-market or bond-
+equivalent yield. The functions all assume a face value of $100 for each Treasury bill.
+
+Treasury Bill Repurchase Agreements
+
+This example shows how to compute the break-even discount rate. This is the rate that correctly
+prices the Treasury bill such that the profit from selling the tail equals 0.
+
+Maturity = '26-Dec-2002';
+InitialDiscount = 0.0161;
+PurchaseDate = '26-Sep-2002';
+SaleDate = '26-Oct-2002';
+RepoRate = 0.0149;
+
+BreakevenDiscount = tbillrepo(RepoRate, InitialDiscount, ... 
+PurchaseDate, SaleDate, Maturity)
+
+BreakevenDiscount = 
+0.0167
+
+You can check the result of this computation by examining the cash flows in and out from the
+repurchase transaction. First compute the price of the Treasury bill on the purchase date (September
+26).
+
+2
+Performing Common Financial Tasks
+
+2-26

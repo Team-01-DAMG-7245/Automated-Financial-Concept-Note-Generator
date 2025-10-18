@@ -1,0 +1,12 @@
+{
+  "page": 385,
+  "original_text": "p = setBudget(p, 1, 1);     % allow 0% risk free asset allocation, meaning fully invested in risk\np1 = setBudget(p, 0, 1);    % allow 0% to 100% risk free asset allocation\np2 = setBudget(p, 0.7, 1);  % allow 0% to 30% risk free asset allocation\n[risk, retn] = estimatePortMoments(p, estimateMaxSharpeRatio(p));",
+  "ocr_text": "p=setBudget(p,1,1); allow0riskfreeassetallocation,meaningfullyinvestedinris\npl=setBudget(p,0,1); allow0to100riskfreeassetallocation\np2=setBudget(p,0.7,1);allow0to30*riskfreeassetallocation\n[risk,retn]=estimatePortMoments(p,estimateMaxSharpeRatio(p));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 432.43,
+    "x1": 615.55,
+    "y1": 475.29
+  },
+  "confidence": "high"
+}

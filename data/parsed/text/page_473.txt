@@ -1,0 +1,61 @@
+Convert the returnData timetable to a numSamples-by-1 cell array. Each cell contains a
+numFeatures-by-seqLength matrix. The response variable is a numSamples-by-numResponses
+matrix.
+
+network_features  = cell(numSamples,1);
+network_responses = zeros(numSamples,numOutputs);
+
+for j = 1:numSamples
+    network_features{j} = (returnData(j:j+historySize-1,:).Variables)';
+    network_responses(j,:) = ...
+        (returnData(j+historySize:j+historySize+futureSize-1,outputVarName).Variables)';
+end
+
+Split the network_features and the network_responses into three parts: training, validation,
+and backtesting. Select the backtesting set as a set of sequential data points. The remainder of the
+data is randomly split into a training and a validation set. Use the validation set to prevent overfitting
+while training the model. The backtesting set is not used in the training process, but it is reserved for
+the final strategy backtest.
+
+% Specify rows to use in the backtest (31-Dec-2015 to 2-Nov-2021).
+backtest_start_idx = find(date_vector < datetime(2016,1,1),1,'last');
+backtest_indices = backtest_start_idx:size(network_responses,1);
+
+% Specify data reserved for the backtest.
+Xbacktest = network_features(backtest_indices);
+Tbacktest = network_responses(backtest_indices,:);
+
+% Remove the backtest data.
+network_features = network_features(1:backtest_indices(1)-1);
+network_responses = network_responses(1:backtest_indices(1)-1,:);
+
+% Partition the remaining data into training and validation sets.
+rng('default');
+cv_partition = cvpartition(size(network_features,1),'HoldOut',0.2);
+
+% Training set
+Xtraining = network_features(~cv_partition.test,:);
+Ttraining = network_responses(~cv_partition.test,:);
+
+% Validation set
+Xvalidation = network_features(cv_partition.test,:);
+Tvalidation = network_responses(cv_partition.test,:);
+
+Define LSTM Network Architecture
+
+Specify the network architecture as a series of layers. For more information on LSTM networks, see
+“Long Short-Term Memory Neural Networks” (Deep Learning Toolbox). The Deep Network Designer
+(Deep Learning Toolbox) is a powerful tool for designing deep learning models.
+
+numFeatures = width(returnData);
+numHiddenUnits_LSTM = 10;
+
+layers_LSTM = [ ...
+    sequenceInputLayer(numFeatures) 
+    lstmLayer(numHiddenUnits_LSTM)
+    layerNormalizationLayer
+    lstmLayer(numHiddenUnits_LSTM)
+
+Backtest Strategies Using Deep Learning
+
+4-305

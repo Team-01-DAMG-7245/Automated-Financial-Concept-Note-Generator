@@ -1,0 +1,15 @@
+totalCost = sum(backtester.BuyCost{:,:}) + sum(backtester.SellCost{:,:});
+bar(totalCost);
+title('Total Transaction Costs');
+ylabel('$')
+set(gca,'xticklabel',[strategies.Name])
+
+Generate Equity Curve
+
+Use equityCurve to plot the equity curve for the equal weighted and inverse variance strategies.
+
+equityCurve(backtester)
+
+summary
+
+15-301

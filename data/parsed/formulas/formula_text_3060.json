@@ -1,0 +1,12 @@
+{
+  "page": 1604,
+  "original_text": "ans = struct with fields:\n      EqualWeighted: [231×8 timetable]\n    InverseVariance: [231×8 timetable]",
+  "ocr_text": "ans=structwithfields:\nEqualWeighted:[231x8timetable]\nInverseVariance:[231x8timetable]",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 644.03,
+    "x1": 295.88,
+    "y1": 676.1
+  },
+  "confidence": "high"
+}

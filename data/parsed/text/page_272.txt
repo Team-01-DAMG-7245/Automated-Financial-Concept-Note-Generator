@@ -1,0 +1,18 @@
+•
+“Portfolio Optimization Theory” on page 4-4
+
+•
+“Portfolio Object Workflow” on page 4-18
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+•
+MATLAB for Advanced Portfolio Construction and Stock Selection Models (30 min 28 sec)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-104

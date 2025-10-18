@@ -1,0 +1,12 @@
+{
+  "page": 1301,
+  "original_text": "% Import the commodity data.\nfunction Prices = importCommodityData(filename)",
+  "ocr_text": "Importthecommoditydata.\nfunctionPrices=importCommodityData(filename)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.22,
+    "x1": 344.65,
+    "y1": 643.49
+  },
+  "confidence": "high"
+}

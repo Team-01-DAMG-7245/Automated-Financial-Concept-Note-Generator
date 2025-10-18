@@ -1,0 +1,12 @@
+{
+  "page": 392,
+  "original_text": "bizyear2bizday = 1/252;\nq = q*bizyear2bizday; \nOmega = Omega*bizyear2bizday;",
+  "ocr_text": "bizyear2bizday=1/252;\nq=q*bizyear2bizday;\nOmega=Omega*bizyear2bizday;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.66,
+    "x1": 247.12,
+    "y1": 158.72
+  },
+  "confidence": "high"
+}

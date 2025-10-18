@@ -1,0 +1,29 @@
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although cdprice supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+bndprice | cdai | cdyield | stepcpnprice | tbillprice | datetime
+
+Topics
+“Coupon Date Calculations” on page 2-20
+“Yield Conventions” on page 2-21
+
+15
+Functions
+
+15-618

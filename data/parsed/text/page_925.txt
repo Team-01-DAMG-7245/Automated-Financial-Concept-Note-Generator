@@ -1,0 +1,64 @@
+dataNR.Rating{7} = 'NR';
+
+head(dataNR,12)
+
+ID              Date          Rating 
+    ____________    _______________    _______
+
+{'00010283'}    {'10-Nov-1984'}    {'CCC'}
+    {'00010283'}    {'12-May-1986'}    {'NR' }
+    {'00010283'}    {'29-Jun-1988'}    {'CCC'}
+    {'00010283'}    {'12-Dec-1991'}    {'D'  }
+    {'00013326'}    {'09-Feb-1985'}    {'A'  }
+    {'00013326'}    {'24-Feb-1994'}    {'AA' }
+    {'00013326'}    {'10-Nov-2000'}    {'NR' }
+    {'00014413'}    {'23-Dec-1982'}    {'B'  }
+    {'00014413'}    {'20-Apr-1988'}    {'BB' }
+    {'00014413'}    {'16-Jan-1998'}    {'B'  }
+    {'00014413'}    {'25-Nov-1999'}    {'BB' }
+    {'00012126'}    {'17-Feb-1985'}    {'CCC'}
+
+'NR' is treated as another rating. The transition matrix shows the estimated probability of
+transitioning into and out of 'NR'. In this example, the transprob function uses the 'cohort'
+algorithm, and the 'NR' rating is treated as another rating. The same behavior exists when using the
+transprob function with the 'duration' algorithm.
+
+RatingsLabelsNR = {'AAA','AA','A','BBB','BB','B','CCC','D','NR'};
+[MatrixNRCohort,TotalsNRCohort] = transprob(dataNR, ...
+   'Labels',RatingsLabelsNR, ...
+   'Algorithm','cohort');
+
+fprintf('Transition probability, cohort, including NR:\n')
+
+Transition probability, cohort, including NR:
+
+disp(array2table(MatrixNRCohort,'VariableNames',RatingsLabelsNR, ...
+   'RowNames',RatingsLabelsNR))
+
+AAA         AA          A          BBB         BB          B          CCC          D
+           ________    _______    ________    _______    ________    ________    ________    ____
+
+AAA      93.135     5.9335     0.74557    0.15533    0.031066           0           0        
+    AA       1.7359      92.92      4.5446    0.58514     0.15604           0           0    0.03
+    A       0.12683     2.9716      91.991     4.3124      0.4711    0.054358           0    0.07
+    BBB    0.021048    0.37887      5.0726     89.771      4.0413     0.46306    0.042096     0.2
+    BB     0.022099     0.1105     0.68508      6.232      88.376      3.6464     0.28729     0.6
+    B             0          0    0.076161    0.72353       7.997      86.215      2.7037      2
+    CCC           0          0           0    0.30936      1.8561      4.4857      80.897      12
+    D             0          0           0          0           0           0           0        
+    NR            0          0           0          0           0           0      16.667
+
+fprintf('Total transitions out of given rating, including 6 out of NR (5 NR->NR, 1 NR->CCC):\n')
+
+Total transitions out of given rating, including 6 out of NR (5 NR->NR, 1 NR->CCC):
+
+disp(array2table(TotalsNRCohort.totalsVec,'VariableNames',RatingsLabelsNR))
+
+AAA      AA      A      BBB      BB      B      CCC      D      NR
+    ____    ____    ____    ____    ____    ____    ____    ____    __
+
+3219    5127    5519    4751    4525    2626    1293    4050    6
+
+Estimation of Transition Probabilities
+
+8-7

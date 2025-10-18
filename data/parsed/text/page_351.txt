@@ -1,0 +1,47 @@
+bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [4×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: [2×4 double]
+                    LowerGroup: []
+                    UpperGroup: [2×1 double]
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [4×1 categorical]
+
+Step 4. Validate the portfolio problem.
+
+An important step in portfolio optimization is to validate that the portfolio problem is feasible and the
+main test is to ensure that the set of portfolios is nonempty and bounded. Use the estimateBounds
+function to determine the bounds for the portfolio set. In this case, since both lb and ub are finite,
+the set is bounded.
+
+[lb, ub] = estimateBounds(p);
+display([lb, ub])
+
+0.1500    1.0000
+         0    0.8500
+         0    0.8500
+         0    0.3500
+
+Step 5. Plotting the efficient frontier.
+
+Given the constructed Portfolio object, use the plotFrontier function to view the efficient
+frontier. Instead of using the default of 10 portfolios along the frontier, you can display the frontier
+with 40 portfolios. Notice gross efficient portfolio returns fall between approximately 6% and 16% per
+years.
+
+plotFrontier(p, 40)
+
+Asset Allocation Case Study
+
+4-183

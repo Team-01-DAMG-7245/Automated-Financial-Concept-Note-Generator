@@ -1,0 +1,12 @@
+{
+  "page": 2074,
+  "original_text": "PreviousCouponDate = cpndatep( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate) returns the previous coupon date on or before settlement\nfor a portfolio of bonds.",
+  "ocr_text": "PreviousCouponDate=cpndatep(__,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)returnsthepreviouscoupondateonorbeforesettlement\nforaportfolioofbonds.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 384.78,
+    "x1": 542.3,
+    "y1": 420.41
+  },
+  "confidence": "high"
+}

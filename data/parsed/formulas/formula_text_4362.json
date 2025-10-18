@@ -1,0 +1,12 @@
+{
+  "page": 2471,
+  "original_text": "values = llow(Data)\nvalues = llow( ___ ,Name,Value)",
+  "ocr_text": "values=Llow(Data)\nvalues=llow(___,Name,Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.02,
+    "x1": 268.59,
+    "y1": 213.65
+  },
+  "confidence": "high"
+}

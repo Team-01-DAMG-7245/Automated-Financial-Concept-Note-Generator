@@ -1,0 +1,63 @@
+Fit a logistic regression model to the WOE data from the creditscorecard object. The
+fitmodel function internally bins the training data, transforms it into WOE values, maps the
+response variable so that 'Good' is 1, and fits a linear logistic regression model.
+
+By default, fitmodel uses a stepwise procedure to determine which predictors should be in the
+model, but optional input arguments can also be used, for example, to fit a full model. For more
+information and examples, see fitmodel and step 3 in “Case Study for Credit Scorecard
+Analysis” on page 8-71.
+
+Alternatively, you can apply equality, inequality, or bound constraints to fit a logistic regression
+model to the WOE data from the creditscorecard object using fitConstrainedModel.
+
+5
+Review and format credit scorecard points.
+
+After fitting the logistic model, use displaypoints to summarize the scorecard points. By
+default, the points are unscaled and come directly from the combination of Weight of Evidence
+(WOE) values and model coefficients.
+
+The formatpoints function lets you control scaling and rounding of scorecard points. For more
+information and examples, see displaypoints and formatpoints and step 4 in “Case Study
+for Credit Scorecard Analysis” on page 8-71.
+
+Optionally, you can create a compact credit scorecard using
+
+To create a compactCreditScorecard object, use compact to create a
+compactCreditScorecard object. You can then use the following functions displaypoints,
+score, and probdefault from the Risk Management Toolbox with the
+compactCreditScorecard object..
+
+6
+Score the data.
+
+The score function computes the scores for the training data.
+
+An optional data input can also be passed to score, for example, validation data. The points per
+predictor for each customer are also provided as an optional output. For more information and
+examples, see score and step 5 in “Case Study for Credit Scorecard Analysis” on page 8-71.
+
+7
+Calculate the probability of default for credit scorecard scores.
+
+The probdefault function to calculate the probability of default for training data.
+
+In addition, you can compute likelihood of default for a different dataset (for example, a
+validation data set) using the probdefault function. For more information and examples, see
+probdefault and step 6 in “Case Study for Credit Scorecard Analysis” on page 8-71.
+
+8
+Validate the credit scorecard model.
+
+Use the validatemodel function to validate the quality of the credit scorecard model.
+
+You can obtain the Cumulative Accuracy Profile (CAP), Receiver Operating Characteristic (ROC),
+and Kolmogorov-Smirnov (KS) plots and statistics for a given dataset using the validatemodel
+function. For more information and examples, see validatemodel and step 7 in “Case Study for
+Credit Scorecard Analysis” on page 8-71.
+
+For an example of this workflow, see “Case Study for Credit Scorecard Analysis” on page 8-71.
+
+Credit Scorecard Modeling Workflow
+
+8-53

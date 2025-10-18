@@ -1,0 +1,6 @@
+Page 2458
+================================================================================
+
+•
+'logratio' — Given raw data qx and model estimates q x for x = 1, ... , N, the second objective
+has the form

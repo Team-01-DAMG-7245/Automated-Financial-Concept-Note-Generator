@@ -1,0 +1,12 @@
+{
+  "page": 768,
+  "original_text": "% Compute risk and returns of the portfolios on the efficient frontier\nrsk = estimatePortRisk(p,pwgt)",
+  "ocr_text": "Computeriskandreturnsoftheportfoliosontheefficientfrontier\nrsk=estimatePortRisk(p,pwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 134.43,
+    "x1": 469.26,
+    "y1": 155.69
+  },
+  "confidence": "high"
+}

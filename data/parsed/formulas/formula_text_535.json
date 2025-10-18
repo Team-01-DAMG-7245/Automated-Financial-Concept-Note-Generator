@@ -1,0 +1,12 @@
+{
+  "page": 360,
+  "original_text": "toler = eps;\nsum(wgt>toler & wgt<0.05)",
+  "ocr_text": "toler=eps;\nsum(wgttolerSwgt0.05)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 499.34,
+    "x1": 225.45,
+    "y1": 520.61
+  },
+  "confidence": "high"
+}

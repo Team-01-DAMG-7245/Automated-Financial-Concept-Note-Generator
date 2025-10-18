@@ -1,0 +1,59 @@
+Greek-Neutral Portfolios of European Stock Options
+
+This example shows how to create an equity option portfolio using the Black-Scholes model for
+European options that is simultaneously delta, gamma, and vega neutral.
+
+The option sensitivity measures familiar to most option traders are often referred to as the greeks:
+delta, gamma, vega, lambda, rho, and theta. Delta is the price sensitivity of an option with respect to
+changes in the price of the underlying asset. It represents a first-order sensitivity measure analogous
+to duration in fixed income markets. Gamma is the sensitivity of an option's delta to changes in the
+price of the underlying asset, and represents a second-order price sensitivity analogous to convexity
+in fixed income markets. Vega is the price sensitivity of an option with respect to changes in the
+volatility of the underlying asset. For more information, see “Pricing and Analyzing Equity
+Derivatives” on page 2-39.
+
+The greeks of a particular option are a function of the model used to price the option. However, given
+enough different options to work with, a trader can construct a portfolio with any desired values for
+its greeks. For example, to insulate the value of an option portfolio from small changes in the price of
+the underlying asset, one trader might construct an option portfolio whose delta is zero. Such a
+portfolio is then said to be "delta neutral." Another trader may want to protect an option portfolio
+from larger changes in the price of the underlying asset, and so might construct a portfolio whose
+delta and gamma are both zero. Such a portfolio is both delta and gamma neutral. A third trader may
+want to construct a portfolio insulated from small changes in the volatility of the underlying asset in
+addition to delta and gamma neutrality. Such a portfolio is then delta, gamma, and vega neutral.
+
+Using the Black-Scholes model for European options, this example creates an equity option portfolio
+that is simultaneously delta, gamma, and vega neutral. The value of a particular greek of an option
+portfolio is a weighted average of the corresponding greek of each individual option. The weights are
+the quantity of each option in the portfolio. Hedging an option portfolio thus involves solving a system
+of linear equations, an easy process in MATLAB®.
+
+Create Input Data Matrix
+
+Create an input data matrix to summarize the relevant information. Each row of the matrix contains
+the standard inputs to Financial Toolbox™ Black-Scholes suite of functions: column 1 contains the
+current price of the underlying stock; column 2 the strike price of each option; column 3 the time to-
+expiry of each option in years; column 4 the annualized stock price volatility; and column 5 the
+annualized dividend rate of the underlying asset. Rows 1 and 3 are data related to call options, while
+rows 2 and 4 are data related to put options.
+
+DataMatrix = [100.000  100  0.2  0.3   0        % Call
+              119.100  125  0.2  0.2   0.025    % Put
+               87.200   85  0.1  0.23  0        % Call
+              301.125  315  0.5  0.25  0.0333]; % Put
+
+Assume that the annualized risk-free rate is 10% and is constant for all maturities of interest.
+
+RiskFreeRate = 0.10;
+
+For clarity, assign each column of DataMatrix to a column vector whose name reflects the type of
+financial data in the column.
+
+StockPrice   = DataMatrix(:,1);
+StrikePrice  = DataMatrix(:,2);
+ExpiryTime   = DataMatrix(:,3);
+
+10
+Solving Sample Problems
+
+10-14

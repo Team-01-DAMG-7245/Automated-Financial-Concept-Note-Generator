@@ -1,0 +1,7 @@
+Page 1299
+================================================================================
+
+numForecastSteps = 60;
+simFirstComponent = simulate( firstComponentModel, numForecastSteps, "Y0", firstComponent );
+simSecondComponent = simulate( secondComponentModel, numForecastSteps, "Y0", secondComponent );
+simComponents = [simFirstComponent, simSecondComponent];

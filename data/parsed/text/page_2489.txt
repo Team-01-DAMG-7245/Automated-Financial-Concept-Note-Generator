@@ -1,0 +1,56 @@
+movavg
+
+Moving average of a financial time series
+
+Syntax
+
+ma = movavg(Data,type,windowSize)
+ma = movavg( ___ ,initialPoints)
+
+ma = movavg(Data,type,weights)
+ma = movavg( ___ ,initialPoints)
+
+Description
+
+ma = movavg(Data,type,windowSize) computes the moving average (MA) of a financial time
+series.
+
+ma = movavg( ___ ,initialPoints) adds an optional argument for initialPoints.
+
+ma = movavg(Data,type,weights) computes the moving average (MA) of a financial time series
+using a 'custom' type and weights.
+
+ma = movavg( ___ ,initialPoints) adds an optional argument for initialPoints.
+
+Examples
+
+Calculate the Moving Average for a Data Series
+
+Load the file SimulatedStock.mat and compute the moving average using simulated closing price
+data.
+
+load SimulatedStock.mat
+type = 'linear';
+windowSize = 14;
+ma = movavg(TMW_CLOSE,type,windowSize)
+
+ma = 1000×1
+
+100.2500
+  100.3433
+  100.8700
+  100.4916
+   99.9937
+   99.3603
+   98.8769
+   98.6364
+   98.4348
+   97.8491
+   97.1689
+   96.5502
+   96.2904
+   95.8138
+
+movavg
+
+15-1183

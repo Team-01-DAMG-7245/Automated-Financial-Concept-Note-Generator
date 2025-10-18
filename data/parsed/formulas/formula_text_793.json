@@ -1,0 +1,12 @@
+{
+  "page": 455,
+  "original_text": "% Define the mean-variance portfolio.\np = Portfolio(AssetMean=mu,AssetCovar=Sigma);\np = setDefaultConstraints(p);",
+  "ocr_text": "Definethemean-varianceportfolio.\np=Portfolio(AssetMean=mu,AssetCovar=Sigma);\np=setDefaultConstraints(p);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 558.07,
+    "x1": 333.81,
+    "y1": 590.13
+  },
+  "confidence": "high"
+}

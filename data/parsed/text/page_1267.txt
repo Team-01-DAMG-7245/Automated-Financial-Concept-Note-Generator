@@ -1,0 +1,30 @@
+Ultimately, a copula will be used to generate random numbers to drive the simulations. The CDF and
+inverse CDF transforms will capture the volatility of simulated returns as part of the diffusion term of
+the SDE. The mean return of each index is governed by the riskless rate and incorporated in the drift
+term of the SDE. The following code segment centers the returns (that is, extracts the mean) of each
+index.
+
+Because the following analysis uses extreme value theory to characterize the distribution of each
+equity index return series, it is helpful to examine details for a particular country:
+
+returns = tick2ret(prices,'Method','continuous');  % Convert prices to returns
+returns = returns - mean(returns);  % Center the returns
+index   = 3;                        % Germany stored in column 3
+
+plot(dates(2:end), returns(:,index))
+xlabel('Date')
+ylabel('Return')
+title(['Daily Logarithmic Centered Returns: ' series{index}])
+
+Note that this code segment can be changed to examine details for any country.
+
+Using these centered returns, estimate the empirical, or non-parametric, CDF of each index with a
+Gaussian kernel. This smoothes the CDF estimates, eliminating the staircase pattern of unsmoothed
+sample CDFs. Although non-parametric kernel CDF estimates are well-suited for the interior of the
+distribution, where most of the data is found, they tend to perform poorly when applied to the upper
+and lower tails. To better estimate the tails of the distribution, apply EVT to the returns that fall in
+each tail.
+
+Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation
+
+14-75

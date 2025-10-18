@@ -1,0 +1,12 @@
+{
+  "page": 2040,
+  "original_text": "Example: volatility = chaikvolat(TMW,'NumPeriods',10,'WindowSize',10)",
+  "ocr_text": "Example:volatility=chaikvolat(TMW,NumPeriods,10,WindowSize,10)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 334.86,
+    "x1": 496.58,
+    "y1": 346.49
+  },
+  "confidence": "high"
+}

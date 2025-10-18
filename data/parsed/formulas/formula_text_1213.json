@@ -1,0 +1,12 @@
+{
+  "page": 613,
+  "original_text": "% Enforce ending inventory constraint\nif LoggedSignals.IntervalIdx >= LoggedSignals.NumIntervalsPerHorizon\n    if EnvConstants.BuyTrade\n        TradingShares = max(EnvConstants.TotalTradingShares - ...\n            LoggedSignals.CurrentInventoryShares, 0);\n    else\n        TradingShares = LoggedSignals.CurrentInventoryShares;\n    end\nelse\n    if EnvConstants.BuyTrade\n        if PriceDivergence > 0\n            AgentRemainingSharestoTrade = max(EnvConstants.TotalTradingShares - ...\n                LoggedSignals.CurrentInventoryShares,0);\n            TradingShares = round(AgentRemainingSharestoTrade./RemainingIntervals./2);\n            TradingShares = min(TradingShares,Action);\n        else\n            TradingShares = min(EnvConstants.TotalTradingShares - ...\n                LoggedSignals.CurrentInventoryShares, Action);\n        end\n    else\n        if PriceDivergence > 0\n            AgentRemainingSharestoTrade = max(LoggedSignals.CurrentInventoryShares, 0);\n            TradingShares = round(AgentRemainingSharestoTrade./RemainingIntervals./2);\n            TradingShares = min(TradingShares,Action);\n        else\n            TradingShares = min(LoggedSignals.CurrentInventoryShares, Action);\n        end\n    end\nend",
+  "ocr_text": "Enforceendinginventoryconstraint\nifLoggedSignals.IntervalIdx-=LoggedSignals.NumIntervalsPerHorizon\nifEnvConstants.BuyTrade\nTradingShares=max(EnvConstants.TotalTradingShares-...\nLoggedSignals.CurrentInventoryShares,0);\nelse\nTradingShares=LoggedSignals.CurrentInventoryShares;\nend\nelse\nifEnvConstants.BuyTrade\nifPriceDivergence=0\nAgentRemainingSharestoTrade=max(EnvConstants.TotalTradingShares-...\nLoggedSignals.CurrentInventoryShares,0);\nTradingShares=round(AgentRemainingSharestoTrade./RemainingIntervals./2);\nTradingShares=min(TradingShares,Action);\nelse\nTradingShares=min(EnvConstants.TotalTradingShares-...\nLoggedSignals.CurrentInventoryShares,Action);\nend\nelse\nifPriceDivergence=0\nAgentRemainingSharestoTrade=max(LoggedSignals.CurrentInventoryShares,0);\nTradingShares=round(AgentRemainingSharestoTrade./RemainingIntervals./2);\nTradingShares=min(TradingShares,Action);\nelse\nTradingShares=min(LoggedSignals.CurrentInventoryShares,Action);\nend\nend\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 265.83,
+    "x1": 561.37,
+    "y1": 578.69
+  },
+  "confidence": "high"
+}

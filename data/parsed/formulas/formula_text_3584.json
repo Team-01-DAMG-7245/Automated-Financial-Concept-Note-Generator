@@ -1,0 +1,12 @@
+{
+  "page": 2022,
+  "original_text": "Settle = datetime\n   01-Jul-2003",
+  "ocr_text": "Settle=datetime\n01-Jul-2003",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 453.66,
+    "x1": 182.11,
+    "y1": 474.93
+  },
+  "confidence": "high"
+}

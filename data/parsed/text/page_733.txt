@@ -1,0 +1,74 @@
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+
+p = PortfolioCVaR('initport', pwgt0);
+p = simulateNormalScenariosByMoments(p, m, C, 20000);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.9);
+
+pwgt = estimateFrontier(p, 5);
+
+pret = estimatePortReturn(p, [pwgt0, pwgt]);
+prsk = estimatePortRisk(p, [pwgt0, pwgt]);
+pstd = estimatePortStd(p, [pwgt0, pwgt]);
+pvar = estimatePortVaR(p, [pwgt0, pwgt]);
+
+[pret, prsk, pstd, pvar]
+
+ans = 6×4
+
+0.0206    0.0454    0.0377    0.0276
+    0.0949    0.0215    0.0658   -0.0096
+    0.1086    0.0219    0.0738   -0.0130
+    0.1223    0.0229    0.0821   -0.0161
+    0.1360    0.0246    0.0907   -0.0189
+    0.1497    0.0272    0.0999   -0.0205
+
+See Also
+PortfolioCVaR | estimatePortReturn | plotFrontier | estimatePortStd |
+estimatePortVaR
+
+Related Examples
+
+•
+“Plotting the Efficient Frontier for a PortfolioCVaR Object” on page 5-109
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 5-115
+
+•
+“Hedging Using CVaR Portfolio Optimization” on page 5-125
+
+•
+“Compute Maximum Reward-to-Risk Ratio for CVaR Portfolio” on page 5-137
+
+More About
+
+•
+“PortfolioCVaR Object” on page 5-17
+
+•
+“Portfolio Optimization Theory” on page 5-3
+
+•
+“PortfolioCVaR Object Workflow” on page 5-16
+
+External Websites
+
+•
+Getting Started with Portfolio Optimization (4 min 13 sec)
+
+Estimate Efficient Frontiers for PortfolioCVaR Object
+
+5-107

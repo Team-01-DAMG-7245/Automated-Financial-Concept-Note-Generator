@@ -1,0 +1,12 @@
+{
+  "page": 1026,
+  "original_text": "fprintf('Mark-to-market of hedged position: $ %8.2f\\n',sum(Price2)+sum(AccPrem2));",
+  "ocr_text": "fprintf(Mark-to-marketofhedgedposition:8.2fn,sum(Price2)+sum(AccPrem2));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 502.63,
+    "x1": 534.3,
+    "y1": 513.09
+  },
+  "confidence": "high"
+}

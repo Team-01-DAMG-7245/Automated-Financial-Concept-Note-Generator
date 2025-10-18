@@ -1,0 +1,5 @@
+Page 441
+================================================================================
+
+where σi represents the standard deviation of asset i. Using this measure as a penalty function
+maximizes the diversification ratio [1 on page 4-281].

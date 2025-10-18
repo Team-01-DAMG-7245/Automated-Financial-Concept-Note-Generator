@@ -1,0 +1,56 @@
+busdays
+
+Business days for given period
+
+Syntax
+
+bdates = busdays(sdate,edate)
+bdates = busdays( ___ ,bdmode,Holiday)
+
+Description
+
+bdates = busdays(sdate,edate) generates a vector of business days between the last business
+date of the period that contains the start date (sdate), and the last business date of period that
+contains the end date (edate).
+
+bdates = busdays( ___ ,bdmode,Holiday) generates a vector of business days between the last
+business date of the period that contains the start date (sdate), and the last business date of period
+that contains the end date (edate) using optional input arguments. If Holiday is not supplied, the
+dates are generated based on United States holidays. If you do not supply bdmode, bdates generates
+a daily vector.
+
+Examples
+
+Determine Business Days for a Given Period
+
+Determine the business days for a weekly period.
+
+bdates = datestr(busdays('1/2/01','1/9/01','weekly'))
+
+bdates = 2×11 char array
+    '05-Jan-2001'
+    '12-Jan-2001'
+
+The end of the week is considered to be a Friday. Between 1/2/01 (Monday) and 1/9/01 (Tuesday),
+there is only one end-of-week day, 1/5/01 (Friday). Because 1/9/01 is part of the following week, the
+following Friday (1/12/01) is also reported.
+
+Determine the business days for a weekly period using a datetime input for sdate.
+
+bdates = busdays(datetime('2-Jan-2001','Locale','en_US'),'9-Jan-2001','weekly')
+
+bdates = 2×1 datetime
+   05-Jan-2001
+   12-Jan-2001
+
+Determine the business days for a monthly period.
+
+vec = datestr(busdays('1/8/16','3/1/16','monthly'))
+
+vec = 3×11 char array
+    '29-Jan-2016'
+
+15
+Functions
+
+15-604

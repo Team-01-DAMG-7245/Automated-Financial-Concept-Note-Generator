@@ -1,0 +1,10 @@
+Page 203
+================================================================================
+
+If the NumAssets property is already set and you pass in too many or too few identifiers, the
+Portfolio object, and the setAssetList function truncate or pad the list with numbered default
+asset names that use the name specified in the hidden public property defaultforAssetList. If
+the list is truncated or padded, a warning message indicates the discrepancy. For example, assume
+that you have a Portfolio object with five ETFs and you only know the first three CUSIPs
+'921937835', '922908769', and '922042775'. Use this syntax to create an asset list that pads
+the remaining asset identifiers with numbered 'UnknownCUSIP' placeholders:

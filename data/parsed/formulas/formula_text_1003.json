@@ -1,0 +1,12 @@
+{
+  "page": 527,
+  "original_text": "RC_extra = portfolioRiskContribution(w_extra,Sigma);\n% Table with weights and risk contributions\nT_extra = table(w_extra,RC_extra,budget, ...\n    VariableNames={'RB Portfolio','RB Contribution','Budget'})",
+  "ocr_text": "RC_extra=portfolioRiskContribution(w_extra,Sigma);\n\nTablewithweightsandriskcontributions\n\nT_extra=table(w_extra,RC_extra,budget,...\nVariableNames={RBPortfolio,RBContribution,Budget})",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 425.94,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

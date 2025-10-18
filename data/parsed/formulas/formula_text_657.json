@@ -1,0 +1,12 @@
+{
+  "page": 415,
+  "original_text": "Q = cov(table2array(assetReturns));\nSIGMAx = diag(diag(Q));",
+  "ocr_text": "Q=cov(table2array(assetReturns));\nSIGMAx_=diag(diag(Q));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 546.62,
+    "x1": 279.63,
+    "y1": 567.89
+  },
+  "confidence": "high"
+}

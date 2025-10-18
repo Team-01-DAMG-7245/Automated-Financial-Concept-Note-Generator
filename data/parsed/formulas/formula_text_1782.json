@@ -1,0 +1,12 @@
+{
+  "page": 903,
+  "original_text": "Returns = tick2ret(TestData);\nAssets\nMean = mean(Returns)\nSigma = std(Returns, 1)",
+  "ocr_text": "Returns=tick2ret(TestData);\nAssets\n\nMean=mean(Returns)\nSigma=std(Returns,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 613.92,
+    "x1": 247.12,
+    "y1": 656.78
+  },
+  "confidence": "high"
+}

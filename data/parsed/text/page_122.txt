@@ -1,0 +1,77 @@
+Backtest Deep Learning Model for Algorithmic Trading of Limit
+Order Book Data
+
+This example applies artificial intelligence (AI) techniques and backtesting to find trading
+opportunities from imbalances in limit order book (LOB) data of a security. Specifically, the example
+applies a backtest trading strategy to measure the performance of a long short-term memory (LSTM)
+neural network. The goal of the model is to predict future forward price movements from current and
+past on ask and bid volume imbalances and forward price movements, which are extracted from the
+raw LOB data. Given a forward price movement prediction, a trading decision can be made. This
+example uses the following trading strategy and assumptions:
+
+•
+Trading strategy: "All-in/all-out"; all cash is invested when the model predicts positive price
+movements and cash out when the model predicts no or negative cash movements.
+
+•
+Transactions are free.
+
+•
+Current trading actions do not affect future price movements.
+
+•
+The risk-free rate is 0%.
+
+This example builds on the developments in the “Machine Learning for Statistical Arbitrage:
+Introduction” on page 2-48 example series and uses this procedure:
+
+1
+Load and preprocess the raw limit order book data.
+
+2
+Engineer features by transforming the raw LOB data to obtain the discretized imbalance index
+series ρt and forward price movement series ΔSt. The response is the discretized future price
+movement ΔSt + ΔtS.
+
+3
+Prepare the data for the classification LSTM neural network.
+
+4
+Partition the data into training, validation, and backtest sets.
+
+5
+Configure the LSTM neural network.
+
+6
+Train and validate the LSTM neural network.
+
+7
+Asses the quality of the trained model.
+
+8
+Backtest the trained LSTM neural network. Compare the performance of the model with a model
+that has knowledge of all future price movements (maximum profit model).
+
+Load and Preprocess Raw LOB Data
+
+This example uses the level 3 limit order book data from one trading day of NASDAQ exchange data
+[3] on one security (INTC) in a sample provided by LOBSTER [2] and included with the Financial
+Toolbox™ documentation in the zip file LOBSTER_SampleFile_INTC_2012-06-21_5.zip.
+
+Extract the contents of the zip file into your current folder.
+
+unzip("LOBSTER_SampleFile_INTC_2012-06-21_5.zip");
+MSGFileName = "INTC_2012-06-21_34200000_57600000_message_5.csv";   
+LOBFileName = "INTC_2012-06-21_34200000_57600000_orderbook_5.csv";
+
+The “Machine Learning for Statistical Arbitrage I: Data Management and Visualization” on page 2-50
+example describes LOB data. To summarize:
+
+•
+LOB data is composed of two CSV files: the order book LOBFileName and a message file
+MSGFileName.
+
+2
+Performing Common Financial Tasks
+
+2-78

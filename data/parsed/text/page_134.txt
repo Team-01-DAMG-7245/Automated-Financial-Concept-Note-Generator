@@ -1,0 +1,41 @@
+In general, each curve represents the ability of the model to distinguish observations that are in the
+corresponding class from the other two classes at various classification decision thresholds. For
+example, the blue curve corresponds to the ability of the classifiers to correctly distinguish losses
+from constants or gains. The diagonal dashed line is a hypothetical classifier that assigns
+observations into classes at random, which is a baseline for comparison. The curve of a good
+classifier increases very quickly and then levels off, making the area under the curve (AUC) close to
+1. In other words, a good classifier has a high true positive rate for all classification decision
+thresholds, regardless of false positive rate levels produced. Note that the ROC curve does not
+consider false negative rates.
+
+In this case, the risky LSTM is better at correctly distinguishing each class from the other two than
+the conservative LSTM; the AUCs of the risky LSTM are larger than the corresponding AUCs of the
+conservative LSTM.
+
+Backtest Risky LSTM Model
+
+Backtesting a predictive financial model dispatches it, and a trading strategy based on its predictions,
+on historical data. This action determines how well the model performs, with respect to the strategy.
+A backtest requires:
+
+•
+Historical data not used to train or validate the model (see Partition Data on page 2-83)
+
+•
+The target predictive model (The risky LSTM neural network RiskyLSTMMdl)
+
+•
+The model's predictions (signals) on the historical data
+
+•
+At least one trading strategy
+
+Classify the forward price movements in the backtest data XBT using the risky LSTM neural network.
+
+[predScoresRLSTMBT] = minibatchpredict(RiskyLSTMMdl,XBT,InputDataFormats="CTB");
+predYRLSTMBT = scores2label(predScoresRLSTMBT,classes);
+
+2
+Performing Common Financial Tasks
+
+2-90

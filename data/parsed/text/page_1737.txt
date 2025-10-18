@@ -1,0 +1,53 @@
+acrudisc
+
+Accrued interest of discount security paying at maturity
+
+Syntax
+
+AccruInterest = acrudisc(Settle,Maturity,Face,Discount)
+AccruInterest = acrudisc( ___ ,Period,Basis)
+
+Description
+
+AccruInterest = acrudisc(Settle,Maturity,Face,Discount) returns the accrued interest
+of a discount security paid at maturity.
+
+AccruInterest = acrudisc( ___ ,Period,Basis) adds optional arguments for Period and
+Basis.
+
+Examples
+
+Find Accrued Interest of a Discount Security Paid at Maturity
+
+This example shows how to find the accrued interest of a discount security paid at maturity.
+
+AccruInterest = acrudisc(datetime(1992,5,1), datetime(1992,7,15), 100,  0.1,  2,  0)
+
+AccruInterest = 
+2.0604
+
+Input Arguments
+
+Settle — Settlement date of security
+datetime array | string array | date character vector
+
+Settlement date of the security, specified as a scalar or a NINST-by-1 vector using a datetime array,
+string array, or date character vectors. The Settle date must be before the Maturity date.
+
+To support existing code, acrudisc also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Maturity — Maturity date of security
+datetime array | string array | date character vector
+
+Maturity date of the security, specified as a scalar or a NINST-by-1 vector using a datetime array,
+string array, or date character vectors.
+
+To support existing code, acrudisc also accepts serial date numbers as inputs, but they are not
+recommended.
+
+acrudisc
+
+15-431

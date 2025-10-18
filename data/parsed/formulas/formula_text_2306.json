@@ -1,0 +1,12 @@
+{
+  "page": 1187,
+  "original_text": "calendarButtonHandle = uicontrol(f, 'Style', 'PushButton', ...  \n'String', 'Select a single date', ...  \n'Position', [275 200 200 20], ...  \n'callback', @pushbutton_cb);\n5\nTo start up UICalendar, create a nested function (callback function) for the push button.",
+  "ocr_text": "calendarButtonHandle=uicontrol(f,Style,PushButton,...\n\nString,Selectasingledate,...\n\nPosition,[27520020020],...\n\ncallback,Qpushbutton_cb);\n5TostartupUICalendar,createanestedfunction(callbackfunction)forthepushbutton.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 253.23,
+    "x1": 512.91,
+    "y1": 307.99
+  },
+  "confidence": "high"
+}

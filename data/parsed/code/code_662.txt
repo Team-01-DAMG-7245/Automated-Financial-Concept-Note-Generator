@@ -1,0 +1,17 @@
+Page 611
+================================================================================
+
+function [Observation,Reward,IsDone,LoggedSignals] = ...
+    RL_OptimalExecution_LOB_StepFcn(Action,LoggedSignals,EnvConstants)
+% RL_OptimalExecution_LOB_StepFcn function is Step Function for RL Environment
+%   Given current Action and LoggedSignals, update Observation, Reward, and
+%   LoggedSignals, and indicate whether the episode is complete.
+%
+% Inputs:
+%
+% Action: Number of shares to be traded at the current step (scalar)
+%
+% LoggedSignals: Structure with following fields
+% - IntervalIdx: Current time interval index
+% - HorizonIdx: Current time horizon index
+% - CurrentInventoryShares: Current number of shares in inventory

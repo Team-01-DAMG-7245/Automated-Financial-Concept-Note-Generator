@@ -1,0 +1,4 @@
+Page 1403
+================================================================================
+
+B represents the parameter B, specified as an array or deterministic function of time.

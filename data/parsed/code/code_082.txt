@@ -1,0 +1,6 @@
+Page 89
+================================================================================
+
+Life table models generally specify either the hazard function or the survival function. However, life
+tables are discrete and work with discrete versions of the hazard and survival functions. Three series
+are used for life tables and the notation is the convention. The discrete hazard function is denoted as

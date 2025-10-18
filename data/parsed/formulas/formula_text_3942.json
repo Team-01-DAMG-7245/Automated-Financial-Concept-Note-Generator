@@ -1,0 +1,12 @@
+{
+  "page": 2239,
+  "original_text": "X = portsim(AssetMean', AssetCovar, 120);",
+  "ocr_text": "X=portsim(AssetMean,AssetCovar,120);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 236.0,
+    "x1": 350.06,
+    "y1": 246.47
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 773,
+  "original_text": "load(\"Data_DieboldLi.mat\")\nyieldsMaturity = maturities';\nyields = DataTimeTable{:,1:17};",
+  "ocr_text": "load(Data_DieboldLi.mat)\nyieldsMaturity=maturities;\nyields=DataTimeTable{:,1:17};",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 359.29,
+    "x1": 257.96,
+    "y1": 391.36
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,25 @@
+Data Types: double
+
+Output Arguments
+
+OutNumber — Output number which is InNumber rounded downward to closest integer
+numeric
+
+Output number which is InNumber rounded downward to closest integer, returned as a numeric
+value.
+
+Fractions — Fractional part in units of thirty-second
+numeric
+
+Fractional part in units of thirty-second, returned as a numeric value. The Fractions output
+conforms to accuracy as prescribed by the input Accuracy.
+
+Version History
+Introduced before R2006a
+
+See Also
+thirtytwo2dec
+
+dec2thirtytwo
+
+15-841

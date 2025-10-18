@@ -1,0 +1,12 @@
+{
+  "page": 1201,
+  "original_text": "The drift and diffusion rates, F and G, respectively, are general functions of a real-valued scalar\nsample time t and state vector Xt. Also, static (non-time-variable) coefficients are simply a special\ncase of the more general dynamic (time-variable) situation, just as a function can be a trivial\nconstant; for example, f(t,Xt) = 4. The SDE in “Equation 14-1” is useful in implementing derived\nclasses that impose additional structure on the drift and diffusion-rate functions.",
+  "ocr_text": "Thedriftanddiffusionrates,FandG,respectively,aregeneralfunctionsofareal-valuedscalar\nsampletimetandstatevectorX;.Also,static(non-time-variable)coefficientsaresimplyaspecial\ncaseofthemoregeneraldynamic(time-variable)situation,justasafunctioncanbeatrivial\nconstant;forexample,f(t.X,)=4.TheSDEinEquation14-1isusefulinimplementingderived\nclassesthatimposeadditionalstructureonthedriftanddiffusion-ratefunctions.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 113.46,
+    "x1": 535.28,
+    "y1": 173.09
+  },
+  "confidence": "high"
+}

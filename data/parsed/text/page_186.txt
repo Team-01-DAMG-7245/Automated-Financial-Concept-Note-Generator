@@ -1,0 +1,73 @@
+Portfolio Object Workflow
+
+The Portfolio object workflow for creating and modeling a mean-variance portfolio is:
+
+1
+Create a Portfolio.
+
+Create a Portfolio object for mean-variance portfolio optimization. For more information, see
+“Creating the Portfolio Object” on page 4-25.
+
+2
+Estimate the mean and covariance for returns.
+
+Evaluate the mean and covariance for portfolio asset returns, including assets with missing data
+and financial time series data. For more information, see “Asset Returns and Moments of Asset
+Returns Using Portfolio Object” on page 4-42.
+
+3
+Specify the Portfolio Constraints.
+
+Define the constraints for portfolio assets such as linear equality and inequality, bound, budget,
+conditional budget, group, group ratio, turnover, tracking error, 'Conditional' BoundType,
+and MinNumAssets, MaxNumAssets constraints. For more information, see “Working with
+Portfolio Constraints Using Defaults” on page 4-58 and “Working with 'Conditional' BoundType,
+MinNumAssets, and MaxNumAssets Constraints Using Portfolio Objects” on page 4-81.
+
+4
+Validate the Portfolio.
+
+Identify errors for the portfolio specification. For more information, see “Validate the Portfolio
+Problem for Portfolio Object” on page 4-94.
+
+5
+Estimate the efficient portfolios and frontiers.
+
+Analyze the efficient portfolios and efficient frontiers for a portfolio. For more information, see
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98 and
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122.
+
+Alternatively, you can estimate an optimal portfolio with a user-defined objective function for a
+Portfolio object. For details on using estimateCustomObjectivePortfolio to specify a
+user-defined objective function, see “Solver Guidelines for Custom Objective Problems Using
+Portfolio Objects” on page 4-119.
+
+6
+Postprocess the results.
+
+Use the efficient portfolios and efficient frontiers results to set up trades. For more information,
+see “Postprocessing Results to Set Up Tradable Portfolios” on page 4-130.
+
+For an example of this workflow, see “Asset Allocation Case Study” on page 4-180 and “Portfolio
+Optimization Examples Using Financial Toolbox” on page 4-161.
+
+See Also
+
+Related Examples
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-18

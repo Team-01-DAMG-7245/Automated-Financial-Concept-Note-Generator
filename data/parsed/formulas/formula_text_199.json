@@ -1,0 +1,12 @@
+{
+  "page": 127,
+  "original_text": "b = 100;    % Hyperpatameter\nn = n - b + 1;\nXCell = cell(n,1);",
+  "ocr_text": "b=100; Hyperpatameter\nn=n-b+H+41;\nXCell_=cell(n,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.04,
+    "x1": 241.71,
+    "y1": 170.1
+  },
+  "confidence": "high"
+}

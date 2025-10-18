@@ -1,0 +1,12 @@
+{
+  "page": 1131,
+  "original_text": "% Fix the random seed for reproducible results.\nstream = RandStream('mrg32k3a');\nRandStream.setGlobalStream(stream);",
+  "ocr_text": "Fixtherandomseedforreproducibleresults.\nstream=RandStream(mrg32k3a);\nRandStream.setGlobalStream(stream);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 103.83,
+    "x1": 344.65,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

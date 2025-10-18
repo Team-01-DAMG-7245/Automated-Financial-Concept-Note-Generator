@@ -1,0 +1,7 @@
+Page 1108
+================================================================================
+
+Plot the price of the portfolio as a function of settlement date and a range of yields, and as a function
+of the change in yield (dY). This plot illustrates the interest-rate sensitivity of the portfolio as time
+progresses (dT), under a range of interest-rate scenarios. With the following graphics commands, you
+can visualize the three-dimensional surface relative to the current portfolio value (that is, $100,000).

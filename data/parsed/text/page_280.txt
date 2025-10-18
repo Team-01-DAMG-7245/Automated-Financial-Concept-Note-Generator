@@ -1,0 +1,72 @@
+pwgt = 4×1
+
+0.4251
+    0.2917
+    0.0856
+    0.1977
+
+display(pbuy)
+
+pbuy = 4×1
+
+0.1251
+         0
+         0
+    0.0977
+
+display(psell)
+
+psell = 4×1
+
+0
+    0.0083
+    0.1144
+         0
+
+If you do not specify an initial portfolio, the purchase and sale weights assume that you initial
+portfolio is 0.
+
+See Also
+Portfolio | estimateFrontier | estimateFrontierLimits | estimatePortMoments |
+estimateFrontierByReturn | estimatePortReturn | estimateFrontierByRisk |
+estimatePortRisk | estimateFrontierByRisk | estimateMaxSharpeRatio | setSolver
+
+Related Examples
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-112

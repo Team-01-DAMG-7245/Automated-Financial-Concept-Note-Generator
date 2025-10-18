@@ -1,0 +1,12 @@
+{
+  "page": 329,
+  "original_text": "p = setInitPort(p,1/p.NumAssets);\n[ersk,eret] = estimatePortMoments(p,p.InitPort);",
+  "ocr_text": "p=setInitPort(p,1/p.NumAssets);\n[ersk,eret]=estimatePortMoments(p,p.InitPort);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 552.76,
+    "x1": 350.06,
+    "y1": 574.03
+  },
+  "confidence": "high"
+}

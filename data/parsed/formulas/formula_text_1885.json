@@ -1,0 +1,12 @@
+{
+  "page": 955,
+  "original_text": "cpf = CPF(end)-4;\nspr = SPR(end);\nyPredRange = [yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];\nfprintf('CPF drops 4%%    %4.2f%%  %4.2f%%  %4.2f%%\\n',yPredRange);",
+  "ocr_text": "cpf=CPF(end)-4;\n\nspr_=SPR(end);\nyPredRange=[yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];\nfprintf(CPFdrops4 4.2684.2F84.2Fs5n,yPredRange);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 469.26,
+    "y1": 135.89
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1125,
+  "original_text": "T = (1:Time(i))';\n  NewT = T(:,ones(PLen,1));",
+  "ocr_text": "T=(1:Time(i));\nNewT=T(:,ones(PLen,1));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 479.04,
+    "x1": 236.29,
+    "y1": 500.31
+  },
+  "confidence": "high"
+}

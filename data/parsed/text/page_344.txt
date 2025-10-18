@@ -1,0 +1,59 @@
+KO      -14.205          0    14.205
+    MCD        3.91       3.91         0
+    MMM      7.5995     7.5995         0
+    MO       4.0856     4.0856         0
+    MRK       3.747      3.747         0
+    MSFT     4.0769     4.0769         0
+    PFE      -9.096          0     9.096
+    PG       1.6493     1.6493         0
+    SBC     -5.2547          0    5.2547
+    UTX      5.7454     5.7454         0
+    VZ       -2.438          0     2.438
+    WMT     0.84844    0.84844         0
+    XOM      18.529     18.529         0
+
+Confirm Dollar-Neutral Portfolio
+  (Net, Long, Short)
+0.0000 76.7350 76.7350
+
+130/30 Fund Structure
+
+Finally, the turnover constraints are used to set up a 130-30 portfolio structure, which is a structure
+with a net long position but permits leverage with long and short positions up to a maximum amount
+of leverage. In the case of a 130-30 portfolio, the leverage is 30%.
+
+To set up a 130-30 portfolio, start with the "standard" portfolio problem and set the maximum value
+for leverage in the variable Leverage. The bounds for individual asset weights range between -
+Leverage and 1 + Leverage. Since the net position must be long, the budget constraint is 1 and,
+once again, the initial portfolio is 0. Finally, the one-way turnover constraints provide the necessary
+long and short restrictions to prevent "double-counting" of long and short positions. The blotter
+shows the portfolio weights for the 130-30 portfolio that maximizes the Sharpe ratio. The long and
+short positions are obtained from the buy and sell trades relative to the initial portfolio.
+
+Leverage = 0.3;
+
+q = setBounds(p, -Leverage, 1 + Leverage);
+q = setBudget(q, 1, 1);
+q = setOneWayTurnover(q, 1 + Leverage, Leverage);
+
+[qwgt,qbuy,qsell] = estimateFrontier(q,20);
+[qrsk,qret] = estimatePortMoments(q,qwgt);
+
+[qswgt,qslong,qsshort] = estimateMaxSharpeRatio(q);
+[qsrsk,qsret] = estimatePortMoments(q,qswgt);
+
+% Plot the efficient frontier for a 130-30 fund structure with tangency portfolio.
+
+clf;
+portfolioexamples_plot(sprintf('Efficient Frontier with %g-%g Portfolio', ...
+    100*(1 + Leverage),100*Leverage), ...
+    {'line', prsk, pret, {'Standard'}, 'b:'}, ...
+    {'line', qrsk, qret, {'130-30'}, 'b'}, ...
+    {'scatter', qsrsk, qsret, {'Sharpe'}}, ...
+    {'scatter', [mrsk, crsk, ersk], [mret, cret, eret], {'Market', 'Cash', 'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-176

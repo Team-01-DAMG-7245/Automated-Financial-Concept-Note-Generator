@@ -1,0 +1,5 @@
+Page 466
+================================================================================
+
+2. Compute each cluster's weight using the covariance between each cluster's portfolio. Now, the
+riskBudgetingPortfolio function receives a matrix (Γ) that represents the covariance between

@@ -1,0 +1,37 @@
+bollinger
+
+Time series Bollinger band
+
+Syntax
+
+[middle,upper,lower] = bollinger(Data)
+[middle,upper,lower] = bollinger( ___ ,Name,Value)
+
+Description
+
+[middle,upper,lower] = bollinger(Data) calculates the middle, upper, and lower bands that
+make up the Bollinger bands from a series of data. A Bollinger band chart plots actual asset data
+along with three other bands of data: the upper band that is two standard deviations above a user-
+specified moving average; the lower band that is two standard deviations below that moving average;
+and the middle band that is the moving average itself.
+
+[middle,upper,lower] = bollinger( ___ ,Name,Value) adds optional name-value pair
+arguments.
+
+Examples
+
+Calculate the Bollinger Bands for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock.
+
+load SimulatedStock.mat
+[middle,upper,lower]= bollinger(TMW);
+CloseBolling = [middle.Close, upper.Close,... 
+lower.Close];
+plot(middle.Time,CloseBolling)
+title('Bollinger Bands for TMW Closing Prices')
+
+bollinger
+
+15-593

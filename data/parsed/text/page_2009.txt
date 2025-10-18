@@ -1,0 +1,63 @@
+cfamounts can be used to generate CFlowDates.
+
+Data Types: datetime
+
+CFlowAmounts — Matrix of cash flow amounts
+vector
+
+Matrix of cash flow amounts, specified as a NINST-by-(Number of cash flows) matrix of cash
+flow amounts, with empty entries padded with NaNs. The CFlowAmounts matrix must be the same
+size as CFlowDates.
+
+cfamounts can be used to generate CFlowAmounts.
+
+Data Types: double
+
+ax — Valid axis object
+object
+
+(Optional) Valid axis object, specified as an ax object that is created using axes. The plot will be
+created in the axes specified by the optional ax argument instead of in the current axes (gca). The
+optional argument ax can precede any of the input argument combinations.
+
+Data Types: object
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: cfplot(CFlowDates,CFlowAmounts,'Groups',{[2
+3]},'ShowAmnt',1,'DateFormat',6,'DateSpacing',100)
+
+Groups — Group cash flows
+'off' (default) | character vector with value 'off' or 'individual' | cell array of character
+vectors
+
+Group cash flows, specified as the comma-separated pair consisting of 'Groups' and the following
+values:
+
+•
+'off' — Show all instruments in one set of axes, arranged from top to bottom.
+
+•
+'individual' — Generate subplots and plot each instrument in its own axis.
+
+•
+GRP — Cell array of instrument groups, {Group1, Group2,... }. This generates subplots and
+plots each group in each axis. When specifying {Group1, Group2,... }, each Group must be
+mutually exclusive vectors of INSTIndex. Unspecified instruments are not shown in the grouped
+plot.
+
+Data Types: char | cell
+
+Stacked — Stack arrows if cash flows are in same direction on same day
+ignored when 'Groups' is 'off', otherwise 'off' (default) | character vector with values 'off',
+'all', or 'GRPIndex'
+
+cfplot
+
+15-703

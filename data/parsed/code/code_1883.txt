@@ -1,0 +1,8 @@
+Page 1530
+================================================================================
+
+The third equation represents the process describing the evolution of the variance rate of the coupled
+GBM process, where Yt is a Volterra process. In a Volterra process, the increments are not only
+dependent on the current state of the process but also on the entire history of the process. This
+means that the current state of the process is determined by integrating a function over the entire
+past trajectory of the process, as opposed to just the most recent state.

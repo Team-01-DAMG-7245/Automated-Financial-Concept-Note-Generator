@@ -1,0 +1,12 @@
+{
+  "page": 426,
+  "original_text": "macdInitWeights = computeInitialWeights(macdSignal(20,:));\nmacdRebalanceFcn = @(w,p,s) crossoverRebalanceFcn(w,p,s,macdSignalNameEnding);\nmacdStrategy = backtestStrategy('MACD',macdRebalanceFcn,...\n    'TransactionCosts',tradingCosts,...\n    'LookbackWindow',2,...\n    'InitialWeights',macdInitWeights);",
+  "ocr_text": "macdInitWeights=computeInitialWeights(macdSignal(20,:));\nmacdRebalanceFcn=Q(w,p,s)_crossoverRebalanceFcn(w,p,s,macdSignalNameEnding);\nmacdStrategy=backtestStrategy(MACD,macdRebalanceFcn,...\n\nTransactionCosts,tradingCosts,...\n\nLookbackWindow,2,...\n\nInitialWeights,macdInitWeights);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 512.6,
+    "y1": 341.09
+  },
+  "confidence": "high"
+}

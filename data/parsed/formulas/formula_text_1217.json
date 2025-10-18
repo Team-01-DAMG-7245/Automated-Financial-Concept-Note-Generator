@@ -1,0 +1,12 @@
+{
+  "page": 614,
+  "original_text": "% Update Reward\nif LoggedSignals.IntervalIdx==1\n    LoggedSignals.ArrivalPrice = InitialPrice;\nend",
+  "ocr_text": "UpdateReward\nifLoggedSignals.IntervalIdx==1\n\nLoggedSignals.ArrivalPrice=InitialPrice;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 222.63,
+    "x1": 339.23,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

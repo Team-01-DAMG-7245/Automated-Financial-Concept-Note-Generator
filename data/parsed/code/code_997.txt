@@ -1,0 +1,11 @@
+Page 1012
+================================================================================
+
+K  = length(sc.PredictorVars);
+lb = [-Inf;zeros(K,1)];
+ub = [Inf;ones(K,1)];
+AIneq = [0 -1 0 0 0 1 0 0 0 0;0 -1 0 0 0 -1 0 0 0 0];
+bIneq = [0.05;0.05];
+Options = optimoptions('fmincon','SpecifyObjectiveGradient',true,'Display','off');
+[sc3,mdl] = fitConstrainedModel(sc,'AInequality',AIneq,'bInequality',bIneq,...
+    'LowerBound',lb,'UpperBound',ub,'Options',Options);

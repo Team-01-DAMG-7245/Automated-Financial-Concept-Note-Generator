@@ -1,0 +1,22 @@
+Note If t = 1, then Y = exp(X).
+
+The arith2geom function has no restriction on the input mean ma but requires the input covariance
+Ca to be a symmetric positive-semidefinite matrix.
+
+The functions arith2geom and geom2arith are complementary so that, given m, C, and t, the
+sequence
+
+[mg,Cg] = arith2geom(m,C,t);       
+[ma,Ca] = geom2arith(mg,Cg,1/t);
+
+yields ma = m and Ca = C.
+
+Version History
+Introduced before R2006a
+
+See Also
+geom2arith | nearcorr
+
+arith2geom
+
+15-471

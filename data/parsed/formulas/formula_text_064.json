@@ -1,0 +1,12 @@
+{
+  "page": 68,
+  "original_text": "krd = bndkrdur([ZeroDates ZeroRates],CouponRate,Settle,Maturity,'keyrates',[2 5 10 20])",
+  "ocr_text": "krd=bndkrdur([ZeroDatesZeroRates],CouponRate,Settle,Maturity,keyrates,[251020])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 201.43,
+    "x1": 561.4,
+    "y1": 211.89
+  },
+  "confidence": "high"
+}

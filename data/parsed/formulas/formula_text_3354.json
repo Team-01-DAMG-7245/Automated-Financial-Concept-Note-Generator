@@ -1,0 +1,12 @@
+{
+  "page": 1821,
+  "original_text": "Payments = Payments(2:end)",
+  "ocr_text": "Payments=Payments(2:end)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 176.53,
+    "x1": 230.87,
+    "y1": 186.99
+  },
+  "confidence": "high"
+}

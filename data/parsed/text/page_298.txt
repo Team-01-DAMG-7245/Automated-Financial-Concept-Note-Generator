@@ -1,0 +1,60 @@
+Postprocessing Results to Set Up Tradable Portfolios
+
+This example shows how to use your results for efficient portfolios or estimates for expected portfolio
+risks and returns to set up trades to move toward an efficient portfolio. For information on the
+workflow when using Portfolio objects, see “Portfolio Object Workflow” on page 4-18.
+
+Suppose that you set up a portfolio optimization problem and obtained portfolios on the efficient
+frontier. Use the dataset object to form a blotter that lists your portfolios with the names for each
+asset. For example, suppose that you want to obtain five portfolios along the efficient frontier. You can
+set up a blotter with weights multiplied by 100 to view the allocations for each portfolio:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+ 
+ p = Portfolio('InitPort', pwgt0);
+ p = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');
+ p = setAssetMoments(p, m, C);
+ p = setDefaultConstraints(p);
+ pwgt = estimateFrontier(p, 5);
+ 
+ pnames = cell(1,5);
+   for i = 1:5
+       pnames{i} = sprintf('Port%d',i);
+   end
+ 
+ Blotter = dataset([{100*pwgt},pnames],'obsnames',p.AssetList);
+ display(Blotter)
+
+Blotter = 
+                          Port1     Port2     Port3     Port4     Port5
+    Bonds                 88.906    51.216    13.525         0      0  
+    Large-Cap Equities    3.6875    24.387    45.086    27.479      0  
+    Small-Cap Equities    4.0425    7.7088    11.375    13.759      0  
+    Emerging Equities      3.364    16.689    30.014    58.762    100
+
+This result indicates that you would invest primarily in bonds at the minimum-risk/minimum-return
+end of the efficient frontier (Port1), and that you would invest completely in emerging equity at the
+maximum-risk/maximum-return end of the efficient frontier (Port5). You can also select a particular
+efficient portfolio, for example, suppose that you want a portfolio with 15% risk and you add purchase
+and sale weights outputs obtained from the "estimateFrontier" functions to set up a trade blotter:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+ 
+p = Portfolio('InitPort', pwgt0);
+p = setAssetList(p, 'Bonds','Large-Cap Equities','Small-Cap Equities','Emerging Equities');
+p = setAssetMoments(p, m, C);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-130

@@ -1,0 +1,12 @@
+{
+  "page": 1032,
+  "original_text": "data = {'ABC','17-Feb-2015','AA';\n    'ABC','6-Jul-2017','A';\n    'LMN','12-Aug-2014','B';\n    'LMN','9-Nov-2015','CCC';\n    'LMN','7-Sep-2016','D';\n    'XYZ','14-May-2013','BB';\n    'XYZ','21-Jun-2016','BBB'};\ndata = cell2table(data,'VariableNames',{'ID','Date','Rating'});\ndisp(data)",
+  "ocr_text": "data={ABC,17-Feb-2015,AA;\n\nABC:,6-Jul-2017,A;\n\nLMN,12-Aug-2014,B;\n\nLMN,9-Nov-2015,CCC;\n\nLMN,7-Sep-2016,D;\n\n*XYZ,14-May-2013,BB;\n\nXYZ,21-Jun-2016,BBB};\ndata=cell2table(data,VariableNames,{ID,Date,Rating});\ndisp(data)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 234.36,
+    "x1": 431.36,
+    "y1": 331.23
+  },
+  "confidence": "high"
+}

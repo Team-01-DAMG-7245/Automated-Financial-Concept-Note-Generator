@@ -1,0 +1,12 @@
+{
+  "page": 124,
+  "original_text": "DT = tall(CombinedDS);\nDT.Time = seconds(DT.Time);\nDTT = table2timetable(DT);",
+  "ocr_text": "DT=tall(CombinedDS);\nDT.Time=seconds(DT.Time);\nDTT=table2timetable(DT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 236.29,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,10 @@
+Page 1146
+================================================================================
+
+Position_prev = InitPos;
+Position_next = policy(simPaths(1,:)/Strike,T*ones(1,nTrials),InitPos*ones(1,nTrials));
+for timeidx=2:nSteps+1
+    rew(timeidx-1,:) = (simPaths(timeidx,:) - simPaths(timeidx-1,:)).*Position_prev - ...
+        abs(Position_next - Position_prev).*simPaths(timeidx,:)*kappa - ...
+        blsprice(simPaths(timeidx,:),Strike,r,max(0,T - simTimes(timeidx)),ExpVol) + ...
+        blsprice(simPaths(timeidx-1,:),Strike,r,T - simTimes(timeidx-1),ExpVol);

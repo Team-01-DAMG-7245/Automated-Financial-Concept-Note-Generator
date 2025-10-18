@@ -1,0 +1,12 @@
+{
+  "page": 912,
+  "original_text": "Sigma = std(Returns, 1)",
+  "ocr_text": "Sigma=std(Returns,1)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 380.73,
+    "x1": 214.62,
+    "y1": 391.19
+  },
+  "confidence": "high"
+}

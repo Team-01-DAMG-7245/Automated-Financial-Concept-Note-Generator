@@ -1,0 +1,33 @@
+ylabel("Implementation Shortfall")
+title("Implementation Shortfall  (Agent, Training, Sell)")
+xlim([0 300])
+ylim([-200 200])
+
+subplot(3,1,2)
+bar(1:NumTrainingSteps, SimExecutedShares_Train_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTrainingSteps), " steps total.)"))
+ylabel("Executed Shares")
+title("Shares Traded at Each Step (Agent, Training, Sell)")
+xlim([0 300])
+
+subplot(3,1,3)
+bar(1:NumTrainingSteps, SimInventory_Train_Sell)
+xlabel(strcat("Step number (", num2str(TradingIntervalSec), ...
+    " sec intervals, ", num2str(NumTrainingSteps), " steps total.)"))
+ylabel("Inventory Shares")
+title("Inventory Shares (Agent, Training, Sell)")
+xlim([0 300])
+
+Unlike the previous TWAP baseline plot, where the executed shares in the middle panel have a flat
+profile, here you can see that the agent actively changes the number of executed shares at each step.
+Also, the inventory shares in the bottom panel decline in a non-linear manner.
+
+To directly compare the results from the agent with the TWAP baseline, you can plot both results on
+the same chart. Generate plots to compare implementation shortfall, executed shares, and inventory
+shares between the TWAP baseline and the agent for each step using the training data.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-424

@@ -1,0 +1,12 @@
+{
+  "page": 110,
+  "original_text": "PCond = zeros(size(P));\nphiNums = 1:numStates;\nmodNums = mod(phiNums,numBins);\nfor i = phiNums\n    for j = phiNums\n        idx = (modNums == modNums(j));\n        PCond(i,j) = sum(P(i,idx));        \n    end    \nend",
+  "ocr_text": "PCond=zeros(size(P));\nphiNums=1:numStates;\nmodNums=mod(phiNums,numBins);\nfori=phiNums\nforj=phiNums\nidx=(modNums==modNums(j));\nPCond(i,j)=sum(P(i,idx));\nend\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 155.52,
+    "x1": 322.98,
+    "y1": 252.39
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+Page 212
+================================================================================
+
+Both the Portfolio object and the setAssetMoments function perform scalar expansion on
+arguments for the moments of asset returns. When using the Portfolio object, the number of
+assets must be already specified in the variable NumAssets. If NumAssets has not already been set,
+a scalar argument is interpreted as a scalar with NumAssets set to 1. setAssetMoments provides
+an additional optional argument to specify the number of assets so that scalar expansion works with
+the correct number of assets. In addition, if either a scalar or vector is input for the covariance of
+asset returns, a diagonal matrix is formed such that a scalar expands along the diagonal and a vector
+becomes the diagonal. This example demonstrates scalar expansion for four jointly independent
+assets with a common mean 0.1 and common variance 0.03:

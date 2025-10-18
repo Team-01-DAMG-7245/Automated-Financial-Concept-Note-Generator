@@ -1,0 +1,5 @@
+Page 1066
+================================================================================
+
+for k = 1, ..., m, where you have dropped the parameter dependence on the left sides for notational
+convenience.

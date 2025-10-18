@@ -1,0 +1,7 @@
+Page 955
+================================================================================
+
+cpf = CPF(end);
+spr = SPR(end)+1;
+yPredRange = [yPredLBFn(cpf,spr),yPredFn(cpf,spr),yPredUBFn(cpf,spr)];
+fprintf('SPR rises 1%%    %4.2f%%  %4.2f%%  %4.2f%%\n',yPredRange);

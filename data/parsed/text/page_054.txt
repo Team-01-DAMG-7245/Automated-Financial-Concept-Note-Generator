@@ -1,0 +1,32 @@
+See Also
+datedisp | datenum | datestr | datetime | datevec | format | date | holidays |
+nyseclosures | busdate | cfdates | addBusinessCalendar
+
+Related Examples
+
+•
+“Convert Between Text and datetime or duration Values”
+
+•
+“Read Collection or Sequence of Spreadsheet Files”
+
+•
+“Trading Calendars User Interface” on page 12-2
+
+•
+“UICalendar User Interface” on page 12-4
+
+More About
+
+•
+“Convert Dates Between Microsoft Excel and MATLAB” (Spreadsheet Link)
+
+External Websites
+
+•
+Automated Data Cleaning and Preparation in MATLAB (43 min)
+
+2
+Performing Common Financial Tasks
+
+2-10

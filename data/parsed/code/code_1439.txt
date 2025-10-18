@@ -1,0 +1,5 @@
+Page 1398
+================================================================================
+
+Composite diffusion-rate function, specified as: G(t,Xt)). The function stored in Rate fully
+encapsulates the combined effect of Alpha and Sigma where:

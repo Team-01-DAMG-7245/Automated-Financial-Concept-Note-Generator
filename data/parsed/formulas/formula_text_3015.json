@@ -1,0 +1,12 @@
+{
+  "page": 1584,
+  "original_text": "backtester = runBacktest( ___ ,Name,Value) specifies options using one or more optional\nname-value pair arguments in addition to the input arguments in the previous syntax. For example,\nbacktester = runBacktest(backtester,assetPrices,'Start',50,'End',100).",
+  "ocr_text": "backtester=_runBacktest( ,Name,Value)specifiesoptionsusingoneormoreoptional\nname-valuepairargumentsinadditiontotheinputargumentsintheprevioussyntax.Forexample,\nbacktester=runBacktest(backtester,assetPrices,Start,50,End,100).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 581.82,
+    "x1": 544.25,
+    "y1": 617.45
+  },
+  "confidence": "high"
+}

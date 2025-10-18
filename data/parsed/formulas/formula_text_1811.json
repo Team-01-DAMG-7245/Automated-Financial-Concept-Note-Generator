@@ -1,0 +1,12 @@
+{
+  "page": 925,
+  "original_text": "fprintf('Total transitions out of given rating, including 6 out of NR (5 NR->NR, 1 NR->CCC):\\n')",
+  "ocr_text": "fprintf(Total_transitionsoutofgivenrating,including6outofNR(5NR-NR,_1NR-=CCC):n)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 619.61,
+    "x1": 610.17,
+    "y1": 630.08
+  },
+  "confidence": "high"
+}

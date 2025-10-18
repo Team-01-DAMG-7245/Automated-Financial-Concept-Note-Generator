@@ -1,0 +1,29 @@
+Visualize Actor and Critic Networks
+
+Visualize the actor and critic networks using the Deep Network Designer.
+
+deepNetworkDesigner(getModel(getActor(agent)))
+
+Train Agent
+
+Train the agent using the train (Reinforcement Learning Toolbox) function.
+
+trainOpts = rlTrainingOptions( ...
+    'MaxEpisodes', nTrials, ...
+    'MaxStepsPerEpisode',nSteps, ...
+    'Verbose', false, ...
+    'ScoreAveragingWindowLength',200,...
+    'StopTrainingCriteria',"AverageReward", ...
+    'StopTrainingValue',-40, ...
+    'StopOnError',"on", ...
+    "UseParallel",false);
+
+doTraining = false;
+if doTraining
+    % Train the agent.
+    trainingStats = train(agent,env,trainOpts);
+else
+
+Hedge Options Using Reinforcement Learning Toolbox
+
+10-43

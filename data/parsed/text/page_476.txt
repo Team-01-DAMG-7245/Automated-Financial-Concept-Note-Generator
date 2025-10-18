@@ -1,0 +1,9 @@
+% Examine the residuals.
+residuals = actual(:,output_idx) - predicted(:,output_idx);
+figure;
+normplot(residuals);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-308

@@ -1,0 +1,5 @@
+Page 1120
+================================================================================
+
+Convert the standard deviations and correlation matrix into a variance-covariance matrix with the
+function corr2cov.

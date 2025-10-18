@@ -1,0 +1,61 @@
+Multivariate Normal Regression With Missing Data
+
+Estimate parameters using ecmmvnrmle:
+
+[Parameters, Covariance] = ecmmvnrmle(Data, Design);
+
+Estimate standard errors using ecmmvnrstd:
+
+StdParameters = ecmmvnrstd(Data, Design, Covariance);
+
+Least-Squares Regression
+
+Least-squares regression, or LSR, sometimes called ordinary least-squares or multiple linear
+regression, is the simplest linear regression model. It also enjoys the property that, independent of
+the underlying distribution, it is a best linear unbiased estimator (BLUE).
+
+Given m = NumSamples observations, the typical least-squares regression model seeks to minimize
+the objective function
+
+∑
+k = 1
+
+m
+
+Zk −Hkb T Zk −Hkb ,
+
+which, within the maximum likelihood framework of the multivariate normal regression routine
+mvnrmle, is equivalent to a single-iteration estimation of just the parameters to obtain Parameters
+with the initial covariance matrix Covariance held fixed as the identity matrix. In the case of
+missing data, however, the internal algorithm to handle missing data requires a separate routine
+ecmlsrmle to do least-squares instead of multivariate normal regression.
+
+Least-Squares Regression Without Missing Data
+
+Estimate parameters using mvnrmle:
+
+[Parameters, Covariance] = mvnrmle(Data, Design, 1);
+
+Estimate standard errors using mvnrstd:
+
+StdParameters = mvnrstd(Data, Design, Covariance);
+
+Least-Squares Regression With Missing Data
+
+Estimate parameters using ecmlsrmle:
+
+[Parameters, Covariance] = ecmlsrmle(Data, Design);
+
+Estimate standard errors using ecmmvnrstd:
+
+StdParameters = ecmmvnrstd(Data, Design, Covariance);
+
+Covariance-Weighted Least Squares
+
+Given m = NUMSAMPLES observations, the typical covariance-weighted least squares, or CWLS,
+regression model seeks to minimize the objective function
+
+9
+Regression with Missing Data
+
+9-14

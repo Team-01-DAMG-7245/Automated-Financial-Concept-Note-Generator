@@ -1,0 +1,12 @@
+{
+  "page": 117,
+  "original_text": "n = optimizableVariable('numBins',[1 10],'Type','integer');\nN = optimizableVariable('numTicks',[1 50],'Type','integer');",
+  "ocr_text": "n=optimizableVariable(numBins,[110],Type,integer);\nN=optimizableVariable(numTicks,[150],Type,integer);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 449.43,
+    "x1": 415.11,
+    "y1": 470.69
+  },
+  "confidence": "high"
+}

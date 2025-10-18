@@ -1,0 +1,12 @@
+{
+  "page": 721,
+  "original_text": "prsk = estimatePortRisk(p, p.estimateFrontierLimits);\ndisplay(prsk)",
+  "ocr_text": "prsk=estimatePortRisk(p,p.estimateFrontierLimits);\ndisplay(prsk)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 597.03,
+    "x1": 377.16,
+    "y1": 618.29
+  },
+  "confidence": "high"
+}

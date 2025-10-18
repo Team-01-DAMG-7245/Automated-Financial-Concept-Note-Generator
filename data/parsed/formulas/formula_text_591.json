@@ -1,0 +1,12 @@
+{
+  "page": 393,
+  "original_text": "port = Portfolio('NumAssets', numAssets, 'lb', 0, 'budget', 1, 'Name', 'Mean Variance');\nport = setAssetMoments(port, mean(assetRetns.Variables), Sigma);\nwts = estimateMaxSharpeRatio(port);",
+  "ocr_text": "port=Portfolio(NumAssets,numAssets,lb,0,budget,1,Name,MeanVariance);\nport=setAssetMoments(port,mean(assetRetns.Variables),Sigma);\nwts=estimateMaxSharpeRatio(port);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 433.23,
+    "x1": 566.82,
+    "y1": 465.29
+  },
+  "confidence": "high"
+}

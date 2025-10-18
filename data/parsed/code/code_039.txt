@@ -1,0 +1,7 @@
+Page 46
+================================================================================
+
+Note If you specify a two-digit year, MATLAB assumes that the year lies within the 100-year period
+centered on the current year. See the function datenum for specific information. MATLAB internal
+date handling and calculations generate no ambiguous values. However, whenever possible, use
+serial date numbers or date character vectors containing four-digit years.

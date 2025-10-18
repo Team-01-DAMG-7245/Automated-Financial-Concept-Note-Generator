@@ -1,0 +1,12 @@
+{
+  "page": 1045,
+  "original_text": "rfImputedData = dataMissing;",
+  "ocr_text": "rfImputedData=dataMissing;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.31,
+    "x1": 241.71,
+    "y1": 578.78
+  },
+  "confidence": "high"
+}

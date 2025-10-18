@@ -1,0 +1,5 @@
+Page 1145
+================================================================================
+
+LoggedSignals.State = [S_next/X;TTM_next;Position_next];
+NextObs = LoggedSignals.State;

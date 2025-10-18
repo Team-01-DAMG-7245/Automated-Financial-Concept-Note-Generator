@@ -1,0 +1,9 @@
+Page 932
+================================================================================
+
+Use bootstrp with transprobbytotals as the bootstrap function and idTotals as the data to
+sample from. Each bootstrap sample corresponds to a dataset made of companies sampled with
+replacement from the original data. However, you do not have to draw companies from the original
+data, because a bootstrap idTotals sample contains all the information required to compute the
+transition probabilities. transprobbytotals aggregates all structures in each bootstrap idTotals
+sample and finds the corresponding transition matrix.

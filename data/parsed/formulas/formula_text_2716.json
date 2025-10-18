@@ -1,0 +1,12 @@
+{
+  "page": 1366,
+  "original_text": "% Run the backtest.\nbacktester = runBacktest(backtester,pricesTT,'Start',warmupPeriod);",
+  "ocr_text": "SRunthebacktest.\nbacktester=runBacktest(backtester,pricesTT,Start,warmupPeriod);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 547.54,
+    "x1": 453.03,
+    "y1": 568.81
+  },
+  "confidence": "high"
+}

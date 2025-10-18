@@ -1,0 +1,35 @@
+0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0001    0.0001    0.0001
+    0.0002    0.0002    0.0001
+    0.0002    0.0002    0.0002
+    0.0002    0.0003    0.0002
+    0.0003    0.0004    0.0002
+    0.0004    0.0005    0.0002
+    0.0005    0.0006    0.0003
+    0.0006    0.0008    0.0003
+    0.0007    0.0009    0.0003
+
+Plot the qx series and display the legend. The series qx is the conditional probability that a person at
+age x will die between age x and the next age in the series.
+
+plot(x,log(qx))
+legend(series)
+
+Prepare Life Table Data Using the qx Series and Generate the qx Life Table
+
+Load the life table data file.
+
+load us_lifetable_2009
+
+Convert the life table series into life tables with forced termination.
+
+[~, lx] = lifetableconv(x, qx, 'qx');
+
+15
+Functions
+
+15-1156

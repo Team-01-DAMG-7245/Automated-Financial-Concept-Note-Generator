@@ -1,0 +1,8 @@
+Page 1250
+================================================================================
+
+The function implements proportional sampling by partitioning the unit interval into bins of equal
+probability by first drawing a random number uniformly distributed in each bin. The inverse
+cumulative distribution function of a standard N(0,1) Gaussian distribution then transforms these
+stratified uniform draws. Finally, the resulting stratified Gaussian draws are scaled by the square root
+of the terminal time to stratify the terminal value of the Brownian motion.

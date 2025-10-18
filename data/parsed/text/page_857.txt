@@ -1,0 +1,59 @@
+Working with One-Way Turnover Constraints Using
+PortfolioMAD Object
+
+One-way turnover constraints are optional constraints (see “One-way Turnover Constraints” on page
+6-13) that enforce upper bounds on net purchases or net sales. One-way turnover constraints can be
+set using the PortfolioMAD object or the setOneWayTurnover function. One-way turnover
+constraints depend upon an initial or current portfolio, which is assumed to be zero if not set when
+the turnover constraints are set. One-way turnover constraints have properties BuyTurnover, for the
+upper bound on net purchases, SellTurnover, for the upper bound on net sales, and InitPort, for
+the portfolio against which turnover is computed.
+
+Setting One-Way Turnover Constraints Using the PortfolioMAD
+Function
+
+The Properties for the one-way turnover constraints are set using the PortfolioMAD object. Suppose
+that you have an initial portfolio with 10 assets in a variable x0 and you want to ensure that turnover
+on purchases is no more than 30% and turnover on sales is no more than 20% of the initial portfolio.
+To set these turnover constraints:
+
+x0 = [ 0.12; 0.09; 0.08; 0.07; 0.1; 0.1; 0.15; 0.11; 0.08; 0.1 ]; 
+p = PortfolioMAD('BuyTurnover', 0.3, 'SellTurnover', 0.2, 'InitPort', x0);
+disp(p.NumAssets)
+disp(p.BuyTurnover)
+disp(p.SellTurnover)
+disp(p.InitPort)
+
+10
+
+0.3000
+
+0.2000
+
+0.1200
+0.0900
+0.0800
+0.0700
+0.1000
+0.1000
+0.1500
+0.1100
+0.0800
+0.1000
+
+If the NumAssets or InitPort properties are not set before or when the turnover constraint is set,
+various rules are applied to assign default values to these properties (see “Setting Up an Initial or
+Current Portfolio” on page 6-33).
+
+Setting Turnover Constraints Using the setOneWayTurnover Function
+
+You can also set properties for portfolio turnover using setOneWayTurnover to specify to the upper
+bounds for turnover on purchases (BuyTurnover) and sales (SellTurnover) and an initial portfolio.
+Suppose that you have an initial portfolio of 10 assets in a variable x0 and want to ensure that
+turnover on purchases is no more than 30% and that turnover on sales is no more than 20% of the
+initial portfolio. Given a PortfolioMAD object p, use setOneWayTurnover to set the turnover
+constraints with and without the initial portfolio being set previously:
+
+Working with One-Way Turnover Constraints Using PortfolioMAD Object
+
+6-77

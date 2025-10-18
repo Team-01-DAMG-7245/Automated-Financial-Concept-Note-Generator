@@ -1,0 +1,12 @@
+{
+  "page": 1859,
+  "original_text": "Example: KeyRateDuration =\nbndkrdur(ZeroData,.0525,'12/31/1998','11/15/2028','KeyRates',[2 5 10 30])",
+  "ocr_text": "Example:KeyRateDuration=\nbndkrdur(ZeroData,.0525,12/31/1998,11/15/2028,KeyRates,[251030])",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 183.7,
+    "x1": 529.46,
+    "y1": 207.33
+  },
+  "confidence": "high"
+}

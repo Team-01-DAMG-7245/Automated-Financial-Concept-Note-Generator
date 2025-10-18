@@ -1,0 +1,12 @@
+{
+  "page": 577,
+  "original_text": "•\nFor a sell trade:\nPrice Divergence = Average Bid Prices of First 2 Levels of Current LOB −Arrival Price",
+  "ocr_text": "*Foraselltrade:\nPriceDivergence=AverageBidPricesofFirst2LevelsofCurrentLOB-ArrivalPrice",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 283.22,
+    "x1": 494.85,
+    "y1": 306.85
+  },
+  "confidence": "high"
+}

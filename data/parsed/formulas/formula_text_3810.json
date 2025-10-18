@@ -1,0 +1,12 @@
+{
+  "page": 2154,
+  "original_text": "Sum = depsoyd(13000, 1000, 10)'",
+  "ocr_text": "Sum=depsoyd(13000,1000,10)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 377.01,
+    "x1": 257.96,
+    "y1": 387.47
+  },
+  "confidence": "high"
+}

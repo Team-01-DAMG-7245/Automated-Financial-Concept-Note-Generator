@@ -1,0 +1,12 @@
+{
+  "page": 1225,
+  "original_text": "G = diffusion(ones(nVariables,1), diag(sigma))",
+  "ocr_text": "G=diffusion(ones(nVariables,1),diag(sigma))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 167.55,
+    "x1": 339.23,
+    "y1": 178.02
+  },
+  "confidence": "high"
+}

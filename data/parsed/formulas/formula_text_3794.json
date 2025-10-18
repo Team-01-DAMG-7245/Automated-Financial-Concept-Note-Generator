@@ -1,0 +1,12 @@
+{
+  "page": 2143,
+  "original_text": "MoreDays = [datetime(2001,3,1) ; datetime(2002,3,1) ; datetime(2003,3,1)]; \nNumDays = daysdif(datetime(1998,3,1), MoreDays)",
+  "ocr_text": "MoreDays=[datetime(2001,3,1);datetime(2002,3,1);datetime(2003,3,1)];\nNumDays=daysdif(datetime(1998,3,1),MoreDays)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 496.35,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

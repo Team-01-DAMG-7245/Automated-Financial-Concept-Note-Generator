@@ -1,0 +1,7 @@
+Page 1709
+================================================================================
+
+The Optional input argument for simulate accepts any variable-length list of input arguments that
+the simulation method or function referenced by the SDE.Simulation parameter requires or
+accepts. It passes this input list directly to the appropriate SDE simulation method or user-defined
+simulation function.

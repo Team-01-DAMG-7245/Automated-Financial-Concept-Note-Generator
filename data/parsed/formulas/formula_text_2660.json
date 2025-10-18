@@ -1,0 +1,12 @@
+{
+  "page": 1350,
+  "original_text": "Example: categoryWeightsChart(BrinsonPAObj,ActiveOnly=true)",
+  "ocr_text": "Example:categoryWeightsChart(BrinsonPAObj,ActiveOnly=true)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 671.86,
+    "x1": 436.37,
+    "y1": 683.49
+  },
+  "confidence": "high"
+}

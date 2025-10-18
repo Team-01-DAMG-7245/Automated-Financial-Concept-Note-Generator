@@ -1,0 +1,39 @@
+head(backtester.Returns)
+
+Time        EqualWeighted    InverseVariance
+    ___________    _____________    _______________
+
+02-Feb-2006      -0.007553        -0.0070957   
+    03-Feb-2006     -0.0037771         -0.003327   
+    06-Feb-2006     -0.0010094        -0.0014312   
+    07-Feb-2006      0.0053284         0.0020578   
+    08-Feb-2006      0.0099755         0.0095781   
+    09-Feb-2006     -0.0026871        -0.0014999   
+    10-Feb-2006      0.0048374         0.0059589   
+    13-Feb-2006     -0.0056868        -0.0051232
+
+binedges = -0.025:0.0025:0.025;
+h1 = histogram(backtester.Returns.EqualWeighted,'BinEdges',binedges);
+hold on
+histogram(backtester.Returns.InverseVariance,'BinEdges',binedges);
+hold off
+title('Distribution of Daily Returns')
+legend([strategies.Name]);
+
+Positions
+
+The Positions property holds a structure of timetables, one per strategy.
+
+backtester.Positions
+
+ans = struct with fields:
+      EqualWeighted: [231×8 timetable]
+    InverseVariance: [231×8 timetable]
+
+The Positions timetable of each strategy holds the per-time-step positions for each asset as well as
+the Cash asset (which earns the risk-free rate). The Positions timetables contain one more row
+
+15
+Functions
+
+15-298

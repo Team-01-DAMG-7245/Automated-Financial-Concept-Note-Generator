@@ -1,0 +1,12 @@
+{
+  "page": 1558,
+  "original_text": "strats = [ewPartial, ewWhole];\nbacktester = backtestEngine(strats,RiskFreeRate=0.02);\nbacktester = runBacktest(backtester,pricesTT);",
+  "ocr_text": "strats=[ewPartial,ewwhole];\nbacktester=backtestEngine(strats,RiskFreeRate=0.02);\nbacktester=runBacktest(backtester,pricesTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 352.6,
+    "x1": 382.57,
+    "y1": 384.66
+  },
+  "confidence": "high"
+}

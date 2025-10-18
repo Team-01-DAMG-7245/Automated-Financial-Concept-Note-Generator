@@ -1,0 +1,63 @@
+Price American Basket Options Using Standard Monte Carlo
+and Quasi-Monte Carlo Simulation
+
+Model the fat-tailed behavior of asset returns and assess the impact of alternative joint distributions
+on basket option prices. Using various implementations of a separable multivariate Geometric
+Brownian Motion (GBM) process, often referred to as a multi-dimensional market model, the example
+simulates risk-neutral sample paths of an equity index portfolio and prices basket put options using
+the technique of Longstaff & Schwartz.
+
+In addition, this example also illustrates salient features of the Stochastic Differential Equation (SDE)
+architecture, including
+
+•
+Customized random number generation functions that compare Brownian motion and Brownian
+copulas
+
+•
+End-of-period processing functions that form an equity index basket and price American options
+on the underlying basket based on the least squares method of Longstaff & Schwartz
+
+•
+Piecewise probability distributions and Extreme Value Theory (EVT)
+
+•
+Quasi-Monte Carlo simulation using for a gbm object using simByEuler.
+
+This example also highlights important issues of volatility and interest rate scaling. It illustrates how
+equivalent results can be achieved by working with daily or annualized data. For more information
+about EVT and copulas, see “Using Extreme Value Theory and Copulas to Evaluate Market Risk”
+(Econometrics Toolbox).
+
+Overview of the Modeling Framework
+
+The ultimate objective of this example is to compare basket option prices derived from different noise
+processes. The first noise process is a traditional Brownian motion model whose index portfolio price
+process is driven by correlated Gaussian random draws. As an alternative, the Brownian motion
+benchmark is compared to noise processes driven by Gaussian and Student's t copulas, referred to
+collectively as a Brownian copula.
+
+A copula is a multivariate cumulative distribution function (CDF) with uniformly-distributed margins.
+Although the theoretical foundations were established decades ago, copulas have experienced a
+tremendous surge in popularity over the last few years, primarily as a technique for modeling non-
+Gaussian portfolio risks.
+
+Although numerous families exist, all copulas represent a statistical device for modeling the
+dependence structure between two or more random variables. In addition, important statistics, such
+as rank correlation and tail dependence are properties of a given copula and are unchanged by
+monotonic transforms of their margins.
+
+These copula draws produce dependent random variables, which are subsequently transformed to
+individual variables (margins). This transformation is achieved with a semi-parametric probability
+distribution with generalized Pareto tails.
+
+The risk-neutral market model to simulate is
+
+dXt = rXtdt + σXtdWt
+
+where the risk-free rate, r, is assumed constant over the life of the option. Because this is a separable
+multivariate model, the risk-free return is a diagonal matrix in which the same riskless return is
+
+Price American Basket Options Using Standard Monte Carlo and Quasi-Monte Carlo Simulation
+
+14-71

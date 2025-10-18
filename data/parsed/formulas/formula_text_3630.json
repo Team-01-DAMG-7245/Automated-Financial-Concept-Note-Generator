@@ -1,0 +1,12 @@
+{
+  "page": 2046,
+  "original_text": "This example shows a CAPM demonstration using 6 stocks and 60 months of simulated asset returns,\nwhere the model for each stock is AssetReturn = Alpha * 1 + CashReturn + Beta *\n(MarketReturn - CashReturn) + Noise and the parameters to estimate are Alpha and Beta.",
+  "ocr_text": "ThisexampleshowsaCAPMdemonstrationusing6stocksand60monthsofsimulatedassetreturns,\nwherethemodelforeachstockisAssetReturn=Alpha*1+CashReturn+Beta*\n(MarketReturn-CashReturn)+NoiseandtheparameterstoestimateareAlphaandBeta.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 338.66,
+    "x1": 554.04,
+    "y1": 374.29
+  },
+  "confidence": "high"
+}

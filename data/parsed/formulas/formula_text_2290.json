@@ -1,0 +1,12 @@
+{
+  "page": 1177,
+  "original_text": "% Create a timetable from vector input\nTMW = timetable(TMW_OPEN,TMW_HIGH,TMW_LOW,TMW_CLOSE_MISSING,TMW_VOLUME, ... \n    'VariableNames',{'Open','High','Low','Close','Volume'},'RowTimes',TMW_DATES);",
+  "ocr_text": "Createatimetablefromvectorinput\nTMW=timetable(TMW_OPEN,TMW_HIGH,TMW_LOW,TMW_CLOSE_MISSING,TMW_VOLUME,...\nVariableNames,{Open,High,Low,Close,Volume},RowTimes,TMW_DATES);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 472.92,
+    "x1": 528.89,
+    "y1": 504.98
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1282,
+  "original_text": "Prices = Prices(commodityIdx, :);\ninflation = inflation{inflationIdx, :};\nPrices.Variables = Prices.Variables .* inflation;",
+  "ocr_text": "Prices=Prices(commodityIdx,:);\ninflation=inflation{inflationIdx,:};\nPrices.Variables=Prices.Variables.*inflation;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 187.43,
+    "x1": 355.49,
+    "y1": 219.49
+  },
+  "confidence": "high"
+}

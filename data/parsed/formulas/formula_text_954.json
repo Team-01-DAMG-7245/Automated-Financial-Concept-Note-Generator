@@ -1,0 +1,12 @@
+{
+  "page": 512,
+  "original_text": "% Compute the excess return.\nexcessReturn = assetsTT.Variables-marketTT.Variables;",
+  "ocr_text": "Computetheexcessreturn.\nexcessReturn=assetsTT.Variables-marketTT.Variables;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 604.65,
+    "x1": 377.16,
+    "y1": 625.92
+  },
+  "confidence": "high"
+}

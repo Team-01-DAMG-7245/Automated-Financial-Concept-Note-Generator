@@ -1,0 +1,29 @@
+BinMissingData: 0
+                    IDVar: 'CustID'
+            PredictorVars: {'CustAge'  'TmAtAddress'  'ResStatus'  'EmpStatus'  'CustIncome'  'Tm
+                     Data: [1200×11 table]
+
+Perform some initial data exploration. Inquire about predictor statistics for the categorical variable
+'ResStatus' and plot the bin information for 'ResStatus'.
+
+bininfo(sc,'ResStatus')
+
+ans=4×6 table
+         Bin          Good    Bad     Odds        WOE       InfoValue
+    ______________    ____    ___    ______    _________    _________
+
+{'Home Owner'}    365     177    2.0621     0.019329    0.0001682
+    {'Tenant'    }    307     167    1.8383    -0.095564    0.0036638
+    {'Other'     }    131      53    2.4717      0.20049    0.0059418
+    {'Totals'    }    803     397    2.0227          NaN    0.0097738
+
+plotbins(sc,'ResStatus')
+
+This bin information contains the frequencies of “Good” and “Bad,” and bin statistics. Avoid having
+bins with frequencies of zero because they lead to infinite or undefined (NaN) statistics. Use the 
+modifybins or autobinning functions to bin the data accordingly.
+
+8
+Credit Risk Analysis
+
+8-72

@@ -1,0 +1,58 @@
+Portfolio Optimization Examples Using Financial Toolbox
+
+Follow a sequence of examples that highlight features of the Portfolio object. Specifically, the
+examples use the Portfolio object to show how to set up mean-variance portfolio optimization
+problems that focus on the two-fund theorem, the impact of transaction costs and turnover
+constraints, how to obtain portfolios that maximize the Sharpe ratio, and how to set up two popular
+hedge-fund strategies — dollar-neutral and 130-30 portfolios.
+
+Set up the Data
+
+Every example works with moments for monthly total returns of a universe of 30 "blue-chip" stocks.
+Although derived from real data, these data are for illustrative purposes and are not meant to be
+representative of specific assets or of market performance. The data are contained in the file
+BlueChipStockMoments.mat with a list of asset identifiers in the variable AssetList, a mean and
+covariance of asset returns in the variables AssetMean and AssetCovar, and the mean and variance
+of cash and market returns in the variables CashMean, CashVar, MarketMean, and MarketVar.
+Since most of the analysis requires the use of the standard deviation of asset returns as the proxy for
+risk, cash, and market variances are converted into standard deviations.
+
+load BlueChipStockMoments
+
+mret = MarketMean;
+mrsk = sqrt(MarketVar);
+cret = CashMean;
+crsk = sqrt(CashVar);
+
+Create a Portfolio Object
+
+First create a "standard" Portfolio object with Portfolio to incorporate the list of assets, the
+risk-free rate, and the moments of asset returns into the object.
+
+p = Portfolio('AssetList',AssetList,'RiskFreeRate',CashMean);
+p = setAssetMoments(p,AssetMean,AssetCovar);
+
+To provide a basis for comparison, set up an equal-weight portfolio and make it the initial portfolio in
+the Portfolio object. Keep in mind that the hedged portfolios to be constructed later will require a
+different initial portfolio. Once the initial portfolio is created, the estimatePortMoments function
+estimates the mean and standard deviation of equal-weight portfolio returns.
+
+p = setInitPort(p,1/p.NumAssets);
+[ersk,eret] = estimatePortMoments(p,p.InitPort);
+
+A specialized "helper" function portfolioexamples_plot makes it possible to plot all results to be
+developed here. The first plot shows the distribution of individual assets according to their means and
+standard deviations of returns. In addition, the equal-weight, market, and cash portfolios are plotted
+on the same plot. Note that the portfolioexamples_plot function converts monthly total returns
+into annualized total returns.
+
+clf;
+portfolioexamples_plot('Asset Risks and Returns', ...
+    {'scatter', mrsk, mret, {'Market'}}, ...
+    {'scatter', crsk, cret, {'Cash'}}, ...
+    {'scatter', ersk, eret, {'Equal'}}, ...
+    {'scatter', sqrt(diag(p.AssetCovar)), p.AssetMean, p.AssetList, '.r'});
+
+Portfolio Optimization Examples Using Financial Toolbox
+
+4-161

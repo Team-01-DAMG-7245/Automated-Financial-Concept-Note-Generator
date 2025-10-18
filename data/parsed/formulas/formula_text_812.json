@@ -1,0 +1,12 @@
+{
+  "page": 464,
+  "original_text": "% Compute covariance and correlation matrices\nSigma = cov(assetRetn);\nC = corrcov(Sigma);\nheatmap(C);",
+  "ocr_text": "SComputecovarianceandcorrelationmatrices\nSigma=cov(assetRetn);\n\nC=corrcov(Sigma);\n\nheatmap(C);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 357.43,
+    "x1": 333.81,
+    "y1": 400.29
+  },
+  "confidence": "high"
+}

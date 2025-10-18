@@ -1,0 +1,8 @@
+Page 1062
+================================================================================
+
+A final simplification of the general model is to estimate the mean and covariance of a sequence of n-
+dimensional observations z1, ..., zm. In this case, the number of series is equal to the number of model
+parameters with n = p and the design matrices are identity matrices with Hk = I for i = 1, ..., m so
+that b is an estimate for the mean and C is an estimate of the covariance of the collection of
+observations z1, ..., zm.

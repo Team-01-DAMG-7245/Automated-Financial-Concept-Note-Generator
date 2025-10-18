@@ -1,0 +1,12 @@
+{
+  "page": 563,
+  "original_text": "% Compute the weights with denoised strategy.\nwDenoised_initial = denoising(w0,warmupTT);",
+  "ocr_text": "Computetheweightswithdenoisedstrategy.\nwDenoised_initial=denoising(w0,warmupTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 675.24,
+    "x1": 333.81,
+    "y1": 696.5
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,54 @@
+Holiday — Holiday and nontrading-day dates
+if Holiday is [ ] holiday dates are based on United States holidays specified by holidays (default)
+| datetime array | string array | date character vector
+
+Holiday and nontrading-day dates, specified as a vector using a datetime array, string array, or date
+character vectors. If you specify Holiday, you must also supply the frequency bdmode. Using a
+Holiday value of NaN uses a holiday list that has no dates.
+
+To support existing code, busdays also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+Output Arguments
+
+bdates — Business days
+column vector
+
+Business days, returned as a column vector of business dates, in datetime format (if sdate, edate,
+or Holiday are in datetime format). Business dates can exist before and/or after the specified sdate
+and edate.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although busdays supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+isbusday | holidays | datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+“Trading Calendars User Interface” on page 12-2
+
+15
+Functions
+
+15-606

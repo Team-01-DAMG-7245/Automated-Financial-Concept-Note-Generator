@@ -1,0 +1,12 @@
+{
+  "page": 1988,
+  "original_text": "CFlowConvexity = cfconv(CashFlow,Yield) returns the convexity of a cash flow in periods.",
+  "ocr_text": "CFlowConvexity=cfconv(CashFlow,Yield)returnstheconvexityofacashflowinperiods.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 248.0,
+    "x1": 541.91,
+    "y1": 259.63
+  },
+  "confidence": "high"
+}

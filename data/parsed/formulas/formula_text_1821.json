@@ -1,0 +1,12 @@
+{
+  "page": 931,
+  "original_text": "DefProb = zeros(7,5);\nfor t = 1:5\n   transMatTemp = transprobbytotals(sampleTotals,'transInterval',t);\n   DefProb(:,t) = transMatTemp(1:7,8);\nend\nDefProb",
+  "ocr_text": "DefProb=zeros(7,5);\n\nfort=1:5\ntransMatTemp=transprobbytotals(sampleTotals,transInterval,t);\nDefProb(:,t)=transMatTemp(1:7,8);\n\nend\n\nDefProb",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 259.99,
+    "x1": 458.45,
+    "y1": 324.46
+  },
+  "confidence": "high"
+}

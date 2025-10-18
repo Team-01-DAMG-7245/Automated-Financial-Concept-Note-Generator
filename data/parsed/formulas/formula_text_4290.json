@@ -1,0 +1,12 @@
+{
+  "page": 2428,
+  "original_text": "H = holidays(StartDate,EndDate) returns a vector or datetime array corresponding to the\nholidays and nontrading days between StartDate and EndDate, inclusive.",
+  "ocr_text": "H=holidays(StartDate,EndDate)returnsavectorordatetimearraycorrespondingtothe\nholidaysandnontradingdaysbetweenStartDateandEndDate,inclusive.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 293.71,
+    "x1": 534.68,
+    "y1": 317.34
+  },
+  "confidence": "high"
+}

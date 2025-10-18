@@ -1,0 +1,58 @@
+[pwgt,pbuy,psell] = obj.estimateMaxSharpeRatio;
+
+Algorithms
+
+The maximization of the Sharpe ratio is accomplished by either using the 'direct' or 'iterative'
+method. For the 'direct' method, consider the following scenario. To maximize the Sharpe ratio is
+to:
+
+MaximizeμTx −rf
+
+xTCx
+, s . t . ∑xi = 1,   0 ≤xi ≤1,
+
+where μ and C are the mean and covariance matrix, and rf is the risk-free rate.
+
+If μT x - rf ≤ 0 for all x the portfolio that maximizes the Sharpe ratio is the one with maximum return.
+
+If μT x - rf > 0, let t =
+1
+μTx −rf
+
+and y = tx (Cornuejols [1] section 8.2). Then after some substitutions, you can transform the original
+problem into the following form,
+
+Minimize yTCy,  s . t .  ∑yi = t,  t > 0,  0 ≤yi ≤t , μTy −rft = 1.
+
+Only one optimization needs to be solved, hence the name “direct”. The portfolio weights can be
+recovered by x* = y* / t*.
+
+For the 'iterative' method, the idea is to iteratively explore the portfolios at different return
+levels on the efficient frontier and locate the one with maximum Sharpe ratio. Therefore, multiple
+optimization problems are solved during the process, instead of only one in the 'direct' method.
+Consequently, the 'iterative' method is slow compared to 'direct' method.
+
+Version History
+Introduced in R2011b
+
+References
+
+[1] Cornuejols, G. and Reha Tütüncü. Optimization Methods in Finance. Cambridge University Press,
+2007.
+
+See Also
+estimatePortSharpeRatio | estimateFrontier | estimateFrontierByReturn |
+estimateFrontierByRisk | setBounds | setMinMaxNumAssets
+
+Topics
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+“Working with 'Conditional' BoundType, MinNumAssets, and MaxNumAssets Constraints Using
+Portfolio Objects” on page 4-81
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+“Bond Portfolio Optimization Using Portfolio Object” on page 10-30
+“Portfolio Optimization Theory” on page 4-4
+
+15
+Functions
+
+15-996

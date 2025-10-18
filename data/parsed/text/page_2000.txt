@@ -1,0 +1,51 @@
+cfdur
+
+Cash-flow duration and modified duration
+
+Syntax
+
+[Duration,ModDuration] = cfdur(CashFlow,Yield)
+
+Description
+
+[Duration,ModDuration] = cfdur(CashFlow,Yield) calculates the duration and modified
+duration of a cash flow in periods.
+
+Examples
+
+Compute the Duration and Modified Duration of a Cash Flow
+
+This example shows how to calculate the duration and modified duration of a cash flow, given a cash
+flow of nine payments of $2.50 and a final payment $102.50, with a periodic yield of 2.5%.
+
+CashFlow=[2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 102.5];
+
+[Duration, ModDuration] = cfdur(CashFlow, 0.025)
+
+Duration = 
+8.9709
+
+ModDuration = 
+8.7521
+
+Input Arguments
+
+CashFlow — Cash flow
+vector of real numbers | matrix of real numbers
+
+Cash flow, specified as a vector or matrix of real numbers. When using a matrix, each column of the
+matrix is a separate CashFlow.
+
+Data Types: double
+
+Yield — Periodic yield
+scalar decimal | vector of decimals
+
+Periodic yield, specified as a scalar decimal or a vector of decimals.
+
+Data Types: double
+
+15
+Functions
+
+15-694

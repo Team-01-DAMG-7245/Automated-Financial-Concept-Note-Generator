@@ -1,0 +1,12 @@
+{
+  "page": 583,
+  "original_text": "ActionInfo_Sell = rlFiniteSetSpec(ActionRange);\nActionInfo_Sell.Name = 'Trading Action (Number of Shares)';\nActionInfo_Sell.Description = 'Number of Shares to be Traded at Each Time Step';",
+  "ocr_text": "ActionInfo_Sell=rlFiniteSetSpec(ActionRange);\nActionInfo_Sell.Name=TradingAction(NumberofShares);\nActionInfo_Sell.Description=NumberofSharestobeTradedatEachTimeStep;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 245.25,
+    "x1": 523.48,
+    "y1": 277.32
+  },
+  "confidence": "high"
+}

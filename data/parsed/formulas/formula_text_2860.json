@@ -1,0 +1,12 @@
+{
+  "page": 1479,
+  "original_text": "SDELD = sdeld(A,B,Alpha,Sigma) creates a default SDELD object.",
+  "ocr_text": "SDELD=sdeld(A,B,Alpha,Sigma)createsadefaultSDELDobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 627.17,
+    "x1": 416.79,
+    "y1": 638.8
+  },
+  "confidence": "high"
+}

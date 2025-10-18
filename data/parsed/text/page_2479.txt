@@ -1,0 +1,14 @@
+References
+
+[1] Achelis, S. B. Technical Analysis from A to Z. Second Edition. McGraw-Hill, 1995, pp. 166–168.
+
+See Also
+adline | timetable | table | willad
+
+Topics
+“Use Timetables in Finance” on page 11-7
+“Convert Financial Time Series Objects (fints) to Timetables” on page 11-2
+
+macd
+
+15-1173

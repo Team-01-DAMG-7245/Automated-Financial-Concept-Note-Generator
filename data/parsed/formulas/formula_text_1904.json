@@ -1,0 +1,12 @@
+{
+  "page": 964,
+  "original_text": "xliml = -5;\nxlimr = 5;\nstep = 0.1;\nx=xliml:step:xlimr;\nthresCCC = thresh(7,:);\nlabels = {'AAA','AA','A','BBB','BB','B','CCC','D'};",
+  "ocr_text": "xliml=-5;\n\nxlimr=5;\n\nstep=0.1;\n\nx=xLiml:step:xlimr;\n\nthresCCC=thresh(7,:);\nlabels={AAA,AA,A,BBB,BB,B,CCC,D};",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 557.43,
+    "x1": 366.34,
+    "y1": 621.89
+  },
+  "confidence": "high"
+}

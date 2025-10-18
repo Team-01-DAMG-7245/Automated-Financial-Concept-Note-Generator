@@ -1,0 +1,12 @@
+{
+  "page": 490,
+  "original_text": "% Brinson Period input\nnum_assets = width(pricesTT);\nPeriod = (1:num_periods) .* ones(num_assets,1);",
+  "ocr_text": "sBrinsonPeriodinput\nnum_assets=width(pricesTT);\nPeriod=(1:num_periods).*ones(num_assets,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 211.83,
+    "x1": 344.65,
+    "y1": 243.89
+  },
+  "confidence": "high"
+}

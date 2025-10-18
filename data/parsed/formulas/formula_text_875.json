@@ -1,0 +1,12 @@
+{
+  "page": 483,
+  "original_text": "% Set the sectors for each stock.\nasset_categories = categorical([\"Materials\";\"Financials\";\"Financials\"; ...\n    \"Industrials\";\"Financials\";\"Industrials\";\"Materials\"; ...\n    \"Communication Services\";\"Industrials\";\"Consumer Discretionary\"; ...\n    \"Consumer Discretionary\";\"Industrials\";\"Information Technology\"; ...\n    \"Information Technology\";\"Information Technology\";\"Health Care\"; ...\n    \"Financials\";\"Consumer Staples\";\"Consumer Discretionary\"; ...\n    \"Industrials\";\"Consumer Staples\";\"Health Care\"; ...\n    \"Information Technology\";\"Health Care\";\"Consumer Staples\"; ...\n    \"Communication Services\";\"Industrials\";\"Communication Services\"; ...\n    \"Consumer Staples\";\"Energy\"]);",
+  "ocr_text": "Setthesectorsforeachstock.\n\nasset_categories=categorical([Materials;Financials;Financials;...\nIndustrials;Financials;Industrials;Materials;...\nCommunicationServices;Industrials;ConsumerDiscretionary;...\nConsumerDiscretionary;Industrials;InformationTechnology;...\nInformationTechnology;InformationTechnology;HealthCare;...\nFinancials;ConsumerStaples;ConsumerDiscretionary;...\nIndustrials;ConsumerStaples;HealthCare;...\nInformationTechnology;HealthCare;ConsumerStaples;...\nCommunicationServices;Industrials;CommunicationServices;...\nConsumerStaples;Energy]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 342.76,
+    "x1": 490.96,
+    "y1": 461.23
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 515
+================================================================================
+
+Define the tracking error penalized objective function using the max Sharpe ratio portfolio as the
+benchmark.

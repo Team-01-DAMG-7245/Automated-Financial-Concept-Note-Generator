@@ -1,0 +1,7 @@
+Page 1236
+================================================================================
+
+Because time series arrays represent dynamic behavior that must be captured by functions accessible
+by the t, Xt  interface, you need utilities to convert traditional time series arrays into callable
+functions of time and state. The following example shows how to do this using the conversion function
+ts2func (time series to function).

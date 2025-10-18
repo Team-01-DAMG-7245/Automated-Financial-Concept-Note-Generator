@@ -1,0 +1,60 @@
+NumParams = 2 * NumAssets;
+
+% Set up grouped asset data and design matrices
+TestData = zeros(NumSamples, NumAssets);
+TestDesign = cell(NumSamples, 1);
+Design = zeros(NumAssets, NumParams);
+
+for k = 1:NumSamples
+    for i = 1:NumAssets
+        TestData(k,i) = Data(k,i) - Data(k,14);
+        Design(i,2*i - 1) = 1.0;
+        Design(i,2*i) = Data(k,13) - Data(k,14);
+    end
+    TestDesign{k} = Design;
+end
+
+% Estimate CAPM for all assets together with initial parameter
+% estimates
+[Param, Covar] = ecmmvnrmle(TestData, TestDesign, [], [], [], ... 
+    Param0, Covar0);
+
+% Estimate ideal standard errors for covariance parameters
+[StdParam, StdCovar] = ecmmvnrstd(TestData, TestDesign, Covar, ...
+    'fisher');
+
+% Estimate sample standard errors for model parameters
+StdParam = ecmmvnrstd(TestData, TestDesign, Covar, 'hessian');
+
+% Set up results for output
+Alpha = Param(1:2:end-1);
+Beta = Param(2:2:end);
+Sigma = sqrt(diag(Covar));
+
+StdAlpha = StdParam(1:2:end-1);
+StdBeta = StdParam(2:2:end);
+StdSigma = sqrt(diag(StdCovar));
+
+% Display estimates
+for i = 1:NumAssets
+  fprintf('  %4s %9.4f (%8.4f) %9.4f (%8.4f) %9.4f (%8.4f)\n', ... 
+  Assets{i},Alpha(i),abs(Alpha(i)/StdAlpha(i)), ...
+  Beta(i),abs(Beta(i)/StdBeta(i)),Sigma(i),StdSigma(i));
+end
+
+AAPL    0.0012 (  1.3882)    1.2294 ( 17.1839)    0.0322 (  0.0062)
+  AMZN    0.0007 (  0.6086)    1.3673 ( 13.6427)    0.0450 (  0.0086)
+  CSCO   -0.0002 (  0.2878)    1.5653 ( 23.6085)    0.0298 (  0.0057)
+  DELL   -0.0000 (  0.0368)    1.2594 ( 22.2164)    0.0255 (  0.0049)
+  EBAY    0.0014 (  1.4326)    1.3441 ( 16.0732)    0.0376 (  0.0072)
+  GOOG    0.0041 (  2.8907)    0.6173 (  3.1100)    0.0337 (  0.0065)
+   HPQ    0.0001 (  0.1747)    1.3745 ( 24.2390)    0.0255 (  0.0049)
+   IBM   -0.0000 (  0.0312)    1.0807 ( 28.7576)    0.0169 (  0.0032)
+  INTC    0.0001 (  0.1608)    1.6002 ( 27.3684)    0.0263 (  0.0050)
+  MSFT   -0.0002 (  0.4871)    1.1765 ( 27.4554)    0.0193 (  0.0037)
+  ORCL    0.0000 (  0.0389)    1.5010 ( 21.1855)    0.0319 (  0.0061)
+  YHOO    0.0001 (  0.1282)    1.6543 ( 19.3838)    0.0384 (  0.0074)
+
+Valuation with Missing Data
+
+9-31

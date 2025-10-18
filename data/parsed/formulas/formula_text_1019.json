@@ -1,0 +1,12 @@
+{
+  "page": 533,
+  "original_text": "wMV = estimateFrontierLimits(p,'min');\nTprobabilities.MV = 1-probability(wMV)",
+  "ocr_text": "wMV=estimateFrontierLimits(p,min);\nTprobabilities.MV=1-probability(wMV)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 668.4,
+    "x1": 295.9,
+    "y1": 689.67
+  },
+  "confidence": "high"
+}

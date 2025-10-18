@@ -1,0 +1,12 @@
+{
+  "page": 128,
+  "original_text": "pV = 0.15;\nnTV = sum(idxTV);\ntspTV = tspartition(nTV,Holdout=pV);\nidxT = training(tspTV);     % Training indices\nidxV = test(tspTV);         % Validation indices\nXT = XCell(idxT);\nyT = y(idxT);\nXV = XCell(idxV);\nyV = y(idxV);",
+  "ocr_text": "pv=0.15;\n\nnTV=sum(idxTV);\ntspTV=tspartition(nTV,Holdout=pV);\nidxT=training(tspTV); Trainingindices\nidxV=test(tspTV); SValidationindices\nXT_=XCell(idxT);\n\nyT=y(idxT);\n\nXV_=XCelL(idxV);\n\nyV_=y(idxv);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.23,
+    "x1": 350.07,
+    "y1": 287.09
+  },
+  "confidence": "high"
+}

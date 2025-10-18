@@ -1,0 +1,37 @@
+Use backtestEngine to create a backtestEngine object for the strategies and then use
+runBacktest to run the backtest. Display the equity curve using equityCurve and then use
+summary to display the backtest summary table. Both the equal category and risk budgeting
+strategies outperform the benchmark.
+
+strategies = [benchmark,equalCategory,riskBudgeting];
+bt = backtestEngine(strategies);
+bt = runBacktest(bt,pricesTT,'Start',start_date);
+equityCurve(bt)
+
+summary(bt)
+
+ans=9×3 table
+                       Benchmark     EqualCategory    RiskBudgeting
+                       __________    _____________    _____________
+
+TotalReturn           0.17811        0.19249          0.18065  
+    SharpeRatio           0.11671        0.12645          0.12393  
+    Volatility          0.0062905      0.0062211        0.0059849  
+    AverageTurnover    0.00073556     0.00076049        0.0015965  
+    MaxTurnover          0.025681       0.028611         0.080538  
+    AverageReturn      0.00073259     0.00078493       0.00074008  
+    MaxDrawdown           0.07502       0.078323         0.071364  
+    AverageBuyCost              0              0                0  
+    AverageSellCost             0              0                0
+
+Prepare Backtest Results for Brinson Attribution
+
+Set the strategy name of the benchmark.
+
+benchmark_name = 'Benchmark';
+
+Define Brinson periods by the rebalance dates and the backtest end date.
+
+Backtest with Brinson Attribution to Evaluate Portfolio Performance
+
+4-317

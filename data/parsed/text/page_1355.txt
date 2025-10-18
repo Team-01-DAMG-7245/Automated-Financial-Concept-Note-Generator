@@ -1,0 +1,61 @@
+mu = mean_return(1:numAssets);
+C = Correlation(1:numAssets,1:numAssets);
+
+% Generate a random sample
+rng('default')
+randSample = mvnrnd(mu,C,numObservations);
+
+Use corr to compute the standard correlation estimate of the sample. This example works with the
+correlation matrix to remove the effect of the variance. This is useful when comparing the effect of
+the sample size in the denoised covariance estimate.
+
+stdCorr = corr(randSample);
+
+Due to numerical errors, stdCorr is not symmetric. Modify stdCorr to make it symmetric.
+
+% Compute maximum absolute difference of matrix against its
+% transpose
+max(abs(stdCorr-stdCorr'),[],'all')
+
+ans = 
+0
+
+% Force correlation matrix to be symmetric
+stdCorr = (stdCorr+stdCorr')/2;
+
+Use covarianceDenoising to compute the denoised covariance estimate from Sigma using the
+correct sample size.
+
+denoisedCorr = covarianceDenoising(stdCorr,numObservations);
+denoisedCorr = (denoisedCorr+denoisedCorr')/2;
+
+Compute Denoised Covariance for Different Sample Sizes
+
+Compare the maximum correlation difference between the denoised covariance with the correct
+sample size and other sample sizes. Also, you compute the number of factors.
+
+% Sample sizes to try
+numSizes = 100;
+sampleSizes = ceil(logspace(0,4,numSizes));
+
+% Compute denoised correlation and store the maximum correlation
+% mismatch
+correlations = cell(numSizes);
+numFactors = zeros(numSizes,1);
+maxDiff = zeros(numSizes,1);
+for i = 1:numSizes
+    [correlations{i},numFactors(i)] = covarianceDenoising(stdCorr,...
+        sampleSizes(i)); 
+    maxDiff(i) = norm(correlations{i}(:)-denoisedCorr(:),inf);
+end
+
+Plot the maximum error in the correlations as well as the number of factors identified for each sample
+size.
+
+figure;
+
+% Plot correlation error
+
+covarianceDenoising
+
+15-49

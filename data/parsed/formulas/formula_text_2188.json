@@ -1,0 +1,12 @@
+{
+  "page": 1128,
+  "original_text": "histData = load('HistoricalYTMData.mat');\n% Time to maturity for each series\ntsYTMMats = histData.tsYTMMats;\n% Dates that rates were observed\ntsYTMObsDates = histData.tsYTMObsDates;\n% Observed rates\ntsYTMRates = histData.tsYTMRates;",
+  "ocr_text": "histData=load(HistoricalYTMData.mat);\nTimetomaturityforeachseries\ntsYTMMats=histData.tsYTMMats;\nsDatesthatrateswereobserved\ntsYTMObsDates=histData.tsYTMObsDates;\nObservedrates\ntsYTMRates=histData.tsYTMRates;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 557.42,
+    "x1": 312.16,
+    "y1": 632.69
+  },
+  "confidence": "high"
+}

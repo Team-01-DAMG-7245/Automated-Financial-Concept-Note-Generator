@@ -1,0 +1,12 @@
+{
+  "page": 109,
+  "original_text": "C = zeros(numStates);\nfor i = 1:length(phi)-dS-1  \n    C(phi(i),phi(i+1)) = C(phi(i),phi(i+1))+1;\nend",
+  "ocr_text": "C=zeros(numStates);\nfori=1:length(phi)-dS-1\n\nC(phi(i),phi(i+1))=C(phi(i),phi(i+1))+1;\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 461.91,
+    "x1": 339.23,
+    "y1": 504.78
+  },
+  "confidence": "high"
+}

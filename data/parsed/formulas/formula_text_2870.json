@@ -1,0 +1,12 @@
+{
+  "page": 1488,
+  "original_text": "SDEMRD = sdemrd(Speed,Level,Alpha,Sigma) creates a default SDEMRD object.",
+  "ocr_text": "SDEMRD=sdemrd(Speed,Level,Alpha,Sigma)createsadefaultSDEMRDobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 607.02,
+    "x1": 483.02,
+    "y1": 618.65
+  },
+  "confidence": "high"
+}

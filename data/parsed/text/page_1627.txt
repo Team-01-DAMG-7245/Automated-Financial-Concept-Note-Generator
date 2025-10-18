@@ -1,0 +1,59 @@
+mertonObj = merton(Return,Sigma,JumpFreq,JumpMean,JumpVol,...
+                'startstat',AssetPrice)
+
+mertonObj = 
+   Class MERTON: Merton Jump Diffusion
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 80
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+          Sigma: 0.16
+         Return: 0.03
+       JumpFreq: 2
+       JumpMean: 0.02
+        JumpVol: 0.08
+
+Define the quasi-Monte Carlo simulation using the optional name-value arguments for
+'MonteCarloMethod','QuasiSequence', and 'BrownianMotionMethod'.
+
+[paths,time,z] = simByEuler(mertonObj,10,'ntrials',4096,'montecarlomethod','quasi','quasisequence
+
+Input Arguments
+
+MDL — Stochastic differential equation model
+object
+
+Stochastic differential equation model, specified as a merton object. You can create a merton object
+using merton.
+
+Data Types: object
+
+NPeriods — Number of simulation periods
+positive scalar integer
+
+Number of simulation periods, specified as a positive scalar integer. The value of NPeriods
+determines the number of rows of the simulated output series.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: [Paths,Times,Z,N] = simByEuler(merton,NPeriods,'DeltaTime',dt)
+
+NTrials — Simulated trials (sample paths)
+1 (single path of correlated state variables) (default) | positive scalar integer
+
+simByEuler
+
+15-321

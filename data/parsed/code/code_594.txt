@@ -1,0 +1,6 @@
+Page 550
+================================================================================
+
+1
+Define a myResetFunction function that describes the initial conditions of the environment at
+the beginning of a training episode.

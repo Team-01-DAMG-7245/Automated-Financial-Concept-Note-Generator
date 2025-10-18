@@ -1,0 +1,12 @@
+{
+  "page": 442,
+  "original_text": "lambdaHH =\n;\n% Variance + Herfindahl-Hirschman (HH) index\nvar_HH = @(x) x'*p.AssetCovar*x + lambdaHH*(x'*x);\n% Solution that accounts for risk and HH diversification\nwHHMix = estimateCustomObjectivePortfolio(p,var_HH,TargetReturn=ret0);",
+  "ocr_text": "lambdaHH_= .081 ;\nSVariance+Herfindahl-Hirschman(HH)index\nvar_HH=Q(x)x*p.AssetCovar*x+LambdaHH*(x*x);\nSolutionthataccountsforriskandHHdiversification\nWHHMix=estimateCustom0bjectivePortfolio(p,var_HH,TargetReturn=ret);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 561.16,
+    "x1": 469.26,
+    "y1": 614.83
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,35 @@
+yyaxis left
+semilogx(sampleSizes,maxDiff)
+hold on
+ylabel("Correlation Error");
+
+% Plot number of factors
+yyaxis right
+semilogx(sampleSizes,numFactors)
+ylabel("Number of Factors");
+
+% Title, labels, and legends
+title("Sample Size Effect")
+xlabel("Sample Size");
+hold off
+
+Note that when the sample size is close to the number of assets, the behavior of both the correlation
+error and the number of factors is erratic. Here, when the sample size is between 55 and 292, the
+number of factors and the correlation error jump up and down. Before 55 "observations" the number
+of factors is 1 because the denoising method doesn't have enough information to trust that what is
+being observed is signal and not noise; only the largest eigenvalue is associated with signal. Usually
+the largest eigenvalue is linked to the market. Meanwhile, after 292 "observations" the number of
+eigenvalues not associated with noise monotonically increases. This behavior happens because
+denoising assumes that the sample is less noisy with more observations, so identifying signal from
+noise is easier.
+
+If the sample size of the initial covariance estimate is not known, it is better to choose a sample size
+that is far from the number of assets. For cases with less trust in the initial covariance estimate, the
+sample size should be smaller, below 55 in this example. If you trust the initial covariance estimate,
+then the sample size should be larger, above 292 in this example. The degree of trust in the initial
+covariance matrix can be adjusted by increasing the sample size.
+
+15
+Functions
+
+15-50

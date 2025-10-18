@@ -1,0 +1,12 @@
+{
+  "page": 708,
+  "original_text": "p = PortfolioCVaR;\np = setBudget(p, 1,1);\np = setBounds(p, [ -0.1; 0.2; 0.3; 0.2 ], [ 0.5; 0.3; 0.9; 0.8 ]);\n        \n[lb, ub, isbounded] = estimateBounds(p)",
+  "ocr_text": "p=PortfolioCVvaR;\n\np=setBudget(p,1,1);\np=setBounds(p,[-0.1;0.2;0.3;0.2],[0.5;0.3;0.9;0.8])\n[lb,ub,isbounded]=estimateBounds(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 307.59,
+    "x1": 376.07,
+    "y1": 350.53
+  },
+  "confidence": "high"
+}

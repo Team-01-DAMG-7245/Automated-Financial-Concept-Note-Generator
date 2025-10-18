@@ -1,0 +1,12 @@
+{
+  "page": 1025,
+  "original_text": "fprintf('Date \\t\\t Time Frac \\t Amount\\n');",
+  "ocr_text": "fprintf(Date(ttTimeFractAmountn);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 658.31,
+    "x1": 323.0,
+    "y1": 668.78
+  },
+  "confidence": "high"
+}

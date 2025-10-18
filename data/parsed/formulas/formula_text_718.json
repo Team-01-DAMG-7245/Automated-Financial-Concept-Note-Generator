@@ -1,0 +1,12 @@
+{
+  "page": 433,
+  "original_text": "Define a grid of WoB percentages such that minWoB = targetWoB(1) ≤… ≤ targetWoB(N) =\nmaxWoB.",
+  "ocr_text": "DefineagridofWoBpercentagessuchthatminWoB=targetWoB(1)s...stargetWoB(N)=\nmaxWoB.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 588.96,
+    "x1": 528.78,
+    "y1": 612.59
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,10 @@
+Page 1542
+================================================================================
+
+•
+computeTransactionCostsFcn — A function handle to compute customized transaction fees. If
+you specify a function handle, the backtestEngine object calls the TransactionCosts function
+to compute the fees for each rebalance. The user-defined computeTransactionCostsFcn
+function handle has different signatures depending on whether the optional name-value
+arguments UserData and EngineDataList are specified and whether the sellCosts,
+buyCosts, or detailedCosts outputs are used.

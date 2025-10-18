@@ -1,0 +1,12 @@
+{
+  "page": 923,
+  "original_text": "transMatIGSG = transprob(dataIGSG,'labels',{'IG','SG','D'},...\n'startDate',startDate,'endDate',endDate)",
+  "ocr_text": "transMatIGSG=transprob(dataIGSG,labels,{IG,SG,D},...\nstartDate,startDate,endDate,endDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 408.03,
+    "x1": 425.94,
+    "y1": 429.29
+  },
+  "confidence": "high"
+}

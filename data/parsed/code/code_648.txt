@@ -1,0 +1,10 @@
+Page 604
+================================================================================
+
+ObservationDimension = [1 4];
+ObservationInfo_Train_Buy = rlNumericSpec(ObservationDimension);
+ObservationInfo_Train_Buy.Name = 'Observation Data';
+ObservationInfo_Train_Buy.Description = ['RemainingSharesToTrade, ...' ...
+    'RemainingIntervals, IS_Agent, PriceDivergence'];
+ObservationInfo_Train_Buy.LowerLimit = -inf;
+ObservationInfo_Train_Buy.UpperLimit = inf;

@@ -1,0 +1,54 @@
+than IBM by more than 4%. This difference is due to the imposed strong view that MSFT outperforms
+IBM by 5%.
+
+table(assetNames', PI*252, mu_bl*252, 'VariableNames', ["Asset_Name", ...
+    "Prior_Belief_of_Expected_Return", "Black_Litterman_Blended_Expected_Return"])
+
+ans=7×3 table
+    Asset_Name    Prior_Belief_of_Expected_Return    Black_Litterman_Blended_Expected_Return
+    __________    _______________________________    _______________________________________
+
+"AA"                    0.19143                                0.19012                
+      "AIG"                   0.14432                                0.13303                
+      "WMT"                   0.15754                                 0.1408                
+      "MSFT"                  0.14071                                0.17557                
+      "BA"                    0.21108                                 0.2017                
+      "GE"                    0.13323                                0.12525                
+      "IBM"                   0.14816                                0.12877
+
+Portfolio Optimization and Results
+
+The Portfolio object in Financial Toolbox™ implements the Markowitz mean variance portfolio
+optimization framework. Using a Portfolio object, you can find the efficient portfolio for a given
+risk or return level, and you can also maximize the Sharpe ratio.
+
+Use estimateMaxSharpeRatio with the Portfolio object to find allocations with the maximum
+Sharpe ratio for the following portfolios:
+
+•
+Portfolio with asset mean and covariance from historical asset returns
+
+•
+Portfolio with blended asset return and covariance from the Black-Litterman model
+
+port = Portfolio('NumAssets', numAssets, 'lb', 0, 'budget', 1, 'Name', 'Mean Variance');
+port = setAssetMoments(port, mean(assetRetns.Variables), Sigma);
+wts = estimateMaxSharpeRatio(port);
+
+portBL = Portfolio('NumAssets', numAssets, 'lb', 0, 'budget', 1, 'Name', 'Mean Variance with Blac
+portBL = setAssetMoments(portBL, mu_bl, Sigma + cov_mu);  
+wtsBL = estimateMaxSharpeRatio(portBL);
+
+ax1 = subplot(1,2,1);
+idx = wts>0.001;
+pie(ax1, wts(idx), assetNames(idx));
+title(ax1, port.Name ,'Position', [-0.05, 1.6, 0]);
+
+ax2 = subplot(1,2,2);
+idx_BL = wtsBL>0.001;
+pie(ax2, wtsBL(idx_BL), assetNames(idx_BL));
+title(ax2, portBL.Name ,'Position', [-0.05, 1.6, 0]);
+
+Black-Litterman Portfolio Optimization Using Financial Toolbox
+
+4-225

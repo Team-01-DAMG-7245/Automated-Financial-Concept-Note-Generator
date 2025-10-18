@@ -1,0 +1,12 @@
+{
+  "page": 2426,
+  "original_text": "Weights = holdings2weights(Holdings,Prices) converts portfolio holdings into portfolio\nweights. The weights must satisfy a budget constraint such that the weights sum to Budget for each\nportfolio.",
+  "ocr_text": "Weights=holdings2weights(Holdings,Prices)convertsportfolioholdingsintoportfolio\nweights.TheweightsmustsatisfyabudgetconstraintsuchthattheweightssumtoBudgetforeach\nportfolio.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 259.4,
+    "x1": 551.57,
+    "y1": 295.03
+  },
+  "confidence": "high"
+}

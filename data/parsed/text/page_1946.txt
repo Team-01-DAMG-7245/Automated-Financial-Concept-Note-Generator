@@ -1,0 +1,21 @@
+[2] Hull, J., and A. White. “Valuing Credit Default Swaps I: No Counterparty Default Risk.” Journal of
+Derivatives. Vol. 8, pp. 29–40.
+
+[3] O'Kane, D. and S. Turnbull. “Valuation of Credit Default Swaps.” Lehman Brothers, Fixed Income
+Quantitative Credit Research, April 2003.
+
+See Also
+cdsbootstrap | cdsprice | IRDataCurve
+
+Topics
+“Finding Breakeven Spread for New CDS Contract” on page 8-104
+“Valuing an Existing CDS Contract” on page 8-107
+“Converting from Running to Upfront” on page 8-109
+“First-to-Default Swaps” (Financial Instruments Toolbox)
+“Pricing a CDS Index Option” (Financial Instruments Toolbox)
+“Credit Default Swap (CDS)” on page 8-100
+
+15
+Functions
+
+15-640

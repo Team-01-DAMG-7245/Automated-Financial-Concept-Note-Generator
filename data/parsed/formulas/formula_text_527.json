@@ -1,0 +1,12 @@
+{
+  "page": 358,
+  "original_text": "•\nA semicontinuous constraint confines the allocation of an asset. For example, you can use this\nconstraint to confine the allocated weight of an allocated asset to between 5% and 50%. By using\nthis constraint, you can avoid very small or large positions to minimize the churns and operational\ncosts. To mathematically formulate this type of constraint, a binary variable vi is needed, where vi\nis 0 or 1. The value 0 indicates that asset i is not allocated and the value 1 indicates that asset i is\nallocated. The mathematical form is lb * vi ≤xi ≤ub * vi, where vi is 0 or 1. Specify this type of\nconstraint as a 'Conditional' BoundType in the Portfolio class using the setBounds\nfunction.",
+  "ocr_text": "*A-semicontinuousconstraintconfinestheallocationofanasset.Forexample,youcanusethis\nconstrainttoconfinetheallocatedweightofanallocatedassettobetween5and50.Byusing\nthisconstraint,youcanavoidverysmallorlargepositionstominimizethechurnsandoperational\ncosts.Tomathematicallyformulatethistypeofconstraint,abinaryvariablev;isneeded,wherev;\nis0or1.Thevalue0indicatesthatassetiisnotallocatedandthevalue1indicatesthatassetiis\nallocated.Themathematicalformislb*v;=x;sub*v;,wherev;is0or1.Specifythistypeof\nconstraintasaConditionalBoundTypeinthePortfolioclassusingthesetBounds\nfunction.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 360.64,
+    "x1": 555.16,
+    "y1": 459.56
+  },
+  "confidence": "high"
+}

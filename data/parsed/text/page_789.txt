@@ -1,0 +1,63 @@
+The default is to ignore these constraints.
+
+Linear Equality Constraints
+
+Linear equality constraints are general linear constraints that model relationships among portfolio
+weights that satisfy a system of equalities. Linear equality constraints take the form
+
+AEx = bE
+
+where:
+
+x is the portfolio (n vector).
+
+AE is the linear equality constraint matrix (nE-by-n matrix).
+
+bE is the linear equality constraint vector (nE vector).
+
+n is the number of assets in the universe and nE is the number of constraints.
+
+PortfolioMAD object properties to specify linear equality constraints are:
+
+•
+AEquality for AE
+•
+bEquality for bE
+•
+NumAssets for n
+
+The default is to ignore these constraints.
+
+'Simple' Bound Constraints
+
+'Simple' Bound constraints are specialized linear constraints that confine portfolio weights to fall
+either above or below specific bounds. Since every portfolio set must be bounded, it is often a good
+practice, albeit not necessary, to set explicit bounds for the portfolio problem. To obtain explicit
+bounds for a given portfolio set, use the estimateBounds function. Bound constraints take the form
+
+lB ≤x ≤uB
+
+where:
+
+x is the portfolio (n vector).
+
+lB is the lower-bound constraint (n vector).
+
+uB is the upper-bound constraint (n vector).
+
+n is the number of assets in the universe.
+
+PortfolioMAD object properties to specify bound constraints are:
+
+•
+LowerBound for lB
+•
+UpperBound for uB
+•
+NumAssets for n
+
+The default is to ignore these constraints.
+
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object
+
+6-9

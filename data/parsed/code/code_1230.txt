@@ -1,0 +1,12 @@
+Page 1258
+================================================================================
+
+•
+Take advantage of the fact that simulation methods are designed to detect the presence
+of NaN (not a number) conditions returned from end-of-period processing functions. A
+NaN represents the result of an undefined numerical calculation, and any subsequent calculation
+based on a NaN produces another NaN. This helps improve performance in certain situations. For
+example, consider simulating paths of the underlier of a knock-out barrier option (that is, an
+option that becomes worthless when the price of the underlying asset crosses some prescribed
+barrier). Your end-of-period function could detect a barrier crossing and return a NaN to signal
+early termination of the current trial.

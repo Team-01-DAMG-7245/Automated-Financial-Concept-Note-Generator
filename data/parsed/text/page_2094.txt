@@ -1,0 +1,64 @@
+TargetDir — Target folder where to write new holidays.m files
+character vector
+
+Target folder where to write the new holidays.m files, specified using a character vector.
+
+Data Types: char
+
+IncludeWkds — Option to include weekends in holiday list
+numeric with value 0 or 1
+
+Option to include weekends in the holiday list, specified using a numeric with value 0 or 1. Values
+are:
+
+•
+0 – Do not include weekends in the holiday list.
+
+•
+1 – Include weekends in the holiday list.
+
+Data Types: logical
+
+Wprompt — Option to prompt for file location for each holiday.m file that is created
+numeric with value 0 or 1
+
+Option to prompt for the file location for each holiday.m file that is created, specified using a
+numeric with value 0 or 1. Values are:
+
+•
+0 – Do not prompt for the file location.
+
+•
+1 – Prompt for the file location.
+
+Data Types: logical
+
+NoGUI — Run createholidays without displaying Trading Calendars user interface
+numeric with value 0 or 1
+
+Run createholidays without displaying the Trading Calendars user interface, specified using a
+numeric with value 0 or 1. Values are:
+
+•
+0 – Display the GUI.
+
+•
+1 – Do not display the GUI.
+
+Data Types: logical
+
+Version History
+Introduced in R2007b
+
+See Also
+holidays
+
+Topics
+“Handle and Convert Dates” on page 2-2
+“Trading Calendars User Interface” on page 12-2
+“UICalendar User Interface” on page 12-4
+
+15
+Functions
+
+15-788

@@ -1,0 +1,63 @@
+If you have an initial portfolio, estimateFrontierByReturn also returns purchases and sales to get
+from your initial portfolio to the target portfolios on the efficient frontier. For example, given an initial
+portfolio in pwgt0, to obtain purchases and sales with target returns of 7%, 10%, and 12%:
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+p = setInitPort(p, pwgt0);
+[pwgt, pbuy, psell] = estimateFrontierByReturn(p, [0.07,  0.10, .12]);
+
+display(pwgt)
+
+pwgt = 4×3
+
+0.7435    0.3656    0.1088
+    0.1257    0.3411    0.4946
+    0.0510    0.0782    0.0939
+    0.0799    0.2151    0.3027
+
+display(pbuy)
+
+pbuy = 4×3
+
+0.4435    0.0656         0
+         0    0.0411    0.1946
+         0         0         0
+         0    0.1151    0.2027
+
+display(psell)
+
+psell = 4×3
+
+0         0    0.1912
+    0.1743         0         0
+    0.1490    0.1218    0.1061
+    0.0201         0         0
+
+If you do not have an initial portfolio, the purchase and sale weights assume that your initial portfolio
+is 0.
+
+See Also
+PortfolioCVaR | estimateFrontier | estimateFrontierLimits |
+estimateFrontierByReturn | estimatePortReturn | estimateFrontierByRisk |
+estimatePortRisk | estimateFrontierByRisk | setSolver
+
+Related Examples
+
+•
+“Estimate Efficient Portfolios for Entire Frontier for PortfolioCVaR Object” on page 5-85
+
+•
+“Creating the PortfolioCVaR Object” on page 5-22
+
+•
+“Working with CVaR Portfolio Constraints Using Defaults” on page 5-51
+
+•
+“Estimate Efficient Frontiers for PortfolioCVaR Object” on page 5-105
+
+•
+“Asset Returns and Scenarios Using PortfolioCVaR Object” on page 5-36
+
+Obtaining Efficient Portfolios for Target Returns
+
+5-93

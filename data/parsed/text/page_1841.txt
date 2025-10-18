@@ -1,0 +1,57 @@
+Note If a SIA day-count basis is defined in the Basis input argument and there is no value assigned
+for DiscountBasis, the default behavior is for SIA bases to use the actual/actual day count to
+compute discount factors.
+
+If an ICMA day-count basis or BUS/252 is defined in the Basis input argument and there is no value
+assigned for DiscountBasis, the specified bases from the Basis input argument are used.
+
+Data Types: double
+
+LastCouponInterest — Compounding convention for computing yield of a bond in last
+coupon period
+compound (default) | values are simple or compound
+
+Compounding convention for computing the yield of a bond in the last coupon period, specified as the
+comma-separated pair consisting of 'LastCouponInterest' and a scalar or a NUMBONDS-by-1 or 1-
+by-NUMBONDS vector. LastCouponInterest is based on only the last coupon and the face value to
+be repaid. Acceptable values are:
+
+•
+simple
+
+•
+compound
+
+Data Types: char | cell
+
+Output Arguments
+
+YearConvexity — Yearly (annualized) convexity
+numeric
+
+Yearly (annualized) convexity, returned as a NUMBONDS-by-1 vector.
+
+PerConvexity — Periodic convexity reported on semiannual bond basis
+numeric
+
+Periodic convexity reported on a semiannual bond basis (in accordance with SIA convention),
+returned as a NUMBONDS-by-1 vector.
+
+More About
+
+Bond Convexity
+
+Bond convexity is a measure of the curvature in the relationship between bond prices and bond
+yields.
+
+Bond convexity quantifies how much the price of a bond changes in response to changes in interest
+rates, taking into account the nonlinear relationship between price and yield. Convexity is an
+important concept in fixed-income investing because it helps investors understand the sensitivity of a
+bond's price to interest rate movements beyond what is captured by duration alone.
+
+Version History
+Introduced before R2006a
+
+bndconvy
+
+15-535

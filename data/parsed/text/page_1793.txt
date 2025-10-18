@@ -1,0 +1,39 @@
+PutDelta — Delta of put option
+numeric
+
+Delta of the put option, returned as a numeric.
+
+More About
+
+Delta
+
+A delta sensitivity measures the rate at which the price of an option is expected to change relative to
+a $1 change in the price of the underlying asset.
+
+Delta is not a static measure; it changes as the price of the underlying asset changes (a concept
+known as gamma sensitivity), and as time passes. Options that are near the money or have longer
+until expiration are more sensitive to changes in delta.
+
+Delta values for call options range from 0 to 1. A delta close to 1 means the option price moves
+almost in tandem with the stock price. And, delta values for put options ranges from -1 to 0. A delta
+close to -1 means the option price moves inversely but almost in tandem with the stock price.
+
+Version History
+Introduced in R2006a
+
+References
+
+[1] Hull, John C. Options, Futures, and Other Derivatives. 5th edition, Prentice Hall, 2003.
+
+See Also
+blsgamma | blslambda | blsprice | blsrho | blstheta | blsvega
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+blsdelta
+
+15-487

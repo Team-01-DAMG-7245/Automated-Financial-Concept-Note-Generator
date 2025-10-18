@@ -1,0 +1,12 @@
+{
+  "page": 1805,
+  "original_text": "Price = blsprice(S,X,r_d,T,sigma,r_f)",
+  "ocr_text": "Price=blsprice(S,X,r_d,T,sigma,r_f)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 325.78,
+    "x1": 290.46,
+    "y1": 336.25
+  },
+  "confidence": "high"
+}

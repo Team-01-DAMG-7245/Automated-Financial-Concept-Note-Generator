@@ -1,0 +1,6 @@
+Page 1167
+================================================================================
+
+for i = 1:nIndices
+    U(:,i) = cdf(tails{i}, residuals(:,i)); % Transform margin to uniform
+end

@@ -1,0 +1,65 @@
+•
+If NUMSERIES ≥ 1, Design is a cell array. The cell array contains either one or NUMSAMPLES cells.
+Each cell contains a NUMSERIES-by-NUMPARAMS matrix of known values.
+
+If Design has a single cell, it is assumed to have the same Design matrix for each sample. If
+Design has more than one cell, each cell contains a Design matrix for each sample.
+
+Data Types: double | cell
+
+Covariance — Estimates for the covariance of the residuals of the regression
+matrix
+
+Estimates for the covariance of the residuals of the regression, specified as an NUMSERIES-by-
+NUMSERIES matrix.
+
+Data Types: double
+
+Method — Method of calculation for information matrix
+'hessian' (default) | character vector with value 'hessian' or 'fisher'
+
+(Optional) Method of calculation for the information matrix, specified as a character vector. The
+choices are:
+
+•
+'hessian' — This is the default method using the expected Hessian matrix of the observed log-
+likelihood function. This method is recommended since the resultant standard errors incorporate
+the increased uncertainties due to missing data.
+
+•
+'fisher' — This computes using the Fisher information matrix.
+
+Data Types: char
+
+MatrixFormat — Parameters to be included in Fisher information matrix
+'full' (default) | character vector with value 'full' or 'paramonly'
+
+(Optional) Parameters to be included in the Fisher information matrix, specified as a character vector.
+The choices are:
+
+•
+'full' — This is the default method that computes the full Fisher information matrix for both
+model and covariance parameter estimates.
+
+•
+'paramonly' — This computes only components of the Fisher information matrix associated with
+the model parameter estimates.
+
+Data Types: char
+
+CovarFormat — Format for covariance matrix
+'full' (default) | character vector with value 'full' or 'diagonal'
+
+(Optional) Format for the covariance matrix, specified as a character vector. The choices are:
+
+•
+'full' — This is the default method that computes the full covariance matrix.
+
+•
+'diagonal' — This forces the covariance matrix to be a diagonal matrix.
+
+Data Types: char
+
+ecmmvnrfish
+
+15-867

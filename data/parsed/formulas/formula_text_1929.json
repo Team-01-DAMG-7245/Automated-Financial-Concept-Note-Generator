@@ -1,0 +1,12 @@
+{
+  "page": 989,
+  "original_text": "sc = \n  creditscorecard with properties:",
+  "ocr_text": "sc=\ncreditscorecardwithproperties:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 622.23,
+    "x1": 274.21,
+    "y1": 643.49
+  },
+  "confidence": "high"
+}

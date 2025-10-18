@@ -1,0 +1,12 @@
+{
+  "page": 1908,
+  "original_text": "Busday = datetime\n   05-Jul-2001",
+  "ocr_text": "Busday=datetime\n05-Jul-2001",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 182.11,
+    "y1": 114.29
+  },
+  "confidence": "high"
+}

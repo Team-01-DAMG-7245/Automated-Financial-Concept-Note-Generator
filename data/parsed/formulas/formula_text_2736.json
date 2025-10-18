@@ -1,0 +1,12 @@
+{
+  "page": 1378,
+  "original_text": "CEV = cev(Return,Alpha,Sigma) creates a default CEV object.",
+  "ocr_text": "CEV=cev(Return,Alpha,Sigma)createsadefaultCEVobject.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.77,
+    "x1": 398.73,
+    "y1": 580.4
+  },
+  "confidence": "high"
+}

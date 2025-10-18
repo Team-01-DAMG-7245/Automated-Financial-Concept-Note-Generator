@@ -1,0 +1,37 @@
+function new_weights = mktFcn(~,pricesTT)
+% Market index rebalance function
+
+% Invest only in the market index.
+new_weights = zeros(size(pricesTT,2),1);
+new_weights(1) = 1;
+
+end
+
+% The API of the rebalance functions (riskParityFcn and mktFcn) require
+% a first input with the current weights. They are
+% redundant for these two strategies and can be ignored.
+
+See Also
+backtestStrategy | backtestEngine | portfolioRiskContribution |
+riskBudgetingPortfolio
+
+Related Examples
+
+•
+“Risk Budgeting Portfolio” on page 4-286
+
+•
+“Create Hierarchical Risk Parity Portfolio” on page 4-296
+
+•
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+
+•
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+
+•
+“Backtest with Brinson Attribution to Evaluate Portfolio Performance” on page 4-315
+
+Backtest Using Risk-Based Equity Indexation
+
+4-295

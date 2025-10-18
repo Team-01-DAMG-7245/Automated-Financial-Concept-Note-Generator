@@ -1,0 +1,12 @@
+{
+  "page": 931,
+  "original_text": "load Data_TransProb\nstartDate = datetime(1995,12,31);",
+  "ocr_text": "loadData_TransProb\nstartDate=datetime(1995,12,31);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 268.8,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

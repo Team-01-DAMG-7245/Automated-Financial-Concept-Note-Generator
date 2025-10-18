@@ -1,0 +1,9 @@
+Page 95
+================================================================================
+
+LOB3Variables = ["AskPrice1","AskSize1","BidPrice1","BidSize1",...
+                 "AskPrice2","AskSize2","BidPrice2","BidSize2",...
+                 "AskPrice3","AskSize3","BidPrice3","BidSize3"];
+DSLOB.SelectedVariableNames = LOB3Variables;
+                               
+DS = combine(DSMSG,DSLOB);

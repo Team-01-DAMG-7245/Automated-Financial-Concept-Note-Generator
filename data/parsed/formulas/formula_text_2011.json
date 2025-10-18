@@ -1,0 +1,12 @@
+{
+  "page": 1040,
+  "original_text": "knnResStatus = fitcknn(resStatusToImpute, 'ResStatus', 'NumNeighbors', k, 'Standardize', true);\nimputedResStatus = predict(knnResStatus,resStatusToImpute(missingResStatus,:));",
+  "ocr_text": "knnResStatus=fitcknn(resStatusToImpute,ResStatus,NumNeighbors,k,Standardize,true);\nimputedResStatus=predict(knnResStatus,resStatusToImpute(missingResStatus,:));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 519.84,
+    "x1": 604.75,
+    "y1": 541.11
+  },
+  "confidence": "high"
+}

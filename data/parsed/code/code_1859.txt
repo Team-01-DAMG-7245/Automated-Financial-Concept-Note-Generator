@@ -1,0 +1,5 @@
+Page 1521
+================================================================================
+
+Expected (mean) instantaneous rate of return of GBM price process, returned as a numeric scalar or
+function handle.

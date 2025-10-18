@@ -1,0 +1,31 @@
+yLimits = ylim;
+
+% Target points and odds
+plot([TargetPoints TargetPoints],[yLimits(1) TargetOdds],'k:')
+plot([xLimits(1) TargetPoints],[TargetOdds TargetOdds],'k:')
+
+% Target points plus PDO
+plot([TargetPoints+PDO TargetPoints+PDO],[yLimits(1) 2*TargetOdds],'k:')
+plot([xLimits(1) TargetPoints+PDO],[2*TargetOdds 2*TargetOdds],'k:')
+
+% Target points minus PDO
+plot([TargetPoints-PDO TargetPoints-PDO],[yLimits(1) TargetOdds/2],'k:')
+plot([xLimits(1) TargetPoints-PDO],[TargetOdds/2 TargetOdds/2],'k:')
+
+hold off
+
+Step 7. Validate the credit scorecard model using the CAP, ROC, and Kolmogorov-Smirnov
+statistic
+
+The creditscorecard class supports three validation methods, the Cumulative Accuracy Profile
+(CAP), the Receiver Operating Characteristic (ROC), and the Kolmogorov-Smirnov (KS) statistic. For
+more information on CAP, ROC, and KS, see “Cumulative Accuracy Profile (CAP)” on page 15-2015,
+“Receiver Operating Characteristic (ROC)” on page 15-2015, and “Kolmogorov-Smirnov statistic (KS)”
+on page 15-2016.
+
+[Stats,T] = validatemodel(sc,'Plot',{'CAP','ROC','KS'});
+
+8
+Credit Risk Analysis
+
+8-84

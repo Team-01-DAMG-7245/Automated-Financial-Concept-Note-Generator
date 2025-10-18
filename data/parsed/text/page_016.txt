@@ -1,0 +1,104 @@
+Supported Constraints for Portfolio Optimization Using PortfolioMAD
+Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-8
+Linear Inequality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-8
+Linear Equality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-9
+'Simple' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-9
+'Conditional' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-10
+Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-10
+Conditional Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-11
+Group Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-11
+Group Ratio Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-12
+Average Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-13
+One-way Turnover Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-13
+Cardinality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-14
+
+Default Portfolio Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-15
+
+PortfolioMAD Object Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-16
+
+PortfolioMAD Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-17
+PortfolioMAD Object Properties and Functions . . . . . . . . . . . . . . . . . . . .
+6-17
+Working with PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-17
+Setting and Getting Properties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-18
+Displaying PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-18
+Saving and Loading PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . .
+6-18
+Estimating Efficient Portfolios and Frontiers . . . . . . . . . . . . . . . . . . . . . .
+6-18
+Arrays of PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-19
+Subclassing PortfolioMAD Objects . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-20
+Conventions for Representation of Data . . . . . . . . . . . . . . . . . . . . . . . . .
+6-20
+
+Creating the PortfolioMAD Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-22
+Syntax . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-22
+PortfolioMAD Problem Sufficiency . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-22
+PortfolioMAD Function Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-23
+
+Common Operations on the PortfolioMAD Object . . . . . . . . . . . . . . . . . .
+6-29
+Naming a PortfolioMAD Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-29
+Configuring the Assets in the Asset Universe . . . . . . . . . . . . . . . . . . . . .
+6-29
+Setting Up a List of Asset Identifiers . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-29
+Truncating and Padding Asset Lists . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-31
+
+Setting Up an Initial or Current Portfolio . . . . . . . . . . . . . . . . . . . . . . . . .
+6-33
+
+Asset Returns and Scenarios Using PortfolioMAD Object . . . . . . . . . . . .
+6-35
+How Stochastic Optimization Works . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-35
+What Are Scenarios? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-35
+Setting Scenarios Using the PortfolioMAD Function . . . . . . . . . . . . . . . .
+6-36
+Setting Scenarios Using the setScenarios Function . . . . . . . . . . . . . . . . .
+6-37
+Estimating the Mean and Covariance of Scenarios . . . . . . . . . . . . . . . . .
+6-37
+Simulating Normal Scenarios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-38
+Simulating Normal Scenarios from Returns or Prices . . . . . . . . . . . . . . .
+6-38
+Simulating Normal Scenarios with Missing Data . . . . . . . . . . . . . . . . . . .
+6-39
+Simulating Normal Scenarios from Time Series Data . . . . . . . . . . . . . . .
+6-41
+Simulating Normal Scenarios with Mean and Covariance . . . . . . . . . . . .
+6-43
+
+Working with a Riskless Asset . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6-45
+
+xvi
+Contents

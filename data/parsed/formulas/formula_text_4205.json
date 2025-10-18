@@ -1,0 +1,12 @@
+{
+  "page": 2367,
+  "original_text": "Settle = datetime(2001,2,15);\nMaturity = datetime(2001,5,15);\nPrice = 100;\nDiscount = 0.0575;\nBasis = 2;",
+  "ocr_text": "Settle=datetime(2001,2,15);\nMaturity=datetime(2001,5,15);\nPrice=100;\n\nDiscount=0.0575;\n\nBasis=2;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 427.27,
+    "x1": 257.96,
+    "y1": 480.94
+  },
+  "confidence": "high"
+}

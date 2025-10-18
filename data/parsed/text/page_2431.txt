@@ -1,0 +1,50 @@
+inforatio
+
+Calculate information ratio for one or more assets
+
+Syntax
+
+inforatio(Asset,Benchmark)
+[Ratio,TE] = inforatio(Asset,Benchmark)
+
+Description
+
+inforatio(Asset,Benchmark) computes the information ratio for each asset relative to the
+Benchmark.
+
+[Ratio,TE] = inforatio(Asset,Benchmark) computes the information ratio and tracking error
+for each asset relative to the Benchmark.
+
+Examples
+
+Compute Information Ratio
+
+This example show how to calculate the information ratio using inforatio with example data,
+where the mean return of the market series is used as the return of the benchmark.
+
+You can use inforatio to compute the information ratio for the given asset return data and the riskless
+asset return.
+
+load FundMarketCash 
+Returns = tick2ret(TestData);
+Benchmark = Returns(:,2);
+InfoRatio = inforatio(Returns, Benchmark)
+
+InfoRatio = 1×3
+
+0.0432       NaN   -0.0315
+
+Since the market series has no risk relative to itself, the information ratio for the second series is
+undefined (which is represented as NaN in MATLAB®.
+
+Use Information Ratio to Compute Tracking Error
+
+This example show how to calculate the tracking error using inforatio with example data, where
+the mean return of the market series is used as the return of the benchmark.
+
+Given an asset or portfolio of assets and a benchmark, the relative standard deviation of returns
+between the asset or portfolio of assets and the benchmark is called tracking error.
+
+inforatio
+
+15-1125

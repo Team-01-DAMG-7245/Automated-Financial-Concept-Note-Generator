@@ -1,0 +1,6 @@
+Page 2215
+================================================================================
+
+This example shows how to compute expected lower partial moments based on the mean and
+standard deviations of normally distributed asset returns. The elpm function works with the mean
+and standard deviations for multiple assets and multiple orders.

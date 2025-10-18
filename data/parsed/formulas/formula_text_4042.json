@@ -1,0 +1,12 @@
+{
+  "page": 2289,
+  "original_text": "ans = struct with fields:\n                           MaxIterations: 1000\n                    AbsoluteGapTolerance: 1.0000e-07\n                    RelativeGapTolerance: 1.0000e-05\n                  NonlinearScalingFactor: 1000\n                  ObjectiveScalingFactor: 1000\n                                 Display: 'off'\n                           CutGeneration: 'basic'\n                MaxIterationsInactiveCut: 30\n                      ActiveCutTolerance: 1.0000e-07\n                    IntMainSolverOptions: [1×1 optim.options.Intlinprog]\n    NumIterationsEarlyIntegerConvergence: 30\n                     ExtendedFormulation: 0\n                            NumInnerCuts: 10\n                     NumInitialOuterCuts: 10",
+  "ocr_text": "ans=structwithfields:\n\nMaxIterations:_1000\nAbsoluteGapTolerance:_1.0000e-07\nRelativeGapTolerance:1.0000e-05\n\nNonlinearScalingFactor:1000\n\nObjectiveScalingFactor:1000\n\nDisplay:off\nCutGeneration:basic\nMaxIterationsInactiveCut:_30\nActiveCutTolerance:1.0000e-07\nIntMainSolverOptions:[1x1optim.options.Intlinprog]\nNumIterationsEarlyIntegerConvergence:_30\nExtendedFormulation:0\n\nNumInnerCuts:10\nNumInitialOuterCuts:10",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 168.63,
+    "x1": 480.1,
+    "y1": 330.29
+  },
+  "confidence": "high"
+}

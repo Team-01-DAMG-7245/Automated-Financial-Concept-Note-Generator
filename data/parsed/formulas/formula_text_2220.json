@@ -1,0 +1,12 @@
+{
+  "page": 1145,
+  "original_text": "LoggedSignals.State = [Moneyness TimeToMaturity InitPosition]';\nInitialObservation  = LoggedSignals.State;",
+  "ocr_text": "LoggedSignals.State=[MoneynessTimeToMaturityInitPosition];\nInitialObservation=LoggedSignals.State;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 244.23,
+    "x1": 431.33,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

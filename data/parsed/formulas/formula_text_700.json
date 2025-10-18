@@ -1,0 +1,12 @@
+{
+  "page": 430,
+  "original_text": "% Sell any existing long position where the signal has turned to 0.\nidx = crossoverSignals{end,:} == 0;\nnew_weights(idx) = 0;",
+  "ocr_text": "Sellanyexistinglongpositionwherethesignalhasturnedto0.\nidx=crossoverSignals{end,:}==0;\nnew_weights(idx)=0;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 114.63,
+    "x1": 453.01,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1223,
+  "original_text": "nVariables  = size(returns, 2);\nexpReturn   = mean(returns);\nsigma       = std(returns);\ncorrelation = corrcoef(returns);\nt           = 0;\nX           = 100;\nX           = X(ones(nVariables,1));",
+  "ocr_text": "nVariables=size(returns,2);\nexpReturn =mean(returns);\n\nsigma =std(returns);\ncorrelation=corrcoef(returns);\n\nt =0;\n\nxX =100;\n\nX =X(ones(nVariables,1));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 589.93,
+    "x1": 285.05,
+    "y1": 665.19
+  },
+  "confidence": "high"
+}

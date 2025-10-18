@@ -1,0 +1,52 @@
+From the trend decomposition and by inspecting the series Lt + St for each commodity, you can see
+that most commodities show a long-term decrease in price over recent decades, followed by a more
+recent upturn in the price.
+
+Some exceptions, such as the series Sugar, EU, show a long-term downward trend.
+
+Some commodities also appear to have gone through periods of high seasonal volatility, such as the
+two coffee price series. Banana and orange prices appear to be more susceptible to seasonal
+volatility. Chicken prices exhibit seasonal volatility that has increased in the last few years.
+
+Cluster Commodities Based on Similarity in Irregular Component
+
+After removing the long-term and seasonal components from the price series, you are left with the
+irregular component Ct, given by
+
+Ct = Pt −Lt −St.
+
+The Ct component represents the business cycle component in the soft commodity time series and
+this series is affected by short-term market conditions. This component provides a fairer basis for
+comparing the soft commodity prices because both the long-term price trends and the seasonal
+trends are removed.
+
+Compute the pairwise distances between the irregular components using the correlation distance
+metric d. This metric is defined by
+
+d(s1, s2) = 1 −ρ(s1, s2), where ρ(s1, s2) is the linear correlation coefficient between the two time series
+s1 and s2.
+
+irregularCorrDistances = pdist( irregularComponent.', "correlation" );
+
+Use linkage to perform hierarchical clustering using the correlation distances. The complete
+method uses the largest distance between commodities in the two clusters.
+
+irregularComponentLinkage = linkage( irregularCorrDistances, "complete" );
+
+Create a dendrogram to visualize the linkage.
+
+figure
+h = dendrogram( irregularComponentLinkage, numCommodities, ...
+    "Labels", commodityNames, ...
+    "ColorThreshold", 1.2 );
+ylabel( "Dissimilarity" )
+title( "Commodity Price Series Clustering" )
+subtitle( "Irregular Component Correlation Distance" )
+set( h, "LineWidth", 2 )
+xtickangle( 45 )
+grid( "on" )
+box( "on" )
+
+Volatility Modeling for Soft Commodities
+
+14-95

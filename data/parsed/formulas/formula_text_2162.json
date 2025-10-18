@@ -1,0 +1,12 @@
+{
+  "page": 1113,
+  "original_text": "Gammas = blsgamma(StockPrice, StrikePrice, RiskFreeRate, ...\n                  ExpiryTime, Volatility , DividendRate)'",
+  "ocr_text": "Gammas=blsgamma(StockPrice,StrikePrice,RiskFreeRate,...\nExpiryTime,Volatility,DividendRate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 289.45,
+    "x1": 415.11,
+    "y1": 310.72
+  },
+  "confidence": "high"
+}

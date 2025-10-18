@@ -1,0 +1,12 @@
+{
+  "page": 513,
+  "original_text": "% Specify that the budget sums to one constraint.\np = setBudget(p,1,1);\n% Specify the maximum number of assets as 15.\np = setMinMaxNumAssets(p,[],2);\n% Specify the conditional bounds.\np = setBounds(p,0.1,[],BoundType=\"conditional\");",
+  "ocr_text": "Specifythatthebudgetsumstooneconstraint.\np=setBudget(p,1,1);\nSpecifythemaximumnumberofassetsas15.\np=setMinMaxNumAssets(p,[],2);\nSpecifytheconditionalbounds.\np=setBounds(p,0.1,[],BoundType=conditional);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 266.63,
+    "x1": 355.48,
+    "y1": 331.1
+  },
+  "confidence": "high"
+}

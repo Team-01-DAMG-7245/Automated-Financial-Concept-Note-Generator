@@ -1,0 +1,7 @@
+Page 1388
+================================================================================
+
+•
+A MATLAB function. Specifying a function provides indirect support for virtually any static,
+dynamic, linear, or nonlinear model. This parameter is supported via an interface, because all
+implementation details are hidden and fully encapsulated by the function.

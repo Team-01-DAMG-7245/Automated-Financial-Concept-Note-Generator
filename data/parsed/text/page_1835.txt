@@ -1,0 +1,48 @@
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although bndconvp supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+R2017b: Support for optional name-value input arguments
+Behavior changed in R2017b
+
+The specification of optional input arguments has changed. While the previous ordered inputs syntax
+is still supported, it may no longer be supported in a future release. Use the optional name-value pair
+inputs: Period, Basis, EndMonthRule, IssueDate,FirstCouponDate, LastCouponDate,
+StartDate,Face, CompoundingFrequency, DiscountBasis, and LastCouponInterest.
+
+References
+
+[1] Krgin, D. Handbook of Global Fixed Income Calculations. Wiley, 2002.
+
+[2] Mayle, J. "Standard Securities Calculations Methods: Fixed Income Securities Formulas for
+Analytic Measures." SIA, Vol 2, Jan 1994.
+
+[3] Stigum, M., Robinson, F. Money Market and Bond Calculation. McGraw-Hill, 1996.
+
+See Also
+cfconv | bndconvy | bnddurp | bnddury | cfdur | datetime
+
+Topics
+“Bond Portfolio for Hedging Duration and Convexity” on page 10-6
+“Yield Conventions” on page 2-21
+
+bndconvp
+
+15-529

@@ -1,0 +1,12 @@
+{
+  "page": 1277,
+  "original_text": "fprintf(' Brownian Motion American Put  Basket Price: %8.4f\\n\\n', BrownianMotionPutPrice)",
+  "ocr_text": "fprintf(BrownianMotionAmericanPutBasketPrice:8.4fnn,BrownianMotionPutPrice)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 335.65,
+    "x1": 572.23,
+    "y1": 346.12
+  },
+  "confidence": "high"
+}

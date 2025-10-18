@@ -1,0 +1,12 @@
+{
+  "page": 1304,
+  "original_text": "rng default\nZ = randn(NPeriods,1,NTrials);",
+  "ocr_text": "rngdefault\nZ=randn(NPeriods,1,NTrials);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 127.83,
+    "x1": 252.54,
+    "y1": 149.09
+  },
+  "confidence": "high"
+}

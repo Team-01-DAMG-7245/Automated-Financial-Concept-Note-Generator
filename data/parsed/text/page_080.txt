@@ -1,0 +1,34 @@
+Due to the following identity
+
+rc(t) = log
+pc(t)
+pc(t −1)
+
+=log(pc(t)) −log(pc(t −1))
+
+= [real(log(pc(t)) −real(log(pc(t −1)))]
+⨉
+blue curve
++ [imag(log(pc(t))) −imag(log(pc(t −1)))]
+⨉
+red curve
+⋅i,
+
+you can read the real part of a continuous return as a difference in ordinates on the blue graph, and
+you can read the imaginary part as a difference in ordinates on the red graph. Absolute price
+movements toward zero result in a negative real part and absolute price movements away from zero
+result in a positive real part. Likewise, changes of sign result in a jump of ±π in the imaginary part,
+with the sign change depending on the direction of the move.
+
+For example, the plot below superimposes the real and imaginary parts of the logarithm at prices p =
+−4 and p = 2, with lines to help visualize their differences.
+
+p = [-4; 2];
+plot(p,real(log(p)),"bo-",MarkerFaceColor="b")
+plot(p,imag(log(p)),"ro-",MarkerFaceColor="r")
+hold off
+
+2
+Performing Common Financial Tasks
+
+2-36

@@ -1,0 +1,62 @@
+%    Outputs:
+%      ExecutedShares - Vector of number of executed shares at each traded level
+%      ExecutedPrices - Vector of number of executed prices at each traded level
+%      InitialPrice - Scalar numeric initial price
+%      TradedLevels - Scalar numeric traded levels
+
+LOBLength = length(CurrentLOB);
+
+% Separate Bid and Ask data
+AskPriceIdx = (1:4:LOBLength);
+AskSizeIdx = AskPriceIdx + 1;
+BidPriceIdx = AskSizeIdx + 1;
+BidSizeIdx = BidPriceIdx + 1;
+
+AskPrices = CurrentLOB(AskPriceIdx)';
+AskSizes = CurrentLOB(AskSizeIdx)';
+BidPrices = CurrentLOB(BidPriceIdx)';
+BidSizes = CurrentLOB(BidSizeIdx)';
+
+if BuyTrade
+    LOBPrices = AskPrices;
+    LOBSizes = AskSizes;
+else
+    LOBPrices = BidPrices;
+    LOBSizes = BidSizes;
+end
+
+InitialPrice = LOBPrices(1);
+
+% Execute trade
+CumulativeLOBSizes = cumsum(LOBSizes);
+TradedLevels = sum(CumulativeLOBSizes <= TradingShares);
+if TradedLevels < 1
+    TradedLevels = 1;
+elseif CumulativeLOBSizes(TradedLevels) < TradingShares
+    TradedLevels = TradedLevels + 1;
+end
+
+ExecutedPrices = LOBPrices(1:TradedLevels);
+ExecutedShares = LOBSizes(1:TradedLevels);
+ExecutedShares(end) = ExecutedShares(end) - (sum(ExecutedShares) - TradingShares);
+end
+
+function outIS = endingInventoryIS(ArrivalPrice,ExecutedPrices,TradedVolumes,BuyTrade)
+% EndingInventoryIS function for Implementation Shortfall given ending inventory constraints
+%   This function computes the Implementation Shortfall (IS) under the
+%   assumption of ending inventory constraints (i.e. no opportunity cost).
+%
+%   For a Sell trade, the constraint is to have zero ending inventory
+%   assuming successful liquidation of all shares.
+%
+%   For a Buy trade, the constraint is to have full ending inventory
+%   assuming successful purchase of all shares.
+%
+%   Inputs:
+%
+%      ArrivalPrice - Scalar price immediately before trade execution
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-448

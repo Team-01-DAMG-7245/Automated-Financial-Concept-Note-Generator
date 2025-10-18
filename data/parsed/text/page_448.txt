@@ -1,0 +1,39 @@
+'Start',warmupPeriod);
+
+% Summary
+summary(backtester)
+
+ans=9×4 table
+                        MixedHH       MixedMDP      TiltedHH     TiltedMDP 
+                       __________    __________    __________    __________
+
+TotalReturn            0.7077        1.1927       0.79527        1.3295
+    SharpeRatio          0.029317       0.03188      0.031911      0.034608
+    Volatility           0.011965      0.017845      0.011719      0.016851
+    AverageTurnover     0.0054528     0.0065605     0.0053991     0.0070898
+    MaxTurnover           0.80059       0.72624       0.80099       0.76676
+    AverageReturn      0.00035068    0.00056875    0.00037387    0.00058304
+    MaxDrawdown           0.23083       0.34334       0.22526       0.34688
+    AverageBuyCost       0.068778      0.097277      0.070048       0.12019
+    AverageSellCost      0.068778      0.097277      0.070048       0.12019
+
+To visualize their performance over the entire investment period, plot the daily results of the
+strategies using equityCurve.
+
+% Plot the daily stocks and ESG strategy behavior.
+figure
+t = tiledlayout(2,1,'Padding','none');
+
+% Equity curves
+nexttile(t)
+equityCurve(backtester);
+
+% Table and plot of the average ESG score for the mixed and tilted
+% strategies throughout the investment period.
+nexttile(t)
+TAvgESG = averageESGTimetable(backtester,ESGnumeric,ESG0);
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-280

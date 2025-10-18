@@ -1,0 +1,12 @@
+{
+  "page": 1102,
+  "original_text": "NewPrice = PortfolioAmounts' * (CleanPrice + AccruedInterest)",
+  "ocr_text": "NewPrice=PortfolioAmounts*(CleanPrice+AccruedInterest)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 242.71,
+    "x1": 420.5,
+    "y1": 253.18
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 409
+================================================================================
+
+strategyNames = {'Equal Weighted', 'Max Sharpe Ratio', 'Inverse Variance', 'Markowitz Optimizatio
+assetSymbols = pricesTT.Properties.VariableNames;
+initialWeights = [equalWeight_initial(:), maxSharpeRatio_initial(:), inverseVariance_initial(:), 
+heatmap(strategyNames, assetSymbols, initialWeights, 'title','Initial Asset Allocations','Colorma

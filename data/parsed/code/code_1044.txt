@@ -1,0 +1,5 @@
+Page 1070
+================================================================================
+
+These functions behave slightly differently from the more general regression functions since they
+solve a specialized problem. Consult the function reference pages for details.

@@ -1,0 +1,12 @@
+{
+  "page": 1229,
+  "original_text": "SDE = sde(F, G, 'Correlation', ...\n    correlation, 'StartState', X);",
+  "ocr_text": "SDE=sde(F,G,Correlation,...\ncorrelation,StartState,X);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 399.28,
+    "x1": 274.23,
+    "y1": 420.55
+  },
+  "confidence": "high"
+}

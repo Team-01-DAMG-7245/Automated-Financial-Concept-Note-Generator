@@ -1,0 +1,12 @@
+{
+  "page": 99,
+  "original_text": "numTimes = gather(size(sampleLOB,1))",
+  "ocr_text": "numTimes=gather(size(sampleLOB,1))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 350.48,
+    "x1": 285.05,
+    "y1": 360.94
+  },
+  "confidence": "high"
+}

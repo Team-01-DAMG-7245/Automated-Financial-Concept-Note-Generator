@@ -1,0 +1,59 @@
+Asset Allocation Case Study
+
+This example shows how to set up a basic asset allocation problem that uses mean-variance portfolio
+optimization with a Portfolio object to estimate efficient portfolios.
+
+Step 1. Defining the portfolio problem.
+
+Suppose that you want to manage an asset allocation fund with four asset classes: bonds, large-cap
+equities, small-cap equities, and emerging equities. The fund is long-only with no borrowing or
+leverage, should have no more than 85% of the portfolio in equities, and no more than 35% of the
+portfolio in emerging equities. The cost to trade the first three assets is 10 basis points annualized
+and the cost to trade emerging equities is four times higher. Finally, you want to ensure that average
+turnover is no more than 15%. To solve this problem, you will set up a basic mean-variance portfolio
+optimization problem and then slowly introduce the various constraints on the problem to get to a
+solution.
+
+To set up the portfolio optimization problem, start with basic definitions of known quantities
+associated with the structure of this problem. Each asset class is assumed to have a tradeable asset
+with a real-time price. Such assets can be, for example, exchange-traded funds (ETFs). The initial
+portfolio with holdings in each asset that has a total of $7.5 million along with an additional cash
+position of $60,000. These basic quantities and the costs to trade are set up in the following variables
+with asset names in the cell array Asset, current prices in the vector Price, current portfolio
+holdings in the vector Holding, and transaction costs in the vector UnitCost.
+
+To analyze this portfolio, you can set up a blotter in a table object to help track prices, holdings,
+weights, and so forth. In particular, you can compute the initial portfolio weights and maintain them
+in a new blotter field called InitPort.
+
+Asset = { 'Bonds', 'Large-Cap Equities', 'Small-Cap Equities', 'Emerging Equities' };
+Price = [ 52.4; 122.7; 35.2; 46.9 ];
+Holding = [ 42938; 24449; 42612; 15991 ];
+UnitCost = [ 0.001; 0.001; 0.001; 0.004 ];
+
+Blotter = table('RowNames', Asset);
+Blotter.Price = Price;
+Blotter.InitHolding = Holding;
+Wealth = sum(Blotter.Price .* Blotter.InitHolding);
+Blotter.InitPort = (1/Wealth)*(Blotter.Price .* Blotter.InitHolding);
+Blotter.UnitCost = UnitCost;
+Blotter
+
+Blotter=4×4 table
+                          Price    InitHolding    InitPort    UnitCost
+                          _____    ___________    ________    ________
+
+Bonds                  52.4       42938         0.3        0.001  
+    Large-Cap Equities    122.7       24449         0.4        0.001  
+    Small-Cap Equities     35.2       42612         0.2        0.001  
+    Emerging Equities      46.9       15991         0.1        0.004
+
+Step 2. Simulating asset prices.
+
+Since this is a hypothetical example, to simulate asset prices from a given mean and covariance of
+annual asset total returns for the asset classes, the portsim function is used to create asset returns
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-180

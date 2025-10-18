@@ -1,0 +1,56 @@
+equityCurve
+
+Plot equity curves of strategies
+
+Syntax
+
+equityCurve(backtester)
+h = equityCurve(ax,backtester)
+
+Description
+
+equityCurve(backtester) plots the equity curves of each strategy that you create using
+backtestStrategy. After creating the backtesting engine using backtestEngine and running the
+backtest with runBacktest, use equityCurve to plot the strategies and compare their
+performance.
+
+h = equityCurve(ax,backtester) additionally returns the figure handle h for the equity curve
+plot.
+
+Examples
+
+Generate Equity Curve for Backtest
+
+The MATLAB® backtesting engine runs backtests of portfolio investment strategies over time series
+of asset price data. After creating a set of backtest strategies using backtestStrategy and the
+backtesting engine using backtestEngine, the runBacktest function executes the backtest. After
+using the runBacktest function to test investment strategies, you can run the equityCurve
+function to plot the equity curves of strategies.
+
+Load Data
+
+Load one year of stock price data. For readability, this example uses only a subset of the DJIA stocks.
+
+% Read a table of daily adjusted close prices for 2006 DJIA stocks
+T = readtable('dowPortfolio.xlsx');
+
+% Prune the table to hold only the dates and selected stocks
+timeColumn = "Dates";
+assetSymbols = ["BA", "CAT", "DIS", "GE", "IBM", "MCD", "MSFT"];
+T = T(:,[timeColumn assetSymbols]);
+
+% Convert to timetable
+pricesTT = table2timetable(T,'RowTimes','Dates');
+
+% View the final asset price timetable
+head(pricesTT)
+
+Dates        BA       CAT      DIS      GE       IBM      MCD     MSFT 
+    ___________    _____    _____    _____    _____    _____    _____    _____
+
+03-Jan-2006    68.63    55.86    24.18     33.6    80.13    32.72    26.19
+
+15
+Functions
+
+15-304

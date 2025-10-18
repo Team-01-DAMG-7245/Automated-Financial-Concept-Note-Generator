@@ -1,0 +1,7 @@
+Page 186
+================================================================================
+
+Alternatively, you can estimate an optimal portfolio with a user-defined objective function for a
+Portfolio object. For details on using estimateCustomObjectivePortfolio to specify a
+user-defined objective function, see “Solver Guidelines for Custom Objective Problems Using
+Portfolio Objects” on page 4-119.

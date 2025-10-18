@@ -1,0 +1,12 @@
+{
+  "page": 625,
+  "original_text": "% Create Portfolio object\np = Portfolio(AssetMean=mu',AssetCovar=Sigma);",
+  "ocr_text": "CreatePortfolioobject\np=Portfolio(AssetMean=mu,AssetCovar=Sigma);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 384.95,
+    "x1": 339.22,
+    "y1": 406.21
+  },
+  "confidence": "high"
+}

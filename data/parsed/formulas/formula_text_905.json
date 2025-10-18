@@ -1,0 +1,12 @@
+{
+  "page": 490,
+  "original_text": "% Aggregate the inputs into the Brinson asset table\nasset_table = table(Period(:),Name(:),Return(:),Category(:), ...\n    PortfolioWeight(:),BenchmarkWeight(:),...\n    VariableNames=[\"Period\",\"Name\",\"Return\",\"Category\", ...\n    \"PortfolioWeight\",\"BenchmarkWeight\"]);\nend",
+  "ocr_text": "AggregatetheinputsintotheBrinsonassettable\n\nasset_table=table(Period(:),Name(:),Return(:),Category(:),...\nPortfolioWeight(:),BenchmarkWeight(:),...\nVariableNames=[Period,Name,Return,Category,...\nPortfolioWweight,BenchmarkWeight]);\n\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 373.83,
+    "x1": 436.78,
+    "y1": 438.29
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,54 @@
+estimatePortMoments
+
+Estimate moments of portfolio returns for Portfolio object
+
+Syntax
+
+[prsk,pret] = estimatePortMoments(obj,pwgt)
+
+Description
+
+[prsk,pret] = estimatePortMoments(obj,pwgt) estimate moments of portfolio returns for a
+Portfolio object. For details on the workflow, see “Portfolio Object Workflow” on page 4-18.
+
+The estimate of port moments is specific to mean-variance portfolio optimization and computes the
+mean and standard deviation (which is the square-root of variance) of portfolio returns.
+
+Examples
+
+Identify the Range of Risks and Returns for Efficient Portfolios for a Portfolio Object
+
+Given portfolio p, use the estimatePortMoments function to show the range of risks and returns for
+efficient portfolios.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+      0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+ 
+p = Portfolio;
+p = setAssetMoments(p, m, C);
+p = setDefaultConstraints(p);
+pwgt = estimateFrontierLimits(p);
+
+[prsk, pret] = estimatePortMoments(p, pwgt);
+disp([prsk, pret]);
+
+0.0769    0.0590
+    0.3500    0.1800
+
+Identify the Range of Risks and Returns for Efficient Portfolios Portfolio Object with
+Integrality Constraints
+
+Create a Portfolio object for three assets.
+
+AssetMean = [ 0.0101110; 0.0043532; 0.0137058 ];
+AssetCovar = [ 0.00324625 0.00022983 0.00420395;
+               0.00022983 0.00049937 0.00019247;
+               0.00420395 0.00019247 0.00764097 ];
+
+15
+Functions
+
+15-1002

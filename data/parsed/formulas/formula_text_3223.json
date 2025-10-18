@@ -1,0 +1,12 @@
+{
+  "page": 1730,
+  "original_text": "Fraction = accrfrac( ___ ,Period,Basis,EndMonthRule,IssueDate,FirstCouponDate,\nLastCouponDate) returns the fraction of the coupon period before settlement with optional inputs.",
+  "ocr_text": "Fraction=accrfrac( ,Period,Basis,EndMonthRule,IssueDate,FirstCouponDate,\nLastCouponDate)returnsthefractionofthecouponperiodbeforesettlementwithoptionalinputs.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 384.24,
+    "x1": 551.56,
+    "y1": 407.87
+  },
+  "confidence": "high"
+}

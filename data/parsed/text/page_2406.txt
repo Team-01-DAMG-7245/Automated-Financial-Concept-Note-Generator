@@ -1,0 +1,60 @@
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+Output Arguments
+
+GroupMatrix — Group constraint matrix
+matrix
+
+Group constraint matrix, returned as a matrix for a Portfolio, PortfolioCVaR, or PortfolioMAD
+input object (obj).
+
+LowerGroup — Lower bound for group constraints
+vector
+
+Lower bound for group constraints, returned as a vector for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+UpperGroup — Upper bound for group constraints
+vector
+
+Upper bound for group constraints, returned as a vector for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj).
+
+More About
+
+Group Constraints
+
+Group constraints specify that the total weight or allocation of assets within a particular group must
+satisfy certain conditions relative to the total portfolio.
+
+Group constraints help maintain diversification by preventing excessive concentration in specific
+asset groups. They also align the portfolio with the investor's risk tolerance and investment strategy.
+
+Tips
+
+You can also use dot notation to obtain the group constraint arrays from portfolio objects.
+
+[GroupMatrix, LowerGroup, UpperGroup] = obj.getGroups;
+
+Version History
+Introduced in R2011a
+
+See Also
+setGroups
+
+Topics
+“Working with Group Constraints Using Portfolio Object” on page 4-69
+
+15
+Functions
+
+15-1100

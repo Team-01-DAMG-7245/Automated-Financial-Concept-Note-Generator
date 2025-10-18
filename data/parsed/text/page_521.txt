@@ -1,0 +1,34 @@
+Define the warmup period to compute the initial portfolios for the different strategies using the data
+in that period.
+
+% Set backtesting warmup period to two 21-day months.
+warmupPeriod = 21*2;
+% Set a warmup partition of the timetable.
+warmupTT = pricesTT(1:warmupPeriod,:);
+
+Compute the initial portfolios using the rebalancing functions (markowitzFcn and robustFcn) that
+are defined in Local Functions on page 4-356.
+
+% Define the initial Markowitz portfolio.
+initialMarkowitz = markowitzFcn(zeros(p.NumAssets,1),warmupTT,p);
+% Define the initial robust portfolio.
+initialRP = robustFcn(zeros(p.NumAssets,1),warmupTT,p,kappa);
+
+Plot both types of portfolios to compare the initial behavior.
+
+% Plot the initial portfolios.
+bar([initialMarkowitz initialRP])
+legend('Markowitz','Robust')
+title('Markowitz vs. Robust Allocation')
+
+Out of 30 assets in the Markowitz allocation, 29 are at the extremes of the feasible bounds. On the
+other hand, only 17 assets in the robust allocation are at their extremes. The number of assets at the
+extremes of the feasible bounds shows the sensitivity of the traditional maximum return allocation
+strategy to the parameters of the problem. The Markowitz strategy invests everything possible in the
+assets with the highest returns. This result means that the Markowitz strategy shorts the assets with
+the lowest returns to be able to allocate more to the assets with the largest returns. On the other
+hand, the robust strategy does not have the same extreme behavior.
+
+Solve Robust Portfolio Maximum Return Problem with Ellipsoidal Uncertainty
+
+4-353

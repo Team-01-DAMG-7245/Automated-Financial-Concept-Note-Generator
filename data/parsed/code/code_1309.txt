@@ -1,0 +1,5 @@
+Page 1361
+================================================================================
+
+The covarianceDenoising function shrinks only the part of the covariance that corresponds with
+noise as follows:

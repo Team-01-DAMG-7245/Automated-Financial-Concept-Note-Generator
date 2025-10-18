@@ -1,0 +1,5 @@
+Page 2408
+================================================================================
+
+Use the getScenarios function with a PortfolioCVaR or PortfolioMAD objects to obtain
+scenarios.

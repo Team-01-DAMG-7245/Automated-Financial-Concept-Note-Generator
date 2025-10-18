@@ -1,0 +1,12 @@
+{
+  "page": 905,
+  "original_text": "Sharpe = sharpe(Returns, Returns(:,3))",
+  "ocr_text": "Sharpe=sharpe(Returns,Returns(:,3))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 541.8,
+    "x1": 295.88,
+    "y1": 552.26
+  },
+  "confidence": "high"
+}

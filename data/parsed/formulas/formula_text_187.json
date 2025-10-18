@@ -1,0 +1,12 @@
+{
+  "page": 124,
+  "original_text": "lvl = 3;        % Hyperparameter\nlambda = 0.5;   % Hyperparameter\nweights = exp(-(lambda)*(0:(lvl-1)))';\nVAsk = DTT{:,\"AskSize\" + string(1:lvl)}*weights;\nVBid = DTT{:,\"BidSize\" + string(1:lvl)}*weights;\nDTT.I = (VBid-VAsk)./(VBid+VAsk);",
+  "ocr_text": "Wl=3; S_Hyperparameter\n\nlambda=0.5; S_Hyperparameter\nweights=exp(-(lambda)*(0:(lvl-1)));\nVAsk=DTT{:,AskSize_+string(1:lvl)}*weights;\nVBid=DTT{:,BidSize+string(1:lvl)}*weights;\nDTT.I=(VBid-VAsk)./(VBid+VAsk);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 467.71,
+    "x1": 350.07,
+    "y1": 532.17
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,52 @@
+Obtain Group Ratio Constraints for a PortfolioCVaR Object
+
+Suppose you want to ensure that the ratio of financial to nonfinancial companies in your portfolios
+never exceeds 50%. Assume you have six assets with three financial companies (assets 1-3) and three
+nonfinancial companies (assets 4-6). After setting group ratio constraints, obtain the values for
+GroupA, GroupB, LowerRatio, and UpperRatio.
+
+GA = [ true true true false false false ];   % financial companies
+GB = [ false false false true true true ];   % nonfinancial companies
+p = PortfolioCVaR;
+p = setGroupRatio(p, GA, GB, [], 0.5);
+[GroupA, GroupB, LowerRatio, UpperRatio] = getGroupRatio(p)
+
+GroupA = 1×6
+
+1     1     1     0     0     0
+
+GroupB = 1×6
+
+0     0     0     1     1     1
+
+LowerRatio =
+
+[]
+
+UpperRatio = 
+0.5000
+
+Obtain Group Ratio Constraints for a PortfolioMAD Object
+
+Suppose you want to ensure that the ratio of financial to nonfinancial companies in your portfolios
+never exceeds 50%. Assume you have six assets with three financial companies (assets 1-3) and three
+nonfinancial companies (assets 4-6). After setting group ratio constraints, obtain the values for
+GroupA, GroupB, LowerRatio, and UpperRatio.
+
+GA = [ true true true false false false ];   % financial companies
+GB = [ false false false true true true ];   % nonfinancial companies
+p = PortfolioMAD;
+p = setGroupRatio(p, GA, GB, [], 0.5);
+[GroupA, GroupB, LowerRatio, UpperRatio] = getGroupRatio(p)
+
+GroupA = 1×6
+
+1     1     1     0     0     0
+
+GroupB = 1×6
+
+0     0     0     1     1     1
+
+getGroupRatio
+
+15-1095

@@ -1,0 +1,12 @@
+{
+  "page": 217,
+  "original_text": "m = [ 0.05; 0.1; 0.12; 0.18 ];\nC = [ 0.0064 0.00408 0.00192 0; \n      0.00408 0.0289 0.0204 0.0119;\n      0.00192 0.0204 0.0576 0.0336;\n      0 0.0119 0.0336 0.1225 ];\nm = m/12;\nC = C/12;\n \nassetRetnScenarios = portsim(m', C, 120);\ndates = datetime(datenum(2001,1:120,31), 'ConvertFrom', 'datenum');\nassetsName = {'Bonds', 'LargeCap', 'SmallCap', 'Emerging'};\nassetRetnTimeTable = array2timetable(assetRetnScenarios,'RowTimes',dates, 'VariableNames', assets\nassetRetnTable = array2table(assetRetnScenarios, 'VariableNames', assetsName);",
+  "ocr_text": "m=[0.05;0.1;0.12;0.18];\nC=[0.00640.004080.001920;\n\n0.004080.02890.02040.0119;\n\n0.001920.02040.05760.0336;\n\n00.01190.03360.1225];\nm=m/12;\nC=C/12;\nassetRetnScenarios=portsim(m,C,120);\ndates=datetime(datenum(2001,1:120,31),ConvertFrom,datenum);\nassetsName={Bonds,LargeCap,SmallCap,Emerging};\nassetRetnTimeTable=array2timetable(assetRetnScenarios,Rowlimes,dates,VariableNames,asset:\nassetRetnTable=array2table(assetRetnScenarios,VariableNames,assetsName);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 356.98,
+    "x1": 615.59,
+    "y1": 497.04
+  },
+  "confidence": "high"
+}

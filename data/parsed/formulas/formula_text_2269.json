@@ -1,0 +1,12 @@
+{
+  "page": 1166,
+  "original_text": "figure\n[P,Q] = boundary(tails{index});  % Cumulative probabilities & quantiles at boundaries\ny     = sort(residuals(residuals(:,index) > Q(2), index) - Q(2)); % Sort exceedances\nplot(y, (cdf(tails{index}, y + Q(2)) - P(2))/P(1))\n[F,x] = ecdf(y);                 % Empirical CDF\nhold on\nstairs(x, F, 'r')\ngrid on",
+  "ocr_text": "figure\n[P,Q]=boundary(tails{index});Cumulativeprobabilitiesquantilesatboundaries\ny =sort(residuals(residuals(:,index)=Q(2),index)-Q(2));Sortexceedances\nplot(y,_(cdf(tails{index},y+Q(2))-P(2))/P(1))\n\n[F,x]=ecdf(y); EmpiricalCDF\n\nholdon\n\nstairs(x,F,r)\n\ngridon",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 517.75,
+    "x1": 550.54,
+    "y1": 603.82
+  },
+  "confidence": "high"
+}

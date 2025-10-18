@@ -1,0 +1,12 @@
+{
+  "page": 2398,
+  "original_text": "p = PortfolioCVaR;\np = setEquality(p, A, b);\n[AEquality, bEquality] = getEquality(p)",
+  "ocr_text": "p=PortfolioCVaR;\np=setEquality(p,A,b);\n[AEquality,bEquality]=getEquality(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 301.3,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

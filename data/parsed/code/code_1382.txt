@@ -1,0 +1,5 @@
+Page 1382
+================================================================================
+
+Alpha and Sigma enable you to query the original inputs. (The combined effect of the individual
+Alpha and Sigma parameters is fully encapsulated by the function stored in Rate.) The Rate

@@ -1,0 +1,7 @@
+Page 1032
+================================================================================
+
+The transprob function returns a transition probability matrix as the primary output. There are also
+optional outputs that contain additional information for how many transitions occurred. For more
+information, see transprob for information on the optional outputs for both the 'cohort' and the
+'duration' methods.

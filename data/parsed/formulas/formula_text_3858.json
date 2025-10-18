@@ -1,0 +1,12 @@
+{
+  "page": 2191,
+  "original_text": "Fisher = ecmnfish(Data,ECMCovar)",
+  "ocr_text": "Fisher=ecmnfish(Data,ECMCovar)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 312.48,
+    "x1": 263.38,
+    "y1": 322.94
+  },
+  "confidence": "high"
+}

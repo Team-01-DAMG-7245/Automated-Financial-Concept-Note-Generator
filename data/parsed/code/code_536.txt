@@ -1,0 +1,5 @@
+Page 492
+================================================================================
+
+PortfolioWeight = [PortfolioWeightQ1 PortfolioWeightQ2 ...
+    PortfolioWeightQ3 PortfolioWeightQ4];

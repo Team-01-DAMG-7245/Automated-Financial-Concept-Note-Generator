@@ -1,0 +1,12 @@
+{
+  "page": 1025,
+  "original_text": "Maturity2 = '20-Sep-2012';\nSpread2 = 196;\n \n[Price,AccPrem,PaymentDates,PaymentTimes,PaymentCF] = cdsprice(ZeroData, ...\nProbData,Settle,Maturity2,Spread2);\n \nfprintf('Dirty Price: %8.2f\\n',Price+AccPrem);",
+  "ocr_text": "Maturity2=20-Sep-2012;\n\nSpread2=196;\n[Price,AccPrem,PaymentDates,PaymentTimes,PaymentCF]=cdsprice(ZeroData,...\nProbData,Settle,Maturity2,Spread2);\nfprintf(DirtyPrice:8.2fn,Price+AccPrem);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 435.44,
+    "x1": 501.8,
+    "y1": 510.71
+  },
+  "confidence": "high"
+}

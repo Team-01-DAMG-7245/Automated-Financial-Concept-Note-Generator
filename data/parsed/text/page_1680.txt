@@ -1,0 +1,59 @@
+V0 = 0.04;
+            Level = 0.05;
+            Speed = 1.0;
+            Volatility = 0.2;
+            Rho = -0.7;
+            StartState = [AssetPrice;V0]; 
+            Correlation = [1 Rho;Rho 1];
+
+batesObj = bates(Return, Speed, Level, Volatility,...
+                JumpFreq, JumpMean, JumpVol,'startstate',StartState,...
+                'correlation',Correlation)
+
+batesObj = 
+   Class BATES: Bates Bivariate Stochastic Volatility
+   --------------------------------------------------
+     Dimensions: State = 2, Brownian = 2
+   --------------------------------------------------
+      StartTime: 0
+     StartState: 2x1 double array 
+    Correlation: 2x2 double array 
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+         Return: 0.03
+          Speed: 1
+          Level: 0.05
+     Volatility: 0.2
+       JumpFreq: 0.1
+       JumpMean: 0.02
+        JumpVol: 0.08
+
+Use simByQuadExp to simulate NTrials sample paths directly from the stochastic differential
+equation of motion; the discrete-time process approaches the true continuous-time process only in
+the limit as DeltaTimes approaches zero.
+
+NPeriods = 2;
+[Paths,Times,Z,N] = simByQuadExp(batesObj,NPeriods)
+
+Paths = 3×2
+
+80.0000    0.0400
+   64.3377    0.1063
+   31.5703    0.1009
+
+Times = 3×1
+
+0
+     1
+     2
+
+Z = 2×2
+
+0.5377    1.8339
+   -2.2588    0.8622
+
+15
+Functions
+
+15-374

@@ -1,0 +1,56 @@
+boxcox
+
+Box-Cox transformation
+
+Syntax
+
+[transdat,lambda] = boxcox(data)
+transdat = boxcox(lambda,data)
+
+Description
+
+[transdat,lambda] = boxcox(data) transforms the data vector data using the Box-Cox
+transformation method into transdat. It also estimates the transformation parameter λ. For more
+information, see “Box Cox Transformation” on page 15-599.
+
+transdat = boxcox(lambda,data) transform the data using a certain specified λ for the Box-
+Cox transformation. This syntax does not find the optimum λ that maximizes the LLF. For more
+information, see “Box Cox Transformation” on page 15-599.
+
+Examples
+
+Transform a Data Series Contained in Vector of Data
+
+Use boxcox to transform the data series contained in a vector of data into another set of data series
+with relatively normal distributions.
+
+Load the SimulatedStock.mat data file.
+
+load SimulatedStock.mat
+
+Transform the nonnormally distributed filled data series TMW_CLOSE into a normally distributed one
+using Box-Cox transformation.
+
+[Xbc, lambdabc] = boxcox(TMW_CLOSE)
+
+Xbc = 1000×1
+
+7.8756
+    7.8805
+    7.9173
+    7.8557
+    7.8245
+    7.7844
+    7.7811
+    7.8029
+    7.8015
+    7.7229
+    7.6870
+    7.6825
+    7.7447
+    7.6958
+    7.6596
+
+boxcox
+
+15-597

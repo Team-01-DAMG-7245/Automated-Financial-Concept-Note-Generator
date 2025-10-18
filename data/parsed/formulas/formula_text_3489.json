@@ -1,0 +1,12 @@
+{
+  "page": 1938,
+  "original_text": "MtM = Notional (S0 –SC)RPV01",
+  "ocr_text": "MtM=Notional(S,-S;)RPVO1",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 189.82,
+    "x1": 237.45,
+    "y1": 202.65
+  },
+  "confidence": "high"
+}

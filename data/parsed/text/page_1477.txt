@@ -1,0 +1,26 @@
+For more information, see “SDE Models” on page 14-7, “SDE Classes and Associated Simulation
+Methods” on page 14-13, and “SDE Class Hierarchy” on page 14-5.
+
+Algorithms
+
+When you specify the required input parameters as arrays, they are associated with a specific
+parametric form. By contrast, when you specify either required input parameter as a function, you
+can customize virtually any specification.
+
+Accessing the output parameters with no inputs simply returns the original input specification. Thus,
+when you invoke these parameters with no inputs, they behave like simple properties and allow you
+to test the data type (double vs. function, or equivalently, static vs. dynamic) of the original input
+specification. This is useful for validating and designing methods.
+
+When you invoke these parameters with inputs, they behave like functions, giving the impression of
+dynamic behavior. The parameters accept the observation time t and a state vector Xt, and return an
+array of appropriate dimension. Even if you originally specified an input as an array, sdeddo treats it
+as a static function of time and state, by that means guaranteeing that all parameters are accessible
+by the same interface.
+
+Version History
+Introduced in R2008a
+
+sdeddo
+
+15-171

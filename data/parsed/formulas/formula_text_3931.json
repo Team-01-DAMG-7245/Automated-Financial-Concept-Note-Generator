@@ -1,0 +1,12 @@
+{
+  "page": 2235,
+  "original_text": "obj = estimateAssetMoments( ___ ,Name,Value) estimates mean and covariance of asset\nreturns from data for a Portfolio object with additional options for one or more Name,Value pair\narguments.",
+  "ocr_text": "obj=estimateAssetMoments( ,Name,Value)estimatesmeanandcovarianceofasset\nreturnsfromdataforaPortfolioobjectwithadditionaloptionsforoneormoreName,Valuepair\narguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 299.51,
+    "x1": 534.02,
+    "y1": 335.14
+  },
+  "confidence": "high"
+}

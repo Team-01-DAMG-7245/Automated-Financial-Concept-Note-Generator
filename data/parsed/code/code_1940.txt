@@ -1,0 +1,9 @@
+Page 1547
+================================================================================
+
+•
+TransactionCostHistory — A timetable of per-asset transaction costs charged for each day in
+the backtest. Future dates in the timetable contain NaN values. The TransactionCostHistory
+cannot be set if the TransactionCosts function generate aggregate costs. The
+TransactionCosts computeTransactionCostsFcn function handle must specify an output
+for detailedCosts to set TransactionCostHistory.

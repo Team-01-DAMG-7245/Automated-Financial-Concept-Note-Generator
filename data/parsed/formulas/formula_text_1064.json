@@ -1,0 +1,12 @@
+{
+  "page": 550,
+  "original_text": "% Define the minimum possible wealth.\ntimeVec = 0:finalTimePeriod;\nmu_min = pret(1);\nsigma_max  = prsk(end);\nWMinVec = initialWealth*exp((mu_min-(sigma_max^2)/2)*timeVec- ...\n    3*sigma_max*sqrt(timeVec));\nWMin = min(WMinVec);",
+  "ocr_text": "Definetheminimumpossiblewealth.\n\ntimeVec=0:finalTimePeriod;\n\nmu_min=pret(1);\n\nsigma_max=prsk(end);\n\nWMinVec=initialWealth*exp((mu_min-(sigma_max*2)/2)*timeVec-...\n3*sigma_max*sqrt(timeVec));\n\nWMin=min(WMinVec);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 308.05,
+    "x1": 442.2,
+    "y1": 383.31
+  },
+  "confidence": "high"
+}

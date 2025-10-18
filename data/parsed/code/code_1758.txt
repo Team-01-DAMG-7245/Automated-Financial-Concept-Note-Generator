@@ -1,0 +1,5 @@
+Page 1498
+================================================================================
+
+If you specify Return as a deterministic function of time and state, it must return a scalar when you
+call it with two inputs:

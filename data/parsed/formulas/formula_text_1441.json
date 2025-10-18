@@ -1,0 +1,12 @@
+{
+  "page": 724,
+  "original_text": "p = PortfolioCVaR;\np = setSolver(p, 'TrustRegionCP', 'MaxIterations', 2000);\ndisplay(p.solverType)\ndisplay(p.solverOptions)",
+  "ocr_text": "p=PortfolioCVaR;\np=setSolver(p,TrustRegionCP,MaxIterations,2000);\ndisplay(p.solverType)\n\ndisplay(p.solver0Options)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 335.82,
+    "x1": 398.85,
+    "y1": 378.68
+  },
+  "confidence": "high"
+}

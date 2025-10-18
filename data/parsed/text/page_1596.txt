@@ -1,0 +1,58 @@
+Columns that are indicated in the CashAssets list are designated as cash assets. These assets
+behave like regular assets, except that they do not contribute to transaction costs or portfolio
+turnover.
+
+When the backtestEngine name-value argument PayExpensesFromCash is set to true, and if
+either CashAssets or DebtAssets are specified, the expenses encountered in the backtest
+(transaction costs and other fees) are paid in the following order:
+
+1
+If specified, the assets in the CashAssets list, in order until all CashAssets are exhausted.
+
+2
+If specified, the first asset listed in the DebtAssets list incurs all remaining expenses. If no
+DebtAssets is specified, then the final CashAssets balance goes negative to pay any remaining
+expense.
+
+Note The CashAssets are added to the available engine data for the backtestStrategy name-
+value argument for EnginedataList.
+
+Data Types: string
+
+DebtAssets — Specify items in pricesTT timetable as debt assets
+"" (default) | string | string array
+
+Specify items in prices timetable as debt assets, specified as the comma-separated pair consisting of
+'DebtAssets' and a scalar string or a string array where each element in the list must correspond
+to a column in the pricesTT timetable.
+
+Columns that are indicated in the DebtAssets list are designated as debt assets. These assets
+behave like regular assets, except that they do not contribute to transaction costs or portfolio
+turnover.
+
+When the backtestEngine name-value argument PayExpensesFromCash is set to true, and if
+either CashAssets or DebtAssets are specified, the expenses encountered in the backtest
+(transaction costs and other fees) are paid in the following order:
+
+1
+If specified, the assets in the CashAssets list, in order until all CashAssets are exhausted.
+
+2
+If specified, the first asset listed in the DebtAssets list incurs all remaining expenses. If no
+DebtAssets is specified, then the final CashAssets balance goes negative to pay any remaining
+expense.
+
+Note The DebtAssets are added to the available engine data for the backtestStrategy name-
+value argument for EnginedataList.
+
+Data Types: string
+
+Output Arguments
+
+backtester — Backtesting engine
+backtestEngine object
+
+15
+Functions
+
+15-290

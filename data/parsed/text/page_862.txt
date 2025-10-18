@@ -1,0 +1,68 @@
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+
+AssetScenarios = mvnrnd(m, C, 20000);
+
+p = PortfolioMAD;
+p = setScenarios(p, AssetScenarios);
+p = setDefaultConstraints(p);
+
+pwgt = estimateFrontier(p);
+
+checkFeasibility(p, pwgt)
+
+ans =
+
+1     1     1     1     1     1     1     1     1     1
+
+Next, set up a different portfolio problem that starts with the initial problem with an additional a
+turnover constraint and an equally weighted initial portfolio:
+
+q = setTurnover(p, 0.3, 0.25);
+checkFeasibility(q, pwgt)
+
+ans =
+
+0     0     1     1     1     0     0     0     0     0
+
+In this case, only two of the 10 efficient portfolios from the initial problem are feasible relative to the
+new problem in PortfolioMAD object q. Solving the second problem using checkFeasibility
+demonstrates that the efficient portfolio for PortfolioMAD object q is feasible relative to the initial
+problem:
+
+qwgt = estimateFrontier(q);
+checkFeasibility(p, qwgt)
+
+ans =
+
+1     1     1     1     1     1     1     1     1     1
+
+See Also
+PortfolioMAD | estimateBounds | checkFeasibility
+
+Related Examples
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Estimate Efficient Frontiers for PortfolioMAD Object” on page 6-105
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+6
+MAD Portfolio Optimization Tools
+
+6-82

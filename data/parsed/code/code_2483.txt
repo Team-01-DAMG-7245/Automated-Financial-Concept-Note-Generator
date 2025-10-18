@@ -1,0 +1,5 @@
+Page 2324
+================================================================================
+
+Given a portfolio pwgt, use the estimatePortStd function to show the standard deviation of
+portfolio returns.

@@ -1,0 +1,60 @@
+drift
+
+Drift-rate model component
+
+Description
+
+The drift object specifies the drift-rate component of continuous-time stochastic differential
+equations (SDEs).
+
+The drift-rate specification supports the simulation of sample paths of NVars state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods,
+approximating continuous-time stochastic processes.
+
+The drift-rate specification can be any NVars-by-1 vector-valued function F of the general form:
+
+F(t, Xt) = A(t) + B(t)Xt
+
+where:
+
+•
+A is an NVars-by-1 vector-valued function accessible using the (t, Xt) interface.
+
+•
+B is an NVars-by-NVars matrix-valued function accessible using the (t, Xt) interface.
+
+And a drift-rate specification is associated with a vector-valued SDE of the form
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+
+where:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+dWt is an NBrowns-by-1 Brownian motion vector.
+
+•
+A and B are model parameters.
+
+The drift-rate specification is flexible, and provides direct parametric support for static/linear drift
+models. It is also extensible, and provides indirect support for dynamic/nonlinear models via an
+interface. This enables you to specify virtually any drift-rate specification.
+
+Creation
+
+Syntax
+
+DriftRate = drift(A,B)
+
+Description
+
+DriftRate = drift(A,B) creates a default DriftRate model component.
+
+Specify required input parameters A and B as one of the following types:
+
+15
+Functions
+
+15-96

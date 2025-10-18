@@ -1,0 +1,12 @@
+{
+  "page": 997,
+  "original_text": "cp(2) = []; % To merge bins 2 and 3\nsc = modifybins(sc,'AMBalance','CutPoints',cp);\nplotbins(sc,'AMBalance')",
+  "ocr_text": "cp(2)=[];*Tomergebins2and3\nsc_=modifybins(sc,AMBalance,CutPoints,cp);\nplotbins(sc,AMBalance)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 177.0,
+    "x1": 344.67,
+    "y1": 209.07
+  },
+  "confidence": "high"
+}

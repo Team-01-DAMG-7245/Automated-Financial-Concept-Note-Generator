@@ -1,0 +1,29 @@
+Estimate Efficient Portfolio that Maximizes the Sharpe Ratio for a Portfolio Object With
+Tracking Error Using the Direct Method and Solver Options
+
+Estimate the efficient portfolio that maximizes the Sharpe ratio. The estimateMaxSharpeRatio
+function maximizes the Sharpe ratio among portfolios on the efficient frontier. This example uses the
+'direct' method for a Portfolio object (p) that specifies a tracking error uses nonlinear
+constraints. The setSolver function is used to control the SolverType and SolverOptions. In
+this case fmincon is the SolverType.
+
+p = Portfolio('AssetMean',[0.3, 0.1, 0.5], 'AssetCovar',...
+[0.01, -0.010,  0.004; -0.010,  0.040, -0.002;  0.004, -0.002,  0.023],'lb', 0,'budget', 1);
+plotFrontier(p, 20);
+
+p = setSolver(p, 'fmincon', 'Display', 'off', 'Algorithm', 'sqp', ...
+        'SpecifyObjectiveGradient', true, 'SpecifyConstraintGradient', true, ...
+        'ConstraintTolerance', 1.0e-8, 'OptimalityTolerance', 1.0e-8, 'StepTolerance', 1.0e-8);
+
+weights = estimateMaxSharpeRatio(p);
+
+te = 0.08;
+p = setTrackingError(p,te,weights);
+
+[risk, ret] = estimatePortMoments(p,weights);
+hold on
+plot(risk,ret,'*r');
+
+estimateMaxSharpeRatio
+
+15-989

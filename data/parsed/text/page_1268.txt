@@ -1,0 +1,61 @@
+Specifically, find the upper and lower thresholds such that 10% of the returns are reserved for each
+tail. Then fit the amount by which the extreme returns in each tail fall beyond the associated
+threshold to a Pareto distribution by maximum likelihood.
+
+The following code segment creates one object of type paretotails for each index return series.
+These Pareto tail objects encapsulate the estimates of the parametric Pareto lower tail, the non-
+parametric kernel-smoothed interior, and the parametric Pareto upper tail to construct a composite
+semi-parametric CDF for each index.
+
+tailFraction = 0.1;        % Decimal fraction allocated to each tail
+tails = cell(nIndices,1);  % Cell array of Pareto tail objects
+
+for i = 1:nIndices
+    tails{i} = paretotails(returns(:,i), tailFraction, 1 - tailFraction, 'kernel');
+end
+
+The resulting piecewise distribution object allows interpolation within the interior of the CDF and
+extrapolation (function evaluation) in each tail. Extrapolation allows estimation of quantiles outside
+the historical record, which is invaluable for risk management applications.
+
+Pareto tail objects also provide methods to evaluate the CDF and inverse CDF (quantile function), and
+to query the cumulative probabilities and quantiles of the boundaries between each segment of the
+piecewise distribution.
+
+Now that three distinct regions of the piecewise distribution have been estimated, graphically
+concatenate and display the result.
+
+The following code calls the CDF and inverse CDF methods of the Pareto tails object of interest with
+data other than that upon which the fit is based. The referenced methods have access to the fitted
+state. They are now invoked to select and analyze specific regions of the probability curve, acting as a
+powerful data filtering mechanism.
+
+For reference, the plot also includes a zero-mean Gaussian CDF of the same standard deviation. To a
+degree, the variation in options prices reflect the extent to which the distribution of each asset differs
+from this normal curve.
+
+minProbability = cdf(tails{index}, (min(returns(:,index))));
+maxProbability = cdf(tails{index}, (max(returns(:,index))));
+
+pLowerTail = linspace(minProbability  , tailFraction    , 200); % Lower tail
+pUpperTail = linspace(1 - tailFraction, maxProbability  , 200); % Upper tail
+pInterior  = linspace(tailFraction    , 1 - tailFraction, 200); % Interior
+
+plot(icdf(tails{index}, pLowerTail), pLowerTail, 'red'  , 'LineWidth', 2)
+hold on
+grid on
+plot(icdf(tails{index}, pInterior) , pInterior , 'black', 'LineWidth', 2)
+plot(icdf(tails{index}, pUpperTail), pUpperTail, 'blue' , 'LineWidth', 2)
+
+limits = axis;
+x = linspace(limits(1), limits(2));
+plot(x, normcdf(x, 0, std(returns(:,index))), 'green', 'LineWidth', 2)
+
+fig = gcf;
+fig.Color = [1 1 1];
+hold off
+
+14
+Stochastic Differential Equations
+
+14-76

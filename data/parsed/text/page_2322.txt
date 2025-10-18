@@ -1,0 +1,60 @@
+The function rng(seed) resets the random number generator to produce the documented results. It is
+not necessary to reset the random number generator to simulate scenarios.
+
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+pwgt — Collection of portfolios
+matrix
+
+Collection of portfolios, specified as a NumAssets-by-NumPorts matrix, where NumAssets is the
+number of assets in the universe and NumPorts is the number of portfolios in the collection of
+portfolios.
+
+Data Types: double
+
+Output Arguments
+
+prsk — Estimates for portfolio risk according to the risk proxy associated with the
+corresponding object (obj) for each portfolio in pwgt
+vector
+
+Estimates for portfolio risk according to the risk proxy associated with the corresponding object
+(obj) for each portfolio in pwgt, returned as a NumPorts vector.
+
+prsk is returned for a Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+Tips
+
+You can also use dot notation to estimate portfolio risk according to the risk proxy associated with the
+corresponding object (obj).
+
+prsk = obj.estimatePortRisk(pwgt);
+
+Version History
+Introduced in R2011a
+
+See Also
+estimatePortStd | estimatePortVaR | estimateFrontierByReturn |
+estimateFrontierByRisk | rng
+
+15
+Functions
+
+15-1016

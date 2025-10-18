@@ -1,0 +1,30 @@
+aggError = 
+2.8422e-14
+
+See Also
+transprob | transprobprep | transprobbytotals | bootstrp | transprobgrouptotals |
+transprobtothresholds | transprobfromthresholds
+
+Related Examples
+
+•
+“Credit Quality Thresholds” on page 8-45
+
+•
+“Credit Rating by Bagging Decision Trees”
+
+•
+“Forecasting Corporate Default Rates” on page 8-23
+
+External Websites
+
+•
+Credit Risk Modeling with MATLAB (53 min 09 sec)
+
+•
+Forecasting Corporate Default Rates with MATLAB (54 min 36 sec)
+
+8
+Credit Risk Analysis
+
+8-22

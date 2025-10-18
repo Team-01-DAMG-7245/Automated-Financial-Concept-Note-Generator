@@ -1,0 +1,12 @@
+{
+  "page": 1173,
+  "original_text": "S = vartype('numeric');",
+  "ocr_text": "S=vartype(numeric);",
+  "bbox": {
+    "x0": 89.99,
+    "y0": 456.06,
+    "x1": 228.46,
+    "y1": 467.69
+  },
+  "confidence": "high"
+}

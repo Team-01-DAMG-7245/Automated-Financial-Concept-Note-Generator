@@ -1,0 +1,33 @@
+figure;
+plot(x,hrznYTMRatesSims(1,:),'k-o',xi,treasuryYTMAtHorizonSim(1,:),'ro');
+xlabel('Time (days)');
+ylabel('Yield');
+legend({'Simulated Yield Curve','Interpolated Yields'},'location','se');
+grid on;
+title('Zoom to See Spline vs. Linear Interpolants');
+
+Price the treasuries at the horizon for each simulated yield to maturity. Note that the same
+assumptions are being made here as in the previous call to bndprice.
+
+basis = 8*ones(numSim,1);
+for j=1:3
+    treasuryPricesAtHorizonSim(:,j) = bndprice(treasuryYTMAtHorizonSim(:,j),0, ...
+                                               hrznDate,treasuryMaturities(j),'basis',basis);
+end
+
+% Calculate the distribution of linear returns.
+treasuryReturns = ( treasuryPricesAtHorizonSim - repmat(treasuryPricesAtSettle,numSim,1) )./repma
+
+% Calculate the returns statistics.
+retsMean = mean(treasuryReturns);
+retsCov  = cov(treasuryReturns);
+[retsStd,retsCor] = cov2corr(retsCov);
+
+% Visualize the results for the 30 year treasury.
+figure
+histogram(treasuryReturns(:,1),100,Normalization='pdf',EdgeColor='none')
+hold on
+
+Bond Portfolio Optimization Using Portfolio Object
+
+10-35

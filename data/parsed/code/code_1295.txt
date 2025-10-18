@@ -1,0 +1,6 @@
+Page 1344
+================================================================================
+
+AssetTable = table(Period, Name, ...
+      MonthlyReturns(:), Categories, PortfolioWeight, BenchmarkWeight, ...
+      VariableNames=["Period","Name","Return","Category","PortfolioWeight","BenchmarkWeight"])

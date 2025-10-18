@@ -1,0 +1,5 @@
+Page 2385
+================================================================================
+
+Use the getAssetMoments function with a Portfolio object to obtain mean and covariance of
+asset returns.

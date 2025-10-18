@@ -1,0 +1,55 @@
+•
+BuyTurnover for τB
+•
+SellTurnover for τS
+•
+InitPort for x0
+
+The default is to ignore this constraint.
+
+Note The average turnover constraint (see “Working with Average Turnover Constraints Using
+PortfolioMAD Object” on page 6-74) with τ is not a combination of the one-way turnover constraints
+with τ = τB = τS.
+
+Cardinality Constraints
+
+Cardinality constraint limits the number of assets in the optimal allocation for an PortfolioMAD
+object. Use setMinMaxNumAssets to specify the 'MinNumAssets' and 'MaxNumAssets'
+constraints. To mathematically formulate this type of constraints, a binary variable vi is needed. vi = 0
+indicates that asset i is not selected and vi = 1 indicates that the asset was selected. Thus
+
+MinNumAssets ≤
+∑
+i = 1
+
+NumAssets
+vi ≤MaxNumAssets
+
+The default is to ignore this constraint.
+
+See Also
+Portfolio | PortfolioCVaR | PortfolioMAD
+
+Related Examples
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Default Portfolio Problem” on page 6-15
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+6
+MAD Portfolio Optimization Tools
+
+6-14

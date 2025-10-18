@@ -1,0 +1,12 @@
+{
+  "page": 653,
+  "original_text": "p = PortfolioCVaR('scenario', AssetScenarios, 'lb', 0, 'budget', 1, 'plevel', 0.95);\nplotFrontier(p)",
+  "ocr_text": "p=PortfolioCVaR(scenario,AssetScenarios,lb,0,budget,1,_plevel,0.95);\nplotFrontier(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 510.8,
+    "x1": 413.66,
+    "y1": 525.93
+  },
+  "confidence": "high"
+}

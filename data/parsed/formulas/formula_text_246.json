@@ -1,0 +1,12 @@
+{
+  "page": 155,
+  "original_text": "p = Portfolio;\np = setAssetMoments(p, ExpReturn, ExpCovariance);\np = setDefaultConstraints(p);                % implement default constraints here\np = setInequality(p, A, b);                    % implement group constraints here",
+  "ocr_text": "p=Portfolio;\n\np=setAssetMoments(p,ExpReturn,ExpCovariance);\n\np=setDefaultConstraints(p); _implementdefaultconstraintshere\np=setInequality(p,A,b); implementgroupconstraintshere",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 576.54,
+    "x1": 402.09,
+    "y1": 607.02
+  },
+  "confidence": "high"
+}

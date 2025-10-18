@@ -1,0 +1,6 @@
+Page 1716
+================================================================================
+
+NTimes is the number of time steps at which the simulate function samples the state vector.
+NTimes includes intermediate times designed to improve accuracy, which simulate does not
+necessarily report in the Paths output time series.

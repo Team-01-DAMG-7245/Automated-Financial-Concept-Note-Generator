@@ -1,0 +1,12 @@
+{
+  "page": 1039,
+  "original_text": "dResStatus = dummyvar(dataToImpute.ResStatus);\ndEmpStatus = dummyvar(dataToImpute.EmpStatus);\ndOtherCC = dummyvar(dataToImpute.OtherCC);",
+  "ocr_text": "dResStatus=dummyvar(dataToImpute.ResStatus);\ndEmpStatus=dummyvar(dataToImpute.EmpStatus);\ndOtherCC=dummyvar(dataToImpute.OtherCC);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 617.87,
+    "x1": 339.23,
+    "y1": 649.94
+  },
+  "confidence": "high"
+}

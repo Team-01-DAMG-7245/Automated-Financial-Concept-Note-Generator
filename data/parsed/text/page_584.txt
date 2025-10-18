@@ -1,0 +1,62 @@
+Validate the step function by monitoring the logged signals and rewards while calling the step
+functions multiple times. Here, you can see the time interval index increasing at each step and the
+current inventory shares changing as the trades are executed at each step.
+
+[~,Reward1,~,LoggedSignals1] = step(RL_OptimalExecution_Training_Environment_Sell,TradingShares_S
+LoggedSignals1
+
+LoggedSignals1 = struct with fields:
+               IntervalIdx: 1
+                HorizonIdx: 1
+    CurrentInventoryShares: 2624
+              ArrivalPrice: 27.4600
+            ExecutedShares: 114
+            ExecutedPrices: 27.4600
+     HorizonExecutedShares: [60×1 double]
+     HorizonExecutedPrices: [60×1 double]
+                  IS_Agent: [3516×1 double]
+                    Reward: [3516×1 double]
+    NumIntervalsPerHorizon: 12
+               NumHorizons: 293
+                 NumLevels: 5
+
+Reward1
+
+Reward1 = 
+0
+
+[~,Reward2,~,LoggedSignals2] = step(RL_OptimalExecution_Training_Environment_Sell,10);
+LoggedSignals2
+
+LoggedSignals2 = struct with fields:
+               IntervalIdx: 2
+                HorizonIdx: 1
+    CurrentInventoryShares: 2614
+              ArrivalPrice: 27.4600
+            ExecutedShares: 10
+            ExecutedPrices: 27.4900
+     HorizonExecutedShares: [60×1 double]
+     HorizonExecutedPrices: [60×1 double]
+                  IS_Agent: [3516×1 double]
+                    Reward: [3516×1 double]
+    NumIntervalsPerHorizon: 12
+               NumHorizons: 293
+                 NumLevels: 5
+
+Reward2
+
+Reward2 = 
+0.6150
+
+[~,Reward3,~,LoggedSignals3] = step(RL_OptimalExecution_Training_Environment_Sell,35);
+LoggedSignals3
+
+LoggedSignals3 = struct with fields:
+               IntervalIdx: 3
+                HorizonIdx: 1
+    CurrentInventoryShares: 2579
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-416

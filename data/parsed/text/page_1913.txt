@@ -1,0 +1,35 @@
+candle
+
+Candlestick chart
+
+Syntax
+
+candle(Data)
+candle(Data,Color)
+h = candle(ax ___ )
+
+Description
+
+candle(Data) plots a candlestick chart from a series of opening, high, low, and closing prices of a
+security. If the closing price is greater than the opening price, the body (the region between the open
+and close price) is unfilled; otherwise the body is filled.
+
+candle(Data,Color) adds an optional argument for Color.
+
+h = candle(ax ___ ) adds an optional argument for ax.
+
+Examples
+
+Generate a Candlestick Chart for a Data Series for a Stock
+
+Load the file SimulatedStock.mat, which provides a timetable (TMW) for financial data for TMW
+stock. This is a candlestick chart with blue candles, for the most recent 21 days in
+SimulatedStock.mat.
+
+load SimulatedStock.mat;
+candle(TMW(end-20:end,:),'b');
+title('Candlestick chart for TMW')
+
+candle
+
+15-607

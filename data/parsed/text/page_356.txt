@@ -1,0 +1,38 @@
+Step 10. Displaying the final results.
+
+The final result is a blotter that contains proposed trades to get from your current portfolio to a
+moderate-risk portfolio. To make the trade, you would need to sell 16,049 shares of your bond asset
+and 8,069 shares of your small-cap equity asset and would need to purchase 23,986 shares of your
+emerging equities asset.
+
+display(Blotter)
+
+Blotter=4×7 table
+                          Price    InitHolding    InitPort     Port      Holding    BuyShare    S
+                          _____    ___________    ________    _______    _______    ________    _
+
+Bonds                  52.4       42938         0.3       0.18787     26889          0       
+    Large-Cap Equities    122.7       24449         0.4           0.4     24449          0       
+    Small-Cap Equities     35.2       42612         0.2       0.16213     34543          0       
+    Emerging Equities      46.9       15991         0.1          0.25     39977      23986
+
+The final plot uses the plotFrontier function to display the efficient frontier and the initial portfolio
+for the fully specified portfolio optimization problem. It also adds the location of the moderate-risk or
+final portfolio on the efficient frontier.
+
+plotFrontier(q, 40);
+hold on
+scatter(estimatePortRisk(q, qwgt), estimatePortReturn(q, qwgt), 'filled', 'r');
+h = legend('Initial Portfolio', 'Efficient Frontier', 'Final Portfolio', 'location', 'best');
+set(h, 'Fontsize', 8);
+hold off
+
+Local Functions
+
+function displayReturns(pret0, pret, qret)
+fprintf('Annualized Portfolio Returns ...\n');
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-188

@@ -1,0 +1,21 @@
+Q = makeQ(TData,n,N);
+
+% Trade on Q
+
+cash = tradeOnQ(VData,Q,n,N);
+
+% Objective value
+
+loss = -cash;
+
+end % negativeCash
+
+Optimize the trading strategy by passing the training and validation data to optimizeTrading.
+
+rng(0) % For reproducibility
+results = optimizeTrading(TData,VData);
+
+2
+Performing Common Financial Tasks
+
+2-74

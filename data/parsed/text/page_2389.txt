@@ -1,0 +1,63 @@
+Output Arguments
+
+LowerBound — Lower-bound weight for each asset
+vector
+
+Lower-bound weight for each asset, returned as a vector for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj). For more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+UpperBound — Upper-bound weight for each asset
+vector
+
+Upper-bound weight for each asset, returned as a vector for a Portfolio, PortfolioCVaR, or
+PortfolioMAD input object (obj). For more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+More About
+
+Upper and Lower Bounds
+
+Upper and lower bounds in portfolio optimization are critical constraints that help define the limits of
+asset allocation, ensuring that the resulting portfolio aligns with the investor's goals for risk
+tolerance.
+
+Tips
+
+You can also use dot notation to obtain bounds for portfolio weights from portfolio objects.
+
+[LowerBound, UpperBound] = obj.getBounds;
+
+Version History
+Introduced in R2011a
+
+See Also
+setBounds
+
+Topics
+“Working with 'Simple' Bound Constraints Using Portfolio Object” on page 4-62
+“Working with 'Simple' Bound Constraints Using PortfolioCVaR Object” on page 5-55
+“Working with 'Simple' Bound Constraints Using PortfolioMAD Object” on page 6-54
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+Supported Constraints for Portfolio Optimization Using Portfolio Objects on page 4-9
+Supported Constraints for Portfolio Optimization Using PortfolioCVaR Object on page 5-8
+
+getBounds
+
+15-1083

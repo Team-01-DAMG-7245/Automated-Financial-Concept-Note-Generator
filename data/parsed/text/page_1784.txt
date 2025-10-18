@@ -1,0 +1,53 @@
+blkimpv
+
+Implied volatility for futures options from Black model
+
+Syntax
+
+Volatility = blkimpv(Price,Strike,Rate,Time,Value)
+Volatility = blkimpv( ___ ,Name,Value)
+
+Description
+
+Volatility = blkimpv(Price,Strike,Rate,Time,Value) computes the implied volatility of a
+futures price from the market value of European futures options using Black's model. If the Class
+name-value argument is empty or unspecified, the default is a call option
+
+Note Any input argument can be a scalar, vector, or matrix. When a value is a scalar, that value is
+used to compute the implied volatility of all the options. If more than one input is a vector or matrix,
+the dimensions of all nonscalar inputs must be identical.
+
+Ensure that Rate and Time are expressed in consistent units of time.
+
+Volatility = blkimpv( ___ ,Name,Value) specifies options using one or more name-value pair
+arguments in addition to the input arguments in the previous syntax.
+
+Examples
+
+Find Implied Volatility for Futures Options from Black's Model
+
+This example shows how to find the implied volatility for a European call futures option that expires
+in four months, trades at $1.1166, and has an exercise price of $20. Assume that the current
+underlying futures price is also $20 and that the risk-free rate is 9% per annum. Furthermore,
+assume that you are interested in implied volatilities no greater than 0.5 (50% per annum). Under
+these conditions, the following commands all return an implied volatility of 0.25, or 25% per annum.
+
+Volatility = blkimpv(20, 20, 0.09, 4/12, 1.1166, 'Limit',0.5);
+Volatility = blkimpv(20, 20, 0.09, 4/12, 1.1166, 'Limit',0.5,'Class',{'Call'});
+Volatility = blkimpv(20, 20, 0.09, 4/12, 1.1166, 'Limit',0.5,'Class',true);
+Volatility = blkimpv(20, 20, 0.09, 4/12, 1.1166, 'Limit',0.5,'Class',true,'Method','jackel2016')
+
+Volatility = 
+0.2500
+
+Input Arguments
+
+Price — Current price of underlying asset
+scalar numeric
+
+Current price of the underlying asset (that is, a futures contract), specified as a scalar numeric.
+
+15
+Functions
+
+15-478

@@ -1,0 +1,12 @@
+{
+  "page": 1244,
+  "original_text": "[coefficients, intervals, residuals] = ...\n   regress(diff(yields), regressors);\ndt    = 1;  % time increment = 1 day\nspeed = -coefficients(2)/dt;\nlevel = -coefficients(1)/coefficients(2);\nsigma =  std(residuals)/sqrt(dt);",
+  "ocr_text": "[coefficients,intervals,residuals]=...\nregress(diff(yields),regressors);\n\ndt =1;timeincrement=1day\n\nspeed=-coefficients(2)/dt;\n\nlevel=-coefficients(1)/coefficients(2);\n\nsigma=_std(residuals)/sqrt(dt);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 317.57,
+    "y1": 157.49
+  },
+  "confidence": "high"
+}

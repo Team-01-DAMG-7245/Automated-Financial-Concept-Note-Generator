@@ -1,0 +1,12 @@
+{
+  "page": 526,
+  "original_text": "% Define the Portfolio object\np = Portfolio(AssetCovar=Sigma);\n% Set bound constraints\np = setBounds(p,0,0.3);\n% Set budget constraint\np = setBudget(p,1,1);",
+  "ocr_text": "DefinethePortfolioobject\np=Portfolio(AssetCovar=Sigma);\nSetboundconstraints\np=setBounds(p,0,0.3);\nSetbudgetconstraint\np=setBudget(p,1,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 503.0,
+    "x1": 263.37,
+    "y1": 567.47
+  },
+  "confidence": "high"
+}

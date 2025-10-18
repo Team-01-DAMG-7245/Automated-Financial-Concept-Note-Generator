@@ -1,0 +1,12 @@
+{
+  "page": 2222,
+  "original_text": "[pwgt,pbuy,psell,exitflag] = estimateCustomObjectivePortfolio(obj,fun)\n[pwgt,pbuy,psell,exitflag] = estimateCustomObjectivePortfolio( ___ ,Name=Value)",
+  "ocr_text": "[pwgt,pbuy,psell,exitflag]=estimateCustom0bjectivePortfolio(obj,fun)\n[pwgt,pbuy,psell,exitflag]=estimateCustomObjectivePortfolio(,Name=Value)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 194.25,
+    "x1": 557.58,
+    "y1": 217.88
+  },
+  "confidence": "high"
+}

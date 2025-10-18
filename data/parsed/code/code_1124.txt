@@ -1,0 +1,7 @@
+Page 1162
+================================================================================
+
+for i = 1:nIndices
+    fit{i} = estimate(model, returns(:,i), 'Display', 'off', 'Options', options);
+    [residuals(:,i), variances(:,i)] = infer(fit{i}, returns(:,i));
+end

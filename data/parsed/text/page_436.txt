@@ -1,0 +1,38 @@
+The differences between this approach and the one presented in the previous section are quite
+evident. Requiring all the assets to have a WoB percentage of at least 35% gives an efficient frontier
+
+that can achieve a return of at most around 1 . 2 10 −3. On the other hand, requiring only that the
+portfolio's average percentage of WoB is 36.57% gives the possibility to reach a return of around
+
+3 . 2 10 −3, almost 2.5 times the return obtained when excluding assets. To better show the
+differences between these two approaches, compute the maximum return achieved for a given
+standard deviation for the two ways of including the percentage of WoB requirements to the portfolio.
+
+Approach 1
+
+In the first approach, exclude all assets with a WoB percentage lower than 33% and find the portfolio
+of maximum return that has a standard deviation of at most 0.012.
+
+% Select the assets to exclude.
+ub = zeros(p.NumAssets,1);
+ub(WoB >= 0.33) = 1;
+p.UpperBound = ub;
+% Estimate the return for a risk level of 0.012.
+pwgt_exclude = estimateFrontierByRisk(p,0.012);
+ret_exclude = estimatePortReturn(p,pwgt_exclude)
+
+ret_exclude = 
+0.0011
+
+% Return the constraints to the original portfolio.
+p.UpperBound = [];
+
+Approach 2
+
+For the second approach, ensure that the average WoB percentage is of at least 33% and find the
+portfolio of maximum return that has a standard deviation of at most 0.012.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-268

@@ -1,0 +1,12 @@
+{
+  "page": 915,
+  "original_text": "MaxDD50Ret = maxdrawdown(Fund50)",
+  "ocr_text": "MaxDD50Ret=maxdrawdown(Fund50)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 574.61,
+    "x1": 263.38,
+    "y1": 585.07
+  },
+  "confidence": "high"
+}

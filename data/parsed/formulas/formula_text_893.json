@@ -1,0 +1,12 @@
+{
+  "page": 489,
+  "original_text": "function new_weights = riskBudgetingRebalanceFcn(~,pricesTT)\n% Risk budgeting rebalance function",
+  "ocr_text": "functionnew_weights=riskBudgetingRebalanceFcn(,pricesTT)\nSRiskbudgetingrebalancefunction",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 492.63,
+    "x1": 415.08,
+    "y1": 513.89
+  },
+  "confidence": "high"
+}

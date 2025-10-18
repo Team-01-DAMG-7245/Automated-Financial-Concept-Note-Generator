@@ -1,0 +1,12 @@
+{
+  "page": 1087,
+  "original_text": "StdAlpha = StdParam(1);\n  StdBeta = StdParam(2);\n  StdSigma = sqrt(StdCovar);",
+  "ocr_text": "StdAlpha=StdParam(1);\nStdBeta=StdParam(2);\nStdSigma=sqrt(StdCovar);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 309.03,
+    "x1": 241.7,
+    "y1": 341.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1156,
+  "original_text": "% Achievable levels of return\npretlimits = pmv.estimatePortReturn(pmv.estimateFrontierLimits);\nTargetRet = mean(pretlimits); % Target half way up the frontier",
+  "ocr_text": "Achievablelevelsofreturn\npretlimits=pmv.estimatePortReturn(pmv.estimateFrontierLimits);\nTargetRet=mean(pretlimits);*Targethalfwayupthefrontier",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 402.13,
+    "x1": 436.75,
+    "y1": 434.2
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,60 @@
+Treat Missing Data in a Credit Scorecard Workflow Using
+MATLAB fillmissing
+
+This example shows a workflow to gather missing data, manually treat the training data, develop a
+new creditscorecard, and treat new data before scoring using the MATLAB® fillmissing.
+
+The advantage of this method is that you can use all the options available in fillmissing to fill
+missing data, as well as other MATLAB functionality such as standardizeMissing and features for
+the treatment of outliers. In this approach, note that you must ensure that the treatment of the
+training data and the treatment of any new data set that requires scoring must be the same.
+
+Alternatively, after you create a creditscorecard object, you can use the fillmissing function
+for the creditscorecard object to fill missing values. For additional information on alternative
+approaches for "treating" missing data, see “Credit Scorecard Modeling with Missing Values” on page
+8-57.
+
+The dataMissing table in the CreditCardData.mat file has two predictors with missing values —
+CustAge and ResStatus.
+
+load CreditCardData.mat
+head(dataMissing)
+
+CustID    CustAge    TmAtAddress     ResStatus     EmpStatus    CustIncome    TmWBank    Othe
+    ______    _______    ___________    ___________    _________    __________    _______    ____
+
+1          53          62         <undefined>    Unknown        50000         55         Ye
+      2          61          22         Home Owner     Employed       52000         25         Ye
+      3          47          30         Tenant         Employed       37000         61         No
+      4         NaN          75         Home Owner     Employed       53000         20         Ye
+      5          68          56         Home Owner     Employed       53000         14         Ye
+      6          65          13         Home Owner     Employed       48000         59         Ye
+      7          34          32         Home Owner     Unknown        32000         26         Ye
+      8          50          57         Other          Employed       51000         33         No
+
+First, analyze the missing data information using the untreated training data.
+
+Create a creditscorecard object using the CreditCardData.mat file to load the dataMissing
+that contains missing values. Set the 'BinMissingData' argument for creditscorecard to true
+to explicitly report information on missing values. Then apply automatic binning using autobinning.
+
+sc = creditscorecard(dataMissing,'IDVar','CustID','BinMissingData',true);
+sc = autobinning(sc);
+
+The bin information and bin plots for predictors that have missing data both show a <missing> bin
+at the end. The two predictors with missing values in this data set are CustAge and ResStatus.
+
+bi = bininfo(sc,'CustAge');
+disp(bi)
+
+Bin         Good    Bad     Odds       WOE       InfoValue 
+    _____________    ____    ___    ______    ________    __________
+
+{'[-Inf,33)'}     69      52    1.3269    -0.42156      0.018993
+    {'[33,37)'  }     63      45       1.4    -0.36795      0.012839
+    {'[37,40)'  }     72      47    1.5319     -0.2779     0.0079824
+
+8
+Credit Risk Analysis
+
+8-132

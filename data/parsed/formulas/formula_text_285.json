@@ -1,0 +1,12 @@
+{
+  "page": 175,
+  "original_text": "MAD(x) = 1\nS ∑\ns = 1",
+  "ocr_text": "1 S\nMAD(x)= 3.2,",
+  "bbox": {
+    "x0": 111.76,
+    "y0": 648.49,
+    "x1": 188.56,
+    "y1": 675.43
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1978,
+  "original_text": "Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the\nargument name and Value is the corresponding value. Name-value arguments must appear after\nother arguments, but the order of the pairs does not matter.",
+  "ocr_text": "SpecifyoptionalpairsofargumentsasNamel=Valuel,...,NameN=ValueN,whereNameisthe\nargumentnameandValueisthecorrespondingvalue.Name-valueargumentsmustappearafter\notherarguments,buttheorderofthepairsdoesnotmatter.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 630.55,
+    "x1": 536.47,
+    "y1": 666.18
+  },
+  "confidence": "high"
+}

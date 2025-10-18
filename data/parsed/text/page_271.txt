@@ -1,0 +1,73 @@
+0.0369         0
+    0.0404         0
+    0.0336    1.0000
+
+display(pbuy)
+
+pbuy = 4×2
+
+0.5891         0
+         0         0
+         0         0
+         0    0.9000
+
+display(psell)
+
+psell = 4×2
+
+0    0.3000
+    0.2631    0.3000
+    0.1596    0.2000
+    0.0664         0
+
+If you do not specify an initial portfolio, the purchase and sale weights assume that your initial
+portfolio is 0.
+
+See Also
+Portfolio | estimateFrontier | estimateFrontierLimits | estimatePortMoments |
+estimateFrontierByReturn | estimatePortReturn | estimateFrontierByRisk |
+estimatePortRisk | estimateFrontierByRisk | estimateMaxSharpeRatio | setSolver
+
+Related Examples
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Asset Allocation Case Study” on page 4-180
+
+•
+“Portfolio Optimization Examples Using Financial Toolbox” on page 4-161
+
+•
+“Portfolio Optimization with Semicontinuous and Cardinality Constraints” on page 4-190
+
+•
+“Black-Litterman Portfolio Optimization Using Financial Toolbox” on page 4-222
+
+•
+“Portfolio Optimization Using Factor Models” on page 4-231
+
+•
+“Portfolio Optimization Using Social Performance Measure” on page 4-264
+
+•
+“Diversify Portfolios Using Custom Objective” on page 4-331
+
+More About
+
+•
+“Portfolio Object” on page 4-20
+
+Obtaining Endpoints of the Efficient Frontier
+
+4-103

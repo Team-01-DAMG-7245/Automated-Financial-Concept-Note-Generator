@@ -1,0 +1,53 @@
+Discount margin, returned as a NINST-by-1 vector of the discount margin if RateInfo is specified as
+a NINST-by-2 vector of stub and spot rates.
+
+If RateInfo is specified as an annualized zero rate term structure created by intenvset, Margin is
+returned as a NINST-by-NCURVES matrix of the zero discount margin.
+
+More About
+
+Discount Margin
+
+The discount margin is the spread between the expected yield on a floating-rate security and the
+benchmark interest rate, adjusted for the expected cash flows of the security.
+
+Version History
+Introduced in R2012b
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although floatdiscmargin supports serial date numbers, datetime values are recommended
+instead. The datetime data type provides flexible date and time formats, storage out to nanosecond
+precision, and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+References
+
+[1] Fabozzi, Frank J., Mann, Steven V. Floating-Rate Securities. John Wiley and Sons, New York, 2000.
+
+[2] Fabozzi, Frank J., Mann, Steven V. Introduction to Fixed Income Analytics: Relative Value Analysis,
+Risk Measures and Valuation. John Wiley and Sons, New York, 2010.
+
+[3] O'Kane, Dominic, Sen, Saurav. “Credit Spreads Explained.” Lehman Brothers Fixed Income
+Quantitative Research, March 2004.
+
+See Also
+floatmargin | floatbyzero | bndspread | intenvset | datetime
+
+Topics
+“Fixed-Income Terminology” on page 2-15
+
+floatdiscmargin
+
+15-1049

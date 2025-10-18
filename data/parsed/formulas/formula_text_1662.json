@@ -1,0 +1,12 @@
+{
+  "page": 837,
+  "original_text": "p = PortfolioMAD('LowerBudget', 0.99, 'UpperBudget', 1);\ndisp(p.LowerBudget)\ndisp(p.UpperBudget)",
+  "ocr_text": "p=PortfolioMAD(LowerBudget,0.99,UpperBudget,1);\ndisp(p.LowerBudget)\ndisp(p.UpperBudget)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 301.15,
+    "x1": 393.43,
+    "y1": 333.21
+  },
+  "confidence": "high"
+}

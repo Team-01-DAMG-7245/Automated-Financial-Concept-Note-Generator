@@ -1,0 +1,58 @@
+bondDefaultBootstrap
+
+Bootstrap default probability curve from bond prices
+
+Syntax
+
+[ProbabilityData,HazardData] = bondDefaultBootstrap(ZeroData,MarketData,
+Settle)
+[ProbabilityData,HazardData] = bondDefaultBootstrap( ___ ,Name,Value)
+
+Description
+
+[ProbabilityData,HazardData] = bondDefaultBootstrap(ZeroData,MarketData,
+Settle) bootstraps the default probability curve from bond prices.
+
+Using bondDefaultBootstrap, you can:
+
+•
+Extract discrete default probabilities for a certain period from market bond data.
+
+•
+Interpolate these default probabilities to get the default probability curve for pricing and risk
+management purposes.
+
+[ProbabilityData,HazardData] = bondDefaultBootstrap( ___ ,Name,Value) adds
+optional name-value pair arguments.
+
+Examples
+
+Determine the Default Probability and Hazard Rate Values for Treasury Bonds
+
+Use the following bond data.
+
+Settle = datenum('08-Jul-2016');
+ MarketDate = datenum({'06/15/2018', '01/08/2019', '02/01/2021', '03/18/2021', '08/04/2025'}','mm
+ CouponRate = [2.240 2.943 5.750 3.336 4.134]'/100;
+ MarketPrice = [101.300 103.020 115.423 104.683 108.642]';
+ MarketData = [MarketDate,MarketPrice,CouponRate];
+
+Calculate the ProbabilityData and HazardData.
+
+TreasuryParYield = [0.26 0.28 0.36 0.48 0.61 0.71 0.95 1.19 1.37 1.69 2.11]'/100;
+TreasuryDates = datemnth(Settle, [[1 3 6], 12 * [1 2 3 5 7 10 20 30]]');
+[ZeroRates, CurveDates] = pyld2zero(TreasuryParYield, TreasuryDates, Settle);
+ZeroData = [CurveDates, ZeroRates];
+format longg
+[ProbabilityData,HazardData]=bondDefaultBootstrap(ZeroData,MarketData,Settle)
+
+ProbabilityData = 5×2
+
+737226        0.0299675399937611
+                    737433        0.0418832295824674
+                    738188         0.090518332884262
+                    738233         0.101248065083713
+
+bondDefaultBootstrap
+
+15-511

@@ -1,0 +1,20 @@
+R2022b: Support for negative price data
+Behavior changed in R2022b
+
+The Data input accepts negative prices.
+
+References
+
+[1] Achelis, S. B. Technical Analysis from A to Z. Second Edition. McGraw-Hill, 1995, pp. 72–74.
+
+See Also
+timetable | table | movavg
+
+Topics
+“Use Timetables in Finance” on page 11-7
+“Convert Financial Time Series Objects (fints) to Timetables” on page 11-2
+
+15
+Functions
+
+15-596

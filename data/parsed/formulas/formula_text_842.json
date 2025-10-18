@@ -1,0 +1,12 @@
+{
+  "page": 473,
+  "original_text": "% Specify data reserved for the backtest.\nXbacktest = network_features(backtest_indices);\nTbacktest = network_responses(backtest_indices,:);",
+  "ocr_text": "Specifydatareservedforthebacktest.\nXbacktest=network_features(backtest_indices);\nTbacktest=network_responses(backtest_indices,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 349.43,
+    "x1": 360.9,
+    "y1": 381.49
+  },
+  "confidence": "high"
+}

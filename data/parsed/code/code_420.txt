@@ -1,0 +1,11 @@
+Page 426
+================================================================================
+
+% The RSI strategy uses its signal differently, buying on a 0->1
+% transition and selling on a 0->-1 transition.  This logic is captured in
+% the rsiRebalanceFcn function defined in the Local Functions section.
+rsiInitWeights = computeInitialWeights(rsiSignal(20,:));
+rsiStrategy = backtestStrategy('RSI',@rsiRebalanceFcn,...
+    'TransactionCosts',tradingCosts,...
+    'LookbackWindow',2,...
+    'InitialWeights',rsiInitWeights);

@@ -1,0 +1,37 @@
+'GBWM Portfolio','Location','southeast')
+hold off
+
+The GBWM portfolio is riskier than the maximum Sharpe ratio portfolio. This extra risk is necessary
+to maximize the probability of attaining the investor's wealth goal G by time T.
+
+Compare GBWM Portfolio to Maximum Sharpe Ratio Portfolio
+
+Compare the probabilities of achieving the wealth goal G by the end of the investment period T for
+the maximum Sharpe ratio portfolio against the GBWM portfolio.
+
+Tprobabilities = table(1-probability(wSR),1-probability(wGBWM),...
+    RowNames={'P(W_T >= G)'},VariableNames={'SR','GBWM'})
+
+Tprobabilities=1×2 table
+                     SR        GBWM  
+                   _______    _______
+
+P(W_T >= G)    0.94592    0.95347
+
+The probability of successfully meeting the investor's wealth goal does not change much between the
+maximum Sharpe ratio portfolio and the GBWM portfolio. Using this information, an investor can
+understand the trade-off between achieving their wealth goal G by time T compared to choosing a
+less risky portfolio. For example, an investor might choose a minimum variance portfolio that has a
+much lower probability of achieving their wealth goal G by time T. Find the minimum variance (MV)
+portfolio, and compare the probability of achieving the wealth goal using this portfolio with the other
+two approaches.
+
+wMV = estimateFrontierLimits(p,'min');
+Tprobabilities.MV = 1-probability(wMV)
+
+Tprobabilities=1×3 table
+                     SR        GBWM        MV
+
+Single Period Goal-Based Wealth Management
+
+4-365

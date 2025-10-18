@@ -1,0 +1,12 @@
+{
+  "page": 1875,
+  "original_text": "Settle = datetime(2004,1,1);\nRates = [0.03840; 0.04512; 0.05086];\nEndDates = [datetime(2004,1,2) datenum('2-Jan-2004'); datetime(2005,1,2);...\n             datetime(2006,1,2)];\nSpotInfo = intenvset('StartDates' , Settle  ,...\n                      'Rates'      , Rates   ,...\n                      'EndDates'   , EndDates,...\n                      'Compounding', 2       ,...\n                      'Basis'      , 0);\n•\nTable — If SpotInfo is a table, the first column can be either a datetime array, string array, or\ndate character vector. The second column is numerical data representing zero rates. For example:",
+  "ocr_text": "Settle=datetime(2004,1,1);\nRates=[0.03840;0.04512;0.05086];\nEndDates=[datetime(2004,1,2)datenum(2-Jan-2004);datetime(2005,1,2);...\ndatetime(2006,1,2)];\n\nSpotInfo=intenvset(StartDates,Settle_,...\n\nRates ,Rates pee\n\nEndDates ,EndDates,...\n\nCompounding,2 pees\n\nBasis ,O);\n\n*Table-IfSpotInfoisatable,thefirstcolumncanbeeitheradatetimearray,stringarray,or\n\ndatecharactervector.Thesecondcolumnisnumericaldatarepresentingzerorates.Forexample:",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 594.95,
+    "x1": 554.22,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 435
+================================================================================
+
+% Remove the average percetage of WoB constraint.
+p.AInequality = []; p.bInequality = [];

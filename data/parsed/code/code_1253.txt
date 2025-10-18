@@ -1,0 +1,20 @@
+Page 1291
+================================================================================
+
+clustery = Y(idx, 2);
+    clusterz = Y(idx, 3);
+    color = clusterColors(k, :);
+    % Evaluate the convex hull.
+    ch = convhull( clusterx, clustery, clusterz );
+    % Visualize the convex hull, its vertices (the commodities), and create
+    % text labels.
+    trisurf( ch, clusterx, clustery, clusterz, ...
+        "FaceColor", clusterColors(k, :), ...
+        "FaceAlpha", 0.25, ...
+        "EdgeColor", "none", ...
+        "HandleVisibility", "off" )
+    scatter3( clusterx, clustery, clusterz, ...
+        [], clusterColors(k, :), "filled", "DisplayName", "Cluster " + k )
+    text( clusterx, clustery, clusterz, ...
+        clusteredCommodities.Commodity(idx), "Rotation", 10 )
+end

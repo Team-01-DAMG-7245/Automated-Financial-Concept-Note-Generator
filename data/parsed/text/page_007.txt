@@ -1,0 +1,86 @@
+Portfolio Analysis
+3
+
+Analyzing Portfolios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-2
+
+Portfolio Optimization Functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-3
+
+Portfolio Construction Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-5
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-5
+Efficient Frontier Example . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-5
+
+Portfolio Selection and Risk Aversion . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-7
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-7
+Optimal Risky Portfolio . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-8
+
+portopt Migration to Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-11
+Migrate portopt Without Output Arguments . . . . . . . . . . . . . . . . . . . . . .
+3-11
+Migrate portopt with Output Arguments . . . . . . . . . . . . . . . . . . . . . . . . .
+3-12
+Migrate portopt for Target Returns Within Range of Efficient Portfolio
+Returns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-13
+Migrate portopt for Target Return Outside Range of Efficient Portfolio
+Returns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-14
+Migrate portopt Using portcons Output for ConSet . . . . . . . . . . . . . . . . .
+3-15
+Integrate Output from portcons, pcalims, pcglims, and pcgcomp with a
+Portfolio Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-17
+
+Constraint Specification Using a Portfolio Object . . . . . . . . . . . . . . . . . .
+3-19
+Constraints for Efficient Frontier . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-19
+Linear Constraint Equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-21
+Specifying Group Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+3-24
+
+Active Returns and Tracking Error Efficient Frontier . . . . . . . . . . . . . . .
+3-27
+
+Mean-Variance Portfolio Optimization Tools
+4
+
+Portfolio Optimization Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-4
+Portfolio Optimization Problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-4
+Portfolio Problem Specification . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-4
+Return Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-5
+Risk Proxy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-6
+
+Supported Constraints for Portfolio Optimization Using Portfolio Objects
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-9
+Linear Inequality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-9
+Linear Equality Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-10
+'Simple' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-10
+'Conditional' Bound Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-11
+Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-11
+Conditional Budget Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-12
+Group Constraints . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+4-12
+
+vii

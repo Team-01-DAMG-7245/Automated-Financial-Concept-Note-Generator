@@ -1,0 +1,23 @@
+11-Jan-2006    28.05    59.28    25.33    20.61    30.88    59.91     34.5    75.22    53.31 
+    12-Jan-2006    27.68    60.13    25.41    19.76    30.57    59.63    33.96    74.57    53.23
+
+Inspect Data Set
+
+Visualize the correlation and total return of each stock in the data set.
+
+% Visualize the correlation between the 15 stocks.
+returns = tick2ret(pricesTT);
+stockCorr = corr(returns.Variables);
+heatmap(symbols,symbols,stockCorr,'Colormap',parula);
+
+% Visualize the performance of each stock over the range of price data.
+totalRet = ret2tick(returns);
+plot(totalRet.Dates,totalRet.Variables);
+legend(symbols,'Location','NW');
+title('Growth of $1 for Each Stock')
+ylabel('$')
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-252

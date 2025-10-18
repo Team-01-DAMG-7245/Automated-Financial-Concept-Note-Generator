@@ -1,0 +1,5 @@
+Page 2397
+================================================================================
+
+Use the getEquality function with a Portfolio, PortfolioCVaR, or PortfolioMAD object to
+obtain equality constraint arrays from portfolio objects.

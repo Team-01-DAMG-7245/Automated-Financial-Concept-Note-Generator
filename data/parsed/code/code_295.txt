@@ -1,0 +1,7 @@
+Page 293
+================================================================================
+
+This example shows how to use the plotFrontier function to create a plot of the efficient frontier
+for a given portfolio optimization problem. The plotFrontier function accepts several types of
+inputs and generates a plot with an optional possibility to output the estimates for portfolio risks and
+returns along the efficient frontier.

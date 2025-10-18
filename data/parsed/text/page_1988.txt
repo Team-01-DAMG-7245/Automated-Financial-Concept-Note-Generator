@@ -1,0 +1,53 @@
+cfconv
+
+Cash flow convexity
+
+Syntax
+
+CFlowConvexity = cfconv(CashFlow,Yield)
+
+Description
+
+CFlowConvexity = cfconv(CashFlow,Yield) returns the convexity of a cash flow in periods.
+
+Examples
+
+Compute the Convexity of a Cash Flow
+
+This example shows how to return the convexity of a cash flow, given a cash flow of nine payments of
+$2.50 and a final payment $102.50, with a periodic yield of 2.5%.
+
+CashFlow = [2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 102.5];
+
+Convex = cfconv(CashFlow, 0.025)
+
+Convex = 
+90.4493
+
+Input Arguments
+
+CashFlow — Cash flow
+vector of real numbers
+
+Cash flow, specified as a vector of real numbers.
+
+Data Types: double
+
+Yield — Periodic yield
+scalar decimal
+
+Periodic yield, specified as a scalar decimal.
+
+Data Types: double
+
+Output Arguments
+
+CFlowConvexity — Convexity
+scalar
+
+Convexity returned as a scalar.
+
+15
+Functions
+
+15-682

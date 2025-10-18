@@ -1,0 +1,12 @@
+{
+  "page": 754,
+  "original_text": "p = PortfolioCVaR('Name','CVaR Portfolio Five Hedging Levels',...\n   'AssetList',{'Stock','Hedge50','Hedge75','Hedge90','Hedge95'},...\n   'Scenarios', AssetScenarios, 'LowerBound', 0, ...\n   'Budget', 1, 'ProbabilityLevel', 0.95);",
+  "ocr_text": "p=PortfolioCVaR(Name,CVaRPortfolioFiveHedgingLevels,...\nAssetList,{Stock,Hedge50,Hedge75,Hedge90,Hedge95},...\nScenarios,AssetScenarios,LowerBound,0,...\nBudget,1,_ProbabilityLevel,0.95);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 475.93,
+    "x1": 458.46,
+    "y1": 518.8
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,54 @@
+ResultTable = TestCase;
+ResultTable.ModelPrice = ModelPrice;
+ResultTable.Difference = ModelPrice - TestCase.Price
+
+ResultTable=1×5 table
+     Maturity      Price     Coupon    ModelPrice    Difference
+    ___________    ______    ______    __________    __________
+
+Jun-01-2019    109.02     0.08       109.02      1.4211e-14
+
+Input Arguments
+
+ZeroData — Zero rate data
+matrix | IRDataCurve object
+
+Zero rate data, specified as an M-by-2 matrix of dates and zero rates or an IRDataCurve object of
+zero rates. For array input, the dates must be entered as serial date numbers, and discount rate must
+be in decimal form.
+
+When ZeroData is an IRDataCurve object, ZeroCompounding and ZeroBasis are implicit in
+ZeroData and are redundant inside this function. In this case, specify these optional parameters
+when constructing the IRDataCurve object before using this bondDefaultBootstrap function.
+
+For more information on an IRDataCurve object, see “Creating an IRDataCurve Object” (Financial
+Instruments Toolbox).
+
+Data Types: double
+
+MarketData — Bond market data
+matrix
+
+Bond market data, specified as an N-by-3 matrix of maturity dates, market prices, and coupon rates
+for bonds. The dates must be entered as serial date numbers, market prices must be numeric values,
+and coupon rate must be in decimal form.
+
+Note A warning is displayed when MarketData is not sorted in ascending order by time.
+
+Data Types: double
+
+Settle — Settlement date
+datetime scalar | string scalar | date character vector
+
+Settlement date, specified as a scalar datetime, string, or date character vector. Settle must be
+earlier than or equal to the maturity dates in MarketData.
+
+To support existing code, bondDefaultBootstrap also accepts serial date numbers as inputs, but
+they are not recommended.
+
+Data Types: char | datetime | string
+
+15
+Functions
+
+15-516

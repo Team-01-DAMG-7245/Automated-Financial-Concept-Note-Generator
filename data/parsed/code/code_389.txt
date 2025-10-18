@@ -1,0 +1,6 @@
+Page 410
+================================================================================
+
+% Set the rolling lookback window to be at least 40 days and at most 126
+% days (about 6 months).
+lookback  = [40 126];

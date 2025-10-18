@@ -1,0 +1,12 @@
+{
+  "page": 1908,
+  "original_text": "ans = datetime\n   24-Nov-2022",
+  "ocr_text": "ans=datetime\n24-Nov-2022",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 175.73,
+    "x1": 165.86,
+    "y1": 197.0
+  },
+  "confidence": "high"
+}

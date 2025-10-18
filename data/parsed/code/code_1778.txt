@@ -1,0 +1,5 @@
+Page 1500
+================================================================================
+
+If you specify JumpMean as a function of time and state, JumpMean must return a scalar when you
+call it with two inputs:

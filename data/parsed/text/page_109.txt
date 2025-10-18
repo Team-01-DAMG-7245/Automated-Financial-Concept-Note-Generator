@@ -1,0 +1,39 @@
+Hyperparameters dI (ΔtI) and dS (ΔtS) determine the size of a rolling state characterizing the
+
+dynamics. At time t, the process transitions from φ = ρprevious, ΔScurrent = i to
+
+φ = ρcurrent, ΔSfuture = j (or holds in the same state if i = j).
+
+Estimate Process Parameters
+
+Execution of the trading strategy at any time t is based on the probability of ΔSfuture being in a
+particular state, conditional on the current and previous values of the other states. Following [3] and
+[4], determine empirical transition probabilities, and then assess them for predictive power.
+
+% Transition counts
+
+C = zeros(numStates);
+for i = 1:length(phi)-dS-1  
+    C(phi(i),phi(i+1)) = C(phi(i),phi(i+1))+1;
+end
+
+% Holding times
+
+H = diag(C);
+
+% Transition rate matrix (infinitesimal generator)
+
+G = C./H;
+v = sum(G,2);
+G = G + diag(-v);
+
+% Transition probability matrix (stochastic for all dI)
+
+P = expm(G*dI); % Matrix exponential
+
+To obtain a trading matrix Q containing Prob ΔSfuture ρprevious, ρcurrent, ΔScurrent  as in [4], apply
+Bayes’ rule,
+
+Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development
+
+2-65

@@ -1,0 +1,36 @@
+F(t, Xt) = S(t)[L(t) −Xt]
+ (14-3)
+
+where S is an NVars-by-NVars matrix-valued function of mean reversion speeds (that is, rates of mean
+reversion), and L is an NVars-by-1 vector-valued function of mean reversion levels (that is, long run
+average level).
+
+Similarly, consider the following diffusion-rate specification:
+
+G(t, Xt) = D(t, Xt
+α(t))V(t)
+ (14-4)
+
+where D is an NVars-by-NVars diagonal matrix-valued function. Each diagonal element of D is the
+corresponding element of the state vector raised to the corresponding element of an exponent Alpha,
+which is also an NVars-by-1 vector-valued function. V is an NVars-by-NBrowns matrix-valued function
+of instantaneous volatility rates. Each row of V corresponds to a particular state variable, and each
+column corresponds to a particular Brownian source of uncertainty. V associates the exposure of state
+variables with sources of risk.
+
+The parametric specifications for the drift and diffusion-rate functions associate parametric
+restrictions with familiar models derived from the general SDE class, and provide coverage for many
+models.
+
+The class system and hierarchy of the SDE engine use industry-standard terminology to provide
+simplified interfaces for many models by placing user-transparent restrictions on drift and diffusion
+specifications. This design allows you to mix and match existing models, and customize drift-rate or
+diffusion-rate functions.
+
+Available SDE Models
+
+For example, the following models are special cases of the general SDE model.
+
+SDE Models
+
+14-11

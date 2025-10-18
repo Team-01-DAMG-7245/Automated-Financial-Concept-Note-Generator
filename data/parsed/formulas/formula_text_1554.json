@@ -1,0 +1,12 @@
+{
+  "page": 778,
+  "original_text": "% Min CVaR portfolio\nnexttile\nidxMinCVaR = pwgt(:,1) >= 1e-4;\npiechart(pwgt(idxMinCVaR,1),labels(idxMinCVaR))\ntitle('Min CVaR Portfolio')",
+  "ocr_text": "SMinCVaRportfolio\n\nnexttile\n\nidxMinCVaR=pwgt(:,1)==1le-4;\npiechart(pwgt(idxMinCVaR,1),Labels(idxMinCVaR))\ntitle(MinCVaRPortfolio)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 418.03,
+    "x1": 344.65,
+    "y1": 471.69
+  },
+  "confidence": "high"
+}

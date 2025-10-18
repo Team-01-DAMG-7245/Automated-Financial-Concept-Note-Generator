@@ -1,0 +1,69 @@
+•
+9 = actual/360 (ICMA)
+
+•
+10 = actual/365 (ICMA)
+
+•
+11 = 30/360E (ICMA)
+
+•
+12 = actual/365 (ISDA)
+
+•
+13 = BUS/252
+
+For more information, see “Basis” on page 2-16.
+
+Data Types: double
+
+EndMonthRule — End-of-month rule flag
+1 (in effect) (default) | nonnegative integer 0 or 1
+
+End-of-month rule flag, specified as the comma-separated pair consisting of 'EndMonthRule' and a
+nonnegative integer, 0 or 1, using a NINST-by-1 vector. This rule applies only when Maturity is an
+end-of-month date for a month having 30 or fewer days.
+
+•
+0 = Ignore rule, meaning that a bond coupon payment date is always the same numerical day of
+the month.
+
+•
+1 = Set rule on, meaning that a bond coupon payment date is always the last actual day of the
+month.
+
+Data Types: double
+
+IssueDate — Bond issue date
+if IssueDate not specified, cash flow payment dates determined from other inputs (default) |
+datetime array | string array | date character vector
+
+Bond issue date, specified as the comma-separated pair consisting of 'IssueDate' and a N-by-1
+vector using a datetime array, string array, or date character vectors.
+
+To support existing code, bondDefaultBootstrap also accepts serial date numbers as inputs, but
+they are not recommended.
+
+Data Types: char | datetime | string
+
+FirstCouponDate — First actual coupon date
+if you do not specify a FirstCouponDate, cash flow payment dates are determined from other
+inputs (default) | datetime scalar | string scalar | date character vector
+
+First actual coupon date, specified as the comma-separated pair consisting of 'FirstCouponDate'
+and a scalar datetime, string, or date character vector. FirstCouponDate is used when a bond has
+an irregular first coupon period. When FirstCouponDate and LastCouponDate are both specified,
+FirstCouponDate takes precedence in determining the coupon payment structure.
+
+To support existing code, bondDefaultBootstrap also accepts serial date numbers as inputs, but
+they are not recommended.
+
+Data Types: char | datetime | string
+
+LastCouponDate — Last actual coupon date
+if you do not specify a LastCouponDate, cash flow payment dates are determined from other inputs
+(default) | datetime scalar | string scalar | date character vector
+
+bondDefaultBootstrap
+
+15-519

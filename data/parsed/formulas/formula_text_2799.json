@@ -1,0 +1,12 @@
+{
+  "page": 1429,
+  "original_text": "HWV = hwv(1.5,100,10,'startstate',100);",
+  "ocr_text": "HWV=hwv(1.5,100,10,startstate,100);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 211.22,
+    "x1": 301.32,
+    "y1": 221.69
+  },
+  "confidence": "high"
+}

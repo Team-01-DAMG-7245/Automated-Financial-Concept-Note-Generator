@@ -1,0 +1,51 @@
+% Compute asset returns per period
+asset_returns = tick2ret(pricesTT(period_dates,:));
+num_periods = height(asset_returns);
+
+% Brinson Return input
+Return = asset_returns.Variables';
+
+% Brinson Category input
+Category = repmat(asset_categories,1,num_periods);
+
+% Brinson Period input
+num_assets = width(pricesTT);
+Period = (1:num_periods) .* ones(num_assets,1);
+
+% Brinson Name input
+Name = repmat(string(pricesTT.Properties.VariableNames(:)),1,num_periods);
+
+% Benchmark weights
+benchmark_positions = bt.Positions.(benchmark_name){period_dates(1:end-1),2:end}';
+BenchmarkWeight = benchmark_positions ./ sum(benchmark_positions);
+
+% Strategy weights
+portfolio_positions = bt.Positions.(strategy_name){period_dates(1:end-1),2:end}';
+PortfolioWeight = portfolio_positions ./ sum(portfolio_positions);
+
+% Aggregate the inputs into the Brinson asset table
+asset_table = table(Period(:),Name(:),Return(:),Category(:), ...
+    PortfolioWeight(:),BenchmarkWeight(:),...
+    VariableNames=["Period","Name","Return","Category", ...
+    "PortfolioWeight","BenchmarkWeight"]);
+end
+
+See Also
+brinsonAttribution | categoryAttribution | categoryReturns | categoryWeights |
+totalAttribution | summary
+
+Related Examples
+
+•
+“Backtest Investment Strategies Using Financial Toolbox” on page 4-238
+
+•
+“Backtest Investment Strategies with Trading Signals” on page 4-251
+
+•
+“Backtest Using Risk-Based Equity Indexation” on page 4-291
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-322

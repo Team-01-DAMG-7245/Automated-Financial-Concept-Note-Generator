@@ -1,0 +1,80 @@
+Convert Financial Time Series Objects (fints) to Timetables
+
+In this section...
+
+“Create Time Series” on page 11-2
+
+“Index an Object” on page 11-3
+
+“Transform Time Series” on page 11-3
+
+“Convert Time Series” on page 11-4
+
+“Merge Time Series” on page 11-5
+
+“Analyze Time Series” on page 11-5
+
+“Data Extraction” on page 11-6
+
+In R2023a, financial time series (fints), and its associated methods have been removed and are
+replaced with a MATLAB timetable function. If you use fints or the associated methods, you
+receive an error. To help you convert from the older fints to the newer timetable functionality, use
+the following information.
+
+Create Time Series
+
+I/O Related Operations
+
+Task
+Removed Functionality
+Use This Functionality
+
+Construct by passing in
+data and dates
+
+fints(dates,data,datanames
+)
+
+Use timetable:
+
+timetable(rowTimes,var1,...,
+varN,'VariableNames',
+{'a','b',...})
+
+Construct by conversion of
+files
+
+ascii2fts(filename,descrow
+,colheadrow,skiprows)
+
+Use readtable and
+table2timetable:
+
+T =
+readtable(filename,opts,Name
+,Value)
+
+TT =
+table2timetable(T,'RowTimes'
+,timeVarName)
+
+Write files
+fts2ascii(filename,tsobj,e
+xttext)
+
+Use writetable:
+
+writetable(TT,filename)
+
+Convert to matrix
+fts2mat(tsobj)
+S = vartype('numeric');
+
+TT2 = TT(:,S)
+
+TT2.Variables
+
+11
+Using Financial Timetables
+
+11-2

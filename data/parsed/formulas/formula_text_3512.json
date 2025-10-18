@@ -1,0 +1,12 @@
+{
+  "page": 1957,
+  "original_text": "newTradeIdx = 3;\nnewTradeValues = values(:,newTradeIdx,:);",
+  "ocr_text": "newTradeIdx=3;\nnewTradeValues=values(:,newTradeldx,:);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 550.61,
+    "x1": 312.14,
+    "y1": 571.88
+  },
+  "confidence": "high"
+}

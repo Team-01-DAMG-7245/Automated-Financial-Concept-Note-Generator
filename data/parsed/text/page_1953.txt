@@ -1,0 +1,15 @@
+[3] O'Kane, D. and S. Turnbull. “Valuation of Credit Default Swaps.” Lehman Brothers, Fixed Income
+Quantitative Credit Research. April, 2003.
+
+[4] O'Kane, D. Modelling Single-name and Multi-name Credit Derivatives. Wiley Finance, 2008.
+
+See Also
+cdsbootstrap | cdsspread | cdsprice | cdsoptprice | IRDataCurve
+
+Topics
+“Pricing a CDS Index Option” (Financial Instruments Toolbox)
+“Credit Default Swap Option” (Financial Instruments Toolbox)
+
+cdsrpv01
+
+15-647

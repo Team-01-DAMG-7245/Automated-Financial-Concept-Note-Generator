@@ -1,0 +1,60 @@
+Load the Data_GlobalIdx2 data set and specify the GBM model as in “Represent Market Models
+Using SDELD, CEV, and GBM Objects” on page 14-33.
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+    Dataset.NIK Dataset.FTSE Dataset.SP];
+
+returns =  tick2ret(prices);
+nVariables  = size(returns,2);
+expReturn   = mean(returns);
+sigma       = std(returns);
+correlation = corrcoef(returns);
+X           = 100;
+X           = X(ones(nVariables,1));
+
+GBM = gbm(diag(expReturn),diag(sigma), 'Correlation', ...
+    correlation, 'StartState', X);
+
+Perform a quasi-Monte Carlo simulation by using simBySolution with the optional name-value
+arguments for 'MonteCarloMethod','QuasiSequence', and 'BrownianMotionMethod'.
+
+[paths,time,z] = simBySolution(GBM, 10,'ntrials',4096,'MonteCarloMethod','quasi','QuasiSequence',
+
+Calculate Price for European Call Option Using Monte Carlo Simulation with GBM Object
+
+This example shows the workflow to compute the price of a European call option using Monte Carlo
+simulation with a gbm object.
+
+Set up the parameters for the Geometric Brownian Motion (GBM) model and the European call
+option.
+
+% Parameters for the GBM model and option
+S0 = 80; % Initial stock price
+K = 40; % Strike price
+T = 1; % Time to maturity in years
+r = 0.05; % Risk-free interest rate
+sigma = 0.20; % Volatility
+nTrials = 10000; % Number of Monte Carlo trials
+nPeriods = 1; % Number of periods (for one year, this can be set to 1)
+
+Create a gbm object.
+
+% Create GBM object
+gbmobj = gbm(r,sigma,'StartState',S0);
+
+Use simBySolution to simulate the end-of-year stock prices using the GBM model (gbm) over
+nTrials trials.
+
+% Simulate stock prices at maturity
+FuturePrices = simBySolution(gbmobj,nPeriods,'nTrials',nTrials,'DeltaTime',T);
+
+Calculate the payoff for the European call option based on the simulated prices.
+
+% Calculate payoffs for the call option
+Payoffs = max(FuturePrices(:, end) - K, 0);
+
+15
+Functions
+
+15-114

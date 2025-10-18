@@ -1,0 +1,12 @@
+{
+  "page": 546,
+  "original_text": "WPath(t+1) = WPath(t)*exp(mu-(sigma^2)/2+sigma*Z(t));",
+  "ocr_text": "WPath(t+1)=WPath(t)*exp(mu-(sigma*2)/2+sigma*Z(t));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 398.83,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

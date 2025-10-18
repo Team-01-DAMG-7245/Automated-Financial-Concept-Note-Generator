@@ -1,0 +1,61 @@
+Term Structure Analysis and Interest-Rate Swaps
+
+This example shows how to derive implied zero and forward curves from the observed market prices
+of coupon-bearing bonds.
+
+This code illustrates some of the term-structure analysis functions found in Financial Toolbox™
+software. Specifically, it illustrates how to derive implied zero (spot) and forward curves from the
+observed market prices of coupon-bearing bonds. The zero and forward curves implied from the
+market data are then used to price an interest rate swap agreement.
+
+In an interest rate swap, two parties agree to a periodic exchange of cash flows. One of the cash flows
+is based on a fixed interest rate held constant throughout the life of the swap. The other cash flow
+stream is tied to some variable index rate. Pricing a swap at inception amounts to finding the fixed
+rate of the swap agreement. This fixed rate, appropriately scaled by the notional principal of the swap
+agreement, determines the periodic sequence of fixed cash flows.
+
+In general, interest rate swaps are priced from the forward curve such that the variable cash flows
+implied from the series of forward rates and the periodic sequence of fixed-rate cash flows have the
+same current value. Thus, interest rate swap pricing and term structure analysis are intimately
+related.
+
+Define Data
+
+Specify values for the settlement date, maturity dates, coupon rates, and market prices for 10 U.S.
+Treasury Bonds. This data allows you to price a five-year swap with net cash flow payments
+exchanged every six months. For simplicity, accept default values for the end-of-month payment rule
+(rule in effect) and day-count basis (actual/actual). To avoid issues of accrued interest, assume that all
+Treasury Bonds pay semiannual coupons and that settlement occurs on a coupon payment date.
+
+Settle   = datenum('15-Jan-1999');
+
+BondData = {'15-Jul-1999'  0.06000   99.93
+            '15-Jan-2000'  0.06125   99.72
+            '15-Jul-2000'  0.06375   99.70
+            '15-Jan-2001'  0.06500   99.40
+            '15-Jul-2001'  0.06875   99.73
+            '15-Jan-2002'  0.07000   99.42
+            '15-Jul-2002'  0.07250   99.32
+            '15-Jan-2003'  0.07375   98.45
+            '15-Jul-2003'  0.07500   97.71
+            '15-Jan-2004'  0.08000   98.15};
+
+BondData is an instance of a MATLAB® cell array, indicated by the curly braces ({}).
+
+Next assign the date stored in the cell array to Maturity, CouponRate, and Prices vectors for
+further processing.
+
+Maturity   = datenum(char(BondData{:,1}));
+CouponRate = [BondData{:,2}]';
+Prices     = [BondData{:,3}]';
+Period     = 2; % semiannual coupons
+
+Bootstrap Zero Curve
+
+Now that the data has been specified, use the term structure function zbtprice to bootstrap the
+zero curve implied from the prices of the coupon-bearing bonds. This implied zero curve represents
+
+10
+Solving Sample Problems
+
+10-18

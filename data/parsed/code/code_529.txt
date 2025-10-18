@@ -1,0 +1,6 @@
+Page 489
+================================================================================
+
+function asset_table = backtest2brinson(bt,strategy_name,benchmark_name,pricesTT,asset_categories
+% Build Brinson attribution input asset table based on the results of the
+% completed backtest.

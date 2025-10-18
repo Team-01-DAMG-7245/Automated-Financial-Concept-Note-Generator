@@ -1,0 +1,12 @@
+{
+  "page": 1957,
+  "original_text": "profilesBefore = struct with fields:\n     Dates: [37×1 double]\n        EE: [37×1 double]\n       PFE: [37×1 double]\n      MPFE: 2.1580e+05\n     EffEE: [37×1 double]\n       EPE: 2.8602e+04\n    EffEPE: 4.9579e+04",
+  "ocr_text": "profilesBefore=structwithfields:\nDates:[37x1double]\nEE:[37x1double]\nPFE:_[37x1double]\nMPFE:2.1580e+05\nEffEE:[37x1double]\nEPE:2.8602e+04\nEffEPE:4.9579e+04",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 410.95,
+    "x1": 285.06,
+    "y1": 497.01
+  },
+  "confidence": "high"
+}

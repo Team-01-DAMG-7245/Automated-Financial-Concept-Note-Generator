@@ -1,0 +1,12 @@
+{
+  "page": 451,
+  "original_text": "function new_weights = MixHH(~, assetPrices, struct)\n% Min variance + max HH diversification strategy",
+  "ocr_text": "functionnew_weights=MixHH(,assetPrices,struct)\nSMinvariance+maxHHdiversificationstrategy",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.23,
+    "x1": 371.74,
+    "y1": 211.49
+  },
+  "confidence": "high"
+}

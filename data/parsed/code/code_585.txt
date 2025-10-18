@@ -1,0 +1,8 @@
+Page 540
+================================================================================
+
+% Initialize the matrix that stores the value function at different
+% wealth nodes and time periods.
+V = zeros(nWealthNodes,T+1);
+% Define the Value function at t = T.
+V(:,end) = (WGrid >= G);

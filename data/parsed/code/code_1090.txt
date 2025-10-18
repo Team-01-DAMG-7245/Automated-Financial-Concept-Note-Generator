@@ -1,0 +1,5 @@
+Page 1117
+================================================================================
+
+From the implied zero curve, find the corresponding series of implied forward rates using the term
+structure function zero2fwd.

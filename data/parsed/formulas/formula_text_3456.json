@@ -1,0 +1,12 @@
+{
+  "page": 1915,
+  "original_text": "Get the RGB triplets using RGB = get(groot,\"FactoryAxesColorOrder\").",
+  "ocr_text": "GettheRGBtripletsusingRGB=get(groot,FactoryAxesColor0Order).",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 469.8,
+    "x1": 457.2,
+    "y1": 481.43
+  },
+  "confidence": "high"
+}

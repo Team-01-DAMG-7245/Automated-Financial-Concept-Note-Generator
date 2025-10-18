@@ -1,0 +1,68 @@
+Cao [2 on page 10-46] describes the setup for reinforcement learning as:
+
+•
+Si is the state at time i.
+
+•
+Ai is the action taken at i.
+
+•
+Ri + 1 is the resulting reward at time i + 1.
+
+The aim of reinforcement learning is to maximize expected future rewards. In this financial
+application of reinforcement learning, maximizing expected rewards is learning a delta-hedging
+strategy as an optimal approach to hedging a European call option.
+
+This example follows the framework outlined in Cao [2 on page 10-46]. Specifically, an accounting
+profit and loss (P&L) formulation from that paper is used to set up the reinforcement learning
+problem and a deep deterministic policy gradient (DDPG) agent is used. This example does not
+exactly reproduce the approach from [2 on page 10-46] because Cao et. al. recommend a Q-learning
+approach with two separate Q-functions (one for the hedging cost and one for the expected square of
+the hedging cost), but this example uses instead a simplified reward function.
+
+Define Training Parameters
+
+Next, specify an at-the-money option with three months to maturity is hedged. For simplicity, both the
+interest rate and dividend yield are set to 0.
+
+% Option parameters
+Strike = 100;
+Maturity = 21*3/250;
+
+% Asset parameters
+SpotPrice = 100;
+ExpVol = .2;
+ExpReturn = .05;
+
+% Simulation parameters
+rfRate = 0;
+dT = 1/250;
+nSteps = Maturity/dT;
+nTrials = 5000;
+
+% Transacation cost and cost function parameters
+c = 1.5;
+kappa = .01;
+InitPosition = 0;
+
+% Set the random generator seed for reproducibility.
+rng(3)
+
+Define Environment
+
+In this section, you define the action and observation parameters, actInfo and obsInfo. The agent
+action is the current hedge value which can range between 0 and 1. There are three variables in the
+agent observation:
+
+•
+Moneyness (ratio of the spot price to the strike price)
+
+•
+Time to maturity
+
+•
+Position or amount of the underlying asset that is held
+
+Hedge Options Using Reinforcement Learning Toolbox
+
+10-41

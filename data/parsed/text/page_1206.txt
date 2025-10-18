@@ -1,0 +1,88 @@
+SDE Class Names
+Supported Simulation Methods
+
+sde
+simByEuler, simulate
+
+bm
+simByEuler, simByMilstein,
+simByMilstein2, simulate
+
+gbm
+simByEuler, simBySolution,
+simByMilstein, simByMilstein2, simulate
+
+merton
+simBySolution, simByMilstein,
+simByMilstein2, simulate
+
+bates
+simByTransition, simByQuadExp,
+simByMilstein, simByMilstein2, simulate
+
+hwv
+simBySolution, simByMilstein,
+simByMilstein2, simulate
+
+heston
+simByTransition, simByQuadExp,
+simByMilstein, simByMilstein2, simulate
+
+cev
+simByEuler, simByMilstein,
+simByMilstein2, simulate
+
+cir
+simByEuler, simByTransition,
+simByQuadExp, simByMilstein,
+simByMilstein2, simulate
+
+sdeddo
+simByEuler, simByMilstein,
+simByMilstein2, simulate
+
+sdeld
+simByEuler, simByMilstein,
+simByMilstein2, simulate
+
+sdemrd
+simByEuler, simByMilstein,
+simByMilstein2, simulate
+
+rvm
+simByEuler, simByHybrid
+
+roughbergomi
+simByEuler, simByHybrid
+
+roughheston
+simByEuler
+
+See Also
+sde | bm | gbm | merton | bates | drift | diffusion | sdeddo | sdeld | cev | cir | heston | hwv |
+sdemrd | rvm | roughbergomi | roughheston | ts2func | simulate | simByEuler |
+simBySolution | simByQuadExp | simBySolution | interpolate
+
+Related Examples
+
+•
+“Base SDE Models” on page 14-16
+
+•
+“Drift and Diffusion Models” on page 14-19
+
+•
+“Linear Drift Models” on page 14-22
+
+•
+“Parametric Models” on page 14-24
+
+More About
+
+•
+“SDEs” on page 14-2
+
+14
+Stochastic Differential Equations
+
+14-14

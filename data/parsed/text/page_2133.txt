@@ -1,0 +1,54 @@
+days365
+
+Days between dates based on 365-day year
+
+Syntax
+
+NumDays = days365(StartDate,EndDate)
+
+Description
+
+NumDays = days365(StartDate,EndDate) returns the number of days between StartDate and
+EndDate based on a 365-day year. All months contain their actual number of days. February always
+contains 28 days.
+
+If EndDate is earlier than StartDate, NumDays is negative. Under this convention, all months
+contain 30 days.
+
+Either input argument can contain multiple values, but if so, the other must contain the same number
+of values or a single value that applies to all. For example, if StartDate is an n-row datetime, then
+EndDate must be an N-by-1 vector of integers or a single integer. NumDays is then an N-by-1 vector of
+date numbers.
+
+Examples
+
+Determine the Number of Days Between Two Dates Based on a 365-Day Year
+
+Determine the NumDays using date character vectors for StartDate and EndDate.
+
+NumDays = days365('15-jan-2000', '15-mar-2000')
+
+NumDays = 
+59
+
+Determine the NumDays using datetimes for StartDate and EndDate.
+
+NumDays = days365(datetime(2000,1,15) , datetime(2000,3,15))
+
+NumDays = 
+59
+
+Determine the NumDays using a datetime array for EndDate.
+
+MoreDays = [datetime(2000,3,15) ; datetime(2000,4,15) ; datetime(2000,6,15)];
+NumDays = days365('15-jan-2000', MoreDays)
+
+NumDays = 3×1
+
+59
+    90
+   151
+
+days365
+
+15-827

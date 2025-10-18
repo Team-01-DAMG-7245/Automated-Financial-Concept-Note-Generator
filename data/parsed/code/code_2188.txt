@@ -1,0 +1,7 @@
+Page 1874
+================================================================================
+
+RefBonds = [RefPrices, RefMaturity, RefCpn];
+Settle   = datetime('26-Nov-2002','Locale','en_US');
+[ZeroRates, CurveDates] = zbtprice(RefBonds(:, 2:end), ...
+RefPrices, Settle)

@@ -1,0 +1,4 @@
+Page 1012
+================================================================================
+
+By assumption, all defaults are independent events, so the objective function is

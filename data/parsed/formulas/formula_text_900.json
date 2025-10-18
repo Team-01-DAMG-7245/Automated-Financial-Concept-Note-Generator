@@ -1,0 +1,12 @@
+{
+  "page": 490,
+  "original_text": "% Brinson Category input\nCategory = repmat(asset_categories,1,num_periods);",
+  "ocr_text": "BrinsonCategoryinput\nCategory=repmat(asset_categories,1,num_periods);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 179.43,
+    "x1": 360.9,
+    "y1": 200.69
+  },
+  "confidence": "high"
+}

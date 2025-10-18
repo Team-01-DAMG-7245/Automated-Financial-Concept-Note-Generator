@@ -1,0 +1,21 @@
+PortfolioCategoryWeight: [2×3 double]
+    BenchmarkCategoryWeight: [2×3 double]
+            PortfolioReturn: 0.0598
+            BenchmarkReturn: 0.0540
+               ActiveReturn: 0.0059
+
+Generate Horizontal Bar Chart for Performance Attribution
+
+Use the brinsonAttribution object with attributionsChart to generate a horizontal bar chart
+of portfolio performance attributions by category, aggregated over all time periods.
+
+attributionsChart(BrinsonPAobj)
+
+Alternatively, you can use the name-value argument for Style to generate a stacked horizontal bar
+chart of return attributions by category.
+
+attributionsChart(BrinsonPAobj,Style="stacked")
+
+attributionsChart
+
+15-33

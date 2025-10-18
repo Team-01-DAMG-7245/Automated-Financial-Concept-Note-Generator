@@ -1,0 +1,38 @@
+AllRates — All the internal rates of return
+serial date number | matrix
+
+All the internal rates of return associated with CashFlow, returned as a matrix with the same
+number of columns as CashFlow and one less row. Also, column j in AllRates contains all the rates
+of return associated to column j in CashFlow (including complex-valued rates).
+
+More About
+
+Internal Rate of Return
+
+Internal rate of return is a financial metric used to evaluate the profitability of an investment. It
+represents the discount rate at which the net present value (NPV) of all cash flows (both incoming
+and outgoing) from an investment equals zero.
+
+Version History
+Introduced before R2006a
+
+References
+
+[1] Brealey and Myers. Principles of Corporate Finance. McGraw-Hill Higher Education, Chapter 5,
+2003.
+
+[2] Hazen G. “A New Perspective on Multiple Internal Rates of Return.” The Engineering Economist.
+Vol. 48-1, 2003, pp. 31–51.
+
+See Also
+effrr | mirr | nomrr | xirr | pvvar
+
+Topics
+“Interest Rates/Rates of Return” on page 2-11
+“Analyzing and Computing Cash Flows” on page 2-11
+“Performance Metrics Overview” on page 7-2
+
+15
+Functions
+
+15-1130

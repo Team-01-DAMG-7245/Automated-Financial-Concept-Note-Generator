@@ -1,0 +1,12 @@
+{
+  "page": 1560,
+  "original_text": "% Prune the table to hold only 10 days of data and selected stocks.\ntimeColumn = \"Dates\";\nT = T(1:10,[timeColumn assetSymbols]);",
+  "ocr_text": "SPrunethetabletoholdonly10daysofdataandselectedstocks.\ntimeColumn=Dates;\nT=T(1:10,[timeColumnassetSymbols]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 652.83,
+    "x1": 453.01,
+    "y1": 684.89
+  },
+  "confidence": "high"
+}

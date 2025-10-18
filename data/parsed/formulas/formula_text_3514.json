@@ -1,0 +1,12 @@
+{
+  "page": 1957,
+  "original_text": "profilesAfter = exposureprofiles(simulationDates,exposures)",
+  "ocr_text": "profilesAfter=exposureprofiles(simulationDates,exposures)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 656.68,
+    "x1": 409.66,
+    "y1": 667.15
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,7 @@
+Page 925
+================================================================================
+
+'NR' is treated as another rating. The transition matrix shows the estimated probability of
+transitioning into and out of 'NR'. In this example, the transprob function uses the 'cohort'
+algorithm, and the 'NR' rating is treated as another rating. The same behavior exists when using the
+transprob function with the 'duration' algorithm.

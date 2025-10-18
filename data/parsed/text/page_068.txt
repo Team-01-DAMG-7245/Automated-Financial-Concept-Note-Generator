@@ -1,0 +1,47 @@
+For the ZeroData information on the current spot curve for this bond, refer to https://
+www.treasury.gov/resource-center/data-chart-center/interest-rates/Pages/TextView.aspx?data=yield.
+
+ZeroDates = daysadd(Settle ,[30 90 180 360 360*2 360*3 360*5 ...
+360*7 360*10 360*20 360*30]);
+ZeroRates = ([0.06 0.12 0.81 1.08 1.22 1.53 2.32 2.92 3.68 4.42 4.20]/100)';
+
+Compute the key rate duration using bndkrdur for a specific set of rates (choose this based on the
+maturities of the available hedging instruments).
+
+krd = bndkrdur([ZeroDates ZeroRates],CouponRate,Settle,Maturity,'keyrates',[2 5 10 20])
+
+krd = 1×4
+
+0.2865    0.8729    2.6451    8.5778
+
+Note, the sum of the key rate durations approximately equals the duration of the bond.
+
+[sum(krd) bnddurp(Price,CouponRate,Settle,Maturity)]
+
+ans = 1×2
+
+12.3823   12.3919
+
+See Also
+bndconvp | bndconvy | bnddurp | bnddury | bndkrdur
+
+Related Examples
+
+•
+“Handle and Convert Dates” on page 2-2
+
+•
+“Term Structure of Interest Rates” on page 2-29
+
+•
+“Computing Treasury Bill Price and Yield” on page 2-26
+
+More About
+
+•
+“Treasury Bills Defined” on page 2-25
+
+2
+Performing Common Financial Tasks
+
+2-24

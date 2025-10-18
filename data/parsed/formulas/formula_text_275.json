@@ -1,0 +1,12 @@
+{
+  "page": 168,
+  "original_text": "ActiveWeights = p.estimateFrontier(21)",
+  "ocr_text": "ActiveWeights=p.estimateFrontier(21)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 138.03,
+    "x1": 295.89,
+    "y1": 148.49
+  },
+  "confidence": "high"
+}

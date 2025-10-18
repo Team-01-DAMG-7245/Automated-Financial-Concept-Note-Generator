@@ -1,0 +1,12 @@
+{
+  "page": 2474,
+  "original_text": "Moment = lpm(Data,MAR,Order) computes lower partial moments for asset returns Data relative\nto MAR for each asset in a NUMORDERS x NUMSERIES matrix Moment.",
+  "ocr_text": "Moment=lpm(Data,MAR,Order)computeslowerpartialmomentsforassetreturnsDatarelative\ntoMARforeachassetinaNUMORDERS_x_NUMSERIESmatrixMoment.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 345.41,
+    "x1": 555.1,
+    "y1": 369.04
+  },
+  "confidence": "high"
+}

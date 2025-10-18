@@ -1,0 +1,7 @@
+Page 547
+================================================================================
+
+•
+The policy is a mapping that selects actions based on the observations from the environment.
+Typically, the policy is a function approximator with tunable parameters, such as a deep neural
+network.

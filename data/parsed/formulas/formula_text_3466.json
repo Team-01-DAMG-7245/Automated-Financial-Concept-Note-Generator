@@ -1,0 +1,12 @@
+{
+  "page": 1922,
+  "original_text": "Settle =  datetime('02-Jan-02','Locale','en_US');\nMaturity =  datetime('31-Mar-02','Locale','en_US');\nIssueDate =  datetime('1-Oct-01','Locale','en_US');",
+  "ocr_text": "Settle=datetime(02-Jan-02,Locale,en_US);\nMaturity=datetime(31-Mar-02,Locale,en_US);\nIssueDate=datetime(1-Oct-01,Locale,en_US);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 366.34,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

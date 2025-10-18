@@ -1,0 +1,12 @@
+{
+  "page": 426,
+  "original_text": "% The equal weight strategy requires no history, so set LookbackWindow to 0.\nbenchmarkStrategy = backtestStrategy('Benchmark',@equalWeightFcn,...\n    'TransactionCosts',tradingCosts,...\n    'RebalanceFrequency',20,...\n    'LookbackWindow',0);",
+  "ocr_text": "Theequalweightstrategyrequiresnohistory,sosetLookbackWindowto0.\nbenchmarkStrategy=backtestStrategy(Benchmark,GequalWeightFcn,...\nTransactionCosts,tradingCosts,...\nRebalanceFrequency,20,...\nLookbackWindow,0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 515.09,
+    "x1": 501.77,
+    "y1": 568.76
+  },
+  "confidence": "high"
+}

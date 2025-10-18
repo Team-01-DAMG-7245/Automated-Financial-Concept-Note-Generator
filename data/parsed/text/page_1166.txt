@@ -1,0 +1,32 @@
+Assess GPD Fit
+
+Examine the GPD fit in more detail.
+
+The CDF of a GPD is parameterized as
+
+F(y) = 1 −(1 + ζy/β)−1/ζ, y > = 0, β > 0, ζ > −0 . 5
+
+for exceedances (y), tail index parameter (ζ), and scale parameter (β).
+
+To visually assess the GPD fit, plot the empirical CDF of the upper tail exceedances of the residuals
+along with the CDF fitted by the GPD. Although only 10% of the standardized residuals are used, the
+fitted distribution closely follows the exceedance data, so the GPD model is an appropriate choice.
+
+figure
+[P,Q] = boundary(tails{index});  % Cumulative probabilities & quantiles at boundaries
+y     = sort(residuals(residuals(:,index) > Q(2), index) - Q(2)); % Sort exceedances
+plot(y, (cdf(tails{index}, y + Q(2)) - P(2))/P(1))
+[F,x] = ecdf(y);                 % Empirical CDF
+hold on
+stairs(x, F, 'r')
+grid on
+
+legend('Fitted generalized Pareto CDF','Empirical CDF','Location','SouthEast');
+xlabel('Exceedance')
+ylabel('Probability')
+title('Upper Tail of Standardized Residuals')
+
+10
+Solving Sample Problems
+
+10-68

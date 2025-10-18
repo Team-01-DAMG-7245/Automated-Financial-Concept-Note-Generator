@@ -1,0 +1,12 @@
+{
+  "page": 318,
+  "original_text": "p = Portfolio('AssetMean', AssetMean, 'AssetCovar', AssetCovar, 'Budget', 1);\np = setBounds(p, 0.1, 0.5, 'BoundType',[\"simple\"; \"conditional\";\"conditional\"])\np.BoundType",
+  "ocr_text": "p=Portfolio(AssetMean,AssetMean,AssetCovar,AssetCovar,_Budget,1);\np=setBounds(p,0.1,0.5,_BoundType,[simple;conditional;conditional])\np.BoundType",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 375.27,
+    "x1": 394.39,
+    "y1": 398.07
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 775,
+  "original_text": "figure\nt = tiledlayout(3,1);\ntitle(t,'PDF of One-Month-Ahead Returns')\nylabel(t,'Returns')\nbins = -0.1:0.001:0.1;",
+  "ocr_text": "figure\n\nt=tiledlayout(3,1);\ntitle(t,PDFofOne-Month-AheadReturns)\nylabel(t,Returns)\nbins=-0.1:0.001:0.1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 266.83,
+    "x1": 312.16,
+    "y1": 320.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 860,
+  "original_text": "p = PortfolioMAD('NumAssets', 3, 'Budget', 1);\np = setTurnover(p, 0.3, 0);",
+  "ocr_text": "p=PortfolioMAD(NumAssets,3,Budget,1);\np=setTurnover(p,0.3,0);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 366.41,
+    "x1": 339.25,
+    "y1": 387.68
+  },
+  "confidence": "high"
+}

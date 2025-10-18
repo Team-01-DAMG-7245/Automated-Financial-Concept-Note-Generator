@@ -1,0 +1,60 @@
+outputType — Year to determine days
+'datenum' (default) | character vector with values 'datenum' or 'datetime'
+
+A character vector specified as either 'datenum' or 'datetime'. The output Date is in serial date
+format if 'datenum' is specified, or datetime format if 'datetime' is specified. By default the
+output Date is in serial date format, or match the format of Holiday, if specified.
+
+Data Types: char
+
+Output Arguments
+
+Date — Date for the last business date of given year and month
+datetime | serial date number
+
+Date for the last business date of a given year and month, returned as a datetime or serial date
+number.
+
+If neither Holiday nor outputType are specified, Date is returned as a serial date number. If
+Holiday is specified, but not outputType, then the type of the holiday variable controls the type of
+date:
+
+•
+If Holiday is a string or date character vector, then Date is returned as a serial date number. Use
+the function datetime to convert serial date numbers to formatted datetime arrays.
+
+•
+If Holiday is a datetime array, then Date is returned as a datetime array.
+
+.
+
+Version History
+Introduced before R2006a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+Although lbusdate supports serial date numbers, datetime values are recommended instead. The
+datetime data type provides flexible date and time formats, storage out to nanosecond precision,
+and properties to account for time zones and daylight saving time.
+
+To convert serial date numbers or text to datetime values, use the datetime function. For example:
+
+t = datetime(738427.656845093,"ConvertFrom","datenum");
+y = year(t)
+
+y =
+
+2021
+
+There are no plans to remove support for serial date number inputs.
+
+See Also
+busdate | fbusdate | holidays | isbusday | datetime
+
+Topics
+“Handle and Convert Dates” on page 2-2
+
+lbusdate
+
+15-1139

@@ -1,0 +1,12 @@
+{
+  "page": 2480,
+  "original_text": "MaxDD = maxdrawdown(Data) computes maximum drawdown for each series in an N-vector MaxDD\nand identifies start and end indexes of maximum drawdown periods for each series in a 2-by-N matrix\nMaxDDIndex.",
+  "ocr_text": "MaxDD=maxdrawdown(Data)computesmaximumdrawdownforeachseriesinanN-vectorMaxDD\nandidentifiesstartandendindexesofmaximumdrawdownperiodsforeachseriesina2-by-Nmatrix\nMaxDDIndex.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 269.86,
+    "x1": 555.03,
+    "y1": 305.49
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1231,
+  "original_text": "X           = X(ones(nVariables,1));",
+  "ocr_text": "xX =X(ones(nVariables,1));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 285.05,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

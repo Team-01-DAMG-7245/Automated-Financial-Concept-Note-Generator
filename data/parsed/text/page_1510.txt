@@ -1,0 +1,65 @@
+If you specify Sigma as a deterministic function of time and state, it must return an NVars-by-
+NBrowns matrix when you call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+An NVars-by-1 state vector Xt
+
+Note Although merton enforces no restrictions for Sigma, volatilities are usually nonnegative.
+
+Data Types: double | function_handle
+
+JumpFreq — Instantaneous jump frequencies representing intensities of Poisson processes
+array | deterministic function of time | deterministic function of time and state
+
+Instantaneous jump frequencies representing the intensities (the mean number of jumps per unit
+time) of the Poisson processes Nt that drive the jump simulation, specified as an array, a deterministic
+function of time, or a deterministic function of time and state.
+
+If you specify JumpFreq as an array, it must be an NJumps-by-1 vector.
+
+If you specify JumpFreq as a deterministic function of time, when you call JumpFreq with a real-
+valued scalar time t as its only input, JumpFreq must produce an NJumps-by-1 vector.
+
+If you specify JumpFreq as a deterministic function of time and state, it must return an NVars-by-
+NBrowns matrix when you call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+An NVars-by-1 state vector Xt
+
+Data Types: double | function_handle
+
+JumpMean — Instantaneous mean of random percentage jump sizes
+array | deterministic function of time | deterministic function of time and state
+
+Instantaneous mean of random percentage jump sizes J, where log(1+J) is normally distributed with
+mean (log(1+JumpMean) - 0.5 × JumpVol2) and standard deviation JumpVol, specified as decimal
+using an array, a deterministic function of time, or a deterministic function of time and state. For
+instance, an expected jump effect of 20% on the price of an underlying asset must be input as 0.2
+instead of 20.
+
+If you specify JumpMean as an array, it must be an NVars-by-NJumps matrix.
+
+If you specify JumpMean as a deterministic function of time, when you cal JumpMean with a real-
+valued scalar time t as its only input, it must return an NVars-by-NJumps matrix.
+
+If you specify JumpMean as a deterministic function of time and state, it must return an NVars-by-
+NJumps matrix when you call it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+An NVars-by-1 state vector Xt
+
+Data Types: double | function_handle
+
+15
+Functions
+
+15-204

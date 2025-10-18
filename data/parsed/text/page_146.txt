@@ -1,0 +1,52 @@
+returns as the return proxy, the variance of portfolio returns as the risk proxy, and a portfolio set that
+is any combination of the specified constraints to form a portfolio set. For information on the
+workflow when using Portfolio objects, see “Portfolio Object Workflow” on page 4-18.
+
+Optimal Risky Portfolio
+
+This example shows how to compute the optimal risky portfolio on the efficient frontier based on the
+risk-free rate, the borrowing rate, and the investor's degree of risk aversion.
+
+You do this with the function portalloc. First generate the efficient frontier data using portopt.
+
+ExpReturn = [0.1 0.2 0.15];
+
+ExpCovariance  = [ 0.005   -0.010    0.004;
+                  -0.010    0.040   -0.002;
+                   0.004   -0.002    0.023];
+
+NumPorts = 20; % Consider 20 different points along the efficient frontier.
+
+[PortRisk, PortReturn, PortWts] = portopt(ExpReturn,... 
+ExpCovariance, NumPorts);
+
+Calling portopt, while specifying output arguments, returns the corresponding vectors and arrays
+representing the risk, return, and weights for each of the portfolios along the efficient frontier. Use
+these as the first three input arguments to the function portalloc.
+
+Find the optimal risky portfolio and the optimal allocation of funds between the risky portfolio and
+the risk-free asset, using these values for the risk-free rate, borrowing rate, and investor's degree of
+risk aversion.
+
+RisklessRate  =  0.08
+
+RisklessRate = 
+0.0800
+
+BorrowRate    =  0.12
+
+BorrowRate = 
+0.1200
+
+RiskAversion  =  3
+
+RiskAversion = 
+3
+
+portalloc(PortRisk, PortReturn, PortWts, RisklessRate,... 
+BorrowRate, RiskAversion);
+
+3
+Portfolio Analysis
+
+3-8

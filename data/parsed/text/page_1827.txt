@@ -1,0 +1,63 @@
+Output Arguments
+
+ProbabilityData — Default probability values
+matrix
+
+Default probability values, returned as a P-by-2 matrix with dates and corresponding cumulative
+default probability values. The dates match those in MarketData, unless the optional input
+parameter ProbabilityDates is provided.
+
+HazardData — Hazard rate values
+matrix
+
+Hazard rate values, returned as an N-by-2 matrix with dates and corresponding hazard rate values for
+the survival probability model. The dates match those in MarketData.
+
+Note A warning is displayed when nonmonotone default probabilities (that is, negative hazard rates)
+are found.
+
+More About
+
+Bootstrap Default Probability
+
+A default probability curve can be bootstrapped from a collection of bond market quotes.
+
+Extracting discrete default probabilities for a certain period from market bond data is represented by
+the formula
+
+Price = Disc(tN) × FV × Q(tN) + C
+f × ∑
+i = 1
+
+N
+Disc(ti) × Q(ti) + ∑
+(i = 1)
+
+N
+Disc(ti) × R(ti) × (Q(ti −1) −Q(ti))
+
+where:
+
+FV — Face value
+
+Q — Survival probability
+
+C — Coupon
+
+R — Recovery amount
+
+f — Payment frequency (for example, 2 for semiannual coupon bonds)
+
+The default probability is:
+
+DefaultProbability = 1 – SurvivalProbability
+
+Version History
+Introduced in R2017a
+
+R2022b: Serial date numbers not recommended
+Not recommended starting in R2022b
+
+bondDefaultBootstrap
+
+15-521

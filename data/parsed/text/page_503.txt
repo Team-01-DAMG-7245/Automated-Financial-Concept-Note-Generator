@@ -1,0 +1,37 @@
+% Maximize the diversification ratio.
+sigma = sqrt(diag(p.AssetCovar));
+MDPObjFun = @(x) (sigma'*x)/sqrt(x'*p.AssetCovar*x);
+% Solution of MDP
+wMDP = estimateCustomObjectivePortfolio(p,MDPObjFun, ...
+    ObjectiveSense="maximize");
+
+The following code shows that there exists a value λMDP > 0 such that the MDP problem and the
+problem with its penalized version are equivalent. The portfolio that minimizes the variance with the
+MDP penalty is min
+x ∈X xTΣx −λMDP σTx.
+
+Define an MDP penalty parameter and solve for MDP using the function handle MDPMixObjFun for
+the MDP penalty with the estimateCustomObjectivePortfolio function.
+
+% MDP penalty parameter
+lambdaMDP = 1e-2;
+% Variance + Most Diversified Portfolio (MDP)
+MDPMixObjFun = @(x) x'*p.AssetCovar*x - lambdaMDP*(sigma'*x);
+% Solution that accounts for risk and MDP diversification
+wMDPMix = estimateCustomObjectivePortfolio(p,MDPMixObjFun);
+
+Plot the weights distribution for the minimum variance portfolio, the MDP, and the penalized strategy.
+
+% Plot the different strategies.
+plotAssetAllocationChanges(wMinVar,wMDPMix,wMDP)
+
+In this plot, the penalized strategy weights are between the minimum variance portfolio and the MDP.
+This result is the same as with the HH penalty, where choosing λMDP = 0 returns the minimum
+
+variance solution and values of λMDP ∈0, λMDP  return asset weights that range from the minimum
+
+variance behavior to the MDP behavior.
+
+Diversify Portfolios Using Custom Objective
+
+4-335

@@ -1,0 +1,64 @@
+Data Types: double | char
+
+FanFaceColor — Color of each fan
+[1 1 0;1 0 0] (yellow to red) (default) | matrix
+
+Color of each fan, specified as an N-by-3 matrix controlling the color of each fan, where each row is
+an RGB triplet. There are three possible values of N:
+
+•
+When N = NumQuantiles, the color of each fan is specified by the corresponding row in the
+matrix.
+
+•
+When N = ceil(NumQuantiles/2), the specified colors represent the bottom half of the fans. The
+colors of the top half are determined by reversing the order of these colors. For more information,
+see ceil.
+
+•
+When N = 2, the colors in the bottom half of the fan are a linear interpolation between the two
+specified colors. The pattern is reversed for the top half.
+
+Data Types: double
+
+HistoricalMarker — Marker symbol of historical line
+'o' (default) | character vector
+
+Marker symbol of historical line, specified as a character vector. For more information on supported
+character vectors for markers, see Primitive Line.
+
+Data Types: char
+
+HistoricalMarkerSize — Marker size of historical line
+5 (default) | positive value in point units
+
+Marker size of historical line, specified as a positive value in point units.
+
+Data Types: double | char
+
+HistoricalMarkerFaceColor — Marker fill color of historical line
+axes dependent (default) | character vector with a value of 'none', 'auto', color identifier, or RGB
+triplet
+
+Marker fill color of historical line, specified as a character vector with a value of 'none', 'auto', a
+character vector for color, or an RGB triplet. For more information on supported character vectors for
+color, see Primitive Line.
+
+Data Types: double | char
+
+HistoricalMarkerEdgeColor — Marker outline color of historical line
+axes dependent (default) | character vector with a value of 'none', 'auto', color identifier, or RGB
+triplet
+
+Marker outline color of historical line, specified as a character vector with a value of 'none',
+'auto', a character vector for color, or an RGB triplet. For more information on supported character
+vectors for color, see Primitive Line.
+
+Data Types: double | char
+
+HistoricalLineColor — Color of historical line
+axes dependent (default) | character vector with a value of 'none', color identifier, or RGB triplet
+
+fanplot
+
+15-1037

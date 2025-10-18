@@ -1,0 +1,12 @@
+{
+  "page": 2471,
+  "original_text": "values = llow(Data) generates a vector of lowest low values from the series of low prices for the\npast n periods.",
+  "ocr_text": "values=Llow(Data)generatesavectoroflowestlowvaluesfromtheseriesoflowpricesforthe\npastnperiods.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 255.4,
+    "x1": 553.94,
+    "y1": 279.03
+  },
+  "confidence": "high"
+}

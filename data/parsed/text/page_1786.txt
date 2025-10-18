@@ -1,0 +1,56 @@
+Tolerance — Implied volatility termination tolerance
+1e6 (default) | positive scalar numeric
+
+Implied volatility termination tolerance, specified as the comma-separated pair consisting of
+'Tolerance' and a positive scalar numeric. If empty or missing, the default is 1e6.
+
+Note If you are using Method with a value of 'jackel2016', the Tolerance argument is ignored.
+
+Data Types: double
+
+Class — Option class from which implied volatility is derived
+true (call option) (default) | logical | cell array of character vectors | string array
+
+Option class indicating option type (call or put) from which implied volatility is derived, specified as
+the comma-separated pair consisting of 'Class' and a logical indicator, cell array of character
+vectors, or string array.
+
+To specify call options, set Class = true or Class = {'call'}. To specify put options, set Class =
+false or Class = {'put'} or Class = ["put"]. If Class is empty or unspecified, the default is a
+call option.
+
+Data Types: logical | cell | string
+
+Method — Method for computing implied volatility
+'jackel2016' (default) | character vector with values 'search' or 'jackel2016' | string with
+values "search" or "jackel2016"
+
+Method for computing implied volatility, specified as the comma-separated pair consisting of
+'Method' and a character vector with a value of 'search' or 'jackel2016' or a string with a
+value of "search" or "jackel2016".
+
+Data Types: char | string
+
+Output Arguments
+
+Volatility — Implied volatility of underlying asset derived from European futures option
+prices
+decimal
+
+Implied volatility of the underlying asset derived from European futures option prices, returned as a
+decimal. If no solution is found, blkimpv returns NaN.
+
+More About
+
+Implied Volatility
+
+Implied volatility is a measure of the market's expectations regarding the future volatility of an
+asset's price.
+
+Implied volatility is expressed as a percentage and indicates the expected annualized standard
+deviation of the asset's returns.
+
+15
+Functions
+
+15-480

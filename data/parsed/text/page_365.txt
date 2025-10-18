@@ -1,0 +1,32 @@
+plotFrontier(p, wgt); hold on;
+plotFrontier(p1, wgt1); hold off;
+legend('Baseline portfolio', 'With MaxNumAssets constraint', 'location', 'best');
+
+Asset Allocation for an Equal-Weighted Portfolio
+
+Create an equal-weighted portfolio using both setBounds and setMinMaxNumAssets functions.
+
+numAssetsAllocated = 8;
+weight= 1/numAssetsAllocated;
+p2 = setBounds(p, weight, weight, 'BoundType', 'conditional');   
+p2 = setMinMaxNumAssets(p2, numAssetsAllocated, numAssetsAllocated);
+
+When any one, or any combination of 'Conditional' BoundType, MinNumAssets, or
+MaxNumAssets are active, the optimization problem is formulated as a mixed integer nonlinear
+programming (MINLP) problem. The Portfolio class automatically constructs the MINLP problem
+based on the specified constraints.
+
+When working with a Portfolio object, you can select one of three solvers using the
+setSolverMINLP function. In this example, instead of using default MINLP solver options, customize
+the solver options to help with a convergence issue. Use a large number (50) for
+'MaxIterationsInactiveCut' with setSolverMINLP, instead of the default value of 30 for
+'MaxIterationsInactiveCut'. The value 50 works well in finding the efficient frontier of optimal
+asset allocation.
+
+p2 = setSolverMINLP(p2, 'OuterApproximation', 'MaxIterationsInactiveCut', 50);
+
+Plot the efficient frontiers for the baseline and equal-weighted portfolios.
+
+Portfolio Optimization with Semicontinuous and Cardinality Constraints
+
+4-197

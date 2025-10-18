@@ -1,0 +1,12 @@
+{
+  "page": 1595,
+  "original_text": "backtester = runBacktest(backtester,pricesTT,'End',datetime('2006-12-05','InputFormat','yyyy-MM-d",
+  "ocr_text": "backtester=runBacktest(backtester,pricesTT,End,datetime(2006-12-05,InputFormat,yyyy-MM-",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 577.01,
+    "x1": 615.55,
+    "y1": 587.47
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,35 @@
+Median: 31-Aug-2014
+           Max: 24-Aug-2016
+          Mean: 31-Aug-2014
+           Std: 10058:44:06
+      TimeStep: NaN
+
+Step 4. Visualize the data.
+
+To visualize the timetable data, use financial charting functions such as highlow or movavg. For this
+example, the moving average information is plotted on the same chart for highlow to provide a
+complete visualization. To obtain the stock performance in 2014, use the MATLAB timerange
+function to select rows of the timetable. To visualize a technical indicator such as the Moving
+Average Convergence Divergence (MACD), pass the timetable object into the macd function for
+analysis.
+
+index = timerange(datetime('01-Jan-2014','Locale','en_US'),datetime('31-Dec-2014','Locale','en_US
+
+highlow(TMW(index,:));
+hold on
+
+ema15 = movavg(TMW(:,'Close'),'exponential',15);
+ema25 = movavg(TMW(:,'Close'),'exponential',25);
+
+ema15 = ema15(index,:);
+ema25 = ema25(index,:);
+plot(ema15.Time,ema15.Close,'r');
+plot(ema25.Time,ema25.Close,'g');
+hold off
+
+legend('Price','15-Day EMA','25-Day EMA')
+title('Highlow Plot for TMW')
+
+Use Timetables in Finance
+
+11-9

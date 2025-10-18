@@ -1,0 +1,70 @@
+•
+If Both UserData and EngineDataList are Specified and detailedCosts Output is
+Specified
+
+If you use the optional name-value argument for UserData to specify a strategy-specific
+userData struct and the optional name-value argument EngineDataList to specify required
+backtest engine state data and the detailedCosts output is specified, the required syntax for
+the computeTransactionCostsFcn function handle must have the following signature:
+
+[detailedCosts,userData] = computeTransactionCostsFcn(deltaPositions,engineData,userData)
+
+If you specify the optional name-value argument UserData, then the strategy userData struct
+is passed to the computeTransactionCostsFcn cost function as the final input argument.
+The computeTransactionCostsFcn function handle can read or write any information to the
+userData struct. The updated userData struct is returned as the second output argument.
+
+Data Types: double | function_handle
+
+LookbackWindow — Lookback window
+[0 Inf] (default) | scalar or 1-by-2 vector using nonnegative integers | scalar or 1-by-2 duration
+object | scalar or 1-by-2 calendarDuration object
+
+Lookback window, specified as the comma-separated pair consisting of 'LookbackWindow' and a
+scalar or 1-by-2 vector of integers, a duration or calendarDuration object.
+
+A scalar LookbackWindow sets the minimum and maximum lookback window to the same value. In
+other words, a scalar LookbackWindow has a fixed window size.
+
+A 1-by-2 vector defines the minimum and maximum size of the rolling window of data (asset prices
+and signal data) that is passed to the rebalance function (rebalanceFcn). For an example, see “Set
+the Size of Rolling Windows for Backtest Strategies” on page 15-254.
+
+•
+When the inputs are integers, the lookback window refers to the number of rows of data from the
+asset (pricesTT) and signal (signalTT) timetables passed to the rebalancing function. The
+lookback minimum sets the minimum number of rows that must be available, prior the row
+associated with the current rebalancing period, before a strategy rebalance can occur. The
+lookback maximum sets the maximum number of rows that is passed to the rebalance function.
+
+For example:
+
+•
+[10 Inf] –— At least 10 rows of data must be available before the current rebalancing period.
+
+•
+[0 50] –— At most 50 rows of data prior to the current rebalancing period are passed to the
+rebalancing function.
+
+•
+[0 Inf] –— Use all available data up to the current rebalancing period; there is no minimum
+and no maximum. This is the default value.
+
+•
+[20 20] –— Exactly 20 rows of data prior to the current rebalancing period are passed to the
+rebalancing function; this is equivalent to setting LookbackWindow to the scalar value 20.
+
+•
+When the inputs are either duration or calendarDuration objects, the lookback window
+minimum and maximum are defined in terms of timespans relative to the time of the current
+rebalance period. For example, if the lookback minimum is set to five days (that is, days(5)), the
+rebalance only occurs if the backtest start time is at least five days prior to the rebalance time.
+Similarly, if the lookback maximum is set to six months (that is, calmonths(6)), the lookback
+window only contains data from the six months prior to the rebalance period or later. For an
+example, see “Backtest Investment Strategies Using datetime and calendarDuration” on page 4-
+451.
+
+15
+Functions
+
+15-238

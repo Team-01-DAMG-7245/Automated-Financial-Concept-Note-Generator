@@ -1,0 +1,12 @@
+{
+  "page": 1094,
+  "original_text": "% Estimate the ideal standard errors for covariance parameters.\n    [StdParam, StdCovar] = ecmmvnrstd(TestData, TestDesign, Covar, 'fisher');\n    \n    % Estimate the sample standard errors for model parameters.\n    StdParam = ecmmvnrstd(TestData, TestDesign, Covar, 'hessian');",
+  "ocr_text": "Estimatetheidealstandarderrorsforcovarianceparameters.\n[StdParam,StdCovar]=ecmmvnrstd(TestData,TestDesign,Covar,fisher);\nEstimatethesamplestandarderrorsformodelparameters.\nStdParam=ecmmvnrstd(TestData,TestDesign,Covar,hessian);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 430.14,
+    "x1": 507.22,
+    "y1": 483.81
+  },
+  "confidence": "high"
+}

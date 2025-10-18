@@ -1,0 +1,12 @@
+{
+  "page": 582,
+  "original_text": "EnvConstants_Train_Sell.SampledBook = TrainingLOB;\nEnvConstants_Train_Sell.BuyTrade = BuyTrade;\nEnvConstants_Train_Sell.TotalTradingShares = TotalTradingShares_Sell;\nEnvConstants_Train_Sell.NumIntervalsPerHorizon = NumIntervalsPerHorizon;\nEnvConstants_Train_Sell.NumHorizons = NumTrainingHorizons;\nEnvConstants_Train_Sell.NumSteps = NumTrainingSteps;",
+  "ocr_text": "EnvConstants_Train_Sell.SampledBook=TrainingLOB;\nEnvConstants_Train_Sell.BuyTrade=BuyTrade;\nEnvConstants_Train_Sell.TotalTradingShares=TotalTradingSharesSell;\nEnvConstants_Train_Sell.NumIntervalsPerHorizon=NumIntervalsPerHorizon;\nEnvConstants_Train_Sell.NumHorizons=NumTrainingHorizons;\nEnvConstants_Train_Sell.NumSteps=NumTrainingSteps;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 654.63,
+    "x1": 480.1,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

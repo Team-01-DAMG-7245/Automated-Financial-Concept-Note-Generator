@@ -1,0 +1,21 @@
+Limit the Maximum Number of Assets to Allocate
+
+Use setMinMaxNumAssets to set the maximum number of allocated assets for the Portfolio
+object. Suppose that you want no more than eight assets invested in the optimal portfolio. To do this
+with a Portfolio object, use setMinMaxNumAssets.
+
+pWithMaxNumAssets = setMinMaxNumAssets(p, [], 8);
+
+wgt = estimateFrontier(p);
+wgtWithMaxNumAssets = estimateFrontier(pWithMaxNumAssets);
+
+Warning: Risk minimization problem failed to converge. Number of iterations exceeded 'MaxIteratio
+
+plotFrontier(p, wgt); hold on;
+plotFrontier(pWithMaxNumAssets, wgtWithMaxNumAssets); hold off;
+legend('Baseline portfolio', 'With MaxNumAssets constraint', 'location', 'best');
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-194

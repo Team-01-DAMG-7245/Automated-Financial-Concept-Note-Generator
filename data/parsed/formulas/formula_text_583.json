@@ -1,0 +1,12 @@
+{
+  "page": 391,
+  "original_text": "% View 1\nP(1, assetNames==\"AIG\") = 1; \nq(1) = 0.05;\nOmega(1, 1) = 1e-3;",
+  "ocr_text": "View1\nP(1,assetNames==AIG)=1;\nq(1)=0.05;\nOmega(1,1)=le-3;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 415.2,
+    "x1": 247.13,
+    "y1": 458.06
+  },
+  "confidence": "high"
+}

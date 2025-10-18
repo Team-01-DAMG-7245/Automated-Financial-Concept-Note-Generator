@@ -1,0 +1,12 @@
+{
+  "page": 1238,
+  "original_text": "rng(5713,'twister')\nobj = gbm(r, diag(sigma),'StartState',100)",
+  "ocr_text": "rng(5713,twister)\nobj=gbm(r,diag(sigma),StartState,100)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 160.03,
+    "x1": 317.58,
+    "y1": 181.29
+  },
+  "confidence": "high"
+}

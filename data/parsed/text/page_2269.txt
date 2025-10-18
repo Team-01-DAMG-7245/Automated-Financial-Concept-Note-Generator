@@ -1,0 +1,58 @@
+specified returns. Assume you have a universe of four assets where you want to obtain efficient
+portfolios with target portfolio returns of 7%, 10%, and 13%.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+rng(11);
+
+p = PortfolioCVaR;
+p = simulateNormalScenariosByMoments(p, m, C, 2000);
+p = setDefaultConstraints(p);
+p = setProbabilityLevel(p, 0.95);
+
+pwgt = estimateFrontierByReturn(p, [0.07 0.10, 0.13]);
+
+display(pwgt);
+
+pwgt = 4×3
+
+0.7371    0.3072         0
+    0.1504    0.3919    0.4396
+    0.0286    0.1011    0.1360
+    0.0839    0.1999    0.4244
+
+The function rng(seed) is used to reset the random number generator to produce the documented
+results. It is not necessary to reset the random number generator to simulate scenarios.
+
+Obtain the Portfolio for Targeted Portfolio Returns for a PortfolioMAD Object
+
+To obtain efficient portfolios that have targeted portfolio returns, the estimateFrontierByReturn
+function accepts one or more target portfolio returns and obtains efficient portfolios with the
+specified returns. Assume you have a universe of four assets where you want to obtain efficient
+portfolios with target portfolio returns of 7%, 10%, and 13%.
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+
+rng(11);
+
+p = PortfolioMAD;
+p = simulateNormalScenariosByMoments(p, m, C, 2000);
+p = setDefaultConstraints(p);
+
+pwgt = estimateFrontierByReturn(p, [0.07 0.10, 0.13]);
+
+display(pwgt);
+
+pwgt = 4×3
+
+estimateFrontierByReturn
+
+15-963

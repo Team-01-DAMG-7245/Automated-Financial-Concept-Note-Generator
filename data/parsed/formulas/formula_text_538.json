@@ -1,0 +1,12 @@
+{
+  "page": 362,
+  "original_text": "wgt = estimateFrontier(p);\nwgtWithMaxNumAssets = estimateFrontier(pWithMaxNumAssets);",
+  "ocr_text": "wgt=estimateFrontier(p);\nwgtWithMaxNumAssets=estimateFrontier(pWithMaxNumAssets);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 509.98,
+    "x1": 404.25,
+    "y1": 531.25
+  },
+  "confidence": "high"
+}

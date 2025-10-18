@@ -1,0 +1,32 @@
+Use summary to generate a table of performance results for both strategies.
+
+summary(backtester)
+
+ans=9×2 table
+                        Markowitz       Robust  
+                       ___________    __________
+
+TotalReturn           -0.12004      0.013641
+    SharpeRatio           -0.02926      0.011774
+    Volatility            0.016383     0.0088013
+    AverageTurnover       0.047756      0.021642
+    MaxTurnover             1.8849        1.0392
+    AverageReturn      -0.00047822    0.00010338
+    MaxDrawdown            0.20332       0.12068
+    AverageBuyCost           2.276         1.036
+    AverageSellCost          2.276         1.036
+
+As expected, the robust strategy has lower volatility than the traditional mean-variance strategy. This
+characteristic is observed in all the performance indicators that measure variability: volatility,
+turnover, and maximum drawdown. This result is the expected outcome of robust strategies. Although
+it is not always the case, in this particular example, the robust strategy also outperforms the
+traditional mean-variance allocation.
+
+References
+
+[1] Goldfarb, D. and G. Iyengar. "Robust Portfolio Selection Problems." Mathematics of Operations
+Research. 28(1), pp. 1–38, 2003.
+
+Solve Robust Portfolio Maximum Return Problem with Ellipsoidal Uncertainty
+
+4-355

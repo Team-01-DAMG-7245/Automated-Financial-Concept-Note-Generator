@@ -1,0 +1,58 @@
+maxReturn = max(qret); % Max return portfolio
+minReturn = min(qret); % Min return portfolio
+display(0.01*(maxReturn-minReturn))
+
+1.5193e-04
+
+The purpose of increasing the termination tolerance is to speed up the convergence of the
+'iterative' algorithm. However, as previously mentioned, the accuracy of the solution will
+decrease. You can see this in the table that follows.
+
+pwgtshpr_iter_largerTol = estimateMaxSharpeRatio(q, 'Method', 'iterative',...
+    'TolX', 1e-4);
+display(table(pwgtshpr_iter, pwgtshpr_iter_largerTol,...
+    'VariableNames', {'Default TolX = 1e-8','TolX = 1e-4'}))
+
+30×2 table
+
+Default TolX = 1e-8    TolX = 1e-4
+    ___________________    ___________
+
+0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+                0                  0  
+         0.015518           0.015523  
+         0.052455           0.052473  
+                0                  0  
+                0                  0  
+                0                  0  
+         0.090304           0.090335  
+         0.081535           0.081562  
+                0                  0  
+         0.026085           0.026094  
+                0                  0  
+         0.043451           0.043466  
+                0                  0  
+         0.034986           0.034998  
+                0                  0  
+          0.12846             0.1285  
+          0.10976            0.10979
+
+In the table, the value of the weights varies slightly with respect to the weights obtained with the
+default tolerance, as expected.
+
+15
+Functions
+
+15-992

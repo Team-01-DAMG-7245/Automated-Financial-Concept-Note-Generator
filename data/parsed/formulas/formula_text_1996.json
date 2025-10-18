@@ -1,0 +1,12 @@
+{
+  "page": 1033,
+  "original_text": "CompanyID = \n;\nUniqueIDs = unique(data.ID,'stable');\n[~,CompanyIndex] = ismember(CompanyID,UniqueIDs);\nhDisplayTransitions(it(CompanyIndex).totalsMat,RatingLabels,strcat(\"Transition counts, company ID",
+  "ocr_text": "CompanyID= Es.\n\nUniqueIDs=unique(data.ID,stable);\n\n[-,CompanyIndex]_=ismember(CompanyID,UniquelIDs);\nhDisplayTransitions(it(CompanyIndex).totalsMat,RatingLabels,strcat(Transitioncounts,companyII",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 645.35,
+    "x1": 615.57,
+    "y1": 688.22
+  },
+  "confidence": "high"
+}

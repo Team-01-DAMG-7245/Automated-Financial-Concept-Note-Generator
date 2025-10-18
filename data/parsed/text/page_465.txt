@@ -1,0 +1,35 @@
+Hierarchical Clustering
+
+Hierarchical clustering is a common clustering technique in machine learning. In the context of asset
+allocation, a hierarchical clustering algorithm is applied to find the distance or similarity between
+each pair of assets and group them into a multilevel binary hierarchical tree.
+
+Begin by defining a measure of likeness or distance between the assets. The more correlated two
+assets are, the closer they should be.
+
+% Compute the correlation distance matrix.
+distCorr = ((1-C)/2).^0.5;
+
+Use the linkage function to compute the matrix that encodes the hierarchical tree of the assets in
+the universe. Them use the dendrogram function to visualize the hierarchical structure.
+
+% Compute the linkage.
+link = linkage(distCorr);
+figure;
+h = dendrogram(link, ColorThreshold='default');
+set(h, LineWidth=2);
+title('Default Leaf Order');
+
+The covariance or correlation matrix can be rearranged to be very close to a block diagonal matrix
+using the information obtained from the hierarchical tree. Each block in the diagonal shows the
+assets that are closely related.
+
+% Sort the assets for quasi-diagonalization. 
+nLeafNodes = size(link,1) + 1;
+rootNodeId = 2*nLeafNodes - 1;
+sortedIdx = getLeafNodesInGroup(rootNodeId,link);
+heatmap(C(sortedIdx,sortedIdx), XData=sortedIdx, YData=sortedIdx);
+
+Create Hierarchical Risk Parity Portfolio
+
+4-297

@@ -1,0 +1,12 @@
+{
+  "page": 1141,
+  "original_text": "trainOpts = rlTrainingOptions( ...\n    'MaxEpisodes', nTrials, ...\n    'MaxStepsPerEpisode',nSteps, ...\n    'Verbose', false, ...\n    'ScoreAveragingWindowLength',200,...\n    'StopTrainingCriteria',\"AverageReward\", ...\n    'StopTrainingValue',-40, ...\n    'StopOnError',\"on\", ...\n    \"UseParallel\",false);",
+  "ocr_text": "trainOpts=rlTrainingOptions(...\nMaxEpisodes,nTrials,...\nMaxStepsPerEpisode,nSteps,...\nVerbose,false,...\nScoreAveragingWindowLength,200,...\nStopTrainingCriteria,AverageReward,...\nStopTrainingValue,-40,_...\nStopOnError,on,...\nUseParallel,false);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 557.43,
+    "x1": 344.66,
+    "y1": 654.29
+  },
+  "confidence": "high"
+}

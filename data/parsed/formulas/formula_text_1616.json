@@ -1,0 +1,12 @@
+{
+  "page": 813,
+  "original_text": "x0 = [ 0.3; 0.2; 0.2; 0.0 ];\np = PortfolioMAD('InitPort', x0);\ndisp(p.InitPort)",
+  "ocr_text": "xO=[0.3;0.2;0.2;0.0];\np=PortfolioMAD(InitPort,x0);\ndisp(p.InitPort)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 240.36,
+    "x1": 268.8,
+    "y1": 272.42
+  },
+  "confidence": "high"
+}

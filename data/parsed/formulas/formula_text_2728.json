@@ -1,0 +1,12 @@
+{
+  "page": 1371,
+  "original_text": "BM = bm( ___ ,Name,Value) creates a bm object with additional options specified by one or more\nName,Value pair arguments.",
+  "ocr_text": "BM=bm(___,Name,Value)createsabmobjectwithadditionaloptionsspecifiedbyoneormore\nName,Valuepairarguments.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 171.99,
+    "x1": 546.19,
+    "y1": 195.62
+  },
+  "confidence": "high"
+}

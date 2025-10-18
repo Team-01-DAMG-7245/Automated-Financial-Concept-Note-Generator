@@ -1,0 +1,60 @@
+0.00408 0.0289 0.0204 0.0119;
+      0.00192 0.0204 0.0576 0.0336;
+      0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+ 
+p = Portfolio;
+p = Portfolio(p, 'AssetMean', m);
+p = Portfolio(p, 'AssetCovar', C);
+[assetmean, assetcovar] = p.getAssetMoments
+
+assetmean =
+
+0.0042
+    0.0083
+    0.0100
+    0.0150
+
+assetcovar =
+
+0.0005    0.0003    0.0002         0
+    0.0003    0.0024    0.0017    0.0010
+    0.0002    0.0017    0.0048    0.0028
+         0    0.0010    0.0028    0.0102
+
+The getAssetMoments function lets you get the values for AssetMean and AssetCovar properties
+at the same time.
+
+Assignment Using the setAssetMoments Function
+
+You can also set asset moment properties using the setAssetMoments function. For example, given
+the mean and covariance of asset returns in the variables m and C, the asset moment properties can
+be set:
+
+m = [ 0.05; 0.1; 0.12; 0.18 ];
+C = [ 0.0064 0.00408 0.00192 0; 
+    0.00408 0.0289 0.0204 0.0119;
+    0.00192 0.0204 0.0576 0.0336;
+    0 0.0119 0.0336 0.1225 ];
+m = m/12;
+C = C/12;
+ 
+p = Portfolio;
+p = setAssetMoments(p, m, C);
+[assetmean, assetcovar] = getAssetMoments(p)
+
+assetmean =
+
+0.0042
+    0.0083
+    0.0100
+    0.0150
+
+assetcovar =
+
+0.0005    0.0003    0.0002         0
+
+Asset Returns and Moments of Asset Returns Using Portfolio Object
+
+4-43

@@ -1,0 +1,63 @@
+Estimation of Transition Probabilities
+
+In this section...
+
+“Introduction” on page 8-2
+
+“Estimate Transition Probabilities” on page 8-2
+
+“Estimate Transition Probabilities for Different Rating Scales” on page 8-4
+
+“Working with a Transition Matrix Containing NR Rating” on page 8-6
+
+“Estimate Point-in-Time and Through-the-Cycle Probabilities” on page 8-10
+
+“Estimate t-Year Default Probabilities” on page 8-12
+
+“Estimate Bootstrap Confidence Intervals” on page 8-13
+
+“Group Credit Ratings” on page 8-15
+
+“Work with Nonsquare Matrices” on page 8-17
+
+“Remove Outliers” on page 8-18
+
+“Estimate Probabilities for Different Segments” on page 8-19
+
+“Work with Large Datasets” on page 8-20
+
+Introduction
+
+Credit ratings rank borrowers according to their credit worthiness. Though this ranking is, in itself,
+useful, institutions are also interested in knowing how likely it is that borrowers in a particular rating
+category will be upgraded or downgraded to a different rating, and especially, how likely it is that
+they will default.
+
+Transition probabilities offer one way to characterize the past changes in credit quality of obligors
+(typically firms), and are cardinal inputs to many risk management applications. Financial Toolbox
+software supports the estimation of transition probabilities using both cohort and duration (also
+known as hazard rate or intensity) approaches using transprob and related functions.
+
+Note The sample dataset used throughout this section is simulated using a single transition matrix.
+No attempt is made to match historical trends in transition rates.
+
+Estimate Transition Probabilities
+
+This example shows how to estimate transition probabilities using sample credit ratings data.
+
+Use the Data_TransProb.mat file that contains sample credit ratings data.
+
+load Data_TransProb
+data(1:10,:)
+
+ans=10×3 table
+         ID              Date          Rating 
+    ____________    _______________    _______
+
+{'00010283'}    {'10-Nov-1984'}    {'CCC'}
+    {'00010283'}    {'12-May-1986'}    {'B'  }
+
+8
+Credit Risk Analysis
+
+8-2

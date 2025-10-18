@@ -1,0 +1,57 @@
+Feasible Generalized Least Squares With Missing Data
+
+Estimate parameters using ecmlsrmle:
+
+[Parameters, Covar0] = ecmlsrmle(Data, Design);
+[Parameters, Covariance] = ecmlsrmle(Data, Design, [], [], [], [], Covar0);
+
+Estimate standard errors using ecmmvnrstd:
+
+StdParameters = ecmmvnrstd(Data, Design, Covariance);
+
+Seemingly Unrelated Regression
+
+Given a multivariate normal regression model in standard form with a Data matrix and a Design
+array, it is possible to convert the problem into a seemingly unrelated regression (SUR) problem by a
+simple transformation of the Design array. The main idea of SUR is that instead of having a common
+parameter vector over all data series, you have a separate parameter vector associated with each
+separate series or with distinct groups of series that, nevertheless, share a common residual
+covariance. It is this ability to aggregate and disaggregate series and to perform comparative tests on
+each design that is the power of SUR.
+
+To make the transformation, use the function convert2sur, which converts a standard-form design
+array into an equivalent design array to do SUR with a specified mapping of the series into
+NUMGROUPS groups. The regression functions are used in the usual manner, but with the SUR design
+array instead of the original design array. Instead of having NUMPARAMS elements, the SUR output
+parameter vector has NUMGROUPS of stacked parameter estimates, where the first NUMPARAMS
+elements of Parameters contain parameter estimates associated with the first group of series, the
+next NUMPARAMS elements of Parameters contain parameter estimates associated with the second
+group of series, and so on. If the model has only one series, for example, NUMSERIES = 1, then the
+SUR design array is the same as the original design array since SUR requires two or more series to
+generate distinct parameter estimates.
+
+Given NUMPARAMS parameters and NUMGROUPS groups with a parameter vector (Parameters) with
+NUMGROUPS * NUMPARAMS elements from any of the regression routines, the following MATLAB
+code fragment shows how to print a table of SUR parameter estimates with rows that correspond to
+each parameter and columns that correspond to each group or series:
+
+fprintf(1,'Seemingly Unrelated Regression Parameter
+   Estimates\n');
+fprintf(1,'   %7s ',' ');
+fprintf(1,'  Group(%3d) ',1:NumGroups);
+fprintf(1,'\n');
+for i = 1:NumParams
+    fprintf(1,'   %7d ',i);
+    ii = i;
+        for j = 1:NumGroups
+            fprintf(1,'%12g ',Param(ii));
+            ii = ii + NumParams;
+            end
+            fprintf(1,'\n');
+end
+fprintf(1,'\n');
+
+9
+Regression with Missing Data
+
+9-16

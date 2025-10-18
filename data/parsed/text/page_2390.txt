@@ -1,0 +1,6 @@
+Supported Constraints for Portfolio Optimization Using PortfolioMAD Object on page 6-8
+
+15
+Functions
+
+15-1084

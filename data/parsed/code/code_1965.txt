@@ -1,0 +1,8 @@
+Page 1557
+================================================================================
+
+% Sell the stock
+        new_weights(assetIdx) = 0;
+        % Set new buy-in price
+        user_data.BuyInPrice = assetPrice * (1 - user_data.BuyInPercent);
+    end

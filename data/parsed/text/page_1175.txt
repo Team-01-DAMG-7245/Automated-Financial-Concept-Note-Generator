@@ -1,0 +1,100 @@
+Conversion Operations
+
+Task
+Removed Functionality
+Use This Functionality
+
+Convert to specified
+frequency
+
+convertto(oldfts,newfreq)
+Use retime:
+
+retime(TT,newTimeStep,method
+)
+
+Convert to annual
+toannual(oldfts,...)
+Use convert2annual:
+
+convert2annual(TT,…)
+
+Convert to daily
+todaily(oldfts,...)
+Use convert2daily:
+
+convert2daily(TT,…)
+
+Convert to monthly
+tomonthly(oldfts,...)
+Use convert2monthly:
+
+convert2monthly(TT,…)
+
+Convert to quarterly
+toquarterly(oldfts,...)
+Use convert2quarterly:
+
+convert2quarterly(TT,…)
+
+Convert to semiannual
+tosemi(oldfts,...)
+Use convert2semiannual:
+
+convert2semiannual(TT,…)
+
+Convert to weekly
+toweekly(oldfts,...)
+Use convert2weekly:
+
+convert2weekly(TT,…)
+
+Merge Time Series
+
+Merge Operations
+
+Task
+Removed Functionality
+Use This Functionality
+
+Merge multiple time series
+objects
+
+merge(fts1,fts2)
+[TT1;TT2] (requires variable name
+to be the same)
+
+unique(TT)
+
+Concatenate financial time
+series objects horizontally
+
+horzcat(fts1,fts2) or
+[fts1,fts2]
+
+Use horzcat or synchronize:
+
+horzcat[TT1,TT2] (requires
+variable name to be the same) or
+
+synchronize(TT1,TT2)
+
+Concatenate financial time
+series objects vertically
+
+vertcat(fts1,fts2) or
+[fts1;fts2]
+
+Use vertcat:
+
+vertcat[TT1;TT2]
+
+Analyze Time Series
+
+Due to flexibility of a timetable that can hold heterogeneous variables, a timetable does not support
+math operations or descriptive statistical calculations. If you would like to apply any numeric
+calculations on a timetable, use the following guidelines.
+
+Convert Financial Time Series Objects (fints) to Timetables
+
+11-5

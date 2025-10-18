@@ -1,0 +1,12 @@
+{
+  "page": 524,
+  "original_text": "% Compute the max return portfolio.\nnew_weights = estimateFrontierLimits(p,'max');",
+  "ocr_text": "SComputethemaxreturnportfolio.\nnew_weights=estimateFrontierLimits(p,max);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 190.63,
+    "x1": 339.25,
+    "y1": 211.89
+  },
+  "confidence": "high"
+}

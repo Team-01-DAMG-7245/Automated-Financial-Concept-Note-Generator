@@ -1,0 +1,12 @@
+{
+  "page": 2383,
+  "original_text": "mAi = tlog(1 + mGi) −1\n2CAii",
+  "ocr_text": "1\nma,=tlog(1+mg,)- aii",
+  "bbox": {
+    "x0": 111.6,
+    "y0": 641.84,
+    "x1": 236.43,
+    "y1": 665.13
+  },
+  "confidence": "high"
+}

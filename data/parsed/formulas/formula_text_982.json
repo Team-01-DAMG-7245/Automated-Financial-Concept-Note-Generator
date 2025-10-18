@@ -1,0 +1,12 @@
+{
+  "page": 520,
+  "original_text": "% Specify a fully invested constraint.\np = setBudget(p,1,1);\n% Specify the long-short bounds.\np = setBounds(p,-0.2,0.2);",
+  "ocr_text": "Specifyafullyinvestedconstraint.\np=setBudget(p,1,1);\nSpecifythelong-shortbounds.\np=setBounds(p,-0.2,0.2);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 519.5,
+    "x1": 295.88,
+    "y1": 562.37
+  },
+  "confidence": "high"
+}

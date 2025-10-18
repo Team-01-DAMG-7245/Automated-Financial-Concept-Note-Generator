@@ -1,0 +1,64 @@
+0.00034 0.002408 0.0017 0.000992;
+0.00016 0.0017 0.0048 0.0028;
+0 0.000992 0.0028 0.010208 ];
+
+pwgt0 = [ 0.3; 0.3; 0.2; 0.1 ];
+
+p = PortfolioMAD('initport', pwgt0);
+p = simulateNormalScenariosByMoments(p, m, C, 20000);
+p = setDefaultConstraints(p);
+
+pwgt = estimateFrontier(p, 5);
+
+pret = estimatePortReturn(p, [pwgt0, pwgt]);
+prsk = estimatePortRisk(p, [pwgt0, pwgt]);
+pstd = estimatePortStd(p, [pwgt0, pwgt]);
+
+[pret, prsk, pstd]
+
+ans = 6×3
+
+0.0206    0.0300    0.0377
+    0.0196    0.0321    0.0403
+    0.0521    0.0365    0.0459
+    0.0847    0.0480    0.0603
+    0.1172    0.0629    0.0790
+    0.1497    0.0796    0.0999
+
+See Also
+PortfolioMAD | estimatePortReturn | plotFrontier | estimatePortStd
+
+Related Examples
+
+•
+“Plotting the Efficient Frontier for a PortfolioMAD Object” on page 6-108
+
+•
+“Creating the PortfolioMAD Object” on page 6-22
+
+•
+“Working with MAD Portfolio Constraints Using Defaults” on page 6-50
+
+•
+“Estimate Efficient Portfolios Along the Entire Frontier for PortfolioMAD Object” on page 6-84
+
+•
+“Asset Returns and Scenarios Using PortfolioMAD Object” on page 6-35
+
+•
+“Postprocessing Results to Set Up Tradable Portfolios” on page 6-113
+
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+Estimate Efficient Frontiers for PortfolioMAD Object
+
+6-107

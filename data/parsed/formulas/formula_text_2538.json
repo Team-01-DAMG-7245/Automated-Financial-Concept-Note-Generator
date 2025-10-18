@@ -1,0 +1,12 @@
+{
+  "page": 1295,
+  "original_text": "maxIdx = double( loadings == max( loadings, [], 2 ) );\nfigure\nheatmap( 1:numLatentFactors, commodityNames, maxIdx, ...\n    \"Colormap\", turbo, ...\n    \"ColorLimits\", [-1, 1] )\nxlabel( \"Latent Factor\" )\ntitle( \"Maximum Factor Loadings\" )",
+  "ocr_text": "maxIdx=double(loadings==max(loadings,[],2));\nfigure\nheatmap(_1:numLatentFactors,commodityNames,maxIdx,...\nColormap,turbo,...\nColorLimits,[-1,1])\nxlabel(LatentFactor)\ntitle(MaximumFactorLoadings)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 426.88,
+    "x1": 393.43,
+    "y1": 502.15
+  },
+  "confidence": "high"
+}

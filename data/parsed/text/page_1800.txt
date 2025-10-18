@@ -1,0 +1,49 @@
+Method for computing implied volatility, specified as the comma-separated pair consisting of
+'Method' and a character vector with a value of 'search' or 'jackel2016' or a string with a
+value of "search" or "jackel2016".
+
+Data Types: char | string
+
+Output Arguments
+
+Volatility — Implied volatility of underlying asset derived from European option prices
+decimal
+
+Implied volatility of the underlying asset derived from European option prices, returned as a decimal.
+If no solution is found, blsimpv returns NaN.
+
+More About
+
+Implied Volatility
+
+Implied volatility is a measure of the market's expectations regarding the future volatility of an
+asset's price.
+
+Implied volatility is expressed as a percentage and indicates the expected annualized standard
+deviation of the asset's returns.
+
+Version History
+Introduced before R2006a
+
+References
+
+[1] Hull, John C. Options, Futures, and Other Derivatives. 5th edition, Prentice Hall, 2003.
+
+[2] Jäckel, Peter. "Let's Be Rational." Wilmott Magazine., January, 2015 (https://
+onlinelibrary.wiley.com/doi/abs/10.1002/wilm.10395).
+
+[3] Luenberger, David G. Investment Science. Oxford University Press, 1998.
+
+See Also
+impvbybls | blsgamma | blsdelta | blslambda | blsprice | blsrho | blstheta | blsvega
+
+Topics
+“Pricing and Analyzing Equity Derivatives” on page 2-39
+“Greek-Neutral Portfolios of European Stock Options” on page 10-14
+“Plotting Sensitivities of an Option” on page 10-25
+“Plotting Sensitivities of a Portfolio of Options” on page 10-27
+
+15
+Functions
+
+15-494

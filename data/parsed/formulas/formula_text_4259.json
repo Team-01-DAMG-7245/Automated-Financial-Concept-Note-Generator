@@ -1,0 +1,12 @@
+{
+  "page": 2412,
+  "original_text": "p = PortfolioCVaR;\np = setInequality(p, A, b);\n[AInequality, bInequality] = getInequality(p)",
+  "ocr_text": "p=PortfolioCVaR;\np=setInequality(p,A,b);\n[AInequality,bInequality]=getInequality(p)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 333.81,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

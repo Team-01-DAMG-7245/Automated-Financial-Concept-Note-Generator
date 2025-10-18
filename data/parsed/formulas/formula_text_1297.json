@@ -1,0 +1,12 @@
+{
+  "page": 648,
+  "original_text": "p = PortfolioCVaR;",
+  "ocr_text": "p=PortfolioCVaR;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 319.72,
+    "x1": 187.53,
+    "y1": 330.19
+  },
+  "confidence": "high"
+}

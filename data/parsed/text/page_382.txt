@@ -1,0 +1,14 @@
+Visualize the Efficient Frontier at Different Turnover Thresholds
+
+This efficient frontier is much closer to the initial portfolio than the starting efficient frontier without
+turnover constraints. To visualize this difference, use the custom function
+TurnoverConstraintPlot to visualize multiple constrained efficient frontiers at different turnover
+thresholds.
+
+turnovers = 0.05:0.05:0.25;
+TurnoverConstraintPlot(P,turnovers)
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-214

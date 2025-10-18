@@ -1,0 +1,12 @@
+{
+  "page": 31,
+  "original_text": "BondItems = Bonds(2, 2:4)",
+  "ocr_text": "BondItems=Bonds(2,2:4)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 489.86,
+    "x1": 225.45,
+    "y1": 500.33
+  },
+  "confidence": "high"
+}

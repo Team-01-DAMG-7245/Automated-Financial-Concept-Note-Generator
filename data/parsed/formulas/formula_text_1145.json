@@ -1,0 +1,12 @@
+{
+  "page": 580,
+  "original_text": "SampledBook = LOB(MessageSampleIdx(2:end),1:NumLevels*4);",
+  "ocr_text": "SampledBook=LOB(MessageSampleIdx(2:end),1:NumLevels*4);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 257.36,
+    "x1": 398.82,
+    "y1": 267.82
+  },
+  "confidence": "high"
+}

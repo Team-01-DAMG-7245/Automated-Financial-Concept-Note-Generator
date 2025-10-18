@@ -1,0 +1,12 @@
+{
+  "page": 939,
+  "original_text": "transMatWhole = transprob(data,'startDate',startDate,'endDate',endDate)",
+  "ocr_text": "transMatWhole=transprob(data,startDate,startDate,endDate,endDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 559.16,
+    "x1": 474.71,
+    "y1": 569.63
+  },
+  "confidence": "high"
+}

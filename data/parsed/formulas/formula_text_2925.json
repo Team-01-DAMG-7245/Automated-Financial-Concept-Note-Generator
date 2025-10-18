@@ -1,0 +1,12 @@
+{
+  "page": 1526,
+  "original_text": "Kernel function parameter representing the roughness index, specified as numeric scalar. The value\nof Alpha should be in (-0.5, 0.5). The BSS process behaves locally like a fractional Brownian\nmotion (fBm) with the Hurst index H = Alpha + 0.5.",
+  "ocr_text": "Kernelfunctionparameterrepresentingtheroughnessindex,specifiedasnumericscalar.Thevalue\nofAlphashouldbein(-0.5,.5).TheBSSprocessbehaveslocallylikeafractionalBrownian\nmotion(fBm)withtheHurstindexH=Alpha+0.5.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 248.79,
+    "x1": 547.7,
+    "y1": 284.42
+  },
+  "confidence": "high"
+}

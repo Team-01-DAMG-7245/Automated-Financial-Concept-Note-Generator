@@ -1,0 +1,71 @@
+To estimate the underlying volatility of a time series using an EWMA model, let{rn}denote the
+sequence of commodity returns and let{yn} be the sequence of EWMA estimates for the
+instantaneous variance. The difference equation for computing the sequence {yn} is as follows:
+
+y1 = r1
+2,
+yn = λyn −1 + 1 −λ rn2,
+λ ∈
+0, 1 ,
+n ≥2
+
+•
+Here, λ  is a scalar smoothing parameter chosen from the interval [0, 1].
+
+•
+In many typical applications, 0 . 90 ≤λ ≤0 . 99. In this example, you take λ = 0 . 94.
+
+•
+As λ increases, the influence of the previous moving average estimate (yn −1) on the current
+
+variance estimate (yn) increases, and the influence of the current squared return (rn2) decreases.
+
+•
+If λ is close to 1, then the influence of the current squared return value rn2 is negligible in the
+
+moving average and yn −1 dominates. If λ is close to 0, then the current squared return value rn2
+
+dominates and yn −1 is negligible.
+
+This example uses the square of the commodity returns in the EWMA computation because you
+estimate the instantaneous variance of the portfolio return series, from which you take the square
+root to obtain estimates for the instantaneous volatility (standard deviation).
+
+Compute Exponentially Weighted Moving Averages
+
+Define the smoothing parameter λ.
+
+lambda = 0.94;
+
+Standard form for a filter in MATLAB® is the following:
+
+a0yn = b0xn + b1xn −1 + … + bkxn −k −a1yn −1 −… −an −ℓyn −ℓ
+
+where a = [a0, a1, a2, an −ℓ] and b = [b0, b1, …, bk] are the filter coefficients. For more information, see
+filter.
+
+Write the EWMA filter coefficients in standard form:
+
+1yn + ( −λ)yn −1 = (1 −λ)rn2
+
+Here, you have a = [1, −λ] and b = [1 −λ] = 1 −λ.
+
+a = [1, -lambda];
+b = 1 - lambda;
+
+Compute the instantaneous variance and volatility estimates.
+
+instantVariance = filter(b, a, Returns.Variables.^2);
+InferredVolatility = sqrt( instantVariance );
+
+Create a timetable containing the estimated volatilities.
+
+InferredVolatility = array2timetable( InferredVolatility, ...
+    "VariableNames", commodityNames, ...
+    "RowTimes", Returns.Date );
+InferredVolatility.Properties.DimensionNames(1) = "Date";
+
+14
+Stochastic Differential Equations
+
+14-100

@@ -1,0 +1,61 @@
+sdeddo
+
+Stochastic Differential Equation (SDEDDO) model from Drift and Diffusion components
+
+Description
+
+Creates and displays a sdeddo object, instantiated with objects of class drift and diffusion. The
+restricted sdeddo object contains the input drift and diffusion objects; therefore, you can
+directly access their displayed parameters.
+
+This abstraction also generalizes the notion of drift and diffusion-rate objects as functions that
+sdeddo evaluates for specific values of time t and state Xt. Like sde objects, sdeddo objects allow
+you to simulate sample paths of NVars state variables driven by NBrowns Brownian motion sources
+of risk over NPeriods consecutive observation periods, approximating continuous-time stochastic
+processes.
+
+This method enables you to simulate any vector-valued SDEDDO of the form:
+
+dXt = F(t, Xt)dt + G(t, Xt)dWt
+ (15-3)
+
+where:
+
+•
+Xt is an NVars-by-1 state vector of process variables.
+
+•
+dWt is an NBrowns-by-1 Brownian motion vector.
+
+•
+F is an NVars-by-1 vector-valued drift-rate function.
+
+•
+G is an NVars-by-NBrowns matrix-valued diffusion-rate function.
+
+Creation
+
+Syntax
+
+SDEDDO = sdeddo(DriftRate,DiffusionRate)
+SDEDDO = sdeddo( ___ ,Name,Value)
+
+Description
+
+SDEDDO = sdeddo(DriftRate,DiffusionRate) creates a default SDEDDO object.
+
+SDEDDO = sdeddo( ___ ,Name,Value) creates a SDEDDO object with additional options specified
+by one or more Name,Value pair arguments.
+
+Name is a property name and Value is its corresponding value. Name must appear inside single
+quotes (''). You can specify several name-value pair arguments in any order as Name1,Value1,
+…,NameN,ValueN.
+
+The SDEDDO object has the following displayed “Properties” on page 15-167:
+
+•
+StartTime — Initial observation time
+
+sdeddo
+
+15-165

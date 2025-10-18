@@ -1,0 +1,8 @@
+Page 1560
+================================================================================
+
+•
+Expanding rolling window — For an expanding rolling window of data, set the
+LookbackWindow property to a 1-by-2 vector [min max]. The software then calls the rebalance
+function with a price timetable containing at least min rows and at most max rows of rolling price
+data.

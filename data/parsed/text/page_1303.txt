@@ -1,0 +1,59 @@
+Improving Performance of Monte Carlo Simulation with Parallel
+Computing
+
+This example shows how to improve the performance of a Monte Carlo simulation using Parallel
+Computing Toolbox.
+
+Consider a geometric Brownian motion (GBM) process in which you want to incorporate alternative
+asset price dynamics. Specifically, suppose that you want to include a time-varying short rate and a
+volatility surface. The process to simulate is written as
+
+dS(t) = r(t)S(t)dt + V(t, S(t))S(t)dW(t)
+
+for stock price S(t), rate of return r(t), volatility V(t,S(t)), and Brownian motion W(t). In this example,
+the rate of return is a deterministic function of time and the volatility is a function of both time and
+current stock price. Both the return and volatility are defined on a discrete grid such that
+intermediate values are obtained by linear interpolation. For example, such a simulation can be used
+to support the pricing of thinly traded options.
+
+To include a time series of riskless short rates, suppose that you derive the following deterministic
+short-rate process as a function of time.
+
+times = [0 0.25 0.5 1 2 3 4 5 6 7 8 9 10];  % in years
+rates = [0.1 0.2 0.3 0.4 0.5 0.8 1.25 1.75 2.0 2.2 2.25 2.50 2.75]/100;
+
+Suppose that you then derive the following volatility surface whose columns correspond to simple
+relative moneyness, or the ratio of the spot price to strike price, and whose rows correspond to time
+to maturity, or tenor.
+
+surface = [28.1 25.3 20.6 16.3 11.2  6.2  4.9  4.9  4.9  4.9  4.9  4.9
+           22.7 19.8 15.4 12.6  9.6  6.7  5.2  5.2  5.2  5.2  5.2  5.2
+           21.7 17.6 13.7 11.5  9.4  7.3  5.7  5.4  5.4  5.4  5.4  5.4
+           19.8 16.4 12.9 11.1  9.3  7.6  6.2  5.6  5.6  5.6  5.6  5.6
+           18.6 15.6 12.5 10.8  9.3  7.8  6.6  5.9  5.9  5.9  5.9  5.9
+           17.4 13.8 11.7 10.8  9.9  9.1  8.5  7.9  7.4  7.3  7.3  7.3
+           17.1 13.7 12.0 11.2 10.6 10.0  9.5  9.1  8.8  8.6  8.4  8.0
+           17.5 13.9 12.5 11.9 11.4 10.9 10.5 10.2  9.9  9.6  9.4  9.0
+           18.3 14.9 13.7 13.2 12.8 12.4 12.0 11.7 11.4 11.2 11.0 10.8
+           19.2 19.6 14.2 13.9 13.4 13.0 13.2 12.5 12.1 11.9 11.8 11.4]/100;
+
+tenor = [0 0.25 0.50 0.75 1 2 3 5 7 10];   % in years
+moneyness = [0.25 0.5 0.75 0.8 0.9 1 1.10 1.25 1.50 2 3 5];
+
+Set the simulation parameters. The following assumes that the price of the underlying asset is
+initially equal to the strike price and that the price of the underlying asset is simulated monthly for 10
+years, or 120 months. As a simple illustration, 100 sample paths are simulated.
+
+price = 100;
+strike = 100;
+dt = 1/12;
+NPeriods = 120;
+NTrials = 100;
+
+For reproducibility, set the random number generator to its default, and draw the Gaussian random
+variates that drive the simulation. Generating the random variates is not necessary to incur the
+performance improvement of parallel computation, but doing so allows the resulting simulated paths
+
+Improving Performance of Monte Carlo Simulation with Parallel Computing
+
+14-111

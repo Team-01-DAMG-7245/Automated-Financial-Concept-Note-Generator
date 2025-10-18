@@ -1,0 +1,12 @@
+{
+  "page": 2171,
+  "original_text": "ecmlsrobj(Data, Design, Parameters) = ecmmvnrobj(Data, Design, Parameters, IdentityMatrix)",
+  "ocr_text": "ecmlsrobj(Data,Design,Parameters)=ecmmvnrobj(Data,Design,Parameters,IdentityMatrix)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 211.83,
+    "x1": 577.62,
+    "y1": 222.29
+  },
+  "confidence": "high"
+}

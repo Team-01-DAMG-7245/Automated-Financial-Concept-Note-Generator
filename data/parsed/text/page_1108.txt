@@ -1,0 +1,61 @@
+out to 15-Jan-2018. Thus, this step evaluates portfolio price on a grid of time of progression (dT) and
+interest rates (dY).
+
+dy = -0.05:0.005:0.05;               % Yield changes
+
+D  = datevec(Settle);                % Get date components
+dt = datetime(year(Settle):2018, month(Settle), day(Settle)); % Get evaluation dates
+
+[dT, dY]  =  meshgrid(dt, dy); % Create grid
+
+NumTimes  =  length(dt);       % Number of time steps
+NumYields =  length(dy);       % Number of yield changes
+NumBonds  =  length(Maturity); % Number of bonds
+
+% Preallocate vector
+Prices = zeros(NumTimes*NumYields, NumBonds);
+
+Now that the grid and price vectors have been created, compute the price of each bond in the
+portfolio on the grid one bond at a time.
+
+for i = 1:NumBonds
+
+[CleanPrice, AccruedInterest] = bndprice(Yields(i)+... 
+   dY(:), CouponRate(i), dT(:), Maturity(i), Periods(i),...
+   [], [], [], [], [], [], Face(i));
+
+Prices(:,i) = CleanPrice + AccruedInterest;
+
+end
+
+Scale the bond prices by the quantity of bonds and reshape the bond values to conform to the
+underlying evaluation grid.
+
+Prices = Prices * BondAmounts;
+Prices = reshape(Prices, NumYields, NumTimes);
+
+Plot the price of the portfolio as a function of settlement date and a range of yields, and as a function
+of the change in yield (dY). This plot illustrates the interest-rate sensitivity of the portfolio as time
+progresses (dT), under a range of interest-rate scenarios. With the following graphics commands, you
+can visualize the three-dimensional surface relative to the current portfolio value (that is, $100,000).
+
+figure                   % Open a new figure window
+surf(dt, dy, Prices)     % Draw the surface
+
+hold on                  % Add the current value for reference
+basemesh = mesh(dt, dy, 100000*ones(NumYields, NumTimes));
+set(basemesh, 'facecolor', 'none');
+set(basemesh, 'edgecolor', 'm');
+set(gca, 'box', 'on');
+
+xlim(datetime([1993,2020],1,1))
+xlabel('Evaluation Date');
+ylabel('Change in Yield');
+zlabel('Portfolio Price');
+hold off
+view(-25,25);
+
+10
+Solving Sample Problems
+
+10-10

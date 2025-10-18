@@ -1,0 +1,6 @@
+Page 425
+================================================================================
+
+Build the strategies for the backtestStrategy object using the rebalance functions defined in the
+Local Functions on page 4-261 section. Each strategy uses the rebalance function to make trading
+decisions based on the appropriate signals.

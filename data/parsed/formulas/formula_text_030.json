@@ -1,0 +1,12 @@
+{
+  "page": 39,
+  "original_text": "Units = Cash \\ Receipts",
+  "ocr_text": "Units=CashReceipts",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 462.57,
+    "x1": 214.62,
+    "y1": 473.04
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,64 @@
+DeltaTime represents the familiar dt found in stochastic differential equations, and determines the
+times at which the simulated paths of the output state variables are reported.
+
+Data Types: double
+
+NSteps — Number of intermediate time steps within each time increment dt (specified as
+DeltaTime)
+1 (indicating no intermediate evaluation) (default) | positive integer
+
+Number of intermediate time steps within each time increment dt (specified as DeltaTime),
+specified as the comma-separated pair consisting of 'NSteps' and a positive scalar integer.
+
+The simBySolution function partitions each time increment dt into NSteps subintervals of length
+dt/NSteps, and refines the simulation by evaluating the simulated state vector at NSteps − 1
+intermediate points. Although simBySolution does not report the output state vector at these
+intermediate points, the refinement improves accuracy by allowing the simulation to more closely
+approximate the underlying continuous-time process.
+
+Data Types: double
+
+Antithetic — Flag to indicate whether simBySolution uses antithetic sampling to
+generate Gaussian random variates
+False (no antithetic sampling) (default) | logical with values True or False
+
+Flag to indicate whether simBySolution uses antithetic sampling to generate the Gaussian random
+variates that drive the Brownian motion vector (Wiener processes), specified as the comma-separated
+pair consisting of 'Antithetic' and a scalar logical flag with a value of True or False.
+
+When you specify True, simBySolution performs sampling such that all primary and antithetic
+paths are simulated and stored in successive matching pairs:
+
+•
+Odd trials (1,3,5,...) correspond to the primary Gaussian paths.
+
+•
+Even trials (2,4,6,...) are the matching antithetic paths of each pair derived by negating the
+Gaussian draws of the corresponding primary (odd) trial.
+
+Note If you specify an input noise process (see Z), simBySolution ignores the value of
+Antithetic.
+
+Data Types: logical
+
+MonteCarloMethod — Monte Carlo method to simulate stochastic processes
+"standard" (default) | string with values "standard", "quasi", or "randomized-quasi" |
+character vector with values 'standard', 'quasi', or 'randomized-quasi'
+
+Monte Carlo method to simulate stochastic processes, specified as the comma-separated pair
+consisting of 'MonteCarloMethod' and a string or character vector with one of the following
+values:
+
+•
+"standard" — Monte Carlo using pseudo random numbers
+
+•
+"quasi" — Quasi-Monte Carlo using low-discrepancy sequences
+
+•
+"randomized-quasi" — Randomized quasi-Monte Carlo
+
+15
+Functions
+
+15-116

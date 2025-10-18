@@ -1,0 +1,57 @@
+function new_weights = shrunkStrat(~, pricesTT) 
+% Function for minimum variance portfolio using covariance shrinkage.
+
+% Compute the returns from the prices timetable.
+assetReturns = tick2ret(pricesTT);
+mu = mean(assetReturns.Variables);
+Sigma = covarianceShrinkage(assetReturns.Variables);
+
+% Create the portfolio problem.
+p = Portfolio(AssetMean=mu,AssetCovar=Sigma);
+% Specify long-only fully invested contraints.
+p = setDefaultConstraints(p);
+
+% Compute the minimum variance portfolio.
+new_weights = estimateFrontierLimits(p,'min');
+end
+
+Input Arguments
+
+AssetReturns — Asset returns
+matrix | table | timetable
+
+Asset returns, specified as a NumObservations-by-NumAssets matrix, table, or timetable.
+
+Note All NumObservations with one or more NaN values are removed before computing the
+covariance estimate.
+
+Data Types: double | table | timetable
+
+Output Arguments
+
+SigmaHat — Covariance estimate
+matrix
+
+Covariance estimate, returned as a NumAssets-by-NumAssets matrix.
+
+More About
+
+Covariance Shrinkage
+
+Shrinkage estimators for covariance shrinkage are used to reduce the effect of noise in the
+covariance approximation.
+
+The goal of covariance shrinkage is to pull all eigenvalues of the traditional covariance matrix
+towards a target.
+
+Algorithms
+
+The covarianceShrikage function applies a linear shrinkage method that shrinks the traditional
+covariance estimate to a multiple of the identity matrix.
+
+Σ = (1 −α)Σ + α(τI)
+
+15
+Functions
+
+15-62

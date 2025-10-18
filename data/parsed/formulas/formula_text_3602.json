@@ -1,0 +1,12 @@
+{
+  "page": 2030,
+  "original_text": "TFactors = cftimes( ___ ,Name,Value) specifies options using one or more name-value pair\narguments in addition to the input arguments in the previous syntax.",
+  "ocr_text": "TFactors=cftimes( ,Name,Value)specifiesoptionsusingoneormorename-valuepair\nargumentsinadditiontotheinputargumentsintheprevioussyntax.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 338.7,
+    "x1": 540.09,
+    "y1": 362.33
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 402,
+  "original_text": "reconReturn = factorRetn*factorLoading' + mu;\nunexplainedRetn = stockReturns{training,:} - reconReturn;",
+  "ocr_text": "reconReturn=factorRetn*factorLoading+mu;\nunexplainedRetn=stockReturns{training,:}-reconReturn;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 113.56,
+    "x1": 398.83,
+    "y1": 134.83
+  },
+  "confidence": "high"
+}

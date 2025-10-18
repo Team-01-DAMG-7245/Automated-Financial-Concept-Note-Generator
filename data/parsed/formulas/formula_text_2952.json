@@ -1,0 +1,12 @@
+{
+  "page": 1543,
+  "original_text": "detailedCosts = computeTransactionCostsFcn(deltaPositions)",
+  "ocr_text": "detailedCosts=computeTransactionCostsFcn(deltaPositions)",
+  "bbox": {
+    "x0": 120.0,
+    "y0": 93.03,
+    "x1": 434.24,
+    "y1": 103.49
+  },
+  "confidence": "high"
+}

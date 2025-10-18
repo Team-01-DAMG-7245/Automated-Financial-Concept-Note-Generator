@@ -1,0 +1,12 @@
+{
+  "page": 235,
+  "original_text": "p = Portfolio;\np = setConditionBudget(p, .40, 1.5);\ndisp(p.threshold)\ndisp(p.upperBudget)",
+  "ocr_text": "p=Portfolio;\np=setConditionBudget(p,.40,1.5);\ndisp(p.threshold)\ndisp(p.upperBudget)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 502.6,
+    "x1": 285.05,
+    "y1": 545.46
+  },
+  "confidence": "high"
+}

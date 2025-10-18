@@ -1,0 +1,12 @@
+{
+  "page": 977,
+  "original_text": "bi = bininfo(sc,'EmpStatus');\ndisp(bi)",
+  "ocr_text": "bi=bininfo(sc,EmpStatus);\ndisp(bi)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 499.64,
+    "x1": 247.14,
+    "y1": 520.91
+  },
+  "confidence": "high"
+}

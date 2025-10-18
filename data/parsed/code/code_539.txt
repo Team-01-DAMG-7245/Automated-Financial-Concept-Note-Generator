@@ -1,0 +1,7 @@
+Page 499
+================================================================================
+
+Additionally, this example demonstrates penalty methods that you can use to achieve different
+degrees of diversification. In those methods, you add a penalty term to the
+estimateCustomObjectivePortfolio function to balance the level of variance reduction and the
+diversification of the portfolio.

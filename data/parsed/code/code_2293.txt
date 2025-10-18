@@ -1,0 +1,6 @@
+Page 2150
+================================================================================
+
+A car is purchased for $10,000 and is to be depreciated over five years. The estimated salvage value
+is $1000. Using the double-declining-balance method, the function calculates the depreciation for
+each year and returns the remaining depreciable value at the end of the life of the car.

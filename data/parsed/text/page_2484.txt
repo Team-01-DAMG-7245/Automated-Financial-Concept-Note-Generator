@@ -1,0 +1,15 @@
+References
+
+[1] Christian S. Pederson and Ted Rudholm-Alfvin. "Selecting a Risk-Adjusted Shareholder
+Performance Measure." Journal of Asset Management. Vol. 4, No. 3, 2003, pp. 152–172.
+
+See Also
+emaxdrawdown
+
+Topics
+“Performance Metrics Overview” on page 7-2
+
+15
+Functions
+
+15-1178

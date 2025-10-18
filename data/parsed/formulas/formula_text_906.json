@@ -1,0 +1,12 @@
+{
+  "page": 491,
+  "original_text": "T = readtable('dowPortfolio.xlsx');\nMonthIdx = [1;20;39;62;81;103;125;145;168;188;210;231;251];\nMonthlyPrices = T(MonthIdx,3:end);",
+  "ocr_text": "T=readtable(dowPortfolio.xlsx);\nMonthIdx=[1;20;39;62;81;103;125;145;168;188;210;231;251];\nMonthlyPrices=T(MonthIdx,3:end);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 247.22,
+    "x1": 409.67,
+    "y1": 279.28
+  },
+  "confidence": "high"
+}

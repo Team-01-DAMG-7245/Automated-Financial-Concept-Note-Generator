@@ -1,0 +1,55 @@
+Given annual arithmetic mean m and covariance C of asset returns, obtain monthly geometric mean
+mg and covariance Cg. In this case, the output period (1 month) is 1/12 times the input period (1 year)
+so that the optional input t = 1/12.
+
+[mg, Cg] = arith2geom(m, C, 1/12)
+
+mg = 4×1
+
+0.0044
+    0.0096
+    0.0125
+    0.0203
+
+Cg = 4×4
+
+0.0005    0.0003    0.0002         0
+    0.0003    0.0025    0.0017    0.0010
+    0.0002    0.0017    0.0049    0.0029
+         0    0.0010    0.0029    0.0107
+
+Given arithmetic mean m and covariance C of monthly total returns, obtain quarterly continuously
+compounded return moments. In this case, the output is 3 of the input periods so that the optional
+input t = 3.
+
+[mg, Cg] = arith2geom(m, C, 3)
+
+mg = 4×1
+
+0.1730
+    0.4097
+    0.5627
+    1.0622
+
+Cg = 4×4
+
+0.0267    0.0204    0.0106         0
+    0.0204    0.1800    0.1390    0.1057
+    0.0106    0.1390    0.4606    0.3418
+         0    0.1057    0.3418    1.8886
+
+Input Arguments
+
+ma — Arithmetic mean of asset-return data
+vector
+
+Arithmetic mean of asset-return data, specified as an n-vector.
+
+Data Types: double
+
+Ca — Arithmetic covariance of asset-return data
+matrix
+
+arith2geom
+
+15-469

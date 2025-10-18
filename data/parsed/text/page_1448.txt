@@ -1,0 +1,62 @@
+If StartState is a scalar, the hwv object applies the same initial value to all state variables on all
+trials.
+
+If StartState is a column vector, the hwv object applies a unique initial value to each state variable
+on all trials.
+
+If StartState is a matrix, the hwv object applies a unique initial value to each state variable on each
+trial.
+
+Data Types: double
+
+Correlation — Correlation between Gaussian random variates drawn to generate the
+Brownian motion vector (Wiener processes)
+NBrowns-by-NBrowns identity matrix representing independent Gaussian processes (default) |
+positive semidefinite matrix | deterministic function
+
+Correlation between Gaussian random variates drawn to generate the Brownian motion vector
+(Wiener processes), specified as an NBrowns-by-NBrowns positive semidefinite matrix, or as a
+deterministic function C(t) that accepts the current time t and returns an NBrowns-by-NBrowns
+positive semidefinite correlation matrix. If Correlation is not a symmetric positive semidefinite
+matrix, use nearcorr to create a positive semidefinite matrix for a correlation matrix.
+
+A Correlation matrix represents a static condition.
+
+As a deterministic function of time, Correlation allows you to specify a dynamic correlation
+structure.
+
+Data Types: double
+
+Simulation — User-defined simulation function or SDE simulation method
+simulation by Euler approximation (simByEuler) (default) | function | SDE simulation method
+
+User-defined simulation function or SDE simulation method, specified as a function or SDE simulation
+method.
+
+Data Types: function_handle
+
+Drift — Drift rate component of continuous-time stochastic differential equations (SDEs)
+value stored from drift-rate function (default) | drift object or function accessible by (t, Xt)
+
+This property is read-only.
+
+Drift rate component of continuous-time stochastic differential equations (SDEs), specified as a drift
+object or function accessible by (t, Xt.
+
+The drift rate specification supports the simulation of sample paths of NVars state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods,
+approximating continuous-time stochastic processes.
+
+The drift class allows you to create drift-rate objects using drift of the form:
+
+F(t, Xt) = A(t) + B(t)Xt
+
+where:
+
+•
+A is an NVars-by-1 vector-valued function accessible using the (t, Xt) interface.
+
+15
+Functions
+
+15-142

@@ -1,0 +1,35 @@
+Very different predictor values result in similar default rate levels. For example, consider a profits
+forecast around 10% with a spread of 3.5%, and a profits forecast of -2.5% with a spread of 2%, they
+both result in a default rate slightly above 3%. Also, only one point in the available history yields a
+default rate higher than 4%.
+
+Monetary terms, once again, may be more meaningful. Use the Basel II capital requirements formula
+(see [2 on page 8-43]) to translate the default rates into a monetary measure. The Basel II formula is
+convenient because it is analytic (there is no need to simulate to estimate the capital requirements),
+but also because it depends only on the probabilities of default. Define the Basel II capital
+requirements as a function K.
+
+% Correlation as a function of PD
+w = @(pd) (1-exp(-50*pd))/(1-exp(-50)); % weight
+R = @(pd) (0.12*w(pd)+0.24*(1-w(pd))); % correlation
+% Vasicek formula
+V = @(pd) normcdf(norminv(pd)+R(pd).*norminv(0.999)./sqrt(1-R(pd)));
+% Parameter b for maturity adjustment
+b = @(pd) (0.11852-0.05478*log(pd)).^2;
+% Basel II capital requirement with LGD=45% and maturity M=2.5 (numerator
+% in maturity adjustment term becomes 1)
+K = @(pd) 0.45*(V(pd)-pd).*(1./(1-1.5*b(pd)));
+
+Worst-case default rates for a whole grid of CPF - SPR pairs are stored in DefRateUB. By applying the
+function K to DefRateUB, you can visualize the capital requirements over the same grid.
+
+CapReq = 100*K(DefRateUB/100);
+Example_StressTestPlot(gridCPF,gridSPR,CapReq,CPF,SPR,...
+   'Corporate Profits Forecast (%)','Corporate Spread (%)',...
+   {'{\bf Capital Requirement Regions (% of value)}';...
+   ['{\bf using ' strConf '% UB Default Rate}']})
+
+8
+Credit Risk Analysis
+
+8-38

@@ -1,0 +1,12 @@
+{
+  "page": 1027,
+  "original_text": "ProbData3Upf = cdsbootstrap(ZeroData,[Maturity3 Upfront3 Spread3Std],Settle);\nSpread3RunFromUpf = cdsspread(ZeroData,ProbData3Upf,Settle,Maturity3);\ndisplay([Spread3Run Spread3RunFromUpf]);",
+  "ocr_text": "ProbData3Upf=cdsbootstrap(ZeroData,[Maturity3Upfront3Spread3Std],Settle);\nSpread3RunFromUpf=cdsspread(ZeroData,ProbData3Upf,Settle,Maturity3);\ndisplay([Spread3RunSpread3RunFromUpf]);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 544.29,
+    "x1": 507.19,
+    "y1": 576.36
+  },
+  "confidence": "high"
+}

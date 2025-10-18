@@ -1,0 +1,35 @@
+The bright, central 3 x 3 square shows that in most transitions, tick to tick, no price change is
+expected (ΔSfuture = 0). Bright areas in the upper-left 3 x 3 square (downward price movements
+ΔSfuture = −1) and lower-right 3 x 3 square (upward price movements ΔSfuture = + 1) show evidence
+of momentum, which can be leveraged in a trading strategy.
+
+You can find arbitrage opportunities by thresholding Q above a specified trigger probability. For
+example:
+
+trigger = 0.5;
+QPattern = (Q > trigger)
+
+QPattern = 9×9 logical array
+
+1   0   0   0   1   1   0   0   0
+   1   1   0   0   0   1   0   0   0
+   1   1   1   0   0   0   0   0   0
+   0   0   0   1   1   1   0   0   0
+   0   0   0   1   1   1   0   0   0
+   0   0   0   1   1   1   0   0   0
+   0   0   0   1   0   0   0   1   1
+   0   0   0   1   0   0   0   1   1
+   0   0   0   1   1   0   0   0   1
+
+The entry in the (1,1) position shows a chance of more than 50% that a downward price movement
+(ΔScurrent = −1) will be followed by another downward price movement (ΔSfuture = −1), provided
+that the previous and current imbalance states ρ are both 1.
+
+A Trading Strategy?
+
+Q is constructed on the basis of both the available exchange data and the hyperparameter settings.
+Using Q to inform future trading decisions depends on the market continuing in the same statistical
+
+Machine Learning for Statistical Arbitrage II: Feature Engineering and Model Development
+
+2-67

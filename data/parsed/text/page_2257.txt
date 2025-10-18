@@ -1,0 +1,57 @@
+Input Arguments
+
+obj — Object for portfolio
+object
+
+Object for portfolio, specified using Portfolio, PortfolioCVaR, or PortfolioMAD object. For
+more information on creating a portfolio object, see
+
+•
+Portfolio
+
+•
+PortfolioCVaR
+
+•
+PortfolioMAD
+
+Data Types: object
+
+NumPorts — Number of points to obtain on efficient frontier
+value from hidden property defaultNumPorts (default value is 10) (default) | scalar integer
+
+Number of points to obtain on the efficient frontier, specified as a scalar integer.
+
+Note If no value is specified for NumPorts, the default value is obtained from the hidden property
+defaultNumPorts (default value is 10). If NumPorts = 1, this function returns the portfolio
+specified by the hidden property defaultFrontierLimit (current default value is 'min').
+
+Data Types: double
+
+Output Arguments
+
+pwgt — Optimal portfolios on efficient frontier with specified number of portfolios spaced
+equally from minimum to maximum portfolio return
+matrix
+
+Optimal portfolios on the efficient frontier with specified number of portfolios spaced equally from
+minimum to maximum portfolio return, returned as a NumAssets-by-NumPorts matrix. pwgt is
+returned for a Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+pbuy — Purchases relative to initial portfolio for optimal portfolios on efficient frontier
+matrix
+
+Purchases relative to an initial portfolio for optimal portfolios on the efficient frontier, returned as
+NumAssets-by-NumPorts matrix.
+
+Note If no initial portfolio is specified in obj.InitPort, that value is assumed to be 0 such that
+pbuy = max(0, pwgt) and psell = max(0, -pwgt).
+
+pbuy is returned for a Portfolio, PortfolioCVaR, or PortfolioMAD input object (obj).
+
+psell — Sales relative to initial portfolio for optimal portfolios on efficient frontier
+matrix
+
+estimateFrontier
+
+15-951

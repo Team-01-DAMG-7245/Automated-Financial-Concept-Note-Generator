@@ -1,0 +1,6 @@
+Page 520
+================================================================================
+
+% Objective function handle
+kappa = 0.5;
+robustObjective = @(x) p.AssetMean'*x - kappa*sqrt(x'*SigmaR*x);

@@ -1,0 +1,12 @@
+{
+  "page": 66,
+  "original_text": "Yield = bndyield(Price, CouponRate, Settle, Maturity, Period, ... \nBasis, EndMonthRule, IssueDate, FirstCouponDate, LastCouponDate)",
+  "ocr_text": "Yield=bndyield(Price,CouponRate,Settle,Maturity,Period,...\nBasis,EndMonthRule,IssueDate,FirstCouponDate,LastCouponDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 209.86,
+    "x1": 447.62,
+    "y1": 231.12
+  },
+  "confidence": "high"
+}

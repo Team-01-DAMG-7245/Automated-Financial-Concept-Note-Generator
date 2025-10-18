@@ -1,0 +1,12 @@
+{
+  "page": 616,
+  "original_text": "LOBLength = length(CurrentLOB);",
+  "ocr_text": "LOBLength=length(CurrentLoOB);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 157.83,
+    "x1": 257.96,
+    "y1": 168.29
+  },
+  "confidence": "high"
+}

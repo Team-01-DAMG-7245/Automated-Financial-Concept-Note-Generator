@@ -1,0 +1,64 @@
+Bootstrapping from Inverted Market Curves
+
+The following two examples demonstrate the behavior of bootstrapping with inverted CDS market
+curves, that is, market quotes with higher spreads for short-term CDS contracts. The first example is
+handled normally by cdsbootstrap:
+
+Settle = '17-Jul-2009';  % valuation date for the CDS
+MarketDates = datenum({'20-Sep-10','20-Sep-11','20-Sep-12','20-Sep-14',...
+'20-Sep-16'});
+
+ZeroDates = datenum({'17-Jan-10','17-Jul-10','17-Jul-11','17-Jul-12',...
+'17-Jul-13','17-Jul-14'});
+ZeroRates = [1.35 1.43 1.9 2.47 2.936 3.311]'/100;
+ZeroData = [ZeroDates ZeroRates];
+
+MarketSpreadsInv1 = [750 650 550 500 450]';
+MarketDataInv1 = [MarketDates MarketSpreadsInv1];
+[ProbDataInv1,HazDataInv1] = cdsbootstrap(ZeroData,MarketDataInv1,Settle)
+
+ProbDataInv1 =
+
+1.0e+05 *
+
+7.3440    0.0000
+    7.3477    0.0000
+    7.3513    0.0000
+    7.3586    0.0000
+    7.3659    0.0000
+
+HazDataInv1 =
+
+1.0e+05 *
+
+7.3440    0.0000
+    7.3477    0.0000
+    7.3513    0.0000
+    7.3586    0.0000
+    7.3659    0.0000
+
+In the second example, cdsbootstrap generates a warning:
+
+MarketSpreadsInv2 = [800 550 400 250 100]';
+MarketDataInv2 = [MarketDates MarketSpreadsInv2];
+
+[ProbDataInv2,HazDataInv2] = cdsbootstrap(ZeroData,MarketDataInv2,Settle);
+
+Warning: Found non-monotone default probabilities (negative hazard rates)
+
+A non-monotone bootstrapped probability curve implies negative default probabilities and negative
+hazard rates for certain time intervals. Extreme market conditions can lead to these types of
+situations. In these cases, you must assess the reliability and usefulness of the bootstrapped results.
+
+The following plot illustrates these bootstrapped probability curves. The curves are concave, meaning
+that the marginal default probability decreases with time. This result is consistent with the market
+information that indicates a higher default risk in the short term. The second bootstrapped curve is
+non-monotone, as indicated by the warning.
+
+ProbTimes = yearfrac(Settle, MarketDates);
+figure
+plot([0; ProbTimes],[0; ProbDataInv1(:,2)])
+
+Bootstrapping from Inverted Market Curves
+
+8-111

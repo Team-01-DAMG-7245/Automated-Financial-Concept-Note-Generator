@@ -1,0 +1,12 @@
+{
+  "page": 1525,
+  "original_text": "RoughBergomi = roughbergomi( ___ ,Name=Value) creates a RoughBergomi object with\nadditional options specified by one or more name-value arguments to set the properties on page 15-\n221.",
+  "ocr_text": "RoughBergomi=roughbergomi(___,Name=Value)createsaRoughBergomiobjectwith\nadditionaloptionsspecifiedbyoneormorename-valueargumentstosetthepropertiesonpage15-\n221.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 683.36,
+    "x1": 547.44,
+    "y1": 718.99
+  },
+  "confidence": "high"
+}

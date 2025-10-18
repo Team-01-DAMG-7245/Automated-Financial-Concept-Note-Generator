@@ -1,0 +1,8 @@
+Page 1040
+================================================================================
+
+numObs = height(dataToImpute);
+k = round(sqrt(numObs));
+if ~mod(k,2)
+    k = k+1;
+end

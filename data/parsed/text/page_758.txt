@@ -1,0 +1,21 @@
+Plot the efficient mean-variance portfolio for the return TargetRet on the CVaR efficient frontier.
+Notice that the efficient mean-variance portfolio is below the CVaR efficient frontier.
+
+% Obtain the mean-variance efficient portfolio at target return
+pwgtmvTarget = estimateFrontierByReturn(pmv,TargetRet);
+
+% Obtain the CVaR risk for the mean-variance efficient portfolio
+pretTargetCVaR = estimatePortReturn(p,pwgtmvTarget); % Should be TargetRet
+priskTargetCVaR = estimatePortRisk(p,pwgtmvTarget);  % Risk proxy is CVaR
+
+% Plot mean-variance efficient portfolio onto the CVaR frontier
+figure;
+plotFrontier(p,pwgt);
+hold on
+scatter(priskTargetCVaR,pretTargetCVaR,[],'filled');
+hold off
+
+5
+CVaR Portfolio Optimization Tools
+
+5-132

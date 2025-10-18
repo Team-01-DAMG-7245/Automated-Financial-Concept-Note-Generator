@@ -1,0 +1,9 @@
+Page 980
+================================================================================
+
+MATLAB® supports a fillmissing function that you can use before creating a creditscorecard
+object to treat missing values in numeric and categorical data. The advantage of this method is that
+you can use all the options available in fillmissing to fill missing data, as well as other MATLAB
+functionality, such as standardizeMissing and features for the treatment of outliers. However, the
+downside is that you are responsible for the same transformations to the validation data before
+scoring as the fillmissing function is outside of the creditscorecard object.

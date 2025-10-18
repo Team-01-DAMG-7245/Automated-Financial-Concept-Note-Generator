@@ -1,0 +1,66 @@
+Technical Indicators
+
+Technical analysis (or charting) is used by some investment managers to help manage portfolios.
+Technical analysis relies heavily on the availability of historical data. Investment managers calculate
+different indicators from available data and plot them as charts. Observations of price, direction, and
+volume on the charts assist managers in making decisions on their investment portfolios.
+
+The technical analysis functions in Financial Toolbox are tools to help analyze your investments. The
+functions in themselves will not make any suggestions or perform any qualitative analysis of your
+investment.
+
+Technical Analysis: Oscillators
+
+Function
+Type
+
+adosc
+Accumulation/distribution oscillator
+
+chaikosc
+Chaikin oscillator
+
+macd
+Moving Average Convergence/Divergence
+
+stochosc
+Stochastic oscillator
+
+tsaccel
+Acceleration
+
+tsmom
+Momentum
+
+Technical Analysis: Stochastics
+
+Function
+Type
+
+chaikvolat
+Chaikin volatility
+
+stochosc
+Fast stochastics, slow stochastics
+
+willpctr
+Williams %R
+
+Technical Analysis: Indexes
+
+Function
+Type
+
+negvolidx
+Negative volume index
+
+posvolidx
+Positive volume index
+
+rsindex
+Relative strength index
+
+13
+Technical Analysis
+
+13-2

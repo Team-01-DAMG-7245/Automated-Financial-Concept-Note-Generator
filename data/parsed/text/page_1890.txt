@@ -1,0 +1,53 @@
+bndyield
+
+Yield to maturity for fixed-income security
+
+Syntax
+
+Yield = bndyield(Price,CouponRate,Settle,Maturity)
+Yield = bndyield( ___ ,Name,Value)
+
+Description
+
+Yield = bndyield(Price,CouponRate,Settle,Maturity) given NUMBONDS bonds with SIA
+date parameters and clean prices (excludes accrued interest), returns the bond equivalent yields to
+maturity.
+
+Yield = bndyield( ___ ,Name,Value) adds optional name-value arguments.
+
+Examples
+
+Compute Yield to Maturity for a Treasury Bond
+
+This example shows how to compute the yield of a Treasury bond at three different price values.
+
+Price = [95; 100; 105]; 
+CouponRate = 0.05; 
+Settle = '20-Jan-1997'; 
+Maturity = '15-Jun-2002'; 
+Period = 2; 
+Basis = 0;
+
+Yield = bndyield(Price, CouponRate, Settle,... 
+Maturity, Period, Basis)
+
+Yield = 3×1
+
+0.0610
+    0.0500
+    0.0396
+
+Compute Yield to Maturity for a Treasury Bond Using datetime Inputs
+
+This example shows how to use datetime inputs to compute the yield of a Treasury bond at three
+different price values.
+
+Price = [95; 100; 105];
+CouponRate = 0.05;
+Settle = datetime('20-Jan-1997','Locale','en_US');
+Maturity = datetime('15-Jun-2002','Locale','en_US');
+
+15
+Functions
+
+15-584

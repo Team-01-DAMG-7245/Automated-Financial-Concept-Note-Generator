@@ -1,0 +1,12 @@
+{
+  "page": 605,
+  "original_text": "EnvConstants_Train_Buy.NumHorizons = NumTrainingHorizons;\nEnvConstants_Train_Buy.NumSteps = NumTrainingSteps;\nEnvConstants_Train_Buy.NumLevels = NumLevels;\nEnvConstants_Train_Buy.IS_TWAP = IS_TWAP_Step_Train_Buy;\nResetFunction_Buy = @() RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Train_Buy);",
+  "ocr_text": "EnvConstants_Train_Buy.NumHorizons=NumTrainingHorizons;\nEnvConstants_Train_Buy.NumSteps=NumTrainingSteps;\nEnvConstants_Train_Buy.NumLevels=NumLevels;\nEnvConstants_Train_Buy.IS_TWAP=IS_TWAP_StepTrain_Buy;\nResetFunction_Buy=()RL_OptimalExecution_LOB_ResetFcn(EnvConstants_Train_Buy);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 528.86,
+    "y1": 146.69
+  },
+  "confidence": "high"
+}

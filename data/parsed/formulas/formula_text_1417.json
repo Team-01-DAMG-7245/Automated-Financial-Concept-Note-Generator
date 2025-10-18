@@ -1,0 +1,12 @@
+{
+  "page": 709,
+  "original_text": "qwgt = estimateFrontier(q);\ncheckFeasibility(p, qwgt)",
+  "ocr_text": "qwgt_=estimateFrontier(q);\ncheckFeasibility(p,_qwgt)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 501.92,
+    "x1": 236.29,
+    "y1": 523.19
+  },
+  "confidence": "high"
+}

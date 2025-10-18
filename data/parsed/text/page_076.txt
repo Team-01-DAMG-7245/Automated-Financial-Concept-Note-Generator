@@ -1,0 +1,61 @@
+Returns with Negative Prices
+
+Once considered a mathematical impossibility, negative prices have become an established aspect of
+many financial markets. Negative prices arise in situations where investors determine that holding an
+asset entails more risk than the current value of the asset. For example, energy futures see negative
+prices because of costs associated with overproduction and limited storage capacity. In a different
+setting, central banks impose negative interest rates when national economies become deflationary,
+and the pricing of interest rate derivatives, traditionally based on positivity, have to be rethought (see
+“Work with Negative Interest Rates Using Functions” (Financial Instruments Toolbox)). A negative
+price encourages the buyer to take something from the seller, and the seller pays a fee for the service
+of divesting.
+
+MathWorks® Computational Finance products support several functions for converting between price
+series p(t) and return series r(t). Price positivity is not a requirement. The returns computed from
+input negative prices can be unexpected, but they have mathematical meaning that can help you to
+understand price movements.
+
+Negative Price Conversion
+
+Financial Toolbox functions ret2tick and tick2ret support converting between price series p(t)
+and return series r(t).
+
+For simple returns (default), the functions implement the formulas
+
+rs(t) =
+ps(t)
+ps(t −1) −1
+
+ps(t) = ps(t −1)(rs(t) + 1) .
+
+For continuous returns, the functions implement the formulas
+
+rc(t) = log
+pc(t)
+pc(t −1)
+
+pc(t) = pc(t −1)erc(t) .
+
+The functions price2ret and ret2price implement the same formulas, but they divide by Δt in the
+return formulas and they multiply by Δt in the price formulas. A positive factor of Δt (enforced by
+required monotonic observation times) does not affect the behavior of the functions. Econometrics
+Toolbox™ calls simple returns periodic, and continuous returns are the default. Otherwise, the
+functionality between the set of functions is identical. This example concentrates on the Financial
+Toolbox functions.
+
+In the simple return formula, rs(t) is the percentage change (PC) in ps(t − 1) over the interval [t − 1,t]
+
+PC =
+ps(t)
+ps(t −1) −1
+
+ps(t) = ps(t −1) + PC ⋅ps(t −1) .
+
+For positive prices, the range of PC is (−1,∞), that is, anything from a 100% loss (ps: ps(t − 1) → 0) to
+unlimited gain. The recursion in the second equation gives the subsequent prices; ps(t) is computed
+from ps(t − 1) by adding a percentage of ps(t − 1).
+
+2
+Performing Common Financial Tasks
+
+2-32

@@ -1,0 +1,12 @@
+{
+  "page": 1104,
+  "original_text": "Durations = bnddury(Yields, CouponRate, Settle, Maturity,...\n2, 0, [], [], [], [], [], Face);",
+  "ocr_text": "Durations=bnddury(Yields,CouponRate,Settle,Maturity,...\n2,0,[],[],(],1,(],Face);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 570.84,
+    "x1": 415.11,
+    "y1": 592.11
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 520,
+  "original_text": "% Read the table of daily adjusted close prices for 2006 DJI stocks.\nT = readtable('dowPortfolio.xlsx');\n% Convert the table to a timetable.\npricesTT = table2timetable(T);\n% Remove the DJI stock from the table.\npricesTT = pricesTT(:,2:end);",
+  "ocr_text": "Readthetableofdailyadjustedclosepricesfor2006DJIstocks.\nT=readtable(dowPortfolio.xlsx);\nConvertthetabletoatimetable.\n\npricesTT=table2timetable(T);\nSRemovetheDJIstockfromthetable.\n\npricesTT=pricesTT(:,2:end);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 235.57,
+    "x1": 458.43,
+    "y1": 300.04
+  },
+  "confidence": "high"
+}

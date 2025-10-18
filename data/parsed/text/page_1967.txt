@@ -1,0 +1,67 @@
+simulation date, each column a different counterparty, and each “page” is a different scenario from a
+Monte-Carlo simulation.
+
+Data Types: double
+
+Name-Value Pair Arguments
+
+Specify optional pairs of arguments as Name1=Value1,...,NameN=ValueN, where Name is the
+argument name and Value is the corresponding value. Name-value arguments must appear after
+other arguments, but the order of the pairs does not matter.
+
+Before R2021a, use commas to separate each name and value, and enclose Name in quotes.
+
+Example: profilestructs =
+exposureprofiles(dates,exposures,'ProfileSpec','PFE','PFEProbabilityLevel',.9
+)
+
+ProfileSpec — Exposure profiles
+All (generate all profiles) (default) | character vector with possible values EE, PFE, MPE, EffEE, EPE,
+EffEPE, All | cell array of character vectors with possible values EE, PFE, MPE, EffEE, EPE, EffEPE
+
+Exposure profiles, specified as a character vector or cell array of character vectors with the following
+possible values:
+
+•
+EE — Expected Exposure. The mean of the distribution of exposures at each date. A [NumDates-
+by-1] vector.
+
+•
+PFE — Potential Future Exposure. A high percentile (default 95%) of the distribution of possible
+exposures at each date. This is sometimes referred to as “Peak Exposure.” A [NumDates-by-1]
+vector.
+
+•
+MPFE — Maximum Potential Future Exposure. The maximum potential future exposure (PFE) over
+all dates
+
+•
+EffEE — Effective Expected Exposure. The maximum expected exposure (at a specific date) that
+occurs at that date or any prior date. This is the expected exposure, but constrained to be
+nondecreasing over time. A [NumDates-by-1] vector.
+
+•
+EPE — Expected Positive Exposure. The weighted average over time of expected exposures. A
+scalar.
+
+•
+EffEPE — Effective Expected Positive Exposure. The weighted average over time of the effective
+expected exposure (EffEE). A scalar.
+
+•
+All — Generate all the previous profiles.
+
+Note Exposure profiles are computed on a per-counterparty basis.
+
+Data Types: char | cell
+
+PFEProbabilityLevel — Level for potential future exposure (PFE) and maximum potential
+future exposure (MPFE)
+.95 (the 95th percentile) (default) | scalar with value [0..1]
+
+Level for potential future exposure (PFE) and maximum potential future exposure (MPFE), specified
+as a scalar with value [0..1].
+
+exposureprofiles
+
+15-661

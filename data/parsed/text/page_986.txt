@@ -1,0 +1,72 @@
+ResponseVar: 'status'
+                 VarNames: {1x11 cell}
+        NumericPredictors: {1x6 cell}
+    CategoricalPredictors: {'ResStatus'  'EmpStatus'  'OtherCC'}
+                    IDVar: 'CustID'
+            PredictorVars: {1x9 cell}
+
+T =
+
+PredictorType    Ordinal     LatestBinning 
+                 _____________    _______    _______________
+
+ResStatus    'Categorical'    false      'Original Data'
+
+Stats =
+
+Count
+          _____
+
+C1    542  
+    C2    474  
+    C3    184
+
+Note that 'ResStatus' now appears as part of the Categorical predictors. Also, predictorinfo
+now describes 'ResStatus' as categorical and displays the category counts.
+
+If you apply autobinning, the categories are now reordered, as shown by calling bininfo, which
+also shows the category labels, as opposed to numeric ranges. The optional output of bininfo is now
+a category grouping table.
+
+sc = autobinning(sc,'ResStatus');
+[bi,cg] = bininfo(sc,'ResStatus')
+
+bi =
+
+Bin       Good    Bad     Odds        WOE       InfoValue
+    ________    ____    ___    ______    _________    _________
+
+'C2'        307     167    1.8383    -0.095564    0.0036638
+    'C1'        365     177    2.0621     0.019329    0.0001682
+    'C3'        131      53    2.4717      0.20049    0.0059418
+    'Totals'    803     397    2.0227          NaN    0.0097738
+
+cg =
+
+Category    BinNumber
+    ________    _________
+
+'C2'        1        
+    'C1'        2        
+    'C3'        3
+
+NaNs Returned When Scoring a “Test” Dataset
+
+When applying a creditscorecard model to a “test” dataset using the score function, if an
+observation in the “test” dataset has a NaN or <undefined> value, a NaN total score is returned for
+each of these observations. For example, a creditscorecard object is created using “training”
+data.
+
+load CreditCardData
+sc = creditscorecard(data,'IDVar','CustID');
+sc = autobinning(sc);
+sc = fitmodel(sc);
+
+1. Adding CustIncome, Deviance = 1490.8527, Chi2Stat = 32.588614, PValue = 1.1387992e-08
+2. Adding TmWBank, Deviance = 1467.1415, Chi2Stat = 23.711203, PValue = 1.1192909e-06
+3. Adding AMBalance, Deviance = 1455.5715, Chi2Stat = 11.569967, PValue = 0.00067025601
+
+8
+Credit Risk Analysis
+
+8-68

@@ -1,0 +1,6 @@
+Page 1535
+================================================================================
+
+Expected (mean) instantaneous rate of return of the GBM price process, returned as an array, a
+numeric scalar, or a deterministic function of time as a function handle, or as a function of time and
+state.

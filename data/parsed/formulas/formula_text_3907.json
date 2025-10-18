@@ -1,0 +1,12 @@
+{
+  "page": 2226,
+  "original_text": "% Solve portfolio problem\nwMinTE = estimateCustomObjectivePortfolio(p,trackingError)",
+  "ocr_text": "Solveportfolioproblem\nwMinTE=estimateCustom0bjectivePortfolio(p,trackingError)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 300.82,
+    "x1": 404.25,
+    "y1": 322.09
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,5 @@
+Page 2182
+================================================================================
+
+Objective = ecmmvnrobj( ___ ,CovarFormat) computes a log-likelihood function based on
+current maximum likelihood parameter estimates with missing data using an optional argument.

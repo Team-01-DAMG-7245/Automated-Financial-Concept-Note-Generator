@@ -1,0 +1,5 @@
+Page 1510
+================================================================================
+
+If you specify JumpMean as a deterministic function of time, when you cal JumpMean with a real-
+valued scalar time t as its only input, it must return an NVars-by-NJumps matrix.

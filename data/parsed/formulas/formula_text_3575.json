@@ -1,0 +1,12 @@
+{
+  "page": 2018,
+  "original_text": "Settle = datetime(2003,7,1);\nYield = .05;\nCFAmounts = [30;40;30];\nCFDates = [datetime(2004,7,15) ; datetime(2005,7,15) ; datetime(2006,7,15)];",
+  "ocr_text": "Settle=datetime(2003,7,1);\n\nYield=.05;\n\nCFAmounts=[30;40;30];\nCFDates=[datetime(2004,7,15);datetime(2005,7,15);datetime(2006,7,15)];",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 425.58,
+    "x1": 501.76,
+    "y1": 468.45
+  },
+  "confidence": "high"
+}

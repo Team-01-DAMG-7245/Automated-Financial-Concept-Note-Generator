@@ -1,0 +1,90 @@
+length, fill the character vectors with spaces or zeros. For more information, see “Character Vector
+Input” on page 1-16.
+
+Output Conversions with datestr
+
+The datestr function converts a serial date number to one of 19 different date character vector
+output formats showing date, time, or both. The default output for dates is a day-month-year
+character vector, for example, 24-Aug-2000. The datestr function is useful for preparing output
+reports.
+
+datestr Format
+Description
+
+01-Mar-2000 15:45:17
+day-month-year hour:minute:second
+
+01-Mar-2000
+day-month-year
+
+03/01/00
+month/day/year
+
+Mar
+month, three letters
+
+M
+month, single letter
+
+3
+month number
+
+03/01
+month/day
+
+1
+day of month
+
+Wed
+day of week, three letters
+
+W
+day of week, single letter
+
+2000
+year, four numbers
+
+99
+year, two numbers
+
+Mar01
+month year
+
+15:45:17
+hour:minute:second
+
+03:45:17 PM
+hour:minute:second AM or PM
+
+15:45
+hour:minute
+
+03:45 PM
+hour:minute AM or PM
+
+Q1-99
+calendar quarter-year
+
+Q1
+calendar quarter
+
+Current Date and Time
+
+The today and now functions return serial date numbers for the current date, and the current date
+and time, respectively.
+
+today
+
+ans =
+
+736675
+
+now
+
+ans =
+
+7.3668e+05
+
+Handle and Convert Dates
+
+2-7

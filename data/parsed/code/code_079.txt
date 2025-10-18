@@ -1,0 +1,6 @@
+Page 88
+================================================================================
+
+Life tables are based on hazard functions and survival functions which are, in turn, derived from
+probability distributions. Specifically, given a continuous probability distribution, its cumulative
+distribution function is F(x) and its probability density function is f(x) = d F(x)/dx.

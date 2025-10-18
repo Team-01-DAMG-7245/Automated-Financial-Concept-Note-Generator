@@ -1,0 +1,12 @@
+{
+  "page": 2116,
+  "original_text": "EndDate = datewrkdy(datetime(2000,12,12), 16, 2)",
+  "ocr_text": "EndDate=datewrkdy(datetime(2000,12,12),16,2)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 645.97,
+    "x1": 350.06,
+    "y1": 656.44
+  },
+  "confidence": "high"
+}

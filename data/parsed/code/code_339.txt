@@ -1,0 +1,8 @@
+Page 327
+================================================================================
+
+This function is commonly used to construct risk parity portfolios. Although this function is
+convex, problems with cardinality constraints or conditional bounds make this function ill-defined.
+This happens because lnxi is not defined when xi = 0. Since adding cardinality constraints or
+conditional bounds imply that some assets have a weight of 0, the function becomes ill-defined at
+the points of interest.

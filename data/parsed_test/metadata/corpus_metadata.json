@@ -1,0 +1,14 @@
+{
+  "total_pages": 10,
+  "content_summary": {
+    "text_blocks": 98,
+    "figures": 4,
+    "formula_images": 0,
+    "table_images": 0,
+    "formulas": 0,
+    "code_snippets": 2,
+    "headings": 0
+  },
+  "extraction_method": "PyMuPDF + Tesseract OCR",
+  "reading_order_preserved": true
+}

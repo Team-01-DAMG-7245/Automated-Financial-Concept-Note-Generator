@@ -1,0 +1,53 @@
+Data Types: double
+
+Rate — Annualized continuously compounded risk-free rate of return over life of the option
+positive decimal
+
+Annualized continuously compounded risk-free rate of return over the life of the option, specified as a
+positive decimal number.
+
+Data Types: double
+
+Time — Time to expiration of option
+numeric
+
+Time to expiration of the option, specified as the number of years. Time must be greater than 0.
+
+Data Types: double
+
+Volatility — Annualized asset price volatility
+positive decimal
+
+Annualized futures price volatility, specified as a positive decimal number.
+
+Data Types: double
+
+Output Arguments
+
+Call — Price of a European call futures option
+matrix
+
+Price of a European call futures option, returned as a matrix.
+
+Put — Price of a European put futures option
+matrix
+
+Price of a European put futures option, returned as a matrix.
+
+More About
+
+Black Model
+
+The Black model is a financial model used to price options on futures contracts.
+
+Developed by Fischer Black in 1976, this model extends the Black-Scholes option pricing framework
+to accommodate options on futures rather than stocks. The Black model is particularly useful in
+situations where the underlying asset is a futures contract, which is common in commodities and
+interest rate markets.
+
+Version History
+Introduced before R2006a
+
+blkprice
+
+15-483

@@ -1,0 +1,39 @@
+pie(wHRP,labels)
+title('HRP Portfolio',Position=[0,1.5]);
+
+You can see that the HRP portfolio is a much more diversified portfolio as compared to the portfolio
+obtained using the traditional mean-variance approach. In addition, you can see the following:
+
+•
+The assets that were not correlated with others, assets 5 and 6, represent a much larger area of
+the pie. In fact, the sum of the areas of assets that are in the same cluster (for example, assets 1
+and 10 or assets 11, 13, 3 and 14) are close to the individual areas of assets 5 and 6. This shows
+that the weights are divided somewhat evenly between clusters and that each cluster's weight is
+divided somewhat evenly among the assets within the cluster. This is consistent with the HRP
+theory.
+
+•
+The risk parity portfolio of fully correlated assets with the same variance is an equally weighted
+portfolio. The same happens for assets that are completely uncorrelated. Since all the assets in the
+universe have a similar variance, and assets between clusters are almost uncorrelated, the
+weights allocated to each cluster are almost even. And, since the assets within a cluster are meant
+to be highly correlated, the weights of the assets within a cluster are evenly distributed.
+
+References
+
+1
+Lopez de Prado, M. "Building Diversified Portfolios That Outperform Out of Sample." The Journal
+of Portfolio Management. 42(4), 59-69, 2016.
+
+Local Functions
+
+function pwgt = hrpPortfolio(T,Sigma)
+% Function that computes a hierarchical risk parity portfolio. The
+% algorithm first computes a risk parity portfolio for each cluster. Then,
+% each cluster is assigned a weight based on a risk parity allocation of
+% the covariance between the cluster's portfolios.
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-300

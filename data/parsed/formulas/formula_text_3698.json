@@ -1,0 +1,12 @@
+{
+  "page": 2088,
+  "original_text": "NumDaysPeriod = cpnpersz(Settle,Maturity)\nNumDaysPeriod = cpnpersz( ___ ,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)",
+  "ocr_text": "NumDaysPeriod=cpnpersz(Settle,Maturity)\nNumDaysPeriod=cpnpersz(____,Period,Basis,EndMonthRule,IssueDate,\nFirstCouponDate,LastCouponDate)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.71,
+    "x1": 485.33,
+    "y1": 224.34
+  },
+  "confidence": "high"
+}

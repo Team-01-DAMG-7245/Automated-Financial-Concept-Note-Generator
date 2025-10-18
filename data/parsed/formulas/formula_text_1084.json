@@ -1,0 +1,12 @@
+{
+  "page": 559,
+  "original_text": "% Store initial state in loggedSignals\nloggedSignals.Wealth = initialWealth;\nloggedSignals.TimePeriod = 0;",
+  "ocr_text": "StoreinitialstateinloggedSignals\nLoggedSignals.Wealth=initialWealth;\nLoggedSignals.TimePeriod=0;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 265.83,
+    "x1": 295.88,
+    "y1": 297.89
+  },
+  "confidence": "high"
+}

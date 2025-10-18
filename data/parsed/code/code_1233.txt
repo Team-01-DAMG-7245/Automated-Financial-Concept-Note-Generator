@@ -1,0 +1,6 @@
+Page 1268
+================================================================================
+
+The resulting piecewise distribution object allows interpolation within the interior of the CDF and
+extrapolation (function evaluation) in each tail. Extrapolation allows estimation of quantiles outside
+the historical record, which is invaluable for risk management applications.

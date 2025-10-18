@@ -1,0 +1,12 @@
+{
+  "page": 426,
+  "original_text": "% Each anonymous function takes the current weights (w), prices (p), \n% and signal (s) data from the backtest engine and passes it to the\n% crossoverRebalanceFcn function with the signal name string.\nsmaInitWeights = computeInitialWeights(smaSignal(20,:));\nsmaRebalanceFcn = @(w,p,s) crossoverRebalanceFcn(w,p,s,smaSignalNameEnding);\nsmaStrategy = backtestStrategy('SMA',smaRebalanceFcn,...\n    'TransactionCosts',tradingCosts,...\n    'LookbackWindow',2,...\n    'InitialWeights',smaInitWeights);",
+  "ocr_text": "Eachanonymousfunctiontakesthecurrentweights(w),prices(p),\nSandsignal(s)datafromthebacktestengineandpassesittothe\ncrossoverRebalanceFcnfunctionwiththesignalnamestring.\nsmaInitWeights=computeInitialWeights(smaSignal(20,:));\nsmaRebalanceFcn=Q(w,p,S)_crossoverRebalanceFcn(w,p,s,smaSignalNameEnding);\nsmaStrategy=backtestStrategy(SMA,smaRebalanceFcn,...\n\nTransactionCosts,tradingCosts,...\n\nLookbackWindow,2,...\n\nInitialWeights,smaInitWeights);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 168.63,
+    "x1": 501.77,
+    "y1": 265.49
+  },
+  "confidence": "high"
+}

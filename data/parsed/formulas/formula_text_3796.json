@@ -1,0 +1,12 @@
+{
+  "page": 2148,
+  "original_text": "Depreciation = depfixdb(Cost,Salvage,Life,Period)\nDepreciation = depfixdb( ___ ,Month)",
+  "ocr_text": "Depreciation=depfixdb(Cost,Salvage,Life,Period)\nDepreciation=depfixdb(__,Month)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 188.44,
+    "x1": 385.0,
+    "y1": 212.07
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 1570,
+  "original_text": "backtester = backtestEngine(strategies) creates a backtestEngine object. Use the\nbacktestEngine object to backtest the portfolio trading strategies defined in the\nbacktestStrategy objects.",
+  "ocr_text": "backtester=backtestEngine(strategies)createsabacktestEngineobject.Usethe\nbacktestEngineobjecttobacktesttheportfoliotradingstrategiesdefinedinthe\nbacktestStrategyobjects.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 524.38,
+    "x1": 528.21,
+    "y1": 560.01
+  },
+  "confidence": "high"
+}

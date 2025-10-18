@@ -1,0 +1,12 @@
+{
+  "page": 1284,
+  "original_text": "longTermComponent = NaN( numObservations, numCommodities );\nseasonalComponent = NaN( numObservations, numCommodities );",
+  "ocr_text": "LongTermComponent=NaN(numObservations,numCommodities);\nseasonalComponent=NaN(numObservations,numCommodities);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 697.83,
+    "x1": 409.67,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

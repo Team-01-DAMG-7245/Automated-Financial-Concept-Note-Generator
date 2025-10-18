@@ -1,0 +1,12 @@
+{
+  "page": 1954,
+  "original_text": "load ccr.mat\n% Look at one counterparty.\ncpID = 4;\ncpValues = squeeze(sum(values(:,swaps.Counterparty == cpID,:),2));\nsubplot(2,1,1)\nsimulationDates = datetime(simulationDates,\"ConvertFrom\",\"datenum\");\nplot(simulationDates,cpValues);\ntitle(sprintf('Mark-to-Market Contract Values for Counterparty: %d',cpID));\nxtickformat('MMMyy');\nylabel('Portfolio Value ($)')\n% Compute the exposure by counterparty.\n[exposures, expcpty] = creditexposures(values,swaps.Counterparty, ...\n'NettingID',swaps.NettingID);\n% View the credit exposure over time for the counterparty.",
+  "ocr_text": "load_ccr.mat\n\nLookatonecounterparty.\n\ncpID=4;\ncpValues=squeeze(sum(values(:,swaps.Counterparty==cpID,:),2));\nsubplot(2,1,1)\nsimulationDates=datetime(simulationDates,ConvertFrom,datenum);\nplot(simulationDates,cpValues);\ntitle(sprintf(Mark-to-MarketContractValuesforCounterparty:d,cpID));\nxtickformat(MMMyy);\n\nylabel(PortfolioValue(S))\n\nSComputetheexposurebycounterparty.\n[exposures,expcpty]=creditexposures(values,swaps.Counterparty,...\nNettingID,swaps.NettingID);\nViewthecreditexposureovertimeforthecounterparty.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 568.23,
+    "x1": 496.38,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

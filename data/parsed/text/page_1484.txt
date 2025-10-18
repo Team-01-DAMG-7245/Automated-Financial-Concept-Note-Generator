@@ -1,0 +1,67 @@
+•
+Rate: The diffusion-rate function, G(t,Xt).
+
+•
+Alpha: The state vector exponent, which determines the format of D(t,Xt) of G(t,Xt).
+
+•
+Sigma: The volatility rate, V(t,Xt), of G(t,Xt).
+
+Alpha and Sigma enable you to query the original inputs. (The combined effect of the individual
+Alpha and Sigma parameters is fully encapsulated by the function stored in Rate.) The Rate
+functions are the calculation engines for the drift and diffusion objects, and are the only
+parameters required for simulation.
+
+Note You can express drift and diffusion classes in the most general form to emphasize the
+functional (t, Xt) interface. However, you can specify the components A and B as functions that adhere
+to the common (t, Xt) interface, or as MATLAB arrays of appropriate dimension.
+
+Example: G = diffusion(1, 0.3) % Diffusion rate function G(t,X)
+
+Data Types: struct | double
+
+Object Functions
+interpolate
+Brownian interpolation of stochastic differential equations (SDEs) for SDE, BM,
+GBM, CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simulate
+Simulate multivariate stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, SDEMRD, Merton, or Bates models
+simByEuler
+Euler simulation of stochastic differential equations (SDEs) for SDE, BM, GBM,
+CEV, CIR, HWV, Heston, SDEDDO, SDELD, or SDEMRD models
+simByMilstein
+Simulate diagonal diffusion for BM, GBM, CEV, HWV, SDEDDO, SDELD, or
+SDEMRD sample paths by Milstein approximation
+simByMilstein2
+Simulate BM, GBM, CEV, HWV, SDEDDO, SDELD, SDEMRD process sample paths
+by second order Milstein approximation
+
+Examples
+
+Create a sdeld Object
+
+The sdeld class derives from the sdeddo class. These objects allow you to simulate correlated paths
+of NVARS state variables expressed in linear drift-rate form:
+
+dXt = (A(t) + B(t)Xt)dt + D(t, Xt
+α(t))V(t)dWt.
+
+obj = sdeld(0, 0.1, 1, 0.3) % (A, B, Alpha, Sigma)
+
+obj = 
+   Class SDELD: SDE with Linear Drift
+   ----------------------------------------
+     Dimensions: State = 1, Brownian = 1
+   ----------------------------------------
+      StartTime: 0
+     StartState: 1
+    Correlation: 1
+          Drift: drift rate function F(t,X(t)) 
+      Diffusion: diffusion rate function G(t,X(t)) 
+     Simulation: simulation method/function simByEuler
+
+15
+Functions
+
+15-178

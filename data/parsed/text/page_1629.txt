@@ -1,0 +1,65 @@
+of 'Z' and a function or as an (NPeriods ⨉ NSteps)-by-NBrowns-by-NTrials three-dimensional
+array of dependent random variates.
+
+Note If you specify Z as a function, it must return an NBrowns-by-1 column vector, and you must call
+it with two inputs:
+
+•
+A real-valued scalar observation time t
+
+•
+An NVars-by-1 state vector Xt
+
+Data Types: double | function
+
+N — Dependent random counting process for generating number of jumps
+random numbers from Poisson distribution with parameter JumpFreq from merton object (default) |
+three-dimensional array | function
+
+Dependent random counting process for generating the number of jumps, specified as the comma-
+separated pair consisting of 'N' and a function or an (NPeriods ⨉ NSteps) -by-NJumps-by-NTrials
+three-dimensional array of dependent random variates.
+
+If you specify a function, N must return an NJumps-by-1 column vector, and you must call it with two
+inputs: a real-valued scalar observation time t followed by an NVars-by-1 state vector Xt.
+
+Data Types: double | function
+
+StorePaths — Flag that indicates how Paths is stored and returned
+true (default) | logical with values true or false
+
+Flag that indicates how the output array Paths is stored and returned, specified as the comma-
+separated pair consisting of 'StorePaths' and a scalar numeric or logical 1 (true) or 0 (false).
+
+•
+If StorePaths is true (the default value) or is unspecified, simByEuler returns Paths as a
+three-dimensional time series array.
+
+•
+If StorePaths is false (logical 0), simByEuler returns Paths as an empty matrix.
+
+Data Types: logical
+
+MonteCarloMethod — Monte Carlo method to simulate stochastic processes
+"standard" (default) | string with values "standard", "quasi", or "randomized-quasi" |
+character vector with values 'standard', 'quasi', or 'randomized-quasi'
+
+Monte Carlo method to simulate stochastic processes, specified as the comma-separated pair
+consisting of 'MonteCarloMethod' and a string or character vector with one of the following
+values:
+
+•
+"standard" — Monte Carlo using pseudo random numbers
+
+•
+"quasi" — Quasi-Monte Carlo using low-discrepancy sequences
+
+•
+"randomized-quasi" — Randomized quasi-Monte Carlo
+
+Note If you specify an input noise process (see Z and N), simByEuler ignores the value of
+MonteCarloMethod.
+
+simByEuler
+
+15-323

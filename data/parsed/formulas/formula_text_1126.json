@@ -1,0 +1,12 @@
+{
+  "page": 570,
+  "original_text": "Include binary variables for this scenario by setting conditional (semicontinuous) bounds. Conditional\nbounds are those such that xi = 0 or xi ≥ℓi. In this example, ℓi = 0 . 1 for all assets.",
+  "ocr_text": "Includebinaryvariablesforthisscenariobysettingconditional(semicontinuous)bounds.Conditional\nboundsarethosesuchthatxj=0orxj=_0;._Inthisexample,(;_=0.1forallassets.",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 377.83,
+    "x1": 555.54,
+    "y1": 403.77
+  },
+  "confidence": "high"
+}

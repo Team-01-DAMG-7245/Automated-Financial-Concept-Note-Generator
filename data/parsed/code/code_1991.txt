@@ -1,0 +1,4 @@
+Page 1587
+================================================================================
+
+Use the summary function to generate a summary table of backtest results.

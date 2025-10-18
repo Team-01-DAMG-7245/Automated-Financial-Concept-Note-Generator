@@ -1,0 +1,12 @@
+{
+  "page": 77,
+  "original_text": "ps(T)\nps(1) −1 = ∏\nt = 2",
+  "ocr_text": "T\nps(T) -1=\npatty*=,LL",
+  "bbox": {
+    "x0": 112.71,
+    "y0": 116.96,
+    "x1": 185.71,
+    "y1": 145.54
+  },
+  "confidence": "high"
+}

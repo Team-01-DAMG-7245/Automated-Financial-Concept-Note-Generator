@@ -1,0 +1,6 @@
+Page 1437
+================================================================================
+
+Moreover, a parameter is identified as a deterministic function of time if the function accepts a scalar
+time t as its only input argument. Otherwise, a parameter is assumed to be a function of time t and
+state X(t) and is invoked with both input arguments.

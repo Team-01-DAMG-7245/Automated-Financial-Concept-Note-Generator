@@ -1,0 +1,60 @@
+Object for portfolio, specified using a Portfolio object. For more information on creating a portfolio
+object, see Portfolio.
+
+Data Types: object
+
+pwgt — Collection of portfolios
+matrix
+
+Collection of portfolios, specified as a NumAssets-by-NumPorts matrix where NumAssets is the
+number of assets in the universe and NumPorts is the number of portfolios in the collection of
+portfolios.
+
+Data Types: double
+
+Output Arguments
+
+prsk — Estimates for standard deviations of portfolio returns for each portfolio in pwgt
+vector
+
+Estimates for standard deviations of portfolio returns for each portfolio in pwgt, returned as a
+NumPorts vector.
+
+prsk is returned for a Portfolio input object (obj). If the asset returns provided to the Portfolio
+object are daily returns, then the output (prsk) for the standard deviation of the portfolio(s) is also in
+daily terms.
+
+pret — Estimates for means of portfolio returns for each portfolio in pwgt
+vector
+
+Estimates for means of portfolio returns for each portfolio in pwgt, returned as a NumPorts vector.
+
+pret is returned for a Portfolio input object (obj). If the asset returns provided to the Portfolio
+object are daily returns, then the output (pret) for returns is also in daily terms.
+
+More About
+
+Moments of Portfolio Returns
+
+The moments of portfolio returns are statistical measures that provide insights into the
+characteristics of the return distribution of an investment portfolio.
+
+The moments of portfolio returns provide information on:
+
+•
+The variance and standard deviation to help investors gauge the risk associated with their
+portfolio.
+
+•
+A mean return that provides a benchmark for evaluating portfolio performance.
+
+Tips
+
+You can also use dot notation to estimate the moments of portfolio returns.
+
+[prsk, pret] = obj.estimatePortMoments(pwgt);
+
+15
+Functions
+
+15-1006

@@ -1,0 +1,27 @@
+Create Mean-Variance Portfolio
+
+Create a Portfolio object to compare with the PortfolioCVaR object.
+
+% Create the Portfolio object.
+pmv = Portfolio('Name','Mean-Variance Portfolio Five Hedging Levels', ...
+   'AssetList',{'Stock','Hedge50','Hedge75','Hedge90','Hedge95'});
+pmv = pmv.estimateAssetMoments(p.getScenarios);
+pmv = pmv.setDefaultConstraints;
+
+% Estimate the efficient frontier to obtain portfolio weights.
+pwgtmv = pmv.estimateFrontier;
+
+% Plot the efficient frontier.
+figure;
+mvFrontierHandle = pmv.plotFrontier(pwgtmv);
+
+% Plot the portfolio weights.
+figure;
+area(pwgtmv');
+legend(pmv.AssetList);
+axis([1 10 0 1])
+title('Mean-Variance Portfolio Weights');
+
+Hedge Using Monte Carlo Simulation
+
+10-57

@@ -1,0 +1,14 @@
+More About
+
+•
+“PortfolioMAD Object” on page 6-17
+
+•
+“Portfolio Optimization Theory” on page 6-3
+
+•
+“PortfolioMAD Object Workflow” on page 6-16
+
+Working with One-Way Turnover Constraints Using PortfolioMAD Object
+
+6-79

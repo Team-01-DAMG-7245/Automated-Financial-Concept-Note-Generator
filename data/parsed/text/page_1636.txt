@@ -1,0 +1,58 @@
+StartTime: 0
+     StartState: 1 (2x1 double array) 
+    Correlation: 2x2 diagonal double array 
+         Return: 0.03
+          Alpha: -0.03
+             Xi: 0.2
+            Eta: 0.015
+
+Use simByEuler to simulate NTrials sample paths of NVars correlated state variables driven by
+NBrowns Brownian motion sources of risk over NPeriods consecutive observation periods. The
+function simByEuler approximates a continuous-time stochastic process by the Euler approach.
+
+NPeriods = 2;
+[Paths,Times,Z] = simByEuler(roughbergomiObj,NPeriods)
+
+Paths = 3×2
+
+1.0000    0.2000
+    1.1858    0.2054
+    0.3962    0.2078
+
+Times = 3×1
+
+0
+     1
+     2
+
+Z = 2×2
+
+0.5377    1.8339
+   -2.2588    0.8622
+
+Paths is a 3-by-2 matrix and the output Z is a matrix used to generate the Brownian motion vector.
+
+Simulate Rough Heston Model Sample Paths by Euler Approximation
+
+The rough Heston model is a roughheston object that is a bivariate composite models, composed of
+two coupled and dissimilar univariate models, each driven by a single Brownian motion source of risk
+over NPERIODS consecutive observation periods, approximating continuous-time rough Heston
+stochastic volatility processes..
+
+Create an roughheston object.
+
+Return = 0.1;
+Speed = 0.2;
+Level = 0.1;
+Volatility = 0.05;
+Alpha = -0.03;
+
+roughhestonObj = roughheston(Return,Speed,Level,Volatility,Alpha)
+
+roughhestonObj = 
+   Class ROUGHHESTON: Rough Heston Stochastic Volatility
+
+15
+Functions
+
+15-330

@@ -1,0 +1,12 @@
+{
+  "page": 1774,
+  "original_text": "[mg,Cg = arith2geom(ma,Ca)\n[mg,Cg = arith2geom( ___ ,t)",
+  "ocr_text": "[mg,Cg=arith2geom(ma,Ca)\n[mg,Cg=arith2geom(___,t)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 194.47,
+    "x1": 250.54,
+    "y1": 218.1
+  },
+  "confidence": "high"
+}

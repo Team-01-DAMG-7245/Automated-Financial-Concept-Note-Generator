@@ -1,0 +1,29 @@
+Simulate 10 trials of the solution and plot the first trial.
+
+rng(142857,'twister')
+[S,T] = simulate(SDE, nPeriods, 'DeltaTime', dt, 'nTrials', 10);
+rng(142857,'twister')
+[X,T] = simBySolution(GBM, nPeriods,...
+    'DeltaTime', dt, 'nTrials', 10);
+subplot(2,1,1)
+plot(T, S(:,:,1)), xlabel('Trading Day'),ylabel('Price')
+title('1st Path of Multi-Dim Market Model:Euler Approximation')
+subplot(2,1,2)
+plot(T, X(:,:,1)), xlabel('Trading Day'),ylabel('Price')
+title('1st Path of Multi-Dim Market Model:Analytic Solution')
+
+In this example, all parameters are constants, and simBySolution does indeed sample the exact
+solution. The details of a single index for any given trial show that the price paths of the Euler
+approximation and the exact solution are close, but not identical.
+
+Plot the difference between the two methods.
+
+subplot(1,1,1)
+plot(T, S(:,1,1) - X(:,1,1), 'blue'), grid('on')
+xlabel('Trading Day'), ylabel('Price Difference')
+title('Euler Approx Minus Exact Solution:Canada(TSX Composite)')
+
+14
+Stochastic Differential Equations
+
+14-40

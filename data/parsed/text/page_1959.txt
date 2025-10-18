@@ -1,0 +1,38 @@
+Compute Exposures for Counterparties Under Collateral Agreement
+
+Load the data (ccr.mat) containing the mark-to-market contract values for a portfolio of swaps over
+many scenarios.
+
+load ccr.mat
+
+Only look at a single counterparty for this example.
+
+cpID = 4;
+cpIdx = swaps.Counterparty == cpID;
+cpValues = values(:,cpIdx,:);
+
+Compute the uncollateralized exposures.
+
+exposures = creditexposures(cpValues,swaps.Counterparty(cpIdx),...
+'NettingID',swaps.NettingID(cpIdx));
+
+View the credit exposure over time for the counterparty.
+
+simulationDates = datetime(simulationDates,"ConvertFrom","datenum");
+plot(simulationDates,squeeze(exposures));
+expYLim = get(gca,'YLim');
+title(sprintf('Exposures for Counterparty: %d',cpID));
+xtickformat('MMMyy');
+ylabel('Exposure ($)')
+xlabel('Simulation Dates')
+
+Add a collateral agreement for the counterparty. The 'CollateralTable' parameter is a
+MATLAB® table. You can create tables from spreadsheets or other data sources, in addition to
+building them inline as seen here. For more information, see table.
+
+collateralVariables = {'Counterparty';'PeriodOfRisk';'Threshold';'MinimumTransfer'};
+periodOfRisk = 14;
+
+creditexposures
+
+15-653

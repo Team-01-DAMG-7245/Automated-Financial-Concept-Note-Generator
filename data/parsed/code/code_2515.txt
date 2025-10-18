@@ -1,0 +1,7 @@
+Page 2380
+================================================================================
+
+If both inputs for CurveDates and Settle are strings or date character vectors, CurveDates is
+returned as serial date numbers. Use the function datetime to convert serial date numbers to
+formatted datetime arrays. However, if either of the inputs for CurveDates and Settle are a
+datetime array, CurveDates is returned as a datetime array.

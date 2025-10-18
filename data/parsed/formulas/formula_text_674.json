@@ -1,0 +1,12 @@
+{
+  "page": 417,
+  "original_text": "% Sells\nidx = -1e3 < deltaPositions & deltaPositions < 0;\nsell(idx) = 0.0075 * -deltaPositions(idx); % 75 basis points\nidx = deltaPositions <= -1e3;\nsell(idx) = 0.005 * -deltaPositions(idx); % 50 basis points\nsell = sum(sell);",
+  "ocr_text": "Sells\n\nidx=-le3deltaPositionsdeltaPositions0;\nsell(idx)=0.0075*-deltaPositions(idx);*75basispoints\nidx=deltaPositions=-1le3;\nsell(idx)=0.005*-deltaPositions(idx);50basispoints\nsell=sum(sell);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 276.63,
+    "x1": 415.1,
+    "y1": 341.09
+  },
+  "confidence": "high"
+}

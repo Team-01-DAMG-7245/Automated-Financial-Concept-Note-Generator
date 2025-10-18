@@ -1,0 +1,82 @@
+corresponding greek of each individual option in the portfolio. The system of equations is solved
+using the back slash (\) operator discussed in “Solving Simultaneous Linear Equations” on page 1-11.
+
+A = [Deltas; Gammas; Vegas; Prices];
+b = [0; 0; 0; 17000];
+OptionQuantities = A\b % Quantity (number) of each option.
+
+OptionQuantities = 4×1
+104 ×
+
+2.2333
+    0.6864
+   -1.5655
+   -0.4511
+
+Compute Market Value, Delta, Gamma, and Vega of Portfolio
+
+Compute the market value, delta, gamma, and vega of the overall portfolio as a weighted average of
+the corresponding parameters of the component options. The weighted average is computed as an
+inner product of two vectors.
+
+PortfolioValue =  Prices * OptionQuantities
+
+PortfolioValue = 
+17000
+
+PortfolioDelta =  Deltas * OptionQuantities
+
+PortfolioDelta = 
+1.8190e-12
+
+PortfolioGamma =  Gammas * OptionQuantities
+
+PortfolioGamma = 
+-1.1369e-13
+
+PortfolioVega  =  Vegas  * OptionQuantities
+
+PortfolioVega = 
+0
+
+The output for these computations is:
+
+Option
+Price
+Delta
+Gamma
+Vega
+Quantity
+
+1
+6.3441
+0.5856
+0.0290
+17.4293
+22332.6131
+
+2
+6.6035
+-0.6255
+0.0353
+20.0347
+6864.0731
+
+3
+4.2993
+0.7003
+0.0548
+9.5837
+-15654.8657
+
+4
+22.7694
+-0.4830
+0.0074
+83.5225
+-4510.5153
+
+10
+Solving Sample Problems
+
+10-16

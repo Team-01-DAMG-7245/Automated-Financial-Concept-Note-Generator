@@ -1,0 +1,69 @@
+0.0013
+    0.0024
+
+0.4000
+    0.2000
+    0.2000
+    0.1000
+    0.1000
+
+For an example of setting costs, see “Portfolio Analysis with Turnover Constraints” on page 4-211.
+
+Setting Transaction Costs with Scalar Expansion
+
+Both the Portfolio object and the setCosts function implement scalar expansion on the
+arguments for transaction costs and the initial portfolio. If the NumAssets property is already set in
+the Portfolio object, scalar arguments for these properties are expanded to have the same value
+across all dimensions. In addition, setCosts lets you specify NumAssets as an optional final
+argument. For example, assume that you have an initial portfolio x0 and you want to set common
+transaction costs on all assets in your universe. You can set these costs in any of these equivalent
+ways:
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = Portfolio('InitPort', x0, 'BuyCost', 0.002, 'SellCost', 0.002);
+
+or
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = Portfolio('InitPort', x0);
+p = setCosts(p, 0.002, 0.002);
+
+or
+
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = Portfolio;
+p = setCosts(p, 0.002, 0.002, x0);
+
+To clear costs from your Portfolio object, use either the Portfolio object or setCosts with
+empty inputs for the properties to be cleared. For example, you can clear sales costs from the
+Portfolio object p in the previous example:
+
+p = Portfolio(p, 'SellCost', []);
+
+See Also
+Portfolio | setAssetMoments | estimateAssetMoments | getAssetMoments | setCosts
+
+Related Examples
+
+•
+“Creating the Portfolio Object” on page 4-25
+
+•
+“Working with Portfolio Constraints Using Defaults” on page 4-58
+
+•
+“Validate the Portfolio Problem for Portfolio Object” on page 4-94
+
+•
+“Estimate Efficient Portfolios for Entire Efficient Frontier for Portfolio Object” on page 4-98
+
+•
+“Estimate Efficient Frontiers for Portfolio Object” on page 4-122
+
+•
+“Portfolio Analysis with Turnover Constraints” on page 4-211
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-56

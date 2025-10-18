@@ -1,0 +1,12 @@
+{
+  "page": 1701,
+  "original_text": "A(t, T) =\n2(eγ(T −t) −1)\n(γ + α)(eγ(T −t) −1) + 2γ",
+  "ocr_text": "2(evF- te 1)\nA(t,T)=___\nen (y+ay(eX-9-1)+2y",
+  "bbox": {
+    "x0": 112.32,
+    "y0": 581.13,
+    "x1": 265.88,
+    "y1": 610.89
+  },
+  "confidence": "high"
+}

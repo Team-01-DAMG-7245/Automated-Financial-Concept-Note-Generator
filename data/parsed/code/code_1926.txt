@@ -1,0 +1,6 @@
+Page 1542
+================================================================================
+
+When the optional name-value arguments UserData and EngineDataList are not specified
+and detailedCosts output is specified, the computeTransactionCostsFcn function
+handle has the following signature:

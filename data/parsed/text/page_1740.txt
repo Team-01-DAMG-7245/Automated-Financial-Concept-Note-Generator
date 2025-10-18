@@ -1,0 +1,55 @@
+active2abs
+
+Convert constraints from active to absolute format
+
+Syntax
+
+AbsConSet = active2abs(ActiveConSet,Index)
+
+Description
+
+AbsConSet = active2abs(ActiveConSet,Index) transforms a constraint matrix to an
+equivalent matrix expressed in absolute weight format. The transformation equation is
+
+Awactive = A wabsolute −windex ≤bactive .
+
+Therefore
+
+Awabsolute ≤bactive + Awindex = babsolute .
+
+The initial constraint matrix consists of NCONSTRAINTS portfolio linear inequality constraints
+expressed in active weight format (relative to the index portfolio). The index portfolio vector contains
+NASSETS assets.
+
+AbsConSet is the transformed portfolio linear inequality constraint matrix expressed in absolute
+weight format, also of the form [A b] such that A*w <= b. The value w represents a vector of active
+asset weights (relative to the index portfolio) whose elements sum to the total portfolio value.
+
+Input Arguments
+
+ActiveConSet — Portfolio linear inequality constraint matrix expressed in active weight
+format
+matrix
+
+Portfolio linear inequality constraint matrix expressed in active weight format, formatted as [A b]
+such that A*w <= b, where A is a number of constraints (NCONSTRAINTS) by number of assets
+(NASSETS) weight coefficient matrix, and b and w are column vectors of length NASSETS. The value w
+represents a vector of active asset weights (relative to the index portfolio) whose elements sum to 0.
+
+See the output ConSet from portcons for additional details about constraint matrices.
+
+Data Types: double
+
+Index — Index of portfolio weights
+vector
+
+Index of portfolio weights, specified as an ASSETS-by-1 vector. The sum of the index weights must
+equal the total portfolio value. For example, a standard portfolio optimization imposes a sum to 1
+budget constraint.
+
+Data Types: double
+
+15
+Functions
+
+15-434

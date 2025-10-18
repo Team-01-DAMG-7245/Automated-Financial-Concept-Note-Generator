@@ -1,0 +1,12 @@
+{
+  "page": 560,
+  "original_text": "% Get current state\nt = loggedSignals.TimePeriod;\nW = loggedSignals.Wealth;",
+  "ocr_text": "Getcurrentstate\nt_=loggedSignals.TimePeriod;\nW=loggedSignals.Wealth;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 471.03,
+    "x1": 247.12,
+    "y1": 503.09
+  },
+  "confidence": "high"
+}

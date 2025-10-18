@@ -1,0 +1,12 @@
+{
+  "page": 2493,
+  "original_text": "W(i) = w(i)/sum(w), for i = 1,2,...,N",
+  "ocr_text": "W(i)=w(i)/sum(w),fori=1,2,...,N",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 126.27,
+    "x1": 312.74,
+    "y1": 137.9
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,74 @@
+•
+Trading is a continuous process.
+
+•
+The risk-free interest rate is constant and remains the same for all maturities.
+
+If any of these assumptions is untrue, Black-Scholes may not be an appropriate model.
+
+To illustrate toolbox Black-Scholes functions (blsprice, blsdelta, blsgamma, blsvega, and
+blslambda) this example computes the call and put prices of a European option and its delta,
+gamma, lambda, and implied volatility. The asset price is $100.00, the exercise price is $95.00, the
+risk-free interest rate is 10%, the time to maturity is 0.25 years, the volatility is 0.50, and the
+dividend rate is 0.
+
+[OptCall, OptPut] = blsprice(100, 95, 0.10, 0.25, 0.50, 0)
+
+OptCall = 
+13.6953
+
+OptPut = 
+6.3497
+
+[CallVal, PutVal] = blsdelta(100, 95, 0.10, 0.25, 0.50, 0)
+
+CallVal = 
+0.6665
+
+PutVal = 
+-0.3335
+
+GammaVal = blsgamma(100, 95, 0.10, 0.25, 0.50, 0)
+
+GammaVal = 
+0.0145
+
+VegaVal = blsvega(100, 95, 0.10, 0.25, 0.50, 0)
+
+VegaVal = 
+18.1843
+
+[LamCall, LamPut] = blslambda(100, 95, 0.10, 0.25, 0.50, 0)
+
+LamCall = 
+4.8664
+
+LamPut = 
+-5.2528
+
+To summarize:
+
+•
+The option call price OptCall = $13.70
+
+•
+The option put price OptPut = $6.35
+
+•
+delta for a call CallVal = 0.6665 and delta for a put PutVal = -0.3335
+
+•
+gamma GammaVal = 0.0145
+
+•
+vega VegaVal = 18.1843
+
+•
+lambda for a call LamCall = 4.8664 and lambda for a put LamPut = –5.2528
+
+As a computation check, find the implied volatility of the option using the call option price from
+blsprice.
+
+Pricing and Analyzing Equity Derivatives
+
+2-41

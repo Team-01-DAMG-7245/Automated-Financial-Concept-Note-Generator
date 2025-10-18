@@ -1,0 +1,67 @@
+'29-Feb-2016'
+    '31-Mar-2016'
+
+The start date (1/8/16) is in the month of January, 2016. The last business day for the month of
+January is 1/29/16 (Friday). The end date (3/1/16) is in the month of March, 2016. The last business
+day for the month of March is 3/31/16 (Thursday). The month of February, 2016 lies between the start
+date and the end date. The last business day for the month of February is 2/29/16 (Monday).
+
+Input Arguments
+
+sdate — Start date
+datetime scalar | string scalar | date character vector
+
+Start date, specified as a scalar datetime, string, or date character vector.
+
+To support existing code, busdays also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+edate — End date
+datetime scalar | string scalar | date character vector
+
+End date, specified as a scalar datetime, string, or date character vector.
+
+To support existing code, busdays also accepts serial date numbers as inputs, but they are not
+recommended.
+
+Data Types: char | string | datetime
+
+bdmode — Frequency of business days
+DAILY (1) (default) | nonnegative numeric with values 1 through 5 | date character vector with values
+DAILY, WEEKLY, MONTHLY, QUARTERLY, SEMIANNUAL or ANNUAL
+
+Frequency of business days, specified as a nonnegative numeric with values 1 through 5 or date
+character vector with values of DAILY, WEEKLY, MONTHLY, QUARTERLY, SEMIANNUAL, or ANNUAL
+
+Valid periodicities include:
+
+•
+DAILY, Daily, daily, D, d, 1 (default)
+
+•
+WEEKLY, Weekly, weekly, W, w, 2
+
+•
+MONTHLY, Monthly, monthly, M, m, 3
+
+•
+QUARTERLY, Quarterly, quarterly, Q, q, 4
+
+•
+SEMIANNUAL, Semiannual, semiannual, S, s, 5
+
+•
+ANNUAL, Annual, annual, A, a, 6
+
+Character vectors must be enclosed in single quotation marks.
+
+For example, if bdmode is set to monthly, busdays returns end-of-month business dates for all full
+or partial months between the start date and end date inclusive.
+
+Data Types: double | char
+
+busdays
+
+15-605

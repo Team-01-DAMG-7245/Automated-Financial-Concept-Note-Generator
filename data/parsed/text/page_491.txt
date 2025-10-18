@@ -1,0 +1,60 @@
+Analyze Performance Attribution Using Brinson Model
+
+This example shows how to prepare data, create a brinsonAttribution object, and then analyze
+the performance attribution with respect to category (sector) weights and returns. In this example,
+you use the categoryAttribution, categoryReturns, categoryWeights, totalAttribution,
+and summary functions for the analysis. Also, you can generate plots for the results, using
+categoryReturnsChart, categoryWeightsChart, and attributionsChart.
+
+Prepare Data
+
+Load the stock price data into a table.
+
+T = readtable('dowPortfolio.xlsx');
+MonthIdx = [1;20;39;62;81;103;125;145;168;188;210;231;251];
+MonthlyPrices = T(MonthIdx,3:end);
+
+Compute the monthly returns using tick2ret.
+
+MonthlyReturns = tick2ret(MonthlyPrices.Variables)';
+[NumAssets,NumPeriods] = size(MonthlyReturns);
+
+Define the asset categories (sectors) using categorical.
+
+Category = categorical(["Materials";"Financials";"Financials"; ...
+    "Industrials";"Financials";"Industrials";"Materials"; ...
+    "Communication Services";"Industrials";"Consumer Discretionary"; ...
+    "Consumer Discretionary";"Industrials";"Information Technology"; ...
+    "Information Technology";"Information Technology";"Health Care"; ...
+    "Financials";"Consumer Staples";"Consumer Discretionary"; ...
+    "Industrials";"Consumer Staples";"Health Care"; ...
+    "Information Technology";"Health Care";"Consumer Staples"; ...
+    "Communication Services";"Industrials";"Communication Services"; ...
+    "Consumer Staples";"Energy"]);
+Category = repmat(Category,1,NumPeriods);
+
+Define Benchmark and Portfolio Weights
+
+Define the benchmark weight and the portfolio weights, by quarter, for each of the stock assets.
+
+BenchmarkWeight = 1./length(MonthlyReturns).*ones(NumAssets, NumPeriods);
+
+PortfolioWeightQ1 = [0;0;0.022;0.033;0;0.044;0.022;0.011;0.065;0.033; ...
+    0.055;0.072;0;0.04;0;0.05;0.08;0.042;0.03;0.043;0.055;0.036;0.111; ...
+    0.036;0;0.03;0;0.05;0;0.04]*ones(1,3);
+
+PortfolioWeightQ2 = [0;0;0.022;0.033;0;0.044;0.022;0.011;0.049;0.033; ...
+    0.055;0.074;0;0.04;0;0.05;0.08;0.042;0.03;0.02;0.055;0.036;0.148; ...
+    0.036;0;0.03;0;0.05;0;0.04]*ones(1,3);
+
+PortfolioWeightQ3 = [0;0;0.022;0.033;0;0.042;0.022;0.01;0.049;0.033; ...
+    0.05;0.07;0;0.04;0;0.05;0.08;0.042;0.03;0.02;0.055;0.036;0.16; ...
+    0.036;0;0.03;0;0.05;0;0.04]*ones(1,3);
+
+PortfolioWeightQ4 = [0;0;0.022;0.033;0;0.042;0.02;0.01;0.039;0.033; ...
+    0.05;0.07;0;0.04;0;0.05;0.08;0.042;0.03;0.02;0.055;0.036;0.198; ...
+    0.036;0;0.03;0;0.03;0;0.034]*ones(1,3);
+
+Analyze Performance Attribution Using Brinson Model
+
+4-323

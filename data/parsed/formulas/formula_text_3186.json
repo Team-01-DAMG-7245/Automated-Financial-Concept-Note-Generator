@@ -1,0 +1,12 @@
+{
+  "page": 1712,
+  "original_text": "function displaySummary(optionPrice, standardError, lowerBound, upperBound)\nfprintf('  Up-and-In Barrier Option Price: %8.4f\\n', ...\n            optionPrice);\nfprintf('         Standard Error of Price: %8.4f\\n', ...\n            standardError);\nfprintf(' Confidence Interval Lower Bound: %8.4f\\n', ...\n            lowerBound);\nfprintf(' Confidence Interval Upper Bound: %8.4f\\n', ...\n            upperBound);\nend",
+  "ocr_text": "functiondisplaySummary(optionPrice,standardError,lowerBound,_upperBound)\nfprintf(Up-and-InBarrierOptionPrice:8.4fn,...\n\noptionPrice);\nfprintf( StandardErrorofPrice:8.4fn,...\n\nstandardError);\nfprintf(ConfidenceIntervalLowerBound:8.4fn,...\n\nLowerBound);\nfprintf(ConfidenceIntervalUpperBound:8.4fn,...\n\nupperBound);\nend",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 167.82,
+    "x1": 496.35,
+    "y1": 275.49
+  },
+  "confidence": "high"
+}

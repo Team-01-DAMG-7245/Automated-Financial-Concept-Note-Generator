@@ -1,0 +1,12 @@
+{
+  "page": 402,
+  "original_text": "optimProb.Constraints.asset_factor_weight = factorLoading'*wgtAsset - wgtFactor == 0;\noptimProb.Constraints.risk = wgtFactor'*covarFactor*wgtFactor + wgtAsset'*D*wgtAsset <= tRisk;\noptimProb.Constraints.budget = sum(wgtAsset) == 1;",
+  "ocr_text": "optimProb.Constraints.asset_factor_weight=factorLoading*wgtAsset-wgtFactor==0;\noptimProb.Constraints.risk=wgtFactor*covarFactor*wgtFactor+wgtAsset*D*wgtAsset=tRisk;\noptimProb.Constraints.budget=sum(wgtAsset)==1;",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 408.58,
+    "x1": 599.29,
+    "y1": 440.65
+  },
+  "confidence": "high"
+}

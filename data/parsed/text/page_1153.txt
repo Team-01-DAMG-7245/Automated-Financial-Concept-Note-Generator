@@ -1,0 +1,62 @@
+Add Hedging Strategies
+
+Use blsprice to calculate prices of put options with different strikes.
+
+% Put option with strike at 50% of current underlying price
+Strike50 = 0.50*Price_0;
+[~, Put50] = blsprice(Price_0,Strike50,RiskFreeRate,T,Vol);
+
+% Put option with strike at 75% of current underlying price
+Strike75 = 0.75*Price_0;
+[~, Put75] = blsprice(Price_0,Strike75,RiskFreeRate,T,Vol);
+
+% Put option with strike at 90% of current underlying price
+Strike90 = 0.90*Price_0;
+[~, Put90] = blsprice(Price_0,Strike90,RiskFreeRate,T,Vol);
+
+% Put option with strike at 95% of current underlying price
+Strike95 = 0.95*Price_0; % Same as strike
+[~, Put95] = blsprice(Price_0,Strike95,RiskFreeRate,T,Vol);
+
+Generate Simulation Matrix for Strategies
+
+Generate simulation matrix for the strategy variations.
+
+AssetScenarios = zeros(NTRIALS, 5);
+
+% Strategy 1: Stock only
+AssetScenarios(:, 1) = (Price_T - Price_0) ./ Price_0;
+
+% Strategy 2: Put option cover at 50%
+AssetScenarios(:, 2) = (max(Price_T, Strike50) - (Price_0 + Put50)) ./ ...
+    (Price_0 + Put50);
+
+% Strategy 2: Put option cover at 75%
+AssetScenarios(:, 3) = (max(Price_T, Strike75) - (Price_0 + Put75)) ./ ...
+    (Price_0 + Put75);
+
+% Strategy 2: Put option cover at 90%
+AssetScenarios(:, 4) = (max(Price_T, Strike90) - (Price_0 + Put90)) ./ ...
+    (Price_0 + Put90);
+
+% Strategy 2: Put option cover at 95%
+AssetScenarios(:, 5) = (max(Price_T, Strike95) - (Price_0 + Put95)) ./ ...
+    (Price_0 + Put95);
+
+Create PortfolioCVar Object Using Hedging Strategies
+
+Create a PortfolioCVaR object using the hedging strategies.
+
+p = PortfolioCVaR('Name','CVaR Portfolio Five Hedging Levels', ...
+   'AssetList',{'Stock','Hedge50','Hedge75','Hedge90','Hedge95'}, ...
+   'Scenarios',AssetScenarios,'LowerBound',0, ...
+   'Budget',1,'ProbabilityLevel',0.95);
+
+% Estimate the efficient frontier to obtain portfolio weights.
+pwgt = estimateFrontier(p);
+
+% Plot the efficient frontier.
+
+Hedge Using Monte Carlo Simulation
+
+10-55

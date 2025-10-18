@@ -1,0 +1,12 @@
+{
+  "page": 1226,
+  "original_text": "CEV = cev(diag(expReturn), ones(nVariables,1), ... \n    diag(sigma), 'Correlation', correlation, ...\n    'StartState', X)",
+  "ocr_text": "CEV=cev(diag(expReturn),ones(nVariables,1),...\ndiag(sigma),Correlation,correlation,...\nStartState,X)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 559.31,
+    "x1": 366.34,
+    "y1": 591.38
+  },
+  "confidence": "high"
+}

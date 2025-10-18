@@ -1,0 +1,12 @@
+{
+  "page": 2112,
+  "original_text": "TargetDate = datemnth(StartDate,NumberMonths)\nTargetDate = datemnth( ___ ,DayFlag,Basis,EndMonthRule)",
+  "ocr_text": "TargetDate=datemnth(StartDate,NumberMonths)\nTargetDate=datemnth(__,DayFlag,Basis,EndMonthRule)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 192.66,
+    "x1": 413.09,
+    "y1": 216.29
+  },
+  "confidence": "high"
+}

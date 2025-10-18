@@ -1,0 +1,8 @@
+Page 1177
+================================================================================
+
+Use the MATLAB® timetable function to create a timetable object. Alternatively, you can use the
+MATLAB conversion function table2timetable to convert a table to a timetable. In this example,
+the timetable TMW_TT is constructed from a table and is only for illustration purposes. After you
+create a timetable object, you can use the Description field of the timetable object to store
+meta-information about the timetable.

@@ -1,0 +1,12 @@
+{
+  "page": 1897,
+  "original_text": "f =\nThe frequency of quotes for the yield.",
+  "ocr_text": "f=s=sd Thefrequencyofquotesfortheyield.",
+  "bbox": {
+    "x0": 92.25,
+    "y0": 156.71,
+    "x1": 353.03,
+    "y1": 168.34
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 368,
+  "original_text": "boundType = repmat(\"simple\",q.NumAssets,1);\nboundType(ii) = \"conditional\";\nq = setBounds(q, lb, ub, 'BoundType',boundType);",
+  "ocr_text": "boundType=repmat(simple,q.NumAssets,1);\nboundType(ii)=conditional;\nq=setBounds(q,lb,ub,_BoundType,boundType);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 350.08,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

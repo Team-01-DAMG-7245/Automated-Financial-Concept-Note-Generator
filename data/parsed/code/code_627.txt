@@ -1,0 +1,7 @@
+Page 568
+================================================================================
+
+% Compute the maximum return portfolio subject to the target risk.
+targetRisk = 0.008;
+new_weights = estimateFrontierByRisk(p,targetRisk);
+end

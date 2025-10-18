@@ -1,0 +1,63 @@
+PortfolioMAD Object
+
+In this section...
+
+“PortfolioMAD Object Properties and Functions” on page 6-17
+
+“Working with PortfolioMAD Objects” on page 6-17
+
+“Setting and Getting Properties” on page 6-18
+
+“Displaying PortfolioMAD Objects” on page 6-18
+
+“Saving and Loading PortfolioMAD Objects” on page 6-18
+
+“Estimating Efficient Portfolios and Frontiers” on page 6-18
+
+“Arrays of PortfolioMAD Objects” on page 6-19
+
+“Subclassing PortfolioMAD Objects” on page 6-20
+
+“Conventions for Representation of Data” on page 6-20
+
+PortfolioMAD Object Properties and Functions
+
+The PortfolioMAD object implements mean absolute-deviation (MAD) portfolio optimization and is
+derived from the abstract class AbstractPortfolio. Every property and function of the
+PortfolioMAD object is public, although some properties and functions are hidden. The
+PortfolioMAD object is a value object where every instance of the object is a distinct version of the
+object. Since the PortfolioMAD object is also a MATLAB object, it inherits the default functions
+associated with MATLAB objects.
+
+Working with PortfolioMAD Objects
+
+The PortfolioMAD object and its functions are an interface for mean absolute-deviation portfolio
+optimization. So, almost everything you do with the PortfolioMAD object can be done using the
+functions. The basic workflow is:
+
+1
+Design your portfolio problem.
+
+2
+Use PortfolioMAD to create the PortfolioMAD object or use the various set functions to set
+up your portfolio problem.
+
+3
+Use estimate functions to solve your portfolio problem.
+
+In addition, functions are available to help you view intermediate results and to diagnose your
+computations. Since MATLAB features are part of a PortfolioMAD object, you can save and load
+objects from your workspace and create and manipulate arrays of objects. After settling on a
+problem, which, in the case of MAD portfolio optimization, means that you have either scenarios,
+data, or moments for asset returns, and a collection of constraints on your portfolios, use
+PortfolioMAD to set the properties for the PortfolioMAD object.
+
+PortfolioMAD lets you create an object from scratch or update an existing object. Since the
+PortfolioMAD object is a value object, it is easy to create a basic object, then use functions to build
+upon the basic object to create new versions of the basic object. This is useful to compare a basic
+problem with alternatives derived from the basic problem. For details, see “Creating the
+PortfolioMAD Object” on page 6-22.
+
+PortfolioMAD Object
+
+6-17

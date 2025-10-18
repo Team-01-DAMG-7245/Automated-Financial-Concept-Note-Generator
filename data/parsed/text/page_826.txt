@@ -1,0 +1,58 @@
+Working with Transaction Costs
+
+The difference between net and gross portfolio returns is transaction costs. The net portfolio return
+proxy has distinct proportional costs to purchase and to sell assets which are maintained in the
+PortfolioMAD object properties BuyCost and SellCost. Transaction costs are in units of total
+return and, as such, are proportional to the price of an asset so that they enter the model for net
+portfolio returns in return form. For example, suppose that you have a stock currently priced $40 and
+your usual transaction costs are 5 cents per share. Then the transaction cost for the stock is 0.05/40
+= 0.00125 (as defined in “Net Portfolio Returns” on page 6-4). Costs are entered as positive values
+and credits are entered as negative values.
+
+Setting Transaction Costs Using the PortfolioMAD Function
+
+To set up transaction costs, you must specify an initial or current portfolio in the InitPort property.
+If the initial portfolio is not set when you set up the transaction cost properties, InitPort is 0. The
+properties for transaction costs can be set using the PortfolioMAD object. For example, assume that
+purchase and sale transaction costs are in the variables bc and sc and an initial portfolio is in the
+variable x0, then transaction costs are set:
+
+bc = [ 0.00125; 0.00125; 0.00125; 0.00125; 0.00125 ];
+sc = [ 0.00125; 0.007; 0.00125; 0.00125; 0.0024 ];
+x0 = [ 0.4; 0.2; 0.2; 0.1; 0.1 ];
+p = PortfolioMAD('BuyCost', bc, 'SellCost', sc, 'InitPort', x0);
+disp(p.NumAssets)
+disp(p.BuyCost)
+disp(p.SellCost)
+disp(p.InitPort)
+
+5
+
+0.0013
+    0.0013
+    0.0013
+    0.0013
+    0.0013
+
+0.0013
+    0.0070
+    0.0013
+    0.0013
+    0.0024
+
+0.4000
+    0.2000
+    0.2000
+    0.1000
+    0.1000
+
+Setting Transaction Costs Using the setCosts Function
+
+You can also set the properties for transaction costs using setCosts. Assume that you have the same
+costs and initial portfolio as in the previous example. Given a PortfolioMAD object p with an initial
+portfolio already set, use setCosts to set up transaction costs:
+
+6
+MAD Portfolio Optimization Tools
+
+6-46

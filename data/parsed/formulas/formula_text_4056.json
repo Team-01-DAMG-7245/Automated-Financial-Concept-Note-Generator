@@ -1,0 +1,12 @@
+{
+  "page": 2295,
+  "original_text": "p = setSolver(p, 'fmincon', 'Display', 'off', 'Algorithm', 'sqp', ...\n        'SpecifyObjectiveGradient', true, 'SpecifyConstraintGradient', true, ...\n        'ConstraintTolerance', 1.0e-8, 'OptimalityTolerance', 1.0e-8, 'StepTolerance', 1.0e-8);",
+  "ocr_text": "p=setSolver(p,fmincon,Display,off,Algorithm,sqp,...\nSpecifyObjectiveGradient,true,_SpecifyConstraintGradient,true,...\nConstraintTolerance,1.0e-8,OptimalityTolerance,1.0e-8,StepTolerance,1.0e-8);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 536.33,
+    "x1": 610.17,
+    "y1": 568.4
+  },
+  "confidence": "high"
+}

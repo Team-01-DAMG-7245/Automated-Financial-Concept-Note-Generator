@@ -1,0 +1,62 @@
+ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [20×1 categorical]
+
+If the number of assets is unknown, setDefaultConstraints accepts NumAssets as an optional
+argument to form a portfolio set for a default problem. Suppose that you have 20 assets:
+
+p = Portfolio;
+p = setDefaultConstraints(p, 20);
+disp(p)
+
+Portfolio with properties:
+
+BuyCost: []
+                      SellCost: []
+                  RiskFreeRate: []
+                     AssetMean: []
+                    AssetCovar: []
+                 TrackingError: []
+                  TrackingPort: []
+                      Turnover: []
+                   BuyTurnover: []
+                  SellTurnover: []
+                          Name: []
+                     NumAssets: 20
+                     AssetList: []
+                      InitPort: []
+                   AInequality: []
+                   bInequality: []
+                     AEquality: []
+                     bEquality: []
+                    LowerBound: [20×1 double]
+                    UpperBound: []
+                   LowerBudget: 1
+                   UpperBudget: 1
+                   GroupMatrix: []
+                    LowerGroup: []
+                    UpperGroup: []
+                        GroupA: []
+                        GroupB: []
+                    LowerRatio: []
+                    UpperRatio: []
+                  MinNumAssets: []
+                  MaxNumAssets: []
+    ConditionalBudgetThreshold: []
+        ConditionalUpperBudget: []
+                     BoundType: [20×1 categorical]
+
+See Also
+Portfolio | setDefaultConstraints | setBounds | setBudget | setConditionalBudget |
+setGroups | setGroupRatio | setEquality | setInequality | setTurnover |
+setOneWayTurnover | setTrackingPort | setTrackingError
+
+Related Examples
+
+•
+“Working with 'Simple' Bound Constraints Using Portfolio Object” on page 4-62
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-60

@@ -1,0 +1,12 @@
+{
+  "page": 2298,
+  "original_text": "maxReturn = max(qret); % Max return portfolio\nminReturn = min(qret); % Min return portfolio\ndisplay(0.01*(maxReturn-minReturn))",
+  "ocr_text": "maxReturn=max(qret);Maxreturnportfolio\nminReturn=min(qret);Minreturnportfolio\ndisplay(0.01*(maxReturn-minReturn))",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 93.03,
+    "x1": 333.82,
+    "y1": 125.09
+  },
+  "confidence": "high"
+}

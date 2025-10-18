@@ -1,0 +1,12 @@
+{
+  "page": 1287,
+  "original_text": "figure\nh = dendrogram( irregularComponentLinkage, numCommodities, ...\n    \"Labels\", commodityNames, ...\n    \"ColorThreshold\", 1.2 );\nylabel( \"Dissimilarity\" )\ntitle( \"Commodity Price Series Clustering\" )\nsubtitle( \"Irregular Component Correlation Distance\" )\nset( h, \"LineWidth\", 2 )\nxtickangle( 45 )\ngrid( \"on\" )\nbox( \"on\" )",
+  "ocr_text": "figure\n\nh=dendrogram(_irregularComponentLinkage,numCommodities,...\nLabels,commodityNames,...\nColorThreshold,1.2);\n\nylabel(Dissimilarity)\n\ntitle(CommodityPriceSeriesClustering)\n\nsubtitle(IrregularComponentCorrelationDistance)\n\nset(h,LineWidth,2)\n\nxtickangle(45)\n\ngrid(on)\n\nbox(on)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 514.48,
+    "x1": 425.95,
+    "y1": 632.94
+  },
+  "confidence": "high"
+}

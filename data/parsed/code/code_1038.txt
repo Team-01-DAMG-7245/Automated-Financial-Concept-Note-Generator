@@ -1,0 +1,6 @@
+Page 1066
+================================================================================
+
+The E and CM steps are repeated until the log-likelihood function ceases to increase. One of the
+important properties of the ECM algorithm is that it is always guaranteed to find a maximum of the
+log-likelihood function and, under suitable conditions, this maximum can be a global maximum.

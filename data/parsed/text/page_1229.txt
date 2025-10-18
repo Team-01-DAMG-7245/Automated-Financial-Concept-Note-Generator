@@ -1,0 +1,58 @@
+Because simByEuler is a valid simulation method, you can call it directly, overriding the
+Simulation parameter's current method or function (which in this case is simByEuler). The
+following statements produce the same price paths as generated in “Simulate Equity Markets Using
+the Default Simulate Method” on page 14-35.
+
+Load the Data_GlobalIdx2 data set from the matlabroot/examples/finance/data directory and
+use sde to specify the SDE model as in
+
+load Data_GlobalIdx2
+prices  = [Dataset.TSX Dataset.CAC Dataset.DAX ...
+    Dataset.NIK Dataset.FTSE Dataset.SP];
+
+returns =  tick2ret(prices);
+
+nVariables  = size(returns,2);
+expReturn   = mean(returns);
+sigma       = std(returns);
+correlation = corrcoef(returns);
+t           = 0;
+X           = 100;
+X           = X(ones(nVariables,1));
+
+F = @(t,X) diag(expReturn)* X;
+G = @(t,X) diag(X) * diag(sigma);
+
+SDE = sde(F, G, 'Correlation', ...
+    correlation, 'StartState', X);
+
+Simulate a single path using simByEuler.
+
+nPeriods = 249;      % # of simulated observations
+dt       =   1;      % time increment = 1 day
+rng(142857,'twister')
+[S,T] = simByEuler(SDE, nPeriods, 'DeltaTime', dt);
+
+Simulate 10 trials with the same initial conditions, and examine S.
+
+rng(142857,'twister')
+[S,T] = simulate(SDE, nPeriods, 'DeltaTime', dt, 'nTrials', 10);
+
+whos S
+
+Name        Size               Bytes  Class     Attributes
+
+S         250x6x10            120000  double
+
+Now the output array S is an NPeriods + 1-by-nVariables-by-NTrials time series array.
+
+Plot the first paths.
+
+plot(T, S(:,:,1)), xlabel('Trading Day'), ylabel('Price')
+title('First Path of Multi-Dimensional Market Model')
+legend({'Canada' 'France' 'Germany' 'Japan' 'UK' 'US'},...
+    'Location', 'Best')
+
+Simulating Equity Prices
+
+14-37

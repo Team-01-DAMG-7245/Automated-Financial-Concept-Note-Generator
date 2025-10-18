@@ -1,0 +1,6 @@
+Page 1685
+================================================================================
+
+The simByQuadExp function runs processing functions at each interpolation time. The functions
+must accept the current interpolation time t, and the current state vector Xt and return a state vector
+that can be an adjustment to the input state.

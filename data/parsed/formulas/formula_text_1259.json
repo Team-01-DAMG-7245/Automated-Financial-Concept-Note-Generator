@@ -1,0 +1,12 @@
+{
+  "page": 625,
+  "original_text": "% Read table of daily adjusted close prices for 2006 DJI stocks\npricesTT = readtimetable('dowPortfolio.xlsx');\n% Compute the returns from the prices\nreturnsTT = tick2ret(pricesTT);",
+  "ocr_text": "Readtableofdailyadjustedclosepricesfor2006DJIstocks\npricesTT=readtimetable(dowPortfolio.xlsx);\nComputethereturnsfromtheprices\nreturnsTT=tick2ret(pricesTT);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 266.15,
+    "x1": 431.33,
+    "y1": 309.01
+  },
+  "confidence": "high"
+}

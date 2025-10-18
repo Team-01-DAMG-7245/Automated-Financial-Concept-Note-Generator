@@ -1,0 +1,12 @@
+{
+  "page": 1636,
+  "original_text": "roughhestonObj = roughheston(Return,Speed,Level,Volatility,Alpha)",
+  "ocr_text": "roughheston0Obj=roughheston(Return,Speed,Level,Volatility,Alpha)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 678.47,
+    "x1": 442.17,
+    "y1": 688.93
+  },
+  "confidence": "high"
+}

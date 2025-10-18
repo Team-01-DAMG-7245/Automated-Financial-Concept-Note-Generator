@@ -1,0 +1,5 @@
+Page 1511
+================================================================================
+
+If you specify JumpVol as a deterministic function of time and state, it must return an NVars-by-
+NJumps matrix when you call it with two inputs:

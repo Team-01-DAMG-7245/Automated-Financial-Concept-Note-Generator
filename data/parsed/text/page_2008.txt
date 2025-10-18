@@ -1,0 +1,33 @@
+734297      734396      734761      735127      735492      735857      736222      736588
+
+PayCF = 1×12
+
+-0.3644    0.5000    1.4048    1.9823    2.8436    3.2842    3.8218    4.1733    4.5164    4.4
+
+PayCFDates = 1×12
+
+734297      734396      734761      735127      735492      735857      736222      736588
+
+Define CFlowDates and CFlowAmounts for the swap and generate a cash flow plot using cfplot.
+
+CFlowDates = [PayCFDates;RecCFDates];
+CFlowAmounts = [-PayCF;RecCF];
+cfplot(CFlowDates, CFlowAmounts, 'Groups', {[1 2]});
+xlabel('Numeric Cash Flow Dates');
+
+Input Arguments
+
+CFlowDates — Matrix of dates for cash flows
+vector
+
+Matrix of datetime arrays for cash flows, specified as a NINST-by-(Number of cash flows) matrix
+of cash flow dates using datetime format, with empty entries padded with NaNs.
+
+Each row of the CFlowDates matrix represents an instrument so that CFlowDates(k,:) is the
+vector of cash flow dates for the kth instrument. Rows are padded with trailing NaNs if the number of
+cash flows is not the same for all instruments.
+
+15
+Functions
+
+15-702

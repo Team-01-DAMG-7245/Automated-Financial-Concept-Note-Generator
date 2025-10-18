@@ -1,0 +1,12 @@
+{
+  "page": 1001,
+  "original_text": "pd = probdefault(sc);",
+  "ocr_text": "pd=probdefault(sc);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 523.13,
+    "x1": 203.78,
+    "y1": 533.6
+  },
+  "confidence": "high"
+}

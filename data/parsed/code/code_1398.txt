@@ -1,0 +1,7 @@
+Page 1388
+================================================================================
+
+As a deterministic function of time, when Speed is called with a real-valued scalar time t as its only
+input, Speed must produce an NVars-by-NVars matrix. If you specify Speed as a function of time and
+state, it calculates the speed of mean reversion. This function must generate an NVars-by-NVars
+matrix of reversion rates when called with two inputs:

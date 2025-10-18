@@ -1,0 +1,12 @@
+{
+  "page": 55,
+  "original_text": "ROR = irr(Stream)",
+  "ocr_text": "ROR=irr(Stream)",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 523.48,
+    "x1": 182.11,
+    "y1": 533.94
+  },
+  "confidence": "high"
+}

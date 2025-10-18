@@ -1,0 +1,35 @@
+18    18   NaN
+
+The first two series experience their maximum drawdowns from the second to the 18th month in the
+data. The indices for the third series are NaNs because it never has a drawdown.
+
+The 16.58% value loss from month 2 to month 18 for the fund series is verified using the reported
+indices.
+
+Start = MaxDDIndex(1,:);
+End = MaxDDIndex(2,:);
+(TestData(Start(1),1) - TestData(End(1),1))/TestData(Start(1),1)
+
+ans = 
+0.1658
+
+ans = 0.1658
+
+Although the maximum drawdown is measured in terms of returns, maxdrawdown can measure the
+drawdown in terms of absolute drop in value, or in terms of log-returns. To contrast these alternatives
+more clearly, you can work with the fund series, assuming an initial investment of 50 dollars:
+
+Fund50 = 50*TestData(:,1);
+plot(Fund50);
+title('\bfFive-Year Fund Performance, Initial Investment 50 usd');
+xlabel('Months');
+ylabel('Value of Investment');
+
+First, compute the standard maximum drawdown, which coincides with the results above because
+returns are independent of the initial amounts invested.
+
+MaxDD50Ret = maxdrawdown(Fund50)
+
+maxdrawdown
+
+15-1175

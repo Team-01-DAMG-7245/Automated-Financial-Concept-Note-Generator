@@ -1,0 +1,59 @@
+disp(p.LowerGroup);
+
+-Inf
+    0.2000
+
+disp(p.UpperGroup);
+
+0.3000
+       Inf
+
+Add Group Constraints to a PortfolioCVaR Object
+
+Set a group constraint to ensure that the first three assets constitute at most 30% of a portfolio. Then
+add another group constraint to ensure that the odd-numbered assets constitute at least 20% of a
+portfolio.
+
+p = PortfolioCVaR;
+G = [ true true true false false ];    % group matrix for first group constraint
+p = setGroups(p, G, [], 0.3);
+G = [ true false true false true ];    % group matrix for second group constraint
+p = addGroups(p, G, 0.2);
+disp(p.NumAssets);
+
+5
+
+disp(p.GroupMatrix);
+
+1     1     1     0     0
+     1     0     1     0     1
+
+disp(p.LowerGroup);
+
+-Inf
+    0.2000
+
+disp(p.UpperGroup);
+
+0.3000
+       Inf
+
+Add Group Constraints to a PortfolioMAD Object
+
+Set a group constraint to ensure that the first three assets constitute at most 30% of a portfolio. Then
+add another group constraint to ensure that the odd-numbered assets constitute at least 20% of a
+portfolio.
+
+p = PortfolioMAD;
+G = [ true true true false false ];    % group matrix for first group constraint
+p = setGroups(p, G, [], 0.3);
+G = [ true false true false true ];    % group matrix for second group constraint
+p = addGroups(p, G, 0.2);
+disp(p.NumAssets);
+
+5
+
+15
+Functions
+
+15-446

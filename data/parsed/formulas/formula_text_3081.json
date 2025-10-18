@@ -1,0 +1,12 @@
+{
+  "page": 1615,
+  "original_text": "batesObj = \n   Class BATES: Bates Bivariate Stochastic Volatility\n   --------------------------------------------------\n     Dimensions: State = 2, Brownian = 2",
+  "ocr_text": "batesObj=\nClassBATES:BatesBivariateStochasticVolatility\nDimensions:State=2,Brownian=2",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 676.23,
+    "x1": 377.15,
+    "y1": 719.09
+  },
+  "confidence": "high"
+}

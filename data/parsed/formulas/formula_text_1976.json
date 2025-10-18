@@ -1,0 +1,12 @@
+{
+  "page": 1026,
+  "original_text": "fprintf('Contract \\t Dirty Price \\t Acc Premium \\t  Clean Price\\n');",
+  "ocr_text": "fprintf(ContracttDirtyPrice(tAccPremium(tCleanPricen);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 362.23,
+    "x1": 458.46,
+    "y1": 372.69
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,12 @@
+{
+  "page": 107,
+  "original_text": "DS = NaN(size(S));\nshiftS = S(dS+1:end);\nDS(1:end-dS) = sign(shiftS-S(1:end-dS));",
+  "ocr_text": "DS=NaN(size(S));\nshiftS=S(dS+1l:end);\nDS(1:end-dS)=sign(shiftS-S(1:end-dS));",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 274.43,
+    "x1": 306.72,
+    "y1": 306.49
+  },
+  "confidence": "high"
+}

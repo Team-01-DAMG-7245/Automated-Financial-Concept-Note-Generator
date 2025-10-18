@@ -1,0 +1,12 @@
+{
+  "page": 350,
+  "original_text": "p = setAssetMoments(p, AssetMean/12, AssetCovar/12);\np = estimateAssetMoments(p, Y, 'DataFormat', 'Prices');",
+  "ocr_text": "p=setAssetMoments(p,AssetMean/12,AssetCovar/12);\np=estimateAssetMoments(p,Y,_DataFormat,Prices);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 441.8,
+    "x1": 388.01,
+    "y1": 463.07
+  },
+  "confidence": "high"
+}

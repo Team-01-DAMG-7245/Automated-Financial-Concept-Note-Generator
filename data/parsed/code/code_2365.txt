@@ -1,0 +1,8 @@
+Page 2235
+================================================================================
+
+To illustrate using the estimateAssetMoments function, generate random samples of 120
+observations of asset returns for four assets from the mean and covariance of asset returns in the
+variables m and C with the portsim function. The default behavior portsim creates simulated data
+with estimated mean and covariance identical to the input moments m and C. In addition to a return
+series created by the portsim function in the variable X, a price series is created in the variable Y:

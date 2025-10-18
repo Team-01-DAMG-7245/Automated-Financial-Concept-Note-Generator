@@ -1,0 +1,41 @@
+The goal is to simulate various paths of daily stock prices, and calculate the price of the barrier
+option as the risk-neutral sample average of the discounted terminal option payoff. Since this is a
+barrier option, you must also determine if and when the barrier is crossed.
+
+This example performs antithetic sampling by explicitly setting the Antithetic flag to true, and
+then specifies an end-of-period processing function to record the maximum and terminal stock prices
+on a path-by-path basis.
+
+Create a GBM model using gbm.
+
+barrier      = 120;           % barrier
+strike       = 100;           % exercise price
+rate         = 0.05;          % annualized risk-free rate
+sigma        = 0.3;           % annualized volatility
+nPeriods     = 63;            % 63 trading days
+dt           = 1 / 252;       % time increment = 252 days
+Time        = nPeriods * dt; % expiration time = 0.25 years
+obj        = gbm(rate, sigma, 'StartState', 105);
+
+Perform a small-scale simulation that explicitly returns two simulated paths.
+
+rng('default')                % make output reproducible
+[X, T] = obj.simBySolution(nPeriods, 'DeltaTime', dt, ...
+                'nTrials', 2, 'Antithetic', true);
+
+Perform antithetic sampling such that all primary and antithetic paths are simulated and stored in
+successive matching pairs. Odd paths (1,3,5,...) correspond to the primary Gaussian paths. Even
+paths (2,4,6,...) are the matching antithetic paths of each pair, derived by negating the Gaussian
+draws of the corresponding primary (odd) path. Verify this by examining the matching paths of the
+primary/antithetic pair.
+
+plot(T, X(:,:,1), 'blue', T, X(:,:,2), 'red')
+xlabel('Time (Years)'), ylabel('Stock Price'), ... 
+            title('Antithetic Sampling')
+legend({'Primary Path' 'Antithetic Path'}, ...
+            'Location', 'Best')
+
+15
+Functions
+
+15-404

@@ -1,0 +1,12 @@
+{
+  "page": 478,
+  "original_text": "% Invest in both long and short positions proportionally to their predicted returns.\nLongShortStrategy = backtestStrategy('LongShort',@LongShortRebalanceFcn, ...\n    'TransactionCosts',tradingCosts, ...\n    'LookbackWindow',1);",
+  "ocr_text": "Investinbothlongandshortpositionsproportionallytotheirpredictedreturns.\nLongShortStrategy=backtestStrategy(LongShort,fLongShortRebalanceFcn,...\nTransactionCosts,tradingCosts,...\nLookbackWindow,1);",
+  "bbox": {
+    "x0": 90.0,
+    "y0": 358.44,
+    "x1": 545.12,
+    "y1": 401.31
+  },
+  "confidence": "high"
+}

@@ -1,0 +1,63 @@
+% strategy as well as the MACD strategy.  This is because they both trade
+% on their respective signals in the same way (buy when signal goes from
+% 0->1, sell when signal goes from 1->0).  Build an anonymous
+% function for the rebalance functions of the strategies that calls the
+% shared crossoverRebalanceFcn() with the appropriate signal name string
+% for each strategy.
+
+% Each anonymous function takes the current weights (w), prices (p), 
+% and signal (s) data from the backtest engine and passes it to the
+% crossoverRebalanceFcn function with the signal name string.
+smaInitWeights = computeInitialWeights(smaSignal(20,:));
+smaRebalanceFcn = @(w,p,s) crossoverRebalanceFcn(w,p,s,smaSignalNameEnding);
+smaStrategy = backtestStrategy('SMA',smaRebalanceFcn,...
+    'TransactionCosts',tradingCosts,...
+    'LookbackWindow',2,...
+    'InitialWeights',smaInitWeights);
+
+macdInitWeights = computeInitialWeights(macdSignal(20,:));
+macdRebalanceFcn = @(w,p,s) crossoverRebalanceFcn(w,p,s,macdSignalNameEnding);
+macdStrategy = backtestStrategy('MACD',macdRebalanceFcn,...
+    'TransactionCosts',tradingCosts,...
+    'LookbackWindow',2,...
+    'InitialWeights',macdInitWeights);
+
+% The RSI strategy uses its signal differently, buying on a 0->1
+% transition and selling on a 0->-1 transition.  This logic is captured in
+% the rsiRebalanceFcn function defined in the Local Functions section.
+rsiInitWeights = computeInitialWeights(rsiSignal(20,:));
+rsiStrategy = backtestStrategy('RSI',@rsiRebalanceFcn,...
+    'TransactionCosts',tradingCosts,...
+    'LookbackWindow',2,...
+    'InitialWeights',rsiInitWeights);
+
+Set Up Backtest
+
+As a benchmark, this example also runs a simple equal-weighted strategy to determine if the trading
+signals are providing valuable insights into future returns of the assets. The benchmark strategy is
+rebalanced every four weeks.
+
+% The equal weight strategy requires no history, so set LookbackWindow to 0.
+benchmarkStrategy = backtestStrategy('Benchmark',@equalWeightFcn,...
+    'TransactionCosts',tradingCosts,...
+    'RebalanceFrequency',20,...
+    'LookbackWindow',0);
+
+Aggregate each of the individual signal timetables into a single backtest signal timetable.
+
+% Combine the three signal timetables.
+signalTT = timetable;
+signalTT = synchronize(signalTT, smaSignal);
+signalTT = synchronize(signalTT, macdSignal);
+signalTT = synchronize(signalTT, rsiSignal);
+
+Use backtestEngine to create the backtesting engine and then use runBacktest to run the
+backtest. The risk-free rate earned on uninvested cash is 1% annualized.
+
+% Put the benchmark strategy and three signal strategies into an array.
+strategies = [benchmarkStrategy smaStrategy macdStrategy rsiStrategy];
+
+4
+Mean-Variance Portfolio Optimization Tools
+
+4-258
