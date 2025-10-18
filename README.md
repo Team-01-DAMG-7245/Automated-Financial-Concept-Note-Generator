@@ -179,15 +179,3 @@ See `HYBRID_CHUNKING_JUSTIFICATION.md` for detailed analysis.
 - **Structured Output**: Instructor package
 - **Fallback**: Wikipedia API
 
-## Project Status
-- [x] Lab 1.1: PDF Corpus Construction
-- [x] Lab 1.2: Chunking Pipeline (5 strategies evaluated)
-- [x] Lab 1.3: Embeddings Module (text-embedding-3-large)
-- [x] Lab 1.4: Pinecone Storage (vector database)
-- [ ] Lab 2: Vector Store Setup (Complete!)
-- [ ] Lab 3: Airflow DAG
-- [ ] Lab 4: FastAPI Service
-- [ ] Lab 5: Streamlit Frontend
-- [ ] Lab 6: Wikipedia Fallback
-
-
