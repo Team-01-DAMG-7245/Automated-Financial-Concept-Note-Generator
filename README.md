@@ -179,3 +179,20 @@ See `HYBRID_CHUNKING_JUSTIFICATION.md` for detailed analysis.
 - **Structured Output**: Instructor package
 - **Fallback**: Wikipedia API
 
+\
+# Lab 2 - Airflow Orchestration
+
+## Overview
+Managed orchestration pipeline using AWS MWAA.
+
+## Quick Start
+1. Configure AWS: `aws configure --profile aurelia`
+2. Create S3 buckets: `./scripts/setup_s3_buckets.sh`
+3. Create VPC: `./scripts/create_mwaa_vpc.sh`
+4. Deploy DAGs: `./scripts/deploy_dags.sh`
+
+## Structure
+- `dags/` - Airflow DAG files
+- `scripts/` - Setup scripts
+- `infrastructure/` - AWS configs
+- `config/` - Configuration files
