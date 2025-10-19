@@ -1,29 +1,26 @@
-# ============================================
-# MWAA 2.7.2 Compatible Requirements
-# ============================================
-# NOTE: Do NOT include apache-airflow - it's pre-installed!
+# ---- MWAA Airflow 2.7.2 on Python 3.11 ----
+-c https://raw.githubusercontent.com/apache/airflow/constraints-2.7.2/constraints-3.11.txt
 
-# AWS Providers
-apache-airflow-providers-amazon==8.13.0
+# AWS provider (works fine on 2.7.x)
+apache-airflow-providers-amazon==9.1.0
 
-# LLM & Embeddings
-openai==1.7.2
-langchain==0.1.0
-langchain-openai==0.0.5
+# Core data stack (pin both to avoid pandas↔numpy mismatch)
+numpy==2.0.2
+pandas==2.2.3
 
-# Vector Database
-pinecone-client==3.0.3
-
-# Data & Utilities
-pandas==2.1.4
-numpy==1.26.3
-requests==2.31.0
-
-# Wikipedia (choose ONE - using wikipedia, not Wikipedia-API)
+# Wikipedia + basics
 wikipedia==1.4.0
+requests==2.32.3
+beautifulsoup4==4.12.3
 
-# Models
-pydantic==2.5.3
+# Models / validation
+pydantic==2.7.4
 
-# Database
+# DB driver
 psycopg2-binary==2.9.9
+
+# LLM / Vector — pin to stable ranges to avoid breaking changes
+openai>=1.30,<2
+langchain>=0.2.12,<0.3
+langchain-openai>=0.1.7,<0.2
+pinecone-client>=2.2.4,<3
