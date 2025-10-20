@@ -1,0 +1,46 @@
+# ============================================
+# CRITICAL: Environment & Secrets
+# ============================================
+.env
+*.env
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*credentials*.csv
+**/.env
+**/config/*.env
+infrastructure/**/credentials*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Airflow
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+
+# Outputs
+outputs/temp/
+test_chroma_db/
