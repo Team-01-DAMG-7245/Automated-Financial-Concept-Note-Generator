@@ -1,26 +1,19 @@
-# ---- MWAA Airflow 2.7.2 on Python 3.11 ----
--c https://raw.githubusercontent.com/apache/airflow/constraints-2.7.2/constraints-3.11.txt
+# ---- MWAA Airflow 2.7.2 / Python 3.11 ----
+# Do NOT include apache-airflow itself.
+# Match MWAA's internal pin for the Amazon provider:
+# --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.2.2/constraints-3.7.txt"
 
-# AWS provider (works fine on 2.7.x)
-apache-airflow-providers-amazon==9.1.0
+# apache-airflow-providers-amazon==8.7.1
 
-# Core data stack (pin both to avoid pandas↔numpy mismatch)
-numpy==2.0.2
-pandas==2.2.3
-
-# Wikipedia + basics
+numpy==1.24.4
+pandas==2.1.1
 wikipedia==1.4.0
-requests==2.32.3
-beautifulsoup4==4.12.3
-
-# Models / validation
-pydantic==2.7.4
-
-# DB driver
+requests==2.31.0
+beautifulsoup4==4.12.2
+pydantic==2.7.2
 psycopg2-binary==2.9.9
 
-# LLM / Vector — pin to stable ranges to avoid breaking changes
 openai>=1.30,<2
-langchain>=0.2.12,<0.3
-langchain-openai>=0.1.7,<0.2
-pinecone-client>=2.2.4,<3
+langchain>=0.2.12
+langchain-openai>=0.1.7
+pinecone==6.0.0
