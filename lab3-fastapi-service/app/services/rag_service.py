@@ -1,14 +1,29 @@
 """
 RAG Service for querying and seeding financial concepts
 """
+from datetime import datetime, timedelta
+import os
 import logging
 from typing import List, Dict, Any
 import asyncio
-from app.models.schemas import QueryResponse, SeedResponse, RetrievedChunk
+from app.models.schemas import QueryResponse, SeedResponse, RetrievedChunk, ConceptNote
 from app.services.pinecone_service import PineconeService, PineconeQueryError
 from app.services.wikipedia_fallback import WikipediaFallbackService
+from app.core.db import SessionLocal, Base, engine
+from app.services.generator import generate_concept_note
+from app.services.repo import get_cached_concept, upsert_concept_note
 
 logger = logging.getLogger(__name__)
+
+
+# Ensure DB tables exist (safe to call at import time)
+Base.metadata.create_all(bind=engine)
+
+# Cache freshness window
+MAX_CACHE_AGE_HOURS = int(os.getenv("MAX_CACHE_AGE_HOURS", "720"))
+
+def _is_stale(dt: datetime) -> bool:
+    return (datetime.utcnow() - dt) > timedelta(hours=MAX_CACHE_AGE_HOURS)
 
 
 class RAGService:
@@ -52,106 +67,119 @@ class RAGService:
             # Continue with mock mode
             logger.warning("Continuing in mock mode without vector store")
     
-    async def query_concept(
-        self,
-        concept_name: str,
-        top_k: int = 5
-    ) -> QueryResponse:
-        """
-        Query for a financial concept and generate a note
-        
-        Args:
-            concept_name: Name of the concept to query
-            top_k: Number of chunks to retrieve
-            
-        Returns:
-            QueryResponse with retrieved chunks and generated note
-        """
+    async def query_concept(self, concept_name: str, top_k: int = 5) -> QueryResponse:
         logger.info(f"Querying concept: {concept_name} with top_k={top_k}")
-        
-        # Step 1: Query Pinecone for similar chunks
+
+        # --- 0) CACHE LOOKUP ---
+        with SessionLocal() as db:
+            row = get_cached_concept(db, concept_name.strip())
+            if row and not _is_stale(row.generated_at):
+                logger.info(f"Cache hit for concept: {concept_name}")
+                cached_note = ConceptNote(
+                    concept=row.concept,
+                    definition=row.definition,
+                    intuition=row.intuition,
+                    formulae=row.formulae,
+                    step_by_step=row.step_by_step,
+                    pitfalls=row.pitfalls,
+                    examples=row.examples,
+                    citations=row.citations,
+                    used_fallback=row.used_fallback,
+                    generated_at=row.generated_at,
+                )
+                return QueryResponse(
+                    concept_name=concept_name,
+                    retrieved_chunks=[],
+                    source="cache",
+                    generated_note=cached_note.model_dump(),
+                )
+
+        # --- 1) RETRIEVE (unchanged logic) ---
         try:
             if self.pinecone_service and self.pinecone_service.index:
-                # Use real Pinecone service
                 pinecone_results = await self.pinecone_service.query_similar_chunks(
                     concept_query=concept_name,
                     top_k=top_k
                 )
-                
                 if pinecone_results:
                     logger.info(f"Retrieved {len(pinecone_results)} chunks from Pinecone")
                     chunks = self._format_pinecone_results(pinecone_results)
                     source = "fintbx_pdf (Pinecone Vector DB)"
                 else:
-                    # No Pinecone results - try Wikipedia fallback
                     logger.warning("No results from Pinecone, attempting Wikipedia fallback")
                     chunks = await self._try_wikipedia_fallback(concept_name, top_k)
                     source = "wikipedia (Fallback)" if chunks else "Mock Data (No results)"
             else:
-                # Pinecone not available - try Wikipedia fallback
                 logger.warning("Pinecone not available, attempting Wikipedia fallback")
                 chunks = await self._try_wikipedia_fallback(concept_name, top_k)
                 source = "wikipedia (Fallback)" if chunks else "Mock Data (Pinecone not connected)"
-                
         except PineconeQueryError as e:
-            # Pinecone error - try Wikipedia fallback
             logger.error(f"Pinecone query error: {str(e)}, attempting Wikipedia fallback")
             chunks = await self._try_wikipedia_fallback(concept_name, top_k)
             source = "wikipedia (Fallback)" if chunks else "Mock Data (Pinecone error)"
-        
-        # Step 2: Generate concept note
-        generated_note = await self._generate_concept_note(
-            concept_name=concept_name,
-            chunks=chunks
-        )
-        
-        # Step 3: Format response
+
+        # --- 2) GENERATE (Instructor) ---
+        generated_note = await self._generate_concept_note(concept_name=concept_name, chunks=chunks)
+
+        # --- 3) UPSERT CACHE ---
+        try:
+            # convert dict back to ConceptNote for repo (pydantic will validate)
+            note_obj = ConceptNote(**generated_note)
+            with SessionLocal() as db:
+                upsert_concept_note(db, note_obj)
+                db.commit()
+        except Exception as e:
+            logger.warning(f"Cache upsert failed for '{concept_name}': {e}")
+
+        # --- 4) RESPONSE ---
         return QueryResponse(
             concept_name=concept_name,
             retrieved_chunks=chunks,
             source=source,
             generated_note=generated_note
         )
+
     
-    async def seed_concept(
-        self,
-        concept_name: str,
-        force_refresh: bool = False
-    ) -> SeedResponse:
-        """
-        Seed the database with embeddings for a concept
-        
-        Args:
-            concept_name: Name of the concept to seed
-            force_refresh: Whether to force refresh existing embeddings
-            
-        Returns:
-            SeedResponse with success status
-        """
+    async def seed_concept(self, concept_name: str, force_refresh: bool = False) -> SeedResponse:
         logger.info(f"Seeding concept: {concept_name}, force_refresh={force_refresh}")
-        
-        # Check if concept already exists
-        if not force_refresh:
-            exists = await self._check_concept_exists(concept_name)
-            if exists:
+
+        # respect existing cache unless forced
+        with SessionLocal() as db:
+            row = get_cached_concept(db, concept_name.strip())
+            if row and not force_refresh and not _is_stale(row.generated_at):
                 return SeedResponse(
                     success=True,
-                    message=f"Concept '{concept_name}' already exists. Use force_refresh=true to update.",
+                    message=f"Concept '{concept_name}' already cached; skipped. Use force_refresh=true to update.",
                     concept_name=concept_name
                 )
-        
-        # Generate embeddings and store
+
+        # retrieve
+        chunks: List[RetrievedChunk] = []
         try:
-            await self._generate_and_store_embeddings(concept_name)
-            
-            return SeedResponse(
-                success=True,
-                message=f"Concept '{concept_name}' seeded successfully",
-                concept_name=concept_name
-            )
+            if self.pinecone_service and self.pinecone_service.index:
+                pine = await self.pinecone_service.query_similar_chunks(concept_query=concept_name, top_k=5)
+                if pine:
+                    chunks = self._format_pinecone_results(pine)
         except Exception as e:
-            logger.error(f"Failed to seed concept {concept_name}: {str(e)}")
-            raise
+            logger.warning(f"Pinecone error during seed: {e}")
+
+        if not chunks:
+            chunks = await self._try_wikipedia_fallback(concept_name, top_k=5)
+            if not chunks:
+                return SeedResponse(success=False, message="No sources found", concept_name=concept_name)
+
+        # generate + upsert
+        note = await self._generate_concept_note(concept_name, chunks)
+        try:
+            with SessionLocal() as db:
+                upsert_concept_note(db, ConceptNote(**note))
+                db.commit()
+        except Exception as e:
+            logger.error(f"Failed to upsert cache during seed: {e}")
+            return SeedResponse(success=False, message=f"Seed failed: {e}", concept_name=concept_name)
+
+        return SeedResponse(success=True, message="Concept seeded successfully", concept_name=concept_name)
+
     
     async def _generate_query_embedding(self, query: str) -> List[float]:
         """
@@ -185,18 +213,26 @@ class RAGService:
         formatted_chunks = []
         
         for result in pinecone_results:
-            chunk = RetrievedChunk(
-                content=result['chunk_text'],
-                metadata={
-                    "section_title": result['metadata']['section_title'],
-                    "page_number": result['metadata']['page_number'],
-                    "document_source": result['metadata']['document_source'],
-                    "chunk_id": result['metadata'].get('chunk_id', ''),
-                    "chunk_index": result['metadata'].get('chunk_index', 0)
-                },
-                score=result['similarity_score']
-            )
-            formatted_chunks.append(chunk)
+            md = result.get("metadata", {}) or {}
+            # normalize names expected by the generator/citations
+            metadata = {
+                "source_type": "pdf",
+                "title": md.get("section_title"),
+                "page": md.get("page_number"),
+                "url": md.get("document_source"),   # if you have a URL, put it here
+                "document_source": md.get("document_source"),
+                "section_title": md.get("section_title"),
+                "page_number": md.get("page_number"),
+                "chunk_id": md.get("chunk_id", ""),
+                "chunk_index": md.get("chunk_index", 0),
+            }
+            formatted_chunks.append(
+                RetrievedChunk(
+                    content=result.get("chunk_text", ""),
+                    metadata=metadata,
+                    score=result.get("similarity_score"),
+                )
+        )
         
         return formatted_chunks
     
@@ -218,21 +254,19 @@ class RAGService:
         try:
             if self.wikipedia_fallback:
                 logger.info(f"Attempting Wikipedia fallback for: '{concept_name}'")
-                chunks = await self.wikipedia_fallback.get_fallback_chunks(
-                    concept_name=concept_name,
-                    top_k=top_k
-                )
-                
+                chunks = await self.wikipedia_fallback.get_fallback_chunks(concept_name=concept_name, top_k=top_k)
                 if chunks:
+                    # tag all as wikipedia sources
+                    for ch in chunks:
+                        md = ch.metadata or {}
+                        md["source_type"] = "wikipedia"
+                        ch.metadata = md
                     logger.info(f"Wikipedia fallback successful: {len(chunks)} chunks")
                     return chunks
-                else:
-                    logger.warning(f"Wikipedia fallback returned no chunks for: '{concept_name}'")
-                    return await self._retrieve_mock_chunks(top_k)
-            else:
-                logger.warning("Wikipedia fallback service not available")
+                logger.warning(f"Wikipedia fallback returned no chunks for: '{concept_name}'")
                 return await self._retrieve_mock_chunks(top_k)
-                
+            logger.warning("Wikipedia fallback service not available")
+            return await self._retrieve_mock_chunks(top_k)
         except Exception as e:
             logger.error(f"Wikipedia fallback error: {str(e)}")
             return await self._retrieve_mock_chunks(top_k)
@@ -270,31 +304,14 @@ class RAGService:
         chunks: List[RetrievedChunk]
     ) -> Dict[str, Any]:
         """
-        Generate a concept note from retrieved chunks
-        
-        Args:
-            concept_name: Name of the concept
-            chunks: Retrieved chunks
-            
-        Returns:
-            Generated concept note dictionary
+        Generate a structured concept note using Instructor/OpenAI.
+        Returns a plain dict to match your QueryResponse schema.
         """
-        # TODO: Implement LLM-based note generation
         logger.debug(f"Generating concept note for: {concept_name}")
-        await asyncio.sleep(0.2)  # Simulate async operation
-        
-        # Mock generated note
-        return {
-            "title": concept_name.title(),
-            "summary": f"Comprehensive overview of {concept_name} based on {len(chunks)} retrieved chunks.",
-            "key_points": [
-                f"Key point 1 about {concept_name}",
-                f"Key point 2 about {concept_name}",
-                f"Key point 3 about {concept_name}"
-            ],
-            "related_concepts": ["Related Concept 1", "Related Concept 2"],
-            "confidence": 0.92
-        }
+        # call the structured generator (sync) in a thread to avoid blocking loop
+        note: ConceptNote = await asyncio.to_thread(generate_concept_note, concept_name, chunks)
+        return note.model_dump()
+
     
     async def _check_concept_exists(self, concept_name: str) -> bool:
         """

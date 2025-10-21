@@ -3,6 +3,7 @@ Pydantic schemas for API request/response validation
 """
 from typing import List, Dict, Any, Optional
 from pydantic import BaseModel, Field
+from datetime import datetime
 
 
 class QueryRequest(BaseModel):
@@ -133,3 +134,21 @@ class ErrorResponse(BaseModel):
             }
         }
 
+class Citation(BaseModel):
+    source_type: str = Field(..., description="pdf|wikipedia")
+    title: Optional[str] = None
+    page: Optional[int] = None
+    url: Optional[str] = None
+    score: Optional[float] = None
+
+class ConceptNote(BaseModel):
+    concept: str = Field(..., description="Canonical concept name")
+    definition: str = Field(..., description="Precise, 2-4 sentence definition")
+    intuition: str = Field(..., description="Plain-language intuition")
+    formulae: List[str] = Field(default_factory=list, description="List of plaintext formulas")
+    step_by_step: List[str] = Field(default_factory=list, description="Ordered steps to apply")
+    pitfalls: List[str] = Field(default_factory=list, description="Common mistakes / caveats")
+    examples: List[str] = Field(default_factory=list, description="Short examples or scenarios")
+    citations: List[Citation] = Field(default_factory=list, description="Source traceability")
+    used_fallback: bool = Field(default=False, description="True if Wikipedia fallback used")
+    generated_at: datetime = Field(default_factory=datetime.utcnow, description="UTC timestamp")

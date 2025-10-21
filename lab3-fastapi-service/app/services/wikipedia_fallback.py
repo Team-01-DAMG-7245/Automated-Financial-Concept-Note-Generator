@@ -6,7 +6,7 @@ import logging
 import re
 import time
 from typing import List, Dict, Any, Optional
-import wikipediaapi
+import wikipedia
 from app.models.schemas import RetrievedChunk
 
 logger = logging.getLogger(__name__)
@@ -26,9 +26,9 @@ class WikipediaFallbackService:
         """
         Initialize Wikipedia fallback service
         """
-        self.wiki = wikipediaapi.Wikipedia(
+        self.wiki = wikipedia.Wikipedia(
             language='en',
-            extract_format=wikipediaapi.ExtractFormat.WIKI,
+            extract_format=wikipedia.ExtractFormat.WIKI,
             user_agent='AURELIA-RAG-Service/1.0 (https://github.com/your-repo)'
         )
         self.rate_limit_delay = 1.0  # 1 second between requests
