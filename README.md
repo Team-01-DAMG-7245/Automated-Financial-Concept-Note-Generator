@@ -90,6 +90,106 @@ streamlit run streamlit_app.py --server.port 8501
 #    - Complete concept note with definition, intuition, formulae, etc.
 ```
 
+
+---
+
+## 🚀 Run Locally
+```bash
+cd lab4-streamlit-frontend
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+Backend must be running first:
+
+bash
+Copy code
+cd ../lab3-fastapi-service
+uvicorn app.main:app --reload
+Open: http://localhost:8501
+
+🧠 Overview
+Section	Description
+📚 Query Concepts	Search and generate concept notes via the FastAPI /query endpoint.
+📊 Database Explorer	View all seeded notes stored in PostgreSQL (or SQLite fallback).
+📈 Evaluation Dashboard	Integrates Lab 5 metrics — latency plots, token cost, and accuracy charts.
+
+🔗 API Endpoints Used
+Method	Route	Purpose
+POST	/query	Fetch or generate concept note
+POST	/seed	Insert new financial concept into DB
+GET	/health	Check FastAPI server status
+
+⚙️ Features
+Live Concept Querying: Real-time interaction with the RAG pipeline.
+
+Caching & Retrieval: Fetches from DB first, regenerates if missing.
+
+Interactive Visualization: Uses Plotly and Matplotlib for evaluation graphs.
+
+Session State: Persists last searched concepts across tabs.
+
+Seamless Backend Integration: Communicates with FastAPI JSON endpoints.
+
+🧩 Requirements
+bash
+Copy code
+streamlit
+requests
+pandas
+plotly
+matplotlib
+sqlalchemy
+psycopg2-binary
+🖥️ Example Usage
+bash
+Copy code
+# 1️⃣ Start backend
+cd ../lab3-fastapi-service
+uvicorn app.main:app --reload
+
+# 2️⃣ Launch frontend
+cd ../lab4-streamlit-frontend
+streamlit run streamlit_app.py
+Then visit: http://localhost:8501
+
+# Lab 5 - Evaluation & Benchmarking
+## Requirements Implemented
+- **Req 19**: Quality metrics (accuracy, completeness, citation fidelity)
+- **Req 20**: Latency comparison (cached vs generated)
+- **Req 21**: Retrieval latency & token costs for Pinecone/ChromaDB
+
+## Files
+- `benchmark_suite.py` - Complete benchmarking framework
+- `test_lab5.py` - Testing script for all requirements
+- `evaluation_metrics.log` - Test run logs
+- `results/` - Benchmark outputs and reports
+
+## Usage
+```bash
+# Run tests
+python3 test_lab5.py
+
+# Run full benchmark
+python3 benchmark_suite.py
+
+# Generate plots
+python3 generate_plots.py
+```
+
+## Results
+- Quality Scores: 80% accuracy, 80% completeness, 100% citation fidelity
+- Performance: 27x speedup with caching (15ms cached vs 410ms generated)
+- Cost: ~$0.000008 per query using text-embedding-3-large
+
+## Dependencies
+```
+pandas
+matplotlib
+aiohttp
+openai
+pinecone-client
+chromadb
+requests
+```
 #### **Step 4: Verify Backend Health**
 ```bash
 # In a new terminal, test the backend directly:
@@ -266,13 +366,10 @@ python lab5_evaluation.py
 **Expected Output:**
 ```
 🚀 Starting Enhanced AURELIA Lab 5 Evaluation
-============================================================
 ✅ Backend is healthy
 
 📋 Testing 5 financial concepts
-============================================================
 1. ENHANCED CONCEPT NOTE QUALITY EVALUATION
-============================================================
 🔍 Evaluating concept quality for: Sharpe Ratio (Vector Store: local)
 ✅ Generated concept note in 7.93s
 📊 Source: fintbx_pdf (Local Vector Service)
