@@ -16,7 +16,16 @@ Automated-Financial-Concept-Note-Generator/
 ├── lab4-streamlit-frontend/      # Streamlit web interface
 └── lab5-evaluation-benchmarking/ # Performance evaluation and testing
 ```
+## Submission links:
 
+Github: https://github.com/Team-01-DAMG-7245/Automated-Financial-Concept-Note-Generator
+
+Demo video: https://youtu.be/vfdyIbU_E4Y
+
+Documentation: https://docs.google.com/document/d/1R8fZbUGrrSG2_UM2BiBRFB-Ln1keN-NkJMEvFUgO-ZA/edit?usp=sharing
+
+Codelabs:https://codelabs-preview.appspot.com/?file_id=1R8fZbUGrrSG2_UM2BiBRFB-Ln1keN-NkJMEvFUgO-ZA
+  
 ## 🚀 Quick Start Guide
 
 ### Prerequisites
@@ -158,10 +167,7 @@ Then visit: http://localhost:8501
 - **Req 21**: Retrieval latency & token costs for Pinecone/ChromaDB
 
 ## Files
-- `benchmark_suite.py` - Complete benchmarking framework
-- `test_lab5.py` - Testing script for all requirements
-- `evaluation_metrics.log` - Test run logs
-- `results/` - Benchmark outputs and reports
+- lab5_evaluation.py 
 
 ## Results
 - Quality Scores: 80% accuracy, 80% completeness, 100% citation fidelity
