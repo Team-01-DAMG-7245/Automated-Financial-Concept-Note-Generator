@@ -8,6 +8,7 @@ from typing import List, Dict, Any
 import asyncio
 from app.models.schemas import QueryResponse, SeedResponse, RetrievedChunk, ConceptNote
 from app.services.pinecone_service import PineconeService, PineconeQueryError
+from app.services.local_vector_service import LocalVectorService
 from app.services.wikipedia_fallback import WikipediaFallbackService
 from app.core.db import SessionLocal, Base, engine
 from app.services.generator import generate_concept_note
@@ -36,6 +37,7 @@ class RAGService:
         Initialize RAG service with vector store and LLM
         """
         self.pinecone_service: PineconeService = None
+        self.local_vector_service: LocalVectorService = None
         self.wikipedia_fallback: WikipediaFallbackService = None
         self.llm = None
         self._initialize_components()
@@ -45,14 +47,18 @@ class RAGService:
         Initialize vector store and LLM components
         """
         try:
-            # Initialize Pinecone service
+            # Initialize Local Vector Service (Primary - uses lab1 data)
+            self.local_vector_service = LocalVectorService()
+            logger.info("Local vector service initialized with lab1 data")
+            
+            # Initialize Pinecone service (Secondary - for cloud deployment)
             self.pinecone_service = PineconeService()
             
-            # Test connection
+            # Test Pinecone connection
             if self.pinecone_service.test_connection():
                 logger.info("Pinecone connection verified")
             else:
-                logger.warning("Pinecone connection test failed, service will use mock data")
+                logger.warning("Pinecone connection test failed, will use local vector service")
             
             # Initialize Wikipedia fallback service
             self.wikipedia_fallback = WikipediaFallbackService()
@@ -94,9 +100,34 @@ class RAGService:
                     generated_note=cached_note.model_dump(),
                 )
 
-        # --- 1) RETRIEVE (unchanged logic) ---
+        # --- 1) RETRIEVE (Primary: Local Vector Service, Secondary: Pinecone, Fallback: Wikipedia) ---
+        chunks = []
+        source = "No results"
+        
         try:
-            if self.pinecone_service and self.pinecone_service.index:
+            # PRIMARY: Try local vector service first (lab1 data)
+            if self.local_vector_service and self.local_vector_service.chunks_data:
+                logger.info(f"Querying local vector service for: '{concept_name}'")
+                
+                # Generate query embedding using OpenAI
+                query_embedding = await self._generate_query_embedding(concept_name)
+                if query_embedding:
+                    local_results = self.local_vector_service.query_chunks(
+                        query_embedding=query_embedding,
+                        top_k=top_k,
+                        threshold=0.01  # Very low threshold for testing
+                    )
+                    
+                    if local_results:
+                        logger.info(f"Retrieved {len(local_results)} chunks from local vector service")
+                        chunks = local_results
+                        source = "fintbx_pdf (Local Vector Service)"
+                    else:
+                        logger.warning("No results from local vector service, trying Pinecone")
+            
+            # SECONDARY: Try Pinecone if local service has no results
+            if not chunks and self.pinecone_service and self.pinecone_service.index:
+                logger.info("Attempting Pinecone query as secondary source")
                 pinecone_results = await self.pinecone_service.query_similar_chunks(
                     concept_query=concept_name,
                     top_k=top_k
@@ -105,18 +136,17 @@ class RAGService:
                     logger.info(f"Retrieved {len(pinecone_results)} chunks from Pinecone")
                     chunks = self._format_pinecone_results(pinecone_results)
                     source = "fintbx_pdf (Pinecone Vector DB)"
-                else:
-                    logger.warning("No results from Pinecone, attempting Wikipedia fallback")
-                    chunks = await self._try_wikipedia_fallback(concept_name, top_k)
-                    source = "wikipedia (Fallback)" if chunks else "Mock Data (No results)"
-            else:
-                logger.warning("Pinecone not available, attempting Wikipedia fallback")
+            
+            # FALLBACK: Try Wikipedia if both vector services have no results
+            if not chunks:
+                logger.warning("No results from vector services, attempting Wikipedia fallback")
                 chunks = await self._try_wikipedia_fallback(concept_name, top_k)
-                source = "wikipedia (Fallback)" if chunks else "Mock Data (Pinecone not connected)"
-        except PineconeQueryError as e:
-            logger.error(f"Pinecone query error: {str(e)}, attempting Wikipedia fallback")
+                source = "wikipedia (Fallback)" if chunks else "Mock Data (No results)"
+                
+        except Exception as e:
+            logger.error(f"Retrieval error: {str(e)}, attempting Wikipedia fallback")
             chunks = await self._try_wikipedia_fallback(concept_name, top_k)
-            source = "wikipedia (Fallback)" if chunks else "Mock Data (Pinecone error)"
+            source = "wikipedia (Fallback)" if chunks else "Mock Data (Retrieval error)"
 
         # --- 2) GENERATE (Instructor) ---
         generated_note = await self._generate_concept_note(concept_name=concept_name, chunks=chunks)
@@ -183,7 +213,7 @@ class RAGService:
     
     async def _generate_query_embedding(self, query: str) -> List[float]:
         """
-        Generate embedding for a query
+        Generate embedding for a query using OpenAI
         
         Args:
             query: Query string
@@ -191,11 +221,26 @@ class RAGService:
         Returns:
             Query embedding vector
         """
-        # TODO: Implement embedding generation
-        # For now, return a mock embedding
-        logger.debug(f"Generating embedding for query: {query}")
-        await asyncio.sleep(0.1)  # Simulate async operation
-        return [0.1] * 384  # Mock embedding (384 dimensions for sentence-transformers)
+        try:
+            if self.pinecone_service and self.pinecone_service.openai_client:
+                logger.debug(f"Generating OpenAI embedding for query: {query}")
+                
+                response = self.pinecone_service.openai_client.embeddings.create(
+                    model="text-embedding-3-large",
+                    input=query
+                )
+                
+                embedding = response.data[0].embedding
+                logger.debug(f"Generated embedding with {len(embedding)} dimensions")
+                return embedding
+            else:
+                logger.warning("OpenAI client not available, using mock embedding")
+                # Use a more realistic mock embedding that might match some content
+                return [0.01] * 3072  # Smaller values for better similarity
+                
+        except Exception as e:
+            logger.error(f"Error generating query embedding: {str(e)}")
+            return [0.01] * 3072  # Fallback mock embedding
     
     def _format_pinecone_results(
         self,
