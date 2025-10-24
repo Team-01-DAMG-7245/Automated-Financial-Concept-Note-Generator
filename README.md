@@ -24,7 +24,7 @@ Demo video: https://youtu.be/vfdyIbU_E4Y
 
 Documentation: https://docs.google.com/document/d/1R8fZbUGrrSG2_UM2BiBRFB-Ln1keN-NkJMEvFUgO-ZA/edit?usp=sharing
 
-Codelabs:https://codelabs-preview.appspot.com/?file_id=1R8fZbUGrrSG2_UM2BiBRFB-Ln1keN-NkJMEvFUgO-ZA
+Codelabs: https://codelabs-preview.appspot.com/?file_id=1I2yde3ebxA9MhyqZZKioJD-ajLghyoqNPpSEnaE0nmY#0
   
 ## 🚀 Quick Start Guide
 
