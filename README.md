@@ -250,21 +250,116 @@ Once both services are running:
 
 **Purpose:** Parse fintbx.pdf, create embeddings, and prepare vector data
 
+**Pipeline 1: PDF → Markdown** (Takes ~1 hour)
 ```bash
-# Navigate to Lab 1
-cd lab1-pdf-processing
+python pipeline_orchestrator.py --pipeline 1 --output-dir outputs
+```
+- Parse PDF using multiple techniques
+- Generate structured markdown
+- Save to `outputs/fintbx_complete.md`
 
-# Install dependencies
-pip install -r requirements.txt
+**Pipeline 2: Markdown → Chunks → Embeddings → Storage** (Fast, ~10 seconds)
+```bash
+python pipeline_orchestrator.py --pipeline 2 --output-dir outputs
+```
+- Load markdown file
+- Apply chunking strategy
+- Generate embeddings
+- Store in Pinecone
 
-# Run the complete pipeline
+**Complete Pipeline**:
+```bash
 python pipeline_orchestrator.py --output-dir outputs
+```
+
 
 # Verify results
 python -c "import json; data=json.load(open('outputs/chunks/chunks_markdown_embedded.json')); print(f'✅ {len(data)} chunks with embeddings loaded')"
 ```
 
 **Expected Output:** 49 chunks with embeddings ready for retrieval
+
+### 🚧 Lab 2 – AWS MWAA Orchestration
+
+**Purpose:** Cloud-based orchestration pipeline using AWS Managed Workflows for Apache Airflow
+
+**Infrastructure Setup** (One-time, ~1 hour total)
+```bash
+cd lab2-airflow-orchestration
+
+# 1. Configure AWS credentials
+aws configure --profile aurelia
+source .env
+
+# 2. Create S3 buckets (~1 min)
+./scripts/setup_s3_buckets.sh
+
+# 3. Create VPC infrastructure (~5 mins)
+./scripts/create_mwaa_vpc.sh
+
+# 4. Create MWAA execution role (~1 min)
+./scripts/create_mwaa_role.sh
+
+# 5. Create MWAA environment (~25 mins)
+./scripts/create_mwaa_environment.sh
+
+# 6. Deploy DAGs (~2 mins)
+./scripts/deploy_dags.sh
+```
+
+**Resources Created:**
+- 5 S3 buckets (raw-pdfs, processed-chunks, embeddings, concept-notes, mwaa)
+- VPC with private subnets, NAT gateways, and security groups
+- MWAA environment running Airflow 2.7.2
+
+**DAG 1: `fintbx_ingest_dag`** - Scheduled weekly
+```
+Purpose: Orchestrate Lab 1 embeddings to Pinecone
+Tasks:
+  1. Load Lab 1's pre-computed chunks (49 chunks, MarkdownHeader strategy)
+  2. Validate embeddings (3072-dimension vectors)
+  3. Upload to Pinecone vector database
+  4. Backup embeddings to S3
+  5. Generate pipeline report
+```
+
+**DAG 2: `concept_seed_dag`** - Manual trigger
+```
+Purpose: Pre-generate concept notes for common financial terms
+Concepts: Duration, Sharpe Ratio, Black-Scholes, VaR, Beta, CAPM, etc.
+Tasks:
+  1. Query vector database for concept
+  2. Fallback to Wikipedia if not found
+  3. Generate structured note using instructor
+  4. Cache in S3/Postgres
+```
+
+**Access Airflow UI:**
+```bash
+# Get webserver URL
+aws mwaa get-environment --name aurelia-mwaa \
+    --query 'Environment.WebserverUrl' --output text
+
+# Open: https://<url-from-above>
+```
+
+**Monitor DAGs:**
+```bash
+# Check environment status
+aws mwaa get-environment --name aurelia-mwaa --query 'Environment.Status'
+
+# View task logs (in Airflow UI or CLI)
+aws logs tail /aws/mwaa/environment/aurelia-mwaa/task --follow
+```
+
+**Known Issues:**
+- Package installation via requirements.txt requires specific configuration
+- See `TROUBLESHOOTING.md` for workarounds
+
+**Integration with Lab 1:**
+- Lab 1 outputs stored in: `s3://aurelia-3c28b5-processed-chunks/lab1-outputs/`
+- Pre-computed embeddings: `chunks_markdown_embedded.json` (49 chunks, 24,919 tokens)
+- DAG orchestrates upload to Pinecone for RAG retrieval
 
 ### ✅ Lab 3 – FastAPI Backend Service
 
