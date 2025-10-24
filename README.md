@@ -163,18 +163,6 @@ Then visit: http://localhost:8501
 - `evaluation_metrics.log` - Test run logs
 - `results/` - Benchmark outputs and reports
 
-## Usage
-```bash
-# Run tests
-python3 test_lab5.py
-
-# Run full benchmark
-python3 benchmark_suite.py
-
-# Generate plots
-python3 generate_plots.py
-```
-
 ## Results
 - Quality Scores: 80% accuracy, 80% completeness, 100% citation fidelity
 - Performance: 27x speedup with caching (15ms cached vs 410ms generated)
