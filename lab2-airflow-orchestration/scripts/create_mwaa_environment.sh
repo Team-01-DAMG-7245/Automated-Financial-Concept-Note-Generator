@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -e
 
 # ======= Prereqs =======
 # aws configure (or AWS_PROFILE)
@@ -7,6 +7,7 @@ set -euo pipefail
 # You must have already staged:
 #   s3://$MWAA_BUCKET/requirements.txt
 #   s3://$MWAA_BUCKET/dags/...
+
 
 # ======= Config (from your env) =======
 : "${AWS_REGION:=us-east-1}"

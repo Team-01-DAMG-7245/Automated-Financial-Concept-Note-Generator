@@ -58,7 +58,7 @@ def upload_to_pinecone(**context):
     pc = Pinecone(api_key=os.getenv('PINECONE_API_KEY'))
     index_name = os.getenv('PINECONE_INDEX', 'aurelia-financial-concepts')
     
-    print(f"📌 Uploading to Pinecone index: {index_name}")
+    print(f"Uploading to Pinecone index: {index_name}")
     
     # Create index if doesn't exist
     if index_name not in pc.list_indexes().names():
