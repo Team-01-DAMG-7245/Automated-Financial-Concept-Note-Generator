@@ -21,6 +21,7 @@ with c1:
     if st.button("💾 Seed / Refresh Cache"):
         try:
             payload = {
+                "concept_name": concept,  # ← ADD THIS LINE
                 "sources": [
                     {"type": "web", "uri": "https://en.wikipedia.org/wiki/Sharpe_ratio"},
                     {"type": "web", "uri": "https://www.investopedia.com/terms/s/sharperatio.asp"},

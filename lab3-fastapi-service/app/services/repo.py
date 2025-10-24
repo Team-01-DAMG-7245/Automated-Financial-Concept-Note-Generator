@@ -9,6 +9,7 @@ def get_cached_concept(db: Session, concept: str):
     return db.execute(q).scalar_one_or_none()
 
 def upsert_concept_note(db: Session, note: ConceptNote) -> ConceptNoteRow:
+    # Step 1: Create the insert statement
     stmt = insert(ConceptNoteRow).values(
         concept=note.concept,
         definition=note.definition,
@@ -20,8 +21,11 @@ def upsert_concept_note(db: Session, note: ConceptNote) -> ConceptNoteRow:
         citations=[c.model_dump() for c in note.citations],
         used_fallback=note.used_fallback,
         generated_at=note.generated_at,
-    ).on_conflict_do_update(
-        index_elements=[ConceptNoteRow.concept],
+    )
+    
+    # Step 2: Now stmt exists, so we can reference stmt.excluded
+    stmt = stmt.on_conflict_do_update(
+        index_elements=['concept'],  # Can use string instead of ConceptNoteRow.concept
         set_={
             "definition": stmt.excluded.definition,
             "intuition": stmt.excluded.intuition,
@@ -34,4 +38,5 @@ def upsert_concept_note(db: Session, note: ConceptNote) -> ConceptNoteRow:
             "generated_at": stmt.excluded.generated_at,
         },
     ).returning(ConceptNoteRow)
+    
     return db.execute(stmt).scalar_one()
