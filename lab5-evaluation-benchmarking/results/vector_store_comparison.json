@@ -1,0 +1,692 @@
+{
+  "local_vector_results": [
+    {
+      "concept_name": "Sharpe Ratio",
+      "vector_store": "local",
+      "source": "fintbx_pdf (Local Vector Service)",
+      "generation_time": 8.77551007270813,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 1,
+        "avg_chunk_relevance": 0.5,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "Sharpe Ratio",
+        "definition": "The Sharpe Ratio is a performance metric that measures the risk-adjusted return of an investment portfolio. It is calculated by subtracting the risk-free rate from the portfolio's return and then dividing the result by the standard deviation of the portfolio's excess return. This ratio helps investors understand how much excess return they are receiving for the extra volatility endured by holding a riskier asset.",
+        "intuition": "The Sharpe Ratio tells you how well an investment compensates you for the risk you take. A higher Sharpe Ratio means you are getting more return per unit of risk, making the investment more attractive on a risk-adjusted basis.",
+        "formulae": [
+          "Sharpe Ratio = (Rp - Rf) / \u03c3p",
+          "where Rp = portfolio return, Rf = risk-free rate, \u03c3p = standard deviation of portfolio excess return"
+        ],
+        "step_by_step": [
+          "Calculate the portfolio's return over the period of interest.",
+          "Determine the risk-free rate for the same period.",
+          "Compute the excess return by subtracting the risk-free rate from the portfolio return.",
+          "Calculate the standard deviation of the portfolio's excess returns to measure risk.",
+          "Divide the excess return by the standard deviation to obtain the Sharpe Ratio."
+        ],
+        "pitfalls": [
+          "Using the Sharpe Ratio assumes returns are normally distributed, which may not hold true for all assets.",
+          "It does not distinguish between upside and downside volatility; all volatility is treated as risk.",
+          "Comparing Sharpe Ratios across different time periods or asset classes without adjustment can be misleading.",
+          "Ignoring the impact of leverage or non-linear payoffs can distort the ratio."
+        ],
+        "examples": [
+          "An investor compares two mutual funds: Fund A has a Sharpe Ratio of 1.2, and Fund B has 0.8. Fund A provides better risk-adjusted returns.",
+          "A portfolio with a return of 10%, a risk-free rate of 2%, and a standard deviation of 8% has a Sharpe Ratio of (10%-2%)/8% = 1.0."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": "Investment Performance Metrics",
+            "page": 19,
+            "url": null,
+            "score": 0.359
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-01T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:04:29.953961"
+    },
+    {
+      "concept_name": "Duration",
+      "vector_store": "local",
+      "source": "fintbx_pdf (Local Vector Service)",
+      "generation_time": 9.087236166000366,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 3,
+        "avg_chunk_relevance": 0.0,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "Duration",
+        "definition": "Duration is a measure of the sensitivity of the price of a fixed income investment to changes in interest rates, expressed as the weighted average time until cash flows are received. It quantifies the effective maturity of a bond, considering the present value of all coupon and principal payments.",
+        "intuition": "Duration tells you how much a bond's price will change when interest rates move. A higher duration means the bond is more sensitive to interest rate changes, so its price will fluctuate more.",
+        "formulae": [
+          "Duration = (\u03a3 (t \u00d7 PV(CF_t))) / Price",
+          "where t = time period, PV(CF_t) = present value of cash flow at time t"
+        ],
+        "step_by_step": [
+          "Identify all future cash flows of the bond (coupons and principal).",
+          "Calculate the present value of each cash flow using the current yield or discount rate.",
+          "Multiply each present value by the time period until the cash flow is received.",
+          "Sum all these weighted present values.",
+          "Divide the sum by the current price of the bond to get the duration."
+        ],
+        "pitfalls": [
+          "Duration assumes parallel shifts in the yield curve, which may not always hold true.",
+          "It is an approximation and less accurate for large interest rate changes.",
+          "Duration does not account for embedded options in bonds, such as call or put features."
+        ],
+        "examples": [
+          "A bond with a duration of 5 years will see its price decrease by approximately 5% if interest rates rise by 1%.",
+          "Comparing two bonds, the one with a longer duration is more sensitive to interest rate changes."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": 36,
+            "url": null,
+            "score": 0.263
+          },
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": 38,
+            "url": null,
+            "score": 0.254
+          },
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": 39,
+            "url": null,
+            "score": 0.258
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-10T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:04:39.041197"
+    },
+    {
+      "concept_name": "Black-Scholes Model",
+      "vector_store": "local",
+      "source": "fintbx_pdf (Local Vector Service)",
+      "generation_time": 9.504497766494751,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 1,
+        "avg_chunk_relevance": 0.3333333333333333,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "Black-Scholes Model",
+        "definition": "The Black-Scholes Model is a mathematical framework for pricing European-style options. It assumes that the underlying asset price follows a geometric Brownian motion with constant volatility and interest rate, allowing the derivation of a closed-form solution for option prices. The model is foundational in financial engineering for option valuation and risk management.",
+        "intuition": "The model imagines the price of a stock moving randomly but smoothly over time, with a predictable average growth and volatility. By modeling this behavior mathematically, it calculates the fair price of an option as the expected payoff discounted at the risk-free rate, assuming no arbitrage opportunities.",
+        "formulae": [
+          "dS = \u03bcS dt + \u03c3S dW",
+          "C = S N(d1) - K e^{-rT} N(d2)",
+          "d1 = [ln(S/K) + (r + \u03c3^2/2) T] / (\u03c3 sqrt(T))",
+          "d2 = d1 - \u03c3 sqrt(T)"
+        ],
+        "step_by_step": [
+          "Model the underlying asset price S as a geometric Brownian motion with drift \u03bc and volatility \u03c3.",
+          "Define the option payoff at maturity T based on the strike price K.",
+          "Use risk-neutral valuation to replace the drift \u03bc with the risk-free rate r.",
+          "Calculate d1 and d2 using the formulas involving S, K, r, \u03c3, and T.",
+          "Compute the option price C using the Black-Scholes formula involving the cumulative normal distribution N."
+        ],
+        "pitfalls": [
+          "Assuming constant volatility and interest rates, which may not hold in real markets.",
+          "The model applies only to European options, not American options with early exercise features.",
+          "Ignoring dividends or other payouts from the underlying asset can lead to mispricing.",
+          "Market frictions like transaction costs and liquidity constraints are not considered."
+        ],
+        "examples": [
+          "Pricing a European call option on a non-dividend-paying stock with known volatility and risk-free rate.",
+          "Using the model to estimate the fair value of a European put option by applying put-call parity."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": 24,
+            "url": null,
+            "score": 0.433
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-10T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:04:48.556450"
+    },
+    {
+      "concept_name": "CAPM",
+      "vector_store": "local",
+      "source": "fintbx_pdf (Local Vector Service)",
+      "generation_time": 9.621851682662964,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 1,
+        "avg_chunk_relevance": 0.0,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "CAPM",
+        "definition": "The Capital Asset Pricing Model (CAPM) is a financial model that describes the relationship between systematic risk and expected return for assets, particularly stocks. It asserts that the expected return on a security is equal to the risk-free rate plus a risk premium, which is proportional to the security's beta, a measure of its sensitivity to market movements. CAPM is widely used to estimate the cost of equity and to price risky securities.",
+        "intuition": "CAPM helps investors understand how much return they should expect for taking on additional risk compared to a risk-free investment. It shows that investors need to be compensated for both the time value of money (risk-free rate) and the risk they take relative to the market (beta times market risk premium).",
+        "formulae": [
+          "Expected Return = Risk-Free Rate + Beta \u00d7 (Market Return - Risk-Free Rate)",
+          "E(R_i) = R_f + \u03b2_i (E(R_m) - R_f)"
+        ],
+        "step_by_step": [
+          "Identify the risk-free rate, typically the yield on government bonds.",
+          "Estimate the expected market return based on historical data or market forecasts.",
+          "Calculate the beta of the security, which measures its volatility relative to the market.",
+          "Compute the market risk premium as the difference between the expected market return and the risk-free rate.",
+          "Apply the CAPM formula to find the expected return of the security."
+        ],
+        "pitfalls": [
+          "Assuming beta is constant over time, while it can change with market conditions.",
+          "Using historical data for beta and market returns may not predict future performance accurately.",
+          "Ignoring other factors that can affect returns, such as size, value, or momentum effects.",
+          "Assuming markets are efficient and investors are rational, which may not always hold."
+        ],
+        "examples": [
+          "If the risk-free rate is 2%, the expected market return is 8%, and a stock has a beta of 1.5, then the expected return is 2% + 1.5 \u00d7 (8% - 2%) = 11%.",
+          "An investor uses CAPM to estimate the cost of equity for a company to evaluate whether a project meets the required return."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": null,
+            "url": null,
+            "score": 0.34
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-01T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:04:58.189098"
+    },
+    {
+      "concept_name": "Portfolio Optimization",
+      "vector_store": "local",
+      "source": "fintbx_pdf (Local Vector Service)",
+      "generation_time": 13.521511554718018,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 3,
+        "avg_chunk_relevance": 1.0,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "Portfolio Optimization",
+        "definition": "Portfolio optimization is the process of selecting the best distribution of assets in an investment portfolio to maximize returns for a given level of risk or to minimize risk for a given level of expected return. It involves mathematical modeling of returns and risks, subject to various constraints such as budget, turnover, and regulatory requirements. Techniques include mean-variance optimization, Conditional Value at Risk (CVaR) optimization, and mixed-integer programming to handle complex constraints.",
+        "intuition": "The goal of portfolio optimization is to find the most efficient way to allocate your investments so that you get the highest possible return without taking on more risk than you are comfortable with. It balances the trade-off between risk and reward by considering how different assets interact and how constraints affect your choices.",
+        "formulae": [
+          "Maximize: E(R_p) = \u03a3 w_i * E(R_i)",
+          "Subject to: Risk measure (e.g., variance \u03c3_p^2 = w'\u03a3w) \u2264 target risk",
+          "\u03a3 w_i = 1 (budget constraint)",
+          "w_i \u2265 0 (no short selling, if applicable)",
+          "CVaR optimization: minimize CVaR_\u03b1(w) subject to return and constraints"
+        ],
+        "step_by_step": [
+          "Define the investment universe and collect historical return data.",
+          "Choose a return proxy (expected returns) and a risk proxy (variance, CVaR, etc.).",
+          "Specify constraints such as budget, turnover limits, cardinality, and regulatory requirements.",
+          "Formulate the optimization problem mathematically, incorporating objectives and constraints.",
+          "Select an appropriate solver (e.g., quadratic programming, mixed-integer nonlinear programming).",
+          "Run the optimization to obtain the portfolio weights along the efficient frontier.",
+          "Analyze and validate the optimized portfolio, adjusting constraints or inputs as needed.",
+          "Implement and monitor the portfolio, re-optimizing periodically."
+        ],
+        "pitfalls": [
+          "Relying on inaccurate or unstable estimates of expected returns and covariances can lead to suboptimal portfolios.",
+          "Ignoring constraints or mis-specifying them can produce infeasible or impractical portfolios.",
+          "Overfitting to historical data may not generalize to future market conditions.",
+          "Computational complexity increases with the number of assets and constraints, requiring advanced solvers.",
+          "Not accounting for transaction costs and turnover can reduce realized returns."
+        ],
+        "examples": [
+          "Using mean-variance optimization to allocate assets among stocks and bonds to achieve a target return with minimum variance.",
+          "Applying CVaR portfolio optimization to minimize potential losses in extreme market downturns.",
+          "Incorporating cardinality constraints to limit the number of assets held in the portfolio for manageability.",
+          "Using mixed-integer programming to enforce buy-in thresholds and sector exposure limits."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": "Portfolio Optimization Theory and Applications",
+            "page": 5,
+            "url": null,
+            "score": 0.623
+          },
+          {
+            "source_type": "pdf",
+            "title": "Efficient Frontier and CVaR Portfolio Optimization",
+            "page": 15,
+            "url": null,
+            "score": 0.584
+          },
+          {
+            "source_type": "pdf",
+            "title": "Role of Convexity in Portfolio Problems",
+            "page": 11,
+            "url": null,
+            "score": 0.576
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-01T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:05:11.712243"
+    }
+  ],
+  "pinecone_results": [
+    {
+      "concept_name": "Sharpe Ratio",
+      "vector_store": "pinecone",
+      "source": "fintbx_pdf (Pinecone Vector DB)",
+      "generation_time": 7.020408058166504,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 1,
+        "avg_chunk_relevance": 0.5,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "Sharpe Ratio",
+        "definition": "The Sharpe Ratio is a performance metric that measures the risk-adjusted return of an investment portfolio. It is calculated by subtracting the risk-free rate from the portfolio's return and then dividing the result by the standard deviation of the portfolio's excess return. This ratio helps investors understand how much excess return they are receiving for the extra volatility endured by holding a riskier asset.",
+        "intuition": "The Sharpe Ratio tells you how well an investment compensates you for the risk you take. A higher Sharpe Ratio means you are getting more return per unit of risk, making the investment more attractive on a risk-adjusted basis.",
+        "formulae": [
+          "Sharpe Ratio = (Rp - Rf) / \u03c3p",
+          "where Rp = portfolio return, Rf = risk-free rate, \u03c3p = standard deviation of portfolio excess return"
+        ],
+        "step_by_step": [
+          "Calculate the portfolio's return over the period of interest.",
+          "Determine the risk-free rate for the same period.",
+          "Compute the excess return by subtracting the risk-free rate from the portfolio return.",
+          "Calculate the standard deviation of the portfolio's excess returns to measure risk.",
+          "Divide the excess return by the standard deviation to obtain the Sharpe Ratio."
+        ],
+        "pitfalls": [
+          "Using the Sharpe Ratio assumes returns are normally distributed, which may not hold true for all assets.",
+          "It does not distinguish between upside and downside volatility; all volatility is treated as risk.",
+          "Comparing Sharpe Ratios across different time periods or asset classes without adjustment can be misleading.",
+          "Ignoring the impact of leverage or non-linear payoffs can distort the ratio."
+        ],
+        "examples": [
+          "An investor compares two mutual funds: Fund A has a Sharpe Ratio of 1.2, and Fund B has 0.8. Fund A provides better risk-adjusted returns.",
+          "A portfolio with a return of 10%, a risk-free rate of 2%, and a standard deviation of 8% has a Sharpe Ratio of (10%-2%)/8% = 1.0."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": "Investment Performance Metrics",
+            "page": 19,
+            "url": null,
+            "score": 0.359
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-01T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:04:29.953961"
+    },
+    {
+      "concept_name": "Duration",
+      "vector_store": "pinecone",
+      "source": "fintbx_pdf (Pinecone Vector DB)",
+      "generation_time": 7.269788932800293,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 3,
+        "avg_chunk_relevance": 0.0,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "Duration",
+        "definition": "Duration is a measure of the sensitivity of the price of a fixed income investment to changes in interest rates, expressed as the weighted average time until cash flows are received. It quantifies the effective maturity of a bond, considering the present value of all coupon and principal payments.",
+        "intuition": "Duration tells you how much a bond's price will change when interest rates move. A higher duration means the bond is more sensitive to interest rate changes, so its price will fluctuate more.",
+        "formulae": [
+          "Duration = (\u03a3 (t \u00d7 PV(CF_t))) / Price",
+          "where t = time period, PV(CF_t) = present value of cash flow at time t"
+        ],
+        "step_by_step": [
+          "Identify all future cash flows of the bond (coupons and principal).",
+          "Calculate the present value of each cash flow using the current yield or discount rate.",
+          "Multiply each present value by the time period until the cash flow is received.",
+          "Sum all these weighted present values.",
+          "Divide the sum by the current price of the bond to get the duration."
+        ],
+        "pitfalls": [
+          "Duration assumes parallel shifts in the yield curve, which may not always hold true.",
+          "It is an approximation and less accurate for large interest rate changes.",
+          "Duration does not account for embedded options in bonds, such as call or put features."
+        ],
+        "examples": [
+          "A bond with a duration of 5 years will see its price decrease by approximately 5% if interest rates rise by 1%.",
+          "Comparing two bonds, the one with a longer duration is more sensitive to interest rate changes."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": 36,
+            "url": null,
+            "score": 0.263
+          },
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": 38,
+            "url": null,
+            "score": 0.254
+          },
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": 39,
+            "url": null,
+            "score": 0.258
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-10T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:04:39.041197"
+    },
+    {
+      "concept_name": "Black-Scholes Model",
+      "vector_store": "pinecone",
+      "source": "fintbx_pdf (Pinecone Vector DB)",
+      "generation_time": 7.603598213195801,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 1,
+        "avg_chunk_relevance": 0.3333333333333333,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "Black-Scholes Model",
+        "definition": "The Black-Scholes Model is a mathematical framework for pricing European-style options. It assumes that the underlying asset price follows a geometric Brownian motion with constant volatility and interest rate, allowing the derivation of a closed-form solution for option prices. The model is foundational in financial engineering for option valuation and risk management.",
+        "intuition": "The model imagines the price of a stock moving randomly but smoothly over time, with a predictable average growth and volatility. By modeling this behavior mathematically, it calculates the fair price of an option as the expected payoff discounted at the risk-free rate, assuming no arbitrage opportunities.",
+        "formulae": [
+          "dS = \u03bcS dt + \u03c3S dW",
+          "C = S N(d1) - K e^{-rT} N(d2)",
+          "d1 = [ln(S/K) + (r + \u03c3^2/2) T] / (\u03c3 sqrt(T))",
+          "d2 = d1 - \u03c3 sqrt(T)"
+        ],
+        "step_by_step": [
+          "Model the underlying asset price S as a geometric Brownian motion with drift \u03bc and volatility \u03c3.",
+          "Define the option payoff at maturity T based on the strike price K.",
+          "Use risk-neutral valuation to replace the drift \u03bc with the risk-free rate r.",
+          "Calculate d1 and d2 using the formulas involving S, K, r, \u03c3, and T.",
+          "Compute the option price C using the Black-Scholes formula involving the cumulative normal distribution N."
+        ],
+        "pitfalls": [
+          "Assuming constant volatility and interest rates, which may not hold in real markets.",
+          "The model applies only to European options, not American options with early exercise features.",
+          "Ignoring dividends or other payouts from the underlying asset can lead to mispricing.",
+          "Market frictions like transaction costs and liquidity constraints are not considered."
+        ],
+        "examples": [
+          "Pricing a European call option on a non-dividend-paying stock with known volatility and risk-free rate.",
+          "Using the model to estimate the fair value of a European put option by applying put-call parity."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": 24,
+            "url": null,
+            "score": 0.433
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-10T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:04:48.556450"
+    },
+    {
+      "concept_name": "CAPM",
+      "vector_store": "pinecone",
+      "source": "fintbx_pdf (Pinecone Vector DB)",
+      "generation_time": 7.697481346130371,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 1,
+        "avg_chunk_relevance": 0.0,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "CAPM",
+        "definition": "The Capital Asset Pricing Model (CAPM) is a financial model that describes the relationship between systematic risk and expected return for assets, particularly stocks. It asserts that the expected return on a security is equal to the risk-free rate plus a risk premium, which is proportional to the security's beta, a measure of its sensitivity to market movements. CAPM is widely used to estimate the cost of equity and to price risky securities.",
+        "intuition": "CAPM helps investors understand how much return they should expect for taking on additional risk compared to a risk-free investment. It shows that investors need to be compensated for both the time value of money (risk-free rate) and the risk they take relative to the market (beta times market risk premium).",
+        "formulae": [
+          "Expected Return = Risk-Free Rate + Beta \u00d7 (Market Return - Risk-Free Rate)",
+          "E(R_i) = R_f + \u03b2_i (E(R_m) - R_f)"
+        ],
+        "step_by_step": [
+          "Identify the risk-free rate, typically the yield on government bonds.",
+          "Estimate the expected market return based on historical data or market forecasts.",
+          "Calculate the beta of the security, which measures its volatility relative to the market.",
+          "Compute the market risk premium as the difference between the expected market return and the risk-free rate.",
+          "Apply the CAPM formula to find the expected return of the security."
+        ],
+        "pitfalls": [
+          "Assuming beta is constant over time, while it can change with market conditions.",
+          "Using historical data for beta and market returns may not predict future performance accurately.",
+          "Ignoring other factors that can affect returns, such as size, value, or momentum effects.",
+          "Assuming markets are efficient and investors are rational, which may not always hold."
+        ],
+        "examples": [
+          "If the risk-free rate is 2%, the expected market return is 8%, and a stock has a beta of 1.5, then the expected return is 2% + 1.5 \u00d7 (8% - 2%) = 11%.",
+          "An investor uses CAPM to estimate the cost of equity for a company to evaluate whether a project meets the required return."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": null,
+            "page": null,
+            "url": null,
+            "score": 0.34
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-01T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:04:58.189098"
+    },
+    {
+      "concept_name": "Portfolio Optimization",
+      "vector_store": "pinecone",
+      "source": "fintbx_pdf (Pinecone Vector DB)",
+      "generation_time": 10.817209243774414,
+      "retrieved_chunks_count": 3,
+      "quality_metrics": {
+        "accuracy_score": 1.0,
+        "completeness_score": 1.0,
+        "citation_fidelity": 0.36,
+        "has_definition": true,
+        "has_intuition": true,
+        "has_formulae": true,
+        "has_step_by_step": true,
+        "has_pitfalls": true,
+        "has_examples": true,
+        "citations_count": 3,
+        "avg_chunk_relevance": 1.0,
+        "citation_coverage": 0.0
+      },
+      "generated_note": {
+        "concept": "Portfolio Optimization",
+        "definition": "Portfolio optimization is the process of selecting the best distribution of assets in an investment portfolio to maximize returns for a given level of risk or to minimize risk for a given level of expected return. It involves mathematical modeling of returns and risks, subject to various constraints such as budget, turnover, and regulatory requirements. Techniques include mean-variance optimization, Conditional Value at Risk (CVaR) optimization, and mixed-integer programming to handle complex constraints.",
+        "intuition": "The goal of portfolio optimization is to find the most efficient way to allocate your investments so that you get the highest possible return without taking on more risk than you are comfortable with. It balances the trade-off between risk and reward by considering how different assets interact and how constraints affect your choices.",
+        "formulae": [
+          "Maximize: E(R_p) = \u03a3 w_i * E(R_i)",
+          "Subject to: Risk measure (e.g., variance \u03c3_p^2 = w'\u03a3w) \u2264 target risk",
+          "\u03a3 w_i = 1 (budget constraint)",
+          "w_i \u2265 0 (no short selling, if applicable)",
+          "CVaR optimization: minimize CVaR_\u03b1(w) subject to return and constraints"
+        ],
+        "step_by_step": [
+          "Define the investment universe and collect historical return data.",
+          "Choose a return proxy (expected returns) and a risk proxy (variance, CVaR, etc.).",
+          "Specify constraints such as budget, turnover limits, cardinality, and regulatory requirements.",
+          "Formulate the optimization problem mathematically, incorporating objectives and constraints.",
+          "Select an appropriate solver (e.g., quadratic programming, mixed-integer nonlinear programming).",
+          "Run the optimization to obtain the portfolio weights along the efficient frontier.",
+          "Analyze and validate the optimized portfolio, adjusting constraints or inputs as needed.",
+          "Implement and monitor the portfolio, re-optimizing periodically."
+        ],
+        "pitfalls": [
+          "Relying on inaccurate or unstable estimates of expected returns and covariances can lead to suboptimal portfolios.",
+          "Ignoring constraints or mis-specifying them can produce infeasible or impractical portfolios.",
+          "Overfitting to historical data may not generalize to future market conditions.",
+          "Computational complexity increases with the number of assets and constraints, requiring advanced solvers.",
+          "Not accounting for transaction costs and turnover can reduce realized returns."
+        ],
+        "examples": [
+          "Using mean-variance optimization to allocate assets among stocks and bonds to achieve a target return with minimum variance.",
+          "Applying CVaR portfolio optimization to minimize potential losses in extreme market downturns.",
+          "Incorporating cardinality constraints to limit the number of assets held in the portfolio for manageability.",
+          "Using mixed-integer programming to enforce buy-in thresholds and sector exposure limits."
+        ],
+        "citations": [
+          {
+            "source_type": "pdf",
+            "title": "Portfolio Optimization Theory and Applications",
+            "page": 5,
+            "url": null,
+            "score": 0.623
+          },
+          {
+            "source_type": "pdf",
+            "title": "Efficient Frontier and CVaR Portfolio Optimization",
+            "page": 15,
+            "url": null,
+            "score": 0.584
+          },
+          {
+            "source_type": "pdf",
+            "title": "Role of Convexity in Portfolio Problems",
+            "page": 11,
+            "url": null,
+            "score": 0.576
+          }
+        ],
+        "used_fallback": false,
+        "generated_at": "2024-06-01T00:00:00Z"
+      },
+      "timestamp": "2025-10-24T11:05:11.712243"
+    }
+  ],
+  "comparison_metrics": {
+    "local_vector_service": {
+      "avg_generation_time": 10.102121448516845,
+      "avg_accuracy": 1.0,
+      "avg_completeness": 1.0,
+      "avg_citation_fidelity": 0.36
+    },
+    "pinecone": {
+      "avg_generation_time": 8.081697158813476,
+      "avg_accuracy": 1.0,
+      "avg_completeness": 1.0,
+      "avg_citation_fidelity": 0.36
+    },
+    "performance_comparison": {
+      "time_improvement": 20.0,
+      "accuracy_difference": 0.0,
+      "completeness_difference": 0.0,
+      "citation_fidelity_improvement": 0.0
+    }
+  }
+}

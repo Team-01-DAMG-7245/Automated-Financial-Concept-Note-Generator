@@ -26,11 +26,10 @@ class WikipediaFallbackService:
         """
         Initialize Wikipedia fallback service
         """
-        self.wiki = wikipedia.Wikipedia(
-            language='en',
-            extract_format=wikipedia.ExtractFormat.WIKI,
-            user_agent='AURELIA-RAG-Service/1.0 (https://github.com/your-repo)'
-        )
+        # Set Wikipedia language and user agent
+        wikipedia.set_lang('en')
+        wikipedia.set_user_agent('AURELIA-RAG-Service/1.0 (https://github.com/Team-01-DAMG-7245/Automated-Financial-Concept-Note-Generator)')
+        
         self.rate_limit_delay = 1.0  # 1 second between requests
         self.last_request_time = 0
         self.chunk_size = 500  # Characters per chunk
@@ -75,14 +74,10 @@ class WikipediaFallbackService:
             self._rate_limit()
             
             # Search for the page
-            page = self.wiki.page(concept_name)
-            
-            if not page.exists():
-                logger.warning(f"Wikipedia page not found for: '{concept_name}'")
-                return None
+            page = wikipedia.page(concept_name)
             
             # Extract content
-            content = page.text
+            content = page.content
             
             if not content or len(content) < 100:
                 logger.warning(f"Wikipedia content too short for: '{concept_name}'")
@@ -101,7 +96,7 @@ class WikipediaFallbackService:
             
             return {
                 'title': page.title,
-                'url': page.fullurl,
+                'url': page.url,
                 'content': cleaned_content,
                 'chunks': chunks,
                 'total_chunks': len(chunks)
