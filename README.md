@@ -838,12 +838,14 @@ This project was developed as a collaborative effort with specific contributions
   - Part 12: Structured output generation using instructor package
   - Part 13: LLM integration for concept note synthesis and Wikipedia fallback
 
-#### **Kundana** - Frontend Development
+#### **Kundana** - Frontend Development, Cloud Deployment & Documentation
 - **Lab 4 - Streamlit Frontend:** Complete web interface development including:
   - User-friendly concept query interface
   - Real-time concept note display
   - Backend integration and error handling
   - Responsive design and user experience optimization
+  - Deployed the frontend to Google Cloud Run for scalable public access
+  - Authored the complete technical documentation and final project report.
 
 ### 🏆 Project Achievements
 
@@ -881,7 +883,7 @@ We, the undersigned team members, hereby attest to the originality and authentic
 
 **Swara** - Core System Architecture & Backend Development  
 **Nat** - Orchestration & AI Integration  
-**Kundana** - Frontend Development  
+**Kundana** - Frontend Development, Cloud Deployment & Documentation
 
 ### Declaration of Originality
 
