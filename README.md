@@ -435,16 +435,129 @@ DATABASE_URL=sqlite:///./aurelia_test.db
 
 ## 🎯 System Architecture
 
+### High-Level Architecture Diagram
+
+```mermaid
+graph TB
+    A[PDF Document<br/>fintbx.pdf] --> B[Lab 1: PDF Processing]
+    B --> C[Hybrid Chunking<br/>Markdown + Code + Semantic]
+    C --> D[Text Embeddings<br/>text-embedding-3-large]
+    D --> E[Vector Storage<br/>Local Vector Service]
+    
+    F[User Query] --> G[Lab 4: Streamlit Frontend<br/>Port 8501]
+    G --> H[Lab 3: FastAPI Backend<br/>Port 8000]
+    H --> I[RAG Service]
+    I --> E
+    E --> J[Similarity Search<br/>Cosine Similarity]
+    J --> K[Retrieved Chunks]
+    K --> L[LLM Generation<br/>GPT-4 + Instructor]
+    L --> M[Structured Concept Note]
+    M --> N[Wikipedia Fallback<br/>if no results]
+    N --> M
+    M --> G
+    
+    O[Lab 2: Airflow Orchestration<br/>AWS MWAA] --> B
+    O --> P[S3 Storage<br/>Cloud Artifacts]
+    P --> E
+    
+    Q[Lab 5: Evaluation] --> H
+    Q --> R[Performance Metrics<br/>Accuracy, Completeness, Latency]
+    
+    style A fill:#e1f5fe
+    style G fill:#f3e5f5
+    style H fill:#e8f5e8
+    style E fill:#fff3e0
+    style M fill:#fce4ec
 ```
-PDF (fintbx.pdf) 
-    ↓ Lab 1: Processing
-Chunks + Embeddings
-    ↓ Lab 3: RAG Service
-FastAPI Backend (Port 8000)
-    ↓ Lab 4: Frontend
-Streamlit UI (Port 8501)
-    ↓ Lab 5: Evaluation
-Performance Metrics & Reports
+
+### Component Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        AURELIA SYSTEM                          │
+├─────────────────────────────────────────────────────────────────┤
+│  Frontend Layer (Lab 4)                                        │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ Streamlit Web Interface (Port 8501)                    │    │
+│  │ • Concept Input Form                                   │    │
+│  │ • Real-time Results Display                            │    │
+│  │ • Backend Integration                                  │    │
+│  └─────────────────────────────────────────────────────────┘    │
+├─────────────────────────────────────────────────────────────────┤
+│  API Layer (Lab 3)                                             │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ FastAPI Backend (Port 8000)                            │    │
+│  │ • /api/v1/query - Concept Generation                   │    │
+│  │ • /api/v1/seed - Concept Pre-seeding                   │    │
+│  │ • /health - System Health Check                        │    │
+│  └─────────────────────────────────────────────────────────┘    │
+├─────────────────────────────────────────────────────────────────┤
+│  RAG Service Layer                                             │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ RAG Orchestrator                                        │    │
+│  │ • Local Vector Service (Primary)                        │    │
+│  │ • Pinecone Integration (Secondary)                      │    │
+│  │ • Wikipedia Fallback                                    │    │
+│  │ • LLM Generation (GPT-4 + Instructor)                  │    │
+│  └─────────────────────────────────────────────────────────┘    │
+├─────────────────────────────────────────────────────────────────┤
+│  Data Processing Layer (Lab 1)                                 │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ PDF Processing Pipeline                                  │    │
+│  │ • Document Parsing                                       │    │
+│  │ • Hybrid Chunking Strategy                              │    │
+│  │ • Embedding Generation                                   │    │
+│  │ • Vector Storage                                         │    │
+│  └─────────────────────────────────────────────────────────┘    │
+├─────────────────────────────────────────────────────────────────┤
+│  Orchestration Layer (Lab 2)                                   │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ AWS MWAA Airflow                                        │    │
+│  │ • fintbx_ingest_dag - Weekly Processing                 │    │
+│  │ • concept_seed_dag - On-demand Seeding                  │    │
+│  │ • S3 Artifact Management                                │    │
+│  └─────────────────────────────────────────────────────────┘    │
+├─────────────────────────────────────────────────────────────────┤
+│  Evaluation Layer (Lab 5)                                      │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │ Performance Evaluation                                  │    │
+│  │ • Quality Metrics (Accuracy, Completeness)             │    │
+│  │ • Citation Fidelity Analysis                            │    │
+│  │ • Latency Benchmarking                                  │    │
+│  │ • Vector Store Comparison                               │    │
+│  └─────────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Data Flow Architecture
+
+```
+1. PDF Input (fintbx.pdf)
+   ↓
+2. Lab 1: Document Processing
+   ├── Parse PDF → Extract text, images, tables
+   ├── Hybrid Chunking → Markdown + Code + Semantic
+   ├── Generate Embeddings → text-embedding-3-large
+   └── Store Vectors → Local Vector Service
+   ↓
+3. Lab 3: RAG Service
+   ├── Receive Query → Concept name + parameters
+   ├── Vector Search → Cosine similarity matching
+   ├── Retrieve Chunks → Top-k relevant chunks
+   ├── Generate Response → GPT-4 + Instructor
+   └── Fallback Logic → Wikipedia if no results
+   ↓
+4. Lab 4: Frontend Display
+   ├── User Interface → Streamlit web app
+   ├── Query Submission → HTTP POST to backend
+   ├── Results Display → Structured concept notes
+   └── Error Handling → User-friendly messages
+   ↓
+5. Lab 5: Evaluation
+   ├── Quality Assessment → Accuracy, completeness
+   ├── Performance Metrics → Latency, throughput
+   ├── Citation Analysis → Fidelity scoring
+   └── Comparative Analysis → Vector store performance
 ```
 
 ## 🚀 Production Deployment
@@ -571,3 +684,32 @@ This project was developed as a collaborative effort with specific contributions
 | Citation Fidelity | >20% | 30% | ✅ Exceeded |
 | Generation Speed | <15s | 10.10s | ✅ Exceeded |
 | Integration Success | 100% | 100% | ✅ Achieved |
+
+---
+
+## 📜 Attestation Statement
+
+### Originality and Academic Integrity Declaration
+
+We, the undersigned team members, hereby attest to the originality and authenticity of the work presented in the AURELIA project:
+
+**Swara** - Core System Architecture & Backend Development  
+**Nat** - Orchestration & AI Integration  
+**Kundana** - Frontend Development  
+
+### Declaration of Originality
+
+1. **Original Work:** All code, documentation, and implementation presented in this project represents our original work, developed specifically for this assignment.
+
+2. **No Plagiarism:** We confirm that no part of this work has been copied from other sources without proper attribution. All external libraries, frameworks, and tools used are properly documented and credited.
+
+3. **Individual Contributions:** Each team member's contributions are clearly documented and attributed in the project documentation.
+
+
+### Technical Authenticity
+
+- **Lab 1:** PDF processing pipeline implemented from scratch using hybrid chunking strategies
+- **Lab 2:** AWS MWAA orchestration designed and implemented for cloud deployment
+- **Lab 3:** FastAPI backend service with RAG implementation and instructor integration
+- **Lab 4:** Streamlit frontend developed with custom UI/UX design
+- **Lab 5:** Comprehensive evaluation framework with custom metrics and benchmarking
