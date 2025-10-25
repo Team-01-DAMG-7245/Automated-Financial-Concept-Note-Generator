@@ -829,7 +829,7 @@ This project was developed as a collaborative effort with specific contributions
 - **Lab 3 - FastAPI Service Endpoints (9, 10, 11):** 
   - Endpoint 9: `/api/v1/query` - Core concept query and generation
   - Endpoint 10: `/api/v1/seed` - Concept pre-seeding functionality  
-  - Endpoint 11: `/health` - System health monitoring
+  - Endpoint 11: `/health` - System health monitoring 
 - **Lab 5 - Evaluation & Benchmarking:** Comprehensive performance evaluation system with quality metrics, latency analysis, and vector store comparisons
 
 #### **Nat** - Orchestration & AI Integration
@@ -838,7 +838,11 @@ This project was developed as a collaborative effort with specific contributions
   - Part 12: Structured output generation using instructor package
   - Part 13: LLM integration for concept note synthesis and Wikipedia fallback
 
-#### **Kundana** - Frontend Development, Cloud Deployment & Documentation
+#### **Kundana** - Frontend Development,Backend Optimization,Cloud Deployment & Documentation
+- **Lab 3 - Backend Optimization** :
+  - Part 11: Fixed retrieval logic so that concept notes are generated from the embedded financial PDF instead of defaulting to Wikipedia
+  - Ensured fallback only triggers when no vector matches exist
+  - Verified end-to-end integration between frontend (Streamlit) and backend (FastAPI RAG service)
 - **Lab 4 - Streamlit Frontend:** Complete web interface development including:
   - User-friendly concept query interface
   - Real-time concept note display
@@ -883,7 +887,7 @@ We, the undersigned team members, hereby attest to the originality and authentic
 
 **Swara** - Core System Architecture & Backend Development  
 **Nat** - Orchestration & AI Integration  
-**Kundana** - Frontend Development, Cloud Deployment & Documentation
+**Kundana** - Frontend Development,Backend Optimization,Cloud Deployment & Documentation
 
 ### Declaration of Originality
 
@@ -900,4 +904,4 @@ We, the undersigned team members, hereby attest to the originality and authentic
 - **Lab 2:** AWS MWAA orchestration designed and implemented for cloud deployment
 - **Lab 3:** FastAPI backend service with RAG implementation and instructor integration
 - **Lab 4:** Streamlit frontend developed with custom UI/UX design
-- **Lab 5:** Comprehensive evaluation framework with custom metrics and benchmarking
+- **Lab 5:** Comprehensive evaluation framework with custom metrics and benchmarking 
