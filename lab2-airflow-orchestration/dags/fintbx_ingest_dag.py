@@ -19,8 +19,8 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-PROCESSED_BUCKET = os.getenv('PROCESSED_BUCKET', 'aurelia-3c28b5-processed-chunks')
-EMBEDDINGS_BUCKET = os.getenv('EMBEDDINGS_BUCKET', 'aurelia-3c28b5-embeddings')
+PROCESSED_BUCKET = os.getenv('PROCESSED_BUCKET', 'aurelia-faea36-processed-chunks')
+EMBEDDINGS_BUCKET = os.getenv('EMBEDDINGS_BUCKET', 'aurelia-faea36-embeddings')
 
 def load_lab1_embeddings(**context):
     """Load Lab 1's pre-computed chunks with embeddings"""
