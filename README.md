@@ -829,7 +829,8 @@ This project was developed as a collaborative effort with specific contributions
 - **Lab 3 - FastAPI Service Endpoints (9, 10, 11):** 
   - Endpoint 9: `/api/v1/query` - Core concept query and generation
   - Endpoint 10: `/api/v1/seed` - Concept pre-seeding functionality  
-  - Endpoint 11: `/health` - System health monitoring 
+  - Endpoint 11: `/health` - System health monitoring
+- **LAb 4** - Backend integration and error handling
 - **Lab 5 - Evaluation & Benchmarking:** Comprehensive performance evaluation system with quality metrics, latency analysis, and vector store comparisons
 
 #### **Nat** - Orchestration & AI Integration
@@ -837,6 +838,7 @@ This project was developed as a collaborative effort with specific contributions
 - **Lab 3 - Instructor Integration (12, 13):**
   - Part 12: Structured output generation using instructor package
   - Part 13: LLM integration for concept note synthesis and Wikipedia fallback
+  - **Lab 4** Deployed the frontend to Google Cloud Run for scalable public access
 
 #### **Kundana** - Frontend Development,Backend Optimization,Cloud Deployment & Documentation
 - **Lab 3 - Backend Optimization** :
@@ -846,9 +848,7 @@ This project was developed as a collaborative effort with specific contributions
 - **Lab 4 - Streamlit Frontend:** Complete web interface development including:
   - User-friendly concept query interface
   - Real-time concept note display
-  - Backend integration and error handling
   - Responsive design and user experience optimization
-  - Deployed the frontend to Google Cloud Run for scalable public access
   - Authored the complete technical documentation and final project report.
 
 ### 🏆 Project Achievements
@@ -887,7 +887,7 @@ We, the undersigned team members, hereby attest to the originality and authentic
 
 **Swara** - Core System Architecture & Backend Development  
 **Nat** - Orchestration & AI Integration  
-**Kundana** - Frontend Development,Backend Optimization,Cloud Deployment & Documentation
+**Kundana** - Frontend Development
 
 ### Declaration of Originality
 
