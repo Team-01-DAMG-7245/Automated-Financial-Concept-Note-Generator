@@ -841,10 +841,6 @@ This project was developed as a collaborative effort with specific contributions
   - **Lab 4** Deployed the frontend to Google Cloud Run for scalable public access
 
 #### **Kundana** - Frontend Development,Backend Optimization,Cloud Deployment & Documentation
-- **Lab 3 - Backend Optimization** :
-  - Part 11: Fixed retrieval logic so that concept notes are generated from the embedded financial PDF instead of defaulting to Wikipedia
-  - Ensured fallback only triggers when no vector matches exist
-  - Verified end-to-end integration between frontend (Streamlit) and backend (FastAPI RAG service)
 - **Lab 4 - Streamlit Frontend:** Complete web interface development including:
   - User-friendly concept query interface
   - Real-time concept note display
