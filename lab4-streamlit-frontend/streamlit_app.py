@@ -7,7 +7,7 @@ st.set_page_config(page_title="Aurelia — Financial Concept Notes", layout="wid
 st.title("📘 Aurelia — Financial Concept Notes")
 st.caption("Streamlit frontend connected to FastAPI RAG backend")
 
-default_backend = os.getenv("FASTAPI_BASE_URL", "http://127.0.0.1:8000")
+default_backend = os.getenv("FASTAPI_BASE_URL", "https://aurelia-backend-524697556345.us-central1.run.app")
 backend_url = st.sidebar.text_input("Backend URL:", default_backend)
 
 col1, col2 = st.columns([3, 1])

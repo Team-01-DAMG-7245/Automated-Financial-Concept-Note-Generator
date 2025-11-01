@@ -5,6 +5,8 @@ Lab 1 already generated embeddings - we validate and upload to Pinecone
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from pinecone import Pinecone, ServerlessSpec
+from airflow.models import Variable
 from datetime import datetime, timedelta
 import json
 import os
@@ -19,8 +21,8 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-PROCESSED_BUCKET = os.getenv('PROCESSED_BUCKET', 'aurelia-3c28b5-processed-chunks')
-EMBEDDINGS_BUCKET = os.getenv('EMBEDDINGS_BUCKET', 'aurelia-3c28b5-embeddings')
+PROCESSED_BUCKET = os.getenv('PROCESSED_BUCKET', 'aurelia-faea36-processed-chunks')
+EMBEDDINGS_BUCKET = os.getenv('EMBEDDINGS_BUCKET', 'aurelia-faea36-embeddings')
 
 def load_lab1_embeddings(**context):
     """Load Lab 1's pre-computed chunks with embeddings"""
@@ -53,9 +55,8 @@ def load_lab1_embeddings(**context):
 
 def upload_to_pinecone(**context):
     """Upload embeddings to Pinecone vector database"""
-    from pinecone import Pinecone, ServerlessSpec
-    
-    pc = Pinecone(api_key=os.getenv('PINECONE_API_KEY'))
+
+    pc = Pinecone(api_key=Variable.get('PINECONE_API_KEY'))
     index_name = os.getenv('PINECONE_INDEX', 'aurelia-financial-concepts')
     
     print(f"Uploading to Pinecone index: {index_name}")
