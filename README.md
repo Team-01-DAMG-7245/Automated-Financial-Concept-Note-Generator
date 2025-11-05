@@ -841,10 +841,12 @@ This project was developed as a collaborative effort with specific contributions
   - **Lab 4** Deployed the frontend to Google Cloud Run for scalable public access
 
 #### **Kundana** - Frontend Development,Backend Optimization,Cloud Deployment & Documentation
+- **Lab 3** - Fixed the fallback mechanism to use pdf instead of wikipedia
 - **Lab 4 - Streamlit Frontend:** Complete web interface development including:
   - User-friendly concept query interface
   - Real-time concept note display
   - Responsive design and user experience optimization
+  - Deployed the frontend to Google Cloud Run for scalable public access
   - Authored the complete technical documentation and final project report.
 
 ### 🏆 Project Achievements
