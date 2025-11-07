@@ -885,7 +885,7 @@ We, the undersigned team members, hereby attest to the originality and authentic
 
 **Swara** - Core System Architecture & Backend Development  
 **Nat** - Orchestration & AI Integration  
-**Kundana** - Frontend Development
+**Kundana** - Frontend Development,Backend Optimization,Cloud Deployment & Documentation
 
 ### Declaration of Originality
 
